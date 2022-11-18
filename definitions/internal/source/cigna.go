@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -32,10 +31,10 @@ func GetSourceCigna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, e
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "5bf24f17-3554-404f-8c67-ccbea00438ad"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeCigna))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCigna))
 
 	sourceDef.Display = "Cigna"
-	sourceDef.SourceType = definitions.SourceTypeCigna
+	sourceDef.SourceType = pkg.SourceTypeCigna
 	sourceDef.Category = []string{"Insurance", "Hospital"}
 	sourceDef.Enabled = true
 

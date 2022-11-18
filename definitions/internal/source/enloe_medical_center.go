@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -25,10 +24,10 @@ func GetSourceEnloeMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSource
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = ""
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Enloe Medical Center"
-	sourceDef.SourceType = definitions.SourceTypeEnloeMedicalCenter
+	sourceDef.SourceType = pkg.SourceTypeEnloeMedicalCenter
 	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 

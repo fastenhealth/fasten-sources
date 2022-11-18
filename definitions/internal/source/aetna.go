@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -31,10 +30,10 @@ func GetSourceAetna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, e
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "5c47935b-29a7-4346-a01b-649a11d94dc5"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeAetna))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAetna))
 
 	sourceDef.Display = "Aetna"
-	sourceDef.SourceType = definitions.SourceTypeAetna
+	sourceDef.SourceType = pkg.SourceTypeAetna
 	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Enabled = true
 

@@ -6,7 +6,6 @@
 package sandbox
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -35,10 +34,10 @@ func GetSourceAthena(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, 
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "0oaewpzeuut4fyHim297"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeAthena))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
 
 	sourceDef.Display = "Athena (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeAthena
+	sourceDef.SourceType = pkg.SourceTypeAthena
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = true
 

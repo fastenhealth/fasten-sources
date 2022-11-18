@@ -6,7 +6,6 @@
 package sandbox
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -34,10 +33,10 @@ func GetSourceHealthit(env pkg.FastenEnvType) (models.LighthouseSourceDefinition
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "9ad3ML0upIMiawLVdM5-DiPinGcv7M"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeHealthit))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeHealthit))
 
 	sourceDef.Display = "HealthIT (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeHealthit
+	sourceDef.SourceType = pkg.SourceTypeHealthit
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = true
 

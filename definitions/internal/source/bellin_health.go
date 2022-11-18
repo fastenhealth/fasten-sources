@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -25,10 +24,10 @@ func GetSourceBellinHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = ""
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Bellin Health"
-	sourceDef.SourceType = definitions.SourceTypeBellinHealth
+	sourceDef.SourceType = pkg.SourceTypeBellinHealth
 	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 

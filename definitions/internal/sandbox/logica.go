@@ -6,7 +6,6 @@
 package sandbox
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -33,10 +32,10 @@ func GetSourceLogica(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, 
 	} else {
 		sourceDef.ClientId = "12b14c49-a4da-42f7-9e6f-2f19db622962"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeLogica))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeLogica))
 
 	sourceDef.Display = "Logica (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeLogica
+	sourceDef.SourceType = pkg.SourceTypeLogica
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = true
 

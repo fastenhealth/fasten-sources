@@ -6,7 +6,6 @@
 package platform
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -34,10 +33,10 @@ func GetSourceEpic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, er
 	} else {
 		sourceDef.ClientId = "764e5f3f-c881-4029-8f36-15ea5c2eb418"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Epic (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeEpic
+	sourceDef.SourceType = pkg.SourceTypeEpic
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = true
 

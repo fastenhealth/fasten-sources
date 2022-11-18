@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -24,10 +23,10 @@ func GetSourceAnthem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, 
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360c.anthem.com/P360Member/api/fhir-r4"
 	sourceDef.ClientId = "fastenhealth"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeAnthem))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAnthem))
 
 	sourceDef.Display = "Anthem"
-	sourceDef.SourceType = definitions.SourceTypeAnthem
+	sourceDef.SourceType = pkg.SourceTypeAnthem
 	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "anthem"

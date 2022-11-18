@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -27,7 +26,7 @@ func GetSourceDellchildrens(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	}
 
 	sourceDef.Display = "Dell Children's Health Plan"
-	sourceDef.SourceType = definitions.SourceTypeDellchildrens
+	sourceDef.SourceType = pkg.SourceTypeDellchildrens
 	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Enabled = true
 

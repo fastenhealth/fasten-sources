@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -34,11 +33,11 @@ func GetSourceBluebutton(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "XQPwCYLXmqZkiQZWhLX56mToZ29MSfekrPEkNUaF"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeBluebutton))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeBluebutton))
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "Medicare/VA Health (BlueButton)"
-	sourceDef.SourceType = definitions.SourceTypeBluebutton
+	sourceDef.SourceType = pkg.SourceTypeBluebutton
 	sourceDef.Category = []string{"Hospital"}
 	sourceDef.Enabled = true
 

@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -27,7 +26,7 @@ func GetSourceHealthybluelamedicaid(env pkg.FastenEnvType) (models.LighthouseSou
 	}
 
 	sourceDef.Display = "Healthy Blue LA Medicaid"
-	sourceDef.SourceType = definitions.SourceTypeHealthybluelamedicaid
+	sourceDef.SourceType = pkg.SourceTypeHealthybluelamedicaid
 	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Enabled = true
 

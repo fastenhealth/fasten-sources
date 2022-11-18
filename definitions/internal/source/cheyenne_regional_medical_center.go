@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -25,10 +24,10 @@ func GetSourceCheyenneRegionalMedicalCenter(env pkg.FastenEnvType) (models.Light
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = ""
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cheyenne Regional Medical Center"
-	sourceDef.SourceType = definitions.SourceTypeCheyenneRegionalMedicalCenter
+	sourceDef.SourceType = pkg.SourceTypeCheyenneRegionalMedicalCenter
 	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 

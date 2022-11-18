@@ -6,7 +6,6 @@
 package platform
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -36,10 +35,10 @@ func GetSourceCerner(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, 
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "89efc22c-e879-4c02-a423-c3b98a0117a3"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeCerner))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Cerner (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeCerner
+	sourceDef.SourceType = pkg.SourceTypeCerner
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = true
 

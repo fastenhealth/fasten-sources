@@ -6,7 +6,6 @@
 package platform
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
@@ -31,11 +30,11 @@ func GetSourceCareevolution(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = "12eb6280-c091-4c97-9c84-116c280fea18"
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeCareevolution))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCareevolution))
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "CareEvolution (Sandbox)"
-	sourceDef.SourceType = definitions.SourceTypeCareevolution
+	sourceDef.SourceType = pkg.SourceTypeCareevolution
 	sourceDef.Category = []string{"Sandbox"}
 	sourceDef.Enabled = false
 

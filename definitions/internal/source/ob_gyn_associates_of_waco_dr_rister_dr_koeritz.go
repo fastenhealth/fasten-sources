@@ -6,7 +6,6 @@
 package source
 
 import (
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -25,10 +24,10 @@ func GetSourceObGynAssociatesOfWacoDrRisterDrKoeritz(env pkg.FastenEnvType) (mod
 	if env == pkg.FastenEnvSandbox {
 		sourceDef.ClientId = ""
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(definitions.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OB/GYN Associates of Waco - Dr. Rister, Dr. Koeritz"
-	sourceDef.SourceType = definitions.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz
+	sourceDef.SourceType = pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz
 	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
