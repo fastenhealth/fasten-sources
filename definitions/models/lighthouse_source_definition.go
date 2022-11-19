@@ -1,8 +1,6 @@
 package models
 
-import (
-	"github.com/fastenhealth/fasten-sources/definitions"
-)
+import "github.com/fastenhealth/fasten-sources/pkg"
 
 // LighthouseSource
 //https://vteapif1.aetna.com/fhirdemo/v1/fhirserver_auth/oauth2/authorize?
@@ -45,8 +43,8 @@ type LighthouseSourceDefinition struct {
 	SecretKeyPrefix   string `json:"-"`                   //the secret key prefix to use, if empty (default) will use the sourceType value
 
 	//Display information
-	Display    string                 `json:"display"`
-	SourceType definitions.SourceType `json:"source_type"`
-	Category   []string               `json:"category"`
-	Enabled    bool                   `json:"enabled"`
+	Display    string         `json:"display"`
+	SourceType pkg.SourceType `json:"source_type"`
+	Category   []string       `json:"category"`
+	Enabled    bool           `json:"enabled"`
 }

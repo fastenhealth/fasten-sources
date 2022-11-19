@@ -7,7 +7,6 @@ package factory
 
 import (
 	"fmt"
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	platform "github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	sandbox "github.com/fastenhealth/fasten-sources/definitions/internal/sandbox"
 	source "github.com/fastenhealth/fasten-sources/definitions/internal/source"
@@ -18,901 +17,901 @@ import (
 func GetSourceConfig(env pkg.FastenEnvType, sourceType pkg.SourceType) (models.LighthouseSourceDefinition, error) {
 	switch sourceType {
 	// platform
-	case definitions.SourceTypeCareevolution:
+	case pkg.SourceTypeCareevolution:
 		return platform.GetSourceCareevolution(env)
-	case definitions.SourceTypeCerner:
+	case pkg.SourceTypeCerner:
 		return platform.GetSourceCerner(env)
-	case definitions.SourceTypeEpic:
+	case pkg.SourceTypeEpic:
 		return platform.GetSourceEpic(env)
 	// source
-	case definitions.SourceTypeAccessCommunityHealthNetwork:
+	case pkg.SourceTypeAccessCommunityHealthNetwork:
 		return source.GetSourceAccessCommunityHealthNetwork(env)
-	case definitions.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo:
+	case pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo:
 		return source.GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env)
-	case definitions.SourceTypeAdvantagecarePhysicians:
+	case pkg.SourceTypeAdvantagecarePhysicians:
 		return source.GetSourceAdvantagecarePhysicians(env)
-	case definitions.SourceTypeAdventhealth:
+	case pkg.SourceTypeAdventhealth:
 		return source.GetSourceAdventhealth(env)
-	case definitions.SourceTypeAdventistHealthWest:
+	case pkg.SourceTypeAdventistHealthWest:
 		return source.GetSourceAdventistHealthWest(env)
-	case definitions.SourceTypeAkronChildrensHospital:
+	case pkg.SourceTypeAkronChildrensHospital:
 		return source.GetSourceAkronChildrensHospital(env)
-	case definitions.SourceTypeAlamedaHealthSystem:
+	case pkg.SourceTypeAlamedaHealthSystem:
 		return source.GetSourceAlamedaHealthSystem(env)
-	case definitions.SourceTypeAlleghenyHealthNetwork:
+	case pkg.SourceTypeAlleghenyHealthNetwork:
 		return source.GetSourceAlleghenyHealthNetwork(env)
-	case definitions.SourceTypeAllinaHealthSystem:
+	case pkg.SourceTypeAllinaHealthSystem:
 		return source.GetSourceAllinaHealthSystem(env)
-	case definitions.SourceTypeAltamed:
+	case pkg.SourceTypeAltamed:
 		return source.GetSourceAltamed(env)
-	case definitions.SourceTypeAltruHealthSystem:
+	case pkg.SourceTypeAltruHealthSystem:
 		return source.GetSourceAltruHealthSystem(env)
-	case definitions.SourceTypeAmerigroup:
+	case pkg.SourceTypeAmerigroup:
 		return source.GetSourceAmerigroup(env)
-	case definitions.SourceTypeAmerigroupmedicaid:
+	case pkg.SourceTypeAmerigroupmedicaid:
 		return source.GetSourceAmerigroupmedicaid(env)
-	case definitions.SourceTypeAnmedHealth:
+	case pkg.SourceTypeAnmedHealth:
 		return source.GetSourceAnmedHealth(env)
-	case definitions.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago:
+	case pkg.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago:
 		return source.GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env)
-	case definitions.SourceTypeAnthemMedicaid:
+	case pkg.SourceTypeAnthemMedicaid:
 		return source.GetSourceAnthemMedicaid(env)
-	case definitions.SourceTypeAnthem:
+	case pkg.SourceTypeAnthem:
 		return source.GetSourceAnthem(env)
-	case definitions.SourceTypeAnthembluecrossca:
+	case pkg.SourceTypeAnthembluecrossca:
 		return source.GetSourceAnthembluecrossca(env)
-	case definitions.SourceTypeArdent:
+	case pkg.SourceTypeArdent:
 		return source.GetSourceArdent(env)
-	case definitions.SourceTypeArizonaCommunityPhysicians:
+	case pkg.SourceTypeArizonaCommunityPhysicians:
 		return source.GetSourceArizonaCommunityPhysicians(env)
-	case definitions.SourceTypeArkansasChildrens:
+	case pkg.SourceTypeArkansasChildrens:
 		return source.GetSourceArkansasChildrens(env)
-	case definitions.SourceTypeArrowheadRegionalMedicalCenter:
+	case pkg.SourceTypeArrowheadRegionalMedicalCenter:
 		return source.GetSourceArrowheadRegionalMedicalCenter(env)
-	case definitions.SourceTypeAsanteHealthSystems:
+	case pkg.SourceTypeAsanteHealthSystems:
 		return source.GetSourceAsanteHealthSystems(env)
-	case definitions.SourceTypeAspenValleyHospital:
+	case pkg.SourceTypeAspenValleyHospital:
 		return source.GetSourceAspenValleyHospital(env)
-	case definitions.SourceTypeAspirus:
+	case pkg.SourceTypeAspirus:
 		return source.GetSourceAspirus(env)
-	case definitions.SourceTypeAtlanticHealth:
+	case pkg.SourceTypeAtlanticHealth:
 		return source.GetSourceAtlanticHealth(env)
-	case definitions.SourceTypeAtriumHealthWakeForestBaptist:
+	case pkg.SourceTypeAtriumHealthWakeForestBaptist:
 		return source.GetSourceAtriumHealthWakeForestBaptist(env)
-	case definitions.SourceTypeAtriumHealth:
+	case pkg.SourceTypeAtriumHealth:
 		return source.GetSourceAtriumHealth(env)
-	case definitions.SourceTypeAtriusHealth:
+	case pkg.SourceTypeAtriusHealth:
 		return source.GetSourceAtriusHealth(env)
-	case definitions.SourceTypeAuroraHealthCareMyaurora:
+	case pkg.SourceTypeAuroraHealthCareMyaurora:
 		return source.GetSourceAuroraHealthCareMyaurora(env)
-	case definitions.SourceTypeAustinRegionalClinic:
+	case pkg.SourceTypeAustinRegionalClinic:
 		return source.GetSourceAustinRegionalClinic(env)
-	case definitions.SourceTypeBalladHealth:
+	case pkg.SourceTypeBalladHealth:
 		return source.GetSourceBalladHealth(env)
-	case definitions.SourceTypeBaptistHealthArkansas:
+	case pkg.SourceTypeBaptistHealthArkansas:
 		return source.GetSourceBaptistHealthArkansas(env)
-	case definitions.SourceTypeBaptistHealthKyAndIn:
+	case pkg.SourceTypeBaptistHealthKyAndIn:
 		return source.GetSourceBaptistHealthKyAndIn(env)
-	case definitions.SourceTypeBaptistHealthNortheastFlorida:
+	case pkg.SourceTypeBaptistHealthNortheastFlorida:
 		return source.GetSourceBaptistHealthNortheastFlorida(env)
-	case definitions.SourceTypeBaptistMemorialHealthCare:
+	case pkg.SourceTypeBaptistMemorialHealthCare:
 		return source.GetSourceBaptistMemorialHealthCare(env)
-	case definitions.SourceTypeBassettHealthcare:
+	case pkg.SourceTypeBassettHealthcare:
 		return source.GetSourceBassettHealthcare(env)
-	case definitions.SourceTypeBaycareClinicMybaycare:
+	case pkg.SourceTypeBaycareClinicMybaycare:
 		return source.GetSourceBaycareClinicMybaycare(env)
-	case definitions.SourceTypeBayhealthMedicalCenter:
+	case pkg.SourceTypeBayhealthMedicalCenter:
 		return source.GetSourceBayhealthMedicalCenter(env)
-	case definitions.SourceTypeBaylorCollegeOfMedicine:
+	case pkg.SourceTypeBaylorCollegeOfMedicine:
 		return source.GetSourceBaylorCollegeOfMedicine(env)
-	case definitions.SourceTypeBaylorScottAndWhite:
+	case pkg.SourceTypeBaylorScottAndWhite:
 		return source.GetSourceBaylorScottAndWhite(env)
-	case definitions.SourceTypeBcbskansas:
+	case pkg.SourceTypeBcbskansas:
 		return source.GetSourceBcbskansas(env)
-	case definitions.SourceTypeBcbskansasmedicare:
+	case pkg.SourceTypeBcbskansasmedicare:
 		return source.GetSourceBcbskansasmedicare(env)
-	case definitions.SourceTypeBcbsny:
+	case pkg.SourceTypeBcbsny:
 		return source.GetSourceBcbsny(env)
-	case definitions.SourceTypeBeaumontHealth:
+	case pkg.SourceTypeBeaumontHealth:
 		return source.GetSourceBeaumontHealth(env)
-	case definitions.SourceTypeBellinHealth:
+	case pkg.SourceTypeBellinHealth:
 		return source.GetSourceBellinHealth(env)
-	case definitions.SourceTypeBjcAndWashingtonUniversity:
+	case pkg.SourceTypeBjcAndWashingtonUniversity:
 		return source.GetSourceBjcAndWashingtonUniversity(env)
-	case definitions.SourceTypeBluemedicareadvantage:
+	case pkg.SourceTypeBluemedicareadvantage:
 		return source.GetSourceBluemedicareadvantage(env)
-	case definitions.SourceTypeBonSecoursHealthSystem:
+	case pkg.SourceTypeBonSecoursHealthSystem:
 		return source.GetSourceBonSecoursHealthSystem(env)
-	case definitions.SourceTypeBostonMedicalCenter:
+	case pkg.SourceTypeBostonMedicalCenter:
 		return source.GetSourceBostonMedicalCenter(env)
-	case definitions.SourceTypeBoulderCommunityHealth:
+	case pkg.SourceTypeBoulderCommunityHealth:
 		return source.GetSourceBoulderCommunityHealth(env)
-	case definitions.SourceTypeBronsonHealthcareGroup:
+	case pkg.SourceTypeBronsonHealthcareGroup:
 		return source.GetSourceBronsonHealthcareGroup(env)
-	case definitions.SourceTypeBrookwoodBaptistHealth:
+	case pkg.SourceTypeBrookwoodBaptistHealth:
 		return source.GetSourceBrookwoodBaptistHealth(env)
-	case definitions.SourceTypeBrownAndTolandPhysicians:
+	case pkg.SourceTypeBrownAndTolandPhysicians:
 		return source.GetSourceBrownAndTolandPhysicians(env)
-	case definitions.SourceTypeBryanHealth:
+	case pkg.SourceTypeBryanHealth:
 		return source.GetSourceBryanHealth(env)
-	case definitions.SourceTypeBuffaloMedicalGroup:
+	case pkg.SourceTypeBuffaloMedicalGroup:
 		return source.GetSourceBuffaloMedicalGroup(env)
-	case definitions.SourceTypeCapeCodHealthcare:
+	case pkg.SourceTypeCapeCodHealthcare:
 		return source.GetSourceCapeCodHealthcare(env)
-	case definitions.SourceTypeCapeFearValleyHealth:
+	case pkg.SourceTypeCapeFearValleyHealth:
 		return source.GetSourceCapeFearValleyHealth(env)
-	case definitions.SourceTypeCareNewEngland:
+	case pkg.SourceTypeCareNewEngland:
 		return source.GetSourceCareNewEngland(env)
-	case definitions.SourceTypeCarleFoundationHospitalAndPhysicianGroup:
+	case pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup:
 		return source.GetSourceCarleFoundationHospitalAndPhysicianGroup(env)
-	case definitions.SourceTypeCaromontHealth:
+	case pkg.SourceTypeCaromontHealth:
 		return source.GetSourceCaromontHealth(env)
-	case definitions.SourceTypeCatholicHealthLongIslandNy:
+	case pkg.SourceTypeCatholicHealthLongIslandNy:
 		return source.GetSourceCatholicHealthLongIslandNy(env)
-	case definitions.SourceTypeCatholicHealthSystemBuffalo:
+	case pkg.SourceTypeCatholicHealthSystemBuffalo:
 		return source.GetSourceCatholicHealthSystemBuffalo(env)
-	case definitions.SourceTypeCedarsSinaiHealthSystem:
+	case pkg.SourceTypeCedarsSinaiHealthSystem:
 		return source.GetSourceCedarsSinaiHealthSystem(env)
-	case definitions.SourceTypeCentracareHealthAndAffiliates:
+	case pkg.SourceTypeCentracareHealthAndAffiliates:
 		return source.GetSourceCentracareHealthAndAffiliates(env)
-	case definitions.SourceTypeCenturaHealth:
+	case pkg.SourceTypeCenturaHealth:
 		return source.GetSourceCenturaHealth(env)
-	case definitions.SourceTypeCharlotteEyeEarNoseAndThroatAssociates:
+	case pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates:
 		return source.GetSourceCharlotteEyeEarNoseAndThroatAssociates(env)
-	case definitions.SourceTypeChesapeakeRegionalMedicalCenter:
+	case pkg.SourceTypeChesapeakeRegionalMedicalCenter:
 		return source.GetSourceChesapeakeRegionalMedicalCenter(env)
-	case definitions.SourceTypeCheyenneRegionalMedicalCenter:
+	case pkg.SourceTypeCheyenneRegionalMedicalCenter:
 		return source.GetSourceCheyenneRegionalMedicalCenter(env)
-	case definitions.SourceTypeChildrensHealthSystemOfTexas:
+	case pkg.SourceTypeChildrensHealthSystemOfTexas:
 		return source.GetSourceChildrensHealthSystemOfTexas(env)
-	case definitions.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska:
+	case pkg.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska:
 		return source.GetSourceChildrensHospitalAndMedicalCenterOmahaNebraska(env)
-	case definitions.SourceTypeChildrensHospitalColorado:
+	case pkg.SourceTypeChildrensHospitalColorado:
 		return source.GetSourceChildrensHospitalColorado(env)
-	case definitions.SourceTypeChildrensHospitalOfPhiladelphia:
+	case pkg.SourceTypeChildrensHospitalOfPhiladelphia:
 		return source.GetSourceChildrensHospitalOfPhiladelphia(env)
-	case definitions.SourceTypeChildrensWisconsin:
+	case pkg.SourceTypeChildrensWisconsin:
 		return source.GetSourceChildrensWisconsin(env)
-	case definitions.SourceTypeChildrenssHealthcareOfAtlanta:
+	case pkg.SourceTypeChildrenssHealthcareOfAtlanta:
 		return source.GetSourceChildrenssHealthcareOfAtlanta(env)
-	case definitions.SourceTypeCignaMedicalGroup:
+	case pkg.SourceTypeCignaMedicalGroup:
 		return source.GetSourceCignaMedicalGroup(env)
-	case definitions.SourceTypeCincinnatiChildrensHospitalMedicalCenter:
+	case pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter:
 		return source.GetSourceCincinnatiChildrensHospitalMedicalCenter(env)
-	case definitions.SourceTypeCityOfHope:
+	case pkg.SourceTypeCityOfHope:
 		return source.GetSourceCityOfHope(env)
-	case definitions.SourceTypeClearhealthalliance:
+	case pkg.SourceTypeClearhealthalliance:
 		return source.GetSourceClearhealthalliance(env)
-	case definitions.SourceTypeClevelandClinic:
+	case pkg.SourceTypeClevelandClinic:
 		return source.GetSourceClevelandClinic(env)
-	case definitions.SourceTypeColumbiaPhysicians:
+	case pkg.SourceTypeColumbiaPhysicians:
 		return source.GetSourceColumbiaPhysicians(env)
-	case definitions.SourceTypeColumbusRegionalHealth:
+	case pkg.SourceTypeColumbusRegionalHealth:
 		return source.GetSourceColumbusRegionalHealth(env)
-	case definitions.SourceTypeCommunityHealthNetwork:
+	case pkg.SourceTypeCommunityHealthNetwork:
 		return source.GetSourceCommunityHealthNetwork(env)
-	case definitions.SourceTypeCommunityHealthcareSystem:
+	case pkg.SourceTypeCommunityHealthcareSystem:
 		return source.GetSourceCommunityHealthcareSystem(env)
-	case definitions.SourceTypeCommunityMedicalCenters:
+	case pkg.SourceTypeCommunityMedicalCenters:
 		return source.GetSourceCommunityMedicalCenters(env)
-	case definitions.SourceTypeConeHealth:
+	case pkg.SourceTypeConeHealth:
 		return source.GetSourceConeHealth(env)
-	case definitions.SourceTypeConemaughHealthSystem:
+	case pkg.SourceTypeConemaughHealthSystem:
 		return source.GetSourceConemaughHealthSystem(env)
-	case definitions.SourceTypeConfluenceHealth:
+	case pkg.SourceTypeConfluenceHealth:
 		return source.GetSourceConfluenceHealth(env)
-	case definitions.SourceTypeConnecticutChildrensMedicalCenter:
+	case pkg.SourceTypeConnecticutChildrensMedicalCenter:
 		return source.GetSourceConnecticutChildrensMedicalCenter(env)
-	case definitions.SourceTypeContraCosta:
+	case pkg.SourceTypeContraCosta:
 		return source.GetSourceContraCosta(env)
-	case definitions.SourceTypeCookChildrensHealthCareSystem:
+	case pkg.SourceTypeCookChildrensHealthCareSystem:
 		return source.GetSourceCookChildrensHealthCareSystem(env)
-	case definitions.SourceTypeCooperUniversityHealthCare:
+	case pkg.SourceTypeCooperUniversityHealthCare:
 		return source.GetSourceCooperUniversityHealthCare(env)
-	case definitions.SourceTypeCottageHealth:
+	case pkg.SourceTypeCottageHealth:
 		return source.GetSourceCottageHealth(env)
-	case definitions.SourceTypeCovenantHealth:
+	case pkg.SourceTypeCovenantHealth:
 		return source.GetSourceCovenantHealth(env)
-	case definitions.SourceTypeDartmouthHitchcock:
+	case pkg.SourceTypeDartmouthHitchcock:
 		return source.GetSourceDartmouthHitchcock(env)
-	case definitions.SourceTypeDavitaPhysicianSolutions:
+	case pkg.SourceTypeDavitaPhysicianSolutions:
 		return source.GetSourceDavitaPhysicianSolutions(env)
-	case definitions.SourceTypeDaytonChildrensHospital:
+	case pkg.SourceTypeDaytonChildrensHospital:
 		return source.GetSourceDaytonChildrensHospital(env)
-	case definitions.SourceTypeDeaconessHealthSystemPrd:
+	case pkg.SourceTypeDeaconessHealthSystemPrd:
 		return source.GetSourceDeaconessHealthSystemPrd(env)
-	case definitions.SourceTypeDellchildrens:
+	case pkg.SourceTypeDellchildrens:
 		return source.GetSourceDellchildrens(env)
-	case definitions.SourceTypeDenverHealth:
+	case pkg.SourceTypeDenverHealth:
 		return source.GetSourceDenverHealth(env)
-	case definitions.SourceTypeDrexelMedicine:
+	case pkg.SourceTypeDrexelMedicine:
 		return source.GetSourceDrexelMedicine(env)
-	case definitions.SourceTypeDriscollChildrensHospital:
+	case pkg.SourceTypeDriscollChildrensHospital:
 		return source.GetSourceDriscollChildrensHospital(env)
-	case definitions.SourceTypeDukeHealth:
+	case pkg.SourceTypeDukeHealth:
 		return source.GetSourceDukeHealth(env)
-	case definitions.SourceTypeDulyHealthAndCare:
+	case pkg.SourceTypeDulyHealthAndCare:
 		return source.GetSourceDulyHealthAndCare(env)
-	case definitions.SourceTypeEastBostonNeighborhoodHealthCenter:
+	case pkg.SourceTypeEastBostonNeighborhoodHealthCenter:
 		return source.GetSourceEastBostonNeighborhoodHealthCenter(env)
-	case definitions.SourceTypeEdwardElmhurstHealthcare:
+	case pkg.SourceTypeEdwardElmhurstHealthcare:
 		return source.GetSourceEdwardElmhurstHealthcare(env)
-	case definitions.SourceTypeEisenhowerMedicalCenter:
+	case pkg.SourceTypeEisenhowerMedicalCenter:
 		return source.GetSourceEisenhowerMedicalCenter(env)
-	case definitions.SourceTypeElCaminoHospital:
+	case pkg.SourceTypeElCaminoHospital:
 		return source.GetSourceElCaminoHospital(env)
-	case definitions.SourceTypeElRioHealth:
+	case pkg.SourceTypeElRioHealth:
 		return source.GetSourceElRioHealth(env)
-	case definitions.SourceTypeEmoryHealthcare:
+	case pkg.SourceTypeEmoryHealthcare:
 		return source.GetSourceEmoryHealthcare(env)
-	case definitions.SourceTypeEmpireblue:
+	case pkg.SourceTypeEmpireblue:
 		return source.GetSourceEmpireblue(env)
-	case definitions.SourceTypeEmpirebluemedicaid:
+	case pkg.SourceTypeEmpirebluemedicaid:
 		return source.GetSourceEmpirebluemedicaid(env)
-	case definitions.SourceTypeEnglewoodHospitalAndMedicalCenter:
+	case pkg.SourceTypeEnglewoodHospitalAndMedicalCenter:
 		return source.GetSourceEnglewoodHospitalAndMedicalCenter(env)
-	case definitions.SourceTypeEnloeMedicalCenter:
+	case pkg.SourceTypeEnloeMedicalCenter:
 		return source.GetSourceEnloeMedicalCenter(env)
-	case definitions.SourceTypeErlangerHealthSystem:
+	case pkg.SourceTypeErlangerHealthSystem:
 		return source.GetSourceErlangerHealthSystem(env)
-	case definitions.SourceTypeEskenaziHealth:
+	case pkg.SourceTypeEskenaziHealth:
 		return source.GetSourceEskenaziHealth(env)
-	case definitions.SourceTypeEssentiaHealth:
+	case pkg.SourceTypeEssentiaHealth:
 		return source.GetSourceEssentiaHealth(env)
-	case definitions.SourceTypeEvernorth:
+	case pkg.SourceTypeEvernorth:
 		return source.GetSourceEvernorth(env)
-	case definitions.SourceTypeFairviewHealthServices:
+	case pkg.SourceTypeFairviewHealthServices:
 		return source.GetSourceFairviewHealthServices(env)
-	case definitions.SourceTypeFamilyHealthCenterMichigan:
+	case pkg.SourceTypeFamilyHealthCenterMichigan:
 		return source.GetSourceFamilyHealthCenterMichigan(env)
-	case definitions.SourceTypeFastmed:
+	case pkg.SourceTypeFastmed:
 		return source.GetSourceFastmed(env)
-	case definitions.SourceTypeFirsthealthOfTheCarolinas:
+	case pkg.SourceTypeFirsthealthOfTheCarolinas:
 		return source.GetSourceFirsthealthOfTheCarolinas(env)
-	case definitions.SourceTypeFranciscanAlliance:
+	case pkg.SourceTypeFranciscanAlliance:
 		return source.GetSourceFranciscanAlliance(env)
-	case definitions.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem:
+	case pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem:
 		return source.GetSourceFranciscanMissionariesOfOurLadyHealthSystem(env)
-	case definitions.SourceTypeFreseniusMedicalCareNorthAmerica:
+	case pkg.SourceTypeFreseniusMedicalCareNorthAmerica:
 		return source.GetSourceFreseniusMedicalCareNorthAmerica(env)
-	case definitions.SourceTypeFroedtertHealth:
+	case pkg.SourceTypeFroedtertHealth:
 		return source.GetSourceFroedtertHealth(env)
-	case definitions.SourceTypeGarnetHealth:
+	case pkg.SourceTypeGarnetHealth:
 		return source.GetSourceGarnetHealth(env)
-	case definitions.SourceTypeGeisinger:
+	case pkg.SourceTypeGeisinger:
 		return source.GetSourceGeisinger(env)
-	case definitions.SourceTypeGenesisHealthcareSystem:
+	case pkg.SourceTypeGenesisHealthcareSystem:
 		return source.GetSourceGenesisHealthcareSystem(env)
-	case definitions.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates:
+	case pkg.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates:
 		return source.GetSourceGeorgeWashingtonUniversityMedicalFacultyAssociates(env)
-	case definitions.SourceTypeGoldenValleyHealthCenters:
+	case pkg.SourceTypeGoldenValleyHealthCenters:
 		return source.GetSourceGoldenValleyHealthCenters(env)
-	case definitions.SourceTypeGradyHealthSystem:
+	case pkg.SourceTypeGradyHealthSystem:
 		return source.GetSourceGradyHealthSystem(env)
-	case definitions.SourceTypeGreaterBaltimoreMedicalCenter:
+	case pkg.SourceTypeGreaterBaltimoreMedicalCenter:
 		return source.GetSourceGreaterBaltimoreMedicalCenter(env)
-	case definitions.SourceTypeGroupHealthCooperativeSouthCentralWisconsin:
+	case pkg.SourceTypeGroupHealthCooperativeSouthCentralWisconsin:
 		return source.GetSourceGroupHealthCooperativeSouthCentralWisconsin(env)
-	case definitions.SourceTypeGundersenHealthSystem:
+	case pkg.SourceTypeGundersenHealthSystem:
 		return source.GetSourceGundersenHealthSystem(env)
-	case definitions.SourceTypeHackensackMeridianHealth:
+	case pkg.SourceTypeHackensackMeridianHealth:
 		return source.GetSourceHackensackMeridianHealth(env)
-	case definitions.SourceTypeHartfordHealthcare:
+	case pkg.SourceTypeHartfordHealthcare:
 		return source.GetSourceHartfordHealthcare(env)
-	case definitions.SourceTypeHattiesburgClinicAndForrestGeneralHospital:
+	case pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital:
 		return source.GetSourceHattiesburgClinicAndForrestGeneralHospital(env)
-	case definitions.SourceTypeHawaiiPacificHealthPrd:
+	case pkg.SourceTypeHawaiiPacificHealthPrd:
 		return source.GetSourceHawaiiPacificHealthPrd(env)
-	case definitions.SourceTypeHcaCentralAndWestTexas:
+	case pkg.SourceTypeHcaCentralAndWestTexas:
 		return source.GetSourceHcaCentralAndWestTexas(env)
-	case definitions.SourceTypeHcaMountain:
+	case pkg.SourceTypeHcaMountain:
 		return source.GetSourceHcaMountain(env)
-	case definitions.SourceTypeHcaSouthAtlantic:
+	case pkg.SourceTypeHcaSouthAtlantic:
 		return source.GetSourceHcaSouthAtlantic(env)
-	case definitions.SourceTypeHealthpartners:
+	case pkg.SourceTypeHealthpartners:
 		return source.GetSourceHealthpartners(env)
-	case definitions.SourceTypeHealthybluela:
+	case pkg.SourceTypeHealthybluela:
 		return source.GetSourceHealthybluela(env)
-	case definitions.SourceTypeHealthybluelamedicaid:
+	case pkg.SourceTypeHealthybluelamedicaid:
 		return source.GetSourceHealthybluelamedicaid(env)
-	case definitions.SourceTypeHealthybluemo:
+	case pkg.SourceTypeHealthybluemo:
 		return source.GetSourceHealthybluemo(env)
-	case definitions.SourceTypeHealthybluemomedicaid:
+	case pkg.SourceTypeHealthybluemomedicaid:
 		return source.GetSourceHealthybluemomedicaid(env)
-	case definitions.SourceTypeHealthybluenc:
+	case pkg.SourceTypeHealthybluenc:
 		return source.GetSourceHealthybluenc(env)
-	case definitions.SourceTypeHealthybluencmedicaid:
+	case pkg.SourceTypeHealthybluencmedicaid:
 		return source.GetSourceHealthybluencmedicaid(env)
-	case definitions.SourceTypeHealthybluene:
+	case pkg.SourceTypeHealthybluene:
 		return source.GetSourceHealthybluene(env)
-	case definitions.SourceTypeHealthybluesc:
+	case pkg.SourceTypeHealthybluesc:
 		return source.GetSourceHealthybluesc(env)
-	case definitions.SourceTypeHendricksRegionalHealth:
+	case pkg.SourceTypeHendricksRegionalHealth:
 		return source.GetSourceHendricksRegionalHealth(env)
-	case definitions.SourceTypeHennepinHealthcare:
+	case pkg.SourceTypeHennepinHealthcare:
 		return source.GetSourceHennepinHealthcare(env)
-	case definitions.SourceTypeHenryFordHealthSystem:
+	case pkg.SourceTypeHenryFordHealthSystem:
 		return source.GetSourceHenryFordHealthSystem(env)
-	case definitions.SourceTypeHighmarkwesternny:
+	case pkg.SourceTypeHighmarkwesternny:
 		return source.GetSourceHighmarkwesternny(env)
-	case definitions.SourceTypeHillPhysicians:
+	case pkg.SourceTypeHillPhysicians:
 		return source.GetSourceHillPhysicians(env)
-	case definitions.SourceTypeHoagMemorialHospitalPresbyterian:
+	case pkg.SourceTypeHoagMemorialHospitalPresbyterian:
 		return source.GetSourceHoagMemorialHospitalPresbyterian(env)
-	case definitions.SourceTypeHonorhealth:
+	case pkg.SourceTypeHonorhealth:
 		return source.GetSourceHonorhealth(env)
-	case definitions.SourceTypeHospitalForSpecialSurgery:
+	case pkg.SourceTypeHospitalForSpecialSurgery:
 		return source.GetSourceHospitalForSpecialSurgery(env)
-	case definitions.SourceTypeHospitalSistersHealthSystemHshs:
+	case pkg.SourceTypeHospitalSistersHealthSystemHshs:
 		return source.GetSourceHospitalSistersHealthSystemHshs(env)
-	case definitions.SourceTypeHoustonMethodist:
+	case pkg.SourceTypeHoustonMethodist:
 		return source.GetSourceHoustonMethodist(env)
-	case definitions.SourceTypeHurleyMedicalCenter:
+	case pkg.SourceTypeHurleyMedicalCenter:
 		return source.GetSourceHurleyMedicalCenter(env)
-	case definitions.SourceTypeIllinoisBoneAndJointInstitute:
+	case pkg.SourceTypeIllinoisBoneAndJointInstitute:
 		return source.GetSourceIllinoisBoneAndJointInstitute(env)
-	case definitions.SourceTypeInfirmaryHealth:
+	case pkg.SourceTypeInfirmaryHealth:
 		return source.GetSourceInfirmaryHealth(env)
-	case definitions.SourceTypeInovaAndValleyHealth:
+	case pkg.SourceTypeInovaAndValleyHealth:
 		return source.GetSourceInovaAndValleyHealth(env)
-	case definitions.SourceTypeInstituteForFamilyHealth:
+	case pkg.SourceTypeInstituteForFamilyHealth:
 		return source.GetSourceInstituteForFamilyHealth(env)
-	case definitions.SourceTypeIntegrisHealth:
+	case pkg.SourceTypeIntegrisHealth:
 		return source.GetSourceIntegrisHealth(env)
-	case definitions.SourceTypeJeffersonHealth:
+	case pkg.SourceTypeJeffersonHealth:
 		return source.GetSourceJeffersonHealth(env)
-	case definitions.SourceTypeJohnMuirHealth:
+	case pkg.SourceTypeJohnMuirHealth:
 		return source.GetSourceJohnMuirHealth(env)
-	case definitions.SourceTypeJohnsHopkinsMedicine:
+	case pkg.SourceTypeJohnsHopkinsMedicine:
 		return source.GetSourceJohnsHopkinsMedicine(env)
-	case definitions.SourceTypeJpsHealthNetwork:
+	case pkg.SourceTypeJpsHealthNetwork:
 		return source.GetSourceJpsHealthNetwork(env)
-	case definitions.SourceTypeKaiserPermanenteCaliforniaNorthern:
+	case pkg.SourceTypeKaiserPermanenteCaliforniaNorthern:
 		return source.GetSourceKaiserPermanenteCaliforniaNorthern(env)
-	case definitions.SourceTypeKaiserPermanenteCaliforniaSouthern:
+	case pkg.SourceTypeKaiserPermanenteCaliforniaSouthern:
 		return source.GetSourceKaiserPermanenteCaliforniaSouthern(env)
-	case definitions.SourceTypeKaiserPermanenteColorado:
+	case pkg.SourceTypeKaiserPermanenteColorado:
 		return source.GetSourceKaiserPermanenteColorado(env)
-	case definitions.SourceTypeKaiserPermanenteGeorgia:
+	case pkg.SourceTypeKaiserPermanenteGeorgia:
 		return source.GetSourceKaiserPermanenteGeorgia(env)
-	case definitions.SourceTypeKaiserPermanenteHawaiiMauiHealthSystem:
+	case pkg.SourceTypeKaiserPermanenteHawaiiMauiHealthSystem:
 		return source.GetSourceKaiserPermanenteHawaiiMauiHealthSystem(env)
-	case definitions.SourceTypeKaiserPermanenteMarylandVirginiaWashingtonDC:
+	case pkg.SourceTypeKaiserPermanenteMarylandVirginiaWashingtonDC:
 		return source.GetSourceKaiserPermanenteMarylandVirginiaWashingtonDC(env)
-	case definitions.SourceTypeKaiserPermanenteOregonSwWashington:
+	case pkg.SourceTypeKaiserPermanenteOregonSwWashington:
 		return source.GetSourceKaiserPermanenteOregonSwWashington(env)
-	case definitions.SourceTypeKaiserPermanenteWashington:
+	case pkg.SourceTypeKaiserPermanenteWashington:
 		return source.GetSourceKaiserPermanenteWashington(env)
-	case definitions.SourceTypeKalamazooCollegeStudentHealthCenter:
+	case pkg.SourceTypeKalamazooCollegeStudentHealthCenter:
 		return source.GetSourceKalamazooCollegeStudentHealthCenter(env)
-	case definitions.SourceTypeKalamazooFootSurgery:
+	case pkg.SourceTypeKalamazooFootSurgery:
 		return source.GetSourceKalamazooFootSurgery(env)
-	case definitions.SourceTypeKelseySeyboldClinic:
+	case pkg.SourceTypeKelseySeyboldClinic:
 		return source.GetSourceKelseySeyboldClinic(env)
-	case definitions.SourceTypeKennedyKriegerInstitute:
+	case pkg.SourceTypeKennedyKriegerInstitute:
 		return source.GetSourceKennedyKriegerInstitute(env)
-	case definitions.SourceTypeKetteringHealthNetwork:
+	case pkg.SourceTypeKetteringHealthNetwork:
 		return source.GetSourceKetteringHealthNetwork(env)
-	case definitions.SourceTypeKingsDaughtersMedicalCenter:
+	case pkg.SourceTypeKingsDaughtersMedicalCenter:
 		return source.GetSourceKingsDaughtersMedicalCenter(env)
-	case definitions.SourceTypeKootenaiHealth:
+	case pkg.SourceTypeKootenaiHealth:
 		return source.GetSourceKootenaiHealth(env)
-	case definitions.SourceTypeLacyCKesslerMdPa:
+	case pkg.SourceTypeLacyCKesslerMdPa:
 		return source.GetSourceLacyCKesslerMdPa(env)
-	case definitions.SourceTypeLaheyHealthSystem:
+	case pkg.SourceTypeLaheyHealthSystem:
 		return source.GetSourceLaheyHealthSystem(env)
-	case definitions.SourceTypeLakelandHealth:
+	case pkg.SourceTypeLakelandHealth:
 		return source.GetSourceLakelandHealth(env)
-	case definitions.SourceTypeLancasterGeneralHealth:
+	case pkg.SourceTypeLancasterGeneralHealth:
 		return source.GetSourceLancasterGeneralHealth(env)
-	case definitions.SourceTypeLcmcHealth:
+	case pkg.SourceTypeLcmcHealth:
 		return source.GetSourceLcmcHealth(env)
-	case definitions.SourceTypeLeeHealth:
+	case pkg.SourceTypeLeeHealth:
 		return source.GetSourceLeeHealth(env)
-	case definitions.SourceTypeLegacyHealth:
+	case pkg.SourceTypeLegacyHealth:
 		return source.GetSourceLegacyHealth(env)
-	case definitions.SourceTypeLehighValleyHealthNetwork:
+	case pkg.SourceTypeLehighValleyHealthNetwork:
 		return source.GetSourceLehighValleyHealthNetwork(env)
-	case definitions.SourceTypeLeonMedicalCenters:
+	case pkg.SourceTypeLeonMedicalCenters:
 		return source.GetSourceLeonMedicalCenters(env)
-	case definitions.SourceTypeLickingMemorialHealthSystems:
+	case pkg.SourceTypeLickingMemorialHealthSystems:
 		return source.GetSourceLickingMemorialHealthSystems(env)
-	case definitions.SourceTypeLifespan:
+	case pkg.SourceTypeLifespan:
 		return source.GetSourceLifespan(env)
-	case definitions.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners:
+	case pkg.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners:
 		return source.GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env)
-	case definitions.SourceTypeLoyolaMedicine:
+	case pkg.SourceTypeLoyolaMedicine:
 		return source.GetSourceLoyolaMedicine(env)
-	case definitions.SourceTypeLuminisHealth:
+	case pkg.SourceTypeLuminisHealth:
 		return source.GetSourceLuminisHealth(env)
-	case definitions.SourceTypeMainLineHealth:
+	case pkg.SourceTypeMainLineHealth:
 		return source.GetSourceMainLineHealth(env)
-	case definitions.SourceTypeMainehealth:
+	case pkg.SourceTypeMainehealth:
 		return source.GetSourceMainehealth(env)
-	case definitions.SourceTypeMartinHealthSystem:
+	case pkg.SourceTypeMartinHealthSystem:
 		return source.GetSourceMartinHealthSystem(env)
-	case definitions.SourceTypeMaryGreeleyMedicalCenterIowa:
+	case pkg.SourceTypeMaryGreeleyMedicalCenterIowa:
 		return source.GetSourceMaryGreeleyMedicalCenterIowa(env)
-	case definitions.SourceTypeMaryWashingtonHealthcare:
+	case pkg.SourceTypeMaryWashingtonHealthcare:
 		return source.GetSourceMaryWashingtonHealthcare(env)
-	case definitions.SourceTypeMassGeneralBrigham:
+	case pkg.SourceTypeMassGeneralBrigham:
 		return source.GetSourceMassGeneralBrigham(env)
-	case definitions.SourceTypeMayoClinic:
+	case pkg.SourceTypeMayoClinic:
 		return source.GetSourceMayoClinic(env)
-	case definitions.SourceTypeMcfarlandClinicIowa:
+	case pkg.SourceTypeMcfarlandClinicIowa:
 		return source.GetSourceMcfarlandClinicIowa(env)
-	case definitions.SourceTypeMedicalUniversityOfSouthCarolina:
+	case pkg.SourceTypeMedicalUniversityOfSouthCarolina:
 		return source.GetSourceMedicalUniversityOfSouthCarolina(env)
-	case definitions.SourceTypeMedisysHealthNetwork:
+	case pkg.SourceTypeMedisysHealthNetwork:
 		return source.GetSourceMedisysHealthNetwork(env)
-	case definitions.SourceTypeMemorialHealthcareSystem:
+	case pkg.SourceTypeMemorialHealthcareSystem:
 		return source.GetSourceMemorialHealthcareSystem(env)
-	case definitions.SourceTypeMemorialHospitalAndHealthCareCenter:
+	case pkg.SourceTypeMemorialHospitalAndHealthCareCenter:
 		return source.GetSourceMemorialHospitalAndHealthCareCenter(env)
-	case definitions.SourceTypeMemorialcare:
+	case pkg.SourceTypeMemorialcare:
 		return source.GetSourceMemorialcare(env)
-	case definitions.SourceTypeMercyHealthOhKy:
+	case pkg.SourceTypeMercyHealthOhKy:
 		return source.GetSourceMercyHealthOhKy(env)
-	case definitions.SourceTypeMercyHealthServicesMd:
+	case pkg.SourceTypeMercyHealthServicesMd:
 		return source.GetSourceMercyHealthServicesMd(env)
-	case definitions.SourceTypeMercyHealthSystemWi:
+	case pkg.SourceTypeMercyHealthSystemWi:
 		return source.GetSourceMercyHealthSystemWi(env)
-	case definitions.SourceTypeMercyMedicalCenter:
+	case pkg.SourceTypeMercyMedicalCenter:
 		return source.GetSourceMercyMedicalCenter(env)
-	case definitions.SourceTypeMeritus:
+	case pkg.SourceTypeMeritus:
 		return source.GetSourceMeritus(env)
-	case definitions.SourceTypeMethodistHealthSystem:
+	case pkg.SourceTypeMethodistHealthSystem:
 		return source.GetSourceMethodistHealthSystem(env)
-	case definitions.SourceTypeMethodistHospitalsPrd:
+	case pkg.SourceTypeMethodistHospitalsPrd:
 		return source.GetSourceMethodistHospitalsPrd(env)
-	case definitions.SourceTypeMetroHealthMichigan:
+	case pkg.SourceTypeMetroHealthMichigan:
 		return source.GetSourceMetroHealthMichigan(env)
-	case definitions.SourceTypeMetrohealthOh:
+	case pkg.SourceTypeMetrohealthOh:
 		return source.GetSourceMetrohealthOh(env)
-	case definitions.SourceTypeMichiganMedicine:
+	case pkg.SourceTypeMichiganMedicine:
 		return source.GetSourceMichiganMedicine(env)
-	case definitions.SourceTypeMiddlesexHospital:
+	case pkg.SourceTypeMiddlesexHospital:
 		return source.GetSourceMiddlesexHospital(env)
-	case definitions.SourceTypeMidmichiganHealth:
+	case pkg.SourceTypeMidmichiganHealth:
 		return source.GetSourceMidmichiganHealth(env)
-	case definitions.SourceTypeMohawkValleyHealthSystem:
+	case pkg.SourceTypeMohawkValleyHealthSystem:
 		return source.GetSourceMohawkValleyHealthSystem(env)
-	case definitions.SourceTypeMolinaHealthcare:
+	case pkg.SourceTypeMolinaHealthcare:
 		return source.GetSourceMolinaHealthcare(env)
-	case definitions.SourceTypeMontageHealth:
+	case pkg.SourceTypeMontageHealth:
 		return source.GetSourceMontageHealth(env)
-	case definitions.SourceTypeMontefioreMedicalCenter:
+	case pkg.SourceTypeMontefioreMedicalCenter:
 		return source.GetSourceMontefioreMedicalCenter(env)
-	case definitions.SourceTypeMonumentHealth:
+	case pkg.SourceTypeMonumentHealth:
 		return source.GetSourceMonumentHealth(env)
-	case definitions.SourceTypeMountAuburnHospital:
+	case pkg.SourceTypeMountAuburnHospital:
 		return source.GetSourceMountAuburnHospital(env)
-	case definitions.SourceTypeMountSinaiHealthSystem:
+	case pkg.SourceTypeMountSinaiHealthSystem:
 		return source.GetSourceMountSinaiHealthSystem(env)
-	case definitions.SourceTypeMountSinaiMedicalCenter:
+	case pkg.SourceTypeMountSinaiMedicalCenter:
 		return source.GetSourceMountSinaiMedicalCenter(env)
-	case definitions.SourceTypeMulticareHealthSystem:
+	case pkg.SourceTypeMulticareHealthSystem:
 		return source.GetSourceMulticareHealthSystem(env)
-	case definitions.SourceTypeMuscogeeCreekNationDepartmentOfHealth:
+	case pkg.SourceTypeMuscogeeCreekNationDepartmentOfHealth:
 		return source.GetSourceMuscogeeCreekNationDepartmentOfHealth(env)
-	case definitions.SourceTypeMyDrNow:
+	case pkg.SourceTypeMyDrNow:
 		return source.GetSourceMyDrNow(env)
-	case definitions.SourceTypeNationwideChildrensHospital:
+	case pkg.SourceTypeNationwideChildrensHospital:
 		return source.GetSourceNationwideChildrensHospital(env)
-	case definitions.SourceTypeNchHealthcareSystem:
+	case pkg.SourceTypeNchHealthcareSystem:
 		return source.GetSourceNchHealthcareSystem(env)
-	case definitions.SourceTypeNebraskaMedicine:
+	case pkg.SourceTypeNebraskaMedicine:
 		return source.GetSourceNebraskaMedicine(env)
-	case definitions.SourceTypeNemours:
+	case pkg.SourceTypeNemours:
 		return source.GetSourceNemours(env)
-	case definitions.SourceTypeNephrologyCenterSouthwestMichigan:
+	case pkg.SourceTypeNephrologyCenterSouthwestMichigan:
 		return source.GetSourceNephrologyCenterSouthwestMichigan(env)
-	case definitions.SourceTypeNewHanoverRegionalMedicalCenter:
+	case pkg.SourceTypeNewHanoverRegionalMedicalCenter:
 		return source.GetSourceNewHanoverRegionalMedicalCenter(env)
-	case definitions.SourceTypeNewJerseyUrology:
+	case pkg.SourceTypeNewJerseyUrology:
 		return source.GetSourceNewJerseyUrology(env)
-	case definitions.SourceTypeNewYorkPresbyterian:
+	case pkg.SourceTypeNewYorkPresbyterian:
 		return source.GetSourceNewYorkPresbyterian(env)
-	case definitions.SourceTypeNorthMemorialHealth:
+	case pkg.SourceTypeNorthMemorialHealth:
 		return source.GetSourceNorthMemorialHealth(env)
-	case definitions.SourceTypeNorthMississippiHealthServices:
+	case pkg.SourceTypeNorthMississippiHealthServices:
 		return source.GetSourceNorthMississippiHealthServices(env)
-	case definitions.SourceTypeNorthOaks:
+	case pkg.SourceTypeNorthOaks:
 		return source.GetSourceNorthOaks(env)
-	case definitions.SourceTypeNortheastGeorgiaHealthSystem:
+	case pkg.SourceTypeNortheastGeorgiaHealthSystem:
 		return source.GetSourceNortheastGeorgiaHealthSystem(env)
-	case definitions.SourceTypeNorthshoreUniversityHealthSystem:
+	case pkg.SourceTypeNorthshoreUniversityHealthSystem:
 		return source.GetSourceNorthshoreUniversityHealthSystem(env)
-	case definitions.SourceTypeNorthwestCommunityHospital:
+	case pkg.SourceTypeNorthwestCommunityHospital:
 		return source.GetSourceNorthwestCommunityHospital(env)
-	case definitions.SourceTypeNortonHealthcare:
+	case pkg.SourceTypeNortonHealthcare:
 		return source.GetSourceNortonHealthcare(env)
-	case definitions.SourceTypeNovantHealth:
+	case pkg.SourceTypeNovantHealth:
 		return source.GetSourceNovantHealth(env)
-	case definitions.SourceTypeNovoHealth:
+	case pkg.SourceTypeNovoHealth:
 		return source.GetSourceNovoHealth(env)
-	case definitions.SourceTypeNycHealthHospitals:
+	case pkg.SourceTypeNycHealthHospitals:
 		return source.GetSourceNycHealthHospitals(env)
-	case definitions.SourceTypeNyuLangoneMedicalCenter:
+	case pkg.SourceTypeNyuLangoneMedicalCenter:
 		return source.GetSourceNyuLangoneMedicalCenter(env)
-	case definitions.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz:
+	case pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz:
 		return source.GetSourceObGynAssociatesOfWacoDrRisterDrKoeritz(env)
-	case definitions.SourceTypeOchin:
+	case pkg.SourceTypeOchin:
 		return source.GetSourceOchin(env)
-	case definitions.SourceTypeOchsnerHealthSystem:
+	case pkg.SourceTypeOchsnerHealthSystem:
 		return source.GetSourceOchsnerHealthSystem(env)
-	case definitions.SourceTypeOhiohealth:
+	case pkg.SourceTypeOhiohealth:
 		return source.GetSourceOhiohealth(env)
-	case definitions.SourceTypeOlmstedMedicalCenter:
+	case pkg.SourceTypeOlmstedMedicalCenter:
 		return source.GetSourceOlmstedMedicalCenter(env)
-	case definitions.SourceTypeOneBrooklynHealthSystem:
+	case pkg.SourceTypeOneBrooklynHealthSystem:
 		return source.GetSourceOneBrooklynHealthSystem(env)
-	case definitions.SourceTypeOptumcareEast:
+	case pkg.SourceTypeOptumcareEast:
 		return source.GetSourceOptumcareEast(env)
-	case definitions.SourceTypeOptumcareWest:
+	case pkg.SourceTypeOptumcareWest:
 		return source.GetSourceOptumcareWest(env)
-	case definitions.SourceTypeOregonHealthAndScienceUniversity:
+	case pkg.SourceTypeOregonHealthAndScienceUniversity:
 		return source.GetSourceOregonHealthAndScienceUniversity(env)
-	case definitions.SourceTypeOrlandoHealth:
+	case pkg.SourceTypeOrlandoHealth:
 		return source.GetSourceOrlandoHealth(env)
-	case definitions.SourceTypeOrthocarolina:
+	case pkg.SourceTypeOrthocarolina:
 		return source.GetSourceOrthocarolina(env)
-	case definitions.SourceTypeOrthovirginia:
+	case pkg.SourceTypeOrthovirginia:
 		return source.GetSourceOrthovirginia(env)
-	case definitions.SourceTypeOsfHealthcare:
+	case pkg.SourceTypeOsfHealthcare:
 		return source.GetSourceOsfHealthcare(env)
-	case definitions.SourceTypeOverlakeHospitalMedicalCenter:
+	case pkg.SourceTypeOverlakeHospitalMedicalCenter:
 		return source.GetSourceOverlakeHospitalMedicalCenter(env)
-	case definitions.SourceTypeOwensboroHealth:
+	case pkg.SourceTypeOwensboroHealth:
 		return source.GetSourceOwensboroHealth(env)
-	case definitions.SourceTypePacificDentalServices:
+	case pkg.SourceTypePacificDentalServices:
 		return source.GetSourcePacificDentalServices(env)
-	case definitions.SourceTypePalosHealth:
+	case pkg.SourceTypePalosHealth:
 		return source.GetSourcePalosHealth(env)
-	case definitions.SourceTypeParkland:
+	case pkg.SourceTypeParkland:
 		return source.GetSourceParkland(env)
-	case definitions.SourceTypeParkviewHealth:
+	case pkg.SourceTypeParkviewHealth:
 		return source.GetSourceParkviewHealth(env)
-	case definitions.SourceTypePeacehealth:
+	case pkg.SourceTypePeacehealth:
 		return source.GetSourcePeacehealth(env)
-	case definitions.SourceTypePediatricPhysiciansOrganizationAtChildrens:
+	case pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens:
 		return source.GetSourcePediatricPhysiciansOrganizationAtChildrens(env)
-	case definitions.SourceTypePennMedicine:
+	case pkg.SourceTypePennMedicine:
 		return source.GetSourcePennMedicine(env)
-	case definitions.SourceTypePhelpsHealth:
+	case pkg.SourceTypePhelpsHealth:
 		return source.GetSourcePhelpsHealth(env)
-	case definitions.SourceTypePiedmontHealthcare:
+	case pkg.SourceTypePiedmontHealthcare:
 		return source.GetSourcePiedmontHealthcare(env)
-	case definitions.SourceTypePikevilleMedicalCenter:
+	case pkg.SourceTypePikevilleMedicalCenter:
 		return source.GetSourcePikevilleMedicalCenter(env)
-	case definitions.SourceTypePineRestChristianMentalHealthServices:
+	case pkg.SourceTypePineRestChristianMentalHealthServices:
 		return source.GetSourcePineRestChristianMentalHealthServices(env)
-	case definitions.SourceTypePlannedParenthood:
+	case pkg.SourceTypePlannedParenthood:
 		return source.GetSourcePlannedParenthood(env)
-	case definitions.SourceTypePremierHealth:
+	case pkg.SourceTypePremierHealth:
 		return source.GetSourcePremierHealth(env)
-	case definitions.SourceTypePresbyterianHealthcareServices:
+	case pkg.SourceTypePresbyterianHealthcareServices:
 		return source.GetSourcePresbyterianHealthcareServices(env)
-	case definitions.SourceTypePrimeHealthcare:
+	case pkg.SourceTypePrimeHealthcare:
 		return source.GetSourcePrimeHealthcare(env)
-	case definitions.SourceTypePrismaHealth:
+	case pkg.SourceTypePrismaHealth:
 		return source.GetSourcePrismaHealth(env)
-	case definitions.SourceTypeProhealthCare:
+	case pkg.SourceTypeProhealthCare:
 		return source.GetSourceProhealthCare(env)
-	case definitions.SourceTypePromedicaHealthSystem:
+	case pkg.SourceTypePromedicaHealthSystem:
 		return source.GetSourcePromedicaHealthSystem(env)
-	case definitions.SourceTypeProvidenceHealthAndServicesAlaska:
+	case pkg.SourceTypeProvidenceHealthAndServicesAlaska:
 		return source.GetSourceProvidenceHealthAndServicesAlaska(env)
-	case definitions.SourceTypeProvidenceHealthAndServicesOregonCalifornia:
+	case pkg.SourceTypeProvidenceHealthAndServicesOregonCalifornia:
 		return source.GetSourceProvidenceHealthAndServicesOregonCalifornia(env)
-	case definitions.SourceTypeProvidenceHealthAndServicesWashingtonMontana:
+	case pkg.SourceTypeProvidenceHealthAndServicesWashingtonMontana:
 		return source.GetSourceProvidenceHealthAndServicesWashingtonMontana(env)
-	case definitions.SourceTypeQuadmed:
+	case pkg.SourceTypeQuadmed:
 		return source.GetSourceQuadmed(env)
-	case definitions.SourceTypeRadyChildrens:
+	case pkg.SourceTypeRadyChildrens:
 		return source.GetSourceRadyChildrens(env)
-	case definitions.SourceTypeReidHealth:
+	case pkg.SourceTypeReidHealth:
 		return source.GetSourceReidHealth(env)
-	case definitions.SourceTypeReliantMedicalGroup:
+	case pkg.SourceTypeReliantMedicalGroup:
 		return source.GetSourceReliantMedicalGroup(env)
-	case definitions.SourceTypeRenownBartonCvmc:
+	case pkg.SourceTypeRenownBartonCvmc:
 		return source.GetSourceRenownBartonCvmc(env)
-	case definitions.SourceTypeRiversideHealthSystemNewportNewsVa:
+	case pkg.SourceTypeRiversideHealthSystemNewportNewsVa:
 		return source.GetSourceRiversideHealthSystemNewportNewsVa(env)
-	case definitions.SourceTypeRiversideMedicalCenter:
+	case pkg.SourceTypeRiversideMedicalCenter:
 		return source.GetSourceRiversideMedicalCenter(env)
-	case definitions.SourceTypeRiversideMedicalClinic:
+	case pkg.SourceTypeRiversideMedicalClinic:
 		return source.GetSourceRiversideMedicalClinic(env)
-	case definitions.SourceTypeRochesterRegionalHealth:
+	case pkg.SourceTypeRochesterRegionalHealth:
 		return source.GetSourceRochesterRegionalHealth(env)
-	case definitions.SourceTypeRushUniversityMedicalCenter:
+	case pkg.SourceTypeRushUniversityMedicalCenter:
 		return source.GetSourceRushUniversityMedicalCenter(env)
-	case definitions.SourceTypeRwjbarnabasHealth:
+	case pkg.SourceTypeRwjbarnabasHealth:
 		return source.GetSourceRwjbarnabasHealth(env)
-	case definitions.SourceTypeSaintFrancisHealthSystem:
+	case pkg.SourceTypeSaintFrancisHealthSystem:
 		return source.GetSourceSaintFrancisHealthSystem(env)
-	case definitions.SourceTypeSaintFrancisHealthcareSystemManual:
+	case pkg.SourceTypeSaintFrancisHealthcareSystemManual:
 		return source.GetSourceSaintFrancisHealthcareSystemManual(env)
-	case definitions.SourceTypeSalemHealth:
+	case pkg.SourceTypeSalemHealth:
 		return source.GetSourceSalemHealth(env)
-	case definitions.SourceTypeSalinasValleyMemorialHealthcareSystems:
+	case pkg.SourceTypeSalinasValleyMemorialHealthcareSystems:
 		return source.GetSourceSalinasValleyMemorialHealthcareSystems(env)
-	case definitions.SourceTypeSamaritanHealthServices:
+	case pkg.SourceTypeSamaritanHealthServices:
 		return source.GetSourceSamaritanHealthServices(env)
-	case definitions.SourceTypeSanFranciscoDepartmentOfPublicHealth:
+	case pkg.SourceTypeSanFranciscoDepartmentOfPublicHealth:
 		return source.GetSourceSanFranciscoDepartmentOfPublicHealth(env)
-	case definitions.SourceTypeSanfordHealth:
+	case pkg.SourceTypeSanfordHealth:
 		return source.GetSourceSanfordHealth(env)
-	case definitions.SourceTypeSansumClinic:
+	case pkg.SourceTypeSansumClinic:
 		return source.GetSourceSansumClinic(env)
-	case definitions.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics:
+	case pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics:
 		return source.GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env)
-	case definitions.SourceTypeSclHealth:
+	case pkg.SourceTypeSclHealth:
 		return source.GetSourceSclHealth(env)
-	case definitions.SourceTypeScotlandHealthCareSystem:
+	case pkg.SourceTypeScotlandHealthCareSystem:
 		return source.GetSourceScotlandHealthCareSystem(env)
-	case definitions.SourceTypeScottishRiteForChildren:
+	case pkg.SourceTypeScottishRiteForChildren:
 		return source.GetSourceScottishRiteForChildren(env)
-	case definitions.SourceTypeScrippsHealth:
+	case pkg.SourceTypeScrippsHealth:
 		return source.GetSourceScrippsHealth(env)
-	case definitions.SourceTypeSeattleChildrensHospital:
+	case pkg.SourceTypeSeattleChildrensHospital:
 		return source.GetSourceSeattleChildrensHospital(env)
-	case definitions.SourceTypeSelectMedical:
+	case pkg.SourceTypeSelectMedical:
 		return source.GetSourceSelectMedical(env)
-	case definitions.SourceTypeSelfRegionalHealthcare:
+	case pkg.SourceTypeSelfRegionalHealthcare:
 		return source.GetSourceSelfRegionalHealthcare(env)
-	case definitions.SourceTypeSentaraHealthcare:
+	case pkg.SourceTypeSentaraHealthcare:
 		return source.GetSourceSentaraHealthcare(env)
-	case definitions.SourceTypeShannonHealth:
+	case pkg.SourceTypeShannonHealth:
 		return source.GetSourceShannonHealth(env)
-	case definitions.SourceTypeSimplyhealthcaremedicaid:
+	case pkg.SourceTypeSimplyhealthcaremedicaid:
 		return source.GetSourceSimplyhealthcaremedicaid(env)
-	case definitions.SourceTypeSimplyhealthcaremedicare:
+	case pkg.SourceTypeSimplyhealthcaremedicare:
 		return source.GetSourceSimplyhealthcaremedicare(env)
-	case definitions.SourceTypeSingingRiverHealthSystemPrd:
+	case pkg.SourceTypeSingingRiverHealthSystemPrd:
 		return source.GetSourceSingingRiverHealthSystemPrd(env)
-	case definitions.SourceTypeSkagitRegionalHealth:
+	case pkg.SourceTypeSkagitRegionalHealth:
 		return source.GetSourceSkagitRegionalHealth(env)
-	case definitions.SourceTypeSolutionhealth:
+	case pkg.SourceTypeSolutionhealth:
 		return source.GetSourceSolutionhealth(env)
-	case definitions.SourceTypeSouthGeorgiaMedicalCenter:
+	case pkg.SourceTypeSouthGeorgiaMedicalCenter:
 		return source.GetSourceSouthGeorgiaMedicalCenter(env)
-	case definitions.SourceTypeSouthShoreHealthSystem:
+	case pkg.SourceTypeSouthShoreHealthSystem:
 		return source.GetSourceSouthShoreHealthSystem(env)
-	case definitions.SourceTypeSouthcoastHealth:
+	case pkg.SourceTypeSouthcoastHealth:
 		return source.GetSourceSouthcoastHealth(env)
-	case definitions.SourceTypeSoutheastHealth:
+	case pkg.SourceTypeSoutheastHealth:
 		return source.GetSourceSoutheastHealth(env)
-	case definitions.SourceTypeSoutheasternHealth:
+	case pkg.SourceTypeSoutheasternHealth:
 		return source.GetSourceSoutheasternHealth(env)
-	case definitions.SourceTypeSouthernIllinoisHealthcare:
+	case pkg.SourceTypeSouthernIllinoisHealthcare:
 		return source.GetSourceSouthernIllinoisHealthcare(env)
-	case definitions.SourceTypeSparrowHealthSystem:
+	case pkg.SourceTypeSparrowHealthSystem:
 		return source.GetSourceSparrowHealthSystem(env)
-	case definitions.SourceTypeSpartanburgRegionalHealthSystems:
+	case pkg.SourceTypeSpartanburgRegionalHealthSystems:
 		return source.GetSourceSpartanburgRegionalHealthSystems(env)
-	case definitions.SourceTypeSpectrumHealthLakeland:
+	case pkg.SourceTypeSpectrumHealthLakeland:
 		return source.GetSourceSpectrumHealthLakeland(env)
-	case definitions.SourceTypeSpectrumHealth:
+	case pkg.SourceTypeSpectrumHealth:
 		return source.GetSourceSpectrumHealth(env)
-	case definitions.SourceTypeSsmHealth:
+	case pkg.SourceTypeSsmHealth:
 		return source.GetSourceSsmHealth(env)
-	case definitions.SourceTypeStCharlesHealthSystem:
+	case pkg.SourceTypeStCharlesHealthSystem:
 		return source.GetSourceStCharlesHealthSystem(env)
-	case definitions.SourceTypeStElizabethHealthcare:
+	case pkg.SourceTypeStElizabethHealthcare:
 		return source.GetSourceStElizabethHealthcare(env)
-	case definitions.SourceTypeStJosephHospitalHealthCenter:
+	case pkg.SourceTypeStJosephHospitalHealthCenter:
 		return source.GetSourceStJosephHospitalHealthCenter(env)
-	case definitions.SourceTypeStJudeChildrensResearchHospital:
+	case pkg.SourceTypeStJudeChildrensResearchHospital:
 		return source.GetSourceStJudeChildrensResearchHospital(env)
-	case definitions.SourceTypeStLukesHealthSystemIdahoAndEasternOregon:
+	case pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon:
 		return source.GetSourceStLukesHealthSystemIdahoAndEasternOregon(env)
-	case definitions.SourceTypeStLukesHospitalNorthCarolina:
+	case pkg.SourceTypeStLukesHospitalNorthCarolina:
 		return source.GetSourceStLukesHospitalNorthCarolina(env)
-	case definitions.SourceTypeStanfordChildrensHealth:
+	case pkg.SourceTypeStanfordChildrensHealth:
 		return source.GetSourceStanfordChildrensHealth(env)
-	case definitions.SourceTypeStanfordHealthCare:
+	case pkg.SourceTypeStanfordHealthCare:
 		return source.GetSourceStanfordHealthCare(env)
-	case definitions.SourceTypeStormontVailHealth:
+	case pkg.SourceTypeStormontVailHealth:
 		return source.GetSourceStormontVailHealth(env)
-	case definitions.SourceTypeSummitHealth:
+	case pkg.SourceTypeSummitHealth:
 		return source.GetSourceSummitHealth(env)
-	case definitions.SourceTypeSummitcommunitycare:
+	case pkg.SourceTypeSummitcommunitycare:
 		return source.GetSourceSummitcommunitycare(env)
-	case definitions.SourceTypeSunyUpstateMedicalUniversity:
+	case pkg.SourceTypeSunyUpstateMedicalUniversity:
 		return source.GetSourceSunyUpstateMedicalUniversity(env)
-	case definitions.SourceTypeSutterHealth:
+	case pkg.SourceTypeSutterHealth:
 		return source.GetSourceSutterHealth(env)
-	case definitions.SourceTypeTampaGeneralHospital:
+	case pkg.SourceTypeTampaGeneralHospital:
 		return source.GetSourceTampaGeneralHospital(env)
-	case definitions.SourceTypeTannerHealthSystem:
+	case pkg.SourceTypeTannerHealthSystem:
 		return source.GetSourceTannerHealthSystem(env)
-	case definitions.SourceTypeTemplehealth:
+	case pkg.SourceTypeTemplehealth:
 		return source.GetSourceTemplehealth(env)
-	case definitions.SourceTypeTexasChildrens:
+	case pkg.SourceTypeTexasChildrens:
 		return source.GetSourceTexasChildrens(env)
-	case definitions.SourceTypeTexasHealthResources:
+	case pkg.SourceTypeTexasHealthResources:
 		return source.GetSourceTexasHealthResources(env)
-	case definitions.SourceTypeTheBrooklynHospitalCenter:
+	case pkg.SourceTypeTheBrooklynHospitalCenter:
 		return source.GetSourceTheBrooklynHospitalCenter(env)
-	case definitions.SourceTypeTheChristHospital:
+	case pkg.SourceTypeTheChristHospital:
 		return source.GetSourceTheChristHospital(env)
-	case definitions.SourceTypeTheEverettClinic:
+	case pkg.SourceTypeTheEverettClinic:
 		return source.GetSourceTheEverettClinic(env)
-	case definitions.SourceTypeTheGuthrieClinic:
+	case pkg.SourceTypeTheGuthrieClinic:
 		return source.GetSourceTheGuthrieClinic(env)
-	case definitions.SourceTypeTheOhioStateUniversityWexnerMedicalCenter:
+	case pkg.SourceTypeTheOhioStateUniversityWexnerMedicalCenter:
 		return source.GetSourceTheOhioStateUniversityWexnerMedicalCenter(env)
-	case definitions.SourceTypeThePolyclinic:
+	case pkg.SourceTypeThePolyclinic:
 		return source.GetSourceThePolyclinic(env)
-	case definitions.SourceTypeThePortlandClinic:
+	case pkg.SourceTypeThePortlandClinic:
 		return source.GetSourceThePortlandClinic(env)
-	case definitions.SourceTypeTheQueensHealthSystems:
+	case pkg.SourceTypeTheQueensHealthSystems:
 		return source.GetSourceTheQueensHealthSystems(env)
-	case definitions.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston:
+	case pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston:
 		return source.GetSourceTheUniversityOfTexasHealthScienceCenterAtHouston(env)
-	case definitions.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter:
+	case pkg.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter:
 		return source.GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env)
-	case definitions.SourceTypeTheUniversityOfVermontHealthNetwork:
+	case pkg.SourceTypeTheUniversityOfVermontHealthNetwork:
 		return source.GetSourceTheUniversityOfVermontHealthNetwork(env)
-	case definitions.SourceTypeTheVancouverClinic:
+	case pkg.SourceTypeTheVancouverClinic:
 		return source.GetSourceTheVancouverClinic(env)
-	case definitions.SourceTypeThedacare:
+	case pkg.SourceTypeThedacare:
 		return source.GetSourceThedacare(env)
-	case definitions.SourceTypeTidalhealth:
+	case pkg.SourceTypeTidalhealth:
 		return source.GetSourceTidalhealth(env)
-	case definitions.SourceTypeTmcHealthcare:
+	case pkg.SourceTypeTmcHealthcare:
 		return source.GetSourceTmcHealthcare(env)
-	case definitions.SourceTypeTowerHealth:
+	case pkg.SourceTypeTowerHealth:
 		return source.GetSourceTowerHealth(env)
-	case definitions.SourceTypeTrihealth:
+	case pkg.SourceTypeTrihealth:
 		return source.GetSourceTrihealth(env)
-	case definitions.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield:
+	case pkg.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield:
 		return source.GetSourceTrinityHealthOfNewEnglandMedicalGroupSpringfield(env)
-	case definitions.SourceTypeTrinityHealthOfNewEngland:
+	case pkg.SourceTypeTrinityHealthOfNewEngland:
 		return source.GetSourceTrinityHealthOfNewEngland(env)
-	case definitions.SourceTypeTrinityHealth:
+	case pkg.SourceTypeTrinityHealth:
 		return source.GetSourceTrinityHealth(env)
-	case definitions.SourceTypeTuftsMedicine:
+	case pkg.SourceTypeTuftsMedicine:
 		return source.GetSourceTuftsMedicine(env)
-	case definitions.SourceTypeUcDavisMmc:
+	case pkg.SourceTypeUcDavisMmc:
 		return source.GetSourceUcDavisMmc(env)
-	case definitions.SourceTypeUcDavis:
+	case pkg.SourceTypeUcDavis:
 		return source.GetSourceUcDavis(env)
-	case definitions.SourceTypeUcHealth:
+	case pkg.SourceTypeUcHealth:
 		return source.GetSourceUcHealth(env)
-	case definitions.SourceTypeUchicagoMedicine:
+	case pkg.SourceTypeUchicagoMedicine:
 		return source.GetSourceUchicagoMedicine(env)
-	case definitions.SourceTypeUclaMedicalCenter:
+	case pkg.SourceTypeUclaMedicalCenter:
 		return source.GetSourceUclaMedicalCenter(env)
-	case definitions.SourceTypeUconnHealth:
+	case pkg.SourceTypeUconnHealth:
 		return source.GetSourceUconnHealth(env)
-	case definitions.SourceTypeUcsfBenioffChildrensHospital:
+	case pkg.SourceTypeUcsfBenioffChildrensHospital:
 		return source.GetSourceUcsfBenioffChildrensHospital(env)
-	case definitions.SourceTypeUcsfHealth:
+	case pkg.SourceTypeUcsfHealth:
 		return source.GetSourceUcsfHealth(env)
-	case definitions.SourceTypeUfHealth:
+	case pkg.SourceTypeUfHealth:
 		return source.GetSourceUfHealth(env)
-	case definitions.SourceTypeUhsSanAntonio:
+	case pkg.SourceTypeUhsSanAntonio:
 		return source.GetSourceUhsSanAntonio(env)
-	case definitions.SourceTypeUiHealth:
+	case pkg.SourceTypeUiHealth:
 		return source.GetSourceUiHealth(env)
-	case definitions.SourceTypeUkHealthcare:
+	case pkg.SourceTypeUkHealthcare:
 		return source.GetSourceUkHealthcare(env)
-	case definitions.SourceTypeUmassMemorialHealthCare:
+	case pkg.SourceTypeUmassMemorialHealthCare:
 		return source.GetSourceUmassMemorialHealthCare(env)
-	case definitions.SourceTypeUmcSouthernNevada:
+	case pkg.SourceTypeUmcSouthernNevada:
 		return source.GetSourceUmcSouthernNevada(env)
-	case definitions.SourceTypeUncHealthCare:
+	case pkg.SourceTypeUncHealthCare:
 		return source.GetSourceUncHealthCare(env)
-	case definitions.SourceTypeUnicare:
+	case pkg.SourceTypeUnicare:
 		return source.GetSourceUnicare(env)
-	case definitions.SourceTypeUnicarema:
+	case pkg.SourceTypeUnicarema:
 		return source.GetSourceUnicarema(env)
-	case definitions.SourceTypeUnitedHealthServicesNewYorkNyuhs:
+	case pkg.SourceTypeUnitedHealthServicesNewYorkNyuhs:
 		return source.GetSourceUnitedHealthServicesNewYorkNyuhs(env)
-	case definitions.SourceTypeUnitedRegionalHealthCareSystem:
+	case pkg.SourceTypeUnitedRegionalHealthCareSystem:
 		return source.GetSourceUnitedRegionalHealthCareSystem(env)
-	case definitions.SourceTypeUnitypointHealth:
+	case pkg.SourceTypeUnitypointHealth:
 		return source.GetSourceUnitypointHealth(env)
-	case definitions.SourceTypeUniversityHealthCareSystem:
+	case pkg.SourceTypeUniversityHealthCareSystem:
 		return source.GetSourceUniversityHealthCareSystem(env)
-	case definitions.SourceTypeUniversityHospitalNewJersey:
+	case pkg.SourceTypeUniversityHospitalNewJersey:
 		return source.GetSourceUniversityHospitalNewJersey(env)
-	case definitions.SourceTypeUniversityOfArkansasForMedicalSciences:
+	case pkg.SourceTypeUniversityOfArkansasForMedicalSciences:
 		return source.GetSourceUniversityOfArkansasForMedicalSciences(env)
-	case definitions.SourceTypeUniversityOfCaliforniaIrvine:
+	case pkg.SourceTypeUniversityOfCaliforniaIrvine:
 		return source.GetSourceUniversityOfCaliforniaIrvine(env)
-	case definitions.SourceTypeUniversityOfCaliforniaSanDiego:
+	case pkg.SourceTypeUniversityOfCaliforniaSanDiego:
 		return source.GetSourceUniversityOfCaliforniaSanDiego(env)
-	case definitions.SourceTypeUniversityOfIowaHealthCare:
+	case pkg.SourceTypeUniversityOfIowaHealthCare:
 		return source.GetSourceUniversityOfIowaHealthCare(env)
-	case definitions.SourceTypeUniversityOfKansasHealthSystem:
+	case pkg.SourceTypeUniversityOfKansasHealthSystem:
 		return source.GetSourceUniversityOfKansasHealthSystem(env)
-	case definitions.SourceTypeUniversityOfLouisvillePhysicians:
+	case pkg.SourceTypeUniversityOfLouisvillePhysicians:
 		return source.GetSourceUniversityOfLouisvillePhysicians(env)
-	case definitions.SourceTypeUniversityOfMarylandMedicalSystem:
+	case pkg.SourceTypeUniversityOfMarylandMedicalSystem:
 		return source.GetSourceUniversityOfMarylandMedicalSystem(env)
-	case definitions.SourceTypeUniversityOfMississippiMedicalCenter:
+	case pkg.SourceTypeUniversityOfMississippiMedicalCenter:
 		return source.GetSourceUniversityOfMississippiMedicalCenter(env)
-	case definitions.SourceTypeUniversityOfPittsburghMedicalCenterUpmc:
+	case pkg.SourceTypeUniversityOfPittsburghMedicalCenterUpmc:
 		return source.GetSourceUniversityOfPittsburghMedicalCenterUpmc(env)
-	case definitions.SourceTypeUniversityOfRochesterMedicalCenterPrd:
+	case pkg.SourceTypeUniversityOfRochesterMedicalCenterPrd:
 		return source.GetSourceUniversityOfRochesterMedicalCenterPrd(env)
-	case definitions.SourceTypeUniversityOfTexasMedicalBranch:
+	case pkg.SourceTypeUniversityOfTexasMedicalBranch:
 		return source.GetSourceUniversityOfTexasMedicalBranch(env)
-	case definitions.SourceTypeUniversityOfTexasSouthwesternMedicalCenter:
+	case pkg.SourceTypeUniversityOfTexasSouthwesternMedicalCenter:
 		return source.GetSourceUniversityOfTexasSouthwesternMedicalCenter(env)
-	case definitions.SourceTypeUniversityOfToledo:
+	case pkg.SourceTypeUniversityOfToledo:
 		return source.GetSourceUniversityOfToledo(env)
-	case definitions.SourceTypeUniversityOfUtahHealthcare:
+	case pkg.SourceTypeUniversityOfUtahHealthcare:
 		return source.GetSourceUniversityOfUtahHealthcare(env)
-	case definitions.SourceTypeUpmcCentralPa:
+	case pkg.SourceTypeUpmcCentralPa:
 		return source.GetSourceUpmcCentralPa(env)
-	case definitions.SourceTypeUtHealthSanAntonio:
+	case pkg.SourceTypeUtHealthSanAntonio:
 		return source.GetSourceUtHealthSanAntonio(env)
-	case definitions.SourceTypeUvaHealthSystem:
+	case pkg.SourceTypeUvaHealthSystem:
 		return source.GetSourceUvaHealthSystem(env)
-	case definitions.SourceTypeUwHealthAndAffiliatesWisconsin:
+	case pkg.SourceTypeUwHealthAndAffiliatesWisconsin:
 		return source.GetSourceUwHealthAndAffiliatesWisconsin(env)
-	case definitions.SourceTypeUwMedicineWashington:
+	case pkg.SourceTypeUwMedicineWashington:
 		return source.GetSourceUwMedicineWashington(env)
-	case definitions.SourceTypeValleyChildrensHealthcare:
+	case pkg.SourceTypeValleyChildrensHealthcare:
 		return source.GetSourceValleyChildrensHealthcare(env)
-	case definitions.SourceTypeValleyMedicalCenter:
+	case pkg.SourceTypeValleyMedicalCenter:
 		return source.GetSourceValleyMedicalCenter(env)
-	case definitions.SourceTypeValleywiseHealth:
+	case pkg.SourceTypeValleywiseHealth:
 		return source.GetSourceValleywiseHealth(env)
-	case definitions.SourceTypeVanderbilt:
+	case pkg.SourceTypeVanderbilt:
 		return source.GetSourceVanderbilt(env)
-	case definitions.SourceTypeVcuHealth:
+	case pkg.SourceTypeVcuHealth:
 		return source.GetSourceVcuHealth(env)
-	case definitions.SourceTypeVidantHealth:
+	case pkg.SourceTypeVidantHealth:
 		return source.GetSourceVidantHealth(env)
-	case definitions.SourceTypeVirginiaHospitalCenter:
+	case pkg.SourceTypeVirginiaHospitalCenter:
 		return source.GetSourceVirginiaHospitalCenter(env)
-	case definitions.SourceTypeVirtuaHealth:
+	case pkg.SourceTypeVirtuaHealth:
 		return source.GetSourceVirtuaHealth(env)
-	case definitions.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter:
+	case pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter:
 		return source.GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env)
-	case definitions.SourceTypeWakemedHealthAndHospitals:
+	case pkg.SourceTypeWakemedHealthAndHospitals:
 		return source.GetSourceWakemedHealthAndHospitals(env)
-	case definitions.SourceTypeWalmart:
+	case pkg.SourceTypeWalmart:
 		return source.GetSourceWalmart(env)
-	case definitions.SourceTypeWashingtonHospitalHealthcareSystem:
+	case pkg.SourceTypeWashingtonHospitalHealthcareSystem:
 		return source.GetSourceWashingtonHospitalHealthcareSystem(env)
-	case definitions.SourceTypeWatsonClinic:
+	case pkg.SourceTypeWatsonClinic:
 		return source.GetSourceWatsonClinic(env)
-	case definitions.SourceTypeWeillCornellMedicine:
+	case pkg.SourceTypeWeillCornellMedicine:
 		return source.GetSourceWeillCornellMedicine(env)
-	case definitions.SourceTypeWellspanHealth:
+	case pkg.SourceTypeWellspanHealth:
 		return source.GetSourceWellspanHealth(env)
-	case definitions.SourceTypeWellstar:
+	case pkg.SourceTypeWellstar:
 		return source.GetSourceWellstar(env)
-	case definitions.SourceTypeWestTennesseeHealthcare:
+	case pkg.SourceTypeWestTennesseeHealthcare:
 		return source.GetSourceWestTennesseeHealthcare(env)
-	case definitions.SourceTypeWestVirginiaUniversityMedicine:
+	case pkg.SourceTypeWestVirginiaUniversityMedicine:
 		return source.GetSourceWestVirginiaUniversityMedicine(env)
-	case definitions.SourceTypeWesternMichiganUniversitySchoolOfMedicine:
+	case pkg.SourceTypeWesternMichiganUniversitySchoolOfMedicine:
 		return source.GetSourceWesternMichiganUniversitySchoolOfMedicine(env)
-	case definitions.SourceTypeYakimaValleyFarmWorkersClinic:
+	case pkg.SourceTypeYakimaValleyFarmWorkersClinic:
 		return source.GetSourceYakimaValleyFarmWorkersClinic(env)
-	case definitions.SourceTypeYaleNewHavenHealthSystem:
+	case pkg.SourceTypeYaleNewHavenHealthSystem:
 		return source.GetSourceYaleNewHavenHealthSystem(env)
-	case definitions.SourceTypeYumaRegionalMedicalCenter:
+	case pkg.SourceTypeYumaRegionalMedicalCenter:
 		return source.GetSourceYumaRegionalMedicalCenter(env)
-	case definitions.SourceTypeAetna:
+	case pkg.SourceTypeAetna:
 		return source.GetSourceAetna(env)
-	case definitions.SourceTypeBluebutton:
+	case pkg.SourceTypeBluebutton:
 		return source.GetSourceBluebutton(env)
-	case definitions.SourceTypeCigna:
+	case pkg.SourceTypeCigna:
 		return source.GetSourceCigna(env)
 	// sandbox
-	case definitions.SourceTypeAthena:
+	case pkg.SourceTypeAthena:
 		return sandbox.GetSourceAthena(env)
-	case definitions.SourceTypeHealthit:
+	case pkg.SourceTypeHealthit:
 		return sandbox.GetSourceHealthit(env)
-	case definitions.SourceTypeLogica:
+	case pkg.SourceTypeLogica:
 		return sandbox.GetSourceLogica(env)
 	default:
 		return models.LighthouseSourceDefinition{}, fmt.Errorf("could not find source type")
@@ -923,10 +922,10 @@ func GetSourceConfigMap(env pkg.FastenEnvType) (map[string]models.LighthouseSour
 	var sourceTypes []pkg.SourceType
 	// in sandbox mode, we support sandbox servers, platforms and providers that have sandbox environments
 	if env == pkg.FastenEnvSandbox {
-		sourceTypes = []pkg.SourceType{definitions.SourceTypeAthena, definitions.SourceTypeHealthit, definitions.SourceTypeLogica, definitions.SourceTypeCareevolution, definitions.SourceTypeCerner, definitions.SourceTypeEpic, definitions.SourceTypeAnthem, definitions.SourceTypeAetna, definitions.SourceTypeBluebutton, definitions.SourceTypeCigna}
+		sourceTypes = []pkg.SourceType{pkg.SourceTypeAthena, pkg.SourceTypeHealthit, pkg.SourceTypeLogica, pkg.SourceTypeCareevolution, pkg.SourceTypeCerner, pkg.SourceTypeEpic, pkg.SourceTypeAnthem, pkg.SourceTypeAetna, pkg.SourceTypeBluebutton, pkg.SourceTypeCigna}
 	} else {
 		// only show production envs
-		sourceTypes = []pkg.SourceType{definitions.SourceTypeAccessCommunityHealthNetwork, definitions.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo, definitions.SourceTypeAdvantagecarePhysicians, definitions.SourceTypeAdventhealth, definitions.SourceTypeAdventistHealthWest, definitions.SourceTypeAkronChildrensHospital, definitions.SourceTypeAlamedaHealthSystem, definitions.SourceTypeAlleghenyHealthNetwork, definitions.SourceTypeAllinaHealthSystem, definitions.SourceTypeAltamed, definitions.SourceTypeAltruHealthSystem, definitions.SourceTypeAmerigroup, definitions.SourceTypeAmerigroupmedicaid, definitions.SourceTypeAnmedHealth, definitions.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago, definitions.SourceTypeAnthemMedicaid, definitions.SourceTypeAnthem, definitions.SourceTypeAnthembluecrossca, definitions.SourceTypeArdent, definitions.SourceTypeArizonaCommunityPhysicians, definitions.SourceTypeArkansasChildrens, definitions.SourceTypeArrowheadRegionalMedicalCenter, definitions.SourceTypeAsanteHealthSystems, definitions.SourceTypeAspenValleyHospital, definitions.SourceTypeAspirus, definitions.SourceTypeAtlanticHealth, definitions.SourceTypeAtriumHealthWakeForestBaptist, definitions.SourceTypeAtriumHealth, definitions.SourceTypeAtriusHealth, definitions.SourceTypeAuroraHealthCareMyaurora, definitions.SourceTypeAustinRegionalClinic, definitions.SourceTypeBalladHealth, definitions.SourceTypeBaptistHealthArkansas, definitions.SourceTypeBaptistHealthKyAndIn, definitions.SourceTypeBaptistHealthNortheastFlorida, definitions.SourceTypeBaptistMemorialHealthCare, definitions.SourceTypeBassettHealthcare, definitions.SourceTypeBaycareClinicMybaycare, definitions.SourceTypeBayhealthMedicalCenter, definitions.SourceTypeBaylorCollegeOfMedicine, definitions.SourceTypeBaylorScottAndWhite, definitions.SourceTypeBcbskansas, definitions.SourceTypeBcbskansasmedicare, definitions.SourceTypeBcbsny, definitions.SourceTypeBeaumontHealth, definitions.SourceTypeBellinHealth, definitions.SourceTypeBjcAndWashingtonUniversity, definitions.SourceTypeBluemedicareadvantage, definitions.SourceTypeBonSecoursHealthSystem, definitions.SourceTypeBostonMedicalCenter, definitions.SourceTypeBoulderCommunityHealth, definitions.SourceTypeBronsonHealthcareGroup, definitions.SourceTypeBrookwoodBaptistHealth, definitions.SourceTypeBrownAndTolandPhysicians, definitions.SourceTypeBryanHealth, definitions.SourceTypeBuffaloMedicalGroup, definitions.SourceTypeCapeCodHealthcare, definitions.SourceTypeCapeFearValleyHealth, definitions.SourceTypeCareNewEngland, definitions.SourceTypeCarleFoundationHospitalAndPhysicianGroup, definitions.SourceTypeCaromontHealth, definitions.SourceTypeCatholicHealthLongIslandNy, definitions.SourceTypeCatholicHealthSystemBuffalo, definitions.SourceTypeCedarsSinaiHealthSystem, definitions.SourceTypeCentracareHealthAndAffiliates, definitions.SourceTypeCenturaHealth, definitions.SourceTypeCharlotteEyeEarNoseAndThroatAssociates, definitions.SourceTypeChesapeakeRegionalMedicalCenter, definitions.SourceTypeCheyenneRegionalMedicalCenter, definitions.SourceTypeChildrensHealthSystemOfTexas, definitions.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska, definitions.SourceTypeChildrensHospitalColorado, definitions.SourceTypeChildrensHospitalOfPhiladelphia, definitions.SourceTypeChildrensWisconsin, definitions.SourceTypeChildrenssHealthcareOfAtlanta, definitions.SourceTypeCignaMedicalGroup, definitions.SourceTypeCincinnatiChildrensHospitalMedicalCenter, definitions.SourceTypeCityOfHope, definitions.SourceTypeClearhealthalliance, definitions.SourceTypeClevelandClinic, definitions.SourceTypeColumbiaPhysicians, definitions.SourceTypeColumbusRegionalHealth, definitions.SourceTypeCommunityHealthNetwork, definitions.SourceTypeCommunityHealthcareSystem, definitions.SourceTypeCommunityMedicalCenters, definitions.SourceTypeConeHealth, definitions.SourceTypeConemaughHealthSystem, definitions.SourceTypeConfluenceHealth, definitions.SourceTypeConnecticutChildrensMedicalCenter, definitions.SourceTypeContraCosta, definitions.SourceTypeCookChildrensHealthCareSystem, definitions.SourceTypeCooperUniversityHealthCare, definitions.SourceTypeCottageHealth, definitions.SourceTypeCovenantHealth, definitions.SourceTypeDartmouthHitchcock, definitions.SourceTypeDavitaPhysicianSolutions, definitions.SourceTypeDaytonChildrensHospital, definitions.SourceTypeDeaconessHealthSystemPrd, definitions.SourceTypeDellchildrens, definitions.SourceTypeDenverHealth, definitions.SourceTypeDrexelMedicine, definitions.SourceTypeDriscollChildrensHospital, definitions.SourceTypeDukeHealth, definitions.SourceTypeDulyHealthAndCare, definitions.SourceTypeEastBostonNeighborhoodHealthCenter, definitions.SourceTypeEdwardElmhurstHealthcare, definitions.SourceTypeEisenhowerMedicalCenter, definitions.SourceTypeElCaminoHospital, definitions.SourceTypeElRioHealth, definitions.SourceTypeEmoryHealthcare, definitions.SourceTypeEmpireblue, definitions.SourceTypeEmpirebluemedicaid, definitions.SourceTypeEnglewoodHospitalAndMedicalCenter, definitions.SourceTypeEnloeMedicalCenter, definitions.SourceTypeErlangerHealthSystem, definitions.SourceTypeEskenaziHealth, definitions.SourceTypeEssentiaHealth, definitions.SourceTypeEvernorth, definitions.SourceTypeFairviewHealthServices, definitions.SourceTypeFamilyHealthCenterMichigan, definitions.SourceTypeFastmed, definitions.SourceTypeFirsthealthOfTheCarolinas, definitions.SourceTypeFranciscanAlliance, definitions.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem, definitions.SourceTypeFreseniusMedicalCareNorthAmerica, definitions.SourceTypeFroedtertHealth, definitions.SourceTypeGarnetHealth, definitions.SourceTypeGeisinger, definitions.SourceTypeGenesisHealthcareSystem, definitions.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates, definitions.SourceTypeGoldenValleyHealthCenters, definitions.SourceTypeGradyHealthSystem, definitions.SourceTypeGreaterBaltimoreMedicalCenter, definitions.SourceTypeGroupHealthCooperativeSouthCentralWisconsin, definitions.SourceTypeGundersenHealthSystem, definitions.SourceTypeHackensackMeridianHealth, definitions.SourceTypeHartfordHealthcare, definitions.SourceTypeHattiesburgClinicAndForrestGeneralHospital, definitions.SourceTypeHawaiiPacificHealthPrd, definitions.SourceTypeHcaCentralAndWestTexas, definitions.SourceTypeHcaMountain, definitions.SourceTypeHcaSouthAtlantic, definitions.SourceTypeHealthpartners, definitions.SourceTypeHealthybluela, definitions.SourceTypeHealthybluelamedicaid, definitions.SourceTypeHealthybluemo, definitions.SourceTypeHealthybluemomedicaid, definitions.SourceTypeHealthybluenc, definitions.SourceTypeHealthybluencmedicaid, definitions.SourceTypeHealthybluene, definitions.SourceTypeHealthybluesc, definitions.SourceTypeHendricksRegionalHealth, definitions.SourceTypeHennepinHealthcare, definitions.SourceTypeHenryFordHealthSystem, definitions.SourceTypeHighmarkwesternny, definitions.SourceTypeHillPhysicians, definitions.SourceTypeHoagMemorialHospitalPresbyterian, definitions.SourceTypeHonorhealth, definitions.SourceTypeHospitalForSpecialSurgery, definitions.SourceTypeHospitalSistersHealthSystemHshs, definitions.SourceTypeHoustonMethodist, definitions.SourceTypeHurleyMedicalCenter, definitions.SourceTypeIllinoisBoneAndJointInstitute, definitions.SourceTypeInfirmaryHealth, definitions.SourceTypeInovaAndValleyHealth, definitions.SourceTypeInstituteForFamilyHealth, definitions.SourceTypeIntegrisHealth, definitions.SourceTypeJeffersonHealth, definitions.SourceTypeJohnMuirHealth, definitions.SourceTypeJohnsHopkinsMedicine, definitions.SourceTypeJpsHealthNetwork, definitions.SourceTypeKaiserPermanenteCaliforniaNorthern, definitions.SourceTypeKaiserPermanenteCaliforniaSouthern, definitions.SourceTypeKaiserPermanenteColorado, definitions.SourceTypeKaiserPermanenteGeorgia, definitions.SourceTypeKaiserPermanenteHawaiiMauiHealthSystem, definitions.SourceTypeKaiserPermanenteMarylandVirginiaWashingtonDC, definitions.SourceTypeKaiserPermanenteOregonSwWashington, definitions.SourceTypeKaiserPermanenteWashington, definitions.SourceTypeKalamazooCollegeStudentHealthCenter, definitions.SourceTypeKalamazooFootSurgery, definitions.SourceTypeKelseySeyboldClinic, definitions.SourceTypeKennedyKriegerInstitute, definitions.SourceTypeKetteringHealthNetwork, definitions.SourceTypeKingsDaughtersMedicalCenter, definitions.SourceTypeKootenaiHealth, definitions.SourceTypeLacyCKesslerMdPa, definitions.SourceTypeLaheyHealthSystem, definitions.SourceTypeLakelandHealth, definitions.SourceTypeLancasterGeneralHealth, definitions.SourceTypeLcmcHealth, definitions.SourceTypeLeeHealth, definitions.SourceTypeLegacyHealth, definitions.SourceTypeLehighValleyHealthNetwork, definitions.SourceTypeLeonMedicalCenters, definitions.SourceTypeLickingMemorialHealthSystems, definitions.SourceTypeLifespan, definitions.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners, definitions.SourceTypeLoyolaMedicine, definitions.SourceTypeLuminisHealth, definitions.SourceTypeMainLineHealth, definitions.SourceTypeMainehealth, definitions.SourceTypeMartinHealthSystem, definitions.SourceTypeMaryGreeleyMedicalCenterIowa, definitions.SourceTypeMaryWashingtonHealthcare, definitions.SourceTypeMassGeneralBrigham, definitions.SourceTypeMayoClinic, definitions.SourceTypeMcfarlandClinicIowa, definitions.SourceTypeMedicalUniversityOfSouthCarolina, definitions.SourceTypeMedisysHealthNetwork, definitions.SourceTypeMemorialHealthcareSystem, definitions.SourceTypeMemorialHospitalAndHealthCareCenter, definitions.SourceTypeMemorialcare, definitions.SourceTypeMercyHealthOhKy, definitions.SourceTypeMercyHealthServicesMd, definitions.SourceTypeMercyHealthSystemWi, definitions.SourceTypeMercyMedicalCenter, definitions.SourceTypeMeritus, definitions.SourceTypeMethodistHealthSystem, definitions.SourceTypeMethodistHospitalsPrd, definitions.SourceTypeMetroHealthMichigan, definitions.SourceTypeMetrohealthOh, definitions.SourceTypeMichiganMedicine, definitions.SourceTypeMiddlesexHospital, definitions.SourceTypeMidmichiganHealth, definitions.SourceTypeMohawkValleyHealthSystem, definitions.SourceTypeMolinaHealthcare, definitions.SourceTypeMontageHealth, definitions.SourceTypeMontefioreMedicalCenter, definitions.SourceTypeMonumentHealth, definitions.SourceTypeMountAuburnHospital, definitions.SourceTypeMountSinaiHealthSystem, definitions.SourceTypeMountSinaiMedicalCenter, definitions.SourceTypeMulticareHealthSystem, definitions.SourceTypeMuscogeeCreekNationDepartmentOfHealth, definitions.SourceTypeMyDrNow, definitions.SourceTypeNationwideChildrensHospital, definitions.SourceTypeNchHealthcareSystem, definitions.SourceTypeNebraskaMedicine, definitions.SourceTypeNemours, definitions.SourceTypeNephrologyCenterSouthwestMichigan, definitions.SourceTypeNewHanoverRegionalMedicalCenter, definitions.SourceTypeNewJerseyUrology, definitions.SourceTypeNewYorkPresbyterian, definitions.SourceTypeNorthMemorialHealth, definitions.SourceTypeNorthMississippiHealthServices, definitions.SourceTypeNorthOaks, definitions.SourceTypeNortheastGeorgiaHealthSystem, definitions.SourceTypeNorthshoreUniversityHealthSystem, definitions.SourceTypeNorthwestCommunityHospital, definitions.SourceTypeNortonHealthcare, definitions.SourceTypeNovantHealth, definitions.SourceTypeNovoHealth, definitions.SourceTypeNycHealthHospitals, definitions.SourceTypeNyuLangoneMedicalCenter, definitions.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz, definitions.SourceTypeOchin, definitions.SourceTypeOchsnerHealthSystem, definitions.SourceTypeOhiohealth, definitions.SourceTypeOlmstedMedicalCenter, definitions.SourceTypeOneBrooklynHealthSystem, definitions.SourceTypeOptumcareEast, definitions.SourceTypeOptumcareWest, definitions.SourceTypeOregonHealthAndScienceUniversity, definitions.SourceTypeOrlandoHealth, definitions.SourceTypeOrthocarolina, definitions.SourceTypeOrthovirginia, definitions.SourceTypeOsfHealthcare, definitions.SourceTypeOverlakeHospitalMedicalCenter, definitions.SourceTypeOwensboroHealth, definitions.SourceTypePacificDentalServices, definitions.SourceTypePalosHealth, definitions.SourceTypeParkland, definitions.SourceTypeParkviewHealth, definitions.SourceTypePeacehealth, definitions.SourceTypePediatricPhysiciansOrganizationAtChildrens, definitions.SourceTypePennMedicine, definitions.SourceTypePhelpsHealth, definitions.SourceTypePiedmontHealthcare, definitions.SourceTypePikevilleMedicalCenter, definitions.SourceTypePineRestChristianMentalHealthServices, definitions.SourceTypePlannedParenthood, definitions.SourceTypePremierHealth, definitions.SourceTypePresbyterianHealthcareServices, definitions.SourceTypePrimeHealthcare, definitions.SourceTypePrismaHealth, definitions.SourceTypeProhealthCare, definitions.SourceTypePromedicaHealthSystem, definitions.SourceTypeProvidenceHealthAndServicesAlaska, definitions.SourceTypeProvidenceHealthAndServicesOregonCalifornia, definitions.SourceTypeProvidenceHealthAndServicesWashingtonMontana, definitions.SourceTypeQuadmed, definitions.SourceTypeRadyChildrens, definitions.SourceTypeReidHealth, definitions.SourceTypeReliantMedicalGroup, definitions.SourceTypeRenownBartonCvmc, definitions.SourceTypeRiversideHealthSystemNewportNewsVa, definitions.SourceTypeRiversideMedicalCenter, definitions.SourceTypeRiversideMedicalClinic, definitions.SourceTypeRochesterRegionalHealth, definitions.SourceTypeRushUniversityMedicalCenter, definitions.SourceTypeRwjbarnabasHealth, definitions.SourceTypeSaintFrancisHealthSystem, definitions.SourceTypeSaintFrancisHealthcareSystemManual, definitions.SourceTypeSalemHealth, definitions.SourceTypeSalinasValleyMemorialHealthcareSystems, definitions.SourceTypeSamaritanHealthServices, definitions.SourceTypeSanFranciscoDepartmentOfPublicHealth, definitions.SourceTypeSanfordHealth, definitions.SourceTypeSansumClinic, definitions.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics, definitions.SourceTypeSclHealth, definitions.SourceTypeScotlandHealthCareSystem, definitions.SourceTypeScottishRiteForChildren, definitions.SourceTypeScrippsHealth, definitions.SourceTypeSeattleChildrensHospital, definitions.SourceTypeSelectMedical, definitions.SourceTypeSelfRegionalHealthcare, definitions.SourceTypeSentaraHealthcare, definitions.SourceTypeShannonHealth, definitions.SourceTypeSimplyhealthcaremedicaid, definitions.SourceTypeSimplyhealthcaremedicare, definitions.SourceTypeSingingRiverHealthSystemPrd, definitions.SourceTypeSkagitRegionalHealth, definitions.SourceTypeSolutionhealth, definitions.SourceTypeSouthGeorgiaMedicalCenter, definitions.SourceTypeSouthShoreHealthSystem, definitions.SourceTypeSouthcoastHealth, definitions.SourceTypeSoutheastHealth, definitions.SourceTypeSoutheasternHealth, definitions.SourceTypeSouthernIllinoisHealthcare, definitions.SourceTypeSparrowHealthSystem, definitions.SourceTypeSpartanburgRegionalHealthSystems, definitions.SourceTypeSpectrumHealthLakeland, definitions.SourceTypeSpectrumHealth, definitions.SourceTypeSsmHealth, definitions.SourceTypeStCharlesHealthSystem, definitions.SourceTypeStElizabethHealthcare, definitions.SourceTypeStJosephHospitalHealthCenter, definitions.SourceTypeStJudeChildrensResearchHospital, definitions.SourceTypeStLukesHealthSystemIdahoAndEasternOregon, definitions.SourceTypeStLukesHospitalNorthCarolina, definitions.SourceTypeStanfordChildrensHealth, definitions.SourceTypeStanfordHealthCare, definitions.SourceTypeStormontVailHealth, definitions.SourceTypeSummitHealth, definitions.SourceTypeSummitcommunitycare, definitions.SourceTypeSunyUpstateMedicalUniversity, definitions.SourceTypeSutterHealth, definitions.SourceTypeTampaGeneralHospital, definitions.SourceTypeTannerHealthSystem, definitions.SourceTypeTemplehealth, definitions.SourceTypeTexasChildrens, definitions.SourceTypeTexasHealthResources, definitions.SourceTypeTheBrooklynHospitalCenter, definitions.SourceTypeTheChristHospital, definitions.SourceTypeTheEverettClinic, definitions.SourceTypeTheGuthrieClinic, definitions.SourceTypeTheOhioStateUniversityWexnerMedicalCenter, definitions.SourceTypeThePolyclinic, definitions.SourceTypeThePortlandClinic, definitions.SourceTypeTheQueensHealthSystems, definitions.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston, definitions.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter, definitions.SourceTypeTheUniversityOfVermontHealthNetwork, definitions.SourceTypeTheVancouverClinic, definitions.SourceTypeThedacare, definitions.SourceTypeTidalhealth, definitions.SourceTypeTmcHealthcare, definitions.SourceTypeTowerHealth, definitions.SourceTypeTrihealth, definitions.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield, definitions.SourceTypeTrinityHealthOfNewEngland, definitions.SourceTypeTrinityHealth, definitions.SourceTypeTuftsMedicine, definitions.SourceTypeUcDavisMmc, definitions.SourceTypeUcDavis, definitions.SourceTypeUcHealth, definitions.SourceTypeUchicagoMedicine, definitions.SourceTypeUclaMedicalCenter, definitions.SourceTypeUconnHealth, definitions.SourceTypeUcsfBenioffChildrensHospital, definitions.SourceTypeUcsfHealth, definitions.SourceTypeUfHealth, definitions.SourceTypeUhsSanAntonio, definitions.SourceTypeUiHealth, definitions.SourceTypeUkHealthcare, definitions.SourceTypeUmassMemorialHealthCare, definitions.SourceTypeUmcSouthernNevada, definitions.SourceTypeUncHealthCare, definitions.SourceTypeUnicare, definitions.SourceTypeUnicarema, definitions.SourceTypeUnitedHealthServicesNewYorkNyuhs, definitions.SourceTypeUnitedRegionalHealthCareSystem, definitions.SourceTypeUnitypointHealth, definitions.SourceTypeUniversityHealthCareSystem, definitions.SourceTypeUniversityHospitalNewJersey, definitions.SourceTypeUniversityOfArkansasForMedicalSciences, definitions.SourceTypeUniversityOfCaliforniaIrvine, definitions.SourceTypeUniversityOfCaliforniaSanDiego, definitions.SourceTypeUniversityOfIowaHealthCare, definitions.SourceTypeUniversityOfKansasHealthSystem, definitions.SourceTypeUniversityOfLouisvillePhysicians, definitions.SourceTypeUniversityOfMarylandMedicalSystem, definitions.SourceTypeUniversityOfMississippiMedicalCenter, definitions.SourceTypeUniversityOfPittsburghMedicalCenterUpmc, definitions.SourceTypeUniversityOfRochesterMedicalCenterPrd, definitions.SourceTypeUniversityOfTexasMedicalBranch, definitions.SourceTypeUniversityOfTexasSouthwesternMedicalCenter, definitions.SourceTypeUniversityOfToledo, definitions.SourceTypeUniversityOfUtahHealthcare, definitions.SourceTypeUpmcCentralPa, definitions.SourceTypeUtHealthSanAntonio, definitions.SourceTypeUvaHealthSystem, definitions.SourceTypeUwHealthAndAffiliatesWisconsin, definitions.SourceTypeUwMedicineWashington, definitions.SourceTypeValleyChildrensHealthcare, definitions.SourceTypeValleyMedicalCenter, definitions.SourceTypeValleywiseHealth, definitions.SourceTypeVanderbilt, definitions.SourceTypeVcuHealth, definitions.SourceTypeVidantHealth, definitions.SourceTypeVirginiaHospitalCenter, definitions.SourceTypeVirtuaHealth, definitions.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter, definitions.SourceTypeWakemedHealthAndHospitals, definitions.SourceTypeWalmart, definitions.SourceTypeWashingtonHospitalHealthcareSystem, definitions.SourceTypeWatsonClinic, definitions.SourceTypeWeillCornellMedicine, definitions.SourceTypeWellspanHealth, definitions.SourceTypeWellstar, definitions.SourceTypeWestTennesseeHealthcare, definitions.SourceTypeWestVirginiaUniversityMedicine, definitions.SourceTypeWesternMichiganUniversitySchoolOfMedicine, definitions.SourceTypeYakimaValleyFarmWorkersClinic, definitions.SourceTypeYaleNewHavenHealthSystem, definitions.SourceTypeYumaRegionalMedicalCenter, definitions.SourceTypeAetna, definitions.SourceTypeBluebutton, definitions.SourceTypeCigna}
+		sourceTypes = []pkg.SourceType{pkg.SourceTypeAccessCommunityHealthNetwork, pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo, pkg.SourceTypeAdvantagecarePhysicians, pkg.SourceTypeAdventhealth, pkg.SourceTypeAdventistHealthWest, pkg.SourceTypeAkronChildrensHospital, pkg.SourceTypeAlamedaHealthSystem, pkg.SourceTypeAlleghenyHealthNetwork, pkg.SourceTypeAllinaHealthSystem, pkg.SourceTypeAltamed, pkg.SourceTypeAltruHealthSystem, pkg.SourceTypeAmerigroup, pkg.SourceTypeAmerigroupmedicaid, pkg.SourceTypeAnmedHealth, pkg.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago, pkg.SourceTypeAnthemMedicaid, pkg.SourceTypeAnthem, pkg.SourceTypeAnthembluecrossca, pkg.SourceTypeArdent, pkg.SourceTypeArizonaCommunityPhysicians, pkg.SourceTypeArkansasChildrens, pkg.SourceTypeArrowheadRegionalMedicalCenter, pkg.SourceTypeAsanteHealthSystems, pkg.SourceTypeAspenValleyHospital, pkg.SourceTypeAspirus, pkg.SourceTypeAtlanticHealth, pkg.SourceTypeAtriumHealthWakeForestBaptist, pkg.SourceTypeAtriumHealth, pkg.SourceTypeAtriusHealth, pkg.SourceTypeAuroraHealthCareMyaurora, pkg.SourceTypeAustinRegionalClinic, pkg.SourceTypeBalladHealth, pkg.SourceTypeBaptistHealthArkansas, pkg.SourceTypeBaptistHealthKyAndIn, pkg.SourceTypeBaptistHealthNortheastFlorida, pkg.SourceTypeBaptistMemorialHealthCare, pkg.SourceTypeBassettHealthcare, pkg.SourceTypeBaycareClinicMybaycare, pkg.SourceTypeBayhealthMedicalCenter, pkg.SourceTypeBaylorCollegeOfMedicine, pkg.SourceTypeBaylorScottAndWhite, pkg.SourceTypeBcbskansas, pkg.SourceTypeBcbskansasmedicare, pkg.SourceTypeBcbsny, pkg.SourceTypeBeaumontHealth, pkg.SourceTypeBellinHealth, pkg.SourceTypeBjcAndWashingtonUniversity, pkg.SourceTypeBluemedicareadvantage, pkg.SourceTypeBonSecoursHealthSystem, pkg.SourceTypeBostonMedicalCenter, pkg.SourceTypeBoulderCommunityHealth, pkg.SourceTypeBronsonHealthcareGroup, pkg.SourceTypeBrookwoodBaptistHealth, pkg.SourceTypeBrownAndTolandPhysicians, pkg.SourceTypeBryanHealth, pkg.SourceTypeBuffaloMedicalGroup, pkg.SourceTypeCapeCodHealthcare, pkg.SourceTypeCapeFearValleyHealth, pkg.SourceTypeCareNewEngland, pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup, pkg.SourceTypeCaromontHealth, pkg.SourceTypeCatholicHealthLongIslandNy, pkg.SourceTypeCatholicHealthSystemBuffalo, pkg.SourceTypeCedarsSinaiHealthSystem, pkg.SourceTypeCentracareHealthAndAffiliates, pkg.SourceTypeCenturaHealth, pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates, pkg.SourceTypeChesapeakeRegionalMedicalCenter, pkg.SourceTypeCheyenneRegionalMedicalCenter, pkg.SourceTypeChildrensHealthSystemOfTexas, pkg.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska, pkg.SourceTypeChildrensHospitalColorado, pkg.SourceTypeChildrensHospitalOfPhiladelphia, pkg.SourceTypeChildrensWisconsin, pkg.SourceTypeChildrenssHealthcareOfAtlanta, pkg.SourceTypeCignaMedicalGroup, pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter, pkg.SourceTypeCityOfHope, pkg.SourceTypeClearhealthalliance, pkg.SourceTypeClevelandClinic, pkg.SourceTypeColumbiaPhysicians, pkg.SourceTypeColumbusRegionalHealth, pkg.SourceTypeCommunityHealthNetwork, pkg.SourceTypeCommunityHealthcareSystem, pkg.SourceTypeCommunityMedicalCenters, pkg.SourceTypeConeHealth, pkg.SourceTypeConemaughHealthSystem, pkg.SourceTypeConfluenceHealth, pkg.SourceTypeConnecticutChildrensMedicalCenter, pkg.SourceTypeContraCosta, pkg.SourceTypeCookChildrensHealthCareSystem, pkg.SourceTypeCooperUniversityHealthCare, pkg.SourceTypeCottageHealth, pkg.SourceTypeCovenantHealth, pkg.SourceTypeDartmouthHitchcock, pkg.SourceTypeDavitaPhysicianSolutions, pkg.SourceTypeDaytonChildrensHospital, pkg.SourceTypeDeaconessHealthSystemPrd, pkg.SourceTypeDellchildrens, pkg.SourceTypeDenverHealth, pkg.SourceTypeDrexelMedicine, pkg.SourceTypeDriscollChildrensHospital, pkg.SourceTypeDukeHealth, pkg.SourceTypeDulyHealthAndCare, pkg.SourceTypeEastBostonNeighborhoodHealthCenter, pkg.SourceTypeEdwardElmhurstHealthcare, pkg.SourceTypeEisenhowerMedicalCenter, pkg.SourceTypeElCaminoHospital, pkg.SourceTypeElRioHealth, pkg.SourceTypeEmoryHealthcare, pkg.SourceTypeEmpireblue, pkg.SourceTypeEmpirebluemedicaid, pkg.SourceTypeEnglewoodHospitalAndMedicalCenter, pkg.SourceTypeEnloeMedicalCenter, pkg.SourceTypeErlangerHealthSystem, pkg.SourceTypeEskenaziHealth, pkg.SourceTypeEssentiaHealth, pkg.SourceTypeEvernorth, pkg.SourceTypeFairviewHealthServices, pkg.SourceTypeFamilyHealthCenterMichigan, pkg.SourceTypeFastmed, pkg.SourceTypeFirsthealthOfTheCarolinas, pkg.SourceTypeFranciscanAlliance, pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem, pkg.SourceTypeFreseniusMedicalCareNorthAmerica, pkg.SourceTypeFroedtertHealth, pkg.SourceTypeGarnetHealth, pkg.SourceTypeGeisinger, pkg.SourceTypeGenesisHealthcareSystem, pkg.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates, pkg.SourceTypeGoldenValleyHealthCenters, pkg.SourceTypeGradyHealthSystem, pkg.SourceTypeGreaterBaltimoreMedicalCenter, pkg.SourceTypeGroupHealthCooperativeSouthCentralWisconsin, pkg.SourceTypeGundersenHealthSystem, pkg.SourceTypeHackensackMeridianHealth, pkg.SourceTypeHartfordHealthcare, pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital, pkg.SourceTypeHawaiiPacificHealthPrd, pkg.SourceTypeHcaCentralAndWestTexas, pkg.SourceTypeHcaMountain, pkg.SourceTypeHcaSouthAtlantic, pkg.SourceTypeHealthpartners, pkg.SourceTypeHealthybluela, pkg.SourceTypeHealthybluelamedicaid, pkg.SourceTypeHealthybluemo, pkg.SourceTypeHealthybluemomedicaid, pkg.SourceTypeHealthybluenc, pkg.SourceTypeHealthybluencmedicaid, pkg.SourceTypeHealthybluene, pkg.SourceTypeHealthybluesc, pkg.SourceTypeHendricksRegionalHealth, pkg.SourceTypeHennepinHealthcare, pkg.SourceTypeHenryFordHealthSystem, pkg.SourceTypeHighmarkwesternny, pkg.SourceTypeHillPhysicians, pkg.SourceTypeHoagMemorialHospitalPresbyterian, pkg.SourceTypeHonorhealth, pkg.SourceTypeHospitalForSpecialSurgery, pkg.SourceTypeHospitalSistersHealthSystemHshs, pkg.SourceTypeHoustonMethodist, pkg.SourceTypeHurleyMedicalCenter, pkg.SourceTypeIllinoisBoneAndJointInstitute, pkg.SourceTypeInfirmaryHealth, pkg.SourceTypeInovaAndValleyHealth, pkg.SourceTypeInstituteForFamilyHealth, pkg.SourceTypeIntegrisHealth, pkg.SourceTypeJeffersonHealth, pkg.SourceTypeJohnMuirHealth, pkg.SourceTypeJohnsHopkinsMedicine, pkg.SourceTypeJpsHealthNetwork, pkg.SourceTypeKaiserPermanenteCaliforniaNorthern, pkg.SourceTypeKaiserPermanenteCaliforniaSouthern, pkg.SourceTypeKaiserPermanenteColorado, pkg.SourceTypeKaiserPermanenteGeorgia, pkg.SourceTypeKaiserPermanenteHawaiiMauiHealthSystem, pkg.SourceTypeKaiserPermanenteMarylandVirginiaWashingtonDC, pkg.SourceTypeKaiserPermanenteOregonSwWashington, pkg.SourceTypeKaiserPermanenteWashington, pkg.SourceTypeKalamazooCollegeStudentHealthCenter, pkg.SourceTypeKalamazooFootSurgery, pkg.SourceTypeKelseySeyboldClinic, pkg.SourceTypeKennedyKriegerInstitute, pkg.SourceTypeKetteringHealthNetwork, pkg.SourceTypeKingsDaughtersMedicalCenter, pkg.SourceTypeKootenaiHealth, pkg.SourceTypeLacyCKesslerMdPa, pkg.SourceTypeLaheyHealthSystem, pkg.SourceTypeLakelandHealth, pkg.SourceTypeLancasterGeneralHealth, pkg.SourceTypeLcmcHealth, pkg.SourceTypeLeeHealth, pkg.SourceTypeLegacyHealth, pkg.SourceTypeLehighValleyHealthNetwork, pkg.SourceTypeLeonMedicalCenters, pkg.SourceTypeLickingMemorialHealthSystems, pkg.SourceTypeLifespan, pkg.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners, pkg.SourceTypeLoyolaMedicine, pkg.SourceTypeLuminisHealth, pkg.SourceTypeMainLineHealth, pkg.SourceTypeMainehealth, pkg.SourceTypeMartinHealthSystem, pkg.SourceTypeMaryGreeleyMedicalCenterIowa, pkg.SourceTypeMaryWashingtonHealthcare, pkg.SourceTypeMassGeneralBrigham, pkg.SourceTypeMayoClinic, pkg.SourceTypeMcfarlandClinicIowa, pkg.SourceTypeMedicalUniversityOfSouthCarolina, pkg.SourceTypeMedisysHealthNetwork, pkg.SourceTypeMemorialHealthcareSystem, pkg.SourceTypeMemorialHospitalAndHealthCareCenter, pkg.SourceTypeMemorialcare, pkg.SourceTypeMercyHealthOhKy, pkg.SourceTypeMercyHealthServicesMd, pkg.SourceTypeMercyHealthSystemWi, pkg.SourceTypeMercyMedicalCenter, pkg.SourceTypeMeritus, pkg.SourceTypeMethodistHealthSystem, pkg.SourceTypeMethodistHospitalsPrd, pkg.SourceTypeMetroHealthMichigan, pkg.SourceTypeMetrohealthOh, pkg.SourceTypeMichiganMedicine, pkg.SourceTypeMiddlesexHospital, pkg.SourceTypeMidmichiganHealth, pkg.SourceTypeMohawkValleyHealthSystem, pkg.SourceTypeMolinaHealthcare, pkg.SourceTypeMontageHealth, pkg.SourceTypeMontefioreMedicalCenter, pkg.SourceTypeMonumentHealth, pkg.SourceTypeMountAuburnHospital, pkg.SourceTypeMountSinaiHealthSystem, pkg.SourceTypeMountSinaiMedicalCenter, pkg.SourceTypeMulticareHealthSystem, pkg.SourceTypeMuscogeeCreekNationDepartmentOfHealth, pkg.SourceTypeMyDrNow, pkg.SourceTypeNationwideChildrensHospital, pkg.SourceTypeNchHealthcareSystem, pkg.SourceTypeNebraskaMedicine, pkg.SourceTypeNemours, pkg.SourceTypeNephrologyCenterSouthwestMichigan, pkg.SourceTypeNewHanoverRegionalMedicalCenter, pkg.SourceTypeNewJerseyUrology, pkg.SourceTypeNewYorkPresbyterian, pkg.SourceTypeNorthMemorialHealth, pkg.SourceTypeNorthMississippiHealthServices, pkg.SourceTypeNorthOaks, pkg.SourceTypeNortheastGeorgiaHealthSystem, pkg.SourceTypeNorthshoreUniversityHealthSystem, pkg.SourceTypeNorthwestCommunityHospital, pkg.SourceTypeNortonHealthcare, pkg.SourceTypeNovantHealth, pkg.SourceTypeNovoHealth, pkg.SourceTypeNycHealthHospitals, pkg.SourceTypeNyuLangoneMedicalCenter, pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz, pkg.SourceTypeOchin, pkg.SourceTypeOchsnerHealthSystem, pkg.SourceTypeOhiohealth, pkg.SourceTypeOlmstedMedicalCenter, pkg.SourceTypeOneBrooklynHealthSystem, pkg.SourceTypeOptumcareEast, pkg.SourceTypeOptumcareWest, pkg.SourceTypeOregonHealthAndScienceUniversity, pkg.SourceTypeOrlandoHealth, pkg.SourceTypeOrthocarolina, pkg.SourceTypeOrthovirginia, pkg.SourceTypeOsfHealthcare, pkg.SourceTypeOverlakeHospitalMedicalCenter, pkg.SourceTypeOwensboroHealth, pkg.SourceTypePacificDentalServices, pkg.SourceTypePalosHealth, pkg.SourceTypeParkland, pkg.SourceTypeParkviewHealth, pkg.SourceTypePeacehealth, pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens, pkg.SourceTypePennMedicine, pkg.SourceTypePhelpsHealth, pkg.SourceTypePiedmontHealthcare, pkg.SourceTypePikevilleMedicalCenter, pkg.SourceTypePineRestChristianMentalHealthServices, pkg.SourceTypePlannedParenthood, pkg.SourceTypePremierHealth, pkg.SourceTypePresbyterianHealthcareServices, pkg.SourceTypePrimeHealthcare, pkg.SourceTypePrismaHealth, pkg.SourceTypeProhealthCare, pkg.SourceTypePromedicaHealthSystem, pkg.SourceTypeProvidenceHealthAndServicesAlaska, pkg.SourceTypeProvidenceHealthAndServicesOregonCalifornia, pkg.SourceTypeProvidenceHealthAndServicesWashingtonMontana, pkg.SourceTypeQuadmed, pkg.SourceTypeRadyChildrens, pkg.SourceTypeReidHealth, pkg.SourceTypeReliantMedicalGroup, pkg.SourceTypeRenownBartonCvmc, pkg.SourceTypeRiversideHealthSystemNewportNewsVa, pkg.SourceTypeRiversideMedicalCenter, pkg.SourceTypeRiversideMedicalClinic, pkg.SourceTypeRochesterRegionalHealth, pkg.SourceTypeRushUniversityMedicalCenter, pkg.SourceTypeRwjbarnabasHealth, pkg.SourceTypeSaintFrancisHealthSystem, pkg.SourceTypeSaintFrancisHealthcareSystemManual, pkg.SourceTypeSalemHealth, pkg.SourceTypeSalinasValleyMemorialHealthcareSystems, pkg.SourceTypeSamaritanHealthServices, pkg.SourceTypeSanFranciscoDepartmentOfPublicHealth, pkg.SourceTypeSanfordHealth, pkg.SourceTypeSansumClinic, pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics, pkg.SourceTypeSclHealth, pkg.SourceTypeScotlandHealthCareSystem, pkg.SourceTypeScottishRiteForChildren, pkg.SourceTypeScrippsHealth, pkg.SourceTypeSeattleChildrensHospital, pkg.SourceTypeSelectMedical, pkg.SourceTypeSelfRegionalHealthcare, pkg.SourceTypeSentaraHealthcare, pkg.SourceTypeShannonHealth, pkg.SourceTypeSimplyhealthcaremedicaid, pkg.SourceTypeSimplyhealthcaremedicare, pkg.SourceTypeSingingRiverHealthSystemPrd, pkg.SourceTypeSkagitRegionalHealth, pkg.SourceTypeSolutionhealth, pkg.SourceTypeSouthGeorgiaMedicalCenter, pkg.SourceTypeSouthShoreHealthSystem, pkg.SourceTypeSouthcoastHealth, pkg.SourceTypeSoutheastHealth, pkg.SourceTypeSoutheasternHealth, pkg.SourceTypeSouthernIllinoisHealthcare, pkg.SourceTypeSparrowHealthSystem, pkg.SourceTypeSpartanburgRegionalHealthSystems, pkg.SourceTypeSpectrumHealthLakeland, pkg.SourceTypeSpectrumHealth, pkg.SourceTypeSsmHealth, pkg.SourceTypeStCharlesHealthSystem, pkg.SourceTypeStElizabethHealthcare, pkg.SourceTypeStJosephHospitalHealthCenter, pkg.SourceTypeStJudeChildrensResearchHospital, pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon, pkg.SourceTypeStLukesHospitalNorthCarolina, pkg.SourceTypeStanfordChildrensHealth, pkg.SourceTypeStanfordHealthCare, pkg.SourceTypeStormontVailHealth, pkg.SourceTypeSummitHealth, pkg.SourceTypeSummitcommunitycare, pkg.SourceTypeSunyUpstateMedicalUniversity, pkg.SourceTypeSutterHealth, pkg.SourceTypeTampaGeneralHospital, pkg.SourceTypeTannerHealthSystem, pkg.SourceTypeTemplehealth, pkg.SourceTypeTexasChildrens, pkg.SourceTypeTexasHealthResources, pkg.SourceTypeTheBrooklynHospitalCenter, pkg.SourceTypeTheChristHospital, pkg.SourceTypeTheEverettClinic, pkg.SourceTypeTheGuthrieClinic, pkg.SourceTypeTheOhioStateUniversityWexnerMedicalCenter, pkg.SourceTypeThePolyclinic, pkg.SourceTypeThePortlandClinic, pkg.SourceTypeTheQueensHealthSystems, pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston, pkg.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter, pkg.SourceTypeTheUniversityOfVermontHealthNetwork, pkg.SourceTypeTheVancouverClinic, pkg.SourceTypeThedacare, pkg.SourceTypeTidalhealth, pkg.SourceTypeTmcHealthcare, pkg.SourceTypeTowerHealth, pkg.SourceTypeTrihealth, pkg.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield, pkg.SourceTypeTrinityHealthOfNewEngland, pkg.SourceTypeTrinityHealth, pkg.SourceTypeTuftsMedicine, pkg.SourceTypeUcDavisMmc, pkg.SourceTypeUcDavis, pkg.SourceTypeUcHealth, pkg.SourceTypeUchicagoMedicine, pkg.SourceTypeUclaMedicalCenter, pkg.SourceTypeUconnHealth, pkg.SourceTypeUcsfBenioffChildrensHospital, pkg.SourceTypeUcsfHealth, pkg.SourceTypeUfHealth, pkg.SourceTypeUhsSanAntonio, pkg.SourceTypeUiHealth, pkg.SourceTypeUkHealthcare, pkg.SourceTypeUmassMemorialHealthCare, pkg.SourceTypeUmcSouthernNevada, pkg.SourceTypeUncHealthCare, pkg.SourceTypeUnicare, pkg.SourceTypeUnicarema, pkg.SourceTypeUnitedHealthServicesNewYorkNyuhs, pkg.SourceTypeUnitedRegionalHealthCareSystem, pkg.SourceTypeUnitypointHealth, pkg.SourceTypeUniversityHealthCareSystem, pkg.SourceTypeUniversityHospitalNewJersey, pkg.SourceTypeUniversityOfArkansasForMedicalSciences, pkg.SourceTypeUniversityOfCaliforniaIrvine, pkg.SourceTypeUniversityOfCaliforniaSanDiego, pkg.SourceTypeUniversityOfIowaHealthCare, pkg.SourceTypeUniversityOfKansasHealthSystem, pkg.SourceTypeUniversityOfLouisvillePhysicians, pkg.SourceTypeUniversityOfMarylandMedicalSystem, pkg.SourceTypeUniversityOfMississippiMedicalCenter, pkg.SourceTypeUniversityOfPittsburghMedicalCenterUpmc, pkg.SourceTypeUniversityOfRochesterMedicalCenterPrd, pkg.SourceTypeUniversityOfTexasMedicalBranch, pkg.SourceTypeUniversityOfTexasSouthwesternMedicalCenter, pkg.SourceTypeUniversityOfToledo, pkg.SourceTypeUniversityOfUtahHealthcare, pkg.SourceTypeUpmcCentralPa, pkg.SourceTypeUtHealthSanAntonio, pkg.SourceTypeUvaHealthSystem, pkg.SourceTypeUwHealthAndAffiliatesWisconsin, pkg.SourceTypeUwMedicineWashington, pkg.SourceTypeValleyChildrensHealthcare, pkg.SourceTypeValleyMedicalCenter, pkg.SourceTypeValleywiseHealth, pkg.SourceTypeVanderbilt, pkg.SourceTypeVcuHealth, pkg.SourceTypeVidantHealth, pkg.SourceTypeVirginiaHospitalCenter, pkg.SourceTypeVirtuaHealth, pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter, pkg.SourceTypeWakemedHealthAndHospitals, pkg.SourceTypeWalmart, pkg.SourceTypeWashingtonHospitalHealthcareSystem, pkg.SourceTypeWatsonClinic, pkg.SourceTypeWeillCornellMedicine, pkg.SourceTypeWellspanHealth, pkg.SourceTypeWellstar, pkg.SourceTypeWestTennesseeHealthcare, pkg.SourceTypeWestVirginiaUniversityMedicine, pkg.SourceTypeWesternMichiganUniversitySchoolOfMedicine, pkg.SourceTypeYakimaValleyFarmWorkersClinic, pkg.SourceTypeYaleNewHavenHealthSystem, pkg.SourceTypeYumaRegionalMedicalCenter, pkg.SourceTypeAetna, pkg.SourceTypeBluebutton, pkg.SourceTypeCigna}
 	}
 	sourceConfigMap := map[string]models.LighthouseSourceDefinition{}
 	for _, sourceType := range sourceTypes {
