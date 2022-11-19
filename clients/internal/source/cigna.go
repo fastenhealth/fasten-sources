@@ -18,8 +18,8 @@ import (
 /*
 https://developer.cigna.com/service-apis/patient-access/sandbox#How-to-Use-the-Sandbox-Sandbox-Test-Users
 */
-func GetSourceClientCigna(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCigna(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }

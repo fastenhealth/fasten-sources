@@ -16,8 +16,8 @@ import (
 
 // https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4/metadata
-func GetSourceClientKetteringHealthNetwork(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKetteringHealthNetwork(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }

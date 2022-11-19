@@ -16,8 +16,8 @@ type FHIR401Client struct {
 	*BaseClient
 }
 
-func GetSourceClientFHIR401(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*FHIR401Client, *models.SourceCredential, error) {
-	baseClient, updatedSource, err := NewBaseClient(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*FHIR401Client, *models.SourceCredential, error) {
+	baseClient, updatedSource, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	return &FHIR401Client{
 		baseClient,
 	}, updatedSource, err

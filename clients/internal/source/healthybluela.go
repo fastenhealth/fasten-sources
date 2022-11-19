@@ -16,8 +16,8 @@ import (
 // https://patient360la.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360la.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360la.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientHealthybluela(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHealthybluela(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }

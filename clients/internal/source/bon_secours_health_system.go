@@ -16,8 +16,8 @@ import (
 
 // https://haiku.bshsi.org/fhir/BSHSI_OAUTH/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.bshsi.org/fhir/BSHSI_OAUTH/api/FHIR/R4/metadata
-func GetSourceClientBonSecoursHealthSystem(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBonSecoursHealthSystem(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }

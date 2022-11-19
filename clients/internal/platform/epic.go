@@ -17,8 +17,8 @@ import (
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/metadata
 // https://fhir.epic.com/Documentation?docId=testpatients
-func GetSourceClientEpic(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEpic(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }

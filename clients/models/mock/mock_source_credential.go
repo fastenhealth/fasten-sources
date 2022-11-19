@@ -7,6 +7,7 @@ package mock_models
 import (
 	reflect "reflect"
 
+	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	gomock "github.com/golang/mock/gomock"
 )
 
@@ -143,6 +144,20 @@ func (m *MockSourceCredential) GetRefreshToken() string {
 func (mr *MockSourceCredentialMockRecorder) GetRefreshToken() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRefreshToken", reflect.TypeOf((*MockSourceCredential)(nil).GetRefreshToken))
+}
+
+// GetSourceType mocks base method.
+func (m *MockSourceCredential) GetSourceType() pkg.SourceType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSourceType")
+	ret0, _ := ret[0].(pkg.SourceType)
+	return ret0
+}
+
+// GetSourceType indicates an expected call of GetSourceType.
+func (mr *MockSourceCredentialMockRecorder) GetSourceType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceType", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceType))
 }
 
 // RefreshTokens mocks base method.

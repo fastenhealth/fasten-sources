@@ -19,10 +19,9 @@ import (
 )
 
 type BaseClient struct {
-	FastenEnv  pkg.FastenEnvType
-	SourceType pkg.SourceType
-	Context    context.Context
-	Logger     logrus.FieldLogger
+	FastenEnv pkg.FastenEnvType
+	Context   context.Context
+	Logger    logrus.FieldLogger
 
 	OauthClient      *http.Client
 	SourceCredential models.SourceCredential
@@ -33,7 +32,7 @@ func (c *BaseClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*BaseClient, *models.SourceCredential, error) {
+func NewBaseClient(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*BaseClient, *models.SourceCredential, error) {
 	var httpClient *http.Client
 	var updatedSource *models.SourceCredential
 	if len(testHttpClient) == 0 {
@@ -92,7 +91,6 @@ func NewBaseClient(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context
 
 	return &BaseClient{
 		FastenEnv:        env,
-		SourceType:       sourceType,
 		Context:          ctx,
 		Logger:           globalLogger,
 		OauthClient:      httpClient,

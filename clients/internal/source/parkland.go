@@ -16,8 +16,8 @@ import (
 
 // https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientParkland(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, sourceType, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientParkland(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return baseClient, updatedSourceCred, err
 }
