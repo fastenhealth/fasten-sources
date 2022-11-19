@@ -19,8 +19,10 @@ import (
 )
 
 type BaseClient struct {
-	Context context.Context
-	Logger  logrus.FieldLogger
+	FastenEnv  pkg.FastenEnvType
+	SourceType pkg.SourceType
+	Context    context.Context
+	Logger     logrus.FieldLogger
 
 	OauthClient      *http.Client
 	SourceCredential models.SourceCredential
@@ -89,6 +91,8 @@ func NewBaseClient(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context
 	httpClient.Timeout = 10 * time.Second
 
 	return &BaseClient{
+		FastenEnv:        env,
+		SourceType:       sourceType,
 		Context:          ctx,
 		Logger:           globalLogger,
 		OauthClient:      httpClient,

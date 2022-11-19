@@ -3,7 +3,8 @@ package base
 import (
 	"context"
 	"encoding/json"
-	"github.com/fastenhealth/fasten-sources/clients/models"
+	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
+	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	"github.com/golang/mock/gomock"
 	"github.com/sirupsen/logrus"
@@ -29,21 +30,21 @@ func TestNewFHIR401Client(t *testing.T) {
 	//setup
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	sc.EXPECT().GetAccessToken().Return("test-access-token")
+	sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
 
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
 
 	//test
-	client, _, err := GetSourceClientFHIR401(context.Background(), fakeConfig, testLogger, models.SourceCredential{
-		RefreshToken: "test-refresh-token",
-		AccessToken:  "test-access-token",
-	}, &http.Client{})
+	client, _, err := GetSourceClientFHIR401(pkg.FastenEnvSandbox, pkg.SourceTypeEpic, context.Background(), testLogger, sc, &http.Client{})
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, client.Source.AccessToken, "test-access-token")
-	require.Equal(t, client.Source.RefreshToken, "test-refresh-token")
+	require.Equal(t, client.SourceCredential.GetAccessToken(), "test-access-token")
+	require.Equal(t, client.SourceCredential.GetRefreshToken(), "test-refresh-token")
 }
 
 func TestFHIR401Client_ProcessBundle(t *testing.T) {
@@ -51,14 +52,13 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	//setup
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
-	fakeConfig := mock_config.NewMockInterface(mockCtrl)
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	sc.EXPECT().GetAccessToken().Return("test-access-token")
+	sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, _, err := GetSourceClientFHIR401(context.Background(), fakeConfig, testLogger, models.Source{
-		RefreshToken: "test-refresh-token",
-		AccessToken:  "test-access-token",
-	}, &http.Client{})
+	client, _, err := GetSourceClientFHIR401(pkg.FastenEnvSandbox, pkg.SourceTypeEpic, context.Background(), testLogger, sc, &http.Client{})
 	require.NoError(t, err)
 
 	jsonBytes, err := readTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")

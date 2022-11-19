@@ -19,8 +19,10 @@ import (
 )
 
 type ManualClient struct {
-	Context context.Context
-	Logger  logrus.FieldLogger
+	FastenEnv  pkg.FastenEnvType
+	SourceType pkg.SourceType
+	Context    context.Context
+	Logger     logrus.FieldLogger
 
 	SourceCredential *models.SourceCredential
 }
@@ -35,21 +37,22 @@ func (m ManualClient) SyncAll(db models.DatabaseRepository) error {
 
 func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
 
+	//TODO: figure out how to pass patient information back to the database
 	// we need to find the (most populated) patient record
-	patientId, bundleType, err := m.ExtractPatientId(bundleFile)
+	_, bundleType, err := m.ExtractPatientId(bundleFile)
 	if err != nil {
 		return fmt.Errorf("an error occurred while extracting patient id from bundle: %w", err)
 	}
-	// we need to add the patient id to the source
-	m.SourceCredential.PatientId = patientId
-
-	// we need to upsert Source
-	err = db.CreateSource(m.Context, m.Source)
-	if err != nil {
-		return fmt.Errorf("an error occurred while creating manual source: %w", err)
-	}
-	// we need to parse the bundle into resources (might need to try a couple of different times)
-	var resourceFhirList []models.ResourceFhir
+	//// we need to add the patient id to the source
+	//m.SourceCredential.PatientId = patientId
+	//
+	//// we need to upsert Source
+	//err = db.CreateSource(m.Context, m.Source)
+	//if err != nil {
+	//	return fmt.Errorf("an error occurred while creating manual source: %w", err)
+	//}
+	//// we need to parse the bundle into resources (might need to try a couple of different times)
+	var rawResourceList []models.ResourceInterface
 	switch bundleType {
 	case "fhir430":
 		bundle430Data := fhir430.Bundle{}
@@ -57,11 +60,11 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
 		}
-		client, _, err := base.NewFHIR430Client(m.Context, m.AppConfig, m.Logger, *m.Source, http.DefaultClient)
+		client, _, err := base.GetSourceClientFHIR430(m.FastenEnv, m.SourceType, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
 		}
-		resourceFhirList, err = client.ProcessBundle(bundle430Data)
+		rawResourceList, err = client.ProcessBundle(bundle430Data)
 		if err != nil {
 			return fmt.Errorf("an error occurred while processing 4.3.0 resources: %w", err)
 		}
@@ -71,18 +74,18 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
-		client, _, err := base.NewFHIR401Client(m.Context, m.AppConfig, m.Logger, *m.Source, http.DefaultClient)
+		client, _, err := base.GetSourceClientFHIR401(m.FastenEnv, m.SourceType, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 		}
-		resourceFhirList, err = client.ProcessBundle(bundle401Data)
+		rawResourceList, err = client.ProcessBundle(bundle401Data)
 		if err != nil {
 			return fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
 		}
 	}
 	// we need to upsert all resources (and make sure they are associated with new Source)
-	for _, apiModel := range resourceFhirList {
-		err = db.UpsertResource(context.Background(), &apiModel)
+	for _, apiModel := range rawResourceList {
+		err = db.UpsertRawResource(context.Background(), *m.SourceCredential, apiModel)
 		if err != nil {
 			return fmt.Errorf("an error occurred while upserting resources: %w", err)
 		}
@@ -104,7 +107,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, err
 			if err != nil {
 				return "", false
 			}
-			typedResource := parsedResource.(base.ResourceInterface)
+			typedResource := parsedResource.(models.ResourceInterface)
 			resourceType, resourceId := typedResource.ResourceRef()
 
 			if resourceId == nil || len(*resourceId) == 0 {
@@ -129,7 +132,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, err
 			if err != nil {
 				return "", false
 			}
-			typedResource := parsedResource.(base.ResourceInterface)
+			typedResource := parsedResource.(models.ResourceInterface)
 			resourceType, resourceId := typedResource.ResourceRef()
 
 			if resourceId == nil || len(*resourceId) == 0 {
@@ -150,11 +153,11 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, err
 }
 
 func GetSourceClientManual(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*ManualClient, *models.SourceCredential, error) {
-	return ManualClient{
-		Context: ctx,
-		Logger:  globalLogger,
-		SourceCreds: &models.Source{
-			SourceType: pkg.SourceTypeManual,
-		},
+	return &ManualClient{
+		FastenEnv:        env,
+		SourceType:       sourceType,
+		Context:          ctx,
+		Logger:           globalLogger,
+		SourceCredential: &sourceCreds,
 	}, nil, nil
 }
