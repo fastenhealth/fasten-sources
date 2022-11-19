@@ -18,7 +18,7 @@ import (
 	"time"
 )
 
-type BaseClient struct {
+type SourceClientBase struct {
 	FastenEnv pkg.FastenEnvType
 	Context   context.Context
 	Logger    logrus.FieldLogger
@@ -26,13 +26,16 @@ type BaseClient struct {
 	OauthClient      *http.Client
 	SourceCredential models.SourceCredential
 	Headers          map[string]string
+
+	UsCoreResources []string
+	FhirVersion     string
 }
 
-func (c *BaseClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
+func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*BaseClient, *models.SourceCredential, error) {
+func NewBaseClient(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, *models.SourceCredential, error) {
 	var httpClient *http.Client
 	var updatedSource *models.SourceCredential
 	if len(testHttpClient) == 0 {
@@ -89,20 +92,49 @@ func NewBaseClient(env pkg.FastenEnvType, ctx context.Context, globalLogger logr
 
 	httpClient.Timeout = 10 * time.Second
 
-	return &BaseClient{
+	return &SourceClientBase{
 		FastenEnv:        env,
 		Context:          ctx,
 		Logger:           globalLogger,
 		OauthClient:      httpClient,
 		SourceCredential: sourceCreds,
 		Headers:          map[string]string{},
+
+		// https://build.fhir.org/ig/HL7/US-Core/
+		UsCoreResources: []string{
+			"AllergyIntolerance",
+			//"Binary",
+			"CarePlan",
+			"CareTeam",
+			"Condition",
+			//"Coverage",
+			"Device",
+			"DiagnosticReport",
+			"DocumentReference",
+			"Encounter",
+			"Goal",
+			"Immunization",
+			//"Location",
+			//"Medication",
+			//"MedicationRequest",
+			"Observation",
+			//"Organization",
+			//"Patient",
+			//"Practitioner",
+			//"PractitionerRole",
+			"Procedure",
+			//"Provenance",
+			//"RelatedPerson",
+			// "ServiceRequest",
+			// "Specimen",
+		},
 	}, updatedSource, nil
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HttpClient
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *BaseClient) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) error {
+func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) error {
 	resourceUrl, err := url.Parse(resourceSubpathOrNext)
 	if err != nil {
 		return err

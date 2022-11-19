@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientAnmedHealth struct {
+	models.SourceClient
+}
+
 // https://epicproxy.et0971.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0971.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientAnmedHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientAnmedHealth{baseClient}, updatedSourceCred, err
 }

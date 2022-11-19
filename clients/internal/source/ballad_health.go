@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientBalladHealth struct {
+	models.SourceClient
+}
+
 // https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/metadata
 func GetSourceClientBalladHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientBalladHealth{baseClient}, updatedSourceCred, err
 }

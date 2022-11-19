@@ -14,11 +14,17 @@ import (
 	"net/http"
 )
 
+type SourceClientCareevolution struct {
+	models.SourceClient
+}
+
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/.well-known/smart-configuration
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/metadata
 // https://fhir.careevolution.com/TestPatientAccounts.html
 func GetSourceClientCareevolution(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	// API requires the following headers for every request
+	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientCareevolution{baseClient}, updatedSourceCred, err
 }

@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientDenverHealth struct {
+	models.SourceClient
+}
+
 // https://webservices.dhha.org/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://webservices.dhha.org/PRD-FHIR/api/FHIR/R4/metadata
 func GetSourceClientDenverHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientDenverHealth{baseClient}, updatedSourceCred, err
 }

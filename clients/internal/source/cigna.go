@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type SourceClientCigna struct {
+	models.SourceClient
+}
+
 // https://r-hi2.cigna.com/.well-known/smart-configuration
 /*
 https://developer.cigna.com/service-apis/patient-access/sandbox#How-to-Use-the-Sandbox-Sandbox-Test-Users
@@ -21,5 +25,5 @@ https://developer.cigna.com/service-apis/patient-access/sandbox#How-to-Use-the-S
 func GetSourceClientCigna(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientCigna{baseClient}, updatedSourceCred, err
 }

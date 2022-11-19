@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientVanderbilt struct {
+	models.SourceClient
+}
+
 // https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientVanderbilt(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientVanderbilt{baseClient}, updatedSourceCred, err
 }

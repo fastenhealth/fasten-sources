@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientGeisinger struct {
+	models.SourceClient
+}
+
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/metadata
 func GetSourceClientGeisinger(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientGeisinger{baseClient}, updatedSourceCred, err
 }

@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientAtriusHealth struct {
+	models.SourceClient
+}
+
 // https://iatrius.atriushealth.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://iatrius.atriushealth.org/FHIR/api/FHIR/R4/metadata
 func GetSourceClientAtriusHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientAtriusHealth{baseClient}, updatedSourceCred, err
 }

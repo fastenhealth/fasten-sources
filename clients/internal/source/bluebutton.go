@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type SourceClientBluebutton struct {
+	models.SourceClient
+}
+
 // https://sandbox.bluebutton.cms.gov/.well-known/openid-configuration-v2
 /*
 https://groups.google.com/g/Developer-group-for-cms-blue-button-api/c/mVNFJI4dxbs
@@ -22,5 +26,5 @@ https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHlo
 func GetSourceClientBluebutton(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientBluebutton{baseClient}, updatedSourceCred, err
 }

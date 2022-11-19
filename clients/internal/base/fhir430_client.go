@@ -12,13 +12,14 @@ import (
 	"net/http"
 )
 
-type FHIR430Client struct {
-	*BaseClient
+type SourceClientFHIR430 struct {
+	*SourceClientBase
 }
 
-func GetSourceClientFHIR430(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*FHIR430Client, *models.SourceCredential, error) {
+func GetSourceClientFHIR430(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR430, *models.SourceCredential, error) {
 	baseClient, updatedSource, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	return &FHIR430Client{
+	baseClient.FhirVersion = "4.3.0"
+	return &SourceClientFHIR430{
 		baseClient,
 	}, updatedSource, err
 }
@@ -26,7 +27,7 @@ func GetSourceClientFHIR430(env pkg.FastenEnvType, ctx context.Context, globalLo
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FHIR
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *FHIR430Client) GetPatientEverything(patientId string) (*fhir430.Bundle, error) {
+func (c *SourceClientFHIR430) GetPatientEverything(patientId string) (*fhir430.Bundle, error) {
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
 	bundle := fhir430.Bundle{}
@@ -34,7 +35,7 @@ func (c *FHIR430Client) GetPatientEverything(patientId string) (*fhir430.Bundle,
 	return &bundle, err
 }
 
-func (c *FHIR430Client) GetPatient(patientId string) (*fhir430.Patient, error) {
+func (c *SourceClientFHIR430) GetPatient(patientId string) (*fhir430.Patient, error) {
 
 	patient := fhir430.Patient{}
 	err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
@@ -44,7 +45,7 @@ func (c *FHIR430Client) GetPatient(patientId string) (*fhir430.Patient, error) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *FHIR430Client) ProcessBundle(bundle fhir430.Bundle) ([]models.ResourceInterface, error) {
+func (c *SourceClientFHIR430) ProcessBundle(bundle fhir430.Bundle) ([]models.ResourceInterface, error) {
 
 	//process each entry in bundle
 	wrappedResourceModels := lo.FilterMap[fhir430.BundleEntry, models.ResourceInterface](bundle.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (models.ResourceInterface, bool) {

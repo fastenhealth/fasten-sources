@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type SourceClientCerner struct {
+	models.SourceClient
+}
+
 /*
 https://groups.google.com/g/cerner-fhir-developers
 http://fhir.cerner.com/millennium/r4/#authorization
@@ -23,6 +27,8 @@ http://fhir.cerner.com/millennium/r4/#authorization
 // https://docs.google.com/document/d/10RnVyF1etl_17pyCyK96tyhUWRbrTyEcqpwzW-Z-Ybs/edit
 func GetSourceClientCerner(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	// API requires the following headers for every request
+	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientCerner{baseClient}, updatedSourceCred, err
 }

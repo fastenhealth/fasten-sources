@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientWashingtonHospitalHealthcareSystem struct {
+	models.SourceClient
+}
+
 // https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4/metadata
 func GetSourceClientWashingtonHospitalHealthcareSystem(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientWashingtonHospitalHealthcareSystem{baseClient}, updatedSourceCred, err
 }

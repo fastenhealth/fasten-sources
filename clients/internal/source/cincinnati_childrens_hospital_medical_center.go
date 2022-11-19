@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientCincinnatiChildrensHospitalMedicalCenter struct {
+	models.SourceClient
+}
+
 // https://boomer.cchmc.org/fhir/api/fhir/R4/.well-known/smart-configuration
 // https://boomer.cchmc.org/fhir/api/fhir/R4/metadata
 func GetSourceClientCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientCincinnatiChildrensHospitalMedicalCenter{baseClient}, updatedSourceCred, err
 }

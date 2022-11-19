@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientStormontVailHealth struct {
+	models.SourceClient
+}
+
 // https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/metadata
 func GetSourceClientStormontVailHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientStormontVailHealth{baseClient}, updatedSourceCred, err
 }

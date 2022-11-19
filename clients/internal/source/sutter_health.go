@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientSutterHealth struct {
+	models.SourceClient
+}
+
 // https://apiservices.sutterhealth.org/ifs/api/FHIR/R4/.well-known/smart-configuration
 // https://apiservices.sutterhealth.org/ifs/api/FHIR/R4/metadata
 func GetSourceClientSutterHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientSutterHealth{baseClient}, updatedSourceCred, err
 }

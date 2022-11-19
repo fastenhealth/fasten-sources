@@ -13,11 +13,15 @@ import (
 	"net/http"
 )
 
+type SourceClientHealthybluemo struct {
+	models.SourceClient
+}
+
 // https://patient360mo.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360mo.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360mo.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientHealthybluemo(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientHealthybluemo{baseClient}, updatedSourceCred, err
 }

@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientEmoryHealthcare struct {
+	models.SourceClient
+}
+
 // https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4/metadata
 func GetSourceClientEmoryHealthcare(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientEmoryHealthcare{baseClient}, updatedSourceCred, err
 }

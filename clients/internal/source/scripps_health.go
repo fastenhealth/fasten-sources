@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientScrippsHealth struct {
+	models.SourceClient
+}
+
 // https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4/metadata
 func GetSourceClientScrippsHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientScrippsHealth{baseClient}, updatedSourceCred, err
 }

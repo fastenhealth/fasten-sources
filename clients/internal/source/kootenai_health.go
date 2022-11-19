@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientKootenaiHealth struct {
+	models.SourceClient
+}
+
 // https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4/.well-known/smart-configuration
 // https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4/metadata
 func GetSourceClientKootenaiHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientKootenaiHealth{baseClient}, updatedSourceCred, err
 }

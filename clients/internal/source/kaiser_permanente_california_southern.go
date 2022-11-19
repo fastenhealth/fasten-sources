@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientKaiserPermanenteCaliforniaSouthern struct {
+	models.SourceClient
+}
+
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/api/FHIR/R4/metadata
 func GetSourceClientKaiserPermanenteCaliforniaSouthern(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientKaiserPermanenteCaliforniaSouthern{baseClient}, updatedSourceCred, err
 }

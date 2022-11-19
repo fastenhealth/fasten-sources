@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter struct {
+	models.SourceClient
+}
+
 // https://haiku.wacofhc.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.wacofhc.org/FHIR/api/FHIR/R4/metadata
 func GetSourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter{baseClient}, updatedSourceCred, err
 }

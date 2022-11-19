@@ -13,11 +13,15 @@ import (
 	"net/http"
 )
 
+type SourceClientHighmarkwesternny struct {
+	models.SourceClient
+}
+
 // https://patient360.mybcbswny.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360.mybcbswny.com/P360Member/api/fhir-r4/metadata
 // https://patient360.mybcbswny.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientHighmarkwesternny(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientHighmarkwesternny{baseClient}, updatedSourceCred, err
 }

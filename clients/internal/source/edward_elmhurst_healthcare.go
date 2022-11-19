@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientEdwardElmhurstHealthcare struct {
+	models.SourceClient
+}
+
 // https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/metadata
 func GetSourceClientEdwardElmhurstHealthcare(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientEdwardElmhurstHealthcare{baseClient}, updatedSourceCred, err
 }

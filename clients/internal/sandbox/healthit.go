@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type SourceClientHealthit struct {
+	models.SourceClient
+}
+
 // https://fhirsandbox.healthit.gov/secure/r4/.well-known/smart-configuration
 /*
 CFor demo users use Username: demouser Password: Demouser1!
@@ -22,6 +26,8 @@ User associated with multiple patients, so the system prompts to chose one when 
 */
 func GetSourceClientHealthit(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	// API requires the following headers for every request
+	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientHealthit{baseClient}, updatedSourceCred, err
 }

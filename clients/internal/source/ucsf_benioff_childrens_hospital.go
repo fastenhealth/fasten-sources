@@ -14,10 +14,14 @@ import (
 	"net/http"
 )
 
+type SourceClientUcsfBenioffChildrensHospital struct {
+	models.SourceClient
+}
+
 // https://unified-api.ucsf.edu/clinical/apex/api/FHIR/R4/.well-known/smart-configuration
 // https://unified-api.ucsf.edu/clinical/apex/api/FHIR/R4/metadata
 func GetSourceClientUcsfBenioffChildrensHospital(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientUcsfBenioffChildrensHospital{baseClient}, updatedSourceCred, err
 }

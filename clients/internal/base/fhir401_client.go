@@ -12,21 +12,22 @@ import (
 	"net/http"
 )
 
-type FHIR401Client struct {
-	*BaseClient
+type SourceClientFHIR401 struct {
+	*SourceClientBase
 }
 
-func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*FHIR401Client, *models.SourceCredential, error) {
+func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR401, *models.SourceCredential, error) {
 	baseClient, updatedSource, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	return &FHIR401Client{
-		baseClient,
+	baseClient.FhirVersion = "4.0.1"
+	return &SourceClientFHIR401{
+		SourceClientBase: baseClient,
 	}, updatedSource, err
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sync
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *FHIR401Client) SyncAll(db models.DatabaseRepository) error {
+func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) error {
 
 	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
 	if err != nil {
@@ -50,7 +51,7 @@ func (c *FHIR401Client) SyncAll(db models.DatabaseRepository) error {
 }
 
 //TODO, find a way to sync references that cannot be searched by patient ID.
-func (c *FHIR401Client) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
+func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
 
 	//Store the Patient
 	patientResource, err := c.GetPatient(c.SourceCredential.GetPatientId())
@@ -108,7 +109,7 @@ func (c *FHIR401Client) SyncAllByResourceName(db models.DatabaseRepository, reso
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FHIR
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *FHIR401Client) GetResourceBundle(relativeResourcePath string) (fhir401.Bundle, error) {
+func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (fhir401.Bundle, error) {
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
 	bundle := fhir401.Bundle{}
@@ -156,11 +157,11 @@ func (c *FHIR401Client) GetResourceBundle(relativeResourcePath string) (fhir401.
 
 }
 
-func (c *FHIR401Client) GetPatientBundle(patientId string) (fhir401.Bundle, error) {
+func (c *SourceClientFHIR401) GetPatientBundle(patientId string) (fhir401.Bundle, error) {
 	return c.GetResourceBundle(fmt.Sprintf("Patient/%s/$everything", patientId))
 }
 
-func (c *FHIR401Client) GetPatient(patientId string) (fhir401.Patient, error) {
+func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, error) {
 
 	patient := fhir401.Patient{}
 	err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
@@ -170,7 +171,7 @@ func (c *FHIR401Client) GetPatient(patientId string) (fhir401.Patient, error) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *FHIR401Client) ProcessBundle(bundle fhir401.Bundle) ([]models.ResourceInterface, error) {
+func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.ResourceInterface, error) {
 
 	//process each entry in bundle
 	wrappedResourceModels := lo.FilterMap[fhir401.BundleEntry, models.ResourceInterface](bundle.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (models.ResourceInterface, bool) {

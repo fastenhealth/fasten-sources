@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type SourceClientAthena struct {
+	models.SourceClient
+}
+
 // https://api.preview.platform.athenahealth.com/fhir/r4/.well-known/smart-configuration
 /*
 sandbox users:
@@ -24,5 +28,5 @@ Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com /
 func GetSourceClientAthena(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return baseClient, updatedSourceCred, err
+	return SourceClientAthena{baseClient}, updatedSourceCred, err
 }
