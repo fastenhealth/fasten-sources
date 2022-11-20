@@ -90,3 +90,17 @@ func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile interface{}
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllBundle), db, bundleFile)
 }
+
+// SyncAllByResourceName mocks base method.
+func (m *MockSourceClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SyncAllByResourceName", db, resourceNames)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SyncAllByResourceName indicates an expected call of SyncAllByResourceName.
+func (mr *MockSourceClientMockRecorder) SyncAllByResourceName(db, resourceNames interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllByResourceName", reflect.TypeOf((*MockSourceClient)(nil).SyncAllByResourceName), db, resourceNames)
+}
