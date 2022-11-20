@@ -49,6 +49,20 @@ func (mr *MockSourceClientMockRecorder) GetRequest(resourceSubpath, decodeModelP
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRequest", reflect.TypeOf((*MockSourceClient)(nil).GetRequest), resourceSubpath, decodeModelPtr)
 }
 
+// GetUsCoreResources mocks base method.
+func (m *MockSourceClient) GetUsCoreResources() []string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetUsCoreResources")
+	ret0, _ := ret[0].([]string)
+	return ret0
+}
+
+// GetUsCoreResources indicates an expected call of GetUsCoreResources.
+func (mr *MockSourceClientMockRecorder) GetUsCoreResources() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsCoreResources", reflect.TypeOf((*MockSourceClient)(nil).GetUsCoreResources))
+}
+
 // SyncAll mocks base method.
 func (m *MockSourceClient) SyncAll(db models.DatabaseRepository) error {
 	m.ctrl.T.Helper()

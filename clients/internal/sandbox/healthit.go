@@ -31,3 +31,10 @@ func GetSourceClientHealthit(env pkg.FastenEnvType, ctx context.Context, globalL
 
 	return SourceClientHealthit{baseClient}, updatedSourceCred, err
 }
+
+// Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
+// Manually processing individual resources
+func (c SourceClientHealthit) SyncAll(db models.DatabaseRepository) error {
+	supportedResources := append(c.GetUsCoreResources(), []string{"Consent", "FamilyMemberHistory", "InsurancePlan", "MedicationRequest", "NutritionOrder", "Person", "Provenance", "Questionnaire", "QuestionnaireResponse", "RelatedPerson", "Schedule", "ServiceRequest", "Slot"}...)
+	return c.SyncAllByResourceName(db, supportedResources)
+}

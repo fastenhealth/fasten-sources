@@ -60,7 +60,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
 		}
-		client, _, err := base.GetSourceClientFHIR430(m.FastenEnv, m.SourceType, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
+		client, _, err := base.GetSourceClientFHIR430(m.FastenEnv, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
 		}
@@ -74,7 +74,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
-		client, _, err := base.GetSourceClientFHIR401(m.FastenEnv, m.SourceType, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
+		client, _, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, *m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 		}
