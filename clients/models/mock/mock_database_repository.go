@@ -48,15 +48,3 @@ func (mr *MockDatabaseRepositoryMockRecorder) UpsertRawResource(ctx, sourceCrede
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpsertRawResource", reflect.TypeOf((*MockDatabaseRepository)(nil).UpsertRawResource), ctx, sourceCredentials, rawResource)
 }
-
-// WrapRawResource mocks base method.
-func (m *MockDatabaseRepository) WrapRawResource(rawResourcePtr interface{}) {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "WrapRawResource", rawResourcePtr)
-}
-
-// WrapRawResource indicates an expected call of WrapRawResource.
-func (mr *MockDatabaseRepositoryMockRecorder) WrapRawResource(rawResourcePtr interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WrapRawResource", reflect.TypeOf((*MockDatabaseRepository)(nil).WrapRawResource), rawResourcePtr)
-}
