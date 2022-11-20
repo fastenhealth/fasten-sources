@@ -16,6 +16,8 @@ import (
 
 func GetSourceConfig(env pkg.FastenEnvType, sourceType pkg.SourceType) (models.LighthouseSourceDefinition, error) {
 	switch sourceType {
+	case pkg.SourceTypeManual:
+		return models.LighthouseSourceDefinition{SourceType: pkg.SourceTypeManual}, nil
 	// platform
 	case pkg.SourceTypeCareevolution:
 		return platform.GetSourceCareevolution(env)

@@ -8,6 +8,7 @@ package pkg
 type SourceType string
 
 const (
+	SourceTypeManual SourceType = "manual"
 	// platform
 	SourceTypeCareevolution SourceType = "careevolution"
 	SourceTypeCerner        SourceType = "cerner"
