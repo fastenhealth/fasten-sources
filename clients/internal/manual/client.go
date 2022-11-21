@@ -52,7 +52,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	//	return fmt.Errorf("an error occurred while creating manual source: %w", err)
 	//}
 	//// we need to parse the bundle into resources (might need to try a couple of different times)
-	var rawResourceList []models.ResourceInterface
+	var rawResourceList []models.RawResourceFhir
 	switch bundleType {
 	case "fhir430":
 		bundle430Data := fhir430.Bundle{}

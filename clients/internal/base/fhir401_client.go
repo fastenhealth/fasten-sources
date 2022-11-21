@@ -58,23 +58,22 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	if err != nil {
 		return err
 	}
-	//patientJson, err := patientResource.MarshalJSON()
-	//if err != nil {
-	//	return err
-	//}
+	patientJson, err := patientResource.MarshalJSON()
+	if err != nil {
+		return err
+	}
 
-	//patientResourceType, patientResourceId := patientResource.ResourceRef()
-	//patientResourceFhir := models.ResourceFhir{
-	//	OriginBase: models.OriginBase{
-	//		UserID:             c.Source.UserID,
-	//		SourceID:           c.Source.ID,
-	//		SourceResourceType: patientResourceType,
-	//		SourceResourceID:   *patientResourceId,
-	//	},
-	//	Payload: datatypes.JSON(patientJson),
-	//}
-	db.UpsertRawResource(context.Background(), c.SourceCredential, patientResource)
-
+	patientResourceType, patientResourceId := patientResource.ResourceRef()
+	patientResourceFhir := models.RawResourceFhir{
+		SourceResourceType: patientResourceType,
+		SourceResourceID:   *patientResourceId,
+		RawResource:        patientJson,
+	}
+	err = db.UpsertRawResource(context.Background(), c.SourceCredential, patientResourceFhir)
+	if err != nil {
+		c.Logger.Infof("An error occurred while storing raw resource (by name) %v", err)
+		return err
+	}
 	//error map storage.
 	syncErrors := map[string]error{}
 
@@ -153,6 +152,7 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (fh
 		}
 	}
 
+	c.Logger.Infof("BUNDLE - %v", bundle)
 	return bundle, err
 
 }
@@ -171,38 +171,31 @@ func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, err
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.ResourceInterface, error) {
+func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.RawResourceFhir, error) {
 
 	//process each entry in bundle
-	wrappedResourceModels := lo.FilterMap[fhir401.BundleEntry, models.ResourceInterface](bundle.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (models.ResourceInterface, bool) {
+	wrappedResourceModels := lo.FilterMap[fhir401.BundleEntry, models.RawResourceFhir](bundle.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (models.RawResourceFhir, bool) {
 		originalResource, _ := fhirutils.MapToResource(bundleEntry.Resource, false)
-		return originalResource.(models.ResourceInterface), true
 
-		//resourceType, resourceId := originalResource.(ResourceInterface).ResourceRef()
-
+		resourceType, resourceId := originalResource.(models.ResourceInterface).ResourceRef()
+		if resourceId == nil {
+			//no resourceId present for this resource, we'll ignore it.
+			return models.RawResourceFhir{}, false
+		}
 		// TODO find a way to safely/consistently get the resource updated date (and other metadata) which shoudl be added to the model.
 		//if originalResource.Meta != nil && originalResource.Meta.LastUpdated != nil {
 		//	if parsed, err := time.Parse(time.RFC3339Nano, *originalResource.Meta.LastUpdated); err == nil {
 		//		patientProfile.UpdatedAt = parsed
 		//	}
 		//}
-		//if resourceId == nil {
-		//	//no resourceId present for this resource, we'll ignore it.
-		//	return models.ResourceFhir{}, false
-		//}
 
-		//wrappedResourceModel := models.ResourceFhir{
-		//	OriginBase: models.OriginBase{
-		//		ModelBase:          models.ModelBase{},
-		//		UserID:             c.Source.UserID,
-		//		SourceID:           c.Source.ID,
-		//		SourceResourceID:   *resourceId,
-		//		SourceResourceType: resourceType,
-		//	},
-		//	Payload: datatypes.JSON(bundleEntry.Resource),
-		//}
+		wrappedResourceModel := models.RawResourceFhir{
+			SourceResourceID:   *resourceId,
+			SourceResourceType: resourceType,
+			RawResource:        bundleEntry.Resource,
+		}
 
-		//return wrappedResourceModel, true
+		return wrappedResourceModel, true
 	})
 	return wrappedResourceModels, nil
 }

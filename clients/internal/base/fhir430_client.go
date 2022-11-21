@@ -45,39 +45,31 @@ func (c *SourceClientFHIR430) GetPatient(patientId string) (*fhir430.Patient, er
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR430) ProcessBundle(bundle fhir430.Bundle) ([]models.ResourceInterface, error) {
+func (c *SourceClientFHIR430) ProcessBundle(bundle fhir430.Bundle) ([]models.RawResourceFhir, error) {
 
 	//process each entry in bundle
-	wrappedResourceModels := lo.FilterMap[fhir430.BundleEntry, models.ResourceInterface](bundle.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (models.ResourceInterface, bool) {
+	wrappedResourceModels := lo.FilterMap[fhir430.BundleEntry, models.RawResourceFhir](bundle.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (models.RawResourceFhir, bool) {
 		originalResource, _ := fhirutils.MapToResource(bundleEntry.Resource, false)
 
-		_, resourceId := originalResource.(models.ResourceInterface).ResourceRef()
-		//return
+		resourceType, resourceId := originalResource.(models.ResourceInterface).ResourceRef()
+		if resourceId == nil {
+			//no resourceId present for this resource, we'll ignore it.
+			return models.RawResourceFhir{}, false
+		}
 		// TODO find a way to safely/consistently get the resource updated date (and other metadata) which shoudl be added to the model.
 		//if originalResource.Meta != nil && originalResource.Meta.LastUpdated != nil {
 		//	if parsed, err := time.Parse(time.RFC3339Nano, *originalResource.Meta.LastUpdated); err == nil {
 		//		patientProfile.UpdatedAt = parsed
 		//	}
 		//}
-		if resourceId == nil {
-			//no resourceId present for this resource, we'll ignore it.
-			return nil, false
+
+		wrappedResourceModel := models.RawResourceFhir{
+			SourceResourceID:   *resourceId,
+			SourceResourceType: resourceType,
+			RawResource:        bundleEntry.Resource,
 		}
 
-		return originalResource.(models.ResourceInterface), true
-
-		//wrappedResourceModel := models.ResourceFhir{
-		//	OriginBase: models.OriginBase{
-		//		ModelBase:          models.ModelBase{},
-		//		UserID:             c.Source.UserID,
-		//		SourceID:           c.Source.ID,
-		//		SourceResourceID:   *resourceId,
-		//		SourceResourceType: resourceType,
-		//	},
-		//	Payload: datatypes.JSON(bundleEntry.Resource),
-		//}
-		//
-		//return wrappedResourceModel, true
+		return wrappedResourceModel, true
 	})
 	return wrappedResourceModels, nil
 }
