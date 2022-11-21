@@ -66,7 +66,7 @@ func (c *SourceClientFHIR430) ProcessBundle(bundle fhir430.Bundle) ([]models.Raw
 		wrappedResourceModel := models.RawResourceFhir{
 			SourceResourceID:   *resourceId,
 			SourceResourceType: resourceType,
-			RawResource:        bundleEntry.Resource,
+			ResourceRaw:        bundleEntry.Resource,
 		}
 
 		return wrappedResourceModel, true

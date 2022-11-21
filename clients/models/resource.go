@@ -10,5 +10,5 @@ type ResourceInterface interface {
 type RawResourceFhir struct {
 	SourceResourceType string          `json:"source_resource_type"`
 	SourceResourceID   string          `json:"source_resource_id"`
-	RawResource        json.RawMessage `json:"raw_resource"`
+	ResourceRaw        json.RawMessage `json:"resource_raw"`
 }

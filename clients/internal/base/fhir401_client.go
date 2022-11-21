@@ -67,7 +67,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	patientResourceFhir := models.RawResourceFhir{
 		SourceResourceType: patientResourceType,
 		SourceResourceID:   *patientResourceId,
-		RawResource:        patientJson,
+		ResourceRaw:        patientJson,
 	}
 	err = db.UpsertRawResource(context.Background(), c.SourceCredential, patientResourceFhir)
 	if err != nil {
@@ -192,7 +192,7 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 		wrappedResourceModel := models.RawResourceFhir{
 			SourceResourceID:   *resourceId,
 			SourceResourceType: resourceType,
-			RawResource:        bundleEntry.Resource,
+			ResourceRaw:        bundleEntry.Resource,
 		}
 
 		return wrappedResourceModel, true
