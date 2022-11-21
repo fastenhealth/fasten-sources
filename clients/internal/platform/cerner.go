@@ -35,7 +35,7 @@ func GetSourceClientCerner(env pkg.FastenEnvType, ctx context.Context, globalLog
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c SourceClientCerner) SyncAll(db models.DatabaseRepository) error {
+func (c SourceClientCerner) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{"Account", "Appointment", "Consent", "FamilyMemberHistory", "InsurancePlan", "MedicationRequest", "NutritionOrder", "Person", "Provenance", "Questionnaire", "QuestionnaireResponse", "RelatedPerson", "Schedule", "ServiceRequest", "Slot"}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }

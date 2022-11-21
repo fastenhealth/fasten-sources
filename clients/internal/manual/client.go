@@ -32,7 +32,7 @@ func (m ManualClient) GetUsCoreResources() []string {
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
+func (m ManualClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
 	//TODO implement me
 	panic("implement me")
 }
@@ -41,17 +41,20 @@ func (m ManualClient) GetRequest(resourceSubpath string, decodeModelPtr interfac
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAll(db models.DatabaseRepository) error {
+func (m ManualClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
+func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) (models.UpsertSummary, error) {
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
 
 	//TODO: figure out how to pass patient information back to the database
 	// we need to find the (most populated) patient record
 	_, bundleType, err := m.ExtractPatientId(bundleFile)
 	if err != nil {
-		return fmt.Errorf("an error occurred while extracting patient id from bundle: %w", err)
+		return summary, fmt.Errorf("an error occurred while extracting patient id from bundle: %w", err)
 	}
 	//// we need to add the patient id to the source
 	//m.SourceCredential.SetPatientId(patientId)
@@ -68,39 +71,39 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		bundle430Data := fhir430.Bundle{}
 		err := base.ParseBundle(bundleFile, &bundle430Data)
 		if err != nil {
-			return fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
+			return summary, fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
 		}
 		client, _, err := base.GetSourceClientFHIR430(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
 		if err != nil {
-			return fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
+			return summary, fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
 		}
 		rawResourceList, err = client.ProcessBundle(bundle430Data)
 		if err != nil {
-			return fmt.Errorf("an error occurred while processing 4.3.0 resources: %w", err)
+			return summary, fmt.Errorf("an error occurred while processing 4.3.0 resources: %w", err)
 		}
 	case "fhir401":
 		bundle401Data := fhir401.Bundle{}
 		err := base.ParseBundle(bundleFile, &bundle401Data)
 		if err != nil {
-			return fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
+			return summary, fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
 		client, _, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
 		if err != nil {
-			return fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
+			return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 		}
 		rawResourceList, err = client.ProcessBundle(bundle401Data)
 		if err != nil {
-			return fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
+			return summary, fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
 		}
 	}
 	// we need to upsert all resources (and make sure they are associated with new Source)
 	for _, apiModel := range rawResourceList {
-		err = db.UpsertRawResource(context.Background(), m.SourceCredential, apiModel)
+		_, err := db.UpsertRawResource(context.Background(), m.SourceCredential, apiModel)
 		if err != nil {
-			return fmt.Errorf("an error occurred while upserting resources: %w", err)
+			return summary, fmt.Errorf("an error occurred while upserting resources: %w", err)
 		}
 	}
-	return nil
+	return summary, nil
 }
 
 func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, error) {

@@ -33,7 +33,7 @@ func GetSourceClientAthena(env pkg.FastenEnvType, ctx context.Context, globalLog
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c SourceClientAthena) SyncAll(db models.DatabaseRepository) error {
+func (c SourceClientAthena) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }

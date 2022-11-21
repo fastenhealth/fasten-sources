@@ -31,7 +31,7 @@ func GetSourceClientEpic(env pkg.FastenEnvType, ctx context.Context, globalLogge
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c SourceClientEpic) SyncAll(db models.DatabaseRepository) error {
+func (c SourceClientEpic) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{"Account", "Appointment", "Consent", "FamilyMemberHistory", "InsurancePlan", "MedicationRequest", "NutritionOrder", "Person", "Provenance", "Questionnaire", "QuestionnaireResponse", "RelatedPerson", "Schedule", "ServiceRequest", "Slot"}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }

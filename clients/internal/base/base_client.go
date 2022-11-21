@@ -31,7 +31,7 @@ type SourceClientBase struct {
 	FhirVersion     string
 }
 
-func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
+func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) (models.UpsertSummary, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 

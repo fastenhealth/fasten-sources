@@ -27,40 +27,48 @@ func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLo
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sync
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) error {
-
+func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
 	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
 	if err != nil {
-		return err
+		return summary, err
 	}
 
 	rawResourceModels, err := c.ProcessBundle(bundle)
 	if err != nil {
 		c.Logger.Infof("An error occurred while processing patient bundle %s", c.SourceCredential.GetPatientId())
-		return err
+		return summary, err
 	}
-	//todo, create the resources in dependency order
+	summary.TotalResources = len(rawResourceModels)
 
 	for _, rawResource := range rawResourceModels {
-		err = db.UpsertRawResource(context.Background(), c.SourceCredential, rawResource)
+		isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, rawResource)
 		if err != nil {
-			return err
+			return summary, err
+		}
+		if isUpdated {
+			summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", rawResource.SourceResourceType, rawResource.SourceResourceID))
 		}
 	}
-	return nil
+	return summary, nil
 }
 
 //TODO, find a way to sync references that cannot be searched by patient ID.
-func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
+func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
 
 	//Store the Patient
 	patientResource, err := c.GetPatient(c.SourceCredential.GetPatientId())
 	if err != nil {
-		return err
+		return summary, err
 	}
 	patientJson, err := patientResource.MarshalJSON()
 	if err != nil {
-		return err
+		return summary, err
 	}
 
 	patientResourceType, patientResourceId := patientResource.ResourceRef()
@@ -69,11 +77,16 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		SourceResourceID:   *patientResourceId,
 		ResourceRaw:        patientJson,
 	}
-	err = db.UpsertRawResource(context.Background(), c.SourceCredential, patientResourceFhir)
+	isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, patientResourceFhir)
 	if err != nil {
 		c.Logger.Infof("An error occurred while storing raw resource (by name) %v", err)
-		return err
+		return summary, err
 	}
+	summary.TotalResources += 1
+	if isUpdated {
+		summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", patientResourceFhir.SourceResourceType, patientResourceFhir.SourceResourceID))
+	}
+
 	//error map storage.
 	syncErrors := map[string]error{}
 
@@ -90,19 +103,23 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			syncErrors[resourceType] = err
 			continue
 		}
+		summary.TotalResources += len(rawResourceModels)
 		for _, apiModel := range rawResourceModels {
-			err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
+			isUpdated, err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
+			}
+			if isUpdated {
+				summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", apiModel.SourceResourceType, apiModel.SourceResourceID))
 			}
 		}
 	}
 
 	if len(syncErrors) > 0 {
-		return fmt.Errorf("%d error(s) occurred during sync: %v", len(syncErrors), syncErrors)
+		return summary, fmt.Errorf("%d error(s) occurred during sync: %v", len(syncErrors), syncErrors)
 	}
-	return nil
+	return summary, nil
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

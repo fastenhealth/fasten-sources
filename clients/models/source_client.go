@@ -8,9 +8,9 @@ import (
 type SourceClient interface {
 	GetUsCoreResources() []string
 	GetRequest(resourceSubpath string, decodeModelPtr interface{}) error
-	SyncAll(db DatabaseRepository) error
-	SyncAllByResourceName(db DatabaseRepository, resourceNames []string) error
+	SyncAll(db DatabaseRepository) (UpsertSummary, error)
+	SyncAllByResourceName(db DatabaseRepository, resourceNames []string) (UpsertSummary, error)
 
 	//Manual client ONLY functions
-	SyncAllBundle(db DatabaseRepository, bundleFile *os.File) error
+	SyncAllBundle(db DatabaseRepository, bundleFile *os.File) (UpsertSummary, error)
 }
