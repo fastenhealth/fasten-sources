@@ -8,8 +8,10 @@ import (
 type SourceClient interface {
 	GetUsCoreResources() []string
 	GetRequest(resourceSubpath string, decodeModelPtr interface{}) error
+	GetResourceBundle(relativeResourcePath string) (interface{}, error)
 	SyncAll(db DatabaseRepository) (UpsertSummary, error)
 	SyncAllByResourceName(db DatabaseRepository, resourceNames []string) (UpsertSummary, error)
+	SyncAllByPatientEverythingBundle(db DatabaseRepository, bundleModel interface{}) (UpsertSummary, error)
 
 	//Manual client ONLY functions
 	SyncAllBundle(db DatabaseRepository, bundleFile *os.File) (UpsertSummary, error)

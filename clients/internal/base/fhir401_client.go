@@ -28,15 +28,22 @@ func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLo
 // Sync
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
+	if err != nil {
+		return models.UpsertSummary{
+			UpdatedResources: []string{},
+		}, err
+	}
+
+	return c.SyncAllByPatientEverythingBundle(db, bundle)
+}
+
+func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundle interface{}) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
 	}
-	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
-	if err != nil {
-		return summary, err
-	}
 
-	rawResourceModels, err := c.ProcessBundle(bundle)
+	rawResourceModels, err := c.ProcessBundle(bundle.(fhir401.Bundle))
 	if err != nil {
 		c.Logger.Infof("An error occurred while processing patient bundle %s", c.SourceCredential.GetPatientId())
 		return summary, err
@@ -97,7 +104,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			syncErrors[resourceType] = err
 			continue
 		}
-		rawResourceModels, err := c.ProcessBundle(bundle)
+		rawResourceModels, err := c.ProcessBundle(bundle.(fhir401.Bundle))
 		if err != nil {
 			c.Logger.Infof("An error occurred while processing %s bundle %s", resourceType, c.SourceCredential.GetPatientId())
 			syncErrors[resourceType] = err
@@ -126,7 +133,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FHIR
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (fhir401.Bundle, error) {
+func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (interface{}, error) {
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
 	bundle := fhir401.Bundle{}
@@ -176,7 +183,11 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (fh
 }
 
 func (c *SourceClientFHIR401) GetPatientBundle(patientId string) (fhir401.Bundle, error) {
-	return c.GetResourceBundle(fmt.Sprintf("Patient/%s/$everything", patientId))
+	patientBundle, err := c.GetResourceBundle(fmt.Sprintf("Patient/%s/$everything", patientId))
+	if err != nil {
+		return fhir401.Bundle{}, err
+	}
+	return patientBundle.(fhir401.Bundle), err
 }
 
 func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, error) {

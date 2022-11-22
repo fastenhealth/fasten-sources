@@ -26,3 +26,12 @@ func GetSourceClientAetna(env pkg.FastenEnvType, ctx context.Context, globalLogg
 
 	return SourceClientAetna{baseClient}, updatedSourceCred, err
 }
+
+// Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html
+func (c SourceClientAetna) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+	bundle, err := c.GetResourceBundle("Patient")
+	if err != nil {
+		return models.UpsertSummary{UpdatedResources: []string{}}, err
+	}
+	return c.SyncAllByPatientEverythingBundle(db, bundle)
+}

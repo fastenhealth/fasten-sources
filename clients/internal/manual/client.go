@@ -27,6 +27,16 @@ type ManualClient struct {
 	SourceCredential models.SourceCredential
 }
 
+func (m ManualClient) GetResourceBundle(relativeResourcePath string) (interface{}, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (m ManualClient) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundleModel interface{}) (models.UpsertSummary, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (m ManualClient) GetUsCoreResources() []string {
 	//TODO implement me
 	panic("implement me")
