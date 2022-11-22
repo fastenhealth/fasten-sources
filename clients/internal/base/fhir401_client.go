@@ -2,6 +2,7 @@ package base
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -10,6 +11,7 @@ import (
 	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
 	"net/http"
+	"strings"
 )
 
 type SourceClientFHIR401 struct {
@@ -62,7 +64,10 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	return summary, nil
 }
 
-//TODO, find a way to sync references that cannot be searched by patient ID.
+// SyncAllByResourceName
+// Given a list of resource names (Patient, Encounter, etc), we should query for all resources associated with the current patient
+// then store these resources in the database. NOTE: we must extract links to other resources referenced as we find them, and process
+// them as well
 func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
@@ -97,7 +102,10 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	//error map storage.
 	syncErrors := map[string]error{}
 
-	//Store all other resources.
+	//lookup table for every resource ID found by Fasten
+	lookupResourceReferences := map[string]bool{}
+
+	//query for resources by resource name
 	for _, resourceType := range resourceNames {
 		bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?patient=%s", resourceType, c.SourceCredential.GetPatientId()))
 		if err != nil {
@@ -112,47 +120,65 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 		summary.TotalResources += len(rawResourceModels)
 
-		extractedResourceReferences := []string{}
-
 		for _, apiModel := range rawResourceModels {
-			resourceObj, err := fhirutils.MapToResource(apiModel.ResourceRaw, false)
+			err = c.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
 			}
 
-			isUpdated, err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
+		}
+	}
+
+	// now that we've processed all resources by resource type, lets see if theres any extracted resources that we haven't processed.
+	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
+	extractionLoopCount := 0
+	for {
+		//loop forever until we've processed all pending resources
+
+		pendingLookupResourceReferences := lo.PickBy[string, bool](lookupResourceReferences, func(resourceId string, isCompleted bool) bool { return !isCompleted })
+		pendingResourceReferences := lo.Keys(pendingLookupResourceReferences)
+
+		c.Logger.Infof("Start processing Extracted Resource Identifiers: %d (%d loops completed)", len(pendingResourceReferences), extractionLoopCount)
+		if len(pendingResourceReferences) == 0 {
+			break
+		}
+
+		if extractionLoopCount > 10 {
+			c.Logger.Warnf("we've attempted to extract resources more than 10 times. This should not happen.")
+			break
+		}
+
+		//process pending resources
+		summary.TotalResources += len(pendingResourceReferences)
+		for _, pendingResourceId := range pendingResourceReferences {
+			var resourceRaw map[string]interface{}
+			err := c.GetRequest(pendingResourceId, &resourceRaw)
 			if err != nil {
-				syncErrors[resourceType] = err
+				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
 				continue
 			}
-			if isUpdated {
-				summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", apiModel.SourceResourceType, apiModel.SourceResourceID))
+			resourceRawJson, err := json.Marshal(resourceRaw)
+			if err != nil {
+				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
+				continue
+			}
+			pendingResourceIdParts := strings.SplitN(pendingResourceId, "/", 2)
+
+			pendingRawResource := models.RawResourceFhir{
+				SourceResourceType: pendingResourceIdParts[0],
+				SourceResourceID:   pendingResourceIdParts[1],
+				ResourceRaw:        resourceRawJson,
 			}
 
-			extractedResourceReferences = append(extractedResourceReferences, c.ExtractResourceReference(resourceObj)...)
-		}
-
-		// check if theres any "extracted" resource references that we should sync as well
-
-		if len(extractedResourceReferences) > 0 {
-			extractedResourceReferences = removeDuplicateStr(extractedResourceReferences)
-			c.Logger.Infof("Extracted Resource References: %v", extractedResourceReferences)
-
-			extractedRawResourceModels := c.GenerateRawResourceListFromResourceIds(extractedResourceReferences)
-
-			summary.TotalResources += len(extractedRawResourceModels)
-			for _, apiModel := range extractedRawResourceModels {
-				isUpdated, err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
-				if err != nil {
-					syncErrors[resourceType] = err
-					continue
-				}
-				if isUpdated {
-					summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", apiModel.SourceResourceType, apiModel.SourceResourceID))
-				}
+			//process resource will store the resource in the database, and potentially extract new resources we need to process.
+			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, &summary)
+			if err != nil {
+				syncErrors[pendingResourceId] = err
+				continue
 			}
 		}
+		extractionLoopCount += 1
 	}
 
 	if len(syncErrors) > 0 {
@@ -259,4 +285,30 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 		return wrappedResourceModel, true
 	})
 	return wrappedResourceModels, nil
+}
+
+//process a resource by:
+//- inserting into the database
+//- increment the updatedResources list if the resource has been updated
+//- extract all external references from the resource payload (adding the the lookup table)
+func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, lookupResourceReferences map[string]bool, summary *models.UpsertSummary) error {
+	lookupResourceReferences[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
+
+	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
+
+	isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, resource)
+	if err != nil {
+		return err
+	}
+	if isUpdated {
+		summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID))
+	}
+
+	resourceReferences := c.ExtractResourceReference(resourceObj)
+	for _, ref := range resourceReferences {
+		if _, lookupOk := lookupResourceReferences[ref]; !lookupOk {
+			lookupResourceReferences[ref] = false //this reference has not been seen before, set to false (pending)
+		}
+	}
+	return nil
 }

@@ -1,16 +1,33 @@
 package base
 
 import (
-	"encoding/json"
-	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/gofhir-models/fhir401"
-	"strings"
 )
 
 func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) []string {
 	resourceRefs := []string{}
 
 	switch sourceResourceType := resourceRaw.(type) {
+
+	case fhir401.AllergyIntolerance:
+		// recorder can contain
+		//- Practitioner
+		//- PractitionerRole
+		//- Patient
+		//- RelatedPerson
+		if sourceResourceType.Recorder != nil && sourceResourceType.Recorder.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Recorder.Reference)
+		}
+
+		// asserter can contain
+		//- Practitioner
+		//- PractitionerRole
+		//- Patient
+		//- RelatedPerson
+		if sourceResourceType.Asserter != nil && sourceResourceType.Asserter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Asserter.Reference)
+		}
+
 	case fhir401.CarePlan:
 		// encounter can contain
 		//- Encounter
@@ -140,6 +157,38 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
+
+		if sourceResourceType.ResultsInterpreter != nil {
+			for _, r := range sourceResourceType.ResultsInterpreter {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Specimen != nil {
+			for _, r := range sourceResourceType.Specimen {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Result != nil {
+			for _, r := range sourceResourceType.Result {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.ImagingStudy != nil {
+			for _, r := range sourceResourceType.ImagingStudy {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
 		break
 	case fhir401.DocumentReference:
 		//author[x] can contain
@@ -249,6 +298,14 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		//- Organization
 		if sourceResourceType.ServiceProvider != nil && sourceResourceType.ServiceProvider.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.ServiceProvider.Reference)
+		}
+
+		if sourceResourceType.Diagnosis != nil {
+			for _, r := range sourceResourceType.Diagnosis {
+				if r.Condition.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Condition.Reference)
+				}
+			}
 		}
 
 		break
@@ -510,36 +567,6 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 	// remove all null values, remove all duplicates
 	cleanResourceRefs := removeDuplicateStr(resourceRefs)
 	return cleanResourceRefs
-}
-
-func (c *SourceClientFHIR401) GenerateRawResourceListFromResourceIds(resourceIds []string) []models.RawResourceFhir {
-
-	rawResourceList := []models.RawResourceFhir{}
-
-	for _, resourceId := range resourceIds {
-
-		var resourceRaw map[string]interface{}
-		err := c.GetRequest(resourceId, &resourceRaw)
-		if err != nil {
-			continue
-		}
-
-		resourceRawJson, err := json.Marshal(resourceRaw)
-		if err != nil {
-			continue
-		}
-
-		parts := strings.SplitN(resourceId, "/", 2)
-
-		rawResourceList = append(rawResourceList, models.RawResourceFhir{
-			SourceResourceType: parts[0],
-			SourceResourceID:   parts[1],
-			ResourceRaw:        resourceRawJson,
-		})
-
-	}
-
-	return rawResourceList
 }
 
 func removeDuplicateStr(strSlice []string) []string {
