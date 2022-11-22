@@ -117,7 +117,8 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	}
 
 	if len(syncErrors) > 0 {
-		return summary, fmt.Errorf("%d error(s) occurred during sync: %v", len(syncErrors), syncErrors)
+		//TODO: ignore errors.
+		c.Logger.Errorf("%d error(s) occurred during sync", len(syncErrors))
 	}
 	return summary, nil
 }

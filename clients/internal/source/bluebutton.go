@@ -28,3 +28,10 @@ func GetSourceClientBluebutton(env pkg.FastenEnvType, ctx context.Context, globa
 
 	return SourceClientBluebutton{baseClient}, updatedSourceCred, err
 }
+
+// Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
+// Manually processing individual resources
+func (c SourceClientBluebutton) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+	supportedResources := append(c.GetUsCoreResources(), []string{"ExplanationOfBenefit", "Coverage"}...)
+	return c.SyncAllByResourceName(db, supportedResources)
+}

@@ -170,7 +170,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
 		b, _ := io.ReadAll(resp.Body)
-		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, string(b))
+		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, string(b)[:100])
 	}
 
 	err = ParseBundle(resp.Body, decodeModelPtr)
