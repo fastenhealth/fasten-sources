@@ -111,7 +111,16 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			continue
 		}
 		summary.TotalResources += len(rawResourceModels)
+
+		extractedResourceReferences := []string{}
+
 		for _, apiModel := range rawResourceModels {
+			resourceObj, err := fhirutils.MapToResource(apiModel.ResourceRaw, false)
+			if err != nil {
+				syncErrors[resourceType] = err
+				continue
+			}
+
 			isUpdated, err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
 			if err != nil {
 				syncErrors[resourceType] = err
@@ -119,6 +128,29 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			}
 			if isUpdated {
 				summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", apiModel.SourceResourceType, apiModel.SourceResourceID))
+			}
+
+			extractedResourceReferences = append(extractedResourceReferences, c.ExtractResourceReference(resourceObj)...)
+		}
+
+		// check if theres any "extracted" resource references that we should sync as well
+
+		if len(extractedResourceReferences) > 0 {
+			extractedResourceReferences = removeDuplicateStr(extractedResourceReferences)
+			c.Logger.Infof("Extracted Resource References: %v", extractedResourceReferences)
+
+			extractedRawResourceModels := c.GenerateRawResourceListFromResourceIds(extractedResourceReferences)
+
+			summary.TotalResources += len(extractedRawResourceModels)
+			for _, apiModel := range extractedRawResourceModels {
+				isUpdated, err = db.UpsertRawResource(context.Background(), c.SourceCredential, apiModel)
+				if err != nil {
+					syncErrors[resourceType] = err
+					continue
+				}
+				if isUpdated {
+					summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", apiModel.SourceResourceType, apiModel.SourceResourceID))
+				}
 			}
 		}
 	}
