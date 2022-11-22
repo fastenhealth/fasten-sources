@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
-
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 	"io"
@@ -170,7 +169,11 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
 		b, _ := io.ReadAll(resp.Body)
-		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, string(b)[:100])
+		bodyContent := string(b)
+		if len(bodyContent) > 100 {
+			bodyContent = bodyContent[:100]
+		}
+		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
 
 	err = ParseBundle(resp.Body, decodeModelPtr)
