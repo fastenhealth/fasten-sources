@@ -10,6 +10,11 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 	switch sourceResourceType := resourceRaw.(type) {
 
 	case fhir401.AllergyIntolerance:
+
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+
 		// recorder can contain
 		//- Practitioner
 		//- PractitionerRole
@@ -27,8 +32,41 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		if sourceResourceType.Asserter != nil && sourceResourceType.Asserter.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.Asserter.Reference)
 		}
-
+	case fhir401.Binary:
+		if sourceResourceType.SecurityContext != nil && sourceResourceType.SecurityContext.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.SecurityContext.Reference)
+		}
+		break
 	case fhir401.CarePlan:
+
+		if sourceResourceType.BasedOn != nil {
+			for _, r := range sourceResourceType.BasedOn {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Replaces != nil {
+			for _, r := range sourceResourceType.Replaces {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.PartOf != nil {
+			for _, r := range sourceResourceType.PartOf {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+
 		// encounter can contain
 		//- Encounter
 		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
@@ -71,8 +109,45 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
+
+		if sourceResourceType.Addresses != nil {
+			for _, r := range sourceResourceType.Addresses {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.SupportingInfo != nil {
+			for _, r := range sourceResourceType.SupportingInfo {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Goal != nil {
+			for _, r := range sourceResourceType.Goal {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Activity != nil {
+			for _, r := range sourceResourceType.Activity {
+				if r.Reference != nil && r.Reference.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference.Reference)
+				}
+			}
+		}
 		break
 	case fhir401.CareTeam:
+
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+
 		// encounter can contain
 		//- Encounter
 		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
@@ -99,6 +174,14 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			}
 		}
 
+		if sourceResourceType.ReasonReference != nil {
+			for _, r := range sourceResourceType.ReasonReference {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
 		//managingOrganization
 		//- Organization
 		if sourceResourceType.ManagingOrganization != nil {
@@ -111,6 +194,13 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 
 		break
 	case fhir401.Condition:
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+
 		// recorder can contain
 		//- Practitioner
 		//- PractitionerRole
@@ -129,6 +219,60 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			resourceRefs = append(resourceRefs, *sourceResourceType.Asserter.Reference)
 		}
 
+		if sourceResourceType.Evidence != nil {
+			for _, r := range sourceResourceType.Evidence {
+				if r.Detail != nil {
+					for _, d := range r.Detail {
+						if d.Reference != nil {
+							resourceRefs = append(resourceRefs, *d.Reference)
+						}
+					}
+				}
+			}
+		}
+
+		break
+	case fhir401.Coverage:
+		if sourceResourceType.PolicyHolder != nil && sourceResourceType.PolicyHolder.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.PolicyHolder.Reference)
+		}
+		if sourceResourceType.Subscriber != nil && sourceResourceType.Subscriber.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subscriber.Reference)
+		}
+		if sourceResourceType.Beneficiary.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Beneficiary.Reference)
+		}
+		if sourceResourceType.Payor != nil {
+			for _, r := range sourceResourceType.Payor {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Contract != nil {
+			for _, r := range sourceResourceType.Contract {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
+	case fhir401.Device:
+		if sourceResourceType.Definition != nil && sourceResourceType.Definition.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Definition.Reference)
+		}
+		if sourceResourceType.Patient != nil && sourceResourceType.Patient.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Patient.Reference)
+		}
+		if sourceResourceType.Owner != nil && sourceResourceType.Owner.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Owner.Reference)
+		}
+		if sourceResourceType.Location != nil && sourceResourceType.Location.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Location.Reference)
+		}
+		if sourceResourceType.Parent != nil && sourceResourceType.Parent.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Parent.Reference)
+		}
 		break
 	case fhir401.DiagnosticReport:
 		//basedOn[x] can contain
@@ -143,6 +287,13 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 					resourceRefs = append(resourceRefs, *r.Reference)
 				}
 			}
+		}
+
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
 		}
 
 		// performer[x] can contain
@@ -189,8 +340,29 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
+
+		if sourceResourceType.Media != nil {
+			for _, r := range sourceResourceType.Media {
+				if r.Link.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Link.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.PresentedForm != nil {
+			for _, r := range sourceResourceType.PresentedForm {
+				if r.Url != nil && len(*r.Url) > 0 {
+					resourceRefs = append(resourceRefs, *r.Url)
+				}
+			}
+		}
+
 		break
 	case fhir401.DocumentReference:
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+
 		//author[x] can contain
 		//- Practitioner
 		//- Organization
@@ -232,8 +404,26 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 
 		//content.attachment can contain
 		//- Attachment
-
+		if sourceResourceType.Content != nil {
+			for _, r := range sourceResourceType.Content {
+				if r.Attachment.Url != nil {
+					resourceRefs = append(resourceRefs, *r.Attachment.Url)
+				}
+			}
+		}
 	case fhir401.Encounter:
+
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.EpisodeOfCare != nil {
+			for _, r := range sourceResourceType.EpisodeOfCare {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
 		// basedOn[x] can contain
 		//- ServiceRequest
 		if sourceResourceType.BasedOn != nil {
@@ -256,6 +446,14 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			}
 		}
 
+		if sourceResourceType.Appointment != nil {
+			for _, r := range sourceResourceType.Appointment {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
 		//reasonReference[x] can contain
 		//- Condition
 		//- Procedure
@@ -263,6 +461,22 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		//- ImmunizationRecommendation
 		if sourceResourceType.ReasonReference != nil {
 			for _, r := range sourceResourceType.ReasonReference {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Diagnosis != nil {
+			for _, r := range sourceResourceType.Diagnosis {
+				if r.Condition.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Condition.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Account != nil {
+			for _, r := range sourceResourceType.Account {
 				if r.Reference != nil {
 					resourceRefs = append(resourceRefs, *r.Reference)
 				}
@@ -299,17 +513,41 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		if sourceResourceType.ServiceProvider != nil && sourceResourceType.ServiceProvider.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.ServiceProvider.Reference)
 		}
-
-		if sourceResourceType.Diagnosis != nil {
-			for _, r := range sourceResourceType.Diagnosis {
-				if r.Condition.Reference != nil {
-					resourceRefs = append(resourceRefs, *r.Condition.Reference)
-				}
-			}
+		if sourceResourceType.PartOf != nil && sourceResourceType.PartOf.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.PartOf.Reference)
 		}
 
 		break
+	case fhir401.Goal:
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.ExpressedBy != nil && sourceResourceType.ExpressedBy.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.ExpressedBy.Reference)
+		}
+		if sourceResourceType.Addresses != nil {
+			for _, r := range sourceResourceType.Addresses {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.OutcomeReference != nil {
+			for _, r := range sourceResourceType.OutcomeReference {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
 	case fhir401.Immunization:
+		if sourceResourceType.Patient.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Patient.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+
 		// location can contain
 		//- Location
 		if sourceResourceType.Location != nil && sourceResourceType.Location.Reference != nil {
@@ -341,6 +579,21 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
+		if sourceResourceType.Education != nil {
+			for _, r := range sourceResourceType.Education {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Reaction != nil {
+			for _, r := range sourceResourceType.Reaction {
+				if r.Detail != nil && r.Detail.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Detail.Reference)
+				}
+			}
+		}
 
 		//protocolApplied[x].authority can contain
 		//- Organization
@@ -365,9 +618,34 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		if sourceResourceType.PartOf != nil && sourceResourceType.PartOf.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.PartOf.Reference)
 		}
+		if sourceResourceType.Endpoint != nil {
+			for _, r := range sourceResourceType.Endpoint {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
 
 		break
+	case fhir401.Medication:
+		if sourceResourceType.Manufacturer != nil && sourceResourceType.Manufacturer.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Manufacturer.Reference)
+		}
+		break
 	case fhir401.MedicationRequest:
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+		if sourceResourceType.SupportingInformation != nil {
+			for _, r := range sourceResourceType.SupportingInformation {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
 
 		// requester can contain
 		//- Practitioner
@@ -392,7 +670,6 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			resourceRefs = append(resourceRefs, *sourceResourceType.Recorder.Reference)
 		}
 
-		//TODO: reasonReference
 		if sourceResourceType.ReasonReference != nil {
 			for _, r := range sourceResourceType.ReasonReference {
 				if r.Reference != nil {
@@ -400,8 +677,6 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
-
-		//TODO: basedOn
 		if sourceResourceType.BasedOn != nil {
 			for _, r := range sourceResourceType.BasedOn {
 				if r.Reference != nil {
@@ -409,8 +684,6 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
-
-		//TODO: insurance
 		if sourceResourceType.Insurance != nil {
 			for _, r := range sourceResourceType.Insurance {
 				if r.Reference != nil {
@@ -423,6 +696,25 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 		//- Organization
 		if sourceResourceType.DispenseRequest != nil && sourceResourceType.DispenseRequest.Performer != nil && sourceResourceType.DispenseRequest.Performer.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.DispenseRequest.Performer.Reference)
+		}
+
+		if sourceResourceType.PriorPrescription != nil && sourceResourceType.PriorPrescription.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.PriorPrescription.Reference)
+		}
+
+		if sourceResourceType.DetectedIssue != nil {
+			for _, r := range sourceResourceType.DetectedIssue {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.EventHistory != nil {
+			for _, r := range sourceResourceType.EventHistory {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
 		}
 		break
 	case fhir401.Observation:
@@ -446,6 +738,20 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			}
 		}
 
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Focus != nil {
+			for _, r := range sourceResourceType.Focus {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+
 		// performer[x] can contain
 		//- Practitioner | PractitionerRole | Organization | CareTeam | Patient | RelatedPerson
 		if sourceResourceType.Performer != nil {
@@ -455,12 +761,54 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
+
+		if sourceResourceType.Specimen != nil && sourceResourceType.Specimen.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Specimen.Reference)
+		}
 		// device can contain
 		//- Device | DeviceMetric
 		if sourceResourceType.Device != nil && sourceResourceType.Device.Reference != nil {
 			resourceRefs = append(resourceRefs, *sourceResourceType.Device.Reference)
 		}
+		if sourceResourceType.HasMember != nil {
+			for _, r := range sourceResourceType.HasMember {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.DerivedFrom != nil {
+			for _, r := range sourceResourceType.DerivedFrom {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
+	case fhir401.Organization:
+		if sourceResourceType.PartOf != nil && sourceResourceType.PartOf.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.PartOf.Reference)
+		}
+		if sourceResourceType.Endpoint != nil {
+			for _, r := range sourceResourceType.Endpoint {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
+	case fhir401.Patient:
 
+		if sourceResourceType.GeneralPractitioner != nil {
+			for _, r := range sourceResourceType.GeneralPractitioner {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.ManagingOrganization != nil && sourceResourceType.ManagingOrganization.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.ManagingOrganization.Reference)
+		}
 		break
 	case fhir401.PractitionerRole:
 		// practitioner can contain
@@ -496,6 +844,65 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 
 		//TODO: endpoint
 		break
+	case fhir401.Procedure:
+		if sourceResourceType.BasedOn != nil {
+			for _, r := range sourceResourceType.BasedOn {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.PartOf != nil {
+			for _, r := range sourceResourceType.PartOf {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
+		if sourceResourceType.Recorder != nil && sourceResourceType.Recorder.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Recorder.Reference)
+		}
+		if sourceResourceType.Asserter != nil && sourceResourceType.Asserter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Asserter.Reference)
+		}
+		if sourceResourceType.Performer != nil {
+			for _, r := range sourceResourceType.Performer {
+				if r.Actor.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Actor.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Location != nil && sourceResourceType.Location.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Location.Reference)
+		}
+		if sourceResourceType.ReasonReference != nil {
+			for _, r := range sourceResourceType.ReasonReference {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Report != nil {
+			for _, r := range sourceResourceType.Report {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.ComplicationDetail != nil {
+			for _, r := range sourceResourceType.ComplicationDetail {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
 	case fhir401.ServiceRequest:
 		// basedOn[x] can contain
 		//- CarePlan | ServiceRequest | MedicationRequest
@@ -506,7 +913,19 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 				}
 			}
 		}
-
+		if sourceResourceType.Replaces != nil {
+			for _, r := range sourceResourceType.Replaces {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Encounter != nil && sourceResourceType.Encounter.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Encounter.Reference)
+		}
 		//requester can contain
 		//- Practitioner
 		//- Organization
@@ -561,6 +980,56 @@ func (c *SourceClientFHIR401) ExtractResourceReference(resourceRaw interface{}) 
 			}
 		}
 
+		if sourceResourceType.SupportingInfo != nil {
+			for _, r := range sourceResourceType.SupportingInfo {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.Specimen != nil {
+			for _, r := range sourceResourceType.Specimen {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceType.RelevantHistory != nil {
+			for _, r := range sourceResourceType.RelevantHistory {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		break
+	case fhir401.Specimen:
+
+		if sourceResourceType.Subject != nil && sourceResourceType.Subject.Reference != nil {
+			resourceRefs = append(resourceRefs, *sourceResourceType.Subject.Reference)
+		}
+		if sourceResourceType.Parent != nil {
+			for _, r := range sourceResourceType.Parent {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Request != nil {
+			for _, r := range sourceResourceType.Request {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
+		if sourceResourceType.Request != nil {
+			for _, r := range sourceResourceType.Request {
+				if r.Reference != nil {
+					resourceRefs = append(resourceRefs, *r.Reference)
+				}
+			}
+		}
 		break
 	}
 

@@ -130,11 +130,11 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 	}
 
-	// now that we've processed all resources by resource type, lets see if theres any extracted resources that we haven't processed.
+	// now that we've processed all resources by resource type, lets see if there's any extracted resources that we haven't processed.
 	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
 	extractionLoopCount := 0
 	for {
-		//loop forever until we've processed all pending resources
+		//loop "forever" until we've processed all pending resources
 
 		pendingLookupResourceReferences := lo.PickBy[string, bool](lookupResourceReferences, func(resourceId string, isCompleted bool) bool { return !isCompleted })
 		pendingResourceReferences := lo.Keys(pendingLookupResourceReferences)
@@ -145,6 +145,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 
 		if extractionLoopCount > 10 {
+			//bail out
 			c.Logger.Warnf("we've attempted to extract resources more than 10 times. This should not happen.")
 			break
 		}
@@ -183,7 +184,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 
 	if len(syncErrors) > 0 {
 		//TODO: ignore errors.
-		c.Logger.Errorf("%d error(s) occurred during sync", len(syncErrors))
+		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
 	}
 	return summary, nil
 }
