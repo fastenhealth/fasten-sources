@@ -36,11 +36,12 @@ func (m *MockDatabaseRepository) EXPECT() *MockDatabaseRepositoryMockRecorder {
 }
 
 // UpsertRawResource mocks base method.
-func (m *MockDatabaseRepository) UpsertRawResource(ctx context.Context, sourceCredentials models.SourceCredential, rawResource models.RawResourceFhir) error {
+func (m *MockDatabaseRepository) UpsertRawResource(ctx context.Context, sourceCredentials models.SourceCredential, rawResource models.RawResourceFhir) (bool, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpsertRawResource", ctx, sourceCredentials, rawResource)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret0, _ := ret[0].(bool)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // UpsertRawResource indicates an expected call of UpsertRawResource.

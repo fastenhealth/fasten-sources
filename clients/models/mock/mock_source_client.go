@@ -35,6 +35,22 @@ func (m *MockSourceClient) EXPECT() *MockSourceClientMockRecorder {
 	return m.recorder
 }
 
+// ExtractPatientId mocks base method.
+func (m *MockSourceClient) ExtractPatientId(bundleFile *os.File) (string, string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ExtractPatientId", bundleFile)
+	ret0, _ := ret[0].(string)
+	ret1, _ := ret[1].(string)
+	ret2, _ := ret[2].(error)
+	return ret0, ret1, ret2
+}
+
+// ExtractPatientId indicates an expected call of ExtractPatientId.
+func (mr *MockSourceClientMockRecorder) ExtractPatientId(bundleFile interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExtractPatientId", reflect.TypeOf((*MockSourceClient)(nil).ExtractPatientId), bundleFile)
+}
+
 // GetRequest mocks base method.
 func (m *MockSourceClient) GetRequest(resourceSubpath string, decodeModelPtr interface{}) error {
 	m.ctrl.T.Helper()
@@ -47,6 +63,21 @@ func (m *MockSourceClient) GetRequest(resourceSubpath string, decodeModelPtr int
 func (mr *MockSourceClientMockRecorder) GetRequest(resourceSubpath, decodeModelPtr interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRequest", reflect.TypeOf((*MockSourceClient)(nil).GetRequest), resourceSubpath, decodeModelPtr)
+}
+
+// GetResourceBundle mocks base method.
+func (m *MockSourceClient) GetResourceBundle(relativeResourcePath string) (interface{}, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResourceBundle", relativeResourcePath)
+	ret0, _ := ret[0].(interface{})
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResourceBundle indicates an expected call of GetResourceBundle.
+func (mr *MockSourceClientMockRecorder) GetResourceBundle(relativeResourcePath interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceBundle", reflect.TypeOf((*MockSourceClient)(nil).GetResourceBundle), relativeResourcePath)
 }
 
 // GetUsCoreResources mocks base method.
@@ -64,11 +95,12 @@ func (mr *MockSourceClientMockRecorder) GetUsCoreResources() *gomock.Call {
 }
 
 // SyncAll mocks base method.
-func (m *MockSourceClient) SyncAll(db models.DatabaseRepository) error {
+func (m *MockSourceClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAll", db)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret0, _ := ret[0].(models.UpsertSummary)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // SyncAll indicates an expected call of SyncAll.
@@ -78,25 +110,42 @@ func (mr *MockSourceClientMockRecorder) SyncAll(db interface{}) *gomock.Call {
 }
 
 // SyncAllBundle mocks base method.
-func (m *MockSourceClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) error {
+func (m *MockSourceClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SyncAllBundle", db, bundleFile)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret := m.ctrl.Call(m, "SyncAllBundle", db, bundleFile, bundleType)
+	ret0, _ := ret[0].(models.UpsertSummary)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // SyncAllBundle indicates an expected call of SyncAllBundle.
-func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile interface{}) *gomock.Call {
+func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile, bundleType interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllBundle), db, bundleFile)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllBundle), db, bundleFile, bundleType)
+}
+
+// SyncAllByPatientEverythingBundle mocks base method.
+func (m *MockSourceClient) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundleModel interface{}) (models.UpsertSummary, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SyncAllByPatientEverythingBundle", db, bundleModel)
+	ret0, _ := ret[0].(models.UpsertSummary)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SyncAllByPatientEverythingBundle indicates an expected call of SyncAllByPatientEverythingBundle.
+func (mr *MockSourceClientMockRecorder) SyncAllByPatientEverythingBundle(db, bundleModel interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllByPatientEverythingBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllByPatientEverythingBundle), db, bundleModel)
 }
 
 // SyncAllByResourceName mocks base method.
-func (m *MockSourceClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) error {
+func (m *MockSourceClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAllByResourceName", db, resourceNames)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret0, _ := ret[0].(models.UpsertSummary)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // SyncAllByResourceName indicates an expected call of SyncAllByResourceName.

@@ -55,25 +55,11 @@ func (m ManualClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummar
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
 	}
 
-	//TODO: figure out how to pass patient information back to the database
-	// we need to find the (most populated) patient record
-	_, bundleType, err := m.ExtractPatientId(bundleFile)
-	if err != nil {
-		return summary, fmt.Errorf("an error occurred while extracting patient id from bundle: %w", err)
-	}
-	//// we need to add the patient id to the source
-	//m.SourceCredential.SetPatientId(patientId)
-	//
-	//// we need to upsert Source
-	//err = db.CreateManualSource(m.Context, m.SourceCredential)
-	//if err != nil {
-	//	return fmt.Errorf("an error occurred while creating manual source: %w", err)
-	//}
 	// we need to parse the bundle into resources (might need to try a couple of different times)
 	var rawResourceList []models.RawResourceFhir
 	switch bundleType {

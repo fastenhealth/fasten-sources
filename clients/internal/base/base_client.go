@@ -30,7 +30,10 @@ type SourceClientBase struct {
 	FhirVersion     string
 }
 
-func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File) (models.UpsertSummary, error) {
+func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
+	panic("SyncAllBundle functionality is not available on this client")
+}
+func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, string, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
