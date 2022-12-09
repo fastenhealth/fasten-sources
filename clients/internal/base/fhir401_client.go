@@ -292,10 +292,12 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 //- inserting into the database
 //- increment the updatedResources list if the resource has been updated
 //- extract all external references from the resource payload (adding the the lookup table)
-func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, lookupResourceReferences map[string]bool, summary *models.UpsertSummary) error {
-	lookupResourceReferences[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
+func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, lookupReferencedResources map[string]bool, summary *models.UpsertSummary) error {
+	lookupReferencedResources[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
+	referencedResources := c.ExtractReferencedResources(resourceObj)
+	resource.ReferencedResources = referencedResources
 
 	isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, resource)
 	if err != nil {
@@ -305,10 +307,9 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 		summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID))
 	}
 
-	resourceReferences := c.ExtractResourceReference(resourceObj)
-	for _, ref := range resourceReferences {
-		if _, lookupOk := lookupResourceReferences[ref]; !lookupOk {
-			lookupResourceReferences[ref] = false //this reference has not been seen before, set to false (pending)
+	for _, ref := range referencedResources {
+		if _, lookupOk := lookupReferencedResources[ref]; !lookupOk {
+			lookupReferencedResources[ref] = false //this reference has not been seen before, set to false (pending)
 		}
 	}
 	return nil
