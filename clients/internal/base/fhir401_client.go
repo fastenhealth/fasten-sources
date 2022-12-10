@@ -53,7 +53,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	summary.TotalResources = len(rawResourceModels)
 
 	for _, rawResource := range rawResourceModels {
-		isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, rawResource)
+		isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, rawResource)
 		if err != nil {
 			return summary, err
 		}
@@ -89,7 +89,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		SourceResourceID:   *patientResourceId,
 		ResourceRaw:        patientJson,
 	}
-	isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, patientResourceFhir)
+	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, patientResourceFhir)
 	if err != nil {
 		c.Logger.Infof("An error occurred while storing raw resource (by name) %v", err)
 		return summary, err
@@ -299,7 +299,7 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	referencedResources := c.ExtractReferencedResources(resourceObj)
 	resource.ReferencedResources = referencedResources
 
-	isUpdated, err := db.UpsertRawResource(context.Background(), c.SourceCredential, resource)
+	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)
 	if err != nil {
 		return err
 	}

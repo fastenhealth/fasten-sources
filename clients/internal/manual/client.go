@@ -77,6 +77,10 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while processing 4.3.0 resources: %w", err)
 		}
+
+		//for _, apiModel := range rawResourceList {
+		//	apiModel.ReferencedResources = client.ExtractReferencedResources(apiModel)
+		//}
 	case "fhir401":
 		bundle401Data := fhir401.Bundle{}
 		err := base.ParseBundle(bundleFile, &bundle401Data)
@@ -91,10 +95,15 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
 		}
+
+		for _, apiModel := range rawResourceList {
+			apiModel.ReferencedResources = client.ExtractReferencedResources(apiModel)
+		}
+
 	}
 	// we need to upsert all resources (and make sure they are associated with new Source)
 	for _, apiModel := range rawResourceList {
-		_, err := db.UpsertRawResource(context.Background(), m.SourceCredential, apiModel)
+		_, err := db.UpsertRawResource(m.Context, m.SourceCredential, apiModel)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while upserting resources: %w", err)
 		}
