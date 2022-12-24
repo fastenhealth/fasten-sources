@@ -53,8 +53,8 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
-	sc.EXPECT().GetAccessToken().Return("test-access-token")
-	sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
+	//sc.EXPECT().GetAccessToken().Return("test-access-token")
+	//sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})

@@ -242,6 +242,18 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 }
 
 func (c *SourceClientFHIR401) GetPatientBundle(patientId string) (fhir401.Bundle, error) {
+	/*
+		Alternative bundle Urls:
+		For those who have implemented FHIR based Argonaut or Bulk Data specifications, we expect common API patterns to include:
+
+		GET {fhirBase}/Patient/{patientId}/$everything
+		GET {fhirBase}/Patient/{patientId}/$export
+		GET {fhirBase}/Patient/$export?patientId={patientId}
+		GET {fhirBase}/Patient/{patientId}/$everything?_outputFormat=ndjson
+		GET {fhirBase}/Patient/{patientId}/$export?_outputFormat=ndjson
+		GET {fhirBase}/Patient/$export?patientId={patientId}&_outputFormat=ndjson
+	*/
+
 	patientBundle, err := c.GetResourceBundle(fmt.Sprintf("Patient/%s/$everything", patientId))
 	if err != nil {
 		return fhir401.Bundle{}, err
