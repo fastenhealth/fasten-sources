@@ -1,0 +1,23 @@
+name: CI
+# This workflow is triggered on pushes & pull requests
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    container: ghcr.io/packagrio/packagr:latest-golang
+    env:
+      STATIC: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test Backend
+        run: |
+          go install github.com/golang/mock/mockgen@v1.6.0
+          go generate ./...
+          go test ./...
