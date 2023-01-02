@@ -1,6 +1,7 @@
 package models
 
 import (
+	"github.com/fastenhealth/fasten-sources/pkg"
 	"os"
 )
 
@@ -14,6 +15,6 @@ type SourceClient interface {
 	SyncAllByPatientEverythingBundle(db DatabaseRepository, bundleModel interface{}) (UpsertSummary, error)
 
 	//Manual client ONLY functions
-	SyncAllBundle(db DatabaseRepository, bundleFile *os.File, bundleType string) (UpsertSummary, error)
-	ExtractPatientId(bundleFile *os.File) (string, string, error)
+	SyncAllBundle(db DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (UpsertSummary, error)
+	ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error)
 }

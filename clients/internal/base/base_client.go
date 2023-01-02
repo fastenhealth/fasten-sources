@@ -18,7 +18,7 @@ import (
 )
 
 type SourceClientBase struct {
-	FastenEnv pkg.FastenEnvType
+	FastenEnv pkg.FastenLighthouseEnvType
 	Context   context.Context
 	Logger    logrus.FieldLogger
 
@@ -30,14 +30,14 @@ type SourceClientBase struct {
 	FhirVersion     string
 }
 
-func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
+func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
-func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, string, error) {
+func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, *models.SourceCredential, error) {
+func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, *models.SourceCredential, error) {
 	var httpClient *http.Client
 	var updatedSource *models.SourceCredential
 	if len(testHttpClient) == 0 {

@@ -9,21 +9,9 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
-	"io/ioutil"
 	"net/http"
-	"os"
 	"testing"
 )
-
-// helpers
-func readTestFixture(path string) ([]byte, error) {
-	jsonFile, err := os.Open(path)
-	if err != nil {
-		return nil, err
-	}
-	defer jsonFile.Close()
-	return ioutil.ReadAll(jsonFile)
-}
 
 func TestNewFHIR401Client(t *testing.T) {
 	t.Parallel()
@@ -39,7 +27,7 @@ func TestNewFHIR401Client(t *testing.T) {
 	})
 
 	//test
-	client, _, err := GetSourceClientFHIR401(pkg.FastenEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	client, _, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
 
 	//assert
 	require.NoError(t, err)
@@ -58,10 +46,10 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, _, err := GetSourceClientFHIR401(pkg.FastenEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	client, _, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
 	require.NoError(t, err)
 
-	jsonBytes, err := readTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
 	require.NoError(t, err)
 	var bundle fhir401.Bundle
 	err = json.Unmarshal(jsonBytes, &bundle)

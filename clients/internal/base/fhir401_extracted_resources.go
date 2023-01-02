@@ -4,7 +4,7 @@ import (
 	"github.com/fastenhealth/gofhir-models/fhir401"
 )
 
-func (c *SourceClientFHIR401) ExtractReferencedResources(resourceRaw interface{}) []string {
+func ExtractReferencedResources(resourceRaw interface{}) []string {
 	referencedResources := []string{}
 
 	switch sourceResourceType := resourceRaw.(type) {
