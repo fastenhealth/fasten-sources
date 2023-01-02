@@ -13,7 +13,7 @@ import (
 
 // https://external.fastmed.com/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://external.fastmed.com/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceFastmed(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceFastmed(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://external.fastmed.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://external.fastmed.com/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceFastmed(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://external.fastmed.com/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://external.fastmed.com/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

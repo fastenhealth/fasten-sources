@@ -13,7 +13,7 @@ import (
 
 // https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenEnvType) (models.
 	sourceDef.Audience = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

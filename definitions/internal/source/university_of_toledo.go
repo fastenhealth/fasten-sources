@@ -13,7 +13,7 @@ import (
 
 // https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4/metadata
-func GetSourceUniversityOfToledo(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfToledo(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://icon.utoledo.edu/ic-oa2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://icon.utoledo.edu/ic-oa2-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfToledo(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

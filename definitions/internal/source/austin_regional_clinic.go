@@ -13,7 +13,7 @@ import (
 
 // https://mobileprod.arcmd.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://mobileprod.arcmd.com/FHIR/api/FHIR/R4/metadata
-func GetSourceAustinRegionalClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAustinRegionalClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://mobileprod.arcmd.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileprod.arcmd.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAustinRegionalClinic(env pkg.FastenEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://mobileprod.arcmd.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mobileprod.arcmd.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

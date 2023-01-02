@@ -13,7 +13,7 @@ import (
 
 // https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceReliantMedicalGroup(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceReliantMedicalGroup(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceReliantMedicalGroup(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

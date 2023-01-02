@@ -13,7 +13,7 @@ import (
 
 // https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4/metadata
-func GetSourceAccessCommunityHealthNetwork(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAccessCommunityHealthNetwork(env pkg.FastenEnvType) (models.Lighth
 	sourceDef.Audience = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

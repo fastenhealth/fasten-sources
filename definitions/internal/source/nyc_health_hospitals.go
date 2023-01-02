@@ -13,7 +13,7 @@ import (
 
 // https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceNycHealthHospitals(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNycHealthHospitals(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxypda.nychhc.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxypda.nychhc.org/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNycHealthHospitals(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/SCOT/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/SCOT/api/FHIR/R4/metadata
-func GetSourceScotlandHealthCareSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceScotlandHealthCareSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/SCOT/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/SCOT/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceScotlandHealthCareSystem(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/SCOT/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0905.epichosted.com/FHIRproxy/SCOT/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

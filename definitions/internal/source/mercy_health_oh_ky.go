@@ -13,7 +13,7 @@ import (
 
 // https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4/metadata
-func GetSourceMercyHealthOhKy(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMercyHealthOhKy(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://carepath.health-partners.org/Proxy-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://carepath.health-partners.org/Proxy-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMercyHealthOhKy(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4/.well-known/smart-configuration
 // https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4/metadata
-func GetSourceGundersenHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGundersenHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://scproxy.gundersenhealth.org/FHIRARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scproxy.gundersenhealth.org/FHIRARR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGundersenHealthSystem(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

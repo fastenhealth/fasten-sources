@@ -20,7 +20,7 @@ type SourceClientFranciscanMissionariesOfOurLadyHealthSystem struct {
 
 // https://epicproxy.et0830.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0830.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientFranciscanMissionariesOfOurLadyHealthSystem(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientFranciscanMissionariesOfOurLadyHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientFranciscanMissionariesOfOurLadyHealthSystem{baseClient}, updatedSourceCred, err

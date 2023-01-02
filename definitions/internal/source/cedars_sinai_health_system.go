@@ -13,7 +13,7 @@ import (
 
 // https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4/metadata
-func GetSourceCedarsSinaiHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCedarsSinaiHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://cslinkmobile.csmc.edu/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://cslinkmobile.csmc.edu/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCedarsSinaiHealthSystem(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

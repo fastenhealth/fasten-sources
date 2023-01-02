@@ -13,7 +13,7 @@ import (
 
 // https://fhir.mah.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.mah.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceMountAuburnHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMountAuburnHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mah.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mah.org/prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMountAuburnHospital(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://fhir.mah.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.mah.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

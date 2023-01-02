@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4/metadata
-func GetSourceArrowheadRegionalMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceArrowheadRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1152.epichosted.com/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1152.epichosted.com/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceArrowheadRegionalMedicalCenter(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

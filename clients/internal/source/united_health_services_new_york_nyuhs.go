@@ -20,7 +20,7 @@ type SourceClientUnitedHealthServicesNewYorkNyuhs struct {
 
 // https://epicproxy.et1127.epichosted.com/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1127.epichosted.com/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceClientUnitedHealthServicesNewYorkNyuhs(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientUnitedHealthServicesNewYorkNyuhs(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientUnitedHealthServicesNewYorkNyuhs{baseClient}, updatedSourceCred, err

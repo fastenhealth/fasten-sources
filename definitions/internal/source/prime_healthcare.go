@@ -13,7 +13,7 @@ import (
 
 // https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4/metadata
-func GetSourcePrimeHealthcare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePrimeHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePrimeHealthcare(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

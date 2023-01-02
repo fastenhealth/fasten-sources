@@ -13,7 +13,7 @@ import (
 
 // https://epicnsproxy.chop.edu/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicnsproxy.chop.edu/fhir/api/FHIR/R4/metadata
-func GetSourceChildrensHospitalOfPhiladelphia(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceChildrensHospitalOfPhiladelphia(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicnsproxy.chop.edu/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicnsproxy.chop.edu/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceChildrensHospitalOfPhiladelphia(env pkg.FastenEnvType) (models.Lig
 	sourceDef.Audience = "https://epicnsproxy.chop.edu/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicnsproxy.chop.edu/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://wpprod.nghs.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://wpprod.nghs.com/fhir/api/FHIR/R4/metadata
-func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.nghs.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.nghs.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenEnvType) (models.Lighth
 	sourceDef.Audience = "https://wpprod.nghs.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wpprod.nghs.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://fhir.mdanderson.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.mdanderson.org/FHIR/api/FHIR/R4/metadata
-func GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mdanderson.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mdanderson.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env pkg.FastenEnvType) 
 	sourceDef.Audience = "https://fhir.mdanderson.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.mdanderson.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

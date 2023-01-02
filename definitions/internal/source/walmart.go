@@ -13,7 +13,7 @@ import (
 
 // https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/api/FHIR/R4/metadata
-func GetSourceWalmart(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceWalmart(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceWalmart(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

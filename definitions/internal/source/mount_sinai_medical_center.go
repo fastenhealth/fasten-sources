@@ -13,7 +13,7 @@ import (
 
 // https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4/metadata
-func GetSourceMountSinaiMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMountSinaiMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.msmc.com/proxysite-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.msmc.com/proxysite-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMountSinaiMedicalCenter(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://fhirprod.musc.edu/fhirprod/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprod.musc.edu/fhirprod/api/FHIR/R4/metadata
-func GetSourceMedicalUniversityOfSouthCarolina(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMedicalUniversityOfSouthCarolina(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhirprod.musc.edu/fhirprod/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprod.musc.edu/fhirprod/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMedicalUniversityOfSouthCarolina(env pkg.FastenEnvType) (models.Li
 	sourceDef.Audience = "https://fhirprod.musc.edu/fhirprod/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.musc.edu/fhirprod/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

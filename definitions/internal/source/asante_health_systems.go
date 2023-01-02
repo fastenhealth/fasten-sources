@@ -13,7 +13,7 @@ import (
 
 // https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceAsanteHealthSystems(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAsanteHealthSystems(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.asante.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.asante.org/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAsanteHealthSystems(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

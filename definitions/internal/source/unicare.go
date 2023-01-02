@@ -13,7 +13,7 @@ import (
 // https://patient360c.unicare.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.unicare.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.unicare.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceUnicare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUnicare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := GetSourceAnthem(env)
 	sourceDef.AuthorizationEndpoint = "https://patient360c.unicare.com/P360Member/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://patient360c.unicare.com/P360Member/identityserver/connect/token"
@@ -21,7 +21,7 @@ func GetSourceUnicare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://patient360c.unicare.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360c.unicare.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 

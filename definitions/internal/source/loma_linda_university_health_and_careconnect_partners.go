@@ -13,7 +13,7 @@ import (
 
 // https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4/metadata
-func GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.lluh.org/interconnect-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.lluh.org/interconnect-fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenEnvT
 	sourceDef.Audience = "https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://fhir.promedica.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.promedica.org/FHIR/api/FHIR/R4/metadata
-func GetSourcePromedicaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePromedicaHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.promedica.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.promedica.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePromedicaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://fhir.promedica.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.promedica.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

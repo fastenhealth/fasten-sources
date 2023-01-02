@@ -13,7 +13,7 @@ import (
 
 // https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceMedisysHealthNetwork(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMedisysHealthNetwork(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eprescribe-p.medisys.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribe-p.medisys.org/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMedisysHealthNetwork(env pkg.FastenEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -5,7 +5,9 @@ import (
 	"crypto/tls"
 	"github.com/seborama/govcr"
 	"golang.org/x/oauth2"
+	"io/ioutil"
 	"net/http"
+	"os"
 	"path"
 	"testing"
 )
@@ -48,4 +50,14 @@ func OAuthVcrSetup(t *testing.T, enableRecording bool) *http.Client {
 
 	vcr := govcr.NewVCR(t.Name(), &vcrConfig)
 	return vcr.Client
+}
+
+// helpers
+func ReadTestFixture(path string) ([]byte, error) {
+	jsonFile, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer jsonFile.Close()
+	return ioutil.ReadAll(jsonFile)
 }

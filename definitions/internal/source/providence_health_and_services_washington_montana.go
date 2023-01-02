@@ -13,7 +13,7 @@ import (
 
 // https://haikuwa.providence.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://haikuwa.providence.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceProvidenceHealthAndServicesWashingtonMontana(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceProvidenceHealthAndServicesWashingtonMontana(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://haikuwa.providence.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haikuwa.providence.org/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceProvidenceHealthAndServicesWashingtonMontana(env pkg.FastenEnvType
 	sourceDef.Audience = "https://haikuwa.providence.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haikuwa.providence.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

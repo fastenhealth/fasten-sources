@@ -13,7 +13,7 @@ import (
 
 // https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4/metadata
-func GetSourceNorthMississippiHealthServices(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNorthMississippiHealthServices(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eiclbext.nmhs.net/interconnect-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eiclbext.nmhs.net/interconnect-fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNorthMississippiHealthServices(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

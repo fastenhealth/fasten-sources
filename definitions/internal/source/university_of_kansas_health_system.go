@@ -13,7 +13,7 @@ import (
 
 // https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4/metadata
-func GetSourceUniversityOfKansasHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfKansasHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfKansasHealthSystem(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

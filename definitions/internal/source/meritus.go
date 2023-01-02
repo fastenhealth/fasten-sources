@@ -13,7 +13,7 @@ import (
 
 // https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceMeritus(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMeritus(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMeritus(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

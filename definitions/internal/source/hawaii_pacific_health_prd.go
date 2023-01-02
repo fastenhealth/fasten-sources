@@ -13,7 +13,7 @@ import (
 
 // https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4/metadata
-func GetSourceHawaiiPacificHealthPrd(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHawaiiPacificHealthPrd(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

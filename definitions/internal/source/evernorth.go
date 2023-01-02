@@ -13,7 +13,7 @@ import (
 
 // https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceEvernorth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceEvernorth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.healthcare.cigna.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.healthcare.cigna.com/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceEvernorth(env pkg.FastenEnvType) (models.LighthouseSourceDefinitio
 	sourceDef.Audience = "https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceDartmouthHitchcock(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceDartmouthHitchcock(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://edhwebportal.hitchcock.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://edhwebportal.hitchcock.org/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceDartmouthHitchcock(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

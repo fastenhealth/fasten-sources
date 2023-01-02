@@ -13,7 +13,7 @@ import (
 
 // https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceScrippsHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceScrippsHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceScrippsHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

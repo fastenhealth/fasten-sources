@@ -13,7 +13,7 @@ import (
 
 // https://patientfhirapis.ynhh.org/pff/api/FHIR/R4/.well-known/smart-configuration
 // https://patientfhirapis.ynhh.org/pff/api/FHIR/R4/metadata
-func GetSourceYaleNewHavenHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceYaleNewHavenHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://patientfhirapis.ynhh.org/PFF/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://patientfhirapis.ynhh.org/PFF/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceYaleNewHavenHealthSystem(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://patientfhirapis.ynhh.org/pff/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patientfhirapis.ynhh.org/pff/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

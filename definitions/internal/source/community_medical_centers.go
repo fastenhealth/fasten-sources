@@ -13,7 +13,7 @@ import (
 
 // https://epicsoapprd.communitymedical.org/arr_fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoapprd.communitymedical.org/arr_fhir/api/FHIR/R4/metadata
-func GetSourceCommunityMedicalCenters(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCommunityMedicalCenters(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoapprd.communitymedical.org/arr_fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoapprd.communitymedical.org/arr_fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCommunityMedicalCenters(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicsoapprd.communitymedical.org/arr_fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoapprd.communitymedical.org/arr_fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

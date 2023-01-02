@@ -13,7 +13,7 @@ import (
 
 // https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceGoldenValleyHealthCenters(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGoldenValleyHealthCenters(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ep-rps.gvhc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ep-rps.gvhc.org/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGoldenValleyHealthCenters(env pkg.FastenEnvType) (models.Lighthous
 	sourceDef.Audience = "https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

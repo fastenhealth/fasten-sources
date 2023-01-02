@@ -20,7 +20,7 @@ type SourceClientAlleghenyHealthNetwork struct {
 
 // https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceClientAlleghenyHealthNetwork(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAlleghenyHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAlleghenyHealthNetwork{baseClient}, updatedSourceCred, err

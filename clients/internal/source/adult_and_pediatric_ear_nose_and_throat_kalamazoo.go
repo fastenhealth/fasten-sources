@@ -20,7 +20,7 @@ type SourceClientAdultAndPediatricEarNoseAndThroatKalamazoo struct {
 
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAdultAndPediatricEarNoseAndThroatKalamazoo{baseClient}, updatedSourceCred, err

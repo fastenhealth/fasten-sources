@@ -13,7 +13,7 @@ import (
 
 // https://epicsoap.altru.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.altru.org/fhir/api/FHIR/R4/metadata
-func GetSourceAltruHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAltruHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.altru.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.altru.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAltruHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://epicsoap.altru.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.altru.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

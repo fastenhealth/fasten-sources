@@ -13,7 +13,7 @@ import (
 
 // https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceUvaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUvaHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUvaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

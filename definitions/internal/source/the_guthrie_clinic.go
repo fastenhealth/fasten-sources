@@ -13,7 +13,7 @@ import (
 
 // https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceTheGuthrieClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheGuthrieClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.guthrie.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.guthrie.org/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheGuthrieClinic(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

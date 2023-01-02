@@ -13,7 +13,7 @@ import (
 
 // https://fhir.genesishcs.org/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.genesishcs.org/api/FHIR/R4/metadata
-func GetSourceGenesisHealthcareSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.genesishcs.org/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.genesishcs.org/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGenesisHealthcareSystem(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://fhir.genesishcs.org/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.genesishcs.org/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceRiversideMedicalClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceRiversideMedicalClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceRiversideMedicalClinic(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

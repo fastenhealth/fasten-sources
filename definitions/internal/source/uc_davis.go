@@ -13,7 +13,7 @@ import (
 
 // https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4/metadata
-func GetSourceUcDavis(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUcDavis(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://emrrp.ucdmc.ucdavis.edu/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emrrp.ucdmc.ucdavis.edu/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUcDavis(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

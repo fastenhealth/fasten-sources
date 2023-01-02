@@ -13,7 +13,7 @@ import (
 
 // https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4/metadata
-func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.nhrmc.org/OAuth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.nhrmc.org/OAuth2-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenEnvType) (models.Lig
 	sourceDef.Audience = "https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

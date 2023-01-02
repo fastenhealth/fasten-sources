@@ -20,7 +20,7 @@ type SourceClientParkland struct {
 
 // https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientParkland(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientParkland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientParkland{baseClient}, updatedSourceCred, err

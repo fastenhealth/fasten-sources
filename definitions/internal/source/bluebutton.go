@@ -15,7 +15,7 @@ import (
 https://groups.google.com/g/Developer-group-for-cms-blue-button-api/c/mVNFJI4dxbs
 https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHloM/m/jQHZVNznBAAJ?utm_medium=email&utm_source=footer
 */
-func GetSourceBluebutton(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBluebutton(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://sandbox.bluebutton.cms.gov/v2/o/authorize/"
 	sourceDef.TokenEndpoint = "https://sandbox.bluebutton.cms.gov/v2/o/token/"
@@ -30,7 +30,7 @@ func GetSourceBluebutton(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://sandbox.bluebutton.cms.gov/v2/fhir"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = "XQPwCYLXmqZkiQZWhLX56mToZ29MSfekrPEkNUaF"
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeBluebutton))

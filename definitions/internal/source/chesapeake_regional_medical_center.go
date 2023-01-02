@@ -13,7 +13,7 @@ import (
 
 // https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4/metadata
-func GetSourceChesapeakeRegionalMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceChesapeakeRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceChesapeakeRegionalMedicalCenter(env pkg.FastenEnvType) (models.Lig
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

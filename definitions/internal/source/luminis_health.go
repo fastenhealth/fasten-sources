@@ -13,7 +13,7 @@ import (
 
 // https://epicarr.aahs.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarr.aahs.org/FHIR/api/FHIR/R4/metadata
-func GetSourceLuminisHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLuminisHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.aahs.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.aahs.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLuminisHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epicarr.aahs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.aahs.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

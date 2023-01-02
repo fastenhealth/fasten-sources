@@ -25,7 +25,7 @@ Practice ID: #80000
 Patient ID: #14545
 Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com / Password1
 */
-func GetSourceClientAthena(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAthena(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAthena{baseClient}, updatedSourceCred, err

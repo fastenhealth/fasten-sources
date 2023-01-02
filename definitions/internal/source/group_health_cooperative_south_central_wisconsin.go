@@ -13,7 +13,7 @@ import (
 
 // https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://linkpoint.ghcscw.com/Interconnect-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://linkpoint.ghcscw.com/Interconnect-PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenEnvType)
 	sourceDef.Audience = "https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

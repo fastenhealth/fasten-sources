@@ -13,7 +13,7 @@ import (
 
 // https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4/metadata
-func GetSourceFroedtertHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceFroedtertHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceFroedtertHealth(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

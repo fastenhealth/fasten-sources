@@ -13,7 +13,7 @@ import (
 
 // https://fhir.hurleymc.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.hurleymc.com/fhir/api/FHIR/R4/metadata
-func GetSourceHurleyMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHurleyMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.hurleymc.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.hurleymc.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHurleyMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://fhir.hurleymc.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.hurleymc.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epicsoap.shands.ufl.edu/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.shands.ufl.edu/FHIR/api/FHIR/R4/metadata
-func GetSourceUfHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUfHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.shands.ufl.edu/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.shands.ufl.edu/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUfHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition
 	sourceDef.Audience = "https://epicsoap.shands.ufl.edu/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.shands.ufl.edu/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

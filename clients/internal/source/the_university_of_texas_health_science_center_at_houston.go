@@ -20,7 +20,7 @@ type SourceClientTheUniversityOfTexasHealthScienceCenterAtHouston struct {
 
 // https://epicproxy.et1178.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1178.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientTheUniversityOfTexasHealthScienceCenterAtHouston(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientTheUniversityOfTexasHealthScienceCenterAtHouston(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientTheUniversityOfTexasHealthScienceCenterAtHouston{baseClient}, updatedSourceCred, err

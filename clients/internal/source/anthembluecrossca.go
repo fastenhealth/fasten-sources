@@ -20,7 +20,7 @@ type SourceClientAnthembluecrossca struct {
 // https://patient360ca.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360ca.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360ca.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientAnthembluecrossca(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAnthembluecrossca(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAnthembluecrossca{baseClient}, updatedSourceCred, err

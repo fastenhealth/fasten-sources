@@ -13,7 +13,7 @@ import (
 
 // https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4/metadata
-func GetSourceTheVancouverClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheVancouverClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.tvc.org/ARR-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.tvc.org/ARR-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheVancouverClinic(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

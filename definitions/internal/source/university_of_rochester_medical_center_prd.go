@@ -13,7 +13,7 @@ import (
 
 // https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4/.well-known/smart-configuration
 // https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4/metadata
-func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ercd-sproxy.urmc.rochester.edu/mips/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ercd-sproxy.urmc.rochester.edu/mips/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenEnvType) (mode
 	sourceDef.Audience = "https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

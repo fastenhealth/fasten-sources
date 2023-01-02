@@ -13,7 +13,7 @@ import (
 
 // https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.ohsu.edu/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.ohsu.edu/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenEnvType) (models.Li
 	sourceDef.Audience = "https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -20,7 +20,7 @@ type SourceClientEmpireblue struct {
 // https://patient360c.empireblue.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.empireblue.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.empireblue.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientEmpireblue(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientEmpireblue(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientEmpireblue{baseClient}, updatedSourceCred, err

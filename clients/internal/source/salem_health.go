@@ -20,7 +20,7 @@ type SourceClientSalemHealth struct {
 
 // https://prd.salemhealth.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://prd.salemhealth.org/fhir/api/FHIR/R4/metadata
-func GetSourceClientSalemHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientSalemHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientSalemHealth{baseClient}, updatedSourceCred, err

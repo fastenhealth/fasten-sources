@@ -13,7 +13,7 @@ import (
 
 // https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4/metadata
-func GetSourcePiedmontHealthcare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePiedmontHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.piedmont.org/ARR-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.piedmont.org/ARR-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePiedmontHealthcare(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

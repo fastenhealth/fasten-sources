@@ -13,7 +13,7 @@ import (
 
 // https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4/metadata
-func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenEnvType) (
 	sourceDef.Audience = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

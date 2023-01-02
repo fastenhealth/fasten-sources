@@ -13,7 +13,7 @@ import (
 
 // https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/metadata
-func GetSourceHcaSouthAtlantic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHcaSouthAtlantic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHcaSouthAtlantic(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

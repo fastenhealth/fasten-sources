@@ -13,7 +13,7 @@ import (
 
 // https://arrprd.southeasthealth.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprd.southeasthealth.org/FHIR/api/FHIR/R4/metadata
-func GetSourceSoutheastHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSoutheastHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.southeasthealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.southeasthealth.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSoutheastHealth(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://arrprd.southeasthealth.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.southeasthealth.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

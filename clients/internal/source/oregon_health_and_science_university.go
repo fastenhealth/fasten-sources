@@ -20,7 +20,7 @@ type SourceClientOregonHealthAndScienceUniversity struct {
 
 // https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceClientOregonHealthAndScienceUniversity(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientOregonHealthAndScienceUniversity(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientOregonHealthAndScienceUniversity{baseClient}, updatedSourceCred, err

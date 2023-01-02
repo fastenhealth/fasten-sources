@@ -13,7 +13,7 @@ import (
 
 // https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4/metadata
-func GetSourceIntegrisHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceIntegrisHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.Integrisok.com/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.Integrisok.com/Interconnect-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceIntegrisHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

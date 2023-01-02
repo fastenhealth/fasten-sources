@@ -13,7 +13,7 @@ import (
 
 // https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4/metadata
-func GetSourceBaptistHealthArkansas(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBaptistHealthArkansas(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBaptistHealthArkansas(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.bhsi.com/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.bhsi.com/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceBaptistHealthKyAndIn(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBaptistHealthKyAndIn(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.bhsi.com/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.bhsi.com/PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBaptistHealthKyAndIn(env pkg.FastenEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://epicproxy.bhsi.com/PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.bhsi.com/PRD-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

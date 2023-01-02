@@ -13,7 +13,7 @@ import (
 
 // https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4/.well-known/smart-configuration
 // https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4/metadata
-func GetSourceAtlanticHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAtlanticHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapproxy.atlantichealth.org/FHIRPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxy.atlantichealth.org/FHIRPrd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAtlanticHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

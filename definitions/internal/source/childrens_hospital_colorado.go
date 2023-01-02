@@ -13,7 +13,7 @@ import (
 
 // https://fhir.childrenscolorado.org/fhirprd/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.childrenscolorado.org/fhirprd/api/FHIR/R4/metadata
-func GetSourceChildrensHospitalColorado(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceChildrensHospitalColorado(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.childrenscolorado.org/fhirprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.childrenscolorado.org/fhirprd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceChildrensHospitalColorado(env pkg.FastenEnvType) (models.Lighthous
 	sourceDef.Audience = "https://fhir.childrenscolorado.org/fhirprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.childrenscolorado.org/fhirprd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

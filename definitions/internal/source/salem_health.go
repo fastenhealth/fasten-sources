@@ -13,7 +13,7 @@ import (
 
 // https://prd.salemhealth.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://prd.salemhealth.org/fhir/api/FHIR/R4/metadata
-func GetSourceSalemHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSalemHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://prd.salemhealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prd.salemhealth.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSalemHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinit
 	sourceDef.Audience = "https://prd.salemhealth.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prd.salemhealth.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

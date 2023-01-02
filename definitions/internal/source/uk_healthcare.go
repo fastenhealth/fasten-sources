@@ -13,7 +13,7 @@ import (
 
 // https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/api/FHIR/R4/.well-known/smart-configuration
 // https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/api/FHIR/R4/metadata
-func GetSourceUkHealthcare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUkHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUkHealthcare(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://boomer.cchmc.org/fhir/api/fhir/R4/.well-known/smart-configuration
 // https://boomer.cchmc.org/fhir/api/fhir/R4/metadata
-func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://boomer.cchmc.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://boomer.cchmc.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenEnvType) (m
 	sourceDef.Audience = "https://boomer.cchmc.org/fhir/api/fhir/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://boomer.cchmc.org/fhir/api/fhir/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

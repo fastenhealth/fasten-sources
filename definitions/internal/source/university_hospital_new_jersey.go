@@ -13,7 +13,7 @@ import (
 
 // https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceUniversityHospitalNewJersey(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityHospitalNewJersey(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityHospitalNewJersey(env pkg.FastenEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://mobileapps.queens.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://mobileapps.queens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceTheQueensHealthSystems(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheQueensHealthSystems(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://mobileapps.queens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileapps.queens.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheQueensHealthSystems(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://mobileapps.queens.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mobileapps.queens.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

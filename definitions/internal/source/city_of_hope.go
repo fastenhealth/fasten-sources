@@ -13,7 +13,7 @@ import (
 
 // https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceCityOfHope(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCityOfHope(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCityOfHope(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.Audience = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

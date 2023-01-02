@@ -13,7 +13,7 @@ import (
 
 // https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceStormontVailHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceStormontVailHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceStormontVailHealth(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

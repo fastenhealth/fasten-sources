@@ -13,7 +13,7 @@ import (
 // https://vteapif1.aetna.com/fhirdemo/.well-known/smart-configuration
 // https://vteapif1.aetna.com/fhirdemo/v1/patientaccess/metadata
 // https://developerportal.aetna.com/Aetna_TestMember_Data_V6.xls
-func GetSourceAetna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAetna(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://vteapif1.aetna.com/fhirdemo/v1/fhirserver_auth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://vteapif1.aetna.com/fhirdemo/v1/fhirserver_auth/oauth2/token"
@@ -27,7 +27,7 @@ func GetSourceAetna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, e
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://vteapif1.aetna.com/fhirdemo/v1/patientaccess"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = "5c47935b-29a7-4346-a01b-649a11d94dc5"
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAetna))

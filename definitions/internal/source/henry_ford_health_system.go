@@ -13,7 +13,7 @@ import (
 
 // https://fhir.hfhs.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.hfhs.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceHenryFordHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHenryFordHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.hfhs.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.hfhs.org/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHenryFordHealthSystem(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://fhir.hfhs.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.hfhs.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

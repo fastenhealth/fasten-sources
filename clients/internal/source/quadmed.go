@@ -20,7 +20,7 @@ type SourceClientQuadmed struct {
 
 // https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4/metadata
-func GetSourceClientQuadmed(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientQuadmed(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientQuadmed{baseClient}, updatedSourceCred, err

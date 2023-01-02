@@ -13,7 +13,7 @@ import (
 
 // https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4/metadata
-func GetSourceLcmcHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLcmcHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.lcmchealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.lcmchealth.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLcmcHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.Audience = "https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

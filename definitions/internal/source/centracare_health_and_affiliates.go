@@ -13,7 +13,7 @@ import (
 
 // https://epicmobile.centracare.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.centracare.com/fhir/api/FHIR/R4/metadata
-func GetSourceCentracareHealthAndAffiliates(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCentracareHealthAndAffiliates(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.centracare.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.centracare.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCentracareHealthAndAffiliates(env pkg.FastenEnvType) (models.Light
 	sourceDef.Audience = "https://epicmobile.centracare.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.centracare.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

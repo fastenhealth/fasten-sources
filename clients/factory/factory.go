@@ -18,7 +18,7 @@ import (
 	"net/http"
 )
 
-func GetSourceClient(env pkg.FastenEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	switch sourceType {
 	case pkg.SourceTypeManual:
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)

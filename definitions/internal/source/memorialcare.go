@@ -13,7 +13,7 @@ import (
 
 // https://fhir.memorialcare.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.memorialcare.org/fhir/api/FHIR/R4/metadata
-func GetSourceMemorialcare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMemorialcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.memorialcare.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.memorialcare.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMemorialcare(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://fhir.memorialcare.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.memorialcare.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

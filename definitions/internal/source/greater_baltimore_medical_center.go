@@ -13,7 +13,7 @@ import (
 
 // https://eportal.gbmc.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://eportal.gbmc.org/fhir/api/FHIR/R4/metadata
-func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eportal.gbmc.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eportal.gbmc.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenEnvType) (models.Light
 	sourceDef.Audience = "https://eportal.gbmc.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eportal.gbmc.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

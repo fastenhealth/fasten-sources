@@ -13,7 +13,7 @@ import (
 
 // https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4/metadata
-func GetSourceLegacyHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLegacyHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLegacyHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

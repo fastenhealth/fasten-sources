@@ -13,7 +13,7 @@ import (
 
 // https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceHoustonMethodist(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHoustonMethodist(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHoustonMethodist(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

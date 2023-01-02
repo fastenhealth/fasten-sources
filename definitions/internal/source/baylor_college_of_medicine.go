@@ -13,7 +13,7 @@ import (
 
 // https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4/metadata
-func GetSourceBaylorCollegeOfMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBaylorCollegeOfMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.clinical.bcm.edu/Stage1Fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.clinical.bcm.edu/Stage1Fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBaylorCollegeOfMedicine(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

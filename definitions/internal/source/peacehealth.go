@@ -13,7 +13,7 @@ import (
 
 // https://soapproxy.peacehealth.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://soapproxy.peacehealth.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourcePeacehealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePeacehealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapproxy.peacehealth.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxy.peacehealth.org/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePeacehealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinit
 	sourceDef.Audience = "https://soapproxy.peacehealth.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxy.peacehealth.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

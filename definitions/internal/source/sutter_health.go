@@ -13,7 +13,7 @@ import (
 
 // https://apiservices.sutterhealth.org/ifs/api/FHIR/R4/.well-known/smart-configuration
 // https://apiservices.sutterhealth.org/ifs/api/FHIR/R4/metadata
-func GetSourceSutterHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSutterHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSutterHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://apiservices.sutterhealth.org/ifs/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://apiservices.sutterhealth.org/ifs/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

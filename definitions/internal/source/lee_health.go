@@ -13,7 +13,7 @@ import (
 
 // https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4/metadata
-func GetSourceLeeHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLeeHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinitio
 	sourceDef.Audience = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

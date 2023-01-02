@@ -13,7 +13,7 @@ import (
 
 // https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4/metadata
-func GetSourceSummitHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSummitHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.bmctotalcare.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.bmctotalcare.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSummitHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

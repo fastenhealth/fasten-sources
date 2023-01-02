@@ -13,7 +13,7 @@ import (
 
 // https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4/.well-known/smart-configuration
 // https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4/metadata
-func GetSourceKootenaiHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceKootenaiHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.multicare.org/FHIRProxy/KH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.multicare.org/FHIRProxy/KH/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceKootenaiHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

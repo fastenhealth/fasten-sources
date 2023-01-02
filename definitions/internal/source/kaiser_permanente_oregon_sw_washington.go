@@ -13,7 +13,7 @@ import (
 
 // https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/api/FHIR/R4/.well-known/smart-configuration
 // https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/api/FHIR/R4/metadata
-func GetSourceKaiserPermanenteOregonSwWashington(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceKaiserPermanenteOregonSwWashington(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceKaiserPermanenteOregonSwWashington(env pkg.FastenEnvType) (models.
 	sourceDef.Audience = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/190/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

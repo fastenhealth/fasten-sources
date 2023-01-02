@@ -13,7 +13,7 @@ import (
 
 // https://epic-arr.utmb.edu/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-arr.utmb.edu/fhir-prd/api/FHIR/R4/metadata
-func GetSourceUniversityOfTexasMedicalBranch(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfTexasMedicalBranch(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-arr.utmb.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-arr.utmb.edu/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfTexasMedicalBranch(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://epic-arr.utmb.edu/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-arr.utmb.edu/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

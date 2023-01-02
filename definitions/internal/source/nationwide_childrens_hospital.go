@@ -13,7 +13,7 @@ import (
 
 // https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceNationwideChildrensHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNationwideChildrensHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://hkc.nationwidechildrens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hkc.nationwidechildrens.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNationwideChildrensHospital(env pkg.FastenEnvType) (models.Lightho
 	sourceDef.Audience = "https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -20,7 +20,7 @@ type SourceClientUniversityOfCaliforniaIrvine struct {
 
 // https://epicproxy.et0502.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0502.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfCaliforniaIrvine(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientUniversityOfCaliforniaIrvine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientUniversityOfCaliforniaIrvine{baseClient}, updatedSourceCred, err

@@ -13,7 +13,7 @@ import (
 
 // https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4/metadata
-func GetSourceCovenantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCovenantHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://haiku.bshsi.org/fhir/COV_OAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.bshsi.org/fhir/COV_OAUTH/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCovenantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

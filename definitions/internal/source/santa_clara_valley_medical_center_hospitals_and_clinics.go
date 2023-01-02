@@ -13,7 +13,7 @@ import (
 
 // https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/metadata
-func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenEnv
 	sourceDef.Audience = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

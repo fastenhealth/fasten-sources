@@ -13,7 +13,7 @@ import (
 
 // https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceEskenaziHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceEskenaziHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://proxy.eskenazihealth.edu/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://proxy.eskenazihealth.edu/FHIR-Proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceEskenaziHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

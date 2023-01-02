@@ -13,7 +13,7 @@ import (
 
 // https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceUchicagoMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUchicagoMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUchicagoMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

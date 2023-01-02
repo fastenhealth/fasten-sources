@@ -13,7 +13,7 @@ import (
 
 // https://fhir.epic.medical.washington.edu/FHIR-Proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.epic.medical.washington.edu/FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceUwMedicineWashington(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUwMedicineWashington(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUwMedicineWashington(env pkg.FastenEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -20,7 +20,7 @@ type SourceClientAustinRegionalClinic struct {
 
 // https://mobileprod.arcmd.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://mobileprod.arcmd.com/FHIR/api/FHIR/R4/metadata
-func GetSourceClientAustinRegionalClinic(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAustinRegionalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAustinRegionalClinic{baseClient}, updatedSourceCred, err

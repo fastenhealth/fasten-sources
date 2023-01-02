@@ -13,7 +13,7 @@ import (
 
 // https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceAdvantagecarePhysicians(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAdvantagecarePhysicians(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epwebapps.acpny.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epwebapps.acpny.com/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAdvantagecarePhysicians(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

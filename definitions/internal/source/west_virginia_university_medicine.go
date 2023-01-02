@@ -13,7 +13,7 @@ import (
 
 // https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4/metadata
-func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

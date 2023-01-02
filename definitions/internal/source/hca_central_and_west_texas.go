@@ -13,7 +13,7 @@ import (
 
 // https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/metadata
-func GetSourceHcaCentralAndWestTexas(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHcaCentralAndWestTexas(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHcaCentralAndWestTexas(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

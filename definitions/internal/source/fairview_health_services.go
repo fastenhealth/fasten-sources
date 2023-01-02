@@ -13,7 +13,7 @@ import (
 
 // https://sfd.fairview.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://sfd.fairview.org/FHIR/api/FHIR/R4/metadata
-func GetSourceFairviewHealthServices(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceFairviewHealthServices(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://sfd.fairview.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sfd.fairview.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceFairviewHealthServices(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://sfd.fairview.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sfd.fairview.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

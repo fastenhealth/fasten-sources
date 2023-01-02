@@ -13,7 +13,7 @@ import (
 
 // https://eprp.deaconess.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://eprp.deaconess.com/FHIR/api/FHIR/R4/metadata
-func GetSourceDeaconessHealthSystemPrd(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceDeaconessHealthSystemPrd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eprp.deaconess.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprp.deaconess.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceDeaconessHealthSystemPrd(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://eprp.deaconess.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprp.deaconess.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

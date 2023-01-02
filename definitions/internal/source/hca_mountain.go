@@ -13,7 +13,7 @@ import (
 
 // https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/metadata
-func GetSourceHcaMountain(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHcaMountain(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHcaMountain(env pkg.FastenEnvType) (models.LighthouseSourceDefinit
 	sourceDef.Audience = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

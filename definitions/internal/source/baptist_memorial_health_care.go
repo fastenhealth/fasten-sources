@@ -13,7 +13,7 @@ import (
 
 // https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceBaptistMemorialHealthCare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBaptistMemorialHealthCare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://rxedi.bmhcc.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rxedi.bmhcc.org/prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBaptistMemorialHealthCare(env pkg.FastenEnvType) (models.Lighthous
 	sourceDef.Audience = "https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
