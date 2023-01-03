@@ -1,44 +1,46 @@
 package base
 
 import (
-	"context"
 	"crypto/tls"
+	"fmt"
 	"github.com/seborama/govcr"
-	"golang.org/x/oauth2"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"path"
 	"testing"
+	"time"
 )
 
-func OAuthVcrSetup(t *testing.T, enableRecording bool) *http.Client {
-	accessToken := "PLACEHOLDER"
-	if enableRecording {
-		//this has to be disabled because CI is empty inside docker containers.
-		accessToken = ""
-	}
+type bearerTransport struct {
+	accessToken         string
+	underlyingTransport http.RoundTripper
+}
 
-	ts := oauth2.StaticTokenSource(
-		//setting a real access token here will allow API calls to connect successfully
-		&oauth2.Token{AccessToken: accessToken},
-	)
+func (bt *bearerTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+
+	req.Header.Add("X-Transaction-Id", time.Now().String())
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", bt.accessToken))
+	return bt.underlyingTransport.RoundTrip(req)
+}
+
+func OAuthVcrSetup(t *testing.T, enableRecording bool) *http.Client {
 
 	tr := http.DefaultTransport.(*http.Transport)
 	tr.TLSClientConfig = &tls.Config{
 		InsecureSkipVerify: true, //disable certificate validation because we're playing back http requests.
 	}
 	insecureClient := http.Client{
-		Transport: tr,
+		Transport: &bearerTransport{
+			accessToken:         "PLACEHOLDER",
+			underlyingTransport: tr,
+		},
 	}
-
-	ctx := context.WithValue(oauth2.NoContext, oauth2.HTTPClient, insecureClient)
-	tc := oauth2.NewClient(ctx, ts)
 
 	vcrConfig := govcr.VCRConfig{
 		Logging:      true,
 		CassettePath: path.Join("testdata", "govcr-fixtures"),
-		Client:       tc,
+		Client:       &insecureClient,
 
 		//this line ensures that we do not attempt to create new recordings.
 		//Comment this out if you would like to make recordings.
