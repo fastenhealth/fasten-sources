@@ -20,7 +20,7 @@ type SourceClientUcDavis struct {
 
 // https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4/metadata
-func GetSourceClientUcDavis(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientUcDavis(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientUcDavis{baseClient}, updatedSourceCred, err

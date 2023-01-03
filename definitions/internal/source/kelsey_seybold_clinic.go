@@ -13,7 +13,7 @@ import (
 
 // https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4/metadata
-func GetSourceKelseySeyboldClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceKelseySeyboldClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ssrx.ksnet.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssrx.ksnet.com/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceKelseySeyboldClinic(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

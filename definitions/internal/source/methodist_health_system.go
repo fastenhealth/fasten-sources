@@ -13,7 +13,7 @@ import (
 
 // https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4/metadata
-func GetSourceMethodistHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMethodistHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epcapp.mhd.com/arr-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epcapp.mhd.com/arr-prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMethodistHealthSystem(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

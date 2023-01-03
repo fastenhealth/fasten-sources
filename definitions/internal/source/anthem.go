@@ -14,7 +14,7 @@ import (
 // https://patient360c.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceAnthem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAnthem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceCareevolution(env)
 	sourceDef.AuthorizationEndpoint = "https://patient360c.anthem.com/P360Member/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://patient360c.anthem.com/P360Member/identityserver/connect/token"

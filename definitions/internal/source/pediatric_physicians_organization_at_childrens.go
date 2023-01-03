@@ -13,7 +13,7 @@ import (
 
 // https://fhir.chppoc.org/Fhir-External/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.chppoc.org/Fhir-External/api/FHIR/R4/metadata
-func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenEnvType) 
 	sourceDef.Audience = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

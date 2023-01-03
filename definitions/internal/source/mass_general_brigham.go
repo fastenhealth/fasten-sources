@@ -13,7 +13,7 @@ import (
 
 // https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4/metadata
-func GetSourceMassGeneralBrigham(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMassGeneralBrigham(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMassGeneralBrigham(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

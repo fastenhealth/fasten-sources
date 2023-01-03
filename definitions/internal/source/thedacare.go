@@ -13,7 +13,7 @@ import (
 
 // https://arr.thedacare.org/FHIR/TC/api/FHIR/R4/.well-known/smart-configuration
 // https://arr.thedacare.org/FHIR/TC/api/FHIR/R4/metadata
-func GetSourceThedacare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceThedacare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceThedacare(env pkg.FastenEnvType) (models.LighthouseSourceDefinitio
 	sourceDef.Audience = "https://arr.thedacare.org/FHIR/TC/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr.thedacare.org/FHIR/TC/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

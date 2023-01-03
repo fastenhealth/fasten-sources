@@ -13,7 +13,7 @@ import (
 
 // https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4/metadata
-func GetSourceParkviewHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceParkviewHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicprod-mobile.parkview.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprod-mobile.parkview.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceParkviewHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

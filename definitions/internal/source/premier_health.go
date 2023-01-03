@@ -13,7 +13,7 @@ import (
 
 // https://rx.premierhealthpartners.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://rx.premierhealthpartners.org/fhir/api/FHIR/R4/metadata
-func GetSourcePremierHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePremierHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePremierHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://rx.premierhealthpartners.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rx.premierhealthpartners.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

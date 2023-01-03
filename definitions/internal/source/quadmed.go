@@ -13,7 +13,7 @@ import (
 
 // https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4/metadata
-func GetSourceQuadmed(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceQuadmed(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicicfore.quadmedical.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicicfore.quadmedical.com/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceQuadmed(env pkg.FastenEnvType) (models.LighthouseSourceDefinition,
 	sourceDef.Audience = "https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4/metadata
-func GetSourceEisenhowerMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.emc.org/EMC_FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.emc.org/EMC_FHIR_PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceEisenhowerMedicalCenter(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

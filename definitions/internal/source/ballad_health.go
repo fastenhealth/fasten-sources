@@ -13,7 +13,7 @@ import (
 
 // https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceBalladHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBalladHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

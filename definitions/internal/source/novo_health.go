@@ -13,7 +13,7 @@ import (
 
 // https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4/metadata
-func GetSourceNovoHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNovoHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNovoHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.Audience = "https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4/.well-known/smart-configuration
 // https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4/metadata
-func GetSourceTuftsMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTuftsMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTuftsMedicine(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

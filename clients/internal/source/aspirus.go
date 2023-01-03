@@ -20,7 +20,7 @@ type SourceClientAspirus struct {
 
 // https://erx.aspirus.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://erx.aspirus.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientAspirus(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientAspirus(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAspirus{baseClient}, updatedSourceCred, err

@@ -21,7 +21,7 @@ type SourceClientEpic struct {
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/metadata
 // https://fhir.epic.com/Documentation?docId=testpatients
-func GetSourceClientEpic(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientEpic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"

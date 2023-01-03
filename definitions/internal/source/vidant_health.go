@@ -13,7 +13,7 @@ import (
 
 // https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4/metadata
-func GetSourceVidantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceVidantHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceVidantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epic-soap.uchealth.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-soap.uchealth.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceUcHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUcHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-soap.uchealth.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-soap.uchealth.com/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUcHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition
 	sourceDef.Audience = "https://epic-soap.uchealth.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-soap.uchealth.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

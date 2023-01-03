@@ -13,7 +13,7 @@ import (
 
 // https://webproxy.allina.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://webproxy.allina.com/FHIR/api/FHIR/R4/metadata
-func GetSourceAllinaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAllinaHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.allina.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.allina.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAllinaHealthSystem(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://webproxy.allina.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webproxy.allina.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

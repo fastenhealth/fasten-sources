@@ -13,7 +13,7 @@ import (
 
 // https://api.utmsa.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://api.utmsa.com/fhir/api/FHIR/R4/metadata
-func GetSourceUtHealthSanAntonio(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUtHealthSanAntonio(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://api.utmsa.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.utmsa.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUtHealthSanAntonio(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://api.utmsa.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.utmsa.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

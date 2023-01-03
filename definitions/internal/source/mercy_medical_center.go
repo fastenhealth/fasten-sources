@@ -13,7 +13,7 @@ import (
 
 // https://eproxy.mercycare.org/oauth2/api/FHIR/R4/.well-known/smart-configuration
 // https://eproxy.mercycare.org/oauth2/api/FHIR/R4/metadata
-func GetSourceMercyMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMercyMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eproxy.mercycare.org/oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eproxy.mercycare.org/oauth2/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMercyMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://eproxy.mercycare.org/oauth2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eproxy.mercycare.org/oauth2/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

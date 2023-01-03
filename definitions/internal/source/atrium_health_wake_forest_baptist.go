@@ -13,7 +13,7 @@ import (
 
 // https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/metadata
-func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://w1soap.wakehealth.edu/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://w1soap.wakehealth.edu/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenEnvType) (models.Light
 	sourceDef.Audience = "https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

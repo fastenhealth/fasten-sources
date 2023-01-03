@@ -13,7 +13,7 @@ import (
 
 // https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceUniversityOfIowaHealthCare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfIowaHealthCare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://myepicapps.uihealthcare.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://myepicapps.uihealthcare.org/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfIowaHealthCare(env pkg.FastenEnvType) (models.Lighthou
 	sourceDef.Audience = "https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

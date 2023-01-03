@@ -14,7 +14,7 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-func GetSourceConfig(env pkg.FastenEnvType, sourceType pkg.SourceType) (models.LighthouseSourceDefinition, error) {
+func GetSourceConfig(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType) (models.LighthouseSourceDefinition, error) {
 	switch sourceType {
 	case pkg.SourceTypeManual:
 		return models.LighthouseSourceDefinition{SourceType: pkg.SourceTypeManual}, nil
@@ -920,10 +920,10 @@ func GetSourceConfig(env pkg.FastenEnvType, sourceType pkg.SourceType) (models.L
 	}
 }
 
-func GetSourceConfigMap(env pkg.FastenEnvType) (map[string]models.LighthouseSourceDefinition, error) {
+func GetSourceConfigMap(env pkg.FastenLighthouseEnvType) (map[string]models.LighthouseSourceDefinition, error) {
 	var sourceTypes []pkg.SourceType
 	// in sandbox mode, we support sandbox servers, platforms and providers that have sandbox environments
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceTypes = []pkg.SourceType{pkg.SourceTypeAthena, pkg.SourceTypeHealthit, pkg.SourceTypeLogica, pkg.SourceTypeCareevolution, pkg.SourceTypeCerner, pkg.SourceTypeEpic, pkg.SourceTypeAnthem, pkg.SourceTypeAetna, pkg.SourceTypeBluebutton, pkg.SourceTypeCigna}
 	} else {
 		// only show production envs

@@ -13,7 +13,7 @@ import (
 
 // https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4/metadata
-func GetSourceSolutionhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSolutionhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSolutionhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

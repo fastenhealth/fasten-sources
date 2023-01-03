@@ -13,7 +13,7 @@ import (
 
 // https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceAdventistHealthWest(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAdventistHealthWest(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicescribe1.ah.org/ARR-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicescribe1.ah.org/ARR-FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAdventistHealthWest(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

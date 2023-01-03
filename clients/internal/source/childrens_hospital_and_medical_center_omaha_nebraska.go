@@ -20,7 +20,7 @@ type SourceClientChildrensHospitalAndMedicalCenterOmahaNebraska struct {
 
 // https://EPROXY1.chsomaha.org/FHIRPROXY/api/FHIR/R4/.well-known/smart-configuration
 // https://EPROXY1.chsomaha.org/FHIRPROXY/api/FHIR/R4/metadata
-func GetSourceClientChildrensHospitalAndMedicalCenterOmahaNebraska(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientChildrensHospitalAndMedicalCenterOmahaNebraska(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientChildrensHospitalAndMedicalCenterOmahaNebraska{baseClient}, updatedSourceCred, err

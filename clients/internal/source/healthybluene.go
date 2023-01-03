@@ -20,7 +20,7 @@ type SourceClientHealthybluene struct {
 // https://patient360.healthybluene.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360.healthybluene.com/P360Member/api/fhir-r4/metadata
 // https://patient360.healthybluene.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientHealthybluene(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientHealthybluene(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientHealthybluene{baseClient}, updatedSourceCred, err

@@ -13,7 +13,7 @@ import (
 
 // https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4/metadata
-func GetSourceMidmichiganHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMidmichiganHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMidmichiganHealth(env pkg.FastenEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

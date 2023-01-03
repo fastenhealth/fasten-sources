@@ -13,7 +13,7 @@ import (
 
 // https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4/metadata
-func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.hattiesburgclinic.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.hattiesburgclinic.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenEnvType) 
 	sourceDef.Audience = "https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

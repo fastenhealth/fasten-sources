@@ -13,7 +13,7 @@ import (
 
 // https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceMercyHealthServicesMd(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMercyHealthServicesMd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://surescripts.mdmercy.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://surescripts.mdmercy.com/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMercyHealthServicesMd(env pkg.FastenEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

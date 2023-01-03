@@ -13,7 +13,7 @@ import (
 
 // https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4/metadata
-func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenEnvType) (models.Lig
 	sourceDef.Audience = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

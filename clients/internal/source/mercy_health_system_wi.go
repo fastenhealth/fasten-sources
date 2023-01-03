@@ -20,7 +20,7 @@ type SourceClientMercyHealthSystemWi struct {
 
 // https://epicproxy.mhsjvl.org/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.mhsjvl.org/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceClientMercyHealthSystemWi(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientMercyHealthSystemWi(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientMercyHealthSystemWi{baseClient}, updatedSourceCred, err

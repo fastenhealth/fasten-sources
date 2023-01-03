@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4/metadata
-func GetSourceArdent(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceArdent(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceArdent(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, 
 	sourceDef.Audience = "https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

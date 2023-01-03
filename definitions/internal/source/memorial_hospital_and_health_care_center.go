@@ -13,7 +13,7 @@ import (
 
 // https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4/metadata
-func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenEnvType) (models
 	sourceDef.Audience = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

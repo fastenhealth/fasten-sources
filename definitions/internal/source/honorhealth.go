@@ -13,7 +13,7 @@ import (
 
 // https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceHonorhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHonorhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceHonorhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinit
 	sourceDef.Audience = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceCenturaHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCenturaHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-p-foreground.centura.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-p-foreground.centura.org/prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCenturaHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

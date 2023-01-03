@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.connecticutchildrens.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.connecticutchildrens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceConnecticutChildrensMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceConnecticutChildrensMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.connecticutchildrens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.connecticutchildrens.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceConnecticutChildrensMedicalCenter(env pkg.FastenEnvType) (models.L
 	sourceDef.Audience = "https://epicproxy.connecticutchildrens.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.connecticutchildrens.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

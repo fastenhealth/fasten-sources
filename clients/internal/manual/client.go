@@ -19,7 +19,7 @@ import (
 )
 
 type ManualClient struct {
-	FastenEnv  pkg.FastenEnvType
+	FastenEnv  pkg.FastenLighthouseEnvType
 	SourceType pkg.SourceType
 	Context    context.Context
 	Logger     logrus.FieldLogger
@@ -55,15 +55,23 @@ func (m ManualClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummar
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType pkg.FhirVersion) (models.UpsertSummary, error) {
+	//structurally similar to #SyncAllByResourceName in clients/internal/base/fhir401_client.go
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
 	}
 
 	// we need to parse the bundle into resources (might need to try a couple of different times)
 	var rawResourceList []models.RawResourceFhir
+
+	//error map storage.
+	syncErrors := map[string]error{}
+
+	//lookup table for every resource ID found by Fasten
+	lookupResourceReferences := map[string]bool{}
+
 	switch bundleType {
-	case "fhir430":
+	case pkg.FhirVersion430:
 		bundle430Data := fhir430.Bundle{}
 		err := base.ParseBundle(bundleFile, &bundle430Data)
 		if err != nil {
@@ -79,9 +87,13 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		}
 
 		//for _, apiModel := range rawResourceList {
-		//	apiModel.ReferencedResources = client.ExtractReferencedResources(apiModel)
+		//	err = client.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
+		//	if err != nil {
+		//		syncErrors[apiModel.SourceResourceType] = err
+		//		continue
+		//	}
 		//}
-	case "fhir401":
+	case pkg.FhirVersion401:
 		bundle401Data := fhir401.Bundle{}
 		err := base.ParseBundle(bundleFile, &bundle401Data)
 		if err != nil {
@@ -97,28 +109,31 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		}
 
 		for _, apiModel := range rawResourceList {
-			apiModel.ReferencedResources = client.ExtractReferencedResources(apiModel)
+			err = client.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
+			if err != nil {
+				syncErrors[apiModel.SourceResourceType] = err
+				continue
+			}
 		}
 
 	}
-	// we need to upsert all resources (and make sure they are associated with new Source)
-	for _, apiModel := range rawResourceList {
-		_, err := db.UpsertRawResource(m.Context, m.SourceCredential, apiModel)
-		if err != nil {
-			return summary, fmt.Errorf("an error occurred while upserting resources: %w", err)
-		}
+	summary.TotalResources = len(rawResourceList)
+
+	if len(syncErrors) > 0 {
+		//TODO: ignore errors.
+		m.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
 	}
 	return summary, nil
 }
 
-func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, error) {
+func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
 	// try from newest format to the oldest format
 	bundle430Data := fhir430.Bundle{}
 	bundle401Data := fhir401.Bundle{}
 
 	var patientIds []string
 
-	bundleType := "fhir430"
+	bundleType := pkg.FhirVersion430
 	if err := base.ParseBundle(bundleFile, &bundle430Data); err == nil {
 		patientIds = lo.FilterMap[fhir430.BundleEntry, string](bundle430Data.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (string, bool) {
 			parsedResource, err := fhir430utils.MapToResource(bundleEntry.Resource, false)
@@ -138,7 +153,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, err
 
 	//fallback
 	if patientIds == nil || len(patientIds) == 0 {
-		bundleType = "fhir401"
+		bundleType = pkg.FhirVersion401
 		//try parsing the bundle as a 401 bundle
 		//TODO: find a better, more generic way to do this.
 		err := base.ParseBundle(bundleFile, &bundle401Data)
@@ -170,7 +185,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, string, err
 	}
 }
 
-func GetSourceClientManual(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	return &ManualClient{
 		FastenEnv:        env,
 		Context:          ctx,

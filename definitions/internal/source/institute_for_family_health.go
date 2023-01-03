@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.institute.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.institute.org/fhir/api/FHIR/R4/metadata
-func GetSourceInstituteForFamilyHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceInstituteForFamilyHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.institute.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.institute.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceInstituteForFamilyHealth(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://epicproxy.institute.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.institute.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

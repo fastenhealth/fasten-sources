@@ -13,7 +13,7 @@ import (
 
 // https://epproxy.texashealth.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epproxy.texashealth.org/FHIR/api/FHIR/R4/metadata
-func GetSourceTexasHealthResources(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTexasHealthResources(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epproxy.texashealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epproxy.texashealth.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTexasHealthResources(env pkg.FastenEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://epproxy.texashealth.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epproxy.texashealth.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

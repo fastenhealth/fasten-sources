@@ -13,7 +13,7 @@ import (
 
 // https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4/metadata
-func GetSourceTemplehealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTemplehealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicaccess.templehealth.org/FhirProxyPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicaccess.templehealth.org/FhirProxyPrd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTemplehealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

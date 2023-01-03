@@ -13,7 +13,7 @@ import (
 
 // https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceMaryGreeleyMedicalCenterIowa(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMaryGreeleyMedicalCenterIowa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMaryGreeleyMedicalCenterIowa(env pkg.FastenEnvType) (models.Lighth
 	sourceDef.Audience = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

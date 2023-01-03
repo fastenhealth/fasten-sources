@@ -20,7 +20,7 @@ type SourceClientCareNewEngland struct {
 
 // https://cnesp001.carene.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://cnesp001.carene.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientCareNewEngland(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientCareNewEngland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientCareNewEngland{baseClient}, updatedSourceCred, err

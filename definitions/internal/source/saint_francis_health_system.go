@@ -13,7 +13,7 @@ import (
 
 // https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceSaintFrancisHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSaintFrancisHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eprdsoap000.saintfrancis.Com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprdsoap000.saintfrancis.Com/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSaintFrancisHealthSystem(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

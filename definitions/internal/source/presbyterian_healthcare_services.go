@@ -13,7 +13,7 @@ import (
 
 // https://epicFHIR.phs.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicFHIR.phs.org/FHIR/api/FHIR/R4/metadata
-func GetSourcePresbyterianHealthcareServices(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourcePresbyterianHealthcareServices(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.phs.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.phs.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourcePresbyterianHealthcareServices(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://epicFHIR.phs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicFHIR.phs.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

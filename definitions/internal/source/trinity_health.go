@@ -13,7 +13,7 @@ import (
 
 // https://epic-ext.trinity-health.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-ext.trinity-health.org/FHIR/api/FHIR/R4/metadata
-func GetSourceTrinityHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTrinityHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-ext.trinity-health.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-ext.trinity-health.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTrinityHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epic-ext.trinity-health.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-ext.trinity-health.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

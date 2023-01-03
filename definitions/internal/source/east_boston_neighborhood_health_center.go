@@ -13,7 +13,7 @@ import (
 
 // https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4/metadata
-func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenEnvType) (models.
 	sourceDef.Audience = "https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

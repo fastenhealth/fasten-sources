@@ -13,7 +13,7 @@ import (
 
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/metadata
-func GetSourceGeisinger(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceGeisinger(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceGeisinger(env pkg.FastenEnvType) (models.LighthouseSourceDefinitio
 	sourceDef.Audience = "https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

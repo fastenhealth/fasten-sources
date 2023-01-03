@@ -13,7 +13,7 @@ import (
 
 // https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceMonumentHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMonumentHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://ehrmobile.monument.health/interconnect-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ehrmobile.monument.health/interconnect-prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMonumentHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

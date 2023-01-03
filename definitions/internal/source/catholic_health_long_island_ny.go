@@ -13,7 +13,7 @@ import (
 
 // https://epx1.chsli.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epx1.chsli.org/FHIR/api/FHIR/R4/metadata
-func GetSourceCatholicHealthLongIslandNy(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCatholicHealthLongIslandNy(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epx1.chsli.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epx1.chsli.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCatholicHealthLongIslandNy(env pkg.FastenEnvType) (models.Lighthou
 	sourceDef.Audience = "https://epx1.chsli.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epx1.chsli.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

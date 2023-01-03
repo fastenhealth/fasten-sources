@@ -13,7 +13,7 @@ import (
 
 // https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceJeffersonHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceJeffersonHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.jefferson.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.jefferson.edu/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceJeffersonHealth(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

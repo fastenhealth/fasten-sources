@@ -13,7 +13,7 @@ import (
 
 // https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/metadata
-func GetSourceThePortlandClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceThePortlandClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://tpc-shield.tpcllp.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://tpc-shield.tpcllp.com/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceThePortlandClinic(env pkg.FastenEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4/.well-known/smart-configuration
 // https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4/metadata
-func GetSourceMontefioreMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMontefioreMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapepic.montefiore.org/FhirProxyPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapepic.montefiore.org/FhirProxyPrd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMontefioreMedicalCenter(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

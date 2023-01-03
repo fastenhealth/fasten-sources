@@ -13,7 +13,7 @@ import (
 
 // https://arrprd.metrohealth.net/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprd.metrohealth.net/fhir/api/FHIR/R4/metadata
-func GetSourceMetroHealthMichigan(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMetroHealthMichigan(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.metrohealth.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.metrohealth.net/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMetroHealthMichigan(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://arrprd.metrohealth.net/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.metrohealth.net/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

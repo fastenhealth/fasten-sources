@@ -13,7 +13,7 @@ import (
 
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://hygieia.bronsonhg.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hygieia.bronsonhg.org/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenEnvType) 
 	sourceDef.Audience = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

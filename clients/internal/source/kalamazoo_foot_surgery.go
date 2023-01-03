@@ -20,7 +20,7 @@ type SourceClientKalamazooFootSurgery struct {
 
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientKalamazooFootSurgery(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientKalamazooFootSurgery(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientKalamazooFootSurgery{baseClient}, updatedSourceCred, err

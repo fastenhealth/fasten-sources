@@ -13,7 +13,7 @@ import (
 
 // https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceDaytonChildrensHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceDaytonChildrensHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://appprd.childrensdayton.org/interconnect-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://appprd.childrensdayton.org/interconnect-prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceDaytonChildrensHospital(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

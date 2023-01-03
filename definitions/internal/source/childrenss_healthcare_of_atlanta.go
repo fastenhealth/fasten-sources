@@ -13,7 +13,7 @@ import (
 
 // https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4/metadata
-func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenEnvType) (models.Light
 	sourceDef.Audience = "https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

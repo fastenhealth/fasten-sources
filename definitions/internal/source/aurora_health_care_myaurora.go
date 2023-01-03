@@ -13,7 +13,7 @@ import (
 
 // https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4/.well-known/smart-configuration
 // https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4/metadata
-func GetSourceAuroraHealthCareMyaurora(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAuroraHealthCareMyaurora(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

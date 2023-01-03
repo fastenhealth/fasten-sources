@@ -13,7 +13,7 @@ import (
 
 // https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceLeonMedicalCenters(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLeonMedicalCenters(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLeonMedicalCenters(env pkg.FastenEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

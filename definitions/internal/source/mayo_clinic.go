@@ -13,7 +13,7 @@ import (
 
 // https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4/.well-known/smart-configuration
 // https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4/metadata
-func GetSourceMayoClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMayoClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.Audience = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

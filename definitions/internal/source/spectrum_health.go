@@ -13,7 +13,7 @@ import (
 
 // https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4/metadata
-func GetSourceSpectrumHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSpectrumHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicarr02.spectrumhealth.org/EpicFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr02.spectrumhealth.org/EpicFHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSpectrumHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

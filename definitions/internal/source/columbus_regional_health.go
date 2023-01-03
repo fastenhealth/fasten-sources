@@ -13,7 +13,7 @@ import (
 
 // https://epicprdproxy.crh.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprdproxy.crh.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceColumbusRegionalHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceColumbusRegionalHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicprdproxy.crh.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdproxy.crh.org/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceColumbusRegionalHealth(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://epicprdproxy.crh.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicprdproxy.crh.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

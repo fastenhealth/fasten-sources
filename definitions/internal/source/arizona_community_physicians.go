@@ -13,7 +13,7 @@ import (
 
 // https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4/metadata
-func GetSourceArizonaCommunityPhysicians(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceArizonaCommunityPhysicians(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.azacp.com/interconnect-oauth2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.azacp.com/interconnect-oauth2-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceArizonaCommunityPhysicians(env pkg.FastenEnvType) (models.Lighthou
 	sourceDef.Audience = "https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -9,17 +9,17 @@ func GetCallbackEndpoint(sourceType string) string {
 	return os.Getenv("FASTEN_CALLBACK_ENDPOINT") + sourceType
 }
 
-type FastenEnvType string
+type FastenLighthouseEnvType string
 
 const (
-	FastenEnvSandbox    FastenEnvType = "sandbox"
-	FastenEnvProduction FastenEnvType = "prod"
+	FastenLighthouseEnvSandbox    FastenLighthouseEnvType = "sandbox"
+	FastenLighthouseEnvProduction FastenLighthouseEnvType = "prod"
 )
 
-func GetFastenEnv() FastenEnvType {
-	env := FastenEnvSandbox
+func GetFastenLighthouseEnv() FastenLighthouseEnvType {
+	env := FastenLighthouseEnvSandbox
 	if envString := os.Getenv("FASTEN_ENV"); len(envString) > 0 {
-		env = FastenEnvType(strings.ToLower(strings.TrimSpace(envString)))
+		env = FastenLighthouseEnvType(strings.ToLower(strings.TrimSpace(envString)))
 	}
 	return env
 }

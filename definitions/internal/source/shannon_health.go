@@ -13,7 +13,7 @@ import (
 
 // https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4/metadata
-func GetSourceShannonHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceShannonHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicrpx.shannonhealth.org/FHIR_ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicrpx.shannonhealth.org/FHIR_ARR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceShannonHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -20,7 +20,7 @@ type SourceClientGroupHealthCooperativeSouthCentralWisconsin struct {
 
 // https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientGroupHealthCooperativeSouthCentralWisconsin{baseClient}, updatedSourceCred, err

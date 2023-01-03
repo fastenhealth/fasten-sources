@@ -13,7 +13,7 @@ import (
 
 // https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceTidalhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTidalhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://eweb.tidalhealth.org/Oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eweb.tidalhealth.org/Oauth2/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTidalhealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinit
 	sourceDef.Audience = "https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

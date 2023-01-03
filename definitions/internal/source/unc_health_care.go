@@ -13,7 +13,7 @@ import (
 
 // https://epicfe.unch.unc.edu/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicfe.unch.unc.edu/FHIR/api/FHIR/R4/metadata
-func GetSourceUncHealthCare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUncHealthCare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicfe.unch.unc.edu/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfe.unch.unc.edu/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUncHealthCare(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epicfe.unch.unc.edu/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfe.unch.unc.edu/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

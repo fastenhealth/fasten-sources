@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4/metadata
-func GetSourceDulyHealthAndCare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceDulyHealthAndCare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceDulyHealthAndCare(env pkg.FastenEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

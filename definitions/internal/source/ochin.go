@@ -13,7 +13,7 @@ import (
 
 // https://webprd.ochin.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://webprd.ochin.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceOchin(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceOchin(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceOchin(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, e
 	sourceDef.Audience = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

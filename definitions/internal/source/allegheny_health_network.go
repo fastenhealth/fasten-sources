@@ -13,7 +13,7 @@ import (
 
 // https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceAlleghenyHealthNetwork(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAlleghenyHealthNetwork(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicprisfd.ahn.org/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprisfd.ahn.org/PRD-FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAlleghenyHealthNetwork(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4/.well-known/smart-configuration
 // https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4/metadata
-func GetSourceNorthOaks(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNorthOaks(env pkg.FastenEnvType) (models.LighthouseSourceDefinitio
 	sourceDef.Audience = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

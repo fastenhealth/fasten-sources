@@ -13,7 +13,7 @@ import (
 
 // https://fhir.lakelandregional.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.lakelandregional.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceLakelandHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLakelandHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.lakelandregional.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.lakelandregional.org/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceLakelandHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://fhir.lakelandregional.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.lakelandregional.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

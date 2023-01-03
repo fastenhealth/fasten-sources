@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4/metadata
-func GetSourceUwHealthAndAffiliatesWisconsin(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUwHealthAndAffiliatesWisconsin(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.hosp.wisc.edu/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.hosp.wisc.edu/FhirProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUwHealthAndAffiliatesWisconsin(env pkg.FastenEnvType) (models.Ligh
 	sourceDef.Audience = "https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -13,7 +13,7 @@ import (
 
 // https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir-prd.upmc.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir-prd.upmc.com/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenEnvType) (mo
 	sourceDef.Audience = "https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

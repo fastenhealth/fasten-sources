@@ -13,7 +13,7 @@ import (
 
 // https://rp.stjude.org/oauth2-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://rp.stjude.org/oauth2-prd/api/FHIR/R4/metadata
-func GetSourceStJudeChildrensResearchHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceStJudeChildrensResearchHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://rp.stjude.org/oauth2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rp.stjude.org/oauth2-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceStJudeChildrensResearchHospital(env pkg.FastenEnvType) (models.Lig
 	sourceDef.Audience = "https://rp.stjude.org/oauth2-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rp.stjude.org/oauth2-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

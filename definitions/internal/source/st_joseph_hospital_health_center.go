@@ -13,7 +13,7 @@ import (
 
 // https://mobileproxy.sjhsyr.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://mobileproxy.sjhsyr.org/FHIR/api/FHIR/R4/metadata
-func GetSourceStJosephHospitalHealthCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceStJosephHospitalHealthCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://mobileproxy.sjhsyr.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileproxy.sjhsyr.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceStJosephHospitalHealthCenter(env pkg.FastenEnvType) (models.Lighth
 	sourceDef.Audience = "https://mobileproxy.sjhsyr.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mobileproxy.sjhsyr.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

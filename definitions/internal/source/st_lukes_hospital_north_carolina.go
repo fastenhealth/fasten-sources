@@ -13,7 +13,7 @@ import (
 
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4/metadata
-func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenEnvType) (models.Lighth
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

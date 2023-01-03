@@ -13,7 +13,7 @@ import (
 
 // https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4/.well-known/smart-configuration
 // https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4/metadata
-func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenEnvType) (models.
 	sourceDef.Audience = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

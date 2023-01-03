@@ -13,7 +13,7 @@ import (
 
 // https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceNorthwestCommunityHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNorthwestCommunityHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicprdproxy.nch.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdproxy.nch.org/prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNorthwestCommunityHospital(env pkg.FastenEnvType) (models.Lighthou
 	sourceDef.Audience = "https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

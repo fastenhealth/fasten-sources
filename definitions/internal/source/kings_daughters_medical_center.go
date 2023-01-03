@@ -13,7 +13,7 @@ import (
 
 // https://arrprd.kdmc.net/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprd.kdmc.net/fhir/api/FHIR/R4/metadata
-func GetSourceKingsDaughtersMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceKingsDaughtersMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.kdmc.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.kdmc.net/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceKingsDaughtersMedicalCenter(env pkg.FastenEnvType) (models.Lightho
 	sourceDef.Audience = "https://arrprd.kdmc.net/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.kdmc.net/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

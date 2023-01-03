@@ -13,7 +13,7 @@ import (
 
 // https://moc.beaumont.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://moc.beaumont.org/FHIR/api/FHIR/R4/metadata
-func GetSourceBeaumontHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBeaumontHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://moc.beaumont.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://moc.beaumont.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBeaumontHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefi
 	sourceDef.Audience = "https://moc.beaumont.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://moc.beaumont.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

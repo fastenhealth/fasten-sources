@@ -13,7 +13,7 @@ import (
 
 // https://fhirprd.ceenta.com/proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprd.ceenta.com/proxy/api/FHIR/R4/metadata
-func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.ceenta.com/proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.ceenta.com/proxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenEnvType) (mod
 	sourceDef.Audience = "https://fhirprd.ceenta.com/proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.ceenta.com/proxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

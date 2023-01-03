@@ -20,7 +20,7 @@ type SourceClientLifespan struct {
 
 // https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientLifespan(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientLifespan(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientLifespan{baseClient}, updatedSourceCred, err

@@ -20,7 +20,7 @@ type SourceClientMedisysHealthNetwork struct {
 
 // https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientMedisysHealthNetwork(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientMedisysHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientMedisysHealthNetwork{baseClient}, updatedSourceCred, err

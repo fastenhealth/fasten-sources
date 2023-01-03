@@ -20,7 +20,7 @@ type SourceClientThePolyclinic struct {
 
 // https://fhir.myeverettclinic.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.myeverettclinic.com/fhir/api/FHIR/R4/metadata
-func GetSourceClientThePolyclinic(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientThePolyclinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientThePolyclinic{baseClient}, updatedSourceCred, err

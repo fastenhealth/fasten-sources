@@ -13,7 +13,7 @@ import (
 
 // https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceNovantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNovantHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.mynovant.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.mynovant.org/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNovantHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

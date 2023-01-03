@@ -13,7 +13,7 @@ import (
 
 // https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceVanderbilt(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceVanderbilt(env pkg.FastenEnvType) (models.LighthouseSourceDefiniti
 	sourceDef.Audience = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

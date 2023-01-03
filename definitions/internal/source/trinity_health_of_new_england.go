@@ -13,7 +13,7 @@ import (
 
 // https://epicprdext.stfranciscare.org/FhirProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicprdext.stfranciscare.org/FhirProxy/api/FHIR/R4/metadata
-func GetSourceTrinityHealthOfNewEngland(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTrinityHealthOfNewEngland(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicprdext.stfranciscare.org/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdext.stfranciscare.org/FhirProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTrinityHealthOfNewEngland(env pkg.FastenEnvType) (models.Lighthous
 	sourceDef.Audience = "https://epicprdext.stfranciscare.org/FhirProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicprdext.stfranciscare.org/FhirProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

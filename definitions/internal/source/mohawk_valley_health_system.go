@@ -13,7 +13,7 @@ import (
 
 // https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceMohawkValleyHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceMohawkValleyHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mvhealthsystem.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mvhealthsystem.org/FHIRproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceMohawkValleyHealthSystem(env pkg.FastenEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

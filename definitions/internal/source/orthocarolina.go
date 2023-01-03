@@ -13,7 +13,7 @@ import (
 
 // https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceOrthocarolina(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceOrthocarolina(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceOrthocarolina(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

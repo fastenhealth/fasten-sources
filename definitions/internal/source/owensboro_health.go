@@ -13,7 +13,7 @@ import (
 
 // https://fhir.omhs.org/rp-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.omhs.org/rp-prd-fhir/api/FHIR/R4/metadata
-func GetSourceOwensboroHealth(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceOwensboroHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.omhs.org/rp-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.omhs.org/rp-prd-fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceOwensboroHealth(env pkg.FastenEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://fhir.omhs.org/rp-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.omhs.org/rp-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

@@ -18,7 +18,7 @@ type SourceClientFHIR401 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR401(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR401, *models.SourceCredential, error) {
+func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR401, *models.SourceCredential, error) {
 	baseClient, updatedSource, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	baseClient.FhirVersion = "4.0.1"
 	return &SourceClientFHIR401{
@@ -40,6 +40,8 @@ func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.Upse
 	return c.SyncAllByPatientEverythingBundle(db, bundle)
 }
 
+// If the Patient/$everything or Patient/$export endpoints are supported, this function will allow us to easily process and add resources to the DB.
+// This funciton should mimic SyncAllByResourceName logic
 func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundle interface{}) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
@@ -51,16 +53,20 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 		return summary, err
 	}
 	summary.TotalResources = len(rawResourceModels)
+	//error map storage.
+	syncErrors := map[string]error{}
 
-	for _, rawResource := range rawResourceModels {
-		isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, rawResource)
+	//lookup table for every resource ID found by Fasten
+	lookupResourceReferences := map[string]bool{}
+
+	for _, apiModel := range rawResourceModels {
+		err = c.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
 		if err != nil {
-			return summary, err
-		}
-		if isUpdated {
-			summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", rawResource.SourceResourceType, rawResource.SourceResourceID))
+			syncErrors[apiModel.SourceResourceType] = err
+			continue
 		}
 	}
+
 	return summary, nil
 }
 
@@ -68,6 +74,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 // Given a list of resource names (Patient, Encounter, etc), we should query for all resources associated with the current patient
 // then store these resources in the database. NOTE: we must extract links to other resources referenced as we find them, and process
 // them as well
+// Changes to this function may need to be applied to SyncAllByPatientEverythingBundle as well.
 func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
@@ -308,7 +315,7 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	lookupReferencedResources[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
-	referencedResources := c.ExtractReferencedResources(resourceObj)
+	referencedResources := ExtractFhir401ReferencedResources(resourceObj)
 	resource.ReferencedResources = referencedResources
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)

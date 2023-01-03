@@ -13,7 +13,7 @@ import (
 
 // https://fhir.myeverettclinic.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.myeverettclinic.com/fhir/api/FHIR/R4/metadata
-func GetSourceTheEverettClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceTheEverettClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.myeverettclinic.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.myeverettclinic.com/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceTheEverettClinic(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://fhir.myeverettclinic.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.myeverettclinic.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

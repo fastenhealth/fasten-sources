@@ -13,7 +13,7 @@ import (
 
 // https://haiku.sparrow.org/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.sparrow.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceSparrowHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceSparrowHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://haiku.sparrow.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.sparrow.org/fhir-prd/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceSparrowHealthSystem(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://haiku.sparrow.org/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.sparrow.org/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

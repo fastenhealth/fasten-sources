@@ -13,7 +13,7 @@ import (
 
 // https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4/metadata
-func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenEnvType
 	sourceDef.Audience = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

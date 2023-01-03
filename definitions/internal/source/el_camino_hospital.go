@@ -13,7 +13,7 @@ import (
 
 // https://rwebproxy.elcaminohospital.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://rwebproxy.elcaminohospital.org/FHIR/api/FHIR/R4/metadata
-func GetSourceElCaminoHospital(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceElCaminoHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://rwebproxy.elcaminohospital.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rwebproxy.elcaminohospital.org/FHIR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceElCaminoHospital(env pkg.FastenEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://rwebproxy.elcaminohospital.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rwebproxy.elcaminohospital.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

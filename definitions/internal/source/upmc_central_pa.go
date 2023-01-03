@@ -13,7 +13,7 @@ import (
 
 // https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4/.well-known/smart-configuration
 // https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4/metadata
-func GetSourceUpmcCentralPa(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceUpmcCentralPa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceUpmcCentralPa(env pkg.FastenEnvType) (models.LighthouseSourceDefin
 	sourceDef.Audience = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

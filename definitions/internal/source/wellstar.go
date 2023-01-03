@@ -13,7 +13,7 @@ import (
 
 // https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceWellstar(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceWellstar(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.wellstar.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.wellstar.org/fhirproxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceWellstar(env pkg.FastenEnvType) (models.LighthouseSourceDefinition
 	sourceDef.Audience = "https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

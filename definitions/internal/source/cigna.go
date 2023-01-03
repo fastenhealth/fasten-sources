@@ -14,7 +14,7 @@ import (
 /*
 https://developer.cigna.com/service-apis/patient-access/sandbox#How-to-Use-the-Sandbox-Sandbox-Test-Users
 */
-func GetSourceCigna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCigna(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://r-hi2.cigna.com/mga/sps/oauth/oauth20/authorize"
 	sourceDef.TokenEndpoint = "https://r-hi2.cigna.com/mga/sps/oauth/oauth20/token"
@@ -28,7 +28,7 @@ func GetSourceCigna(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, e
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://p-hi2.digitaledge.cigna.com/PatientAccess/v1-devportal"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = "5bf24f17-3554-404f-8c67-ccbea00438ad"
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCigna))

@@ -20,7 +20,7 @@ type SourceClientLaheyHealthSystem struct {
 
 // https://fhir.laheyhealth.org/proxy-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.laheyhealth.org/proxy-prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientLaheyHealthSystem(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientLaheyHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientLaheyHealthSystem{baseClient}, updatedSourceCred, err

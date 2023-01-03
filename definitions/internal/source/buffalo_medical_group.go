@@ -13,7 +13,7 @@ import (
 
 // https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4/metadata
-func GetSourceBuffaloMedicalGroup(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBuffaloMedicalGroup(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.buffalomedicalgroup.com/fhir-arr/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.buffalomedicalgroup.com/fhir-arr/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBuffaloMedicalGroup(env pkg.FastenEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

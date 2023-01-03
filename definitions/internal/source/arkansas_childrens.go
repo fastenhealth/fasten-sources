@@ -13,7 +13,7 @@ import (
 
 // https://fhir.archildrens.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.archildrens.org/fhir/api/FHIR/R4/metadata
-func GetSourceArkansasChildrens(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceArkansasChildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://fhir.archildrens.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.archildrens.org/fhir/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceArkansasChildrens(env pkg.FastenEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://fhir.archildrens.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.archildrens.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

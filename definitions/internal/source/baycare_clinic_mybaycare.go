@@ -13,7 +13,7 @@ import (
 
 // https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4/.well-known/smart-configuration
 // https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4/metadata
-func GetSourceBaycareClinicMybaycare(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceBaycareClinicMybaycare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceBaycareClinicMybaycare(env pkg.FastenEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

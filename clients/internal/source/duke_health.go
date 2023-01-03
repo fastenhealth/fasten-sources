@@ -20,7 +20,7 @@ type SourceClientDukeHealth struct {
 
 // https://health-apis.duke.edu/FHIR/patient/R4/.well-known/smart-configuration
 // https://health-apis.duke.edu/FHIR/patient/R4/metadata
-func GetSourceClientDukeHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientDukeHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientDukeHealth{baseClient}, updatedSourceCred, err

@@ -20,7 +20,7 @@ type SourceClientMuscogeeCreekNationDepartmentOfHealth struct {
 
 // https://epicproxy.et1221.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1221.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientMuscogeeCreekNationDepartmentOfHealth(env pkg.FastenEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientMuscogeeCreekNationDepartmentOfHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientMuscogeeCreekNationDepartmentOfHealth{baseClient}, updatedSourceCred, err

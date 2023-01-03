@@ -13,7 +13,7 @@ import (
 
 // https://epicfhir.nyumc.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicfhir.nyumc.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceNyuLangoneMedicalCenter(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceNyuLangoneMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.nyumc.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.nyumc.org/FHIRPRD/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceNyuLangoneMedicalCenter(env pkg.FastenEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicfhir.nyumc.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfhir.nyumc.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))

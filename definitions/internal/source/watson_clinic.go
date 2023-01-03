@@ -13,7 +13,7 @@ import (
 
 // https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceWatsonClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceWatsonClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
 	sourceDef.AuthorizationEndpoint = "https://epic-arr.watsonclinicad.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-arr.watsonclinicad.com/FHIRProxy/oauth2/token"
@@ -21,7 +21,7 @@ func GetSourceWatsonClinic(env pkg.FastenEnvType) (models.LighthouseSourceDefini
 	sourceDef.Audience = "https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenEnvSandbox {
+	if env == pkg.FastenLighthouseEnvSandbox {
 		sourceDef.ClientId = ""
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
