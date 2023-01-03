@@ -20,10 +20,10 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	//fakeDatabase.EXPECT().UpsertRawResource("web.database.location").AnyTimes().Return(testDatabase.Name())
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(694).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("REPLACEME")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("12742397")
 	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeCerner)
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d")
 
@@ -31,9 +31,11 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 	client, _, err := GetSourceClientCerner(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
-	_, err = client.SyncAll(fakeDatabase)
+	resp, err := client.SyncAll(fakeDatabase)
 	require.NoError(t, err)
 
 	//assert
 	require.NoError(t, err)
+	require.Equal(t, 931, resp.TotalResources)
+	require.Equal(t, 694, len(resp.UpdatedResources))
 }

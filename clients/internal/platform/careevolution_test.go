@@ -20,10 +20,10 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	//fakeDatabase.EXPECT().UpsertRawResource("web.database.location").AnyTimes().Return(testDatabase.Name())
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(158).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("REPLACEME")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("6709dc13-ca3e-4969-886a-fe0889eb8256")
 	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeCareevolution)
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4")
 
@@ -31,9 +31,11 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 	client, _, err := GetSourceClientCareevolution(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
-	_, err = client.SyncAll(fakeDatabase)
+	resp, err := client.SyncAll(fakeDatabase)
 	require.NoError(t, err)
 
 	//assert
 	require.NoError(t, err)
+	require.Equal(t, 158, resp.TotalResources)
+	require.Equal(t, 158, len(resp.UpdatedResources))
 }
