@@ -20,20 +20,22 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	//fakeDatabase.EXPECT().UpsertRawResource("web.database.location").AnyTimes().Return(testDatabase.Name())
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(13).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("erXuFYUfucBZaryVksYEcMg3")
 	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeEpic)
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4")
 
-	httpClient := base.OAuthVcrSetup(t, true)
+	httpClient := base.OAuthVcrSetup(t, false)
 	client, _, err := GetSourceClientEpic(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
-	_, err = client.SyncAll(fakeDatabase)
+	resp, err := client.SyncAll(fakeDatabase)
 	require.NoError(t, err)
 
 	//assert
 	require.NoError(t, err)
+	require.Equal(t, 15, resp.TotalResources)
+	require.Equal(t, 13, len(resp.UpdatedResources))
 }
