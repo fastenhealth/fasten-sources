@@ -315,7 +315,7 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	lookupReferencedResources[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
-	referencedResources := ExtractReferencedResources(resourceObj)
+	referencedResources := ExtractFhir401ReferencedResources(resourceObj)
 	resource.ReferencedResources = referencedResources
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)
