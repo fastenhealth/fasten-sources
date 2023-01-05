@@ -21,14 +21,10 @@ func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenLightho
 	sourceDef.Audience = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Ann & Robert H. Lurie Children's Hospital of Chicago"
 	sourceDef.SourceType = pkg.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

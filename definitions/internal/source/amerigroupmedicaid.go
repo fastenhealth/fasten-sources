@@ -21,14 +21,10 @@ func GetSourceAmerigroupmedicaid(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://patient360.amerigroup.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.amerigroup.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Amerigroup Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeAmerigroupmedicaid
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

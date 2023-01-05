@@ -39,7 +39,6 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.Display = "Medicare/VA Health (BlueButton)"
 	sourceDef.SourceType = pkg.SourceTypeBluebutton
 	sourceDef.Category = []string{"Hospital"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

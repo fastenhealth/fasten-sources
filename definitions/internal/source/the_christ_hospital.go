@@ -21,14 +21,10 @@ func GetSourceTheChristHospital(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://soapproxyprod.thechristhospital.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxyprod.thechristhospital.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "The Christ Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTheChristHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceMartinHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Martin Health System"
 	sourceDef.SourceType = pkg.SourceTypeMartinHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

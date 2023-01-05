@@ -21,14 +21,10 @@ func GetSourceObGynAssociatesOfWacoDrRisterDrKoeritz(env pkg.FastenLighthouseEnv
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OB/GYN Associates of Waco - Dr. Rister, Dr. Koeritz"
 	sourceDef.SourceType = pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

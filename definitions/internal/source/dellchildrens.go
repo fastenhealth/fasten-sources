@@ -21,14 +21,10 @@ func GetSourceDellchildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://patient360.mydellchildrens.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.mydellchildrens.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Dell Children's Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeDellchildrens
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

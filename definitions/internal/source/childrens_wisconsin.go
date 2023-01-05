@@ -21,14 +21,10 @@ func GetSourceChildrensWisconsin(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://epicproxy.et0815.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0815.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Children's Wisconsin"
 	sourceDef.SourceType = pkg.SourceTypeChildrensWisconsin
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

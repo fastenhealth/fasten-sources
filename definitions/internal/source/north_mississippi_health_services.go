@@ -15,20 +15,16 @@ import (
 // https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4/metadata
 func GetSourceNorthMississippiHealthServices(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://eiclbext.nmhs.net/interconnect-fhir-prd/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://eiclbext.nmhs.net/interconnect-fhir-prd/oauth2/token"
+	sourceDef.AuthorizationEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/token"
 
 	sourceDef.Audience = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "North Mississippi Health Services"
 	sourceDef.SourceType = pkg.SourceTypeNorthMississippiHealthServices
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -37,7 +37,6 @@ func GetSourceLogica(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.Display = "Logica (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeLogica
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

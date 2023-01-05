@@ -21,14 +21,10 @@ func GetSourceFranciscanAlliance(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://ema.franciscanalliance.org/FHIR_PROXY/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ema.franciscanalliance.org/FHIR_PROXY/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Franciscan Alliance"
 	sourceDef.SourceType = pkg.SourceTypeFranciscanAlliance
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

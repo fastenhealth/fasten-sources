@@ -21,14 +21,10 @@ func GetSourceTheVancouverClinic(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "The Vancouver Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheVancouverClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

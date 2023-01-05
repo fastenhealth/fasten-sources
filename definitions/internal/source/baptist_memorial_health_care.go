@@ -21,14 +21,10 @@ func GetSourceBaptistMemorialHealthCare(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Baptist Memorial Health Care"
 	sourceDef.SourceType = pkg.SourceTypeBaptistMemorialHealthCare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

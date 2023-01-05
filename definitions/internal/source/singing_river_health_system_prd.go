@@ -21,14 +21,10 @@ func GetSourceSingingRiverHealthSystemPrd(env pkg.FastenLighthouseEnvType) (mode
 	sourceDef.Audience = "https://arr.mysrhs.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr.mysrhs.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Singing River Health System - PRD"
 	sourceDef.SourceType = pkg.SourceTypeSingingRiverHealthSystemPrd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

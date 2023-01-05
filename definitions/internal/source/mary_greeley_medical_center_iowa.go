@@ -21,14 +21,10 @@ func GetSourceMaryGreeleyMedicalCenterIowa(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mary Greeley Medical Center (Iowa)"
 	sourceDef.SourceType = pkg.SourceTypeMaryGreeleyMedicalCenterIowa
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

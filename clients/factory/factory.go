@@ -30,144 +30,632 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 	case pkg.SourceTypeEpic:
 		return platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// source
+	case pkg.SourceTypeAWomanSPlaceLlc:
+		return source.GetSourceClientAWomanSPlaceLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAbbevilleGeneralHospital:
+		return source.GetSourceClientAbbevilleGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAbbvieInc:
+		return source.GetSourceClientAbbvieInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAbcPediatrics:
+		return source.GetSourceClientAbcPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAbigailFamilyMedicineLLC:
+		return source.GetSourceClientAbigailFamilyMedicineLLC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAbileneDermatologySkinSurgeryCenter:
+		return source.GetSourceClientAbileneDermatologySkinSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAcadiaStLandryHospitalDba:
+		return source.GetSourceClientAcadiaStLandryHospitalDba(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAccelwellInc:
+		return source.GetSourceClientAccelwellInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAccessCommunityHealthNetwork:
 		return source.GetSourceClientAccessCommunityHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAcendaInc:
+		return source.GetSourceClientAcendaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdairCountyMemorialHospital:
+		return source.GetSourceClientAdairCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo:
 		return source.GetSourceClientAdultAndPediatricEarNoseAndThroatKalamazoo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdultInternalMedicine:
+		return source.GetSourceClientAdultInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdultMedicalAssociates:
+		return source.GetSourceClientAdultMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdultMedicineSpecialists:
+		return source.GetSourceClientAdultMedicineSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedDermatology:
+		return source.GetSourceClientAdvancedDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedDigestiveCareCenter:
+		return source.GetSourceClientAdvancedDigestiveCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedFootAnkleClinicLlp:
+		return source.GetSourceClientAdvancedFootAnkleClinicLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedPediatricCareLtd:
+		return source.GetSourceClientAdvancedPediatricCareLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedSkinAndMohsSurgeryCenterSc:
+		return source.GetSourceClientAdvancedSkinAndMohsSurgeryCenterSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvantageHealthConvenientCare:
+		return source.GetSourceClientAdvantageHealthConvenientCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvantageHealthcareForWomen:
+		return source.GetSourceClientAdvantageHealthcareForWomen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvantagecarePhysicians:
 		return source.GetSourceClientAdvantagecarePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventhealthOrlando:
+		return source.GetSourceClientAdventhealthOrlando(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventhealthOttawa:
+		return source.GetSourceClientAdventhealthOttawa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdventhealth:
 		return source.GetSourceClientAdventhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventistHealthCorporateOffice:
+		return source.GetSourceClientAdventistHealthCorporateOffice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventistHealthDelano:
+		return source.GetSourceClientAdventistHealthDelano(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventistHealthRevenueCycleIntentRci:
+		return source.GetSourceClientAdventistHealthRevenueCycleIntentRci(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventistHealthTulare:
+		return source.GetSourceClientAdventistHealthTulare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdventistHealthWest:
 		return source.GetSourceClientAdventistHealthWest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdventistHealthcare:
+		return source.GetSourceClientAdventistHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvocateAuroraHealth:
+		return source.GetSourceClientAdvocateAuroraHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvocateShermanHospital:
+		return source.GetSourceClientAdvocateShermanHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAestheticPlasticSurgeryPc:
+		return source.GetSourceClientAestheticPlasticSurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAffiliatedPodiatristsLtd:
+		return source.GetSourceClientAffiliatedPodiatristsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAffiliatedPodiatristsOfSouthJersey:
+		return source.GetSourceClientAffiliatedPodiatristsOfSouthJersey(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAffordableHealthInc:
+		return source.GetSourceClientAffordableHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAgnesianHealthCare:
+		return source.GetSourceClientAgnesianHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAkronAmbulatoryFootSurgeons:
+		return source.GetSourceClientAkronAmbulatoryFootSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAkronChildrensHospital:
 		return source.GetSourceClientAkronChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlabamaFootCare:
+		return source.GetSourceClientAlabamaFootCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlabamaMedicineAndRheumatologyLlc:
+		return source.GetSourceClientAlabamaMedicineAndRheumatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlamedaHealthSystem:
 		return source.GetSourceClientAlamedaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlamoPsychiatricCarePa:
+		return source.GetSourceClientAlamoPsychiatricCarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlamogordoSurgicalAssociates:
+		return source.GetSourceClientAlamogordoSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlanLKalischerMD:
+		return source.GetSourceClientAlanLKalischerMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlanYagerMd:
+		return source.GetSourceClientAlanYagerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlaskaNativeMedicalCenter:
+		return source.GetSourceClientAlaskaNativeMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlbanySurgicalPc:
+		return source.GetSourceClientAlbanySurgicalPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlbuquerqueCenterForRheumatologyPC:
+		return source.GetSourceClientAlbuquerqueCenterForRheumatologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlexiusBishopMd:
+		return source.GetSourceClientAlexiusBishopMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlfieriCardiologyPa:
+		return source.GetSourceClientAlfieriCardiologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlleghenyHealthNetwork:
 		return source.GetSourceClientAlleghenyHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllenAFloodMd:
+		return source.GetSourceClientAllenAFloodMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllenCountyRegionalHospital:
+		return source.GetSourceClientAllenCountyRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllentownFamilyFootCare:
+		return source.GetSourceClientAllentownFamilyFootCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllergyAsthmaAssoc:
+		return source.GetSourceClientAllergyAsthmaAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllergyAsthmaClinicOfAlexandria:
+		return source.GetSourceClientAllergyAsthmaClinicOfAlexandria(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllinaHealthSystem:
 		return source.GetSourceClientAllinaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAllinaHealth:
+		return source.GetSourceClientAllinaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAlphaHealthAssociates:
+		return source.GetSourceClientAlphaHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAltamed:
 		return source.GetSourceClientAltamed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAltruHealthSystem:
 		return source.GetSourceClientAltruHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmadorHormillaMD:
+		return source.GetSourceClientAmadorHormillaMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmandaMeszarosDpmFacfas:
+		return source.GetSourceClientAmandaMeszarosDpmFacfas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmeliaIslandFootAndAnkleAssociates:
+		return source.GetSourceClientAmeliaIslandFootAndAnkleAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmericanAnesthesiologyOfNj:
+		return source.GetSourceClientAmericanAnesthesiologyOfNj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmericanCentury:
+		return source.GetSourceClientAmericanCentury(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmericanForkPediatrics:
+		return source.GetSourceClientAmericanForkPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAmericoServicesInc:
+		return source.GetSourceClientAmericoServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAmerigroup:
 		return source.GetSourceClientAmerigroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAmerigroupmedicaid:
 		return source.GetSourceClientAmerigroupmedicaid(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAndersonDermatologyAndSkinSurgery:
+		return source.GetSourceClientAndersonDermatologyAndSkinSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAndrosEntSleepCenterPA:
+		return source.GetSourceClientAndrosEntSleepCenterPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAngelPhysicianPractices:
+		return source.GetSourceClientAngelPhysicianPractices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnimasSurgicalHospital:
+		return source.GetSourceClientAnimasSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnkleFootSpecialists:
+		return source.GetSourceClientAnkleFootSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnmedHealth:
 		return source.GetSourceClientAnmedHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago:
 		return source.GetSourceClientAnnAndRobertHLurieChildrensHospitalOfChicago(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnneMarieGracia:
+		return source.GetSourceClientAnneMarieGracia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnnistonNeurologyHeadache:
+		return source.GetSourceClientAnnistonNeurologyHeadache(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnsariPediatrics:
+		return source.GetSourceClientAnsariPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAntelopeValleyMedicalCenter:
+		return source.GetSourceClientAntelopeValleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthemMedicaid:
 		return source.GetSourceClientAnthemMedicaid(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthem:
 		return source.GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthembluecrossca:
 		return source.GetSourceClientAnthembluecrossca(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnthonyParksMD:
+		return source.GetSourceClientAnthonyParksMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnthonyVasileMd:
+		return source.GetSourceClientAnthonyVasileMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAnuvaHealth:
+		return source.GetSourceClientAnuvaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeArchboldMedicalCenter:
+		return source.GetSourceClientArchboldMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArdent:
 		return source.GetSourceClientArdent(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArizonaCommunityPhysicians:
 		return source.GetSourceClientArizonaCommunityPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArkansasChildrens:
 		return source.GetSourceClientArkansasChildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeArlingtonPodiatry:
+		return source.GetSourceClientArlingtonPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeArmandoOsioMd:
+		return source.GetSourceClientArmandoOsioMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArrowheadRegionalMedicalCenter:
 		return source.GetSourceClientArrowheadRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAsanteHealthSystems:
 		return source.GetSourceClientAsanteHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAscensionHealth:
+		return source.GetSourceClientAscensionHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAscensionProvidenceRochesterHospital:
+		return source.GetSourceClientAscensionProvidenceRochesterHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAscensionSeton:
+		return source.GetSourceClientAscensionSeton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAscensionViaChristi:
+		return source.GetSourceClientAscensionViaChristi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAschinbergPediatrics:
+		return source.GetSourceClientAschinbergPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAshDermatologySkinCancerCenterPa:
+		return source.GetSourceClientAshDermatologySkinCancerCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAshevillePodiatryAssociates:
+		return source.GetSourceClientAshevillePodiatryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAshlandHealthCenter:
+		return source.GetSourceClientAshlandHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAshlandMansfieldFootAnkleSpecialist:
+		return source.GetSourceClientAshlandMansfieldFootAnkleSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAsimChohanMd:
+		return source.GetSourceClientAsimChohanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAspenValleyHospital:
 		return source.GetSourceClientAspenValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAspirus:
 		return source.GetSourceClientAspirus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAsquamCommunityHealthCollaborativeLlc:
+		return source.GetSourceClientAsquamCommunityHealthCollaborativeLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatedNephrologyConsultants:
+		return source.GetSourceClientAssociatedNephrologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatedOphthalmologists:
+		return source.GetSourceClientAssociatedOphthalmologists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatedPodiatristsLlp:
+		return source.GetSourceClientAssociatedPodiatristsLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatedSkinCareSpecialists:
+		return source.GetSourceClientAssociatedSkinCareSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatesInAnesthesia:
+		return source.GetSourceClientAssociatesInAnesthesia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatesInGastroenterologyPC:
+		return source.GetSourceClientAssociatesInGastroenterologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatesInOtolaryngology:
+		return source.GetSourceClientAssociatesInOtolaryngology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociatesInWomenSHealth:
+		return source.GetSourceClientAssociatesInWomenSHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAssociationForMentalHealthAndWellness:
+		return source.GetSourceClientAssociationForMentalHealthAndWellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAstriaSunnysideHospital:
+		return source.GetSourceClientAstriaSunnysideHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtiSmOccupationalHealthCenter:
+		return source.GetSourceClientAtiSmOccupationalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtiSmRichburgHealthCenter:
+		return source.GetSourceClientAtiSmRichburgHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlantaHeartGroup:
+		return source.GetSourceClientAtlantaHeartGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlantaInfectiousDiseaseSpecialists:
+		return source.GetSourceClientAtlantaInfectiousDiseaseSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlantaNeuromuscularDiagnostics:
+		return source.GetSourceClientAtlantaNeuromuscularDiagnostics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlantaRehabilitationPhysiciansPC:
+		return source.GetSourceClientAtlantaRehabilitationPhysiciansPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlantaRophekaMedicalCenter:
+		return source.GetSourceClientAtlantaRophekaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticHealth:
 		return source.GetSourceClientAtlanticHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAtlanticareHealthSystem:
+		return source.GetSourceClientAtlanticareHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtriumHealthWakeForestBaptist:
 		return source.GetSourceClientAtriumHealthWakeForestBaptist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtriumHealth:
 		return source.GetSourceClientAtriumHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtriusHealth:
 		return source.GetSourceClientAtriusHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAuMedicalCenterInc:
+		return source.GetSourceClientAuMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAultmanHealthFoundation:
+		return source.GetSourceClientAultmanHealthFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAuroraHealthCareMyaurora:
 		return source.GetSourceClientAuroraHealthCareMyaurora(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAustinRegionalClinic:
 		return source.GetSourceClientAustinRegionalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAutomationDirect:
+		return source.GetSourceClientAutomationDirect(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAvalaHealth:
+		return source.GetSourceClientAvalaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAveonHealth:
+		return source.GetSourceClientAveonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAvinashGuptaMdPc:
+		return source.GetSourceClientAvinashGuptaMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAwaniKumarMdPc:
+		return source.GetSourceClientAwaniKumarMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAzharKhanMdPc:
+		return source.GetSourceClientAzharKhanMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBKGuptaMd:
+		return source.GetSourceClientBKGuptaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBacharachInstituteForRehabilitation:
+		return source.GetSourceClientBacharachInstituteForRehabilitation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBalladHealth:
 		return source.GetSourceClientBalladHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBallardFamilyMedical:
+		return source.GetSourceClientBallardFamilyMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBannerHealth:
+		return source.GetSourceClientBannerHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthArkansas:
 		return source.GetSourceClientBaptistHealthArkansas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthKyAndIn:
 		return source.GetSourceClientBaptistHealthKyAndIn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaptistHealthMedicalGroupInc:
+		return source.GetSourceClientBaptistHealthMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthNortheastFlorida:
 		return source.GetSourceClientBaptistHealthNortheastFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaptistHealthSouthFlorida:
+		return source.GetSourceClientBaptistHealthSouthFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaptistHealthSystemInc:
+		return source.GetSourceClientBaptistHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaptistHealth:
+		return source.GetSourceClientBaptistHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistMemorialHealthCare:
 		return source.GetSourceClientBaptistMemorialHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaragaCountyMemorialHospital:
+		return source.GetSourceClientBaragaCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBarclayInternist:
+		return source.GetSourceClientBarclayInternist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBarkerSleepMedicinePllc:
+		return source.GetSourceClientBarkerSleepMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBarnegatMedicalAssociates:
+		return source.GetSourceClientBarnegatMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBartlettRegionalHospital:
+		return source.GetSourceClientBartlettRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaselRefaiMd:
+		return source.GetSourceClientBaselRefaiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBassettHealthcare:
 		return source.GetSourceClientBassettHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaxterRegionalMedicalCenter:
+		return source.GetSourceClientBaxterRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBayAreaHospital:
+		return source.GetSourceClientBayAreaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBayAreaNeurologyAssociates:
+		return source.GetSourceClientBayAreaNeurologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBayClinic:
+		return source.GetSourceClientBayClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaycareClinicMybaycare:
 		return source.GetSourceClientBaycareClinicMybaycare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaycareHealthSystem:
+		return source.GetSourceClientBaycareHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBayhealthMedicalCenter:
 		return source.GetSourceClientBayhealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaylorCollegeOfMedicine:
 		return source.GetSourceClientBaylorCollegeOfMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaylorScottAndWhite:
 		return source.GetSourceClientBaylorScottAndWhite(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaystateHealthInc:
+		return source.GetSourceClientBaystateHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBcbskansas:
 		return source.GetSourceClientBcbskansas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBcbskansasmedicare:
 		return source.GetSourceClientBcbskansasmedicare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBcbsny:
 		return source.GetSourceClientBcbsny(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBeachCitiesDermatology:
+		return source.GetSourceClientBeachCitiesDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBeaconHealthSystem:
+		return source.GetSourceClientBeaconHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBeaconMedicalGroup:
+		return source.GetSourceClientBeaconMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeaumontHealth:
 		return source.GetSourceClientBeaumontHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBeebeHealthcare:
+		return source.GetSourceClientBeebeHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBelkysBravoMd:
+		return source.GetSourceClientBelkysBravoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBelladonnaMedicalPC:
+		return source.GetSourceClientBelladonnaMedicalPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBellevueHeartGroup:
+		return source.GetSourceClientBellevueHeartGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBellinHealth:
 		return source.GetSourceClientBellinHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBellvilleMedicalCenter:
+		return source.GetSourceClientBellvilleMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBeloitHealthSystem:
+		return source.GetSourceClientBeloitHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBenewahCommunityHospital:
+		return source.GetSourceClientBenewahCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBerkelyFamilyMedicineAssociates:
+		return source.GetSourceClientBerkelyFamilyMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBermudaHealthcareServices:
+		return source.GetSourceClientBermudaHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBessmerPc:
+		return source.GetSourceClientBessmerPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBestselfBehavioralHealthInc:
+		return source.GetSourceClientBestselfBehavioralHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBhaveshPatel:
+		return source.GetSourceClientBhaveshPatel(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBillieABondarDpm:
+		return source.GetSourceClientBillieABondarDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBillingsClinic:
+		return source.GetSourceClientBillingsClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBiltmoreFamilyMedicinePllc:
+		return source.GetSourceClientBiltmoreFamilyMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBiomerieuxUS:
+		return source.GetSourceClientBiomerieuxUS(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBitterrootHealthDalyHospital:
+		return source.GetSourceClientBitterrootHealthDalyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBjcAndWashingtonUniversity:
 		return source.GetSourceClientBjcAndWashingtonUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlackRiverMemorialHospitalInc:
+		return source.GetSourceClientBlackRiverMemorialHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlackwellFamilyMedicine:
+		return source.GetSourceClientBlackwellFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlairFootAnkle:
+		return source.GetSourceClientBlairFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlanchardValleyHealthSystem:
+		return source.GetSourceClientBlanchardValleyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlueCrossAndBlueShieldOfVermont:
+		return source.GetSourceClientBlueCrossAndBlueShieldOfVermont(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlueCrossBlueShieldOfLouisiana:
+		return source.GetSourceClientBlueCrossBlueShieldOfLouisiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlueCrossBlueShieldOfMassachusetts:
+		return source.GetSourceClientBlueCrossBlueShieldOfMassachusetts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBlueRidgeBehavioralHealthcare:
+		return source.GetSourceClientBlueRidgeBehavioralHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBluemedicareadvantage:
 		return source.GetSourceClientBluemedicareadvantage(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBocaRatonRegionalHospital:
+		return source.GetSourceClientBocaRatonRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBonSecoursHealthSystem:
 		return source.GetSourceClientBonSecoursHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBonhamSInsuranceFilingService:
+		return source.GetSourceClientBonhamSInsuranceFilingService(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBooneCountyHealthCenter:
+		return source.GetSourceClientBooneCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBorgessHealthAlliance:
+		return source.GetSourceClientBorgessHealthAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBosqueCountyHospitalDistrictDbaGoodallWitcherHospita:
+		return source.GetSourceClientBosqueCountyHospitalDistrictDbaGoodallWitcherHospita(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBostonMedicalCenter:
 		return source.GetSourceClientBostonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBoulderCityHospital:
+		return source.GetSourceClientBoulderCityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBoulderCommunityHealth:
 		return source.GetSourceClientBoulderCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBoyScoutsOfAmerica:
+		return source.GetSourceClientBoyScoutsOfAmerica(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBoyleHeightsNephrology:
+		return source.GetSourceClientBoyleHeightsNephrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrattleboroMemorialHospital:
+		return source.GetSourceClientBrattleboroMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrianJLipmanMDPc:
+		return source.GetSourceClientBrianJLipmanMDPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrianWeeksMdInc:
+		return source.GetSourceClientBrianWeeksMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBridgeCounselingAssociates:
+		return source.GetSourceClientBridgeCounselingAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBridgesMedicalServices:
+		return source.GetSourceClientBridgesMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrightPediatrics:
+		return source.GetSourceClientBrightPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrmcMedicalSpecialists:
+		return source.GetSourceClientBrmcMedicalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBronsonCenterForColonRectalDiseases:
+		return source.GetSourceClientBronsonCenterForColonRectalDiseases(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBronsonHealthcareGroup:
 		return source.GetSourceClientBronsonHealthcareGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrookwoodBaptistHealth:
 		return source.GetSourceClientBrookwoodBaptistHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrownAndTolandPhysicians:
 		return source.GetSourceClientBrownAndTolandPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBrownCountyHospital:
+		return source.GetSourceClientBrownCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBryanHealth:
 		return source.GetSourceClientBryanHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBryceBeseth:
+		return source.GetSourceClientBryceBeseth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBuffaloMedicalGroup:
 		return source.GetSourceClientBuffaloMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBurrellPodiatryClinic:
+		return source.GetSourceClientBurrellPodiatryClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeButlerCountyHealthCareCenter:
+		return source.GetSourceClientButlerCountyHealthCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeC2IGenomicsInc:
+		return source.GetSourceClientC2IGenomicsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCabellHuntingtonHospitalInc:
+		return source.GetSourceClientCabellHuntingtonHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCaliforniaCorrectionalHealthCareServices:
+		return source.GetSourceClientCaliforniaCorrectionalHealthCareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCaliforniaKidneySpecialists:
+		return source.GetSourceClientCaliforniaKidneySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCanevaFootAnkleClinicLtd:
+		return source.GetSourceClientCanevaFootAnkleClinicLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapeCodHealthcare:
 		return source.GetSourceClientCapeCodHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapeFearValleyHealth:
 		return source.GetSourceClientCapeFearValleyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCapitalHealthSystemInc:
+		return source.GetSourceClientCapitalHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCapitalRegionHealthcare:
+		return source.GetSourceClientCapitalRegionHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardioMd:
+		return source.GetSourceClientCardioMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiologyAssociatesInc:
+		return source.GetSourceClientCardiologyAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiothoracicAssociatesOfHawaii:
+		return source.GetSourceClientCardiothoracicAssociatesOfHawaii(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiovascularAssociates:
+		return source.GetSourceClientCardiovascularAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiovascularHospitalsOfAmericaInternational:
+		return source.GetSourceClientCardiovascularHospitalsOfAmericaInternational(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiovascularSpecialistIncPC:
+		return source.GetSourceClientCardiovascularSpecialistIncPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCareNewEnglandHealthSystem:
+		return source.GetSourceClientCareNewEnglandHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCareNewEngland:
 		return source.GetSourceClientCareNewEngland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCaritasClinics:
+		return source.GetSourceClientCaritasClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup:
 		return source.GetSourceClientCarleFoundationHospitalAndPhysicianGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCarolinaVascular:
+		return source.GetSourceClientCarolinaVascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCarolinaeastHealthSystem:
+		return source.GetSourceClientCarolinaeastHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaromontHealth:
 		return source.GetSourceClientCaromontHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCarondeletHealthNetwork:
+		return source.GetSourceClientCarondeletHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCarrollCountyMemorialHospital:
+		return source.GetSourceClientCarrollCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCartersvilleObGynAssociates:
+		return source.GetSourceClientCartersvilleObGynAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCasaColinaHospitalAndCentersForHealthcare:
+		return source.GetSourceClientCasaColinaHospitalAndCentersForHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCascadeInternalMedicine:
+		return source.GetSourceClientCascadeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCastroCountyHospitalDistrict:
+		return source.GetSourceClientCastroCountyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCatherineChiodoDpm:
+		return source.GetSourceClientCatherineChiodoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCatholicCharitiesTrenton:
+		return source.GetSourceClientCatholicCharitiesTrenton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatholicHealthLongIslandNy:
 		return source.GetSourceClientCatholicHealthLongIslandNy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatholicHealthSystemBuffalo:
 		return source.GetSourceClientCatholicHealthSystemBuffalo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCathyBerensNp:
+		return source.GetSourceClientCathyBerensNp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCaymanIslandsHealthServicesAuthority:
+		return source.GetSourceClientCaymanIslandsHealthServicesAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCedarsSinaiHealthSystem:
 		return source.GetSourceClientCedarsSinaiHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCelebrationFootAndAnkleInstitute:
+		return source.GetSourceClientCelebrationFootAndAnkleInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCelebrationMinimallyInvasiveSpineInstitute:
+		return source.GetSourceClientCelebrationMinimallyInvasiveSpineInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCenteneCorporation:
+		return source.GetSourceClientCenteneCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCenterForChildren:
+		return source.GetSourceClientCenterForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCenterForHealthcareServices:
+		return source.GetSourceClientCenterForHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCenterForManualMedicine:
+		return source.GetSourceClientCenterForManualMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCenterOfWomenSHealthOfLansdale:
+		return source.GetSourceClientCenterOfWomenSHealthOfLansdale(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentraHealth:
+		return source.GetSourceClientCentraHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentracareHealthAndAffiliates:
 		return source.GetSourceClientCentracareHealthAndAffiliates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentralCommunityHospital:
+		return source.GetSourceClientCentralCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentralJerseySportsMedicineAndOrthopaedicCenter:
+		return source.GetSourceClientCentralJerseySportsMedicineAndOrthopaedicCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentralMaineMedicalCenter:
+		return source.GetSourceClientCentralMaineMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentralValleyMedicalCenter:
+		return source.GetSourceClientCentralValleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCentralValleyPhysiatry:
+		return source.GetSourceClientCentralValleyPhysiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenturaHealth:
 		return source.GetSourceClientCenturaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCernerHealtheClinic:
+		return source.GetSourceClientCernerHealtheClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCghMedicalCenter:
+		return source.GetSourceClientCghMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChaMedicalAndSurgicalGroupPc:
+		return source.GetSourceClientChaMedicalAndSurgicalGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChadronCommunityHospital:
+		return source.GetSourceClientChadronCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCharlesMurphyDpm:
+		return source.GetSourceClientCharlesMurphyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCharlestonAreaMedicalCenterInc:
+		return source.GetSourceClientCharlestonAreaMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates:
 		return source.GetSourceClientCharlotteEyeEarNoseAndThroatAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChaseCountyCommunityHospital:
+		return source.GetSourceClientChaseCountyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChattanoogaEyeInstitute:
+		return source.GetSourceClientChattanoogaEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChccMedicalGroup:
+		return source.GetSourceClientChccMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChelmsfordPediatrics:
+		return source.GetSourceClientChelmsfordPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCherokeeNation:
+		return source.GetSourceClientCherokeeNation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChesapeakeRegionalMedicalCenter:
 		return source.GetSourceClientChesapeakeRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChesterfieldValleyDermatology:
+		return source.GetSourceClientChesterfieldValleyDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChestertownCardiology:
+		return source.GetSourceClientChestertownCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChestnutHillPodiatry:
+		return source.GetSourceClientChestnutHillPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCheyenneCountyHospital:
+		return source.GetSourceClientCheyenneCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCheyenneRegionalMedicalCenter:
 		return source.GetSourceClientCheyenneRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChicagoWellnessCenterCoalition:
+		return source.GetSourceClientChicagoWellnessCenterCoalition(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSDiabetesAndEndocrinology:
+		return source.GetSourceClientChildrenSDiabetesAndEndocrinology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSHospitalLosAngeles:
+		return source.GetSourceClientChildrenSHospitalLosAngeles(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSHospitalOfOrangeCountyChoc:
+		return source.GetSourceClientChildrenSHospitalOfOrangeCountyChoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSHospitalOfTheKingSDaughtersInc:
+		return source.GetSourceClientChildrenSHospitalOfTheKingSDaughtersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSHospitalsAndClinicsOfMinnesota:
+		return source.GetSourceClientChildrenSHospitalsAndClinicsOfMinnesota(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSNationalMedicalCenter:
+		return source.GetSourceClientChildrenSNationalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSSkinCenter:
+		return source.GetSourceClientChildrenSSkinCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChildrenSUrology:
+		return source.GetSourceClientChildrenSUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensHealthSystemOfTexas:
 		return source.GetSourceClientChildrensHealthSystemOfTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska:
@@ -180,26 +668,126 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChildrensWisconsin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrenssHealthcareOfAtlanta:
 		return source.GetSourceClientChildrenssHealthcareOfAtlanta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChineseHospital:
+		return source.GetSourceClientChineseHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChmcCommunityHealthServicesNetwork:
+		return source.GetSourceClientChmcCommunityHealthServicesNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChristianaCareHealthServicesInc:
+		return source.GetSourceClientChristianaCareHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeChristinaGoodridgeMdLlc:
+		return source.GetSourceClientChristinaGoodridgeMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCibolaGeneralHospital:
+		return source.GetSourceClientCibolaGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCignaMedicalGroup:
 		return source.GetSourceClientCignaMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter:
 		return source.GetSourceClientCincinnatiChildrensHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCircleHealthInc:
+		return source.GetSourceClientCircleHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCityOfAshevilleHealthServices:
+		return source.GetSourceClientCityOfAshevilleHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCityOfChandler:
+		return source.GetSourceClientCityOfChandler(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCityOfHope:
 		return source.GetSourceClientCityOfHope(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCityOfLenexaKs:
+		return source.GetSourceClientCityOfLenexaKs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCityOfVirginiaBeach:
+		return source.GetSourceClientCityOfVirginiaBeach(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCityWideMedical:
+		return source.GetSourceClientCityWideMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClaraBartonHospital:
+		return source.GetSourceClientClaraBartonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClarksvilleGeneralHospital:
+		return source.GetSourceClientClarksvilleGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClayCountyMedicalCenter:
+		return source.GetSourceClientClayCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClayPlatteFamilyMedicineClinic:
+		return source.GetSourceClientClayPlatteFamilyMedicineClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClearhealthalliance:
 		return source.GetSourceClientClearhealthalliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClearskyHealth:
+		return source.GetSourceClientClearskyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClemKirklandMdInc:
+		return source.GetSourceClientClemKirklandMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClevelandAreaHospital:
+		return source.GetSourceClientClevelandAreaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClevelandClinic:
 		return source.GetSourceClientClevelandClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClevelandFamilyCare:
+		return source.GetSourceClientClevelandFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClevelandFootClinicInc:
+		return source.GetSourceClientClevelandFootClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClevelandHeadNeck:
+		return source.GetSourceClientClevelandHeadNeck(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCliftonHHuntMd:
+		return source.GetSourceClientCliftonHHuntMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeClinicaLasCondes:
+		return source.GetSourceClientClinicaLasCondes(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoastalNephrologyPa:
+		return source.GetSourceClientCoastalNephrologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoastalPlainCommunityMhmrCenter:
+		return source.GetSourceClientCoastalPlainCommunityMhmrCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoastalPulmonary:
+		return source.GetSourceClientCoastalPulmonary(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoastalWomenSHealthcareInc:
+		return source.GetSourceClientCoastalWomenSHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCogdellMemorialHospital:
+		return source.GetSourceClientCogdellMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCollegeMedicalCenter:
+		return source.GetSourceClientCollegeMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColonRectalSurgeryAssociates:
+		return source.GetSourceClientColonRectalSurgeryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColonialBehavioralHealth:
+		return source.GetSourceClientColonialBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColonialHealthcare:
+		return source.GetSourceClientColonialHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColoradoCanyonsHospitalMedicalCenter:
+		return source.GetSourceClientColoradoCanyonsHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColumbiaMemorialHospital:
+		return source.GetSourceClientColumbiaMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaPhysicians:
 		return source.GetSourceClientColumbiaPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColumbiaStMarySInc:
+		return source.GetSourceClientColumbiaStMarySInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColumbusPainCenterPC:
+		return source.GetSourceClientColumbusPainCenterPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbusRegionalHealth:
 		return source.GetSourceClientColumbusRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeColumbusRegionalHealthcareSystem:
+		return source.GetSourceClientColumbusRegionalHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommonspiritHealth:
+		return source.GetSourceClientCommonspiritHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityFirstHealthPlans:
+		return source.GetSourceClientCommunityFirstHealthPlans(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityHealthNetworkInc:
+		return source.GetSourceClientCommunityHealthNetworkInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthNetwork:
 		return source.GetSourceClientCommunityHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityHealthcareSystemInc:
+		return source.GetSourceClientCommunityHealthcareSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthcareSystem:
 		return source.GetSourceClientCommunityHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityMedicalCenterMissoula:
+		return source.GetSourceClientCommunityMedicalCenterMissoula(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityMedicalCenters:
 		return source.GetSourceClientCommunityMedicalCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityMemorialHospital:
+		return source.GetSourceClientCommunityMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCommunityPulmonaryAssociates:
+		return source.GetSourceClientCommunityPulmonaryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCompleteCardiologyPC:
+		return source.GetSourceClientCompleteCardiologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCompleteCareMedicalCenter:
+		return source.GetSourceClientCompleteCareMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCompleteMedicalHealthcare:
+		return source.GetSourceClientCompleteMedicalHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeComprehensiveCounselingCenter:
+		return source.GetSourceClientComprehensiveCounselingCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCompsych:
+		return source.GetSourceClientCompsych(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeConciergeMedicalOfNaplesLlc:
+		return source.GetSourceClientConciergeMedicalOfNaplesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeConeHealth:
 		return source.GetSourceClientConeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeConemaughHealthSystem:
@@ -208,114 +796,698 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientConfluenceHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeConnecticutChildrensMedicalCenter:
 		return source.GetSourceClientConnecticutChildrensMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeConsultantsInInfectiousDisease:
+		return source.GetSourceClientConsultantsInInfectiousDisease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeContraCosta:
 		return source.GetSourceClientContraCosta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeConvenientCareFamilyMedicine:
+		return source.GetSourceClientConvenientCareFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeConwayMedicalCenter:
+		return source.GetSourceClientConwayMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCookChildrensHealthCareSystem:
 		return source.GetSourceClientCookChildrensHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCookCountyHealthHospitalsSystem:
+		return source.GetSourceClientCookCountyHealthHospitalsSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCooperUniversityHealthCare:
 		return source.GetSourceClientCooperUniversityHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCopperQueenCommunityHospital:
+		return source.GetSourceClientCopperQueenCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoquilleValleyHospital:
+		return source.GetSourceClientCoquilleValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCottageHealth:
 		return source.GetSourceClientCottageHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoulterClinic:
+		return source.GetSourceClientCoulterClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCouncilBluffsSurgicalAssociates:
+		return source.GetSourceClientCouncilBluffsSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCountyOfVentura:
+		return source.GetSourceClientCountyOfVentura(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCovenantHealth:
 		return source.GetSourceClientCovenantHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCoxhealth:
+		return source.GetSourceClientCoxhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCozenOConnor:
+		return source.GetSourceClientCozenOConnor(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrawfordMemorialHospital:
+		return source.GetSourceClientCrawfordMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCreekNationCommunityHospital:
+		return source.GetSourceClientCreekNationCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrispRegionalHospitalInc:
+		return source.GetSourceClientCrispRegionalHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrockettMedicalCenter:
+		return source.GetSourceClientCrockettMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrossroadsForWomenInc:
+		return source.GetSourceClientCrossroadsForWomenInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrozerHealthAccessNetwork:
+		return source.GetSourceClientCrozerHealthAccessNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCrystalClinicOrthopaedicCenterLlc:
+		return source.GetSourceClientCrystalClinicOrthopaedicCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCullmanMedicalPediatricAssocPc:
+		return source.GetSourceClientCullmanMedicalPediatricAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCullmanRegionalMedicalCenter:
+		return source.GetSourceClientCullmanRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCullmanSurgicalAssocPC:
+		return source.GetSourceClientCullmanSurgicalAssocPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCumberlandCountyHospitalSystemInc:
+		return source.GetSourceClientCumberlandCountyHospitalSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCumberlandMountainCommunityServicesBoard:
+		return source.GetSourceClientCumberlandMountainCommunityServicesBoard(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCureCardiovascularConsultantsInc:
+		return source.GetSourceClientCureCardiovascularConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCypressPointeFamilyMedicine:
+		return source.GetSourceClientCypressPointeFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDVPasupuletiMd:
+		return source.GetSourceClientDVPasupuletiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDallasCenterMedical:
+		return source.GetSourceClientDallasCenterMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDanBangartDpm:
+		return source.GetSourceClientDanBangartDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDanielJRyanMDPC:
+		return source.GetSourceClientDanielJRyanMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDanielToocheckOd:
+		return source.GetSourceClientDanielToocheckOd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDareFootCareLlc:
+		return source.GetSourceClientDareFootCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDartmouthHitchcock:
 		return source.GetSourceClientDartmouthHitchcock(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavidCMorleyJrMd:
+		return source.GetSourceClientDavidCMorleyJrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavidEBankMd:
+		return source.GetSourceClientDavidEBankMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavidHWarnerDpm:
+		return source.GetSourceClientDavidHWarnerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavidHamilosDpm:
+		return source.GetSourceClientDavidHamilosDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavidLCrowderMDInc:
+		return source.GetSourceClientDavidLCrowderMDInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavisCountyHospital:
+		return source.GetSourceClientDavisCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDavitaInc:
+		return source.GetSourceClientDavitaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavitaPhysicianSolutions:
 		return source.GetSourceClientDavitaPhysicianSolutions(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDaytonChildrensHospital:
 		return source.GetSourceClientDaytonChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeaconessHealthSystemPrd:
 		return source.GetSourceClientDeaconessHealthSystemPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDeanBrightDpm:
+		return source.GetSourceClientDeanBrightDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDecaturCountyHospital:
+		return source.GetSourceClientDecaturCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDeerChaseMedicalAssociates:
+		return source.GetSourceClientDeerChaseMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDelawareCountyMemorialHospitalDbaRegionalMedicalCenter:
+		return source.GetSourceClientDelawareCountyMemorialHospitalDbaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDelawareFootAnkleGroup:
+		return source.GetSourceClientDelawareFootAnkleGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDelawareValleyHealthTrust:
+		return source.GetSourceClientDelawareValleyHealthTrust(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDellchildrens:
 		return source.GetSourceClientDellchildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDeltaMedicalClinic:
+		return source.GetSourceClientDeltaMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDenrobManagement:
+		return source.GetSourceClientDenrobManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDenverHealthMedicalPlanInc:
+		return source.GetSourceClientDenverHealthMedicalPlanInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDenverHealth:
 		return source.GetSourceClientDenverHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDermatologyAssociatesOfNorthwest:
+		return source.GetSourceClientDermatologyAssociatesOfNorthwest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDermatologyAssociatesOfThePalmBeaches:
+		return source.GetSourceClientDermatologyAssociatesOfThePalmBeaches(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDermatologyConsultantsPa:
+		return source.GetSourceClientDermatologyConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDermatologyInstitute:
+		return source.GetSourceClientDermatologyInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDermatologySkinCancerCenterOfNewMexico:
+		return source.GetSourceClientDermatologySkinCancerCenterOfNewMexico(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDetroitMedicalCenter:
+		return source.GetSourceClientDetroitMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDewittFootAnkle:
+		return source.GetSourceClientDewittFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDewittHospitalAndNursingHome:
+		return source.GetSourceClientDewittHospitalAndNursingHome(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDigestiveDiseaseConsultants:
+		return source.GetSourceClientDigestiveDiseaseConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDignityHealthCareb:
+		return source.GetSourceClientDignityHealthCareb(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDignityHealthMedicalGroupNorthridgeFamilyMedicine:
+		return source.GetSourceClientDignityHealthMedicalGroupNorthridgeFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDignityHealthYavapaiRegionalMedicalCenter:
+		return source.GetSourceClientDignityHealthYavapaiRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDineshLahotiMd:
+		return source.GetSourceClientDineshLahotiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDistrictMedicalGroupInc:
+		return source.GetSourceClientDistrictMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDoctorsForSeniorHealthPc:
+		return source.GetSourceClientDoctorsForSeniorHealthPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDoctorsHospitalAtRenaissance:
+		return source.GetSourceClientDoctorsHospitalAtRenaissance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDonaldMBirchMd:
+		return source.GetSourceClientDonaldMBirchMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDouglasATaylorMd:
+		return source.GetSourceClientDouglasATaylorMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDouglasAshinskyMd:
+		return source.GetSourceClientDouglasAshinskyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDouglasGrantLincolnOkanoganCountiesHospitalDistrict6DBACouleeMedicalCenter:
+		return source.GetSourceClientDouglasGrantLincolnOkanoganCountiesHospitalDistrict6DBACouleeMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDoverFootSpecialtyCenterInc:
+		return source.GetSourceClientDoverFootSpecialtyCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDownEastCommunityHospital:
+		return source.GetSourceClientDownEastCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrAdekunleAdeoti:
+		return source.GetSourceClientDrAdekunleAdeoti(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrAlbertBoydMd:
+		return source.GetSourceClientDrAlbertBoydMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrAmyMorris:
+		return source.GetSourceClientDrAmyMorris(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrAnuradhaKollipara:
+		return source.GetSourceClientDrAnuradhaKollipara(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBasimZAbdelkarimMdInc:
+		return source.GetSourceClientDrBasimZAbdelkarimMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBelenClarkMd:
+		return source.GetSourceClientDrBelenClarkMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBobHealthCentre:
+		return source.GetSourceClientDrBobHealthCentre(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBoseIndustrialFamilyMedicine:
+		return source.GetSourceClientDrBoseIndustrialFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBrandonHolloway:
+		return source.GetSourceClientDrBrandonHolloway(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrBrianHarkinsMd:
+		return source.GetSourceClientDrBrianHarkinsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrChadSmokerMd:
+		return source.GetSourceClientDrChadSmokerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrCharlesSchlosser:
+		return source.GetSourceClientDrCharlesSchlosser(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrDonaldHuang:
+		return source.GetSourceClientDrDonaldHuang(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrDouglasWAnkromInc:
+		return source.GetSourceClientDrDouglasWAnkromInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrEllbogenMd:
+		return source.GetSourceClientDrEllbogenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrElviraRives:
+		return source.GetSourceClientDrElviraRives(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrFranciscoMartinezMdPa:
+		return source.GetSourceClientDrFranciscoMartinezMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrGlenEHurst:
+		return source.GetSourceClientDrGlenEHurst(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrHussainAlDarsaniMd:
+		return source.GetSourceClientDrHussainAlDarsaniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrIrwinBuchwald:
+		return source.GetSourceClientDrIrwinBuchwald(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrIsraelAlvarez:
+		return source.GetSourceClientDrIsraelAlvarez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJamesRussellMd:
+		return source.GetSourceClientDrJamesRussellMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJeffreyJBetmanPodiatricPhysicianAndSurgeonPc:
+		return source.GetSourceClientDrJeffreyJBetmanPodiatricPhysicianAndSurgeonPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJoaquinGomez:
+		return source.GetSourceClientDrJoaquinGomez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJoseFernandez:
+		return source.GetSourceClientDrJoseFernandez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJosePenaMd:
+		return source.GetSourceClientDrJosePenaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrJuanBMartinezJrMd:
+		return source.GetSourceClientDrJuanBMartinezJrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrKennethTreadwell:
+		return source.GetSourceClientDrKennethTreadwell(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrKermani:
+		return source.GetSourceClientDrKermani(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrKostecke:
+		return source.GetSourceClientDrKostecke(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrKouWeiChiu:
+		return source.GetSourceClientDrKouWeiChiu(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrKumar:
+		return source.GetSourceClientDrKumar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrLuciaZamorano:
+		return source.GetSourceClientDrLuciaZamorano(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrManuelLovo:
+		return source.GetSourceClientDrManuelLovo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrMariaERamonCoton:
+		return source.GetSourceClientDrMariaERamonCoton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrMariaFernandez:
+		return source.GetSourceClientDrMariaFernandez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrMarielaUrbinaMd:
+		return source.GetSourceClientDrMarielaUrbinaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrMunifSalek:
+		return source.GetSourceClientDrMunifSalek(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrNealSuares:
+		return source.GetSourceClientDrNealSuares(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrNelsonSanchezMd:
+		return source.GetSourceClientDrNelsonSanchezMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrNelsonVega:
+		return source.GetSourceClientDrNelsonVega(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrPadmaGuptaMdPa:
+		return source.GetSourceClientDrPadmaGuptaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrPepperSnappleGroupAspers:
+		return source.GetSourceClientDrPepperSnappleGroupAspers(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrPepperSnappleGroupIrving:
+		return source.GetSourceClientDrPepperSnappleGroupIrving(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrRDanielJacob:
+		return source.GetSourceClientDrRDanielJacob(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrRafaelAbreu:
+		return source.GetSourceClientDrRafaelAbreu(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrRodrigoArgenalMd:
+		return source.GetSourceClientDrRodrigoArgenalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrSherwinParikh:
+		return source.GetSourceClientDrSherwinParikh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrSonnyPark:
+		return source.GetSourceClientDrSonnyPark(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrStephanieHerreraMd:
+		return source.GetSourceClientDrStephanieHerreraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrSuganthiniUmakanthanMd:
+		return source.GetSourceClientDrSuganthiniUmakanthanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrSusanHunterJoernsMd:
+		return source.GetSourceClientDrSusanHunterJoernsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrTilakMallik:
+		return source.GetSourceClientDrTilakMallik(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrTimothyJKilleenMd:
+		return source.GetSourceClientDrTimothyJKilleenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrTriciaHislopChestnut:
+		return source.GetSourceClientDrTriciaHislopChestnut(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrVincentReyes:
+		return source.GetSourceClientDrVincentReyes(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrWilliamJHicks:
+		return source.GetSourceClientDrWilliamJHicks(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrWilliamStrazzellaDo:
+		return source.GetSourceClientDrWilliamStrazzellaDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrexelMedicine:
 		return source.GetSourceClientDrexelMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDriscollChildrensHospital:
 		return source.GetSourceClientDriscollChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrsWestScharfConteAndBastianelli:
+		return source.GetSourceClientDrsWestScharfConteAndBastianelli(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrumhillPediatrics:
+		return source.GetSourceClientDrumhillPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDrumrightRegionalHospital:
+		return source.GetSourceClientDrumrightRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDublinWomensCenter:
+		return source.GetSourceClientDublinWomensCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDubuqueOrthopaedicSurgeonsPc:
+		return source.GetSourceClientDubuqueOrthopaedicSurgeonsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDukeHealth:
 		return source.GetSourceClientDukeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDulyHealthAndCare:
 		return source.GetSourceClientDulyHealthAndCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDustinHubbardDpm:
+		return source.GetSourceClientDustinHubbardDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeDutchessCountyDepartmentOfBehavioralAndCommunityHealth:
+		return source.GetSourceClientDutchessCountyDepartmentOfBehavioralAndCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEarlJacobsonDpm:
+		return source.GetSourceClientEarlJacobsonDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEastAlabamaEyeClinicOfAnnistonPc:
+		return source.GetSourceClientEastAlabamaEyeClinicOfAnnistonPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEastAlabamaWomenSClinic:
+		return source.GetSourceClientEastAlabamaWomenSClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEastBankGastroenterology:
+		return source.GetSourceClientEastBankGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastBostonNeighborhoodHealthCenter:
 		return source.GetSourceClientEastBostonNeighborhoodHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEastTennesseeAllergyPc:
+		return source.GetSourceClientEastTennesseeAllergyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEasternMedicalSpecialistsPc:
+		return source.GetSourceClientEasternMedicalSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEastlandMemorialHospital:
+		return source.GetSourceClientEastlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEctorCountyHospitalDistrictMedicalCenterHealthSystem:
+		return source.GetSourceClientEctorCountyHospitalDistrictMedicalCenterHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEdgarSandovalMd:
+		return source.GetSourceClientEdgarSandovalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardElmhurstHealthcare:
 		return source.GetSourceClientEdwardElmhurstHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEdwardLMurrayDpm:
+		return source.GetSourceClientEdwardLMurrayDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEdwardYavitzMd:
+		return source.GetSourceClientEdwardYavitzMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEffinghamHealthSystem:
+		return source.GetSourceClientEffinghamHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEinsteinHealthcareNetwork:
+		return source.GetSourceClientEinsteinHealthcareNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEisenhowerMedicalCenter:
 		return source.GetSourceClientEisenhowerMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElCaminoHospital:
 		return source.GetSourceClientElCaminoHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeElCentroRegionalMedicalCenter:
+		return source.GetSourceClientElCentroRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElRioHealth:
 		return source.GetSourceClientElRioHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEllinwoodDistrictHospitalAndClinic:
+		return source.GetSourceClientEllinwoodDistrictHospitalAndClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEllisHospital:
+		return source.GetSourceClientEllisHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEllsworthCountyMedicalCenter:
+		return source.GetSourceClientEllsworthCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEminentMedicalCenter:
+		return source.GetSourceClientEminentMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEmmaGoldmanClinic:
+		return source.GetSourceClientEmmaGoldmanClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEmmanuelEmelleMd:
+		return source.GetSourceClientEmmanuelEmelleMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEmoryClinicAtCoke:
+		return source.GetSourceClientEmoryClinicAtCoke(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEmoryHealthcareInc:
+		return source.GetSourceClientEmoryHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmoryHealthcare:
 		return source.GetSourceClientEmoryHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmpireblue:
 		return source.GetSourceClientEmpireblue(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmpirebluemedicaid:
 		return source.GetSourceClientEmpirebluemedicaid(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEmpowerPsychiatryAndSleepLlc:
+		return source.GetSourceClientEmpowerPsychiatryAndSleepLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEncompassHealthCorporation:
+		return source.GetSourceClientEncompassHealthCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEndeavorHealthServices:
+		return source.GetSourceClientEndeavorHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEndocrinologyAndMetabolismOfEastAlabamaLlc:
+		return source.GetSourceClientEndocrinologyAndMetabolismOfEastAlabamaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEngineeredFloors:
+		return source.GetSourceClientEngineeredFloors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEnglewoodHospitalAndMedicalCenter:
 		return source.GetSourceClientEnglewoodHospitalAndMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEnkeiAmericaInc:
+		return source.GetSourceClientEnkeiAmericaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEnloeMedicalCenter:
 		return source.GetSourceClientEnloeMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEnriqueGriegoMD:
+		return source.GetSourceClientEnriqueGriegoMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEntAllergyAssociatesPC:
+		return source.GetSourceClientEntAllergyAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEntAndAllergyCenterPa:
+		return source.GetSourceClientEntAndAllergyCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEntAssociatesOfMetairie:
+		return source.GetSourceClientEntAssociatesOfMetairie(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEpiphanyDermatology:
+		return source.GetSourceClientEpiphanyDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEricFontenotMd:
+		return source.GetSourceClientEricFontenotMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeErlangerHealthSystem:
 		return source.GetSourceClientErlangerHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEscambiaCountyHealthcareAuthority:
+		return source.GetSourceClientEscambiaCountyHealthcareAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEskenaziHealth:
 		return source.GetSourceClientEskenaziHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEssentiaHealth:
 		return source.GetSourceClientEssentiaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEssexWomenSHealthCenter:
+		return source.GetSourceClientEssexWomenSHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEugeneShteermanMd:
+		return source.GetSourceClientEugeneShteermanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEverettJMasonIiiDpm:
+		return source.GetSourceClientEverettJMasonIiiDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEvergreenhealth:
+		return source.GetSourceClientEvergreenhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEvernorth:
 		return source.GetSourceClientEvernorth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEvolutionHealth:
+		return source.GetSourceClientEvolutionHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeExcelaHealth:
+		return source.GetSourceClientExcelaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeExecutiveHealthOfCoralGables:
+		return source.GetSourceClientExecutiveHealthOfCoralGables(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeExodusRecoveryInc:
+		return source.GetSourceClientExodusRecoveryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEyeCareOfSanDiego:
+		return source.GetSourceClientEyeCareOfSanDiego(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEyeSpecialists:
+		return source.GetSourceClientEyeSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeEyeVisionInternational:
+		return source.GetSourceClientEyeVisionInternational(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFacvConsultantsPc:
+		return source.GetSourceClientFacvConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFairbanksMemorialHospital:
+		return source.GetSourceClientFairbanksMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFairfieldMedicalCenter:
+		return source.GetSourceClientFairfieldMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFairfieldMemorialHospital:
+		return source.GetSourceClientFairfieldMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFairviewHealthServices:
 		return source.GetSourceClientFairviewHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyFootAnkleClinicPa:
+		return source.GetSourceClientFamilyFootAnkleClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyFootHealthCenterPc:
+		return source.GetSourceClientFamilyFootHealthCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyFootcare:
+		return source.GetSourceClientFamilyFootcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyHealthCenterMichigan:
 		return source.GetSourceClientFamilyHealthCenterMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyHealthcareOfSmyrnaPc:
+		return source.GetSourceClientFamilyHealthcareOfSmyrnaPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyPodiatryGroupOfTampaPa:
+		return source.GetSourceClientFamilyPodiatryGroupOfTampaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyPodiatry:
+		return source.GetSourceClientFamilyPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFastmed:
 		return source.GetSourceClientFastmed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFasttrackImmediateCare:
+		return source.GetSourceClientFasttrackImmediateCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFaulktonAreaMedicalCenter:
+		return source.GetSourceClientFaulktonAreaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFayetteCountyMemorialHospital:
+		return source.GetSourceClientFayetteCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFelixStanziolaMd:
+		return source.GetSourceClientFelixStanziolaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFernandesBanerjeeShenoyKidneyCenterLlc:
+		return source.GetSourceClientFernandesBanerjeeShenoyKidneyCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFernandoLMartinezCatinchiMdPa:
+		return source.GetSourceClientFernandoLMartinezCatinchiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFillmoreCountyHospital:
+		return source.GetSourceClientFillmoreCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFirstBaptistMedicalCenter:
+		return source.GetSourceClientFirstBaptistMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFirstChoiceCommunityHealthcare:
+		return source.GetSourceClientFirstChoiceCommunityHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFirstCoastInfectiousDisease:
+		return source.GetSourceClientFirstCoastInfectiousDisease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFirstCoastSurgicalAssociates:
+		return source.GetSourceClientFirstCoastSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirsthealthOfTheCarolinas:
 		return source.GetSourceClientFirsthealthOfTheCarolinas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFisherTitusMedicalCenter:
+		return source.GetSourceClientFisherTitusMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFitzgibbonHospital:
+		return source.GetSourceClientFitzgibbonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFiveMountainsHawaiiIncDbaKipukaOKeOla:
+		return source.GetSourceClientFiveMountainsHawaiiIncDbaKipukaOKeOla(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFloridaLungAsthmaSleepSpecialists:
+		return source.GetSourceClientFloridaLungAsthmaSleepSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFloridaNeurology:
+		return source.GetSourceClientFloridaNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFloydHealthcareManagement:
+		return source.GetSourceClientFloydHealthcareManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFoleyEyeClinicPA:
+		return source.GetSourceClientFoleyEyeClinicPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFootAndAnkleAssociatesOfMainePa:
+		return source.GetSourceClientFootAndAnkleAssociatesOfMainePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFootAnkleCenterOfSj:
+		return source.GetSourceClientFootAnkleCenterOfSj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFootAnkleClinicLlp:
+		return source.GetSourceClientFootAnkleClinicLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFootSpecialistsOfGreaterCincinnati:
+		return source.GetSourceClientFootSpecialistsOfGreaterCincinnati(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFortHealthcare:
+		return source.GetSourceClientFortHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFoxwoodsCasino:
+		return source.GetSourceClientFoxwoodsCasino(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFrancisVAdamsMd:
+		return source.GetSourceClientFrancisVAdamsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranciscanAlliance:
 		return source.GetSourceClientFranciscanAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystemInc:
+		return source.GetSourceClientFranciscanMissionariesOfOurLadyHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem:
 		return source.GetSourceClientFranciscanMissionariesOfOurLadyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFrankTSconzoJrMd:
+		return source.GetSourceClientFrankTSconzoJrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFranklinGeneralHospital:
+		return source.GetSourceClientFranklinGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFranklinMedicalCenter:
+		return source.GetSourceClientFranklinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFraserChildFamilyCenter:
+		return source.GetSourceClientFraserChildFamilyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFredoniaRegionalHospital:
+		return source.GetSourceClientFredoniaRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFreeStateDermatology:
+		return source.GetSourceClientFreeStateDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFreseniusMedicalCareNorthAmerica:
 		return source.GetSourceClientFreseniusMedicalCareNorthAmerica(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFritoLayOrlando:
+		return source.GetSourceClientFritoLayOrlando(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFroedtertHealth:
 		return source.GetSourceClientFroedtertHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGPerrinUnderwoodMd:
+		return source.GetSourceClientGPerrinUnderwoodMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGScotJohnsonMd:
+		return source.GetSourceClientGScotJohnsonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGabbieMedicalClinic:
+		return source.GetSourceClientGabbieMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGardenStateBariatrics:
+		return source.GetSourceClientGardenStateBariatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGarlandIsdClinic:
+		return source.GetSourceClientGarlandIsdClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGarnetHealth:
 		return source.GetSourceClientGarnetHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGaryLAdsitDpm:
+		return source.GetSourceClientGaryLAdsitDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGastroIntestinalConsultantsOfManhattanPA:
+		return source.GetSourceClientGastroIntestinalConsultantsOfManhattanPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGastroPediatricPartners:
+		return source.GetSourceClientGastroPediatricPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGastroenterologyCenterMs:
+		return source.GetSourceClientGastroenterologyCenterMs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGavyMdCsp:
+		return source.GetSourceClientGavyMdCsp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGcUsaOfFloridaLlc:
+		return source.GetSourceClientGcUsaOfFloridaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeisingerHealthPlan:
+		return source.GetSourceClientGeisingerHealthPlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeisingerSystemServices:
+		return source.GetSourceClientGeisingerSystemServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeisinger:
 		return source.GetSourceClientGeisinger(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital:
+		return source.GetSourceClientGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeneralSurgicalAssociatesPC:
+		return source.GetSourceClientGeneralSurgicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGenesisHealthSystem:
+		return source.GetSourceClientGenesisHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGenesisHealthcareSystem:
 		return source.GetSourceClientGenesisHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeorgeLMeeMemorialHospital:
+		return source.GetSourceClientGeorgeLMeeMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeorgeLThalerDpm:
+		return source.GetSourceClientGeorgeLThalerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates:
 		return source.GetSourceClientGeorgeWashingtonUniversityMedicalFacultyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeorgiaCenterForWomen:
+		return source.GetSourceClientGeorgiaCenterForWomen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGeraldChampionRegionalMedicalCenter:
+		return source.GetSourceClientGeraldChampionRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGibsonCountyPodiatry:
+		return source.GetSourceClientGibsonCountyPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGilaRiverHealthCareCorporation:
+		return source.GetSourceClientGilaRiverHealthCareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGilletteChildrenSSpecialtyHealthcare:
+		return source.GetSourceClientGilletteChildrenSSpecialtyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGlacierPediatrics:
+		return source.GetSourceClientGlacierPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGlensFallsHospital:
+		return source.GetSourceClientGlensFallsHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGnadenHuettenMemorialHospital:
+		return source.GetSourceClientGnadenHuettenMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGoldenValleyHealthCenters:
 		return source.GetSourceClientGoldenValleyHealthCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGoldsboroPodiatry:
+		return source.GetSourceClientGoldsboroPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGooseCreekPediatrics:
+		return source.GetSourceClientGooseCreekPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGordenEyeAssociates:
+		return source.GetSourceClientGordenEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGothenburgMemorialHospital:
+		return source.GetSourceClientGothenburgMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGraceCottageHospital:
+		return source.GetSourceClientGraceCottageHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGraceObGyn:
+		return source.GetSourceClientGraceObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGradyHealthSystem:
 		return source.GetSourceClientGradyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGrandMeridianFootAnkle:
+		return source.GetSourceClientGrandMeridianFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGraphicPackagingInternationalLlc:
+		return source.GetSourceClientGraphicPackagingInternationalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreatRiverHealthSystem:
+		return source.GetSourceClientGreatRiverHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterBaltimoreMedicalCenter:
 		return source.GetSourceClientGreaterBaltimoreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreaterSalemFamilyFootcareAssociates:
+		return source.GetSourceClientGreaterSalemFamilyFootcareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreenHillsMedicalClinic:
+		return source.GetSourceClientGreenHillsMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreenValleyHospital:
+		return source.GetSourceClientGreenValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreensboroPediatricians:
+		return source.GetSourceClientGreensboroPediatricians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreenvilleSurgicalClinicPa:
+		return source.GetSourceClientGreenvilleSurgicalClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGreggHarrisDpm:
+		return source.GetSourceClientGreggHarrisDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGregoryKEirichDpm:
+		return source.GetSourceClientGregoryKEirichDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGriffinReedEyeCareAMedicalCorp:
+		return source.GetSourceClientGriffinReedEyeCareAMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGrisellMemorialHospitalDistrict1:
+		return source.GetSourceClientGrisellMemorialHospitalDistrict1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGrosVentreObGyn:
+		return source.GetSourceClientGrosVentreObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGroupHealthCooperativeSouthCentralWisconsin:
 		return source.GetSourceClientGroupHealthCooperativeSouthCentralWisconsin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGulfshoreConciergeMedicine:
+		return source.GetSourceClientGulfshoreConciergeMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGundersenHealthSystem:
 		return source.GetSourceClientGundersenHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGwyneddMercyCollege:
+		return source.GetSourceClientGwyneddMercyCollege(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHCharlesHarrisMdPa:
+		return source.GetSourceClientHCharlesHarrisMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHLeeMoffittCancerCenterResearchInstitute:
+		return source.GetSourceClientHLeeMoffittCancerCenterResearchInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHackensackMeridianHealth:
 		return source.GetSourceClientHackensackMeridianHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHamiltonHealthCareSystem:
+		return source.GetSourceClientHamiltonHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHamptonRoadsOrthopaedics:
+		return source.GetSourceClientHamptonRoadsOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHancockCountyHealthSystem:
+		return source.GetSourceClientHancockCountyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHansenFamilyHospital:
+		return source.GetSourceClientHansenFamilyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHardinMedicalCenter:
+		return source.GetSourceClientHardinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHarrisonCountyHospital:
+		return source.GetSourceClientHarrisonCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHartfordHealthcare:
 		return source.GetSourceClientHartfordHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHaskellMemorialHospital:
+		return source.GetSourceClientHaskellMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital:
 		return source.GetSourceClientHattiesburgClinicAndForrestGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHawaiiFootAnkleAssociates:
+		return source.GetSourceClientHawaiiFootAnkleAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHawaiiHealthSystemsCorpKauaiRegion:
+		return source.GetSourceClientHawaiiHealthSystemsCorpKauaiRegion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHawaiiPacificHealthPrd:
 		return source.GetSourceClientHawaiiPacificHealthPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHazeldenBettyFordFoundation:
+		return source.GetSourceClientHazeldenBettyFordFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaCentralAndWestTexas:
 		return source.GetSourceClientHcaCentralAndWestTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHcaFloridaCitrusHospital:
+		return source.GetSourceClientHcaFloridaCitrusHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaMountain:
 		return source.GetSourceClientHcaMountain(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaSouthAtlantic:
 		return source.GetSourceClientHcaSouthAtlantic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealdsburgDistrictHospital:
+		return source.GetSourceClientHealdsburgDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthConsultingSystemsInc:
+		return source.GetSourceClientHealthConsultingSystemsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthPartnersManagementGroupInc:
+		return source.GetSourceClientHealthPartnersManagementGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthQuest:
+		return source.GetSourceClientHealthQuest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthcareBillingResourcesInc:
+		return source.GetSourceClientHealthcareBillingResourcesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthcareExclusivelyForWomen:
+		return source.GetSourceClientHealthcareExclusivelyForWomen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealtheEmployerClinic:
+		return source.GetSourceClientHealtheEmployerClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthpartners:
 		return source.GetSourceClientHealthpartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthsmartCareManagementSolutionsLp:
+		return source.GetSourceClientHealthsmartCareManagementSolutionsLp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHealthwiseInc:
+		return source.GetSourceClientHealthwiseInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthybluela:
 		return source.GetSourceClientHealthybluela(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthybluelamedicaid:
@@ -332,46 +1504,274 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHealthybluene(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthybluesc:
 		return source.GetSourceClientHealthybluesc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHeartVascularSpecialistsOfSouthTexas:
+		return source.GetSourceClientHeartVascularSpecialistsOfSouthTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHeartlandPediatrics:
+		return source.GetSourceClientHeartlandPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHeidelbergDermatology:
+		return source.GetSourceClientHeidelbergDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHeidiBrewerDpm:
+		return source.GetSourceClientHeidiBrewerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHemeltNeurology:
+		return source.GetSourceClientHemeltNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHemphillCountyHospital:
+		return source.GetSourceClientHemphillCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHendricksRegionalHealth:
 		return source.GetSourceClientHendricksRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHennepinHealthcare:
 		return source.GetSourceClientHennepinHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHenryAPretusMd:
+		return source.GetSourceClientHenryAPretusMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHenryCountyMemorialHospital:
+		return source.GetSourceClientHenryCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHenryFordHealthSystem:
 		return source.GetSourceClientHenryFordHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHenryMayoMso:
+		return source.GetSourceClientHenryMayoMso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHerefordRegionalMedicalCenter:
+		return source.GetSourceClientHerefordRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHeritageMedicalAssociatesPa:
+		return source.GetSourceClientHeritageMedicalAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHermannAreaDistrictHospital:
+		return source.GetSourceClientHermannAreaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHhpInternalMedicineAssociates:
+		return source.GetSourceClientHhpInternalMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHidenaoKimuraMdLlc:
+		return source.GetSourceClientHidenaoKimuraMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighmarkwesternny:
 		return source.GetSourceClientHighmarkwesternny(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHillPhysicians:
 		return source.GetSourceClientHillPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHillsboroGastroenterologyPC:
+		return source.GetSourceClientHillsboroGastroenterologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHillsboroOrthoGrpPc:
+		return source.GetSourceClientHillsboroOrthoGrpPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHirenPatelMd:
+		return source.GetSourceClientHirenPatelMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoagMemorialHospitalPresbyterian:
 		return source.GetSourceClientHoagMemorialHospitalPresbyterian(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHollandHospital:
+		return source.GetSourceClientHollandHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHollisterIncorporated:
+		return source.GetSourceClientHollisterIncorporated(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHolyFamilyMemorialInc:
+		return source.GetSourceClientHolyFamilyMemorialInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHolzhauerJamesLMd:
+		return source.GetSourceClientHolzhauerJamesLMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHonorhealth:
 		return source.GetSourceClientHonorhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHorizonHealthServices:
+		return source.GetSourceClientHorizonHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHospitalDist6OfHarperCounty:
+		return source.GetSourceClientHospitalDist6OfHarperCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHospitalForSpecialSurgery:
 		return source.GetSourceClientHospitalForSpecialSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHospitalSistersHealthSystemHshs:
 		return source.GetSourceClientHospitalSistersHealthSystemHshs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoustonMethodist:
 		return source.GetSourceClientHoustonMethodist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHowardDavidGrillMds:
+		return source.GetSourceClientHowardDavidGrillMds(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHudsonPhysiciansSC:
+		return source.GetSourceClientHudsonPhysiciansSC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHumaneCenterForArthritisAndRheumatism:
+		return source.GetSourceClientHumaneCenterForArthritisAndRheumatism(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHumboldtGeneralHospital:
+		return source.GetSourceClientHumboldtGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHuntingtonHospital:
+		return source.GetSourceClientHuntingtonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHuntsvilleHospitalHealthSystem:
+		return source.GetSourceClientHuntsvilleHospitalHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHuntsvillePodiatryCenterPc:
+		return source.GetSourceClientHuntsvillePodiatryCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHurleyMedicalCenter:
 		return source.GetSourceClientHurleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHuronRegionalMedicalCenter:
+		return source.GetSourceClientHuronRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHuronValleyPediatrics:
+		return source.GetSourceClientHuronValleyPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHutchinsonRegionalMedicalCenter:
+		return source.GetSourceClientHutchinsonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIbrahimHAmjadMdFacs:
+		return source.GetSourceClientIbrahimHAmjadMdFacs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIdCare:
+		return source.GetSourceClientIdCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIglesiasMedicalClinic:
+		return source.GetSourceClientIglesiasMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIllinoisBoneAndJointInstitute:
 		return source.GetSourceClientIllinoisBoneAndJointInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndependenceParkMedicalServs:
+		return source.GetSourceClientIndependenceParkMedicalServs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianaFootAnkleSpecialist:
+		return source.GetSourceClientIndianaFootAnkleSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianaRegionalMedicalCenter:
+		return source.GetSourceClientIndianaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianaSpineGroupPC:
+		return source.GetSourceClientIndianaSpineGroupPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianaUniversityHealthBallMemorialPhysicians:
+		return source.GetSourceClientIndianaUniversityHealthBallMemorialPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianaUniversityHealthInc:
+		return source.GetSourceClientIndianaUniversityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIndianapolisGastroenterologyInc:
+		return source.GetSourceClientIndianapolisGastroenterologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInfectiousDiseasesAssociatesPc:
+		return source.GetSourceClientInfectiousDiseasesAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInfirmaryHealth:
 		return source.GetSourceClientInfirmaryHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInovaAndValleyHealth:
 		return source.GetSourceClientInovaAndValleyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInsightHospitalMedicalCenterChicago:
+		return source.GetSourceClientInsightHospitalMedicalCenterChicago(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInspiraHealthNetworkInc:
+		return source.GetSourceClientInspiraHealthNetworkInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInspiraMedicalCenterWoodburyInc:
+		return source.GetSourceClientInspiraMedicalCenterWoodburyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInstituteForFamilyHealth:
 		return source.GetSourceClientInstituteForFamilyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInstituteOfNeurologyAndNeurosurgeryAtStBarnabas:
+		return source.GetSourceClientInstituteOfNeurologyAndNeurosurgeryAtStBarnabas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInstitutoMedicalSanNicolasImsan:
+		return source.GetSourceClientInstitutoMedicalSanNicolasImsan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntegrisHealth:
 		return source.GetSourceClientIntegrisHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIntermountainHealthcareInc:
+		return source.GetSourceClientIntermountainHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicineAndPediatricsOfCullmanPC:
+		return source.GetSourceClientInternalMedicineAndPediatricsOfCullmanPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicineAssociatesOfBentonPA:
+		return source.GetSourceClientInternalMedicineAssociatesOfBentonPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicineConsultantsLlc:
+		return source.GetSourceClientInternalMedicineConsultantsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicineLlc:
+		return source.GetSourceClientInternalMedicineLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicinePhysiciansPc:
+		return source.GetSourceClientInternalMedicinePhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeInternalMedicine:
+		return source.GetSourceClientInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIowaFootCareCenter:
+		return source.GetSourceClientIowaFootCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIredellMemorialHospital:
+		return source.GetSourceClientIredellMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeIronCountyMedicalCenter:
+		return source.GetSourceClientIronCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJDarrickWellsMdInc:
+		return source.GetSourceClientJDarrickWellsMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJEDunnConstructionCo:
+		return source.GetSourceClientJEDunnConstructionCo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJFernandezRMolina:
+		return source.GetSourceClientJFernandezRMolina(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJacksonAndLayne:
+		return source.GetSourceClientJacksonAndLayne(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJacksonHealthSystem:
+		return source.GetSourceClientJacksonHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJacksonParishHospital:
+		return source.GetSourceClientJacksonParishHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJacksonSiegelbaumGastroenterology:
+		return source.GetSourceClientJacksonSiegelbaumGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJaimeECamposMdPa:
+		return source.GetSourceClientJaimeECamposMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJaisohnMedicalCenter:
+		return source.GetSourceClientJaisohnMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesAndDyerMdPa:
+		return source.GetSourceClientJamesAndDyerMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesBrungoDpm:
+		return source.GetSourceClientJamesBrungoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesCCrittendenMd:
+		return source.GetSourceClientJamesCCrittendenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesFierroDo:
+		return source.GetSourceClientJamesFierroDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesMHurstDpm:
+		return source.GetSourceClientJamesMHurstDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesRMilneDoPa:
+		return source.GetSourceClientJamesRMilneDoPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesRommerMd:
+		return source.GetSourceClientJamesRommerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJamesTCortInternalMedicine:
+		return source.GetSourceClientJamesTCortInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJasonAmatoMdDermatologyLlc:
+		return source.GetSourceClientJasonAmatoMdDermatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJasonDefrancisMdPa:
+		return source.GetSourceClientJasonDefrancisMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJasperMemorialHospital:
+		return source.GetSourceClientJasperMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJayALevinMdPc:
+		return source.GetSourceClientJayALevinMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJayGLevineDpm:
+		return source.GetSourceClientJayGLevineDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJayJazayeriMdInc:
+		return source.GetSourceClientJayJazayeriMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffPanMdPc:
+		return source.GetSourceClientJeffPanMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffersonCommunityHealthLife:
+		return source.GetSourceClientJeffersonCommunityHealthLife(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffersonHealth:
 		return source.GetSourceClientJeffersonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffersonPsychiatricAssociatesLlc:
+		return source.GetSourceClientJeffersonPsychiatricAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffreyAFischerDpm:
+		return source.GetSourceClientJeffreyAFischerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffreyLMarksMd:
+		return source.GetSourceClientJeffreyLMarksMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffreyLubellDpm:
+		return source.GetSourceClientJeffreyLubellDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeffreyWWatsonDpm:
+		return source.GetSourceClientJeffreyWWatsonDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJeromeACohnDpmPc:
+		return source.GetSourceClientJeromeACohnDpmPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJerryIHadrychDpm:
+		return source.GetSourceClientJerryIHadrychDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJerseyRehabPA:
+		return source.GetSourceClientJerseyRehabPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJewellCountyHospital:
+		return source.GetSourceClientJewellCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJewishFamilyServicesOfAtlanticAndCapeMayCounties:
+		return source.GetSourceClientJewishFamilyServicesOfAtlanticAndCapeMayCounties(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJmHealthcare:
+		return source.GetSourceClientJmHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJoelFrankelMdPa:
+		return source.GetSourceClientJoelFrankelMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJoelLGellenDpm:
+		return source.GetSourceClientJoelLGellenDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnKnoxVillageOfCentralFloridaInc:
+		return source.GetSourceClientJohnKnoxVillageOfCentralFloridaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnMuirHealth:
 		return source.GetSourceClientJohnMuirHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnnyArrudaMdInc:
+		return source.GetSourceClientJohnnyArrudaMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnnyJadaMd:
+		return source.GetSourceClientJohnnyJadaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnsHopkinsAllChildrensHospitalInc:
+		return source.GetSourceClientJohnsHopkinsAllChildrensHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnsHopkinsMedicine:
 		return source.GetSourceClientJohnsHopkinsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnsonCountyHospital:
+		return source.GetSourceClientJohnsonCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJohnsonMemorialHospital:
+		return source.GetSourceClientJohnsonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJolietPediatricsAndFamilyCare:
+		return source.GetSourceClientJolietPediatricsAndFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJonesAllergyAsthmaCenter:
+		return source.GetSourceClientJonesAllergyAsthmaCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJosephAHarrisonMd:
+		return source.GetSourceClientJosephAHarrisonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJosephFRobertsMd:
+		return source.GetSourceClientJosephFRobertsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJosephWStrangarityMd:
+		return source.GetSourceClientJosephWStrangarityMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJpsHealthNetwork:
 		return source.GetSourceClientJpsHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJuanJSalazarMd:
+		return source.GetSourceClientJuanJSalazarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJulieLorberMd:
+		return source.GetSourceClientJulieLorberMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeJupiterMedicalCenter:
+		return source.GetSourceClientJupiterMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKadinFootAnkleCenter:
+		return source.GetSourceClientKadinFootAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKadoPodiatry:
+		return source.GetSourceClientKadoPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKahukuMedicalCenter:
+		return source.GetSourceClientKahukuMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKaiserPermanenteCaliforniaNorthern:
 		return source.GetSourceClientKaiserPermanenteCaliforniaNorthern(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKaiserPermanenteCaliforniaSouthern:
@@ -392,24 +1792,136 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKalamazooCollegeStudentHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKalamazooFootSurgery:
 		return source.GetSourceClientKalamazooFootSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKaleidaHealth:
+		return source.GetSourceClientKaleidaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKamranKhanSc:
+		return source.GetSourceClientKamranKhanSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKaneCountyHospital:
+		return source.GetSourceClientKaneCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKansasCityDermatology:
+		return source.GetSourceClientKansasCityDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKansasMedicalCenter:
+		return source.GetSourceClientKansasMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKatherineShawBetheaHospital:
+		return source.GetSourceClientKatherineShawBetheaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKathrynAmacherDO:
+		return source.GetSourceClientKathrynAmacherDO(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKathrynLFordFamilyPracticeCenter:
+		return source.GetSourceClientKathrynLFordFamilyPracticeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKathrynTBallardMd:
+		return source.GetSourceClientKathrynTBallardMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKaweahHealth:
+		return source.GetSourceClientKaweahHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKeckMedicineOfUsc:
+		return source.GetSourceClientKeckMedicineOfUsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKellerPlasticSurgeryLlc:
+		return source.GetSourceClientKellerPlasticSurgeryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKelseySeyboldClinic:
 		return source.GetSourceClientKelseySeyboldClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKennedyKriegerInstitute:
 		return source.GetSourceClientKennedyKriegerInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKennethPTwayMdFacc:
+		return source.GetSourceClientKennethPTwayMdFacc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKennrickJDennisDpm:
+		return source.GetSourceClientKennrickJDennisDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKernCountyHospitalAuthority:
+		return source.GetSourceClientKernCountyHospitalAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKetteringHealthNetwork:
 		return source.GetSourceClientKetteringHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKevinRHenryDpm:
+		return source.GetSourceClientKevinRHenryDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKidsAndTeensPediatricsOfDoverInc:
+		return source.GetSourceClientKidsAndTeensPediatricsOfDoverInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKidzMedicalServicesMiami:
+		return source.GetSourceClientKidzMedicalServicesMiami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKingfisherFamilyClinic:
+		return source.GetSourceClientKingfisherFamilyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKingsDaughtersMedicalCenter:
 		return source.GetSourceClientKingsDaughtersMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKingsHighwayElectroDiagnostic:
+		return source.GetSourceClientKingsHighwayElectroDiagnostic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKingsViewCorporation:
+		return source.GetSourceClientKingsViewCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKingsViewDelNorte:
+		return source.GetSourceClientKingsViewDelNorte(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKiowaCountyMemorialHospital:
+		return source.GetSourceClientKiowaCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKiowaDistrictHospital:
+		return source.GetSourceClientKiowaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKishwarShareefMdPc:
+		return source.GetSourceClientKishwarShareefMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKitsapEyePhysicians:
+		return source.GetSourceClientKitsapEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKittitasValleyHealthcare:
+		return source.GetSourceClientKittitasValleyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKlamathOrthopedicClinic:
+		return source.GetSourceClientKlamathOrthopedicClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKlassWassermanMd:
+		return source.GetSourceClientKlassWassermanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKnoxvilleHospitalsClinics:
+		return source.GetSourceClientKnoxvilleHospitalsClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKootenaiHealth:
 		return source.GetSourceClientKootenaiHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKossuthRegionalHealthCenter:
+		return source.GetSourceClientKossuthRegionalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKuakiniMedicalCenter:
+		return source.GetSourceClientKuakiniMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLaCareHealthPlan:
+		return source.GetSourceClientLaCareHealthPlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLabcorpEmployerServicesInc:
+		return source.GetSourceClientLabcorpEmployerServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLacyCKesslerMdPa:
 		return source.GetSourceClientLacyCKesslerMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLafayetteFamilyFootcare:
+		return source.GetSourceClientLafayetteFamilyFootcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLafayetteGeneralHealth:
+		return source.GetSourceClientLafayetteGeneralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaheyHealthSystem:
 		return source.GetSourceClientLaheyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeCountyBehavioralHealth:
+		return source.GetSourceClientLakeCountyBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeHavasuUnifiedSchoolDistrict:
+		return source.GetSourceClientLakeHavasuUnifiedSchoolDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeHealthDistrict:
+		return source.GetSourceClientLakeHealthDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeHealth:
+		return source.GetSourceClientLakeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeRegionHealthcareCorporation:
+		return source.GetSourceClientLakeRegionHealthcareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeRegionalHealthSystem:
+		return source.GetSourceClientLakeRegionalHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeWalesFootAnkle:
+		return source.GetSourceClientLakeWalesFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakeWashingtonCenterForCardiovascularDiseasePllc:
+		return source.GetSourceClientLakeWashingtonCenterForCardiovascularDiseasePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakelandHealth:
 		return source.GetSourceClientLakelandHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakelandRegionalHealthSystemsInc:
+		return source.GetSourceClientLakelandRegionalHealthSystemsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakesidePainCenter:
+		return source.GetSourceClientLakesidePainCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLakewoodFootAndAnkleSpecialistsLlc:
+		return source.GetSourceClientLakewoodFootAndAnkleSpecialistsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLancasterGeneralHealth:
 		return source.GetSourceClientLancasterGeneralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLancasterNeuroscienceSpineAssoc:
+		return source.GetSourceClientLancasterNeuroscienceSpineAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLaneCountyHospital:
+		return source.GetSourceClientLaneCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLaporteRegionalPhysicianNetwork:
+		return source.GetSourceClientLaporteRegionalPhysicianNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLarryCampoliDpm:
+		return source.GetSourceClientLarryCampoliDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLataMundkurMd:
+		return source.GetSourceClientLataMundkurMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLaurelObGyn:
+		return source.GetSourceClientLaurelObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLavacaMedicalCenter:
+		return source.GetSourceClientLavacaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLawrenceCheungMd:
+		return source.GetSourceClientLawrenceCheungMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital:
+		return source.GetSourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLcmcHealth:
 		return source.GetSourceClientLcmcHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLeeHealth:
@@ -418,140 +1930,640 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLegacyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLehighValleyHealthNetwork:
 		return source.GetSourceClientLehighValleyHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLeidosPartnershipForDefenseHealth:
+		return source.GetSourceClientLeidosPartnershipForDefenseHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLelandTGilmoreDpm:
+		return source.GetSourceClientLelandTGilmoreDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLeonMedicalCenters:
 		return source.GetSourceClientLeonMedicalCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLeslieCNormanMd:
+		return source.GetSourceClientLeslieCNormanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLewisCountyHospitalDistrictNo1:
+		return source.GetSourceClientLewisCountyHospitalDistrictNo1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLewisHargettMd:
+		return source.GetSourceClientLewisHargettMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLexingtonCardiologyAssociates:
+		return source.GetSourceClientLexingtonCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLexingtonRegionalHealthCenter:
+		return source.GetSourceClientLexingtonRegionalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLibertyDaytonRegionalMedicalCenter:
+		return source.GetSourceClientLibertyDaytonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLickingMemorialHealthSystems:
 		return source.GetSourceClientLickingMemorialHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLifebridgeHealthInc:
+		return source.GetSourceClientLifebridgeHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLifepointCorporateServicesGeneralPartnership:
+		return source.GetSourceClientLifepointCorporateServicesGeneralPartnership(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLifespan:
 		return source.GetSourceClientLifespan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLincolnCommunityHospitalAndNursingHome:
+		return source.GetSourceClientLincolnCommunityHospitalAndNursingHome(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLittleColoradoMedicalCenter:
+		return source.GetSourceClientLittleColoradoMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLittletonHospitalAssociationDBALrh:
+		return source.GetSourceClientLittletonHospitalAssociationDBALrh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLivingstonHospitalHealthcareServicesInc:
+		return source.GetSourceClientLivingstonHospitalHealthcareServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLmhHealth:
+		return source.GetSourceClientLmhHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLogansportMemorialHospital:
+		return source.GetSourceClientLogansportMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners:
 		return source.GetSourceClientLomaLindaUniversityHealthAndCareconnectPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLomaLindaUniversityMedicalCenterMurrieta:
+		return source.GetSourceClientLomaLindaUniversityMedicalCenterMurrieta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLongIslandSurgeryPc:
+		return source.GetSourceClientLongIslandSurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLorenMillerDpm:
+		return source.GetSourceClientLorenMillerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLosAngelesCountyDeptOfHealthServices:
+		return source.GetSourceClientLosAngelesCountyDeptOfHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLosAngelesJewishHomeForTheAging:
+		return source.GetSourceClientLosAngelesJewishHomeForTheAging(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLowellSurgicalAssociates:
+		return source.GetSourceClientLowellSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLoyolaMedicine:
 		return source.GetSourceClientLoyolaMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLubbockHeartAndSurgicalHospital:
+		return source.GetSourceClientLubbockHeartAndSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLuisFAnezMdpa:
+		return source.GetSourceClientLuisFAnezMdpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeLuisFSotoLlc:
+		return source.GetSourceClientLuisFSotoLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLuminisHealth:
 		return source.GetSourceClientLuminisHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMENDPa:
+		return source.GetSourceClientMENDPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMEdwinDavisMDPC:
+		return source.GetSourceClientMEdwinDavisMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMMunirZaitoonMD:
+		return source.GetSourceClientMMunirZaitoonMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMacarthurPrimaryCare:
+		return source.GetSourceClientMacarthurPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMaconCommunityHospital:
+		return source.GetSourceClientMaconCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMadisonCountyMemorialHospital:
+		return source.GetSourceClientMadisonCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMadisonMemorialHospital:
+		return source.GetSourceClientMadisonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMagruderHospital:
+		return source.GetSourceClientMagruderHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMahiraTanovicMd:
+		return source.GetSourceClientMahiraTanovicMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainLineHealth:
 		return source.GetSourceClientMainLineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainehealth:
 		return source.GetSourceClientMainehealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMammothHospital:
+		return source.GetSourceClientMammothHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeManilaZamanMdInc:
+		return source.GetSourceClientManilaZamanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeManyRiversWholeHealth:
+		return source.GetSourceClientManyRiversWholeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMarbleValleyHealthworksLlc:
+		return source.GetSourceClientMarbleValleyHealthworksLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMarcusLeeMD:
+		return source.GetSourceClientMarcusLeeMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMargaretKSparksMd:
+		return source.GetSourceClientMargaretKSparksMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMargaretMaryCommunityHospital:
+		return source.GetSourceClientMargaretMaryCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMargaretZakanyczDpm:
+		return source.GetSourceClientMargaretZakanyczDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMarletteRegionalHospital:
+		return source.GetSourceClientMarletteRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMarshfieldClinicHealthSystemInc:
+		return source.GetSourceClientMarshfieldClinicHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMartinCountyHospitalDistrict:
+		return source.GetSourceClientMartinCountyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMartinHealthSystem:
 		return source.GetSourceClientMartinHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMartinLutherKingJrCommunityHospital:
+		return source.GetSourceClientMartinLutherKingJrCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMaryFreeBedRehabilitationHospital:
+		return source.GetSourceClientMaryFreeBedRehabilitationHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaryGreeleyMedicalCenterIowa:
 		return source.GetSourceClientMaryGreeleyMedicalCenterIowa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaryWashingtonHealthcare:
 		return source.GetSourceClientMaryWashingtonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMarylandLiveCasino:
+		return source.GetSourceClientMarylandLiveCasino(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMasonGeneralHospital:
+		return source.GetSourceClientMasonGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMasonicareCorporation:
+		return source.GetSourceClientMasonicareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMassGeneralBrigham:
 		return source.GetSourceClientMassGeneralBrigham(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMassachusettsInstituteOfTechnology:
+		return source.GetSourceClientMassachusettsInstituteOfTechnology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMauryRegionalHealthcareSystem:
+		return source.GetSourceClientMauryRegionalHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMayoClinic:
 		return source.GetSourceClientMayoClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMcallenSurgeon:
+		return source.GetSourceClientMcallenSurgeon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMcdonoughDistrictHospital:
+		return source.GetSourceClientMcdonoughDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcfarlandClinicIowa:
 		return source.GetSourceClientMcfarlandClinicIowa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMchcpMissouriConsolidatedHealthCarePlan:
+		return source.GetSourceClientMchcpMissouriConsolidatedHealthCarePlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMcknightClinic:
+		return source.GetSourceClientMcknightClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMclarenHealthCareCorporation:
+		return source.GetSourceClientMclarenHealthCareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMcleodHealth:
+		return source.GetSourceClientMcleodHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMcphersonMedicalAndSurgicalAssociates:
+		return source.GetSourceClientMcphersonMedicalAndSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMecklenburgHealthDepartment:
+		return source.GetSourceClientMecklenburgHealthDepartment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalAssociatesClinicPc:
+		return source.GetSourceClientMedicalAssociatesClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalCenterPodiatryPc:
+		return source.GetSourceClientMedicalCenterPodiatryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalClinicOfNorthvillePc:
+		return source.GetSourceClientMedicalClinicOfNorthvillePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalClinicOfRedBay:
+		return source.GetSourceClientMedicalClinicOfRedBay(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalHealthCenterOfMiddletownInc:
+		return source.GetSourceClientMedicalHealthCenterOfMiddletownInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalPlazaEntPhysicians:
+		return source.GetSourceClientMedicalPlazaEntPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicalSurgicalSpecialtyGroup:
+		return source.GetSourceClientMedicalSurgicalSpecialtyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalUniversityOfSouthCarolina:
 		return source.GetSourceClientMedicalUniversityOfSouthCarolina(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedicineLodgeMemorialHospital:
+		return source.GetSourceClientMedicineLodgeMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedisysHealthNetwork:
 		return source.GetSourceClientMedisysHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedsouthAssociatesPc:
+		return source.GetSourceClientMedsouthAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedsouthUrgentCare:
+		return source.GetSourceClientMedsouthUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMedstarHealthHostedEnvironment:
+		return source.GetSourceClientMedstarHealthHostedEnvironment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialCommunityHealthInc:
+		return source.GetSourceClientMemorialCommunityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHealthSystem:
+		return source.GetSourceClientMemorialHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHealthcareSystem:
 		return source.GetSourceClientMemorialHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHermannHealthSystem:
+		return source.GetSourceClientMemorialHermannHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHospitalAndHealthCareCenter:
 		return source.GetSourceClientMemorialHospitalAndHealthCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHospitalAtGulfport:
+		return source.GetSourceClientMemorialHospitalAtGulfport(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHospitalOfCarbonCounty:
+		return source.GetSourceClientMemorialHospitalOfCarbonCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHospitalOfSweetwaterCounty:
+		return source.GetSourceClientMemorialHospitalOfSweetwaterCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMemorialHospital:
+		return source.GetSourceClientMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialcare:
 		return source.GetSourceClientMemorialcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMentalHealthResourcesInc:
+		return source.GetSourceClientMentalHealthResourcesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMentalIllnessRecoveryCenterInc:
+		return source.GetSourceClientMentalIllnessRecoveryCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMercedesMedicalClinic:
+		return source.GetSourceClientMercedesMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyHealthOhKy:
 		return source.GetSourceClientMercyHealthOhKy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyHealthServicesMd:
 		return source.GetSourceClientMercyHealthServicesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyHealthSystemWi:
 		return source.GetSourceClientMercyHealthSystemWi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMercyHospital:
+		return source.GetSourceClientMercyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMercyMedicalCenterDesMoines:
+		return source.GetSourceClientMercyMedicalCenterDesMoines(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMercyMedicalCenterNewHampton:
+		return source.GetSourceClientMercyMedicalCenterNewHampton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyMedicalCenter:
 		return source.GetSourceClientMercyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMeridianMedicalGroupPc:
+		return source.GetSourceClientMeridianMedicalGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMeritus:
 		return source.GetSourceClientMeritus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMerrimackValleyOrthopaedicAssociates:
+		return source.GetSourceClientMerrimackValleyOrthopaedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMethodistFremontHealth:
+		return source.GetSourceClientMethodistFremontHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMethodistHealthSystem:
 		return source.GetSourceClientMethodistHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMethodistHospitalsPrd:
 		return source.GetSourceClientMethodistHospitalsPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMethodistLeBonheurHealthcare:
+		return source.GetSourceClientMethodistLeBonheurHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMetroHealthMichigan:
 		return source.GetSourceClientMetroHealthMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMetroInfectiousDiseaseConsultants:
+		return source.GetSourceClientMetroInfectiousDiseaseConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMetroObstetricsAndGynecology:
+		return source.GetSourceClientMetroObstetricsAndGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMetrohealthOh:
 		return source.GetSourceClientMetrohealthOh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMetropolitanUrologyClinicPa:
+		return source.GetSourceClientMetropolitanUrologyClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMetuchenCardioAssociatesPA:
+		return source.GetSourceClientMetuchenCardioAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMiamiAssociatesInPediatricSurgeryPa:
+		return source.GetSourceClientMiamiAssociatesInPediatricSurgeryPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMiamiPulmonarySpecialists:
+		return source.GetSourceClientMiamiPulmonarySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelAMarvinDpm:
+		return source.GetSourceClientMichaelAMarvinDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelBehforouzMd:
+		return source.GetSourceClientMichaelBehforouzMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelFEsberDpmPc:
+		return source.GetSourceClientMichaelFEsberDpmPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelFLett:
+		return source.GetSourceClientMichaelFLett(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelJEveroskiMDPC:
+		return source.GetSourceClientMichaelJEveroskiMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichelCSamsonMDFACSPllc:
+		return source.GetSourceClientMichelCSamsonMDFACSPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichelleYangMd:
+		return source.GetSourceClientMichelleYangMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichianaHealthInformationNetworkMhin:
+		return source.GetSourceClientMichianaHealthInformationNetworkMhin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichiganInstituteForInterventionalPain:
+		return source.GetSourceClientMichiganInstituteForInterventionalPain(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichiganInterventionalPainAssociates:
+		return source.GetSourceClientMichiganInterventionalPainAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganMedicine:
 		return source.GetSourceClientMichiganMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidAmericaInternalMedicine:
+		return source.GetSourceClientMidAmericaInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidNassauMedicalCareForKidzLlc:
+		return source.GetSourceClientMidNassauMedicalCareForKidzLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidValleyHospital:
+		return source.GetSourceClientMidValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidatlanticEyeCenter:
+		return source.GetSourceClientMidatlanticEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMiddlebrookFamilyPhysiciansPa:
+		return source.GetSourceClientMiddlebrookFamilyPhysiciansPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiddlesexHospital:
 		return source.GetSourceClientMiddlesexHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidlandMemorialHospital:
+		return source.GetSourceClientMidlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidmichiganHealth:
 		return source.GetSourceClientMidmichiganHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidwestMedicalCenter:
+		return source.GetSourceClientMidwestMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidwestPulmonaryCriticalCare:
+		return source.GetSourceClientMidwestPulmonaryCriticalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMidwestSurgicalHospital:
+		return source.GetSourceClientMidwestSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMihirManiarDO:
+		return source.GetSourceClientMihirManiarDO(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMilfordFamilyPractice:
+		return source.GetSourceClientMilfordFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMillenniumMedicalBillingPhysicianServicesInc:
+		return source.GetSourceClientMillenniumMedicalBillingPhysicianServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMillenniumMedicalMgmntResources:
+		return source.GetSourceClientMillenniumMedicalMgmntResources(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMillerCountyHospital:
+		return source.GetSourceClientMillerCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMiltonHersheySchool:
+		return source.GetSourceClientMiltonHersheySchool(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMilwaukeeFootSpecialists:
+		return source.GetSourceClientMilwaukeeFootSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMineralCommunityHospital:
+		return source.GetSourceClientMineralCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMinersColfaxMedicalCenter:
+		return source.GetSourceClientMinersColfaxMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMinneolaDistrictHospital:
+		return source.GetSourceClientMinneolaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissionHealthSystemInc:
+		return source.GetSourceClientMissionHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissionOccumed:
+		return source.GetSourceClientMissionOccumed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissionPediatricCenter:
+		return source.GetSourceClientMissionPediatricCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissionVascularAndVeinInstitute:
+		return source.GetSourceClientMissionVascularAndVeinInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMississippiArthritisClinicPllc:
+		return source.GetSourceClientMississippiArthritisClinicPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissouriCancerAssociatesLlc:
+		return source.GetSourceClientMissouriCancerAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMissouriDeltaMedicalCenter:
+		return source.GetSourceClientMissouriDeltaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMitchellCountyHospitalHealthSystems:
+		return source.GetSourceClientMitchellCountyHospitalHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMitchellTZimmelDpm:
+		return source.GetSourceClientMitchellTZimmelDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMobileDoctors:
+		return source.GetSourceClientMobileDoctors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMobridgeRegionalHospital:
+		return source.GetSourceClientMobridgeRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMohamedAliMD:
+		return source.GetSourceClientMohamedAliMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMohammadIsmailMd:
+		return source.GetSourceClientMohammadIsmailMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMohawkValleyHealthSystem:
 		return source.GetSourceClientMohawkValleyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMolinaHealthcare:
 		return source.GetSourceClientMolinaHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMonHealthMedicalCenter:
+		return source.GetSourceClientMonHealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMonongaliaCountyGeneralHospitalCompany:
+		return source.GetSourceClientMonongaliaCountyGeneralHospitalCompany(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMonroeCountyHospital:
+		return source.GetSourceClientMonroeCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMonroeFootClinic:
+		return source.GetSourceClientMonroeFootClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMontageHealth:
 		return source.GetSourceClientMontageHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMontefioreMedicalCenter:
 		return source.GetSourceClientMontefioreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMontgomeryCountyMemorialHospital:
+		return source.GetSourceClientMontgomeryCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMontgomeryCountyPulmonarySleepConsultantsPc:
+		return source.GetSourceClientMontgomeryCountyPulmonarySleepConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMontgomeryPulmonaryCons:
+		return source.GetSourceClientMontgomeryPulmonaryCons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMontgomeryRheumatology:
+		return source.GetSourceClientMontgomeryRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMonumentHealth:
 		return source.GetSourceClientMonumentHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMoreheadStateUniversity:
+		return source.GetSourceClientMoreheadStateUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMorganMedicalCenter:
+		return source.GetSourceClientMorganMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMorrisCountyHospital:
+		return source.GetSourceClientMorrisCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMosaicLifeCare:
+		return source.GetSourceClientMosaicLifeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMoundviewMemorialHospital:
+		return source.GetSourceClientMoundviewMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountAuburnHospital:
 		return source.GetSourceClientMountAuburnHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMountDesertIslandHospital:
+		return source.GetSourceClientMountDesertIslandHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMountPleasantInternalMedicine:
+		return source.GetSourceClientMountPleasantInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountSinaiHealthSystem:
 		return source.GetSourceClientMountSinaiHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountSinaiMedicalCenter:
 		return source.GetSourceClientMountSinaiMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMountainGroveHealthClinic:
+		return source.GetSourceClientMountainGroveHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMountainViewChildCareIncDBATotallyKidsRehabilitationHospital:
+		return source.GetSourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMtAscutneyHospitalHealthCenter:
+		return source.GetSourceClientMtAscutneyHospitalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMulticareHealthSystem:
 		return source.GetSourceClientMulticareHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMunisingMemorialHospital:
+		return source.GetSourceClientMunisingMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMunsonHealthcareCharlevoixHospital:
+		return source.GetSourceClientMunsonHealthcareCharlevoixHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMunsonHealthcare:
+		return source.GetSourceClientMunsonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMuscogeeCreekNationDepartmentOfHealth:
 		return source.GetSourceClientMuscogeeCreekNationDepartmentOfHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMusickDermatologyAdvancedClinicalSpaLlc:
+		return source.GetSourceClientMusickDermatologyAdvancedClinicalSpaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMyDrNow:
 		return source.GetSourceClientMyDrNow(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMyKidneyCareLlc:
+		return source.GetSourceClientMyKidneyCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNachiketPatelMdpa:
+		return source.GetSourceClientNachiketPatelMdpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNamitaMohideenMdInc:
+		return source.GetSourceClientNamitaMohideenMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNaplesPremierConciergePL:
+		return source.GetSourceClientNaplesPremierConciergePL(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNashUncHealthCare:
+		return source.GetSourceClientNashUncHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNassauOphthalmologyAssoc:
+		return source.GetSourceClientNassauOphthalmologyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNationwideChildrensHospital:
 		return source.GetSourceClientNationwideChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNavicentHealth:
+		return source.GetSourceClientNavicentHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNchHealthcareSystem:
 		return source.GetSourceClientNchHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNebraskaCardiacCare:
+		return source.GetSourceClientNebraskaCardiacCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNebraskaFootAndAnklePc:
+		return source.GetSourceClientNebraskaFootAndAnklePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNebraskaMedicine:
 		return source.GetSourceClientNebraskaMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNebraskaOrthopaedicHospital:
+		return source.GetSourceClientNebraskaOrthopaedicHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeighborhoodHealthClinic:
+		return source.GetSourceClientNeighborhoodHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeilSOzerMdPa:
+		return source.GetSourceClientNeilSOzerMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNemahaValleyCommunityHospital:
+		return source.GetSourceClientNemahaValleyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNemours:
 		return source.GetSourceClientNemours(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeoshoMemorialRegionalMedicalCenter:
+		return source.GetSourceClientNeoshoMemorialRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNephrologyAssociatesInc:
+		return source.GetSourceClientNephrologyAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyCenterSouthwestMichigan:
 		return source.GetSourceClientNephrologyCenterSouthwestMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNephrologyConsultantsPa:
+		return source.GetSourceClientNephrologyConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNephrologyGroupOfNortheastFlorida:
+		return source.GetSourceClientNephrologyGroupOfNortheastFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeshobaCountyGeneralHospital:
+		return source.GetSourceClientNeshobaCountyGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeuroNetworkPartners:
+		return source.GetSourceClientNeuroNetworkPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologicalAssociatesOfOceanCounty:
+		return source.GetSourceClientNeurologicalAssociatesOfOceanCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologicalAssociatesOfStPaulNa:
+		return source.GetSourceClientNeurologicalAssociatesOfStPaulNa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologicalSurgeryAssociatesPc:
+		return source.GetSourceClientNeurologicalSurgeryAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologyCenterOfEastAlabama:
+		return source.GetSourceClientNeurologyCenterOfEastAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologyLlp:
+		return source.GetSourceClientNeurologyLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeurologySleepAssociates:
+		return source.GetSourceClientNeurologySleepAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNeuropsychiatricHospitals:
+		return source.GetSourceClientNeuropsychiatricHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNevadaRegionalMedicalCenter:
+		return source.GetSourceClientNevadaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewBirthCompanyKansasCity:
+		return source.GetSourceClientNewBirthCompanyKansasCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewCoastCardiology:
+		return source.GetSourceClientNewCoastCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewEnglandFootAnklePc:
+		return source.GetSourceClientNewEnglandFootAnklePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewEnglandHerniaCenter:
+		return source.GetSourceClientNewEnglandHerniaCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewHanoverRegionalMedicalCenter:
 		return source.GetSourceClientNewHanoverRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewJerseyCardiologyAssociates:
+		return source.GetSourceClientNewJerseyCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewJerseyUrology:
 		return source.GetSourceClientNewJerseyUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewRichmondClinic:
+		return source.GetSourceClientNewRichmondClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewYorkComprehensiveCarePC:
+		return source.GetSourceClientNewYorkComprehensiveCarePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealthBenefitsFund:
+		return source.GetSourceClientNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealthBenefitsFund(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewYorkPresbyterianHudsonValleyHospital:
+		return source.GetSourceClientNewYorkPresbyterianHudsonValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewYorkPresbyterian:
 		return source.GetSourceClientNewYorkPresbyterian(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNewyorkPresbyterianBrooklynMethodistHospital:
+		return source.GetSourceClientNewyorkPresbyterianBrooklynMethodistHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNiagaraFallsMemorialMedicalCenter:
+		return source.GetSourceClientNiagaraFallsMemorialMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNicholasSGuittariMd:
+		return source.GetSourceClientNicholasSGuittariMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNicholasSVachonDpm:
+		return source.GetSourceClientNicholasSVachonDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNicklausChildrenSPediatricSpecialisits:
+		return source.GetSourceClientNicklausChildrenSPediatricSpecialisits(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNievaDuqueSalvaMdPa:
+		return source.GetSourceClientNievaDuqueSalvaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNishaVargheseMd:
+		return source.GetSourceClientNishaVargheseMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthAtlanticMedicalAssociatesPC:
+		return source.GetSourceClientNorthAtlanticMedicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthBrowardHospitalDistrict:
+		return source.GetSourceClientNorthBrowardHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCaddoMedicalCenter:
+		return source.GetSourceClientNorthCaddoMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCantonPodiatryInc:
+		return source.GetSourceClientNorthCantonPodiatryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCanyonMedicalCenter:
+		return source.GetSourceClientNorthCanyonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCarolinaNeurologyAndSleepCenter:
+		return source.GetSourceClientNorthCarolinaNeurologyAndSleepCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCentralHealthCare:
+		return source.GetSourceClientNorthCentralHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthCountryHospitalHealthCenter:
+		return source.GetSourceClientNorthCountryHospitalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthIdahoEyeInstitution:
+		return source.GetSourceClientNorthIdahoEyeInstitution(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthKansasCityHospital:
+		return source.GetSourceClientNorthKansasCityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthMemorialHealth:
 		return source.GetSourceClientNorthMemorialHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthMississippiHealthServices:
 		return source.GetSourceClientNorthMississippiHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthOaksHealthSystem:
+		return source.GetSourceClientNorthOaksHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthOaks:
 		return source.GetSourceClientNorthOaks(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthRiverPrimaryCareAssociates:
+		return source.GetSourceClientNorthRiverPrimaryCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthbayHealthcareSystem:
+		return source.GetSourceClientNorthbayHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastGeorgiaHealthSystem:
 		return source.GetSourceClientNortheastGeorgiaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNortheasternHealthSystem:
+		return source.GetSourceClientNortheasternHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthernArizonaHealthcare:
+		return source.GetSourceClientNorthernArizonaHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthernInyoHealthcareDistrict:
+		return source.GetSourceClientNorthernInyoHealthcareDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthernLightHealth:
+		return source.GetSourceClientNorthernLightHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthernLightMayoHospital:
+		return source.GetSourceClientNorthernLightMayoHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthernMaineMedicalCenter:
+		return source.GetSourceClientNorthernMaineMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthlandHealthCareAccess:
+		return source.GetSourceClientNorthlandHealthCareAccess(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthshoreUniversityHealthSystem:
 		return source.GetSourceClientNorthshoreUniversityHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthsideCenterForChildDevelopment:
+		return source.GetSourceClientNorthsideCenterForChildDevelopment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthsideHospital:
+		return source.GetSourceClientNorthsideHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestCommunityHospital:
 		return source.GetSourceClientNorthwestCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthwestHealthLaPorte:
+		return source.GetSourceClientNorthwestHealthLaPorte(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthwestMedicalCenter:
+		return source.GetSourceClientNorthwestMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNortonChildrenSMedicalAssociatesMiddletown:
+		return source.GetSourceClientNortonChildrenSMedicalAssociatesMiddletown(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortonHealthcare:
 		return source.GetSourceClientNortonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorwalkPulmonaryConsultantsPc:
+		return source.GetSourceClientNorwalkPulmonaryConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNovantHealth:
 		return source.GetSourceClientNovantHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNovatoAdvancedFootAnkle:
+		return source.GetSourceClientNovatoAdvancedFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNovoHealth:
 		return source.GetSourceClientNovoHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNutleyPediatricAssociates:
+		return source.GetSourceClientNutleyPediatricAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNycHealthHospitals:
 		return source.GetSourceClientNycHealthHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNyuLangoneMedicalCenter:
 		return source.GetSourceClientNyuLangoneMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOOAlpanLlc:
+		return source.GetSourceClientOOAlpanLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOaklandMercyPlaceClinic:
+		return source.GetSourceClientOaklandMercyPlaceClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOaklawnHospital:
+		return source.GetSourceClientOaklawnHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz:
 		return source.GetSourceClientObGynAssociatesOfWacoDrRisterDrKoeritz(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOceanCountyFootAnkleSurgicalAssociates:
+		return source.GetSourceClientOceanCountyFootAnkleSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOchin:
 		return source.GetSourceClientOchin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOchsnerHealthSystem:
 		return source.GetSourceClientOchsnerHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOchsnerLsuHealthSystemOfNorthLouisiana:
+		return source.GetSourceClientOchsnerLsuHealthSystemOfNorthLouisiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOdessaMedicalEnterprisesPllc:
+		return source.GetSourceClientOdessaMedicalEnterprisesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOdessaMemorialHealthcareCenter:
+		return source.GetSourceClientOdessaMemorialHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOhioHealth:
+		return source.GetSourceClientOhioHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOhiohealth:
 		return source.GetSourceClientOhiohealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict:
+		return source.GetSourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOklahomaHeartHospital:
+		return source.GetSourceClientOklahomaHeartHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOklahomaSurgicalHospital:
+		return source.GetSourceClientOklahomaSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOlatheMedicalCenter:
+		return source.GetSourceClientOlatheMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOldNaplesConciergeMedicine:
+		return source.GetSourceClientOldNaplesConciergeMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOleanMedicalPracticePllc:
+		return source.GetSourceClientOleanMedicalPracticePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOlmstedMedicalCenter:
 		return source.GetSourceClientOlmstedMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOlsonMemorialClinic:
+		return source.GetSourceClientOlsonMemorialClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOncologyAssociatesPc:
+		return source.GetSourceClientOncologyAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOneBrooklynHealthSystem:
 		return source.GetSourceClientOneBrooklynHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOneOakMedicalGroupLlc:
+		return source.GetSourceClientOneOakMedicalGroupLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOnslowMedicalSpecialtiesClinic:
+		return source.GetSourceClientOnslowMedicalSpecialtiesClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOpelousasGeneralHospital:
+		return source.GetSourceClientOpelousasGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOperatingEngineersLocal101HealthAndWelfareFund:
+		return source.GetSourceClientOperatingEngineersLocal101HealthAndWelfareFund(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOphthalmicSpecialists:
+		return source.GetSourceClientOphthalmicSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOptumcareEast:
 		return source.GetSourceClientOptumcareEast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOptumcareWest:
@@ -562,190 +2574,862 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOrlandoHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthocarolina:
 		return source.GetSourceClientOrthocarolina(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrthopaedicInstituteForChildren:
+		return source.GetSourceClientOrthopaedicInstituteForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrthopedicAndSportsMedicineSpecialistsOfGreenBaySc:
+		return source.GetSourceClientOrthopedicAndSportsMedicineSpecialistsOfGreenBaySc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrthopedicSportsMedicineOfSaintJoseph:
+		return source.GetSourceClientOrthopedicSportsMedicineOfSaintJoseph(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrthopedicsOfSouthernIn:
+		return source.GetSourceClientOrthopedicsOfSouthernIn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrthopedicsUnlimitedLlc:
+		return source.GetSourceClientOrthopedicsUnlimitedLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthovirginia:
 		return source.GetSourceClientOrthovirginia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOsborneCountyMemorialHospital:
+		return source.GetSourceClientOsborneCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOscarMatthewsMd:
+		return source.GetSourceClientOscarMatthewsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOsfHealthcare:
 		return source.GetSourceClientOsfHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOsfSaintClareMedicalCenter:
+		return source.GetSourceClientOsfSaintClareMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOsmondGeneralHospital:
+		return source.GetSourceClientOsmondGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOtakarHubschmannMdPa:
+		return source.GetSourceClientOtakarHubschmannMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOttawaCountyHealthCenter:
+		return source.GetSourceClientOttawaCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOttawaFamilyCareCenter:
+		return source.GetSourceClientOttawaFamilyCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOverlakeHospitalMedicalCenter:
 		return source.GetSourceClientOverlakeHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOwensboroHealth:
 		return source.GetSourceClientOwensboroHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOxfordHillsFootAnkleCenter:
+		return source.GetSourceClientOxfordHillsFootAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOzlemGokerAlpanMdLlc:
+		return source.GetSourceClientOzlemGokerAlpanMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaFootAnkleAssociatesLlc:
+		return source.GetSourceClientPaFootAnkleAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePacificDentalServices:
 		return source.GetSourceClientPacificDentalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePacificNeurosurgerySpineMedicalGroupInc:
+		return source.GetSourceClientPacificNeurosurgerySpineMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePadmanabhanJayalakshmiMdPa:
+		return source.GetSourceClientPadmanabhanJayalakshmiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePagosaSpringsMedicalCenter:
+		return source.GetSourceClientPagosaSpringsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePalmBeachSpineDiagnosticInstitute:
+		return source.GetSourceClientPalmBeachSpineDiagnosticInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaloAltoCountyHealthSystem:
+		return source.GetSourceClientPaloAltoCountyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePalomarHealth:
+		return source.GetSourceClientPalomarHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePalosHealth:
 		return source.GetSourceClientPalosHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePami:
+		return source.GetSourceClientPami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePanaCommunityHospital:
+		return source.GetSourceClientPanaCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePandiCapitalLlc:
+		return source.GetSourceClientPandiCapitalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkland:
 		return source.GetSourceClientParkland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkviewHealth:
 		return source.GetSourceClientParkviewHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePartnersInPediatrics:
+		return source.GetSourceClientPartnersInPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePatrickJClaussDpm:
+		return source.GetSourceClientPatrickJClaussDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulGrecoMDConciergeMedicalServicesPL:
+		return source.GetSourceClientPaulGrecoMDConciergeMedicalServicesPL(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulHCraneMd:
+		return source.GetSourceClientPaulHCraneMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulMakelaMdPc:
+		return source.GetSourceClientPaulMakelaMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulPotachDPM:
+		return source.GetSourceClientPaulPotachDPM(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulSDemarcoDpmLlc:
+		return source.GetSourceClientPaulSDemarcoDpmLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePaulSomersDpm:
+		return source.GetSourceClientPaulSomersDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePawhuskaHospitalInc:
+		return source.GetSourceClientPawhuskaHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePawneeCountyMemorialHospital:
+		return source.GetSourceClientPawneeCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePeaceHealthFamilyMedicalCenter:
+		return source.GetSourceClientPeaceHealthFamilyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeacehealth:
 		return source.GetSourceClientPeacehealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePeachtreeNephrologyPc:
+		return source.GetSourceClientPeachtreeNephrologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePeakVisionEyeCenter:
+		return source.GetSourceClientPeakVisionEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePediatricAssociatesInc:
+		return source.GetSourceClientPediatricAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens:
 		return source.GetSourceClientPediatricPhysiciansOrganizationAtChildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePediatricPulmonologyOfCentralGeorgiaLlc:
+		return source.GetSourceClientPediatricPulmonologyOfCentralGeorgiaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePediatricsAtOysterPointLlc:
+		return source.GetSourceClientPediatricsAtOysterPointLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePediatrixMedicalGroupOfFlInc:
+		return source.GetSourceClientPediatrixMedicalGroupOfFlInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePedroJCarvajalMd:
+		return source.GetSourceClientPedroJCarvajalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePedroPLlanezaMdPa:
+		return source.GetSourceClientPedroPLlanezaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePennHighlandsDubois:
+		return source.GetSourceClientPennHighlandsDubois(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePennMedicine:
 		return source.GetSourceClientPennMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePennStateHealthCarePartners:
+		return source.GetSourceClientPennStateHealthCarePartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePennStateHealth:
+		return source.GetSourceClientPennStateHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePenndocFootAnkleCenterLlc:
+		return source.GetSourceClientPenndocFootAnkleCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePensacolaFootAnkleCenter:
+		return source.GetSourceClientPensacolaFootAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePeoplesBank:
+		return source.GetSourceClientPeoplesBank(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePermianWomenSCenter:
+		return source.GetSourceClientPermianWomenSCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePerryCountyMemorialHospital:
+		return source.GetSourceClientPerryCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePerryMansfieldMdInc:
+		return source.GetSourceClientPerryMansfieldMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePersonalizedPrimaryCareAtlanta:
+		return source.GetSourceClientPersonalizedPrimaryCareAtlanta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePeterBarrettDpm:
+		return source.GetSourceClientPeterBarrettDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePetersburgMedicalCenter:
+		return source.GetSourceClientPetersburgMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhelpsHealth:
 		return source.GetSourceClientPhelpsHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhiladelphiaAcademicHealthSystemLlc:
+		return source.GetSourceClientPhiladelphiaAcademicHealthSystemLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhilipGachassinMdApmc:
+		return source.GetSourceClientPhilipGachassinMdApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhilipSiebertDpm:
+		return source.GetSourceClientPhilipSiebertDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhillipsCountyHospital:
+		return source.GetSourceClientPhillipsCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhysicianInHomeServices:
+		return source.GetSourceClientPhysicianInHomeServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePhysicianPainSpecialistsPC:
+		return source.GetSourceClientPhysicianPainSpecialistsPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePickensCountyMedicalCenter:
+		return source.GetSourceClientPickensCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePiedmontAthensRegionalMedicalCenterInc:
+		return source.GetSourceClientPiedmontAthensRegionalMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontHealthcare:
 		return source.GetSourceClientPiedmontHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePikeCountyMemorialHospital:
+		return source.GetSourceClientPikeCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePikevilleMedicalCenter:
 		return source.GetSourceClientPikevilleMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePineRestChristianMentalHealthServices:
 		return source.GetSourceClientPineRestChristianMentalHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePineStreetPodiatry:
+		return source.GetSourceClientPineStreetPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePipelineHealth:
+		return source.GetSourceClientPipelineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePlannedParenthood:
 		return source.GetSourceClientPlannedParenthood(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePlatteCountyHealthDepartmentPlatteCity:
+		return source.GetSourceClientPlatteCountyHealthDepartmentPlatteCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePlumasDistrictHospital:
+		return source.GetSourceClientPlumasDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePncFinancialServicesGroup:
+		return source.GetSourceClientPncFinancialServicesGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePoarchBandOfCreekIndians:
+		return source.GetSourceClientPoarchBandOfCreekIndians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePodiatryAssociatesOfErieInc:
+		return source.GetSourceClientPodiatryAssociatesOfErieInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePodiatryAssociatesOfLakeCounty:
+		return source.GetSourceClientPodiatryAssociatesOfLakeCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePodiatryAssociates:
+		return source.GetSourceClientPodiatryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePodiatryCenter:
+		return source.GetSourceClientPodiatryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePodiatryFootAndAnkleCarePllc:
+		return source.GetSourceClientPodiatryFootAndAnkleCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePomonaValleyHospitalMedicalCenter:
+		return source.GetSourceClientPomonaValleyHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePontiacTrailMedicalCenter:
+		return source.GetSourceClientPontiacTrailMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePositiveImpactHealthCenters:
+		return source.GetSourceClientPositiveImpactHealthCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePostAcuteRecoveryInc:
+		return source.GetSourceClientPostAcuteRecoveryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePracticeAdvantageInc:
+		return source.GetSourceClientPracticeAdvantageInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePracticeSupportServices:
+		return source.GetSourceClientPracticeSupportServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrairieRidgeIntegratedBehavioralHealthcare:
+		return source.GetSourceClientPrairieRidgeIntegratedBehavioralHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrecisionSurgicalSpecialistsOfLowell:
+		return source.GetSourceClientPrecisionSurgicalSpecialistsOfLowell(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePremierHealthCareGroupPllc:
+		return source.GetSourceClientPremierHealthCareGroupPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierHealth:
 		return source.GetSourceClientPremierHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePremierMedicalGroupOfCalifornia:
+		return source.GetSourceClientPremierMedicalGroupOfCalifornia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePremierObGyn:
+		return source.GetSourceClientPremierObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePremierSuburbanMedicalGroup:
+		return source.GetSourceClientPremierSuburbanMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresbyterianHealthcareServices:
 		return source.GetSourceClientPresbyterianHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryCarePhysicians:
+		return source.GetSourceClientPrimaryCarePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryCareProfessionals:
+		return source.GetSourceClientPrimaryCareProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryCareSpecialistsInc:
+		return source.GetSourceClientPrimaryCareSpecialistsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryCareSpecialistsPA:
+		return source.GetSourceClientPrimaryCareSpecialistsPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryMedicalAssociatesDeanRoad:
+		return source.GetSourceClientPrimaryMedicalAssociatesDeanRoad(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrimaryPediatrics:
+		return source.GetSourceClientPrimaryPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimeHealthcare:
 		return source.GetSourceClientPrimeHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePrismaHealthMidlands:
+		return source.GetSourceClientPrismaHealthMidlands(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrismaHealth:
 		return source.GetSourceClientPrismaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProfessionalAssociatesInSurgeryLlp:
+		return source.GetSourceClientProfessionalAssociatesInSurgeryLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProfessionalObGynDoctors:
+		return source.GetSourceClientProfessionalObGynDoctors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProhealthCare:
 		return source.GetSourceClientProhealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePromedicaHealthSystem:
 		return source.GetSourceClientPromedicaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProspectMedicalHoldingsWaterburyHospital:
+		return source.GetSourceClientProspectMedicalHoldingsWaterburyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProvidenceHealthAndServicesAlaska:
 		return source.GetSourceClientProvidenceHealthAndServicesAlaska(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProvidenceHealthAndServicesOregonCalifornia:
 		return source.GetSourceClientProvidenceHealthAndServicesOregonCalifornia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProvidenceHealthAndServicesWashingtonMontana:
 		return source.GetSourceClientProvidenceHealthAndServicesWashingtonMontana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProvidenceHealthServicesOregon:
+		return source.GetSourceClientProvidenceHealthServicesOregon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProvidenceMedicalCenter:
+		return source.GetSourceClientProvidenceMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePublixDeerfieldBeach:
+		return source.GetSourceClientPublixDeerfieldBeach(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePublixLakeland:
+		return source.GetSourceClientPublixLakeland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePulmonaryAllergyCriticalCareAndSleepAssociates:
+		return source.GetSourceClientPulmonaryAllergyCriticalCareAndSleepAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePulmonaryAndCriticalCareSpecialistsOfPrincetonPC:
+		return source.GetSourceClientPulmonaryAndCriticalCareSpecialistsOfPrincetonPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeQuadmed:
 		return source.GetSourceClientQuadmed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeQuorumHealthGroupInc:
+		return source.GetSourceClientQuorumHealthGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRadiologyAssociatesOfSouthFlorida:
+		return source.GetSourceClientRadiologyAssociatesOfSouthFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRadyChildrens:
 		return source.GetSourceClientRadyChildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRalphZaghaMdPa:
+		return source.GetSourceClientRalphZaghaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRankinCountyHospital:
+		return source.GetSourceClientRankinCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRaritanFamilyHealthcare:
+		return source.GetSourceClientRaritanFamilyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRasoAndCohenGastroenterology:
+		return source.GetSourceClientRasoAndCohenGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRaymondDHansenMdPa:
+		return source.GetSourceClientRaymondDHansenMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRedmanGelinasSc:
+		return source.GetSourceClientRedmanGelinasSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeReevesCountyHospitalDistrict:
+		return source.GetSourceClientReevesCountyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRefugioCountyMemorialHospitalDistrict:
+		return source.GetSourceClientRefugioCountyMemorialHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRegionalOneHealth:
+		return source.GetSourceClientRegionalOneHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRegionalWestMedicalCenter:
+		return source.GetSourceClientRegionalWestMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRehabilitationHospitalOfIndiana:
+		return source.GetSourceClientRehabilitationHospitalOfIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRehobothMckinleyChristianHealthCareServices:
+		return source.GetSourceClientRehobothMckinleyChristianHealthCareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeReidHealth:
 		return source.GetSourceClientReidHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeReliantMedicalGroup:
 		return source.GetSourceClientReliantMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRemiVistaInc:
+		return source.GetSourceClientRemiVistaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRenaissanceMedicalFoundation:
+		return source.GetSourceClientRenaissanceMedicalFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRenalAssociatesOfLagrange:
+		return source.GetSourceClientRenalAssociatesOfLagrange(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRenalHypertensionClinicPc:
+		return source.GetSourceClientRenalHypertensionClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRenalMedicalAssociationsLlc:
+		return source.GetSourceClientRenalMedicalAssociationsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenownBartonCvmc:
 		return source.GetSourceClientRenownBartonCvmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRenukaHBhattMd:
+		return source.GetSourceClientRenukaHBhattMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeReproductiveCareOfIndiana:
+		return source.GetSourceClientReproductiveCareOfIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRepublicCountyHospital:
+		return source.GetSourceClientRepublicCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRetinaCenterPa:
+		return source.GetSourceClientRetinaCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRetnaBillanoMd:
+		return source.GetSourceClientRetnaBillanoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRezaAzarMd:
+		return source.GetSourceClientRezaAzarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRheumatologyAndImmunotherapyCenter:
+		return source.GetSourceClientRheumatologyAndImmunotherapyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRicardoCigarroaMd:
+		return source.GetSourceClientRicardoCigarroaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardBurkeyDpm:
+		return source.GetSourceClientRichardBurkeyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardCorsonMd:
+		return source.GetSourceClientRichardCorsonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardDavenportMdAssociatesSc:
+		return source.GetSourceClientRichardDavenportMdAssociatesSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardJSolomonMd:
+		return source.GetSourceClientRichardJSolomonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardLSpinnerDpm:
+		return source.GetSourceClientRichardLSpinnerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardMAdamsDpm:
+		return source.GetSourceClientRichardMAdamsDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardMSooyDpm:
+		return source.GetSourceClientRichardMSooyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardPriceMd:
+		return source.GetSourceClientRichardPriceMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardSWarnerMd:
+		return source.GetSourceClientRichardSWarnerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRichardsMemorialHospital:
+		return source.GetSourceClientRichardsMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRidgeFamilyPractice:
+		return source.GetSourceClientRidgeFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRioGrandeHeartSpecialists:
+		return source.GetSourceClientRioGrandeHeartSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiversideHealthSystemNewportNewsVa:
 		return source.GetSourceClientRiversideHealthSystemNewportNewsVa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiversideMedicalCenter:
 		return source.GetSourceClientRiversideMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiversideMedicalClinic:
 		return source.GetSourceClientRiversideMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRiversideMedicalGroup:
+		return source.GetSourceClientRiversideMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRmsHealthcareInc:
+		return source.GetSourceClientRmsHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRobertGDaviesMdPa:
+		return source.GetSourceClientRobertGDaviesMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRobertHFlanneryDpm:
+		return source.GetSourceClientRobertHFlanneryDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRobertLJacksonMd:
+		return source.GetSourceClientRobertLJacksonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRobertSStipekDpm:
+		return source.GetSourceClientRobertSStipekDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRobertSussmanDpm:
+		return source.GetSourceClientRobertSussmanDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRochesterInternists:
+		return source.GetSourceClientRochesterInternists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRochesterRegionalHealth:
 		return source.GetSourceClientRochesterRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRochesterRehabilitationCenter:
+		return source.GetSourceClientRochesterRehabilitationCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRockRegionalHospital:
+		return source.GetSourceClientRockRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRockefellerUniversityHospital:
+		return source.GetSourceClientRockefellerUniversityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRocklandThoracicAssociates:
+		return source.GetSourceClientRocklandThoracicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRockyMountainInfectiousDiseasePc:
+		return source.GetSourceClientRockyMountainInfectiousDiseasePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRogersMemorialHospitalInc:
+		return source.GetSourceClientRogersMemorialHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRonaldTeedMd:
+		return source.GetSourceClientRonaldTeedMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRoperStFrancisHealthcare:
+		return source.GetSourceClientRoperStFrancisHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRostanaSaidDPM:
+		return source.GetSourceClientRostanaSaidDPM(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRushMemorialHospital:
+		return source.GetSourceClientRushMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRushUniversityMedicalCenter:
 		return source.GetSourceClientRushUniversityMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRwjbarnabasHealth:
 		return source.GetSourceClientRwjbarnabasHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRyanWhiteClinic:
+		return source.GetSourceClientRyanWhiteClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSFHartleyDpmPc:
+		return source.GetSourceClientSFHartleyDpmPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSPAssociatesDOPC:
+		return source.GetSourceClientSPAssociatesDOPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSabethaCommunityHospital:
+		return source.GetSourceClientSabethaCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSacoBayPodiatry:
+		return source.GetSourceClientSacoBayPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSagePlasticSurgery:
+		return source.GetSourceClientSagePlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSaintFrancisHealthSystem:
 		return source.GetSourceClientSaintFrancisHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSaintFrancisHealthcareSystemManual:
 		return source.GetSourceClientSaintFrancisHealthcareSystemManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSaintThomasHealth:
+		return source.GetSourceClientSaintThomasHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSaleemHusainMd:
+		return source.GetSourceClientSaleemHusainMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalemHealth:
 		return source.GetSourceClientSalemHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSalemMemorialDistrictHospital:
+		return source.GetSourceClientSalemMemorialDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSalinaSurgicalCenter:
+		return source.GetSourceClientSalinaSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalinasValleyMemorialHealthcareSystems:
 		return source.GetSourceClientSalinasValleyMemorialHealthcareSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSamaritanHealthServices:
 		return source.GetSourceClientSamaritanHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanAntonioRegionalHospital:
+		return source.GetSourceClientSanAntonioRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanAntonioUrgentCareSierra:
+		return source.GetSourceClientSanAntonioUrgentCareSierra(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanFranciscoDepartmentOfPublicHealth:
 		return source.GetSourceClientSanFranciscoDepartmentOfPublicHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanFranciscoFootAnkleCenter:
+		return source.GetSourceClientSanFranciscoFootAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanJoaquinGeneralHospital:
+		return source.GetSourceClientSanJoaquinGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanJuanHospital:
+		return source.GetSourceClientSanJuanHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanJuanRegionalMedicalCenter:
+		return source.GetSourceClientSanJuanRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanLuisObispoCountyMedicalServices:
+		return source.GetSourceClientSanLuisObispoCountyMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanfordHealth:
 		return source.GetSourceClientSanfordHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanjivSharmaMD:
+		return source.GetSourceClientSanjivSharmaMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSansumClinic:
 		return source.GetSourceClientSansumClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics:
 		return source.GetSourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSantaMonicaDermatology:
+		return source.GetSourceClientSantaMonicaDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSapphireCommunityHealthInc:
+		return source.GetSourceClientSapphireCommunityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSarahBushLincolnHealthSystem:
+		return source.GetSourceClientSarahBushLincolnHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSarahStanowiczMDInc:
+		return source.GetSourceClientSarahStanowiczMDInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSarasotaOphthalmologyAssociates:
+		return source.GetSourceClientSarasotaOphthalmologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSatantaDistrictHospital:
+		return source.GetSourceClientSatantaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSaundersMedicalCenter:
+		return source.GetSourceClientSaundersMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSbClinicalNetworkIpaLlc:
+		return source.GetSourceClientSbClinicalNetworkIpaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSchoolcraftMemorialHospital:
+		return source.GetSourceClientSchoolcraftMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeScituatePodiatryGroupInc:
+		return source.GetSourceClientScituatePodiatryGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSclHealth:
 		return source.GetSourceClientSclHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeScotlandHealthCareSystem:
 		return source.GetSourceClientScotlandHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeScotlandMemorialHospital:
+		return source.GetSourceClientScotlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeScottAGroatDpm:
+		return source.GetSourceClientScottAGroatDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeScottNathanRickoffDpms:
+		return source.GetSourceClientScottNathanRickoffDpms(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeScottishRiteForChildren:
 		return source.GetSourceClientScottishRiteForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeScrippsHealth:
 		return source.GetSourceClientScrippsHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSeasonsCenterForCommunityMentalHealth:
+		return source.GetSourceClientSeasonsCenterForCommunityMentalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSeattleChildrenSHospital:
+		return source.GetSourceClientSeattleChildrenSHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeattleChildrensHospital:
 		return source.GetSourceClientSeattleChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSeiffCenterForAestheticAndReconstructiveSurgery:
+		return source.GetSourceClientSeiffCenterForAestheticAndReconstructiveSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSelectMedical:
 		return source.GetSourceClientSelectMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSelfRegionalHealthcare:
 		return source.GetSourceClientSelfRegionalHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSemlerDermatologyInc:
+		return source.GetSourceClientSemlerDermatologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSeniorCareClinic:
+		return source.GetSourceClientSeniorCareClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSentaClinic:
+		return source.GetSourceClientSentaClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSentaraHealthcare:
 		return source.GetSourceClientSentaraHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSepulvedaAssociatesPc:
+		return source.GetSourceClientSepulvedaAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShahlaMedicalAssociates:
+		return source.GetSourceClientShahlaMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShannonHealth:
 		return source.GetSourceClientShannonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSharonFosterGardepeMd:
+		return source.GetSourceClientSharonFosterGardepeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSharonRegionalHealthSystem:
+		return source.GetSourceClientSharonRegionalHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSharpHealthcare:
+		return source.GetSourceClientSharpHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSharpeMedicalConsulting:
+		return source.GetSourceClientSharpeMedicalConsulting(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShelteringArmsPhysicalRehabilitation:
+		return source.GetSourceClientShelteringArmsPhysicalRehabilitation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShepherdSHope:
+		return source.GetSourceClientShepherdSHope(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSheridanCommunityHospital:
+		return source.GetSourceClientSheridanCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSheridanMemorialHospital:
+		return source.GetSourceClientSheridanMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShirleyRyanAbilitylab:
+		return source.GetSourceClientShirleyRyanAbilitylab(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShoaibAChowdhuryMd:
+		return source.GetSourceClientShoaibAChowdhuryMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShoreCardiacInstitute:
+		return source.GetSourceClientShoreCardiacInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShoreMedicalCenter:
+		return source.GetSourceClientShoreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeShrinersHospitalsForChildren:
+		return source.GetSourceClientShrinersHospitalsForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSicherFootCenter:
+		return source.GetSourceClientSicherFootCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSilverCrossHospital:
+		return source.GetSourceClientSilverCrossHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSimiObstetricsAndGynecology:
+		return source.GetSourceClientSimiObstetricsAndGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSimplyhealthcaremedicaid:
 		return source.GetSourceClientSimplyhealthcaremedicaid(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSimplyhealthcaremedicare:
 		return source.GetSourceClientSimplyhealthcaremedicare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSimpsonGeneralHospital:
+		return source.GetSourceClientSimpsonGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSinghSurgicalAssociates:
+		return source.GetSourceClientSinghSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSingingRiverHealthSystemPrd:
 		return source.GetSourceClientSingingRiverHealthSystemPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSkagitRegionalHealth:
 		return source.GetSourceClientSkagitRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSkinSurgeryCenterOfMissouri:
+		return source.GetSourceClientSkinSurgeryCenterOfMissouri(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSkylineHospital:
+		return source.GetSourceClientSkylineHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSmithCountyMemorialHospital:
+		return source.GetSourceClientSmithCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSmokyMountainFootClinic:
+		return source.GetSourceClientSmokyMountainFootClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSolanoKidneyCareInc:
+		return source.GetSourceClientSolanoKidneyCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSolutionhealth:
 		return source.GetSourceClientSolutionhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthCentralRegionalMedicalCenter:
+		return source.GetSourceClientSouthCentralRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthFloridaPediatricPartners:
+		return source.GetSourceClientSouthFloridaPediatricPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthGeorgiaMedicalCenter:
 		return source.GetSourceClientSouthGeorgiaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthMinneapolisWalkInClinic:
+		return source.GetSourceClientSouthMinneapolisWalkInClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthMountainNephrologyLlc:
+		return source.GetSourceClientSouthMountainNephrologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthShoreHealthSystem:
 		return source.GetSourceClientSouthShoreHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthTexasChildrenSHealthCenter:
+		return source.GetSourceClientSouthTexasChildrenSHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthTexasEyeConsultantsPllc:
+		return source.GetSourceClientSouthTexasEyeConsultantsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthTexasGastroenterologyAssociatesPa:
+		return source.GetSourceClientSouthTexasGastroenterologyAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthTexasInfectiousDiseasesConsultantsPa:
+		return source.GetSourceClientSouthTexasInfectiousDiseasesConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthTexasVeinInstitute:
+		return source.GetSourceClientSouthTexasVeinInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthcoastHealth:
 		return source.GetSourceClientSouthcoastHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthdalePediatricsAssocLtd:
+		return source.GetSourceClientSouthdalePediatricsAssocLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSoutheastGeorgiaGastroenterology:
+		return source.GetSourceClientSoutheastGeorgiaGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSoutheastGeorgiaHealthServicesLlc:
+		return source.GetSourceClientSoutheastGeorgiaHealthServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSoutheastGeorgiaHealthSystem:
+		return source.GetSourceClientSoutheastGeorgiaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSoutheastHealth:
 		return source.GetSourceClientSoutheastHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSoutheastMissouriHospital:
+		return source.GetSourceClientSoutheastMissouriHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSoutheasternHealth:
 		return source.GetSourceClientSoutheasternHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernIllinoisHealthcare:
 		return source.GetSourceClientSouthernIllinoisHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthernInternalMedicineLlc:
+		return source.GetSourceClientSouthernInternalMedicineLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthernIowaOrthopedics:
+		return source.GetSourceClientSouthernIowaOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthernMarylandElectricCoopInc:
+		return source.GetSourceClientSouthernMarylandElectricCoopInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthernOrthopaedicsSportsMedAsso:
+		return source.GetSourceClientSouthernOrthopaedicsSportsMedAsso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthsideFamilyPractice:
+		return source.GetSourceClientSouthsideFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthviewClinic:
+		return source.GetSourceClientSouthviewClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthwestFootAnkleCenterPlc:
+		return source.GetSourceClientSouthwestFootAnkleCenterPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthwestGeneralHealthCenter:
+		return source.GetSourceClientSouthwestGeneralHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthwestMemorialHospital:
+		return source.GetSourceClientSouthwestMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSouthwestRegionalRehabilitationCenter:
+		return source.GetSourceClientSouthwestRegionalRehabilitationCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSparrowHealthSystem:
 		return source.GetSourceClientSparrowHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpartanburgRegionalHealthSystems:
 		return source.GetSourceClientSpartanburgRegionalHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpecialistsInSpineSurgery:
+		return source.GetSourceClientSpecialistsInSpineSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpectrumHealthLakeland:
 		return source.GetSourceClientSpectrumHealthLakeland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpectrumHealth:
 		return source.GetSourceClientSpectrumHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpectrumHealthcare:
+		return source.GetSourceClientSpectrumHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpectrumHumanServices:
+		return source.GetSourceClientSpectrumHumanServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpiritrustLutheranLife:
+		return source.GetSourceClientSpiritrustLutheranLife(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSportsPodiatry:
+		return source.GetSourceClientSportsPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpringEntLlc:
+		return source.GetSourceClientSpringEntLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSpringfieldPediatricsNj:
+		return source.GetSourceClientSpringfieldPediatricsNj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSrinivasaRaoMovva:
+		return source.GetSourceClientSrinivasaRaoMovva(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSsmHealth:
 		return source.GetSourceClientSsmHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStAnthonySPrimaryCare:
+		return source.GetSourceClientStAnthonySPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStCharlesEyeCenterInc:
+		return source.GetSourceClientStCharlesEyeCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStCharlesHealthSystem:
 		return source.GetSourceClientStCharlesHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStClairPulmonaryCriticalCarePc:
+		return source.GetSourceClientStClairPulmonaryCriticalCarePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStDominicJacksonMemorialHospital:
+		return source.GetSourceClientStDominicJacksonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStElizabethHealthcare:
 		return source.GetSourceClientStElizabethHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStFrancisMemorialHospital:
+		return source.GetSourceClientStFrancisMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJamesParishHospital:
+		return source.GetSourceClientStJamesParishHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJohnHealthSystemInc:
+		return source.GetSourceClientStJohnHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJohnMedicalCenter:
+		return source.GetSourceClientStJohnMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJohnProvidenceHealthSystem:
+		return source.GetSourceClientStJohnProvidenceHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJohnsMedicalCenter:
+		return source.GetSourceClientStJohnsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJosephHospitalHealthCenter:
 		return source.GetSourceClientStJosephHospitalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJosephSRegionalMedicalCenter:
+		return source.GetSourceClientStJosephSRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStJudeChildrenSResearchHospitalInc:
+		return source.GetSourceClientStJudeChildrenSResearchHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJudeChildrensResearchHospital:
 		return source.GetSourceClientStJudeChildrensResearchHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStLouisKansasCityCarpentersRegionalCouncil:
+		return source.GetSourceClientStLouisKansasCityCarpentersRegionalCouncil(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStLukeSEntAssociates:
+		return source.GetSourceClientStLukeSEntAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStLukeSHospital:
+		return source.GetSourceClientStLukeSHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon:
 		return source.GetSourceClientStLukesHealthSystemIdahoAndEasternOregon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLukesHospitalNorthCarolina:
 		return source.GetSourceClientStLukesHospitalNorthCarolina(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStMarySHospital:
+		return source.GetSourceClientStMarySHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStMarySMedicalCenter:
+		return source.GetSourceClientStMarySMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStPaulAllergyAsthmaPa:
+		return source.GetSourceClientStPaulAllergyAsthmaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStVincentSHospital:
+		return source.GetSourceClientStVincentSHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStVincentSMedicalCenter:
+		return source.GetSourceClientStVincentSMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStacyFrankelMdPa:
+		return source.GetSourceClientStacyFrankelMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStaffordDistrictHospital:
+		return source.GetSourceClientStaffordDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStanfordChildrensHealth:
 		return source.GetSourceClientStanfordChildrensHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStanfordHealthCare:
 		return source.GetSourceClientStanfordHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStanleySShamaDpm:
+		return source.GetSourceClientStanleySShamaDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStatcareOutpatient:
+		return source.GetSourceClientStatcareOutpatient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStateOfDelawareHealthAndSocialServices:
+		return source.GetSourceClientStateOfDelawareHealthAndSocialServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStateOfKansas:
+		return source.GetSourceClientStateOfKansas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStateOfNewMexico:
+		return source.GetSourceClientStateOfNewMexico(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSteenersonRonaldLeifMdPc:
+		return source.GetSourceClientSteenersonRonaldLeifMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStephenVileMD:
+		return source.GetSourceClientStephenVileMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSteveLoveladyMdLlc:
+		return source.GetSourceClientSteveLoveladyMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStevenBRubinsMd:
+		return source.GetSourceClientStevenBRubinsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStevenDelmaestroMD:
+		return source.GetSourceClientStevenDelmaestroMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStevensCountyHospital:
+		return source.GetSourceClientStevensCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStewardHealthCareSystem:
+		return source.GetSourceClientStewardHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStewartJohnAMdPc:
+		return source.GetSourceClientStewartJohnAMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStonewallJacksonMemorialHospital:
+		return source.GetSourceClientStonewallJacksonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStonyBrookBusinessVenturesLlc:
+		return source.GetSourceClientStonyBrookBusinessVenturesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStonyBrookUniversityHospital:
+		return source.GetSourceClientStonyBrookUniversityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStormontVailHealth:
 		return source.GetSourceClientStormontVailHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeStuartCourtneyDpm:
+		return source.GetSourceClientStuartCourtneyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSturdyMemorialHospital:
+		return source.GetSourceClientSturdyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSuAndChangDermatologyAssociatesApmc:
+		return source.GetSourceClientSuAndChangDermatologyAssociatesApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSuburbanFootPhysicians:
+		return source.GetSourceClientSuburbanFootPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSuburbanPulmonaryMedicine:
+		return source.GetSourceClientSuburbanPulmonaryMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitHealth:
 		return source.GetSourceClientSummitHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitcommunitycare:
 		return source.GetSourceClientSummitcommunitycare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSumnerRegionalMedicalCenter:
+		return source.GetSourceClientSumnerRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSunnysidePediatrics:
+		return source.GetSourceClientSunnysidePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSunyUpstateMedicalUniversity:
 		return source.GetSourceClientSunyUpstateMedicalUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgeryPartnersNashville:
+		return source.GetSourceClientSurgeryPartnersNashville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalArts:
+		return source.GetSourceClientSurgicalArts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalAssociatesAtRenaissance:
+		return source.GetSourceClientSurgicalAssociatesAtRenaissance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalAssociatesOfAtlantaPC:
+		return source.GetSourceClientSurgicalAssociatesOfAtlantaPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalCareAssociatesDrClayton:
+		return source.GetSourceClientSurgicalCareAssociatesDrClayton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalMultispecialtiesMedicalGroup:
+		return source.GetSourceClientSurgicalMultispecialtiesMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSurgicalSpecialistsOfBg:
+		return source.GetSourceClientSurgicalSpecialistsOfBg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSutterHealth:
 		return source.GetSourceClientSutterHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSweenyCommunityHospital:
+		return source.GetSourceClientSweenyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSwisherMemorialHospital:
+		return source.GetSourceClientSwisherMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSynergyInfectiousDiseasePhysiciansPllc:
+		return source.GetSourceClientSynergyInfectiousDiseasePhysiciansPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSyracuseAreaHealth:
+		return source.GetSourceClientSyracuseAreaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSyringaHospitalAndClinics:
+		return source.GetSourceClientSyringaHospitalAndClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTJRegionalHealth:
+		return source.GetSourceClientTJRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTMobile:
+		return source.GetSourceClientTMobile(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTallahasseeMemorialHealthcare:
+		return source.GetSourceClientTallahasseeMemorialHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTallahasseePodiatryAssociates:
+		return source.GetSourceClientTallahasseePodiatryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTampaBayRadiationOncologyUrology:
+		return source.GetSourceClientTampaBayRadiationOncologyUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTampaGeneralHospital:
 		return source.GetSourceClientTampaGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTannerHealthSystem:
 		return source.GetSourceClientTannerHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTanveerAhmadMd:
+		return source.GetSourceClientTanveerAhmadMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTemplehealth:
 		return source.GetSourceClientTemplehealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTenderCarePediatrics:
+		return source.GetSourceClientTenderCarePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexasChildrens:
 		return source.GetSourceClientTexasChildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexasHealthResources:
 		return source.GetSourceClientTexasHealthResources(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTexasTechHealthSciencesCenterPermianBasin:
+		return source.GetSourceClientTexasTechHealthSciencesCenterPermianBasin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTexasTechUniversityHealthSciencesCenterAtElPaso:
+		return source.GetSourceClientTexasTechUniversityHealthSciencesCenterAtElPaso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTeyWomenSHealthCenter:
+		return source.GetSourceClientTeyWomenSHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeThayerCountyMemorialHospital:
+		return source.GetSourceClientThayerCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheBrooklynHospitalCenter:
 		return source.GetSourceClientTheBrooklynHospitalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheCenterForReproductiveHealth:
+		return source.GetSourceClientTheCenterForReproductiveHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheChildrenSHospitalCorporation:
+		return source.GetSourceClientTheChildrenSHospitalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheChildrenSMercyHospital:
+		return source.GetSourceClientTheChildrenSMercyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheChristHospital:
 		return source.GetSourceClientTheChristHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheDermatologyClinic:
+		return source.GetSourceClientTheDermatologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheEastAlabamaHealthCareAuthority:
+		return source.GetSourceClientTheEastAlabamaHealthCareAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheEverettClinic:
 		return source.GetSourceClientTheEverettClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheFedeliGroup:
+		return source.GetSourceClientTheFedeliGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheFootCareGroupPc:
+		return source.GetSourceClientTheFootCareGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheFootLegSpecialtyCenter:
+		return source.GetSourceClientTheFootLegSpecialtyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheGilletteCompany:
+		return source.GetSourceClientTheGilletteCompany(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheGuthrieClinic:
 		return source.GetSourceClientTheGuthrieClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheHospitalOfCentralConnecticut:
+		return source.GetSourceClientTheHospitalOfCentralConnecticut(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheHypertensionClinic:
+		return source.GetSourceClientTheHypertensionClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheMenningerClinic:
+		return source.GetSourceClientTheMenningerClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheNationalDiabetesObesityResearchInstitute:
+		return source.GetSourceClientTheNationalDiabetesObesityResearchInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheNewYorkGracieSquareHospital:
+		return source.GetSourceClientTheNewYorkGracieSquareHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheOhioStateUniversityWexnerMedicalCenter:
 		return source.GetSourceClientTheOhioStateUniversityWexnerMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThePolyclinic:
@@ -754,6 +3438,36 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientThePortlandClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheQueensHealthSystems:
 		return source.GetSourceClientTheQueensHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties:
+		return source.GetSourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheRutlandHospitalIncDBARutlandRegionalMedicalCenter:
+		return source.GetSourceClientTheRutlandHospitalIncDBARutlandRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtCenterstone:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtCenterstone(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtChildFamilyService:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtChildFamilyService(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtEasterseals:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtEasterseals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtEndeavors:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtEndeavors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtHopeForTheWarriors:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtHopeForTheWarriors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtMetrocare:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtMetrocare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtRedRock:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtRedRock(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtTheUniversityOfPennsylvania:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtTheUniversityOfPennsylvania(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtTheUpCenter:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtTheUpCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtValleyCities:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtValleyCities(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtVeteransVillage:
+		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston:
 		return source.GetSourceClientTheUniversityOfTexasHealthScienceCenterAtHouston(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter:
@@ -762,24 +3476,90 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheUniversityOfVermontHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheVancouverClinic:
 		return source.GetSourceClientTheVancouverClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital:
+		return source.GetSourceClientTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThedacare:
 		return source.GetSourceClientThedacare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeThomasJHaganDpm:
+		return source.GetSourceClientThomasJHaganDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeThomasJMelhamMd:
+		return source.GetSourceClientThomasJMelhamMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeThomasRichDpm:
+		return source.GetSourceClientThomasRichDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeThreeCrossesRegionalHospital:
+		return source.GetSourceClientThreeCrossesRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTidalhealth:
 		return source.GetSourceClientTidalhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTiftRegionalHealthSystemInc:
+		return source.GetSourceClientTiftRegionalHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTimothyCookConvenientMedCareCenter:
+		return source.GetSourceClientTimothyCookConvenientMedCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTimothyJGrahamDPM:
+		return source.GetSourceClientTimothyJGrahamDPM(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTmcHealthcare:
 		return source.GetSourceClientTmcHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTmhPhysicianPartners:
+		return source.GetSourceClientTmhPhysicianPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTodSReedDpm:
+		return source.GetSourceClientTodSReedDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTomekaRobertsMdPc:
+		return source.GetSourceClientTomekaRobertsMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTooTallDocSPA:
+		return source.GetSourceClientTooTallDocSPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTorranceMemorialMedicalCenter:
+		return source.GetSourceClientTorranceMemorialMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTotalBodyPainInstituteLlc:
+		return source.GetSourceClientTotalBodyPainInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTouroUniversityMedicalGroup:
+		return source.GetSourceClientTouroUniversityMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTowerHealth:
 		return source.GetSourceClientTowerHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTownCenterFootClinic:
+		return source.GetSourceClientTownCenterFootClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeToyotaIndustrialEquipment:
+		return source.GetSourceClientToyotaIndustrialEquipment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTpmdLlc:
+		return source.GetSourceClientTpmdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTreasureCoastPodiatry:
+		return source.GetSourceClientTreasureCoastPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTregoCountyLemkeMemorialHospital:
+		return source.GetSourceClientTregoCountyLemkeMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTriCityMedicalCenter:
+		return source.GetSourceClientTriCityMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTriCityMentalHealthAuthority:
+		return source.GetSourceClientTriCityMentalHealthAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTriCityPrimaryCareMedicalGroupInc:
+		return source.GetSourceClientTriCityPrimaryCareMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTriCityPulmonaryMedicalGroup:
+		return source.GetSourceClientTriCityPulmonaryMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTriCountyMentalHealthServices:
+		return source.GetSourceClientTriCountyMentalHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrihealth:
 		return source.GetSourceClientTrihealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTrinityHealthCorporation:
+		return source.GetSourceClientTrinityHealthCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield:
 		return source.GetSourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrinityHealthOfNewEngland:
 		return source.GetSourceClientTrinityHealthOfNewEngland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrinityHealth:
 		return source.GetSourceClientTrinityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTropicalTexasBehavioralHealth:
+		return source.GetSourceClientTropicalTexasBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTualityHealthcare:
+		return source.GetSourceClientTualityHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTualityPhysiciansPc:
+		return source.GetSourceClientTualityPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTucsonPhysicianGroupHoldingsLlc:
+		return source.GetSourceClientTucsonPhysicianGroupHoldingsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTuftsMedicine:
 		return source.GetSourceClientTuftsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTylerHolmesMemorialHospital:
+		return source.GetSourceClientTylerHolmesMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUOfLPhysicians:
+		return source.GetSourceClientUOfLPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUabHospital:
+		return source.GetSourceClientUabHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUcDavisMmc:
 		return source.GetSourceClientUcDavisMmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUcDavis:
@@ -788,6 +3568,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUcHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUchicagoMedicine:
 		return source.GetSourceClientUchicagoMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUciMedicalAffiliatesOfSouthCarolinaInc:
+		return source.GetSourceClientUciMedicalAffiliatesOfSouthCarolinaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUclaMedicalCenter:
 		return source.GetSourceClientUclaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUconnHealth:
@@ -798,12 +3580,26 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUcsfHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUfHealth:
 		return source.GetSourceClientUfHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUhsAmbulatoryCentral:
+		return source.GetSourceClientUhsAmbulatoryCentral(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUhsAmbulatoryEast:
+		return source.GetSourceClientUhsAmbulatoryEast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUhsAmbulatoryWest:
+		return source.GetSourceClientUhsAmbulatoryWest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUhsOfDelawareInc:
+		return source.GetSourceClientUhsOfDelawareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUhsSanAntonio:
 		return source.GetSourceClientUhsSanAntonio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUiHealth:
 		return source.GetSourceClientUiHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUintahBasinMedicalCenter:
+		return source.GetSourceClientUintahBasinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUkHealthcare:
 		return source.GetSourceClientUkHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUkiahValleyPrimaryCareMedical:
+		return source.GetSourceClientUkiahValleyPrimaryCareMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUltimateAccessPrimaryCare:
+		return source.GetSourceClientUltimateAccessPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUmassMemorialHealthCare:
 		return source.GetSourceClientUmassMemorialHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUmcSouthernNevada:
@@ -814,36 +3610,76 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUnicare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnicarema:
 		return source.GetSourceClientUnicarema(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnifiedGovernmentOfWyandotteCounty:
+		return source.GetSourceClientUnifiedGovernmentOfWyandotteCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnifiedHealthAssociates:
+		return source.GetSourceClientUnifiedHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnionGeneralHospitalInc:
+		return source.GetSourceClientUnionGeneralHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnionHospitalInc:
+		return source.GetSourceClientUnionHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniontownHospital:
+		return source.GetSourceClientUniontownHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnitedHealthServicesNewYorkNyuhs:
 		return source.GetSourceClientUnitedHealthServicesNewYorkNyuhs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnitedHospitalistGroup:
+		return source.GetSourceClientUnitedHospitalistGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnitedMedicalLlc:
+		return source.GetSourceClientUnitedMedicalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnitedRegionalHealthCareSystem:
 		return source.GetSourceClientUnitedRegionalHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUnitedSurgicalPartnersInternational:
+		return source.GetSourceClientUnitedSurgicalPartnersInternational(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnitypointHealth:
 		return source.GetSourceClientUnitypointHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityDermatologyAndVeinClinicLlc:
+		return source.GetSourceClientUniversityDermatologyAndVeinClinicLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityHealthCareSystem:
 		return source.GetSourceClientUniversityHealthCareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityHealth:
+		return source.GetSourceClientUniversityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityHospitalNewJersey:
 		return source.GetSourceClientUniversityHospitalNewJersey(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityHospitalsSamaritanMedicalCenter:
+		return source.GetSourceClientUniversityHospitalsSamaritanMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityMedicalCenterOfElPaso:
+		return source.GetSourceClientUniversityMedicalCenterOfElPaso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityMedicalCenter:
+		return source.GetSourceClientUniversityMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityMedicineAndCardiology:
+		return source.GetSourceClientUniversityMedicineAndCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfArkansasForMedicalSciences:
 		return source.GetSourceClientUniversityOfArkansasForMedicalSciences(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfCaliforniaIrvine:
 		return source.GetSourceClientUniversityOfCaliforniaIrvine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfCaliforniaSanDiego:
 		return source.GetSourceClientUniversityOfCaliforniaSanDiego(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine:
+		return source.GetSourceClientUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfIowaHealthCare:
 		return source.GetSourceClientUniversityOfIowaHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfKansasHealthSystem:
 		return source.GetSourceClientUniversityOfKansasHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfLouisvillePhysicians:
 		return source.GetSourceClientUniversityOfLouisvillePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfMarylandCapitalRegionHealth:
+		return source.GetSourceClientUniversityOfMarylandCapitalRegionHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfMarylandMedicalSystem:
 		return source.GetSourceClientUniversityOfMarylandMedicalSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfMiami:
+		return source.GetSourceClientUniversityOfMiami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfMississippiMedicalCenter:
 		return source.GetSourceClientUniversityOfMississippiMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfMissouriHealthSystem:
+		return source.GetSourceClientUniversityOfMissouriHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfNewMexicoHealthSciencesCenter:
+		return source.GetSourceClientUniversityOfNewMexicoHealthSciencesCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfPittsburghMedicalCenterUpmc:
 		return source.GetSourceClientUniversityOfPittsburghMedicalCenterUpmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfRochesterMedicalCenterPrd:
 		return source.GetSourceClientUniversityOfRochesterMedicalCenterPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUniversityOfTennesseeMedicalCenter:
+		return source.GetSourceClientUniversityOfTennesseeMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfTexasMedicalBranch:
 		return source.GetSourceClientUniversityOfTexasMedicalBranch(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfTexasSouthwesternMedicalCenter:
@@ -852,8 +3688,30 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUniversityOfToledo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityOfUtahHealthcare:
 		return source.GetSourceClientUniversityOfUtahHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUoflHealth:
+		return source.GetSourceClientUoflHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUpmcCentralPa:
 		return source.GetSourceClientUpmcCentralPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUpmcChildrenSHospital:
+		return source.GetSourceClientUpmcChildrenSHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUpmcCoreZone:
+		return source.GetSourceClientUpmcCoreZone(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUpperlineHealth:
+		return source.GetSourceClientUpperlineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUpstatePodiatryGroup:
+		return source.GetSourceClientUpstatePodiatryGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUrologicPhysiciansPa:
+		return source.GetSourceClientUrologicPhysiciansPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUrologyAssociatesOfTheCentralCoast:
+		return source.GetSourceClientUrologyAssociatesOfTheCentralCoast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUrologyPartnersOfNorthTexasPllc:
+		return source.GetSourceClientUrologyPartnersOfNorthTexasPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUsWellness:
+		return source.GetSourceClientUsWellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUsaHealthDermatology:
+		return source.GetSourceClientUsaHealthDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUsaHealthUniversityHospital:
+		return source.GetSourceClientUsaHealthUniversityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUtHealthSanAntonio:
 		return source.GetSourceClientUtHealthSanAntonio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUvaHealthSystem:
@@ -862,50 +3720,210 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUwHealthAndAffiliatesWisconsin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUwMedicineWashington:
 		return source.GetSourceClientUwMedicineWashington(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUwharriePodiatryLlc:
+		return source.GetSourceClientUwharriePodiatryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVailHealth:
+		return source.GetSourceClientVailHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeValenteniaDaughertyAndAlvinRSmithPc:
+		return source.GetSourceClientValenteniaDaughertyAndAlvinRSmithPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeValirRehabilitationHospital:
+		return source.GetSourceClientValirRehabilitationHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyChildrensHealthcare:
 		return source.GetSourceClientValleyChildrensHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeValleyHeartConsultants:
+		return source.GetSourceClientValleyHeartConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyMedicalCenter:
 		return source.GetSourceClientValleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeValleySKidsAndTeensClinicPa:
+		return source.GetSourceClientValleySKidsAndTeensClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeValleyVascularAssociates:
+		return source.GetSourceClientValleyVascularAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleywiseHealth:
 		return source.GetSourceClientValleywiseHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVanDiestMedicalCenter:
+		return source.GetSourceClientVanDiestMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVanderbilt:
 		return source.GetSourceClientVanderbilt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVarietyChildrensHospitalDBANicklausChildrensHospital:
+		return source.GetSourceClientVarietyChildrensHospitalDBANicklausChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVascularSurgeryAssociates:
+		return source.GetSourceClientVascularSurgeryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVatsalHModyMD:
+		return source.GetSourceClientVatsalHModyMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVcuHealthSystemAuthority:
+		return source.GetSourceClientVcuHealthSystemAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVcuHealth:
 		return source.GetSourceClientVcuHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVenturaEyeInstitute:
+		return source.GetSourceClientVenturaEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeronicaKacmarFedorchakDpm:
+		return source.GetSourceClientVeronicaKacmarFedorchakDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVhsPhysiciansOfMichigan:
+		return source.GetSourceClientVhsPhysiciansOfMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeViasatInc:
+		return source.GetSourceClientViasatInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVibrantHealthFamilyClinics:
+		return source.GetSourceClientVibrantHealthFamilyClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVickiRaabMD:
+		return source.GetSourceClientVickiRaabMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVictorValleyGlobalMedicalCenter:
+		return source.GetSourceClientVictorValleyGlobalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVidantHealth:
 		return source.GetSourceClientVidantHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginiaHospitalCenter:
 		return source.GetSourceClientVirginiaHospitalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVirginiaLightnerMd:
+		return source.GetSourceClientVirginiaLightnerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVirginiaMasonMedicalCenter:
+		return source.GetSourceClientVirginiaMasonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirtuaHealth:
 		return source.GetSourceClientVirtuaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVishenRKMd:
+		return source.GetSourceClientVishenRKMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWDavidMelloMD:
+		return source.GetSourceClientWDavidMelloMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter:
 		return source.GetSourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWakemedHealthAndHospitals:
 		return source.GetSourceClientWakemedHealthAndHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWalmart:
 		return source.GetSourceClientWalmart(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWalnutLakeObGyn:
+		return source.GetSourceClientWalnutLakeObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWalterKnoxMemorialHospital:
+		return source.GetSourceClientWalterKnoxMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWaltonKJoynerJrMdPa:
+		return source.GetSourceClientWaltonKJoynerJrMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWarrenEKaplanDpm:
+		return source.GetSourceClientWarrenEKaplanDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWarrenJDegaturJrMdFaafp:
+		return source.GetSourceClientWarrenJDegaturJrMdFaafp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWarrenWashingtonAssociationForMh:
+		return source.GetSourceClientWarrenWashingtonAssociationForMh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonHospitalHealthcareSystem:
 		return source.GetSourceClientWashingtonHospitalHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWashingtonRegionalMedicalSystem:
+		return source.GetSourceClientWashingtonRegionalMedicalSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWatsonClinic:
 		return source.GetSourceClientWatsonClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWayneStateUniversity:
+		return source.GetSourceClientWayneStateUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWeaverKennethRMd:
+		return source.GetSourceClientWeaverKennethRMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWeillCornellMedicine:
 		return source.GetSourceClientWeillCornellMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWeldCountyColorado:
+		return source.GetSourceClientWeldCountyColorado(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWellpath:
+		return source.GetSourceClientWellpath(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWellspanHealth:
 		return source.GetSourceClientWellspanHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWellstar:
 		return source.GetSourceClientWellstar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWeslacoMedicalClinic:
+		return source.GetSourceClientWeslacoMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestAlabamaInternalMedicine:
+		return source.GetSourceClientWestAlabamaInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestAlabamaPediatrics:
+		return source.GetSourceClientWestAlabamaPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestBroadwayClinic:
+		return source.GetSourceClientWestBroadwayClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestCentralOhioPodiatryInc:
+		return source.GetSourceClientWestCentralOhioPodiatryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter:
+		return source.GetSourceClientWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestMichiganFamilyMedicine:
+		return source.GetSourceClientWestMichiganFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestTennesseeHealthcare:
 		return source.GetSourceClientWestTennesseeHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestVirginiaUniversityMedicine:
 		return source.GetSourceClientWestVirginiaUniversityMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestchesterMedicalCenter:
+		return source.GetSourceClientWestchesterMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWesternConnecticutHealthNetwork:
+		return source.GetSourceClientWesternConnecticutHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesternMichiganUniversitySchoolOfMedicine:
 		return source.GetSourceClientWesternMichiganUniversitySchoolOfMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWesternMissouriMedicalCenter:
+		return source.GetSourceClientWesternMissouriMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWesternOhPodiatricMedicalCtr:
+		return source.GetSourceClientWesternOhPodiatricMedicalCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWestmorelandArnoldMdPllc:
+		return source.GetSourceClientWestmorelandArnoldMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWheatlandMemorialHospital:
+		return source.GetSourceClientWheatlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWhiteSandsFamilyPracticeClinic:
+		return source.GetSourceClientWhiteSandsFamilyPracticeClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWhitehallMedicalCenter:
+		return source.GetSourceClientWhitehallMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWhitevilleEyeAssociatesPA:
+		return source.GetSourceClientWhitevilleEyeAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWichitaCountyHealthCenter:
+		return source.GetSourceClientWichitaCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilkesRegionalMedicalCenter:
+		return source.GetSourceClientWilkesRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamDefeoDpm:
+		return source.GetSourceClientWilliamDefeoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamHansenDpm:
+		return source.GetSourceClientWilliamHansenDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamOfrichterDpm:
+		return source.GetSourceClientWilliamOfrichterDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamRBurdenMdPa:
+		return source.GetSourceClientWilliamRBurdenMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamRWelbornIiiMd:
+		return source.GetSourceClientWilliamRWelbornIiiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilsonMedicalCenterReeseCampus:
+		return source.GetSourceClientWilsonMedicalCenterReeseCampus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWinchesterFootAndAnkleAssociatesPllc:
+		return source.GetSourceClientWinchesterFootAndAnkleAssociatesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWinfieldObGyn:
+		return source.GetSourceClientWinfieldObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWinklerCountyMemorialHospital:
+		return source.GetSourceClientWinklerCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWinonaHealthServices:
+		return source.GetSourceClientWinonaHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWishekCommunityHospital:
+		return source.GetSourceClientWishekCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWomenSMedicalCenterOfMeridian:
+		return source.GetSourceClientWomenSMedicalCenterOfMeridian(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWomensChoiceOncologyPllc:
+		return source.GetSourceClientWomensChoiceOncologyPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWomensHealthcareOfSuffolk:
+		return source.GetSourceClientWomensHealthcareOfSuffolk(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWoodCountyHospital:
+		return source.GetSourceClientWoodCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWrayCommunityDistrictHospital:
+		return source.GetSourceClientWrayCommunityDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWyomingMedicalCenter:
+		return source.GetSourceClientWyomingMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYakimaValleyFarmWorkersClinic:
 		return source.GetSourceClientYakimaValleyFarmWorkersClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYakimaValleyMemorial:
+		return source.GetSourceClientYakimaValleyMemorial(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYaleNewHavenHealthSystem:
 		return source.GetSourceClientYaleNewHavenHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYeamanSignatureHealthClinic:
+		return source.GetSourceClientYeamanSignatureHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYoungstownUniversity:
+		return source.GetSourceClientYoungstownUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYourNextStepPc:
+		return source.GetSourceClientYourNextStepPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYrmcPhysicianPracticeGastro:
+		return source.GetSourceClientYrmcPhysicianPracticeGastro(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYukonKuskokwimHealthCorporation:
+		return source.GetSourceClientYukonKuskokwimHealthCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYumaDistrictHospital:
+		return source.GetSourceClientYumaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYumaRegionalMedicalCenter:
 		return source.GetSourceClientYumaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeYvelPMoreauMD:
+		return source.GetSourceClientYvelPMoreauMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeZafarShaheenMd:
+		return source.GetSourceClientZafarShaheenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeZiaShahMd:
+		return source.GetSourceClientZiaShahMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeZivMHarishMd:
+		return source.GetSourceClientZivMHarishMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAetna:
 		return source.GetSourceClientAetna(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBluebutton:

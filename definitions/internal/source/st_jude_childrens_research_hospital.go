@@ -21,14 +21,10 @@ func GetSourceStJudeChildrensResearchHospital(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://rp.stjude.org/oauth2-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rp.stjude.org/oauth2-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "St. Jude Children's Research Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStJudeChildrensResearchHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

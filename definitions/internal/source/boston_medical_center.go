@@ -21,14 +21,10 @@ func GetSourceBostonMedicalCenter(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Boston Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBostonMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceBcbsny(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.Audience = "https://patient360ny.bcbsdirect.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360ny.bcbsdirect.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Blue Rx New York"
 	sourceDef.SourceType = pkg.SourceTypeBcbsny
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

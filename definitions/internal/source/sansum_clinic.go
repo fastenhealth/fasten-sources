@@ -21,14 +21,10 @@ func GetSourceSansumClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://wavesurescripts.sansumclinic.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wavesurescripts.sansumclinic.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Sansum Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSansumClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

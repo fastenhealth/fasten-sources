@@ -21,14 +21,10 @@ func GetSourceCheyenneRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (mo
 	sourceDef.Audience = "https://soap.crmcwy.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soap.crmcwy.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cheyenne Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCheyenneRegionalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

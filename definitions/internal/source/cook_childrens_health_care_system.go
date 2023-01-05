@@ -21,14 +21,10 @@ func GetSourceCookChildrensHealthCareSystem(env pkg.FastenLighthouseEnvType) (mo
 	sourceDef.Audience = "https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cook Children�s Health Care System"
 	sourceDef.SourceType = pkg.SourceTypeCookChildrensHealthCareSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

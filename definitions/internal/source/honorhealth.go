@@ -21,14 +21,10 @@ func GetSourceHonorhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "HonorHealth"
 	sourceDef.SourceType = pkg.SourceTypeHonorhealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

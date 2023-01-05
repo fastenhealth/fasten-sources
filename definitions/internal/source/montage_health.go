@@ -21,14 +21,10 @@ func GetSourceMontageHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicproxy.et1058.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1058.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Montage Health"
 	sourceDef.SourceType = pkg.SourceTypeMontageHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

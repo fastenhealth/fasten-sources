@@ -21,14 +21,10 @@ func GetSourceRenownBartonCvmc(env pkg.FastenLighthouseEnvType) (models.Lighthou
 	sourceDef.Audience = "https://fhir.renown.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.renown.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Renown, Barton, CVMC"
 	sourceDef.SourceType = pkg.SourceTypeRenownBartonCvmc
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

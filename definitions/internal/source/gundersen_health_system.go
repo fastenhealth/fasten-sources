@@ -21,14 +21,10 @@ func GetSourceGundersenHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Gundersen Health System"
 	sourceDef.SourceType = pkg.SourceTypeGundersenHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

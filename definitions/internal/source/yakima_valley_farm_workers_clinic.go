@@ -21,14 +21,10 @@ func GetSourceYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType) (mo
 	sourceDef.Audience = "https://epicproxy.et0943.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0943.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Yakima Valley Farm Workers Clinic"
 	sourceDef.SourceType = pkg.SourceTypeYakimaValleyFarmWorkersClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

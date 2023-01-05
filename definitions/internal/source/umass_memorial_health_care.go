@@ -21,14 +21,10 @@ func GetSourceUmassMemorialHealthCare(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://epicproxy.et0978.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0978.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UMass Memorial Health Care"
 	sourceDef.SourceType = pkg.SourceTypeUmassMemorialHealthCare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

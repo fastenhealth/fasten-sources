@@ -15,20 +15,16 @@ import (
 // https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/metadata
 func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-fhir/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-fhir/oauth2/token"
+	sourceDef.AuthorizationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/token"
 
 	sourceDef.Audience = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Santa Clara Valley Medical Center Hospitals and Clinics"
 	sourceDef.SourceType = pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

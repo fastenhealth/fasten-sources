@@ -21,14 +21,10 @@ func GetSourceMichiganMedicine(env pkg.FastenLighthouseEnvType) (models.Lighthou
 	sourceDef.Audience = "https://mcproxyprd.med.umich.edu/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mcproxyprd.med.umich.edu/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Michigan Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMichiganMedicine
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

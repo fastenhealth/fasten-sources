@@ -21,14 +21,10 @@ func GetSourceCignaMedicalGroup(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cigna Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCignaMedicalGroup
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

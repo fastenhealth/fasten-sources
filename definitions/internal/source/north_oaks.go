@@ -21,14 +21,10 @@ func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "North Oaks"
 	sourceDef.SourceType = pkg.SourceTypeNorthOaks
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

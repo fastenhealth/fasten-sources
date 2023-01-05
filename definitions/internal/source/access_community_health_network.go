@@ -21,14 +21,10 @@ func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Access Community Health Network"
 	sourceDef.SourceType = pkg.SourceTypeAccessCommunityHealthNetwork
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

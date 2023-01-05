@@ -21,14 +21,10 @@ func GetSourceWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://epic-soap.wakemed.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-soap.wakemed.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "WakeMed Health and Hospitals"
 	sourceDef.SourceType = pkg.SourceTypeWakemedHealthAndHospitals
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

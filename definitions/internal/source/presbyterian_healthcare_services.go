@@ -21,14 +21,10 @@ func GetSourcePresbyterianHealthcareServices(env pkg.FastenLighthouseEnvType) (m
 	sourceDef.Audience = "https://epicFHIR.phs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicFHIR.phs.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Presbyterian Healthcare Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianHealthcareServices
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

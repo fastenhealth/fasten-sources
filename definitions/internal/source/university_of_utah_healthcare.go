@@ -21,14 +21,10 @@ func GetSourceUniversityOfUtahHealthcare(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://webproxyprd.med.utah.edu/FHIRMyChart/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webproxyprd.med.utah.edu/FHIRMyChart/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Utah Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfUtahHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

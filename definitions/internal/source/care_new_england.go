@@ -21,14 +21,10 @@ func GetSourceCareNewEngland(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://cnesp001.carene.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://cnesp001.carene.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Care New England"
 	sourceDef.SourceType = pkg.SourceTypeCareNewEngland
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

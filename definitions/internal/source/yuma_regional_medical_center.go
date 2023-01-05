@@ -21,14 +21,10 @@ func GetSourceYumaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://yrmccare1.yumaregional.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://yrmccare1.yumaregional.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Yuma Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeYumaRegionalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

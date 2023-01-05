@@ -21,14 +21,10 @@ func GetSourceBeaumontHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://moc.beaumont.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://moc.beaumont.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Beaumont Health"
 	sourceDef.SourceType = pkg.SourceTypeBeaumontHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

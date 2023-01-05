@@ -21,14 +21,10 @@ func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthous
 	sourceDef.Audience = "https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hattiesburg Clinic and Forrest General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

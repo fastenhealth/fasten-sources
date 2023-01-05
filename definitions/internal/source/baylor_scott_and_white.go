@@ -21,14 +21,10 @@ func GetSourceBaylorScottAndWhite(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Baylor Scott & White"
 	sourceDef.SourceType = pkg.SourceTypeBaylorScottAndWhite
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

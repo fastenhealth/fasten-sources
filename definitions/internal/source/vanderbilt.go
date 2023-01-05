@@ -21,14 +21,10 @@ func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Vanderbilt"
 	sourceDef.SourceType = pkg.SourceTypeVanderbilt
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

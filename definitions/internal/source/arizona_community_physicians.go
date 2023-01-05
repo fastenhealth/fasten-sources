@@ -21,14 +21,10 @@ func GetSourceArizonaCommunityPhysicians(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Arizona Community Physicians"
 	sourceDef.SourceType = pkg.SourceTypeArizonaCommunityPhysicians
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

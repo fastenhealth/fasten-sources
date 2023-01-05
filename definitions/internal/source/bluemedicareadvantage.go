@@ -21,14 +21,10 @@ func GetSourceBluemedicareadvantage(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://patient360.bluemedadv.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.bluemedadv.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Blue Medicare Advantage"
 	sourceDef.SourceType = pkg.SourceTypeBluemedicareadvantage
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

@@ -21,14 +21,10 @@ func GetSourcePlannedParenthood(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicproxy.et1154.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1154.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Planned Parenthood"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthood
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

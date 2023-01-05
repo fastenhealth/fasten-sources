@@ -21,14 +21,10 @@ func GetSourceMethodistHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Methodist Health System"
 	sourceDef.SourceType = pkg.SourceTypeMethodistHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Ballad Health"
 	sourceDef.SourceType = pkg.SourceTypeBalladHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

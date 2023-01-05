@@ -21,14 +21,10 @@ func GetSourceOptumcareEast(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epicarr.optum.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.optum.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OptumCare East"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareEast
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceBaptistHealthArkansas(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Baptist Health (Arkansas)"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthArkansas
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

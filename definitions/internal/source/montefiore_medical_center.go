@@ -21,14 +21,10 @@ func GetSourceMontefioreMedicalCenter(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Montefiore Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMontefioreMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

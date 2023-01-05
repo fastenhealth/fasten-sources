@@ -21,14 +21,10 @@ func GetSourceAnmedHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://epicproxy.et0971.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0971.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "AnMed Health"
 	sourceDef.SourceType = pkg.SourceTypeAnmedHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

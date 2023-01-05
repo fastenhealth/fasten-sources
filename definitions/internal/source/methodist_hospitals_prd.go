@@ -21,14 +21,10 @@ func GetSourceMethodistHospitalsPrd(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Methodist Hospitals - PRD"
 	sourceDef.SourceType = pkg.SourceTypeMethodistHospitalsPrd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

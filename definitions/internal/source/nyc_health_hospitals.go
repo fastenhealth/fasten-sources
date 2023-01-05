@@ -21,14 +21,10 @@ func GetSourceNycHealthHospitals(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "NYC Health + Hospitals"
 	sourceDef.SourceType = pkg.SourceTypeNycHealthHospitals
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

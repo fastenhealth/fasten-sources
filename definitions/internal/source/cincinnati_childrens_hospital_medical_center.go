@@ -21,14 +21,10 @@ func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenLighthouseE
 	sourceDef.Audience = "https://boomer.cchmc.org/fhir/api/fhir/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://boomer.cchmc.org/fhir/api/fhir/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cincinnati Children's Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

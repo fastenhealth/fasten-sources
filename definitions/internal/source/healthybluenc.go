@@ -21,14 +21,10 @@ func GetSourceHealthybluenc(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://patient360nc.bcbsdirect.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360nc.bcbsdirect.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Healthy Blue North Carolina"
 	sourceDef.SourceType = pkg.SourceTypeHealthybluenc
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

@@ -21,14 +21,10 @@ func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouse
 	sourceDef.Audience = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "The Ohio State University Wexner Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeTheOhioStateUniversityWexnerMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

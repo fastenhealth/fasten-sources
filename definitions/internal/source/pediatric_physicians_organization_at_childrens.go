@@ -21,14 +21,10 @@ func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthous
 	sourceDef.Audience = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Pediatric Physicians Organization at Children's"
 	sourceDef.SourceType = pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

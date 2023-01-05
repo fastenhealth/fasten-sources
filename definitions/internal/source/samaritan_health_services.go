@@ -21,14 +21,10 @@ func GetSourceSamaritanHealthServices(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://fhir.samhealth.org/fhir-arr/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.samhealth.org/fhir-arr/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Samaritan Health Services"
 	sourceDef.SourceType = pkg.SourceTypeSamaritanHealthServices
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

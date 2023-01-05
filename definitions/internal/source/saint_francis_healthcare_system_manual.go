@@ -21,14 +21,10 @@ func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenLighthouseEnvType
 	sourceDef.Audience = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Saint Francis Healthcare System (Manual)"
 	sourceDef.SourceType = pkg.SourceTypeSaintFrancisHealthcareSystemManual
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hawaii Pacific Health - PRD"
 	sourceDef.SourceType = pkg.SourceTypeHawaiiPacificHealthPrd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

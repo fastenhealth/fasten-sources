@@ -21,14 +21,10 @@ func GetSourceBuffaloMedicalGroup(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Buffalo Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBuffaloMedicalGroup
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

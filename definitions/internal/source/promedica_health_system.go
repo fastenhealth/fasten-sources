@@ -21,14 +21,10 @@ func GetSourcePromedicaHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://fhir.promedica.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.promedica.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "ProMedica Health System"
 	sourceDef.SourceType = pkg.SourceTypePromedicaHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

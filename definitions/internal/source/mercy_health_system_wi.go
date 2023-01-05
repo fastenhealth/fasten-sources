@@ -21,14 +21,10 @@ func GetSourceMercyHealthSystemWi(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://epicproxy.mhsjvl.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.mhsjvl.org/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mercy Health System - WI"
 	sourceDef.SourceType = pkg.SourceTypeMercyHealthSystemWi
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

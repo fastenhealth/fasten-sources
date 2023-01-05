@@ -21,14 +21,10 @@ func GetSourceMiddlesexHospital(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicproxy.et1124.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1124.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Middlesex Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMiddlesexHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

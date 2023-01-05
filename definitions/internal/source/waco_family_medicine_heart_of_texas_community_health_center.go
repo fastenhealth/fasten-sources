@@ -21,14 +21,10 @@ func GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.Fasten
 	sourceDef.Audience = "https://haiku.wacofhc.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.wacofhc.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Waco Family Medicine (Heart of Texas Community Health Center)"
 	sourceDef.SourceType = pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

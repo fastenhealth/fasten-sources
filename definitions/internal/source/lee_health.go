@@ -21,14 +21,10 @@ func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Lee Health"
 	sourceDef.SourceType = pkg.SourceTypeLeeHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

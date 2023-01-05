@@ -21,14 +21,10 @@ func GetSourceSunyUpstateMedicalUniversity(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://epicedge.upstate.edu/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicedge.upstate.edu/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "SUNY Upstate Medical University"
 	sourceDef.SourceType = pkg.SourceTypeSunyUpstateMedicalUniversity
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

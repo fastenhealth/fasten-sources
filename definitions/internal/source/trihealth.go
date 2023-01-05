@@ -21,14 +21,10 @@ func GetSourceTrihealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://epicscripts.trihealth.com/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicscripts.trihealth.com/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "TriHealth"
 	sourceDef.SourceType = pkg.SourceTypeTrihealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

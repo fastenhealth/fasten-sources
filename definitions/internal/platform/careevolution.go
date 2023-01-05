@@ -36,7 +36,6 @@ func GetSourceCareevolution(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Display = "CareEvolution (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeCareevolution
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = false
 
 	return sourceDef, nil
 }

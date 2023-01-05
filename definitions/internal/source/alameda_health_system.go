@@ -21,14 +21,10 @@ func GetSourceAlamedaHealthSystem(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://epicproxy.et1075.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1075.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Alameda Health System"
 	sourceDef.SourceType = pkg.SourceTypeAlamedaHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

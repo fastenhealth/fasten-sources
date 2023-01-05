@@ -21,14 +21,10 @@ func GetSourceContraCosta(env pkg.FastenLighthouseEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://icproxy.mycclink.org/proxy-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://icproxy.mycclink.org/proxy-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Contra Costa"
 	sourceDef.SourceType = pkg.SourceTypeContraCosta
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceAsanteHealthSystems(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.asante.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Asante Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeAsanteHealthSystems
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

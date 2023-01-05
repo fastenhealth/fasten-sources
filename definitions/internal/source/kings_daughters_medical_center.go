@@ -21,14 +21,10 @@ func GetSourceKingsDaughtersMedicalCenter(env pkg.FastenLighthouseEnvType) (mode
 	sourceDef.Audience = "https://arrprd.kdmc.net/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.kdmc.net/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "King's Daughters Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeKingsDaughtersMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

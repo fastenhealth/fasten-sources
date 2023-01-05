@@ -21,14 +21,10 @@ func GetSourceWellspanHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "WellSpan Health"
 	sourceDef.SourceType = pkg.SourceTypeWellspanHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceUclaMedicalCenter(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://arrprox.mednet.ucla.edu/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprox.mednet.ucla.edu/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UCLA Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUclaMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

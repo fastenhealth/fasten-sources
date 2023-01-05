@@ -21,14 +21,10 @@ func GetSourceHighmarkwesternny(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://patient360.mybcbswny.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.mybcbswny.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Highmark Western New York"
 	sourceDef.SourceType = pkg.SourceTypeHighmarkwesternny
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

@@ -21,14 +21,10 @@ func GetSourceAtlanticHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Atlantic Health"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

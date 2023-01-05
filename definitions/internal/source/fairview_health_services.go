@@ -21,14 +21,10 @@ func GetSourceFairviewHealthServices(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://sfd.fairview.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sfd.fairview.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Fairview Health Services"
 	sourceDef.SourceType = pkg.SourceTypeFairviewHealthServices
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

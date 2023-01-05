@@ -21,14 +21,10 @@ func GetSourceFastmed(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://external.fastmed.com/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://external.fastmed.com/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "FastMed"
 	sourceDef.SourceType = pkg.SourceTypeFastmed
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

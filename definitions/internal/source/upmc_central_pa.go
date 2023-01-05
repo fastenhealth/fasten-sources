@@ -21,14 +21,10 @@ func GetSourceUpmcCentralPa(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UPMC Central PA"
 	sourceDef.SourceType = pkg.SourceTypeUpmcCentralPa
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

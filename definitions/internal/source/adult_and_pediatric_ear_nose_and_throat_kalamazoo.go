@@ -21,14 +21,10 @@ func GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenLighthous
 	sourceDef.Audience = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Adult & Pediatric Ear, Nose & Throat � Kalamazoo"
 	sourceDef.SourceType = pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

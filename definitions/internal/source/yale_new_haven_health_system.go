@@ -21,14 +21,10 @@ func GetSourceYaleNewHavenHealthSystem(env pkg.FastenLighthouseEnvType) (models.
 	sourceDef.Audience = "https://patientfhirapis.ynhh.org/pff/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patientfhirapis.ynhh.org/pff/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Yale New Haven Health System"
 	sourceDef.SourceType = pkg.SourceTypeYaleNewHavenHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

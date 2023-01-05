@@ -21,14 +21,10 @@ func GetSourceAkronChildrensHospital(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Akron Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAkronChildrensHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

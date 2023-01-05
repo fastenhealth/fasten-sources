@@ -21,14 +21,10 @@ func GetSourceJohnMuirHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://fhir.johnmuirhealth.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.johnmuirhealth.com/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "John Muir Health"
 	sourceDef.SourceType = pkg.SourceTypeJohnMuirHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

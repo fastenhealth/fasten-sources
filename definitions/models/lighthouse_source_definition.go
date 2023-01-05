@@ -46,5 +46,5 @@ type LighthouseSourceDefinition struct {
 	Display    string         `json:"display"`
 	SourceType pkg.SourceType `json:"source_type"`
 	Category   []string       `json:"category"`
-	Enabled    bool           `json:"enabled"`
+	Hidden     bool           `json:"hidden"`
 }

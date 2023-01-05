@@ -21,14 +21,10 @@ func GetSourceMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mount Sinai Health System"
 	sourceDef.SourceType = pkg.SourceTypeMountSinaiHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

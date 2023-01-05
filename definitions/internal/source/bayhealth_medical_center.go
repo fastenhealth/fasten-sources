@@ -21,14 +21,10 @@ func GetSourceBayhealthMedicalCenter(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://epproxy.bayhealth.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epproxy.bayhealth.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Bayhealth Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBayhealthMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

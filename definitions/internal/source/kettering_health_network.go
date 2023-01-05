@@ -21,14 +21,10 @@ func GetSourceKetteringHealthNetwork(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kettering Health Network"
 	sourceDef.SourceType = pkg.SourceTypeKetteringHealthNetwork
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

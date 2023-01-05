@@ -21,14 +21,10 @@ func GetSourceUcDavisMmc(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UC Davis - MMC"
 	sourceDef.SourceType = pkg.SourceTypeUcDavisMmc
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

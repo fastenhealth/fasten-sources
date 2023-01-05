@@ -21,14 +21,10 @@ func GetSourceOchsnerHealthSystem(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://myc.ochsner.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://myc.ochsner.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Ochsner Health System"
 	sourceDef.SourceType = pkg.SourceTypeOchsnerHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceRadyChildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Rady Children's"
 	sourceDef.SourceType = pkg.SourceTypeRadyChildrens
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

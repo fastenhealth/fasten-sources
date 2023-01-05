@@ -21,14 +21,10 @@ func GetSourceNewYorkPresbyterian(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "New York-Presbyterian"
 	sourceDef.SourceType = pkg.SourceTypeNewYorkPresbyterian
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

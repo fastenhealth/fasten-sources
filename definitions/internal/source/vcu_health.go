@@ -21,14 +21,10 @@ func GetSourceVcuHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://epicproxy.et1200.epichosted.com/OAuth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1200.epichosted.com/OAuth2-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "VCU Health"
 	sourceDef.SourceType = pkg.SourceTypeVcuHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

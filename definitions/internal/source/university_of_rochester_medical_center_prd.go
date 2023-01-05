@@ -21,14 +21,10 @@ func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvT
 	sourceDef.Audience = "https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Rochester Medical Center - PRD"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfRochesterMedicalCenterPrd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

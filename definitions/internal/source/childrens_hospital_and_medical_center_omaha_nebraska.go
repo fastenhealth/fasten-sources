@@ -21,14 +21,10 @@ func GetSourceChildrensHospitalAndMedicalCenterOmahaNebraska(env pkg.FastenLight
 	sourceDef.Audience = "https://EPROXY1.chsomaha.org/FHIRPROXY/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://EPROXY1.chsomaha.org/FHIRPROXY/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Children's Hospital and Medical Center, Omaha Nebraska"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

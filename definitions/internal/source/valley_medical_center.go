@@ -21,14 +21,10 @@ func GetSourceValleyMedicalCenter(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Valley Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeValleyMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

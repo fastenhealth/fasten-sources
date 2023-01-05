@@ -21,14 +21,10 @@ func GetSourceEmoryHealthcare(env pkg.FastenLighthouseEnvType) (models.Lighthous
 	sourceDef.Audience = "https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Emory Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeEmoryHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

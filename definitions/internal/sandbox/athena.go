@@ -39,7 +39,6 @@ func GetSourceAthena(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.Display = "Athena (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeAthena
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

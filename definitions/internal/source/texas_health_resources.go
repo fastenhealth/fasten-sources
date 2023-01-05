@@ -21,14 +21,10 @@ func GetSourceTexasHealthResources(env pkg.FastenLighthouseEnvType) (models.Ligh
 	sourceDef.Audience = "https://epproxy.texashealth.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epproxy.texashealth.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Texas Health Resources"
 	sourceDef.SourceType = pkg.SourceTypeTexasHealthResources
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

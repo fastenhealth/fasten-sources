@@ -21,14 +21,10 @@ func GetSourceParkland(env pkg.FastenLighthouseEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Parkland"
 	sourceDef.SourceType = pkg.SourceTypeParkland
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceJeffersonHealth(env pkg.FastenLighthouseEnvType) (models.Lighthous
 	sourceDef.Audience = "https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Jefferson Health"
 	sourceDef.SourceType = pkg.SourceTypeJeffersonHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

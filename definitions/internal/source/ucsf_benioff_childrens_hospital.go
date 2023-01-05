@@ -21,14 +21,10 @@ func GetSourceUcsfBenioffChildrensHospital(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://unified-api.ucsf.edu/clinical/apex/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://unified-api.ucsf.edu/clinical/apex/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UCSF Benioff Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUcsfBenioffChildrensHospital
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

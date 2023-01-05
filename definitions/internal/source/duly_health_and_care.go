@@ -21,14 +21,10 @@ func GetSourceDulyHealthAndCare(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Duly Health and Care"
 	sourceDef.SourceType = pkg.SourceTypeDulyHealthAndCare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

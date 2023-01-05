@@ -21,14 +21,10 @@ func GetSourceEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Eisenhower Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEisenhowerMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

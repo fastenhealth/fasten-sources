@@ -21,14 +21,10 @@ func GetSourceHennepinHealthcare(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://hie.hcmed.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hie.hcmed.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hennepin Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeHennepinHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

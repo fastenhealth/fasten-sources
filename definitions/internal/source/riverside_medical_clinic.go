@@ -21,14 +21,10 @@ func GetSourceRiversideMedicalClinic(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Riverside Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeRiversideMedicalClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

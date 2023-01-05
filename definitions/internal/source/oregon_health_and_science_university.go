@@ -21,14 +21,10 @@ func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenLighthouseEnvType) 
 	sourceDef.Audience = "https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Oregon Health & Science University"
 	sourceDef.SourceType = pkg.SourceTypeOregonHealthAndScienceUniversity
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

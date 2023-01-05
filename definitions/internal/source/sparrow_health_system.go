@@ -21,14 +21,10 @@ func GetSourceSparrowHealthSystem(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://haiku.sparrow.org/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.sparrow.org/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Sparrow Health System"
 	sourceDef.SourceType = pkg.SourceTypeSparrowHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

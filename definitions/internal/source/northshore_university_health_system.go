@@ -21,14 +21,10 @@ func GetSourceNorthshoreUniversityHealthSystem(env pkg.FastenLighthouseEnvType) 
 	sourceDef.Audience = "https://haiku.northshore.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.northshore.org/Interconnect-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "NorthShore University Health System"
 	sourceDef.SourceType = pkg.SourceTypeNorthshoreUniversityHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

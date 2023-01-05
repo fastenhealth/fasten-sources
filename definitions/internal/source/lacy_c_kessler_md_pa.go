@@ -21,14 +21,10 @@ func GetSourceLacyCKesslerMdPa(env pkg.FastenLighthouseEnvType) (models.Lighthou
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Lacy C Kessler, MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeLacyCKesslerMdPa
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

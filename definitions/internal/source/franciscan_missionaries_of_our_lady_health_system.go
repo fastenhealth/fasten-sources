@@ -21,14 +21,10 @@ func GetSourceFranciscanMissionariesOfOurLadyHealthSystem(env pkg.FastenLighthou
 	sourceDef.Audience = "https://epicproxy.et0830.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0830.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Franciscan Missionaries of Our Lady Health System"
 	sourceDef.SourceType = pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

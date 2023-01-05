@@ -21,14 +21,10 @@ func GetSourceBoulderCommunityHealth(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Boulder Community Health"
 	sourceDef.SourceType = pkg.SourceTypeBoulderCommunityHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

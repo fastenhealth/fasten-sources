@@ -21,14 +21,10 @@ func GetSourceMemorialcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://fhir.memorialcare.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.memorialcare.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "MemorialCare"
 	sourceDef.SourceType = pkg.SourceTypeMemorialcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

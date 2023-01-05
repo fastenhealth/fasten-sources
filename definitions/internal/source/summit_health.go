@@ -21,14 +21,10 @@ func GetSourceSummitHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Summit Health"
 	sourceDef.SourceType = pkg.SourceTypeSummitHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

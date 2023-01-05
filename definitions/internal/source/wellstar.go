@@ -21,14 +21,10 @@ func GetSourceWellstar(env pkg.FastenLighthouseEnvType) (models.LighthouseSource
 	sourceDef.Audience = "https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "WellStar"
 	sourceDef.SourceType = pkg.SourceTypeWellstar
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

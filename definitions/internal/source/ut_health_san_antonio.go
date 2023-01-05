@@ -21,14 +21,10 @@ func GetSourceUtHealthSanAntonio(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://api.utmsa.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.utmsa.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UT Health San Antonio"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthSanAntonio
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

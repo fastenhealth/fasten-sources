@@ -21,14 +21,10 @@ func GetSourceChildrensHealthSystemOfTexas(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://fhir.childrens.com/prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.childrens.com/prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Children's Health System of Texas"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHealthSystemOfTexas
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

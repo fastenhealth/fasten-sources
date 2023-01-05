@@ -21,14 +21,10 @@ func GetSourceSaintFrancisHealthSystem(env pkg.FastenLighthouseEnvType) (models.
 	sourceDef.Audience = "https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Saint Francis Health System"
 	sourceDef.SourceType = pkg.SourceTypeSaintFrancisHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

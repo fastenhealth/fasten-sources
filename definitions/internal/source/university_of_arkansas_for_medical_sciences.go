@@ -21,14 +21,10 @@ func GetSourceUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnv
 	sourceDef.Audience = "https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Arkansas for Medical Sciences"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfArkansasForMedicalSciences
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

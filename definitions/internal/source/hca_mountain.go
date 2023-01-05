@@ -21,14 +21,10 @@ func GetSourceHcaMountain(env pkg.FastenLighthouseEnvType) (models.LighthouseSou
 	sourceDef.Audience = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "HCA Mountain"
 	sourceDef.SourceType = pkg.SourceTypeHcaMountain
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

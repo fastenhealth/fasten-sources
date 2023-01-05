@@ -21,14 +21,10 @@ func GetSourceBaylorCollegeOfMedicine(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Baylor College of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeBaylorCollegeOfMedicine
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

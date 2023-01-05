@@ -21,14 +21,10 @@ func GetSourceAltruHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicsoap.altru.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.altru.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Altru Health System"
 	sourceDef.SourceType = pkg.SourceTypeAltruHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

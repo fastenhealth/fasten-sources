@@ -21,14 +21,10 @@ func GetSourceCityOfHope(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "City of Hope"
 	sourceDef.SourceType = pkg.SourceTypeCityOfHope
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

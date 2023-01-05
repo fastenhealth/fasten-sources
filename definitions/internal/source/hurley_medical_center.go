@@ -21,14 +21,10 @@ func GetSourceHurleyMedicalCenter(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://fhir.hurleymc.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.hurleymc.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hurley Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHurleyMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceCarleFoundationHospitalAndPhysicianGroup(env pkg.FastenLighthouseE
 	sourceDef.Audience = "https://epicsoap.carle.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.carle.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Carle Foundation Hospital & Physician Group"
 	sourceDef.SourceType = pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

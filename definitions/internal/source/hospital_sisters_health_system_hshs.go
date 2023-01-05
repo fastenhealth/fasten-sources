@@ -21,14 +21,10 @@ func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hospital Sisters Health System (HSHS)"
 	sourceDef.SourceType = pkg.SourceTypeHospitalSistersHealthSystemHshs
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

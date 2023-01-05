@@ -21,14 +21,10 @@ func GetSourceMountSinaiMedicalCenter(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfhir.msmc.com/proxysite-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mount Sinai Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMountSinaiMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

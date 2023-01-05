@@ -21,14 +21,10 @@ func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "St. Luke's Hospital (North Carolina)"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHospitalNorthCarolina
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

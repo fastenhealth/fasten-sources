@@ -21,14 +21,10 @@ func GetSourceDartmouthHitchcock(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Dartmouth-Hitchcock"
 	sourceDef.SourceType = pkg.SourceTypeDartmouthHitchcock
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

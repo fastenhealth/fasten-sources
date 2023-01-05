@@ -21,14 +21,10 @@ func GetSourceOverlakeHospitalMedicalCenter(env pkg.FastenLighthouseEnvType) (mo
 	sourceDef.Audience = "https://sfd.overlakehospital.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sfd.overlakehospital.org/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Overlake Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeOverlakeHospitalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

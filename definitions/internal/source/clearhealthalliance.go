@@ -21,14 +21,10 @@ func GetSourceClearhealthalliance(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://patient360.clearhealthalliance.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.clearhealthalliance.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Clear Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeClearhealthalliance
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

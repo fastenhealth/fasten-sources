@@ -15,20 +15,16 @@ import (
 // https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/metadata
 func GetSourceEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://fhirprd.edward.org/fhirprd/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://fhirprd.edward.org/fhirprd/oauth2/token"
+	sourceDef.AuthorizationEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/token"
 
 	sourceDef.Audience = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Edward-Elmhurst Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeEdwardElmhurstHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

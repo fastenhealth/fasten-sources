@@ -35,7 +35,6 @@ func GetSourceAetna(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDef
 	sourceDef.Display = "Aetna"
 	sourceDef.SourceType = pkg.SourceTypeAetna
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

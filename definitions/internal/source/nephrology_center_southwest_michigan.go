@@ -21,14 +21,10 @@ func GetSourceNephrologyCenterSouthwestMichigan(env pkg.FastenLighthouseEnvType)
 	sourceDef.Audience = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Nephrology Center - Southwest Michigan"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyCenterSouthwestMichigan
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

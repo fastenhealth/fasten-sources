@@ -21,14 +21,10 @@ func GetSourceDeaconessHealthSystemPrd(env pkg.FastenLighthouseEnvType) (models.
 	sourceDef.Audience = "https://eprp.deaconess.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprp.deaconess.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Deaconess Health System - PRD"
 	sourceDef.SourceType = pkg.SourceTypeDeaconessHealthSystemPrd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

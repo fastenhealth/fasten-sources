@@ -21,14 +21,10 @@ func GetSourceMetrohealthOh(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "MetroHealth - OH"
 	sourceDef.SourceType = pkg.SourceTypeMetrohealthOh
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

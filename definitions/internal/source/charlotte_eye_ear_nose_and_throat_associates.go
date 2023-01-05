@@ -21,14 +21,10 @@ func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnv
 	sourceDef.Audience = "https://fhirprd.ceenta.com/proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.ceenta.com/proxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Charlotte Eye Ear Nose & Throat Associates"
 	sourceDef.SourceType = pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

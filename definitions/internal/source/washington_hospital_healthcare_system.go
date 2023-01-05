@@ -21,14 +21,10 @@ func GetSourceWashingtonHospitalHealthcareSystem(env pkg.FastenLighthouseEnvType
 	sourceDef.Audience = "https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Washington Hospital Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonHospitalHealthcareSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

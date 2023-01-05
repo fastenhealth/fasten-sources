@@ -21,14 +21,10 @@ func GetSourceKaiserPermanenteWashington(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://fhir.kp.org/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.kp.org/Interconnect-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kaiser Permanente - Washington"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteWashington
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

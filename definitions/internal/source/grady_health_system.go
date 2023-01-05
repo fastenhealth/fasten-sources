@@ -21,14 +21,10 @@ func GetSourceGradyHealthSystem(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://surescripts.gmh.edu/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://surescripts.gmh.edu/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Grady Health System"
 	sourceDef.SourceType = pkg.SourceTypeGradyHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

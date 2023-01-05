@@ -21,14 +21,10 @@ func GetSourceTemplehealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSo
 	sourceDef.Audience = "https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "TempleHealth"
 	sourceDef.SourceType = pkg.SourceTypeTemplehealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

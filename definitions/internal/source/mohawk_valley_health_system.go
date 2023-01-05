@@ -21,14 +21,10 @@ func GetSourceMohawkValleyHealthSystem(env pkg.FastenLighthouseEnvType) (models.
 	sourceDef.Audience = "https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mohawk Valley Health System"
 	sourceDef.SourceType = pkg.SourceTypeMohawkValleyHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

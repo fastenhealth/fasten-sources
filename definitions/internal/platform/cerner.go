@@ -32,15 +32,12 @@ func GetSourceCerner(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = "89efc22c-e879-4c02-a423-c3b98a0117a3"
-	}
+	sourceDef.ClientId = "89efc22c-e879-4c02-a423-c3b98a0117a3"
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Cerner (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeCerner
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

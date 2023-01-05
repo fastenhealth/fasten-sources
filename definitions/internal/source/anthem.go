@@ -28,7 +28,6 @@ func GetSourceAnthem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.Display = "Anthem"
 	sourceDef.SourceType = pkg.SourceTypeAnthem
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

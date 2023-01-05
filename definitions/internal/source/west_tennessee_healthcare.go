@@ -21,14 +21,10 @@ func GetSourceWestTennesseeHealthcare(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://epicproxy.et1243.epichosted.com/OAuth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1243.epichosted.com/OAuth2-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "West Tennessee Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeWestTennesseeHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceMercyHealthOhKy(env pkg.FastenLighthouseEnvType) (models.Lighthous
 	sourceDef.Audience = "https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mercy Health - OH, KY"
 	sourceDef.SourceType = pkg.SourceTypeMercyHealthOhKy
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

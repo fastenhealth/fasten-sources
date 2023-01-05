@@ -21,14 +21,10 @@ func GetSourceSclHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourc
 	sourceDef.Audience = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "SCL Health"
 	sourceDef.SourceType = pkg.SourceTypeSclHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

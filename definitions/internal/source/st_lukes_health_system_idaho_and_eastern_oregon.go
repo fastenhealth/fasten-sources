@@ -21,14 +21,10 @@ func GetSourceStLukesHealthSystemIdahoAndEasternOregon(env pkg.FastenLighthouseE
 	sourceDef.Audience = "https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "St. Luke�s Health System (Idaho & Eastern Oregon)"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

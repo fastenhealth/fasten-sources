@@ -21,14 +21,10 @@ func GetSourceEmpirebluemedicaid(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://patient360.empireblue.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.empireblue.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Empire Blue Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeEmpirebluemedicaid
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

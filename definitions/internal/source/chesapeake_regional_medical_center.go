@@ -21,14 +21,10 @@ func GetSourceChesapeakeRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Chesapeake Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeRegionalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

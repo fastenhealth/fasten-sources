@@ -21,14 +21,10 @@ func GetSourceSummitcommunitycare(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://patient360.summitcommunitycare.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.summitcommunitycare.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Summit Community Care"
 	sourceDef.SourceType = pkg.SourceTypeSummitcommunitycare
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

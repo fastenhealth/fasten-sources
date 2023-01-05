@@ -38,7 +38,6 @@ func GetSourceHealthit(env pkg.FastenLighthouseEnvType) (models.LighthouseSource
 	sourceDef.Display = "HealthIT (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeHealthit
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

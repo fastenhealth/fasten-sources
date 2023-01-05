@@ -21,14 +21,10 @@ func GetSourceUniversityOfTexasSouthwesternMedicalCenter(env pkg.FastenLighthous
 	sourceDef.Audience = "https://EpicIntprxyPRD.swmed.edu/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://EpicIntprxyPRD.swmed.edu/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Texas Southwestern Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTexasSouthwesternMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

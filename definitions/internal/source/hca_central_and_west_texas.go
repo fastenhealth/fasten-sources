@@ -21,14 +21,10 @@ func GetSourceHcaCentralAndWestTexas(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "HCA Central and West Texas"
 	sourceDef.SourceType = pkg.SourceTypeHcaCentralAndWestTexas
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

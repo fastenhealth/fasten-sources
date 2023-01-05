@@ -21,14 +21,10 @@ func GetSourceReliantMedicalGroup(env pkg.FastenLighthouseEnvType) (models.Light
 	sourceDef.Audience = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Reliant Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeReliantMedicalGroup
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

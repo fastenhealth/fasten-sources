@@ -21,14 +21,10 @@ func GetSourcePineRestChristianMentalHealthServices(env pkg.FastenLighthouseEnvT
 	sourceDef.Audience = "https://wecare.pinerest.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wecare.pinerest.org/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Pine Rest Christian Mental Health Services"
 	sourceDef.SourceType = pkg.SourceTypePineRestChristianMentalHealthServices
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

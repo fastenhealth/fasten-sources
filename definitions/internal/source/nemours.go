@@ -21,14 +21,10 @@ func GetSourceNemours(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://iconnect.nemours.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://iconnect.nemours.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Nemours"
 	sourceDef.SourceType = pkg.SourceTypeNemours
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

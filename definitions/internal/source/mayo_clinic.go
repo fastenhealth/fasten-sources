@@ -21,14 +21,10 @@ func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.Audience = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mayo Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMayoClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

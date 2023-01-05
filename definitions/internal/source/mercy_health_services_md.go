@@ -15,20 +15,16 @@ import (
 // https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4/metadata
 func GetSourceMercyHealthServicesMd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://surescripts.mdmercy.com/fhir-prd/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://surescripts.mdmercy.com/fhir-prd/oauth2/token"
+	sourceDef.AuthorizationEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/token"
 
 	sourceDef.Audience = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mercy Health Services (MD)"
 	sourceDef.SourceType = pkg.SourceTypeMercyHealthServicesMd
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

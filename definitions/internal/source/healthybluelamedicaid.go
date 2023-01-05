@@ -21,14 +21,10 @@ func GetSourceHealthybluelamedicaid(env pkg.FastenLighthouseEnvType) (models.Lig
 	sourceDef.Audience = "https://patient360.healthybluela.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.healthybluela.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Healthy Blue LA Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeHealthybluelamedicaid
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

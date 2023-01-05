@@ -21,14 +21,10 @@ func GetSourceLehighValleyHealthNetwork(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://proxy.lvh.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://proxy.lvh.com/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Lehigh Valley Health Network"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyHealthNetwork
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

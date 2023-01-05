@@ -21,14 +21,10 @@ func GetSourceUniversityOfIowaHealthCare(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Iowa Health Care"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfIowaHealthCare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

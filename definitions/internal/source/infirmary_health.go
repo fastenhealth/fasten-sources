@@ -21,14 +21,10 @@ func GetSourceInfirmaryHealth(env pkg.FastenLighthouseEnvType) (models.Lighthous
 	sourceDef.Audience = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Infirmary Health"
 	sourceDef.SourceType = pkg.SourceTypeInfirmaryHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

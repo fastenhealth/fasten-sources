@@ -36,7 +36,6 @@ func GetSourceCigna(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDef
 	sourceDef.Display = "Cigna"
 	sourceDef.SourceType = pkg.SourceTypeCigna
 	sourceDef.Category = []string{"Insurance", "Hospital"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

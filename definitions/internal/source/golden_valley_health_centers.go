@@ -21,14 +21,10 @@ func GetSourceGoldenValleyHealthCenters(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Golden Valley Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeGoldenValleyHealthCenters
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

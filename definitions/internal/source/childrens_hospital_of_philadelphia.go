@@ -21,14 +21,10 @@ func GetSourceChildrensHospitalOfPhiladelphia(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://epicnsproxy.chop.edu/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicnsproxy.chop.edu/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Children's Hospital of Philadelphia"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalOfPhiladelphia
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

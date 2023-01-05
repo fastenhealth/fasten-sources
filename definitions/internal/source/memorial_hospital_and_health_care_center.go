@@ -21,14 +21,10 @@ func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Audience = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Memorial Hospital and Health Care Center"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHospitalAndHealthCareCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

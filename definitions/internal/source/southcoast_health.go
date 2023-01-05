@@ -21,14 +21,10 @@ func GetSourceSouthcoastHealth(env pkg.FastenLighthouseEnvType) (models.Lighthou
 	sourceDef.Audience = "https://epicpproxy.southcoast.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicpproxy.southcoast.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Southcoast Health"
 	sourceDef.SourceType = pkg.SourceTypeSouthcoastHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

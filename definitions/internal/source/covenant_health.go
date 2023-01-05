@@ -21,14 +21,10 @@ func GetSourceCovenantHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.bshsi.org/fhir/COV_OAUTH/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Covenant Health"
 	sourceDef.SourceType = pkg.SourceTypeCovenantHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

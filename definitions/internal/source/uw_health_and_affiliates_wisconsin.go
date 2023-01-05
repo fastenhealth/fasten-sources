@@ -21,14 +21,10 @@ func GetSourceUwHealthAndAffiliatesWisconsin(env pkg.FastenLighthouseEnvType) (m
 	sourceDef.Audience = "https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "UW Health And Affiliates - Wisconsin"
 	sourceDef.SourceType = pkg.SourceTypeUwHealthAndAffiliatesWisconsin
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceTheEverettClinic(env pkg.FastenLighthouseEnvType) (models.Lighthou
 	sourceDef.Audience = "https://fhir.myeverettclinic.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.myeverettclinic.com/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "The Everett Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheEverettClinic
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

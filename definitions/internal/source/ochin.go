@@ -21,14 +21,10 @@ func GetSourceOchin(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDef
 	sourceDef.Audience = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OCHIN"
 	sourceDef.SourceType = pkg.SourceTypeOchin
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

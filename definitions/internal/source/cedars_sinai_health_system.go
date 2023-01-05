@@ -21,14 +21,10 @@ func GetSourceCedarsSinaiHealthSystem(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cedars-Sinai Health System"
 	sourceDef.SourceType = pkg.SourceTypeCedarsSinaiHealthSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

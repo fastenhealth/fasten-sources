@@ -21,14 +21,10 @@ func GetSourceTuftsMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Tufts Medicine"
 	sourceDef.SourceType = pkg.SourceTypeTuftsMedicine
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

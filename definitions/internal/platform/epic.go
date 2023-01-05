@@ -38,7 +38,6 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefi
 	sourceDef.Display = "Epic (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeEpic
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Enabled = true
 
 	return sourceDef, nil
 }

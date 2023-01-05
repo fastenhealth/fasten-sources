@@ -21,14 +21,10 @@ func GetSourceUniversityOfMississippiMedicalCenter(env pkg.FastenLighthouseEnvTy
 	sourceDef.Audience = "https://soapproxy.umc.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxy.umc.edu/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Mississippi Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMississippiMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

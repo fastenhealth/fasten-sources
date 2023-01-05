@@ -21,14 +21,10 @@ func GetSourceBassettHealthcare(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://soap.bassett.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soap.bassett.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Bassett Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeBassettHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

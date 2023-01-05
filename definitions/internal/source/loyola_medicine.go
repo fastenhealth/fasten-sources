@@ -21,14 +21,10 @@ func GetSourceLoyolaMedicine(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://rxhub.luhs.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rxhub.luhs.org/fhir/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Loyola Medicine"
 	sourceDef.SourceType = pkg.SourceTypeLoyolaMedicine
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceMeritus(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Meritus"
 	sourceDef.SourceType = pkg.SourceTypeMeritus
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

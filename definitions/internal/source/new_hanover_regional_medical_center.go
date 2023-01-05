@@ -21,14 +21,10 @@ func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "New Hanover Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNewHanoverRegionalMedicalCenter
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

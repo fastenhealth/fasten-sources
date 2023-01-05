@@ -21,14 +21,10 @@ func GetSourceCatholicHealthLongIslandNy(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://epx1.chsli.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epx1.chsli.org/FHIR/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Catholic Health (Long Island NY)"
 	sourceDef.SourceType = pkg.SourceTypeCatholicHealthLongIslandNy
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

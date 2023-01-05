@@ -21,14 +21,10 @@ func GetSourceGeorgeWashingtonUniversityMedicalFacultyAssociates(env pkg.FastenL
 	sourceDef.Audience = "https://epicproxy.et1222.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1222.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "George Washington University Medical Faculty Associates"
 	sourceDef.SourceType = pkg.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -21,14 +21,10 @@ func GetSourceSentaraHealthcare(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Sentara Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSentaraHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

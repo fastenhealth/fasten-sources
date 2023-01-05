@@ -21,14 +21,10 @@ func GetSourceSelfRegionalHealthcare(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://epicproxy.et1235.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et1235.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Self Regional Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSelfRegionalHealthcare
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

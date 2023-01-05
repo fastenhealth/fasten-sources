@@ -21,14 +21,10 @@ func GetSourceUniversityOfCaliforniaSanDiego(env pkg.FastenLighthouseEnvType) (m
 	sourceDef.Audience = "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of California San Diego"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfCaliforniaSanDiego
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

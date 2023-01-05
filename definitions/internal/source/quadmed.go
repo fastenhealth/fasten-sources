@@ -21,14 +21,10 @@ func GetSourceQuadmed(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceD
 	sourceDef.Audience = "https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "QuadMed"
 	sourceDef.SourceType = pkg.SourceTypeQuadmed
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

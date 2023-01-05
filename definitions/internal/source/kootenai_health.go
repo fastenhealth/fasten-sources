@@ -21,14 +21,10 @@ func GetSourceKootenaiHealth(env pkg.FastenLighthouseEnvType) (models.Lighthouse
 	sourceDef.Audience = "https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kootenai Health"
 	sourceDef.SourceType = pkg.SourceTypeKootenaiHealth
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

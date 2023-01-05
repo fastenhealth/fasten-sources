@@ -21,14 +21,10 @@ func GetSourceGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType) (models.L
 	sourceDef.Audience = "https://fhir.genesishcs.org/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.genesishcs.org/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Genesis Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeGenesisHealthcareSystem
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

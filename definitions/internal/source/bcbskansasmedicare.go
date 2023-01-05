@@ -21,14 +21,10 @@ func GetSourceBcbskansasmedicare(env pkg.FastenLighthouseEnvType) (models.Lighth
 	sourceDef.Audience = "https://patient360ks.bcbsdirect.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360ks.bcbsdirect.com/P360Member/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 
 	sourceDef.Display = "Blue Cross Blue Shield Kansas  Medicare Part D"
 	sourceDef.SourceType = pkg.SourceTypeBcbskansasmedicare
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Enabled = true
 
 	return sourceDef, err
 }

@@ -21,14 +21,10 @@ func GetSourceKalamazooFootSurgery(env pkg.FastenLighthouseEnvType) (models.Ligh
 	sourceDef.Audience = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kalamazoo Foot Surgery"
 	sourceDef.SourceType = pkg.SourceTypeKalamazooFootSurgery
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

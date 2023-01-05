@@ -21,14 +21,10 @@ func GetSourceKaiserPermanenteCaliforniaNorthern(env pkg.FastenLighthouseEnvType
 	sourceDef.Audience = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/312/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/312/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = ""
-	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kaiser Permanente - California - Northern"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteCaliforniaNorthern
-	sourceDef.Enabled = true
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err
