@@ -315,8 +315,7 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	lookupReferencedResources[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
-	referencedResources := ExtractFhir401ReferencedResources(resourceObj)
-	resource.ReferencedResources = referencedResources
+	SourceClientFHIR401ExtractResourceMetadata(resourceObj, &resource)
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)
 	if err != nil {
@@ -326,7 +325,7 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 		summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID))
 	}
 
-	for _, ref := range referencedResources {
+	for _, ref := range resource.ReferencedResources {
 		if _, lookupOk := lookupReferencedResources[ref]; !lookupOk {
 			lookupReferencedResources[ref] = false //this reference has not been seen before, set to false (pending)
 		}

@@ -9,4 +9,3 @@ There are multiple protocols used by the Medical Provider industry to transfer p
 ones that Fasten supports
 
 ### FHIR
-
