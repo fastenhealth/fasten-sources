@@ -15,7 +15,7 @@ type RawResourceFhir struct {
 	SourceResourceID   string          `json:"source_resource_id"`
 	ResourceRaw        json.RawMessage `json:"resource_raw"`
 
-	SortTitle           string    `json:"sort_title"`
-	SortDate            time.Time `json:"sort_date"`
-	ReferencedResources []string  `json:"referenced_resources"`
+	SortTitle           *string    `json:"sort_title"`
+	SortDate            *time.Time `json:"sort_date"`
+	ReferencedResources []string   `json:"referenced_resources"`
 }
