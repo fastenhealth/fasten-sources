@@ -127,56 +127,24 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 }
 
 func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
-	// try from newest format to the oldest format
-	bundle430Data := fhir430.Bundle{}
-	bundle401Data := fhir401.Bundle{}
+	// TODO: find a way to correctly detect bundle version
 
-	var patientIds []string
-
-	bundleType := pkg.FhirVersion430
-	if err := base.ParseBundle(bundleFile, &bundle430Data); err == nil {
-		patientIds = lo.FilterMap[fhir430.BundleEntry, string](bundle430Data.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (string, bool) {
-			parsedResource, err := fhir430utils.MapToResource(bundleEntry.Resource, false)
-			if err != nil {
-				return "", false
-			}
-			typedResource := parsedResource.(models.ResourceInterface)
-			resourceType, resourceId := typedResource.ResourceRef()
-
-			if resourceId == nil || len(*resourceId) == 0 {
-				return "", false
-			}
-			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
-		})
-	}
+	bundleType := pkg.FhirVersion401
+	patientIds, err := parse401Bundle(bundleFile)
 	bundleFile.Seek(0, io.SeekStart)
 
-	//fallback
-	if patientIds == nil || len(patientIds) == 0 {
-		bundleType = pkg.FhirVersion401
-		//try parsing the bundle as a 401 bundle
-		//TODO: find a better, more generic way to do this.
-		err := base.ParseBundle(bundleFile, &bundle401Data)
-		if err != nil {
-			return "", "", err
-		}
-		patientIds = lo.FilterMap[fhir401.BundleEntry, string](bundle401Data.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (string, bool) {
-			parsedResource, err := fhir401utils.MapToResource(bundleEntry.Resource, false)
-			if err != nil {
-				return "", false
-			}
-			typedResource := parsedResource.(models.ResourceInterface)
-			resourceType, resourceId := typedResource.ResourceRef()
+	//fallback to 430 bundle
+	if err != nil || patientIds == nil || len(patientIds) == 0 {
+		bundleType = pkg.FhirVersion430
 
-			if resourceId == nil || len(*resourceId) == 0 {
-				return "", false
-			}
-			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
-		})
+		patientIds, err = parse430Bundle(bundleFile)
+		bundleFile.Seek(0, io.SeekStart)
+
 	}
-	bundleFile.Seek(0, io.SeekStart)
-
-	if patientIds == nil || len(patientIds) == 0 {
+	if err != nil {
+		//failed to parse the bundle as 401 and 430, return an error
+		return "", "", fmt.Errorf("could not determine bundle version", err)
+	} else if patientIds == nil || len(patientIds) == 0 {
 		return "", "", fmt.Errorf("could not determine patient id")
 	} else {
 		//reset reader
@@ -192,4 +160,54 @@ func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context,
 		Logger:           globalLogger,
 		SourceCredential: sourceCreds,
 	}, nil, nil
+}
+
+//TODO: find a better, more generic way to do this.
+
+func parse401Bundle(bundleFile *os.File) ([]string, error) {
+	bundle401Data := fhir401.Bundle{}
+	//try parsing the bundle as a 401 bundle
+	if err := base.ParseBundle(bundleFile, &bundle401Data); err == nil {
+		patientIds := lo.FilterMap[fhir401.BundleEntry, string](bundle401Data.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (string, bool) {
+			parsedResource, err := fhir401utils.MapToResource(bundleEntry.Resource, false)
+			if err != nil {
+				return "", false
+			}
+			typedResource := parsedResource.(models.ResourceInterface)
+			resourceType, resourceId := typedResource.ResourceRef()
+
+			if resourceId == nil || len(*resourceId) == 0 {
+				return "", false
+			}
+			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
+		})
+
+		return patientIds, nil
+	} else {
+		return nil, err
+	}
+
+}
+
+func parse430Bundle(bundleFile *os.File) ([]string, error) {
+	bundle430Data := fhir430.Bundle{}
+	//try parsing the bundle as a 430 bundle
+	if err := base.ParseBundle(bundleFile, &bundle430Data); err == nil {
+		patientIds := lo.FilterMap[fhir430.BundleEntry, string](bundle430Data.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (string, bool) {
+			parsedResource, err := fhir430utils.MapToResource(bundleEntry.Resource, false)
+			if err != nil {
+				return "", false
+			}
+			typedResource := parsedResource.(models.ResourceInterface)
+			resourceType, resourceId := typedResource.ResourceRef()
+
+			if resourceId == nil || len(*resourceId) == 0 {
+				return "", false
+			}
+			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
+		})
+		return patientIds, nil
+	} else {
+		return nil, err
+	}
 }
