@@ -70,6 +70,9 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	//lookup table for every resource ID found by Fasten
 	lookupResourceReferences := map[string]bool{}
 
+	//lookup table for bundle internal references -> relative references (used heavily by file Bundles)
+	internalFragmentReferenceLookup := map[string]string{}
+
 	switch bundleType {
 	case pkg.FhirVersion430:
 		bundle430Data := fhir430.Bundle{}
@@ -103,13 +106,13 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 		}
-		rawResourceList, err = client.ProcessBundle(bundle401Data)
+		rawResourceList, internalFragmentReferenceLookup, err = client.ProcessBundle(bundle401Data)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
 		}
 
 		for _, apiModel := range rawResourceList {
-			err = client.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
+			err = client.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[apiModel.SourceResourceType] = err
 				continue

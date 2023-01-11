@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/gofhir-models/fhir401"
+	"strings"
 	"time"
 )
 
@@ -14,7 +15,7 @@ This additional data includes:
 - "sort date" - a date when this resource event occurred
 - "sort title" - a title for this resource event.
 */
-func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resource *models.RawResourceFhir) {
+func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resource *models.RawResourceFhir, internalFragmentReferenceLookup map[string]string) {
 	referencedResources := []string{}
 	var sortTitle *string
 	var sortDate *string
@@ -1315,6 +1316,17 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 	// remove all null values, remove all duplicates
 	cleanResourceRefs := removeDuplicateStr(referencedResources)
+
+	//before storing resource references, we need to determine if any of them are internal bundle references, and replace them if so.
+	for ndx, _ := range cleanResourceRefs {
+		internalRef := cleanResourceRefs[ndx]
+		if strings.HasPrefix(internalRef, "urn:uuid:") {
+			if relativeReference, relativeReferenceOk := internalFragmentReferenceLookup[internalRef]; relativeReferenceOk {
+				//replace internal reference with relative reference
+				cleanResourceRefs[ndx] = relativeReference
+			}
+		}
+	}
 	resource.ReferencedResources = cleanResourceRefs
 
 	if sortTitle != nil {

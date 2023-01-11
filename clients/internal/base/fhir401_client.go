@@ -47,7 +47,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 		UpdatedResources: []string{},
 	}
 
-	rawResourceModels, err := c.ProcessBundle(bundle.(fhir401.Bundle))
+	rawResourceModels, internalFragmentReferenceLookup, err := c.ProcessBundle(bundle.(fhir401.Bundle))
 	if err != nil {
 		c.Logger.Infof("An error occurred while processing patient bundle %s", c.SourceCredential.GetPatientId())
 		return summary, err
@@ -60,7 +60,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	lookupResourceReferences := map[string]bool{}
 
 	for _, apiModel := range rawResourceModels {
-		err = c.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
+		err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 		if err != nil {
 			syncErrors[apiModel.SourceResourceType] = err
 			continue
@@ -119,7 +119,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			syncErrors[resourceType] = err
 			continue
 		}
-		rawResourceModels, err := c.ProcessBundle(bundle.(fhir401.Bundle))
+		rawResourceModels, internalFragmentReferenceLookup, err := c.ProcessBundle(bundle.(fhir401.Bundle))
 		if err != nil {
 			c.Logger.Infof("An error occurred while processing %s bundle %s", resourceType, c.SourceCredential.GetPatientId())
 			syncErrors[resourceType] = err
@@ -128,7 +128,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		summary.TotalResources += len(rawResourceModels)
 
 		for _, apiModel := range rawResourceModels {
-			err = c.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
+			err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
@@ -180,7 +180,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			}
 
 			//process resource will store the resource in the database, and potentially extract new resources we need to process.
-			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, &summary)
+			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, &summary)
 			if err != nil {
 				syncErrors[pendingResourceId] = err
 				continue
@@ -278,7 +278,16 @@ func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, err
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.RawResourceFhir, error) {
+func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.RawResourceFhir, map[string]string, error) {
+
+	//bundles may contain references to resources in one of 3 formats: - https://www.hl7.org/fhir/references.html#literal
+	//
+	// - an absolute URL
+	// - a relative URL, which is relative to the Service Base URL, or, if processing a resource from a bundle, which is relative to the base URL implied by the Bundle.entry.fullUrl (see Resolving References in Bundles)
+	// - an internal fragment reference (see "Contained Resources" below) -- eg. urn:uuid:c088b7af-fc41-43cc-ab80-4a9ab8d47cd9
+	//
+	// this last case is complicated, so we'll create a internal -> relative map that we can use when we find `urn:uuid:` references.
+	internalFragmentReferenceLookup := map[string]string{}
 
 	//process each entry in bundle
 	wrappedResourceModels := lo.FilterMap[fhir401.BundleEntry, models.RawResourceFhir](bundle.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (models.RawResourceFhir, bool) {
@@ -296,6 +305,10 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 		//	}
 		//}
 
+		if bundleEntry.FullUrl != nil && strings.HasPrefix(*bundleEntry.FullUrl, "urn:uuid:") {
+			internalFragmentReferenceLookup[*bundleEntry.FullUrl] = fmt.Sprintf("%s/%s", resourceType, *resourceId)
+		}
+
 		wrappedResourceModel := models.RawResourceFhir{
 			SourceResourceID:   *resourceId,
 			SourceResourceType: resourceType,
@@ -304,18 +317,18 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 
 		return wrappedResourceModel, true
 	})
-	return wrappedResourceModels, nil
+	return wrappedResourceModels, internalFragmentReferenceLookup, nil
 }
 
 //process a resource by:
 //- inserting into the database
 //- increment the updatedResources list if the resource has been updated
 //- extract all external references from the resource payload (adding the the lookup table)
-func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, lookupReferencedResources map[string]bool, summary *models.UpsertSummary) error {
-	lookupReferencedResources[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
+func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup map[string]bool, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) error {
+	referencedResourcesLookup[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
-	SourceClientFHIR401ExtractResourceMetadata(resourceObj, &resource)
+	SourceClientFHIR401ExtractResourceMetadata(resourceObj, &resource, internalFragmentReferenceLookup)
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)
 	if err != nil {
@@ -326,8 +339,8 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	}
 
 	for _, ref := range resource.ReferencedResources {
-		if _, lookupOk := lookupReferencedResources[ref]; !lookupOk {
-			lookupReferencedResources[ref] = false //this reference has not been seen before, set to false (pending)
+		if _, lookupOk := referencedResourcesLookup[ref]; !lookupOk {
+			referencedResourcesLookup[ref] = false //this reference has not been seen before, set to false (pending)
 		}
 	}
 	return nil
