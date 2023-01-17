@@ -13,6 +13,9 @@ import (
 /*
 https://allscripts.vanillacommunities.com/search?query=sandbox&scope=site&source=community
 https://open.allscripts.com/fhirendpoints
+
+Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
+so we need to swap the code for the access_token on the server
 */
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
@@ -21,6 +24,7 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/authorize"
 	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/token"
 
+	sourceDef.Issuer = "https://open.allscripts.com"
 	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/*.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
@@ -33,6 +37,7 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 		sourceDef.ClientId = "7c4c102f-73a8-444b-8cd1-a8066c66c202"
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.Confidential = true
 
 	sourceDef.Display = "Allscripts - Veradigm (Sandbox)"
 	sourceDef.SourceType = pkg.SourceTypeAllscripts

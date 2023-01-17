@@ -21,6 +21,9 @@ type SourceClientAllscripts struct {
 /*
 https://allscripts.vanillacommunities.com/search?query=sandbox&scope=site&source=community
 https://open.allscripts.com/fhirendpoints
+
+Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
+so we need to swap the code for the access_token on the server
 */
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
