@@ -10,6 +10,7 @@ type SourceType string
 const (
 	SourceTypeManual SourceType = "manual"
 	// platform
+	SourceTypeAllscripts    SourceType = "allscripts"
 	SourceTypeCareevolution SourceType = "careevolution"
 	SourceTypeCerner        SourceType = "cerner"
 	SourceTypeEpic          SourceType = "epic"
