@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4/metadata
-func GetSourceBoulderCommunityHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceBoulderCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prevprox.bch.org/FHIRproxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prevprox.bch.org/FHIRproxyPRD/oauth2/token"
 
 	sourceDef.Audience = "https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBoulderCommunityHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Boulder Community Health"

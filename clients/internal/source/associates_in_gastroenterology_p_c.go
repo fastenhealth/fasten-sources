@@ -18,7 +18,6 @@ type SourceClientAssociatesInGastroenterologyPC struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e6a2c484-1066-4f3f-be44-cc7c2a79d6c3/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e6a2c484-1066-4f3f-be44-cc7c2a79d6c3/metadata
 func GetSourceClientAssociatesInGastroenterologyPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

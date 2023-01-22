@@ -18,8 +18,7 @@ type SourceClientPulmonaryAndCriticalCareSpecialistsOfPrincetonPC struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/b4fc8c7a-4685-46ad-866e-a6b49b921c08/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/b4fc8c7a-4685-46ad-866e-a6b49b921c08/metadata
+// https://fhir-myrecord.cerner.com/r4/6897a1cf-7b28-4725-822c-72d4d0de5b3a/metadata
 func GetSourceClientPulmonaryAndCriticalCareSpecialistsOfPrincetonPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

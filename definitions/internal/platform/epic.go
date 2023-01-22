@@ -13,7 +13,7 @@ import (
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/metadata
 // https://fhir.epic.com/Documentation?docId=testpatients
-func GetSourceEpic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceEpic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/token"
@@ -28,10 +28,9 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefi
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4"
-	if env == pkg.FastenLighthouseEnvProduction {
-		sourceDef.ClientId = "e749a18a-bfad-4987-ab05-18e28240736a"
-	} else {
-		sourceDef.ClientId = "764e5f3f-c881-4029-8f36-15ea5c2eb418"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeEpic]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 

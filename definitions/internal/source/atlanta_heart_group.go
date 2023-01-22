@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/metadata
-func GetSourceAtlantaHeartGroup(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceAtlantaHeartGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceAtlantaHeartGroup(env pkg.FastenLighthouseEnvType) (models.Lightho
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAtlantaHeartGroup]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Atlanta Heart Group"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaHeartGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

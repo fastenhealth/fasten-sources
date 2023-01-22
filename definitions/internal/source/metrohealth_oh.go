@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4/metadata
-func GetSourceMetrohealthOh(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMetrohealthOh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.metrohealth.org/fhir_prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.metrohealth.org/fhir_prd/oauth2/token"
 
 	sourceDef.Audience = "https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMetrohealthOh]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "MetroHealth - OH"

@@ -18,7 +18,6 @@ type SourceClientNeilSOzerMdPa struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/fd185037-bf1a-4d86-8438-6657be53ce04/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/fd185037-bf1a-4d86-8438-6657be53ce04/metadata
 func GetSourceClientNeilSOzerMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -18,7 +18,6 @@ type SourceClientCelebrationMinimallyInvasiveSpineInstitute struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/c4f78536-22cf-4253-bd59-727d2da9d3dc/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/c4f78536-22cf-4253-bd59-727d2da9d3dc/metadata
 func GetSourceClientCelebrationMinimallyInvasiveSpineInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

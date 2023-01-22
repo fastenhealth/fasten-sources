@@ -18,7 +18,6 @@ type SourceClientGarlandIsdClinic struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/48aa961c-db21-4ffc-8eb3-e4c75d7c7c56/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/48aa961c-db21-4ffc-8eb3-e4c75d7c7c56/metadata
 func GetSourceClientGarlandIsdClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

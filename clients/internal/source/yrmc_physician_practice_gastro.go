@@ -18,8 +18,7 @@ type SourceClientYrmcPhysicianPracticeGastro struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/c0ce24ae-0e9a-4a9e-abb4-e1f717f35aa4/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/c0ce24ae-0e9a-4a9e-abb4-e1f717f35aa4/metadata
+// https://fhir-myrecord.cerner.com/r4/6b255ed2-569c-496e-a6f5-a2e42babd9cb/metadata
 func GetSourceClientYrmcPhysicianPracticeGastro(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

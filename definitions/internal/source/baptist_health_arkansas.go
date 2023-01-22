@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4/metadata
-func GetSourceBaptistHealthArkansas(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceBaptistHealthArkansas(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBaptistHealthArkansas]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Baptist Health (Arkansas)"

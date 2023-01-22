@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ucsoap.uams.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ucsoap.uams.edu/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeUniversityOfArkansasForMedicalSciences]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University of Arkansas for Medical Sciences"

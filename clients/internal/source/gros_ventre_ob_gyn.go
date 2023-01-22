@@ -18,7 +18,6 @@ type SourceClientGrosVentreObGyn struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/4ea2101b-bb2d-4211-bc53-3120cb72bcc5/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/4ea2101b-bb2d-4211-bc53-3120cb72bcc5/metadata
 func GetSourceClientGrosVentreObGyn(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

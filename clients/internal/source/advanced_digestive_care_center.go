@@ -18,7 +18,6 @@ type SourceClientAdvancedDigestiveCareCenter struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/2eaec831-8bc2-4f3d-9dea-0cf59436cebb/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/2eaec831-8bc2-4f3d-9dea-0cf59436cebb/metadata
 func GetSourceClientAdvancedDigestiveCareCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

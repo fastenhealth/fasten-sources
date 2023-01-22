@@ -18,7 +18,6 @@ type SourceClientExcelaHealth struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/4a05505e-47a0-4af0-ad3e-f068134bca65/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/4a05505e-47a0-4af0-ad3e-f068134bca65/metadata
 func GetSourceClientExcelaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

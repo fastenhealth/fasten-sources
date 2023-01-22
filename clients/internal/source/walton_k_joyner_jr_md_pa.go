@@ -18,7 +18,6 @@ type SourceClientWaltonKJoynerJrMdPa struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/wpaHY20Tn18Go7X_M_EdDSJM9VaOhXiY/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/wpaHY20Tn18Go7X_M_EdDSJM9VaOhXiY/metadata
 func GetSourceClientWaltonKJoynerJrMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

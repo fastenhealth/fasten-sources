@@ -18,7 +18,6 @@ type SourceClientAkronChildrensHospital struct {
 	models.SourceClient
 }
 
-// https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientAkronChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

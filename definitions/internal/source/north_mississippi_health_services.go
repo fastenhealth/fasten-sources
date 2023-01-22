@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4/metadata
-func GetSourceNorthMississippiHealthServices(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNorthMississippiHealthServices(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/token"
 
 	sourceDef.Audience = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNorthMississippiHealthServices]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "North Mississippi Health Services"

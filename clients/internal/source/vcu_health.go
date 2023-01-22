@@ -18,7 +18,6 @@ type SourceClientVcuHealth struct {
 	models.SourceClient
 }
 
-// https://epicproxy.et1200.epichosted.com/OAuth2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et1200.epichosted.com/OAuth2-PRD/api/FHIR/R4/metadata
 func GetSourceClientVcuHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

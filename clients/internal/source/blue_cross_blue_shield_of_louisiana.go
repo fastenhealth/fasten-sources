@@ -18,8 +18,7 @@ type SourceClientBlueCrossBlueShieldOfLouisiana struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/f7a07b30-b746-4472-9c87-ea9b751a3943/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/f7a07b30-b746-4472-9c87-ea9b751a3943/metadata
+// https://fhir-myrecord.cerner.com/r4/b6d93b41-a32b-4dd5-9e70-bf8701bff59e/metadata
 func GetSourceClientBlueCrossBlueShieldOfLouisiana(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

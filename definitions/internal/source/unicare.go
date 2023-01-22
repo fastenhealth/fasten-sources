@@ -10,21 +10,24 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://patient360c.unicare.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.unicare.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.unicare.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceUnicare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := GetSourceAnthem(env)
+func GetSourceUnicare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := GetSourceAnthem(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://patient360c.unicare.com/P360Member/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://patient360c.unicare.com/P360Member/identityserver/connect/token"
 
 	sourceDef.Audience = "https://patient360c.unicare.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360c.unicare.com/P360Member/api/fhir-r4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeUnicare]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 
 	sourceDef.Display = "Unicare"
 	sourceDef.SourceType = pkg.SourceTypeUnicare
-	sourceDef.Category = []string{"Insurance"}
+	sourceDef.SecretKeyPrefix = "careevolution"
 
 	return sourceDef, err
 }

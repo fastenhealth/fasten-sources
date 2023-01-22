@@ -11,22 +11,24 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/e6567e17-7548-4791-8688-4e41c1c041ad/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/e6567e17-7548-4791-8688-4e41c1c041ad/metadata
-func GetSourceDrDonaldHuang(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
-	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/e6567e17-7548-4791-8688-4e41c1c041ad/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
-	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/e6567e17-7548-4791-8688-4e41c1c041ad/protocols/oauth2/profiles/smart-v1/token"
+// https://fhir-myrecord.cerner.com/r4/2da544c8-ef40-4e26-86e5-29350376d197/metadata
+func GetSourceDrDonaldHuang(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/2da544c8-ef40-4e26-86e5-29350376d197/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/2da544c8-ef40-4e26-86e5-29350376d197/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/e6567e17-7548-4791-8688-4e41c1c041ad"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/2da544c8-ef40-4e26-86e5-29350376d197"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/e6567e17-7548-4791-8688-4e41c1c041ad"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/2da544c8-ef40-4e26-86e5-29350376d197"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeDrDonaldHuang]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Dr. Donald Huang"
 	sourceDef.SourceType = pkg.SourceTypeDrDonaldHuang
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -18,7 +18,6 @@ type SourceClientBoyleHeightsNephrology struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/metadata
 func GetSourceClientBoyleHeightsNephrology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

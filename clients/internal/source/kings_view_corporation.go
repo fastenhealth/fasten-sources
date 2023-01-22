@@ -18,7 +18,6 @@ type SourceClientKingsViewCorporation struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e34bc0c3-72df-4049-b436-4546b26f4dd2/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e34bc0c3-72df-4049-b436-4546b26f4dd2/metadata
 func GetSourceClientKingsViewCorporation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

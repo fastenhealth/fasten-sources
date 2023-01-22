@@ -18,7 +18,6 @@ type SourceClientStLouisKansasCityCarpentersRegionalCouncil struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/96697297-dedb-4b9a-a814-def7ebf7578f/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/96697297-dedb-4b9a-a814-def7ebf7578f/metadata
 func GetSourceClientStLouisKansasCityCarpentersRegionalCouncil(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/76bea657-435e-4d62-9079-4f5c15d4a22d/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/76bea657-435e-4d62-9079-4f5c15d4a22d/metadata
-func GetSourceDrPepperSnappleGroupAspers(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceDrPepperSnappleGroupAspers(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/76bea657-435e-4d62-9079-4f5c15d4a22d/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/76bea657-435e-4d62-9079-4f5c15d4a22d/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceDrPepperSnappleGroupAspers(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/76bea657-435e-4d62-9079-4f5c15d4a22d"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/76bea657-435e-4d62-9079-4f5c15d4a22d"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeDrPepperSnappleGroupAspers]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Dr Pepper Snapple Group - Aspers"
 	sourceDef.SourceType = pkg.SourceTypeDrPepperSnappleGroupAspers
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

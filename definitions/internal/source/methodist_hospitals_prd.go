@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4/.well-known/smart-configuration
 // https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4/metadata
-func GetSourceMethodistHospitalsPrd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMethodistHospitalsPrd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mychart.methodisthospitals.org/FHIR-ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mychart.methodisthospitals.org/FHIR-ARR/oauth2/token"
 
 	sourceDef.Audience = "https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMethodistHospitalsPrd]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Methodist Hospitals - PRD"

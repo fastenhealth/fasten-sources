@@ -18,7 +18,6 @@ type SourceClientRemiVistaInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e917cccf-ef86-42c5-a988-a3b636c7a1c6/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e917cccf-ef86-42c5-a988-a3b636c7a1c6/metadata
 func GetSourceClientRemiVistaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

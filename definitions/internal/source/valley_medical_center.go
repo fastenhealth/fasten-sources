@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceValleyMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceValleyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.valleymed.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.valleymed.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://FHIR.valleymed.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeValleyMedicalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Valley Medical Center"

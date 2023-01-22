@@ -11,23 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391/metadata
-func GetSourceHardinMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
-	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/0276a61d-cfb3-486e-9665-b29201df0391/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
-	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/0276a61d-cfb3-486e-9665-b29201df0391/protocols/oauth2/profiles/smart-v1/token"
-	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324/metadata
+func GetSourceHardinMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10063324/connect/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10063324/connect/token"
 
-	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHardinMedicalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
 
 	sourceDef.Display = "Hardin Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHardinMedicalCenter
 	sourceDef.Hidden = true
-	sourceDef.SecretKeyPrefix = "cerner"
+	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err
 }

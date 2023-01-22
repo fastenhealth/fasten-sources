@@ -18,7 +18,6 @@ type SourceClientTualityPhysiciansPc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/dab37ab4-940f-46d2-83dd-9830ab97c4d5/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/dab37ab4-940f-46d2-83dd-9830ab97c4d5/metadata
 func GetSourceClientTualityPhysiciansPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

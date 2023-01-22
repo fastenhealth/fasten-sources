@@ -18,7 +18,6 @@ type SourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDi
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776/metadata
 func GetSourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

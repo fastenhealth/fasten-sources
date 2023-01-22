@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceLifespan(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceLifespan(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://lsepprdsoap.lifespan.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://lsepprdsoap.lifespan.org/fhirproxy/oauth2/token"
 
 	sourceDef.Audience = "https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeLifespan]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Lifespan"

@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/4e25fccd-d74e-480d-8ad9-77a7a01a54de/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/4e25fccd-d74e-480d-8ad9-77a7a01a54de/metadata
-func GetSourceAzharKhanMdPc(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceAzharKhanMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/4e25fccd-d74e-480d-8ad9-77a7a01a54de/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/4e25fccd-d74e-480d-8ad9-77a7a01a54de/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceAzharKhanMdPc(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/4e25fccd-d74e-480d-8ad9-77a7a01a54de"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/4e25fccd-d74e-480d-8ad9-77a7a01a54de"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAzharKhanMdPc]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Azhar Khan MD PC"
 	sourceDef.SourceType = pkg.SourceTypeAzharKhanMdPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

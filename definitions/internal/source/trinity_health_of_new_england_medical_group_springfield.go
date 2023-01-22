@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4/metadata
-func GetSourceTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rmgpxy.riverbendmedical.com/fhir_proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rmgpxy.riverbendmedical.com/fhir_proxy/oauth2/token"
 
 	sourceDef.Audience = "https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Trinity Health of New England Medical Group Springfield"

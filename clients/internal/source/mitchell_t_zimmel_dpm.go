@@ -18,7 +18,6 @@ type SourceClientMitchellTZimmelDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/dd839e2d-c171-46e8-bad2-f7adc1f055dd/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/dd839e2d-c171-46e8-bad2-f7adc1f055dd/metadata
 func GetSourceClientMitchellTZimmelDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

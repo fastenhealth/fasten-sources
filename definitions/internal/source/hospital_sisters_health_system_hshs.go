@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4/metadata
-func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHospitalSistersHealthSystemHshs]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hospital Sisters Health System (HSHS)"

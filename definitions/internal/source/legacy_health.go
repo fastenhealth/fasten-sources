@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4/metadata
-func GetSourceLegacyHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceLegacyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeLegacyHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Legacy Health"

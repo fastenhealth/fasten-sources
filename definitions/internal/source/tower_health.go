@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicsoap.readinghospital.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.readinghospital.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceTowerHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceTowerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.readinghospital.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.readinghospital.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://epicsoap.readinghospital.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.readinghospital.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTowerHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Tower Health"

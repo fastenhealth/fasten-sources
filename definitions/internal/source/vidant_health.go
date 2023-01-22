@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4/metadata
-func GetSourceVidantHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceVidantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeVidantHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Vidant Health"

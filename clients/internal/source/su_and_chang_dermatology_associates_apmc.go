@@ -18,7 +18,6 @@ type SourceClientSuAndChangDermatologyAssociatesApmc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ee3151e0-eab6-428c-81ce-718262289f98/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/ee3151e0-eab6-428c-81ce-718262289f98/metadata
 func GetSourceClientSuAndChangDermatologyAssociatesApmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

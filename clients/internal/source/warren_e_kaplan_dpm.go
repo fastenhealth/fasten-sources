@@ -18,7 +18,6 @@ type SourceClientWarrenEKaplanDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/09ea3bf2-1790-4a4b-8cf3-6344789bb530/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/09ea3bf2-1790-4a4b-8cf3-6344789bb530/metadata
 func GetSourceClientWarrenEKaplanDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

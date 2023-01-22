@@ -18,7 +18,6 @@ type SourceClientCityOfHope struct {
 	models.SourceClient
 }
 
-// https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientCityOfHope(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4/metadata
-func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/token"
 
 	sourceDef.Audience = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeLeeHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Lee Health"

@@ -18,7 +18,6 @@ type SourceClientJewishFamilyServicesOfAtlanticAndCapeMayCounties struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/da70f33d-e31d-497a-8eef-34fb466312cb/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/da70f33d-e31d-497a-8eef-34fb466312cb/metadata
 func GetSourceClientJewishFamilyServicesOfAtlanticAndCapeMayCounties(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

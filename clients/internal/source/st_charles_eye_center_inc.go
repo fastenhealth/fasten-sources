@@ -18,7 +18,6 @@ type SourceClientStCharlesEyeCenterInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ae718b75-7880-43e4-bded-99af66193990/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/ae718b75-7880-43e4-bded-99af66193990/metadata
 func GetSourceClientStCharlesEyeCenterInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

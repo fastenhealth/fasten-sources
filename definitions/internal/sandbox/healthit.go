@@ -16,7 +16,7 @@ CFor demo users use Username: demouser Password: Demouser1!
 Mix of clinical and claim data - some synthetic, some de-identified.
 User associated with multiple patients, so the system prompts to chose one when using launch/patient
 */
-func GetSourceHealthit(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceHealthit(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://fhirsandbox.healthit.gov/open/r4/authorize"
 	sourceDef.TokenEndpoint = "https://fhirsandbox.healthit.gov/open/r4/token"
@@ -30,8 +30,9 @@ func GetSourceHealthit(env pkg.FastenLighthouseEnvType) (models.LighthouseSource
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirsandbox.healthit.gov/secure/r4/fhir"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = "9ad3ML0upIMiawLVdM5-DiPinGcv7M"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHealthit]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeHealthit))
 

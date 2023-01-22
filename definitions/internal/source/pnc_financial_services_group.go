@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda/metadata
-func GetSourcePncFinancialServicesGroup(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourcePncFinancialServicesGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourcePncFinancialServicesGroup(env pkg.FastenLighthouseEnvType) (models
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePncFinancialServicesGroup]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "PNC Financial Services Group"
 	sourceDef.SourceType = pkg.SourceTypePncFinancialServicesGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

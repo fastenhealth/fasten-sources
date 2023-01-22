@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.childrens.com/prd/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.childrens.com/prd/api/FHIR/R4/metadata
-func GetSourceChildrensHealthSystemOfTexas(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceChildrensHealthSystemOfTexas(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.childrens.com/prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.childrens.com/prd/oauth2/token"
 
 	sourceDef.Audience = "https://fhir.childrens.com/prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.childrens.com/prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeChildrensHealthSystemOfTexas]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Children's Health System of Texas"

@@ -18,7 +18,6 @@ type SourceClientMainehealth struct {
 	models.SourceClient
 }
 
-// https://fhir.mainehealth.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.mainehealth.org/FHIRPRD/api/FHIR/R4/metadata
 func GetSourceClientMainehealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

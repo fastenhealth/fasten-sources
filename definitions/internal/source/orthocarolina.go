@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceOrthocarolina(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceOrthocarolina(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/token"
 
 	sourceDef.Audience = "https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOrthocarolina]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OrthoCarolina"

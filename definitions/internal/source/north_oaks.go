@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4/.well-known/smart-configuration
 // https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4/metadata
-func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/token"
 
 	sourceDef.Audience = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNorthOaks]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "North Oaks"

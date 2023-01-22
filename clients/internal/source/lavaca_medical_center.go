@@ -18,7 +18,6 @@ type SourceClientLavacaMedicalCenter struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/91d3bb95-7713-4c15-beda-b8a73ec1b5e6/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/91d3bb95-7713-4c15-beda-b8a73ec1b5e6/metadata
 func GetSourceClientLavacaMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

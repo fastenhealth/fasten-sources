@@ -13,7 +13,7 @@ import (
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/.well-known/smart-configuration
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/metadata
 // https://fhir.careevolution.com/TestPatientAccounts.html
-func GetSourceCareevolution(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceCareevolution(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://fhir.careevolution.com/Master.Adapter1.WebClient/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.careevolution.com/Master.Adapter1.WebClient/identityserver/connect/token"
@@ -27,8 +27,9 @@ func GetSourceCareevolution(env pkg.FastenLighthouseEnvType) (models.LighthouseS
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = "12eb6280-c091-4c97-9c84-116c280fea18"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCareevolution]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCareevolution))
 	sourceDef.Confidential = true

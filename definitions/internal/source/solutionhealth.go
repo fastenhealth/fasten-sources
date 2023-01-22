@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4/metadata
-func GetSourceSolutionhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceSolutionhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/token"
 
 	sourceDef.Audience = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSolutionhealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "SolutionHealth"

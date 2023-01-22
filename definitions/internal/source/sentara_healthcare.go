@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceSentaraHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceSentaraHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.sentara.com/ARR-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.sentara.com/ARR-FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSentaraHealthcare]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Sentara Healthcare"

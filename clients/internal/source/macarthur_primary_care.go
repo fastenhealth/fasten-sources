@@ -18,8 +18,7 @@ type SourceClientMacarthurPrimaryCare struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/RSiVkOMaHv5sLlFx1B8RLDUMq_Pfsl_h/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/RSiVkOMaHv5sLlFx1B8RLDUMq_Pfsl_h/metadata
+// https://fhir-myrecord.cerner.com/r4/B5Y5ZienVxjgCQmW_iKfuE1CW27UK8yA/metadata
 func GetSourceClientMacarthurPrimaryCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

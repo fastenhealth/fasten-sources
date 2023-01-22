@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://soap.wellmont.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/token"
 
 	sourceDef.Audience = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBalladHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Ballad Health"

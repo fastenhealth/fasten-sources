@@ -12,7 +12,7 @@ import (
 
 // https://api.logicahealth.org/fastenhealth/open/.well-known/smart-configuration
 // https://developer.cigna.com/service-apis/patient-access/sandbox#How-to-Use-the-Sandbox-Sandbox-Test-Users
-func GetSourceLogica(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceLogica(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://auth.logicahealth.org/authorize"
 	sourceDef.TokenEndpoint = "https://auth.logicahealth.org/token"
@@ -27,10 +27,9 @@ func GetSourceLogica(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.logicahealth.org/fastenhealth/data"
-	if env == pkg.FastenLighthouseEnvProduction {
-		sourceDef.ClientId = "12b14c49-a4da-42f7-9e6f-2f19db622962"
-	} else {
-		sourceDef.ClientId = "12b14c49-a4da-42f7-9e6f-2f19db622962"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeLogica]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeLogica))
 

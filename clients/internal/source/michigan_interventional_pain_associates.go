@@ -18,7 +18,6 @@ type SourceClientMichiganInterventionalPainAssociates struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/772df939-8efc-47b6-b42b-02586e91e2af/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/772df939-8efc-47b6-b42b-02586e91e2af/metadata
 func GetSourceClientMichiganInterventionalPainAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

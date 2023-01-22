@@ -18,7 +18,6 @@ type SourceClientNeurologyLlp struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/41c6ed25-3515-4b65-ae90-1ce32a76404d/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/41c6ed25-3515-4b65-ae90-1ce32a76404d/metadata
 func GetSourceClientNeurologyLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

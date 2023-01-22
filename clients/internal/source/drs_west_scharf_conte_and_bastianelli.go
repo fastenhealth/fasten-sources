@@ -18,7 +18,6 @@ type SourceClientDrsWestScharfConteAndBastianelli struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/20f47704-6d52-45dd-af98-57014a72c180/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/20f47704-6d52-45dd-af98-57014a72c180/metadata
 func GetSourceClientDrsWestScharfConteAndBastianelli(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -18,7 +18,6 @@ type SourceClientStanleySShamaDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/60738f4a-38f3-44cc-a527-32ebee139f3f/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/60738f4a-38f3-44cc-a527-32ebee139f3f/metadata
 func GetSourceClientStanleySShamaDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

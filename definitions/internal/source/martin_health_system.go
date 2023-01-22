@@ -13,14 +13,18 @@ import (
 
 // https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceMartinHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMartinHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prodrx919.martinhealth.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prodrx919.martinhealth.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMartinHealthSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Martin Health System"

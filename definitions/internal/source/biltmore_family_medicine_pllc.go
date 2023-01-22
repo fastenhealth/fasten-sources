@@ -13,8 +13,8 @@ import (
 
 // https://fhir-myrecord.cerner.com/r4/a8569da8-2be1-4a1c-a10c-8effbdf16e4c/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/a8569da8-2be1-4a1c-a10c-8effbdf16e4c/metadata
-func GetSourceBiltmoreFamilyMedicinePllc(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceBiltmoreFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/a8569da8-2be1-4a1c-a10c-8effbdf16e4c/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/a8569da8-2be1-4a1c-a10c-8effbdf16e4c/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +22,14 @@ func GetSourceBiltmoreFamilyMedicinePllc(env pkg.FastenLighthouseEnvType) (model
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/a8569da8-2be1-4a1c-a10c-8effbdf16e4c"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/a8569da8-2be1-4a1c-a10c-8effbdf16e4c"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBiltmoreFamilyMedicinePllc]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Biltmore Family Medicine, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeBiltmoreFamilyMedicinePllc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

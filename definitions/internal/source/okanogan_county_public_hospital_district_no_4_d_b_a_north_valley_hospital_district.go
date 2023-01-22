@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776/metadata
-func GetSourceOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/3886e5cc-74f6-4658-9302-8c8ffe285776/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/3886e5cc-74f6-4658-9302-8c8ffe285776/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistr
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Okanogan County Public Hospital District No 4 d/b/a North Valley Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

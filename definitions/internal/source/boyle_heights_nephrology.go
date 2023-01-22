@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/metadata
-func GetSourceBoyleHeightsNephrology(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceBoyleHeightsNephrology(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceBoyleHeightsNephrology(env pkg.FastenLighthouseEnvType) (models.Li
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/34e9cf55-d4f0-4e9c-8676-4a0b3dc4bae0"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBoyleHeightsNephrology]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Boyle Heights Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeBoyleHeightsNephrology
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -18,7 +18,6 @@ type SourceClientMontgomeryPulmonaryCons struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/94cd7aa5-f2cb-40d7-948e-fda3af64de2b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/94cd7aa5-f2cb-40d7-948e-fda3af64de2b/metadata
 func GetSourceClientMontgomeryPulmonaryCons(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -18,7 +18,6 @@ type SourceClientDeltaMedicalClinic struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/98457c6b-63ef-4752-8922-1770c81bf95b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/98457c6b-63ef-4752-8922-1770c81bf95b/metadata
 func GetSourceClientDeltaMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

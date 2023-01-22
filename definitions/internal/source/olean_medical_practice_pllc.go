@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/6edd93a1-7391-4938-bcd9-ebe248fd573e/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/6edd93a1-7391-4938-bcd9-ebe248fd573e/metadata
-func GetSourceOleanMedicalPracticePllc(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceOleanMedicalPracticePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/6edd93a1-7391-4938-bcd9-ebe248fd573e/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/6edd93a1-7391-4938-bcd9-ebe248fd573e/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceOleanMedicalPracticePllc(env pkg.FastenLighthouseEnvType) (models.
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/6edd93a1-7391-4938-bcd9-ebe248fd573e"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/6edd93a1-7391-4938-bcd9-ebe248fd573e"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOleanMedicalPracticePllc]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Olean Medical Practice PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOleanMedicalPracticePllc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

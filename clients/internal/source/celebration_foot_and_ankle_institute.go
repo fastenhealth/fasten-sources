@@ -18,7 +18,6 @@ type SourceClientCelebrationFootAndAnkleInstitute struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/d4005c17-185b-4cb4-bca7-c5c6e6a820d3/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/d4005c17-185b-4cb4-bca7-c5c6e6a820d3/metadata
 func GetSourceClientCelebrationFootAndAnkleInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

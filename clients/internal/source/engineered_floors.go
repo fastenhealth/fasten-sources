@@ -18,7 +18,6 @@ type SourceClientEngineeredFloors struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/a81eaf84-1569-4eed-953e-1a3a88244dfa/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/a81eaf84-1569-4eed-953e-1a3a88244dfa/metadata
 func GetSourceClientEngineeredFloors(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

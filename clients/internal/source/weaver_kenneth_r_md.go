@@ -18,7 +18,6 @@ type SourceClientWeaverKennethRMd struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/5285d7cf-1d9d-45e6-b50a-a38a52ab319a/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/5285d7cf-1d9d-45e6-b50a-a38a52ab319a/metadata
 func GetSourceClientWeaverKennethRMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

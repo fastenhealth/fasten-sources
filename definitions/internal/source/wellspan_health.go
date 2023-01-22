@@ -11,21 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
-// https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceWellspanHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://interconnect.wellspan.org/interconnect-prd-oauth2/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://interconnect.wellspan.org/interconnect-prd-oauth2/oauth2/token"
+// https://fhir-myrecord.cerner.com/r4/fd4bb206-9367-4644-b3c3-c1a6e26523f4/metadata
+func GetSourceWellspanHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/fd4bb206-9367-4644-b3c3-c1a6e26523f4/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/fd4bb206-9367-4644-b3c3-c1a6e26523f4/protocols/oauth2/profiles/smart-v1/token"
+	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/fd4bb206-9367-4644-b3c3-c1a6e26523f4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/fd4bb206-9367-4644-b3c3-c1a6e26523f4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeWellspanHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "WellSpan Health"
 	sourceDef.SourceType = pkg.SourceTypeWellspanHealth
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err
 }

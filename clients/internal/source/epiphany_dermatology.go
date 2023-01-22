@@ -18,7 +18,6 @@ type SourceClientEpiphanyDermatology struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/f8efb58d-3fee-4bb4-bfc6-f9db5bb210e4/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/f8efb58d-3fee-4bb4-bfc6-f9db5bb210e4/metadata
 func GetSourceClientEpiphanyDermatology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

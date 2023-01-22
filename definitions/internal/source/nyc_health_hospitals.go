@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceNycHealthHospitals(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNycHealthHospitals(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxypda.nychhc.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxypda.nychhc.org/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxypda.nychhc.org/FHIRProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNycHealthHospitals]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "NYC Health + Hospitals"

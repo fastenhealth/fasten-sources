@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4/metadata
-func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/token"
 
 	sourceDef.Audience = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTheOhioStateUniversityWexnerMedicalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "The Ohio State University Wexner Medical Center"

@@ -18,7 +18,6 @@ type SourceClientMosaicLifeCare struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/uBptauhAUxqfDlGzLHbgg1dmomcdTBGI/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/uBptauhAUxqfDlGzLHbgg1dmomcdTBGI/metadata
 func GetSourceClientMosaicLifeCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

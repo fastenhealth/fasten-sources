@@ -18,7 +18,6 @@ type SourceClientAtlantaNeuromuscularDiagnostics struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314/metadata
 func GetSourceClientAtlantaNeuromuscularDiagnostics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

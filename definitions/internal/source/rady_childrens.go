@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4/.well-known/smart-configuration
 // https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4/metadata
-func GetSourceRadyChildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceRadyChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epcppxl1.rchsd.org/fhirprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epcppxl1.rchsd.org/fhirprd/oauth2/token"
 
 	sourceDef.Audience = "https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeRadyChildrens]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Rady Children's"

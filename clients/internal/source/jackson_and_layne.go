@@ -18,7 +18,6 @@ type SourceClientJacksonAndLayne struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/8fd847b5-a8e2-410c-bf48-a2596fa87f4a/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/8fd847b5-a8e2-410c-bf48-a2596fa87f4a/metadata
 func GetSourceClientJacksonAndLayne(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

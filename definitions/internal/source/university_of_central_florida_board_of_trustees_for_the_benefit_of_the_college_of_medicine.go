@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/metadata
-func GetSourceUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollege
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "University of Central Florida Board of Trustees, for the benefit of the College of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4/metadata
-func GetSourceKetteringHealthNetwork(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceKetteringHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://KHNARR.KETTHEALTH.COM/FHIR-PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://KHNARR.KETTHEALTH.COM/FHIR-PROD/oauth2/token"
 
 	sourceDef.Audience = "https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeKetteringHealthNetwork]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Kettering Health Network"

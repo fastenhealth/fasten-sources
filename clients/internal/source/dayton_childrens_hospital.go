@@ -18,7 +18,6 @@ type SourceClientDaytonChildrensHospital struct {
 	models.SourceClient
 }
 
-// https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4/metadata
 func GetSourceClientDaytonChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

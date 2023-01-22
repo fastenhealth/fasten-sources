@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4/metadata
-func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/token"
 
 	sourceDef.Audience = "https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeChildrenssHealthcareOfAtlanta]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Childrens's Healthcare of Atlanta"

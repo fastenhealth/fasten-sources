@@ -18,7 +18,6 @@ type SourceClientCompsych struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/6afc702d-7c56-467a-aedf-49ea8677d023/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/6afc702d-7c56-467a-aedf-49ea8677d023/metadata
 func GetSourceClientCompsych(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

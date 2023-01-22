@@ -18,7 +18,6 @@ type SourceClientMobileDoctors struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/6efe5d3f-6bb6-43d8-8f5f-20475bdac09b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/6efe5d3f-6bb6-43d8-8f5f-20475bdac09b/metadata
 func GetSourceClientMobileDoctors(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4/metadata
-func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/token"
 
 	sourceDef.Audience = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMemorialHospitalAndHealthCareCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Memorial Hospital and Health Care Center"

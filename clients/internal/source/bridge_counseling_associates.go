@@ -18,7 +18,6 @@ type SourceClientBridgeCounselingAssociates struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/f9a6475a-3dbd-47b2-979a-55064cfdbd51/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/f9a6475a-3dbd-47b2-979a-55064cfdbd51/metadata
 func GetSourceClientBridgeCounselingAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

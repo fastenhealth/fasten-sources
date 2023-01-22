@@ -18,7 +18,6 @@ type SourceClientChicagoWellnessCenterCoalition struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/01e186a8-87ec-4e25-bc02-8b7eb7d8fa78/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/01e186a8-87ec-4e25-bc02-8b7eb7d8fa78/metadata
 func GetSourceClientChicagoWellnessCenterCoalition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

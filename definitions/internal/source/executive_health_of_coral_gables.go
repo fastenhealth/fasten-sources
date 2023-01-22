@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/3ed38101-a312-4a4c-8cad-0627a5c63d9e/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/3ed38101-a312-4a4c-8cad-0627a5c63d9e/metadata
-func GetSourceExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/3ed38101-a312-4a4c-8cad-0627a5c63d9e/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/3ed38101-a312-4a4c-8cad-0627a5c63d9e/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/3ed38101-a312-4a4c-8cad-0627a5c63d9e"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/3ed38101-a312-4a4c-8cad-0627a5c63d9e"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeExecutiveHealthOfCoralGables]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Executive Health of Coral Gables"
 	sourceDef.SourceType = pkg.SourceTypeExecutiveHealthOfCoralGables
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

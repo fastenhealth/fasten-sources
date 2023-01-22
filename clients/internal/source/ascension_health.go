@@ -18,10 +18,9 @@ type SourceClientAscensionHealth struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47/metadata
+// https://fhirtw.genesys.org/FHIR/metadata
 func GetSourceClientAscensionHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientAscensionHealth{baseClient}, updatedSourceCred, err
 }

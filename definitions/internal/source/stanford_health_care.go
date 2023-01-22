@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://sfd.stanfordmed.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://sfd.stanfordmed.org/FHIR/api/FHIR/R4/metadata
-func GetSourceStanfordHealthCare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceStanfordHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sfd.stanfordmed.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sfd.stanfordmed.org/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://sfd.stanfordmed.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sfd.stanfordmed.org/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeStanfordHealthCare]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Stanford Health Care"

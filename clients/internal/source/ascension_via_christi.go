@@ -18,7 +18,6 @@ type SourceClientAscensionViaChristi struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/79a09fdd-d4ce-4b27-b1e2-f7fe68705a34/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/79a09fdd-d4ce-4b27-b1e2-f7fe68705a34/metadata
 func GetSourceClientAscensionViaChristi(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

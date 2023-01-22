@@ -19,7 +19,7 @@ so we need to swap the code for the access_token on the server
 */
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
-func GetSourceAllscripts(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/authorize"
 	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/token"
@@ -33,8 +33,9 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType) (models.LighthouseSour
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = "7c4c102f-73a8-444b-8cd1-a8066c66c202"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAllscripts]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
 	sourceDef.Confidential = true

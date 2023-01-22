@@ -18,7 +18,6 @@ type SourceClientFortHealthcare struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/8F7ruIta-JA7ecm4ommy-Q50dF1FkFe4/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/8F7ruIta-JA7ecm4ommy-Q50dF1FkFe4/metadata
 func GetSourceClientFortHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

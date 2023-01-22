@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4/.well-known/smart-configuration
 // https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4/metadata
-func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/token"
 
 	sourceDef.Audience = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMayoClinic]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mayo Clinic"

@@ -18,7 +18,6 @@ type SourceClientTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners struc
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/89aa3c8a-5af5-4166-add0-a8ea5eb1afec/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/89aa3c8a-5af5-4166-add0-a8ea5eb1afec/metadata
 func GetSourceClientTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

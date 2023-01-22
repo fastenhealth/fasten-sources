@@ -18,7 +18,6 @@ type SourceClientEscambiaCountyHealthcareAuthority struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/a7b7f339-eea5-408f-8f14-ad4341b10c45/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/a7b7f339-eea5-408f-8f14-ad4341b10c45/metadata
 func GetSourceClientEscambiaCountyHealthcareAuthority(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

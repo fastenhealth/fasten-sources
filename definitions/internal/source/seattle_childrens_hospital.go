@@ -11,21 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.seattlechildrens.org/fhir/api/FHIR/R4/.well-known/smart-configuration
-// https://fhir.seattlechildrens.org/fhir/api/FHIR/R4/metadata
-func GetSourceSeattleChildrensHospital(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
-	sourceDef.AuthorizationEndpoint = "https://fhir.seattlechildrens.org/fhir/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.seattlechildrens.org/fhir/oauth2/token"
+// https://fhir-myrecord.cerner.com/r4/449052b2-b4e6-4960-bed6-39119385345b/metadata
+func GetSourceSeattleChildrensHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/449052b2-b4e6-4960-bed6-39119385345b/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/449052b2-b4e6-4960-bed6-39119385345b/protocols/oauth2/profiles/smart-v1/token"
+	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://fhir.seattlechildrens.org/fhir/api/FHIR/R4"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/449052b2-b4e6-4960-bed6-39119385345b"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.seattlechildrens.org/fhir/api/FHIR/R4"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/449052b2-b4e6-4960-bed6-39119385345b"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSeattleChildrensHospital]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Seattle Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSeattleChildrensHospital
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err
 }

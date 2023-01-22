@@ -18,7 +18,6 @@ type SourceClientAdventistHealthTulare struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/a36dfa71-4dd3-4608-9cfb-c7a63ade5531/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/a36dfa71-4dd3-4608-9cfb-c7a63ade5531/metadata
 func GetSourceClientAdventistHealthTulare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

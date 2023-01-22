@@ -18,7 +18,6 @@ type SourceClientPrimaryMedicalAssociatesDeanRoad struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/a4d64c85-d772-4db2-836a-d77a8ccf1f72/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/a4d64c85-d772-4db2-836a-d77a8ccf1f72/metadata
 func GetSourceClientPrimaryMedicalAssociatesDeanRoad(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

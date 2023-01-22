@@ -18,7 +18,6 @@ type SourceClientEyeVisionInternational struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/bda8206b-2b36-455e-b305-1bae21f5b548/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/bda8206b-2b36-455e-b305-1bae21f5b548/metadata
 func GetSourceClientEyeVisionInternational(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

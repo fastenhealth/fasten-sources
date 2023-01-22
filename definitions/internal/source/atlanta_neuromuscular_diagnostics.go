@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314/metadata
-func GetSourceAtlantaNeuromuscularDiagnostics(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceAtlantaNeuromuscularDiagnostics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/72d76ddd-a292-4562-a43c-35f3c4adb314/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/72d76ddd-a292-4562-a43c-35f3c4adb314/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceAtlantaNeuromuscularDiagnostics(env pkg.FastenLighthouseEnvType) (
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/72d76ddd-a292-4562-a43c-35f3c4adb314"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAtlantaNeuromuscularDiagnostics]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Atlanta Neuromuscular Diagnostics"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaNeuromuscularDiagnostics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

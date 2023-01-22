@@ -18,7 +18,6 @@ type SourceClientMoreheadStateUniversity struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/d926698c-9c76-4ade-b66a-6537e101538b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/d926698c-9c76-4ade-b66a-6537e101538b/metadata
 func GetSourceClientMoreheadStateUniversity(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

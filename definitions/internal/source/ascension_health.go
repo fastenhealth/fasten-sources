@@ -11,23 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47/metadata
-func GetSourceAscensionHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
-	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/094be162-7d96-49dc-86a2-73b309e5fa47/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
-	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/094be162-7d96-49dc-86a2-73b309e5fa47/protocols/oauth2/profiles/smart-v1/token"
-	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
+// https://fhirtw.genesys.org/FHIR/metadata
+func GetSourceAscensionHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://fhirtw.genesys.org/authorization/connect/authorize"
+	sourceDef.TokenEndpoint = "https://fhirtw.genesys.org/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47"
+	sourceDef.Audience = "https://fhirtw.genesys.org/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
+	sourceDef.ApiEndpointBaseUrl = "https://fhirtw.genesys.org/FHIR"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAscensionHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
 
-	sourceDef.Display = "Ascension Health"
+	sourceDef.Display = "Ascension health"
 	sourceDef.SourceType = pkg.SourceTypeAscensionHealth
 	sourceDef.Hidden = true
-	sourceDef.SecretKeyPrefix = "cerner"
+	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err
 }

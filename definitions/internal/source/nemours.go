@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://iconnect.nemours.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://iconnect.nemours.org/fhir/api/FHIR/R4/metadata
-func GetSourceNemours(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNemours(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://iconnect.nemours.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://iconnect.nemours.org/fhir/oauth2/token"
 
 	sourceDef.Audience = "https://iconnect.nemours.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://iconnect.nemours.org/fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNemours]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Nemours"

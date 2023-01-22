@@ -18,7 +18,6 @@ type SourceClientGreenValleyHospital struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e3c3f29b-49ce-4329-ade7-4c5593d87595/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e3c3f29b-49ce-4329-ade7-4c5593d87595/metadata
 func GetSourceClientGreenValleyHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

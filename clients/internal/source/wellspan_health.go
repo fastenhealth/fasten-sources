@@ -18,10 +18,9 @@ type SourceClientWellspanHealth struct {
 	models.SourceClient
 }
 
-// https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4/.well-known/smart-configuration
-// https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4/metadata
+// https://fhir-myrecord.cerner.com/r4/fd4bb206-9367-4644-b3c3-c1a6e26523f4/metadata
 func GetSourceClientWellspanHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientWellspanHealth{baseClient}, updatedSourceCred, err
 }

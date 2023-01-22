@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://spp.caromonthealth.org/FhirProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://spp.caromonthealth.org/FhirProxy/api/FHIR/R4/metadata
-func GetSourceCaromontHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceCaromontHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://spp.caromonthealth.org/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://spp.caromonthealth.org/FhirProxy/oauth2/token"
 
 	sourceDef.Audience = "https://spp.caromonthealth.org/FhirProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://spp.caromonthealth.org/FhirProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCaromontHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Caromont Health"

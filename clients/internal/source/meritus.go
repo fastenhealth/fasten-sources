@@ -18,7 +18,6 @@ type SourceClientMeritus struct {
 	models.SourceClient
 }
 
-// https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4/metadata
 func GetSourceClientMeritus(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

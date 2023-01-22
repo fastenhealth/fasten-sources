@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4/metadata
-func GetSourceNovoHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNovoHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/token"
 
 	sourceDef.Audience = "https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNovoHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "NOVO Health"
