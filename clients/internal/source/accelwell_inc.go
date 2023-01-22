@@ -18,7 +18,6 @@ type SourceClientAccelwellInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e01b6c4b-db0a-457a-843c-c05296c77706/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e01b6c4b-db0a-457a-843c-c05296c77706/metadata
 func GetSourceClientAccelwellInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

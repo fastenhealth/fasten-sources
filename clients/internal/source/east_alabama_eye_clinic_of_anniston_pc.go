@@ -18,8 +18,7 @@ type SourceClientEastAlabamaEyeClinicOfAnnistonPc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/cqm26xHDL0QfUxnVfAVkDgcb-oKYMVPg/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/cqm26xHDL0QfUxnVfAVkDgcb-oKYMVPg/metadata
+// https://fhir-myrecord.cerner.com/r4/AWi4SOz4m1uTsxIPLBId6Yv60e396TRD/metadata
 func GetSourceClientEastAlabamaEyeClinicOfAnnistonPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

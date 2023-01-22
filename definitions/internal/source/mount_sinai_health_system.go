@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMountSinaiHealthSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mount Sinai Health System"

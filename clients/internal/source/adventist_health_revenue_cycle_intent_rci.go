@@ -18,7 +18,6 @@ type SourceClientAdventistHealthRevenueCycleIntentRci struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/beff2592-7371-476f-a427-ab5586c6dd62/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/beff2592-7371-476f-a427-ab5586c6dd62/metadata
 func GetSourceClientAdventistHealthRevenueCycleIntentRci(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

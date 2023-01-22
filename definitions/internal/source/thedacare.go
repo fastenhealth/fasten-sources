@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://arr.thedacare.org/FHIR/TC/api/FHIR/R4/.well-known/smart-configuration
 // https://arr.thedacare.org/FHIR/TC/api/FHIR/R4/metadata
-func GetSourceThedacare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceThedacare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/token"
 
 	sourceDef.Audience = "https://arr.thedacare.org/FHIR/TC/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr.thedacare.org/FHIR/TC/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeThedacare]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "ThedaCare"

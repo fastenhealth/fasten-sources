@@ -18,7 +18,6 @@ type SourceClientBellinHealth struct {
 	models.SourceClient
 }
 
-// https://arr.thedacare.org/FHIR/BLN/api/FHIR/R4/.well-known/smart-configuration
 // https://arr.thedacare.org/FHIR/BLN/api/FHIR/R4/metadata
 func GetSourceClientBellinHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -18,7 +18,6 @@ type SourceClientKingsHighwayElectroDiagnostic struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/19739db9-b193-4cea-b14b-3ddaa97e789e/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/19739db9-b193-4cea-b14b-3ddaa97e789e/metadata
 func GetSourceClientKingsHighwayElectroDiagnostic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

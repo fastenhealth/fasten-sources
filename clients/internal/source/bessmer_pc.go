@@ -18,7 +18,6 @@ type SourceClientBessmerPc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/bfd3d095-ed99-41ed-8f6b-0f63e0435335/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/bfd3d095-ed99-41ed-8f6b-0f63e0435335/metadata
 func GetSourceClientBessmerPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

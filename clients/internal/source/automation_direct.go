@@ -18,7 +18,6 @@ type SourceClientAutomationDirect struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/744c96da-65d7-4e37-a00c-996f4b604c11/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/744c96da-65d7-4e37-a00c-996f4b604c11/metadata
 func GetSourceClientAutomationDirect(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceMercyHealthServicesMd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMercyHealthServicesMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/token"
 
 	sourceDef.Audience = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMercyHealthServicesMd]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Mercy Health Services (MD)"

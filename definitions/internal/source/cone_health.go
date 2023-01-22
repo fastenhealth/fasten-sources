@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epsoap.conehealth.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epsoap.conehealth.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceConeHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceConeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epsoap.conehealth.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epsoap.conehealth.com/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://epsoap.conehealth.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epsoap.conehealth.com/FHIRProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeConeHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Cone Health"

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4/metadata
-func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/token"
 
 	sourceDef.Audience = "https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeWestVirginiaUniversityMedicine]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "West Virginia University Medicine"

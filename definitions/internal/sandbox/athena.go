@@ -17,7 +17,7 @@ Practice ID: #80000
 Patient ID: #14545
 Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com / Password1
 */
-func GetSourceAthena(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
+func GetSourceAthena(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://api.preview.platform.athenahealth.com/oauth2/v1/authorize"
 	sourceDef.TokenEndpoint = "https://api.preview.platform.athenahealth.com/oauth2/v1/token"
@@ -31,8 +31,9 @@ func GetSourceAthena(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDe
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://api.preview.platform.athenahealth.com/fhir/r4"
-	if env == pkg.FastenLighthouseEnvSandbox {
-		sourceDef.ClientId = "0oaewpzeuut4fyHim297"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAthena]; clientIdOk {
+		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
 

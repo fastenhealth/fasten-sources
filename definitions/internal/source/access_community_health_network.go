@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4/metadata
-func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAccessCommunityHealthNetwork]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Access Community Health Network"

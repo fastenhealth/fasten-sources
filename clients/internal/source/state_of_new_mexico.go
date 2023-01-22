@@ -18,7 +18,6 @@ type SourceClientStateOfNewMexico struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/04b7d73f-0769-4509-8cd9-c3061dc75979/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/04b7d73f-0769-4509-8cd9-c3061dc75979/metadata
 func GetSourceClientStateOfNewMexico(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

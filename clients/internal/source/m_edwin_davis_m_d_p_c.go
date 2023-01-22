@@ -18,7 +18,6 @@ type SourceClientMEdwinDavisMDPC struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/3b1ec0f9-269d-4e41-99b2-594fce574943/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/3b1ec0f9-269d-4e41-99b2-594fce574943/metadata
 func GetSourceClientMEdwinDavisMDPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

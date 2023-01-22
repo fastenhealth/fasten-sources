@@ -18,7 +18,6 @@ type SourceClientTMobile struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/b363650e-9d3c-47f1-8011-4943dcc79def/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/b363650e-9d3c-47f1-8011-4943dcc79def/metadata
 func GetSourceClientTMobile(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

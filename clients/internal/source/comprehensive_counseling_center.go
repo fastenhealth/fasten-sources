@@ -18,8 +18,7 @@ type SourceClientComprehensiveCounselingCenter struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/8e77b480-944d-4d4a-a93e-e5a9fd83d5c6/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/8e77b480-944d-4d4a-a93e-e5a9fd83d5c6/metadata
+// https://fhir-myrecord.cerner.com/r4/6115d3c2-3bea-4068-b135-043d3297eb63/metadata
 func GetSourceClientComprehensiveCounselingCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

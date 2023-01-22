@@ -18,8 +18,7 @@ type SourceClientKennrickJDennisDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/faa53cfe-86c4-4c37-b87e-a425abe8cc46/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/faa53cfe-86c4-4c37-b87e-a425abe8cc46/metadata
+// https://fhir-myrecord.cerner.com/r4/Jq1h-Z1Yyu4OyupN7ciHN171trNUbJQP/metadata
 func GetSourceClientKennrickJDennisDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

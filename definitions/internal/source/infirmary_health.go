@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4/metadata
-func GetSourceInfirmaryHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceInfirmaryHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/oauth2/token"
 
 	sourceDef.Audience = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeInfirmaryHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Infirmary Health"

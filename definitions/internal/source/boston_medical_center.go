@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceBostonMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceBostonMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://emerge-soap1.bmc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emerge-soap1.bmc.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBostonMedicalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Boston Medical Center"

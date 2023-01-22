@@ -18,7 +18,6 @@ type SourceClientWayneStateUniversity struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ad8ce5cb-076d-4b2f-a3c8-94b0574f0516/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/ad8ce5cb-076d-4b2f-a3c8-94b0574f0516/metadata
 func GetSourceClientWayneStateUniversity(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

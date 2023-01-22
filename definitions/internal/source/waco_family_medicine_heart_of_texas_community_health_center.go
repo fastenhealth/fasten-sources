@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://haiku.wacofhc.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://haiku.wacofhc.org/FHIR/api/FHIR/R4/metadata
-func GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.wacofhc.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.wacofhc.org/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://haiku.wacofhc.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://haiku.wacofhc.org/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Waco Family Medicine (Heart of Texas Community Health Center)"

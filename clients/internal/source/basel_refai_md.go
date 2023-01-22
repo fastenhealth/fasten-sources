@@ -18,8 +18,7 @@ type SourceClientBaselRefaiMd struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ffb5a3ea-7b03-4d31-92c0-4781da903c09/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/ffb5a3ea-7b03-4d31-92c0-4781da903c09/metadata
+// https://fhir-myrecord.cerner.com/r4/65979035-1557-4261-8de9-caa332ef8187/metadata
 func GetSourceClientBaselRefaiMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

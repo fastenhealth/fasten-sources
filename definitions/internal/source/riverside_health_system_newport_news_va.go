@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeRiversideHealthSystemNewportNewsVa]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Riverside Health System (Newport News, VA)"

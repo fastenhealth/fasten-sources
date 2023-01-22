@@ -18,7 +18,6 @@ type SourceClientDVPasupuletiMd struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/qAVEa7m1IQ-JEiYJqzzgxOEBv0A3Rmhs/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/qAVEa7m1IQ-JEiYJqzzgxOEBv0A3Rmhs/metadata
 func GetSourceClientDVPasupuletiMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

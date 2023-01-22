@@ -18,7 +18,6 @@ type SourceClientMetrohealthOh struct {
 	models.SourceClient
 }
 
-// https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4/metadata
 func GetSourceClientMetrohealthOh(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

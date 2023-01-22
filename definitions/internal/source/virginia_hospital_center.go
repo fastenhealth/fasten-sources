@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceVirginiaHospitalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceVirginiaHospitalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://common.virginiahospitalcenter.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://common.virginiahospitalcenter.com/FHIRPRD/oauth2/token"
 
 	sourceDef.Audience = "https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeVirginiaHospitalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Virginia Hospital Center"

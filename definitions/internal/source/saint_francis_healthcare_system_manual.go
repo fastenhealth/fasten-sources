@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4/.well-known/smart-configuration
 // https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4/metadata
-func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/token"
 
 	sourceDef.Audience = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSaintFrancisHealthcareSystemManual]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Saint Francis Healthcare System (Manual)"

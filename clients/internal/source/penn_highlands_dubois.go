@@ -18,7 +18,6 @@ type SourceClientPennHighlandsDubois struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/N7LD0qx6O97vWG2K68nV0s0G4Xzq2rtM/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/N7LD0qx6O97vWG2K68nV0s0G4Xzq2rtM/metadata
 func GetSourceClientPennHighlandsDubois(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

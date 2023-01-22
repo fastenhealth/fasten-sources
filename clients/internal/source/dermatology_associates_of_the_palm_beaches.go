@@ -18,7 +18,6 @@ type SourceClientDermatologyAssociatesOfThePalmBeaches struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/889ab906-16e9-4fda-8f5a-5007e346883b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/889ab906-16e9-4fda-8f5a-5007e346883b/metadata
 func GetSourceClientDermatologyAssociatesOfThePalmBeaches(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

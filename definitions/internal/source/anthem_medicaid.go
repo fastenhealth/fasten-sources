@@ -10,21 +10,24 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://patient360.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceAnthemMedicaid(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := GetSourceAnthem(env)
+func GetSourceAnthemMedicaid(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := GetSourceAnthem(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://patient360.anthem.com/P360Member/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://patient360.anthem.com/P360Member/identityserver/connect/token"
 
 	sourceDef.Audience = "https://patient360.anthem.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360.anthem.com/P360Member/api/fhir-r4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAnthemMedicaid]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 
 	sourceDef.Display = "Anthem Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeAnthemMedicaid
-	sourceDef.Category = []string{"Insurance"}
+	sourceDef.SecretKeyPrefix = "careevolution"
 
 	return sourceDef, err
 }

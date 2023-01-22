@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceUniversityHospitalNewJersey(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceUniversityHospitalNewJersey(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/token"
 
 	sourceDef.Audience = "https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeUniversityHospitalNewJersey]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "University Hospital (New Jersey)"

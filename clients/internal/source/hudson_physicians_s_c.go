@@ -18,7 +18,6 @@ type SourceClientHudsonPhysiciansSC struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/42a1ed53-a9ac-42b2-918f-be592f726951/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/42a1ed53-a9ac-42b2-918f-be592f726951/metadata
 func GetSourceClientHudsonPhysiciansSC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

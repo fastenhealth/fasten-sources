@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://eportal.gbmc.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://eportal.gbmc.org/fhir/api/FHIR/R4/metadata
-func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eportal.gbmc.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eportal.gbmc.org/fhir/oauth2/token"
 
 	sourceDef.Audience = "https://eportal.gbmc.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://eportal.gbmc.org/fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeGreaterBaltimoreMedicalCenter]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Greater Baltimore Medical Center"

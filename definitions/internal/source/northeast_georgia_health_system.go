@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://wpprod.nghs.com/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://wpprod.nghs.com/fhir/api/FHIR/R4/metadata
-func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.nghs.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.nghs.com/fhir/oauth2/token"
 
 	sourceDef.Audience = "https://wpprod.nghs.com/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://wpprod.nghs.com/fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNortheastGeorgiaHealthSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Northeast Georgia Health System"

@@ -18,8 +18,7 @@ type SourceClientPami struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ed1a6436-bdd3-4803-83f1-a24346db7ed7/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/ed1a6436-bdd3-4803-83f1-a24346db7ed7/metadata
+// https://fhir-myrecord.cerner.com/r4/85fee1ae-75cd-4cf6-8306-8335ac01dc49/metadata
 func GetSourceClientPami(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

@@ -18,7 +18,6 @@ type SourceClientOrthocarolina struct {
 	models.SourceClient
 }
 
-// https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/metadata
 func GetSourceClientOrthocarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

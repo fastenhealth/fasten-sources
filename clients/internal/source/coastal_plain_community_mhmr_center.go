@@ -18,7 +18,6 @@ type SourceClientCoastalPlainCommunityMhmrCenter struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/cbd4218b-836f-4885-9bb3-ad046fcc104f/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/cbd4218b-836f-4885-9bb3-ad046fcc104f/metadata
 func GetSourceClientCoastalPlainCommunityMhmrCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

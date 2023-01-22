@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ocsoapprd.nebraskamed.com/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://ocsoapprd.nebraskamed.com/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceNebraskaMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceNebraskaMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNebraskaMedicine]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Nebraska Medicine"

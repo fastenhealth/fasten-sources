@@ -18,8 +18,7 @@ type SourceClientDavitaInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/ef305183-7191-4c91-b4e4-93d680f39bae/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/ef305183-7191-4c91-b4e4-93d680f39bae/metadata
+// https://fhir-myrecord.cerner.com/r4/3b23ba82-4045-4c42-b34e-b749fc14463d/metadata
 func GetSourceClientDavitaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

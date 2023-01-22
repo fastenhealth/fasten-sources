@@ -18,7 +18,6 @@ type SourceClientStateOfDelawareHealthAndSocialServices struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/987954ae-9180-4ce0-afd9-4dd65628349b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/987954ae-9180-4ce0-afd9-4dd65628349b/metadata
 func GetSourceClientStateOfDelawareHealthAndSocialServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

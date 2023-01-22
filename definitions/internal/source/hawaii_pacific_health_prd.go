@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4/metadata
-func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/token"
 
 	sourceDef.Audience = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHawaiiPacificHealthPrd]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Hawaii Pacific Health - PRD"

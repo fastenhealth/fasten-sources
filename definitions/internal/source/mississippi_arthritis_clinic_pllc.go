@@ -11,23 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11/metadata
-func GetSourceMississippiArthritisClinicPllc(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
-	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/9a87838e-fc69-4f8f-bd0b-43be75f51b11/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
-	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/9a87838e-fc69-4f8f-bd0b-43be75f51b11/protocols/oauth2/profiles/smart-v1/token"
-	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
+// https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
+func GetSourceMississippiArthritisClinicPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceNextgen(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/token"
 
-	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11"
+	sourceDef.Audience = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11"
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMississippiArthritisClinicPllc]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
 	sourceDef.Display = "Mississippi Arthritis Clinic PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMississippiArthritisClinicPllc
 	sourceDef.Hidden = true
-	sourceDef.SecretKeyPrefix = "cerner"
+	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
 }

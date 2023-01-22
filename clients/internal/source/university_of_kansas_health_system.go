@@ -18,7 +18,6 @@ type SourceClientUniversityOfKansasHealthSystem struct {
 	models.SourceClient
 }
 
-// https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4/metadata
 func GetSourceClientUniversityOfKansasHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

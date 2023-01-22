@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/dc96a33f-fb3c-4ad3-8d24-0941136c69c8/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/dc96a33f-fb3c-4ad3-8d24-0941136c69c8/metadata
-func GetSourceAdvantageHealthcareForWomen(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceAdvantageHealthcareForWomen(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/dc96a33f-fb3c-4ad3-8d24-0941136c69c8/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/dc96a33f-fb3c-4ad3-8d24-0941136c69c8/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceAdvantageHealthcareForWomen(env pkg.FastenLighthouseEnvType) (mode
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/dc96a33f-fb3c-4ad3-8d24-0941136c69c8"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/dc96a33f-fb3c-4ad3-8d24-0941136c69c8"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAdvantageHealthcareForWomen]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Advantage Healthcare For Women"
 	sourceDef.SourceType = pkg.SourceTypeAdvantageHealthcareForWomen
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

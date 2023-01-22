@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/.well-known/smart-configuration
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/metadata
-func GetSourceGeisinger(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceGeisinger(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/token"
 
 	sourceDef.Audience = "https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeGeisinger]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Geisinger"

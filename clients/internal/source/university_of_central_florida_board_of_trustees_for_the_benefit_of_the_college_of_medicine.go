@@ -18,7 +18,6 @@ type SourceClientUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheColl
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/fb0d1cdd-40c5-4449-8f5b-4f83699d2a2c/metadata
 func GetSourceClientUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

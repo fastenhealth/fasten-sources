@@ -18,8 +18,7 @@ type SourceClientLakeHealthDistrict struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/794039a8-89a5-42e7-a8af-b2a702849aea/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/794039a8-89a5-42e7-a8af-b2a702849aea/metadata
+// https://fhir-myrecord.cerner.com/r4/91732642-b694-4776-bbd7-c7859cc968c4/metadata
 func GetSourceClientLakeHealthDistrict(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

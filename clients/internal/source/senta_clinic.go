@@ -18,7 +18,6 @@ type SourceClientSentaClinic struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/5632fbae-577c-4a2c-bb09-322e166c2db1/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/5632fbae-577c-4a2c-bb09-322e166c2db1/metadata
 func GetSourceClientSentaClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

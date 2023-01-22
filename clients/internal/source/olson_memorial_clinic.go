@@ -18,8 +18,7 @@ type SourceClientOlsonMemorialClinic struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/h7Ihx8KqeFMoV6aVE3v7wQPvUnR9Dqw0/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/h7Ihx8KqeFMoV6aVE3v7wQPvUnR9Dqw0/metadata
+// https://fhir-myrecord.cerner.com/r4/c5259d19-f4df-485f-85ba-303153b1ff25/metadata
 func GetSourceClientOlsonMemorialClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

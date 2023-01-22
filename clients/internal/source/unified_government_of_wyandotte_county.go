@@ -18,7 +18,6 @@ type SourceClientUnifiedGovernmentOfWyandotteCounty struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/77cef438-d9a8-4c2b-a90a-6d877ebd2afb/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/77cef438-d9a8-4c2b-a90a-6d877ebd2afb/metadata
 func GetSourceClientUnifiedGovernmentOfWyandotteCounty(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

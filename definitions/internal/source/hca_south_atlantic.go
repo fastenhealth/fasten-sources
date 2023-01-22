@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/.well-known/smart-configuration
 // https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4/metadata
-func GetSourceHcaSouthAtlantic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceHcaSouthAtlantic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
 
 	sourceDef.Audience = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHcaSouthAtlantic]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "HCA South Atlantic"

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceRiversideMedicalClinic(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceRiversideMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeRiversideMedicalClinic]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Riverside Medical Clinic"

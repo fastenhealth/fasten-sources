@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://health-apis.duke.edu/FHIR/patient/R4/.well-known/smart-configuration
 // https://health-apis.duke.edu/FHIR/patient/R4/metadata
-func GetSourceDukeHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceDukeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://health-apis.duke.edu/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://health-apis.duke.edu/Interconnect-FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://health-apis.duke.edu/FHIR/patient/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://health-apis.duke.edu/FHIR/patient/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeDukeHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Duke Health"

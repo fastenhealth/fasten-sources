@@ -18,7 +18,6 @@ type SourceClientYakimaValleyFarmWorkersClinic struct {
 	models.SourceClient
 }
 
-// https://epicproxy.et0943.epichosted.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0943.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

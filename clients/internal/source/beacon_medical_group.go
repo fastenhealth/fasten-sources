@@ -18,8 +18,7 @@ type SourceClientBeaconMedicalGroup struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/acdd0d06-725b-4e78-bc4c-92f3f27f3a8e/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/acdd0d06-725b-4e78-bc4c-92f3f27f3a8e/metadata
+// https://fhir-myrecord.cerner.com/r4/FXKD-Xb5DUX7GYMomaomI02W6AvYyCGp/metadata
 func GetSourceClientBeaconMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4/.well-known/smart-configuration
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4/metadata
-func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/token"
 
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeStLukesHospitalNorthCarolina]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "St. Luke's Hospital (North Carolina)"

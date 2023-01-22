@@ -18,7 +18,6 @@ type SourceClientBestselfBehavioralHealthInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/6e4def70-1dc1-4769-a067-b144af5e540a/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/6e4def70-1dc1-4769-a067-b144af5e540a/metadata
 func GetSourceClientBestselfBehavioralHealthInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

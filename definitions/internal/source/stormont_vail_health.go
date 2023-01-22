@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceStormontVailHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceStormontVailHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/token"
 
 	sourceDef.Audience = "https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeStormontVailHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Stormont Vail Health"

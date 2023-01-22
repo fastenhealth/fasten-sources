@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceMcfarlandClinicIowa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMcfarlandClinicIowa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMcfarlandClinicIowa]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "McFarland Clinic (Iowa)"

@@ -18,7 +18,6 @@ type SourceClientTmcHealthcare struct {
 	models.SourceClient
 }
 
-// https://fhir.tmcaz.com/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.tmcaz.com/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientTmcHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://webprd.ochin.org/prd-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://webprd.ochin.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceOchin(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceOchin(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/token"
 
 	sourceDef.Audience = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOchin]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "OCHIN"

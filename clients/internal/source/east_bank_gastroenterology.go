@@ -18,7 +18,6 @@ type SourceClientEastBankGastroenterology struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/Oy9v_722D9bcevVKOcXOLbc6xptKxGMe/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/Oy9v_722D9bcevVKOcXOLbc6xptKxGMe/metadata
 func GetSourceClientEastBankGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

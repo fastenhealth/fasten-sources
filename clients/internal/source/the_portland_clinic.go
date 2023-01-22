@@ -18,7 +18,6 @@ type SourceClientThePortlandClinic struct {
 	models.SourceClient
 }
 
-// https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/metadata
 func GetSourceClientThePortlandClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

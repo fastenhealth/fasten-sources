@@ -18,7 +18,6 @@ type SourceClientFritoLayOrlando struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/c71f84da-f995-4e6a-9711-82361956b228/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/c71f84da-f995-4e6a-9711-82361956b228/metadata
 func GetSourceClientFritoLayOrlando(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

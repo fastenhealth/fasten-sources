@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4/.well-known/smart-configuration
 // https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4/metadata
-func GetSourceWashingtonHospitalHealthcareSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceWashingtonHospitalHealthcareSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://psacesoap.whhs.com/interconnect-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://psacesoap.whhs.com/interconnect-fhir-prd/oauth2/token"
 
 	sourceDef.Audience = "https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeWashingtonHospitalHealthcareSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Washington Hospital Healthcare System"

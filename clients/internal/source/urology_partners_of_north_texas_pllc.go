@@ -18,7 +18,6 @@ type SourceClientUrologyPartnersOfNorthTexasPllc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/18f5d65c-83f0-435a-868c-70ce5a6de90a/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/18f5d65c-83f0-435a-868c-70ce5a6de90a/metadata
 func GetSourceClientUrologyPartnersOfNorthTexasPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

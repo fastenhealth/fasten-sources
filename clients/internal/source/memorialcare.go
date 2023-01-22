@@ -18,7 +18,6 @@ type SourceClientMemorialcare struct {
 	models.SourceClient
 }
 
-// https://fhir.memorialcare.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.memorialcare.org/fhir/api/FHIR/R4/metadata
 func GetSourceClientMemorialcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

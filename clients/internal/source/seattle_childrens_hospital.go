@@ -18,10 +18,9 @@ type SourceClientSeattleChildrensHospital struct {
 	models.SourceClient
 }
 
-// https://fhir.seattlechildrens.org/fhir/api/FHIR/R4/.well-known/smart-configuration
-// https://fhir.seattlechildrens.org/fhir/api/FHIR/R4/metadata
+// https://fhir-myrecord.cerner.com/r4/449052b2-b4e6-4960-bed6-39119385345b/metadata
 func GetSourceClientSeattleChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientSeattleChildrensHospital{baseClient}, updatedSourceCred, err
 }

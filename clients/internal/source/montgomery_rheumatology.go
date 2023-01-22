@@ -18,8 +18,7 @@ type SourceClientMontgomeryRheumatology struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/UHCaxLDJ6puwMRdSj30hJ8Nw05sTySuR/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/UHCaxLDJ6puwMRdSj30hJ8Nw05sTySuR/metadata
+// https://fhir-myrecord.cerner.com/r4/Ju4SLrJ8HE83ty66H2bgjEBnrvB-FIla/metadata
 func GetSourceClientMontgomeryRheumatology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

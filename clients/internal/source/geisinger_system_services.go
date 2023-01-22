@@ -18,8 +18,7 @@ type SourceClientGeisingerSystemServices struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/7ab3d0ab-808d-451f-b0e3-d59dda3f72e5/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/7ab3d0ab-808d-451f-b0e3-d59dda3f72e5/metadata
+// https://fhir-myrecord.cerner.com/r4/ce6a2fd7-f060-478f-8ee9-1a471e2d7398/metadata
 func GetSourceClientGeisingerSystemServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

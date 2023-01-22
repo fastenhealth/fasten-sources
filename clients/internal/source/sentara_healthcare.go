@@ -18,7 +18,6 @@ type SourceClientSentaraHealthcare struct {
 	models.SourceClient
 }
 
-// https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientSentaraHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

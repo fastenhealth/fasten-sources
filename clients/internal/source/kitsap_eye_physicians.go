@@ -18,7 +18,6 @@ type SourceClientKitsapEyePhysicians struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/dlAnBz8uq_vSjtMuzxuWSiJ9OTQ7taun/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/dlAnBz8uq_vSjtMuzxuWSiJ9OTQ7taun/metadata
 func GetSourceClientKitsapEyePhysicians(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://rx.premierhealthpartners.org/fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://rx.premierhealthpartners.org/fhir/api/FHIR/R4/metadata
-func GetSourcePremierHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourcePremierHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/token"
 
 	sourceDef.Audience = "https://rx.premierhealthpartners.org/fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://rx.premierhealthpartners.org/fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePremierHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Premier Health"

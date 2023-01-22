@@ -18,7 +18,6 @@ type SourceClientSantaMonicaDermatology struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/e1A5O_wfjp6bxazsKQMUgQtMMK_UwF9x/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/e1A5O_wfjp6bxazsKQMUgQtMMK_UwF9x/metadata
 func GetSourceClientSantaMonicaDermatology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

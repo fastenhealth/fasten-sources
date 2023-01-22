@@ -18,7 +18,6 @@ type SourceClientGaryLAdsitDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/443f9f6a-5b23-4b72-82a6-952cfef57015/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/443f9f6a-5b23-4b72-82a6-952cfef57015/metadata
 func GetSourceClientGaryLAdsitDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

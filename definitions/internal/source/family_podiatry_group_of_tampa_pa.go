@@ -11,10 +11,9 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y/metadata
-func GetSourceFamilyPodiatryGroupOfTampaPa(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env)
+func GetSourceFamilyPodiatryGroupOfTampaPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
 	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y/protocols/oauth2/profiles/smart-v1/token"
 	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
@@ -22,11 +21,14 @@ func GetSourceFamilyPodiatryGroupOfTampaPa(env pkg.FastenLighthouseEnvType) (mod
 	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/WpueQ59D-7qcu1Z24coDRM6Ii1_UOg9Y"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeFamilyPodiatryGroupOfTampaPa]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Family Podiatry Group of Tampa, PA"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPodiatryGroupOfTampaPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -18,7 +18,6 @@ type SourceClientYourNextStepPc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/f94c51a0-56e8-4b6b-b7fc-444d2a37a178/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/f94c51a0-56e8-4b6b-b7fc-444d2a37a178/metadata
 func GetSourceClientYourNextStepPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

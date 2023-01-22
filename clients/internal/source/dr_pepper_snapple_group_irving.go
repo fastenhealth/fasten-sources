@@ -18,7 +18,6 @@ type SourceClientDrPepperSnappleGroupIrving struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/039c5844-07d3-4b98-88f9-0db4fea884ad/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/039c5844-07d3-4b98-88f9-0db4fea884ad/metadata
 func GetSourceClientDrPepperSnappleGroupIrving(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

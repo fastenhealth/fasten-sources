@@ -18,7 +18,6 @@ type SourceClientVailHealth struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/2b53e1a6-a4f0-4eb4-9db6-d7bb72f1c188/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/2b53e1a6-a4f0-4eb4-9db6-d7bb72f1c188/metadata
 func GetSourceClientVailHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

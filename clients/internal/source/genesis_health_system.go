@@ -18,8 +18,7 @@ type SourceClientGenesisHealthSystem struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/zRBZsbKdoME7HivKpjAL4ZEb8JQBD9Cn/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/zRBZsbKdoME7HivKpjAL4ZEb8JQBD9Cn/metadata
+// https://fhir-myrecord.cerner.com/r4/Hq9lMFKIau9MlCiBN698ZPzTKNvsMrCb/metadata
 func GetSourceClientGenesisHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

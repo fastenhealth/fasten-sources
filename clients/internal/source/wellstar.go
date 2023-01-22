@@ -18,7 +18,6 @@ type SourceClientWellstar struct {
 	models.SourceClient
 }
 
-// https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/metadata
 func GetSourceClientWellstar(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

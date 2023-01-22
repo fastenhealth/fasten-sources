@@ -18,7 +18,6 @@ type SourceClientAtiSmOccupationalHealthCenter struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/8477b845-b944-41ab-b450-e38d83ec4ffb/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/8477b845-b944-41ab-b450-e38d83ec4ffb/metadata
 func GetSourceClientAtiSmOccupationalHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

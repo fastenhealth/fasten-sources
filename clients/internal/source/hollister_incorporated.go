@@ -18,7 +18,6 @@ type SourceClientHollisterIncorporated struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/8a1730d0-bc79-40c2-8aef-2fa30e00e904/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/8a1730d0-bc79-40c2-8aef-2fa30e00e904/metadata
 func GetSourceClientHollisterIncorporated(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

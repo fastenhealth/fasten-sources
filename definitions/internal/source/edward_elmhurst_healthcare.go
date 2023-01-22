@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/metadata
-func GetSourceEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/token"
 
 	sourceDef.Audience = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeEdwardElmhurstHealthcare]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Edward-Elmhurst Healthcare"

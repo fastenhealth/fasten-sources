@@ -18,7 +18,6 @@ type SourceClientUniversityOfArkansasForMedicalSciences struct {
 	models.SourceClient
 }
 
-// https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4/.well-known/smart-configuration
 // https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

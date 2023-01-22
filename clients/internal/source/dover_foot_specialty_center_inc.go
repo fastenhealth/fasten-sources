@@ -18,7 +18,6 @@ type SourceClientDoverFootSpecialtyCenterInc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/xCzjlohQb7LjffswhVfzHuvSjTl4Y9sP/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/xCzjlohQb7LjffswhVfzHuvSjTl4Y9sP/metadata
 func GetSourceClientDoverFootSpecialtyCenterInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

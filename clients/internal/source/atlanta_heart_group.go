@@ -18,7 +18,6 @@ type SourceClientAtlantaHeartGroup struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/eqfAJKRmsUhFnr8gvMoFTGKRt8zH6OgO/metadata
 func GetSourceClientAtlantaHeartGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

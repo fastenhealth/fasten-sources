@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/.well-known/smart-configuration
 // https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/metadata
-func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/token"
 
 	sourceDef.Audience = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Santa Clara Valley Medical Center Hospitals and Clinics"

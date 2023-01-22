@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4/metadata
-func GetSourceMidmichiganHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceMidmichiganHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/token"
 
 	sourceDef.Audience = "https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMidmichiganHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "MidMichigan Health"

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://webproxy.comhs.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://webproxy.comhs.org/FHIR/api/FHIR/R4/metadata
-func GetSourceCommunityHealthcareSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceCommunityHealthcareSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.comhs.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.comhs.org/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://webproxy.comhs.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://webproxy.comhs.org/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCommunityHealthcareSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Community Healthcare System"

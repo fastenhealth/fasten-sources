@@ -18,7 +18,6 @@ type SourceClientGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemor
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/23d7eb1d-294f-4546-883b-c856fcd53f34/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/23d7eb1d-294f-4546-883b-c856fcd53f34/metadata
 func GetSourceClientGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

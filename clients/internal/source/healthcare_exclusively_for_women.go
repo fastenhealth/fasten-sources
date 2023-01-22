@@ -18,7 +18,6 @@ type SourceClientHealthcareExclusivelyForWomen struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/933edef4-eba4-44c0-a5ce-a34dcfcf6c06/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/933edef4-eba4-44c0-a5ce-a34dcfcf6c06/metadata
 func GetSourceClientHealthcareExclusivelyForWomen(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

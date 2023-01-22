@@ -18,8 +18,7 @@ type SourceClientAlbuquerqueCenterForRheumatologyPC struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/cmjPplTNy_0xpR7h8mITchQoMptbM079/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/cmjPplTNy_0xpR7h8mITchQoMptbM079/metadata
+// https://fhir-myrecord.cerner.com/r4/a7511550-a8b1-48d8-b97c-d2a4596e52d2/metadata
 func GetSourceClientAlbuquerqueCenterForRheumatologyPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

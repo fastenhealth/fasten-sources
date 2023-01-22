@@ -11,24 +11,25 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://patient360c.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceAnthem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCareevolution(env)
+func GetSourceAnthem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceCareevolution(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://patient360c.anthem.com/P360Member/identityserver/connect/authorize"
 	sourceDef.TokenEndpoint = "https://patient360c.anthem.com/P360Member/identityserver/connect/token"
 
 	sourceDef.Audience = "https://patient360c.anthem.com/P360Member/api/fhir-r4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://patient360c.anthem.com/P360Member/api/fhir-r4"
-	sourceDef.ClientId = "fastenhealth"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAnthem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAnthem))
 
 	sourceDef.Display = "Anthem"
 	sourceDef.SourceType = pkg.SourceTypeAnthem
-	sourceDef.Category = []string{"Insurance"}
-	sourceDef.SecretKeyPrefix = "anthem"
+	sourceDef.SecretKeyPrefix = "careevolution"
 
 	return sourceDef, err
 }

@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceReliantMedicalGroup(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceReliantMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/token"
 
 	sourceDef.Audience = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeReliantMedicalGroup]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Reliant Medical Group"

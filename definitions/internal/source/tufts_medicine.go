@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4/.well-known/smart-configuration
 // https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4/metadata
-func GetSourceTuftsMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceTuftsMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/token"
 
 	sourceDef.Audience = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTuftsMedicine]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Tufts Medicine"

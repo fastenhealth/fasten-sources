@@ -18,8 +18,7 @@ type SourceClientPrismaHealthMidlands struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/82b5c78e-3511-4091-8bf4-9b7dbe078f0c/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/82b5c78e-3511-4091-8bf4-9b7dbe078f0c/metadata
+// https://fhir-myrecord.cerner.com/r4/2eNdqWco_jtc-pQyC1ajFurJasuKSupq/metadata
 func GetSourceClientPrismaHealthMidlands(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

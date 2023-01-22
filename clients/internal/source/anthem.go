@@ -18,7 +18,6 @@ type SourceClientAnthem struct {
 	models.SourceClient
 }
 
-// https://patient360c.anthem.com/P360Member/api/fhir-r4/.well-known/smart-configuration
 // https://patient360c.anthem.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientAnthem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {

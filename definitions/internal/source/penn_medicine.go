@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://ssproxy.pennhealth.com/PRD-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://ssproxy.pennhealth.com/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourcePennMedicine(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourcePennMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssproxy.pennhealth.com/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssproxy.pennhealth.com/PRD-FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://ssproxy.pennhealth.com/PRD-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://ssproxy.pennhealth.com/PRD-FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePennMedicine]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Penn Medicine"

@@ -11,19 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4/metadata
-func GetSourceStLukesHealthSystemIdahoAndEasternOregon(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceStLukesHealthSystemIdahoAndEasternOregon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epincoming.slhs.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epincoming.slhs.org/Interconnect-FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
-	sourceDef.Display = "St. Luke�s Health System (Idaho & Eastern Oregon)"
+	sourceDef.Display = "St. Luke’s Health System (Idaho & Eastern Oregon)"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHealthSystemIdahoAndEasternOregon
 	sourceDef.SecretKeyPrefix = "epic"
 

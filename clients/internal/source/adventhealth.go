@@ -18,7 +18,6 @@ type SourceClientAdventhealth struct {
 	models.SourceClient
 }
 
-// https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4/metadata
 func GetSourceClientAdventhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

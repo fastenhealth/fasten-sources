@@ -18,7 +18,6 @@ type SourceClientWarrenWashingtonAssociationForMh struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/10d65d12-0ecf-4613-84df-07c7c4f09ca4/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/10d65d12-0ecf-4613-84df-07c7c4f09ca4/metadata
 func GetSourceClientWarrenWashingtonAssociationForMh(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

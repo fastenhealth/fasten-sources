@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4/.well-known/smart-configuration
 // https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4/metadata
-func GetSourceAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/token"
 
 	sourceDef.Audience = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAuroraHealthCareMyaurora]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Aurora Health Care - myAurora"

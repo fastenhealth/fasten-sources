@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://erx.aspirus.org/FHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://erx.aspirus.org/FHIR/api/FHIR/R4/metadata
-func GetSourceAspirus(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceAspirus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://erx.aspirus.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://erx.aspirus.org/FHIR/oauth2/token"
 
 	sourceDef.Audience = "https://erx.aspirus.org/FHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://erx.aspirus.org/FHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAspirus]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Aspirus"

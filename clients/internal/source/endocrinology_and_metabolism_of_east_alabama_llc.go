@@ -18,7 +18,6 @@ type SourceClientEndocrinologyAndMetabolismOfEastAlabamaLlc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/069b1d3c-f747-4f06-a02f-d2850d19b0c9/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/069b1d3c-f747-4f06-a02f-d2850d19b0c9/metadata
 func GetSourceClientEndocrinologyAndMetabolismOfEastAlabamaLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

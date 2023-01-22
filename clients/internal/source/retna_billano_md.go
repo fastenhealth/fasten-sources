@@ -18,7 +18,6 @@ type SourceClientRetnaBillanoMd struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/c553d676-fb7e-4256-8911-d292ccbba777/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/c553d676-fb7e-4256-8911-d292ccbba777/metadata
 func GetSourceClientRetnaBillanoMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

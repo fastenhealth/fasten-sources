@@ -18,7 +18,6 @@ type SourceClientLakeHavasuUnifiedSchoolDistrict struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/712e1ffa-9f67-48bf-9982-5320fbfe6aed/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/712e1ffa-9f67-48bf-9982-5320fbfe6aed/metadata
 func GetSourceClientLakeHavasuUnifiedSchoolDistrict(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

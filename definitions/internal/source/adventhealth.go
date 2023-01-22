@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4/metadata
-func GetSourceAdventhealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceAdventhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobile.adventhealth.com/oauth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobile.adventhealth.com/oauth2-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAdventhealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "AdventHealth"

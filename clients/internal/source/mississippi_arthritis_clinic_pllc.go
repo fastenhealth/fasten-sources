@@ -18,10 +18,9 @@ type SourceClientMississippiArthritisClinicPllc struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11/.well-known/smart-configuration
-// https://fhir-myrecord.cerner.com/r4/9a87838e-fc69-4f8f-bd0b-43be75f51b11/metadata
+// https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
 func GetSourceClientMississippiArthritisClinicPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
 	return SourceClientMississippiArthritisClinicPllc{baseClient}, updatedSourceCred, err
 }

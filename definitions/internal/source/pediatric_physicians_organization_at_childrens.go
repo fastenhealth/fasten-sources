@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.chppoc.org/Fhir-External/api/FHIR/R4/.well-known/smart-configuration
 // https://fhir.chppoc.org/Fhir-External/api/FHIR/R4/metadata
-func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/token"
 
 	sourceDef.Audience = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Pediatric Physicians Organization at Children's"

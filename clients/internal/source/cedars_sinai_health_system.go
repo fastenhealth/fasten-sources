@@ -18,7 +18,6 @@ type SourceClientCedarsSinaiHealthSystem struct {
 	models.SourceClient
 }
 
-// https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4/metadata
 func GetSourceClientCedarsSinaiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

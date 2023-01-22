@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/token"
 
 	sourceDef.Audience = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeVanderbilt]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Vanderbilt"

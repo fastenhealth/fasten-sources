@@ -11,19 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4/.well-known/smart-configuration
 // https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4/metadata
-func GetSourceCookChildrensHealthCareSystem(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceCookChildrensHealthCareSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://cookicfg.cookchildrens.org/CookFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://cookicfg.cookchildrens.org/CookFHIR/oauth2/token"
 
 	sourceDef.Audience = "https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCookChildrensHealthCareSystem]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
-	sourceDef.Display = "Cook Children�s Health Care System"
+	sourceDef.Display = "Cook Children’s Health Care System"
 	sourceDef.SourceType = pkg.SourceTypeCookChildrensHealthCareSystem
 	sourceDef.SecretKeyPrefix = "epic"
 

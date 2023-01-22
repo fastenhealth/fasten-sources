@@ -11,16 +11,19 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4/metadata
-func GetSourceFroedtertHealth(env pkg.FastenLighthouseEnvType) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env)
+func GetSourceFroedtertHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/token"
 
 	sourceDef.Audience = "https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4"
 
 	sourceDef.ApiEndpointBaseUrl = "https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4"
+	// retrieve client-id, if available
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeFroedtertHealth]; clientIdOk {
+		sourceDef.ClientId = clientId
+	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Froedtert Health"

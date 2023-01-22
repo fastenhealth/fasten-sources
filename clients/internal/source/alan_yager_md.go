@@ -18,7 +18,6 @@ type SourceClientAlanYagerMd struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/9f256476-d263-4340-85b9-e872137a0274/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/9f256476-d263-4340-85b9-e872137a0274/metadata
 func GetSourceClientAlanYagerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)

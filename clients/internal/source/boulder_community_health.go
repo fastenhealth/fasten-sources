@@ -18,7 +18,6 @@ type SourceClientBoulderCommunityHealth struct {
 	models.SourceClient
 }
 
-// https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4/.well-known/smart-configuration
 // https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4/metadata
 func GetSourceClientBoulderCommunityHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)

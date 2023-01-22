@@ -18,7 +18,6 @@ type SourceClientScottAGroatDpm struct {
 	models.SourceClient
 }
 
-// https://fhir-myrecord.cerner.com/r4/2473c3e4-a3db-44eb-852b-6c845f6e5961/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/2473c3e4-a3db-44eb-852b-6c845f6e5961/metadata
 func GetSourceClientScottAGroatDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
