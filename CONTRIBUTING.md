@@ -96,6 +96,7 @@ go run oauth_cli.go
 9. Create a new test function. **Make sure to specify Patient ID and Access Token you noted earlier**
 
 > Make sure `fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return(<<PATIENT_ID>>)` is populated
+>
 > Make sure `httpClient := base.OAuthVcrSetup(t, true, <<ACCESS_TOKEN>>)` is populated, and 2nd parameter is `true`
 
 ```go
@@ -131,7 +132,7 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 ```
 
 10. Run your new test (and generate a recording) by running the following command `go test ./...`
-11. Disable test recordings for your new test 
+11. Disable recording mode
 ```go
 httpClient := base.OAuthVcrSetup(t, true, <<ACCESS_TOKEN>>)
 
