@@ -146,7 +146,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVer
 	}
 	if err != nil {
 		//failed to parse the bundle as 401 and 430, return an error
-		return "", "", fmt.Errorf("could not determine bundle version", err)
+		return "", "", fmt.Errorf("could not determine bundle version: %v", err)
 	} else if patientIds == nil || len(patientIds) == 0 {
 		return "", "", fmt.Errorf("could not determine patient id")
 	} else {

@@ -56,7 +56,7 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	require.NoError(t, err)
 
 	// test
-	wrappedResourceModels, err := client.ProcessBundle(bundle)
+	wrappedResourceModels, _, err := client.ProcessBundle(bundle)
 	//log.Printf("%v", wrappedResourceModels)
 
 	//assert
