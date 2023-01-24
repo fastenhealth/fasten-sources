@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Meta -->
+    <meta name="description" content="Testing">
+    <meta name="author" content="Fasten Health">
+
+    <title>Testing</title>
+    <style>
+        p {
+            text-align: justify;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+            color: blue;
+
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: space-around;
+            gap: 0 3em;
+        }
+    </style>
+</head>
+<body class="az-body">
+<div class="az-error-wrapper">
+    <h2>Lighthouse Source Type</h2>
+    <input type="radio" id="sandbox" name="mode" value="https://lighthouse.fastenhealth.com/sandbox/">
+    <label for="sandbox">Sandbox</label><br>
+    <input type="radio" id="prod" name="mode" value="https://lighthouse.fastenhealth.com/v1/">
+    <label for="prod">Prod</label><br>
+
+    <h2>Available Sources</h2>
+    <ul class="source-list"></ul>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
+<script type="module">
+    import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+
+    function requestSourceList(){
+        var sourceList = $('ul.source-list')
+        sourceList.html("")
+
+        var lighthouseEndpoint = $('input[name="mode"]:checked').val()
+        localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
+
+        $.get(  lighthouseEndpoint + 'list', function( data ) {
+            console.log(data.data)
+            for(const sourceType in data.data){
+                var li = $('<li/>')
+                    .appendTo(sourceList);
+                var sourceLink = $('<a/>')
+                    .text(sourceType)
+                    .addClass("cursor-pointer")
+                    .on('click', function() {
+                        generateSourceAuthorizeUrl(sourceType, data.data[sourceType])
+                    })
+                    .appendTo(li);
+            }
+        });
+    }
+
+    async function  generateSourceAuthorizeUrl(sourceType, lighthouseSource){
+        const state = 'custom'
+        let sourceStateInfo = {}
+        sourceStateInfo.state = state
+        sourceStateInfo.source_type = sourceType
+
+        // generate the authorization url
+        const authorizationUrl = new URL(lighthouseSource.authorization_endpoint);
+        authorizationUrl.searchParams.set('redirect_uri', lighthouseSource.redirect_uri);
+        authorizationUrl.searchParams.set('response_type', lighthouseSource.response_types_supported[0]);
+        authorizationUrl.searchParams.set('response_mode', lighthouseSource.response_modes_supported[0]);
+        authorizationUrl.searchParams.set('state', state);
+        authorizationUrl.searchParams.set('client_id', lighthouseSource.client_id);
+        if(lighthouseSource.scopes_supported && lighthouseSource.scopes_supported.length){
+            authorizationUrl.searchParams.set('scope', lighthouseSource.scopes_supported.join(' '));
+        }
+        if (lighthouseSource.aud) {
+            authorizationUrl.searchParams.set('aud', lighthouseSource.aud);
+        }
+
+        //this is for providers that support CORS and PKCE (public client auth)
+        if(!lighthouseSource.confidential){
+            // https://github.com/panva/oauth4webapi/blob/8eba19eac408bdec5c1fe8abac2710c50bfadcc3/examples/public.ts
+            const codeVerifier = Oauth.generateRandomCodeVerifier();
+            const codeChallenge = await Oauth.calculatePKCECodeChallenge(codeVerifier);
+            const codeChallengeMethod = lighthouseSource.code_challenge_methods_supported[0]; // 'S256'
+
+            sourceStateInfo.code_verifier = codeVerifier
+            sourceStateInfo.code_challenge = codeChallenge
+            sourceStateInfo.code_challenge_method = codeChallengeMethod
+
+            authorizationUrl.searchParams.set('code_challenge', codeChallenge);
+            authorizationUrl.searchParams.set('code_challenge_method', codeChallengeMethod);
+        }
+
+        localStorage.setItem(state, JSON.stringify(sourceStateInfo))
+
+
+        redirectWithOriginAndDestination(authorizationUrl, sourceType, lighthouseSource.redirect_uri);
+    }
+
+    function redirectWithOriginAndDestination(destUrl, sourceType, callbackUri) {
+        const originUrlParts = new URL(window.location.href)
+        originUrlParts.hash = "" //reset hash in-case its present.
+        originUrlParts.pathname = originUrlParts.pathname + `/callback/${sourceType}`
+
+
+        const redirectUrlParts = new URL(callbackUri.replace("/callback/", "/redirect/"));
+        const redirectParams = new URLSearchParams()
+        redirectParams.set("origin_url", originUrlParts.toString())
+        redirectParams.set("dest_url", destUrl)
+        redirectUrlParts.search = redirectParams.toString()
+        console.log(redirectUrlParts.toString());
+
+        // Simulate a mouse click:
+        window.location.href = redirectUrlParts.toString();
+    }
+
+
+    $(function() {
+        requestSourceList()
+
+        $('input[name="mode"]').change(function() {
+            requestSourceList()
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

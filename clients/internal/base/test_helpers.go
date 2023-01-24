@@ -24,17 +24,23 @@ func (bt *bearerTransport) RoundTrip(req *http.Request) (*http.Response, error) 
 	return bt.underlyingTransport.RoundTrip(req)
 }
 
-func OAuthVcrSetup(t *testing.T, enableRecording bool) *http.Client {
+func OAuthVcrSetup(t *testing.T, enableRecording bool, accessToken ...string) *http.Client {
 
 	tr := http.DefaultTransport.(*http.Transport)
 	tr.TLSClientConfig = &tls.Config{
 		InsecureSkipVerify: true, //disable certificate validation because we're playing back http requests.
 	}
+
+	customTransport := bearerTransport{}
+	customTransport.underlyingTransport = tr
+	if enableRecording && len(accessToken) == 1 {
+		customTransport.accessToken = accessToken[0]
+	} else {
+		customTransport.accessToken = "PLACEHOLDER"
+	}
+
 	insecureClient := http.Client{
-		Transport: &bearerTransport{
-			accessToken:         "PLACEHOLDER",
-			underlyingTransport: tr,
-		},
+		Transport: &customTransport,
 	}
 
 	vcrConfig := govcr.VCRConfig{

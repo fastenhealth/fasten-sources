@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Meta -->
+    <meta name="description" content="Testing">
+    <meta name="author" content="Fasten Health">
+
+    <title>Testing</title>
+    <style>
+
+    </style>
+</head>
+<body class="az-body">
+<div class="az-error-wrapper">
+    <h2>Lighthouse Callback Data</h2>
+
+    <ul>
+        <li>Callback code: <pre id="callback_code"></pre></li>
+        <li>OAuth data: <pre id="oauth_data"></pre></li>
+        <li>Patient id: <pre id="patient_data"></pre></li>
+    </ul>
+
+
+    <h2>Available Sources</h2>
+    <ul class="source-list"></ul>
+    <button onclick="window.close();" class="btn btn-outline-indigo">Close</button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
+<script type="module">
+    import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+
+    async function swapOauthToken(sourceType, sourceMetadata, expectedSourceStateInfo, code){
+        // @ts-expect-error
+        const client = {
+            client_id: sourceMetadata.client_id
+        }
+        //this is for providers that support CORS & PKCE (public client auth)
+        let codeVerifier = undefined
+        if(!sourceMetadata.confidential){
+            client.token_endpoint_auth_method = 'none'
+            codeVerifier = expectedSourceStateInfo.code_verifier
+
+        } else {
+            console.log("This is a confidential client, using lighthouse token endpoint.")
+            //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
+            sourceMetadata.token_endpoint = sourceMetadata.redirect_uri.replace("/callback/", "/token/")
+            //use a placeholder client_secret (the actual secret is stored in Lighthouse)
+            client.client_secret = "placeholder"
+            client.token_endpoint_auth_method = "client_secret_basic"
+            codeVerifier = "placeholder"
+        }
+
+        const as = {
+            issuer: sourceMetadata.issuer,
+            authorization_endpoint:	sourceMetadata.authorization_endpoint,
+            token_endpoint:	sourceMetadata.token_endpoint,
+            introspection_endpoint: sourceMetadata.introspection_endpoint,
+        }
+
+        console.log("STARTING--- Oauth.validateAuthResponse", as)
+        const params = Oauth.validateAuthResponse(as, client, new URLSearchParams({"code": code, "state": expectedSourceStateInfo.state}), expectedSourceStateInfo.state)
+        if (Oauth.isOAuth2Error(params)) {
+            console.log('error', params)
+            throw new Error() // Handle OAuth 2.0 redirect error
+        }
+        console.log("ENDING--- Oauth.validateAuthResponse")
+        console.log("STARTING--- Oauth.authorizationCodeGrantRequest")
+        const response = await Oauth.authorizationCodeGrantRequest(
+            as,
+            client,
+            params,
+            sourceMetadata.redirect_uri,
+            codeVerifier,
+        )
+        let payload = await response.json()
+        console.log("ENDING--- Oauth.authorizationCodeGrantRequest", payload)
+        return payload
+    }
+
+    $(function() {
+
+
+        //get sourceType from url (example.com/callback/{{sourceType}})
+        var parts = window.location.pathname.split("/")
+        var sourceType = parts[parts.length-1]
+
+
+        var lighthouseEndpoint = localStorage.getItem('lighthouseEndpoint')
+
+        $.get(  lighthouseEndpoint + `connect/${sourceType}`, async function( data ) {
+            console.log(data.data)
+
+            var sourceMetadata = data.data
+
+
+            //get required parameters from the URI and local storage
+            const callbackUrlParts = new URL(window.location.href)
+            const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
+            const callbackCode = callbackUrlParts.searchParams.get("code") || fragmentParams.get("code")
+            const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
+            const callbackError = callbackUrlParts.searchParams.get("error") || fragmentParams.get("error")
+            const callbackErrorDescription = callbackUrlParts.searchParams.get("error_description") || fragmentParams.get("error_description")
+
+
+            const expectedSourceStateInfo = JSON.parse(localStorage.getItem(callbackState))
+            localStorage.removeItem(callbackState)
+
+            if(callbackError && !callbackCode){
+                //TOOD: print this message in the UI
+                let errMsg = "an error occurred while authenticating to this source. Please try again later"
+                console.error(errMsg, callbackErrorDescription)
+                throw new Error(errMsg)
+            }
+
+            console.log("callback code:", callbackCode)
+            $('#callback_code').text(callbackCode)
+
+
+            let payload = await swapOauthToken(sourceType, sourceMetadata,expectedSourceStateInfo, callbackCode)
+            $('#oauth_data').text(JSON.stringify(payload, null, 4))
+            $('#patient_data').text(payload.patient)
+
+        });
+
+
+    });
+
+
+</script>
+</body>
+</html>
