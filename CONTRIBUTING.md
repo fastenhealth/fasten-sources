@@ -61,6 +61,16 @@ classDiagram
     }
 ```
 
+# Setup Testing Environment
+
+```
+git clone https://github.com/fastenhealth/fasten-sources.git
+cd fasten-sources
+go mod tidy
+go mod vendor
+go test ./...
+```
+
 
 
 ## Writing Tests or Creating Recordings for Existing Client
@@ -68,7 +78,8 @@ classDiagram
 
 If we're testing or making changes to an existing client, we can do the following:
 
-1. Generate an AccessToken for the Source/OAuth client you'd like to test
+1. Determine the Platform source we'd like to modify (Institution sources are sparse and contain no custom logic).
+2. Open browser tool to which will allow us to generate a access-token for our source. 
 ```bash
 
 cd testutils
@@ -76,6 +87,59 @@ go run oauth_cli.go
 
 ```
 
-2. select "Sandbox" or "Production" depending on which 
+3. Select "Sandbox" radio button
+4. Select Platform you'd like to generate an Access Token for. 
+5. Login with Sandbox credentials for the platform - https://github.com/fastenhealth/docs/blob/main/BETA.md#sandbox-flavor
+6. Continue through all prompts, until redirected back to Fasten Lighthouse and localhost. 
+7. Wait for OAuth handshake to complete, note **Access Token** and **Patient ID**. 
+8. Find the [test file](./clients/internal/platform) for the source you'd like to change. 
+9. Create a new test function. **Make sure to specify Patient ID and Access Token you noted earlier**
 
+> Make sure `fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return(<<PATIENT_ID>>)` is populated
+> Make sure `httpClient := base.OAuthVcrSetup(t, true, <<ACCESS_TOKEN>>)` is populated, and 2nd parameter is `true`
 
+```go
+
+func TestGetSourceClientCerner_SyncAll(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(694).Return(true, nil)
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return(<<PATIENT_ID>>)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeCerner)
+	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d")
+
+	httpClient := base.OAuthVcrSetup(t, true, <<ACCESS_TOKEN>>)
+	client, _, err := GetSourceClientCerner(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+
+	//test
+	resp, err := client.SyncAll(fakeDatabase)
+	require.NoError(t, err)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 931, resp.TotalResources)
+	require.Equal(t, 694, len(resp.UpdatedResources))
+}
+```
+
+10. Run your new test (and generate a recording) by running the following command `go test ./...`
+11. Disable test recordings for your new test 
+```go
+httpClient := base.OAuthVcrSetup(t, true, <<ACCESS_TOKEN>>)
+
+//should become
+httpClient := base.OAuthVcrSetup(t, false)
+
+```
+12. Make sure your new recording is added to git
+```bash
+git add clients/internal/platform/testdata
+```
