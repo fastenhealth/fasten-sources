@@ -146,4 +146,4 @@ httpClient := base.OAuthVcrSetup(t, false)
 git add clients/internal/platform/testdata
 ```
 
-13. Once you're satisfied with your changes to the Platform client, open a pull request. A maintainer will verify your changes & recordings, apply your changes to the `fasten-sources-gen` repository, regenerate the class and verify using your recordings. :partying_face
+13. Once you're satisfied with your changes to the Platform client, open a pull request. A maintainer will verify your changes & recordings, apply your changes to the `fasten-sources-gen` repository, regenerate the class and verify using your recordings. :partying_face:
