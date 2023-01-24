@@ -20,7 +20,7 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(694).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(853).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("12742397")
@@ -36,6 +36,6 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 931, resp.TotalResources)
-	require.Equal(t, 694, len(resp.UpdatedResources))
+	require.Equal(t, 864, resp.TotalResources)
+	require.Equal(t, 853, len(resp.UpdatedResources))
 }
