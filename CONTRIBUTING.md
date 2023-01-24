@@ -85,6 +85,7 @@ If we're testing or making changes to an existing client, we can do the followin
 cd testutils
 go run oauth_cli.go
 
+# this should start a simple webserver and open a browser to http://localhost:9999
 ```
 
 3. Select "Sandbox" radio button
