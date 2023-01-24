@@ -128,52 +128,12 @@
             let payload = await swapOauthToken(sourceType, sourceMetadata,expectedSourceStateInfo, callbackCode)
             $('#oauth_data').text(JSON.stringify(payload, null, 4))
             $('#patient_data').text(payload.patient)
-            // if(!payload.access_token || payload.error){
-            //     //if the access token is not set, then something is wrong,
-            //     let errMsg = payload.error || "unable to retrieve access_token"
-            //     console.error(errMsg)
-            //     throw new Error(errMsg)
-            // }
-            //
-            //If payload.patient is not set, make sure we extract the patient ID from the id_token or make an introspection req
-            // if(!payload.patient && payload.id_token){
-            //     //
-            //     console.log("NO PATIENT ID present, decoding jwt to extract patient")
-            //     //const introspectionResp = await Oauth.introspectionRequest(as, client, payload.access_token)
-            //     //console.log(introspectionResp)
-            //     payload.patient = jwtDecode(payload.id_token, new BrowserAdapter())["profile"].replace(/^(Patient\/)/,'')
-            // }
-
-
-
 
         });
 
 
     });
 
-
-
-    // let originUrl = localStorage.getItem('{{.SourceType}}.origin_url'.toLowerCase());
-    // if(originUrl){
-    //     localStorage.removeItem('{{.SourceType}}.origin_url'.toLowerCase())
-    //     let originUrlParts = new window.URL(originUrl)
-    //     originUrlParts.search = new URLSearchParams(window.location.search); //parse the code (or error) from the query params, set on originUrl
-    //     originUrlParts.hash = window.location.hash
-    //     setTimeout(function() {
-    //         window.location.replace(originUrlParts.toString());
-    //     }, 2000);
-    // } else {
-    //     console.log("sending success message to opening window...")
-    //     window.opener.postMessage(JSON.stringify({success:true}), "*")
-    //     window.addEventListener("message", (event) => {
-    //
-    //         console.log("received close:true message, waiting 5 seconds before closing")
-    //         setTimeout(function() {
-    //             window.close()
-    //         }, 4000);
-    //     })
-    // }
 
 </script>
 </body>

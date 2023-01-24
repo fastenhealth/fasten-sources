@@ -45,7 +45,6 @@
 
     <h2>Available Sources</h2>
     <ul class="source-list"></ul>
-    <button onclick="window.close();" class="btn btn-outline-indigo">Close</button>
 </div>
 
 
@@ -145,28 +144,6 @@
 
     });
 
-
-
-    // let originUrl = localStorage.getItem('{{.SourceType}}.origin_url'.toLowerCase());
-    // if(originUrl){
-    //     localStorage.removeItem('{{.SourceType}}.origin_url'.toLowerCase())
-    //     let originUrlParts = new window.URL(originUrl)
-    //     originUrlParts.search = new URLSearchParams(window.location.search); //parse the code (or error) from the query params, set on originUrl
-    //     originUrlParts.hash = window.location.hash
-    //     setTimeout(function() {
-    //         window.location.replace(originUrlParts.toString());
-    //     }, 2000);
-    // } else {
-    //     console.log("sending success message to opening window...")
-    //     window.opener.postMessage(JSON.stringify({success:true}), "*")
-    //     window.addEventListener("message", (event) => {
-    //
-    //         console.log("received close:true message, waiting 5 seconds before closing")
-    //         setTimeout(function() {
-    //             window.close()
-    //         }, 4000);
-    //     })
-    // }
 
 </script>
 </body>
