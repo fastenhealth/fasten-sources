@@ -4,6 +4,10 @@ The Fasten Sources is a library that defines medical provider metadata (`definit
 and http clients (OAuth2/Smart-on-FHIR clients) which can be used to retrieve data from various Medical
 Providers (`clients`).
 
+
+> See [SOURCE_LIST.md](./SOURCE_LIST.md) for a full list of sources available in this repo. 
+
+
 # Types
 
 There are multiple protocols used by the Medical Provider industry to transfer patient data, the following mechanisms are the
