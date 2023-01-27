@@ -1,6 +1,12 @@
 # Platform List
 
-Healthcare institutions in the US are required to use vendors that are certified under the [Certified Health IT Product List (CHPL)](https://chpl.healthit.gov/#/search) Program 
+Healthcare institutions in the US are required to use vendors that are certified under the [Certified Health IT Product List (CHPL)](https://chpl.healthit.gov/#/search) Program - `170.315 (g)(10): Standardized API for Patient and Population Services (Cures Update)`
+
+This list of platforms is sourced from various locations, including:
+
+- [Certified Health IT Product List (CHPL)](https://chpl.healthit.gov/#/search)
+- [ONC Lantern](https://github.com/onc-healthit/lantern-back-end/blob/939e4b3979ce4e37f9473fdc8b1e58b8e552a6d7/endpointmanager/pkg/chplendpointquerier/chplendpointquerier.go)
+- [FHIR Public Test Servers & Sandboxes](https://confluence.hl7.org/display/FHIR/Public+Test+Servers)
 
 | Platform Name                                                                                                                                                           | Developer Account                     | Sandbox Status                     | Production Status                                       | Network Locations Status | 
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|------------------------------------|---------------------------------------------------------|--------------------------|
