@@ -31,6 +31,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEpic:
 		return platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMeditech:
+		return platform.GetSourceClientMeditech(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNextgen:
 		return platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// source

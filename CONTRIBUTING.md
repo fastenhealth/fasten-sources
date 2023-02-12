@@ -147,3 +147,19 @@ git add clients/internal/platform/testdata
 ```
 
 13. Once you're satisfied with your changes to the Platform client, open a pull request. A maintainer will verify your changes & recordings, apply your changes to the `fasten-sources-gen` repository, regenerate the class and verify using your recordings. :partying_face:
+
+
+---
+
+## Notes
+
+This library can take a long time to build, as there are thousand's of generated go files. 
+
+https://github.com/golang/go/issues/45474
+https://groups.google.com/g/golang-nuts/c/NJj9nP2Xc0I
+
+```bash
+go clean -cache
+time go build ./...
+# 129.83s user 5.78s system 204% cpu 1:06.23 total
+```

@@ -14,6 +14,7 @@ const (
 	SourceTypeCareevolution SourceType = "careevolution"
 	SourceTypeCerner        SourceType = "cerner"
 	SourceTypeEpic          SourceType = "epic"
+	SourceTypeMeditech      SourceType = "meditech"
 	SourceTypeNextgen       SourceType = "nextgen"
 	// source
 	SourceType12ThStClinic                                                                   SourceType = "12th-st-clinic"
