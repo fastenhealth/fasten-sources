@@ -6874,6 +6874,7 @@ const (
 	SourceTypeZosimaBCarinoGatebMdInc                                                        SourceType = "zosima-b-carino-gateb-md-inc"
 	SourceTypeZuhairOYahyaMdFacpFace                                                         SourceType = "zuhair-o-yahya-md-facp-face"
 	SourceTypeAetna                                                                          SourceType = "aetna"
+	SourceTypeAthenaCustom                                                                   SourceType = "athena-custom"
 	SourceTypeBluebutton                                                                     SourceType = "bluebutton"
 	SourceTypeCigna                                                                          SourceType = "cigna"
 	// sandbox
