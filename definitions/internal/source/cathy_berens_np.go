@@ -29,6 +29,7 @@ func GetSourceCathyBerensNp(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cathy Berens, NP"
 	sourceDef.SourceType = pkg.SourceTypeCathyBerensNp
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/cathyberenspc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTualityPhysiciansPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Tuality Physicians, PC"
 	sourceDef.SourceType = pkg.SourceTypeTualityPhysiciansPc
+	sourceDef.BrandLogo = "tuality-physicians-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.tualityphysicians.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

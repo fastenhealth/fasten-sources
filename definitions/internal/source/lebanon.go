@@ -29,6 +29,7 @@ func GetSourceLebanon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "Lebanon"
 	sourceDef.SourceType = pkg.SourceTypeLebanon
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.pcmc.care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

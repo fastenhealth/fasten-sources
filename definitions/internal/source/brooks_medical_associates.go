@@ -29,6 +29,7 @@ func GetSourceBrooksMedicalAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Brooks Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeBrooksMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

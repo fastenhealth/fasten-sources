@@ -29,6 +29,7 @@ func GetSourceMclarenHealthCareCorporation(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "McLaren Health Care Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMclarenHealthCareCorporation
+	sourceDef.PatientAccessUrl = "https://www.mclaren.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtChildAndFamilyService(env pkg
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Child & Family Service"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtChildAndFamilyService
+	sourceDef.PatientAccessUrl = "https://www.childandfamilyservice.org/cohenclinic/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

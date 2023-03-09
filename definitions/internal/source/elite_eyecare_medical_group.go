@@ -29,6 +29,7 @@ func GetSourceEliteEyecareMedicalGroup(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Elite Eyecare Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeEliteEyecareMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dnb.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

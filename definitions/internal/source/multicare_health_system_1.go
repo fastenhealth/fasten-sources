@@ -29,6 +29,7 @@ func GetSourceMulticareHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "MultiCare Health System"
 	sourceDef.SourceType = pkg.SourceTypeMulticareHealthSystem1
+	sourceDef.BrandLogo = "multicare-health-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

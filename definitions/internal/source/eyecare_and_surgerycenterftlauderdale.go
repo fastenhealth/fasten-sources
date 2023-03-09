@@ -29,6 +29,7 @@ func GetSourceEyecareAndSurgerycenterftlauderdale(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "EyeCare & SurgeryCenterFtLauderdale"
 	sourceDef.SourceType = pkg.SourceTypeEyecareAndSurgerycenterftlauderdale
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.araneye.com/surgery-centers/eye-care-and-surgery-center-of-ft-lauderdale/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDermatologyAssociates1(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Dermatology Associates"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociates1
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dermatology-associates.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

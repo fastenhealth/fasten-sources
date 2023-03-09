@@ -29,6 +29,7 @@ func GetSourceAvistaWomensCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Avista Womens Care"
 	sourceDef.SourceType = pkg.SourceTypeAvistaWomensCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.avistawomenscare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

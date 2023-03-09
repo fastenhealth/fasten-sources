@@ -29,6 +29,7 @@ func GetSourceBoulderCityHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Boulder City Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBoulderCityHospital
+	sourceDef.PatientAccessUrl = "https://www.bchcares.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

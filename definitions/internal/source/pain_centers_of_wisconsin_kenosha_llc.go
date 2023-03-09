@@ -29,6 +29,7 @@ func GetSourcePainCentersOfWisconsinKenoshaLlc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Pain Centers Of Wisconsin Kenosha LLC"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfWisconsinKenoshaLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/medical-supplies/1629631536-pain-centers-of-wisconsin---kenosha%2C-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

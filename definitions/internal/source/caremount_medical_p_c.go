@@ -29,6 +29,8 @@ func GetSourceCaremountMedicalPC(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "CareMount Medical P.C."
 	sourceDef.SourceType = pkg.SourceTypeCaremountMedicalPC
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "caremount-medical-p-c.jpg"
+	sourceDef.PatientAccessUrl = "https://east.optum.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

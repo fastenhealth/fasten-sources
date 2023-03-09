@@ -29,6 +29,8 @@ func GetSourceUbp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.Display = "UBP"
 	sourceDef.SourceType = pkg.SourceTypeUbp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ubp.svg"
+	sourceDef.PatientAccessUrl = "https://www.ubp.com/en"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

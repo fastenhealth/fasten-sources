@@ -29,6 +29,7 @@ func GetSourceANewLeafInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "A New Leaf Inc"
 	sourceDef.SourceType = pkg.SourceTypeANewLeafInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.anewleaf.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

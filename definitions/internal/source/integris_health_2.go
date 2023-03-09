@@ -29,6 +29,7 @@ func GetSourceIntegrisHealth2(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Integris Health"
 	sourceDef.SourceType = pkg.SourceTypeIntegrisHealth2
+	sourceDef.BrandLogo = "integris-health.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

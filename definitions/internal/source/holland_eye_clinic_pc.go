@@ -29,6 +29,7 @@ func GetSourceHollandEyeClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Holland Eye Clinic PC"
 	sourceDef.SourceType = pkg.SourceTypeHollandEyeClinicPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hollandeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

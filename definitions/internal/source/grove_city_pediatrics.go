@@ -29,6 +29,7 @@ func GetSourceGroveCityPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Grove City Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeGroveCityPediatrics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.grovecitypediatricdds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

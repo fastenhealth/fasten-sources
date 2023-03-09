@@ -29,6 +29,7 @@ func GetSourceDrChadSmokerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Dr. Chad Smoker MD"
 	sourceDef.SourceType = pkg.SourceTypeDrChadSmokerMd
+	sourceDef.PatientAccessUrl = "https://www.mymountaindocs.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

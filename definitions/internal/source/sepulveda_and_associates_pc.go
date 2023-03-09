@@ -29,6 +29,7 @@ func GetSourceSepulvedaAndAssociatesPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sepulveda & Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeSepulvedaAndAssociatesPc
+	sourceDef.PatientAccessUrl = "https://www.sepulvedamd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

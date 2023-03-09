@@ -29,6 +29,8 @@ func GetSourceRaritanFamilyHealthcare1(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Raritan Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeRaritanFamilyHealthcare1
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "raritan-family-healthcare.jpg"
+	sourceDef.PatientAccessUrl = "https://www.raritanfamily.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

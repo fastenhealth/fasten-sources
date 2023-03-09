@@ -28,6 +28,7 @@ func GetSourcePiedmontHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Piedmont Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePiedmontHealthcare1
+	sourceDef.BrandLogo = "piedmont-healthcare.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

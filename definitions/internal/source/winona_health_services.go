@@ -29,6 +29,7 @@ func GetSourceWinonaHealthServices(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Winona Health Services"
 	sourceDef.SourceType = pkg.SourceTypeWinonaHealthServices
+	sourceDef.PatientAccessUrl = "https://www.winonahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceStLukesEntAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "St. Luke's ENT Associates"
 	sourceDef.SourceType = pkg.SourceTypeStLukesEntAssociates
+	sourceDef.PatientAccessUrl = "https://www.slhduluth.com/locations/st-lukes-ear-nose-throat-associates/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

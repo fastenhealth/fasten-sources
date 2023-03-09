@@ -29,6 +29,7 @@ func GetSourceJasperMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Jasper Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJasperMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.jaspermemorialhospital.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

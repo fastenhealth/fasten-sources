@@ -29,6 +29,8 @@ func GetSourcePediatricSpecialistsOfKnoxCounty(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Pediatric Specialists Of Knox County"
 	sourceDef.SourceType = pkg.SourceTypePediatricSpecialistsOfKnoxCounty
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pediatric-specialists-of-knox-county.jpg"
+	sourceDef.PatientAccessUrl = "https://m.yelp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAtriumHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Atrium Health"
 	sourceDef.SourceType = pkg.SourceTypeAtriumHealth1
+	sourceDef.BrandLogo = "atrium-health.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

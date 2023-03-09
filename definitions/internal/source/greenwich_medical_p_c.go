@@ -29,6 +29,7 @@ func GetSourceGreenwichMedicalPC(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Greenwich Medical P.C"
 	sourceDef.SourceType = pkg.SourceTypeGreenwichMedicalPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://greenwichmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

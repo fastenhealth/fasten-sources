@@ -29,6 +29,7 @@ func GetSourceCraigRJohnsonMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Craig R Johnson MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeCraigRJohnsonMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceMedcorAtSynchrony(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Medcor At Synchrony"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtSynchrony
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "medcor-at-synchrony.svg"
+	sourceDef.PatientAccessUrl = "https://www.synchrony.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

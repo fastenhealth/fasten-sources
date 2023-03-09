@@ -29,6 +29,8 @@ func GetSourceReadingObgynWomensBirthCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Reading OBGYN Womens Birth Center"
 	sourceDef.SourceType = pkg.SourceTypeReadingObgynWomensBirthCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "reading-obgyn-womens-birth-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.readingmidwifecenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

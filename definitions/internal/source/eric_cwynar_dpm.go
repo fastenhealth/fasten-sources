@@ -29,6 +29,7 @@ func GetSourceEricCwynarDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Eric Cwynar DPM"
 	sourceDef.SourceType = pkg.SourceTypeEricCwynarDpm
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ohiohealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

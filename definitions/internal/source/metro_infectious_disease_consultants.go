@@ -29,6 +29,7 @@ func GetSourceMetroInfectiousDiseaseConsultants(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Metro Infectious Disease Consultants"
 	sourceDef.SourceType = pkg.SourceTypeMetroInfectiousDiseaseConsultants
+	sourceDef.PatientAccessUrl = "https://midcusa.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

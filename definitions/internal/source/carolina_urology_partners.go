@@ -29,6 +29,8 @@ func GetSourceCarolinaUrologyPartners(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Carolina Urology Partners"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaUrologyPartners
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "carolina-urology-partners.svg"
+	sourceDef.PatientAccessUrl = "https://carolinaurology.com/location/huntersville/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

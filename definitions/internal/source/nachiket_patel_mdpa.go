@@ -29,6 +29,7 @@ func GetSourceNachiketPatelMdpa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Nachiket Patel MDPA"
 	sourceDef.SourceType = pkg.SourceTypeNachiketPatelMdpa
+	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

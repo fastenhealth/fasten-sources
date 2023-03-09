@@ -29,6 +29,7 @@ func GetSourceGroupOne(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Group One"
 	sourceDef.SourceType = pkg.SourceTypeGroupOne
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://grouponeinc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

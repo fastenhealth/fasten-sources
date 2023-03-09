@@ -29,6 +29,7 @@ func GetSourceSmithCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Smith County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSmithCountyMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.scmhks.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

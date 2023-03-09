@@ -29,6 +29,7 @@ func GetSourceCenterForNutritionAndDiabetesMgmt(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Center For Nutrition And Diabetes Mgmt"
 	sourceDef.SourceType = pkg.SourceTypeCenterForNutritionAndDiabetesMgmt
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

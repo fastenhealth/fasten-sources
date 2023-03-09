@@ -29,6 +29,7 @@ func GetSourceAdventistHealthTulare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Adventist Health Tulare"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthTulare
+	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/tulare/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

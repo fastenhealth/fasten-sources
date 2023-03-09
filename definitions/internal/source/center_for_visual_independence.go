@@ -29,6 +29,7 @@ func GetSourceCenterForVisualIndependence(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Center For Visual Independence"
 	sourceDef.SourceType = pkg.SourceTypeCenterForVisualIndependence
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.google.com/maps/place/Center+For+Visual+Independence/@35.1089962,-89.8685588,17z/data=!3m1!4b1!4m6!3m5!1s0x887f84be188a3593:0x62491f276a569f7f!8m2!3d35.1089962!4d-89.8685588!16s%2Fg%2F1260wzy47"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

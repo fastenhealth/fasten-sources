@@ -29,6 +29,7 @@ func GetSourceFredericktown(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Fredericktown"
 	sourceDef.SourceType = pkg.SourceTypeFredericktown
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://fredericktownmo.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

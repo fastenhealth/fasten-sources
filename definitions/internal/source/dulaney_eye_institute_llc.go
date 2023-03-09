@@ -29,6 +29,7 @@ func GetSourceDulaneyEyeInstituteLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Dulaney Eye Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeDulaneyEyeInstituteLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dulaneyeye.com/?y_source=1_MjA0NDA2MDgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

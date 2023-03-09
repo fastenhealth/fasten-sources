@@ -29,6 +29,7 @@ func GetSourceBhaveshPatel(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Bhavesh Patel"
 	sourceDef.SourceType = pkg.SourceTypeBhaveshPatel
+	sourceDef.PatientAccessUrl = "https://www.platinumdigestivehealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceIrinaJasperMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Irina Jasper M D"
 	sourceDef.SourceType = pkg.SourceTypeIrinaJasperMD
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.doctorjasper.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

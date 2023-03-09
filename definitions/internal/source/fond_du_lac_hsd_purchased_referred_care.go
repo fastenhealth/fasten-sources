@@ -29,6 +29,7 @@ func GetSourceFondDuLacHsdPurchasedReferredCare(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Fond du Lac HSD Purchased Referred Care"
 	sourceDef.SourceType = pkg.SourceTypeFondDuLacHsdPurchasedReferredCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.fdlrez.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

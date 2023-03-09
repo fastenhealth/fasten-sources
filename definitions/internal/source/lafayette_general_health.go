@@ -29,6 +29,7 @@ func GetSourceLafayetteGeneralHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Lafayette General Health"
 	sourceDef.SourceType = pkg.SourceTypeLafayetteGeneralHealth
+	sourceDef.PatientAccessUrl = "https://ochsnerlg.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

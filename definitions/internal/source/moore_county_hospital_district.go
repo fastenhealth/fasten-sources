@@ -29,6 +29,7 @@ func GetSourceMooreCountyHospitalDistrict(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Moore County Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeMooreCountyHospitalDistrict
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://mchd.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

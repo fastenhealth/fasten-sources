@@ -29,6 +29,7 @@ func GetSourcePartnersInRecovery(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Partners In Recovery"
 	sourceDef.SourceType = pkg.SourceTypePartnersInRecovery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://minnesotarecovery.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

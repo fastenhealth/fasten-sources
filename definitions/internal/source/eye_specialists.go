@@ -29,6 +29,7 @@ func GetSourceEyeSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Eye Specialists"
 	sourceDef.SourceType = pkg.SourceTypeEyeSpecialists
+	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceBrmcMedicalSpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "BRMC Medical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeBrmcMedicalSpecialists
+	sourceDef.PatientAccessUrl = "https://tampaambulatory.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHematologyOncologyCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Hematology Oncology Center"
 	sourceDef.SourceType = pkg.SourceTypeHematologyOncologyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.aoncology.com/practices/hoc-hematology-oncology-center-ohio/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

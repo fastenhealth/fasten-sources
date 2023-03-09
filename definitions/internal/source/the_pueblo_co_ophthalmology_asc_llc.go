@@ -29,6 +29,7 @@ func GetSourceThePuebloCoOphthalmologyAscLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "The Pueblo CO Ophthalmology ASC LLC"
 	sourceDef.SourceType = pkg.SourceTypeThePuebloCoOphthalmologyAscLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://rockymountainlaserandsurgerycenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

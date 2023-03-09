@@ -28,6 +28,7 @@ func GetSourceSeattleChildrensHospital1(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Seattle Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSeattleChildrensHospital1
+	sourceDef.BrandLogo = "seattle-childrens-hospital.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

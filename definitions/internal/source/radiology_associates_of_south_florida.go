@@ -29,6 +29,7 @@ func GetSourceRadiologyAssociatesOfSouthFlorida(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Radiology Associates of South Florida"
 	sourceDef.SourceType = pkg.SourceTypeRadiologyAssociatesOfSouthFlorida
+	sourceDef.PatientAccessUrl = "https://www.superdoctors.com/florida/hospital-clinic/Radiology-Associates-of-South-Florida/98aea428-dd19-4f25-8bc5-3deff457f7e2.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

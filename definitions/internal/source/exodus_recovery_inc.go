@@ -29,6 +29,7 @@ func GetSourceExodusRecoveryInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Exodus Recovery, Inc."
 	sourceDef.SourceType = pkg.SourceTypeExodusRecoveryInc
+	sourceDef.PatientAccessUrl = "https://www.exodusrecovery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

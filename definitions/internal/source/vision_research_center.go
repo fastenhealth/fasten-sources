@@ -29,6 +29,7 @@ func GetSourceVisionResearchCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Vision Research Center"
 	sourceDef.SourceType = pkg.SourceTypeVisionResearchCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.eyenm.com/vision-research/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

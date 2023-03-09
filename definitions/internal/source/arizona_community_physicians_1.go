@@ -28,6 +28,7 @@ func GetSourceArizonaCommunityPhysicians1(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Arizona Community Physicians"
 	sourceDef.SourceType = pkg.SourceTypeArizonaCommunityPhysicians1
+	sourceDef.BrandLogo = "arizona-community-physicians.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

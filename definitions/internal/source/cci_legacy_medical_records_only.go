@@ -29,6 +29,8 @@ func GetSourceCciLegacyMedicalRecordsOnly(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "CCI-LEGACY-Medical Records ONLY"
 	sourceDef.SourceType = pkg.SourceTypeCciLegacyMedicalRecordsOnly
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "cci-legacy-medical-records-only.svg"
+	sourceDef.PatientAccessUrl = "https://bestcare.org/locations/methodist-physicians-clinic-colon-and-rectal-surgery"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

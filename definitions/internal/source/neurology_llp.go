@@ -29,6 +29,8 @@ func GetSourceNeurologyLlp(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Neurology LLP"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyLlp
+	sourceDef.BrandLogo = "neurology-llp.jpg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

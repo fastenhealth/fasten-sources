@@ -29,6 +29,8 @@ func GetSourceAllinaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Allina Health"
 	sourceDef.SourceType = pkg.SourceTypeAllinaHealth
+	sourceDef.BrandLogo = "allina-health.svg"
+	sourceDef.PatientAccessUrl = "https://account.allinahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

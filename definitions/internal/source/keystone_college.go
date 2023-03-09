@@ -29,6 +29,7 @@ func GetSourceKeystoneCollege(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Keystone College"
 	sourceDef.SourceType = pkg.SourceTypeKeystoneCollege
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.keystone.edu"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

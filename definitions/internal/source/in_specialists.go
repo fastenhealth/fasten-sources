@@ -29,6 +29,7 @@ func GetSourceInSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "IN Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInSpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

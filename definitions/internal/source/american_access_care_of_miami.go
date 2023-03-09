@@ -29,6 +29,7 @@ func GetSourceAmericanAccessCareOfMiami(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "American Access Care Of Miami"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfMiami
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

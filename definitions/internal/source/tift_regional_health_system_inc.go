@@ -29,6 +29,8 @@ func GetSourceTiftRegionalHealthSystemInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Tift Regional Health System, Inc."
 	sourceDef.SourceType = pkg.SourceTypeTiftRegionalHealthSystemInc
+	sourceDef.BrandLogo = "tift-regional-health-system-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://mysouthwell.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

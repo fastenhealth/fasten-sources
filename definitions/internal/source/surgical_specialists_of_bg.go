@@ -29,6 +29,7 @@ func GetSourceSurgicalSpecialistsOfBg(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Surgical Specialists of BG"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalSpecialistsOfBg
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/surgical-specialists-of-bowling-green-llc-62abe6c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -43,9 +43,12 @@ type LighthouseSourceDefinition struct {
 	SecretKeyPrefix   string `json:"-"`                   //the secret key prefix to use, if empty (default) will use the sourceType value
 
 	//Display information
-	PlatformType pkg.SourceType `json:"platform_type"`
-	Display      string         `json:"display"`
-	SourceType   pkg.SourceType `json:"source_type"`
-	Category     []string       `json:"category"`
-	Hidden       bool           `json:"hidden"`
+	PlatformType             pkg.SourceType `json:"platform_type"`
+	Display                  string         `json:"display"`
+	SourceType               pkg.SourceType `json:"source_type"`
+	Category                 []string       `json:"category"`
+	Hidden                   bool           `json:"hidden"`
+	BrandLogo                string         `json:"brand_logo,omitempty"` //if set, will override the default logo filename (sourceType.png). Use for non-png extensions
+	PatientAccessUrl         string         `json:"patient_access_url,omitempty"`
+	PatientAccessDescription string         `json:"patient_access_description,omitempty"`
 }

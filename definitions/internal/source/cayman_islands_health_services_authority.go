@@ -29,6 +29,8 @@ func GetSourceCaymanIslandsHealthServicesAuthority(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Cayman Islands Health Services Authority"
 	sourceDef.SourceType = pkg.SourceTypeCaymanIslandsHealthServicesAuthority
+	sourceDef.BrandLogo = "cayman-islands-health-services-authority.jpg"
+	sourceDef.PatientAccessUrl = "https://www.hsa.ky/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

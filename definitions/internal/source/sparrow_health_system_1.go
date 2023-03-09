@@ -29,6 +29,7 @@ func GetSourceSparrowHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Sparrow Health System"
 	sourceDef.SourceType = pkg.SourceTypeSparrowHealthSystem1
+	sourceDef.BrandLogo = "sparrow-health-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

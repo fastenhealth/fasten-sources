@@ -28,6 +28,7 @@ func GetSourceOrlandoHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Orlando Health"
 	sourceDef.SourceType = pkg.SourceTypeOrlandoHealth1
+	sourceDef.BrandLogo = "orlando-health.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

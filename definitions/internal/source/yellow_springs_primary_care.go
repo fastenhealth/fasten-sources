@@ -29,6 +29,8 @@ func GetSourceYellowSpringsPrimaryCare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Yellow Springs Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeYellowSpringsPrimaryCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "yellow-springs-primary-care.svg"
+	sourceDef.PatientAccessUrl = "https://ketteringhealth.org/locations/kettering-health-medical-group-primary-care-khmgpc1006/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

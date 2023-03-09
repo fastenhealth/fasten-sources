@@ -29,6 +29,7 @@ func GetSourceAspenFamilyCarePllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Aspen Family Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAspenFamilyCarePllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.aspenfamilycare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

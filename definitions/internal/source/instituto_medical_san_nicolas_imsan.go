@@ -29,6 +29,7 @@ func GetSourceInstitutoMedicalSanNicolasImsan(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Instituto Medical San Nicolas (IMSAN)"
 	sourceDef.SourceType = pkg.SourceTypeInstitutoMedicalSanNicolasImsan
+	sourceDef.PatientAccessUrl = "https://www.imsan.aw/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

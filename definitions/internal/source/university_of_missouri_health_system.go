@@ -29,6 +29,7 @@ func GetSourceUniversityOfMissouriHealthSystem(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "University of Missouri Health System"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMissouriHealthSystem
+	sourceDef.PatientAccessUrl = "https://www.muhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

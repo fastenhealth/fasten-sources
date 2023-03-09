@@ -29,6 +29,7 @@ func GetSourceWesterville(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Westerville"
 	sourceDef.SourceType = pkg.SourceTypeWesterville
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ahni.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

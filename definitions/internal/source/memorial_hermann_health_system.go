@@ -29,6 +29,7 @@ func GetSourceMemorialHermannHealthSystem(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Memorial Hermann Health System"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHermannHealthSystem
+	sourceDef.PatientAccessUrl = "https://www.memorialhermann.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceShoaibAChowdhuryMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Shoaib A. Chowdhury, MD"
 	sourceDef.SourceType = pkg.SourceTypeShoaibAChowdhuryMd
+	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/shoaib-chowdhury-451048"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMihokoMNelsenMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Mihoko M Nelsen MD"
 	sourceDef.SourceType = pkg.SourceTypeMihokoMNelsenMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.saintalphonsus.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

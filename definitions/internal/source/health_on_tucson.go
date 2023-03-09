@@ -29,6 +29,7 @@ func GetSourceHealthOnTucson(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Health On Tucson"
 	sourceDef.SourceType = pkg.SourceTypeHealthOnTucson
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://healthontucson.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

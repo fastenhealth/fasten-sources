@@ -29,6 +29,7 @@ func GetSourceTexasHeartAndVascularCarePllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Texas Heart and Vascular Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeTexasHeartAndVascularCarePllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://thandv.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

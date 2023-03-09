@@ -29,6 +29,7 @@ func GetSourceMichaelJEveroskiMDPC(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Michael J. Everoski, M.D., P.C."
 	sourceDef.SourceType = pkg.SourceTypeMichaelJEveroskiMDPC
+	sourceDef.PatientAccessUrl = "https://www.zocdoc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

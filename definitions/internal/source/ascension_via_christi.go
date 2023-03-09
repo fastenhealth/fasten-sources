@@ -29,6 +29,7 @@ func GetSourceAscensionViaChristi(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ascension Via Christi"
 	sourceDef.SourceType = pkg.SourceTypeAscensionViaChristi
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/kansas/kswic/wichita-ascension-via-christi-st-francis"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

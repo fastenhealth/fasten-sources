@@ -29,6 +29,7 @@ func GetSourceAlgosInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Algos Inc"
 	sourceDef.SourceType = pkg.SourceTypeAlgosInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.synovationmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

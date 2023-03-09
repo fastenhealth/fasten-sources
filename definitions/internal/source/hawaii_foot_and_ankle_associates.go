@@ -29,6 +29,7 @@ func GetSourceHawaiiFootAndAnkleAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Hawaii Foot & Ankle Associates"
 	sourceDef.SourceType = pkg.SourceTypeHawaiiFootAndAnkleAssociates
+	sourceDef.PatientAccessUrl = "https://www.hawaiifootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSpectrumOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Spectrum Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumOrthopaedics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://orthospectrum.com/locations/orthoaccess-walk-in-clinic-portland/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

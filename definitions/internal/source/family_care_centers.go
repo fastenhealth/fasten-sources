@@ -29,6 +29,7 @@ func GetSourceFamilyCareCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Family Care Centers"
 	sourceDef.SourceType = pkg.SourceTypeFamilyCareCenters
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1134557655-family-care-centers-medical-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceHunterdonRegionalCancerCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Hunterdon Regional Cancer Center"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonRegionalCancerCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-regional-cancer-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/hunterdon-regional-cancer-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

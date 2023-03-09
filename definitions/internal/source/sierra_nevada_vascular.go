@@ -29,6 +29,7 @@ func GetSourceSierraNevadaVascular(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Sierra Nevada Vascular"
 	sourceDef.SourceType = pkg.SourceTypeSierraNevadaVascular
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/sierra-nevada-access-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

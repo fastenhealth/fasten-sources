@@ -29,6 +29,7 @@ func GetSourcePrimecareOfSoutheasternOhioInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "PrimeCare Of Southeastern Ohio Inc"
 	sourceDef.SourceType = pkg.SourceTypePrimecareOfSoutheasternOhioInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.primecareseo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

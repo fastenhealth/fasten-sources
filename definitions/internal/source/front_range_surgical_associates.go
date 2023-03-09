@@ -29,6 +29,8 @@ func GetSourceFrontRangeSurgicalAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Front Range Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeFrontRangeSurgicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "front-range-surgical-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://npiprofile.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

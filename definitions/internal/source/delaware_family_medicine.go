@@ -29,6 +29,7 @@ func GetSourceDelawareFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Delaware Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDelawareFamilyMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.delawarefamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

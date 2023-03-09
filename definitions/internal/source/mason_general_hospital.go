@@ -29,6 +29,8 @@ func GetSourceMasonGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Mason General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMasonGeneralHospital
+	sourceDef.BrandLogo = "mason-general-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.masongeneral.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

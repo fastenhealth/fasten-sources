@@ -29,6 +29,7 @@ func GetSourceOhioSpecialtyDepartment(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Ohio Specialty Department"
 	sourceDef.SourceType = pkg.SourceTypeOhioSpecialtyDepartment
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ahni.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

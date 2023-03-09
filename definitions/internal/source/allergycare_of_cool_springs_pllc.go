@@ -29,6 +29,7 @@ func GetSourceAllergycareOfCoolSpringsPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Allergycare Of Cool Springs PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAllergycareOfCoolSpringsPllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://allergydropz.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

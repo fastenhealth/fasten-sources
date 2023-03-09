@@ -28,6 +28,7 @@ func GetSourceTheUniversityOfTexasHealthScienceCenterAtHouston1(env pkg.FastenLi
 
 	sourceDef.Display = "The University of Texas Health Science Center at Houston"
 	sourceDef.SourceType = pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston1
+	sourceDef.BrandLogo = "the-university-of-texas-health-science-center-at-houston.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

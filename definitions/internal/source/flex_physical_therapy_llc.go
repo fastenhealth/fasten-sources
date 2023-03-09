@@ -29,6 +29,7 @@ func GetSourceFlexPhysicalTherapyLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Flex Physical Therapy LLC"
 	sourceDef.SourceType = pkg.SourceTypeFlexPhysicalTherapyLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.flexptny.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

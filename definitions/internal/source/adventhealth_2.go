@@ -29,6 +29,7 @@ func GetSourceAdventhealth2(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "AdventHealth"
 	sourceDef.SourceType = pkg.SourceTypeAdventhealth2
+	sourceDef.BrandLogo = "adventhealth.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

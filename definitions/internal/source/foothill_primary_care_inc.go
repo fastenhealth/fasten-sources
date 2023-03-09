@@ -29,6 +29,8 @@ func GetSourceFoothillPrimaryCareInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Foothill Primary Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeFoothillPrimaryCareInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "foothill-primary-care-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://m.yelp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

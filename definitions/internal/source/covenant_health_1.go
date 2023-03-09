@@ -29,6 +29,7 @@ func GetSourceCovenantHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Covenant Health"
 	sourceDef.SourceType = pkg.SourceTypeCovenantHealth1
+	sourceDef.BrandLogo = "covenant-health.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceFrederickHoMdAProfCorp(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Frederick Ho MD A Prof. Corp."
 	sourceDef.SourceType = pkg.SourceTypeFrederickHoMdAProfCorp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "frederick-ho-md-a-prof-corp.jpg"
+	sourceDef.PatientAccessUrl = "http://atlanticeyemd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

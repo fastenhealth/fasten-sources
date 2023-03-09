@@ -29,6 +29,8 @@ func GetSourceHealthpoint(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "HealthPoint"
 	sourceDef.SourceType = pkg.SourceTypeHealthpoint
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "healthpoint.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthpointchc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCompassionateCareWesternNc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Compassionate Care Western NC"
 	sourceDef.SourceType = pkg.SourceTypeCompassionateCareWesternNc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://compassionatecarewnc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceTidalhealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "TidalHealth"
 	sourceDef.SourceType = pkg.SourceTypeTidalhealth1
+	sourceDef.BrandLogo = "tidalhealth.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceClinicaLasCondes(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Clinica Las Condes"
 	sourceDef.SourceType = pkg.SourceTypeClinicaLasCondes
+	sourceDef.PatientAccessUrl = "https://www.clinicalascondes.cl/HOME"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceWomensCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Womens Care"
 	sourceDef.SourceType = pkg.SourceTypeWomensCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://womenscare-obgyn.com/our-locations/shawnee-mission-office/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

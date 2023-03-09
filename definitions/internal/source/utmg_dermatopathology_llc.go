@@ -29,6 +29,8 @@ func GetSourceUtmgDermatopathologyLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "UTMG Dermatopathology LLC"
 	sourceDef.SourceType = pkg.SourceTypeUtmgDermatopathologyLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "utmg-dermatopathology-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://npidb.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

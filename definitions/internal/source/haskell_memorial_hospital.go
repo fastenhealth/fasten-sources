@@ -29,6 +29,8 @@ func GetSourceHaskellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Haskell Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHaskellMemorialHospital
+	sourceDef.BrandLogo = "haskell-memorial-hospital.jpeg"
+	sourceDef.PatientAccessUrl = "http://www.haskellmemorialhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

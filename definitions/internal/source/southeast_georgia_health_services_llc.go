@@ -29,6 +29,7 @@ func GetSourceSoutheastGeorgiaHealthServicesLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Southeast Georgia Health Services, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSoutheastGeorgiaHealthServicesLlc
+	sourceDef.PatientAccessUrl = "https://www.sghs.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

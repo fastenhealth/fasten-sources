@@ -29,6 +29,7 @@ func GetSourceDulaneyAnesthesiaAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Dulaney Anesthesia Associates"
 	sourceDef.SourceType = pkg.SourceTypeDulaneyAnesthesiaAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.usap.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceKirbyEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Kirby Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeKirbyEyeCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://kirbyeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePresbyterianHealthcareServices1(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Presbyterian Healthcare Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianHealthcareServices1
+	sourceDef.BrandLogo = "presbyterian-healthcare-services.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

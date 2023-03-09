@@ -29,6 +29,8 @@ func GetSourceUnitedMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "United Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUnitedMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "united-medical-center.jpeg"
+	sourceDef.PatientAccessUrl = "https://umchealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

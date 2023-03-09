@@ -29,6 +29,7 @@ func GetSourceHilliard(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Hilliard"
 	sourceDef.SourceType = pkg.SourceTypeHilliard
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

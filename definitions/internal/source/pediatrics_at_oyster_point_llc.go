@@ -29,6 +29,7 @@ func GetSourcePediatricsAtOysterPointLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Pediatrics at Oyster Point LLC"
 	sourceDef.SourceType = pkg.SourceTypePediatricsAtOysterPointLlc
+	sourceDef.PatientAccessUrl = "https://www.chkd.org/our-doctors/our-pediatricians/chn-pediatric-practices/pediatrics-at-oyster-point/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

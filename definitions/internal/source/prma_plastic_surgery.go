@@ -29,6 +29,7 @@ func GetSourcePrmaPlasticSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "PRMA Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypePrmaPlasticSurgery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://prma-enhance.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceWellspanHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "WellSpan Health"
 	sourceDef.SourceType = pkg.SourceTypeWellspanHealth1
+	sourceDef.BrandLogo = "wellspan-health.png"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

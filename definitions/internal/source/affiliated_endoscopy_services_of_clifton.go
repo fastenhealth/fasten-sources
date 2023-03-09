@@ -29,6 +29,8 @@ func GetSourceAffiliatedEndoscopyServicesOfClifton(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Affiliated Endoscopy Services Of Clifton"
 	sourceDef.SourceType = pkg.SourceTypeAffiliatedEndoscopyServicesOfClifton
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "affiliated-endoscopy-services-of-clifton.jpg"
+	sourceDef.PatientAccessUrl = "https://affiliatedendo.com/?utm_campaign=gmb-listing&utm_source=google&utm_medium=local-seo"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

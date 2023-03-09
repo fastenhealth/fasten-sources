@@ -29,6 +29,7 @@ func GetSourceNchHealthcareSystem1(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "NCH Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeNchHealthcareSystem1
+	sourceDef.BrandLogo = "nch-healthcare-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

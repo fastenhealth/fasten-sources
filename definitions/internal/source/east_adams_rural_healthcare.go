@@ -29,6 +29,7 @@ func GetSourceEastAdamsRuralHealthcare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "East Adams Rural  Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeEastAdamsRuralHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.earh.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

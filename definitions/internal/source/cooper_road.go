@@ -29,6 +29,7 @@ func GetSourceCooperRoad(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Cooper Road"
 	sourceDef.SourceType = pkg.SourceTypeCooperRoad
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ahni.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
