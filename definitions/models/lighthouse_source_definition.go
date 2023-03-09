@@ -43,8 +43,9 @@ type LighthouseSourceDefinition struct {
 	SecretKeyPrefix   string `json:"-"`                   //the secret key prefix to use, if empty (default) will use the sourceType value
 
 	//Display information
-	Display    string         `json:"display"`
-	SourceType pkg.SourceType `json:"source_type"`
-	Category   []string       `json:"category"`
-	Hidden     bool           `json:"hidden"`
+	PlatformType pkg.SourceType `json:"platform_type"`
+	Display      string         `json:"display"`
+	SourceType   pkg.SourceType `json:"source_type"`
+	Category     []string       `json:"category"`
+	Hidden       bool           `json:"hidden"`
 }

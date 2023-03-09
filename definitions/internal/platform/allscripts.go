@@ -41,6 +41,7 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "Allscripts - Veradigm (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeAllscripts
 	sourceDef.SourceType = pkg.SourceTypeAllscripts
 	sourceDef.Category = []string{"Sandbox"}
 

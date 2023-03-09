@@ -34,6 +34,7 @@ func GetSourceAetna(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAetna))
 
 	sourceDef.Display = "Aetna"
+	sourceDef.PlatformType = pkg.SourceTypeAetna
 	sourceDef.SourceType = pkg.SourceTypeAetna
 	sourceDef.Category = []string{"Insurance"}
 

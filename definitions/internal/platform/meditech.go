@@ -34,6 +34,7 @@ func GetSourceMeditech(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeMeditech))
 
 	sourceDef.Display = "Meditech (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeMeditech
 	sourceDef.SourceType = pkg.SourceTypeMeditech
 	sourceDef.Category = []string{"Sandbox"}
 

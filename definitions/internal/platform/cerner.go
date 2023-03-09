@@ -39,6 +39,7 @@ func GetSourceCerner(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Cerner (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeCerner
 	sourceDef.SourceType = pkg.SourceTypeCerner
 	sourceDef.Category = []string{"Sandbox"}
 

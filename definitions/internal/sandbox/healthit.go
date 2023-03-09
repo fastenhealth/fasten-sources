@@ -37,6 +37,7 @@ func GetSourceHealthit(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeHealthit))
 
 	sourceDef.Display = "HealthIT (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeHealthit
 	sourceDef.SourceType = pkg.SourceTypeHealthit
 	sourceDef.Category = []string{"Sandbox"}
 

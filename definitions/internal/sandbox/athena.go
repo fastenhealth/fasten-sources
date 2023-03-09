@@ -38,6 +38,7 @@ func GetSourceAthena(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
 
 	sourceDef.Display = "Athena (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeAthena
 	sourceDef.SourceType = pkg.SourceTypeAthena
 	sourceDef.Category = []string{"Sandbox"}
 

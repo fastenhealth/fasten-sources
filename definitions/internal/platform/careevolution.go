@@ -35,6 +35,7 @@ func GetSourceCareevolution(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "CareEvolution (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeCareevolution
 	sourceDef.SourceType = pkg.SourceTypeCareevolution
 	sourceDef.Category = []string{"Sandbox"}
 

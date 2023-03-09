@@ -35,6 +35,7 @@ func GetSourceCigna(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCigna))
 
 	sourceDef.Display = "Cigna"
+	sourceDef.PlatformType = pkg.SourceTypeCigna
 	sourceDef.SourceType = pkg.SourceTypeCigna
 	sourceDef.Category = []string{"Insurance", "Hospital"}
 

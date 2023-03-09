@@ -35,6 +35,7 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
 
 	sourceDef.Display = "Epic (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeEpic
 	sourceDef.SourceType = pkg.SourceTypeEpic
 	sourceDef.Category = []string{"Sandbox"}
 

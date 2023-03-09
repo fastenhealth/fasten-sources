@@ -38,6 +38,7 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "Medicare/VA Health (BlueButton)"
+	sourceDef.PlatformType = pkg.SourceTypeBluebutton
 	sourceDef.SourceType = pkg.SourceTypeBluebutton
 	sourceDef.Category = []string{"Hospital"}
 

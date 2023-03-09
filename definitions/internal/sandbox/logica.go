@@ -34,6 +34,7 @@ func GetSourceLogica(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeLogica))
 
 	sourceDef.Display = "Logica (Sandbox)"
+	sourceDef.PlatformType = pkg.SourceTypeLogica
 	sourceDef.SourceType = pkg.SourceTypeLogica
 	sourceDef.Category = []string{"Sandbox"}
 
