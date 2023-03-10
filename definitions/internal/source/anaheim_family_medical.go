@@ -29,6 +29,8 @@ func GetSourceAnaheimFamilyMedical(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Anaheim Family Medical"
 	sourceDef.SourceType = pkg.SourceTypeAnaheimFamilyMedical
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "anaheim-family-medical.jpg"
+	sourceDef.PatientAccessUrl = "http://anaheimfamilymedicalcenter.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

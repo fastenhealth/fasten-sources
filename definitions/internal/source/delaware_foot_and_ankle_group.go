@@ -29,6 +29,7 @@ func GetSourceDelawareFootAndAnkleGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Delaware Foot & Ankle Group"
 	sourceDef.SourceType = pkg.SourceTypeDelawareFootAndAnkleGroup
+	sourceDef.PatientAccessUrl = "https://www.defootandanklegroup.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

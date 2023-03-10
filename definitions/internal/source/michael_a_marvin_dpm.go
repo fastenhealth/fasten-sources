@@ -29,6 +29,7 @@ func GetSourceMichaelAMarvinDpm(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Michael A. Marvin, DPM"
 	sourceDef.SourceType = pkg.SourceTypeMichaelAMarvinDpm
+	sourceDef.PatientAccessUrl = "https://providers.geisinger.org/provider/Michael+Robert+Marvin/758286"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

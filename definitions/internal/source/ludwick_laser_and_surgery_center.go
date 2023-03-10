@@ -29,6 +29,7 @@ func GetSourceLudwickLaserAndSurgeryCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Ludwick Laser & Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeLudwickLaserAndSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/pennsylvania/ludwick-eye-center-372397904"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

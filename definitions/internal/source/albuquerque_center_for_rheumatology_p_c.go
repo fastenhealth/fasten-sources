@@ -29,6 +29,7 @@ func GetSourceAlbuquerqueCenterForRheumatologyPC(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Albuquerque Center for Rheumatology, P.C"
 	sourceDef.SourceType = pkg.SourceTypeAlbuquerqueCenterForRheumatologyPC
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

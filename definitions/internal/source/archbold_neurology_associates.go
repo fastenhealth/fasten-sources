@@ -29,6 +29,7 @@ func GetSourceArchboldNeurologyAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Archbold Neurology Associates"
 	sourceDef.SourceType = pkg.SourceTypeArchboldNeurologyAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

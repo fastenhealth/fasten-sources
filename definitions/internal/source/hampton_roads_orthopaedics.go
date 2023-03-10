@@ -29,6 +29,7 @@ func GetSourceHamptonRoadsOrthopaedics(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Hampton Roads Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeHamptonRoadsOrthopaedics
+	sourceDef.PatientAccessUrl = "https://www.hrosm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

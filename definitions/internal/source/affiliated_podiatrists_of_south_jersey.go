@@ -29,6 +29,7 @@ func GetSourceAffiliatedPodiatristsOfSouthJersey(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Affiliated Podiatrists of South Jersey"
 	sourceDef.SourceType = pkg.SourceTypeAffiliatedPodiatristsOfSouthJersey
+	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/new-jersey/vineland/affiliated-podiatrists-of-south-jersey-ltd-0749208684.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

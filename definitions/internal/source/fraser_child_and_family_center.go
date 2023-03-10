@@ -29,6 +29,8 @@ func GetSourceFraserChildAndFamilyCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Fraser Child & Family Center"
 	sourceDef.SourceType = pkg.SourceTypeFraserChildAndFamilyCenter
+	sourceDef.BrandLogo = "fraser-child-and-family-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.fraser.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

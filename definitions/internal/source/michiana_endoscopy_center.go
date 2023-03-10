@@ -29,6 +29,8 @@ func GetSourceMichianaEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Michiana Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeMichianaEndoscopyCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "michiana-endoscopy-center.jpg"
+	sourceDef.PatientAccessUrl = "https://michianaendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceMetropolitanPediatrics(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Metropolitan Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeMetropolitanPediatrics
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "metropolitan-pediatrics.svg"
+	sourceDef.PatientAccessUrl = "https://www.metropeds.com/locations/edina-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

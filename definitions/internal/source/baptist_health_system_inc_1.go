@@ -29,6 +29,8 @@ func GetSourceBaptistHealthSystemInc1(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Baptist Health System Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthSystemInc1
+	sourceDef.BrandLogo = "baptist-health-system-inc.png"
+	sourceDef.PatientAccessUrl = "https://www.baptistjax.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

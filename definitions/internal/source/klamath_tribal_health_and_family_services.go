@@ -29,6 +29,7 @@ func GetSourceKlamathTribalHealthAndFamilyServices(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Klamath Tribal Health & Family Services"
 	sourceDef.SourceType = pkg.SourceTypeKlamathTribalHealthAndFamilyServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.klamathtribalhealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGelaAesthetics(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "GELA Aesthetics"
 	sourceDef.SourceType = pkg.SourceTypeGelaAesthetics
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gela-aesthetics.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

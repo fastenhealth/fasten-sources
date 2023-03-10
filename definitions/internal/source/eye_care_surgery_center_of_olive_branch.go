@@ -29,6 +29,7 @@ func GetSourceEyeCareSurgeryCenterOfOliveBranch(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Eye Care Surgery Center Of Olive Branch"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareSurgeryCenterOfOliveBranch
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3DZKABX20V2BF1VOIBI0848VL6JVCA?assignment_id=3SNVL38CIIPZLAZ6999UVFT3F81KCT&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

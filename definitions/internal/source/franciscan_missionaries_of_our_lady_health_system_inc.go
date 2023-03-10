@@ -29,6 +29,7 @@ func GetSourceFranciscanMissionariesOfOurLadyHealthSystemInc(env pkg.FastenLight
 
 	sourceDef.Display = "Franciscan Missionaries of Our Lady Health System, Inc."
 	sourceDef.SourceType = pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystemInc
+	sourceDef.BrandLogo = "franciscan-missionaries-of-our-lady-health-system-inc.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

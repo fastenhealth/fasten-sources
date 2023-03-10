@@ -29,6 +29,8 @@ func GetSourceInspiraHealthNetworkInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Inspira Health Network, Inc."
 	sourceDef.SourceType = pkg.SourceTypeInspiraHealthNetworkInc
+	sourceDef.BrandLogo = "inspira-health-network-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.inspirahealthnetwork.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMindBodyConnection(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Mind Body Connection"
 	sourceDef.SourceType = pkg.SourceTypeMindBodyConnection
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3E9ZFLPWPBPUWTMJA0F47S3BEMCIX3?assignment_id=3018Q3ZVOWNXFZF3FFM0QWPTBYQART&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

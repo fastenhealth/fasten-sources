@@ -29,6 +29,8 @@ func GetSourceAtlantaMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Atlanta Maternal-Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaMaternalFetalMedicine
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "atlanta-maternal-fetal-medicine.jpg"
+	sourceDef.PatientAccessUrl = "Name: Atlanta Maternal-Fetal Medicine Address: 625 Beaver Ruin Rd. City: Lilburn Zip: 30047 State: Georgia Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

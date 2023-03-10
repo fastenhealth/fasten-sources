@@ -29,6 +29,7 @@ func GetSourceArchboldCenterForWoundManagement(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Archbold Center For Wound Management"
 	sourceDef.SourceType = pkg.SourceTypeArchboldCenterForWoundManagement
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://archbold.org/about/wound-care-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

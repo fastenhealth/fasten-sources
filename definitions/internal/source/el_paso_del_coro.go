@@ -29,6 +29,7 @@ func GetSourceElPasoDelCoro(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "El Paso Del Coro"
 	sourceDef.SourceType = pkg.SourceTypeElPasoDelCoro
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "el-paso-del-coro.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

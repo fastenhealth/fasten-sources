@@ -29,6 +29,7 @@ func GetSourceFaulktonAreaMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Faulkton Area Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFaulktonAreaMedicalCenter
+	sourceDef.BrandLogo = "faulkton-area-medical-center.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

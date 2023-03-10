@@ -29,6 +29,7 @@ func GetSourceKlassAndWassermanMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Klass & Wasserman, MD"
 	sourceDef.SourceType = pkg.SourceTypeKlassAndWassermanMd
+	sourceDef.PatientAccessUrl = "https://www.md.com/doctor"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

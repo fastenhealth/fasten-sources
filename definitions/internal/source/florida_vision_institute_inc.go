@@ -29,6 +29,7 @@ func GetSourceFloridaVisionInstituteInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Florida Vision Institute Inc"
 	sourceDef.SourceType = pkg.SourceTypeFloridaVisionInstituteInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "florida-vision-institute-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

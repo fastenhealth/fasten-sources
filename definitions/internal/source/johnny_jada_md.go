@@ -29,6 +29,8 @@ func GetSourceJohnnyJadaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Johnny Jada MD"
 	sourceDef.SourceType = pkg.SourceTypeJohnnyJadaMd
+	sourceDef.BrandLogo = "johnny-jada-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.wolfsonchildrens.com/doctors/pediatrician/dr-johnny-jada-md"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

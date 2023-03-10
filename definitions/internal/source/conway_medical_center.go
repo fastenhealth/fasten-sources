@@ -29,6 +29,8 @@ func GetSourceConwayMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Conway Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeConwayMedicalCenter
+	sourceDef.BrandLogo = "conway-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.conwaymedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceHunterdonFamilyPracticeAndObstetrics(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Hunterdon Family Practice And Obstetrics"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyPracticeAndObstetrics
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-family-practice-and-obstetrics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/hunterdon-family-practice-obstetrics"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

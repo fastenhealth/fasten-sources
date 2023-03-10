@@ -29,6 +29,7 @@ func GetSourceHunterdonFamilyMedAtBranchburg(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Hunterdon Family Med At Branchburg"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedAtBranchburg
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-family-med-at-branchburg.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

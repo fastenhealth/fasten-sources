@@ -29,6 +29,7 @@ func GetSourceDupontAnesthesiaPsc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Dupont Anesthesia PSC"
 	sourceDef.SourceType = pkg.SourceTypeDupontAnesthesiaPsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3VJ4PFXFKG4N979QT7C46NGO7WPAUY?assignment_id=3X66WABAJAF66O74QPDE4KXG3FNG37&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

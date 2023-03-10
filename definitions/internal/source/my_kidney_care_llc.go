@@ -29,6 +29,7 @@ func GetSourceMyKidneyCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "My Kidney Care, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMyKidneyCareLlc
+	sourceDef.PatientAccessUrl = "https://www.mykidneycarellc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

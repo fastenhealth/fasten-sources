@@ -29,6 +29,7 @@ func GetSourceApexCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Apex Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeApexCardiology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.apexcardiology.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

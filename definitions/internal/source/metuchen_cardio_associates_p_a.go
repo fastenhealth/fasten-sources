@@ -29,6 +29,7 @@ func GetSourceMetuchenCardioAssociatesPA(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Metuchen Cardio Associates, P.A."
 	sourceDef.SourceType = pkg.SourceTypeMetuchenCardioAssociatesPA
+	sourceDef.PatientAccessUrl = "https://www.metuchencardio.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

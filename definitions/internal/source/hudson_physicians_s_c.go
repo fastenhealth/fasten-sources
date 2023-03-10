@@ -29,6 +29,8 @@ func GetSourceHudsonPhysiciansSC(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hudson Physicians, S.C."
 	sourceDef.SourceType = pkg.SourceTypeHudsonPhysiciansSC
+	sourceDef.BrandLogo = "hudson-physicians-s-c.jpg"
+	sourceDef.PatientAccessUrl = "https://hudsonphysicians.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

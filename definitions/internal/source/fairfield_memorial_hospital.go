@@ -29,6 +29,7 @@ func GetSourceFairfieldMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Fairfield Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFairfieldMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.loopnet.com/Listing/102-Us-321-Byp-Winnsboro-SC/13569058/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

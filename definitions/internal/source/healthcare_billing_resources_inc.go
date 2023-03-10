@@ -29,6 +29,7 @@ func GetSourceHealthcareBillingResourcesInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Healthcare Billing Resources, Inc."
 	sourceDef.SourceType = pkg.SourceTypeHealthcareBillingResourcesInc
+	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/saint-paul/ridley-david-md/#gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

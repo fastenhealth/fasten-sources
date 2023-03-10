@@ -29,6 +29,7 @@ func GetSourceFootAndAnkleCenterOfSj(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Foot & Ankle Center of SJ"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkleCenterOfSj
+	sourceDef.BrandLogo = "foot-and-ankle-center-of-sj.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

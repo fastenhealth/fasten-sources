@@ -29,6 +29,8 @@ func GetSourceHunterdonFamilyMedAtHighlands(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Hunterdon Family Med At Highlands"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedAtHighlands
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-family-med-at-highlands.svg"
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/hunterdon-family-medicine-highlands"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

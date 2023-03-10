@@ -29,6 +29,7 @@ func GetSourceEndocrineAndThyroid(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Endocrine and Thyroid"
 	sourceDef.SourceType = pkg.SourceTypeEndocrineAndThyroid
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "endocrine-and-thyroid.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

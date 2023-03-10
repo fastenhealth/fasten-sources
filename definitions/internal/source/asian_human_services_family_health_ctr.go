@@ -29,6 +29,7 @@ func GetSourceAsianHumanServicesFamilyHealthCtr(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Asian Human Services Family Health Ctr"
 	sourceDef.SourceType = pkg.SourceTypeAsianHumanServicesFamilyHealthCtr
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ahsfhc.org/location/chicago-clinic"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

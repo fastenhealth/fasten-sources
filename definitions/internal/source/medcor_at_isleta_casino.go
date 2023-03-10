@@ -29,6 +29,7 @@ func GetSourceMedcorAtIsletaCasino(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Medcor At Isleta Casino"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtIsletaCasino
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.isleta.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHealtheEmployerClinic3(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Healthe Employer Clinic"
 	sourceDef.SourceType = pkg.SourceTypeHealtheEmployerClinic3
+	sourceDef.BrandLogo = "healthe-employer-clinic.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

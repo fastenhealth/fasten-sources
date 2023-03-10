@@ -29,6 +29,8 @@ func GetSourceFrancisVAdamsMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Francis V Adams, MD"
 	sourceDef.SourceType = pkg.SourceTypeFrancisVAdamsMd
+	sourceDef.BrandLogo = "francis-v-adams-md.svg"
+	sourceDef.PatientAccessUrl = "https://nyulangone.org/doctors/1811099625/francis-adams"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

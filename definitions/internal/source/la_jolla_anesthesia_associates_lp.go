@@ -29,6 +29,7 @@ func GetSourceLaJollaAnesthesiaAssociatesLp(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "La Jolla Anesthesia Associates LP"
 	sourceDef.SourceType = pkg.SourceTypeLaJollaAnesthesiaAssociatesLp
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com/medical_billing/coding/national_provider_identifier/codes/npi_1649717737.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

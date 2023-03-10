@@ -29,6 +29,7 @@ func GetSourceMiltonHersheySchool(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Milton Hershey School"
 	sourceDef.SourceType = pkg.SourceTypeMiltonHersheySchool
+	sourceDef.PatientAccessUrl = "https://www.mhskids.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

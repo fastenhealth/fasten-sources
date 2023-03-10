@@ -29,6 +29,8 @@ func GetSourceEctorCountyHospitalDistrictMedicalCenterHealthSystem1(env pkg.Fast
 
 	sourceDef.Display = "Ector County Hospital District/Medical Center Health System"
 	sourceDef.SourceType = pkg.SourceTypeEctorCountyHospitalDistrictMedicalCenterHealthSystem1
+	sourceDef.BrandLogo = "ector-county-hospital-district-medical-center-health-system.png"
+	sourceDef.PatientAccessUrl = "https://www.mchodessa.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

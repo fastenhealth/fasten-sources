@@ -29,6 +29,7 @@ func GetSourceBaltimoreMedicalSystemInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Baltimore Medical System Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaltimoreMedicalSystemInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://bmsi.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

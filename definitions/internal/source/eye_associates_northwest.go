@@ -29,6 +29,8 @@ func GetSourceEyeAssociatesNorthwest(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Eye Associates Northwest"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesNorthwest
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "eye-associates-northwest.jpg"
+	sourceDef.PatientAccessUrl = "https://www.eanw.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

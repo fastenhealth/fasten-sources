@@ -29,6 +29,8 @@ func GetSourceAnetaStirlingMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Aneta Stirling MD"
 	sourceDef.SourceType = pkg.SourceTypeAnetaStirlingMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "aneta-stirling-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/aneta-stirling/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

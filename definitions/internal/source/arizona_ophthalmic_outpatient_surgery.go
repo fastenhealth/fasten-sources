@@ -29,6 +29,7 @@ func GetSourceArizonaOphthalmicOutpatientSurgery(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Arizona Ophthalmic Outpatient Surgery"
 	sourceDef.SourceType = pkg.SourceTypeArizonaOphthalmicOutpatientSurgery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://arizonaeyesurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

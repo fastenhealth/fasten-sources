@@ -29,6 +29,7 @@ func GetSourceMcleodHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "McLeod Health"
 	sourceDef.SourceType = pkg.SourceTypeMcleodHealth
+	sourceDef.PatientAccessUrl = "https://www.mcleodhealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

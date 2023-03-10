@@ -29,6 +29,7 @@ func GetSourceHmgHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "HMG Health Care"
 	sourceDef.SourceType = pkg.SourceTypeHmgHealthCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hmghealth.com/en/home/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

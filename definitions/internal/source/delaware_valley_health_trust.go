@@ -29,6 +29,7 @@ func GetSourceDelawareValleyHealthTrust(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Delaware Valley Health Trust"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyHealthTrust
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/334ZEL5JYJCWWYBNELMMSHI5BG8SOZ?assignment_id=3C44YUNSIFMA1T20MX9DB2XKUIPDPT&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

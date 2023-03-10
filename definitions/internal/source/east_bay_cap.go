@@ -29,6 +29,7 @@ func GetSourceEastBayCap(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "East Bay CAP"
 	sourceDef.SourceType = pkg.SourceTypeEastBayCap
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ebcap.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

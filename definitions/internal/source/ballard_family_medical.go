@@ -29,6 +29,8 @@ func GetSourceBallardFamilyMedical(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Ballard Family Medical"
 	sourceDef.SourceType = pkg.SourceTypeBallardFamilyMedical
+	sourceDef.BrandLogo = "ballard-family-medical.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/Ballard-Family-Medical/100063752282327/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

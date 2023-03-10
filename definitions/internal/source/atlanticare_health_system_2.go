@@ -29,6 +29,8 @@ func GetSourceAtlanticareHealthSystem2(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "AtlantiCare Health System"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticareHealthSystem2
+	sourceDef.BrandLogo = "atlanticare-health-system.png"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/33IXYHIZCIFHF8H0QS4KWNBN9S4E2V?assignment_id=3RXPCZQMQ38AWLTP3LZVGRIJZBQ1G7&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

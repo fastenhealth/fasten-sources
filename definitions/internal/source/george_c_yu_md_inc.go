@@ -29,6 +29,7 @@ func GetSourceGeorgeCYuMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "George C Yu MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeGeorgeCYuMdInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "george-c-yu-md-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

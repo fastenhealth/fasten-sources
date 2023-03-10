@@ -29,6 +29,7 @@ func GetSourceJewellCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Jewell County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJewellCountyHospital
+	sourceDef.PatientAccessUrl = "https://www.jewellcohospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

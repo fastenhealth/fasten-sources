@@ -29,6 +29,7 @@ func GetSourceMedicalCenterPodiatryPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Medical Center Podiatry PC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCenterPodiatryPc
+	sourceDef.PatientAccessUrl = "https://www.nuvancehealth.org/?_ga=2.63380399.1274284591.1678451396-457660640.1678451396"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

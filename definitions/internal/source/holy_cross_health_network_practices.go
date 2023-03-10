@@ -29,6 +29,7 @@ func GetSourceHolyCrossHealthNetworkPractices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Holy Cross Health Network Practices"
 	sourceDef.SourceType = pkg.SourceTypeHolyCrossHealthNetworkPractices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/37VE3DA4Z7ENNV8YZM51IJB4V69HB0?assignment_id=3RU7GD8VP2QG3ILIJN4261JKWM9PSC&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGenesisHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Genesis Health System"
 	sourceDef.SourceType = pkg.SourceTypeGenesisHealthSystem1
+	sourceDef.BrandLogo = "genesis-health-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

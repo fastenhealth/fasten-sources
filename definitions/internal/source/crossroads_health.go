@@ -29,6 +29,7 @@ func GetSourceCrossroadsHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Crossroads Health"
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://crossroadshealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

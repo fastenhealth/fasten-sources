@@ -29,6 +29,7 @@ func GetSourceHumaneCenterForArthritisAndRheumatism(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Humane Center for Arthritis and Rheumatism"
 	sourceDef.SourceType = pkg.SourceTypeHumaneCenterForArthritisAndRheumatism
+	sourceDef.PatientAccessUrl = "http://www.humanecenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

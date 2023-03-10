@@ -29,6 +29,8 @@ func GetSourceMahometSpecialtyClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Mahomet Specialty Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMahometSpecialtyClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mahomet-specialty-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3PKVGQTFJUHWPXFC5JVF4YBB3OPRYM?assignment_id=3ZOTGHDK5W8YII9H4NRNH1EUMHDSOY&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

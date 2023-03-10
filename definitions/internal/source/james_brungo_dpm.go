@@ -29,6 +29,8 @@ func GetSourceJamesBrungoDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "James Brungo, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJamesBrungoDpm
+	sourceDef.BrandLogo = "james-brungo-dpm.svg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-james-brungo-xq4n5"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

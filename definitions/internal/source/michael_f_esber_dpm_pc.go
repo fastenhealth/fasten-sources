@@ -29,6 +29,8 @@ func GetSourceMichaelFEsberDpmPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Michael F. Esber, DPM PC"
 	sourceDef.SourceType = pkg.SourceTypeMichaelFEsberDpmPc
+	sourceDef.BrandLogo = "michael-f-esber-dpm-pc.svg"
+	sourceDef.PatientAccessUrl = "https://doctors.bannerhealth.com/provider/Michael+Esber/447216"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDfwpmaPsychiatry(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "DFWPMA Psychiatry"
 	sourceDef.SourceType = pkg.SourceTypeDfwpmaPsychiatry
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://dfwpma.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

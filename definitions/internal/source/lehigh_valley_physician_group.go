@@ -29,6 +29,7 @@ func GetSourceLehighValleyPhysicianGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Lehigh Valley Physician Group"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyPhysicianGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.lvhn.org/about-us/lehigh-valley-physician-group-lvpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

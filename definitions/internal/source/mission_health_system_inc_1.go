@@ -29,6 +29,8 @@ func GetSourceMissionHealthSystemInc1(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Mission Health System, Inc."
 	sourceDef.SourceType = pkg.SourceTypeMissionHealthSystemInc1
+	sourceDef.BrandLogo = "mission-health-system-inc.png"
+	sourceDef.PatientAccessUrl = "https://missionhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

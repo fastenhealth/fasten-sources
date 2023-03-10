@@ -29,6 +29,7 @@ func GetSourceAscensionSeton(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Ascension Seton"
 	sourceDef.SourceType = pkg.SourceTypeAscensionSeton
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3H5TOKO3EMGN5738OO4ADEG8C8C64Y?assignment_id=3K772S5NPM8NGIICZFCS8BDE3K9EH4&from_queue=https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3H5TOKO3EMGN5738OO4ADEG8C8C64Y?assignment_id=3K772S5NPM8NGIICZFCS8BDE3K9EH4&from_queue=truetrue"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

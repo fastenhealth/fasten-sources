@@ -29,6 +29,7 @@ func GetSourceBasics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Display = "BASICS"
 	sourceDef.SourceType = pkg.SourceTypeBasics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://basicslife.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

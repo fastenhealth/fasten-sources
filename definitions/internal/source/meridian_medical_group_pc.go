@@ -29,6 +29,7 @@ func GetSourceMeridianMedicalGroupPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Meridian Medical Group, PC"
 	sourceDef.SourceType = pkg.SourceTypeMeridianMedicalGroupPc
+	sourceDef.PatientAccessUrl = "https://www.zoominfo.com/c/meridian-medical-group/348099469"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

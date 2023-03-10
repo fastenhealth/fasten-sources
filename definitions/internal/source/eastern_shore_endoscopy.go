@@ -29,6 +29,7 @@ func GetSourceEasternShoreEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Eastern Shore Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeEasternShoreEndoscopy
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

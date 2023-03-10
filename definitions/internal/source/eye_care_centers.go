@@ -29,6 +29,7 @@ func GetSourceEyeCareCenters(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Eye Care Centers"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareCenters
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://claytoneyecenter.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

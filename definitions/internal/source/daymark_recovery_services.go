@@ -29,6 +29,7 @@ func GetSourceDaymarkRecoveryServices(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Daymark Recovery Services"
 	sourceDef.SourceType = pkg.SourceTypeDaymarkRecoveryServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.daymarkrecovery.org/index.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

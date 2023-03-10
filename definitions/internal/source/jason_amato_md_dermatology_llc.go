@@ -29,6 +29,7 @@ func GetSourceJasonAmatoMdDermatologyLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Jason Amato, MD Dermatology LLC"
 	sourceDef.SourceType = pkg.SourceTypeJasonAmatoMdDermatologyLlc
+	sourceDef.PatientAccessUrl = "https://www.jamatoderm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

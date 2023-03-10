@@ -29,6 +29,7 @@ func GetSourceJRaymondLiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "J Raymond Li MD"
 	sourceDef.SourceType = pkg.SourceTypeJRaymondLiMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/juijung-li/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

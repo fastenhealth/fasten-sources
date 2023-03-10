@@ -29,6 +29,7 @@ func GetSourceLaMaestraSocialDeterminantsOfHealth(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "La Maestra Social Determinants Of Health"
 	sourceDef.SourceType = pkg.SourceTypeLaMaestraSocialDeterminantsOfHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "la-maestra-social-determinants-of-health.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

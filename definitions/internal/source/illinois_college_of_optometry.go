@@ -29,6 +29,7 @@ func GetSourceIllinoisCollegeOfOptometry(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Illinois College Of Optometry"
 	sourceDef.SourceType = pkg.SourceTypeIllinoisCollegeOfOptometry
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ico.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

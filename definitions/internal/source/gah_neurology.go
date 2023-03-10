@@ -29,6 +29,7 @@ func GetSourceGahNeurology(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "GAH Neurology"
 	sourceDef.SourceType = pkg.SourceTypeGahNeurology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-area-hospital"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,7 +29,6 @@ func GetSourceMedicalSurgicalSpecialtyGroup(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medical Surgical Specialty Group"
 	sourceDef.SourceType = pkg.SourceTypeMedicalSurgicalSpecialtyGroup
-	sourceDef.PatientAccessUrl = "https://www.atlantichealth.org/locations/atlantic-medical-group/ent-sparta.html?utm_source=google&utm_medium=business-listings&utm_campaign=website-link"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

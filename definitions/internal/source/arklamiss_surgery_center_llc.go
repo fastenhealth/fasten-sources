@@ -29,6 +29,7 @@ func GetSourceArklamissSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Arklamiss Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeArklamissSurgeryCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://ldh.la.gov/index.cfm/directory/detail/1047/catid/162"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

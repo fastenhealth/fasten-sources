@@ -29,6 +29,7 @@ func GetSourceColoradoHeartAndVascularPc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Colorado Heart And Vascular PC"
 	sourceDef.SourceType = pkg.SourceTypeColoradoHeartAndVascularPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.chvpc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

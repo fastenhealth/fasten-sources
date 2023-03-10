@@ -29,6 +29,7 @@ func GetSourceEyecare2020(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "EyeCare 20 20"
 	sourceDef.SourceType = pkg.SourceTypeEyecare2020
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "eyecare-20-20.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

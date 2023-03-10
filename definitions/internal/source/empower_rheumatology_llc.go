@@ -29,6 +29,7 @@ func GetSourceEmpowerRheumatologyLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Empower Rheumatology LLC"
 	sourceDef.SourceType = pkg.SourceTypeEmpowerRheumatologyLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://provider.kareo.com/dr-shirley-wang"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

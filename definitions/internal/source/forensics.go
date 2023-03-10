@@ -29,6 +29,7 @@ func GetSourceForensics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Forensics"
 	sourceDef.SourceType = pkg.SourceTypeForensics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.unitedstateszipcodes.org/37877/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

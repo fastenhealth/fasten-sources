@@ -29,6 +29,7 @@ func GetSourceAnesthesiaAssociatesOfJoplinLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Anesthesia Associates Of Joplin LLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaAssociatesOfJoplinLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npiprofile.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

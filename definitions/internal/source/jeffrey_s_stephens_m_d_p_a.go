@@ -29,6 +29,7 @@ func GetSourceJeffreySStephensMDPA(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Jeffrey S Stephens M.D. P.A."
 	sourceDef.SourceType = pkg.SourceTypeJeffreySStephensMDPA
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.lakesidesurgerypa.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

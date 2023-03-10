@@ -29,6 +29,7 @@ func GetSourceEyeSurgeonsAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Eye Surgeons Associates"
 	sourceDef.SourceType = pkg.SourceTypeEyeSurgeonsAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.eyesurgeonspc.com/our-locations/bettendorf/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

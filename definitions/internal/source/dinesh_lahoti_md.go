@@ -29,6 +29,7 @@ func GetSourceDineshLahotiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Dinesh Lahoti, MD"
 	sourceDef.SourceType = pkg.SourceTypeDineshLahotiMd
+	sourceDef.BrandLogo = "dinesh-lahoti-md.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

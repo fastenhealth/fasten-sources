@@ -29,6 +29,8 @@ func GetSourceAriaCommunityHealthCenterStratford(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Aria Community Health Center Stratford"
 	sourceDef.SourceType = pkg.SourceTypeAriaCommunityHealthCenterStratford
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "aria-community-health-center-stratford.jpg"
+	sourceDef.PatientAccessUrl = "https://ariachc.org/stratford/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

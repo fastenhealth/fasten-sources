@@ -29,6 +29,7 @@ func GetSourceAdvancedSkinAndMohsSurgeryCenterSc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Advanced Skin and Mohs Surgery Center, SC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedSkinAndMohsSurgeryCenterSc
+	sourceDef.PatientAccessUrl = "http://www.asmsc.doctor"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

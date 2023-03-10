@@ -29,6 +29,7 @@ func GetSourceCorePhysiciansLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Core Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeCorePhysiciansLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "core-physicians-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

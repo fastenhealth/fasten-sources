@@ -29,6 +29,7 @@ func GetSourceFisherTitusMedicalCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Fisher-Titus Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFisherTitusMedicalCenter
+	sourceDef.BrandLogo = "fisher-titus-medical-center.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

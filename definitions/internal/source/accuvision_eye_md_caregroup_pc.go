@@ -29,6 +29,7 @@ func GetSourceAccuvisionEyeMdCaregroupPc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Accuvision Eye MD Caregroup PC"
 	sourceDef.SourceType = pkg.SourceTypeAccuvisionEyeMdCaregroupPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.phillyeyedocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

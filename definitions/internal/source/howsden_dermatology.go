@@ -29,6 +29,7 @@ func GetSourceHowsdenDermatology(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Howsden Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeHowsdenDermatology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://howsdendermatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

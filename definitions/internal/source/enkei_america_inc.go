@@ -29,6 +29,7 @@ func GetSourceEnkeiAmericaInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Enkei America Inc."
 	sourceDef.SourceType = pkg.SourceTypeEnkeiAmericaInc
+	sourceDef.PatientAccessUrl = "https://business.columbusareachamber.com/list/member/enkei-america-inc-2521"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

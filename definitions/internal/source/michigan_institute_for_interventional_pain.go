@@ -29,6 +29,7 @@ func GetSourceMichiganInstituteForInterventionalPain(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Michigan Institute for Interventional Pain"
 	sourceDef.SourceType = pkg.SourceTypeMichiganInstituteForInterventionalPain
+	sourceDef.PatientAccessUrl = "https://www.miiprelief.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

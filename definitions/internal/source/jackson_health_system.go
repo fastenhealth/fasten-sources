@@ -29,6 +29,8 @@ func GetSourceJacksonHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Jackson Health System"
 	sourceDef.SourceType = pkg.SourceTypeJacksonHealthSystem
+	sourceDef.BrandLogo = "jackson-health-system.svg"
+	sourceDef.PatientAccessUrl = "https://jacksonhealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

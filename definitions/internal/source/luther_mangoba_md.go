@@ -29,6 +29,7 @@ func GetSourceLutherMangobaMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Luther Mangoba MD"
 	sourceDef.SourceType = pkg.SourceTypeLutherMangobaMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3DZKABX20V2BF1VOIBI0848VL6KVCB?assignment_id=39GXDJN2O7BBPI35R17WV2816G3V83&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGrandMeridianFootAndAnkle(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Grand Meridian Foot & Ankle"
 	sourceDef.SourceType = pkg.SourceTypeGrandMeridianFootAndAnkle
+	sourceDef.PatientAccessUrl = "https://fmsgr.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

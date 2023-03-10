@@ -29,6 +29,8 @@ func GetSourceAdvancedImagingAtBridgewater(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Advanced Imaging At Bridgewater"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedImagingAtBridgewater
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "advanced-imaging-at-bridgewater.svg"
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

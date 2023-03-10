@@ -29,6 +29,7 @@ func GetSourceBarnetDulaneySurgeryCenters(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Barnet Dulaney Surgery Centers"
 	sourceDef.SourceType = pkg.SourceTypeBarnetDulaneySurgeryCenters
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.goodeyes.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

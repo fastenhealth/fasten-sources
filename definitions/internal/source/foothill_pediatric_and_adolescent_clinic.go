@@ -29,6 +29,7 @@ func GetSourceFoothillPediatricAndAdolescentClinic(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Foothill Pediatric & Adolescent Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFoothillPediatricAndAdolescentClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.foothillpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

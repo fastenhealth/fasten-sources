@@ -29,6 +29,7 @@ func GetSourceAustinJMaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Austin J Ma MD"
 	sourceDef.SourceType = pkg.SourceTypeAustinJMaMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.topnpi.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDanielGOrrMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Daniel G Orr MD"
 	sourceDef.SourceType = pkg.SourceTypeDanielGOrrMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "daniel-g-orr-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

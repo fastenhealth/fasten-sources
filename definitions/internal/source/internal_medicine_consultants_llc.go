@@ -29,6 +29,7 @@ func GetSourceInternalMedicineConsultantsLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Internal Medicine Consultants, LLC"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineConsultantsLlc
+	sourceDef.PatientAccessUrl = "https://www.internalmedconsultants.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

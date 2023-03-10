@@ -29,6 +29,7 @@ func GetSourceFernandesBanerjeeShenoyKidneyCenterLlc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Fernandes Banerjee Shenoy Kidney Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeFernandesBanerjeeShenoyKidneyCenterLlc
+	sourceDef.PatientAccessUrl = "https://www.banerjeekidneycenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

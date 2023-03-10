@@ -29,6 +29,8 @@ func GetSourceAllergyAndAsthmaClinicOfAlexandria1(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Allergy & Asthma Clinic of Alexandria"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaClinicOfAlexandria1
+	sourceDef.BrandLogo = "allergy-and-asthma-clinic-of-alexandria.png"
+	sourceDef.PatientAccessUrl = "https://www.allergyandasthmacarecenterpc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

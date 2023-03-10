@@ -29,6 +29,7 @@ func GetSourceMontgomeryCountyPulmonaryAndSleepConsultantsPc(env pkg.FastenLight
 
 	sourceDef.Display = "Montgomery County Pulmonary & Sleep Consultants, PC"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryCountyPulmonaryAndSleepConsultantsPc
+	sourceDef.PatientAccessUrl = "https://critacuity.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceColumbiaStMarysInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Columbia St. Mary's, Inc."
 	sourceDef.SourceType = pkg.SourceTypeColumbiaStMarysInc
+	sourceDef.BrandLogo = "columbia-st-marys-inc.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

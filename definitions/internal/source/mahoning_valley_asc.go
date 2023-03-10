@@ -29,6 +29,7 @@ func GetSourceMahoningValleyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Mahoning Valley ASC"
 	sourceDef.SourceType = pkg.SourceTypeMahoningValleyAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://housernewman.com/surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

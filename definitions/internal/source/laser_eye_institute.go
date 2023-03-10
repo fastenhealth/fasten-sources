@@ -29,6 +29,8 @@ func GetSourceLaserEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Laser Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeLaserEyeInstitute
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "laser-eye-institute.svg"
+	sourceDef.PatientAccessUrl = "https://www.dragarwal.com/eye-treatment/lasik/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

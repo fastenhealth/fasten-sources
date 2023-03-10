@@ -29,6 +29,7 @@ func GetSourceLakeCountryPhysicalTherapy(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Lake Country Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeLakeCountryPhysicalTherapy
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lake-country-physical-therapy.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

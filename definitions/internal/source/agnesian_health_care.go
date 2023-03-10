@@ -29,6 +29,7 @@ func GetSourceAgnesianHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Agnesian Health Care"
 	sourceDef.SourceType = pkg.SourceTypeAgnesianHealthCare
+	sourceDef.PatientAccessUrl = "https://www.ssmhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

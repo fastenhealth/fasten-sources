@@ -29,6 +29,7 @@ func GetSourceDavidEBankMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "David E. Bank, MD"
 	sourceDef.SourceType = pkg.SourceTypeDavidEBankMd
+	sourceDef.PatientAccessUrl = "https://www.thecenterforderm.com/contents/meet-our-providers/david-e-bank-md-faad"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

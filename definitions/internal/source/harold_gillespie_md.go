@@ -29,6 +29,7 @@ func GetSourceHaroldGillespieMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Harold Gillespie MD"
 	sourceDef.SourceType = pkg.SourceTypeHaroldGillespieMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fmchealth.org/providers/harold-gillespie/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

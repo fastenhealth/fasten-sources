@@ -29,6 +29,7 @@ func GetSourceKolliMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Kolli MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeKolliMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/hemet/kolli-medical-group-xbkhdd1a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

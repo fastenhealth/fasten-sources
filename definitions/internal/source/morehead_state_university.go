@@ -29,6 +29,7 @@ func GetSourceMoreheadStateUniversity(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Morehead State University"
 	sourceDef.SourceType = pkg.SourceTypeMoreheadStateUniversity
+	sourceDef.PatientAccessUrl = "https://moreheadstate.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

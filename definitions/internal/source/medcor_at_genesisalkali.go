@@ -29,6 +29,7 @@ func GetSourceMedcorAtGenesisalkali(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Medcor At Genesisalkali"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtGenesisalkali
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://alkali.genesisenergy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

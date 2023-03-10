@@ -29,7 +29,6 @@ func GetSourceSanDiegoAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "San Diego ASC"
 	sourceDef.SourceType = pkg.SourceTypeSanDiegoAsc
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://www.google.com/search?q=San+Diego+ASC++995+Gateway+Center+Way+San+Diego+California+92102&tbm=lcl&sxsrf=AJOqlzUU8lvHLAGUoOcUtu0MWWLo3FtmNQ%3A1675449086049&ei=_lLdY-bQAqWu5NoP_dirwAw&ved=0ahUKEwjmx_Oc_vn8AhUlF1kFHX3sCsgQ4dUDCAk&uact=5&oq=San+Diego+ASC++995+Gateway+Center+Way+San+Diego+California+92102&gs_lcp=Cg1nd3Mtd2l6LWxvY2FsEAMyBQghEKABOgQIIxAnOgUIIRCrAlBvWLFvYOdxaABwAHgAgAGvCogBxyqSAQszLTQuMC4xLjEuMpgBAKABAaABAsABAQ&sclient=gws-wiz-local#rlfi=hd:;si:12288167428693782648,l,CkBTYW4gRGllZ28gQVNDICA5OTUgR2F0ZXdheSBDZW50ZXIgV2F5IFNhbiBEaWVnbyBDYWxpZm9ybmlhIDkyMTAyWkEiP3NhbiBkaWVnbyBhc2MgOTk1IGdhdGV3YXkgY2VudGVyIHdheSBzYW4gZGllZ28gY2FsaWZvcm5pYSA5MjEwMpIBDm1lZGljYWxfY2VudGVyqgELEAEqByIDYXNjKADgAQA;mv:[[32.715379999999996,-117.1131612],[32.713898199999996,-117.11640100000001]]"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDgMultispecialtyClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "DG Multispecialty Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDgMultispecialtyClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.mwuclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

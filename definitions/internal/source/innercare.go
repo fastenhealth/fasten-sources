@@ -29,6 +29,8 @@ func GetSourceInnercare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Innercare"
 	sourceDef.SourceType = pkg.SourceTypeInnercare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "innercare.jpg"
+	sourceDef.PatientAccessUrl = "https://innercare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

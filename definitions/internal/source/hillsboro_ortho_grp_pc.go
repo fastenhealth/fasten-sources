@@ -29,6 +29,7 @@ func GetSourceHillsboroOrthoGrpPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hillsboro Ortho Grp, PC"
 	sourceDef.SourceType = pkg.SourceTypeHillsboroOrthoGrpPc
+	sourceDef.PatientAccessUrl = "https://www.hillsorthogroup.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

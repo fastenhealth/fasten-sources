@@ -29,6 +29,8 @@ func GetSourceMilwaukeeEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Milwaukee Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeMilwaukeeEndoscopyCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "milwaukee-endoscopy-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.conmed.com/beameraveo"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

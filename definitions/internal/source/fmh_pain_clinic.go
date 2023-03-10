@@ -29,6 +29,7 @@ func GetSourceFmhPainClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "FMH Pain Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFmhPainClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fairfieldmemorial.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

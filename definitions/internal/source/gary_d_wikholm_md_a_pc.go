@@ -29,6 +29,8 @@ func GetSourceGaryDWikholmMdAPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Gary D Wikholm MD A PC"
 	sourceDef.SourceType = pkg.SourceTypeGaryDWikholmMdAPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gary-d-wikholm-md-a-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3HUR21WDE7MGMT1OEI17TGXZ459XYN?assignment_id=3QY7M81QHLJT9T4AIS1JFT1PEXDK73&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

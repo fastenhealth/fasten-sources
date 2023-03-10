@@ -29,6 +29,7 @@ func GetSourceHra3(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.Display = "HRA3"
 	sourceDef.SourceType = pkg.SourceTypeHra3
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.unitedstateszipcodes.org/37921/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFirstChoiceCommunityHealthcare(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "First Choice Community Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeFirstChoiceCommunityHealthcare
+	sourceDef.PatientAccessUrl = "https://www.fcch.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

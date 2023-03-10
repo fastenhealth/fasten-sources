@@ -29,6 +29,7 @@ func GetSourceInternalMedicineAndPediatricsOfCullmanPC(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Internal Medicine and Pediatrics of Cullman, P.C."
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAndPediatricsOfCullmanPC
+	sourceDef.PatientAccessUrl = "http://impcullman.com/doc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

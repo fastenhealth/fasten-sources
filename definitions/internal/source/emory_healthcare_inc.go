@@ -29,6 +29,7 @@ func GetSourceEmoryHealthcareInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Emory Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeEmoryHealthcareInc
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/index.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

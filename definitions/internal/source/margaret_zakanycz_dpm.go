@@ -29,6 +29,7 @@ func GetSourceMargaretZakanyczDpm(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Margaret Zakanycz, DPM"
 	sourceDef.SourceType = pkg.SourceTypeMargaretZakanyczDpm
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/margaret-zakanycz-dpm-ocean-3"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

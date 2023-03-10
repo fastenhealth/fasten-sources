@@ -29,6 +29,7 @@ func GetSourceAnaysSantanaIzquierdoMdPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "ANAYS SANTANA IZQUIERDO MD PA"
 	sourceDef.SourceType = pkg.SourceTypeAnaysSantanaIzquierdoMdPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://baptisthealth.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

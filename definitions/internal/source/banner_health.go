@@ -29,6 +29,7 @@ func GetSourceBannerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Banner Health"
 	sourceDef.SourceType = pkg.SourceTypeBannerHealth
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3Y3N5A7N5T65SH2K0BZYIZH1X9PYMK?assignment_id=39PAAFCOD0XUN2VTUZIRMY4OE94TVW&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

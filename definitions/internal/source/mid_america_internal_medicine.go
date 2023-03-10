@@ -29,6 +29,7 @@ func GetSourceMidAmericaInternalMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Mid-America Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMidAmericaInternalMedicine
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/mo-missouri/independence/mid-america-internal-medicine-x9t8t3"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

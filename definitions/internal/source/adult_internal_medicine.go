@@ -29,6 +29,8 @@ func GetSourceAdultInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Adult Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAdultInternalMedicine
+	sourceDef.BrandLogo = "adult-internal-medicine.svg"
+	sourceDef.PatientAccessUrl = "https://www.adultinternalmedicine.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

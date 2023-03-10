@@ -29,6 +29,7 @@ func GetSourceGuilhermeRCarvalhoMdInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Guilherme R Carvalho MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeGuilhermeRCarvalhoMdInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "guilherme-r-carvalho-md-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

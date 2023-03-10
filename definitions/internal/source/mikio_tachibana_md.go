@@ -29,6 +29,7 @@ func GetSourceMikioTachibanaMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Mikio Tachibana MD"
 	sourceDef.SourceType = pkg.SourceTypeMikioTachibanaMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://mikio-tachibana-md.business.site/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

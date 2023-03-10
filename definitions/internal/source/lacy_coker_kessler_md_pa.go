@@ -29,6 +29,8 @@ func GetSourceLacyCokerKesslerMdPa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Lacy Coker Kessler MD PA"
 	sourceDef.SourceType = pkg.SourceTypeLacyCokerKesslerMdPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lacy-coker-kessler-md-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://deerwoodwomen.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

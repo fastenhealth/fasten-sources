@@ -29,6 +29,7 @@ func GetSourceMariaSusanABuhayMaglunogMd(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Maria Susan A Buhay Maglunog MD"
 	sourceDef.SourceType = pkg.SourceTypeMariaSusanABuhayMaglunogMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/west-covina/buhay-and-maglunog-mds/#gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

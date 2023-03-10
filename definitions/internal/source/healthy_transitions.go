@@ -29,6 +29,8 @@ func GetSourceHealthyTransitions(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Healthy Transitions"
 	sourceDef.SourceType = pkg.SourceTypeHealthyTransitions
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "healthy-transitions.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3BO3NEOQNDEI0GEQZQNQNKSDD12IAY?assignment_id=382M9COHEVCSL4OWZEJRRQ243CSEUW&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceGastroenterologyAssociates1(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyAssociates1
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gastroenterology-associates.png"
+	sourceDef.PatientAccessUrl = "https://www.insitedigestive.com/locations/pasadena-raymond-office/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

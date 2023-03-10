@@ -29,6 +29,7 @@ func GetSourceJacksonParishHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Jackson Parish Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJacksonParishHospital
+	sourceDef.PatientAccessUrl = "Name: Jackson Parish Hospital Address: 165 Beech Springs Rd City: Jonesboro Zip: 71251-2013 State: Louisiana Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

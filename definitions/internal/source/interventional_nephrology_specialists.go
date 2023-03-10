@@ -29,6 +29,7 @@ func GetSourceInterventionalNephrologySpecialists(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Interventional Nephrology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalNephrologySpecialists
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "interventional-nephrology-specialists.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

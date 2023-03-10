@@ -29,6 +29,7 @@ func GetSourceHqaArlington(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "HQA Arlington"
 	sourceDef.SourceType = pkg.SourceTypeHqaArlington
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

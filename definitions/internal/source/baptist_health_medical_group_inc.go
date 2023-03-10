@@ -29,6 +29,8 @@ func GetSourceBaptistHealthMedicalGroupInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Baptist Health Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthMedicalGroupInc
+	sourceDef.BrandLogo = "baptist-health-medical-group-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.baptisthealth.com/about/baptist-health-medical-group"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

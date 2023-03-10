@@ -29,6 +29,8 @@ func GetSourceGeisingerHealthPlan2(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Geisinger Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeGeisingerHealthPlan2
+	sourceDef.BrandLogo = "geisinger-health-plan.svg"
+	sourceDef.PatientAccessUrl = "https://www.geisinger.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMasonicareCorporation(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Masonicare Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMasonicareCorporation
+	sourceDef.PatientAccessUrl = "https://www.masonicare.org/contact-masonicare"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

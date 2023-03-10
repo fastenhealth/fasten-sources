@@ -29,6 +29,7 @@ func GetSourceMishockPhysicalTherapy(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Mishock Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeMishockPhysicalTherapy
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://mishockpt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

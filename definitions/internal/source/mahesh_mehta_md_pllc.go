@@ -29,6 +29,7 @@ func GetSourceMaheshMehtaMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Mahesh Mehta MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMaheshMehtaMdPllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mahesh-mehta-md-pllc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

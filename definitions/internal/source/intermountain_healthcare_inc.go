@@ -29,6 +29,8 @@ func GetSourceIntermountainHealthcareInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Intermountain Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeIntermountainHealthcareInc
+	sourceDef.BrandLogo = "intermountain-healthcare-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://intermountainhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

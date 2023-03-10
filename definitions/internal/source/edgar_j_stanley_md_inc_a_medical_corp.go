@@ -29,6 +29,7 @@ func GetSourceEdgarJStanleyMdIncAMedicalCorp(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Edgar J Stanley MD Inc A Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeEdgarJStanleyMdIncAMedicalCorp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "edgar-j-stanley-md-inc-a-medical-corp.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

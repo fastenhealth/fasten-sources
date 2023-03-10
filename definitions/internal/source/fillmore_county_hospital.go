@@ -29,6 +29,7 @@ func GetSourceFillmoreCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Fillmore County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFillmoreCountyHospital
+	sourceDef.BrandLogo = "fillmore-county-hospital.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceAsquamCommunityHealthCollaborativeLlc(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Asquam Community Health Collaborative, LLC"
 	sourceDef.SourceType = pkg.SourceTypeAsquamCommunityHealthCollaborativeLlc
+	sourceDef.BrandLogo = "asquam-community-health-collaborative-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://spearehospital.com/tag/the-asquam-collaborative/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

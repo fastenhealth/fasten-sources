@@ -29,6 +29,7 @@ func GetSourceJacksonAndLayne(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jackson and Layne"
 	sourceDef.SourceType = pkg.SourceTypeJacksonAndLayne
+	sourceDef.BrandLogo = "jackson-and-layne.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

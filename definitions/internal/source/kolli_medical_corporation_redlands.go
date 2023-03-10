@@ -29,6 +29,7 @@ func GetSourceKolliMedicalCorporationRedlands(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Kolli Medical Corporation-Redlands"
 	sourceDef.SourceType = pkg.SourceTypeKolliMedicalCorporationRedlands
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3UQ1LLR27N5KQHMWKTK3F0K5U5XAL5?assignment_id=3X87C8JFVK813UMXJ0JR669U1IVSQ6&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

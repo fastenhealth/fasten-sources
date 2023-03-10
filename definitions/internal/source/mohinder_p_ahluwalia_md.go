@@ -29,6 +29,7 @@ func GetSourceMohinderPAhluwaliaMd(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Mohinder P. Ahluwalia MD"
 	sourceDef.SourceType = pkg.SourceTypeMohinderPAhluwaliaMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mohinder-p-ahluwalia-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

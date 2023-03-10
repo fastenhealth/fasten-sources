@@ -29,6 +29,7 @@ func GetSourceArchboldBrooksPrimaryCare(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Archbold Brooks Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeArchboldBrooksPrimaryCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://archbold.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

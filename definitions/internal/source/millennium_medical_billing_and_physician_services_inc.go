@@ -29,6 +29,7 @@ func GetSourceMillenniumMedicalBillingAndPhysicianServicesInc(env pkg.FastenLigh
 
 	sourceDef.Display = "Millennium Medical Billing & Physician Services, Inc."
 	sourceDef.SourceType = pkg.SourceTypeMillenniumMedicalBillingAndPhysicianServicesInc
+	sourceDef.PatientAccessUrl = "https://millenniummedicalbilling.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

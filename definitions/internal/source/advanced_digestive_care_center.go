@@ -29,6 +29,7 @@ func GetSourceAdvancedDigestiveCareCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Advanced Digestive Care Center"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedDigestiveCareCenter
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ga-georgia/stockbridge/advanced-digestive-care-ctr-pc-x86wpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceExtendedArmPhysiciansInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Extended Arm Physicians Inc"
 	sourceDef.SourceType = pkg.SourceTypeExtendedArmPhysiciansInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/montgomery/extended-arm-physicians-inc-x5b9m40a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

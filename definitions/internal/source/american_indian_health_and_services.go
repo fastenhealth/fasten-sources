@@ -29,6 +29,8 @@ func GetSourceAmericanIndianHealthAndServices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "American Indian Health And Services"
 	sourceDef.SourceType = pkg.SourceTypeAmericanIndianHealthAndServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "american-indian-health-and-services.svg"
+	sourceDef.PatientAccessUrl = "https://www.aihscorp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

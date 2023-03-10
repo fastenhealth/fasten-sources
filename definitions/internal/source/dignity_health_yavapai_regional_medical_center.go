@@ -29,6 +29,7 @@ func GetSourceDignityHealthYavapaiRegionalMedicalCenter(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Dignity Health Yavapai Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDignityHealthYavapaiRegionalMedicalCenter
+	sourceDef.BrandLogo = "dignity-health-yavapai-regional-medical-center.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

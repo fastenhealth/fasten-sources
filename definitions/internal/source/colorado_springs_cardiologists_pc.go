@@ -29,6 +29,7 @@ func GetSourceColoradoSpringsCardiologistsPc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Colorado Springs Cardiologists PC"
 	sourceDef.SourceType = pkg.SourceTypeColoradoSpringsCardiologistsPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "colorado-springs-cardiologists-pc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

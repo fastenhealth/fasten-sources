@@ -29,6 +29,7 @@ func GetSourceCsRayhrerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "CS Rayhrer MD"
 	sourceDef.SourceType = pkg.SourceTypeCsRayhrerMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "cs-rayhrer-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMetrolinaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Metrolina ASC"
 	sourceDef.SourceType = pkg.SourceTypeMetrolinaAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.metrolinanephrology.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

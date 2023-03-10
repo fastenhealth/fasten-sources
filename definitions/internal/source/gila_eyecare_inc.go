@@ -29,6 +29,7 @@ func GetSourceGilaEyecareInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Gila Eyecare Inc"
 	sourceDef.SourceType = pkg.SourceTypeGilaEyecareInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gilaeyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

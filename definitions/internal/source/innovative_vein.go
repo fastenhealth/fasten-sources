@@ -29,6 +29,7 @@ func GetSourceInnovativeVein(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Innovative Vein"
 	sourceDef.SourceType = pkg.SourceTypeInnovativeVein
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.innovativevein.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

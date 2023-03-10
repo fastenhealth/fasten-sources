@@ -29,6 +29,7 @@ func GetSourceBarkerSleepMedicinePllc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Barker Sleep Medicine, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeBarkerSleepMedicinePllc
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/302U8RURKCYU65SF71REOF27KIXNV0?assignment_id=3VW04L3ZL73T8898ZOK6ZMMF7G1XXN&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

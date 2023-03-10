@@ -29,6 +29,7 @@ func GetSourceFoggRemingtonEyecare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Fogg Remington EyeCare"
 	sourceDef.SourceType = pkg.SourceTypeFoggRemingtonEyecare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.foggremington.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

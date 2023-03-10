@@ -29,6 +29,8 @@ func GetSourceDavidRJensenMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "David R. Jensen MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeDavidRJensenMdInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "david-r-jensen-md-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.firstvalleymedicalgroup.com/provider/david-r-jensen-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

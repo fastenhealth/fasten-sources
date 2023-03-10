@@ -29,6 +29,7 @@ func GetSourceEnterpriseMedical(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Enterprise Medical"
 	sourceDef.SourceType = pkg.SourceTypeEnterpriseMedical
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "enterprise-medical.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAuMedicalCenterInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "AU Medical Center, Inc."
 	sourceDef.SourceType = pkg.SourceTypeAuMedicalCenterInc
+	sourceDef.PatientAccessUrl = "https://www.augustahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

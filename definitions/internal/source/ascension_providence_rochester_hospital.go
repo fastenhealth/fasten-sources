@@ -29,6 +29,8 @@ func GetSourceAscensionProvidenceRochesterHospital(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Ascension Providence Rochester Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAscensionProvidenceRochesterHospital
+	sourceDef.BrandLogo = "ascension-providence-rochester-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/michigan/miroc/rochester-ascension-providence-rochester-hospital?utm_campaign=gmb&utm_medium=organic&utm_source=local"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

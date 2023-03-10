@@ -29,6 +29,8 @@ func GetSourceMedac(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "Medac"
 	sourceDef.SourceType = pkg.SourceTypeMedac
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "medac.svg"
+	sourceDef.PatientAccessUrl = "https://www.medachealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDermatologyAndSkinCancerCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Dermatology And Skin Cancer Center"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAndSkinCancerCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dermatology-and-skin-cancer-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.roswellpark.org/locations/roswell-park-dermatology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

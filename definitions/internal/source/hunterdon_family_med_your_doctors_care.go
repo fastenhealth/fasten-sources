@@ -29,6 +29,7 @@ func GetSourceHunterdonFamilyMedYourDoctorsCare(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Hunterdon Family Med Your Doctors Care"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedYourDoctorsCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3MJ9GGZYPG3EPV0OAN2Y04LWO56A2G?assignment_id=3ERMJ6L4DCPOZH4D34EZU6TT43MM7R&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

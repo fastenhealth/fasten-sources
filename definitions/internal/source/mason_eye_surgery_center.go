@@ -29,6 +29,8 @@ func GetSourceMasonEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Mason Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeMasonEyeSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mason-eye-surgery-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/ozone-park-new-york-ny-11416/mason-eye-surgery-center/vApFFjc6EYBxZBAPZDwPNJ"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceBaxterRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Baxter Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBaxterRegionalMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.baxterregional.org/locations/baxter-regional-medical-center/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceEntAndAllergyAssociatesPC(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "ENT & Allergy Associates, P.C."
 	sourceDef.SourceType = pkg.SourceTypeEntAndAllergyAssociatesPC
+	sourceDef.PatientAccessUrl = "https://www.entandallergy.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

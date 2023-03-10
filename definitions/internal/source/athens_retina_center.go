@@ -29,6 +29,8 @@ func GetSourceAthensRetinaCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Athens Retina Center"
 	sourceDef.SourceType = pkg.SourceTypeAthensRetinaCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "athens-retina-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.athensretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceLibertyDaytonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Liberty Dayton Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeLibertyDaytonRegionalMedicalCenter
+	sourceDef.PatientAccessUrl = "http://www.libertydaytonrmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

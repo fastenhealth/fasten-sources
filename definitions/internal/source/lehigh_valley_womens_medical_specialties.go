@@ -29,6 +29,7 @@ func GetSourceLehighValleyWomensMedicalSpecialties(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Lehigh Valley Womens Medical Specialties"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyWomensMedicalSpecialties
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/pa-pennsylvania/allentown/lehigh-valley-womens-medical-specialties-pc-xb79y8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

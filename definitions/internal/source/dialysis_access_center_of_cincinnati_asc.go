@@ -29,6 +29,7 @@ func GetSourceDialysisAccessCenterOfCincinnatiAsc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Dialysis Access Center Of Cincinnati ASC"
 	sourceDef.SourceType = pkg.SourceTypeDialysisAccessCenterOfCincinnatiAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

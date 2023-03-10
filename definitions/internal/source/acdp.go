@@ -29,6 +29,8 @@ func GetSourceAcdp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.Display = "ACDP"
 	sourceDef.SourceType = pkg.SourceTypeAcdp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "acdp.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3INZSNUD9DNNNMOZF68F0S1GFMDD9T?assignment_id=3GNCZX450WKC3MZO2NIBL1PE4WJAP8&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

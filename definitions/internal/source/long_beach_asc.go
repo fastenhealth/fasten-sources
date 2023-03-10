@@ -29,6 +29,7 @@ func GetSourceLongBeachAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Long Beach ASC"
 	sourceDef.SourceType = pkg.SourceTypeLongBeachAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMoundviewMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Moundview Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMoundviewMemorialHospital
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3BVS8WK9RDSNJQJI54NMIVCJVJOIBU?assignment_id=3IJXV6UZ1BGCLHY1R3ED7UDCO6VIR5&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

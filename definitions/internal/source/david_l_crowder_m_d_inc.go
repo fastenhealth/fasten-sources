@@ -29,6 +29,7 @@ func GetSourceDavidLCrowderMDInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "David L. Crowder, M.D., Inc"
 	sourceDef.SourceType = pkg.SourceTypeDavidLCrowderMDInc
+	sourceDef.PatientAccessUrl = "https://cullmanregional.com/doctor/david-crowder/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

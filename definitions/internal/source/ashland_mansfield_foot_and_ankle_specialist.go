@@ -29,6 +29,8 @@ func GetSourceAshlandMansfieldFootAndAnkleSpecialist(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Ashland Mansfield Foot & Ankle Specialist"
 	sourceDef.SourceType = pkg.SourceTypeAshlandMansfieldFootAndAnkleSpecialist
+	sourceDef.BrandLogo = "ashland-mansfield-foot-and-ankle-specialist.jpg"
+	sourceDef.PatientAccessUrl = "https://www.ohiohealth.com/ohiohealth-physician-group/our-specialties/podiatric-surgery/ashland"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

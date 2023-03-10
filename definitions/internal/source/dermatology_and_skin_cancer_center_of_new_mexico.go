@@ -29,6 +29,7 @@ func GetSourceDermatologyAndSkinCancerCenterOfNewMexico(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Dermatology & Skin Cancer Center of New Mexico"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAndSkinCancerCenterOfNewMexico
+	sourceDef.PatientAccessUrl = "https://www.nmdermcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceGovernorsPlaceAmbulatorySurgeryCtr(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Governors Place Ambulatory Surgery Ctr"
 	sourceDef.SourceType = pkg.SourceTypeGovernorsPlaceAmbulatorySurgeryCtr
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "governors-place-ambulatory-surgery-ctr.jpg"
+	sourceDef.PatientAccessUrl = "https://www.daytonskincare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

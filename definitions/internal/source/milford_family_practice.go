@@ -29,6 +29,7 @@ func GetSourceMilfordFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Milford Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMilfordFamilyPractice
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/milford-family-practice-1c643fc9-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

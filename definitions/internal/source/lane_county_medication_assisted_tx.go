@@ -29,6 +29,7 @@ func GetSourceLaneCountyMedicationAssistedTx(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Lane County Medication Assisted Tx"
 	sourceDef.SourceType = pkg.SourceTypeLaneCountyMedicationAssistedTx
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lane-county-medication-assisted-tx.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

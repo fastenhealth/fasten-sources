@@ -29,6 +29,8 @@ func GetSourceDeenGrossEyeCenters(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Deen Gross Eye Centers"
 	sourceDef.SourceType = pkg.SourceTypeDeenGrossEyeCenters
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "deen-gross-eye-centers.svg"
+	sourceDef.PatientAccessUrl = "https://www.deengrosseye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

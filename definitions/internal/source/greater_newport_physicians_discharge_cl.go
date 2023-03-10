@@ -29,6 +29,8 @@ func GetSourceGreaterNewportPhysiciansDischargeCl(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Greater Newport Physicians Discharge CL"
 	sourceDef.SourceType = pkg.SourceTypeGreaterNewportPhysiciansDischargeCl
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "greater-newport-physicians-discharge-cl.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3BAKUKE4AU9ZZR49TUO6QB01W3FR1N?assignment_id=3N2BF7Y2V4RLS6APGD0BLJINH54HM7&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

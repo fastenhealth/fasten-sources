@@ -29,6 +29,7 @@ func GetSourceAtriumObGynInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Atrium OB GYN INC"
 	sourceDef.SourceType = pkg.SourceTypeAtriumObGynInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.atriumobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

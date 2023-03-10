@@ -29,6 +29,8 @@ func GetSourceLoEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "LO Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeLoEyeCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lo-eye-care.svg"
+	sourceDef.PatientAccessUrl = "http://www.loeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

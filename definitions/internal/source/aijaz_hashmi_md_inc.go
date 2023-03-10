@@ -29,6 +29,7 @@ func GetSourceAijazHashmiMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Aijaz Hashmi MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeAijazHashmiMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://lotus-aesthetica.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

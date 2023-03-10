@@ -29,6 +29,7 @@ func GetSourceHeartCenterOfSouthernMarylandLlp(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Heart Center Of Southern Maryland LLP"
 	sourceDef.SourceType = pkg.SourceTypeHeartCenterOfSouthernMarylandLlp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "heart-center-of-southern-maryland-llp.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

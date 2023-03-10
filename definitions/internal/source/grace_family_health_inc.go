@@ -29,6 +29,7 @@ func GetSourceGraceFamilyHealthInc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Grace Family Health Inc."
 	sourceDef.SourceType = pkg.SourceTypeGraceFamilyHealthInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gracefamilyhealth.net"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

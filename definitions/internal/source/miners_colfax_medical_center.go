@@ -29,6 +29,7 @@ func GetSourceMinersColfaxMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Miners' Colfax Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMinersColfaxMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.minershosp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

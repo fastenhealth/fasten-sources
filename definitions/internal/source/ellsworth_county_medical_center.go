@@ -29,6 +29,7 @@ func GetSourceEllsworthCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Ellsworth County Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEllsworthCountyMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.ewmed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

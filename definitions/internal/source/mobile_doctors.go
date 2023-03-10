@@ -29,7 +29,6 @@ func GetSourceMobileDoctors(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Mobile Doctors"
 	sourceDef.SourceType = pkg.SourceTypeMobileDoctors
-	sourceDef.PatientAccessUrl = "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwj018XM9_n8AhWV4MgKHTw_CJ8YABADGgJxdQ&ohost=www.google.com&cid=CAESaeD23YXavE9YzQdbzhKgJhHi7ATIhEA_9sz4ItrePxeGnxA4PXS2tYGbo5kFeKrM8_KRw5K7_14plo8NdZosCTdu77OcMgCVrshlbGIGc5u3XvkaKGlYCti5jZP1PlaUWmtVnP9PePuRJQ&sig=AOD64_35lgao5Wfyv9l-q50SO5w2mBWIag&q&adurl&ved=2ahUKEwiBz7jM9_n8AhUzEFkFHa3SBNAQ0Qx6BAgGEAE"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

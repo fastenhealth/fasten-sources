@@ -29,6 +29,7 @@ func GetSourceCopperQueenCommunityHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Copper Queen Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCopperQueenCommunityHospital
+	sourceDef.PatientAccessUrl = "https://www.cqch.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceEastlandMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Eastland Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeEastlandMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.eastlandmemorial.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAppleMedicalGroupHaun(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Apple Medical Group- Haun"
 	sourceDef.SourceType = pkg.SourceTypeAppleMedicalGroupHaun
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.appleurgentcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceKathrynAmacherDO(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Kathryn Amacher, D.O."
 	sourceDef.SourceType = pkg.SourceTypeKathrynAmacherDO
+	sourceDef.BrandLogo = "kathryn-amacher-d-o.svg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/vacaville/kathryn-amacher-do-x2x6v9"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMidNassauMedicalCareForKidzLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Mid-Nassau Medical Care for Kidz LLC"
 	sourceDef.SourceType = pkg.SourceTypeMidNassauMedicalCareForKidzLlc
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ny-new-york/westbury/mid-nassau-medical-care-kidz-xb6xrr"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

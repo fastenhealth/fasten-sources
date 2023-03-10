@@ -29,6 +29,7 @@ func GetSourceFurmanMedicalCorporation(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Furman Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeFurmanMedicalCorporation
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npidb.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

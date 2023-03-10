@@ -29,6 +29,7 @@ func GetSourceGreatRiverHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Great River Health System"
 	sourceDef.SourceType = pkg.SourceTypeGreatRiverHealthSystem
+	sourceDef.PatientAccessUrl = "https://www.greatriverhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

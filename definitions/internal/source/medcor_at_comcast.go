@@ -29,6 +29,7 @@ func GetSourceMedcorAtComcast(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Medcor At Comcast"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtComcast
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://medcor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

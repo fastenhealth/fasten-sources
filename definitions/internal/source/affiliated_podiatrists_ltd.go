@@ -29,6 +29,7 @@ func GetSourceAffiliatedPodiatristsLtd(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Affiliated Podiatrists, Ltd."
 	sourceDef.SourceType = pkg.SourceTypeAffiliatedPodiatristsLtd
+	sourceDef.PatientAccessUrl = "https://aplfeet.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

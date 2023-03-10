@@ -29,6 +29,7 @@ func GetSourceCommunityPulmonaryAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Community Pulmonary Associates"
 	sourceDef.SourceType = pkg.SourceTypeCommunityPulmonaryAssociates
+	sourceDef.BrandLogo = "community-pulmonary-associates.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

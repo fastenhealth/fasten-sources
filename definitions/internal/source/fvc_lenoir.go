@@ -29,6 +29,7 @@ func GetSourceFvcLenoir(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "FVC Lenoir"
 	sourceDef.SourceType = pkg.SourceTypeFvcLenoir
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fvc-lenoir.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAutomationDirect(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Automation Direct"
 	sourceDef.SourceType = pkg.SourceTypeAutomationDirect
+	sourceDef.PatientAccessUrl = "https://www.automationdirect.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMississippiPathologyAssociatesPa(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Mississippi Pathology Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeMississippiPathologyAssociatesPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/jackson-ms-39202/ms-pathology-associates-pa/LHwNCqEjmTtXtHxuU42rxU"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

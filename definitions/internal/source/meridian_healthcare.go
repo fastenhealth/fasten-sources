@@ -29,6 +29,7 @@ func GetSourceMeridianHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Meridian HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeMeridianHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://meridianhealthcare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

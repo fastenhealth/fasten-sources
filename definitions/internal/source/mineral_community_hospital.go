@@ -29,6 +29,7 @@ func GetSourceMineralCommunityHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mineral Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMineralCommunityHospital
+	sourceDef.PatientAccessUrl = "https://mineralcommunityhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAngelPhysicianPractices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Angel Physician Practices"
 	sourceDef.SourceType = pkg.SourceTypeAngelPhysicianPractices
+	sourceDef.PatientAccessUrl = "https://missionhealth.org/member-hospitals/angel/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

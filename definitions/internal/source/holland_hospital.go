@@ -29,6 +29,8 @@ func GetSourceHollandHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Holland Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHollandHospital
+	sourceDef.BrandLogo = "holland-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.hollandhospital.org/hh/home.aspx"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

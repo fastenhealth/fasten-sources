@@ -29,6 +29,7 @@ func GetSourceJohnnyArrudaMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Johnny Arruda MD INC"
 	sourceDef.SourceType = pkg.SourceTypeJohnnyArrudaMdInc
+	sourceDef.PatientAccessUrl = "https://www.premierentmed.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

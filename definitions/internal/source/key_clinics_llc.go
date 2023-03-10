@@ -29,6 +29,8 @@ func GetSourceKeyClinicsLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Key Clinics LLC"
 	sourceDef.SourceType = pkg.SourceTypeKeyClinicsLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "key-clinics-llc.svg"
+	sourceDef.PatientAccessUrl = "https://www.keyclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

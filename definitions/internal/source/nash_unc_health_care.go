@@ -29,6 +29,8 @@ func GetSourceNashUncHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Nash UNC Health Care"
 	sourceDef.SourceType = pkg.SourceTypeNashUncHealthCare
+	sourceDef.BrandLogo = "nash-unc-health-care.svg"
+	sourceDef.PatientAccessUrl = "https://www.nashunchealthcare.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

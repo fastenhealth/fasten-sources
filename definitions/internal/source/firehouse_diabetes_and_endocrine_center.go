@@ -29,6 +29,7 @@ func GetSourceFirehouseDiabetesAndEndocrineCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Firehouse Diabetes and Endocrine Center"
 	sourceDef.SourceType = pkg.SourceTypeFirehouseDiabetesAndEndocrineCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://firehouseclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

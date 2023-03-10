@@ -29,6 +29,8 @@ func GetSourceInlandNorthwestFootAndAnkle(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Inland Northwest Foot And Ankle"
 	sourceDef.SourceType = pkg.SourceTypeInlandNorthwestFootAndAnkle
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "inland-northwest-foot-and-ankle.jpg"
+	sourceDef.PatientAccessUrl = "https://inlandfoot.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

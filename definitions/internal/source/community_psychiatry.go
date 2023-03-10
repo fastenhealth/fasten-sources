@@ -29,6 +29,7 @@ func GetSourceCommunityPsychiatry(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Community Psychiatry"
 	sourceDef.SourceType = pkg.SourceTypeCommunityPsychiatry
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ihi.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

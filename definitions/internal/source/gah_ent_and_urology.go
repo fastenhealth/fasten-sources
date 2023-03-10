@@ -29,6 +29,8 @@ func GetSourceGahEntAndUrology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "GAH ENT And Urology"
 	sourceDef.SourceType = pkg.SourceTypeGahEntAndUrology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gah-ent-and-urology.jpg"
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gah-ent-clinic"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFloridaPerinatalAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Florida Perinatal Associates"
 	sourceDef.SourceType = pkg.SourceTypeFloridaPerinatalAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "florida-perinatal-associates.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

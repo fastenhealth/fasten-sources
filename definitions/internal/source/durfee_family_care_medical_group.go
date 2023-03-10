@@ -29,6 +29,7 @@ func GetSourceDurfeeFamilyCareMedicalGroup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Durfee Family Care Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeDurfeeFamilyCareMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "durfee-family-care-medical-group.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

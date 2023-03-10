@@ -29,6 +29,7 @@ func GetSourceFreseniusVascularCareAugustaLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Fresenius Vascular Care Augusta LLC"
 	sourceDef.SourceType = pkg.SourceTypeFreseniusVascularCareAugustaLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fresenius-vascular-care-augusta-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

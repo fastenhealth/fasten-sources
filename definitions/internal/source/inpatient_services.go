@@ -29,6 +29,7 @@ func GetSourceInpatientServices(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Inpatient Services"
 	sourceDef.SourceType = pkg.SourceTypeInpatientServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "inpatient-services.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

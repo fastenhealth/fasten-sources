@@ -29,6 +29,7 @@ func GetSourceLydiaAguileraMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Lydia Aguilera MD"
 	sourceDef.SourceType = pkg.SourceTypeLydiaAguileraMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lydia-aguilera-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

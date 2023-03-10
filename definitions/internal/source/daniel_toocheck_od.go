@@ -29,6 +29,7 @@ func GetSourceDanielToocheckOd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Daniel Toocheck OD"
 	sourceDef.SourceType = pkg.SourceTypeDanielToocheckOd
+	sourceDef.BrandLogo = "daniel-toocheck-od.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

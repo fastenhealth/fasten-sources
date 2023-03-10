@@ -29,6 +29,8 @@ func GetSourceLehighValleyFamilyPracticeEpic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Lehigh Valley Family Practice EPIC"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyFamilyPracticeEpic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lehigh-valley-family-practice-epic.svg"
+	sourceDef.PatientAccessUrl = "https://www.lvhn.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

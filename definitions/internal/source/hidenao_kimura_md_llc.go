@@ -29,6 +29,7 @@ func GetSourceHidenaoKimuraMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hidenao Kimura, MD, LLC"
 	sourceDef.SourceType = pkg.SourceTypeHidenaoKimuraMdLlc
+	sourceDef.PatientAccessUrl = "https://kimuramd.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

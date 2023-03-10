@@ -29,6 +29,7 @@ func GetSourceEarNoseThroatAndAllergyCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Ear Nose Throat and Allergy Center"
 	sourceDef.SourceType = pkg.SourceTypeEarNoseThroatAndAllergyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.entallergycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

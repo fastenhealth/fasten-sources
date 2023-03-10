@@ -29,6 +29,7 @@ func GetSourceGrisellMemorialHospitalDistrict1(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Grisell Memorial Hospital District #1"
 	sourceDef.SourceType = pkg.SourceTypeGrisellMemorialHospitalDistrict1
+	sourceDef.PatientAccessUrl = "https://grisellmemorialhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

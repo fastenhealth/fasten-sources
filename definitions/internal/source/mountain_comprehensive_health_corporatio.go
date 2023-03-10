@@ -29,6 +29,8 @@ func GetSourceMountainComprehensiveHealthCorporatio(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Mountain Comprehensive Health Corporatio"
 	sourceDef.SourceType = pkg.SourceTypeMountainComprehensiveHealthCorporatio
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mountain-comprehensive-health-corporatio.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mchcky.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

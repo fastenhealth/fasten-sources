@@ -29,6 +29,8 @@ func GetSourceEmpowerPsychiatryAndSleepLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Empower Psychiatry and Sleep LLC"
 	sourceDef.SourceType = pkg.SourceTypeEmpowerPsychiatryAndSleepLlc
+	sourceDef.BrandLogo = "empower-psychiatry-and-sleep-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://atlantatms.clinic/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceKlamathOrthopedicClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Klamath Orthopedic Clinic"
 	sourceDef.SourceType = pkg.SourceTypeKlamathOrthopedicClinic
+	sourceDef.PatientAccessUrl = "https://klamathbones.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFirstStateOrthopaedicsPa(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "First State Orthopaedics PA"
 	sourceDef.SourceType = pkg.SourceTypeFirstStateOrthopaedicsPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.firststateortho.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

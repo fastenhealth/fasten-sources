@@ -29,6 +29,7 @@ func GetSourceFiveMountainsHawaiiIncDbaKipukaOKeOla(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Five Mountains Hawaii, Inc- Dba: Kipuka o ke Ola"
 	sourceDef.SourceType = pkg.SourceTypeFiveMountainsHawaiiIncDbaKipukaOKeOla
+	sourceDef.PatientAccessUrl = "https://www.kipukaokeola.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

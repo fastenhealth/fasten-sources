@@ -29,6 +29,7 @@ func GetSourceAlamoOphthalmology(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Alamo Ophthalmology"
 	sourceDef.SourceType = pkg.SourceTypeAlamoOphthalmology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.alamocityeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

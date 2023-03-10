@@ -29,6 +29,7 @@ func GetSourceCouncilBluffsSurgicalAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Council Bluffs Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeCouncilBluffsSurgicalAssociates
+	sourceDef.BrandLogo = "council-bluffs-surgical-associates.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

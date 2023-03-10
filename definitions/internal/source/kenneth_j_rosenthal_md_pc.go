@@ -29,6 +29,7 @@ func GetSourceKennethJRosenthalMdPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Kenneth J. Rosenthal MD PC"
 	sourceDef.SourceType = pkg.SourceTypeKennethJRosenthalMdPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.eyesurgery.org/eye-doctors-new-york/kenneth-rosenthal-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

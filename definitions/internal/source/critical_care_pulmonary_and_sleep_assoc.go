@@ -29,6 +29,8 @@ func GetSourceCriticalCarePulmonaryAndSleepAssoc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Critical Care Pulmonary & Sleep Assoc."
 	sourceDef.SourceType = pkg.SourceTypeCriticalCarePulmonaryAndSleepAssoc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "critical-care-pulmonary-and-sleep-assoc.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3IKMEYR0M9SK189AMEFNUIOSTHZK24?assignment_id=3ZR9AIQJUP6UDGFNC1TUTX269XH40X&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDrHussainAlDarsaniMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Dr. Hussain Al-darsani, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrHussainAlDarsaniMd
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

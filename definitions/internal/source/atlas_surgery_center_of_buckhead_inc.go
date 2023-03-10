@@ -29,6 +29,8 @@ func GetSourceAtlasSurgeryCenterOfBuckheadInc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Atlas Surgery Center Of Buckhead Inc"
 	sourceDef.SourceType = pkg.SourceTypeAtlasSurgeryCenterOfBuckheadInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "atlas-surgery-center-of-buckhead-inc.jpg"
+	sourceDef.PatientAccessUrl = "Name: Atlas Surgery Center Of Buckhead Inc Address: 2253 Northwest Pkwy City: Marietta Zip: 30067 State: Georgia Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

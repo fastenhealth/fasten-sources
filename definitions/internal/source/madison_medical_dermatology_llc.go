@@ -29,6 +29,8 @@ func GetSourceMadisonMedicalDermatologyLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Madison Medical Dermatology LLC"
 	sourceDef.SourceType = pkg.SourceTypeMadisonMedicalDermatologyLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "madison-medical-dermatology-llc.jpg"
+	sourceDef.PatientAccessUrl = "http://madmedgroup.com/madison-medical-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

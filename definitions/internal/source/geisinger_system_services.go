@@ -29,6 +29,7 @@ func GetSourceGeisingerSystemServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Geisinger System Services"
 	sourceDef.SourceType = pkg.SourceTypeGeisingerSystemServices
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/302U8RURKCYU65SF71REOF27KAXNVK?assignment_id=30X31N5D6HN9GEFGU4M5G6UPX09ASH&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

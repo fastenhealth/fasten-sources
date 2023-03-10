@@ -29,6 +29,7 @@ func GetSourceFronteraHealthcareNetwork(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Frontera Healthcare Network"
 	sourceDef.SourceType = pkg.SourceTypeFronteraHealthcareNetwork
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "frontera-healthcare-network.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

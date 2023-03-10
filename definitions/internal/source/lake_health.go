@@ -29,6 +29,8 @@ func GetSourceLakeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Lake Health"
 	sourceDef.SourceType = pkg.SourceTypeLakeHealth
+	sourceDef.BrandLogo = "lake-health.svg"
+	sourceDef.PatientAccessUrl = "https://lakehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

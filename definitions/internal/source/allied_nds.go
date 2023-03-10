@@ -29,6 +29,8 @@ func GetSourceAlliedNds(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Allied NDS"
 	sourceDef.SourceType = pkg.SourceTypeAlliedNds
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "allied-nds.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3MDWE879VUZU8PQF1AH952DGC11B9K?assignment_id=392CY0QWGFO5KBW3GRI0Z122Q8U4IH&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

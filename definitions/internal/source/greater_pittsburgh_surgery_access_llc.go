@@ -29,6 +29,7 @@ func GetSourceGreaterPittsburghSurgeryAccessLlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Greater Pittsburgh Surgery Access LLC"
 	sourceDef.SourceType = pkg.SourceTypeGreaterPittsburghSurgeryAccessLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "greater-pittsburgh-surgery-access-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

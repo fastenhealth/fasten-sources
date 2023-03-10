@@ -29,6 +29,7 @@ func GetSourceArturoQuintanillaMdFaap(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Arturo Quintanilla MD FAAP"
 	sourceDef.SourceType = pkg.SourceTypeArturoQuintanillaMdFaap
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rmpeds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

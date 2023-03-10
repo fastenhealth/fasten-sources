@@ -29,6 +29,7 @@ func GetSourceJohnKnoxVillageOfCentralFloridaInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "John Knox Village of Central Florida, Inc."
 	sourceDef.SourceType = pkg.SourceTypeJohnKnoxVillageOfCentralFloridaInc
+	sourceDef.PatientAccessUrl = "https://johnknox.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

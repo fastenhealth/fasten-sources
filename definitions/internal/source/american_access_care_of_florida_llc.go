@@ -29,6 +29,7 @@ func GetSourceAmericanAccessCareOfFloridaLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "American Access Care Of Florida LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfFloridaLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3SR6AEG6XIQJ03199EJLQU95GNQYHB?assignment_id=35GCEFQ6IJL6X529GH13PRDM8LZZ3N&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

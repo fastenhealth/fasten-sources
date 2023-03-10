@@ -29,6 +29,7 @@ func GetSourceHunterdonFamilyMedAtRiverfield(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Hunterdon Family Med At Riverfield"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedAtRiverfield
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

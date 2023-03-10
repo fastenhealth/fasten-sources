@@ -29,6 +29,7 @@ func GetSourceHughSNasrMdFacpFace(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Hugh S Nasr MD FACP FACE"
 	sourceDef.SourceType = pkg.SourceTypeHughSNasrMdFacpFace
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/hugh-nasr/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

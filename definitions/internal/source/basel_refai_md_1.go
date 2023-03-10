@@ -29,6 +29,8 @@ func GetSourceBaselRefaiMd1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Basel Refai MD"
 	sourceDef.SourceType = pkg.SourceTypeBaselRefaiMd1
+	sourceDef.BrandLogo = "basel-refai-md.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/38O9DZ0A7FKD2TOLKALMKZJASUG622?assignment_id=3A4NIXBJ7KWNE2TF7YF9DBBUT36LM4&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

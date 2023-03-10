@@ -29,6 +29,7 @@ func GetSourceIndianaSpineGroupPC(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Indiana Spine Group, P.C."
 	sourceDef.SourceType = pkg.SourceTypeIndianaSpineGroupPC
+	sourceDef.PatientAccessUrl = "https://www.indianaspinegroup.com/intro/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceGreensboroPediatricians(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Greensboro Pediatricians"
 	sourceDef.SourceType = pkg.SourceTypeGreensboroPediatricians
+	sourceDef.BrandLogo = "greensboro-pediatricians.jpg"
+	sourceDef.PatientAccessUrl = "http://www.greensboropediatricians.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

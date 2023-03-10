@@ -29,6 +29,7 @@ func GetSourceGulfStatesPhysicalMedRehab(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Gulf States Physical Med Rehab"
 	sourceDef.SourceType = pkg.SourceTypeGulfStatesPhysicalMedRehab
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ms-mississippi/jackson/gulf-states-phys-medcn-rehabltn-x8953k"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

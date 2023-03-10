@@ -29,6 +29,7 @@ func GetSourceCvpPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "CVP Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCvpPhysicians
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "cvp-physicians.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

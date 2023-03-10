@@ -29,6 +29,8 @@ func GetSourceMidAmericaRheumatologyConsultantsPa(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Mid America Rheumatology Consultants PA"
 	sourceDef.SourceType = pkg.SourceTypeMidAmericaRheumatologyConsultantsPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mid-america-rheumatology-consultants-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3OCZWXS7014NKBAFPXTM7P4J2RWL5A?assignment_id=3F0BG9B9M3KOTYTRM72AO1G0DD37Y5&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

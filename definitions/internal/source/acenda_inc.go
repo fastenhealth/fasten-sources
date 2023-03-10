@@ -29,6 +29,7 @@ func GetSourceAcendaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Acenda, Inc."
 	sourceDef.SourceType = pkg.SourceTypeAcendaInc
+	sourceDef.PatientAccessUrl = "https://acendahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

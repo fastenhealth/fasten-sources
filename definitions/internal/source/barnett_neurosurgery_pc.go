@@ -29,6 +29,7 @@ func GetSourceBarnettNeurosurgeryPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Barnett Neurosurgery PC"
 	sourceDef.SourceType = pkg.SourceTypeBarnettNeurosurgeryPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.barnettneurosurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

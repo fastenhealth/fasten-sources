@@ -29,6 +29,7 @@ func GetSourceLuisFSotoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Luis F. Soto,LLC."
 	sourceDef.SourceType = pkg.SourceTypeLuisFSotoLlc
+	sourceDef.PatientAccessUrl = "https://www.lcmchealth.org/find-a-provider/luis-f-soto-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

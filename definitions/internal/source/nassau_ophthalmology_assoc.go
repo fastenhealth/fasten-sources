@@ -29,6 +29,7 @@ func GetSourceNassauOphthalmologyAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Nassau Ophthalmology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeNassauOphthalmologyAssoc
+	sourceDef.PatientAccessUrl = "http://www.nassaueyedocs.com/about/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHerefordRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Hereford Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHerefordRegionalMedicalCenter
+	sourceDef.PatientAccessUrl = "https://dschd.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

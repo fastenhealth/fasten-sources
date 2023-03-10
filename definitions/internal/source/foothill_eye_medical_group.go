@@ -29,6 +29,7 @@ func GetSourceFoothillEyeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Foothill Eye Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeFoothillEyeMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "foothill-eye-medical-group.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

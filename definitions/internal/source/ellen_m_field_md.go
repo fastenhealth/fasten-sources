@@ -29,6 +29,7 @@ func GetSourceEllenMFieldMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Ellen M Field MD"
 	sourceDef.SourceType = pkg.SourceTypeEllenMFieldMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ellen-m-field-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

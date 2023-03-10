@@ -29,6 +29,7 @@ func GetSourceIraLiebrossMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Ira Liebross MD"
 	sourceDef.SourceType = pkg.SourceTypeIraLiebrossMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ira-liebross-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

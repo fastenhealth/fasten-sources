@@ -29,6 +29,7 @@ func GetSourceIntegratedFamilyServices(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Integrated Family Services"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedFamilyServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "integrated-family-services.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

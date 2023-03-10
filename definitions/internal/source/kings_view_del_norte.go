@@ -29,6 +29,7 @@ func GetSourceKingsViewDelNorte(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Kings View - Del Norte"
 	sourceDef.SourceType = pkg.SourceTypeKingsViewDelNorte
+	sourceDef.PatientAccessUrl = "https://www.kingsview.org/services/offices/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

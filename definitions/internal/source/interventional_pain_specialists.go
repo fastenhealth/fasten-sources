@@ -29,6 +29,7 @@ func GetSourceInterventionalPainSpecialists(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Interventional Pain Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalPainSpecialists
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "interventional-pain-specialists.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

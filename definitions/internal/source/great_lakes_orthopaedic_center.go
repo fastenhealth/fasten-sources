@@ -29,6 +29,7 @@ func GetSourceGreatLakesOrthopaedicCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Great Lakes Orthopaedic Center"
 	sourceDef.SourceType = pkg.SourceTypeGreatLakesOrthopaedicCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "great-lakes-orthopaedic-center.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

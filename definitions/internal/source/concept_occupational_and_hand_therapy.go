@@ -29,6 +29,8 @@ func GetSourceConceptOccupationalAndHandTherapy(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Concept Occupational and Hand Therapy"
 	sourceDef.SourceType = pkg.SourceTypeConceptOccupationalAndHandTherapy
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "concept-occupational-and-hand-therapy.jpg"
+	sourceDef.PatientAccessUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLP_SMGMKID-iYtDdZkX29HxYfkBu0zdojOw&usqp=CAU"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

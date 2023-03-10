@@ -29,6 +29,8 @@ func GetSourceDohcHomeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "DOHC Home Health"
 	sourceDef.SourceType = pkg.SourceTypeDohcHomeHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dohc-home-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.mydohc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

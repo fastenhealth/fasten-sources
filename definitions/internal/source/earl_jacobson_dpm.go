@@ -29,6 +29,7 @@ func GetSourceEarlJacobsonDpm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Earl Jacobson, DPM"
 	sourceDef.SourceType = pkg.SourceTypeEarlJacobsonDpm
+	sourceDef.PatientAccessUrl = "https://premierfootanklecenter.com/?gclid=Cj0KCQiApKagBhC1ARIsAFc7Mc4cwBIWJLhammmvRGOXJSMX5ve7XINRqVLtJHlg9NmKbcwjSPDO538aAk0pEALw_wcB"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

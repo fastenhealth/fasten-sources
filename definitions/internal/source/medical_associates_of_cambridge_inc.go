@@ -29,6 +29,8 @@ func GetSourceMedicalAssociatesOfCambridgeInc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Medical Associates Of Cambridge Inc"
 	sourceDef.SourceType = pkg.SourceTypeMedicalAssociatesOfCambridgeInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "medical-associates-of-cambridge-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.medicalassociatescare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHouserNewmanAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Houser Newman Associates"
 	sourceDef.SourceType = pkg.SourceTypeHouserNewmanAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://housernewman.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceEvergreenhealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "EvergreenHealth"
 	sourceDef.SourceType = pkg.SourceTypeEvergreenhealth
+	sourceDef.BrandLogo = "evergreenhealth.svg"
+	sourceDef.PatientAccessUrl = "https://www.evergreenhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

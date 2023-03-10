@@ -29,6 +29,7 @@ func GetSourceAllenDBrandonPhd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Allen D Brandon PHD"
 	sourceDef.SourceType = pkg.SourceTypeAllenDBrandonPhd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.vitals.com/doctors/Dr_Allen_Brandon.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

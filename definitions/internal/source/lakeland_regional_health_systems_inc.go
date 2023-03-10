@@ -29,6 +29,8 @@ func GetSourceLakelandRegionalHealthSystemsInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Lakeland Regional Health Systems, Inc."
 	sourceDef.SourceType = pkg.SourceTypeLakelandRegionalHealthSystemsInc
+	sourceDef.BrandLogo = "lakeland-regional-health-systems-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.mylrh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

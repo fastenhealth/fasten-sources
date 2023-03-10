@@ -29,6 +29,7 @@ func GetSourceGarfieldHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Garfield Health Center"
 	sourceDef.SourceType = pkg.SourceTypeGarfieldHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.garfieldhealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAmericanAnesthesiologyOfNj(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "American Anesthesiology of NJ"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAnesthesiologyOfNj
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/livingston/american-anesthesiology-center-for-pain-medicine-xb9dmf"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

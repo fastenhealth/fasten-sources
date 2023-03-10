@@ -29,6 +29,7 @@ func GetSourceMihirManiarDO(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Mihir Maniar, D.O."
 	sourceDef.SourceType = pkg.SourceTypeMihirManiarDO
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/mihir-k-maniar-do-9e5f8fc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

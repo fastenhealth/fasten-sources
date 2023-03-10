@@ -29,6 +29,7 @@ func GetSourceAllergyAndAsthmaAssoc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Allergy & Asthma Assoc"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaAssoc
+	sourceDef.BrandLogo = "allergy-and-asthma-assoc.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

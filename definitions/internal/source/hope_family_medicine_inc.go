@@ -29,6 +29,7 @@ func GetSourceHopeFamilyMedicineInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Hope Family Medicine Inc"
 	sourceDef.SourceType = pkg.SourceTypeHopeFamilyMedicineInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hopefamilymedicineonline.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

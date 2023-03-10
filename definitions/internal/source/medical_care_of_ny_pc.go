@@ -29,6 +29,8 @@ func GetSourceMedicalCareOfNyPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Medical Care Of NY PC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCareOfNyPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "medical-care-of-ny-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3L55D8AUGNUSJVQTNM5KF3CP3NMYCN?assignment_id=32AT8R96GZ6TVNTE093WG76J436USI&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

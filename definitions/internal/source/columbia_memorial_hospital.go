@@ -29,6 +29,7 @@ func GetSourceColumbiaMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Columbia Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaMemorialHospital
+	sourceDef.BrandLogo = "columbia-memorial-hospital.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceColoradoCoalitionForTheHomeless(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Colorado Coalition For The Homeless"
 	sourceDef.SourceType = pkg.SourceTypeColoradoCoalitionForTheHomeless
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.coloradocoalition.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

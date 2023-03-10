@@ -29,6 +29,7 @@ func GetSourceGastroenterologyCenterMs(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Gastroenterology Center- MS"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyCenterMs
+	sourceDef.PatientAccessUrl = "https://www.gastrocenter.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCountyOfVentura(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "County of Ventura"
 	sourceDef.SourceType = pkg.SourceTypeCountyOfVentura
+	sourceDef.PatientAccessUrl = "https://www.ventura.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

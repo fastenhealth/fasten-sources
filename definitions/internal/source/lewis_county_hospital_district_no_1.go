@@ -29,6 +29,7 @@ func GetSourceLewisCountyHospitalDistrictNo1(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Lewis County Hospital District No. 1"
 	sourceDef.SourceType = pkg.SourceTypeLewisCountyHospitalDistrictNo1
+	sourceDef.PatientAccessUrl = "https://www.myarborhealth.org/locations/arbor-health-morton-hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

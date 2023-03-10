@@ -29,6 +29,8 @@ func GetSourceAllentownFamilyFootCare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Allentown Family Foot Care"
 	sourceDef.SourceType = pkg.SourceTypeAllentownFamilyFootCare
+	sourceDef.BrandLogo = "allentown-family-foot-care.jpg"
+	sourceDef.PatientAccessUrl = "https://affc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

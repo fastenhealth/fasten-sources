@@ -29,6 +29,7 @@ func GetSourceAbileneDermatologyAndSkinSurgeryCenter(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Abilene Dermatology & Skin Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeAbileneDermatologyAndSkinSurgeryCenter
+	sourceDef.PatientAccessUrl = "https://www.abilenederm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

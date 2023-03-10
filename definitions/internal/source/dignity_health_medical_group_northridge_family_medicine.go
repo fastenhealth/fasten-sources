@@ -29,6 +29,8 @@ func GetSourceDignityHealthMedicalGroupNorthridgeFamilyMedicine(env pkg.FastenLi
 
 	sourceDef.Display = "Dignity Health Medical Group - Northridge Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDignityHealthMedicalGroupNorthridgeFamilyMedicine
+	sourceDef.BrandLogo = "dignity-health-medical-group-northridge-family-medicine.jpg"
+	sourceDef.PatientAccessUrl = "https://locations.dignityhealth.org/dignity-health-medical-group-northridge-(multi-specialty)?utm_source=LocalSearch&utm_medium=Facility&utm_campaign=Jason&utm_term=DignityHealthMedicalGroup-NorthridgeFamilyMedicine"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

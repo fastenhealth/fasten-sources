@@ -29,6 +29,7 @@ func GetSourceFisherPediatricClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Fisher Pediatric Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFisherPediatricClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fisher-pediatric-clinic.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

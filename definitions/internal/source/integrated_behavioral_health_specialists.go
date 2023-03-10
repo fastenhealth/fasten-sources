@@ -29,6 +29,7 @@ func GetSourceIntegratedBehavioralHealthSpecialists(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Integrated Behavioral Health Specialists"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedBehavioralHealthSpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/services/behavioral-health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

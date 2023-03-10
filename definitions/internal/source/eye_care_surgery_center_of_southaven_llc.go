@@ -29,6 +29,7 @@ func GetSourceEyeCareSurgeryCenterOfSouthavenLlc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Eye Care Surgery Center Of Southaven LLC"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareSurgeryCenterOfSouthavenLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/surgery-center/1780767673-eye-care-surgery-center-of-southaven%2Cllc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceComprehensiveCareClinic(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Comprehensive Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCareClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "comprehensive-care-clinic.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

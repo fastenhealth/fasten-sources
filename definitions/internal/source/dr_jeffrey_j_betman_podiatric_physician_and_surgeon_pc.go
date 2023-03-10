@@ -29,6 +29,7 @@ func GetSourceDrJeffreyJBetmanPodiatricPhysicianAndSurgeonPc(env pkg.FastenLight
 
 	sourceDef.Display = "Dr. Jeffrey J. Betman, Podiatric Physician and Surgeon, PC"
 	sourceDef.SourceType = pkg.SourceTypeDrJeffreyJBetmanPodiatricPhysicianAndSurgeonPc
+	sourceDef.PatientAccessUrl = "https://www.footcaredoctors.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

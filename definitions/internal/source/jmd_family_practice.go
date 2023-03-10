@@ -29,6 +29,8 @@ func GetSourceJmdFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "JMD Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeJmdFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "jmd-family-practice.jpg"
+	sourceDef.PatientAccessUrl = "http://jmdfamilypractice.com/Contact.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

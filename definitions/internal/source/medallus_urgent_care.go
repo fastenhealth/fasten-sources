@@ -29,6 +29,7 @@ func GetSourceMedallusUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Medallus Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeMedallusUrgentCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://afterhoursmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDrSusanHunterJoernsMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Dr. Susan Hunter-Joerns, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrSusanHunterJoernsMd
+	sourceDef.BrandLogo = "dr-susan-hunter-joerns-md.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

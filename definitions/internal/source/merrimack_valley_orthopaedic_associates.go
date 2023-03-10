@@ -29,6 +29,7 @@ func GetSourceMerrimackValleyOrthopaedicAssociates(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Merrimack Valley Orthopaedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeMerrimackValleyOrthopaedicAssociates
+	sourceDef.PatientAccessUrl = "https://www.mvoa.us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

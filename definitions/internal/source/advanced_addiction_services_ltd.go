@@ -29,6 +29,8 @@ func GetSourceAdvancedAddictionServicesLtd(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Advanced Addiction Services LTD"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedAddictionServicesLtd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "advanced-addiction-services-ltd.jpg"
+	sourceDef.PatientAccessUrl = "Name: Advanced Addiction Services LTD Address: 41 Foster Drive City: Thornville Zip: 43076 State: Ohio Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

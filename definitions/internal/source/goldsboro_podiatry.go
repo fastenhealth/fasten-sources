@@ -29,6 +29,7 @@ func GetSourceGoldsboroPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Goldsboro Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeGoldsboroPodiatry
+	sourceDef.PatientAccessUrl = "https://opennpi.com/provider/1063691301"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

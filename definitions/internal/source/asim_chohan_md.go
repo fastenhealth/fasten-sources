@@ -29,6 +29,7 @@ func GetSourceAsimChohanMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Asim Chohan, MD"
 	sourceDef.SourceType = pkg.SourceTypeAsimChohanMd
+	sourceDef.PatientAccessUrl = "https://www.mercy.net/doctor/asim-jafar-chohan-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

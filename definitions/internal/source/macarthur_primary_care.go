@@ -29,6 +29,7 @@ func GetSourceMacarthurPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "MacArthur Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeMacarthurPrimaryCare
+	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

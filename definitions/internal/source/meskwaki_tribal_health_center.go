@@ -29,6 +29,7 @@ func GetSourceMeskwakiTribalHealthCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Meskwaki Tribal Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMeskwakiTribalHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npin.cdc.gov/organization/meskwaki-tribal-health-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

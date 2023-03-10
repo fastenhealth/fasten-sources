@@ -29,6 +29,8 @@ func GetSourceFamilyPracticeOfCentrastate(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Family Practice Of Centrastate"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeOfCentrastate
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-practice-of-centrastate.svg"
+	sourceDef.PatientAccessUrl = "https://www.centrastatefoundation.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

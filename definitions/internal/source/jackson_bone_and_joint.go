@@ -29,6 +29,7 @@ func GetSourceJacksonBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Jackson Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeJacksonBoneAndJoint
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "jackson-bone-and-joint.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGreneVisionGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Grene Vision Group"
 	sourceDef.SourceType = pkg.SourceTypeGreneVisionGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.grenevisiongroup.com/locations/wichita-webb-road"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

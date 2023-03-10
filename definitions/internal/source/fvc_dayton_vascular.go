@@ -29,6 +29,8 @@ func GetSourceFvcDaytonVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "FVC Dayton Vascular"
 	sourceDef.SourceType = pkg.SourceTypeFvcDaytonVascular
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fvc-dayton-vascular.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/31GN6YMHM2P417KP57DW9BVREI7SWB?assignment_id=3WQQ9FUS6ORWG45ZMKGWUQEU2NBB8Y&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

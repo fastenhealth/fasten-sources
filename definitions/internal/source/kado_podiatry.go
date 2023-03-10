@@ -29,6 +29,7 @@ func GetSourceKadoPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Kado Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeKadoPodiatry
+	sourceDef.PatientAccessUrl = "https://karlkadopodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

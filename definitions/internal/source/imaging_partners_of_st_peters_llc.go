@@ -29,6 +29,7 @@ func GetSourceImagingPartnersOfStPetersLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Imaging Partners Of St Peters LLC"
 	sourceDef.SourceType = pkg.SourceTypeImagingPartnersOfStPetersLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "htt://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFayetteCountyMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Fayette County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFayetteCountyMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.adena.org/locations/detail.dT/adena-fayette-medical-center"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

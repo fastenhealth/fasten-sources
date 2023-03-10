@@ -29,6 +29,7 @@ func GetSourceGaileyEyeSurgeryDecaturLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Gailey Eye Surgery - Decatur LLC"
 	sourceDef.SourceType = pkg.SourceTypeGaileyEyeSurgeryDecaturLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gailey-eye-surgery-decatur-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

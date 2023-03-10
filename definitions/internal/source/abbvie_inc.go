@@ -29,6 +29,7 @@ func GetSourceAbbvieInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "AbbVie Inc."
 	sourceDef.SourceType = pkg.SourceTypeAbbvieInc
+	sourceDef.PatientAccessUrl = "https://www.abbvie.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

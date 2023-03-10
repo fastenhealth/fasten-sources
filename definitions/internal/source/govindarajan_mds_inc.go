@@ -29,6 +29,7 @@ func GetSourceGovindarajanMdsInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Govindarajan MDs Inc"
 	sourceDef.SourceType = pkg.SourceTypeGovindarajanMdsInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "govindarajan-mds-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFrederickIntMedAndEndoServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Frederick Int Med & Endo Services"
 	sourceDef.SourceType = pkg.SourceTypeFrederickIntMedAndEndoServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fimes.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceMethodistFremontHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Methodist Fremont Health"
 	sourceDef.SourceType = pkg.SourceTypeMethodistFremontHealth
+	sourceDef.BrandLogo = "methodist-fremont-health.jpg"
+	sourceDef.PatientAccessUrl = "https://bestcare.org/locations/methodist-fremont-health"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

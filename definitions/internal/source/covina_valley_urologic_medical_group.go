@@ -29,6 +29,7 @@ func GetSourceCovinaValleyUrologicMedicalGroup(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Covina Valley Urologic Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCovinaValleyUrologicMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://covinavalleyurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceIredellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Iredell Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeIredellMemorialHospital
+	sourceDef.BrandLogo = "iredell-memorial-hospital.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

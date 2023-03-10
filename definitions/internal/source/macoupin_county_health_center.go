@@ -29,6 +29,8 @@ func GetSourceMacoupinCountyHealthCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Macoupin County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMacoupinCountyHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "macoupin-county-health-center.jpg"
+	sourceDef.PatientAccessUrl = "https://npin.cdc.gov/organization/macoupin-county-public-health-department-0"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

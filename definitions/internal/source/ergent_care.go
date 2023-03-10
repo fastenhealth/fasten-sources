@@ -29,6 +29,7 @@ func GetSourceErgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "ERgent Care"
 	sourceDef.SourceType = pkg.SourceTypeErgentCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ergent-care.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

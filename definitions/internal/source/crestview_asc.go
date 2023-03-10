@@ -29,6 +29,7 @@ func GetSourceCrestviewAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Crestview ASC"
 	sourceDef.SourceType = pkg.SourceTypeCrestviewAsc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "crestview-asc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

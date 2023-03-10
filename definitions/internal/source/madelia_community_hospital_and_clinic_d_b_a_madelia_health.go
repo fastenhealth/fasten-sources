@@ -29,6 +29,8 @@ func GetSourceMadeliaCommunityHospitalAndClinicDBAMadeliaHealth(env pkg.FastenLi
 
 	sourceDef.Display = "Madelia Community Hospital and Clinic (D/B/A Madelia Health)"
 	sourceDef.SourceType = pkg.SourceTypeMadeliaCommunityHospitalAndClinicDBAMadeliaHealth
+	sourceDef.BrandLogo = "madelia-community-hospital-and-clinic-d-b-a-madelia-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.madeliahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

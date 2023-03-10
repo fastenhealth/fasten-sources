@@ -29,6 +29,8 @@ func GetSourceMaslandAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Masland Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeMaslandAssociatesInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "masland-associates-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/maslandassociatesinc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAshDermatologyAndSkinCancerCenterPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Ash Dermatology & Skin Cancer Center, PA"
 	sourceDef.SourceType = pkg.SourceTypeAshDermatologyAndSkinCancerCenterPa
+	sourceDef.PatientAccessUrl = "https://ashdermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

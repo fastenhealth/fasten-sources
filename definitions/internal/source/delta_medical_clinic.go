@@ -29,6 +29,7 @@ func GetSourceDeltaMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Delta Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDeltaMedicalClinic
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/delta-medical-clinic-llc-31fc0e77-e439-4349-bad3-384131989e15"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

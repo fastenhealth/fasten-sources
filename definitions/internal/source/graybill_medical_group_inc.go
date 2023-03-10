@@ -29,6 +29,7 @@ func GetSourceGraybillMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Graybill Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeGraybillMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.graybill.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

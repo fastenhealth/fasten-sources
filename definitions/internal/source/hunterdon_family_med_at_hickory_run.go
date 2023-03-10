@@ -29,6 +29,8 @@ func GetSourceHunterdonFamilyMedAtHickoryRun(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Hunterdon Family Med At Hickory Run"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedAtHickoryRun
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-family-med-at-hickory-run.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3FCO4VKO0HAO19E6W4LFSESVK0Q7EO?assignment_id=3RYC5T2D7HQ423L54Y4XGREOAKQPRO&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

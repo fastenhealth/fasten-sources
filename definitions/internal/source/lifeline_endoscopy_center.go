@@ -29,6 +29,7 @@ func GetSourceLifelineEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Lifeline Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeLifelineEndoscopyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: Lifeline Endoscopy Center Address: 20 Burton Hills Boulevard City: Nashville Zip: 37215 State: Tennessee Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHassanAKobaissiDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Hassan A. Kobaissi DPM"
 	sourceDef.SourceType = pkg.SourceTypeHassanAKobaissiDpm
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hassan-a-kobaissi-dpm.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

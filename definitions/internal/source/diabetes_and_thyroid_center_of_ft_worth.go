@@ -29,6 +29,8 @@ func GetSourceDiabetesAndThyroidCenterOfFtWorth(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Diabetes & Thyroid Center Of Ft. Worth"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndThyroidCenterOfFtWorth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "diabetes-and-thyroid-center-of-ft-worth.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3CVBMEMMYOD0LJ58M5TLDHP8CGH7H3?assignment_id=33FOTY3KE0IXF9DK1Z3CQ0X46251CB&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

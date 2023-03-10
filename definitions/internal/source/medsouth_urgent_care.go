@@ -29,6 +29,8 @@ func GetSourceMedsouthUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "MedSouth Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeMedsouthUrgentCare
+	sourceDef.BrandLogo = "medsouth-urgent-care.svg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

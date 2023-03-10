@@ -29,6 +29,7 @@ func GetSourceMitchellTZimmelDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mitchell T. Zimmel, DPM"
 	sourceDef.SourceType = pkg.SourceTypeMitchellTZimmelDpm
+	sourceDef.PatientAccessUrl = "https://www.drzimmel.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

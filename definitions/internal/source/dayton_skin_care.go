@@ -29,6 +29,7 @@ func GetSourceDaytonSkinCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Dayton Skin Care"
 	sourceDef.SourceType = pkg.SourceTypeDaytonSkinCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dayton-skin-care.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

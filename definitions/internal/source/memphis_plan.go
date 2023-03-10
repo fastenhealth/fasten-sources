@@ -29,6 +29,7 @@ func GetSourceMemphisPlan(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Memphis Plan"
 	sourceDef.SourceType = pkg.SourceTypeMemphisPlan
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://churchhealth.org/memphis-plan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

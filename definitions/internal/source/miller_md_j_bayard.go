@@ -29,6 +29,7 @@ func GetSourceMillerMdJBayard(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Miller MD J Bayard"
 	sourceDef.SourceType = pkg.SourceTypeMillerMdJBayard
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "miller-md-j-bayard.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

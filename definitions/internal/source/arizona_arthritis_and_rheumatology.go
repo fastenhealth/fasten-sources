@@ -29,6 +29,8 @@ func GetSourceArizonaArthritisAndRheumatology(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Arizona Arthritis And Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeArizonaArthritisAndRheumatology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "arizona-arthritis-and-rheumatology.jpg"
+	sourceDef.PatientAccessUrl = "https://www.azarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

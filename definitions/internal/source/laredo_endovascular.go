@@ -29,6 +29,8 @@ func GetSourceLaredoEndovascular(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Laredo Endovascular"
 	sourceDef.SourceType = pkg.SourceTypeLaredoEndovascular
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "laredo-endovascular.svg"
+	sourceDef.PatientAccessUrl = "https://www.laredomedical.com/vascular-surgery-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceIdCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "ID Care"
 	sourceDef.SourceType = pkg.SourceTypeIdCare
+	sourceDef.PatientAccessUrl = "https://idcare.com/location/hillsborough-township-nj/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

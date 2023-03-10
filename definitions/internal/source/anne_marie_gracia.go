@@ -29,6 +29,8 @@ func GetSourceAnneMarieGracia(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Anne-Marie Gracia"
 	sourceDef.SourceType = pkg.SourceTypeAnneMarieGracia
+	sourceDef.BrandLogo = "anne-marie-gracia.jpg"
+	sourceDef.PatientAccessUrl = "Name: Anne-Marie Gracia Address: 59 Main St Ste 204 City: West Orange Zip: 07052-5341 State: New Jersey Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHoustonMultispecialtySurgicalPractice(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Houston Multispecialty Surgical Practice"
 	sourceDef.SourceType = pkg.SourceTypeHoustonMultispecialtySurgicalPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://geo-blocked-site.azurewebsites.net"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDrKostecke(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Dr. Kostecke"
 	sourceDef.SourceType = pkg.SourceTypeDrKostecke
+	sourceDef.PatientAccessUrl = "https://www.milfordkidsdoctor.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

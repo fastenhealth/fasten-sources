@@ -29,6 +29,7 @@ func GetSourceGraceCommunityHealthCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Grace Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeGraceCommunityHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://gracehealthky.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

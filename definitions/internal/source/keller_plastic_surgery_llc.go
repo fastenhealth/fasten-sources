@@ -29,6 +29,7 @@ func GetSourceKellerPlasticSurgeryLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Keller Plastic Surgery, LLC"
 	sourceDef.SourceType = pkg.SourceTypeKellerPlasticSurgeryLlc
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ks-kansas/lawrence/keller-plastic-surgery-llc-x8lyhjc"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

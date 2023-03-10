@@ -29,6 +29,7 @@ func GetSourceJeffreyVanmeterMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Jeffrey VanMeter MD"
 	sourceDef.SourceType = pkg.SourceTypeJeffreyVanmeterMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pgseo.org/Providers/Jeffrey-Vanmeter-MD-Inc-9/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

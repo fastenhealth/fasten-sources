@@ -29,6 +29,7 @@ func GetSourceAtlanticCenterForAesthAndReconSurg(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Atlantic Center For Aesth And Recon Surg"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticCenterForAesthAndReconSurg
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.atlanticcentersurgery.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceArizonasChildrenAssociation(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Arizonas Children Association"
 	sourceDef.SourceType = pkg.SourceTypeArizonasChildrenAssociation
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.arizonaschildren.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

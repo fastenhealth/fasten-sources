@@ -29,6 +29,8 @@ func GetSourceFredoniaRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Fredonia Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFredoniaRegionalHospital
+	sourceDef.BrandLogo = "fredonia-regional-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://frh1.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAlabamaMedicineAndRheumatologyLlc1(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Alabama Medicine and Rheumatology, LLC"
 	sourceDef.SourceType = pkg.SourceTypeAlabamaMedicineAndRheumatologyLlc1
+	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

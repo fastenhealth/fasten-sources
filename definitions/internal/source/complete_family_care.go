@@ -29,6 +29,7 @@ func GetSourceCompleteFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Complete Family Care"
 	sourceDef.SourceType = pkg.SourceTypeCompleteFamilyCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "complete-family-care.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

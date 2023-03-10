@@ -29,6 +29,7 @@ func GetSourceMedicalHealthCenterOfMiddletownInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Medical health center of Middletown, INC."
 	sourceDef.SourceType = pkg.SourceTypeMedicalHealthCenterOfMiddletownInc
+	sourceDef.PatientAccessUrl = "https://opennpi.com/provider/1295261568"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

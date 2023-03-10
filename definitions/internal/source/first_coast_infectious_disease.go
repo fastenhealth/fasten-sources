@@ -29,6 +29,7 @@ func GetSourceFirstCoastInfectiousDisease(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "First Coast Infectious Disease"
 	sourceDef.SourceType = pkg.SourceTypeFirstCoastInfectiousDisease
+	sourceDef.PatientAccessUrl = "http://firstcoastid.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

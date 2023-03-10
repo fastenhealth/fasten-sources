@@ -29,6 +29,7 @@ func GetSourceGabrielleSchoeppnerMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Gabrielle Schoeppner MD"
 	sourceDef.SourceType = pkg.SourceTypeGabrielleSchoeppnerMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gabrielle-schoeppner-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

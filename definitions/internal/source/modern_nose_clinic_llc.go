@@ -29,6 +29,7 @@ func GetSourceModernNoseClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Modern Nose Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeModernNoseClinicLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.modernnoseclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

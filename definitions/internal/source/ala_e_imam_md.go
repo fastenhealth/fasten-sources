@@ -29,6 +29,7 @@ func GetSourceAlaEImamMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "ALA E IMAM MD"
 	sourceDef.SourceType = pkg.SourceTypeAlaEImamMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/38O9DZ0A7FKD2TOLKALMKZJASUG622?assignment_id=3A4NIXBJ7KWNE2TF7YF9DBBUT36LM4&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

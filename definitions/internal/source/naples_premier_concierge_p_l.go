@@ -29,6 +29,7 @@ func GetSourceNaplesPremierConciergePL(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Naples Premier Concierge, P.L."
 	sourceDef.SourceType = pkg.SourceTypeNaplesPremierConciergePL
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3DFYDSXB39XYA0CUNDPHZMJ7XJKUJZ?assignment_id=3ITXP059PAGKH7IKOAZI95X8NN3SJF&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

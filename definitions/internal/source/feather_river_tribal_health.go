@@ -29,6 +29,7 @@ func GetSourceFeatherRiverTribalHealth(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Feather River Tribal Health"
 	sourceDef.SourceType = pkg.SourceTypeFeatherRiverTribalHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "feather-river-tribal-health.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

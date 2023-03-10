@@ -29,6 +29,7 @@ func GetSourceBartBarrettMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Bart Barrett MD"
 	sourceDef.SourceType = pkg.SourceTypeBartBarrettMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthcare.gov/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

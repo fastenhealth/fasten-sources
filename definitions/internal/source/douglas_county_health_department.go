@@ -29,6 +29,7 @@ func GetSourceDouglasCountyHealthDepartment(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Douglas County Health Department"
 	sourceDef.SourceType = pkg.SourceTypeDouglasCountyHealthDepartment
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.dchd.org/about-us.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

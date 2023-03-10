@@ -29,6 +29,7 @@ func GetSourceJamesWassonMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "James Wasson MD PC"
 	sourceDef.SourceType = pkg.SourceTypeJamesWassonMdPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.drwasson.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

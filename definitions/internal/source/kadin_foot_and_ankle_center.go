@@ -29,6 +29,8 @@ func GetSourceKadinFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Kadin Foot & Ankle Center"
 	sourceDef.SourceType = pkg.SourceTypeKadinFootAndAnkleCenter
+	sourceDef.BrandLogo = "kadin-foot-and-ankle-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.kadinfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

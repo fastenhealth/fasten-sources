@@ -29,6 +29,7 @@ func GetSourceDavitaComplexCareSolutions(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Davita Complex Care Solutions"
 	sourceDef.SourceType = pkg.SourceTypeDavitaComplexCareSolutions
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.davita.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

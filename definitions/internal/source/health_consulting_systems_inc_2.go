@@ -29,6 +29,8 @@ func GetSourceHealthConsultingSystemsInc2(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Health Consulting Systems Inc"
 	sourceDef.SourceType = pkg.SourceTypeHealthConsultingSystemsInc2
+	sourceDef.BrandLogo = "health-consulting-systems-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.buzzfile.com/business/Health-Consulting-Systems-Inc-813-777-6117"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

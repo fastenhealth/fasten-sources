@@ -29,6 +29,7 @@ func GetSourceAicaOrthopedicsPC(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "AICA Orthopedics P.C."
 	sourceDef.SourceType = pkg.SourceTypeAicaOrthopedicsPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://aica.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

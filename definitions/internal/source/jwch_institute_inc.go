@@ -29,6 +29,7 @@ func GetSourceJwchInstituteInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "JWCH Institute Inc"
 	sourceDef.SourceType = pkg.SourceTypeJwchInstituteInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://taggs.hhs.gov/Detail/RecipDetail?arg_EntityId=LUyYsTzclxQl6g6nlyAkzw%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

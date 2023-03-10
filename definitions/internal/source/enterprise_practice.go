@@ -29,6 +29,8 @@ func GetSourceEnterprisePractice(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Enterprise Practice"
 	sourceDef.SourceType = pkg.SourceTypeEnterprisePractice
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "enterprise-practice.jpeg"
+	sourceDef.PatientAccessUrl = "https://enterprisepracticesolutions.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

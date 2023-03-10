@@ -29,6 +29,8 @@ func GetSourceKaleidaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Kaleida Health"
 	sourceDef.SourceType = pkg.SourceTypeKaleidaHealth
+	sourceDef.BrandLogo = "kaleida-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.kaleidahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

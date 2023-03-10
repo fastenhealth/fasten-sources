@@ -29,6 +29,7 @@ func GetSourceAStepAheadFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "A Step Ahead Foot And Ankle Center"
 	sourceDef.SourceType = pkg.SourceTypeAStepAheadFootAndAnkleCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.asafoot.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

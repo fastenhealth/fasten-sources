@@ -29,6 +29,7 @@ func GetSourceFoundationForAdvancedEyeCare(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Foundation For Advanced Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeFoundationForAdvancedEyeCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHarvardEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Harvard Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeHarvardEyeAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "harvard-eye-associates.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

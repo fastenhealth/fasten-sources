@@ -29,6 +29,8 @@ func GetSourceKuakiniMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Kuakini Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeKuakiniMedicalCenter
+	sourceDef.BrandLogo = "kuakini-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.kuakini.org/wps/portal/public/home"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

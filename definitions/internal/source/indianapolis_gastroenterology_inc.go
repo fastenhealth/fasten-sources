@@ -29,6 +29,8 @@ func GetSourceIndianapolisGastroenterologyInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Indianapolis Gastroenterology, Inc."
 	sourceDef.SourceType = pkg.SourceTypeIndianapolisGastroenterologyInc
+	sourceDef.BrandLogo = "indianapolis-gastroenterology-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://indygastro.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceAssociatesInGastroenterologyPC(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Associates In Gastroenterology, P.C."
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInGastroenterologyPC
+	sourceDef.BrandLogo = "associates-in-gastroenterology-p-c.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3MGHRFQY3YM8P3VDB6C0K2AOU6P0YC?assignment_id=3K4J6M3CXSQ6Q96PZ4SORSBM35WGAA&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

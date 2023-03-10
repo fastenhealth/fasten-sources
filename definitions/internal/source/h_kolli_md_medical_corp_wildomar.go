@@ -29,6 +29,7 @@ func GetSourceHKolliMdMedicalCorpWildomar(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "H Kolli MD Medical Corp-Wildomar"
 	sourceDef.SourceType = pkg.SourceTypeHKolliMdMedicalCorpWildomar
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "h-kolli-md-medical-corp-wildomar.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

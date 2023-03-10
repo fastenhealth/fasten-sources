@@ -29,6 +29,8 @@ func GetSourceCrozerHealthAccessNetwork(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Crozer Health Access Network"
 	sourceDef.SourceType = pkg.SourceTypeCrozerHealthAccessNetwork
+	sourceDef.BrandLogo = "crozer-health-access-network.jpg"
+	sourceDef.PatientAccessUrl = "https://www.crozerhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

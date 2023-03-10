@@ -29,6 +29,7 @@ func GetSourceDigestiveHealthAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Digestive Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dha-nm.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

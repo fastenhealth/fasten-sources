@@ -29,6 +29,7 @@ func GetSourceMedicalCenterUrologyPa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Medical Center Urology PA"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCenterUrologyPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.medicalcenterurology.com/gallery"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

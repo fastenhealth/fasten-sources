@@ -29,6 +29,7 @@ func GetSourceInternalMedicineAssociatesOfBentonPA(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Internal Medicine Associates of Benton, P.A."
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAssociatesOfBentonPA
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/internal-medicine-associates-of-benton-pa-cd2355c9-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

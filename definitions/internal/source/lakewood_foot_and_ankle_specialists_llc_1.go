@@ -29,6 +29,7 @@ func GetSourceLakewoodFootAndAnkleSpecialistsLlc1(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Lakewood Foot and Ankle Specialists LLC"
 	sourceDef.SourceType = pkg.SourceTypeLakewoodFootAndAnkleSpecialistsLlc1
+	sourceDef.PatientAccessUrl = "https://www.footspecialistnj.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

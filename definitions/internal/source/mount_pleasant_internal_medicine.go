@@ -29,6 +29,7 @@ func GetSourceMountPleasantInternalMedicine(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mount Pleasant Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMountPleasantInternalMedicine
+	sourceDef.BrandLogo = "mount-pleasant-internal-medicine.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

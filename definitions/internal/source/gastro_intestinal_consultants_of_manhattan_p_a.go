@@ -29,6 +29,7 @@ func GetSourceGastroIntestinalConsultantsOfManhattanPA(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Gastro-Intestinal Consultants of Manhattan, P.A."
 	sourceDef.SourceType = pkg.SourceTypeGastroIntestinalConsultantsOfManhattanPA
+	sourceDef.PatientAccessUrl = "https://www.manhattansurgical.com/gastroenterology.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

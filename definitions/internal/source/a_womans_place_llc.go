@@ -29,6 +29,7 @@ func GetSourceAWomansPlaceLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "A Woman's Place, LLC"
 	sourceDef.SourceType = pkg.SourceTypeAWomansPlaceLlc
+	sourceDef.PatientAccessUrl = "https://awomansplacenj.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

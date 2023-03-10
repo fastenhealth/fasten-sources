@@ -29,6 +29,8 @@ func GetSourceJasmineLRamosMdFaap(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Jasmine L Ramos MD FAAP"
 	sourceDef.SourceType = pkg.SourceTypeJasmineLRamosMdFaap
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "jasmine-l-ramos-md-faap.svg"
+	sourceDef.PatientAccessUrl = "https://www.mydohc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

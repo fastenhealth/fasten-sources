@@ -29,6 +29,7 @@ func GetSourceAllEarDoctorsAProfessionalMedicalC(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "All Ear Doctors A Professional Medical C"
 	sourceDef.SourceType = pkg.SourceTypeAllEarDoctorsAProfessionalMedicalC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://alleardoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

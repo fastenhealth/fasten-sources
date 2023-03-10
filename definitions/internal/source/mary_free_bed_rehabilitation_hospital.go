@@ -29,6 +29,8 @@ func GetSourceMaryFreeBedRehabilitationHospital(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Mary Free Bed Rehabilitation Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMaryFreeBedRehabilitationHospital
+	sourceDef.BrandLogo = "mary-free-bed-rehabilitation-hospital.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.maryfreebed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

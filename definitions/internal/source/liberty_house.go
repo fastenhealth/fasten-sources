@@ -29,6 +29,8 @@ func GetSourceLibertyHouse(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Liberty House"
 	sourceDef.SourceType = pkg.SourceTypeLibertyHouse
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "liberty-house.jpg"
+	sourceDef.PatientAccessUrl = "http://www.libertyhouseofalbany.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

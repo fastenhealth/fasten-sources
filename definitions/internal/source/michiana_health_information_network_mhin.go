@@ -29,6 +29,7 @@ func GetSourceMichianaHealthInformationNetworkMhin(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Michiana Health Information Network - MHIN"
 	sourceDef.SourceType = pkg.SourceTypeMichianaHealthInformationNetworkMhin
+	sourceDef.PatientAccessUrl = "https://web.sbrchamber.com/Health-CareMedical-Services/Michiana-Health-Information-Network-2661"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

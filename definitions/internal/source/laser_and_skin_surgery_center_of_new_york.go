@@ -29,6 +29,8 @@ func GetSourceLaserAndSkinSurgeryCenterOfNewYork(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Laser & Skin Surgery Center Of New York"
 	sourceDef.SourceType = pkg.SourceTypeLaserAndSkinSurgeryCenterOfNewYork
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "laser-and-skin-surgery-center-of-new-york.svg"
+	sourceDef.PatientAccessUrl = "https://www.laserskinsurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

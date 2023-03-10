@@ -29,6 +29,8 @@ func GetSourceAllenCountyRegionalHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Allen County Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAllenCountyRegionalHospital
+	sourceDef.BrandLogo = "allen-county-regional-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.saintlukeskc.org/locations/allen-county-regional-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

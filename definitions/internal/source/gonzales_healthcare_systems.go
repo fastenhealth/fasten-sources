@@ -29,6 +29,8 @@ func GetSourceGonzalesHealthcareSystems(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Gonzales Healthcare Systems"
 	sourceDef.SourceType = pkg.SourceTypeGonzalesHealthcareSystems
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gonzales-healthcare-systems.jpg"
+	sourceDef.PatientAccessUrl = "https://www.gonzaleshealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

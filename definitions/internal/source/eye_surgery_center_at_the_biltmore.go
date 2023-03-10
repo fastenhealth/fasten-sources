@@ -29,6 +29,7 @@ func GetSourceEyeSurgeryCenterAtTheBiltmore(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Eye Surgery Center At The Biltmore"
 	sourceDef.SourceType = pkg.SourceTypeEyeSurgeryCenterAtTheBiltmore
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "eye-surgery-center-at-the-biltmore.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

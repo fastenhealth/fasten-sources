@@ -29,6 +29,7 @@ func GetSourceDavidCMorleyJrMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "David C Morley Jr, MD"
 	sourceDef.SourceType = pkg.SourceTypeDavidCMorleyJrMd
+	sourceDef.BrandLogo = "david-c-morley-jr-md.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceKingfisherFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Kingfisher Family Clinic"
 	sourceDef.SourceType = pkg.SourceTypeKingfisherFamilyClinic
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ok-oklahoma/kingfisher/kingfisher-family-clinic-ooo524v"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMcfarlandHealthcareClinicLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "McFarland Healthcare Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeMcfarlandHealthcareClinicLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/mcfarland-healthcare-clinic-a57e68b9-b8d5-407a-a454-c232ab17029e"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

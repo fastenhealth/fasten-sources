@@ -29,6 +29,8 @@ func GetSourceAlfieriCardiologyPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Alfieri Cardiology PA"
 	sourceDef.SourceType = pkg.SourceTypeAlfieriCardiologyPa
+	sourceDef.BrandLogo = "alfieri-cardiology-pa.svg"
+	sourceDef.PatientAccessUrl = "https://alfiericardiology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceAustinsFirstSteps(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Austins First Steps"
 	sourceDef.SourceType = pkg.SourceTypeAustinsFirstSteps
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "austins-first-steps.svg"
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/firststepsaustin?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

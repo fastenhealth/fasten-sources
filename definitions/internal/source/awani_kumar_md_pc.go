@@ -29,6 +29,7 @@ func GetSourceAwaniKumarMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Awani Kumar, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeAwaniKumarMdPc
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

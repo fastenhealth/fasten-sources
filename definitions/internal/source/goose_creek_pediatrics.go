@@ -29,6 +29,7 @@ func GetSourceGooseCreekPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Goose Creek Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeGooseCreekPediatrics
+	sourceDef.BrandLogo = "goose-creek-pediatrics.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

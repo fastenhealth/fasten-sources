@@ -29,6 +29,7 @@ func GetSourceLowellSurgicalAssociates(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Lowell Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeLowellSurgicalAssociates
+	sourceDef.PatientAccessUrl = "https://www.lowelloralsurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

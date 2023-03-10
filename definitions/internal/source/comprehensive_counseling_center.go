@@ -29,6 +29,7 @@ func GetSourceComprehensiveCounselingCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Comprehensive Counseling Center"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCounselingCenter
+	sourceDef.BrandLogo = "comprehensive-counseling-center.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

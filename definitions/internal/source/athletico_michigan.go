@@ -29,6 +29,7 @@ func GetSourceAthleticoMichigan(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Athletico Michigan"
 	sourceDef.SourceType = pkg.SourceTypeAthleticoMichigan
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.athletico.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

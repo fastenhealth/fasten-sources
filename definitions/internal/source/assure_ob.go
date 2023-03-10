@@ -29,6 +29,8 @@ func GetSourceAssureOb(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Assure OB"
 	sourceDef.SourceType = pkg.SourceTypeAssureOb
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "assure-ob.jpg"
+	sourceDef.PatientAccessUrl = "https://www.assure.pro/#/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

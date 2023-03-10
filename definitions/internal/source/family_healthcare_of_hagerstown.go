@@ -29,6 +29,7 @@ func GetSourceFamilyHealthcareOfHagerstown(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Family Healthcare Of Hagerstown"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcareOfHagerstown
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-healthcare-of-hagerstown.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

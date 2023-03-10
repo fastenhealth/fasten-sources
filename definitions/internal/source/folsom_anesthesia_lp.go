@@ -29,6 +29,8 @@ func GetSourceFolsomAnesthesiaLp(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Folsom Anesthesia LP"
 	sourceDef.SourceType = pkg.SourceTypeFolsomAnesthesiaLp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "folsom-anesthesia-lp.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/california/folsom/folsom-anesthesia-lp-4981956729.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

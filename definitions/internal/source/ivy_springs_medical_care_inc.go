@@ -29,6 +29,7 @@ func GetSourceIvySpringsMedicalCareInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Ivy Springs Medical Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeIvySpringsMedicalCareInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/murrieta/ivy-springs-medical-care-x2w3x2"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

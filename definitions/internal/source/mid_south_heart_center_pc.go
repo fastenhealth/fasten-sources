@@ -29,6 +29,7 @@ func GetSourceMidSouthHeartCenterPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Mid-South Heart Center PC"
 	sourceDef.SourceType = pkg.SourceTypeMidSouthHeartCenterPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.midsouthheartcenterjackson.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

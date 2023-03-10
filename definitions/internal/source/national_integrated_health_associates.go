@@ -29,6 +29,7 @@ func GetSourceNationalIntegratedHealthAssociates(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "National Integrated Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeNationalIntegratedHealthAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nihadc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

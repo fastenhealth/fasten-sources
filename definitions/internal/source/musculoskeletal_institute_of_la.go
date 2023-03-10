@@ -29,6 +29,7 @@ func GetSourceMusculoskeletalInstituteOfLa(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Musculoskeletal Institute Of LA"
 	sourceDef.SourceType = pkg.SourceTypeMusculoskeletalInstituteOfLa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/louisiana/shreveport/musculoskeletal-institute-of-louisiana-llc-0143127415.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

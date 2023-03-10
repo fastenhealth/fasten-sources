@@ -29,6 +29,7 @@ func GetSourceGarlandIsdClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Garland ISD Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGarlandIsdClinic
+	sourceDef.PatientAccessUrl = "https://garlandisd.net/staff/health-benefits/employee-clinic"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

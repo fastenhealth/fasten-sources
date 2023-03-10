@@ -29,6 +29,7 @@ func GetSourceHullEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Hull Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeHullEyeCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3DWNFENNFGSZT2IF87YZMILDY6W4JM?assignment_id=37FMASSAYQOP5AHCV6SN7F886KTBIM&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

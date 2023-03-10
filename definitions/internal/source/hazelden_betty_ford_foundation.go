@@ -29,6 +29,7 @@ func GetSourceHazeldenBettyFordFoundation(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hazelden Betty Ford Foundation"
 	sourceDef.SourceType = pkg.SourceTypeHazeldenBettyFordFoundation
+	sourceDef.PatientAccessUrl = "https://www.hazeldenbettyford.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

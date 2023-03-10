@@ -29,6 +29,7 @@ func GetSourceAscensionBorgessAllegan(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Ascension Borgess Allegan"
 	sourceDef.SourceType = pkg.SourceTypeAscensionBorgessAllegan
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/308KJXFUK4389UU1T2MU1RUMOQJATO?assignment_id=3SB5N7Y3OH1APW8772VV2MZ9UJL0G4&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

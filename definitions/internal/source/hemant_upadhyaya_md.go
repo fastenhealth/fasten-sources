@@ -29,6 +29,7 @@ func GetSourceHemantUpadhyayaMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Hemant Upadhyaya MD"
 	sourceDef.SourceType = pkg.SourceTypeHemantUpadhyayaMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/hemant-upadhyaya-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMedicalGroupOfMitchellCounty(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Medical Group of Mitchell County"
 	sourceDef.SourceType = pkg.SourceTypeMedicalGroupOfMitchellCounty
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://archbold.org/mgmc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

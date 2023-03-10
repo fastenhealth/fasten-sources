@@ -29,6 +29,7 @@ func GetSourceJmHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "JM Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeJmHealthcare
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

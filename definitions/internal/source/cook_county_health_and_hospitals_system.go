@@ -29,6 +29,7 @@ func GetSourceCookCountyHealthAndHospitalsSystem(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Cook County Health & Hospitals System"
 	sourceDef.SourceType = pkg.SourceTypeCookCountyHealthAndHospitalsSystem
+	sourceDef.PatientAccessUrl = "https://cookcountyhealth.org/locations/john-h-stroger-jr-hospital-of-cook-county/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

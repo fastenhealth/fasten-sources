@@ -29,6 +29,7 @@ func GetSourceKalamazooGastroenterologyHepatology(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Kalamazoo Gastroenterology  Hepatology"
 	sourceDef.SourceType = pkg.SourceTypeKalamazooGastroenterologyHepatology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "kalamazoo-gastroenterology-hepatology.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceInternalMedicineLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Internal Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineLlc
+	sourceDef.PatientAccessUrl = "https://npino.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHoustonNwObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Houston NW OBH"
 	sourceDef.SourceType = pkg.SourceTypeHoustonNwObh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hcahoustonhealthcare.com/locations/northwest/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

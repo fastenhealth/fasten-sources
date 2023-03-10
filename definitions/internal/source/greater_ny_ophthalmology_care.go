@@ -29,6 +29,7 @@ func GetSourceGreaterNyOphthalmologyCare(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Greater NY Ophthalmology Care"
 	sourceDef.SourceType = pkg.SourceTypeGreaterNyOphthalmologyCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "greater-ny-ophthalmology-care.svg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

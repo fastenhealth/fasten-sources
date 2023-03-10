@@ -29,6 +29,7 @@ func GetSourceErieCountyGeneralHealthDistrict(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Erie County General Health District"
 	sourceDef.SourceType = pkg.SourceTypeErieCountyGeneralHealthDistrict
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://eriecohealthohio.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

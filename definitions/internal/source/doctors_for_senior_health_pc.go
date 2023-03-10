@@ -29,6 +29,7 @@ func GetSourceDoctorsForSeniorHealthPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Doctors For Senior Health PC"
 	sourceDef.SourceType = pkg.SourceTypeDoctorsForSeniorHealthPc
+	sourceDef.BrandLogo = "doctors-for-senior-health-pc.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

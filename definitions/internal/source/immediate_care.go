@@ -29,6 +29,7 @@ func GetSourceImmediateCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Immediate Care"
 	sourceDef.SourceType = pkg.SourceTypeImmediateCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

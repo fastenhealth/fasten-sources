@@ -29,6 +29,7 @@ func GetSourceDeguzmanMedicalCorp(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "DeGuzman Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeDeguzmanMedicalCorp
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://drdeguzman.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

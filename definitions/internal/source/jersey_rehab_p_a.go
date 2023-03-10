@@ -29,6 +29,7 @@ func GetSourceJerseyRehabPA(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Jersey Rehab, P.A."
 	sourceDef.SourceType = pkg.SourceTypeJerseyRehabPA
+	sourceDef.PatientAccessUrl = "https://jerseyrehab.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

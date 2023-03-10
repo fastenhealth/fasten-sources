@@ -29,6 +29,7 @@ func GetSourceAmericoServicesInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Americo Services Inc."
 	sourceDef.SourceType = pkg.SourceTypeAmericoServicesInc
+	sourceDef.PatientAccessUrl = "https://www.americo.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

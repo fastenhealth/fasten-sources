@@ -29,6 +29,8 @@ func GetSourceIndianaUniversityHealthInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Indiana University Health, Inc"
 	sourceDef.SourceType = pkg.SourceTypeIndianaUniversityHealthInc
+	sourceDef.BrandLogo = "indiana-university-health-inc.svg"
+	sourceDef.PatientAccessUrl = "https://iuhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

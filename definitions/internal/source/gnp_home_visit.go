@@ -29,6 +29,7 @@ func GetSourceGnpHomeVisit(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "GNP Home Visit"
 	sourceDef.SourceType = pkg.SourceTypeGnpHomeVisit
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gnpweb.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

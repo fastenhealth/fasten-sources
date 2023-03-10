@@ -29,6 +29,8 @@ func GetSourceAmandaMeszarosDpmFacfas(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Amanda Meszaros, DPM, FACFAS"
 	sourceDef.SourceType = pkg.SourceTypeAmandaMeszarosDpmFacfas
+	sourceDef.BrandLogo = "amanda-meszaros-dpm-facfas.jpg"
+	sourceDef.PatientAccessUrl = "Name: Amanda Meszaros, DPM, FACFAS Address: 60 S. Pleasant St. Suite A City: Oberlin Zip: 44074-1633 State: Ohio Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

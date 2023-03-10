@@ -29,6 +29,7 @@ func GetSourceMonongaliaCountyGeneralHospitalCompany(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Monongalia County General Hospital Company"
 	sourceDef.SourceType = pkg.SourceTypeMonongaliaCountyGeneralHospitalCompany
+	sourceDef.PatientAccessUrl = "https://www.monhealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

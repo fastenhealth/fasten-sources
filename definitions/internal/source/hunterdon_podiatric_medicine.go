@@ -29,6 +29,7 @@ func GetSourceHunterdonPodiatricMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Hunterdon Podiatric Medicine"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonPodiatricMedicine
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-podiatric-medicine.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceJayJLinMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Jay J Lin MD"
 	sourceDef.SourceType = pkg.SourceTypeJayJLinMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "jay-j-lin-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMountainGroveHealthClinic(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Mountain Grove Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMountainGroveHealthClinic
+	sourceDef.PatientAccessUrl = "https://mo-ozarks.org/our_clinic/mountain-grove-clinic/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

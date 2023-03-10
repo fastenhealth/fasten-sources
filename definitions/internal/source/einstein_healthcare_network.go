@@ -29,6 +29,7 @@ func GetSourceEinsteinHealthcareNetwork(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Einstein Healthcare Network"
 	sourceDef.SourceType = pkg.SourceTypeEinsteinHealthcareNetwork
+	sourceDef.PatientAccessUrl = "https://www.einstein.edu/einstein-medical-center-philadelphia"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

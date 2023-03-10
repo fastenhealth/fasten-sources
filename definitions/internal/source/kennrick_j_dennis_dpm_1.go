@@ -29,6 +29,8 @@ func GetSourceKennrickJDennisDpm1(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kennrick J. Dennis, DPM"
 	sourceDef.SourceType = pkg.SourceTypeKennrickJDennisDpm1
+	sourceDef.BrandLogo = "kennrick-j-dennis-dpm.png"
+	sourceDef.PatientAccessUrl = "https://www.kdfoot.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

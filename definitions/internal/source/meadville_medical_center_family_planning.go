@@ -29,6 +29,7 @@ func GetSourceMeadvilleMedicalCenterFamilyPlanning(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Meadville Medical Center Family Planning"
 	sourceDef.SourceType = pkg.SourceTypeMeadvilleMedicalCenterFamilyPlanning
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mmchs.org/Services/Family-Planning-Services.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

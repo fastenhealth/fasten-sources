@@ -29,6 +29,7 @@ func GetSourceEnriqueGriegoMD(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Enrique Griego, M.D."
 	sourceDef.SourceType = pkg.SourceTypeEnriqueGriegoMD
+	sourceDef.BrandLogo = "enrique-griego-m-d.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceArthritisConsultantsOfEasttennesee(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Arthritis Consultants Of  EastTennesee"
 	sourceDef.SourceType = pkg.SourceTypeArthritisConsultantsOfEasttennesee
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/Arthritis-Consultants-of-East-Tennessee/100062411004262/?paipv=0&eav=AfYzPPJPkcUn855yftLChRy2_xrQZGW1AK8D_NlE02Md13Do7ydKobh0CAr8C8ieQqE&_rdr"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

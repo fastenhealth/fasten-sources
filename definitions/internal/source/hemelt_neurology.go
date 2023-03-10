@@ -29,6 +29,7 @@ func GetSourceHemeltNeurology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Hemelt Neurology"
 	sourceDef.SourceType = pkg.SourceTypeHemeltNeurology
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-virginia-hemelt-3f8k6"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

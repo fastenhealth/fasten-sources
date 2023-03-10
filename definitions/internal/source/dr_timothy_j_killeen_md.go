@@ -29,6 +29,7 @@ func GetSourceDrTimothyJKilleenMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dr. Timothy J. Killeen, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrTimothyJKilleenMd
+	sourceDef.PatientAccessUrl = "https://www.drtimothykilleen.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

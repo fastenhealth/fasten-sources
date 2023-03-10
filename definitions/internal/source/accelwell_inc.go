@@ -29,6 +29,8 @@ func GetSourceAccelwellInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "AccelWELL, Inc."
 	sourceDef.SourceType = pkg.SourceTypeAccelwellInc
+	sourceDef.BrandLogo = "accelwell-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3K3G488TSF5YB8QSH21IOB3DC5J5QZ?assignment_id=32UTUBMZ7UTURG1CUDR6M4Y2825VB9&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

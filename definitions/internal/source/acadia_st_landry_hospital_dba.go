@@ -29,6 +29,7 @@ func GetSourceAcadiaStLandryHospitalDba(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Acadia-St. Landry Hospital DBA"
 	sourceDef.SourceType = pkg.SourceTypeAcadiaStLandryHospitalDba
+	sourceDef.PatientAccessUrl = "https://www.aslh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

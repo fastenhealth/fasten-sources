@@ -29,6 +29,7 @@ func GetSourceLorainCountyHealthAndDentistry(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Lorain County Health & Dentistry"
 	sourceDef.SourceType = pkg.SourceTypeLorainCountyHealthAndDentistry
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.lorainhealth-dentistry.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

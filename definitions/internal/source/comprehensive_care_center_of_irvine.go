@@ -29,6 +29,7 @@ func GetSourceComprehensiveCareCenterOfIrvine(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Comprehensive Care Center of Irvine"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCareCenterOfIrvine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://comprehensivecare-irvine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

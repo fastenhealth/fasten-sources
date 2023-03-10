@@ -29,6 +29,8 @@ func GetSourceMommyAndMeMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Mommy & Me Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeMommyAndMeMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mommy-and-me-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mommyandmeclinics.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

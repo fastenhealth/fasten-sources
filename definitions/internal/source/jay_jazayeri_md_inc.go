@@ -29,6 +29,7 @@ func GetSourceJayJazayeriMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jay Jazayeri, MD., Inc"
 	sourceDef.SourceType = pkg.SourceTypeJayJazayeriMdInc
+	sourceDef.PatientAccessUrl = "https://www.memorialcare.org/providers/jay-m-jazayeri"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

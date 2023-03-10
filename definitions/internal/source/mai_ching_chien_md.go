@@ -29,6 +29,7 @@ func GetSourceMaiChingChienMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Mai Ching Chien MD"
 	sourceDef.SourceType = pkg.SourceTypeMaiChingChienMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/mai-ching-chien-d46dcd1b-3d00-4c12-9177-0a1b0ef19978-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

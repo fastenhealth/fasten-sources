@@ -29,6 +29,7 @@ func GetSourceDallasRenalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Dallas Renal Group"
 	sourceDef.SourceType = pkg.SourceTypeDallasRenalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://dallasrenalgroup.com/?utm_source=GMB&utm_medium=Yext"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

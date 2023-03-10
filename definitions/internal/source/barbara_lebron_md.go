@@ -29,6 +29,8 @@ func GetSourceBarbaraLebronMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Barbara Lebron MD"
 	sourceDef.SourceType = pkg.SourceTypeBarbaraLebronMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "barbara-lebron-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.optum.com/care/locations/california/optum-california.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

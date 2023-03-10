@@ -30,6 +30,7 @@ func GetSourceAlaskaNativeMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Alaska Native Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeAlaskaNativeMedicalCenter
+	sourceDef.PatientAccessUrl = "https://anmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

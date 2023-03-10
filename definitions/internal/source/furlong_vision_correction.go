@@ -29,6 +29,7 @@ func GetSourceFurlongVisionCorrection(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Furlong Vision Correction"
 	sourceDef.SourceType = pkg.SourceTypeFurlongVisionCorrection
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://furlongvision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

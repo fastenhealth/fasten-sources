@@ -29,6 +29,7 @@ func GetSourceAndersonProfessionalServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Anderson Professional Services"
 	sourceDef.SourceType = pkg.SourceTypeAndersonProfessionalServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3EAWOID6N6URL9086VPGD36UCPMV0X?assignment_id=3SB5N7Y3OH1APW8772VV2MZ9UJKG0J&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

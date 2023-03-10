@@ -29,6 +29,7 @@ func GetSourceAdvantageHealthcareForWomen(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Advantage Healthcare For Women"
 	sourceDef.SourceType = pkg.SourceTypeAdvantageHealthcareForWomen
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

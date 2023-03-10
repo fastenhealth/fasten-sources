@@ -29,6 +29,7 @@ func GetSourceHighDesertHeartVascularInstitute(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "High Desert Heart Vascular Institute"
 	sourceDef.SourceType = pkg.SourceTypeHighDesertHeartVascularInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.bing.com/ck/a?!&&p=56af249265d226ffJmltdHM9MTY3ODMyMDAwMCZpZ3VpZD0zZTRiMjI1OC1mODVmLTY4OTQtMGVkOS0zMGViZjlmNDY5MWUmaW5zaWQ9NTQ1Ng&ptn=3&hsh=3&fclid=3e4b2258-f85f-6894-0ed9-30ebf9f4691e&u=a1aHR0cHM6Ly93d3cuYmluZy5jb20vYWxpbmsvbGluaz91cmw9aHR0cCUzYSUyZiUyZmhlYXJ0aW5zdGl0dXRlaGQuY29tJTJmaW5kZXglMmZpbmRleC5waHAmc291cmNlPXNlcnAtbG9jYWwmaD0lMmZzcVJ5YU5manpOekJTdDN5aVc3dWNiRU16T25CeGZoaVAlMmJrWkY4TXJGTSUzZCZwPWxvY2Fsd2Vic2l0ZWdvYmlndGl0bGUmaWc9NTBDNUZENjVBODVDNDYxODhFNDc4RDk0QjhDQ0I3RjAmeXBpZD1ZTjk3eDE5NDc2NDc4&ntb=1"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

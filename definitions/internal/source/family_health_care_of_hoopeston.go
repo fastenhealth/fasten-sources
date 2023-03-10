@@ -29,6 +29,8 @@ func GetSourceFamilyHealthCareOfHoopeston(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Family Health Care of Hoopeston"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareOfHoopeston
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-health-care-of-hoopeston.jpg"
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

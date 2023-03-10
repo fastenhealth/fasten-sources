@@ -29,6 +29,8 @@ func GetSourceBayAreaFamilyPhysiciansPC(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Bay Area Family Physicians P.C."
 	sourceDef.SourceType = pkg.SourceTypeBayAreaFamilyPhysiciansPC
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "bay-area-family-physicians-p-c.jpg"
+	sourceDef.PatientAccessUrl = "https://bayareafp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

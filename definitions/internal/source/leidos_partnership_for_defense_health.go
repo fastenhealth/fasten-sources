@@ -29,6 +29,7 @@ func GetSourceLeidosPartnershipForDefenseHealth(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Leidos Partnership for Defense Health"
 	sourceDef.SourceType = pkg.SourceTypeLeidosPartnershipForDefenseHealth
+	sourceDef.PatientAccessUrl = "https://www.leidos.com/markets/health/military-health/mhs-genesis-program#:~:text=The%20MHS%20GENESIS%20system%2C%20developed,NOAA%20and%20private%20sector%20providers."
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

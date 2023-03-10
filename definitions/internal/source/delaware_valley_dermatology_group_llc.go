@@ -29,6 +29,7 @@ func GetSourceDelawareValleyDermatologyGroupLlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Delaware Valley Dermatology Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyDermatologyGroupLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.delawarevlleyderm.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

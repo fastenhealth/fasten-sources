@@ -29,6 +29,7 @@ func GetSourceFamilyPracticeAssociates(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Family Practice Associates"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ourfpa.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

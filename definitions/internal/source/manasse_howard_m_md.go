@@ -29,6 +29,7 @@ func GetSourceManasseHowardMMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "MANASSE HOWARD M MD"
 	sourceDef.SourceType = pkg.SourceTypeManasseHowardMMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "manasse-howard-m-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceIfasManagementLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "IFAS Management, LLC"
 	sourceDef.SourceType = pkg.SourceTypeIfasManagementLlc
+	sourceDef.PatientAccessUrl = "https://ifas-llc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

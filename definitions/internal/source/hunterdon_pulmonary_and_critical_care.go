@@ -29,6 +29,7 @@ func GetSourceHunterdonPulmonaryAndCriticalCare(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Hunterdon Pulmonary And Critical Care"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonPulmonaryAndCriticalCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hunterdon-pulmonary-and-critical-care.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

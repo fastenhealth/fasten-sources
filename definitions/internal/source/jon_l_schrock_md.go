@@ -29,6 +29,7 @@ func GetSourceJonLSchrockMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Jon L Schrock MD"
 	sourceDef.SourceType = pkg.SourceTypeJonLSchrockMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/jon-schrock-md-a6b50821"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

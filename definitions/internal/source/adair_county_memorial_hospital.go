@@ -29,6 +29,7 @@ func GetSourceAdairCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Adair County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAdairCountyMemorialHospital
+	sourceDef.PatientAccessUrl = "https://health.usnews.com/best-hospitals/area/ia/adair-county-memorial-hospital-6620644"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

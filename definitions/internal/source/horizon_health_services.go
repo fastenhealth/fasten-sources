@@ -29,6 +29,7 @@ func GetSourceHorizonHealthServices(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Horizon Health Services"
 	sourceDef.SourceType = pkg.SourceTypeHorizonHealthServices
+	sourceDef.PatientAccessUrl = "https://www.horizon-health.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

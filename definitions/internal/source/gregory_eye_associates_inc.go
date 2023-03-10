@@ -29,6 +29,7 @@ func GetSourceGregoryEyeAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Gregory Eye Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeGregoryEyeAssociatesInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gregory-eye-associates-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceLafayetteFamilyFootcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Lafayette Family Footcare"
 	sourceDef.SourceType = pkg.SourceTypeLafayetteFamilyFootcare
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/lafayette-family-foot-care-0f8f8af8-f126-e311-a62b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

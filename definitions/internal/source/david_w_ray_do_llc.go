@@ -29,6 +29,7 @@ func GetSourceDavidWRayDoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "David W. Ray DO LLC"
 	sourceDef.SourceType = pkg.SourceTypeDavidWRayDoLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "david-w-ray-do-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDoverFootSpecialtyCenterInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Dover Foot Specialty Center, Inc."
 	sourceDef.SourceType = pkg.SourceTypeDoverFootSpecialtyCenterInc
+	sourceDef.PatientAccessUrl = "https://www.doverfoot.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

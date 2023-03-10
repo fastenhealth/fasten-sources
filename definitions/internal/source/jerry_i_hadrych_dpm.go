@@ -29,6 +29,7 @@ func GetSourceJerryIHadrychDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jerry I. Hadrych, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJerryIHadrychDpm
+	sourceDef.PatientAccessUrl = "https://morgantown-foot-ankle-center.business.site/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

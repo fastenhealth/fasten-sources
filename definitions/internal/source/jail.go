@@ -29,6 +29,7 @@ func GetSourceJail(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.Display = "Jail"
 	sourceDef.SourceType = pkg.SourceTypeJail
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://campbellcountytn.gov"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

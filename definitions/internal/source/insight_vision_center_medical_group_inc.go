@@ -29,6 +29,8 @@ func GetSourceInsightVisionCenterMedicalGroupInc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "InSight Vision Center Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeInsightVisionCenterMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "insight-vision-center-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3QE4DGPGC48P20SE01DWP5TX6EFG4U?assignment_id=3B4YI393VNTDGA1AB48W16OVJ6GSSV&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

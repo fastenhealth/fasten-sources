@@ -29,6 +29,8 @@ func GetSourceKossuthRegionalHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Kossuth Regional Health Center"
 	sourceDef.SourceType = pkg.SourceTypeKossuthRegionalHealthCenter
+	sourceDef.BrandLogo = "kossuth-regional-health-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mercyonenorthiowaaffiliates.org/kossuth/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

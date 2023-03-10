@@ -29,6 +29,8 @@ func GetSourceGeminus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "Geminus"
 	sourceDef.SourceType = pkg.SourceTypeGeminus
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "geminus.svg"
+	sourceDef.PatientAccessUrl = "https://www.geminus.care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

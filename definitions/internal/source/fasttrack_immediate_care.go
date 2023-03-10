@@ -29,6 +29,7 @@ func GetSourceFasttrackImmediateCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "FastTrack Immediate Care"
 	sourceDef.SourceType = pkg.SourceTypeFasttrackImmediateCare
+	sourceDef.PatientAccessUrl = "https://choosebaystatehealth.org/job-listing/fdfd8bd4-30bb-ec11-983f-6045bd008951/convenient-care-urgent-care-advanced-practitioner/?gclid=Cj0KCQiAx6ugBhCcARIsAGNmMbjObZRnmbGpS3lIYpgpi6YnavRfzCRnrHB3Z0ZfP1jqF6p7i6rGvsEaAiK1EALw_wcB"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

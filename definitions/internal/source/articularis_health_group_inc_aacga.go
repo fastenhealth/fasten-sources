@@ -29,6 +29,7 @@ func GetSourceArticularisHealthGroupIncAacga(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Articularis Health Group Inc AACGA"
 	sourceDef.SourceType = pkg.SourceTypeArticularisHealthGroupIncAacga
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3M4KL7H8L8K6D86P16L8FG950O261L?assignment_id=3TMSXRD2XKX6T7JPIQ3D2U47TZFW10&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

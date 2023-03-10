@@ -29,6 +29,7 @@ func GetSourceDelawareVisionAssociatesGroupPractic(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Delaware Vision Associates Group Practic"
 	sourceDef.SourceType = pkg.SourceTypeDelawareVisionAssociatesGroupPractic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://eyedoctor.io/clinic/delaware-vision-associates-group-practice-pa-king-of-prussia-pa/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

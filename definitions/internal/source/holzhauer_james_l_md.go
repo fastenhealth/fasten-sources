@@ -29,6 +29,7 @@ func GetSourceHolzhauerJamesLMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Holzhauer, James L., MD"
 	sourceDef.SourceType = pkg.SourceTypeHolzhauerJamesLMd
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

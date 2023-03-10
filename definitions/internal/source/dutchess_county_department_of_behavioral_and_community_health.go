@@ -29,6 +29,7 @@ func GetSourceDutchessCountyDepartmentOfBehavioralAndCommunityHealth(env pkg.Fas
 
 	sourceDef.Display = "Dutchess County Department of Behavioral and Community Health"
 	sourceDef.SourceType = pkg.SourceTypeDutchessCountyDepartmentOfBehavioralAndCommunityHealth
+	sourceDef.BrandLogo = "dutchess-county-department-of-behavioral-and-community-health.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

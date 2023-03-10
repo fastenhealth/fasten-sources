@@ -29,6 +29,7 @@ func GetSourceInsightHospitalAndMedicalCenterChicago(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Insight Hospital & Medical Center Chicago"
 	sourceDef.SourceType = pkg.SourceTypeInsightHospitalAndMedicalCenterChicago
+	sourceDef.PatientAccessUrl = "https://insightchicago.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

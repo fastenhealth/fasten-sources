@@ -29,6 +29,7 @@ func GetSourceFvcTampaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "FVC Tampa LLC"
 	sourceDef.SourceType = pkg.SourceTypeFvcTampaLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fvc-tampa-llc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

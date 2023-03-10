@@ -29,6 +29,8 @@ func GetSourceArthritisNorthwestPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Arthritis Northwest PLLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisNorthwestPllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "arthritis-northwest-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.arthritisnw.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceInfusionForHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Infusion For Health"
 	sourceDef.SourceType = pkg.SourceTypeInfusionForHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://infusionforhealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

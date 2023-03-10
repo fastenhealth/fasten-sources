@@ -29,6 +29,7 @@ func GetSourceAssociatesInWomensHealth(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Associates In Women's Health"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInWomensHealth
+	sourceDef.PatientAccessUrl = "https://myawh.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

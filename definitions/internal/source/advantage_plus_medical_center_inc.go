@@ -29,6 +29,7 @@ func GetSourceAdvantagePlusMedicalCenterInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Advantage Plus Medical Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeAdvantagePlusMedicalCenterInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://advantageplusmedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

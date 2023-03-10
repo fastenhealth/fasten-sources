@@ -29,6 +29,8 @@ func GetSourceAmmHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "AMM Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeAmmHealthcare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "amm-healthcare.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/38G0E1M86Z271VCO42302AU1SEQVU0?assignment_id=369J354OFR7537UM9RBCBN907M86GC&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

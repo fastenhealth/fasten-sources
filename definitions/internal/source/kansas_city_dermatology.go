@@ -29,6 +29,7 @@ func GetSourceKansasCityDermatology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Kansas City Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeKansasCityDermatology
+	sourceDef.PatientAccessUrl = "http://www.kcderm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

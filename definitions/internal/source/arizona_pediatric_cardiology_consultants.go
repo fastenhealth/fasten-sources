@@ -29,6 +29,7 @@ func GetSourceArizonaPediatricCardiologyConsultants(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Arizona Pediatric Cardiology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeArizonaPediatricCardiologyConsultants
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.superdoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

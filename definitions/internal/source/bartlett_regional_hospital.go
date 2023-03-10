@@ -29,6 +29,7 @@ func GetSourceBartlettRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Bartlett Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBartlettRegionalHospital
+	sourceDef.PatientAccessUrl = "https://www.bartletthospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceEastBayEndosurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "East Bay Endosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeEastBayEndosurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://eastbayendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

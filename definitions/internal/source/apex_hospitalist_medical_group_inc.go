@@ -29,6 +29,8 @@ func GetSourceApexHospitalistMedicalGroupInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Apex Hospitalist Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeApexHospitalistMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "apex-hospitalist-medical-group-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.vitadox.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

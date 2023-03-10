@@ -29,6 +29,7 @@ func GetSourceApexHealthcareMedicalCntrOncology(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Apex Healthcare Medical Cntr - Oncology"
 	sourceDef.SourceType = pkg.SourceTypeApexHealthcareMedicalCntrOncology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.apexoncology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

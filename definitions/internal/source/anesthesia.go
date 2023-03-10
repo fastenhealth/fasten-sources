@@ -29,6 +29,7 @@ func GetSourceAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://medlineplus.gov/anesthesia.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

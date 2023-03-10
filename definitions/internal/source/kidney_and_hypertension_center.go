@@ -29,6 +29,7 @@ func GetSourceKidneyAndHypertensionCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Kidney and Hypertension Center"
 	sourceDef.SourceType = pkg.SourceTypeKidneyAndHypertensionCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://khccares.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

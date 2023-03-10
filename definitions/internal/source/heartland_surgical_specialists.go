@@ -29,6 +29,7 @@ func GetSourceHeartlandSurgicalSpecialists(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Heartland Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeHeartlandSurgicalSpecialists
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "heartland-surgical-specialists.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

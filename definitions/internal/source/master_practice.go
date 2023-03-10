@@ -29,6 +29,7 @@ func GetSourceMasterPractice(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Master Practice"
 	sourceDef.SourceType = pkg.SourceTypeMasterPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

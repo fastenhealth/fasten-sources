@@ -29,6 +29,7 @@ func GetSourceJeffreyWWatsonDpm(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Jeffrey W. Watson, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJeffreyWWatsonDpm
+	sourceDef.BrandLogo = "jeffrey-w-watson-dpm.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

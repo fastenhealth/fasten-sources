@@ -29,6 +29,7 @@ func GetSourceHallCanterMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Hall Canter MD"
 	sourceDef.SourceType = pkg.SourceTypeHallCanterMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hall-canter-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

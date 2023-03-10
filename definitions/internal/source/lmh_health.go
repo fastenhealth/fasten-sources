@@ -29,6 +29,8 @@ func GetSourceLmhHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "LMH Health"
 	sourceDef.SourceType = pkg.SourceTypeLmhHealth
+	sourceDef.BrandLogo = "lmh-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.lmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

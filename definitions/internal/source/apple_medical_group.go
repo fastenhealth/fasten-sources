@@ -29,6 +29,8 @@ func GetSourceAppleMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Apple Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAppleMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "apple-medical-group.jpg"
+	sourceDef.PatientAccessUrl = "https://appletreemedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

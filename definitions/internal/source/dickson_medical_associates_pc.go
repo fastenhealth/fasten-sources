@@ -29,6 +29,7 @@ func GetSourceDicksonMedicalAssociatesPc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Dickson Medical Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeDicksonMedicalAssociatesPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://dicksonmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

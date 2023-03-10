@@ -29,6 +29,7 @@ func GetSourceDavitaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "DaVita Inc."
 	sourceDef.SourceType = pkg.SourceTypeDavitaInc
+	sourceDef.PatientAccessUrl = "https://www.davita.com/about/contact-us"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

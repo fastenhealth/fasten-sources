@@ -29,6 +29,8 @@ func GetSourceAscensionHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Ascension health"
 	sourceDef.SourceType = pkg.SourceTypeAscensionHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ascension-health.svg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

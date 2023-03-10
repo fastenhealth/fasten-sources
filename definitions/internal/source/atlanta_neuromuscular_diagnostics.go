@@ -29,6 +29,8 @@ func GetSourceAtlantaNeuromuscularDiagnostics(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Atlanta Neuromuscular Diagnostics"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaNeuromuscularDiagnostics
+	sourceDef.BrandLogo = "atlanta-neuromuscular-diagnostics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/andiagnostics/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

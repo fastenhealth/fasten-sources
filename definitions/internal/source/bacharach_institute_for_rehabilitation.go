@@ -29,6 +29,7 @@ func GetSourceBacharachInstituteForRehabilitation(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Bacharach Institute for Rehabilitation"
 	sourceDef.SourceType = pkg.SourceTypeBacharachInstituteForRehabilitation
+	sourceDef.PatientAccessUrl = "https://www.bacharach.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

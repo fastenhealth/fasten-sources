@@ -29,6 +29,7 @@ func GetSourceEyeoneAndRetinacareOfVirginia(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "EyeOne And RetinaCare Of Virginia"
 	sourceDef.SourceType = pkg.SourceTypeEyeoneAndRetinacareOfVirginia
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "eyeone-and-retinacare-of-virginia.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

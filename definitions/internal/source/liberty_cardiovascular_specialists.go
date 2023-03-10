@@ -29,6 +29,7 @@ func GetSourceLibertyCardiovascularSpecialists(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Liberty Cardiovascular Specialists"
 	sourceDef.SourceType = pkg.SourceTypeLibertyCardiovascularSpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/locations/liberty-cardiovascular-specialists/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

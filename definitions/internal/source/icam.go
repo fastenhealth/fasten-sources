@@ -29,6 +29,7 @@ func GetSourceIcam(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.Display = "ICAM"
 	sourceDef.SourceType = pkg.SourceTypeIcam
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "icam.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

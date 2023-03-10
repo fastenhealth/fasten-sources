@@ -29,6 +29,8 @@ func GetSourceHcaFloridaCitrusHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "HCA Florida Citrus Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHcaFloridaCitrusHospital
+	sourceDef.BrandLogo = "hca-florida-citrus-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.hcafloridahealthcare.com/locations/citrus-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

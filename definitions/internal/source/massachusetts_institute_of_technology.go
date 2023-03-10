@@ -29,6 +29,7 @@ func GetSourceMassachusettsInstituteOfTechnology(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Massachusetts Institute of Technology"
 	sourceDef.SourceType = pkg.SourceTypeMassachusettsInstituteOfTechnology
+	sourceDef.PatientAccessUrl = "https://web.mit.edu/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

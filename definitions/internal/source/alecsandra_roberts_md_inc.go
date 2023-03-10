@@ -29,6 +29,7 @@ func GetSourceAlecsandraRobertsMdInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Alecsandra Roberts MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeAlecsandraRobertsMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/37MQ8Z1JRRTFLDYRQTGE3Q33R48Y2T?assignment_id=3ZDAD0O1TFAMRR0OUEJ9AJ19UKETX1&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceFamilyAssocMedGroupInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Family Assoc Med Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeFamilyAssocMedGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-assoc-med-group-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.crmcinc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

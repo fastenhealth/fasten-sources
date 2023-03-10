@@ -29,6 +29,8 @@ func GetSourceLeonardPlasticSurgery(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Leonard Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeLeonardPlasticSurgery
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "leonard-plastic-surgery.jpg"
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/324N5FAHTA8TYZ7CAOZYWNL3QFTKVD?assignment_id=31LM9EDVOZPN1UQFGEIWABN20OVNJY&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

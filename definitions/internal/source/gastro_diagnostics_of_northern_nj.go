@@ -29,6 +29,7 @@ func GetSourceGastroDiagnosticsOfNorthernNj(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Gastro Diagnostics Of Northern NJ"
 	sourceDef.SourceType = pkg.SourceTypeGastroDiagnosticsOfNorthernNj
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://gastrodiagnosticsnj.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

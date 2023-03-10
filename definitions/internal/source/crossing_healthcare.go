@@ -29,6 +29,7 @@ func GetSourceCrossingHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Crossing Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeCrossingHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.crossinghealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

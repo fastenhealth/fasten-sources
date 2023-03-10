@@ -29,6 +29,7 @@ func GetSourceDeanzaObstetricsAndGynecologyMedGrp(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Deanza Obstetrics And Gynecology Med Grp"
 	sourceDef.SourceType = pkg.SourceTypeDeanzaObstetricsAndGynecologyMedGrp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "deanza-obstetrics-and-gynecology-med-grp.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

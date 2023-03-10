@@ -29,6 +29,7 @@ func GetSourceAspenSpeechTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Aspen Speech Therapy"
 	sourceDef.SourceType = pkg.SourceTypeAspenSpeechTherapy
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.aspenspeechtherapy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

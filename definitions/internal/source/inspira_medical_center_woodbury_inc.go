@@ -29,6 +29,8 @@ func GetSourceInspiraMedicalCenterWoodburyInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Inspira Medical Center Woodbury, Inc."
 	sourceDef.SourceType = pkg.SourceTypeInspiraMedicalCenterWoodburyInc
+	sourceDef.BrandLogo = "inspira-medical-center-woodbury-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.inspirahealthnetwork.org/locations/inspira-health-center-woodbury"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

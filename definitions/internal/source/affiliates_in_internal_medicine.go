@@ -29,6 +29,7 @@ func GetSourceAffiliatesInInternalMedicine(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Affiliates In Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAffiliatesInInternalMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.aiimnj.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

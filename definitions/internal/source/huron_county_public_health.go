@@ -29,6 +29,7 @@ func GetSourceHuronCountyPublicHealth(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Huron County Public Health"
 	sourceDef.SourceType = pkg.SourceTypeHuronCountyPublicHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.huroncohealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

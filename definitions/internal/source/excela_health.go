@@ -29,6 +29,8 @@ func GetSourceExcelaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Excela Health"
 	sourceDef.SourceType = pkg.SourceTypeExcelaHealth
+	sourceDef.BrandLogo = "excela-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.excelahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

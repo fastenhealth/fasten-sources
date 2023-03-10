@@ -29,6 +29,8 @@ func GetSourceMichiganHeadAndSpineInstitute(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Michigan Head And Spine Institute"
 	sourceDef.SourceType = pkg.SourceTypeMichiganHeadAndSpineInstitute
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "michigan-head-and-spine-institute.svg"
+	sourceDef.PatientAccessUrl = "https://www.mhsi.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

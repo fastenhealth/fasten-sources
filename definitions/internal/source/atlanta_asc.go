@@ -29,6 +29,7 @@ func GetSourceAtlantaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Atlanta ASC"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://asc41.com/events/2022-asc-annual-meeting/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

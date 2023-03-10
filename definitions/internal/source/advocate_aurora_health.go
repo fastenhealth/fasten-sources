@@ -29,6 +29,7 @@ func GetSourceAdvocateAuroraHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Advocate Aurora Health"
 	sourceDef.SourceType = pkg.SourceTypeAdvocateAuroraHealth
+	sourceDef.PatientAccessUrl = "https://www.advocateaurorahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

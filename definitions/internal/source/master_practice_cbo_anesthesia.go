@@ -29,6 +29,7 @@ func GetSourceMasterPracticeCboAnesthesia(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Master Practice CBO Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeMasterPracticeCboAnesthesia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

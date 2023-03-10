@@ -29,6 +29,7 @@ func GetSourceExtendedCareClinicalServicesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Extended Care Clinical Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeExtendedCareClinicalServicesLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceJamesKHesterMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "James K Hester MD PA"
 	sourceDef.SourceType = pkg.SourceTypeJamesKHesterMdPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1841359932-james-k-hester-md-pa/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

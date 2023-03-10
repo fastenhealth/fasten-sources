@@ -29,6 +29,7 @@ func GetSourceArthritisAndRheumaticDiseasesPc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Arthritis & Rheumatic Diseases PC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndRheumaticDiseasesPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://arthritisrheumaticdiseases.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

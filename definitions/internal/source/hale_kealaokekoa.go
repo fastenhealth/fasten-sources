@@ -29,6 +29,7 @@ func GetSourceHaleKealaokekoa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Hale Kealaokekoa"
 	sourceDef.SourceType = pkg.SourceTypeHaleKealaokekoa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hale-kealaokekoa.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

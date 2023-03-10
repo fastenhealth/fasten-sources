@@ -29,6 +29,7 @@ func GetSourceBayClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Bay Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBayClinic
+	sourceDef.PatientAccessUrl = "https://bayclinic.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

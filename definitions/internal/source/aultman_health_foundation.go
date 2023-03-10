@@ -29,6 +29,7 @@ func GetSourceAultmanHealthFoundation(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Aultman Health Foundation"
 	sourceDef.SourceType = pkg.SourceTypeAultmanHealthFoundation
+	sourceDef.PatientAccessUrl = "https://aultman.org/#/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

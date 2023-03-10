@@ -29,6 +29,8 @@ func GetSourceMidTennesseeBoneAndJointClinic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Mid Tennessee Bone And Joint Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMidTennesseeBoneAndJointClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "mid-tennessee-bone-and-joint-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://mtbj.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

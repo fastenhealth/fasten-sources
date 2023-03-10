@@ -29,6 +29,7 @@ func GetSourceKootenaiOutpatientSurgery(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Kootenai Outpatient Surgery"
 	sourceDef.SourceType = pkg.SourceTypeKootenaiOutpatientSurgery
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "kootenai-outpatient-surgery.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

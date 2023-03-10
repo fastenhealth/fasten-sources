@@ -29,6 +29,7 @@ func GetSourceMillerCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Miller County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMillerCountyHospital
+	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/38RHULDVABCF7THT0VJI59P45K6IWA?assignment_id=38SKSKU7RFU1IJ3OMJHHLI4DIEAILJ&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

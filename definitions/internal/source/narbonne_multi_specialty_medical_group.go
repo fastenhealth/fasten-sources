@@ -29,6 +29,7 @@ func GetSourceNarbonneMultiSpecialtyMedicalGroup(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Narbonne Multi-Specialty Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeNarbonneMultiSpecialtyMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "narbonne-multi-specialty-medical-group.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

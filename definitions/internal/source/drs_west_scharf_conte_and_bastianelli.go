@@ -29,6 +29,7 @@ func GetSourceDrsWestScharfConteAndBastianelli(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Drs. West, Scharf, Conte and Bastianelli"
 	sourceDef.SourceType = pkg.SourceTypeDrsWestScharfConteAndBastianelli
+	sourceDef.PatientAccessUrl = "http://www.njentfacialplastics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

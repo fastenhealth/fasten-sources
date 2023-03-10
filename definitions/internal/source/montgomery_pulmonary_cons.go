@@ -29,6 +29,7 @@ func GetSourceMontgomeryPulmonaryCons(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Montgomery Pulmonary Cons."
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryPulmonaryCons
+	sourceDef.PatientAccessUrl = "https://montgomerypulmonary.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

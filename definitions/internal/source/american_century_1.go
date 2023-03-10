@@ -29,6 +29,8 @@ func GetSourceAmericanCentury1(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "American Century"
 	sourceDef.SourceType = pkg.SourceTypeAmericanCentury1
+	sourceDef.BrandLogo = "american-century.png"
+	sourceDef.PatientAccessUrl = "https://www.americancentury.com/home/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

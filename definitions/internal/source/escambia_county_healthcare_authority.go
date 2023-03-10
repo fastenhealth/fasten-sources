@@ -29,6 +29,7 @@ func GetSourceEscambiaCountyHealthcareAuthority(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Escambia County Healthcare Authority"
 	sourceDef.SourceType = pkg.SourceTypeEscambiaCountyHealthcareAuthority
+	sourceDef.PatientAccessUrl = "https://www.dwmmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

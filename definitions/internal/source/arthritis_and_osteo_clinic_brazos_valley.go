@@ -29,6 +29,7 @@ func GetSourceArthritisAndOsteoClinicBrazosValley(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Arthritis And Osteo Clinic Brazos Valley"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndOsteoClinicBrazosValley
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.aocbv.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

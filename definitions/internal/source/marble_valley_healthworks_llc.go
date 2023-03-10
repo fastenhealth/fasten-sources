@@ -29,6 +29,7 @@ func GetSourceMarbleValleyHealthworksLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Marble Valley Healthworks, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMarbleValleyHealthworksLlc
+	sourceDef.PatientAccessUrl = "https://scoombsmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

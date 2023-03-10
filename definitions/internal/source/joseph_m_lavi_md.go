@@ -29,6 +29,8 @@ func GetSourceJosephMLaviMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Joseph M Lavi MD"
 	sourceDef.SourceType = pkg.SourceTypeJosephMLaviMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "joseph-m-lavi-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.henrymayo.com/doctors/profile/joseph-lavi/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

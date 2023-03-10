@@ -29,6 +29,8 @@ func GetSourceAdvantageHealthConvenientCare1(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Advantage Health Convenient Care"
 	sourceDef.SourceType = pkg.SourceTypeAdvantageHealthConvenientCare1
+	sourceDef.BrandLogo = "advantage-health-convenient-care.jpg"
+	sourceDef.PatientAccessUrl = "https://ahcdetroit.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

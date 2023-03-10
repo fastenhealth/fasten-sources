@@ -29,6 +29,7 @@ func GetSourceMcdowMedicalCorporation(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "McDow Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMcdowMedicalCorporation
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mcdowmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

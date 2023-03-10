@@ -29,6 +29,7 @@ func GetSourceJamesAndDyerMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "James and Dyer MD PA"
 	sourceDef.SourceType = pkg.SourceTypeJamesAndDyerMdPa
+	sourceDef.PatientAccessUrl = "https://www.jamesanddyer.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

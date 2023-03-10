@@ -29,6 +29,8 @@ func GetSourceGahCosmedics(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "GAH Cosmedics"
 	sourceDef.SourceType = pkg.SourceTypeGahCosmedics
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "gah-cosmedics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/plastic-surgery-and-cosmedics"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

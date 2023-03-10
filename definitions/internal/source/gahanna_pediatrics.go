@@ -29,6 +29,7 @@ func GetSourceGahannaPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Gahanna Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeGahannaPediatrics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gahannapediatrics.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

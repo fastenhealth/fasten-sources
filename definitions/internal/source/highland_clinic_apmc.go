@@ -29,6 +29,8 @@ func GetSourceHighlandClinicApmc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Highland Clinic APMC"
 	sourceDef.SourceType = pkg.SourceTypeHighlandClinicApmc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "highland-clinic-apmc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.highlandclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFamilyHealthCareOfFairbury(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Family Health Care Of Fairbury"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareOfFairbury
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/family-health-care-of-fairbury"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAssociatesInAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Associates In Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInAnesthesia
+	sourceDef.PatientAccessUrl = "http://www.aiamd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceManagedServices(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Managed Services"
 	sourceDef.SourceType = pkg.SourceTypeManagedServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "managed-services.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

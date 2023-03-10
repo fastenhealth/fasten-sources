@@ -29,6 +29,8 @@ func GetSourceFamilyHealthcarePartners(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Family Healthcare Partners"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcarePartners
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-healthcare-partners.jpg"
+	sourceDef.PatientAccessUrl = "https://www.familyhealthcarepartners.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAtiSmOccupationalHealthCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "ATI SM Occupational Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAtiSmOccupationalHealthCenter
+	sourceDef.PatientAccessUrl = "https://www.atimaterials.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

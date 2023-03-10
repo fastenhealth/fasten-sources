@@ -29,6 +29,7 @@ func GetSourceHeritageHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Heritage Health"
 	sourceDef.SourceType = pkg.SourceTypeHeritageHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.myheritagehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

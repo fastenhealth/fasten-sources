@@ -29,6 +29,7 @@ func GetSourceMadisonRheumatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Madison Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeMadisonRheumatology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://madmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

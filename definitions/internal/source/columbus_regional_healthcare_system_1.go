@@ -29,6 +29,7 @@ func GetSourceColumbusRegionalHealthcareSystem1(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Columbus Regional Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeColumbusRegionalHealthcareSystem1
+	sourceDef.BrandLogo = "columbus-regional-healthcare-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

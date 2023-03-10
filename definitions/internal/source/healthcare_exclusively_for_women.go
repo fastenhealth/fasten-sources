@@ -29,6 +29,7 @@ func GetSourceHealthcareExclusivelyForWomen(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Healthcare Exclusively for Women"
 	sourceDef.SourceType = pkg.SourceTypeHealthcareExclusivelyForWomen
+	sourceDef.BrandLogo = "healthcare-exclusively-for-women.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

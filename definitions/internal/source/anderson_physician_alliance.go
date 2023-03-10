@@ -29,6 +29,7 @@ func GetSourceAndersonPhysicianAlliance(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Anderson Physician Alliance"
 	sourceDef.SourceType = pkg.SourceTypeAndersonPhysicianAlliance
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/meridian-1/anderson-physician-alliance-rhu-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

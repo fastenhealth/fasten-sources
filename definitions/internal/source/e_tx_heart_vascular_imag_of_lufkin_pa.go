@@ -29,6 +29,7 @@ func GetSourceETxHeartVascularImagOfLufkinPa(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "E Tx  Heart Vascular Imag Of Lufkin PA"
 	sourceDef.SourceType = pkg.SourceTypeETxHeartVascularImagOfLufkinPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "e-tx-heart-vascular-imag-of-lufkin-pa.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

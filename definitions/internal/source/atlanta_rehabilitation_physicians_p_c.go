@@ -29,6 +29,7 @@ func GetSourceAtlantaRehabilitationPhysiciansPC(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Atlanta Rehabilitation Physicians, P.C."
 	sourceDef.SourceType = pkg.SourceTypeAtlantaRehabilitationPhysiciansPC
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

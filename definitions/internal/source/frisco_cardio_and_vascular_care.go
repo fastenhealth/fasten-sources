@@ -29,6 +29,7 @@ func GetSourceFriscoCardioAndVascularCare(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Frisco Cardio And Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeFriscoCardioAndVascularCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.friscocardiacvascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

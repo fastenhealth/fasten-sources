@@ -29,6 +29,8 @@ func GetSourceColumbiaEyeSurgeryCenterInc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Columbia Eye Surgery Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaEyeSurgeryCenterInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "columbia-eye-surgery-center-inc.jpg"
+	sourceDef.PatientAccessUrl = "http://columbiaeyesurgerycenter.com/?utm_source=GMBSocialClimb&utm_medium=ColumbiaEyeSurgeryCenter"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

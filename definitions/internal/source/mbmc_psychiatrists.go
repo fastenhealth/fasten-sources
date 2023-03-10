@@ -29,6 +29,7 @@ func GetSourceMbmcPsychiatrists(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "MBMC Psychiatrists"
 	sourceDef.SourceType = pkg.SourceTypeMbmcPsychiatrists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.baptistonline.org/locations/jackson"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

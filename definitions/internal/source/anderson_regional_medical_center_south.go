@@ -29,6 +29,7 @@ func GetSourceAndersonRegionalMedicalCenterSouth(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Anderson Regional Medical Center - South"
 	sourceDef.SourceType = pkg.SourceTypeAndersonRegionalMedicalCenterSouth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.andersonregional.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

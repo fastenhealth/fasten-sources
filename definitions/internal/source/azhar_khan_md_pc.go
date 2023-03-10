@@ -29,6 +29,8 @@ func GetSourceAzharKhanMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Azhar Khan MD PC"
 	sourceDef.SourceType = pkg.SourceTypeAzharKhanMdPc
+	sourceDef.BrandLogo = "azhar-khan-md-pc.svg"
+	sourceDef.PatientAccessUrl = "https://integrisok.com/doctors/azhar-khan"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

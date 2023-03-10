@@ -29,6 +29,8 @@ func GetSourceJosephLiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Joseph Li MD"
 	sourceDef.SourceType = pkg.SourceTypeJosephLiMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "joseph-li-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.huntingtonhealth.org/physicians/joseph-y-li-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMichelCSamsonMDFACSPllc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Michel C. Samson, M.D., F.A.C.S., PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMichelCSamsonMDFACSPllc
+	sourceDef.PatientAccessUrl = "https://www.drsamson.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

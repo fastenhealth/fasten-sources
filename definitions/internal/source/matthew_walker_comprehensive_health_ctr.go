@@ -29,6 +29,7 @@ func GetSourceMatthewWalkerComprehensiveHealthCtr(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Matthew Walker Comprehensive Health Ctr"
 	sourceDef.SourceType = pkg.SourceTypeMatthewWalkerComprehensiveHealthCtr
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://mwchc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFoxwoodsCasino(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Foxwoods Casino"
 	sourceDef.SourceType = pkg.SourceTypeFoxwoodsCasino
+	sourceDef.PatientAccessUrl = "https://www.foxwoods.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

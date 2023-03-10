@@ -29,6 +29,7 @@ func GetSourceMarwanEdrisMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Marwan Edris MD"
 	sourceDef.SourceType = pkg.SourceTypeMarwanEdrisMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/marwan-edris-f7483601-0bf0-4072-8ce8-65b2f7a432c7-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

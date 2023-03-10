@@ -29,6 +29,7 @@ func GetSourceLaurelLaserAndSurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Laurel Laser & Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeLaurelLaserAndSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "laurel-laser-and-surgery-center.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

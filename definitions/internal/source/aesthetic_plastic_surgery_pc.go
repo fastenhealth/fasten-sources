@@ -29,6 +29,8 @@ func GetSourceAestheticPlasticSurgeryPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Aesthetic Plastic Surgery, PC"
 	sourceDef.SourceType = pkg.SourceTypeAestheticPlasticSurgeryPc
+	sourceDef.BrandLogo = "aesthetic-plastic-surgery-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.springer.com/journal/266"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

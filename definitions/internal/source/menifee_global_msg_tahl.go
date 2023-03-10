@@ -29,6 +29,7 @@ func GetSourceMenifeeGlobalMsgTahl(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Menifee Global MSG - Tahl"
 	sourceDef.SourceType = pkg.SourceTypeMenifeeGlobalMsgTahl
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://menifeeglobalmedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

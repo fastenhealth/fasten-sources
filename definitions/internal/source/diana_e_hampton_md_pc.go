@@ -29,6 +29,7 @@ func GetSourceDianaEHamptonMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Diana E Hampton MD PC"
 	sourceDef.SourceType = pkg.SourceTypeDianaEHamptonMdPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "diana-e-hampton-md-pc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

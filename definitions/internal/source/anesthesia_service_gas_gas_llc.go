@@ -29,6 +29,8 @@ func GetSourceAnesthesiaServiceGasGasLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Anesthesia Service Gas Gas LLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaServiceGasGasLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "anesthesia-service-gas-gas-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://npiprofile.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

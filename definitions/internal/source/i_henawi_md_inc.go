@@ -29,6 +29,7 @@ func GetSourceIHenawiMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "I Henawi MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeIHenawiMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://drelhenawi.health/iglal-el-henawi-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

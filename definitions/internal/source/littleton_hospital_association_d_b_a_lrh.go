@@ -29,6 +29,7 @@ func GetSourceLittletonHospitalAssociationDBALrh(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Littleton Hospital Association D/B/A LRH"
 	sourceDef.SourceType = pkg.SourceTypeLittletonHospitalAssociationDBALrh
+	sourceDef.PatientAccessUrl = "https://littletonhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

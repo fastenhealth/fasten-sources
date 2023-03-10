@@ -29,6 +29,7 @@ func GetSourceKaneHallBarryNeurology(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Kane Hall Barry Neurology"
 	sourceDef.SourceType = pkg.SourceTypeKaneHallBarryNeurology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "kane-hall-barry-neurology.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAdvancedDermatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Advanced Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedDermatology
+	sourceDef.BrandLogo = "advanced-dermatology.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

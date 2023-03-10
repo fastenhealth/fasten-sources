@@ -29,6 +29,7 @@ func GetSourceDermatologyConsultantsOfFrisco(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Dermatology Consultants Of Frisco"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyConsultantsOfFrisco
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dermatology-consultants-of-frisco.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

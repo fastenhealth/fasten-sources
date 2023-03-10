@@ -29,6 +29,7 @@ func GetSourceFvcRaleigh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "FVC Raleigh"
 	sourceDef.SourceType = pkg.SourceTypeFvcRaleigh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.unchealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

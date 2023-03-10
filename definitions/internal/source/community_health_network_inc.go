@@ -29,6 +29,7 @@ func GetSourceCommunityHealthNetworkInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Community Health Network, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthNetworkInc
+	sourceDef.PatientAccessUrl = "https://www.ecommunity.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

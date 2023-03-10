@@ -29,6 +29,7 @@ func GetSourceMartinCountyHospitalDistrict(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Martin County Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeMartinCountyHospitalDistrict
+	sourceDef.PatientAccessUrl = "https://martincountyhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

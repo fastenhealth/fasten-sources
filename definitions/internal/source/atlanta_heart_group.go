@@ -29,6 +29,7 @@ func GetSourceAtlantaHeartGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Atlanta Heart Group"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaHeartGroup
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

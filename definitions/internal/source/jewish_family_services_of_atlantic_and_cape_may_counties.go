@@ -29,6 +29,7 @@ func GetSourceJewishFamilyServicesOfAtlanticAndCapeMayCounties(env pkg.FastenLig
 
 	sourceDef.Display = "Jewish Family Services of Atlantic and Cape May Counties"
 	sourceDef.SourceType = pkg.SourceTypeJewishFamilyServicesOfAtlanticAndCapeMayCounties
+	sourceDef.BrandLogo = "jewish-family-services-of-atlantic-and-cape-may-counties.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

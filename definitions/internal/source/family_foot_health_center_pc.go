@@ -29,6 +29,7 @@ func GetSourceFamilyFootHealthCenterPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Family Foot Health Center, PC"
 	sourceDef.SourceType = pkg.SourceTypeFamilyFootHealthCenterPc
+	sourceDef.PatientAccessUrl = "https://njfootandankledocs.com/?y_source=1_MTU5NjQzNTEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

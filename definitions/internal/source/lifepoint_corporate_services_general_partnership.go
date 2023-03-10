@@ -29,6 +29,7 @@ func GetSourceLifepointCorporateServicesGeneralPartnership(env pkg.FastenLightho
 
 	sourceDef.Display = "LifePoint Corporate Services General Partnership"
 	sourceDef.SourceType = pkg.SourceTypeLifepointCorporateServicesGeneralPartnership
+	sourceDef.PatientAccessUrl = "https://lifepointhealth.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGeorgiaCenterForWomen(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Georgia Center for Women"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaCenterForWomen
+	sourceDef.PatientAccessUrl = "https://www.gacfw.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceEzraMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Ezra Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEzraMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ezramedical.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
