@@ -20,9 +20,10 @@ func GetSourceNextgen(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/*.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
-	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
+	sourceDef.ResponseModesSupported = []string{"query"}
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNextgen]; clientIdOk {
 		sourceDef.ClientId = clientId
