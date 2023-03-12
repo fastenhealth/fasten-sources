@@ -29,6 +29,8 @@ func GetSourceOrthopaedicSpecialtyInstitute(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Orthopaedic Specialty Institute"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicSpecialtyInstitute
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "orthopaedic-specialty-institute.jpg"
+	sourceDef.PatientAccessUrl = "https://www.orangeorthopaedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

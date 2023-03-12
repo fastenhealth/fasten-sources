@@ -29,6 +29,7 @@ func GetSourceSevenStarEndocrinology(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Seven Star Endocrinology"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarEndocrinology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.sevenstarhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

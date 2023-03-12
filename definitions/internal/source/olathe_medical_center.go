@@ -29,6 +29,7 @@ func GetSourceOlatheMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Olathe Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeOlatheMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.clayplattefamily.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

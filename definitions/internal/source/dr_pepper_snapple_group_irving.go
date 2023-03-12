@@ -29,7 +29,7 @@ func GetSourceDrPepperSnappleGroupIrving(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Dr Pepper Snapple Group - Irving"
 	sourceDef.SourceType = pkg.SourceTypeDrPepperSnappleGroupIrving
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3BCRDCM0PQR8J9SB9GRQKV549M1K6L?assignment_id=3QILPRALQJSYHDUWPAL5LLEOJCR8NM&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.keurigdrpepper.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

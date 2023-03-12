@@ -29,6 +29,7 @@ func GetSourceLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital(env pkg.Faste
 
 	sourceDef.Display = "LCMC Health Holdings, Inc., d/b/a East Jefferson General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/ejhospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

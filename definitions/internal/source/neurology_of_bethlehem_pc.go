@@ -29,6 +29,7 @@ func GetSourceNeurologyOfBethlehemPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Neurology Of Bethlehem PC"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyOfBethlehemPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://findalocation.slhn.org/details/588"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

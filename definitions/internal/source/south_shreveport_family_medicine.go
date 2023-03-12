@@ -29,6 +29,7 @@ func GetSourceSouthShreveportFamilyMedicine(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "South Shreveport Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSouthShreveportFamilyMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/175654782473046/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

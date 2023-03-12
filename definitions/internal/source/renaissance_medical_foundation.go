@@ -29,6 +29,7 @@ func GetSourceRenaissanceMedicalFoundation(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Renaissance Medical Foundation"
 	sourceDef.SourceType = pkg.SourceTypeRenaissanceMedicalFoundation
+	sourceDef.PatientAccessUrl = "http://notfound.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceRefugioCountyMemorialHospitalDistrict(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Refugio County Memorial Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeRefugioCountyMemorialHospitalDistrict
+	sourceDef.PatientAccessUrl = "https://refugiohospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

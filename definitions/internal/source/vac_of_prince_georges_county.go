@@ -29,6 +29,7 @@ func GetSourceVacOfPrinceGeorgesCounty(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "VAC Of Prince Georges County"
 	sourceDef.SourceType = pkg.SourceTypeVacOfPrinceGeorgesCounty
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

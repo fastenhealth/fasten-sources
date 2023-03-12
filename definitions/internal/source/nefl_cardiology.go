@@ -29,6 +29,7 @@ func GetSourceNeflCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "NEFL Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeNeflCardiology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://northeast-florida-cardiovascular-center.business.site/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

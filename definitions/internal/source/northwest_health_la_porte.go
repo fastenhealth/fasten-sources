@@ -29,6 +29,7 @@ func GetSourceNorthwestHealthLaPorte(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Northwest Health - La Porte"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestHealthLaPorte
+	sourceDef.PatientAccessUrl = "https://www.nwhealthlaporte.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

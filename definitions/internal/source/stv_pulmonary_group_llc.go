@@ -29,6 +29,7 @@ func GetSourceStvPulmonaryGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "STV Pulmonary Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeStvPulmonaryGroupLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.bhampulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

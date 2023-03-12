@@ -29,6 +29,7 @@ func GetSourceSouthernIowaOrthopedics(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Southern Iowa Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIowaOrthopedics
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/iowa/southern-iowa-orthopedic-services-372467034"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

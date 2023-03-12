@@ -29,6 +29,7 @@ func GetSourceRehobothMckinleyChristianHealthCareServices(env pkg.FastenLighthou
 
 	sourceDef.Display = "Rehoboth McKinley Christian Health Care Services"
 	sourceDef.SourceType = pkg.SourceTypeRehobothMckinleyChristianHealthCareServices
+	sourceDef.PatientAccessUrl = "https://www.rmch.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

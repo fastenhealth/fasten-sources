@@ -29,6 +29,7 @@ func GetSourcePottsvilleAnesthesiaAssociates(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Pottsville Anesthesia Associates"
 	sourceDef.SourceType = pkg.SourceTypePottsvilleAnesthesiaAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.amg-group.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

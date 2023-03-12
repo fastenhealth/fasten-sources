@@ -29,6 +29,7 @@ func GetSourceValleyHeartConsultants(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Valley Heart Consultants"
 	sourceDef.SourceType = pkg.SourceTypeValleyHeartConsultants
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tx-texas/mcallen/valley-heart-consultants-xbly7n"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

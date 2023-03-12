@@ -29,6 +29,7 @@ func GetSourcePublixLakeland(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Publix - Lakeland"
 	sourceDef.SourceType = pkg.SourceTypePublixLakeland
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

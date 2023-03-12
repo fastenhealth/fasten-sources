@@ -30,6 +30,7 @@ func GetSourceFvcLenoir(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeFvcLenoir
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fvc-lenoir.jpg"
+	sourceDef.PatientAccessUrl = "https://www.caldwellmemorial.org/locations/profile/?id=204"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceVascon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Display = "VASCON"
 	sourceDef.SourceType = pkg.SourceTypeVascon
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://zaubee.com/biz/vascon-vascular-access-center-vou0pmne"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTerrosHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Terros Health"
 	sourceDef.SourceType = pkg.SourceTypeTerrosHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "terros-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.terroshealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePaulPhillipsEyeAndSurgeryCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Paul Phillips Eye And Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypePaulPhillipsEyeAndSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.njlasereye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

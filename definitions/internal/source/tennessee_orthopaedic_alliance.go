@@ -29,6 +29,7 @@ func GetSourceTennesseeOrthopaedicAlliance(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Tennessee Orthopaedic Alliance"
 	sourceDef.SourceType = pkg.SourceTypeTennesseeOrthopaedicAlliance
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://toa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

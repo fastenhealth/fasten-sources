@@ -29,6 +29,7 @@ func GetSourcePositiveImpactHealthCenters(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Positive Impact Health Centers"
 	sourceDef.SourceType = pkg.SourceTypePositiveImpactHealthCenters
+	sourceDef.PatientAccessUrl = "https://www.positiveimpacthealthcenters.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

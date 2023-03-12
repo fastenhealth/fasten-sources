@@ -29,6 +29,7 @@ func GetSourceNephrologyAndHypertensionConsultantsPa(env pkg.FastenLighthouseEnv
 	sourceDef.Display = "NEPHROLOGY & HYPERTENSION CONSULTANTS PA"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAndHypertensionConsultantsPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nc-north-carolina/charlotte/nephrology-and-hypertension-consultants-pa-x8htplb"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

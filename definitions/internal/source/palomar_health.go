@@ -29,6 +29,8 @@ func GetSourcePalomarHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Palomar Health"
 	sourceDef.SourceType = pkg.SourceTypePalomarHealth
+	sourceDef.BrandLogo = "palomar-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.palomarhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

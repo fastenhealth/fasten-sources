@@ -29,6 +29,8 @@ func GetSourceOmniEyeServices(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Omni Eye Services"
 	sourceDef.SourceType = pkg.SourceTypeOmniEyeServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "omni-eye-services.svg"
+	sourceDef.PatientAccessUrl = "https://oomc.com/omni/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCommunityHealthCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.commhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

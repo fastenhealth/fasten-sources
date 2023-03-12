@@ -29,6 +29,8 @@ func GetSourceOrthopedicRehabilitationAssociates(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Orthopedic Rehabilitation Associates"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicRehabilitationAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "orthopedic-rehabilitation-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://ora.urpt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

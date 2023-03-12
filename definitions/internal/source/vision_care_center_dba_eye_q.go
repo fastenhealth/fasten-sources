@@ -29,6 +29,7 @@ func GetSourceVisionCareCenterDbaEyeQ(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Vision Care Center DBA EYE-Q"
 	sourceDef.SourceType = pkg.SourceTypeVisionCareCenterDbaEyeQ
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://eyeqvc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

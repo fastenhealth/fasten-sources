@@ -29,6 +29,7 @@ func GetSourcePrime(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "PRIME"
 	sourceDef.SourceType = pkg.SourceTypePrime
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://suburbanhosp.org/?utm_source=GMBlisting&utm_medium=Organic&utm_campaign=GMBWebsite"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

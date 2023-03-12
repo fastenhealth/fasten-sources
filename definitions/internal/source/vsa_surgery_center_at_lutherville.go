@@ -29,6 +29,8 @@ func GetSourceVsaSurgeryCenterAtLutherville(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "VSA Surgery Center At Lutherville"
 	sourceDef.SourceType = pkg.SourceTypeVsaSurgeryCenterAtLutherville
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vsa-surgery-center-at-lutherville.jpg"
+	sourceDef.PatientAccessUrl = "https://m.facebook.com/people/Vascular-Surgery-Associates-VSA/100063867620579/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

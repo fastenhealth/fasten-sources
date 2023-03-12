@@ -29,6 +29,8 @@ func GetSourceWestGastroenterologyMedicalGroup(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "West Gastroenterology Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWestGastroenterologyMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "west-gastroenterology-medical-group.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/West-Gastroenterology-Medical-Group/100080877843847/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCoordinatedCareDepartment(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Coordinated Care Department"
 	sourceDef.SourceType = pkg.SourceTypeCoordinatedCareDepartment
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hemetcommunitymedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceProfessionalAnesthesiaServicesPllc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Professional Anesthesia Services PLLC"
 	sourceDef.SourceType = pkg.SourceTypeProfessionalAnesthesiaServicesPllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "professional-anesthesia-services-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://m.facebook.com/people/Professional-Anesthesia-Services-of-North-America/100054217911520/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

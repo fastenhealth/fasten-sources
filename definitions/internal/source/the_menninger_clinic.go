@@ -29,6 +29,8 @@ func GetSourceTheMenningerClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Menninger Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheMenningerClinic
+	sourceDef.BrandLogo = "the-menninger-clinic.svg"
+	sourceDef.PatientAccessUrl = "https://www.menningerclinic.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

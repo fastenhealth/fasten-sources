@@ -29,6 +29,7 @@ func GetSourceTheHospitalOfCentralConnecticut(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "The Hospital of Central Connecticut"
 	sourceDef.SourceType = pkg.SourceTypeTheHospitalOfCentralConnecticut
+	sourceDef.PatientAccessUrl = "https://thocc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

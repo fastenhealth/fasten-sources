@@ -29,6 +29,7 @@ func GetSourceNephrologyConsultantsLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Nephrology Consultants LLC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyConsultantsLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.alabamakidney.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

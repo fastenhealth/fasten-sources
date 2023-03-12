@@ -29,6 +29,7 @@ func GetSourcePlannedParenthoodOfMetropolitanNj(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Planned Parenthood of Metropolitan NJ"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfMetropolitanNj
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

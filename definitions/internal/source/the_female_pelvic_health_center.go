@@ -29,6 +29,7 @@ func GetSourceTheFemalePelvicHealthCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "The Female Pelvic Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTheFemalePelvicHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fphcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

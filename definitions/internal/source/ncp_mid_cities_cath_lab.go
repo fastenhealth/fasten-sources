@@ -29,6 +29,7 @@ func GetSourceNcpMidCitiesCathLab(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "NCP Mid Cities Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpMidCitiesCathLab
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: NCP Mid Cities Cath Lab Address: 1305 Airport Frwy City: Bedford Zip: 76021 State: Texas Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

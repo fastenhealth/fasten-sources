@@ -29,6 +29,7 @@ func GetSourceConnecticutVascularThoracicSurgical(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Connecticut Vascular Thoracic Surgical"
 	sourceDef.SourceType = pkg.SourceTypeConnecticutVascularThoracicSurgical
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ctvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

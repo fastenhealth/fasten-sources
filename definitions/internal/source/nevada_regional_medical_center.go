@@ -29,6 +29,7 @@ func GetSourceNevadaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Nevada Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNevadaRegionalMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.nrmchealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

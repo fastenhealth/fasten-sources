@@ -29,6 +29,8 @@ func GetSourceUniversityMedicalCenterOfElPaso(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "University Medical Center of El Paso"
 	sourceDef.SourceType = pkg.SourceTypeUniversityMedicalCenterOfElPaso
+	sourceDef.BrandLogo = "university-medical-center-of-el-paso.jpg"
+	sourceDef.PatientAccessUrl = "https://www.umcelpaso.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

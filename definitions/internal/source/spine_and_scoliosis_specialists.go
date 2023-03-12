@@ -29,6 +29,8 @@ func GetSourceSpineAndScoliosisSpecialists(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Spine And Scoliosis Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSpineAndScoliosisSpecialists
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "spine-and-scoliosis-specialists.jpg"
+	sourceDef.PatientAccessUrl = "https://triadspine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

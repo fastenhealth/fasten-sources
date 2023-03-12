@@ -29,6 +29,7 @@ func GetSourcePhysicianInHomeServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Physician In-Home Services"
 	sourceDef.SourceType = pkg.SourceTypePhysicianInHomeServices
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/mi-michigan/flint/physician-in-home-services-x2qfqb"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceUrologicalAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Urological Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeUrologicalAssociatesPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "urological-associates-pc.svg"
+	sourceDef.PatientAccessUrl = "https://www.urologyqc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

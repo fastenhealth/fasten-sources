@@ -29,6 +29,7 @@ func GetSourceWisconsinHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Wisconsin Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWisconsinHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/wisconsin-health-center-llc-146217ae-5ea5-421b-80c0-96d0900473f7"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

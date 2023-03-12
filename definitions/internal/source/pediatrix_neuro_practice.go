@@ -29,6 +29,7 @@ func GetSourcePediatrixNeuroPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Pediatrix Neuro Practice"
 	sourceDef.SourceType = pkg.SourceTypePediatrixNeuroPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/neurosouthflorida"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

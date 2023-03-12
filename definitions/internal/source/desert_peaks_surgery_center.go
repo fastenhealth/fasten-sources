@@ -29,6 +29,7 @@ func GetSourceDesertPeaksSurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Desert Peaks Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeDesertPeaksSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://desertpeakssurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

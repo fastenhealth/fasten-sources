@@ -29,6 +29,7 @@ func GetSourceGcUsaOfFloridaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "GC USA of Florida, LLC"
 	sourceDef.SourceType = pkg.SourceTypeGcUsaOfFloridaLlc
+	sourceDef.PatientAccessUrl = "https://www.genesiscare.com/us/our-locations/naples-sgn"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

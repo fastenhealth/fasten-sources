@@ -29,6 +29,7 @@ func GetSourcePmaHematolgyOncology(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "PMA Hematolgy/Oncology"
 	sourceDef.SourceType = pkg.SourceTypePmaHematolgyOncology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/allopathic_osteopathic_physicians/hematology-oncology_207rh0003x/1700202041.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

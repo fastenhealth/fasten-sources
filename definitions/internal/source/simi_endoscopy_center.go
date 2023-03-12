@@ -29,6 +29,7 @@ func GetSourceSimiEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Simi Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeSimiEndoscopyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/simi-endoscopy-center-simi-valley"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

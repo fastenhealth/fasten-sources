@@ -29,6 +29,8 @@ func GetSourcePediatricCardiologyAssoc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Pediatric Cardiology Assoc"
 	sourceDef.SourceType = pkg.SourceTypePediatricCardiologyAssoc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pediatric-cardiology-assoc.jpg"
+	sourceDef.PatientAccessUrl = "https://m.facebook.com/pediatric-cardiology-associates-pc-173556995898/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

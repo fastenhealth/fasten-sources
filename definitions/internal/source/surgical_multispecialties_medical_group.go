@@ -29,6 +29,7 @@ func GetSourceSurgicalMultispecialtiesMedicalGroup(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Surgical Multispecialties Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalMultispecialtiesMedicalGroup
+	sourceDef.PatientAccessUrl = "https://www.smmgsurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

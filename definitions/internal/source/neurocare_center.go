@@ -29,6 +29,7 @@ func GetSourceNeurocareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "NeuroCare Center"
 	sourceDef.SourceType = pkg.SourceTypeNeurocareCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.neurocarecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

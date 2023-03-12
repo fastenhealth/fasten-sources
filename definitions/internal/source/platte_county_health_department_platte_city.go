@@ -29,6 +29,7 @@ func GetSourcePlatteCountyHealthDepartmentPlatteCity(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Platte County Health Department - Platte City"
 	sourceDef.SourceType = pkg.SourceTypePlatteCountyHealthDepartmentPlatteCity
+	sourceDef.PatientAccessUrl = "https://www.plattecountyhealthdept.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

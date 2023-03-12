@@ -29,6 +29,7 @@ func GetSourceLaurelCosmeticAndPlasticSurgery(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Laurel Cosmetic & Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeLaurelCosmeticAndPlasticSurgery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.drlabrasca.com/wp-content/themes/glacial/images/logo-p-500x228.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

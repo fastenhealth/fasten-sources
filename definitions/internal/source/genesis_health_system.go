@@ -29,6 +29,7 @@ func GetSourceGenesisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Genesis Health System"
 	sourceDef.SourceType = pkg.SourceTypeGenesisHealthSystem
+	sourceDef.PatientAccessUrl = "http://www.genesishealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceThompsonHealthcarePllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Thompson Healthcare PLLC"
 	sourceDef.SourceType = pkg.SourceTypeThompsonHealthcarePllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "thompson-healthcare-pllc.svg"
+	sourceDef.PatientAccessUrl = "https://www.thsm.info/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

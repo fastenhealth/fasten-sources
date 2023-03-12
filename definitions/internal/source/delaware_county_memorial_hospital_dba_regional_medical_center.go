@@ -29,6 +29,7 @@ func GetSourceDelawareCountyMemorialHospitalDbaRegionalMedicalCenter(env pkg.Fas
 
 	sourceDef.Display = "Delaware County Memorial Hospital dba Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDelawareCountyMemorialHospitalDbaRegionalMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.regmedctr.org/about-us/default.aspx"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNePhiladelphiaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "NE Philadelphia ASC"
 	sourceDef.SourceType = pkg.SourceTypeNePhiladelphiaAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-vascular-care-northeast-philadelphia/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

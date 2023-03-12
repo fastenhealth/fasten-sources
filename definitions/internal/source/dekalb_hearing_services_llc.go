@@ -29,6 +29,7 @@ func GetSourceDekalbHearingServicesLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "DeKalb Hearing Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeDekalbHearingServicesLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hauser-ross.com/locations/sycamore-hauser-ross-eye-institute/?y_source=1_MjAxOTYyNTQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

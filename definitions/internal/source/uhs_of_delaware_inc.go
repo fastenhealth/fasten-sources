@@ -29,6 +29,7 @@ func GetSourceUhsOfDelawareInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "UHS of Delaware, Inc"
 	sourceDef.SourceType = pkg.SourceTypeUhsOfDelawareInc
+	sourceDef.PatientAccessUrl = "https://uhs.com/about-uhs/corporate-information/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceNeuroNetworkPartners(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Neuro Network Partners"
 	sourceDef.SourceType = pkg.SourceTypeNeuroNetworkPartners
+	sourceDef.BrandLogo = "neuro-network-partners.jpg"
+	sourceDef.PatientAccessUrl = "http://www.nnpmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePhysicalTherapySportsInstitute(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Physical Therapy Sports Institute"
 	sourceDef.SourceType = pkg.SourceTypePhysicalTherapySportsInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/hemet/physical-therapy-sports-institute-x8f74x"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

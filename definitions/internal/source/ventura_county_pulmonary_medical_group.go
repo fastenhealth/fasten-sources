@@ -29,6 +29,7 @@ func GetSourceVenturaCountyPulmonaryMedicalGroup(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Ventura County Pulmonary Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeVenturaCountyPulmonaryMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://venturapulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceEpiphanyDermatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Epiphany Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeEpiphanyDermatology
+	sourceDef.BrandLogo = "epiphany-dermatology.jpg"
+	sourceDef.PatientAccessUrl = "https://www.epiphanydermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

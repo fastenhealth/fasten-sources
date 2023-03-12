@@ -29,6 +29,7 @@ func GetSourceSurgeryAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeSurgeryAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/locations/proliance-surgeons-inc-805-madison-st-seattle/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

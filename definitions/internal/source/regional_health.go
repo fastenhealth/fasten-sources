@@ -29,6 +29,7 @@ func GetSourceRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeRegionalHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rhs.care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -30,7 +30,7 @@ func GetSourceFairbanksMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Fairbanks Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFairbanksMemorialHospital
 	sourceDef.BrandLogo = "fairbanks-memorial-hospital.jpg"
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3OLZC0DJ9WC2S4HOALEMJ76QYB3VIC?assignment_id=3Y5140Z9DBDR94IMEBAO2ZDXNO7IPD&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.foundationhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

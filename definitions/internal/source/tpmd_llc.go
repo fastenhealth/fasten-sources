@@ -29,6 +29,7 @@ func GetSourceTpmdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "TPMD, LLC"
 	sourceDef.SourceType = pkg.SourceTypeTpmdLlc
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

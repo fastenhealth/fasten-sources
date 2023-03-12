@@ -29,6 +29,7 @@ func GetSourceRehabilitation(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Rehabilitation"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitation
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://nsuhealth.nova.edu/schedule-appointment/locations-directions.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

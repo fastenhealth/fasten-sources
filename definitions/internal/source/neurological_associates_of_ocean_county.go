@@ -29,6 +29,7 @@ func GetSourceNeurologicalAssociatesOfOceanCounty(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Neurological Associates of Ocean County"
 	sourceDef.SourceType = pkg.SourceTypeNeurologicalAssociatesOfOceanCounty
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/toms-river/neurological-associates-ocean-county-pa-oonbb9g"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceUtahAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "Utah ASC"
 	sourceDef.SourceType = pkg.SourceTypeUtahAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.aschome.com/index.php/en/contact/contact-utah"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

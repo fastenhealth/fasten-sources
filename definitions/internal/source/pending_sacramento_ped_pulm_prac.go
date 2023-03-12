@@ -29,6 +29,7 @@ func GetSourcePendingSacramentoPedPulmPrac(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Pending Sacramento Ped Pulm Prac"
 	sourceDef.SourceType = pkg.SourceTypePendingSacramentoPedPulmPrac
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

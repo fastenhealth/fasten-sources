@@ -29,6 +29,7 @@ func GetSourcePaulMakelaMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Paul Makela MD, PC"
 	sourceDef.SourceType = pkg.SourceTypePaulMakelaMdPc
+	sourceDef.PatientAccessUrl = "https://iha.inquicker.com/provider/paul-makela"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

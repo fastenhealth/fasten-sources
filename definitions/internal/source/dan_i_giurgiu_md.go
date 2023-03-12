@@ -29,6 +29,7 @@ func GetSourceDanIGiurgiuMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Dan I Giurgiu MD"
 	sourceDef.SourceType = pkg.SourceTypeDanIGiurgiuMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.scripps.org/physicians/4156-dan-giurgiu"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

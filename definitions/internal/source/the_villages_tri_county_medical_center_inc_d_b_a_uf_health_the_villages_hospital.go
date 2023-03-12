@@ -29,6 +29,7 @@ func GetSourceTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital
 
 	sourceDef.Display = "The Villages Tri-County Medical Center, Inc. d/b/a UF Health The Villages Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital
+	sourceDef.PatientAccessUrl = "https://ufhealth.org/uf-health-villages-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNorthsideCenterForChildDevelopment(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Northside Center for Child Development"
 	sourceDef.SourceType = pkg.SourceTypeNorthsideCenterForChildDevelopment
+	sourceDef.PatientAccessUrl = "https://www.northsidecenter.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

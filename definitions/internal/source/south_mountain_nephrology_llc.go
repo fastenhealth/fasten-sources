@@ -29,6 +29,8 @@ func GetSourceSouthMountainNephrologyLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "South Mountain Nephrology, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthMountainNephrologyLlc
+	sourceDef.BrandLogo = "south-mountain-nephrology-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/South-Mountain-Nephrology-LLC-526431570765323/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

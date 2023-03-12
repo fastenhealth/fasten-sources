@@ -29,6 +29,7 @@ func GetSourceWhiteOakObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "White Oak OBH"
 	sourceDef.SourceType = pkg.SourceTypeWhiteOakObh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.adventisthealthcare.com/locations/profile/white-oak-medical-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

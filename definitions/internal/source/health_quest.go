@@ -29,7 +29,8 @@ func GetSourceHealthQuest(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Health Quest"
 	sourceDef.SourceType = pkg.SourceTypeHealthQuest
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3A9LA2FRX5BU0YBZ4IXJ7G2WE9WXHO?assignment_id=3ERMJ6L4DCPOZH4D34EZU6TT328M7A&from_queue=true"
+	sourceDef.BrandLogo = "health-quest.jpg"
+	sourceDef.PatientAccessUrl = "https://www.prohealthmd.com/locations-nav/locations/ct/danbury-medical-group-100-reserve-rd-ste-a4-danbury-ct-06810/81402d3b-e73e-4c58-8c84-f7f892218667.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCorneaConsultantsOfTexas(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCorneaConsultantsOfTexas
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "cornea-consultants-of-texas.jpg"
+	sourceDef.PatientAccessUrl = "https://corneaconsultantstx.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

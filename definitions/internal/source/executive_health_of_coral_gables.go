@@ -29,6 +29,7 @@ func GetSourceExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Executive Health of Coral Gables"
 	sourceDef.SourceType = pkg.SourceTypeExecutiveHealthOfCoralGables
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/executive-health-of-coral-gables-06c9b8c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceOptumcarePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "OptumCare Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeOptumcarePrimaryCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.optumcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

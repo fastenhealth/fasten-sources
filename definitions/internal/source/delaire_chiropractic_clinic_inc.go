@@ -29,6 +29,7 @@ func GetSourceDelaireChiropracticClinicInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Delaire Chiropractic Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeDelaireChiropracticClinicInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.drrdelaire.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

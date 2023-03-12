@@ -29,6 +29,7 @@ func GetSourceSnapfingerAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Snapfinger ASC"
 	sourceDef.SourceType = pkg.SourceTypeSnapfingerAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/surgery-center/1730601865-snapfinger-vascular-access-center-asc-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

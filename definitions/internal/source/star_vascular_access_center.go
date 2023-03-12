@@ -29,6 +29,7 @@ func GetSourceStarVascularAccessCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "STAR Vascular Access Center"
 	sourceDef.SourceType = pkg.SourceTypeStarVascularAccessCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/star-vascular-access-center/?utm_source=local&utm_medium=organic&utm_campaign=gmb-center-listing&utm_content=website&y_source=1_MzI4MzA5Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

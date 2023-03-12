@@ -29,6 +29,7 @@ func GetSourceTheMidtownPractice(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "The Midtown Practice"
 	sourceDef.SourceType = pkg.SourceTypeTheMidtownPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

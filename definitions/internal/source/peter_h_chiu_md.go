@@ -29,6 +29,7 @@ func GetSourcePeterHChiuMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Peter H Chiu MD"
 	sourceDef.SourceType = pkg.SourceTypePeterHChiuMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/san-gabriel/chiu-peter-h-md/#location-switcher&gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTomekaRobertsMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Tomeka Roberts, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeTomekaRobertsMdPc
+	sourceDef.BrandLogo = "tomeka-roberts-md-pc.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.tomekarobertsmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

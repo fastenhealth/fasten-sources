@@ -29,6 +29,7 @@ func GetSourcePostFallsFamilyMedicinePa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Post Falls Family Medicine PA"
 	sourceDef.SourceType = pkg.SourceTypePostFallsFamilyMedicinePa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pffamilymedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceUnionBridgeFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Union Bridge Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeUnionBridgeFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/ubdentistry/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

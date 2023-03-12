@@ -29,7 +29,7 @@ func GetSourceInfinityHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Infinity Health"
 	sourceDef.SourceType = pkg.SourceTypeInfinityHealth
 	sourceDef.Hidden = true
-	sourceDef.BrandLogo = "infinity-health.jpg"
+	sourceDef.PatientAccessUrl = "https://weareinfinityhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

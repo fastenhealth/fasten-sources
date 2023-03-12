@@ -29,6 +29,7 @@ func GetSourceEyePhysiciansOfOrangeCountyPc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Eye Physicians of Orange County PC"
 	sourceDef.SourceType = pkg.SourceTypeEyePhysiciansOfOrangeCountyPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://epocny.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

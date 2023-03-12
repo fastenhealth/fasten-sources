@@ -29,6 +29,7 @@ func GetSourcePodiatryAssociatesOfLakeCounty1(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Podiatry Associates of Lake County"
 	sourceDef.SourceType = pkg.SourceTypePodiatryAssociatesOfLakeCounty1
+	sourceDef.PatientAccessUrl = "https://www.podiatrylake.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

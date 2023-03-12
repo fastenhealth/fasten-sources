@@ -30,7 +30,7 @@ func GetSourceDermatologyInstitute(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Dermatology Institute"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyInstitute
 	sourceDef.BrandLogo = "dermatology-institute.jpg"
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3SSN80MU9PLL2OC7A30GK8IO6Q0KXF?assignment_id=323Q6SJS8WDFMWI8UQWYQTYEK4SHF0&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.drrullan.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

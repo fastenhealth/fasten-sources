@@ -29,6 +29,7 @@ func GetSourceTheGuidanceCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "The Guidance Center"
 	sourceDef.SourceType = pkg.SourceTypeTheGuidanceCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.tgcaz.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

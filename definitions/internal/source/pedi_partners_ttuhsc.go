@@ -29,6 +29,7 @@ func GetSourcePediPartnersTtuhsc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Pedi Partners TTUHSC"
 	sourceDef.SourceType = pkg.SourceTypePediPartnersTtuhsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.texastechphysicians.com/amarillo/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

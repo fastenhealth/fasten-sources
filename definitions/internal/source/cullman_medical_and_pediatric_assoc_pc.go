@@ -30,6 +30,7 @@ func GetSourceCullmanMedicalAndPediatricAssocPc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Cullman Medical & Pediatric Assoc. PC"
 	sourceDef.SourceType = pkg.SourceTypeCullmanMedicalAndPediatricAssocPc
 	sourceDef.BrandLogo = "cullman-medical-and-pediatric-assoc-pc.jpg"
+	sourceDef.PatientAccessUrl = "http://cullmanmedandped.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

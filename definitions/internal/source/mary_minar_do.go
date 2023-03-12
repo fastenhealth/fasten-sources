@@ -29,6 +29,7 @@ func GetSourceMaryMinarDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Mary Minar DO"
 	sourceDef.SourceType = pkg.SourceTypeMaryMinarDo
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/minar-mary-l-office-ac7fd4c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

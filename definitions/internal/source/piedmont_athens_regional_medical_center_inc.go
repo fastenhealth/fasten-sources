@@ -29,6 +29,7 @@ func GetSourcePiedmontAthensRegionalMedicalCenterInc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Piedmont Athens Regional Medical Center Inc."
 	sourceDef.SourceType = pkg.SourceTypePiedmontAthensRegionalMedicalCenterInc
+	sourceDef.PatientAccessUrl = "https://www.piedmont.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNeilSOzerMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Neil S. Ozer, MD., Pa."
 	sourceDef.SourceType = pkg.SourceTypeNeilSOzerMdPa
+	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

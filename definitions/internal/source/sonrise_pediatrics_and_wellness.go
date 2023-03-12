@@ -29,6 +29,7 @@ func GetSourceSonrisePediatricsAndWellness(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "SonRise Pediatrics & Wellness"
 	sourceDef.SourceType = pkg.SourceTypeSonrisePediatricsAndWellness
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://sonrisepediatrics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

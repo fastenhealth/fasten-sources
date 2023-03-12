@@ -29,6 +29,8 @@ func GetSourceReliantPsychiatricServicesLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Reliant Psychiatric Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeReliantPsychiatricServicesLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "reliant-psychiatric-services-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://osagebeachccd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

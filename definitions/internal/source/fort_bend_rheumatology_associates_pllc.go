@@ -30,6 +30,7 @@ func GetSourceFortBendRheumatologyAssociatesPllc(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeFortBendRheumatologyAssociatesPllc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fort-bend-rheumatology-associates-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.fortbendrheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

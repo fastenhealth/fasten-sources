@@ -29,6 +29,7 @@ func GetSourceNsSurgicalCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "NS SURGICAL CENTER LLC"
 	sourceDef.SourceType = pkg.SourceTypeNsSurgicalCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/location/ns-surgical-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

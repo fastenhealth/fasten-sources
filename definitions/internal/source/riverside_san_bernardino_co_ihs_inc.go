@@ -29,6 +29,7 @@ func GetSourceRiversideSanBernardinoCoIhsInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Riverside San Bernardino Co IHS Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiversideSanBernardinoCoIhsInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rsbcihi.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNorthMetroInternalMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "North Metro Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeNorthMetroInternalMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/co-colorado/westminster/north-metro-internal-medicine-x8b5gt"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

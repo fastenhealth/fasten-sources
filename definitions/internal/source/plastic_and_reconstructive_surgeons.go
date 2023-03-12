@@ -29,6 +29,8 @@ func GetSourcePlasticAndReconstructiveSurgeons(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Plastic & Reconstructive Surgeons"
 	sourceDef.SourceType = pkg.SourceTypePlasticAndReconstructiveSurgeons
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "plastic-and-reconstructive-surgeons.svg"
+	sourceDef.PatientAccessUrl = "https://www.prsurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

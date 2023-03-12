@@ -29,6 +29,7 @@ func GetSourceUpperlineHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Upperline Health"
 	sourceDef.SourceType = pkg.SourceTypeUpperlineHealth
+	sourceDef.PatientAccessUrl = "https://www.upperlinehealthflorida.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

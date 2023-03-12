@@ -29,6 +29,7 @@ func GetSourceColumbiaArthritisCenterPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Columbia Arthritis Center PA"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaArthritisCenterPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://articularishealthcare.com/practices/columbia-arthritis-center-pa/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

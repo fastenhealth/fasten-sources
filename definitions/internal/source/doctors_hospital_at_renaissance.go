@@ -29,6 +29,7 @@ func GetSourceDoctorsHospitalAtRenaissance(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Doctors Hospital at Renaissance"
 	sourceDef.SourceType = pkg.SourceTypeDoctorsHospitalAtRenaissance
+	sourceDef.PatientAccessUrl = "https://www.dhrhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

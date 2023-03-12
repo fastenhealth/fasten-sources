@@ -29,6 +29,7 @@ func GetSourceNcpTylerAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "NCP Tyler ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpTylerAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.tylerheart.com/privacy.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

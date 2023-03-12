@@ -29,6 +29,8 @@ func GetSourcePortHuronEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Port Huron Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypePortHuronEyeInstitute
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "port-huron-eye-institute.jpg"
+	sourceDef.PatientAccessUrl = "http://www.porthuroneyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

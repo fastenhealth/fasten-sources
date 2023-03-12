@@ -29,6 +29,7 @@ func GetSourceValleyWideHealthSystemsInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Valley Wide Health Systems Inc"
 	sourceDef.SourceType = pkg.SourceTypeValleyWideHealthSystemsInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://valley-widehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

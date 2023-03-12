@@ -29,6 +29,7 @@ func GetSourceNorwalkPulmonaryConsultantsPc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Norwalk Pulmonary Consultants PC"
 	sourceDef.SourceType = pkg.SourceTypeNorwalkPulmonaryConsultantsPc
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

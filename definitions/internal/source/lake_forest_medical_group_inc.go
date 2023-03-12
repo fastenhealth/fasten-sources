@@ -29,6 +29,8 @@ func GetSourceLakeForestMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Lake Forest Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeLakeForestMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lake-forest-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.synovationmedicalgroup.com/location/lake-forest-ca/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

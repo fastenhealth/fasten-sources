@@ -29,6 +29,7 @@ func GetSourceSunnysidePediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Sunnyside Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeSunnysidePediatrics
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/irvington/sunnyside-pediatrics-oyxrhrn"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

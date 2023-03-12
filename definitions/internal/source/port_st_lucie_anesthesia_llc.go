@@ -29,6 +29,7 @@ func GetSourcePortStLucieAnesthesiaLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Port St. Lucie Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypePortStLucieAnesthesiaLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pay.instamed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

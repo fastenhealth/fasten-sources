@@ -29,6 +29,7 @@ func GetSourcePhilipGachassinMdApmc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Philip Gachassin MD APMC"
 	sourceDef.SourceType = pkg.SourceTypePhilipGachassinMdApmc
+	sourceDef.PatientAccessUrl = "https://acadianaweightlosssurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

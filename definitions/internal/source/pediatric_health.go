@@ -29,6 +29,7 @@ func GetSourcePediatricHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Pediatric Health"
 	sourceDef.SourceType = pkg.SourceTypePediatricHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/jan-tayyaba-md-allentown"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

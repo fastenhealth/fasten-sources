@@ -30,6 +30,7 @@ func GetSourceHolyTrinityMedicalClinic(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeHolyTrinityMedicalClinic
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "holy-trinity-medical-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/holy-trinity-medical-clinic-harbor-city"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

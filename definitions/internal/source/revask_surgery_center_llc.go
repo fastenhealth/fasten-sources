@@ -29,6 +29,8 @@ func GetSourceRevaskSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "ReVASK Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeRevaskSurgeryCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "revask-surgery-center-llc.svg"
+	sourceDef.PatientAccessUrl = "https://wichitanephrology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceVipmd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "VIPMD"
 	sourceDef.SourceType = pkg.SourceTypeVipmd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://vipmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

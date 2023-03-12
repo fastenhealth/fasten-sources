@@ -29,6 +29,7 @@ func GetSourceReevesRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Reeves Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeReevesRegionalHealth
+	sourceDef.PatientAccessUrl = "https://www.reevesregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

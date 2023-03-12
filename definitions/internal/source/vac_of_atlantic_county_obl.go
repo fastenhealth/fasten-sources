@@ -29,6 +29,7 @@ func GetSourceVacOfAtlanticCountyObl(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "VAC Of Atlantic County OBL"
 	sourceDef.SourceType = pkg.SourceTypeVacOfAtlanticCountyObl
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.atlantic-county.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

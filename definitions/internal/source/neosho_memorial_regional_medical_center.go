@@ -29,6 +29,8 @@ func GetSourceNeoshoMemorialRegionalMedicalCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Neosho Memorial Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNeoshoMemorialRegionalMedicalCenter
+	sourceDef.BrandLogo = "neosho-memorial-regional-medical-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.nmrmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourcePuyallupTribalHealthAuthority(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Puyallup Tribal Health Authority"
 	sourceDef.SourceType = pkg.SourceTypePuyallupTribalHealthAuthority
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "puyallup-tribal-health-authority.jpg"
+	sourceDef.PatientAccessUrl = "https://eptha.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceSpokaneEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Spokane Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSpokaneEyeSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "spokane-eye-surgery-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.spokaneeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

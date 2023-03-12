@@ -29,6 +29,8 @@ func GetSourceWomensHealthcareAssocPllc1(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "WomenS Healthcare Assoc Pllc"
 	sourceDef.SourceType = pkg.SourceTypeWomensHealthcareAssocPllc1
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "womens-healthcare-assoc-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/whaonline/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

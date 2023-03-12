@@ -29,6 +29,8 @@ func GetSourceSilverCrossHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Silver Cross Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSilverCrossHospital
+	sourceDef.BrandLogo = "silver-cross-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.silvercross.org/?utm_source=SCH-HOSPITAL&utm_campaign=Local-Listings&utm_medium=Google-My-Business"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

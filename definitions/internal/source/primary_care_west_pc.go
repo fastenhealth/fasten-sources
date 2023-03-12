@@ -29,6 +29,8 @@ func GetSourcePrimaryCareWestPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Primary Care West PC"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCareWestPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "primary-care-west-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.primarycarewest.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

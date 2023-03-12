@@ -30,6 +30,7 @@ func GetSourceEdgarJStanleyMdIncAMedicalCorp(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeEdgarJStanleyMdIncAMedicalCorp
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "edgar-j-stanley-md-inc-a-medical-corp.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/edgar-stanley/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

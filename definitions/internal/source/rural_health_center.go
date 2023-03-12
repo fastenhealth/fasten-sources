@@ -29,6 +29,7 @@ func GetSourceRuralHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Rural Health Center"
 	sourceDef.SourceType = pkg.SourceTypeRuralHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.health.pa.gov/topics/facilities/Rural%20Health/Pages/Rural%20Health.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSouthTexasGastroenterologyAssociatesPa(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "South Texas Gastroenterology Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasGastroenterologyAssociatesPa
+	sourceDef.PatientAccessUrl = "https://m.yelp.com/biz/south-texas-gastroenterology-associates-pa-edinburg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

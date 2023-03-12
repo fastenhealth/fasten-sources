@@ -29,6 +29,7 @@ func GetSourceSevenStarUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Seven Star Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarUrgentCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/hemet-ca-92543/seven-star-urgent-care/5nwXzW2mfmHnRN6hM7j2j"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

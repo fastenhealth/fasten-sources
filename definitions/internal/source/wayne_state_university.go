@@ -29,6 +29,8 @@ func GetSourceWayneStateUniversity(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Wayne State University"
 	sourceDef.SourceType = pkg.SourceTypeWayneStateUniversity
+	sourceDef.BrandLogo = "wayne-state-university.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.med.wayne.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

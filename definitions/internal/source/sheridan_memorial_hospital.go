@@ -29,6 +29,7 @@ func GetSourceSheridanMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sheridan Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSheridanMemorialHospital
+	sourceDef.PatientAccessUrl = "Name: Sheridan Memorial Hospital Address: 1401 West Fifth Street City: Sheridan Zip: 82801 State: Wyoming Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

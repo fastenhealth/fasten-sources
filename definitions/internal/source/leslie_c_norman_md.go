@@ -29,6 +29,7 @@ func GetSourceLeslieCNormanMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Leslie C. Norman, MD"
 	sourceDef.SourceType = pkg.SourceTypeLeslieCNormanMd
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/locations/offices/office-of-leslie-c-norman-md.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

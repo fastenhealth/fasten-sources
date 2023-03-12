@@ -29,6 +29,7 @@ func GetSourceSanDimasFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "San Dimas Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeSanDimasFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://sandimasfamilyclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

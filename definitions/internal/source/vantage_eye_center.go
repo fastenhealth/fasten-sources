@@ -29,6 +29,8 @@ func GetSourceVantageEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Vantage Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeVantageEyeCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vantage-eye-center.jpg"
+	sourceDef.PatientAccessUrl = "https://foursquare.com/v/vantage-eye-center/4c5c4be06147be9a00db8e09"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

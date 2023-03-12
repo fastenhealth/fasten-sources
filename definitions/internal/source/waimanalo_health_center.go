@@ -29,6 +29,8 @@ func GetSourceWaimanaloHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Waimanalo Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWaimanaloHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "waimanalo-health-center.jpeg"
+	sourceDef.PatientAccessUrl = "https://waimanalohealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

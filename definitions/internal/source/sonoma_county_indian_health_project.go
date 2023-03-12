@@ -29,6 +29,7 @@ func GetSourceSonomaCountyIndianHealthProject(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Sonoma County Indian Health Project"
 	sourceDef.SourceType = pkg.SourceTypeSonomaCountyIndianHealthProject
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.scihp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

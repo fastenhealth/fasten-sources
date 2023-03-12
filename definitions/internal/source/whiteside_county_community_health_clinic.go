@@ -29,6 +29,7 @@ func GetSourceWhitesideCountyCommunityHealthClinic(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Whiteside County Community Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeWhitesideCountyCommunityHealthClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.whitesidehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

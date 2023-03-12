@@ -29,6 +29,7 @@ func GetSourceUabHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "UAB Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUabHospital
+	sourceDef.PatientAccessUrl = "https://www.uabmedicine.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

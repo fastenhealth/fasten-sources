@@ -29,6 +29,7 @@ func GetSourceVibrantHealthFamilyClinics(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Vibrant Health Family Clinics"
 	sourceDef.SourceType = pkg.SourceTypeVibrantHealthFamilyClinics
+	sourceDef.PatientAccessUrl = "https://www.vibranthealthclinics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTaylorPediatricsInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Taylor Pediatrics Inc"
 	sourceDef.SourceType = pkg.SourceTypeTaylorPediatricsInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "taylor-pediatrics-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.taylorpeds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

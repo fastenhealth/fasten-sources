@@ -29,6 +29,7 @@ func GetSourcePremierMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Premier Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePremierMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pmgarizona.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

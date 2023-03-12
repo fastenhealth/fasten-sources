@@ -29,6 +29,8 @@ func GetSourceWilliamRBurdenMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "William R. Burden, MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeWilliamRBurdenMdPa
+	sourceDef.BrandLogo = "william-r-burden-md-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/doctors/1417038704/william-r-burden-destin-fl"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceVerdierEyeCenterPlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Verdier Eye Center PLC"
 	sourceDef.SourceType = pkg.SourceTypeVerdierEyeCenterPlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://verdiereyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

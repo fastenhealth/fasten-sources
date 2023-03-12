@@ -29,6 +29,8 @@ func GetSourceNavicentHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Navicent Health"
 	sourceDef.SourceType = pkg.SourceTypeNavicentHealth1
+	sourceDef.BrandLogo = "navicent-health.png"
+	sourceDef.PatientAccessUrl = "https://navicenthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

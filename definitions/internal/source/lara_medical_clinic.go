@@ -29,6 +29,7 @@ func GetSourceLaraMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Lara Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeLaraMedicalClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

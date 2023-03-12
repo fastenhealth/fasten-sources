@@ -29,6 +29,7 @@ func GetSourceJEHartleyTurpinMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "J E Hartley Turpin MD"
 	sourceDef.SourceType = pkg.SourceTypeJEHartleyTurpinMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://obits.ocregister.com/us/obituaries/orangecounty/name/j-e-turpin-obituary?id=10021310"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

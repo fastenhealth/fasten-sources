@@ -29,6 +29,7 @@ func GetSourceRosenfeldVanwirtPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Rosenfeld VanWirt PC"
 	sourceDef.SourceType = pkg.SourceTypeRosenfeldVanwirtPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.lvhn.org/locations/rosenfeld-van-wirt-pc/services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceEndeavorHealthServices(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Endeavor Health Services"
 	sourceDef.SourceType = pkg.SourceTypeEndeavorHealthServices
+	sourceDef.PatientAccessUrl = "https://www.ehsny.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

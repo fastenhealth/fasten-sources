@@ -29,6 +29,7 @@ func GetSourceUsborneFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Usborne Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeUsborneFamilyMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.usbornefamilymedicine.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

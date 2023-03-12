@@ -30,6 +30,7 @@ func GetSourceCountyOfIngham(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeCountyOfIngham
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "county-of-ingham.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/InghamHealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

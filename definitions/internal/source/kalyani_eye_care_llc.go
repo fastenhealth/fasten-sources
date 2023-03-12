@@ -29,6 +29,7 @@ func GetSourceKalyaniEyeCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Kalyani Eye Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeKalyaniEyeCareLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.kalyanieye.com/images/kalyani_eye_care_logo.png?crc=150136693"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

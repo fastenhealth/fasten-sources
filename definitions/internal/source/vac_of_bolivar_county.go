@@ -29,6 +29,7 @@ func GetSourceVacOfBolivarCounty(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "VAC Of Bolivar County"
 	sourceDef.SourceType = pkg.SourceTypeVacOfBolivarCounty
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.va.gov/directory/guide/notfound.asp"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

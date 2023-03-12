@@ -30,6 +30,7 @@ func GetSourceEllisHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Ellis Hospital"
 	sourceDef.SourceType = pkg.SourceTypeEllisHospital
 	sourceDef.BrandLogo = "ellis-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.ellismedicine.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

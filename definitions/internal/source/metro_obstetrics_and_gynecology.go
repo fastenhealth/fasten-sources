@@ -29,6 +29,7 @@ func GetSourceMetroObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Metro Obstetrics and Gynecology"
 	sourceDef.SourceType = pkg.SourceTypeMetroObstetricsAndGynecology
+	sourceDef.PatientAccessUrl = "https://www.metroobgyn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

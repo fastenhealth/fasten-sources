@@ -29,6 +29,7 @@ func GetSourceSFHartleyDpmPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "S. F. Hartley, DPM, PC"
 	sourceDef.SourceType = pkg.SourceTypeSFHartleyDpmPc
+	sourceDef.PatientAccessUrl = "https://npino.com/podiatrist/1447442603-s.-f.-hartley%2C-d.p.m.%2C-p.c./"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSacoBayPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Saco Bay Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeSacoBayPodiatry
+	sourceDef.PatientAccessUrl = "https://www.mainehealth.org/Locations/Saco-Bay-Podiatry/Saco-333-Lincoln-ST-11527864"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

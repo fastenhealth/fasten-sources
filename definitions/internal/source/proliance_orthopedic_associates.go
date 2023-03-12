@@ -29,6 +29,8 @@ func GetSourceProlianceOrthopedicAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Proliance Orthopedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeProlianceOrthopedicAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "proliance-orthopedic-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://hi-in.facebook.com/POARenton/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

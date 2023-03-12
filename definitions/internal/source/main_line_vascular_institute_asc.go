@@ -29,6 +29,7 @@ func GetSourceMainLineVascularInstituteAsc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Main Line Vascular Institute (ASC)"
 	sourceDef.SourceType = pkg.SourceTypeMainLineVascularInstituteAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mainlinehealth.org/main-line-healthcare/our-practices/vascular-specialists"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

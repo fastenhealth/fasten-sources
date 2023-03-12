@@ -29,6 +29,7 @@ func GetSourceSierraMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Sierra Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSierraMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.heritagesmg.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

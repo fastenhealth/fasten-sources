@@ -29,6 +29,7 @@ func GetSourceEagleViewCommunityHealthSystem(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Eagle View Community Health System"
 	sourceDef.SourceType = pkg.SourceTypeEagleViewCommunityHealthSystem
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.eagleviewhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

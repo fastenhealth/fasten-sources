@@ -29,6 +29,8 @@ func GetSourceSouthwestGeneralHealthCenter1(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Southwest General Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestGeneralHealthCenter1
+	sourceDef.BrandLogo = "southwest-general-health-center.png"
+	sourceDef.PatientAccessUrl = "https://www.swgeneral.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

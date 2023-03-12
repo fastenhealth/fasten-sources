@@ -29,6 +29,7 @@ func GetSourceStCharlesEyeCenterInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "St Charles Eye Center, Inc."
 	sourceDef.SourceType = pkg.SourceTypeStCharlesEyeCenterInc
+	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=AwrKAXNaxwxkABMjsS_nHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1678587867/RO=10/RU=https%3a%2f%2fdoctor.webmd.com%2fdoctor%2fsudha-govindarajan-a738d035-ce97-405f-9447-4a972ed30291-overview/RK=2/RS=AkfYGVAXcAdW6WyTLeQcsffLEyg-"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

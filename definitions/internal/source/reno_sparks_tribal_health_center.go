@@ -29,6 +29,7 @@ func GetSourceRenoSparksTribalHealthCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Reno Sparks Tribal Health Center"
 	sourceDef.SourceType = pkg.SourceTypeRenoSparksTribalHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rsic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

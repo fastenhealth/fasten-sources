@@ -29,6 +29,7 @@ func GetSourceWernerGonzalezMedicalGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Werner Gonzalez Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWernerGonzalezMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/werner-gonzalez-family-practice-la-quinta"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

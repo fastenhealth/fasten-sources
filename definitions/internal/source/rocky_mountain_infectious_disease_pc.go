@@ -29,6 +29,7 @@ func GetSourceRockyMountainInfectiousDiseasePc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Rocky Mountain Infectious Disease, PC"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainInfectiousDiseasePc
+	sourceDef.PatientAccessUrl = "http://www.rmids.com/site/epage/90751_884.htm"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceVidaFamilyMedicineLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Vida Family Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeVidaFamilyMedicineLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://vidameanslife.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

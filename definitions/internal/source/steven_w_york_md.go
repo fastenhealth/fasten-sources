@@ -29,6 +29,7 @@ func GetSourceStevenWYorkMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Steven W York MD"
 	sourceDef.SourceType = pkg.SourceTypeStevenWYorkMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-steven-york-xwgf9"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

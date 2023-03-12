@@ -30,6 +30,7 @@ func GetSourceGregoryJWithersMdInc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeGregoryJWithersMdInc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gregory-j-withers-md-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-gregory-withers-x2y4p"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

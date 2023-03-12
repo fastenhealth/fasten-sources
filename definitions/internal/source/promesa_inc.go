@@ -29,6 +29,7 @@ func GetSourcePromesaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "PROMESA INC"
 	sourceDef.SourceType = pkg.SourceTypePromesaInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://acacianetwork.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

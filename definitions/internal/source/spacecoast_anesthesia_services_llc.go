@@ -29,6 +29,7 @@ func GetSourceSpacecoastAnesthesiaServicesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Spacecoast Anesthesia Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeSpacecoastAnesthesiaServicesLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nopage.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

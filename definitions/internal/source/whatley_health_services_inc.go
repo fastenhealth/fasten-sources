@@ -29,6 +29,7 @@ func GetSourceWhatleyHealthServicesInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Whatley Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeWhatleyHealthServicesInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://whatleyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

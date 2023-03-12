@@ -29,6 +29,8 @@ func GetSourceUintahBasinMedicalCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Uintah Basin Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUintahBasinMedicalCenter
+	sourceDef.BrandLogo = "uintah-basin-medical-center.jpeg"
+	sourceDef.PatientAccessUrl = "https://ubh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

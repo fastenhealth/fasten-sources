@@ -30,6 +30,7 @@ func GetSourceCommonwealthEyeCareAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCommonwealthEyeCareAssociates
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "commonwealth-eye-care-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.commonwealtheye.com/templates/commonwealtheyecareassociates/images/logo.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

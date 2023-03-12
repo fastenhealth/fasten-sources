@@ -29,6 +29,7 @@ func GetSourceWesternPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Western Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeWesternPrimaryCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nhscnj.org/adult-medicine?gclid=Cj0KCQiAjbagBhD3ARIsANRrqEtsnbM2X94uhSdYe8_t3Fb0zegWyBhK3U4_UFVxPmfqgl4EBaDJI44aAm65EALw_wcB"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

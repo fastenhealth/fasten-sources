@@ -29,6 +29,7 @@ func GetSourceWinfieldObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Winfield OB-GYN"
 	sourceDef.SourceType = pkg.SourceTypeWinfieldObGyn
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/winfield/winfield-ob-gyn-xbm48y"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceRonaldAbramsonMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Ronald Abramson MD"
 	sourceDef.SourceType = pkg.SourceTypeRonaldAbramsonMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.linkedin.com/in/ronald-abramson-md-5b89a823"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

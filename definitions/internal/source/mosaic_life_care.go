@@ -29,6 +29,7 @@ func GetSourceMosaicLifeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Mosaic Life Care"
 	sourceDef.SourceType = pkg.SourceTypeMosaicLifeCare
+	sourceDef.PatientAccessUrl = "https://www.mymlc.com/Main/Location/st-joseph-mo/mosaic-life-care-at-st.-joseph-medical-center/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

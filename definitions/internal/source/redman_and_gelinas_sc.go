@@ -29,6 +29,7 @@ func GetSourceRedmanAndGelinasSc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Redman & Gelinas, SC"
 	sourceDef.SourceType = pkg.SourceTypeRedmanAndGelinasSc
+	sourceDef.PatientAccessUrl = "https://www.redmangelinaseyecare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDanielGhiyamMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Daniel Ghiyam MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeDanielGhiyamMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.simidoctor.com/providers/daniel-ghiyam-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

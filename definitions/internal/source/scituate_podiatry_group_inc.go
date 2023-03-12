@@ -29,6 +29,7 @@ func GetSourceScituatePodiatryGroupInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Scituate Podiatry Group, Inc."
 	sourceDef.SourceType = pkg.SourceTypeScituatePodiatryGroupInc
+	sourceDef.PatientAccessUrl = "https://scituatepodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

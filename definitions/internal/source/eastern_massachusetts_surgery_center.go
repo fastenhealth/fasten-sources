@@ -30,6 +30,7 @@ func GetSourceEasternMassachusettsSurgeryCenter(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeEasternMassachusettsSurgeryCenter
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eastern-massachusetts-surgery-center.jpg"
+	sourceDef.PatientAccessUrl = "https://easternmasurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

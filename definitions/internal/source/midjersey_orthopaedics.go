@@ -29,6 +29,8 @@ func GetSourceMidjerseyOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "MidJersey Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeMidjerseyOrthopaedics
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "midjersey-orthopaedics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.midjerseyortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

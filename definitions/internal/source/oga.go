@@ -29,6 +29,7 @@ func GetSourceOga(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.Display = "OGA"
 	sourceDef.SourceType = pkg.SourceTypeOga
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://ogaidaho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

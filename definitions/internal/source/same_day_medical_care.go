@@ -29,6 +29,7 @@ func GetSourceSameDayMedicalCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Same Day Medical Care"
 	sourceDef.SourceType = pkg.SourceTypeSameDayMedicalCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/hemet/same-day-medical-care-xbj4pn"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceRespacare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Respacare"
 	sourceDef.SourceType = pkg.SourceTypeRespacare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.respacare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

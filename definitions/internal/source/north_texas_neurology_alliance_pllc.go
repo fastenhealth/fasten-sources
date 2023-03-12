@@ -29,6 +29,7 @@ func GetSourceNorthTexasNeurologyAlliancePllc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "North Texas Neurology Alliance PLLC"
 	sourceDef.SourceType = pkg.SourceTypeNorthTexasNeurologyAlliancePllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.yellowpages.com/wichita-falls-tx/mip/north-texas-neurology-alliance-pllc-478792037"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

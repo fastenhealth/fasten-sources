@@ -29,6 +29,7 @@ func GetSourceTualityHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Tuality Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeTualityHealthcare
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/Tuality/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

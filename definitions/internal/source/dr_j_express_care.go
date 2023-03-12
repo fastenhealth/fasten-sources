@@ -30,6 +30,7 @@ func GetSourceDrJExpressCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeDrJExpressCare
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "dr-j-express-care.jpg"
+	sourceDef.PatientAccessUrl = "https://nextcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

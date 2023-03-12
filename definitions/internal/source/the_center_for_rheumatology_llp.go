@@ -29,6 +29,7 @@ func GetSourceTheCenterForRheumatologyLlp(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "The Center For Rheumatology LLP"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForRheumatologyLlp
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.joint-docs.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

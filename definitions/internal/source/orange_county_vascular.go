@@ -29,6 +29,8 @@ func GetSourceOrangeCountyVascular(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Orange County Vascular"
 	sourceDef.SourceType = pkg.SourceTypeOrangeCountyVascular
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "orange-county-vascular.jpg"
+	sourceDef.PatientAccessUrl = "https://ocvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

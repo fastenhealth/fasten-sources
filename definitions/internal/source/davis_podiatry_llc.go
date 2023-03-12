@@ -29,6 +29,7 @@ func GetSourceDavisPodiatryLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Davis Podiatry LLC"
 	sourceDef.SourceType = pkg.SourceTypeDavisPodiatryLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: Davis Podiatry LLC Address: 128 POINDEXTER ST City: Jackson Zip: 392033048 State: Mississippi Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

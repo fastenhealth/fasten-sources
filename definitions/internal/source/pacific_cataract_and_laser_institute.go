@@ -29,6 +29,8 @@ func GetSourcePacificCataractAndLaserInstitute(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Pacific Cataract And Laser Institute"
 	sourceDef.SourceType = pkg.SourceTypePacificCataractAndLaserInstitute
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pacific-cataract-and-laser-institute.jpg"
+	sourceDef.PatientAccessUrl = "https://www.pcli.com/chehalis.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

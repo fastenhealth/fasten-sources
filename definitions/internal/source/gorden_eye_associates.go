@@ -29,6 +29,7 @@ func GetSourceGordenEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Gorden Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeGordenEyeAssociates
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/gorden-eye-associates-temple"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

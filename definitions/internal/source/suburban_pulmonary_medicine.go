@@ -29,6 +29,7 @@ func GetSourceSuburbanPulmonaryMedicine(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Suburban Pulmonary Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSuburbanPulmonaryMedicine
+	sourceDef.PatientAccessUrl = "https://subpul.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

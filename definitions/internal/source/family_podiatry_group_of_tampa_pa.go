@@ -29,6 +29,8 @@ func GetSourceFamilyPodiatryGroupOfTampaPa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Family Podiatry Group of Tampa, PA"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPodiatryGroupOfTampaPa
+	sourceDef.BrandLogo = "family-podiatry-group-of-tampa-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://certifiedfoot.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

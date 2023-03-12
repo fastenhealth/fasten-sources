@@ -29,6 +29,7 @@ func GetSourceMedicalHomePrimaryCareCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Medical Home Primary Care Center"
 	sourceDef.SourceType = pkg.SourceTypeMedicalHomePrimaryCareCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/profile.php?id=100063744770550"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePracticeSupportServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Practice Support Services"
 	sourceDef.SourceType = pkg.SourceTypePracticeSupportServices
+	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.practice_support_services_llc.f753e1696ef0711c4999ba529ecfa2e6.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNewBirthCompanyKansasCity(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "New Birth Company: Kansas City"
 	sourceDef.SourceType = pkg.SourceTypeNewBirthCompanyKansasCity
+	sourceDef.PatientAccessUrl = "https://newbirthcompany.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

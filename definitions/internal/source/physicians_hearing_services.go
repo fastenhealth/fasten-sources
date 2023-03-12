@@ -29,6 +29,7 @@ func GetSourcePhysiciansHearingServices(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Physicians Hearing Services"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansHearingServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthyhearing.com/hearing-aids/29538-orange-county-physicians-hearing-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

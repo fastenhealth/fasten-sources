@@ -29,6 +29,7 @@ func GetSourceOmniFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Omni Family Health"
 	sourceDef.SourceType = pkg.SourceTypeOmniFamilyHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://omnifamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

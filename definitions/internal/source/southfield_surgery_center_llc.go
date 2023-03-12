@@ -29,6 +29,8 @@ func GetSourceSouthfieldSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Southfield Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthfieldSurgeryCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "southfield-surgery-center-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/SouthfieldSurgeryCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceOncologyAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Oncology Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeOncologyAssociatesPc
+	sourceDef.BrandLogo = "oncology-associates-pc.svg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

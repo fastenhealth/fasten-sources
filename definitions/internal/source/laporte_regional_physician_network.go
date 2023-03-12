@@ -29,7 +29,7 @@ func GetSourceLaporteRegionalPhysicianNetwork(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "LaPorte Regional Physician Network"
 	sourceDef.SourceType = pkg.SourceTypeLaporteRegionalPhysicianNetwork
-	sourceDef.BrandLogo = "laporte-regional-physician-network.jpg"
+	sourceDef.PatientAccessUrl = "https://iuhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

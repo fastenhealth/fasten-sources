@@ -29,6 +29,7 @@ func GetSourceWeaverKennethRMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Weaver, Kenneth R., MD"
 	sourceDef.SourceType = pkg.SourceTypeWeaverKennethRMd
+	sourceDef.PatientAccessUrl = "https://www.baptisthealth.com/providers/kenneth-ray-weaver-md-ophthalmology"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

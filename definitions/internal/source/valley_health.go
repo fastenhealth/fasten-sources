@@ -29,6 +29,8 @@ func GetSourceValleyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Valley Health"
 	sourceDef.SourceType = pkg.SourceTypeValleyHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "valley-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.valleyhealthsystemlv.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

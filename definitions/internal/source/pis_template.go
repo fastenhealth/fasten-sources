@@ -29,6 +29,7 @@ func GetSourcePisTemplate(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "PIS Template"
 	sourceDef.SourceType = pkg.SourceTypePisTemplate
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

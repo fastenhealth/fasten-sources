@@ -29,6 +29,8 @@ func GetSourceSaintMoscatiCommunityHealthCare(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Saint Moscati Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeSaintMoscatiCommunityHealthCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "saint-moscati-community-health-care.jpg"
+	sourceDef.PatientAccessUrl = "https://sanmoscati.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceRheumatologyMedicalSpecialistsPc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Rheumatology Medical Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyMedicalSpecialistsPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/rheumatology-medical-specialists-pc-bdb97f93-100c-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

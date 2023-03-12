@@ -29,6 +29,7 @@ func GetSourceIntegratedAnesthesiaServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Integrated Anesthesia Services"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedAnesthesiaServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHillsboroGastroenterologyPC(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hillsboro Gastroenterology P.C."
 	sourceDef.SourceType = pkg.SourceTypeHillsboroGastroenterologyPC
+	sourceDef.PatientAccessUrl = "https://phppd.providence.org/BaseSearch/Facility/View/217110606042625"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

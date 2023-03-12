@@ -29,6 +29,7 @@ func GetSourceInstituteOfNeurologyAndNeurosurgeryAtStBarnabas(env pkg.FastenLigh
 
 	sourceDef.Display = "Institute of Neurology and Neurosurgery at St. Barnabas"
 	sourceDef.SourceType = pkg.SourceTypeInstituteOfNeurologyAndNeurosurgeryAtStBarnabas
+	sourceDef.PatientAccessUrl = "https://www.inst-neuro.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

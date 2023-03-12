@@ -30,6 +30,7 @@ func GetSourceCozenOconnor(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Cozen O'Connor"
 	sourceDef.SourceType = pkg.SourceTypeCozenOconnor
 	sourceDef.BrandLogo = "cozen-oconnor.jpg"
+	sourceDef.PatientAccessUrl = "https://www.cozen.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceProactionBehavioralHealthAlliance(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Proaction Behavioral Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeProactionBehavioralHealthAlliance
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.bloomberg.com/profile/company/6741380Z:US"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

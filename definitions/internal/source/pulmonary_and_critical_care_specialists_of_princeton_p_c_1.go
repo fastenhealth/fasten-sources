@@ -29,6 +29,7 @@ func GetSourcePulmonaryAndCriticalCareSpecialistsOfPrincetonPC1(env pkg.FastenLi
 
 	sourceDef.Display = "Pulmonary and Critical Care Specialists of Princeton, P.C."
 	sourceDef.SourceType = pkg.SourceTypePulmonaryAndCriticalCareSpecialistsOfPrincetonPC1
+	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/ensley-birmingham-al-35211/pulmonary-and-critical-care-specialists-of-princeton-pc/wfspvE7xT36rN8oujusBb8"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

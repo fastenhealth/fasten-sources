@@ -29,6 +29,7 @@ func GetSourceUsmdLaboratoryServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "USMD Laboratory Services"
 	sourceDef.SourceType = pkg.SourceTypeUsmdLaboratoryServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.usmd.com/contact-us.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

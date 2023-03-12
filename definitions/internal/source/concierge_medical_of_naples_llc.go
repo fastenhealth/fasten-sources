@@ -29,6 +29,8 @@ func GetSourceConciergeMedicalOfNaplesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Concierge Medical of Naples, LLC"
 	sourceDef.SourceType = pkg.SourceTypeConciergeMedicalOfNaplesLlc
+	sourceDef.BrandLogo = "concierge-medical-of-naples-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.conciergemedicalofnaples.com/aboutus/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

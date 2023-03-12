@@ -29,6 +29,7 @@ func GetSourceKittitasValleyHealthcare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Kittitas Valley Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeKittitasValleyHealthcare
+	sourceDef.PatientAccessUrl = "https://www.kvhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

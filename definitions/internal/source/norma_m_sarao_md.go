@@ -29,6 +29,7 @@ func GetSourceNormaMSaraoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Norma M Sarao MD"
 	sourceDef.SourceType = pkg.SourceTypeNormaMSaraoMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/norma-sarao/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

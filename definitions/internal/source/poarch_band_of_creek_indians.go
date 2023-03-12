@@ -29,6 +29,8 @@ func GetSourcePoarchBandOfCreekIndians(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Poarch Band of Creek Indians"
 	sourceDef.SourceType = pkg.SourceTypePoarchBandOfCreekIndians
+	sourceDef.BrandLogo = "poarch-band-of-creek-indians.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/PoarchBandofCreekIndians/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

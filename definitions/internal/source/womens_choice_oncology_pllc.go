@@ -29,6 +29,7 @@ func GetSourceWomensChoiceOncologyPllc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Womens Choice Oncology PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWomensChoiceOncologyPllc
+	sourceDef.PatientAccessUrl = "https://manateephysicianalliance.com/locations/womens-choice-oncology/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

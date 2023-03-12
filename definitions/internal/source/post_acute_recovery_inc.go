@@ -29,6 +29,7 @@ func GetSourcePostAcuteRecoveryInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Post Acute Recovery, Inc."
 	sourceDef.SourceType = pkg.SourceTypePostAcuteRecoveryInc
+	sourceDef.PatientAccessUrl = "https://www.postacute.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

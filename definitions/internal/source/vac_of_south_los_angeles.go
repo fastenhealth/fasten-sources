@@ -29,6 +29,7 @@ func GetSourceVacOfSouthLosAngeles(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "VAC Of South Los Angeles"
 	sourceDef.SourceType = pkg.SourceTypeVacOfSouthLosAngeles
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.va.gov/long-beach-health-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

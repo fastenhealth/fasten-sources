@@ -29,6 +29,7 @@ func GetSourcePhysiciansDaySurgeryCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Physicians Day Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansDaySurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/surgery-center/1023057916-physicians-day-surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

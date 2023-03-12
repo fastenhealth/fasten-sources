@@ -29,6 +29,7 @@ func GetSourceUniversityOfMiami(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "University of Miami"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMiami
+	sourceDef.PatientAccessUrl = "https://welcome.miami.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

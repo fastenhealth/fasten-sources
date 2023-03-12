@@ -29,6 +29,8 @@ func GetSourceToyotaIndustrialEquipment(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Toyota Industrial Equipment"
 	sourceDef.SourceType = pkg.SourceTypeToyotaIndustrialEquipment
+	sourceDef.BrandLogo = "toyota-industrial-equipment.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/ToyotaForklift/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

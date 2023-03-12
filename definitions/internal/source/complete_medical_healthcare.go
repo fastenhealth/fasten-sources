@@ -29,6 +29,7 @@ func GetSourceCompleteMedicalHealthcare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Complete Medical Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeCompleteMedicalHealthcare
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/complete-medical-healthcare-588f2b20-5018-49ee-9fb8-78e0ccea5db1"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

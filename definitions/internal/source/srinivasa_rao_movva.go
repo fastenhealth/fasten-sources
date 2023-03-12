@@ -29,6 +29,7 @@ func GetSourceSrinivasaRaoMovva(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Srinivasa Rao Movva"
 	sourceDef.SourceType = pkg.SourceTypeSrinivasaRaoMovva
+	sourceDef.PatientAccessUrl = "https://www.businessyab.com/explore/united_states/new_jersey/monmouth_county/atlantic_highlands/east_washington_avenue/37/movva-srinivasa-md-732-291-3430.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

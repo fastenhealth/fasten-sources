@@ -29,6 +29,7 @@ func GetSourceOphthalmicAssociatesApc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Ophthalmic Associates APC"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicAssociatesApc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.akeyedoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

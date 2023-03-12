@@ -29,6 +29,7 @@ func GetSourceNjCenterForCorneaAndrefractiveSurgery(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "NJ Center For Cornea &Refractive Surgery"
 	sourceDef.SourceType = pkg.SourceTypeNjCenterForCorneaAndrefractiveSurgery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

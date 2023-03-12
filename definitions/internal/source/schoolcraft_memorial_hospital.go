@@ -29,6 +29,7 @@ func GetSourceSchoolcraftMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Schoolcraft Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSchoolcraftMemorialHospital
+	sourceDef.PatientAccessUrl = "https://scmh.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

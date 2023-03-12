@@ -29,6 +29,7 @@ func GetSourceNievaDuqueSalvaMdPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Nieva Duque-Salva, MD PA"
 	sourceDef.SourceType = pkg.SourceTypeNievaDuqueSalvaMdPa
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-nieva-duque-salva-xmcxt"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

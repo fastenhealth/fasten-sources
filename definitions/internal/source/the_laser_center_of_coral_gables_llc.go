@@ -29,6 +29,7 @@ func GetSourceTheLaserCenterOfCoralGablesLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "The Laser Center Of Coral Gables LLC"
 	sourceDef.SourceType = pkg.SourceTypeTheLaserCenterOfCoralGablesLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.tlccoralgables.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceLmgFamilyPracticePc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "LMG Family Practice PC"
 	sourceDef.SourceType = pkg.SourceTypeLmgFamilyPracticePc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://lmgfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

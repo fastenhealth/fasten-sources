@@ -30,6 +30,7 @@ func GetSourceIowaArthritisAndOsteoporosisCenter(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeIowaArthritisAndOsteoporosisCenter
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "iowa-arthritis-and-osteoporosis-center.jpg"
+	sourceDef.PatientAccessUrl = "https://iowaarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

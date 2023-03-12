@@ -29,6 +29,7 @@ func GetSourcePartnersInHealthFamilyMedicine(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Partners In Health Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypePartnersInHealthFamilyMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://rmpc.info/location/rmpc-partners-in-health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

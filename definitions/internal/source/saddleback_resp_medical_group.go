@@ -29,6 +29,7 @@ func GetSourceSaddlebackRespMedicalGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Saddleback Resp Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSaddlebackRespMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://saddlebackmedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

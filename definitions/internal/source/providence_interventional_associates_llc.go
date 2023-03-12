@@ -29,6 +29,7 @@ func GetSourceProvidenceInterventionalAssociatesLlc(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Providence Interventional Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceInterventionalAssociatesLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/providence-interventional-associates-llc-d579b950-5f6a-48a5-8b42-cdf38d5fa9a2"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

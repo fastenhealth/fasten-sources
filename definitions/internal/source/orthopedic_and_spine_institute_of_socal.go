@@ -29,6 +29,7 @@ func GetSourceOrthopedicAndSpineInstituteOfSocal(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Orthopedic & Spine Institute Of SoCal"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicAndSpineInstituteOfSocal
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://na"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSuperiorFamilyMedicalGroupInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Superior Family Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSuperiorFamilyMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/newport-beach/superior-family-medical-grp-inc-x83lf8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

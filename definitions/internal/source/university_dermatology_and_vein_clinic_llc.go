@@ -29,6 +29,7 @@ func GetSourceUniversityDermatologyAndVeinClinicLlc(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "University Dermatology and Vein Clinic, LLC"
 	sourceDef.SourceType = pkg.SourceTypeUniversityDermatologyAndVeinClinicLlc
+	sourceDef.PatientAccessUrl = "http://www.university-dermatology.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

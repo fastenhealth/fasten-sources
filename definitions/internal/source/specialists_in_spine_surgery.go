@@ -29,6 +29,7 @@ func GetSourceSpecialistsInSpineSurgery(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Specialists in Spine Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSpecialistsInSpineSurgery
+	sourceDef.PatientAccessUrl = "https://www.spinedocs.info/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceShawneeChristianHealthcareCenter(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Shawnee Christian Healthcare Center"
 	sourceDef.SourceType = pkg.SourceTypeShawneeChristianHealthcareCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://shawneechristianhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

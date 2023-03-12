@@ -29,6 +29,8 @@ func GetSourceSouthJerseyEyePhysiciansPa(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "South Jersey Eye Physicians PA"
 	sourceDef.SourceType = pkg.SourceTypeSouthJerseyEyePhysiciansPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "south-jersey-eye-physicians-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://sjeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFrankTSconzoJrMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Frank T Sconzo Jr, MD"
 	sourceDef.SourceType = pkg.SourceTypeFrankTSconzoJrMd
 	sourceDef.BrandLogo = "frank-t-sconzo-jr-md.jpg"
+	sourceDef.PatientAccessUrl = "https://nyulangone.org/doctors/1952362667/frank-t-sconzo-jr"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

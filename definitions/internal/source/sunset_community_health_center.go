@@ -29,6 +29,8 @@ func GetSourceSunsetCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Sunset Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSunsetCommunityHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "sunset-community-health-center.svg"
+	sourceDef.PatientAccessUrl = "https://mysunsethealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGoldenPlainsSpecialtyClinics(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Golden Plains Specialty Clinics"
 	sourceDef.SourceType = pkg.SourceTypeGoldenPlainsSpecialtyClinics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/golden-plains-specialty-clinic-f22017c3-7f13-e411-a22a-001f29e3bb64"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

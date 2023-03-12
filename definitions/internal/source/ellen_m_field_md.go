@@ -30,6 +30,7 @@ func GetSourceEllenMFieldMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeEllenMFieldMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ellen-m-field-md.jpg"
+	sourceDef.PatientAccessUrl = "https://findadoctor.slhn.org/details/1227"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

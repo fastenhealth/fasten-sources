@@ -29,6 +29,7 @@ func GetSourceCommunicareHealthCenters(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Communicare Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeCommunicareHealthCenters
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://communicaresa.org/wp-content/uploads/2021/07/CC_Logo_White_2021-e1626108594478.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

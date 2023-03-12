@@ -29,6 +29,7 @@ func GetSourceRiverDriveSurgeryAndLaserCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "River Drive Surgery And Laser Center"
 	sourceDef.SourceType = pkg.SourceTypeRiverDriveSurgeryAndLaserCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://riverdrivesurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

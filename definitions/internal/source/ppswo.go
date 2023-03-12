@@ -29,6 +29,7 @@ func GetSourcePpswo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "PPSWO"
 	sourceDef.SourceType = pkg.SourceTypePpswo
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

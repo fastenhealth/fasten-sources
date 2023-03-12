@@ -29,6 +29,7 @@ func GetSourceDermatologyAssociatesOfGeorgia(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Dermatology Associates Of Georgia"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfGeorgia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceWestglenEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Westglen Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeWestglenEndoscopyCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "westglen-endoscopy-center.jpeg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

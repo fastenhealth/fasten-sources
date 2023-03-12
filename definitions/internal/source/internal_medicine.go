@@ -29,6 +29,7 @@ func GetSourceInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicine
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/west-central-internal-medical-cf802314-7f90-4933-abfb-943e14542fd5"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

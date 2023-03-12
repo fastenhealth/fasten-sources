@@ -29,6 +29,7 @@ func GetSourceOandoAlpanLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "O&O Alpan LLC"
 	sourceDef.SourceType = pkg.SourceTypeOandoAlpanLlc
+	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

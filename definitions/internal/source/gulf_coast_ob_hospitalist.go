@@ -29,6 +29,7 @@ func GetSourceGulfCoastObHospitalist(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Gulf Coast OB Hospitalist"
 	sourceDef.SourceType = pkg.SourceTypeGulfCoastObHospitalist
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gulfcoastobgynfl.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

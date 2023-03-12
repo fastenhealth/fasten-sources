@@ -29,6 +29,7 @@ func GetSourcePrimaryCareProfessionals(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Primary Care Professionals"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCareProfessionals
+	sourceDef.PatientAccessUrl = "https://doctors.silvercross.org/search?primary_care=Primary%20Care%20Providers&sort=relevance%2Cnetworks%2Cavailability_density_best"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

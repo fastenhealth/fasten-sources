@@ -29,6 +29,7 @@ func GetSourceUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollege
 
 	sourceDef.Display = "University of Central Florida Board of Trustees, for the benefit of the College of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfCentralFloridaBoardOfTrusteesForTheBenefitOfTheCollegeOfMedicine
+	sourceDef.PatientAccessUrl = "https://med.ucf.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

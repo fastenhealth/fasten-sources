@@ -30,6 +30,7 @@ func GetSourceComprehensiveCareClinic(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCareClinic
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "comprehensive-care-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/bakersfield/comprehensive-care-clinic-x3j5gd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

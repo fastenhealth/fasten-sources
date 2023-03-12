@@ -29,6 +29,7 @@ func GetSourcePontiacTrailMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Pontiac Trail Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePontiacTrailMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.villagemedical.com/locations/michigan-detroit/620-n-pontiac-trail-walled-lake-mi-48390"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

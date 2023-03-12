@@ -29,6 +29,8 @@ func GetSourcePlumasDistrictHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Plumas District Hospital"
 	sourceDef.SourceType = pkg.SourceTypePlumasDistrictHospital
+	sourceDef.BrandLogo = "plumas-district-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.pdh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

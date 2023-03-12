@@ -29,6 +29,7 @@ func GetSourceRedwoodsRuralHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Redwoods Rural Health Center"
 	sourceDef.SourceType = pkg.SourceTypeRedwoodsRuralHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rrhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

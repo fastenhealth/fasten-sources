@@ -29,6 +29,7 @@ func GetSourceNeurologyCenterOfEastAlabama(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Neurology Center of East Alabama"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyCenterOfEastAlabama
+	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/find-a-service/neurology-center/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSurgicalAssociatesAtRenaissance(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Surgical Associates at Renaissance"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalAssociatesAtRenaissance
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tx-texas/edinburg/surgical-associates-renaissance-x9qkp2"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

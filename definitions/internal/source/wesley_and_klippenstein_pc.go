@@ -29,6 +29,7 @@ func GetSourceWesleyAndKlippensteinPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Wesley And Klippenstein PC"
 	sourceDef.SourceType = pkg.SourceTypeWesleyAndKlippensteinPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ehealthscores.com/care-lfstfsxpzx-wesley-&-klippenstein,-pc-nashville.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

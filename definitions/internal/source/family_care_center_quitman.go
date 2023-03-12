@@ -29,6 +29,7 @@ func GetSourceFamilyCareCenterQuitman(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Family Care Center Quitman"
 	sourceDef.SourceType = pkg.SourceTypeFamilyCareCenterQuitman
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://familycarecenterquitman.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

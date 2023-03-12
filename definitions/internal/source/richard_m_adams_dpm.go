@@ -29,6 +29,8 @@ func GetSourceRichardMAdamsDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Richard M. Adams, DPM"
 	sourceDef.SourceType = pkg.SourceTypeRichardMAdamsDpm
+	sourceDef.BrandLogo = "richard-m-adams-dpm.jpg"
+	sourceDef.PatientAccessUrl = "https://www.familyfootcaretx.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

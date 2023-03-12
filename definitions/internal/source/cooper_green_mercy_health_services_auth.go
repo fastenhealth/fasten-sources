@@ -29,6 +29,7 @@ func GetSourceCooperGreenMercyHealthServicesAuth(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Cooper Green Mercy Health Services Auth"
 	sourceDef.SourceType = pkg.SourceTypeCooperGreenMercyHealthServicesAuth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://coopergreen.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

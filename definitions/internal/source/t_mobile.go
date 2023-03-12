@@ -29,6 +29,7 @@ func GetSourceTMobile(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "T-Mobile"
 	sourceDef.SourceType = pkg.SourceTypeTMobile
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/pages/category/mobile-phone-shop/T-Mobile-1288533237919403/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

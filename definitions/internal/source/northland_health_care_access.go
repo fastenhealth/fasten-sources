@@ -29,6 +29,8 @@ func GetSourceNorthlandHealthCareAccess(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Northland Health Care Access"
 	sourceDef.SourceType = pkg.SourceTypeNorthlandHealthCareAccess
+	sourceDef.BrandLogo = "northland-health-care-access.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/nhcakc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

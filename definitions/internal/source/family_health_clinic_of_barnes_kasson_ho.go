@@ -30,6 +30,7 @@ func GetSourceFamilyHealthClinicOfBarnesKassonHo(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthClinicOfBarnesKassonHo
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "family-health-clinic-of-barnes-kasson-ho.jpg"
+	sourceDef.PatientAccessUrl = "http://www.barnes-kasson.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

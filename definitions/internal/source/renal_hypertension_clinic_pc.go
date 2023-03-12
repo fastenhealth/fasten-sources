@@ -29,6 +29,7 @@ func GetSourceRenalHypertensionClinicPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Renal-Hypertension Clinic, PC"
 	sourceDef.SourceType = pkg.SourceTypeRenalHypertensionClinicPc
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/renal-hypertension-clinic-391cc2c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

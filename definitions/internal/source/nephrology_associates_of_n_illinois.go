@@ -29,6 +29,8 @@ func GetSourceNephrologyAssociatesOfNIllinois(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Nephrology Associates Of N Illinois"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesOfNIllinois
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "nephrology-associates-of-n-illinois.jpg"
+	sourceDef.PatientAccessUrl = "https://www.nephdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

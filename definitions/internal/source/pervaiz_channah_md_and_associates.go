@@ -29,6 +29,7 @@ func GetSourcePervaizChannahMdAndAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Pervaiz Channah MD And Associates"
 	sourceDef.SourceType = pkg.SourceTypePervaizChannahMdAndAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.valleyphysiciansnetwork.com/en/locations-nav/providers/ca/pervaiz-channah-md/1164592614.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

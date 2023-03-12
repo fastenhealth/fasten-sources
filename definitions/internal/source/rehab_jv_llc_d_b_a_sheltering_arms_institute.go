@@ -29,6 +29,7 @@ func GetSourceRehabJvLlcDBAShelteringArmsInstitute(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Rehab JV, LLC d/b/a Sheltering Arms Institute"
 	sourceDef.SourceType = pkg.SourceTypeRehabJvLlcDBAShelteringArmsInstitute
+	sourceDef.PatientAccessUrl = "https://npidb.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

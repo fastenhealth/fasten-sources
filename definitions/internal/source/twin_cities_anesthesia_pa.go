@@ -29,6 +29,7 @@ func GetSourceTwinCitiesAnesthesiaPa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Twin Cities Anesthesia PA"
 	sourceDef.SourceType = pkg.SourceTypeTwinCitiesAnesthesiaPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://twincitiessurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePediatrixGastroenterologyOfFlorida(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Pediatrix Gastroenterology Of Florida"
 	sourceDef.SourceType = pkg.SourceTypePediatrixGastroenterologyOfFlorida
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nextgen.com/api/practice-search"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

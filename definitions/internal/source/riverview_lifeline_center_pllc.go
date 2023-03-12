@@ -29,6 +29,7 @@ func GetSourceRiverviewLifelineCenterPllc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Riverview Lifeline Center PLLC"
 	sourceDef.SourceType = pkg.SourceTypeRiverviewLifelineCenterPllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: Riverview Lifeline Center PLLC Address: 2038 Reliable Parkway City: Chicago Zip: 606860020 State: Illinois Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

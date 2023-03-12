@@ -29,6 +29,8 @@ func GetSourceUnifiedGovernmentOfWyandotteCounty(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Unified Government of Wyandotte County"
 	sourceDef.SourceType = pkg.SourceTypeUnifiedGovernmentOfWyandotteCounty
+	sourceDef.BrandLogo = "unified-government-of-wyandotte-county.jpg"
+	sourceDef.PatientAccessUrl = "https://www.wycokck.org/Home"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

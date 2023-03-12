@@ -29,6 +29,7 @@ func GetSourceStephenWanMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Stephen Wan MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeStephenWanMdPllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://profiles.mountsinai.org/stephen-wan"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

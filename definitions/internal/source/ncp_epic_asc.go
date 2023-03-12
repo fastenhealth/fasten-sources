@@ -29,6 +29,7 @@ func GetSourceNcpEpicAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "NCP EPIC ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpEpicAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.epicheartcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

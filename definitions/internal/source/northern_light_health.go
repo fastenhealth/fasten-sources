@@ -29,6 +29,7 @@ func GetSourceNorthernLightHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Northern Light Health"
 	sourceDef.SourceType = pkg.SourceTypeNorthernLightHealth
+	sourceDef.PatientAccessUrl = "https://northernlighthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

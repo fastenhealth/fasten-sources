@@ -29,6 +29,7 @@ func GetSourcePrecisionSpineCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Precision Spine Care"
 	sourceDef.SourceType = pkg.SourceTypePrecisionSpineCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/PrecisionSpineCare/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

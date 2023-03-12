@@ -30,6 +30,7 @@ func GetSourceMarieTheresePeanMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeMarieTheresePeanMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "marie-therese-pean-md.jpg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/marie-therese-pean-9118d83f-978f-4037-a892-6b086a64296c-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

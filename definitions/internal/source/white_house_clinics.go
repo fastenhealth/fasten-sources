@@ -29,6 +29,7 @@ func GetSourceWhiteHouseClinics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "White House Clinics"
 	sourceDef.SourceType = pkg.SourceTypeWhiteHouseClinics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://whitehouseclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

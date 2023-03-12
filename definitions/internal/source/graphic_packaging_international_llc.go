@@ -29,6 +29,7 @@ func GetSourceGraphicPackagingInternationalLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Graphic Packaging International, LLC"
 	sourceDef.SourceType = pkg.SourceTypeGraphicPackagingInternationalLlc
+	sourceDef.PatientAccessUrl = "https://www.graphicpkg.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

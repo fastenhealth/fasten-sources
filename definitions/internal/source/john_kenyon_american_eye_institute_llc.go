@@ -29,6 +29,7 @@ func GetSourceJohnKenyonAmericanEyeInstituteLlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "John Kenyon American Eye Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeJohnKenyonAmericanEyeInstituteLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.johnkenyon.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

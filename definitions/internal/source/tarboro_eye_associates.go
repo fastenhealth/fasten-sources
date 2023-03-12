@@ -29,6 +29,8 @@ func GetSourceTarboroEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Tarboro Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeTarboroEyeAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "tarboro-eye-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.tarboroeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

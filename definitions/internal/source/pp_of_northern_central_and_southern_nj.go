@@ -29,6 +29,8 @@ func GetSourcePpOfNorthernCentralAndSouthernNj(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "PP Of Northern Central and Southern NJ"
 	sourceDef.SourceType = pkg.SourceTypePpOfNorthernCentralAndSouthernNj
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pp-of-northern-central-and-southern-nj.jpg"
+	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-northern-central-southern-new-jersey"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

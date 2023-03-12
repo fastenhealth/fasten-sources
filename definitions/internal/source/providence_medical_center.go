@@ -29,6 +29,7 @@ func GetSourceProvidenceMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Providence Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceMedicalCenter
+	sourceDef.PatientAccessUrl = "https://providencemedical.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

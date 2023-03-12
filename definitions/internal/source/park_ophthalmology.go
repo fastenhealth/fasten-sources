@@ -29,6 +29,7 @@ func GetSourceParkOphthalmology(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Park Ophthalmology"
 	sourceDef.SourceType = pkg.SourceTypeParkOphthalmology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/north-carolina/park-ophthalmology-435967285"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

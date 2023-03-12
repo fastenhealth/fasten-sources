@@ -29,6 +29,7 @@ func GetSourceSkinscience(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "SkinScience"
 	sourceDef.SourceType = pkg.SourceTypeSkinscience
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.skinsciencemd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

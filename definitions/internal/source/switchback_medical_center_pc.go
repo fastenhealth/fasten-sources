@@ -29,6 +29,7 @@ func GetSourceSwitchbackMedicalCenterPc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Switchback Medical Center PC"
 	sourceDef.SourceType = pkg.SourceTypeSwitchbackMedicalCenterPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.lvhn.org/locations/switchback-medical-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

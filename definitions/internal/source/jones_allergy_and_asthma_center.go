@@ -30,6 +30,7 @@ func GetSourceJonesAllergyAndAsthmaCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Jones Allergy & Asthma Center"
 	sourceDef.SourceType = pkg.SourceTypeJonesAllergyAndAsthmaCenter
 	sourceDef.BrandLogo = "jones-allergy-and-asthma-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.superdoctors.com/missouri/hospital-clinic/Jones-Allergy-and-Asthma-Center/a7d5bb3a-1abd-42ab-9576-e3c1d9c242dd.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

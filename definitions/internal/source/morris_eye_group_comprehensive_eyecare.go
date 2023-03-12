@@ -29,6 +29,7 @@ func GetSourceMorrisEyeGroupComprehensiveEyecare(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Morris Eye Group  Comprehensive Eyecare"
 	sourceDef.SourceType = pkg.SourceTypeMorrisEyeGroupComprehensiveEyecare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.morriseyegroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

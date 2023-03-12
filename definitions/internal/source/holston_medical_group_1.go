@@ -30,6 +30,7 @@ func GetSourceHolstonMedicalGroup1(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeHolstonMedicalGroup1
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "holston-medical-group.png"
+	sourceDef.PatientAccessUrl = "https://www.holstonmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

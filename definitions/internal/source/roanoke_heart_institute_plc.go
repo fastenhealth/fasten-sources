@@ -29,6 +29,7 @@ func GetSourceRoanokeHeartInstitutePlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Roanoke Heart Institute PLC"
 	sourceDef.SourceType = pkg.SourceTypeRoanokeHeartInstitutePlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://roanoke-heart.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

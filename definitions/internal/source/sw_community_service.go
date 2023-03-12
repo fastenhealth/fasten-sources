@@ -29,6 +29,8 @@ func GetSourceSwCommunityService(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "SW Community Service"
 	sourceDef.SourceType = pkg.SourceTypeSwCommunityService
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "sw-community-service.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/SouthwestCHC/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceWesternConnecticutHealthNetwork(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Western Connecticut Health Network"
 	sourceDef.SourceType = pkg.SourceTypeWesternConnecticutHealthNetwork
+	sourceDef.PatientAccessUrl = "https://www.nuvancehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

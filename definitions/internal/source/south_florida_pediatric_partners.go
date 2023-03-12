@@ -29,6 +29,7 @@ func GetSourceSouthFloridaPediatricPartners(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "South Florida Pediatric Partners"
 	sourceDef.SourceType = pkg.SourceTypeSouthFloridaPediatricPartners
+	sourceDef.PatientAccessUrl = "https://www.sflpp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

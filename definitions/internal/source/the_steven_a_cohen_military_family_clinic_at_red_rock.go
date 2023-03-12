@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtRedRock(env pkg.FastenLightho
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Red Rock"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtRedRock
+	sourceDef.BrandLogo = "the-steven-a-cohen-military-family-clinic-at-red-rock.jpg"
+	sourceDef.PatientAccessUrl = "https://www.red-rock.com/military-family-services/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

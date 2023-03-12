@@ -29,6 +29,7 @@ func GetSourceGlacierPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Glacier Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeGlacierPediatrics
+	sourceDef.PatientAccessUrl = "https://www.glacierpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

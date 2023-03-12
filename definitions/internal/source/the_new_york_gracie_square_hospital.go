@@ -29,6 +29,7 @@ func GetSourceTheNewYorkGracieSquareHospital(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "The New York Gracie Square Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTheNewYorkGracieSquareHospital
+	sourceDef.PatientAccessUrl = "https://www.nygsh.org/index.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

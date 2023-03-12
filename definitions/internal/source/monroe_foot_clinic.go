@@ -29,6 +29,7 @@ func GetSourceMonroeFootClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Monroe Foot Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMonroeFootClinic
+	sourceDef.PatientAccessUrl = "https://www.manta.com/c/mm3s5f6/monroe-foot-clinic-sc"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

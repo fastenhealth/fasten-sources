@@ -29,6 +29,7 @@ func GetSourceSelmaMedicalAssociatesInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Selma Medical Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeSelmaMedicalAssociatesInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.selmamed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

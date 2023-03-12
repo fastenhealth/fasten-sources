@@ -29,6 +29,7 @@ func GetSourcePriorityHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "PRIORITY HEALTH CARE"
 	sourceDef.SourceType = pkg.SourceTypePriorityHealthCare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.priorityhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

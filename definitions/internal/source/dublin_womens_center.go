@@ -30,6 +30,7 @@ func GetSourceDublinWomensCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Dublin Womens Center"
 	sourceDef.SourceType = pkg.SourceTypeDublinWomensCenter
 	sourceDef.BrandLogo = "dublin-womens-center.jpg"
+	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

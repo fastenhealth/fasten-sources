@@ -29,6 +29,8 @@ func GetSourceNorthFloridaPediatricsPa(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "North Florida Pediatrics PA"
 	sourceDef.SourceType = pkg.SourceTypeNorthFloridaPediatricsPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "north-florida-pediatrics-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/North-Florida-Pediatrics-221118198675776/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceImageAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Image ASC"
 	sourceDef.SourceType = pkg.SourceTypeImageAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

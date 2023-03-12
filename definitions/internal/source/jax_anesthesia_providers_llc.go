@@ -29,6 +29,7 @@ func GetSourceJaxAnesthesiaProvidersLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Jax Anesthesia Providers LLC"
 	sourceDef.SourceType = pkg.SourceTypeJaxAnesthesiaProvidersLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://jacksonvilleendoscopy.com/jax-anesthesia/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

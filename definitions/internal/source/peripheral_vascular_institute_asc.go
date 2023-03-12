@@ -29,6 +29,7 @@ func GetSourcePeripheralVascularInstituteAsc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Peripheral Vascular Institute (ASC)"
 	sourceDef.SourceType = pkg.SourceTypePeripheralVascularInstituteAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/peripheral-vascular-institute-9b0ae326-6d9d-e211-b0df-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

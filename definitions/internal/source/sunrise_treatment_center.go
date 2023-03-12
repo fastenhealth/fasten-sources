@@ -29,6 +29,7 @@ func GetSourceSunriseTreatmentCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Sunrise Treatment Center"
 	sourceDef.SourceType = pkg.SourceTypeSunriseTreatmentCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.sunrisetreatmentcenter.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

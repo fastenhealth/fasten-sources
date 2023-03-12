@@ -29,6 +29,8 @@ func GetSourceTheWomansClinicOfMonroe(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "The Womans Clinic Of Monroe"
 	sourceDef.SourceType = pkg.SourceTypeTheWomansClinicOfMonroe
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-womans-clinic-of-monroe.svg"
+	sourceDef.PatientAccessUrl = "https://www.thewomansclinic.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

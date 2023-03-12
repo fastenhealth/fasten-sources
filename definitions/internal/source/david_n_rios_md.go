@@ -30,6 +30,7 @@ func GetSourceDavidNRiosMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeDavidNRiosMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "david-n-rios-md.jpg"
+	sourceDef.PatientAccessUrl = "https://saddlebackmedicalgroup.com/david-rios-md/?utm_source=GMBSocialClimb&utm_medium=DavidNRiosMd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

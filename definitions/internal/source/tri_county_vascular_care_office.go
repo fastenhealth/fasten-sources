@@ -29,6 +29,7 @@ func GetSourceTriCountyVascularCareOffice(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Tri County Vascular Care Office"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyVascularCareOffice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://tricountyvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

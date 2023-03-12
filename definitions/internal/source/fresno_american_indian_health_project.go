@@ -30,6 +30,7 @@ func GetSourceFresnoAmericanIndianHealthProject(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeFresnoAmericanIndianHealthProject
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fresno-american-indian-health-project.jpg"
+	sourceDef.PatientAccessUrl = "https://www.faihp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

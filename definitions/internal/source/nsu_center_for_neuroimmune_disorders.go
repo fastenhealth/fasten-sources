@@ -29,6 +29,7 @@ func GetSourceNsuCenterForNeuroimmuneDisorders(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "NSU Center For Neuroimmune Disorders"
 	sourceDef.SourceType = pkg.SourceTypeNsuCenterForNeuroimmuneDisorders
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nova.edu/nim/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

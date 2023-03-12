@@ -29,6 +29,7 @@ func GetSourcePulmonaryDiseaseSpecialistsPa(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Pulmonary Disease Specialists PA"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryDiseaseSpecialistsPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pds-cfsc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

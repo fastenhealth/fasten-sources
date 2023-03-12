@@ -29,6 +29,8 @@ func GetSourceUplandVascularCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Upland Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeUplandVascularCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "upland-vascular-center.jpg"
+	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/location/foothill-dialysis-access-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

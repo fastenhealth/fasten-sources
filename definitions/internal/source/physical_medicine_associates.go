@@ -29,6 +29,7 @@ func GetSourcePhysicalMedicineAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Physical Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypePhysicalMedicineAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.tc-rehab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

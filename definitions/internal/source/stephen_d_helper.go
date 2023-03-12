@@ -29,6 +29,7 @@ func GetSourceStephenDHelper(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Stephen D Helper"
 	sourceDef.SourceType = pkg.SourceTypeStephenDHelper
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/stephen-helper-a6b37807-8e2d-4b3c-8404-6ef93ddada09-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

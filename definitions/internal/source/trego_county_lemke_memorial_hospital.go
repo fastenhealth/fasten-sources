@@ -29,6 +29,7 @@ func GetSourceTregoCountyLemkeMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Trego County-Lemke Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTregoCountyLemkeMemorialHospital
+	sourceDef.PatientAccessUrl = "http://tclmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

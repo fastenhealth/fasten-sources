@@ -30,6 +30,7 @@ func GetSourceCourthouseFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeCourthouseFamilyMedicinePllc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "courthouse-family-medicine-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.courthousefamilymedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

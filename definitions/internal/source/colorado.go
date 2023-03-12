@@ -29,6 +29,7 @@ func GetSourceColorado(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Colorado"
 	sourceDef.SourceType = pkg.SourceTypeColorado
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.caremore.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

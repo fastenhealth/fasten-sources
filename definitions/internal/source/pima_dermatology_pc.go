@@ -29,6 +29,7 @@ func GetSourcePimaDermatologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Pima Dermatology PC"
 	sourceDef.SourceType = pkg.SourceTypePimaDermatologyPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://NA.COM"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

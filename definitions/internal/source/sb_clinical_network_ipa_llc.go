@@ -29,6 +29,7 @@ func GetSourceSbClinicalNetworkIpaLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "SB Clinical Network IPA, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSbClinicalNetworkIpaLlc
+	sourceDef.PatientAccessUrl = "htpps://na.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

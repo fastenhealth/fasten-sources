@@ -29,6 +29,7 @@ func GetSourceSanAntonioPediatricDevelopmentalSvcs(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "San Antonio Pediatric Developmental Svcs"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioPediatricDevelopmentalSvcs
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/san-antonio-pediatric-developmental-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

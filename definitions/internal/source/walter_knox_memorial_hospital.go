@@ -29,6 +29,8 @@ func GetSourceWalterKnoxMemorialHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Walter Knox Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWalterKnoxMemorialHospital
+	sourceDef.BrandLogo = "walter-knox-memorial-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/walter.hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

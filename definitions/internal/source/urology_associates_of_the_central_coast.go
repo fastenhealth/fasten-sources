@@ -29,6 +29,7 @@ func GetSourceUrologyAssociatesOfTheCentralCoast(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Urology Associates of the Central Coast"
 	sourceDef.SourceType = pkg.SourceTypeUrologyAssociatesOfTheCentralCoast
+	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/urology-associates-of-the-central-coast"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

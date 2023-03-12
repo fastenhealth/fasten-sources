@@ -29,6 +29,7 @@ func GetSourceSnyderHopkinsFamilyMedicineCenter(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Snyder-Hopkins Family Medicine Center"
 	sourceDef.SourceType = pkg.SourceTypeSnyderHopkinsFamilyMedicineCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.snyder-hopkins.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

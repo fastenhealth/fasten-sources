@@ -29,6 +29,7 @@ func GetSourceSeiffCenterForAestheticAndReconstructiveSurgery(env pkg.FastenLigh
 
 	sourceDef.Display = "Seiff Center for Aesthetic and Reconstructive Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSeiffCenterForAestheticAndReconstructiveSurgery
+	sourceDef.PatientAccessUrl = "https://seiffcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

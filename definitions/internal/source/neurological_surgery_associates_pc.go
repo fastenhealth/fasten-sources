@@ -29,6 +29,7 @@ func GetSourceNeurologicalSurgeryAssociatesPc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Neurological Surgery Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeNeurologicalSurgeryAssociatesPc
+	sourceDef.PatientAccessUrl = "https://neurosurgicalassociatespc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

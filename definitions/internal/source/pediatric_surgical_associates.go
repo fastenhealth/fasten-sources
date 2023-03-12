@@ -29,6 +29,7 @@ func GetSourcePediatricSurgicalAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Pediatric Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypePediatricSurgicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/surgerydallas"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceOasisMedicalServicesPllc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Oasis Medical Services PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOasisMedicalServicesPllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "oasis-medical-services-pllc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

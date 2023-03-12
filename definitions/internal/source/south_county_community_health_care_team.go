@@ -29,6 +29,7 @@ func GetSourceSouthCountyCommunityHealthCareTeam(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "South County Community Health Care Team"
 	sourceDef.SourceType = pkg.SourceTypeSouthCountyCommunityHealthCareTeam
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/southcountyhealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceStFrancisMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "St. Francis Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStFrancisMemorialHospital
+	sourceDef.PatientAccessUrl = "Name: St. Francis Memorial Hospital Address: 430 N Monitor St City: West Point Zip: 68788-1555 State: Nebraska Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDrumhillPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "DrumHill Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeDrumhillPediatrics
 	sourceDef.BrandLogo = "drumhill-pediatrics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.drumhillpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

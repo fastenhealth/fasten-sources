@@ -29,6 +29,7 @@ func GetSourceWinchesterFootAndAnkleAssociatesPllc(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Winchester Foot and Ankle Associates, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWinchesterFootAndAnkleAssociatesPllc
+	sourceDef.PatientAccessUrl = "http://www.winchesterfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

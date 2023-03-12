@@ -29,6 +29,8 @@ func GetSourceThayerCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Thayer County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeThayerCountyMemorialHospital
+	sourceDef.BrandLogo = "thayer-county-memorial-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://thayercountyhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

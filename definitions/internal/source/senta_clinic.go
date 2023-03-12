@@ -29,6 +29,8 @@ func GetSourceSentaClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Senta Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSentaClinic
+	sourceDef.BrandLogo = "senta-clinic.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.sentaclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

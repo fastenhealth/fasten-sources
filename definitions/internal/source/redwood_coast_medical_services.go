@@ -29,6 +29,7 @@ func GetSourceRedwoodCoastMedicalServices(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Redwood Coast Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeRedwoodCoastMedicalServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rcms-healthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

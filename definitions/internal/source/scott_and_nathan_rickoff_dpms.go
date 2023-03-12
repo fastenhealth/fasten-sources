@@ -29,6 +29,7 @@ func GetSourceScottAndNathanRickoffDpms(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Scott & Nathan Rickoff, DPMs"
 	sourceDef.SourceType = pkg.SourceTypeScottAndNathanRickoffDpms
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-scott-rickoff-2s4dm"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

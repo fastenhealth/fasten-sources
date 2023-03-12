@@ -30,6 +30,7 @@ func GetSourceHLeeMoffittCancerCenterAndResearchInstitute(env pkg.FastenLighthou
 	sourceDef.Display = "H. Lee Moffitt Cancer Center & Research Institute"
 	sourceDef.SourceType = pkg.SourceTypeHLeeMoffittCancerCenterAndResearchInstitute
 	sourceDef.BrandLogo = "h-lee-moffitt-cancer-center-and-research-institute.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/MoffittCancerCenter/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

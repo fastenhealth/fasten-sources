@@ -29,6 +29,7 @@ func GetSourceNeurologyAndSleepAssociates(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Neurology & Sleep Associates"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyAndSleepAssociates
+	sourceDef.PatientAccessUrl = "https://www.phxneurology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

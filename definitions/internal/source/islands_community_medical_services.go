@@ -29,6 +29,7 @@ func GetSourceIslandsCommunityMedicalServices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Islands Community Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeIslandsCommunityMedicalServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.icmsvh.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

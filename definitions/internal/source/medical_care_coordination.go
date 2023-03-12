@@ -30,6 +30,7 @@ func GetSourceMedicalCareCoordination(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeMedicalCareCoordination
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "medical-care-coordination.jpg"
+	sourceDef.PatientAccessUrl = "https://hsvsnyc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

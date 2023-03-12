@@ -29,6 +29,7 @@ func GetSourceTheFootCareGroupPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Foot Care Group, PC."
 	sourceDef.SourceType = pkg.SourceTypeTheFootCareGroupPc
+	sourceDef.PatientAccessUrl = "https://www.yourfootdoctor.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

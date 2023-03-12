@@ -30,6 +30,7 @@ func GetSourceKootenaiOutpatientSurgery(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeKootenaiOutpatientSurgery
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "kootenai-outpatient-surgery.jpg"
+	sourceDef.PatientAccessUrl = "https://www.kh.org/kootenai-outpatient-surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

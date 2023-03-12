@@ -29,6 +29,8 @@ func GetSourceNortonChildrensMedicalAssociatesMiddletown(env pkg.FastenLighthous
 
 	sourceDef.Display = "Norton Children's Medical Associates Middletown"
 	sourceDef.SourceType = pkg.SourceTypeNortonChildrensMedicalAssociatesMiddletown
+	sourceDef.BrandLogo = "norton-childrens-medical-associates-middletown.svg"
+	sourceDef.PatientAccessUrl = "https://nortonchildrens.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

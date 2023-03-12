@@ -29,6 +29,7 @@ func GetSourceCoxhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "CoxHealth"
 	sourceDef.SourceType = pkg.SourceTypeCoxhealth
+	sourceDef.PatientAccessUrl = "https://www.coxhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

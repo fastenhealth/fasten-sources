@@ -29,6 +29,7 @@ func GetSourceWomensMedicalCenterOfMeridian(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Women's Medical Center of Meridian"
 	sourceDef.SourceType = pkg.SourceTypeWomensMedicalCenterOfMeridian
+	sourceDef.PatientAccessUrl = "https://www.andersonregional.org/locations/womens-medical-clinic-meridian/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

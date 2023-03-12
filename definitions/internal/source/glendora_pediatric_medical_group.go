@@ -29,6 +29,7 @@ func GetSourceGlendoraPediatricMedicalGroup(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Glendora Pediatric Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeGlendoraPediatricMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.glendorapediatricsmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

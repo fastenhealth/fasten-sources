@@ -29,6 +29,8 @@ func GetSourceNortheastMissouriHealthCouncilInc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Northeast Missouri Health Council Inc"
 	sourceDef.SourceType = pkg.SourceTypeNortheastMissouriHealthCouncilInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "northeast-missouri-health-council-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.nemohealthcouncil.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

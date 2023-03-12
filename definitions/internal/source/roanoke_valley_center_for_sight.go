@@ -29,6 +29,8 @@ func GetSourceRoanokeValleyCenterForSight(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Roanoke Valley Center For Sight"
 	sourceDef.SourceType = pkg.SourceTypeRoanokeValleyCenterForSight
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "roanoke-valley-center-for-sight.jpeg"
+	sourceDef.PatientAccessUrl = "tbn:ANd9GcTUCksEHVHx81Iyino_DRfP0P4ZWkWI4Jyvng"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

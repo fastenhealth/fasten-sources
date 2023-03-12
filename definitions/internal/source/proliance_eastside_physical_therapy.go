@@ -29,6 +29,7 @@ func GetSourceProlianceEastsidePhysicalTherapy(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Proliance Eastside Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsidePhysicalTherapy
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://proliancesportstherapy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

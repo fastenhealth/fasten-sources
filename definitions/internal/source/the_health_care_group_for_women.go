@@ -29,6 +29,8 @@ func GetSourceTheHealthCareGroupForWomen(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "The Health Care Group for Women"
 	sourceDef.SourceType = pkg.SourceTypeTheHealthCareGroupForWomen
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-health-care-group-for-women.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/mo-missouri/saint-louis/healthcare-group-for-women-saint-louis-mo-x8dls6"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

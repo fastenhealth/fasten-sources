@@ -29,6 +29,7 @@ func GetSourceUrologyPartnersOfNorthTexasPllc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Urology Partners of North Texas, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeUrologyPartnersOfNorthTexasPllc
+	sourceDef.PatientAccessUrl = "https://www.upnt.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

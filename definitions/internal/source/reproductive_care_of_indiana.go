@@ -29,6 +29,7 @@ func GetSourceReproductiveCareOfIndiana(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Reproductive Care of Indiana"
 	sourceDef.SourceType = pkg.SourceTypeReproductiveCareOfIndiana
+	sourceDef.PatientAccessUrl = "https://www.reprocareindiana.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

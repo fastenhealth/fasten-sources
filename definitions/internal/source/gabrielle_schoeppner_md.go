@@ -30,6 +30,7 @@ func GetSourceGabrielleSchoeppnerMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeGabrielleSchoeppnerMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gabrielle-schoeppner-md.jpg"
+	sourceDef.PatientAccessUrl = "https://findadoctor.slhn.org/details/239/gabrielle-schoeppner-ophthalmology-easton"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

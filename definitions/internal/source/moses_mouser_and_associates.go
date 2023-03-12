@@ -30,6 +30,7 @@ func GetSourceMosesMouserAndAssociates(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeMosesMouserAndAssociates
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "moses-mouser-and-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://mosesmousereye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

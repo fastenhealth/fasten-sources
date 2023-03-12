@@ -29,6 +29,7 @@ func GetSourceTexasTechHealthSciencesCenterPermianBasin(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Texas Tech Health Sciences Center - Permian Basin"
 	sourceDef.SourceType = pkg.SourceTypeTexasTechHealthSciencesCenterPermianBasin
+	sourceDef.PatientAccessUrl = "https://www.ttuhsc.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceWesternCommunityHealthResources(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Western Community Health Resources"
 	sourceDef.SourceType = pkg.SourceTypeWesternCommunityHealthResources
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "western-community-health-resources.jpeg"
+	sourceDef.PatientAccessUrl = "http://www.wchr.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

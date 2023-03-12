@@ -29,6 +29,7 @@ func GetSourcePeakVisionEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Peak Vision Eye Center"
 	sourceDef.SourceType = pkg.SourceTypePeakVisionEyeCenter
+	sourceDef.PatientAccessUrl = "https://skylinevisionclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNsuStudentMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "NSU Student Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNsuStudentMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://nsuhealth.nova.edu/student-care/student-medical-center.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

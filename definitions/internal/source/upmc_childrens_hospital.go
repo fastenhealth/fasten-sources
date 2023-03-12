@@ -29,6 +29,7 @@ func GetSourceUpmcChildrensHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "UPMC Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUpmcChildrensHospital
+	sourceDef.PatientAccessUrl = "https://www.chp.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

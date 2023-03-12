@@ -29,6 +29,7 @@ func GetSourceWestchesterHealthMedicalPC(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Westchester Health Medical P.C."
 	sourceDef.SourceType = pkg.SourceTypeWestchesterHealthMedicalPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.westchesterhealth.com/locations/katonah"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

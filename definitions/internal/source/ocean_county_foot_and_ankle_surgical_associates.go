@@ -29,6 +29,8 @@ func GetSourceOceanCountyFootAndAnkleSurgicalAssociates(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Ocean County Foot & Ankle Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeOceanCountyFootAndAnkleSurgicalAssociates
+	sourceDef.BrandLogo = "ocean-county-foot-and-ankle-surgical-associates.svg"
+	sourceDef.PatientAccessUrl = "https://www.ocfasa.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

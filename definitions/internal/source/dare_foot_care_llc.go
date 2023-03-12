@@ -29,6 +29,7 @@ func GetSourceDareFootCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "DARE Foot Care, LLC"
 	sourceDef.SourceType = pkg.SourceTypeDareFootCareLlc
+	sourceDef.PatientAccessUrl = "https://npino.com/podiatrist/1629519517-dare-foot-care-llc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

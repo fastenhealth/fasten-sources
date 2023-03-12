@@ -29,6 +29,7 @@ func GetSourceVacOfCentralNewJerseyObl(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "VAC Of Central New Jersey OBL"
 	sourceDef.SourceType = pkg.SourceTypeVacOfCentralNewJerseyObl
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.zillow.com/homedetails/1-Wills-Way-Piscataway-NJ-08854/333443563_zpid/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

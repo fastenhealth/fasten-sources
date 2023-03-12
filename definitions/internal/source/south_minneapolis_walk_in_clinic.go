@@ -29,6 +29,7 @@ func GetSourceSouthMinneapolisWalkInClinic(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "South Minneapolis Walk-in Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSouthMinneapolisWalkInClinic
+	sourceDef.PatientAccessUrl = "https://mplswalkinclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

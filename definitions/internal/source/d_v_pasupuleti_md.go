@@ -29,6 +29,7 @@ func GetSourceDVPasupuletiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "D.V. Pasupuleti, MD"
 	sourceDef.SourceType = pkg.SourceTypeDVPasupuletiMd
+	sourceDef.PatientAccessUrl = "https://www.mclaren.org/main/physician-directory/pasupuleti-devakinanda-1314"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

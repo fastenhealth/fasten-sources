@@ -29,6 +29,8 @@ func GetSourceJaimeECamposMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jaime E. Campos, MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeJaimeECamposMdPa
+	sourceDef.BrandLogo = "jaime-e-campos-md-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.palmettogeneral.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

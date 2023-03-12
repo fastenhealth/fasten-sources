@@ -29,6 +29,7 @@ func GetSourceMethodistLeBonheurHealthcare(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Methodist Le Bonheur Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeMethodistLeBonheurHealthcare
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/methodistlebonheurhealthcare/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

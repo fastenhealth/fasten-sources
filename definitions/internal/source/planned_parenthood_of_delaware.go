@@ -29,6 +29,8 @@ func GetSourcePlannedParenthoodOfDelaware(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Planned Parenthood of Delaware"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfDelaware
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "planned-parenthood-of-delaware.svg"
+	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/health-center/delaware/wilmington/19801/wilmington-center-3272-90240?utm_campaign=wilmington-center&utm_medium=organic&utm_source=bing-local-listing"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

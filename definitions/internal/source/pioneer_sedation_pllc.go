@@ -29,6 +29,7 @@ func GetSourcePioneerSedationPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Pioneer Sedation PLLC"
 	sourceDef.SourceType = pkg.SourceTypePioneerSedationPllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://opencorporates.com/companies/us_tn/001009359"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

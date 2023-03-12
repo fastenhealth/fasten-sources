@@ -29,6 +29,8 @@ func GetSourceLawrenceCheungMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Lawrence Cheung, MD"
 	sourceDef.SourceType = pkg.SourceTypeLawrenceCheungMd
+	sourceDef.BrandLogo = "lawrence-cheung-md.jpg"
+	sourceDef.PatientAccessUrl = "https://www.dignityhealth.org/ourdoctors/1225096357-lawrence-cheung"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

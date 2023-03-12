@@ -29,6 +29,7 @@ func GetSourceFauquierMedicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "FAUQUIER MEDICAL ASSOCIATES"
 	sourceDef.SourceType = pkg.SourceTypeFauquierMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fauquierhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

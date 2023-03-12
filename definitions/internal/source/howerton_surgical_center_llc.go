@@ -30,6 +30,7 @@ func GetSourceHowertonSurgicalCenterLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeHowertonSurgicalCenterLlc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "howerton-surgical-center-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.howertoneye.com/locations/howerton-surgical-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSalveoFamilyMedicinePc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Salveo Family Medicine PC"
 	sourceDef.SourceType = pkg.SourceTypeSalveoFamilyMedicinePc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.salveoclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNcpBeaumontCathLab(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "NCP Beaumont Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpBeaumontCathLab
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.beaumontheart.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

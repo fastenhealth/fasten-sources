@@ -29,6 +29,8 @@ func GetSourceSanAntonioEyeCenterPA(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "San Antonio Eye Center P.A."
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioEyeCenterPA
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "san-antonio-eye-center-p-a.svg"
+	sourceDef.PatientAccessUrl = "https://saeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtTheUniversityOfPennsylvania(e
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At The University Of Pennsylvania"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtTheUniversityOfPennsylvania
+	sourceDef.PatientAccessUrl = "http://www.pennmedicine.org/veterans"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

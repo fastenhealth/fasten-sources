@@ -29,6 +29,7 @@ func GetSourceRogueValleyPhysiciansPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Rogue Valley Physicians PC"
 	sourceDef.SourceType = pkg.SourceTypeRogueValleyPhysiciansPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.roguevalleyphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

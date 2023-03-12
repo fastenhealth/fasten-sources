@@ -29,6 +29,7 @@ func GetSourceNwSurgicalSpecialistsPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "NW Surgical Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeNwSurgicalSpecialistsPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://business.vancouverusa.com/list/member/nw-surgical-specialists-rebound-orthopedics-and-neurosurgery-453"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

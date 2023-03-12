@@ -29,6 +29,7 @@ func GetSourceNewJerseyVisionAssociatesPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "New Jersey Vision Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeNewJerseyVisionAssociatesPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.njvision.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

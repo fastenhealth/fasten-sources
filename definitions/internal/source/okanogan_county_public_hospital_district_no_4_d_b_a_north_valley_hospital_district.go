@@ -29,6 +29,7 @@ func GetSourceOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistr
 
 	sourceDef.Display = "Okanogan County Public Hospital District No 4 d/b/a North Valley Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict
+	sourceDef.PatientAccessUrl = "https://www.nvhospital.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

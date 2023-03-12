@@ -29,6 +29,7 @@ func GetSourceOsmondGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Osmond General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeOsmondGeneralHospital
+	sourceDef.PatientAccessUrl = "https://osmondhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

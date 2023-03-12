@@ -29,6 +29,7 @@ func GetSourceLivingstonHospitalAndHealthcareServicesInc(env pkg.FastenLighthous
 
 	sourceDef.Display = "Livingston Hospital & Healthcare Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeLivingstonHospitalAndHealthcareServicesInc
+	sourceDef.PatientAccessUrl = "https://www.mdlinx.com/hospital/livingston-hospital-and-healthcare-services"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

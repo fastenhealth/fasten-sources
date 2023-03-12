@@ -29,6 +29,7 @@ func GetSourceHolyFamilyMemorialInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Holy Family Memorial Inc"
 	sourceDef.SourceType = pkg.SourceTypeHolyFamilyMemorialInc
+	sourceDef.PatientAccessUrl = "https://www.hfmhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

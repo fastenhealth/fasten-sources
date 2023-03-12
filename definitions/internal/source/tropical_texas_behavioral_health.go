@@ -29,6 +29,8 @@ func GetSourceTropicalTexasBehavioralHealth(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tropical Texas Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeTropicalTexasBehavioralHealth
+	sourceDef.BrandLogo = "tropical-texas-behavioral-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/tropical-texas-behavioral-health"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

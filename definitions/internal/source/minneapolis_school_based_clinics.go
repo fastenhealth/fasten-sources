@@ -29,6 +29,7 @@ func GetSourceMinneapolisSchoolBasedClinics(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Minneapolis School Based Clinics"
 	sourceDef.SourceType = pkg.SourceTypeMinneapolisSchoolBasedClinics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/mplssbc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

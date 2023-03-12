@@ -29,6 +29,7 @@ func GetSourcePodiatryCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Podiatry Center"
 	sourceDef.SourceType = pkg.SourceTypePodiatryCenter
+	sourceDef.PatientAccessUrl = "https://podiatrycenternj.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

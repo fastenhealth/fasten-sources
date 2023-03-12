@@ -29,6 +29,8 @@ func GetSourcePennStateHealthCarePartners(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Penn State Health Care Partners"
 	sourceDef.SourceType = pkg.SourceTypePennStateHealthCarePartners
+	sourceDef.BrandLogo = "penn-state-health-care-partners.svg"
+	sourceDef.PatientAccessUrl = "http://pennstatehealthcarepartners.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

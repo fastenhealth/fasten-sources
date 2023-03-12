@@ -29,6 +29,7 @@ func GetSourceSouthOfMarketHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "South Of Market Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthOfMarketHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://smhcsf.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

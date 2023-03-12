@@ -29,6 +29,7 @@ func GetSourcePediatricDevelopmentalGroupOfFlorida(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Pediatric Developmental Group of Florida"
 	sourceDef.SourceType = pkg.SourceTypePediatricDevelopmentalGroupOfFlorida
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/pediatric-clinic/1710554936-pediatrix-medical-group-of-florida-inc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

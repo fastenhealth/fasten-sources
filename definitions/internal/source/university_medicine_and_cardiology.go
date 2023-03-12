@@ -29,6 +29,7 @@ func GetSourceUniversityMedicineAndCardiology(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "University Medicine and Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeUniversityMedicineAndCardiology
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

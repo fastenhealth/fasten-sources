@@ -29,6 +29,8 @@ func GetSourceDistrictMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "District Medical Group, Inc."
 	sourceDef.SourceType = pkg.SourceTypeDistrictMedicalGroupInc
+	sourceDef.BrandLogo = "district-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/dmgaz"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

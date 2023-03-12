@@ -29,6 +29,7 @@ func GetSourcePpmns(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "PPMNS"
 	sourceDef.SourceType = pkg.SourceTypePpmns
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/es/centro-de-salud/minnesota/saint-paul/55114/st-paul-health-center-vandalia-4055-90720"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

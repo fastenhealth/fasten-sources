@@ -29,6 +29,7 @@ func GetSourceCrossroadsForWomenInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Crossroads for Women, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsForWomenInc
+	sourceDef.PatientAccessUrl = "https://crossroadsme.org/wp-content/uploads/2019/09/Crossroads-Maine-Addiction-and-Behavioral-Health-Treatment-Center.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

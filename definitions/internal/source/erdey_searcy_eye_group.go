@@ -29,7 +29,7 @@ func GetSourceErdeySearcyEyeGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Erdey Searcy Eye Group"
 	sourceDef.SourceType = pkg.SourceTypeErdeySearcyEyeGroup
 	sourceDef.Hidden = true
-	sourceDef.BrandLogo = "erdey-searcy-eye-group.jpg"
+	sourceDef.PatientAccessUrl = "https://www.icanseeclearly.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

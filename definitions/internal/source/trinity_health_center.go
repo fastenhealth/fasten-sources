@@ -29,6 +29,7 @@ func GetSourceTrinityHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Trinity Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rrths.org/redding-rancheria-trinity-health-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

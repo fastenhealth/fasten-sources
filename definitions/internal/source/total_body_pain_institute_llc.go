@@ -29,6 +29,7 @@ func GetSourceTotalBodyPainInstituteLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Total Body Pain Institute, LLC"
 	sourceDef.SourceType = pkg.SourceTypeTotalBodyPainInstituteLlc
+	sourceDef.PatientAccessUrl = "http://totalbodypaininstitute.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

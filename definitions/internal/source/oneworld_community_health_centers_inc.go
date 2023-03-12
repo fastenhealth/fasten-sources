@@ -29,6 +29,7 @@ func GetSourceOneworldCommunityHealthCentersInc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "OneWorld Community Health Centers Inc"
 	sourceDef.SourceType = pkg.SourceTypeOneworldCommunityHealthCentersInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.oneworldomaha.org/contact-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

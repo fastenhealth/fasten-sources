@@ -29,6 +29,7 @@ func GetSourceTriCityMentalHealthAuthority(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Tri-City Mental Health Authority"
 	sourceDef.SourceType = pkg.SourceTypeTriCityMentalHealthAuthority
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/TriCityMHS/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

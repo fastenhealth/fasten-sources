@@ -29,6 +29,7 @@ func GetSourceSyracuseAreaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Syracuse Area Health"
 	sourceDef.SourceType = pkg.SourceTypeSyracuseAreaHealth
+	sourceDef.PatientAccessUrl = "https://www.syracuseareahealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

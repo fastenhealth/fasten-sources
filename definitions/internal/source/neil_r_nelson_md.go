@@ -29,6 +29,7 @@ func GetSourceNeilRNelsonMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Neil R Nelson MD"
 	sourceDef.SourceType = pkg.SourceTypeNeilRNelsonMd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-neil-nelson-3gv49"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

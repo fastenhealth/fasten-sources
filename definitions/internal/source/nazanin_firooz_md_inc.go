@@ -29,6 +29,8 @@ func GetSourceNazaninFiroozMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Nazanin Firooz MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeNazaninFiroozMdInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "nazanin-firooz-md-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://comprehensiverheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

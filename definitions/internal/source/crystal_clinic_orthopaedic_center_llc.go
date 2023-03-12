@@ -29,6 +29,7 @@ func GetSourceCrystalClinicOrthopaedicCenterLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Crystal Clinic Orthopaedic Center, LLC"
 	sourceDef.SourceType = pkg.SourceTypeCrystalClinicOrthopaedicCenterLlc
+	sourceDef.PatientAccessUrl = "https://www.crystalclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

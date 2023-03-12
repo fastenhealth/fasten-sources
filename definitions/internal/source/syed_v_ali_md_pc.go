@@ -29,6 +29,7 @@ func GetSourceSyedVAliMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Syed V Ali MD PC"
 	sourceDef.SourceType = pkg.SourceTypeSyedVAliMdPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://lakehuronpho.com/find-a-physician/2632/syed-v-ali-md-pc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNeurospinalAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Neurospinal Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeNeurospinalAssociatesPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://nsadoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

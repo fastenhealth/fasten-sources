@@ -29,6 +29,7 @@ func GetSourceTiffanyDawnWilsonMdInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Tiffany Dawn Wilson MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeTiffanyDawnWilsonMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1861595282-tiffany-dawn-wilson%2C-m.d.%2C-inc./"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

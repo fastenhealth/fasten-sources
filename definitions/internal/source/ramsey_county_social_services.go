@@ -29,6 +29,8 @@ func GetSourceRamseyCountySocialServices(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Ramsey County Social Services"
 	sourceDef.SourceType = pkg.SourceTypeRamseyCountySocialServices
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ramsey-county-social-services.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/RamseyCountyMinnesota/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

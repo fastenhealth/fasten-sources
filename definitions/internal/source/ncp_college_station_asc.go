@@ -29,6 +29,7 @@ func GetSourceNcpCollegeStationAsc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "NCP College Station ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollegeStationAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.loopnet.com/Listing/3201-University-Dr-E-Bryan-TX/27264270/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

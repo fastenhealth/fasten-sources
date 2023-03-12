@@ -30,6 +30,7 @@ func GetSourceGuthMdLeonardD(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeGuthMdLeonardD
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "guth-md-leonard-d.jpg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/leonard-guth-c1ea2896-3aff-4e65-97a3-0ae75f9efa69-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

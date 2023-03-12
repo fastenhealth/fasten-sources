@@ -30,6 +30,7 @@ func GetSourceGnadenHuettenMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Gnaden Huetten Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGnadenHuettenMemorialHospital
 	sourceDef.BrandLogo = "gnaden-huetten-memorial-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.blmtn.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSeniorCareClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Senior Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSeniorCareClinic
+	sourceDef.PatientAccessUrl = "https://m.yelp.com/biz/senior-care-clinic-los-angeles"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

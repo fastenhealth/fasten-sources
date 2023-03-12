@@ -29,6 +29,7 @@ func GetSourceRehabilitationAndSpasticitySpecialist(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Rehabilitation And Spasticity Specialist"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitationAndSpasticitySpecialist
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/rehabilitation-and-spasticity-specialists-of-saint-0a1f88b9-f6e9-e411-b35d-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

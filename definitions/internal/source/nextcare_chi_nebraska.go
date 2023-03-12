@@ -29,6 +29,8 @@ func GetSourceNextcareChiNebraska(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "NextCare CHI Nebraska"
 	sourceDef.SourceType = pkg.SourceTypeNextcareChiNebraska
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "nextcare-chi-nebraska.jpg"
+	sourceDef.PatientAccessUrl = "https://nextcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

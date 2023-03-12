@@ -29,6 +29,7 @@ func GetSourcePeaceHealthFamilyMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Peace Health Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePeaceHealthFamilyMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/ui/images/logo-emory.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

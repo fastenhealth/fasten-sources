@@ -29,6 +29,7 @@ func GetSourceSanAntonioCareCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "San Antonio Care Center"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioCareCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://sacrd.org/directory/program/8111"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

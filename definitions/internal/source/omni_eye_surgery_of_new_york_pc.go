@@ -29,6 +29,8 @@ func GetSourceOmniEyeSurgeryOfNewYorkPc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Omni Eye Surgery Of New York PC"
 	sourceDef.SourceType = pkg.SourceTypeOmniEyeSurgeryOfNewYorkPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "omni-eye-surgery-of-new-york-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://oomc.com/omni/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

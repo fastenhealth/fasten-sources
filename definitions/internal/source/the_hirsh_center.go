@@ -29,6 +29,7 @@ func GetSourceTheHirshCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "The Hirsh Center"
 	sourceDef.SourceType = pkg.SourceTypeTheHirshCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.thehirshcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

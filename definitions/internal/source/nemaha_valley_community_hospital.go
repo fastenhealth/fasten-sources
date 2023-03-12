@@ -29,6 +29,7 @@ func GetSourceNemahaValleyCommunityHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Nemaha Valley Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNemahaValleyCommunityHospital
+	sourceDef.PatientAccessUrl = "https://nemvch.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

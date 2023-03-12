@@ -29,6 +29,7 @@ func GetSourceMissouriCancerAssociatesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Missouri Cancer Associates, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMissouriCancerAssociatesLlc
+	sourceDef.PatientAccessUrl = "https://missouricancer.com/locations/columbia/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

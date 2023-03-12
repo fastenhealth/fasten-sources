@@ -29,6 +29,7 @@ func GetSourceRetinaVitreousConsultantsInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Retina Vitreous Consultants Inc"
 	sourceDef.SourceType = pkg.SourceTypeRetinaVitreousConsultantsInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://retinapittsburgh.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

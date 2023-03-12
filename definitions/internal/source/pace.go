@@ -29,6 +29,7 @@ func GetSourcePace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.Display = "PACE"
 	sourceDef.SourceType = pkg.SourceTypePace
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://elementcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

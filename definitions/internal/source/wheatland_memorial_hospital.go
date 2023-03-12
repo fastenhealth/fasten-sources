@@ -29,6 +29,7 @@ func GetSourceWheatlandMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Wheatland Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWheatlandMemorialHospital
+	sourceDef.PatientAccessUrl = "https://www.wheatlandmemorial.org/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

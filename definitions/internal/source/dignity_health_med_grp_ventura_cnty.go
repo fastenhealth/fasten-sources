@@ -29,6 +29,7 @@ func GetSourceDignityHealthMedGrpVenturaCnty(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Dignity Health Med Grp - Ventura Cnty"
 	sourceDef.SourceType = pkg.SourceTypeDignityHealthMedGrpVenturaCnty
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dignityhealth.org/central-coast/medical-group/ventura-county"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

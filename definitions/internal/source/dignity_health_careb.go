@@ -29,6 +29,8 @@ func GetSourceDignityHealthCareb(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dignity Health CAREB"
 	sourceDef.SourceType = pkg.SourceTypeDignityHealthCareb
+	sourceDef.BrandLogo = "dignity-health-careb.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/dignityhealth/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

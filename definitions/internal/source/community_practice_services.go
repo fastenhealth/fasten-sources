@@ -29,6 +29,7 @@ func GetSourceCommunityPracticeServices(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Community Practice Services"
 	sourceDef.SourceType = pkg.SourceTypeCommunityPracticeServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cincinnatichildrens.org/professional/support-services/community-practice-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

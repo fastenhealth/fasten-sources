@@ -29,6 +29,7 @@ func GetSourceVacOfEatontown(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "VAC Of Eatontown"
 	sourceDef.SourceType = pkg.SourceTypeVacOfEatontown
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/new-jersey/vac-of-eatontown-377581900"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

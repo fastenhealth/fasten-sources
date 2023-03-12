@@ -29,6 +29,8 @@ func GetSourceNeuropsychiatricHospitals(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "NeuroPsychiatric Hospitals"
 	sourceDef.SourceType = pkg.SourceTypeNeuropsychiatricHospitals
+	sourceDef.BrandLogo = "neuropsychiatric-hospitals.svg"
+	sourceDef.PatientAccessUrl = "https://www.neuropsychiatrichospitals.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

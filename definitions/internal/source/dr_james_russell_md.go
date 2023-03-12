@@ -30,6 +30,7 @@ func GetSourceDrJamesRussellMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Dr. James Russell MD"
 	sourceDef.SourceType = pkg.SourceTypeDrJamesRussellMd
 	sourceDef.BrandLogo = "dr-james-russell-md.jpg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/oklahoma/oktul/sapulpa-ascension-st-john-sapulpa?utm_campaign=gmb&utm_medium=organic&utm_source=local"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

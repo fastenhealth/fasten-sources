@@ -29,6 +29,8 @@ func GetSourceUnifiedHealthAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Unified Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeUnifiedHealthAssociates
+	sourceDef.BrandLogo = "unified-health-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/unifiedhp/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

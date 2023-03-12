@@ -29,6 +29,7 @@ func GetSourceVishenRKMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Vishen, R K MD"
 	sourceDef.SourceType = pkg.SourceTypeVishenRKMd
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

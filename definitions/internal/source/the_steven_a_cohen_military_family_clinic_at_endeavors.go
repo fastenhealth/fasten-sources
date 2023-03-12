@@ -29,6 +29,7 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtEndeavors(env pkg.FastenLight
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Endeavors"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtEndeavors
+	sourceDef.PatientAccessUrl = "https://www.endeavors.org/cohen-clinic-san-antonio/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSpectrumHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Spectrum Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumHealthcare
+	sourceDef.PatientAccessUrl = "https://www.spectrumhealthcare-group.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

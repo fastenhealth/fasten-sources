@@ -29,6 +29,8 @@ func GetSourceVrfEyeSpecialtyGroupPlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "VRF Eye Specialty Group PLC"
 	sourceDef.SourceType = pkg.SourceTypeVrfEyeSpecialtyGroupPlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vrf-eye-specialty-group-plc.svg"
+	sourceDef.PatientAccessUrl = "https://www.eyespecialtygroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePpNorthernCentralAndSouthernNj(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "PP Northern Central and Southern NJ"
 	sourceDef.SourceType = pkg.SourceTypePpNorthernCentralAndSouthernNj
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/PPNCSNJ/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

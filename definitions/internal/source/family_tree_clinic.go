@@ -30,6 +30,7 @@ func GetSourceFamilyTreeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeFamilyTreeClinic
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "family-tree-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.familytreeclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

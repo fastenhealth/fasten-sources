@@ -29,6 +29,8 @@ func GetSourceMercyMedicalCenterDesMoines(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Mercy Medical Center - Des Moines"
 	sourceDef.SourceType = pkg.SourceTypeMercyMedicalCenterDesMoines
+	sourceDef.BrandLogo = "mercy-medical-center-des-moines.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mercyone.org/desmoines/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

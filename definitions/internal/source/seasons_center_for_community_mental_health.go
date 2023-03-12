@@ -29,6 +29,7 @@ func GetSourceSeasonsCenterForCommunityMentalHealth(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Seasons Center for Community Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeSeasonsCenterForCommunityMentalHealth
+	sourceDef.PatientAccessUrl = "https://pcit.ucdavis.edu/find-a-provider/united-states/seasons-center-for-community-mental-health-clay-county/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

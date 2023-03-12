@@ -29,6 +29,7 @@ func GetSourceStateOfKansas(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "State of Kansas"
 	sourceDef.SourceType = pkg.SourceTypeStateOfKansas
+	sourceDef.PatientAccessUrl = "https://www.kdhe.ks.gov/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceTodSReedDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Tod S. Reed, DPM"
 	sourceDef.SourceType = pkg.SourceTypeTodSReedDpm
+	sourceDef.PatientAccessUrl = "https://www.cardinalfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

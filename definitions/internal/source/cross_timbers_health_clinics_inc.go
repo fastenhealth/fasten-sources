@@ -30,6 +30,7 @@ func GetSourceCrossTimbersHealthClinicsInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeCrossTimbersHealthClinicsInc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "cross-timbers-health-clinics-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://crosstimbersinc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

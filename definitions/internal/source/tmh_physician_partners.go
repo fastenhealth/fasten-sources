@@ -29,6 +29,8 @@ func GetSourceTmhPhysicianPartners(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "TMH Physician Partners"
 	sourceDef.SourceType = pkg.SourceTypeTmhPhysicianPartners
+	sourceDef.BrandLogo = "tmh-physician-partners.svg"
+	sourceDef.PatientAccessUrl = "https://www.tmh.org/location/tmh-physician-partners-pulmonary-critical-care-sleep"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

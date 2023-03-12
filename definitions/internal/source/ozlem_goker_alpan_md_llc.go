@@ -29,6 +29,7 @@ func GetSourceOzlemGokerAlpanMdLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Ozlem Goker-Alpan MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeOzlemGokerAlpanMdLlc
+	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1659863025"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

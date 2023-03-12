@@ -29,6 +29,7 @@ func GetSourceWashingtonRegionalMedicalSystem(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Washington Regional Medical System"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonRegionalMedicalSystem
+	sourceDef.PatientAccessUrl = "https://www.wregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

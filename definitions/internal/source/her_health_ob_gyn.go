@@ -30,6 +30,7 @@ func GetSourceHerHealthObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeHerHealthObGyn
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "her-health-ob-gyn.jpg"
+	sourceDef.PatientAccessUrl = "https://www.hhobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

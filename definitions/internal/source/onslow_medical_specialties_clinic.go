@@ -29,6 +29,8 @@ func GetSourceOnslowMedicalSpecialtiesClinic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Onslow Medical Specialties Clinic"
 	sourceDef.SourceType = pkg.SourceTypeOnslowMedicalSpecialtiesClinic
+	sourceDef.BrandLogo = "onslow-medical-specialties-clinic.jpg"
+	sourceDef.PatientAccessUrl = "http://www.omsclinic.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

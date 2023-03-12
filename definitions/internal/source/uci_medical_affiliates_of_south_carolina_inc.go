@@ -29,6 +29,7 @@ func GetSourceUciMedicalAffiliatesOfSouthCarolinaInc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "UCI Medical Affiliates of South Carolina, Inc"
 	sourceDef.SourceType = pkg.SourceTypeUciMedicalAffiliatesOfSouthCarolinaInc
+	sourceDef.PatientAccessUrl = "https://ucimedinc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

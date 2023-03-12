@@ -29,6 +29,7 @@ func GetSourceRegionalWestMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Regional West Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeRegionalWestMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.rwhs.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

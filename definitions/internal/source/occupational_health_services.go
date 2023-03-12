@@ -29,6 +29,7 @@ func GetSourceOccupationalHealthServices(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Occupational Health Services"
 	sourceDef.SourceType = pkg.SourceTypeOccupationalHealthServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ilo.org/global/lang--en/index.htm"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

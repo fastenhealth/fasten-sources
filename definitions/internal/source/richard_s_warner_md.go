@@ -29,6 +29,8 @@ func GetSourceRichardSWarnerMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Richard S. Warner, MD"
 	sourceDef.SourceType = pkg.SourceTypeRichardSWarnerMd
+	sourceDef.BrandLogo = "richard-s-warner-md.jpg"
+	sourceDef.PatientAccessUrl = "https://providers.baystatehealth.org/provider/Richard+S.+Warner/208259"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

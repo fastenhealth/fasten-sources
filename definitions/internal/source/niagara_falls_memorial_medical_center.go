@@ -29,6 +29,7 @@ func GetSourceNiagaraFallsMemorialMedicalCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Niagara Falls Memorial Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNiagaraFallsMemorialMedicalCenter
+	sourceDef.PatientAccessUrl = "https://nfmmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

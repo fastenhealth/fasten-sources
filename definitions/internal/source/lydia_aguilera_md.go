@@ -30,6 +30,7 @@ func GetSourceLydiaAguileraMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeLydiaAguileraMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "lydia-aguilera-md.jpg"
+	sourceDef.PatientAccessUrl = "https://beverly.org/physician-directory/name/lydia-aguilera/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

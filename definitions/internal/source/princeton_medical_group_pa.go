@@ -29,6 +29,7 @@ func GetSourcePrincetonMedicalGroupPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Princeton Medical Group PA"
 	sourceDef.SourceType = pkg.SourceTypePrincetonMedicalGroupPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.princetonmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDupageEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Dupage Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeDupageEyeAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dupageeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceThePainManagementSolution(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "The Pain Management Solution"
 	sourceDef.SourceType = pkg.SourceTypeThePainManagementSolution
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-pain-management-solution.jpg"
+	sourceDef.PatientAccessUrl = "https://www.nopainoklahoma.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

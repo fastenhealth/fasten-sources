@@ -29,7 +29,7 @@ func GetSourceEyesthetica(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Eyesthetica"
 	sourceDef.SourceType = pkg.SourceTypeEyesthetica
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3R15W654WQQCDXTD9PHP50ZAYNIQLR?assignment_id=3WR9XG3T6H88VRF7X0E38CCTHBJ47T&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.eyesthetica.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

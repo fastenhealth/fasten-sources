@@ -29,6 +29,7 @@ func GetSourceEngineeredFloors(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Engineered Floors"
 	sourceDef.SourceType = pkg.SourceTypeEngineeredFloors
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/EngineeredFloors/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

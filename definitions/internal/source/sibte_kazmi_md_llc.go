@@ -29,6 +29,7 @@ func GetSourceSibteKazmiMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Sibte Kazmi MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeSibteKazmiMdLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.sharecare.com/doctor/dr-sibte-a-kazmi"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

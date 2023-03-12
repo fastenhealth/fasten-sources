@@ -29,6 +29,7 @@ func GetSourceSundanceMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Sundance Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSundanceMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://sundancemedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

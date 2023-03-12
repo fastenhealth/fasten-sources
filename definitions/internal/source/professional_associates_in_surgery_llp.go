@@ -29,6 +29,7 @@ func GetSourceProfessionalAssociatesInSurgeryLlp(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Professional Associates in Surgery, LLP"
 	sourceDef.SourceType = pkg.SourceTypeProfessionalAssociatesInSurgeryLlp
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/west-orange/professional-associates-in-surgery-llp-x99hrq"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

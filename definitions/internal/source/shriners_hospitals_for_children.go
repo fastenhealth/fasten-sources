@@ -29,6 +29,7 @@ func GetSourceShrinersHospitalsForChildren(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Shriners Hospitals for Children"
 	sourceDef.SourceType = pkg.SourceTypeShrinersHospitalsForChildren
+	sourceDef.PatientAccessUrl = "https://www.shrinerschildrens.org/en"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

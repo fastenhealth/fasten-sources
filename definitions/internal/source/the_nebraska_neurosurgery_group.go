@@ -29,6 +29,7 @@ func GetSourceTheNebraskaNeurosurgeryGroup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "The Nebraska Neurosurgery Group"
 	sourceDef.SourceType = pkg.SourceTypeTheNebraskaNeurosurgeryGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nebraskaneurosurgery.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

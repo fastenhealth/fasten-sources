@@ -29,6 +29,7 @@ func GetSourceSwanUrogynecologyPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Swan Urogynecology PC"
 	sourceDef.SourceType = pkg.SourceTypeSwanUrogynecologyPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.swanurogyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

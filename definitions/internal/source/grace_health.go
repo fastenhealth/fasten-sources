@@ -29,6 +29,7 @@ func GetSourceGraceHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Grace Health"
 	sourceDef.SourceType = pkg.SourceTypeGraceHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gracehealthmi.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

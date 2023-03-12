@@ -29,6 +29,7 @@ func GetSourceNephrologyAssociatesOfUpland(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Nephrology Associates of Upland"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesOfUpland
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.nephrologyassociatesonline.com/contact-us.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

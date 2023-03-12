@@ -29,6 +29,7 @@ func GetSourceRoshankmathewMdPscAdvancedCardiology(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "RoshanKMathew MD PSC Advanced Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeRoshankmathewMdPscAdvancedCardiology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.owensborohealth.org/find-doctor/basic-profile/roshan-mathew"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

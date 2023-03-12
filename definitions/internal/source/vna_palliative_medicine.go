@@ -29,6 +29,8 @@ func GetSourceVnaPalliativeMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "VNA Palliative Medicine"
 	sourceDef.SourceType = pkg.SourceTypeVnaPalliativeMedicine
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vna-palliative-medicine.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.nhpco.org/providers/visiting-nurse-association-health-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

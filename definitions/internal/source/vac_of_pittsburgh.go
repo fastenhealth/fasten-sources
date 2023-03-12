@@ -29,6 +29,7 @@ func GetSourceVacOfPittsburgh(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "VAC Of Pittsburgh"
 	sourceDef.SourceType = pkg.SourceTypeVacOfPittsburgh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.southcoastpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

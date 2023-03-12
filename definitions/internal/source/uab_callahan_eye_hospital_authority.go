@@ -29,6 +29,7 @@ func GetSourceUabCallahanEyeHospitalAuthority(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "UAB Callahan Eye Hospital Authority"
 	sourceDef.SourceType = pkg.SourceTypeUabCallahanEyeHospitalAuthority
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://uabcallahaneye.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

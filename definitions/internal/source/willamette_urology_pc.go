@@ -29,6 +29,8 @@ func GetSourceWillametteUrologyPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Willamette Urology PC"
 	sourceDef.SourceType = pkg.SourceTypeWillametteUrologyPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "willamette-urology-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://willametteurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

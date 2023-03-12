@@ -29,6 +29,7 @@ func GetSourceMountainviewAnesthesiaPc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Mountainview Anesthesia PC"
 	sourceDef.SourceType = pkg.SourceTypeMountainviewAnesthesiaPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

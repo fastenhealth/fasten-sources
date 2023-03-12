@@ -29,6 +29,7 @@ func GetSourceDrElviraRives(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Dr. Elvira Rives"
 	sourceDef.SourceType = pkg.SourceTypeDrElviraRives
+	sourceDef.PatientAccessUrl = "https://www.mhs.net/physicians/r/rives-elvira-j"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

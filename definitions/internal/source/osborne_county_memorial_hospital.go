@@ -29,6 +29,8 @@ func GetSourceOsborneCountyMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Osborne County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeOsborneCountyMemorialHospital
+	sourceDef.BrandLogo = "osborne-county-memorial-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.ocmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

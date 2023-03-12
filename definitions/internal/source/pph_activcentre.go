@@ -29,6 +29,7 @@ func GetSourcePphActivcentre(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "PPH ActivCentre"
 	sourceDef.SourceType = pkg.SourceTypePphActivcentre
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.palomarhealthmedicalgroup.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

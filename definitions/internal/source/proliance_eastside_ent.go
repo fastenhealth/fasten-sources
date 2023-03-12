@@ -29,6 +29,7 @@ func GetSourceProlianceEastsideEnt(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Proliance Eastside ENT"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideEnt
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.eastsideent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

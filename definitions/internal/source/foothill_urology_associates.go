@@ -29,6 +29,7 @@ func GetSourceFoothillUrologyAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Foothill Urology Associates"
 	sourceDef.SourceType = pkg.SourceTypeFoothillUrologyAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/foothill-urology-associates-pasadena"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

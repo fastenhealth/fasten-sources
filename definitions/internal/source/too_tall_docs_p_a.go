@@ -29,6 +29,7 @@ func GetSourceTooTallDocsPA(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Too Tall Doc's, P.A."
 	sourceDef.SourceType = pkg.SourceTypeTooTallDocsPA
+	sourceDef.PatientAccessUrl = "https://pauljonesmd.com/wp-content/uploads/notice-of-privacy-practices.pdf"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

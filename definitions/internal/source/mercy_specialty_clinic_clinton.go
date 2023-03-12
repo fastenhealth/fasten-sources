@@ -29,7 +29,7 @@ func GetSourceMercySpecialtyClinicClinton(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Mercy Specialty Clinic - Clinton"
 	sourceDef.SourceType = pkg.SourceTypeMercySpecialtyClinicClinton
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3PKVGQTFJUHWPXFC5JVF4YBB3OPRYM?assignment_id=3ZOTGHDK5W8YII9H4NRNH1EUMHDSOY&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.mercyone.org/clinton/location/mercyone-clinton-specialty-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

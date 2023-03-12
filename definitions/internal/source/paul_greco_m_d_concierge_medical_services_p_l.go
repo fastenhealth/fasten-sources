@@ -29,6 +29,7 @@ func GetSourcePaulGrecoMDConciergeMedicalServicesPL(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Paul Greco, M.D., Concierge Medical Services, P.L."
 	sourceDef.SourceType = pkg.SourceTypePaulGrecoMDConciergeMedicalServicesPL
+	sourceDef.PatientAccessUrl = "https://www.sharecare.com/doctor/dr-paul-t-greco"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

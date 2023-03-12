@@ -29,6 +29,7 @@ func GetSourcePacificHeartMedicalGroup(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Pacific Heart Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePacificHeartMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pacificheart.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

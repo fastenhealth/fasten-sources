@@ -29,6 +29,8 @@ func GetSourceNortheasternHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Northeastern Health System"
 	sourceDef.SourceType = pkg.SourceTypeNortheasternHealthSystem
+	sourceDef.BrandLogo = "northeastern-health-system.jpg"
+	sourceDef.PatientAccessUrl = "https://www.alwaysnhs.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

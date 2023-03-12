@@ -29,6 +29,7 @@ func GetSourceTexasTechUniversityHealthSciencesCenterAtElPaso(env pkg.FastenLigh
 
 	sourceDef.Display = "Texas Tech University Health Sciences Center at El Paso"
 	sourceDef.SourceType = pkg.SourceTypeTexasTechUniversityHealthSciencesCenterAtElPaso
+	sourceDef.PatientAccessUrl = "https://elpaso.ttuhsc.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

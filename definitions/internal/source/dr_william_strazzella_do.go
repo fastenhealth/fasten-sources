@@ -30,6 +30,7 @@ func GetSourceDrWilliamStrazzellaDo(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Dr. William Strazzella DO"
 	sourceDef.SourceType = pkg.SourceTypeDrWilliamStrazzellaDo
 	sourceDef.BrandLogo = "dr-william-strazzella-do.jpg"
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

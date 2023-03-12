@@ -29,6 +29,7 @@ func GetSourceSpringfieldPediatricsNj(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Springfield Pediatrics - NJ"
 	sourceDef.SourceType = pkg.SourceTypeSpringfieldPediatricsNj
+	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

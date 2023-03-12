@@ -29,6 +29,7 @@ func GetSourceGwyneddMercyCollege(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Gwynedd Mercy College"
 	sourceDef.SourceType = pkg.SourceTypeGwyneddMercyCollege
+	sourceDef.PatientAccessUrl = "https://www.gmercyu.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

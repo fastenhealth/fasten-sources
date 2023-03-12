@@ -29,6 +29,7 @@ func GetSourceDrBrandonHolloway(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Dr. Brandon Holloway"
 	sourceDef.SourceType = pkg.SourceTypeDrBrandonHolloway
+	sourceDef.PatientAccessUrl = "https://amarillofootspecialists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

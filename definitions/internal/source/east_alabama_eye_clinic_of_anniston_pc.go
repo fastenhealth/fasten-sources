@@ -29,6 +29,7 @@ func GetSourceEastAlabamaEyeClinicOfAnnistonPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "East Alabama Eye Clinic of Anniston, PC"
 	sourceDef.SourceType = pkg.SourceTypeEastAlabamaEyeClinicOfAnnistonPc
+	sourceDef.PatientAccessUrl = "https://www.eastalabamaeyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

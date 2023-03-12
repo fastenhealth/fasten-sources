@@ -29,6 +29,8 @@ func GetSourceEisnerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Eisner Health"
 	sourceDef.SourceType = pkg.SourceTypeEisnerHealth
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "eisner-health.jpg"
+	sourceDef.PatientAccessUrl = "https://eisnerhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

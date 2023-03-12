@@ -30,6 +30,7 @@ func GetSourceEricGrossMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeEricGrossMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eric-gross-md.jpg"
+	sourceDef.PatientAccessUrl = "https://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

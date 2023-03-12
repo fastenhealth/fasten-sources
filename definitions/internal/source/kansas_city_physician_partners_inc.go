@@ -29,7 +29,8 @@ func GetSourceKansasCityPhysicianPartnersInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Kansas City Physician Partners Inc"
 	sourceDef.SourceType = pkg.SourceTypeKansasCityPhysicianPartnersInc
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3BO3NEOQNDEI0GEQZQNQNKSDD12IAY?assignment_id=382M9COHEVCSL4OWZEJRRQ243CSEUW&from_queue=true"
+	sourceDef.BrandLogo = "kansas-city-physician-partners-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.kcphysicianpartners.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

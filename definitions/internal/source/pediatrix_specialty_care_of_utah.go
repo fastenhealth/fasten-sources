@@ -29,6 +29,8 @@ func GetSourcePediatrixSpecialtyCareOfUtah(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Pediatrix Specialty Care Of Utah"
 	sourceDef.SourceType = pkg.SourceTypePediatrixSpecialtyCareOfUtah
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pediatrix-specialty-care-of-utah.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/pediatricspecialty/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

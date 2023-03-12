@@ -29,7 +29,7 @@ func GetSourceEmployerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Employer Health"
 	sourceDef.SourceType = pkg.SourceTypeEmployerHealth
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/33NKDW9FGAF3JQ0JIQJIWP5G1PRXCV?assignment_id=3DHE4R9OCA8HL6BLMPZ9LASORH4G23&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.loopnet.com/Listing/10333-N-Meridian-St-Indianapolis-IN/11898372/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

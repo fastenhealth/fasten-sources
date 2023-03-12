@@ -29,6 +29,7 @@ func GetSourceEffinghamVascularCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Effingham Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeEffinghamVascularCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.effinghamcounty.com/list/member/effingham-vascular-center-llc-1393"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

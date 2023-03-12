@@ -29,6 +29,8 @@ func GetSourceRafaelFRivasChaconMdLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Rafael F Rivas Chacon MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeRafaelFRivasChaconMdLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "rafael-f-rivas-chacon-md-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/find-a-physician/physician-details/en/1306875075/rafael-rivas-chacon-rheumatology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

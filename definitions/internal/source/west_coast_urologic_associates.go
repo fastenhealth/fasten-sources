@@ -29,6 +29,7 @@ func GetSourceWestCoastUrologicAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "West Coast Urologic Associates"
 	sourceDef.SourceType = pkg.SourceTypeWestCoastUrologicAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.westcoastneurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

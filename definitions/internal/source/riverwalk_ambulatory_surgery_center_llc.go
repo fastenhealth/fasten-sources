@@ -29,6 +29,7 @@ func GetSourceRiverwalkAmbulatorySurgeryCenterLlc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Riverwalk Ambulatory Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeRiverwalkAmbulatorySurgeryCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/riverwalkasc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

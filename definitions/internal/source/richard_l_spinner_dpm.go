@@ -29,6 +29,7 @@ func GetSourceRichardLSpinnerDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Richard L. Spinner, DPM"
 	sourceDef.SourceType = pkg.SourceTypeRichardLSpinnerDpm
+	sourceDef.PatientAccessUrl = "http://richardspinnerdpm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

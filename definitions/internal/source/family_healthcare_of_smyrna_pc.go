@@ -29,6 +29,7 @@ func GetSourceFamilyHealthcareOfSmyrnaPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Family Healthcare of Smyrna, PC"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcareOfSmyrnaPc
+	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/locations/offices/family-healthcare-of-smyrna.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

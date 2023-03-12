@@ -29,6 +29,7 @@ func GetSourcePanoramaOrthopedicsAndSpineCenterPc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Panorama Orthopedics And Spine Center PC"
 	sourceDef.SourceType = pkg.SourceTypePanoramaOrthopedicsAndSpineCenterPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.stephenpehlermd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHeatonEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHeatonEyeAssociates
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "heaton-eye-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://heatoneye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

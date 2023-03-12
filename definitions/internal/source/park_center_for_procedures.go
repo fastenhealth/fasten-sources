@@ -29,6 +29,8 @@ func GetSourceParkCenterForProcedures(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Park Center For Procedures"
 	sourceDef.SourceType = pkg.SourceTypeParkCenterForProcedures
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "park-center-for-procedures.jpg"
+	sourceDef.PatientAccessUrl = "https://www.pcpasc.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

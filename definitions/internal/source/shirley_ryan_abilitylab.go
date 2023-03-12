@@ -29,6 +29,7 @@ func GetSourceShirleyRyanAbilitylab(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Shirley Ryan AbilityLab"
 	sourceDef.SourceType = pkg.SourceTypeShirleyRyanAbilitylab
+	sourceDef.PatientAccessUrl = "https://www.sralab.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceVistaCommunityClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Vista Community Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVistaCommunityClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.vistacommunityclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

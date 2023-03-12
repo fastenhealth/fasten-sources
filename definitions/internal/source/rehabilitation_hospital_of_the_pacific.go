@@ -29,6 +29,8 @@ func GetSourceRehabilitationHospitalOfThePacific(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Rehabilitation Hospital of the Pacific"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitationHospitalOfThePacific
+	sourceDef.BrandLogo = "rehabilitation-hospital-of-the-pacific.svg"
+	sourceDef.PatientAccessUrl = "https://www.rehabhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

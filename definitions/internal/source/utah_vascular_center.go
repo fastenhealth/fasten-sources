@@ -29,6 +29,7 @@ func GetSourceUtahVascularCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Utah Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeUtahVascularCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/utah-vascular-and-interventional-specialists-8331c2d8-fc5c-4bb9-848f-fa25500d44f8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

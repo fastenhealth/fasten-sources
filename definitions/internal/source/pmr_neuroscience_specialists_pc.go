@@ -29,6 +29,8 @@ func GetSourcePmrNeuroscienceSpecialistsPc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "PMR Neuroscience Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypePmrNeuroscienceSpecialistsPc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pmr-neuroscience-specialists-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.neurosurg.org/our-team-neurosurgeon-oklahoma-city-ok/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

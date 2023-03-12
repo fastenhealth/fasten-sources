@@ -30,6 +30,7 @@ func GetSourceDannyRBartelMDPA(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeDannyRBartelMDPA
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "danny-r-bartel-m-d-p-a.jpg"
+	sourceDef.PatientAccessUrl = "https://www.dannybartelmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

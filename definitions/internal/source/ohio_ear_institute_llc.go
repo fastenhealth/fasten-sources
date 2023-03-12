@@ -29,6 +29,8 @@ func GetSourceOhioEarInstituteLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Ohio Ear Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeOhioEarInstituteLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ohio-ear-institute-llc.jpg"
+	sourceDef.PatientAccessUrl = "http://www.ohioear.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

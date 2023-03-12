@@ -29,6 +29,7 @@ func GetSourceWellnessCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeWellnessCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

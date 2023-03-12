@@ -29,6 +29,8 @@ func GetSourceNorthCaddoMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "North Caddo Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthCaddoMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "north-caddo-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://ncmcla.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSouthBendObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "South Bend OBH"
 	sourceDef.SourceType = pkg.SourceTypeSouthBendObh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://providers.beaconhealthsystem.org/specialty/Obstetrics%20and%20Gynecology/near/South%20Bend,%20IN"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

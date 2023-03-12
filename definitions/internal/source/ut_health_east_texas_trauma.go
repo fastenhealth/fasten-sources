@@ -29,6 +29,7 @@ func GetSourceUtHealthEastTexasTrauma(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "UT Health East Texas Trauma"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthEastTexasTrauma
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://uthealtheasttexas.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

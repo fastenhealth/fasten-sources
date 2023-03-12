@@ -29,6 +29,7 @@ func GetSourceMorganCountyFamilyPractice(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Morgan County Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMorganCountyFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://permanentlyclosed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNeurologySpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Neurology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeNeurologySpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

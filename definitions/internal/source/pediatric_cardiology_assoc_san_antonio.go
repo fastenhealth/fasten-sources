@@ -29,6 +29,8 @@ func GetSourcePediatricCardiologyAssocSanAntonio(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Pediatric Cardiology Assoc. San Antonio"
 	sourceDef.SourceType = pkg.SourceTypePediatricCardiologyAssocSanAntonio
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pediatric-cardiology-assoc-san-antonio.svg"
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/cardiologysanantonio"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

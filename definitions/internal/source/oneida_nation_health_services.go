@@ -29,6 +29,7 @@ func GetSourceOneidaNationHealthServices(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Oneida Nation Health Services"
 	sourceDef.SourceType = pkg.SourceTypeOneidaNationHealthServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://oneida-nsn.gov/resources/health/community-health-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

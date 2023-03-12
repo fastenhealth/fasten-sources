@@ -29,6 +29,7 @@ func GetSourceTSriMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Display = "T. Sri M.D."
 	sourceDef.SourceType = pkg.SourceTypeTSriMD
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.avmc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

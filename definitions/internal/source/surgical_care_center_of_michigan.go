@@ -29,6 +29,7 @@ func GetSourceSurgicalCareCenterOfMichigan(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Surgical Care Center Of Michigan"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalCareCenterOfMichigan
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.seeitclear.com/gro-locations/surgical-care-center-of-michigan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

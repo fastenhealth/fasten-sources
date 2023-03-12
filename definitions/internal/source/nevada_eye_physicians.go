@@ -29,6 +29,7 @@ func GetSourceNevadaEyePhysicians(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Nevada Eye Physicians"
 	sourceDef.SourceType = pkg.SourceTypeNevadaEyePhysicians
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://nevadaeyephysicians.com/locations/henderson/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

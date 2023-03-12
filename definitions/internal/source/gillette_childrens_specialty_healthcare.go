@@ -30,6 +30,7 @@ func GetSourceGilletteChildrensSpecialtyHealthcare(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Gillette Children's Specialty Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeGilletteChildrensSpecialtyHealthcare
 	sourceDef.BrandLogo = "gillette-childrens-specialty-healthcare.jpg"
+	sourceDef.PatientAccessUrl = "https://www.gillettechildrens.org/locations/st-paul-campus"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

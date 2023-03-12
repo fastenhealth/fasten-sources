@@ -29,6 +29,7 @@ func GetSourceSeattleNeuroAndSpineSurgery(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Seattle Neuro And Spine Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSeattleNeuroAndSpineSurgery
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://seattleneuro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePhilaCollegeOfOsteopathicMedicine(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Phila College Of Osteopathic Medicine"
 	sourceDef.SourceType = pkg.SourceTypePhilaCollegeOfOsteopathicMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pcom.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHospBasedPocPediatrixMedicalOfTx(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Hosp Based POC-Pediatrix Medical Of Tx"
 	sourceDef.SourceType = pkg.SourceTypeHospBasedPocPediatrixMedicalOfTx
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/neodallas"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

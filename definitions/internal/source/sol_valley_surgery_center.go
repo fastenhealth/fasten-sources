@@ -29,6 +29,7 @@ func GetSourceSolValleySurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Sol Valley Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSolValleySurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://azcarenetwork.org/resource/facility/sol-valley-surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

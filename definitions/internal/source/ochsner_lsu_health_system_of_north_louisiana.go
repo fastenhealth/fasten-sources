@@ -29,6 +29,7 @@ func GetSourceOchsnerLsuHealthSystemOfNorthLouisiana(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Ochsner LSU Health System of North Louisiana"
 	sourceDef.SourceType = pkg.SourceTypeOchsnerLsuHealthSystemOfNorthLouisiana
+	sourceDef.PatientAccessUrl = "https://www.ochsnerlsuhs.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

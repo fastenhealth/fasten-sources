@@ -29,6 +29,8 @@ func GetSourceLosAngelesJewishHomeForTheAging(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Los Angeles Jewish Home for the Aging"
 	sourceDef.SourceType = pkg.SourceTypeLosAngelesJewishHomeForTheAging
+	sourceDef.BrandLogo = "los-angeles-jewish-home-for-the-aging.jpeg"
+	sourceDef.PatientAccessUrl = "https://ajas.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

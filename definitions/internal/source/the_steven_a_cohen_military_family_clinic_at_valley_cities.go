@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtValleyCities(env pkg.FastenLi
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Valley Cities"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtValleyCities
+	sourceDef.BrandLogo = "the-steven-a-cohen-military-family-clinic-at-valley-cities.jpg"
+	sourceDef.PatientAccessUrl = "https://www.valleycities.org/cohenclinic"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

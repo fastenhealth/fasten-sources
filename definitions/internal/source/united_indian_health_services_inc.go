@@ -29,6 +29,7 @@ func GetSourceUnitedIndianHealthServicesInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "United Indian Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeUnitedIndianHealthServicesInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://unitedindianhealthservices.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

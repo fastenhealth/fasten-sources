@@ -29,6 +29,7 @@ func GetSourceWilsonMedicalCenterReeseCampus(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Wilson Medical Center - Reese Campus"
 	sourceDef.SourceType = pkg.SourceTypeWilsonMedicalCenterReeseCampus
+	sourceDef.PatientAccessUrl = "https://www.wilsonmedical.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

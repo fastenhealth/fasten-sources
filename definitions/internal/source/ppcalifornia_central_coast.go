@@ -29,6 +29,7 @@ func GetSourcePpcaliforniaCentralCoast(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "PPCalifornia Central Coast"
 	sourceDef.SourceType = pkg.SourceTypePpcaliforniaCentralCoast
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/health-center/california/santa-barbara/93101/santa-barbara-center-3268-90170"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

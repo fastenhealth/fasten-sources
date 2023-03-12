@@ -29,6 +29,8 @@ func GetSourceTeyWomensHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Tey Women's Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTeyWomensHealthCenter
+	sourceDef.BrandLogo = "tey-womens-health-center.svg"
+	sourceDef.PatientAccessUrl = "http://www.teywomenshealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

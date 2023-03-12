@@ -29,6 +29,7 @@ func GetSourceOptumcareMedicalGroupRbrc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "OptumCare Medical Group RBRC"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareMedicalGroupRbrc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.rosslegacy.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

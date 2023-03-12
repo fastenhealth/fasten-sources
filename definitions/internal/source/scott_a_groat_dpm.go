@@ -29,6 +29,7 @@ func GetSourceScottAGroatDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Scott A. Groat, DPM"
 	sourceDef.SourceType = pkg.SourceTypeScottAGroatDpm
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-scott-groat-x53tv"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

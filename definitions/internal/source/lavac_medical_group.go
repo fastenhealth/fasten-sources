@@ -29,6 +29,7 @@ func GetSourceLavacMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "LAVAC Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeLavacMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

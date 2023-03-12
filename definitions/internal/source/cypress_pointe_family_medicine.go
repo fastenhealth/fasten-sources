@@ -29,6 +29,7 @@ func GetSourceCypressPointeFamilyMedicine(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Cypress Pointe Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCypressPointeFamilyMedicine
+	sourceDef.PatientAccessUrl = "https://childrensmedctr.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

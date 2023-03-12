@@ -29,6 +29,7 @@ func GetSourceProlianceImagingCenterAtFirstHill(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Proliance Imaging Center at First Hill"
 	sourceDef.SourceType = pkg.SourceTypeProlianceImagingCenterAtFirstHill
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

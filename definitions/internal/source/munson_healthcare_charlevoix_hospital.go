@@ -29,6 +29,8 @@ func GetSourceMunsonHealthcareCharlevoixHospital(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Munson Healthcare Charlevoix Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMunsonHealthcareCharlevoixHospital
+	sourceDef.BrandLogo = "munson-healthcare-charlevoix-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.munsonhealthcare.org/charlevoix-hospital/charlevoix-home"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

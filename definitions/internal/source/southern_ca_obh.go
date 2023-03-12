@@ -29,6 +29,7 @@ func GetSourceSouthernCaObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Southern CA OBH"
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaObh
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fountainvalleyhospital.com/home"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

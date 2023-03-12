@@ -29,6 +29,7 @@ func GetSourceNavicentHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Navicent Health"
 	sourceDef.SourceType = pkg.SourceTypeNavicentHealth
+	sourceDef.PatientAccessUrl = "https://navicenthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

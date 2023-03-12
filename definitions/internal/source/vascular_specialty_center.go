@@ -29,6 +29,7 @@ func GetSourceVascularSpecialtyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Vascular Specialty Center"
 	sourceDef.SourceType = pkg.SourceTypeVascularSpecialtyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://brvsc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

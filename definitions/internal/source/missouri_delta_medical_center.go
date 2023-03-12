@@ -29,6 +29,8 @@ func GetSourceMissouriDeltaMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Missouri Delta Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMissouriDeltaMedicalCenter
+	sourceDef.BrandLogo = "missouri-delta-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.missouridelta.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

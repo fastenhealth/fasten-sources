@@ -29,6 +29,8 @@ func GetSourceTheCrossMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "The Cross Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheCrossMedicalClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-cross-medical-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/thecrossmc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

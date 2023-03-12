@@ -29,6 +29,7 @@ func GetSourceSouthMississippiWoundManagementLlc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "South Mississippi Wound Management LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthMississippiWoundManagementLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

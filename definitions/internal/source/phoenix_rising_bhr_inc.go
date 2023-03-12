@@ -29,6 +29,7 @@ func GetSourcePhoenixRisingBhrInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Phoenix Rising BHR Inc"
 	sourceDef.SourceType = pkg.SourceTypePhoenixRisingBhrInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.phoenixrisingbhr.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

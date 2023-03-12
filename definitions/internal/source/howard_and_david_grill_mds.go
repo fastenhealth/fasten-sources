@@ -29,6 +29,7 @@ func GetSourceHowardAndDavidGrillMds(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Howard & David Grill, MDs"
 	sourceDef.SourceType = pkg.SourceTypeHowardAndDavidGrillMds
+	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

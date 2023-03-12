@@ -29,6 +29,8 @@ func GetSourceTheEndocrineOfficeInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "The Endocrine Office Inc"
 	sourceDef.SourceType = pkg.SourceTypeTheEndocrineOfficeInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-endocrine-office-inc.svg"
+	sourceDef.PatientAccessUrl = "https://www.lvhn.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

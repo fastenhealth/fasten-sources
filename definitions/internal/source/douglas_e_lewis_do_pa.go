@@ -29,6 +29,7 @@ func GetSourceDouglasELewisDoPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Douglas E Lewis DO PA"
 	sourceDef.SourceType = pkg.SourceTypeDouglasELewisDoPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://bsahs.org/virtualcare"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

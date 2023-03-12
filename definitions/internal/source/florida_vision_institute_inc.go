@@ -30,6 +30,7 @@ func GetSourceFloridaVisionInstituteInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeFloridaVisionInstituteInc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "florida-vision-institute-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.flvisioninstitute.com/wp-content/themes/glacial/images/logo.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

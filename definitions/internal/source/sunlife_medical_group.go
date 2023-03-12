@@ -29,6 +29,8 @@ func GetSourceSunlifeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Sunlife Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSunlifeMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "sunlife-medical-group.jpg"
+	sourceDef.PatientAccessUrl = "http://sunlifemedgrp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

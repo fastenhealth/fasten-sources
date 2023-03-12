@@ -29,6 +29,7 @@ func GetSourceNcpFortWorthCathLab(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "NCP Fort Worth Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpFortWorthCathLab
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fortworthcathlab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

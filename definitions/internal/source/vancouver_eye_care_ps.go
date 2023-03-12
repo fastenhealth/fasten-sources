@@ -29,6 +29,8 @@ func GetSourceVancouverEyeCarePs(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Vancouver Eye Care PS"
 	sourceDef.SourceType = pkg.SourceTypeVancouverEyeCarePs
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vancouver-eye-care-ps.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.vancouvereyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

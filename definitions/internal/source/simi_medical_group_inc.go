@@ -29,6 +29,8 @@ func GetSourceSimiMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Simi Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSimiMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "simi-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.simimedicalgrp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

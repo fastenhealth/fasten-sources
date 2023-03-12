@@ -29,6 +29,7 @@ func GetSourceWilliamRWelbornIiiMd1(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "William R. Welborn, III MD"
 	sourceDef.SourceType = pkg.SourceTypeWilliamRWelbornIiiMd1
+	sourceDef.PatientAccessUrl = "http://williamrwelbornmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

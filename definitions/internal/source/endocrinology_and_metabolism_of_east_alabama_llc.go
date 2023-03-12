@@ -29,6 +29,7 @@ func GetSourceEndocrinologyAndMetabolismOfEastAlabamaLlc(env pkg.FastenLighthous
 
 	sourceDef.Display = "Endocrinology and Metabolism of East Alabama, LLC"
 	sourceDef.SourceType = pkg.SourceTypeEndocrinologyAndMetabolismOfEastAlabamaLlc
+	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

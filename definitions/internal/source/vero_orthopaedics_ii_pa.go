@@ -29,6 +29,8 @@ func GetSourceVeroOrthopaedicsIiPa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Vero Orthopaedics II PA"
 	sourceDef.SourceType = pkg.SourceTypeVeroOrthopaedicsIiPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vero-orthopaedics-ii-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/veroorthopaedics/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

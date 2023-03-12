@@ -29,6 +29,7 @@ func GetSourceTorranceMemorialMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Torrance Memorial Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeTorranceMemorialMedicalCenter
+	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

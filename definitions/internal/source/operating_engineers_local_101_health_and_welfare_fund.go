@@ -29,6 +29,7 @@ func GetSourceOperatingEngineersLocal101HealthAndWelfareFund(env pkg.FastenLight
 
 	sourceDef.Display = "Operating Engineers Local 101 Health and Welfare Fund"
 	sourceDef.SourceType = pkg.SourceTypeOperatingEngineersLocal101HealthAndWelfareFund
+	sourceDef.PatientAccessUrl = "https://m.facebook.com/profile.php?id=168854199797026"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceStonyBrookBusinessVenturesLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Stony Brook Business Ventures, LLC"
 	sourceDef.SourceType = pkg.SourceTypeStonyBrookBusinessVenturesLlc
+	sourceDef.PatientAccessUrl = "https://www.stonybrookmedicine.edu/community-medical"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

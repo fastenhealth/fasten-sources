@@ -29,6 +29,8 @@ func GetSourceTexasVisionAndLaserCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Texas Vision And Laser Center"
 	sourceDef.SourceType = pkg.SourceTypeTexasVisionAndLaserCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "texas-vision-and-laser-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/texasvisionandlaser/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

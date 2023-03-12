@@ -29,6 +29,7 @@ func GetSourceProlianceSurgicalSpecialistsEdmonds(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Proliance Surgical Specialists Edmonds"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSurgicalSpecialistsEdmonds
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

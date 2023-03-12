@@ -29,6 +29,8 @@ func GetSourceTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env pkg.Fas
 
 	sourceDef.Display = "The Regional Medical Center of Orangeburg and Calhoun Counties"
 	sourceDef.SourceType = pkg.SourceTypeTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties
+	sourceDef.BrandLogo = "the-regional-medical-center-of-orangeburg-and-calhoun-counties.jpg"
+	sourceDef.PatientAccessUrl = "http://www.trmchealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

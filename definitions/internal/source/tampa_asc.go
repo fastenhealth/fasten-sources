@@ -29,6 +29,7 @@ func GetSourceTampaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "Tampa ASC"
 	sourceDef.SourceType = pkg.SourceTypeTampaAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.asctampa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

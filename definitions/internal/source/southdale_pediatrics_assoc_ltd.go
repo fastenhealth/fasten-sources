@@ -29,6 +29,8 @@ func GetSourceSouthdalePediatricsAssocLtd(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Southdale Pediatrics Assoc., Ltd."
 	sourceDef.SourceType = pkg.SourceTypeSouthdalePediatricsAssocLtd
+	sourceDef.BrandLogo = "southdale-pediatrics-assoc-ltd.svg"
+	sourceDef.PatientAccessUrl = "https://www.southdalepeds.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceSouthTexasInfectiousDiseasesConsultantsPa(env pkg.FastenLighthouse
 
 	sourceDef.Display = "South Texas Infectious Diseases Consultants, PA"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasInfectiousDiseasesConsultantsPa
+	sourceDef.BrandLogo = "south-texas-infectious-diseases-consultants-pa.jpg"
+	sourceDef.PatientAccessUrl = "http://stidcpa.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

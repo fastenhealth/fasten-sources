@@ -29,6 +29,8 @@ func GetSourceLonestarVeinAndVascularSpecialists(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Lonestar Vein And Vascular Specialists"
 	sourceDef.SourceType = pkg.SourceTypeLonestarVeinAndVascularSpecialists
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "lonestar-vein-and-vascular-specialists.jpg"
+	sourceDef.PatientAccessUrl = "https://www.lsvvs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

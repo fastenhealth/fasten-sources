@@ -29,6 +29,8 @@ func GetSourcePchsDental(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "PCHS Dental"
 	sourceDef.SourceType = pkg.SourceTypePchsDental
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pchs-dental.jpg"
+	sourceDef.PatientAccessUrl = "https://www.pchsmedclinic.org/contact"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

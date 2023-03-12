@@ -29,6 +29,8 @@ func GetSourceVnacjCommunityHealthCenterInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "VNACJ Community Health Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeVnacjCommunityHealthCenterInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "vnacj-community-health-center-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://vnachc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

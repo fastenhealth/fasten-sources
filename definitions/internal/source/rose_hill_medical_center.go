@@ -29,6 +29,7 @@ func GetSourceRoseHillMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Rose Hill Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeRoseHillMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nc-north-carolina/rose-hill/rose-hill-medical-center-x35fq5"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDeltaHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Delta Health Center"
 	sourceDef.SourceType = pkg.SourceTypeDeltaHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://deltahealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

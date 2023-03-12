@@ -29,6 +29,7 @@ func GetSourceRockyMountainFamilyPhysiciansWest(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Rocky Mountain Family Physicians West"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainFamilyPhysiciansWest
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rmfamilyphys.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

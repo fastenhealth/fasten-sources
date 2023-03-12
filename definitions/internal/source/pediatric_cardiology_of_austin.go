@@ -29,6 +29,7 @@ func GetSourcePediatricCardiologyOfAustin(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Pediatric Cardiology Of Austin"
 	sourceDef.SourceType = pkg.SourceTypePediatricCardiologyOfAustin
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.austexpediatrics.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

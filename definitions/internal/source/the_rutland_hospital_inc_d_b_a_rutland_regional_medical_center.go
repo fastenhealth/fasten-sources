@@ -29,6 +29,8 @@ func GetSourceTheRutlandHospitalIncDBARutlandRegionalMedicalCenter(env pkg.Faste
 
 	sourceDef.Display = "The Rutland Hospital, Inc. d/b/a Rutland Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeTheRutlandHospitalIncDBARutlandRegionalMedicalCenter
+	sourceDef.BrandLogo = "the-rutland-hospital-inc-d-b-a-rutland-regional-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.rrmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

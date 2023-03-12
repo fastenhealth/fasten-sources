@@ -29,6 +29,8 @@ func GetSourcePeachTreeHealthcare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Peach Tree Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePeachTreeHealthcare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "peach-tree-healthcare.jpg"
+	sourceDef.PatientAccessUrl = "https://pickpeach.org/peach-tree-facts-and-figures/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

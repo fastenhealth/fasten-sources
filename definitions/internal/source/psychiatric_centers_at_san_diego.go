@@ -29,6 +29,7 @@ func GetSourcePsychiatricCentersAtSanDiego(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Psychiatric Centers At San Diego"
 	sourceDef.SourceType = pkg.SourceTypePsychiatricCentersAtSanDiego
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.psychiatriccenters.com/locations/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

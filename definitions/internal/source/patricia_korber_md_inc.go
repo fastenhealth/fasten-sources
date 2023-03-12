@@ -29,6 +29,7 @@ func GetSourcePatriciaKorberMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Patricia Korber MD Inc."
 	sourceDef.SourceType = pkg.SourceTypePatriciaKorberMdInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hoag.org/physician/patricia-k-korber-m-d/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

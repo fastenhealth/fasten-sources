@@ -29,6 +29,7 @@ func GetSourceStateOfNewMexico(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "State of New Mexico"
 	sourceDef.SourceType = pkg.SourceTypeStateOfNewMexico
+	sourceDef.PatientAccessUrl = "https://www.generalservices.state.nm.us/divisions/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

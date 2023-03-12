@@ -29,6 +29,8 @@ func GetSourceOttawaCountyHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Ottawa County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeOttawaCountyHealthCenter
+	sourceDef.BrandLogo = "ottawa-county-health-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/Ottawa-County-Health-Center-111568958883951/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

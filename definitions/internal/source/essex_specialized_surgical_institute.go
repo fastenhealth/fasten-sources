@@ -30,6 +30,7 @@ func GetSourceEssexSpecializedSurgicalInstitute(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeEssexSpecializedSurgicalInstitute
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "essex-specialized-surgical-institute.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/ESSIEYES/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

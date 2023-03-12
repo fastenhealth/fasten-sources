@@ -29,6 +29,7 @@ func GetSourceNorthernInyoHealthcareDistrict(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Northern Inyo Healthcare District"
 	sourceDef.SourceType = pkg.SourceTypeNorthernInyoHealthcareDistrict
+	sourceDef.PatientAccessUrl = "https://www.nih.org/?utm_source=GMBSocialClimb&utm_medium=NorthernInyoHospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

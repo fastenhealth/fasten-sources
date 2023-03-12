@@ -29,6 +29,7 @@ func GetSourceMentalHealthResourcesInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mental Health Resources, Inc."
 	sourceDef.SourceType = pkg.SourceTypeMentalHealthResourcesInc
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/mhrnewmexico/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

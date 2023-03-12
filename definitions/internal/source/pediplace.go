@@ -29,6 +29,8 @@ func GetSourcePediplace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "PediPlace"
 	sourceDef.SourceType = pkg.SourceTypePediplace
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pediplace.svg"
+	sourceDef.PatientAccessUrl = "https://www.pediplace.org/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceRaficJarrahMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Rafic Jarrah MD"
 	sourceDef.SourceType = pkg.SourceTypeRaficJarrahMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "rafic-jarrah-md.svg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

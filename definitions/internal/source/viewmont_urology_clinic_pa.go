@@ -29,6 +29,8 @@ func GetSourceViewmontUrologyClinicPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Viewmont Urology Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeViewmontUrologyClinicPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "viewmont-urology-clinic-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/viewmonturology/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMENDPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "M.E.N.D., PA"
 	sourceDef.SourceType = pkg.SourceTypeMENDPa
+	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

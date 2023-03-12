@@ -29,6 +29,7 @@ func GetSourceNorthBrowardHospitalDistrict(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "North Broward Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeNorthBrowardHospitalDistrict
+	sourceDef.PatientAccessUrl = "https://www.browardhealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

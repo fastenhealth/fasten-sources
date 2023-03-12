@@ -29,6 +29,8 @@ func GetSourceUniontownHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Uniontown Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUniontownHospital
+	sourceDef.BrandLogo = "uniontown-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/WVUMedicineUniontownHospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

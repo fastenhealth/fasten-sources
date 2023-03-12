@@ -29,6 +29,7 @@ func GetSourceProvidenceHealthAndServicesOregon(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Providence Health & Services - Oregon"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceHealthAndServicesOregon
+	sourceDef.PatientAccessUrl = "https://www.providence.org/locations/or/community-health-division"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

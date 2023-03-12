@@ -29,7 +29,8 @@ func GetSourceHumboldtGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Humboldt General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHumboldtGeneralHospital
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3ZTE0JGGDRPGPHMRHZWMDCENPDNCOQ?assignment_id=3NPI0JQDA22HIIYX8N9SG6F6Y5NPT1&from_queue=true"
+	sourceDef.BrandLogo = "humboldt-general-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.hghospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

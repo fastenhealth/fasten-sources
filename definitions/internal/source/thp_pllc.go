@@ -29,6 +29,7 @@ func GetSourceThpPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "THP PLLC"
 	sourceDef.SourceType = pkg.SourceTypeThpPllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

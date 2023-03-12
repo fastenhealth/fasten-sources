@@ -29,6 +29,8 @@ func GetSourceThePaxtonClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "The Paxton Clinic"
 	sourceDef.SourceType = pkg.SourceTypeThePaxtonClinic
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "the-paxton-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/thepaxtonclinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

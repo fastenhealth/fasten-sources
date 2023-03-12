@@ -29,6 +29,7 @@ func GetSourceSchwenksvilleFamilyPractice(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Schwenksville Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeSchwenksvilleFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.topnpi.com/pa1013080670/dr-burton-ginsberg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDfwPhysiciansMedicalAssociates(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "DFW Physicians Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeDfwPhysiciansMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dfw-physicians-medical-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://dfwpma.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

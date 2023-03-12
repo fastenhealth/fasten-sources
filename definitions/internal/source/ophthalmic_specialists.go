@@ -29,6 +29,7 @@ func GetSourceOphthalmicSpecialists(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Ophthalmic Specialists"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicSpecialists
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/il-illinois/homewood/ophthalmic-specialists-fgtks"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

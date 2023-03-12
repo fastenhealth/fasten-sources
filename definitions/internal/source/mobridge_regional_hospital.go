@@ -29,6 +29,8 @@ func GetSourceMobridgeRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mobridge Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMobridgeRegionalHospital
+	sourceDef.BrandLogo = "mobridge-regional-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.mobridgehospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

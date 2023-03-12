@@ -29,6 +29,8 @@ func GetSourcePrairieRidgeIntegratedBehavioralHealthcare(env pkg.FastenLighthous
 
 	sourceDef.Display = "Prairie Ridge Integrated Behavioral Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePrairieRidgeIntegratedBehavioralHealthcare
+	sourceDef.BrandLogo = "prairie-ridge-integrated-behavioral-healthcare.jpg"
+	sourceDef.PatientAccessUrl = "https://prairieridge.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

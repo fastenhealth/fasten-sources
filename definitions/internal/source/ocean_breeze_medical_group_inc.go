@@ -29,6 +29,7 @@ func GetSourceOceanBreezeMedicalGroupInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Ocean Breeze Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeOceanBreezeMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/san-clemente/ocean-breeze-medical-group-xbff7y"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

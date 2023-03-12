@@ -29,6 +29,8 @@ func GetSourceSoutheastInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Southeast Inc"
 	sourceDef.SourceType = pkg.SourceTypeSoutheastInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "southeast-inc.svg"
+	sourceDef.PatientAccessUrl = "https://southeasthc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

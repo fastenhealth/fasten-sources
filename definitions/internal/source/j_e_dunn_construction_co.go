@@ -29,6 +29,7 @@ func GetSourceJEDunnConstructionCo(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "J.E. Dunn Construction Co."
 	sourceDef.SourceType = pkg.SourceTypeJEDunnConstructionCo
+	sourceDef.PatientAccessUrl = "https://www.jedunn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

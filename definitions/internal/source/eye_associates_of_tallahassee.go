@@ -29,7 +29,7 @@ func GetSourceEyeAssociatesOfTallahassee(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Eye Associates Of Tallahassee"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesOfTallahassee
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3WGCNLZJLS55YHL4BTTMLMJXH2OD13?assignment_id=3TXD01ZLDIEAT2R3A87EI4QDPMLU4Q&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://www.eyeassociatesoftallahassee.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

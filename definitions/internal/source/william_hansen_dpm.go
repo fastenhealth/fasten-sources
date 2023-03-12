@@ -29,6 +29,7 @@ func GetSourceWilliamHansenDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "William Hansen, DPM"
 	sourceDef.SourceType = pkg.SourceTypeWilliamHansenDpm
+	sourceDef.PatientAccessUrl = "https://doctors.nyp.org/william-m-hansen-dpm/149-45-northern-blvd"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

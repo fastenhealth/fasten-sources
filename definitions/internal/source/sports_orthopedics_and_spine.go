@@ -29,6 +29,7 @@ func GetSourceSportsOrthopedicsAndSpine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Sports Orthopedics And Spine"
 	sourceDef.SourceType = pkg.SourceTypeSportsOrthopedicsAndSpine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.sportsorthospine.com/contact/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

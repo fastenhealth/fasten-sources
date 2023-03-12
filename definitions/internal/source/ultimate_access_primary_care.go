@@ -29,6 +29,7 @@ func GetSourceUltimateAccessPrimaryCare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Ultimate Access Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeUltimateAccessPrimaryCare
+	sourceDef.PatientAccessUrl = "https://www.ultimateaccesspc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

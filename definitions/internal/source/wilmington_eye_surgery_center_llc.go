@@ -29,6 +29,7 @@ func GetSourceWilmingtonEyeSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Wilmington Eye Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeWilmingtonEyeSurgeryCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: Wilmington Eye Surgery Center LLC Address: 1919 S 16th Street City: Wilmington Zip: 284016610 State: North Carolina Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

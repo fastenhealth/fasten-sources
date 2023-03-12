@@ -29,6 +29,7 @@ func GetSourceOrtho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "Ortho"
 	sourceDef.SourceType = pkg.SourceTypeOrtho
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cmcfc.org/clinics/orthomidwest/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

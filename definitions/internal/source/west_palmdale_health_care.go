@@ -29,6 +29,8 @@ func GetSourceWestPalmdaleHealthCare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "West Palmdale Health Care"
 	sourceDef.SourceType = pkg.SourceTypeWestPalmdaleHealthCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "west-palmdale-health-care.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/stayhealthyWPHC/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

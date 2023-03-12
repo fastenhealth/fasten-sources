@@ -29,6 +29,8 @@ func GetSourceGoodmanCampbellBrainAndSpine(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Goodman Campbell Brain And Spine"
 	sourceDef.SourceType = pkg.SourceTypeGoodmanCampbellBrainAndSpine
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "goodman-campbell-brain-and-spine.svg"
+	sourceDef.PatientAccessUrl = "https://www.goodmancampbell.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

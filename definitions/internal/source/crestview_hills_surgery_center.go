@@ -29,6 +29,8 @@ func GetSourceCrestviewHillsSurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Crestview Hills Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeCrestviewHillsSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "crestview-hills-surgery-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.stelizabethphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceShreveportInternalMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Shreveport Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeShreveportInternalMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://shreveportim.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

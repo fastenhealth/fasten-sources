@@ -29,6 +29,7 @@ func GetSourceRafikRGirgisMD(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Rafik R Girgis M D"
 	sourceDef.SourceType = pkg.SourceTypeRafikRGirgisMD
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.emanatehealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

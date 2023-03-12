@@ -29,6 +29,7 @@ func GetSourceStClairPulmonaryAndCriticalCarePc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "St. Clair Pulmonary & Critical Care PC"
 	sourceDef.SourceType = pkg.SourceTypeStClairPulmonaryAndCriticalCarePc
+	sourceDef.PatientAccessUrl = "http://www.stclairpulmonary.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

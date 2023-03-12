@@ -29,6 +29,7 @@ func GetSourceSpiritrustLutheranLife(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "SpiriTrust Lutheran LIFE"
 	sourceDef.SourceType = pkg.SourceTypeSpiritrustLutheranLife
+	sourceDef.PatientAccessUrl = "https://www.spiritrustlutheran.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

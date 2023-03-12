@@ -29,6 +29,7 @@ func GetSourceNorwalkCardiacThoracic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Norwalk Cardiac Thoracic"
 	sourceDef.SourceType = pkg.SourceTypeNorwalkCardiacThoracic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/ohio/norwalk-cardiac-411359217"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

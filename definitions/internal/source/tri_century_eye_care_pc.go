@@ -29,6 +29,7 @@ func GetSourceTriCenturyEyeCarePc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Tri Century Eye Care PC"
 	sourceDef.SourceType = pkg.SourceTypeTriCenturyEyeCarePc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://tricenturyeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

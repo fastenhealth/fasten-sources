@@ -29,6 +29,7 @@ func GetSourceRheumatologyAssocPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Rheumatology Assoc PC"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAssocPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://rheumatologyassociates.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

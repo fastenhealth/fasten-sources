@@ -29,6 +29,8 @@ func GetSourceSimiFamilyMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Simi Family Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSimiFamilyMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "simi-family-medical-group.jpg"
+	sourceDef.PatientAccessUrl = "https://www.simimedicalgrp.com/about.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

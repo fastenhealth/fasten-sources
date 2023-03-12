@@ -29,6 +29,7 @@ func GetSourceReddingRancheriaTribalHealthCtr(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Redding Rancheria Tribal Health Ctr"
 	sourceDef.SourceType = pkg.SourceTypeReddingRancheriaTribalHealthCtr
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rrths.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

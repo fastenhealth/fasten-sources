@@ -29,6 +29,8 @@ func GetSourceSignaturePhysicalTherapy(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Signature Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeSignaturePhysicalTherapy
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "signature-physical-therapy.jpg"
+	sourceDef.PatientAccessUrl = "https://www.signaturemedicalgroup.com/locations/signature-physical-therapy/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

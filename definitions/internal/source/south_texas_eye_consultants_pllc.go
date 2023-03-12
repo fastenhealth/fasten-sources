@@ -29,6 +29,7 @@ func GetSourceSouthTexasEyeConsultantsPllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "South Texas Eye Consultants, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasEyeConsultantsPllc
+	sourceDef.PatientAccessUrl = "https://www.southtexaseye.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

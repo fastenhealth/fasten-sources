@@ -30,6 +30,7 @@ func GetSourceInterventionalNephrologySpecialists(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeInterventionalNephrologySpecialists
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "interventional-nephrology-specialists.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tn-tennessee/memphis/interventional-nephrology-x2bf4rc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

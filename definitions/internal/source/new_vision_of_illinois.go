@@ -29,6 +29,7 @@ func GetSourceNewVisionOfIllinois(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "NEW VISION OF ILLINOIS"
 	sourceDef.SourceType = pkg.SourceTypeNewVisionOfIllinois
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.newvisionrockford.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

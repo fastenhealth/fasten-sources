@@ -29,6 +29,7 @@ func GetSourceFacvConsultantsPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Facv Consultants PC"
 	sourceDef.SourceType = pkg.SourceTypeFacvConsultantsPc
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/montclair/facv-consultants-pc-montclair-oorr7s5"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

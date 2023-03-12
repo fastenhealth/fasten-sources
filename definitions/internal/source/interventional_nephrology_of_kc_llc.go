@@ -29,6 +29,7 @@ func GetSourceInterventionalNephrologyOfKcLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "INTERVENTIONAL NEPHROLOGY OF KC LLC"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalNephrologyOfKcLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/other_service/specialist_174400000x/1134882681.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

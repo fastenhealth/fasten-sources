@@ -29,6 +29,7 @@ func GetSourceHealthsmartCareManagementSolutionsLp(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "HealthSmart Care Management Solutions, LP"
 	sourceDef.SourceType = pkg.SourceTypeHealthsmartCareManagementSolutionsLp
+	sourceDef.PatientAccessUrl = "https://www.healthsmart.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

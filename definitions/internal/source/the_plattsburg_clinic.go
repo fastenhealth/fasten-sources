@@ -29,6 +29,7 @@ func GetSourceThePlattsburgClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "The Plattsburg Clinic"
 	sourceDef.SourceType = pkg.SourceTypeThePlattsburgClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/locations/the-plattsburg-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

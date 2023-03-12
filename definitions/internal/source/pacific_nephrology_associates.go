@@ -29,6 +29,7 @@ func GetSourcePacificNephrologyAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Pacific Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypePacificNephrologyAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://zaubee.com/biz/pacific-renal-associates-d0hkx9zt"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePelvicFloorCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Pelvic Floor Center"
 	sourceDef.SourceType = pkg.SourceTypePelvicFloorCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=AwrKAXO_xQxktKUj8QHnHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1678587455/RO=10/RU=http%3a%2f%2fwww.pelvicfloorcenter.org%2f/RK=2/RS=0HpN5knJkRaXeASXA7dA9Htu8xM-"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

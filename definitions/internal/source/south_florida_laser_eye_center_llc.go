@@ -29,6 +29,7 @@ func GetSourceSouthFloridaLaserEyeCenterLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "South Florida Laser Eye Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthFloridaLaserEyeCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://sflasereye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

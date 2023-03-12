@@ -29,6 +29,7 @@ func GetSourceGreenvilleEntAndAllergyAssociatesPa(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Greenville ENT And Allergy Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeGreenvilleEntAndAllergyAssociatesPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://greenvilleent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

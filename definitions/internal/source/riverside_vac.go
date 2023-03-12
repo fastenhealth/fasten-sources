@@ -29,6 +29,7 @@ func GetSourceRiversideVac(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Riverside VAC"
 	sourceDef.SourceType = pkg.SourceTypeRiversideVac
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.loopnet.com/Listing/4100-Latham-St-Riverside-CA/13588226/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

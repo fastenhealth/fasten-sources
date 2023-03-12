@@ -30,6 +30,7 @@ func GetSourceDermatologyAssociatesOfThePalmBeaches(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Dermatology Associates of The Palm Beaches"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfThePalmBeaches
 	sourceDef.BrandLogo = "dermatology-associates-of-the-palm-beaches.jpg"
+	sourceDef.PatientAccessUrl = "https://www.greatderms.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

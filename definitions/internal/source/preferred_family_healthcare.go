@@ -29,6 +29,7 @@ func GetSourcePreferredFamilyHealthcare(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Preferred Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePreferredFamilyHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pfh.org/locations"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

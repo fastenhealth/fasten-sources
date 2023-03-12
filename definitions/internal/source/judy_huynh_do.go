@@ -29,6 +29,7 @@ func GetSourceJudyHuynhDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Judy Huynh  DO"
 	sourceDef.SourceType = pkg.SourceTypeJudyHuynhDo
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/judy-huynh-do"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

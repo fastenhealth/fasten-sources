@@ -29,6 +29,8 @@ func GetSourceSeacoastOrthoAndsportsMedLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Seacoast Ortho &sports Med LLC"
 	sourceDef.SourceType = pkg.SourceTypeSeacoastOrthoAndsportsMedLlc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "seacoast-ortho-andsports-med-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.orthosports.info/seacoast-orthopedics-9275/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

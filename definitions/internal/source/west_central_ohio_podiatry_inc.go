@@ -29,6 +29,7 @@ func GetSourceWestCentralOhioPodiatryInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "West Central Ohio Podiatry Inc."
 	sourceDef.SourceType = pkg.SourceTypeWestCentralOhioPodiatryInc
+	sourceDef.PatientAccessUrl = "http://wcopodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

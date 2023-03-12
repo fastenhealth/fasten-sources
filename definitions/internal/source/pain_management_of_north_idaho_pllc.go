@@ -29,6 +29,8 @@ func GetSourcePainManagementOfNorthIdahoPllc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Pain Management Of North Idaho PLLC"
 	sourceDef.SourceType = pkg.SourceTypePainManagementOfNorthIdahoPllc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "pain-management-of-north-idaho-pllc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.cdapain.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

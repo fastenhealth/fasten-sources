@@ -29,6 +29,7 @@ func GetSourceQuartzHillWalkInMedicalGroup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Quartz Hill Walk-In Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeQuartzHillWalkInMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.firstvalleymedicalgroup.com/location/ca/quartz-hill"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFootAndAnkleAssociatesOfMainePa(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Foot And Ankle Associates of Maine, PA"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkleAssociatesOfMainePa
 	sourceDef.BrandLogo = "foot-and-ankle-associates-of-maine-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.footandankleassociatesofmaine.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

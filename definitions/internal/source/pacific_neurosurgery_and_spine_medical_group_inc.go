@@ -29,6 +29,8 @@ func GetSourcePacificNeurosurgeryAndSpineMedicalGroupInc(env pkg.FastenLighthous
 
 	sourceDef.Display = "Pacific Neurosurgery & Spine Medical Group, Inc"
 	sourceDef.SourceType = pkg.SourceTypePacificNeurosurgeryAndSpineMedicalGroupInc
+	sourceDef.BrandLogo = "pacific-neurosurgery-and-spine-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.sentaclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

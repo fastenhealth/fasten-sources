@@ -29,6 +29,7 @@ func GetSourceGuillermoValenzuelaMdPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Guillermo Valenzuela MD PA"
 	sourceDef.SourceType = pkg.SourceTypeGuillermoValenzuelaMdPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.valenzuelarheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTallahasseeMemorialHealthcare(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tallahassee Memorial HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeTallahasseeMemorialHealthcare
+	sourceDef.BrandLogo = "tallahassee-memorial-healthcare.svg"
+	sourceDef.PatientAccessUrl = "https://www.tmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

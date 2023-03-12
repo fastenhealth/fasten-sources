@@ -29,6 +29,7 @@ func GetSourceProortho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "ProOrtho"
 	sourceDef.SourceType = pkg.SourceTypeProortho
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.proortho.com/locations-contact/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

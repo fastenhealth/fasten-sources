@@ -29,6 +29,7 @@ func GetSourceWarrenEKaplanDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Warren E. Kaplan, DPM"
 	sourceDef.SourceType = pkg.SourceTypeWarrenEKaplanDpm
+	sourceDef.PatientAccessUrl = "https://www.kaplanpodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePeachtreeNephrologyPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Peachtree Nephrology, PC"
 	sourceDef.SourceType = pkg.SourceTypePeachtreeNephrologyPc
+	sourceDef.PatientAccessUrl = "https://peachneph.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

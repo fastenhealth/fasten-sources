@@ -29,6 +29,8 @@ func GetSourceSeniorCareMedicalAssocInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Senior Care Medical Assoc Inc"
 	sourceDef.SourceType = pkg.SourceTypeSeniorCareMedicalAssocInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "senior-care-medical-assoc-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://seniorcaremed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceNoColoradoAnesthesiaProfessionals(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "No Colorado Anesthesia Professionals"
 	sourceDef.SourceType = pkg.SourceTypeNoColoradoAnesthesiaProfessionals
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://ncaphealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

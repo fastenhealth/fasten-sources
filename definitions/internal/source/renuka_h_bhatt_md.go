@@ -29,6 +29,8 @@ func GetSourceRenukaHBhattMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Renuka H. Bhatt, MD"
 	sourceDef.SourceType = pkg.SourceTypeRenukaHBhattMd
+	sourceDef.BrandLogo = "renuka-h-bhatt-md.jpg"
+	sourceDef.PatientAccessUrl = "https://fineskin.com/joliet/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

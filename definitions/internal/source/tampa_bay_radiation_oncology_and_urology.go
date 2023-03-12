@@ -29,6 +29,7 @@ func GetSourceTampaBayRadiationOncologyAndUrology(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Tampa Bay Radiation Oncology & Urology"
 	sourceDef.SourceType = pkg.SourceTypeTampaBayRadiationOncologyAndUrology
+	sourceDef.PatientAccessUrl = "https://tbropa.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

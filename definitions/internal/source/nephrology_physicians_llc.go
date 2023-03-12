@@ -29,6 +29,7 @@ func GetSourceNephrologyPhysiciansLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Nephrology Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyPhysiciansLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/MichianaRegionalVascularCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

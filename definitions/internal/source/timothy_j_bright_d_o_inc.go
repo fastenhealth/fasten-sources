@@ -29,6 +29,8 @@ func GetSourceTimothyJBrightDOInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Timothy J. Bright D.O. Inc."
 	sourceDef.SourceType = pkg.SourceTypeTimothyJBrightDOInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "timothy-j-bright-d-o-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/timothy-bright-do"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

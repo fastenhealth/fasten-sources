@@ -29,6 +29,7 @@ func GetSourceWaukeshaPainCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Waukesha Pain Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeWaukeshaPainCenterLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

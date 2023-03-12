@@ -29,6 +29,7 @@ func GetSourceOrlandoAtTampa(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Orlando At Tampa"
 	sourceDef.SourceType = pkg.SourceTypeOrlandoAtTampa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://en.wikipedia.org/wiki/Tampa,_Florida"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

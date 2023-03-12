@@ -29,6 +29,7 @@ func GetSourcePicoRiveraCommunityMedicalClinic(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Pico Rivera Community Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypePicoRiveraCommunityMedicalClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://m.yelp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDunkirkFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Dunkirk Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeDunkirkFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dunkirk-family-practice.jpg"
+	sourceDef.PatientAccessUrl = "https://www.dunkirkfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

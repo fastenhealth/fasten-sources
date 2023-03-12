@@ -29,6 +29,7 @@ func GetSourceVascularClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Vascular Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVascularClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://vasclin.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

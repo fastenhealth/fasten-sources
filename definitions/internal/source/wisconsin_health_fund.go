@@ -29,6 +29,7 @@ func GetSourceWisconsinHealthFund(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "WISCONSIN HEALTH FUND"
 	sourceDef.SourceType = pkg.SourceTypeWisconsinHealthFund
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.whfund.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

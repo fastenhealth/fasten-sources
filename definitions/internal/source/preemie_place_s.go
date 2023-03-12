@@ -29,6 +29,7 @@ func GetSourcePreemiePlaceS(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Preemie Place S"
 	sourceDef.SourceType = pkg.SourceTypePreemiePlaceS
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hwca.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

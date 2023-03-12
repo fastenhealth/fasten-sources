@@ -30,6 +30,7 @@ func GetSourceFrankDileoMdPracticeOfOphthalmology(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeFrankDileoMdPracticeOfOphthalmology
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "frank-dileo-md-practice-of-ophthalmology.jpg"
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-frank-di-leo-x56yd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

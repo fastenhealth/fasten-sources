@@ -29,6 +29,7 @@ func GetSourceTheEastAlabamaHealthCareAuthority(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "The East Alabama Health Care Authority"
 	sourceDef.SourceType = pkg.SourceTypeTheEastAlabamaHealthCareAuthority
+	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

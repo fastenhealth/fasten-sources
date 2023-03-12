@@ -29,6 +29,7 @@ func GetSourceSouthernOrthopaedicsAndSportsMedAsso(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Southern Orthopaedics & Sports Med. Asso"
 	sourceDef.SourceType = pkg.SourceTypeSouthernOrthopaedicsAndSportsMedAsso
+	sourceDef.PatientAccessUrl = "https://www.precisionsportsortho.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

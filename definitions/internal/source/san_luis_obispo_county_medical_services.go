@@ -29,6 +29,7 @@ func GetSourceSanLuisObispoCountyMedicalServices(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "San Luis Obispo County Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeSanLuisObispoCountyMedicalServices
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/california/san-luis-obispo-county-medical-services-patient-billing-452997236"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

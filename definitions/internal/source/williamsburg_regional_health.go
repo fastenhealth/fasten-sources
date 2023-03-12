@@ -29,6 +29,7 @@ func GetSourceWilliamsburgRegionalHealth(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Williamsburg Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeWilliamsburgRegionalHealth
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://wmbgrh.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFoothillVascularCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Foothill Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeFoothillVascularCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://foothillvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

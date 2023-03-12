@@ -30,6 +30,7 @@ func GetSourceFvcTampaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeFvcTampaLlc
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fvc-tampa-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/florida/fresenius-vascular-care-tampa-369528920"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

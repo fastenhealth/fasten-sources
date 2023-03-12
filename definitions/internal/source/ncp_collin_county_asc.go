@@ -29,6 +29,7 @@ func GetSourceNcpCollinCountyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "NCP Collin County ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollinCountyAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.collincountytx.gov"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

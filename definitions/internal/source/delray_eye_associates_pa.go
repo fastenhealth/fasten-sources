@@ -29,6 +29,7 @@ func GetSourceDelrayEyeAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Delray Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeDelrayEyeAssociatesPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://delrayeyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSaintThomasHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Saint Thomas Health"
 	sourceDef.SourceType = pkg.SourceTypeSaintThomasHealth
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/tennessee/tnnas/nashville-ascension-saint-thomas-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

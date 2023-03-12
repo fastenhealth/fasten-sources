@@ -29,6 +29,7 @@ func GetSourceNursePractionerProfessionalsLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Nurse Practioner Professionals LLC"
 	sourceDef.SourceType = pkg.SourceTypeNursePractionerProfessionalsLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/nurse-practitioner-directory/ms-mississippi/brookhaven"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

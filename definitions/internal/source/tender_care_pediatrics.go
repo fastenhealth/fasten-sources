@@ -29,6 +29,8 @@ func GetSourceTenderCarePediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Tender Care Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeTenderCarePediatrics
+	sourceDef.BrandLogo = "tender-care-pediatrics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.toplinemd.com/tendercareped/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

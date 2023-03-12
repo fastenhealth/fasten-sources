@@ -29,6 +29,7 @@ func GetSourceOmniEyeSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Omni Eye Specialists"
 	sourceDef.SourceType = pkg.SourceTypeOmniEyeSpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.omnieye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

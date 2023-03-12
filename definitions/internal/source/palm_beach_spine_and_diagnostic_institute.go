@@ -29,6 +29,7 @@ func GetSourcePalmBeachSpineAndDiagnosticInstitute(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Palm Beach Spine & Diagnostic Institute"
 	sourceDef.SourceType = pkg.SourceTypePalmBeachSpineAndDiagnosticInstitute
+	sourceDef.PatientAccessUrl = "https://www.palmbeachhealthnetwork.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

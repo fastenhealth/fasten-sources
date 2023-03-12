@@ -29,6 +29,7 @@ func GetSourceStLouisKansasCityCarpentersRegionalCouncil(env pkg.FastenLighthous
 
 	sourceDef.Display = "St. Louis Kansas City Carpenters Regional Council"
 	sourceDef.SourceType = pkg.SourceTypeStLouisKansasCityCarpentersRegionalCouncil
+	sourceDef.PatientAccessUrl = "https://www.carpdc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

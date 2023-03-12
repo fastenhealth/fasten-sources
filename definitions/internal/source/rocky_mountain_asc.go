@@ -29,6 +29,7 @@ func GetSourceRockyMountainAsc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Rocky Mountain ASC"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/colorado/rocky-mountain-vascular-care-373956193"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

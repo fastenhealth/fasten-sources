@@ -29,6 +29,7 @@ func GetSourcePioneerHeartInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Pioneer Heart Institute"
 	sourceDef.SourceType = pkg.SourceTypePioneerHeartInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pioneerheart.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

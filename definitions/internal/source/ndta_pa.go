@@ -29,6 +29,7 @@ func GetSourceNdtaPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Display = "NDTA PA"
 	sourceDef.SourceType = pkg.SourceTypeNdtaPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

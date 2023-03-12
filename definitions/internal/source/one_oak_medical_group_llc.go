@@ -29,6 +29,7 @@ func GetSourceOneOakMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "One Oak Medical Group, LLC"
 	sourceDef.SourceType = pkg.SourceTypeOneOakMedicalGroupLlc
+	sourceDef.PatientAccessUrl = "https://www.oneoakmedical.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourcePiedmontPediatricsPLC(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "PIEDMONT PEDIATRICS  P L C"
 	sourceDef.SourceType = pkg.SourceTypePiedmontPediatricsPLC
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "piedmont-pediatrics-p-l-c.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/piedmontpediatricsplc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

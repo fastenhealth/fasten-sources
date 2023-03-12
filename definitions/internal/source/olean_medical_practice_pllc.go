@@ -29,6 +29,7 @@ func GetSourceOleanMedicalPracticePllc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Olean Medical Practice PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOleanMedicalPracticePllc
+	sourceDef.PatientAccessUrl = "https://oleanmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

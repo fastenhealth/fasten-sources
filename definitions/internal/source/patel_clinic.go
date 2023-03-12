@@ -29,6 +29,7 @@ func GetSourcePatelClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Patel Clinic"
 	sourceDef.SourceType = pkg.SourceTypePatelClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://researchdirectory.uc.edu/p/patel2s8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

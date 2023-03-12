@@ -29,6 +29,7 @@ func GetSourcePrismaHealthMidlands(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Prisma Health-Midlands"
 	sourceDef.SourceType = pkg.SourceTypePrismaHealthMidlands
+	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.prisma_health-midlands.dd1f9bc0a480d8970803ddeb7c07c3e1.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

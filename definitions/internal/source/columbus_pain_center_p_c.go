@@ -29,6 +29,7 @@ func GetSourceColumbusPainCenterPC(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Columbus Pain Center, P.C."
 	sourceDef.SourceType = pkg.SourceTypeColumbusPainCenterPC
+	sourceDef.PatientAccessUrl = "http://www.columbuspaincenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceRenalMedicalAssociationsLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Renal Medical Associations, LLC"
 	sourceDef.SourceType = pkg.SourceTypeRenalMedicalAssociationsLlc
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/east-orange/renal-medical-associatesllc-x9xnbq"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

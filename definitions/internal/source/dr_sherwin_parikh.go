@@ -29,7 +29,7 @@ func GetSourceDrSherwinParikh(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Dr. Sherwin Parikh"
 	sourceDef.SourceType = pkg.SourceTypeDrSherwinParikh
-	sourceDef.BrandLogo = "dr-sherwin-parikh.jpg"
+	sourceDef.PatientAccessUrl = "https://www.tribecaskincenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

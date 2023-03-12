@@ -29,6 +29,7 @@ func GetSourceRiversideSpineAndPainPhysicians(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Riverside Spine And Pain Physicians"
 	sourceDef.SourceType = pkg.SourceTypeRiversideSpineAndPainPhysicians
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://riversidepainphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

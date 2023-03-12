@@ -29,6 +29,8 @@ func GetSourcePomonaValleyHospitalMedicalCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pomona Valley Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePomonaValleyHospitalMedicalCenter
+	sourceDef.BrandLogo = "pomona-valley-hospital-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.pvhmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

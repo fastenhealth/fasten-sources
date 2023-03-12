@@ -29,6 +29,7 @@ func GetSourceTayaniInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Tayani Institute"
 	sourceDef.SourceType = pkg.SourceTypeTayaniInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://tayani.com/san-clemente/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

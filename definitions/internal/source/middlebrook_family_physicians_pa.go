@@ -29,6 +29,7 @@ func GetSourceMiddlebrookFamilyPhysiciansPa(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Middlebrook Family Physicians, PA"
 	sourceDef.SourceType = pkg.SourceTypeMiddlebrookFamilyPhysiciansPa
+	sourceDef.PatientAccessUrl = "http://middlebrookfamilyphysicians.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

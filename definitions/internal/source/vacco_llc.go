@@ -29,6 +29,7 @@ func GetSourceVaccoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "VACCO LLC"
 	sourceDef.SourceType = pkg.SourceTypeVaccoLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/vacco-ambulatory-surgery-center-2232041e-6203-4a21-b873-d35988d6fec7"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

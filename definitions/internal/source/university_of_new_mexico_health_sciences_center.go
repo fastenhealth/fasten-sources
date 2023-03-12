@@ -29,6 +29,8 @@ func GetSourceUniversityOfNewMexicoHealthSciencesCenter(env pkg.FastenLighthouse
 
 	sourceDef.Display = "University of New Mexico Health Sciences Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfNewMexicoHealthSciencesCenter
+	sourceDef.BrandLogo = "university-of-new-mexico-health-sciences-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.facebook.com/unmhsc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

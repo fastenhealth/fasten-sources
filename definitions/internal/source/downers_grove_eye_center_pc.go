@@ -29,6 +29,7 @@ func GetSourceDownersGroveEyeCenterPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Downers Grove Eye Center PC"
 	sourceDef.SourceType = pkg.SourceTypeDownersGroveEyeCenterPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dgeyecenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

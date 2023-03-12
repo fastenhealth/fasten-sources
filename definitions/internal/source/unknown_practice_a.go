@@ -29,6 +29,7 @@ func GetSourceUnknownPracticeA(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Unknown Practice A"
 	sourceDef.SourceType = pkg.SourceTypeUnknownPracticeA
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nopage.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

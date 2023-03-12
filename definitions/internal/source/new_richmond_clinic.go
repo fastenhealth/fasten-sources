@@ -29,6 +29,8 @@ func GetSourceNewRichmondClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "New Richmond Clinic"
 	sourceDef.SourceType = pkg.SourceTypeNewRichmondClinic
+	sourceDef.BrandLogo = "new-richmond-clinic.svg"
+	sourceDef.PatientAccessUrl = "https://www.healthpartners.com/care/find/location/primary-care-clinics/westfields-hospital-and-clinic/new-richmond/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

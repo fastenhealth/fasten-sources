@@ -29,6 +29,8 @@ func GetSourceHeartAndVascularSpecialistsOfSouthTexas(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "Heart & Vascular Specialists of South Texas"
 	sourceDef.SourceType = pkg.SourceTypeHeartAndVascularSpecialistsOfSouthTexas
+	sourceDef.BrandLogo = "heart-and-vascular-specialists-of-south-texas.svg"
+	sourceDef.PatientAccessUrl = "https://www.texashealth.org/thpg/patient-resources"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

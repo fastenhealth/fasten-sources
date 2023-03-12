@@ -29,6 +29,8 @@ func GetSourceRitaTenenbaumMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Rita Tenenbaum MD"
 	sourceDef.SourceType = pkg.SourceTypeRitaTenenbaumMd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "rita-tenenbaum-md.svg"
+	sourceDef.PatientAccessUrl = "https://www.tmphysiciannetwork.org/tmpn/find-a-doctor/profile/rita-tenenbaum/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

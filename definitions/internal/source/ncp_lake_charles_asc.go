@@ -29,6 +29,7 @@ func GetSourceNcpLakeCharlesAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "NCP Lake Charles ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpLakeCharlesAsc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.lakecharlescathlab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

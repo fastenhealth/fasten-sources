@@ -29,6 +29,7 @@ func GetSourceSanAntonioUrgentCareSierra(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "San Antonio Urgent Care - Sierra"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioUrgentCareSierra
+	sourceDef.PatientAccessUrl = "https://www.sarh.org/centers-of-excellence/urgent-care/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

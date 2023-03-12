@@ -29,6 +29,7 @@ func GetSourceWillCountyCommunityHealthCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Will County Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWillCountyCommunityHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://willcountyhealth.org/chc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

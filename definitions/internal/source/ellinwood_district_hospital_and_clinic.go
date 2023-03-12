@@ -29,6 +29,7 @@ func GetSourceEllinwoodDistrictHospitalAndClinic(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Ellinwood District Hospital and Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEllinwoodDistrictHospitalAndClinic
+	sourceDef.PatientAccessUrl = "https://sv-se.facebook.com/EllinwoodHospitalandClinic/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

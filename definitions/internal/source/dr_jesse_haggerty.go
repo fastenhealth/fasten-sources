@@ -29,6 +29,8 @@ func GetSourceDrJesseHaggerty(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Dr Jesse Haggerty"
 	sourceDef.SourceType = pkg.SourceTypeDrJesseHaggerty
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "dr-jesse-haggerty.jpg"
+	sourceDef.PatientAccessUrl = "https://www.medctrbarbour.org/dr-jesse-c-haggerty-iii-m-d-phd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

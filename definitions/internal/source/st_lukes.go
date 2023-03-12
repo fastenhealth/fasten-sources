@@ -29,6 +29,7 @@ func GetSourceStLukes(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "St Lukes"
 	sourceDef.SourceType = pkg.SourceTypeStLukes
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.stlukeseye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

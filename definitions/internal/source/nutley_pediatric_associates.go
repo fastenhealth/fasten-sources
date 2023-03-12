@@ -29,6 +29,7 @@ func GetSourceNutleyPediatricAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Nutley Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeNutleyPediatricAssociates
+	sourceDef.PatientAccessUrl = "Name: Nutley Pediatric Associates Address: 242 Washington Ave Ste A City: Nutley Zip: 07110-3934 State: New Jersey Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

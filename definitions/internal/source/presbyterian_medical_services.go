@@ -29,6 +29,7 @@ func GetSourcePresbyterianMedicalServices(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Presbyterian Medical Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianMedicalServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.pmsnm.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGatewayCardiologyPC(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Gateway Cardiology P.C."
 	sourceDef.SourceType = pkg.SourceTypeGatewayCardiologyPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://gatewaycardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

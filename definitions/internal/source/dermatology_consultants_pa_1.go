@@ -30,6 +30,7 @@ func GetSourceDermatologyConsultantsPa1(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Dermatology Consultants, PA"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyConsultantsPa1
 	sourceDef.BrandLogo = "dermatology-consultants-pa.png"
+	sourceDef.PatientAccessUrl = "https://www.dermatologyconsultants.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceLakeWashingtonCenterForCardiovascularDiseasePllc(env pkg.FastenLig
 
 	sourceDef.Display = "Lake Washington Center for Cardiovascular Disease PLLC"
 	sourceDef.SourceType = pkg.SourceTypeLakeWashingtonCenterForCardiovascularDiseasePllc
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/lake-washington-primary-care-4b75129f-f7ec-e311-8fc0-001f29e3bb64"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

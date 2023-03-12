@@ -29,6 +29,7 @@ func GetSourceSoutheastGeorgiaGastroenterology(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Southeast Georgia Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeSoutheastGeorgiaGastroenterology
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/southeast-georgia-gastroenterology-c76c8fc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

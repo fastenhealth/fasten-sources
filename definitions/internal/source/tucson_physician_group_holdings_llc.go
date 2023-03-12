@@ -29,6 +29,7 @@ func GetSourceTucsonPhysicianGroupHoldingsLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Tucson Physician Group Holdings LLC"
 	sourceDef.SourceType = pkg.SourceTypeTucsonPhysicianGroupHoldingsLlc
+	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/arizona/tucson/tucson-physician-group-holdings-llc-0547560070.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

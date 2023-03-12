@@ -29,6 +29,7 @@ func GetSourceOcoeeRegionalHealthCorporation(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Ocoee Regional Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeOcoeeRegionalHealthCorporation
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ocoee-regional-health-corporation.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

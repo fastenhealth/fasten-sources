@@ -30,6 +30,7 @@ func GetSourceHoustonPerinatalAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeHoustonPerinatalAssociates
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "houston-perinatal-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/texas/houston"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

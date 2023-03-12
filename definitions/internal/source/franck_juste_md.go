@@ -30,6 +30,7 @@ func GetSourceFranckJusteMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeFranckJusteMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "franck-juste-md.jpg"
+	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/franck-juste-912de6c6-5a12-4433-95e6-7019f283e7b9-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

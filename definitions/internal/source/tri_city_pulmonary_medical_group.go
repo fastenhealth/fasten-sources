@@ -29,6 +29,7 @@ func GetSourceTriCityPulmonaryMedicalGroup(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Tri City Pulmonary Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeTriCityPulmonaryMedicalGroup
+	sourceDef.PatientAccessUrl = "https://www.tricitymed.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTrinityHealthCorporation(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Trinity Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealthCorporation
+	sourceDef.BrandLogo = "trinity-health-corporation.svg"
+	sourceDef.PatientAccessUrl = "https://www.trinity-health.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

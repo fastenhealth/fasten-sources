@@ -30,6 +30,7 @@ func GetSourceGreenValleyHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Green Valley Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGreenValleyHospital
 	sourceDef.BrandLogo = "green-valley-hospital.jpg"
+	sourceDef.PatientAccessUrl = "https://scvrhaz.com/contact-us"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

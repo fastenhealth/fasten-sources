@@ -29,6 +29,7 @@ func GetSourceSupportiveHousing(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Supportive Housing"
 	sourceDef.SourceType = pkg.SourceTypeSupportiveHousing
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://nyconnects.ny.gov/services/st-vincents-services-sh-forensic-brooklyn-comm-svcs-omh-pr-223006739633"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

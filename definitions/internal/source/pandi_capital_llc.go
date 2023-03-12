@@ -29,6 +29,7 @@ func GetSourcePandiCapitalLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Pandi Capital, LLC"
 	sourceDef.SourceType = pkg.SourceTypePandiCapitalLlc
+	sourceDef.PatientAccessUrl = "https://pandicapital.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSouthPlainsSurgeryCtr(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "South Plains Surgery Ctr"
 	sourceDef.SourceType = pkg.SourceTypeSouthPlainsSurgeryCtr
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "Name: South Plains Surgery Ctr Address: 4412 6th Street City: Lubbock Zip: 794164732 State: Texas Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

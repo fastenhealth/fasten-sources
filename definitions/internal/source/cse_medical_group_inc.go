@@ -29,6 +29,7 @@ func GetSourceCseMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "CSE Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeCseMedicalGroupInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.conejosimieye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceIrvineInternalMedicalGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Irvine Internal Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeIrvineInternalMedicalGroup
 	sourceDef.Hidden = true
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3MNJFORX9O11KJ0J3MQOCCZZ5VA5FP?assignment_id=3AZHRG4CUIH9VKWJCNOBJSA0WY230V&from_queue=true"
+	sourceDef.PatientAccessUrl = "https://irvineinternal.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

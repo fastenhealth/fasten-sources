@@ -29,6 +29,7 @@ func GetSourceVacOfNewOrleans(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "VAC Of New Orleans"
 	sourceDef.SourceType = pkg.SourceTypeVacOfNewOrleans
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

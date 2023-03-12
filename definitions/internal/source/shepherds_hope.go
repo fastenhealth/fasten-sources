@@ -29,6 +29,7 @@ func GetSourceShepherdsHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Shepherd's Hope"
 	sourceDef.SourceType = pkg.SourceTypeShepherdsHope
+	sourceDef.PatientAccessUrl = "https://www.shepherdshope.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceSagePlasticSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Sage Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSagePlasticSurgery
+	sourceDef.PatientAccessUrl = "https://journals.sagepub.com/home/psg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

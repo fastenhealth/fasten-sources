@@ -29,6 +29,7 @@ func GetSourceNebraskaOrthopaedicHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Nebraska Orthopaedic Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNebraskaOrthopaedicHospital
+	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/hospital/nebraska/omaha/nebraska-orthopaedic-hospital-280129.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

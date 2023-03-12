@@ -29,6 +29,8 @@ func GetSourceSweenyCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Sweeny Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSweenyCommunityHospital
+	sourceDef.BrandLogo = "sweeny-community-hospital.jpeg"
+	sourceDef.PatientAccessUrl = "https://sweenyhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

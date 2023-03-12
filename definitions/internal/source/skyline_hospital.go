@@ -29,6 +29,7 @@ func GetSourceSkylineHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Skyline Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSkylineHospital
+	sourceDef.PatientAccessUrl = "https://myskylinehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

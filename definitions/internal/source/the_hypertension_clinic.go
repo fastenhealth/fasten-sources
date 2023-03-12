@@ -29,6 +29,8 @@ func GetSourceTheHypertensionClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "The Hypertension Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheHypertensionClinic
+	sourceDef.BrandLogo = "the-hypertension-clinic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.medcross.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

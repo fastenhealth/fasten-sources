@@ -29,7 +29,7 @@ func GetSourceFloridaPerinatalAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Florida Perinatal Associates"
 	sourceDef.SourceType = pkg.SourceTypeFloridaPerinatalAssociates
 	sourceDef.Hidden = true
-	sourceDef.BrandLogo = "florida-perinatal-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/perinatalflorida?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHenryMayoMso(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Henry Mayo MSO"
 	sourceDef.SourceType = pkg.SourceTypeHenryMayoMso
+	sourceDef.PatientAccessUrl = "https://www.henrymayo.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

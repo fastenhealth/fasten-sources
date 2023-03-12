@@ -29,6 +29,7 @@ func GetSourceRheumatologyAndOsteoporosisCtrOfMphs(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Rheumatology & Osteoporosis Ctr of Mphs"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAndOsteoporosisCtrOfMphs
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.rocm.md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

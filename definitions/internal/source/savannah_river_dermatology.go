@@ -29,6 +29,7 @@ func GetSourceSavannahRiverDermatology(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Savannah River Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeSavannahRiverDermatology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.srderm.com/about-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

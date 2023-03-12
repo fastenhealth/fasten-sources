@@ -29,6 +29,7 @@ func GetSourceRetinaConsultantsOfUtah(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Retina Consultants Of Utah"
 	sourceDef.SourceType = pkg.SourceTypeRetinaConsultantsOfUtah
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://retinanevada.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

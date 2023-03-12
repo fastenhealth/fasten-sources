@@ -29,6 +29,7 @@ func GetSourceUpmcCoreZone(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "UPMC Core Zone"
 	sourceDef.SourceType = pkg.SourceTypeUpmcCoreZone
+	sourceDef.PatientAccessUrl = "https://www.upmc.com/about/why-upmc/mission"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

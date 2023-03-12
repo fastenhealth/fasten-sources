@@ -29,6 +29,7 @@ func GetSourceSouthernVitreoretinalAssociatesPl(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Southern Vitreoretinal Associates PL"
 	sourceDef.SourceType = pkg.SourceTypeSouthernVitreoretinalAssociatesPl
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://svaretina.com/office-locations/tallahassee/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

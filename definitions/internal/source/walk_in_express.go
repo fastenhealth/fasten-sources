@@ -29,6 +29,7 @@ func GetSourceWalkInExpress(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Walk In Express"
 	sourceDef.SourceType = pkg.SourceTypeWalkInExpress
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

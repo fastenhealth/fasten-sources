@@ -29,6 +29,7 @@ func GetSourceVrPhysicianForVeinRestorationNyLlc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "VR Physician for Vein Restoration NY LLC"
 	sourceDef.SourceType = pkg.SourceTypeVrPhysicianForVeinRestorationNyLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.veintreatmentclinic.com/vein-doctor/?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPIB0Xjpls8VGhkw-nkECOOQrPd-cTZ-fiMzfMCMakGPJ10j-aea_IkaAg9wEALw_wcB"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

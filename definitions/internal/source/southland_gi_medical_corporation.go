@@ -29,6 +29,7 @@ func GetSourceSouthlandGiMedicalCorporation(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Southland GI Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeSouthlandGiMedicalCorporation
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.southlandgastroenterologymedicalgroupinc.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

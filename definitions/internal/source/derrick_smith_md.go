@@ -30,6 +30,7 @@ func GetSourceDerrickSmithMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeDerrickSmithMd
 	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "derrick-smith-md.jpg"
+	sourceDef.PatientAccessUrl = "https://www.inlandvalleymedcenter.com/?utm_source=Google-Business-Yext&utm_medium=organic"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

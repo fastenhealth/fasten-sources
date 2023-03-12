@@ -29,6 +29,7 @@ func GetSourceThreeRiversEnt(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Three Rivers ENT"
 	sourceDef.SourceType = pkg.SourceTypeThreeRiversEnt
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/wa-washington/kennewick/three-rivers-ear-nose-throat-xbhvqg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
