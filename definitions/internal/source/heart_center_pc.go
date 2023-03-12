@@ -28,7 +28,6 @@ func GetSourceHeartCenterPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Heart Center PC"
 	sourceDef.SourceType = pkg.SourceTypeHeartCenterPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

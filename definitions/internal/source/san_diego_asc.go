@@ -28,7 +28,6 @@ func GetSourceSanDiegoAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "San Diego ASC"
 	sourceDef.SourceType = pkg.SourceTypeSanDiegoAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

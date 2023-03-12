@@ -28,7 +28,6 @@ func GetSourceNashvillePediatricUrology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Nashville Pediatric Urology"
 	sourceDef.SourceType = pkg.SourceTypeNashvillePediatricUrology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceVancouverEyeCareSurgeryAndLaserCtr(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Vancouver Eye Care Surgery And Laser Ctr"
 	sourceDef.SourceType = pkg.SourceTypeVancouverEyeCareSurgeryAndLaserCtr
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vancouvereyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceOphthalmicAnesthesiaServicesInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Ophthalmic Anesthesia Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicAnesthesiaServicesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ehealthscores.com/care-lpzzwqzccw-ophthalmic-anesthesia-services,-inc-phoenix.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

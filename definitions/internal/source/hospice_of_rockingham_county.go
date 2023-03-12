@@ -28,7 +28,6 @@ func GetSourceHospiceOfRockinghamCounty(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hospice of Rockingham County"
 	sourceDef.SourceType = pkg.SourceTypeHospiceOfRockinghamCounty
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hospice-of-rockingham-county.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hospiceofrockinghamcounty.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceMaryToftMDAMedicalCorporation(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mary Toft M.D. A Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMaryToftMDAMedicalCorporation
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

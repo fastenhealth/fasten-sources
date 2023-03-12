@@ -28,7 +28,6 @@ func GetSourceWoodRiverHealthServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Wood River Health Services"
 	sourceDef.SourceType = pkg.SourceTypeWoodRiverHealthServices
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

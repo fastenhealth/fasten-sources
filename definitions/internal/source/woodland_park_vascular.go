@@ -28,7 +28,6 @@ func GetSourceWoodlandParkVascular(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Woodland Park Vascular"
 	sourceDef.SourceType = pkg.SourceTypeWoodlandParkVascular
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

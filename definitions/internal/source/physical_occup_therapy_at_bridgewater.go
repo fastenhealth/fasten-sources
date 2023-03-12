@@ -28,7 +28,6 @@ func GetSourcePhysicalOccupTherapyAtBridgewater(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Physical Occup Therapy At Bridgewater"
 	sourceDef.SourceType = pkg.SourceTypePhysicalOccupTherapyAtBridgewater
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "physical-occup-therapy-at-bridgewater.svg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/physical-and-occupational-therapy"
 	sourceDef.SecretKeyPrefix = "nextgen"

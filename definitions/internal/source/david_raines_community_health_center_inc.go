@@ -28,7 +28,6 @@ func GetSourceDavidRainesCommunityHealthCenterInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "David Raines Community Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeDavidRainesCommunityHealthCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.davidraineschc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

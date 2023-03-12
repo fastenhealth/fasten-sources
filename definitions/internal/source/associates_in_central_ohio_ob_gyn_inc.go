@@ -28,7 +28,6 @@ func GetSourceAssociatesInCentralOhioObGynInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Associates In Central Ohio Ob Gyn Inc"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInCentralOhioObGynInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

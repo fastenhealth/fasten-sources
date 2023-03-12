@@ -28,7 +28,6 @@ func GetSourceEndocrineAndThyroid(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Endocrine and Thyroid"
 	sourceDef.SourceType = pkg.SourceTypeEndocrineAndThyroid
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

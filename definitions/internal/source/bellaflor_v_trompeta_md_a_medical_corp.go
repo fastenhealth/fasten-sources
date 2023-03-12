@@ -28,7 +28,6 @@ func GetSourceBellaflorVTrompetaMdAMedicalCorp(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Bellaflor V Trompeta MD A Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeBellaflorVTrompetaMdAMedicalCorp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

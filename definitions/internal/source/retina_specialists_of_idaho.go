@@ -28,7 +28,6 @@ func GetSourceRetinaSpecialistsOfIdaho(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Retina Specialists Of Idaho"
 	sourceDef.SourceType = pkg.SourceTypeRetinaSpecialistsOfIdaho
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://retinaidaho.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

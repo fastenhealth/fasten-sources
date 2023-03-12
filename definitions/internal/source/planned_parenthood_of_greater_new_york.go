@@ -28,7 +28,6 @@ func GetSourcePlannedParenthoodOfGreaterNewYork(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Planned Parenthood Of Greater New York"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfGreaterNewYork
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PPGNY/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

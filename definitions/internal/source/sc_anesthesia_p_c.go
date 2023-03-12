@@ -28,7 +28,6 @@ func GetSourceScAnesthesiaPC(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "SC Anesthesia P.C."
 	sourceDef.SourceType = pkg.SourceTypeScAnesthesiaPC
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

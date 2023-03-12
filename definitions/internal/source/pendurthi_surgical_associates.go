@@ -28,7 +28,6 @@ func GetSourcePendurthiSurgicalAssociates(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pendurthi Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypePendurthiSurgicalAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pendurthi-surgical-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pendurthisurgicalassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

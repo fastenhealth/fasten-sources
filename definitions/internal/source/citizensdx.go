@@ -28,7 +28,6 @@ func GetSourceCitizensdx(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "CitizensDX"
 	sourceDef.SourceType = pkg.SourceTypeCitizensdx
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

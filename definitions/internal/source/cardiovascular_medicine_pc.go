@@ -28,7 +28,6 @@ func GetSourceCardiovascularMedicinePc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Cardiovascular Medicine PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularMedicinePc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

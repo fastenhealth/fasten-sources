@@ -28,7 +28,6 @@ func GetSourceClinicalSupportProviders(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Clinical Support Providers"
 	sourceDef.SourceType = pkg.SourceTypeClinicalSupportProviders
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceEmanuelDozierMdMph(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Emanuel Dozier MD MPH"
 	sourceDef.SourceType = pkg.SourceTypeEmanuelDozierMdMph
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dignityhealth.org/ourdoctors/1902099708-emanuel-dozier"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

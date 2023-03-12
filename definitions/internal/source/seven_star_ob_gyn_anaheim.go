@@ -28,7 +28,6 @@ func GetSourceSevenStarObGynAnaheim(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Seven Star OB/GYN - Anaheim"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarObGynAnaheim
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.sevenstarhealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

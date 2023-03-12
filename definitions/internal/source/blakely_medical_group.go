@@ -28,7 +28,6 @@ func GetSourceBlakelyMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Blakely Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBlakelyMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

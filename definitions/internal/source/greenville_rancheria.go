@@ -28,7 +28,6 @@ func GetSourceGreenvilleRancheria(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Greenville Rancheria"
 	sourceDef.SourceType = pkg.SourceTypeGreenvilleRancheria
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

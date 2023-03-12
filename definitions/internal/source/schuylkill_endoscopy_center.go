@@ -28,7 +28,6 @@ func GetSourceSchuylkillEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Schuylkill Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeSchuylkillEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "schuylkill-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://schuylkillendoscopy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

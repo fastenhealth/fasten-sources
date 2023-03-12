@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfInPC(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Obstetrix Medical Group Of IN P.C."
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfInPC
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "obstetrix-medical-group-of-in-p-c.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/obxcolorado"
 	sourceDef.SecretKeyPrefix = "nextgen"

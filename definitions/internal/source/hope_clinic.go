@@ -28,7 +28,6 @@ func GetSourceHopeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Hope Clinic"
 	sourceDef.SourceType = pkg.SourceTypeHopeClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hopehealthtx.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

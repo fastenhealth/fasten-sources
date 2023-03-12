@@ -28,7 +28,6 @@ func GetSourceMetrolinaVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Metrolina Vascular"
 	sourceDef.SourceType = pkg.SourceTypeMetrolinaVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/metrolina-access-center-charlotte/?utm_source=local&utm_medium=organic&utm_campaign=gmb-center-listing&utm_content=website&y_source=1_MzQ5MTgxMC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

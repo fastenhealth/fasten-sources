@@ -28,7 +28,6 @@ func GetSourceAdvancedObstetricsAndGynecologyLlc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Advanced Obstetrics And Gynecology LLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedObstetricsAndGynecologyLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.advancedforwomen.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourcePuyallupSurgicalConsultants(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Puyallup Surgical Consultants"
 	sourceDef.SourceType = pkg.SourceTypePuyallupSurgicalConsultants
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://puyallupsurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

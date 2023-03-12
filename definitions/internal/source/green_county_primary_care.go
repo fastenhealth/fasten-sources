@@ -28,7 +28,6 @@ func GetSourceGreenCountyPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Green County Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeGreenCountyPrimaryCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.janetoddhospital.com/clinics/green-county-primary-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceUrologySpecialistsChartered(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Urology Specialists Chartered"
 	sourceDef.SourceType = pkg.SourceTypeUrologySpecialistsChartered
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/UrologySpecialistsSD/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

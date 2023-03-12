@@ -28,7 +28,6 @@ func GetSourceLongIslandSpineSpecialistsPc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Long Island Spine Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeLongIslandSpineSpecialistsPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lispine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

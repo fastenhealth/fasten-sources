@@ -28,7 +28,6 @@ func GetSourceAdvancedCarePodiatryLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Advanced Care Podiatry  LLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedCarePodiatryLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/36AZSFEY0HXS5W3I4BM5XK2D3TJVBJ?assignment_id=3PZDLQMM07I44UVGK33QVJ79TPEC2R&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

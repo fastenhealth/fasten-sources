@@ -28,7 +28,6 @@ func GetSourceSnapfingerVascularCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Snapfinger Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeSnapfingerVascularCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

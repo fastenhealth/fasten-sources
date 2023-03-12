@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfGeorgia(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Obstetrix Medical Group of Georgia"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfGeorgia
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "obstetrix-medical-group-of-georgia.svg"
 	sourceDef.PatientAccessUrl = "http://www.pediatrix.com/OBXAtlanta?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"

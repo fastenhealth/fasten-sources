@@ -28,7 +28,6 @@ func GetSourceHerreraAndObesoMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Herrera & Obeso Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHerreraAndObesoMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://NA.COM"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

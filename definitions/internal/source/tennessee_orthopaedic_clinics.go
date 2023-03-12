@@ -28,7 +28,6 @@ func GetSourceTennesseeOrthopaedicClinics(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Tennessee Orthopaedic Clinics"
 	sourceDef.SourceType = pkg.SourceTypeTennesseeOrthopaedicClinics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

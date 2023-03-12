@@ -28,7 +28,6 @@ func GetSourcePediatricEntInstituteOfSouthTexaspa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Pediatric ENT Institute Of South TexasPA"
 	sourceDef.SourceType = pkg.SourceTypePediatricEntInstituteOfSouthTexaspa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

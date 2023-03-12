@@ -28,7 +28,6 @@ func GetSourceModernConceptsMedicalGroupInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Modern Concepts Medical Group INC"
 	sourceDef.SourceType = pkg.SourceTypeModernConceptsMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mcmg.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

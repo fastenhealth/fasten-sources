@@ -28,7 +28,6 @@ func GetSourceCedarsSinaiMedicalCareFoundation(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Cedars Sinai Medical Care Foundation"
 	sourceDef.SourceType = pkg.SourceTypeCedarsSinaiMedicalCareFoundation
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

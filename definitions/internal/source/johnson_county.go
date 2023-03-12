@@ -28,7 +28,6 @@ func GetSourceJohnsonCounty(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Johnson County"
 	sourceDef.SourceType = pkg.SourceTypeJohnsonCounty
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

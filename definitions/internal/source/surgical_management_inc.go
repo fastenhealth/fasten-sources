@@ -28,7 +28,6 @@ func GetSourceSurgicalManagementInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Surgical Management Inc"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalManagementInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "surgical-management-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.texashealth.org/locations/texas-health-plano"
 	sourceDef.SecretKeyPrefix = "nextgen"

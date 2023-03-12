@@ -28,7 +28,6 @@ func GetSourceMedicalGroupRhcOfWch(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Medical Group (RHC) Of WCH"
 	sourceDef.SourceType = pkg.SourceTypeMedicalGroupRhcOfWch
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.washingtoncountyhospital.org/washington-county-medical-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

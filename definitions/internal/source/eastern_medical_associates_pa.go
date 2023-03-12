@@ -28,7 +28,6 @@ func GetSourceEasternMedicalAssociatesPa(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Eastern Medical Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeEasternMedicalAssociatesPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.easternmed.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

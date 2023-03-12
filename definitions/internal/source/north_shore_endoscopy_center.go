@@ -28,7 +28,6 @@ func GetSourceNorthShoreEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "North Shore Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthShoreEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/north-shore-endoscopy-center-09be68c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

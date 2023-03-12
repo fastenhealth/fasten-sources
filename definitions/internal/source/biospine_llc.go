@@ -28,7 +28,6 @@ func GetSourceBiospineLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "BioSpine LLC"
 	sourceDef.SourceType = pkg.SourceTypeBiospineLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

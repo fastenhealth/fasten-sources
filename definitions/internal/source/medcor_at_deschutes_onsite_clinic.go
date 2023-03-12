@@ -28,7 +28,6 @@ func GetSourceMedcorAtDeschutesOnsiteClinic(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medcor At Deschutes Onsite Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtDeschutesOnsiteClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.deschutes.org/benefits/page/deschutes-onsite-clinic-doc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

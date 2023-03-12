@@ -28,7 +28,6 @@ func GetSourceChestSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Chest Surgery"
 	sourceDef.SourceType = pkg.SourceTypeChestSurgery
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

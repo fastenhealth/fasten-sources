@@ -28,7 +28,6 @@ func GetSourceNuraPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Nura PA"
 	sourceDef.SourceType = pkg.SourceTypeNuraPa
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "nura-pa.svg"
 	sourceDef.PatientAccessUrl = "https://www.nuraclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

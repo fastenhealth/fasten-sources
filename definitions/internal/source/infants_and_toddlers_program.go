@@ -28,7 +28,6 @@ func GetSourceInfantsAndToddlersProgram(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Infants And Toddlers Program"
 	sourceDef.SourceType = pkg.SourceTypeInfantsAndToddlersProgram
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.montgomerycountymd.gov/infantsandtoddlers"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

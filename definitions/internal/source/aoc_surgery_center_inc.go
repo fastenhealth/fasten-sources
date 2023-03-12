@@ -28,7 +28,6 @@ func GetSourceAocSurgeryCenterInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "AOC Surgery Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeAocSurgeryCenterInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "aoc-surgery-center-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.araoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

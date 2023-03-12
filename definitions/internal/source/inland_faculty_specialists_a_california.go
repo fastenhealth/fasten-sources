@@ -28,7 +28,6 @@ func GetSourceInlandFacultySpecialistsACalifornia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Inland Faculty Specialists A California"
 	sourceDef.SourceType = pkg.SourceTypeInlandFacultySpecialistsACalifornia
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ifmgipa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

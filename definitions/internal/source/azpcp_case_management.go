@@ -28,7 +28,6 @@ func GetSourceAzpcpCaseManagement(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "AZPCP Case Management"
 	sourceDef.SourceType = pkg.SourceTypeAzpcpCaseManagement
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://azprioritycare.com/for-providers/claims/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

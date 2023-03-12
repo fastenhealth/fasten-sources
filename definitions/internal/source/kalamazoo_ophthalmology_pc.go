@@ -28,7 +28,6 @@ func GetSourceKalamazooOphthalmologyPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Kalamazoo Ophthalmology PC"
 	sourceDef.SourceType = pkg.SourceTypeKalamazooOphthalmologyPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://seeclearkalamazoo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

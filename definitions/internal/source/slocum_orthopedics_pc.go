@@ -28,7 +28,6 @@ func GetSourceSlocumOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Slocum Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceTypeSlocumOrthopedicsPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "slocum-orthopedics-pc.svg"
 	sourceDef.PatientAccessUrl = "https://www.slocumcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

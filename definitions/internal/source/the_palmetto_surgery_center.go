@@ -28,7 +28,6 @@ func GetSourceThePalmettoSurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "The Palmetto Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeThePalmettoSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "the-palmetto-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.palmettosurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

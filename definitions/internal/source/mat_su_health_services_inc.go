@@ -28,7 +28,6 @@ func GetSourceMatSuHealthServicesInc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Mat Su Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeMatSuHealthServicesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mshsak.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

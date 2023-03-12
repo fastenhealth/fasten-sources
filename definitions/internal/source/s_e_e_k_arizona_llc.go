@@ -28,7 +28,6 @@ func GetSourceSEEKArizonaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "S.E.E.K. Arizona LLC"
 	sourceDef.SourceType = pkg.SourceTypeSEEKArizonaLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "s-e-e-k-arizona-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/seekarizona/events/"
 	sourceDef.SecretKeyPrefix = "nextgen"

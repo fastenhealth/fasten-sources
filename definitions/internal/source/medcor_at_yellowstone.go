@@ -28,7 +28,6 @@ func GetSourceMedcorAtYellowstone(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Medcor At Yellowstone"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtYellowstone
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

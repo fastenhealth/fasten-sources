@@ -28,7 +28,6 @@ func GetSourceMemphisPrimaryCareSpecialist(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Memphis Primary Care Specialist"
 	sourceDef.SourceType = pkg.SourceTypeMemphisPrimaryCareSpecialist
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "memphis-primary-care-specialist.jpg"
 	sourceDef.PatientAccessUrl = "https://www.primarycarememphis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

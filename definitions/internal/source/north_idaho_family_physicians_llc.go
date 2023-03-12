@@ -28,7 +28,6 @@ func GetSourceNorthIdahoFamilyPhysiciansLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "North Idaho Family Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeNorthIdahoFamilyPhysiciansLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.medpracmgmt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

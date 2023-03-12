@@ -28,7 +28,6 @@ func GetSourceFamilyPlanningAssociatesMedicalGroup(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Family Planning Associates Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPlanningAssociatesMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

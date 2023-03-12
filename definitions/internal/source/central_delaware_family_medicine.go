@@ -28,7 +28,6 @@ func GetSourceCentralDelawareFamilyMedicine(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Central Delaware Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCentralDelawareFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.bayhealth.org/find-a-doctor/kimberlie-a-neal"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceGrhcAmbulatory(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "GRHC Ambulatory"
 	sourceDef.SourceType = pkg.SourceTypeGrhcAmbulatory
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

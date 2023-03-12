@@ -28,7 +28,6 @@ func GetSourceMedcorAtQpp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Medcor At QPP"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtQpp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.qppinc.net/pages/onsite-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

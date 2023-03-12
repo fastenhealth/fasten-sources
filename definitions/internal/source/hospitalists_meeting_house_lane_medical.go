@@ -28,7 +28,6 @@ func GetSourceHospitalistsMeetingHouseLaneMedical(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Hospitalists/Meeting House Lane Medical"
 	sourceDef.SourceType = pkg.SourceTypeHospitalistsMeetingHouseLaneMedical
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceFvcDaytonVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "FVC Dayton Vascular"
 	sourceDef.SourceType = pkg.SourceTypeFvcDaytonVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/greater-dayton-vascular-center/?y_source=1_MjY5MDM2ODItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceHypertensionNephrology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Hypertension Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeHypertensionNephrology
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hypertension-nephrology.jpg"
 	sourceDef.PatientAccessUrl = "https://hypertensionnephrologyassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

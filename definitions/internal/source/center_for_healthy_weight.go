@@ -28,7 +28,6 @@ func GetSourceCenterForHealthyWeight(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Center For Healthy Weight"
 	sourceDef.SourceType = pkg.SourceTypeCenterForHealthyWeight
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

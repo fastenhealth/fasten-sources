@@ -28,7 +28,6 @@ func GetSourceRamseyCountyCorrections(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Ramsey County Corrections"
 	sourceDef.SourceType = pkg.SourceTypeRamseyCountyCorrections
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ramseycounty.us/residents/public-safety-law/detention-correctional-facilities/adult-correctional-facility-rccf"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

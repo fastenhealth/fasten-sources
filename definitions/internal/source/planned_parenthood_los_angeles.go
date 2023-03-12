@@ -28,7 +28,6 @@ func GetSourcePlannedParenthoodLosAngeles(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Planned Parenthood Los Angeles"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodLosAngeles
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "planned-parenthood-los-angeles.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-los-angeles/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"

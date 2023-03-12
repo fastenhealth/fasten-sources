@@ -28,7 +28,6 @@ func GetSourceEdwardLColbyDoInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Edward L. Colby DO Inc."
 	sourceDef.SourceType = pkg.SourceTypeEdwardLColbyDoInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

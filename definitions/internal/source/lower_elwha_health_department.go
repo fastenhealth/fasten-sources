@@ -28,7 +28,6 @@ func GetSourceLowerElwhaHealthDepartment(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Lower Elwha Health Department"
 	sourceDef.SourceType = pkg.SourceTypeLowerElwhaHealthDepartment
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.elwha.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSuccessTms(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Success TMS"
 	sourceDef.SourceType = pkg.SourceTypeSuccessTms
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Success-TMS-Advanced-Depression-Therapy-113520390083783/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

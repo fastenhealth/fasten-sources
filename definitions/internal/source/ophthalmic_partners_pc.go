@@ -28,7 +28,6 @@ func GetSourceOphthalmicPartnersPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Ophthalmic Partners PC"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicPartnersPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.biselhearingaids.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

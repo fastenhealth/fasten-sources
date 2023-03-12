@@ -28,7 +28,6 @@ func GetSourceLafayette(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Lafayette"
 	sourceDef.SourceType = pkg.SourceTypeLafayette
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

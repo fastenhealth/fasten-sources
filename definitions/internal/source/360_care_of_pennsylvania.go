@@ -28,7 +28,6 @@ func GetSource360CareOfPennsylvania(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "360care Of Pennsylvania"
 	sourceDef.SourceType = pkg.SourceType360CareOfPennsylvania
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

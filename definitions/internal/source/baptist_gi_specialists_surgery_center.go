@@ -28,7 +28,6 @@ func GetSourceBaptistGiSpecialistsSurgeryCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Baptist GI Specialists Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeBaptistGiSpecialistsSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "baptist-gi-specialists-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/386659BNUYEBZXKAZH5R6FZENLG01E?assignment_id=3JAOYWH7VW187IALIPB48P5AT40L96&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

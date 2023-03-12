@@ -28,7 +28,6 @@ func GetSourceCaremoreAspire(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "CareMore Aspire"
 	sourceDef.SourceType = pkg.SourceTypeCaremoreAspire
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

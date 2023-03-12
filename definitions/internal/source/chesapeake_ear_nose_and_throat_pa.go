@@ -28,7 +28,6 @@ func GetSourceChesapeakeEarNoseAndThroatPa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Chesapeake Ear Nose And Throat PA"
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeEarNoseAndThroatPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

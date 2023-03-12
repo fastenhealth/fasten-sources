@@ -28,7 +28,6 @@ func GetSourceTexasGiEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Texas GI Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTexasGiEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "texas-gi-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://texasgicenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

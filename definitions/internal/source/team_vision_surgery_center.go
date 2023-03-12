@@ -28,7 +28,6 @@ func GetSourceTeamVisionSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Team Vision Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeTeamVisionSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

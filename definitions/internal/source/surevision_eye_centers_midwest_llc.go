@@ -28,7 +28,6 @@ func GetSourceSurevisionEyeCentersMidwestLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "SureVision Eye Centers - Midwest LLC"
 	sourceDef.SourceType = pkg.SourceTypeSurevisionEyeCentersMidwestLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://surevision.com/locations/hazelwood/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceParisCardiologyCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Paris Cardiology Center"
 	sourceDef.SourceType = pkg.SourceTypeParisCardiologyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "paris-cardiology-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pariscardiologycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceBaptistHealthMedicalGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Baptist Health Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

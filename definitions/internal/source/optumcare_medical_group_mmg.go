@@ -28,7 +28,6 @@ func GetSourceOptumcareMedicalGroupMmg(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "OptumCare Medical Group MMG"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareMedicalGroupMmg
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.optumcare.com/redirects/backtocare/california/ocmg/locations/locations.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

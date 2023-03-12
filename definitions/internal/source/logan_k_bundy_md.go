@@ -28,7 +28,6 @@ func GetSourceLoganKBundyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Logan K Bundy MD"
 	sourceDef.SourceType = pkg.SourceTypeLoganKBundyMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://valleycareipa.com/index.php?id=10"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

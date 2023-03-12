@@ -28,7 +28,6 @@ func GetSourceWoodHealthCompanyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Wood Health Company LLC"
 	sourceDef.SourceType = pkg.SourceTypeWoodHealthCompanyLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

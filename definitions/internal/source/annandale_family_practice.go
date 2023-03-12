@@ -28,7 +28,6 @@ func GetSourceAnnandaleFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Annandale Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeAnnandaleFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.annandalefamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

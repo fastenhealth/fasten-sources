@@ -28,7 +28,6 @@ func GetSourceEndoscopicAnesthesiaGroupPa(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Endoscopic Anesthesia Group PA"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopicAnesthesiaGroupPa
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "endoscopic-anesthesia-group-pa.svg"
 	sourceDef.PatientAccessUrl = "https://www.amsurg.com/contact"
 	sourceDef.SecretKeyPrefix = "nextgen"

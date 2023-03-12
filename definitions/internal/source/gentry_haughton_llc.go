@@ -28,7 +28,6 @@ func GetSourceGentryHaughtonLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gentry Haughton LLC"
 	sourceDef.SourceType = pkg.SourceTypeGentryHaughtonLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

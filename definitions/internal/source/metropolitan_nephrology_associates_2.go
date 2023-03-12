@@ -28,7 +28,6 @@ func GetSourceMetropolitanNephrologyAssociates2(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Metropolitan Nephrology Associates 2"
 	sourceDef.SourceType = pkg.SourceTypeMetropolitanNephrologyAssociates2
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.metroneph.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

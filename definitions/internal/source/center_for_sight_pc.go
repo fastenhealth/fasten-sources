@@ -28,7 +28,6 @@ func GetSourceCenterForSightPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Center For Sight PC"
 	sourceDef.SourceType = pkg.SourceTypeCenterForSightPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

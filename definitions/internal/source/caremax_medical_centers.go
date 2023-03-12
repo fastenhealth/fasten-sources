@@ -28,7 +28,6 @@ func GetSourceCaremaxMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Caremax Medical Centers"
 	sourceDef.SourceType = pkg.SourceTypeCaremaxMedicalCenters
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.caremax.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

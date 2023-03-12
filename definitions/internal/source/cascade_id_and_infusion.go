@@ -28,7 +28,6 @@ func GetSourceCascadeIdAndInfusion(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Cascade ID and Infusion"
 	sourceDef.SourceType = pkg.SourceTypeCascadeIdAndInfusion
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

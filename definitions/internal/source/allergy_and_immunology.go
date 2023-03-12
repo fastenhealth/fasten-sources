@@ -28,7 +28,6 @@ func GetSourceAllergyAndImmunology(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Allergy and Immunology"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndImmunology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://weillcornell.org/services/allergy-and-immunology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceChristusHighlandPhysiciansGroup(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Christus Highland Physicians Group"
 	sourceDef.SourceType = pkg.SourceTypeChristusHighlandPhysiciansGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

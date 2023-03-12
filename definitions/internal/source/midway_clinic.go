@@ -28,7 +28,6 @@ func GetSourceMidwayClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Midway Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMidwayClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://edcomed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

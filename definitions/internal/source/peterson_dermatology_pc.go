@@ -28,7 +28,6 @@ func GetSourcePetersonDermatologyPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Peterson Dermatology PC"
 	sourceDef.SourceType = pkg.SourceTypePetersonDermatologyPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "peterson-dermatology-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://ne-np.facebook.com/P.Dermatology/?rf=144424955603103"
 	sourceDef.SecretKeyPrefix = "nextgen"

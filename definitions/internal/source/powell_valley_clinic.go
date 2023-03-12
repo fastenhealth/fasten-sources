@@ -28,7 +28,6 @@ func GetSourcePowellValleyClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Powell Valley Clinic"
 	sourceDef.SourceType = pkg.SourceTypePowellValleyClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Name: Powell Valley Clinic Address: 777 Avenue H City: Powell Zip: 82435 State: Wyoming Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

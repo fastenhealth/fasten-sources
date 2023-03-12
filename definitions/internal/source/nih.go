@@ -28,7 +28,6 @@ func GetSourceNih(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 
 	sourceDef.Display = "NIH"
 	sourceDef.SourceType = pkg.SourceTypeNih
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

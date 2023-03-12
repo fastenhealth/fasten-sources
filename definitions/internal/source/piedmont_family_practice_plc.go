@@ -28,7 +28,6 @@ func GetSourcePiedmontFamilyPracticePlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "PIEDMONT FAMILY PRACTICE PLC"
 	sourceDef.SourceType = pkg.SourceTypePiedmontFamilyPracticePlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.piedmontdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

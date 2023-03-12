@@ -28,7 +28,6 @@ func GetSourcePhaIrvine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "PHA - Irvine"
 	sourceDef.SourceType = pkg.SourceTypePhaIrvine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://pacifichospitalists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

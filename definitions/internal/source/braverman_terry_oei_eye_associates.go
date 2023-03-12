@@ -28,7 +28,6 @@ func GetSourceBravermanTerryOeiEyeAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Braverman Terry Oei Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeBravermanTerryOeiEyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

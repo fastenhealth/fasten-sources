@@ -28,7 +28,6 @@ func GetSourceArthritisCenterOfConnecticut(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Arthritis Center Of Connecticut"
 	sourceDef.SourceType = pkg.SourceTypeArthritisCenterOfConnecticut
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "arthritis-center-of-connecticut.jpeg"
 	sourceDef.PatientAccessUrl = "http://www.arthritiscenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

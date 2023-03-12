@@ -28,7 +28,6 @@ func GetSourceAssociatesForWomensMedicine(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Associates For Womens Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesForWomensMedicine
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "associates-for-womens-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://www.afwomensmed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

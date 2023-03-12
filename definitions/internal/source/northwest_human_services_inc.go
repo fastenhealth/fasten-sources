@@ -28,7 +28,6 @@ func GetSourceNorthwestHumanServicesInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Northwest Human Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestHumanServicesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.northwesthumanservices.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

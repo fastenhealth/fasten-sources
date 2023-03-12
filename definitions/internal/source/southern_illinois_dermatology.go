@@ -28,7 +28,6 @@ func GetSourceSouthernIllinoisDermatology(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Southern Illinois Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIllinoisDermatology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://siderm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceRainierOrthopedicInstitute(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Rainier Orthopedic Institute"
 	sourceDef.SourceType = pkg.SourceTypeRainierOrthopedicInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.rainierortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

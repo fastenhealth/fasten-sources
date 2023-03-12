@@ -28,7 +28,6 @@ func GetSourceStCharlesOrthopaedicSurgeryAssocInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "St Charles Orthopaedic Surgery Assoc Inc"
 	sourceDef.SourceType = pkg.SourceTypeStCharlesOrthopaedicSurgeryAssocInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "st-charles-orthopaedic-surgery-assoc-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.yelp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

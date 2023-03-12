@@ -28,7 +28,6 @@ func GetSourceArkansasValleySurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Arkansas Valley Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeArkansasValleySurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://ww1.arkansassurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

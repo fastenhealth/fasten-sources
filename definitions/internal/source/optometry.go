@@ -28,7 +28,6 @@ func GetSourceOptometry(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Optometry"
 	sourceDef.SourceType = pkg.SourceTypeOptometry
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.community-healthnet.com/locations/daniel-s-snow-m-d-health-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

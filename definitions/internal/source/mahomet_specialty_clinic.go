@@ -28,7 +28,6 @@ func GetSourceMahometSpecialtyClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Mahomet Specialty Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMahometSpecialtyClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-health-of-mahomet"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

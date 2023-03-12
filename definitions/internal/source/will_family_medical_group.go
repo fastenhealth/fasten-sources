@@ -28,7 +28,6 @@ func GetSourceWillFamilyMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Will Family Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWillFamilyMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Name: Stillaguamish Behavioral Health Address: 5700 172nd St NE City: Arlington Zip: 98223 State: Washington Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

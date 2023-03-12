@@ -28,7 +28,6 @@ func GetSourceChicoEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Chico Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeChicoEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceRobertKBratemanMdPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Robert K Brateman MD PC"
 	sourceDef.SourceType = pkg.SourceTypeRobertKBratemanMdPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "robert-k-brateman-md-pc.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/doctors/1548224769/robert-k-brateman-novi-mi"
 	sourceDef.SecretKeyPrefix = "nextgen"

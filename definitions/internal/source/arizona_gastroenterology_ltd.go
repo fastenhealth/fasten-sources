@@ -28,7 +28,6 @@ func GetSourceArizonaGastroenterologyLtd(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Arizona Gastroenterology Ltd"
 	sourceDef.SourceType = pkg.SourceTypeArizonaGastroenterologyLtd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://azgastroenterology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

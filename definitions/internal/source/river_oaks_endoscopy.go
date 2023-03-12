@@ -28,7 +28,6 @@ func GetSourceRiverOaksEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "River Oaks Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeRiverOaksEndoscopy
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://riveroaksendoscopy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

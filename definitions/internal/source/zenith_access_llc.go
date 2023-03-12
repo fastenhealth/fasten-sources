@@ -28,7 +28,6 @@ func GetSourceZenithAccessLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Zenith Access LLC"
 	sourceDef.SourceType = pkg.SourceTypeZenithAccessLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

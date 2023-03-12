@@ -28,7 +28,6 @@ func GetSourcePrairieClinicSc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Prairie Clinic SC"
 	sourceDef.SourceType = pkg.SourceTypePrairieClinicSc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "prairie-clinic-sc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.prairieclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceIntegrativeSportsMedicineLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Integrative Sports Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeSportsMedicineLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "integrative-sports-medicine-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.integrativesportsmed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

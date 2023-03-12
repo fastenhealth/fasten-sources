@@ -28,7 +28,6 @@ func GetSourceMedicalCareOfTennesseePllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Medical Care of Tennessee PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCareOfTennesseePllc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "medical-care-of-tennessee-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.medicalofmemphis.com/contact-locations/complete-health-care-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"

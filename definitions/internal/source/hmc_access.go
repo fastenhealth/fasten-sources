@@ -28,7 +28,6 @@ func GetSourceHmcAccess(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "HMC Access"
 	sourceDef.SourceType = pkg.SourceTypeHmcAccess
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hmc-access.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ibm.com/docs/en/ds8870/7.5.0?topic=settings-hmc-access"
 	sourceDef.SecretKeyPrefix = "nextgen"

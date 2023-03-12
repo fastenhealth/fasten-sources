@@ -28,7 +28,6 @@ func GetSourceCarrollCountyDigestiveDiseaseCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Carroll County Digestive Disease Center"
 	sourceDef.SourceType = pkg.SourceTypeCarrollCountyDigestiveDiseaseCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

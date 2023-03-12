@@ -28,7 +28,6 @@ func GetSourceChildMindMedicalPracticePllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Child Mind Medical Practice PLLC"
 	sourceDef.SourceType = pkg.SourceTypeChildMindMedicalPracticePllc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

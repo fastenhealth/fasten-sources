@@ -28,7 +28,6 @@ func GetSourceLakeCountryOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Lake Country Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeLakeCountryOrthopedics
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lakecountrypt.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

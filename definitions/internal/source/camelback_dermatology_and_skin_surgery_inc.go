@@ -28,7 +28,6 @@ func GetSourceCamelbackDermatologyAndSkinSurgeryInc(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Camelback Dermatology & Skin Surgery Inc"
 	sourceDef.SourceType = pkg.SourceTypeCamelbackDermatologyAndSkinSurgeryInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

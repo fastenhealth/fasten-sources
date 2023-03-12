@@ -28,7 +28,6 @@ func GetSourceCaringHandsHealthcareCentersInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "CARING HANDS HEALTHCARE CENTERS INC."
 	sourceDef.SourceType = pkg.SourceTypeCaringHandsHealthcareCentersInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://chhcok.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

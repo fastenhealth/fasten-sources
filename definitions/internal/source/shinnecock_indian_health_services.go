@@ -28,7 +28,6 @@ func GetSourceShinnecockIndianHealthServices(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Shinnecock Indian Health Services"
 	sourceDef.SourceType = pkg.SourceTypeShinnecockIndianHealthServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.shinnecock-nsn.gov/health-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

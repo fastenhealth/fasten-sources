@@ -28,7 +28,6 @@ func GetSourceBirminghamVascular(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Birmingham Vascular"
 	sourceDef.SourceType = pkg.SourceTypeBirminghamVascular
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

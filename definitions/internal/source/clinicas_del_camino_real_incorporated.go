@@ -28,7 +28,6 @@ func GetSourceClinicasDelCaminoRealIncorporated(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Clinicas Del Camino Real Incorporated"
 	sourceDef.SourceType = pkg.SourceTypeClinicasDelCaminoRealIncorporated
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

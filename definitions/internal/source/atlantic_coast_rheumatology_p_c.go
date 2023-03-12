@@ -28,7 +28,6 @@ func GetSourceAtlanticCoastRheumatologyPC(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Atlantic Coast Rheumatology P C"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticCoastRheumatologyPC
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

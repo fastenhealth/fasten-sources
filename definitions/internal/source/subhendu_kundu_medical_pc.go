@@ -28,7 +28,6 @@ func GetSourceSubhenduKunduMedicalPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Subhendu Kundu Medical PC"
 	sourceDef.SourceType = pkg.SourceTypeSubhenduKunduMedicalPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1861860439-subhendu-kundu-medical-pc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

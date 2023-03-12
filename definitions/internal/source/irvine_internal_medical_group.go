@@ -28,7 +28,6 @@ func GetSourceIrvineInternalMedicalGroup(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Irvine Internal Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeIrvineInternalMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://irvineinternal.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

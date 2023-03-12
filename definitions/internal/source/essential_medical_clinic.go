@@ -28,7 +28,6 @@ func GetSourceEssentialMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Essential Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEssentialMedicalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://essentialmedicalclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

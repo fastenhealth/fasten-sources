@@ -28,7 +28,6 @@ func GetSourceButlerCntyCommHealthCareConsortium(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Butler Cnty Comm Health Care Consortium"
 	sourceDef.SourceType = pkg.SourceTypeButlerCntyCommHealthCareConsortium
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dnb.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

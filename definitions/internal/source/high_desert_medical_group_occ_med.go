@@ -28,7 +28,6 @@ func GetSourceHighDesertMedicalGroupOccMed(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "High Desert Medical Group- Occ Med"
 	sourceDef.SourceType = pkg.SourceTypeHighDesertMedicalGroupOccMed
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

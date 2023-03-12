@@ -28,7 +28,6 @@ func GetSourceNewVisionCataractCenterLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "New Vision Cataract Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeNewVisionCataractCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.newvisioncataractcenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceShawneeMentalHealthCenterInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Shawnee Mental Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeShawneeMentalHealthCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://shawneefamilyhealthcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceNorthCascadeEyeAssociatesPS(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "North Cascade Eye Associates P S"
 	sourceDef.SourceType = pkg.SourceTypeNorthCascadeEyeAssociatesPS
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "north-cascade-eye-associates-p-s.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ncascade.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

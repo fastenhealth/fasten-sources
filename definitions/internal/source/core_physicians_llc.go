@@ -28,7 +28,6 @@ func GetSourceCorePhysiciansLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Core Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeCorePhysiciansLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "core-physicians-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.corephysicians.org/Home"
 	sourceDef.SecretKeyPrefix = "nextgen"

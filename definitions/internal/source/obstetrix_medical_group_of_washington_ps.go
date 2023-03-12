@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfWashingtonPs(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Obstetrix Medical Group Of Washington PS"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfWashingtonPs
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/obstetrix-medical-group-of-washington-inc-1ea71dc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

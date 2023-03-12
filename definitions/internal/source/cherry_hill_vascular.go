@@ -28,7 +28,6 @@ func GetSourceCherryHillVascular(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Cherry Hill Vascular"
 	sourceDef.SourceType = pkg.SourceTypeCherryHillVascular
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

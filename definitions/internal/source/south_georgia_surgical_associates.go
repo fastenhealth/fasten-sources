@@ -28,7 +28,6 @@ func GetSourceSouthGeorgiaSurgicalAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "South Georgia Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeSouthGeorgiaSurgicalAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://archbold.org/services/surgery-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

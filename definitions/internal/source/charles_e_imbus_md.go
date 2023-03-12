@@ -28,7 +28,6 @@ func GetSourceCharlesEImbusMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Charles E Imbus MD"
 	sourceDef.SourceType = pkg.SourceTypeCharlesEImbusMd
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

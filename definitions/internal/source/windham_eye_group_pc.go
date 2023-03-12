@@ -28,7 +28,6 @@ func GetSourceWindhamEyeGroupPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Windham Eye Group PC"
 	sourceDef.SourceType = pkg.SourceTypeWindhamEyeGroupPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "windham-eye-group-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.windhameyegroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

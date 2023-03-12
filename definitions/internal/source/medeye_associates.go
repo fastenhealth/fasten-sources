@@ -28,7 +28,6 @@ func GetSourceMedeyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "MedEye Associates"
 	sourceDef.SourceType = pkg.SourceTypeMedeyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://medeyeassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

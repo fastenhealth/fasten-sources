@@ -28,7 +28,6 @@ func GetSourceNcPediatricAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "NC Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeNcPediatricAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

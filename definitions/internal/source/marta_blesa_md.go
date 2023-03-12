@@ -28,7 +28,6 @@ func GetSourceMartaBlesaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Marta Blesa MD"
 	sourceDef.SourceType = pkg.SourceTypeMartaBlesaMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/temple-city/dr-marta-blesa-md/#gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

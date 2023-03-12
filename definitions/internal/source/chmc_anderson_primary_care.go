@@ -28,7 +28,6 @@ func GetSourceChmcAndersonPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "CHMC Anderson Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeChmcAndersonPrimaryCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceTexasOculoplasticConsultants(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Texas Oculoplastic Consultants"
 	sourceDef.SourceType = pkg.SourceTypeTexasOculoplasticConsultants
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://toceyeandface.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

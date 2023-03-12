@@ -28,7 +28,6 @@ func GetSourceCommunityHealthDevelopmentInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Community Health Development Inc."
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthDevelopmentInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "community-health-development-inc.svg"
 	sourceDef.PatientAccessUrl = "https://chdi4health.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

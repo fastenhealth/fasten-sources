@@ -28,7 +28,6 @@ func GetSourceGardnerFamilyHealthNetwork(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gardner Family Health Network"
 	sourceDef.SourceType = pkg.SourceTypeGardnerFamilyHealthNetwork
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

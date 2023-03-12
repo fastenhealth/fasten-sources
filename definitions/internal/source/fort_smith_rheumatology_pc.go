@@ -28,7 +28,6 @@ func GetSourceFortSmithRheumatologyPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Fort Smith Rheumatology PC"
 	sourceDef.SourceType = pkg.SourceTypeFortSmithRheumatologyPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.rheumatology.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

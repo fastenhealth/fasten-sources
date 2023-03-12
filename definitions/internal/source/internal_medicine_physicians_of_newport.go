@@ -28,7 +28,6 @@ func GetSourceInternalMedicinePhysiciansOfNewport(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Internal Medicine Physicians of Newport"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicinePhysiciansOfNewport
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com/medical_billing/coding/national_provider_identifier/codes/npi_1174709661.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

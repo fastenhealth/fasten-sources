@@ -28,7 +28,6 @@ func GetSourceNorthTexasImagingCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "North Texas Imaging Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthTexasImagingCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/texas/north-texas-imaging-center-430243207"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCharlesJScagliottiMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Charles J Scagliotti MD"
 	sourceDef.SourceType = pkg.SourceTypeCharlesJScagliottiMd
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceArchboldGastroenterologyGroup(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Archbold Gastroenterology Group"
 	sourceDef.SourceType = pkg.SourceTypeArchboldGastroenterologyGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://archbold.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

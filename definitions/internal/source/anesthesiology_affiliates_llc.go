@@ -28,7 +28,6 @@ func GetSourceAnesthesiologyAffiliatesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Anesthesiology Affiliates LLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiologyAffiliatesLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://anesthesiaokc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

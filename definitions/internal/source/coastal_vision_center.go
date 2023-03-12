@@ -28,7 +28,6 @@ func GetSourceCoastalVisionCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Coastal Vision Center"
 	sourceDef.SourceType = pkg.SourceTypeCoastalVisionCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

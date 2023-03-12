@@ -28,7 +28,6 @@ func GetSourceUspiJacksonvilleEndoscopy(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "USPI Jacksonville Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeUspiJacksonvilleEndoscopy
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

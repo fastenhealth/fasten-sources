@@ -28,7 +28,6 @@ func GetSourceGarrisonFamilyPhysiciansPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Garrison Family Physicians PC"
 	sourceDef.SourceType = pkg.SourceTypeGarrisonFamilyPhysiciansPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/co-colorado/lakewood/garrison-family-physicians-x6dcht"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

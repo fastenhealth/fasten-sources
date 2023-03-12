@@ -28,7 +28,6 @@ func GetSourceJoonYKimMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Joon Y Kim MD PC"
 	sourceDef.SourceType = pkg.SourceTypeJoonYKimMdPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.castleconnolly.com/top-doctors/joon-y-kim-ophthalmology-16cc003655"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

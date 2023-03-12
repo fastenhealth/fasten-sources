@@ -28,7 +28,6 @@ func GetSourceRheumatologyTherapeuticsMedicalCenter(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Rheumatology Therapeutics Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyTherapeuticsMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "rheumatology-therapeutics-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/arthritisconsult/"
 	sourceDef.SecretKeyPrefix = "nextgen"

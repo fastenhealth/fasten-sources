@@ -28,7 +28,6 @@ func GetSourceAltaCaliforniaMedicalGroup(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Alta California Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAltaCaliforniaMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://altacaliforniamedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

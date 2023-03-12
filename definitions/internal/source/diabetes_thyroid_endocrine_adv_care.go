@@ -28,7 +28,6 @@ func GetSourceDiabetesThyroidEndocrineAdvCare(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Diabetes Thyroid Endocrine Adv Care"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesThyroidEndocrineAdvCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.detsutah.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

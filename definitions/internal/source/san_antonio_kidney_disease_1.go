@@ -28,7 +28,6 @@ func GetSourceSanAntonioKidneyDisease1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "San Antonio Kidney Disease"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioKidneyDisease1
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "san-antonio-kidney-disease.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sakidney.com/contactus.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceIntegratedFamilyServices(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Integrated Family Services"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedFamilyServices
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "integrated-family-services.jpg"
 	sourceDef.PatientAccessUrl = "http://www.integratedfamilyservices.net/wp-content/uploads/2023/02/IFS_HorzLogo-900px.png"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceMidSouthPulmonaryAndSleepSpecialist(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "MID-SOUTH PULMONARY AND SLEEP SPECIALIST"
 	sourceDef.SourceType = pkg.SourceTypeMidSouthPulmonaryAndSleepSpecialist
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.mspulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

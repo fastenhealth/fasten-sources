@@ -28,7 +28,6 @@ func GetSourceSolidaritus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Solidaritus"
 	sourceDef.SourceType = pkg.SourceTypeSolidaritus
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://solidaritus.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

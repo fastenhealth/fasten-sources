@@ -28,7 +28,6 @@ func GetSourcePersonalPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Personal Physicians"
 	sourceDef.SourceType = pkg.SourceTypePersonalPhysicians
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://personalphysicianstl.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

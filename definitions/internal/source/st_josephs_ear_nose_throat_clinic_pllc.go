@@ -28,7 +28,6 @@ func GetSourceStJosephsEarNoseThroatClinicPllc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "St Josephs Ear Nose Throat Clinic PLLC"
 	sourceDef.SourceType = pkg.SourceTypeStJosephsEarNoseThroatClinicPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.stjosephsent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAmericanPainAndWellness(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "American Pain And Wellness"
 	sourceDef.SourceType = pkg.SourceTypeAmericanPainAndWellness
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3Y3N5A7N5T65SH2K0BZYIZH1X9PYMK?assignment_id=39PAAFCOD0XUN2VTUZIRMY4OE94TVW&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

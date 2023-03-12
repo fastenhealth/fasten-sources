@@ -28,7 +28,6 @@ func GetSourceCityOfBethlehemHealthBureau(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "City Of Bethlehem Health Bureau"
 	sourceDef.SourceType = pkg.SourceTypeCityOfBethlehemHealthBureau
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

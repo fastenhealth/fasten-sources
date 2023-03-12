@@ -28,7 +28,6 @@ func GetSourceBchcFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "BCHC Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeBchcFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceAlonsoMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Alonso Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAlonsoMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://publichealth.lacounty.gov/cms/chdp.htm"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

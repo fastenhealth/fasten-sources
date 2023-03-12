@@ -28,7 +28,6 @@ func GetSourceSouthamptonHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Southampton Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSouthamptonHospital
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/stonybrooksouthamptonhospital/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

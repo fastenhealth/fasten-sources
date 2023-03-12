@@ -28,7 +28,6 @@ func GetSourceRobertVDimeglioMdLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Robert V DiMeglio MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeRobertVDimeglioMdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gaurology.com/our-physicians/physician/robert-v-di-meglio/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

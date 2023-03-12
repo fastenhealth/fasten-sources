@@ -28,7 +28,6 @@ func GetSourcePhysicianCarePc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Physician Care PC"
 	sourceDef.SourceType = pkg.SourceTypePhysicianCarePc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

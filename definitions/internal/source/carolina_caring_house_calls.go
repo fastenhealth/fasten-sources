@@ -28,7 +28,6 @@ func GetSourceCarolinaCaringHouseCalls(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Carolina Caring House Calls"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaCaringHouseCalls
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

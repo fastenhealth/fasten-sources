@@ -28,7 +28,6 @@ func GetSourceKentuckianaRheumatology(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Kentuckiana Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeKentuckianaRheumatology
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "kentuckiana-rheumatology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kentuckianarheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

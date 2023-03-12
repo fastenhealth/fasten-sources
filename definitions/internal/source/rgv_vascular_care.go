@@ -28,7 +28,6 @@ func GetSourceRgvVascularCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "RGV Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeRgvVascularCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/brownsville/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

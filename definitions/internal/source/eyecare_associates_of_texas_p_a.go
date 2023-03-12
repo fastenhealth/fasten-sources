@@ -28,7 +28,6 @@ func GetSourceEyecareAssociatesOfTexasPA(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "EyeCare Associates Of Texas P.A."
 	sourceDef.SourceType = pkg.SourceTypeEyecareAssociatesOfTexasPA
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eyecare-associates-of-texas-p-a.jpg"
 	sourceDef.PatientAccessUrl = "https://www.texaseyes.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

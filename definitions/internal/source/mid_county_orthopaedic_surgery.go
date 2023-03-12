@@ -28,7 +28,6 @@ func GetSourceMidCountyOrthopaedicSurgery(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Mid County Orthopaedic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeMidCountyOrthopaedicSurgery
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/missouri/mid-county-orthopaedic-surgery-sports-medicine-372057781"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

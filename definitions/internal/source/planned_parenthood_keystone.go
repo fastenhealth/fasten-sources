@@ -28,7 +28,6 @@ func GetSourcePlannedParenthoodKeystone(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Planned Parenthood Keystone"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodKeystone
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "planned-parenthood-keystone.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-keystone?utm_campaign=keystone-affiliate&utm_medium=organic&utm_source=local-listing"
 	sourceDef.SecretKeyPrefix = "nextgen"

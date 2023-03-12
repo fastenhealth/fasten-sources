@@ -28,7 +28,6 @@ func GetSourceCapeFearArthritisCarePllc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Cape Fear Arthritis Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeCapeFearArthritisCarePllc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

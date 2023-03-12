@@ -28,7 +28,6 @@ func GetSourceEastwindWomensHealthInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Eastwind Womens Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeEastwindWomensHealthInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eastwind-womens-health-inc.jpg"
 	sourceDef.PatientAccessUrl = "http://eastwindwomenshealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

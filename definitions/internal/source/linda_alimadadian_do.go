@@ -28,7 +28,6 @@ func GetSourceLindaAlimadadianDo(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Linda Alimadadian DO"
 	sourceDef.SourceType = pkg.SourceTypeLindaAlimadadianDo
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ibeautyirvine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

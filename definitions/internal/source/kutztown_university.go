@@ -28,7 +28,6 @@ func GetSourceKutztownUniversity(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Kutztown University"
 	sourceDef.SourceType = pkg.SourceTypeKutztownUniversity
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

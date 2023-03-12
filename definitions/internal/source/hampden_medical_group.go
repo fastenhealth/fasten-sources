@@ -28,7 +28,6 @@ func GetSourceHampdenMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hampden Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHampdenMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hampdenmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAvon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "Avon"
 	sourceDef.SourceType = pkg.SourceTypeAvon
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/locations-nav/locations/in/american-health-network-8607-e-us-highway-36-ste-100-avon-in-46123/eccf2e71-9919-45f2-9946-45d8cf7e7e75.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

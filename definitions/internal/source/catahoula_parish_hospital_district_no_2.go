@@ -28,7 +28,6 @@ func GetSourceCatahoulaParishHospitalDistrictNo2(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Catahoula Parish Hospital District No 2"
 	sourceDef.SourceType = pkg.SourceTypeCatahoulaParishHospitalDistrictNo2
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

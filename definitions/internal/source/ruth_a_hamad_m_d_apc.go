@@ -28,7 +28,6 @@ func GetSourceRuthAHamadMDApc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Ruth A Hamad M D APC"
 	sourceDef.SourceType = pkg.SourceTypeRuthAHamadMDApc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/glendora/ruth-a-hamad-md-apc-xb4wnh"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

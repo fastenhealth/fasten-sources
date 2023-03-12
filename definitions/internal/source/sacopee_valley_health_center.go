@@ -28,7 +28,6 @@ func GetSourceSacopeeValleyHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Sacopee Valley Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSacopeeValleyHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "sacopee-valley-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.svhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

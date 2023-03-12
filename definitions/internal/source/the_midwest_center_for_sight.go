@@ -28,7 +28,6 @@ func GetSourceTheMidwestCenterForSight(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "The Midwest Center For Sight"
 	sourceDef.SourceType = pkg.SourceTypeTheMidwestCenterForSight
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "the-midwest-center-for-sight.jpg"
 	sourceDef.PatientAccessUrl = "https://www.themidwestcenterforsight.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

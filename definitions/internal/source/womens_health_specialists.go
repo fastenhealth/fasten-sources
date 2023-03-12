@@ -28,7 +28,6 @@ func GetSourceWomensHealthSpecialists(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Women's Health Specialists"
 	sourceDef.SourceType = pkg.SourceTypeWomensHealthSpecialists
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

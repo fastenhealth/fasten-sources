@@ -28,7 +28,6 @@ func GetSourceNcpPhoenixAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "NCP Phoenix ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpPhoenixAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

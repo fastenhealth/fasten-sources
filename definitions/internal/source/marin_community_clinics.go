@@ -28,7 +28,6 @@ func GetSourceMarinCommunityClinics(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Marin Community Clinics"
 	sourceDef.SourceType = pkg.SourceTypeMarinCommunityClinics
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.marinclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

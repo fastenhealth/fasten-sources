@@ -28,7 +28,6 @@ func GetSourceOncologyAndHematology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Oncology and Hematology"
 	sourceDef.SourceType = pkg.SourceTypeOncologyAndHematology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.logosvgpng.com/frederick-health-logo-vector/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceRheumatologyAssociatesOfMaui(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Rheumatology Associates Of Maui"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAssociatesOfMaui
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "rheumatology-associates-of-maui.jpg"
 	sourceDef.PatientAccessUrl = "https://hawaiirheum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

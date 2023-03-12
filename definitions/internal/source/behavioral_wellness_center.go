@@ -28,7 +28,6 @@ func GetSourceBehavioralWellnessCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Behavioral Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeBehavioralWellnessCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceCallenLordeCommunityHealthCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Callen-Lorde Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeCallenLordeCommunityHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

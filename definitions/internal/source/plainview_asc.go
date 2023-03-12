@@ -28,7 +28,6 @@ func GetSourcePlainviewAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Plainview ASC"
 	sourceDef.SourceType = pkg.SourceTypePlainviewAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/ambulatory_health_care/ambulatory-surgical_261qa1903x/1003575218.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceElliotLederman(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Elliot Lederman"
 	sourceDef.SourceType = pkg.SourceTypeElliotLederman
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.elliotledermanmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

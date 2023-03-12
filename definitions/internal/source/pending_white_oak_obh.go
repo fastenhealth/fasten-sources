@@ -28,7 +28,6 @@ func GetSourcePendingWhiteOakObh(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Pending White Oak OBH"
 	sourceDef.SourceType = pkg.SourceTypePendingWhiteOakObh
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.na.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

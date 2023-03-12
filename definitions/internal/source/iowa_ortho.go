@@ -28,7 +28,6 @@ func GetSourceIowaOrtho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Iowa Ortho"
 	sourceDef.SourceType = pkg.SourceTypeIowaOrtho
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "iowa-ortho.jpg"
 	sourceDef.PatientAccessUrl = "https://www.iowaortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

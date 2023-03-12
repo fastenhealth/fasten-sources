@@ -28,7 +28,6 @@ func GetSourceGrandTraverseOphthalmologyClinic(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Grand Traverse Ophthalmology Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGrandTraverseOphthalmologyClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gtoc.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCentromed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "CentroMed"
 	sourceDef.SourceType = pkg.SourceTypeCentromed
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

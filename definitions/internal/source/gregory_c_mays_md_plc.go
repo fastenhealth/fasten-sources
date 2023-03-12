@@ -28,7 +28,6 @@ func GetSourceGregoryCMaysMdPlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gregory C Mays MD PLC"
 	sourceDef.SourceType = pkg.SourceTypeGregoryCMaysMdPlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gregorymaysmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

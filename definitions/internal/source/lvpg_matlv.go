@@ -28,7 +28,6 @@ func GetSourceLvpgMatlv(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "LVPG MATLV"
 	sourceDef.SourceType = pkg.SourceTypeLvpgMatlv
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.matlv.com/content_view.asp?wid=164"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

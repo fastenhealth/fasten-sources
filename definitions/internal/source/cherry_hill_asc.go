@@ -28,7 +28,6 @@ func GetSourceCherryHillAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cherry Hill ASC"
 	sourceDef.SourceType = pkg.SourceTypeCherryHillAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

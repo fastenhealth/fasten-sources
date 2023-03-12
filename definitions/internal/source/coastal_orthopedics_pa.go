@@ -28,7 +28,6 @@ func GetSourceCoastalOrthopedicsPa(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Coastal Orthopedics PA"
 	sourceDef.SourceType = pkg.SourceTypeCoastalOrthopedicsPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

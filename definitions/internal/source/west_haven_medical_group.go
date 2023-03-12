@@ -28,7 +28,6 @@ func GetSourceWestHavenMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "West Haven Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWestHavenMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stamfordhealth.org/locations/locations-profile/?navigationNode=/1/15/2/&id=1709"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

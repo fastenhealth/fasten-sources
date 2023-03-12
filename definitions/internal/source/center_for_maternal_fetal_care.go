@@ -28,7 +28,6 @@ func GetSourceCenterForMaternalFetalCare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Center For Maternal-Fetal Care"
 	sourceDef.SourceType = pkg.SourceTypeCenterForMaternalFetalCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

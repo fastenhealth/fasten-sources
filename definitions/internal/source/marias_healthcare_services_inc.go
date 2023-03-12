@@ -28,7 +28,6 @@ func GetSourceMariasHealthcareServicesInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Marias Healthcare Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeMariasHealthcareServicesInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "marias-healthcare-services-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mariashealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

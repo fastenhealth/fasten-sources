@@ -28,7 +28,6 @@ func GetSourceLifeChiropracticCenters(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "LIFE Chiropractic Centers"
 	sourceDef.SourceType = pkg.SourceTypeLifeChiropracticCenters
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "life-chiropractic-centers.jpg"
 	sourceDef.PatientAccessUrl = "https://www.life.edu/campus-life-pages/health-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceArchboldPulmonaryAndCriticalCareSvc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Archbold Pulmonary And Critical Care Svc"
 	sourceDef.SourceType = pkg.SourceTypeArchboldPulmonaryAndCriticalCareSvc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://archbold.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

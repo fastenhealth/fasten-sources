@@ -28,7 +28,6 @@ func GetSourceEmergencySurgicalServicesOfArizona(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Emergency Surgical Services Of Arizona"
 	sourceDef.SourceType = pkg.SourceTypeEmergencySurgicalServicesOfArizona
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

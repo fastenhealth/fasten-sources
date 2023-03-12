@@ -28,7 +28,6 @@ func GetSourcePainCentersOfMinnesotaMankatoLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Pain Centers Of Minnesota Mankato LLC"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfMinnesotaMankatoLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pain-centers-of-minnesota-mankato-llc.svg"
 	sourceDef.PatientAccessUrl = "https://www.mankatoclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

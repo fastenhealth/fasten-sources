@@ -28,7 +28,6 @@ func GetSourceNgsMidStateEndoscopyCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "NGS Mid State Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeNgsMidStateEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.midstateendoscopy-sc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

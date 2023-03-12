@@ -28,7 +28,6 @@ func GetSourceLeeEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Lee Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeLeeEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "lee-eye-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.leeeyecenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

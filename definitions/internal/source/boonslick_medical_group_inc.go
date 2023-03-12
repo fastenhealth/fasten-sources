@@ -28,7 +28,6 @@ func GetSourceBoonslickMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Boonslick Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeBoonslickMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

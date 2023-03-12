@@ -28,7 +28,6 @@ func GetSourceIsabellaCitizensForHealthInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Isabella Citizens For Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeIsabellaCitizensForHealthInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.isabellahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

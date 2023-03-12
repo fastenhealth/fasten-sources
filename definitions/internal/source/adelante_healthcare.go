@@ -28,7 +28,6 @@ func GetSourceAdelanteHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Adelante Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeAdelanteHealthcare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "adelante-healthcare.jpeg"
 	sourceDef.PatientAccessUrl = "https://adelantehealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

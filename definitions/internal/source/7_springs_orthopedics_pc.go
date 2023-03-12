@@ -28,7 +28,6 @@ func GetSource7SpringsOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "7 Springs Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceType7SpringsOrthopedicsPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sportorthourgentcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

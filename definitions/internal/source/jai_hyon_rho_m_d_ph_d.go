@@ -28,7 +28,6 @@ func GetSourceJaiHyonRhoMDPhD(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jai Hyon Rho M D PH D"
 	sourceDef.SourceType = pkg.SourceTypeJaiHyonRhoMDPhD
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "jai-hyon-rho-m-d-ph-d.svg"
 	sourceDef.PatientAccessUrl = "https://www.usnews.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

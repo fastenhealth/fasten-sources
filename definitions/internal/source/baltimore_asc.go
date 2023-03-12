@@ -28,7 +28,6 @@ func GetSourceBaltimoreAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Baltimore ASC"
 	sourceDef.SourceType = pkg.SourceTypeBaltimoreAsc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "baltimore-asc.svg"
 	sourceDef.PatientAccessUrl = "http://phppd.providence.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

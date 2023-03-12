@@ -28,7 +28,6 @@ func GetSourceSuburbanMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Suburban Medical Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeSuburbanMedicalGroupLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.suburbanmedical.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

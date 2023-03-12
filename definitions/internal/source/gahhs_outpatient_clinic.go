@@ -28,7 +28,6 @@ func GetSourceGahhsOutpatientClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "GAHHS Outpatient Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGahhsOutpatientClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gahhs-outpatient-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/home"
 	sourceDef.SecretKeyPrefix = "nextgen"

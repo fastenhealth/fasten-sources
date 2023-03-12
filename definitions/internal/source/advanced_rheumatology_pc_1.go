@@ -28,7 +28,6 @@ func GetSourceAdvancedRheumatologyPc1(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Advanced Rheumatology Pc"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedRheumatologyPc1
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "advanced-rheumatology-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/335HHSX8DQ2G2S6IDIW7D9Z4YZLDHJ?assignment_id=3F6HPJW4JRXDIS1L1U3R7DECL5TW2H&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

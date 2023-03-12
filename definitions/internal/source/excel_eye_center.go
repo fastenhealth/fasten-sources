@@ -28,7 +28,6 @@ func GetSourceExcelEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Excel Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeExcelEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.exceleyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

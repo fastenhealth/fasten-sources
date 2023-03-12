@@ -28,7 +28,6 @@ func GetSourceTampaEyeClinicAndAssociatesPa(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tampa Eye Clinic And Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeTampaEyeClinicAndAssociatesPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.tampaeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

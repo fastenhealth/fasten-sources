@@ -28,7 +28,6 @@ func GetSourceShepardEyeCenterAsc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Shepard Eye Center ASC"
 	sourceDef.SourceType = pkg.SourceTypeShepardEyeCenterAsc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "shepard-eye-center-asc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.shepherdeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

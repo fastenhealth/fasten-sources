@@ -28,7 +28,6 @@ func GetSourceFredGalluccioMdAndAssocInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Fred Galluccio MD & Assoc Inc"
 	sourceDef.SourceType = pkg.SourceTypeFredGalluccioMdAndAssocInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fred-galluccio-md-and-assoc-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.memorialcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

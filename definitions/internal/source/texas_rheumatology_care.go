@@ -28,7 +28,6 @@ func GetSourceTexasRheumatologyCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Texas Rheumatology Care"
 	sourceDef.SourceType = pkg.SourceTypeTexasRheumatologyCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/TexasRheumatologyCare/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

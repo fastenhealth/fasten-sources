@@ -28,7 +28,6 @@ func GetSourceTriadNeurosurgicalAssociatesPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Triad Neurosurgical Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeTriadNeurosurgicalAssociatesPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/triad-neurosurgical-22706342-7bbb-e311-8fc0-001f29e3bb64"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

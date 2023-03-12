@@ -28,7 +28,6 @@ func GetSourceLakeParkRba(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Lake Park RBA"
 	sourceDef.SourceType = pkg.SourceTypeLakeParkRba
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

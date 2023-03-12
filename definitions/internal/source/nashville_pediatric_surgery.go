@@ -28,7 +28,6 @@ func GetSourceNashvillePediatricSurgery(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Nashville Pediatric Surgery"
 	sourceDef.SourceType = pkg.SourceTypeNashvillePediatricSurgery
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vumc.org/main/home"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

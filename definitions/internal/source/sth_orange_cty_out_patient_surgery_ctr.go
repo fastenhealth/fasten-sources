@@ -28,7 +28,6 @@ func GetSourceSthOrangeCtyOutPatientSurgeryCtr(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Sth Orange Cty Out-Patient Surgery Ctr"
 	sourceDef.SourceType = pkg.SourceTypeSthOrangeCtyOutPatientSurgeryCtr
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ocsurgicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

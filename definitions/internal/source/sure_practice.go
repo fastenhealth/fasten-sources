@@ -28,7 +28,6 @@ func GetSourceSurePractice(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "SURE Practice"
 	sourceDef.SourceType = pkg.SourceTypeSurePractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

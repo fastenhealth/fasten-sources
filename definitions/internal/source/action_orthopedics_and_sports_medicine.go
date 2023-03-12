@@ -28,7 +28,6 @@ func GetSourceActionOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Action Orthopedics And Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeActionOrthopedicsAndSportsMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.actionorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

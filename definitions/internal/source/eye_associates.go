@@ -28,7 +28,6 @@ func GetSourceEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.eye-drs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

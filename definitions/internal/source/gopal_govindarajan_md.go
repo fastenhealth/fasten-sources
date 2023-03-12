@@ -28,7 +28,6 @@ func GetSourceGopalGovindarajanMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Gopal Govindarajan MD"
 	sourceDef.SourceType = pkg.SourceTypeGopalGovindarajanMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-gopal-govindarajan-x8bq8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

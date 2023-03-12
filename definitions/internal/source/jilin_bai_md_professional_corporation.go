@@ -28,7 +28,6 @@ func GetSourceJilinBaiMdProfessionalCorporation(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Jilin Bai MD Professional Corporation"
 	sourceDef.SourceType = pkg.SourceTypeJilinBaiMdProfessionalCorporation
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1336691740-jilin-bai-md-professional-corporation/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

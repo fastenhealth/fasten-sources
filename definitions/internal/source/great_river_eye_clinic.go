@@ -28,7 +28,6 @@ func GetSourceGreatRiverEyeClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Great River Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGreatRiverEyeClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "great-river-eye-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://greatrivereyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceContemporaryOphthalmology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CONTEMPORARY OPHTHALMOLOGY"
 	sourceDef.SourceType = pkg.SourceTypeContemporaryOphthalmology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lasikerie.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

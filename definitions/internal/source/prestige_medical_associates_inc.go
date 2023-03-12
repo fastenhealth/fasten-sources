@@ -28,7 +28,6 @@ func GetSourcePrestigeMedicalAssociatesInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Prestige Medical Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypePrestigeMedicalAssociatesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/newbury-park/prestige-medical-associates-x9w4my"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

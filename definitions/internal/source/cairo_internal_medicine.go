@@ -28,7 +28,6 @@ func GetSourceCairoInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cairo Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCairoInternalMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceProlianceEastsideMri(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Proliance Eastside MRI"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideMri
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.proortho.com/location/proliance-eastside-mri/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

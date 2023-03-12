@@ -28,7 +28,6 @@ func GetSourceOrlandoAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Orlando ASC"
 	sourceDef.SourceType = pkg.SourceTypeOrlandoAsc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "orlando-asc.svg"
 	sourceDef.PatientAccessUrl = "https://orlandooutpatientsurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

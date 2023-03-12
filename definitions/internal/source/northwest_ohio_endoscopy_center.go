@@ -28,7 +28,6 @@ func GetSourceNorthwestOhioEndoscopyCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Northwest Ohio Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestOhioEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

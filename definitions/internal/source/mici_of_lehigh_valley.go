@@ -28,7 +28,6 @@ func GetSourceMiciOfLehighValley(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "MICI of Lehigh Valley"
 	sourceDef.SourceType = pkg.SourceTypeMiciOfLehighValley
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.lehigh_valley_vascular_institute_llc.e19f975f10936a6b8ed84cec09e3f927.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

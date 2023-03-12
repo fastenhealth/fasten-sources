@@ -28,7 +28,6 @@ func GetSourceArthritisTreatmentCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Arthritis Treatment Center"
 	sourceDef.SourceType = pkg.SourceTypeArthritisTreatmentCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://arthritistreatmentctr.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

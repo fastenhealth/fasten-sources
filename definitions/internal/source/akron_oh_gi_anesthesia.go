@@ -28,7 +28,6 @@ func GetSourceAkronOhGiAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Akron OH GI - Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeAkronOhGiAnesthesia
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://dhcakron.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

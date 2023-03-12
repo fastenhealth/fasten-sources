@@ -28,7 +28,6 @@ func GetSourceSantaYnezTribalHealthClinic(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Santa Ynez Tribal Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSantaYnezTribalHealthClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://sythc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

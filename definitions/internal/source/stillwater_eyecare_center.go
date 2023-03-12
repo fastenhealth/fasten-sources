@@ -28,7 +28,6 @@ func GetSourceStillwaterEyecareCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Stillwater Eyecare Center"
 	sourceDef.SourceType = pkg.SourceTypeStillwaterEyecareCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stillwater-medical.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

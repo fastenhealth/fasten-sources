@@ -28,7 +28,6 @@ func GetSourceStillwaterUrologyAssociates(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Stillwater Urology Associates"
 	sourceDef.SourceType = pkg.SourceTypeStillwaterUrologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/stillwater-urology-associates-06c6b8c8-4703-e211-a42b-001f29e3eb44/physicians"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

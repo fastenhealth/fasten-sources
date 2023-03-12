@@ -28,7 +28,6 @@ func GetSourceStMaryMedicalCenterCareClinic(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "St Mary Medical Center CARE Clinic"
 	sourceDef.SourceType = pkg.SourceTypeStMaryMedicalCenterCareClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "st-mary-medical-center-care-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://nl-nl.facebook.com/StMaryMedicalCenter"
 	sourceDef.SecretKeyPrefix = "nextgen"

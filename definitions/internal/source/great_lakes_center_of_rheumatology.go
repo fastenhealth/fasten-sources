@@ -28,7 +28,6 @@ func GetSourceGreatLakesCenterOfRheumatology(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Great Lakes Center Of Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeGreatLakesCenterOfRheumatology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://glcor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

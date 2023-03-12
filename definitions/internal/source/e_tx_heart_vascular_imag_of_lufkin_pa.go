@@ -28,7 +28,6 @@ func GetSourceETxHeartVascularImagOfLufkinPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "E Tx  Heart Vascular Imag Of Lufkin PA"
 	sourceDef.SourceType = pkg.SourceTypeETxHeartVascularImagOfLufkinPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hiet.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

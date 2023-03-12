@@ -28,7 +28,6 @@ func GetSourceAmorem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "AMOREM"
 	sourceDef.SourceType = pkg.SourceTypeAmorem
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "amorem.svg"
 	sourceDef.PatientAccessUrl = "https://www.amoremsupport.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceBatonRougeVascular(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Baton Rouge Vascular"
 	sourceDef.SourceType = pkg.SourceTypeBatonRougeVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://brvsc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

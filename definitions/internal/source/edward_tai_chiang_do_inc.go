@@ -28,7 +28,6 @@ func GetSourceEdwardTaiChiangDoInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Edward Tai Chiang DO INC"
 	sourceDef.SourceType = pkg.SourceTypeEdwardTaiChiangDoInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "edward-tai-chiang-do-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://care.everydayhealth.com/providers/612808/edward-tai-chiang-do/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceSignatureOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Signature Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSignatureOrthopedics
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "signature-orthopedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.signaturemedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

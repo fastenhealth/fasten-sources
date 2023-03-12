@@ -28,7 +28,6 @@ func GetSourceEvergreenEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Evergreen Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeEvergreenEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.evergreeneye.com/eye-center/federal-way/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceDesertSenitaChc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Desert Senita CHC"
 	sourceDef.SourceType = pkg.SourceTypeDesertSenitaChc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.desertsenita.or"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

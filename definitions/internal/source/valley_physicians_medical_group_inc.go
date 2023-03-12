@@ -28,7 +28,6 @@ func GetSourceValleyPhysiciansMedicalGroupInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Valley Physicians Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeValleyPhysiciansMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/valley-physicians-medical-group-04af7bc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

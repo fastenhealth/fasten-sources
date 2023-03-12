@@ -28,7 +28,6 @@ func GetSourceMichaAbelesMdAndAryehAbelesMd(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Micha Abeles MD & Aryeh Abeles MD"
 	sourceDef.SourceType = pkg.SourceTypeMichaAbelesMdAndAryehAbelesMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

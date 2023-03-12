@@ -28,7 +28,6 @@ func GetSourceSouthwestEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Southwest Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestEyeInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://southwesteye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceEspirituAndEspirituMdPa(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Espiritu And Espiritu MD PA"
 	sourceDef.SourceType = pkg.SourceTypeEspirituAndEspirituMdPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-miguel-espiritu-xs6ky"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

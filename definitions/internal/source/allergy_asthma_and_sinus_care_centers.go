@@ -28,7 +28,6 @@ func GetSourceAllergyAsthmaAndSinusCareCenters(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Allergy Asthma & Sinus Care Centers"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAsthmaAndSinusCareCenters
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.commercialcafe.com/commercial-property/us/mo/st-louis/9717-landmark-parkway-drive/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

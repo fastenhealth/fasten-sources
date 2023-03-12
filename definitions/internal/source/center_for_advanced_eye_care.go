@@ -28,7 +28,6 @@ func GetSourceCenterForAdvancedEyeCare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Center For Advanced Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeCenterForAdvancedEyeCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

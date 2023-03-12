@@ -28,7 +28,6 @@ func GetSourceArthritisAndRheumClinicsOfKs(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Arthritis And Rheum Clinics of KS"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndRheumClinicsOfKs
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "arthritis-and-rheum-clinics-of-ks.svg"
 	sourceDef.PatientAccessUrl = "https://arck.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourcePainCentersOfWisconsinOcontoFalls(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pain Centers Of Wisconsin Oconto Falls"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfWisconsinOcontoFalls
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/medical-supplies/1265095178-pain-centers-of-wisconsin---oconto-falls%2C-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

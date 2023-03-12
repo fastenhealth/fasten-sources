@@ -28,7 +28,6 @@ func GetSourceCharlesMMaplesDo(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Charles M Maples DO"
 	sourceDef.SourceType = pkg.SourceTypeCharlesMMaplesDo
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

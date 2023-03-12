@@ -28,7 +28,6 @@ func GetSourceSakdcSurgicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "SAKDC Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeSakdcSurgicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sakidney.com/contactus.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

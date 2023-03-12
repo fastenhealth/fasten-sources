@@ -28,7 +28,6 @@ func GetSourceAssociatesOfMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Associates Of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesOfMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stillwater-medical.org/locations/north-central-oklahoma-internal-medicine"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

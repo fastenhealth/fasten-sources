@@ -28,7 +28,6 @@ func GetSourcePioneerValleySurgicenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Pioneer Valley Surgicenter"
 	sourceDef.SourceType = pkg.SourceTypePioneerValleySurgicenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

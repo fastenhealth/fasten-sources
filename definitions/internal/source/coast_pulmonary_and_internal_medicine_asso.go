@@ -28,7 +28,6 @@ func GetSourceCoastPulmonaryAndInternalMedicineAsso(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Coast Pulmonary & Internal Medicine Asso"
 	sourceDef.SourceType = pkg.SourceTypeCoastPulmonaryAndInternalMedicineAsso
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://coastmds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

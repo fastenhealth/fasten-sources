@@ -28,7 +28,6 @@ func GetSourceChildrensHeartsPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Childrens Hearts PC"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHeartsPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

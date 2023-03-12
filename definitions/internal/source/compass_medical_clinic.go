@@ -28,7 +28,6 @@ func GetSourceCompassMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Compass Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCompassMedicalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.compassmed.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

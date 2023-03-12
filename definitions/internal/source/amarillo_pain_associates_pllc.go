@@ -28,7 +28,6 @@ func GetSourceAmarilloPainAssociatesPllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Amarillo Pain Associates PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloPainAssociatesPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3TTPFEFXD6HHHJR33VOT73PCHDY6HK?assignment_id=3LRKMWOKBJEHCN6QCHNY6H8U27ZZ2C&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

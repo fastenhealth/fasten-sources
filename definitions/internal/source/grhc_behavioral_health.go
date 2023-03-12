@@ -28,7 +28,6 @@ func GetSourceGrhcBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "GRHC Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeGrhcBehavioralHealth
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "grhc-behavioral-health.jpg"
 	sourceDef.PatientAccessUrl = "http://grhc.org/bhs/"
 	sourceDef.SecretKeyPrefix = "nextgen"

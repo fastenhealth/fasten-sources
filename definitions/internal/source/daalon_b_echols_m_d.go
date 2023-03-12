@@ -28,7 +28,6 @@ func GetSourceDaalonBEcholsMD(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Daalon B Echols M.D."
 	sourceDef.SourceType = pkg.SourceTypeDaalonBEcholsMD
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.2infuse.com/profile-ic/9406"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

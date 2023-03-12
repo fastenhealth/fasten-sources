@@ -28,7 +28,6 @@ func GetSourceClaimsPractice1Gateway(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Claims Practice 1 (Gateway)"
 	sourceDef.SourceType = pkg.SourceTypeClaimsPractice1Gateway
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

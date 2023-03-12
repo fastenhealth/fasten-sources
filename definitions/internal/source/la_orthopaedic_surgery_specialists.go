@@ -28,7 +28,6 @@ func GetSourceLaOrthopaedicSurgerySpecialists(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "LA Orthopaedic Surgery Specialists"
 	sourceDef.SourceType = pkg.SourceTypeLaOrthopaedicSurgerySpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.drkvitne.com/?gclid=Cj0KCQiApKagBhC1ARIsAFc7Mc7xGs1CcLVsk86ctXCss6CT0mpoM0DUBtcN2UWYg6A-KtDYOtMiBZIaApZbEALw_wcB"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

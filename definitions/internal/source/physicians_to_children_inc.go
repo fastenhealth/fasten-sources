@@ -28,7 +28,6 @@ func GetSourcePhysiciansToChildrenInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Physicians To Children Inc"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansToChildrenInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.physicianstochildren.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

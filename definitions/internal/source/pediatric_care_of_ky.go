@@ -28,7 +28,6 @@ func GetSourcePediatricCareOfKy(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Pediatric Care Of KY"
 	sourceDef.SourceType = pkg.SourceTypePediatricCareOfKy
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.pedicareky.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceNorthlandFamilyCarePc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Northland Family Care PC"
 	sourceDef.SourceType = pkg.SourceTypeNorthlandFamilyCarePc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "northland-family-care-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.northlandfamilycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

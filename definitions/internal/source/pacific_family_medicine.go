@@ -28,7 +28,6 @@ func GetSourcePacificFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Pacific Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypePacificFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

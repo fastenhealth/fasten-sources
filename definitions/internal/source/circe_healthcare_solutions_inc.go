@@ -28,7 +28,6 @@ func GetSourceCirceHealthcareSolutionsInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Circe Healthcare Solutions Inc"
 	sourceDef.SourceType = pkg.SourceTypeCirceHealthcareSolutionsInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

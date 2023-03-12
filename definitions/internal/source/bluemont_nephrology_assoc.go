@@ -28,7 +28,6 @@ func GetSourceBluemontNephrologyAssoc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "BLUEMONT NEPHROLOGY ASSOC"
 	sourceDef.SourceType = pkg.SourceTypeBluemontNephrologyAssoc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

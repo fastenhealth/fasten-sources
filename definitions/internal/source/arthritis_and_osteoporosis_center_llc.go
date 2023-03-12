@@ -28,7 +28,6 @@ func GetSourceArthritisAndOsteoporosisCenterLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Arthritis And Osteoporosis Center  LLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndOsteoporosisCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "arthritis-and-osteoporosis-center-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.arthritisofreading.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

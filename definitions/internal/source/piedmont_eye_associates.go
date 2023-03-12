@@ -28,7 +28,6 @@ func GetSourcePiedmontEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Piedmont Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypePiedmontEyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://piedmonteyeassoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

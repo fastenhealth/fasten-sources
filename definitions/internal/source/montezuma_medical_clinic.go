@@ -28,7 +28,6 @@ func GetSourceMontezumaMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Montezuma Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMontezumaMedicalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.unitypoint.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

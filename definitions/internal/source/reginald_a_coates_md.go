@@ -28,7 +28,6 @@ func GetSourceReginaldACoatesMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Reginald  A. Coates MD"
 	sourceDef.SourceType = pkg.SourceTypeReginaldACoatesMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-reginald-coates-3xxrj"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceLaFronteraEmpactSpc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "La Frontera EMPACT-SPC"
 	sourceDef.SourceType = pkg.SourceTypeLaFronteraEmpactSpc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://lafronteraaz-empact.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

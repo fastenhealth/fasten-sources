@@ -28,7 +28,6 @@ func GetSourceSevenStarFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Seven Star Family Care"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarFamilyCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://sevenstarhealth.com/our-services/family-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

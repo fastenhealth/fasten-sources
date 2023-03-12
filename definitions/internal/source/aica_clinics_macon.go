@@ -28,7 +28,6 @@ func GetSourceAicaClinicsMacon(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "AICA Clinics Macon"
 	sourceDef.SourceType = pkg.SourceTypeAicaClinicsMacon
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://aica.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

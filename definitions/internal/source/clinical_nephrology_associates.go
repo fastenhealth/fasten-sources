@@ -28,7 +28,6 @@ func GetSourceClinicalNephrologyAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Clinical Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypeClinicalNephrologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

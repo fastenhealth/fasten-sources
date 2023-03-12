@@ -28,7 +28,6 @@ func GetSourceDianaEHamptonMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Diana E Hampton MD PC"
 	sourceDef.SourceType = pkg.SourceTypeDianaEHamptonMdPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "diana-e-hampton-md-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.dianahamptonmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

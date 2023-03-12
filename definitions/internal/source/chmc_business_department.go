@@ -28,7 +28,6 @@ func GetSourceChmcBusinessDepartment(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "CHMC Business Department"
 	sourceDef.SourceType = pkg.SourceTypeChmcBusinessDepartment
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

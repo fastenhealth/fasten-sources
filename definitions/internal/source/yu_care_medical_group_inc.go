@@ -28,7 +28,6 @@ func GetSourceYuCareMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Yu Care Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeYuCareMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

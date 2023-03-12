@@ -28,7 +28,6 @@ func GetSourceEarNoseThroatAndAllergyAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Ear Nose Throat And Allergy Associates"
 	sourceDef.SourceType = pkg.SourceTypeEarNoseThroatAndAllergyAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ear-nose-throat-and-allergy-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://entpuyallup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

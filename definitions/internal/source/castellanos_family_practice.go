@@ -28,7 +28,6 @@ func GetSourceCastellanosFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Castellanos Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeCastellanosFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

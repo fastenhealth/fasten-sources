@@ -28,7 +28,6 @@ func GetSourceAmbulatorySurgeryCenters(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Ambulatory Surgery Centers"
 	sourceDef.SourceType = pkg.SourceTypeAmbulatorySurgeryCenters
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/337F8MIINCASRWHTMZOT4D6HZ5Q40V?assignment_id=3VNL7UK1XTG5R593UKDN4C12QFHTF9&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

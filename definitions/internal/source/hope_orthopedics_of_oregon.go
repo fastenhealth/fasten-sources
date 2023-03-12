@@ -28,7 +28,6 @@ func GetSourceHopeOrthopedicsOfOregon(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Hope Orthopedics Of Oregon"
 	sourceDef.SourceType = pkg.SourceTypeHopeOrthopedicsOfOregon
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hopeorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

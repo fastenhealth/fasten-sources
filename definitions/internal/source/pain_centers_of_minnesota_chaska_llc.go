@@ -28,7 +28,6 @@ func GetSourcePainCentersOfMinnesotaChaskaLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Pain Centers Of Minnesota Chaska LLC"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfMinnesotaChaskaLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pain-centers-of-minnesota-chaska-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://ispineclinics.com/locations/chaska/"
 	sourceDef.SecretKeyPrefix = "nextgen"

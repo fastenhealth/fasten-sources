@@ -28,7 +28,6 @@ func GetSourceKlallamCounselingServices(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Klallam Counseling Services"
 	sourceDef.SourceType = pkg.SourceTypeKlallamCounselingServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.elwha.org/departments/klallam-counseling-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

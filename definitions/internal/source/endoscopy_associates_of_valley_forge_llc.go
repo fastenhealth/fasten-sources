@@ -28,7 +28,6 @@ func GetSourceEndoscopyAssociatesOfValleyForgeLlc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Endoscopy Associates Of Valley Forge LLC"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopyAssociatesOfValleyForgeLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vfendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceClinicalAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Clinical Associates"
 	sourceDef.SourceType = pkg.SourceTypeClinicalAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

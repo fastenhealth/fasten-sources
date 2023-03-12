@@ -28,7 +28,6 @@ func GetSourceGreaterFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Greater Family Health"
 	sourceDef.SourceType = pkg.SourceTypeGreaterFamilyHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://greaterfamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

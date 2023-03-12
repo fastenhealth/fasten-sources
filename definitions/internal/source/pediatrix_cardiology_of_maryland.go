@@ -28,7 +28,6 @@ func GetSourcePediatrixCardiologyOfMaryland(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pediatrix Cardiology Of Maryland"
 	sourceDef.SourceType = pkg.SourceTypePediatrixCardiologyOfMaryland
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Name: Pediatrix Cardiology Of Maryland Address: 295 Stoner Ave City: Westminster Zip: 211575688 State: Maryland Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

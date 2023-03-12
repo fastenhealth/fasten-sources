@@ -28,7 +28,6 @@ func GetSourceElPasoAnesthesiaAssociatesLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "El Paso Anesthesia Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeElPasoAnesthesiaAssociatesLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://pay.instamed.com/Form/Payments/New?id=PASO"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

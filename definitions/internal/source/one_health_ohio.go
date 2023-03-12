@@ -28,7 +28,6 @@ func GetSourceOneHealthOhio(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "One Health Ohio"
 	sourceDef.SourceType = pkg.SourceTypeOneHealthOhio
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://onehealthohio.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

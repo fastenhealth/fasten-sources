@@ -28,7 +28,6 @@ func GetSourceEyePartnersPC(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Eye Partners P.C."
 	sourceDef.SourceType = pkg.SourceTypeEyePartnersPC
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/surgerycentersouth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

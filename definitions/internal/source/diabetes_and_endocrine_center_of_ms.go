@@ -28,7 +28,6 @@ func GetSourceDiabetesAndEndocrineCenterOfMs(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Diabetes And Endocrine Center Of MS"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndEndocrineCenterOfMs
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "diabetes-and-endocrine-center-of-ms.jpg"
 	sourceDef.PatientAccessUrl = "https://www.decm.ms"
 	sourceDef.SecretKeyPrefix = "nextgen"

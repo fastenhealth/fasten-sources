@@ -28,7 +28,6 @@ func GetSourceMissionFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Mission Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMissionFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/missionfp/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

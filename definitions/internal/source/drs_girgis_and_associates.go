@@ -28,7 +28,6 @@ func GetSourceDrsGirgisAndAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Drs Girgis & Associates"
 	sourceDef.SourceType = pkg.SourceTypeDrsGirgisAndAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.girgisent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

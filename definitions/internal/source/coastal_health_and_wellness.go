@@ -28,7 +28,6 @@ func GetSourceCoastalHealthAndWellness(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Coastal Health &  Wellness"
 	sourceDef.SourceType = pkg.SourceTypeCoastalHealthAndWellness
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

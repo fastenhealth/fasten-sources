@@ -28,7 +28,6 @@ func GetSourceDoctorsUrgentCareNextcare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Doctors Urgent Care NextCare"
 	sourceDef.SourceType = pkg.SourceTypeDoctorsUrgentCareNextcare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/pages/category/hospital/NextCareUrgentCare/photos/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceProlianceEastsideSurgicalSpecialists(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Proliance Eastside Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideSurgicalSpecialists
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "proliance-eastside-surgical-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/ProlianceEastsideSurgicalSpecialsts/?locale2=lo_LA"
 	sourceDef.SecretKeyPrefix = "nextgen"

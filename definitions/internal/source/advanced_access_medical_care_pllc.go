@@ -28,7 +28,6 @@ func GetSourceAdvancedAccessMedicalCarePllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Advanced Access Medical Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedAccessMedicalCarePllc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

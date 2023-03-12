@@ -28,7 +28,6 @@ func GetSourceAlbanyEntAndAllergyServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Albany ENT and Allergy Services"
 	sourceDef.SourceType = pkg.SourceTypeAlbanyEntAndAllergyServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://albanyentandallergy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

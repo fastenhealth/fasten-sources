@@ -28,7 +28,6 @@ func GetSourceReliantMedicalGroup1(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Reliant Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeReliantMedicalGroup1
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "reliant-medical-group.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

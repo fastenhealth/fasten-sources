@@ -28,7 +28,6 @@ func GetSourceCalverthealthMedicalGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CalvertHealth Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCalverthealthMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

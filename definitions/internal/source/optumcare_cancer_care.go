@@ -28,7 +28,6 @@ func GetSourceOptumcareCancerCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "OptumCare Cancer Care"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareCancerCare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "optumcare-cancer-care.svg"
 	sourceDef.PatientAccessUrl = "https://www.optum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceUsDermatologyPartners6(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "US Dermatology Partners 6"
 	sourceDef.SourceType = pkg.SourceTypeUsDermatologyPartners6
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.usdermatologypartners.com/locations/arizona/scottsdale/10200-n-92nd-st-ste-205/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

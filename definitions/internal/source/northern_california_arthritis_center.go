@@ -28,7 +28,6 @@ func GetSourceNorthernCaliforniaArthritisCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Northern California Arthritis Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthernCaliforniaArthritisCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ncacmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

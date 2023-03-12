@@ -28,7 +28,6 @@ func GetSourceCcsgInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "CCSG Inc."
 	sourceDef.SourceType = pkg.SourceTypeCcsgInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

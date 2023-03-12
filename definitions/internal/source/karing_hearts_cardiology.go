@@ -28,7 +28,6 @@ func GetSourceKaringHeartsCardiology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Karing Hearts Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeKaringHeartsCardiology
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "karing-hearts-cardiology.jpg"
 	sourceDef.PatientAccessUrl = "https://karingheartscardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

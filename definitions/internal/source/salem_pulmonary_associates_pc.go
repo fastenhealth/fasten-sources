@@ -28,7 +28,6 @@ func GetSourceSalemPulmonaryAssociatesPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Salem Pulmonary Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeSalemPulmonaryAssociatesPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "salem-pulmonary-associates-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.salempulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

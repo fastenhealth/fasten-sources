@@ -28,7 +28,6 @@ func GetSourceStillwaterMedicalCenterPractice(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Stillwater Medical Center Practice"
 	sourceDef.SourceType = pkg.SourceTypeStillwaterMedicalCenterPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stillwater-medical.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

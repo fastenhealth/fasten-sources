@@ -28,7 +28,6 @@ func GetSourceSanAntonioPediatricSurgeryAssociates(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "San Antonio Pediatric Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioPediatricSurgeryAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/surgerysanantonio?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

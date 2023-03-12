@@ -28,7 +28,6 @@ func GetSourceRockyMountainEyeCenterInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Rocky Mountain Eye Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainEyeCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://rockymountaineyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

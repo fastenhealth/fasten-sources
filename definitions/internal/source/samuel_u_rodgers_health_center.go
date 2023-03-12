@@ -28,7 +28,6 @@ func GetSourceSamuelURodgersHealthCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Samuel U Rodgers Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSamuelURodgersHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://samrodgers.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

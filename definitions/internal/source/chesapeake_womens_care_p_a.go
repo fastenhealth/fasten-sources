@@ -28,7 +28,6 @@ func GetSourceChesapeakeWomensCarePA(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Chesapeake Women's Care P.A."
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeWomensCarePA
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceIndianaKidneyInstitute(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Indiana Kidney Institute"
 	sourceDef.SourceType = pkg.SourceTypeIndianaKidneyInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.indianakidney.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

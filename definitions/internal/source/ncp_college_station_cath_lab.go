@@ -28,7 +28,6 @@ func GetSourceNcpCollegeStationCathLab(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "NCP College Station Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollegeStationCathLab
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://bcshvc.com/contact.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

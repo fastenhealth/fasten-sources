@@ -28,7 +28,6 @@ func GetSourceCherryHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Cherry Health"
 	sourceDef.SourceType = pkg.SourceTypeCherryHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

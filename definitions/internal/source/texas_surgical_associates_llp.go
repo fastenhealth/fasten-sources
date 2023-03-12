@@ -28,7 +28,6 @@ func GetSourceTexasSurgicalAssociatesLlp(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Texas Surgical Associates LLP"
 	sourceDef.SourceType = pkg.SourceTypeTexasSurgicalAssociatesLlp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.swtsa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

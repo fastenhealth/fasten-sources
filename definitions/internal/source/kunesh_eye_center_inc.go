@@ -28,7 +28,6 @@ func GetSourceKuneshEyeCenterInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Kunesh Eye Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeKuneshEyeCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://kunesh.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAxisMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Axis Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAxisMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "axis-medical-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.axismg.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

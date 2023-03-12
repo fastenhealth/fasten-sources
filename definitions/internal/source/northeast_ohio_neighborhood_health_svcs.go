@@ -28,7 +28,6 @@ func GetSourceNortheastOhioNeighborhoodHealthSvcs(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Northeast Ohio Neighborhood Health Svcs"
 	sourceDef.SourceType = pkg.SourceTypeNortheastOhioNeighborhoodHealthSvcs
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceComprehensiveCardiovascular(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Comprehensive Cardiovascular"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCardiovascular
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "comprehensive-cardiovascular.jpg"
 	sourceDef.PatientAccessUrl = "http://www.ccvmg.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceDigestiveHealthClinicLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Digestive Health Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthClinicLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://digestivehealthclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

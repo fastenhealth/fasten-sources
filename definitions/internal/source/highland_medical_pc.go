@@ -28,7 +28,6 @@ func GetSourceHighlandMedicalPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Highland Medical PC"
 	sourceDef.SourceType = pkg.SourceTypeHighlandMedicalPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.highlandmedicalpc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

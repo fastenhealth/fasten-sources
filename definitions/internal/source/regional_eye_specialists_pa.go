@@ -28,7 +28,6 @@ func GetSourceRegionalEyeSpecialistsPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Regional Eye Specialists PA"
 	sourceDef.SourceType = pkg.SourceTypeRegionalEyeSpecialistsPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://regeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

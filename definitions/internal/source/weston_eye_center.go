@@ -28,7 +28,6 @@ func GetSourceWestonEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Weston Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeWestonEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.nvisioncenters.com/locations/nvision-roseburg/?utm_source=organic&utm_medium=gmb"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

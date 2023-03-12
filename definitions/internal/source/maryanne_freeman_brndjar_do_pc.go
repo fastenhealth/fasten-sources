@@ -28,7 +28,6 @@ func GetSourceMaryanneFreemanBrndjarDoPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "MaryAnne Freeman Brndjar DO PC"
 	sourceDef.SourceType = pkg.SourceTypeMaryanneFreemanBrndjarDoPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "maryanne-freeman-brndjar-do-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://drmaryannefb.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

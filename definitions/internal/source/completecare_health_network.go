@@ -28,7 +28,6 @@ func GetSourceCompletecareHealthNetwork(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CompleteCare Health Network"
 	sourceDef.SourceType = pkg.SourceTypeCompletecareHealthNetwork
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://completecarenj.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceLGregoryTennMD(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "L Gregory Tenn M D"
 	sourceDef.SourceType = pkg.SourceTypeLGregoryTennMD
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.zoominfo.com/c/tenn-l-gregory-md/1188127825"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

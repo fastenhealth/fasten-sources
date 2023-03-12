@@ -28,7 +28,6 @@ func GetSourceMemorialHeartInstituteLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Memorial Heart Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHeartInstituteLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.chattanoogaheart.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

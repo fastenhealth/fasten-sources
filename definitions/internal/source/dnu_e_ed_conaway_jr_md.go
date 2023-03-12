@@ -28,7 +28,6 @@ func GetSourceDnuEEdConawayJrMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "DNU E. Ed Conaway Jr. MD"
 	sourceDef.SourceType = pkg.SourceTypeDnuEEdConawayJrMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "dnu-e-ed-conaway-jr-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.medicalassociatescare.com/staff/ed-conaway-md.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

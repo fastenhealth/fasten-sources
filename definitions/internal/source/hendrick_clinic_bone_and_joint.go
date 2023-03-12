@@ -28,7 +28,6 @@ func GetSourceHendrickClinicBoneAndJoint(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Hendrick Clinic Bone & Joint"
 	sourceDef.SourceType = pkg.SourceTypeHendrickClinicBoneAndJoint
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

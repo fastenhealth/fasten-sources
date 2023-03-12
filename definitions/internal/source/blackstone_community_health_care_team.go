@@ -28,7 +28,6 @@ func GetSourceBlackstoneCommunityHealthCareTeam(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Blackstone Community Health Care Team"
 	sourceDef.SourceType = pkg.SourceTypeBlackstoneCommunityHealthCareTeam
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourcePchcEmployeeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "PCHC Employee Health"
 	sourceDef.SourceType = pkg.SourceTypePchcEmployeeHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pueblochc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceObsPayerDefaultPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "OBS Payer Default Practice"
 	sourceDef.SourceType = pkg.SourceTypeObsPayerDefaultPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.topnpi.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSevenHillsSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Seven Hills Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeSevenHillsSurgeryCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.setup.sevenhillssc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

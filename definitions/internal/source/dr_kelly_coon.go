@@ -28,7 +28,6 @@ func GetSourceDrKellyCoon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Dr Kelly Coon"
 	sourceDef.SourceType = pkg.SourceTypeDrKellyCoon
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "dr-kelly-coon.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/kelly.armstrong.792/"
 	sourceDef.SecretKeyPrefix = "nextgen"

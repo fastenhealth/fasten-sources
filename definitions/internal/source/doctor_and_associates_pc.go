@@ -28,7 +28,6 @@ func GetSourceDoctorAndAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Doctor And Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeDoctorAndAssociatesPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.doctor-cataract-lasik-connecticut.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

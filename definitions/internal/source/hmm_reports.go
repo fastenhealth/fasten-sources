@@ -28,7 +28,6 @@ func GetSourceHmmReports(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "HMM Reports"
 	sourceDef.SourceType = pkg.SourceTypeHmmReports
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hmm-reports.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

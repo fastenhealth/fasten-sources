@@ -28,7 +28,6 @@ func GetSourceFpsMedicalCenterLtd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "FPS Medical Center Ltd"
 	sourceDef.SourceType = pkg.SourceTypeFpsMedicalCenterLtd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://fpsmedical.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

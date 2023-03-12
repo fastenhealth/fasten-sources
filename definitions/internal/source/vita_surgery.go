@@ -28,7 +28,6 @@ func GetSourceVitaSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Vita-Surgery"
 	sourceDef.SourceType = pkg.SourceTypeVitaSurgery
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "vita-surgery.svg"
 	sourceDef.PatientAccessUrl = "https://vitadr.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

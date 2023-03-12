@@ -28,7 +28,6 @@ func GetSourceHaniISalibMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Hani I Salib MD"
 	sourceDef.SourceType = pkg.SourceTypeHaniISalibMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hani-i-salib-md.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/hani-salib/"
 	sourceDef.SecretKeyPrefix = "nextgen"

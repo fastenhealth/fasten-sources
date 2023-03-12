@@ -28,7 +28,6 @@ func GetSourceLaneCountyMedicationAssistedTx(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Lane County Medication Assisted Tx"
 	sourceDef.SourceType = pkg.SourceTypeLaneCountyMedicationAssistedTx
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "lane-county-medication-assisted-tx.jpg"
 	sourceDef.PatientAccessUrl = "https://www.jwneugene.org/wp-content/uploads/2020/05/LCMAT-GNA-Draft-v7.pdf"
 	sourceDef.SecretKeyPrefix = "nextgen"

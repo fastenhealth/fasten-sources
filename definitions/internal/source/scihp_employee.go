@@ -28,7 +28,6 @@ func GetSourceScihpEmployee(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "SCIHP Employee"
 	sourceDef.SourceType = pkg.SourceTypeScihpEmployee
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "scihp-employee.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/SCIHP/"
 	sourceDef.SecretKeyPrefix = "nextgen"

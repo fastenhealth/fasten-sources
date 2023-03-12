@@ -28,7 +28,6 @@ func GetSourceStephenCSpainMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Stephen C Spain MD"
 	sourceDef.SourceType = pkg.SourceTypeStephenCSpainMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "stephen-c-spain-md.jpeg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

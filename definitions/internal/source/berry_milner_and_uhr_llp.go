@@ -28,7 +28,6 @@ func GetSourceBerryMilnerAndUhrLlp(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "BERRY MILNER AND UHR LLP"
 	sourceDef.SourceType = pkg.SourceTypeBerryMilnerAndUhrLlp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

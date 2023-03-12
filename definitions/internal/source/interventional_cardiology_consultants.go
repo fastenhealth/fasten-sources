@@ -28,7 +28,6 @@ func GetSourceInterventionalCardiologyConsultants(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Interventional Cardiology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalCardiologyConsultants
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/georgia/interventional-cardiology-consultants-372747748"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

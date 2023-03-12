@@ -28,7 +28,6 @@ func GetSourceBayouImagingAndIntervLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Bayou Imaging And Interv LLC"
 	sourceDef.SourceType = pkg.SourceTypeBayouImagingAndIntervLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

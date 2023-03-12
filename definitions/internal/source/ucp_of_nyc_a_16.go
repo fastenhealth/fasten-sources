@@ -28,7 +28,6 @@ func GetSourceUcpOfNycA16(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "UCP of NYC A16"
 	sourceDef.SourceType = pkg.SourceTypeUcpOfNycA16
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.carf.org/providerProfile.aspx?cid=346627"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

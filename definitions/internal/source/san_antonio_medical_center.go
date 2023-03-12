@@ -28,7 +28,6 @@ func GetSourceSanAntonioMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "San Antonio Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/santa-ana/san-antonio-medical-center-x3cb44a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

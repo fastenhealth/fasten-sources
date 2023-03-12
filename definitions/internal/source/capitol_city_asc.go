@@ -28,7 +28,6 @@ func GetSourceCapitolCityAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Capitol City ASC"
 	sourceDef.SourceType = pkg.SourceTypeCapitolCityAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

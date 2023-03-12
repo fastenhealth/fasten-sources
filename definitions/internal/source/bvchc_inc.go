@@ -28,7 +28,6 @@ func GetSourceBvchcInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "BVCHC Inc."
 	sourceDef.SourceType = pkg.SourceTypeBvchcInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

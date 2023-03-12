@@ -28,7 +28,6 @@ func GetSourceWoundAndHyperbaricMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Wound and Hyperbaric Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWoundAndHyperbaricMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

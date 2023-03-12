@@ -28,7 +28,6 @@ func GetSourcePhaPostAcuteCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "PHA Post Acute Care"
 	sourceDef.SourceType = pkg.SourceTypePhaPostAcuteCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://pacifichospitalists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

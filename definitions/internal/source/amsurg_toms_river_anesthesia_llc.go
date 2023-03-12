@@ -28,7 +28,6 @@ func GetSourceAmsurgTomsRiverAnesthesiaLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "AmSurg Toms River Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgTomsRiverAnesthesiaLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3LCXHSGDM63AK7YYK7JQN5OR7M2SEB?assignment_id=3OCHAWUVG2HNO8A1055H9SEDB7MXKY&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

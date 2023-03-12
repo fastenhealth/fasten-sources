@@ -28,7 +28,6 @@ func GetSourceCollierAnesthesiaPainPa(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Collier Anesthesia Pain PA"
 	sourceDef.SourceType = pkg.SourceTypeCollierAnesthesiaPainPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

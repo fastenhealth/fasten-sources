@@ -28,7 +28,6 @@ func GetSourceElRioHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "El Rio Health Center"
 	sourceDef.SourceType = pkg.SourceTypeElRioHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.elrio.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

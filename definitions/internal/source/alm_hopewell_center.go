@@ -28,7 +28,6 @@ func GetSourceAlmHopewellCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "ALM Hopewell Center"
 	sourceDef.SourceType = pkg.SourceTypeAlmHopewellCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "alm-hopewell-center.svg"
 	sourceDef.PatientAccessUrl = "https://hopewellcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

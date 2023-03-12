@@ -28,7 +28,6 @@ func GetSourceMedcorAtCityOfSalem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Medcor At City Of Salem"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtCityOfSalem
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.salemrheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

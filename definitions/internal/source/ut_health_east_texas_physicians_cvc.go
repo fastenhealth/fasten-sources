@@ -28,7 +28,6 @@ func GetSourceUtHealthEastTexasPhysiciansCvc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "UT Health East Texas Physicians CVC"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthEastTexasPhysiciansCvc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

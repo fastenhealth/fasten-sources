@@ -28,7 +28,6 @@ func GetSourceJoelMCorwinMdAmc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Joel M Corwin MD AMC"
 	sourceDef.SourceType = pkg.SourceTypeJoelMCorwinMdAmc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.miramareye.com/our-physicians/joel-m-corwin/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

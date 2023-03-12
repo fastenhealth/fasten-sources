@@ -28,7 +28,6 @@ func GetSourceRenalConsultantsOfVenturaCountyInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Renal Consultants of Ventura County Inc"
 	sourceDef.SourceType = pkg.SourceTypeRenalConsultantsOfVenturaCountyInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "renal-consultants-of-ventura-county-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/camarillo/renal-consultants-of-ventura-county-inc-xbxvjh"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceWarrentonAndLintonHallPediatrics(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "WARRENTON AND LINTON HALL PEDIATRICS"
 	sourceDef.SourceType = pkg.SourceTypeWarrentonAndLintonHallPediatrics
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://warrentonpediatrics.com/about/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

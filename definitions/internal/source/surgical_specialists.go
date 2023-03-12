@@ -28,7 +28,6 @@ func GetSourceSurgicalSpecialists(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalSpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.swedish.org/services/swedish-surgical-specialists"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

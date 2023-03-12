@@ -28,7 +28,6 @@ func GetSourceBrowardHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Broward Health"
 	sourceDef.SourceType = pkg.SourceTypeBrowardHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

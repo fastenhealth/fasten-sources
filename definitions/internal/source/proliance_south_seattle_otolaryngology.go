@@ -28,7 +28,6 @@ func GetSourceProlianceSouthSeattleOtolaryngology(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Proliance South Seattle Otolaryngology"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSouthSeattleOtolaryngology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

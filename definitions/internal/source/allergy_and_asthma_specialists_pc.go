@@ -28,7 +28,6 @@ func GetSourceAllergyAndAsthmaSpecialistsPc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Allergy & Asthma Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaSpecialistsPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3VDI8GSXBSQQL1FGC4396H9288B8G9?assignment_id=3HVVDCPGTSPBRWQYZA5BTX8IWQ8TY7&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

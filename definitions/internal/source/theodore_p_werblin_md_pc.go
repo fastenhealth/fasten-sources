@@ -28,7 +28,6 @@ func GetSourceTheodorePWerblinMdPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Theodore P Werblin MD PC"
 	sourceDef.SourceType = pkg.SourceTypeTheodorePWerblinMdPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

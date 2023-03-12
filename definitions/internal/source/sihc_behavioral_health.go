@@ -28,7 +28,6 @@ func GetSourceSihcBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "SIHC Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeSihcBehavioralHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://sihc.org/behavioral-health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

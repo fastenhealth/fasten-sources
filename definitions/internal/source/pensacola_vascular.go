@@ -28,7 +28,6 @@ func GetSourcePensacolaVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Pensacola Vascular"
 	sourceDef.SourceType = pkg.SourceTypePensacolaVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pvss.surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCascadeEarNoseAndThroat(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Cascade Ear Nose And Throat"
 	sourceDef.SourceType = pkg.SourceTypeCascadeEarNoseAndThroat
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

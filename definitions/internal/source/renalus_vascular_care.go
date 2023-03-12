@@ -28,7 +28,6 @@ func GetSourceRenalusVascularCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Renalus Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeRenalusVascularCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

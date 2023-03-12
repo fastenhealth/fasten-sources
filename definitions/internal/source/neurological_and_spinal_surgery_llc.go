@@ -28,7 +28,6 @@ func GetSourceNeurologicalAndSpinalSurgeryLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Neurological And Spinal Surgery LLC"
 	sourceDef.SourceType = pkg.SourceTypeNeurologicalAndSpinalSurgeryLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://nssne.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

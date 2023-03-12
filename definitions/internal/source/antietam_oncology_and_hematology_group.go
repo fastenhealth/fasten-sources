@@ -28,7 +28,6 @@ func GetSourceAntietamOncologyAndHematologyGroup(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Antietam Oncology And Hematology Group"
 	sourceDef.SourceType = pkg.SourceTypeAntietamOncologyAndHematologyGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.antietamoncology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

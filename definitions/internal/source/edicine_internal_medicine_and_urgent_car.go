@@ -28,7 +28,6 @@ func GetSourceEdicineInternalMedicineAndUrgentCar(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Edicine Internal Medicine And Urgent Car"
 	sourceDef.SourceType = pkg.SourceTypeEdicineInternalMedicineAndUrgentCar
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.massgeneral.org/primary-care/internal-medicine-associates/treatments-and-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

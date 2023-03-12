@@ -28,7 +28,6 @@ func GetSourceBayAreaVascular(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Bay Area Vascular"
 	sourceDef.SourceType = pkg.SourceTypeBayAreaVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/bay-area-vascular-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

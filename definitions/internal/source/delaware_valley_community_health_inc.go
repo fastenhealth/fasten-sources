@@ -28,7 +28,6 @@ func GetSourceDelawareValleyCommunityHealthInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Delaware Valley Community Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyCommunityHealthInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://dvch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

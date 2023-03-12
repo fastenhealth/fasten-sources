@@ -28,7 +28,6 @@ func GetSourceCommunityHealthImagingCenters(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Community Health Imaging Centers"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthImagingCenters
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "community-health-imaging-centers.jpg"
 	sourceDef.PatientAccessUrl = "https://scrippsamg.com/practice/community-health-imaging-centers/"
 	sourceDef.SecretKeyPrefix = "nextgen"

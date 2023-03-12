@@ -28,7 +28,6 @@ func GetSourceMagellaMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Magella Medical Group Inc."
 	sourceDef.SourceType = pkg.SourceTypeMagellaMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mednax.com/practice/magella-medical-group-inc/locations/obstetrix-of-so-cal-irvine/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

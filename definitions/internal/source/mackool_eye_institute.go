@@ -28,7 +28,6 @@ func GetSourceMackoolEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Mackool Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeMackoolEyeInstitute
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "mackool-eye-institute.svg"
 	sourceDef.PatientAccessUrl = "https://mackooleyesurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

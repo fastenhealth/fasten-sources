@@ -28,7 +28,6 @@ func GetSourceArchHealthPartners(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Arch Health Partners"
 	sourceDef.SourceType = pkg.SourceTypeArchHealthPartners
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

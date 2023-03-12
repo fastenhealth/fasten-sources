@@ -28,7 +28,6 @@ func GetSourceDermatologyAssociatesOfSanAntonio(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Dermatology Associates Of San Antonio"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfSanAntonio
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dermsa.com/content/location/northeast/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

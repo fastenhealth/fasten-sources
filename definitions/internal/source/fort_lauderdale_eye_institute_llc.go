@@ -28,7 +28,6 @@ func GetSourceFortLauderdaleEyeInstituteLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Fort Lauderdale Eye Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeFortLauderdaleEyeInstituteLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fort-lauderdale-eye-institute-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/FortLauderdaleEye/"
 	sourceDef.SecretKeyPrefix = "nextgen"

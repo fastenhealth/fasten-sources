@@ -28,7 +28,6 @@ func GetSourceValleyDigestiveHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Valley Digestive Health Center"
 	sourceDef.SourceType = pkg.SourceTypeValleyDigestiveHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

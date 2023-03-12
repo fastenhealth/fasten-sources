@@ -28,7 +28,6 @@ func GetSourceJacksonvilleObh(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jacksonville OBH"
 	sourceDef.SourceType = pkg.SourceTypeJacksonvilleObh
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/fl-florida/jacksonville/baptist-medical-center-xymfr6a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

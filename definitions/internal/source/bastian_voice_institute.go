@@ -28,7 +28,6 @@ func GetSourceBastianVoiceInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Bastian Voice Institute"
 	sourceDef.SourceType = pkg.SourceTypeBastianVoiceInstitute
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "bastian-voice-institute.svg"
 	sourceDef.PatientAccessUrl = "https://www.bastianvoice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

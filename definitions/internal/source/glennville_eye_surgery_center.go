@@ -28,7 +28,6 @@ func GetSourceGlennvilleEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Glennville Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGlennvilleEyeSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "glennville-eye-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gaeyeinstitute.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

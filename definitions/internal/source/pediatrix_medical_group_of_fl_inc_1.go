@@ -28,7 +28,6 @@ func GetSourcePediatrixMedicalGroupOfFlInc1(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pediatrix Medical Group of FL, Inc"
 	sourceDef.SourceType = pkg.SourceTypePediatrixMedicalGroupOfFlInc1
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pediatrix-medical-group-of-fl-inc.png"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceWacoCardiologyAssociates(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Waco Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeWacoCardiologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.wacocardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

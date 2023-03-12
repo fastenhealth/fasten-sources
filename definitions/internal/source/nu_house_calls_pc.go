@@ -28,7 +28,6 @@ func GetSourceNuHouseCallsPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "NU House Calls PC"
 	sourceDef.SourceType = pkg.SourceTypeNuHouseCallsPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

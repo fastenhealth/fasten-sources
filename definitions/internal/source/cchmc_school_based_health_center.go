@@ -28,7 +28,6 @@ func GetSourceCchmcSchoolBasedHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "CCHMC School Based Health Center"
 	sourceDef.SourceType = pkg.SourceTypeCchmcSchoolBasedHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

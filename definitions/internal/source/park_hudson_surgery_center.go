@@ -28,7 +28,6 @@ func GetSourceParkHudsonSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Park Hudson Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeParkHudsonSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "park-hudson-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://texasentandallergy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

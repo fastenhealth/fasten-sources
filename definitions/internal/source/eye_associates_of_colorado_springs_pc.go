@@ -28,7 +28,6 @@ func GetSourceEyeAssociatesOfColoradoSpringsPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Eye Associates Of Colorado Springs PC"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesOfColoradoSpringsPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.eyeassoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

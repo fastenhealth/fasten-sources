@@ -28,7 +28,6 @@ func GetSourceGastroDiagCtrOfMplsInc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Gastro Diag Ctr Of MPLS Inc"
 	sourceDef.SourceType = pkg.SourceTypeGastroDiagCtrOfMplsInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://mn.postcodebase.com/zipcode/55486-0001"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

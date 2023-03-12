@@ -28,7 +28,6 @@ func GetSourceNorthstarSleepCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "NorthStar Sleep Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthstarSleepCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://northstarsleep.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

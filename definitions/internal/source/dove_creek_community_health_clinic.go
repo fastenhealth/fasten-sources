@@ -28,7 +28,6 @@ func GetSourceDoveCreekCommunityHealthClinic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Dove Creek Community Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDoveCreekCommunityHealthClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "dove-creek-community-health-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.axishealthsystem.org/locations/dove-creek/dove-creek-integrated-healthcare/"
 	sourceDef.SecretKeyPrefix = "nextgen"

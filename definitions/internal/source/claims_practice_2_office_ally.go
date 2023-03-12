@@ -28,7 +28,6 @@ func GetSourceClaimsPractice2OfficeAlly(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Claims Practice 2 (Office Ally)"
 	sourceDef.SourceType = pkg.SourceTypeClaimsPractice2OfficeAlly
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

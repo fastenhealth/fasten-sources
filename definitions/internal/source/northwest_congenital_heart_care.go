@@ -28,7 +28,6 @@ func GetSourceNorthwestCongenitalHeartCare(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "NorthWest Congenital Heart Care"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestCongenitalHeartCare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "northwest-congenital-heart-care.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

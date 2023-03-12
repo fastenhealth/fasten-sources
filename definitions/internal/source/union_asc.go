@@ -28,7 +28,6 @@ func GetSourceUnionAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Union ASC"
 	sourceDef.SourceType = pkg.SourceTypeUnionAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://unionasc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

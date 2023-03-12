@@ -28,7 +28,6 @@ func GetSourcePhoenixPerinatalAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Phoenix Perinatal Associates"
 	sourceDef.SourceType = pkg.SourceTypePhoenixPerinatalAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "phoenix-perinatal-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PhoenixPerinatalAssociates/"
 	sourceDef.SecretKeyPrefix = "nextgen"

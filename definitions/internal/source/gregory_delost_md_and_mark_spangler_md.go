@@ -28,7 +28,6 @@ func GetSourceGregoryDelostMdAndMarkSpanglerMd(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Gregory Delost MD & Mark Spangler MD"
 	sourceDef.SourceType = pkg.SourceTypeGregoryDelostMdAndMarkSpanglerMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gregory-delost-md-and-mark-spangler-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.docspot.com/p/gregory-j-delost"
 	sourceDef.SecretKeyPrefix = "nextgen"

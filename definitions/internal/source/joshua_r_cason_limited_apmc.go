@@ -28,7 +28,6 @@ func GetSourceJoshuaRCasonLimitedApmc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Joshua R Cason Limited APMC"
 	sourceDef.SourceType = pkg.SourceTypeJoshuaRCasonLimitedApmc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

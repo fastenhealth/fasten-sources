@@ -28,7 +28,6 @@ func GetSourceDaytonNephrology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dayton Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeDaytonNephrology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://naod.us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

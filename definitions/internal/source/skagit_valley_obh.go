@@ -28,7 +28,6 @@ func GetSourceSkagitValleyObh(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Skagit Valley OBH"
 	sourceDef.SourceType = pkg.SourceTypeSkagitValleyObh
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.skagitregionalhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceMiddletownValleyFamilyMedicine(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Middletown Valley Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMiddletownValleyFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.middletownvalleyfamilymedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

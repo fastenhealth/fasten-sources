@@ -28,7 +28,6 @@ func GetSourceJayJLinMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Jay J Lin MD"
 	sourceDef.SourceType = pkg.SourceTypeJayJLinMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "jay-j-lin-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-jay-lin-xfp8h#:~:text=Canoga%20Park%2C%20CA-,Dr.,His%20office%20accepts%20new%20patients."
 	sourceDef.SecretKeyPrefix = "nextgen"

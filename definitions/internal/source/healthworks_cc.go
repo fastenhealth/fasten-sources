@@ -28,7 +28,6 @@ func GetSourceHealthworksCc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "HealthWorks CC"
 	sourceDef.SourceType = pkg.SourceTypeHealthworksCc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "healthworks-cc.jpg"
 	sourceDef.PatientAccessUrl = "https://healthworksfitness.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceEyeCareCenterOfLakeCountyLtd(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Eye Care Center Of Lake County Ltd"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareCenterOfLakeCountyLtd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eye-care-center-of-lake-county-ltd.jpg"
 	sourceDef.PatientAccessUrl = "https://eyecarecenterlakecounty.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

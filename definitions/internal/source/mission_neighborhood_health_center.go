@@ -28,7 +28,6 @@ func GetSourceMissionNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Mission Neighborhood Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMissionNeighborhoodHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mnhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

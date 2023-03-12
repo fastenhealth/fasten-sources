@@ -28,7 +28,6 @@ func GetSourceEdmundJMaclaughlinMdLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Edmund J MacLaughlin MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeEdmundJMaclaughlinMdLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "edmund-j-maclaughlin-md-llc.svg"
 	sourceDef.PatientAccessUrl = "https://www.umms.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceFauziaKhanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Fauzia Khan MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeFauziaKhanMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-fauzia-khan-2gnw7"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourcePrecisionSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Precision Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypePrecisionSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://precisionspinecare.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceOrthopaedicAssociatesOfSoDe(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Orthopaedic Associates Of SO DE"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicAssociatesOfSoDe
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.beebehealthcare.org/locations/orthopaedic-associates-southern-delaware-pa"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

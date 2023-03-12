@@ -28,7 +28,6 @@ func GetSourceLongBeachVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Long Beach Vascular"
 	sourceDef.SourceType = pkg.SourceTypeLongBeachVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/greater-long-beach-vascular-access-center-539d2b96-1379-45e5-ba94-5f356d9628f1"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

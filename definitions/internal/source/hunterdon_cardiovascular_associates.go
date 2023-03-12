@@ -28,7 +28,6 @@ func GetSourceHunterdonCardiovascularAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Hunterdon Cardiovascular Associates"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonCardiovascularAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hunterdoncardiovascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

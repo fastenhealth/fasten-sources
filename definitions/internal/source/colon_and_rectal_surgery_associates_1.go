@@ -28,7 +28,6 @@ func GetSourceColonAndRectalSurgeryAssociates1(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Colon & Rectal Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeColonAndRectalSurgeryAssociates1
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

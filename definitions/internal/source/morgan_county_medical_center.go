@@ -28,7 +28,6 @@ func GetSourceMorganCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Morgan County Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMorganCountyMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

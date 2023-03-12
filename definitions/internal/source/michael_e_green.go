@@ -28,7 +28,6 @@ func GetSourceMichaelEGreen(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Michael E Green"
 	sourceDef.SourceType = pkg.SourceTypeMichaelEGreen
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "michael-e-green.jpg"
 	sourceDef.PatientAccessUrl = "https://www.greeneyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

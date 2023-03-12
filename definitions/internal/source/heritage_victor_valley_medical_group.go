@@ -28,7 +28,6 @@ func GetSourceHeritageVictorValleyMedicalGroup(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Heritage Victor Valley Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHeritageVictorValleyMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hvvmg.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

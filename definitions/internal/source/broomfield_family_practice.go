@@ -28,7 +28,6 @@ func GetSourceBroomfieldFamilyPractice(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Broomfield Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeBroomfieldFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

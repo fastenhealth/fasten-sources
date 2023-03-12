@@ -28,7 +28,6 @@ func GetSourceAdvancedPainManagementSpecialists(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Advanced Pain Management Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainManagementSpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.apmss.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

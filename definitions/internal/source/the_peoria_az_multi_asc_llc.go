@@ -28,7 +28,6 @@ func GetSourceThePeoriaAzMultiAscLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "The Peoria AZ Multi ASC LLC"
 	sourceDef.SourceType = pkg.SourceTypeThePeoriaAzMultiAscLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

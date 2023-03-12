@@ -28,7 +28,6 @@ func GetSourceUsCardioGreensburgAccessLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "US Cardio Greensburg Access LLC"
 	sourceDef.SourceType = pkg.SourceTypeUsCardioGreensburgAccessLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/pennsylvania/jeannette/us-cardio-greensburg-llc-9436446010.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

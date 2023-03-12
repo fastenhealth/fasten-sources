@@ -28,7 +28,6 @@ func GetSourceJaimeCLimMDPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jaime C. Lim M.D. PLLC"
 	sourceDef.SourceType = pkg.SourceTypeJaimeCLimMDPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/jaime-lim-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

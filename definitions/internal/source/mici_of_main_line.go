@@ -28,7 +28,6 @@ func GetSourceMiciOfMainLine(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "MICI of Main Line"
 	sourceDef.SourceType = pkg.SourceTypeMiciOfMainLine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/MainLineSpineSurgeryCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

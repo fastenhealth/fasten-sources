@@ -28,7 +28,6 @@ func GetSourceJohnsCreekGastroenterologyPc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Johns Creek Gastroenterology PC"
 	sourceDef.SourceType = pkg.SourceTypeJohnsCreekGastroenterologyPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.johnscreekgastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSurgicalInterventionsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Surgical Interventions LLC"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalInterventionsLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.surgical_interventions_llc.fb9f9261f5c6819dbc4f347c52a83cd8.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCaremoreMedicalAssociatesTexas(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "CareMore Medical Associates - Texas"
 	sourceDef.SourceType = pkg.SourceTypeCaremoreMedicalAssociatesTexas
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

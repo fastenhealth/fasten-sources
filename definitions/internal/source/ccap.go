@@ -28,7 +28,6 @@ func GetSourceCcap(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "CCAP"
 	sourceDef.SourceType = pkg.SourceTypeCcap
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

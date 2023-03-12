@@ -28,7 +28,6 @@ func GetSourceJoeyBrettMdApmc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Joey Brett MD APMC"
 	sourceDef.SourceType = pkg.SourceTypeJoeyBrettMdApmc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.brett_joey_apmc.8d0f115433dbf783e3204521e367f9da.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

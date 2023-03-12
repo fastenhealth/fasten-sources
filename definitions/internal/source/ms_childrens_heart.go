@@ -28,7 +28,6 @@ func GetSourceMsChildrensHeart(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "MS Childrens Heart"
 	sourceDef.SourceType = pkg.SourceTypeMsChildrensHeart
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ms-childrens-heart.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/Mississippi-Childrens-Heart/100063591577877/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceDublinPhysicalMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Dublin Physical Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDublinPhysicalMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

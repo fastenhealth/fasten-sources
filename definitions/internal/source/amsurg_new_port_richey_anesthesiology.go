@@ -28,7 +28,6 @@ func GetSourceAmsurgNewPortRicheyAnesthesiology(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Amsurg New Port Richey Anesthesiology"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgNewPortRicheyAnesthesiology
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "amsurg-new-port-richey-anesthesiology.jpg"
 	sourceDef.PatientAccessUrl = "Name: Amsurg New Port Richey Anesthesiology Address: 20 Burton Hills Blvd City: Nashville Zip: 37215 State: Tennessee Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceKentuckyObhPractice(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kentucky OBH Practice"
 	sourceDef.SourceType = pkg.SourceTypeKentuckyObhPractice
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "kentucky-obh-practice.jpg"
 	sourceDef.PatientAccessUrl = "https://obhg.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceDonnaLMillerDoPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Donna L Miller DO PC"
 	sourceDef.SourceType = pkg.SourceTypeDonnaLMillerDoPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/donna-l-miller-do"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

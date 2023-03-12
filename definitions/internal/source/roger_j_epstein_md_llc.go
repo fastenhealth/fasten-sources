@@ -28,7 +28,6 @@ func GetSourceRogerJEpsteinMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Roger J Epstein MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeRogerJEpsteinMdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.legacyhealth.org/providers/roger-epstein"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

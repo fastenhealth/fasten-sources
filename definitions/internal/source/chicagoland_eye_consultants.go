@@ -28,7 +28,6 @@ func GetSourceChicagolandEyeConsultants(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Chicagoland Eye Consultants"
 	sourceDef.SourceType = pkg.SourceTypeChicagolandEyeConsultants
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

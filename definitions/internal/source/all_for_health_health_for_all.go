@@ -28,7 +28,6 @@ func GetSourceAllForHealthHealthForAll(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "All For Health Health For All"
 	sourceDef.SourceType = pkg.SourceTypeAllForHealthHealthForAll
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://all4health.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

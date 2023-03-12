@@ -28,7 +28,6 @@ func GetSourceTheEyeSurgeonsGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "The Eye Surgeons Group"
 	sourceDef.SourceType = pkg.SourceTypeTheEyeSurgeonsGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://eyedoctor.io/clinic/the-eye-surgeons-group-seattle-wa/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

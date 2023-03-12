@@ -28,7 +28,6 @@ func GetSourceWellmaxMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "WellMax Medical Centers"
 	sourceDef.SourceType = pkg.SourceTypeWellmaxMedicalCenters
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "wellmax-medical-centers.jpg"
 	sourceDef.PatientAccessUrl = "http://info@wellmaxmedicalcenters.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

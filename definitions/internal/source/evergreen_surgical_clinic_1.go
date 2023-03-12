@@ -28,7 +28,6 @@ func GetSourceEvergreenSurgicalClinic1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Evergreen Surgical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEvergreenSurgicalClinic1
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "evergreen-surgical-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://evergreensurgical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

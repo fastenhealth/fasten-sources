@@ -28,7 +28,6 @@ func GetSourceNeighborhoodHealthServicesCorporation(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Neighborhood Health Services Corporation"
 	sourceDef.SourceType = pkg.SourceTypeNeighborhoodHealthServicesCorporation
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.nhscnj.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

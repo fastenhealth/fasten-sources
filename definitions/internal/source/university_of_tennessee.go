@@ -28,7 +28,6 @@ func GetSourceUniversityOfTennessee(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "University Of Tennessee"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTennessee
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "university-of-tennessee.svg"
 	sourceDef.PatientAccessUrl = "https://www.utk.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"

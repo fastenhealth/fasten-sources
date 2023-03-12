@@ -28,7 +28,6 @@ func GetSourceCommunityHealthSystemsInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Community Health Systems Inc"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthSystemsInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.chsica.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

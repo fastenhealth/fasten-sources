@@ -28,7 +28,6 @@ func GetSourceNianguiWangMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Niangui Wang MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeNianguiWangMdPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.na.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

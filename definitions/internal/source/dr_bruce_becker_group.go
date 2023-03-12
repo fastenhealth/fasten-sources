@@ -28,7 +28,6 @@ func GetSourceDrBruceBeckerGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dr  Bruce Becker Group"
 	sourceDef.SourceType = pkg.SourceTypeDrBruceBeckerGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.eyelidocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

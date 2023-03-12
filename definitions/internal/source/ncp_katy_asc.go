@@ -28,7 +28,6 @@ func GetSourceNcpKatyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "NCP Katy ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpKatyAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.katycathlab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

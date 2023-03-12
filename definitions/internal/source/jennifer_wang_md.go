@@ -28,7 +28,6 @@ func GetSourceJenniferWangMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Jennifer Wang MD"
 	sourceDef.SourceType = pkg.SourceTypeJenniferWangMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthy.kaiserpermanente.org/southern-california/physicians/jennifer-wang-6186937"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

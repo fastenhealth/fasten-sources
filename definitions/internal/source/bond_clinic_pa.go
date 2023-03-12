@@ -28,7 +28,6 @@ func GetSourceBondClinicPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Bond Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeBondClinicPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceUsCardioGreensburgLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "US Cardio Greensburg LLC"
 	sourceDef.SourceType = pkg.SourceTypeUsCardioGreensburgLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1306298823"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

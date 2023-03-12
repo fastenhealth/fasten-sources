@@ -28,7 +28,6 @@ func GetSourceTheRetinaGroupInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "The Retina Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeTheRetinaGroupInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "the-retina-group-inc.jpeg"
 	sourceDef.PatientAccessUrl = "http://theretinagroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

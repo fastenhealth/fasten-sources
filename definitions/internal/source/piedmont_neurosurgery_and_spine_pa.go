@@ -28,7 +28,6 @@ func GetSourcePiedmontNeurosurgeryAndSpinePa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Piedmont Neurosurgery And Spine PA"
 	sourceDef.SourceType = pkg.SourceTypePiedmontNeurosurgeryAndSpinePa
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "piedmont-neurosurgery-and-spine-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.novanthealth.org/clinic-locations/novant-health-piedmont-neurology--spine.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceResearch1(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "RESEARCH"
 	sourceDef.SourceType = pkg.SourceTypeResearch1
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

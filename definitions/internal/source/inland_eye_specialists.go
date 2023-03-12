@@ -28,7 +28,6 @@ func GetSourceInlandEyeSpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Inland Eye Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInlandEyeSpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.inlandeyespecialists.com/locations/murrieta/?y_source=1_MjAxNDg3MDYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

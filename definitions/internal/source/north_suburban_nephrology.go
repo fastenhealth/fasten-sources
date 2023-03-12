@@ -28,7 +28,6 @@ func GetSourceNorthSuburbanNephrology(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "North Suburban Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeNorthSuburbanNephrology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/il-illinois/gurnee/north-suburban-nephrology-xbn2rt0a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

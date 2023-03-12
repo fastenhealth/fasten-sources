@@ -28,7 +28,6 @@ func GetSourceMaryville(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Maryville"
 	sourceDef.SourceType = pkg.SourceTypeMaryville
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceColumbusBoneJointAndHandSurgeonsInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Columbus Bone Joint & Hand Surgeons Inc"
 	sourceDef.SourceType = pkg.SourceTypeColumbusBoneJointAndHandSurgeonsInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.columbusbone.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

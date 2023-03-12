@@ -28,7 +28,6 @@ func GetSourceNcpSanJoseAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "NCP San Jose ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpSanJoseAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

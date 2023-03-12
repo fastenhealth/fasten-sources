@@ -28,7 +28,6 @@ func GetSourceCsoOhio(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "CSO Ohio"
 	sourceDef.SourceType = pkg.SourceTypeCsoOhio
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/content/ahni/en.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceNvision(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "NVISION"
 	sourceDef.SourceType = pkg.SourceTypeNvision
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.nvisioncenters.com/?utm_source=organic&utm_medium=gmb"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

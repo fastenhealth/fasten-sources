@@ -28,7 +28,6 @@ func GetSourceAmitaHeartAndVascular(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "AMITA Heart & Vascular"
 	sourceDef.SourceType = pkg.SourceTypeAmitaHeartAndVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.amitahealth.org/location/amita-health-medical-group-heart-vascular-la-grange"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

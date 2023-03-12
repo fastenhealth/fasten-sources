@@ -28,7 +28,6 @@ func GetSourceAmg(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 
 	sourceDef.Display = "AMG"
 	sourceDef.SourceType = pkg.SourceTypeAmg
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "amg.svg"
 	sourceDef.PatientAccessUrl = "https://www.mercedes-amg.com/en/home.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceDigestiveHealthCenterOfBedford(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Digestive Health Center Of Bedford"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthCenterOfBedford
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

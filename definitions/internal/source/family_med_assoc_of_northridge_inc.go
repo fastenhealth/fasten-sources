@@ -28,7 +28,6 @@ func GetSourceFamilyMedAssocOfNorthridgeInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Family Med Assoc Of Northridge Inc"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedAssocOfNorthridgeInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://northridgedoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

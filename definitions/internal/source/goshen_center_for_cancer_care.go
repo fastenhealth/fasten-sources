@@ -28,7 +28,6 @@ func GetSourceGoshenCenterForCancerCare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Goshen Center For Cancer Care"
 	sourceDef.SourceType = pkg.SourceTypeGoshenCenterForCancerCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

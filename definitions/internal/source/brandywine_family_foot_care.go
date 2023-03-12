@@ -28,7 +28,6 @@ func GetSourceBrandywineFamilyFootCare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Brandywine Family Foot Care"
 	sourceDef.SourceType = pkg.SourceTypeBrandywineFamilyFootCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

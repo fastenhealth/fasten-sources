@@ -28,7 +28,6 @@ func GetSourceMedcorAtDisneyFox(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Medcor At Disney Fox"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtDisneyFox
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.foxnews.com/media/ex-disney-event"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceLouisianaPainCareLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Louisiana Pain Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeLouisianaPainCareLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lapaincare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

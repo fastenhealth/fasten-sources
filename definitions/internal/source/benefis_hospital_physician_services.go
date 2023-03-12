@@ -28,7 +28,6 @@ func GetSourceBenefisHospitalPhysicianServices(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Benefis Hospital Physician Services"
 	sourceDef.SourceType = pkg.SourceTypeBenefisHospitalPhysicianServices
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

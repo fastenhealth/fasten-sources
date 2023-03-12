@@ -28,7 +28,6 @@ func GetSourceRegalMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Regal Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeRegalMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

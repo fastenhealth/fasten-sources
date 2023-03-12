@@ -28,7 +28,6 @@ func GetSourceAmsurgCincinnatiAnesthesiaLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "AMSURG Cincinnati Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgCincinnatiAnesthesiaLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

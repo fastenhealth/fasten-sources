@@ -28,7 +28,6 @@ func GetSourceCherokeeHealthSystems(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cherokee Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeHealthSystems
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

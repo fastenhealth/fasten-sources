@@ -28,7 +28,6 @@ func GetSourceJoslinClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Joslin Clinic"
 	sourceDef.SourceType = pkg.SourceTypeJoslinClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.joslin.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

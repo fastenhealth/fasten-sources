@@ -28,7 +28,6 @@ func GetSourceFortWayneOrthopaedicsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Fort Wayne Orthopaedics LLC"
 	sourceDef.SourceType = pkg.SourceTypeFortWayneOrthopaedicsLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fort-wayne-orthopaedics-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fwortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

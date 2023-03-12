@@ -28,7 +28,6 @@ func GetSourceMgaGastroDiagAndTherapeuticCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "MGA Gastro Diag And Therapeutic Center"
 	sourceDef.SourceType = pkg.SourceTypeMgaGastroDiagAndTherapeuticCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceNorthPugetSoundMri(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "North Puget Sound MRI"
 	sourceDef.SourceType = pkg.SourceTypeNorthPugetSoundMri
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "north-puget-sound-mri.svg"
 	sourceDef.PatientAccessUrl = "https://npsmri.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

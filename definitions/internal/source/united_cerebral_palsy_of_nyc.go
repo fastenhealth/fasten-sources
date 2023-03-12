@@ -28,7 +28,6 @@ func GetSourceUnitedCerebralPalsyOfNyc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "United Cerebral Palsy of NYC"
 	sourceDef.SourceType = pkg.SourceTypeUnitedCerebralPalsyOfNyc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://opwdd.ny.gov/location/united-cerebral-palsy-new-york-city-inc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

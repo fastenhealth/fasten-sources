@@ -28,7 +28,6 @@ func GetSourceAdvancedEyeCareOfSouthFloridaLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Advanced Eye Care Of South Florida LLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedEyeCareOfSouthFloridaLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/fl-florida/deerfield-bch/advanced-eye-care-of-south-florida-deerfield-beach-fl-x9xl9r"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

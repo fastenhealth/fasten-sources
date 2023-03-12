@@ -28,7 +28,6 @@ func GetSourcePugetSoundEarNoseAndThroat(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Puget Sound Ear Nose And Throat"
 	sourceDef.SourceType = pkg.SourceTypePugetSoundEarNoseAndThroat
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://pugetsoundent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

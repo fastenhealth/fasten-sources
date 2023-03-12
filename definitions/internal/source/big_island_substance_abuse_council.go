@@ -28,7 +28,6 @@ func GetSourceBigIslandSubstanceAbuseCouncil(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Big Island Substance Abuse Council"
 	sourceDef.SourceType = pkg.SourceTypeBigIslandSubstanceAbuseCouncil
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

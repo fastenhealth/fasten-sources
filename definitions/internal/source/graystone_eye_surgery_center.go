@@ -28,7 +28,6 @@ func GetSourceGraystoneEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Graystone Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGraystoneEyeSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.graystone-eye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceTejasHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Tejas Health Care"
 	sourceDef.SourceType = pkg.SourceTypeTejasHealthCare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "tejas-health-care.jpg"
 	sourceDef.PatientAccessUrl = "https://tejashealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceThunderbirdEndoscopyCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Thunderbird Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeThunderbirdEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

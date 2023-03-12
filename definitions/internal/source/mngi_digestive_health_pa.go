@@ -28,7 +28,6 @@ func GetSourceMngiDigestiveHealthPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "MNGI Digestive Health PA"
 	sourceDef.SourceType = pkg.SourceTypeMngiDigestiveHealthPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

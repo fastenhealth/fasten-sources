@@ -28,7 +28,6 @@ func GetSourceIntensiveTreatmentSystems(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Intensive Treatment Systems"
 	sourceDef.SourceType = pkg.SourceTypeIntensiveTreatmentSystems
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

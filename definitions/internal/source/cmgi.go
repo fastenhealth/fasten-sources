@@ -28,7 +28,6 @@ func GetSourceCmgi(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "CMGI"
 	sourceDef.SourceType = pkg.SourceTypeCmgi
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

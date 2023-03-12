@@ -28,7 +28,6 @@ func GetSourceUnitedRegionalPhysicianGroup(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "United Regional Physician Group"
 	sourceDef.SourceType = pkg.SourceTypeUnitedRegionalPhysicianGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

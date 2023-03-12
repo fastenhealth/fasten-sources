@@ -28,7 +28,6 @@ func GetSourcePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Primary Care"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

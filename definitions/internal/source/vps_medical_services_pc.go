@@ -28,7 +28,6 @@ func GetSourceVpsMedicalServicesPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "VPS Medical Services PC"
 	sourceDef.SourceType = pkg.SourceTypeVpsMedicalServicesPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.visiting-physician.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

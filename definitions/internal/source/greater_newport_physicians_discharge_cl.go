@@ -28,7 +28,6 @@ func GetSourceGreaterNewportPhysiciansDischargeCl(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Greater Newport Physicians Discharge CL"
 	sourceDef.SourceType = pkg.SourceTypeGreaterNewportPhysiciansDischargeCl
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gnpweb.com/locations/memorialcare-cancer-institute"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

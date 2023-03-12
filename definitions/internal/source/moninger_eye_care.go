@@ -28,7 +28,6 @@ func GetSourceMoningerEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "MONINGER EYE CARE"
 	sourceDef.SourceType = pkg.SourceTypeMoningerEyeCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://drmoninger.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

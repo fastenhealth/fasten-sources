@@ -28,7 +28,6 @@ func GetSourceEndoscopyCenterOfSouthBayAnesthesia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Endoscopy Center Of South Bay Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopyCenterOfSouthBayAnesthesia
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

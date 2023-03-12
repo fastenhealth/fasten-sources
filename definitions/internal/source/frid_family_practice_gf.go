@@ -28,7 +28,6 @@ func GetSourceFridFamilyPracticeGf(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Frid Family Practice GF"
 	sourceDef.SourceType = pkg.SourceTypeFridFamilyPracticeGf
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/germaine-frid-dbe2ef8d-bd38-4c9e-852e-4b4c45fbc63f-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

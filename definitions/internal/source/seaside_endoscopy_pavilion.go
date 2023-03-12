@@ -28,7 +28,6 @@ func GetSourceSeasideEndoscopyPavilion(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Seaside Endoscopy Pavilion"
 	sourceDef.SourceType = pkg.SourceTypeSeasideEndoscopyPavilion
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

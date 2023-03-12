@@ -28,7 +28,6 @@ func GetSourceLaurelLaserAndSurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Laurel Laser & Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeLaurelLaserAndSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.laurellaser.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

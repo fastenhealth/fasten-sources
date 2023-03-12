@@ -28,7 +28,6 @@ func GetSourceNephrologyAssociatesMedicalGroup(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Nephrology Associates Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "nephrology-associates-medical-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.namg.net/locations/riverside/"
 	sourceDef.SecretKeyPrefix = "nextgen"

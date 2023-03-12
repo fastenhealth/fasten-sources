@@ -28,7 +28,6 @@ func GetSourceTannerClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Tanner Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTannerClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

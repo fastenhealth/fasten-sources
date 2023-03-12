@@ -28,7 +28,6 @@ func GetSourceCissnaParkTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Cissna Park Therapy"
 	sourceDef.SourceType = pkg.SourceTypeCissnaParkTherapy
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceEyecare2020(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "EyeCare 20 20"
 	sourceDef.SourceType = pkg.SourceTypeEyecare2020
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eyecare-20-20.jpg"
 	sourceDef.PatientAccessUrl = "https://images.squarespace-cdn.com/content/v1/5e9b46c7ca9cf237ed109243/1587923585111-UBI26OCN0UJQKXI93WTD/HeaderLogoSlate.png?format=1500w"
 	sourceDef.SecretKeyPrefix = "nextgen"

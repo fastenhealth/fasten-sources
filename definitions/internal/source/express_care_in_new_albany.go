@@ -28,7 +28,6 @@ func GetSourceExpressCareInNewAlbany(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Express Care In New Albany"
 	sourceDef.SourceType = pkg.SourceTypeExpressCareInNewAlbany
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

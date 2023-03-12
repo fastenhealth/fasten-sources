@@ -28,7 +28,6 @@ func GetSourceEastStroudsburgUniversity(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "East Stroudsburg University"
 	sourceDef.SourceType = pkg.SourceTypeEastStroudsburgUniversity
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.esu.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCocaineAndAlcoholAwarenessProgram(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Cocaine and Alcohol Awareness Program"
 	sourceDef.SourceType = pkg.SourceTypeCocaineAndAlcoholAwarenessProgram
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceBabakShabatianMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Babak Shabatian MD"
 	sourceDef.SourceType = pkg.SourceTypeBabakShabatianMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://calieye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

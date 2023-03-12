@@ -28,7 +28,6 @@ func GetSourceCreekNationHospitalAndClinics(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Creek Nation Hospital & Clinics"
 	sourceDef.SourceType = pkg.SourceTypeCreekNationHospitalAndClinics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

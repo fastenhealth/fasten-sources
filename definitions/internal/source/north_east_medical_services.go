@@ -28,7 +28,6 @@ func GetSourceNorthEastMedicalServices(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "North East Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeNorthEastMedicalServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://nems.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCoalCreekFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Coal Creek Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCoalCreekFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceOrthopaedicAssocOfMichiganPc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Orthopaedic Assoc. Of Michigan PC"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicAssocOfMichiganPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceTpmg(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "TPMG"
 	sourceDef.SourceType = pkg.SourceTypeTpmg
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

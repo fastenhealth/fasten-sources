@@ -28,7 +28,6 @@ func GetSourceSouthernIndianHealthCouncilInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Southern Indian Health Council Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIndianHealthCouncilInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://sihc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

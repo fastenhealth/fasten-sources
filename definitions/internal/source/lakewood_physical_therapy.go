@@ -28,7 +28,6 @@ func GetSourceLakewoodPhysicalTherapy(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Lakewood Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeLakewoodPhysicalTherapy
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com/medical_billing/coding/national_provider_identifier/codes/npi_1699840835.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

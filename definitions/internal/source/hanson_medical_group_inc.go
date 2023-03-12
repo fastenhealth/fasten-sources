@@ -28,7 +28,6 @@ func GetSourceHansonMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Hanson Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeHansonMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "hanson-medical-group-inc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.hansonmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

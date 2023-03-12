@@ -28,7 +28,6 @@ func GetSourceCrystalRunHealthcarePhysiciansLlp(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Crystal Run Healthcare Physicians LLP"
 	sourceDef.SourceType = pkg.SourceTypeCrystalRunHealthcarePhysiciansLlp
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "crystal-run-healthcare-physicians-llp.jpg"
 	sourceDef.PatientAccessUrl = "https://www.crystalrunhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

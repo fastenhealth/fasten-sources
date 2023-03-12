@@ -28,7 +28,6 @@ func GetSourceEdmondsOrthopedicCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Edmonds Orthopedic Center"
 	sourceDef.SourceType = pkg.SourceTypeEdmondsOrthopedicCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "edmonds-orthopedic-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.edmondsorthopediccenter.com/location/edmonds-orthopedic-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"

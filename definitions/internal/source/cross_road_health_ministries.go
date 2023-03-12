@@ -28,7 +28,6 @@ func GetSourceCrossRoadHealthMinistries(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Cross Road Health Ministries"
 	sourceDef.SourceType = pkg.SourceTypeCrossRoadHealthMinistries
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://crossroadmc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

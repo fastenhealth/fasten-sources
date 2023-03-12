@@ -28,7 +28,6 @@ func GetSourceDeannaYKhanMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Deanna Y Khan MD"
 	sourceDef.SourceType = pkg.SourceTypeDeannaYKhanMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "deanna-y-khan-md.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3KL228NDN8JAG2HHLT0CWMIT304KGN?assignment_id=3LOTDFNYALWXJMDXPPIYRW81ZS7WFH&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

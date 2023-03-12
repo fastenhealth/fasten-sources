@@ -28,7 +28,6 @@ func GetSourceStarCardiologyCarePc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Star Cardiology Care PC"
 	sourceDef.SourceType = pkg.SourceTypeStarCardiologyCarePc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.starcardiologycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

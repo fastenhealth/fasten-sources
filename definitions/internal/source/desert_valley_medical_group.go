@@ -28,7 +28,6 @@ func GetSourceDesertValleyMedicalGroup(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Desert Valley Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeDesertValleyMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://dvmc.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceRobertJBaeMdAMedCorp(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Robert J. Bae MD A Med. Corp."
 	sourceDef.SourceType = pkg.SourceTypeRobertJBaeMdAMedCorp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hoag.org/physician/robert-j-bae-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

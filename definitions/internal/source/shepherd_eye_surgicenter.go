@@ -28,7 +28,6 @@ func GetSourceShepherdEyeSurgicenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Shepherd Eye Surgicenter"
 	sourceDef.SourceType = pkg.SourceTypeShepherdEyeSurgicenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "shepherd-eye-surgicenter.jpg"
 	sourceDef.PatientAccessUrl = "https://www.shepherdeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

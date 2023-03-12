@@ -28,7 +28,6 @@ func GetSourceCarolinaAsthmaAndAllergyCenterPa(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Carolina Asthma And Allergy Center PA"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaAsthmaAndAllergyCenterPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

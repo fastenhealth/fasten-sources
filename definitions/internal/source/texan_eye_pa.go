@@ -28,7 +28,6 @@ func GetSourceTexanEyePa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Texan Eye PA"
 	sourceDef.SourceType = pkg.SourceTypeTexanEyePa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://texaneyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

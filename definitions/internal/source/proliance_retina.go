@@ -28,7 +28,6 @@ func GetSourceProlianceRetina(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Proliance Retina"
 	sourceDef.SourceType = pkg.SourceTypeProlianceRetina
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

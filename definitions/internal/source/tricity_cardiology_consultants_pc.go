@@ -28,7 +28,6 @@ func GetSourceTricityCardiologyConsultantsPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "TriCity Cardiology Consultants PC"
 	sourceDef.SourceType = pkg.SourceTypeTricityCardiologyConsultantsPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://tricitycardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

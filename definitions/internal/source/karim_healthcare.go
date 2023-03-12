@@ -28,7 +28,6 @@ func GetSourceKarimHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Karim HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeKarimHealthcare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://karimhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

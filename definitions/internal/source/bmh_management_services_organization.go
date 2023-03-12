@@ -28,7 +28,6 @@ func GetSourceBmhManagementServicesOrganization(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "BMH Management Services Organization"
 	sourceDef.SourceType = pkg.SourceTypeBmhManagementServicesOrganization
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

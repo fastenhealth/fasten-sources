@@ -28,7 +28,6 @@ func GetSourceZhiwenLuMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "ZhiWen Lu MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeZhiwenLuMdInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

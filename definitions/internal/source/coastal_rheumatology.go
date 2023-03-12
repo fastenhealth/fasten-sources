@@ -28,7 +28,6 @@ func GetSourceCoastalRheumatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Coastal Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeCoastalRheumatology
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

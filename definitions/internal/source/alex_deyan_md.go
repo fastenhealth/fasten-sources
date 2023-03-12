@@ -28,7 +28,6 @@ func GetSourceAlexDeyanMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Alex Deyan MD"
 	sourceDef.SourceType = pkg.SourceTypeAlexDeyanMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3TTPFEFXD6HHHJR33VOT73PCHDY6HK?assignment_id=3LRKMWOKBJEHCN6QCHNY6H8U27ZZ2C&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

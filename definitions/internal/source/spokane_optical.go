@@ -28,7 +28,6 @@ func GetSourceSpokaneOptical(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Spokane Optical"
 	sourceDef.SourceType = pkg.SourceTypeSpokaneOptical
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "spokane-optical.svg"
 	sourceDef.PatientAccessUrl = "https://www.spokaneeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

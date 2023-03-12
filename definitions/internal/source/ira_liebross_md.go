@@ -28,7 +28,6 @@ func GetSourceIraLiebrossMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Ira Liebross MD"
 	sourceDef.SourceType = pkg.SourceTypeIraLiebrossMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ira-liebross-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/doctors/ira-d-liebross-md"
 	sourceDef.SecretKeyPrefix = "nextgen"

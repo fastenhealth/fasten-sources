@@ -28,7 +28,6 @@ func GetSourceBrettRHuttonMDPA(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Brett R. Hutton M.D. P.A."
 	sourceDef.SourceType = pkg.SourceTypeBrettRHuttonMDPA
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

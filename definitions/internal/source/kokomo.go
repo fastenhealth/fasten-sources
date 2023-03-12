@@ -28,7 +28,6 @@ func GetSourceKokomo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Kokomo"
 	sourceDef.SourceType = pkg.SourceTypeKokomo
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.cityofkokomo.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

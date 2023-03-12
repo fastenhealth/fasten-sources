@@ -28,7 +28,6 @@ func GetSourceColumbusHerniaInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Columbus Hernia Institute"
 	sourceDef.SourceType = pkg.SourceTypeColumbusHerniaInstitute
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

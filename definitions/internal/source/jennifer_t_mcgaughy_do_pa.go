@@ -28,7 +28,6 @@ func GetSourceJenniferTMcgaughyDoPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Jennifer T. McGaughy DO PA"
 	sourceDef.SourceType = pkg.SourceTypeJenniferTMcgaughyDoPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ochiltreehospital.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSummitOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Summit Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSummitOrthopedics
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "summit-orthopedics.jpg"
 	sourceDef.PatientAccessUrl = "http://summitorthopanorama.com/?utm_source=GMBSocialClimb&utm_medium=SummitOrthopedicsatPanoramaOrthopedics&SpineCenter"
 	sourceDef.SecretKeyPrefix = "nextgen"

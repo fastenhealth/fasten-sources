@@ -28,7 +28,6 @@ func GetSourceHumanSkillsAndResources(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Human Skills And Resources"
 	sourceDef.SourceType = pkg.SourceTypeHumanSkillsAndResources
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.humanskills.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

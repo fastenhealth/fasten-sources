@@ -28,7 +28,6 @@ func GetSourceVirginia(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Virginia"
 	sourceDef.SourceType = pkg.SourceTypeVirginia
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vdh.virginia.gov/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

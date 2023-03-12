@@ -28,7 +28,6 @@ func GetSourceCandaceHoweMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Candace Howe MD"
 	sourceDef.SourceType = pkg.SourceTypeCandaceHoweMd
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

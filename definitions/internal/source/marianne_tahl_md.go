@@ -28,7 +28,6 @@ func GetSourceMarianneTahlMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Marianne Tahl MD"
 	sourceDef.SourceType = pkg.SourceTypeMarianneTahlMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "marianne-tahl-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-marianne-tahl-3d7ms"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceMakrismdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "MakrisMD LLC"
 	sourceDef.SourceType = pkg.SourceTypeMakrismdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://makrismd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

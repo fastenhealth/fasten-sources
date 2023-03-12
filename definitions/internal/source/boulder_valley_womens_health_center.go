@@ -28,7 +28,6 @@ func GetSourceBoulderValleyWomensHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Boulder Valley Womens Health Center"
 	sourceDef.SourceType = pkg.SourceTypeBoulderValleyWomensHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

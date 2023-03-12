@@ -28,7 +28,6 @@ func GetSourceMedcorDefaultClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Medcor Default Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMedcorDefaultClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

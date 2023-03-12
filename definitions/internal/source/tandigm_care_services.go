@@ -28,7 +28,6 @@ func GetSourceTandigmCareServices(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Tandigm Care Services"
 	sourceDef.SourceType = pkg.SourceTypeTandigmCareServices
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "tandigm-care-services.svg"
 	sourceDef.PatientAccessUrl = "https://tandigmhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

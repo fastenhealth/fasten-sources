@@ -28,7 +28,6 @@ func GetSourceTriangleEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Triangle Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTriangleEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

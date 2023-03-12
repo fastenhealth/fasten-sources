@@ -28,7 +28,6 @@ func GetSourceGreaterHoustonPsychiatricAssociates(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Greater Houston Psychiatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeGreaterHoustonPsychiatricAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.ghpa.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

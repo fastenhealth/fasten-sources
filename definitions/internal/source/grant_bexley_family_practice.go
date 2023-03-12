@@ -28,7 +28,6 @@ func GetSourceGrantBexleyFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Grant Bexley Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeGrantBexleyFamilyPractice
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "grant-bexley-family-practice.jpg"
 	sourceDef.PatientAccessUrl = "https://www.yelp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

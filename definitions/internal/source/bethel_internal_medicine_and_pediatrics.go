@@ -28,7 +28,6 @@ func GetSourceBethelInternalMedicineAndPediatrics(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Bethel Internal Medicine And Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeBethelInternalMedicineAndPediatrics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

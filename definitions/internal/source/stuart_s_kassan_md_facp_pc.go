@@ -28,7 +28,6 @@ func GetSourceStuartSKassanMdFacpPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Stuart S Kassan MD FACP PC"
 	sourceDef.SourceType = pkg.SourceTypeStuartSKassanMdFacpPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.coarthritis.com/dr.-stuart-kassan.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

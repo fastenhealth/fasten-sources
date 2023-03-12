@@ -28,7 +28,6 @@ func GetSourceRaleighInfectiousDiseasesAssociates(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Raleigh Infectious Diseases Associates"
 	sourceDef.SourceType = pkg.SourceTypeRaleighInfectiousDiseasesAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.iddocs.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

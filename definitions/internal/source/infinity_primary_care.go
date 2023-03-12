@@ -28,7 +28,6 @@ func GetSourceInfinityPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Infinity Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeInfinityPrimaryCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

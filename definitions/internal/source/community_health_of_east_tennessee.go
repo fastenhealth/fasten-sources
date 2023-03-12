@@ -28,7 +28,6 @@ func GetSourceCommunityHealthOfEastTennessee(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Community Health Of East Tennessee"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthOfEastTennessee
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://chetn.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

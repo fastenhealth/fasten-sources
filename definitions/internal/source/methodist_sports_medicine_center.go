@@ -28,7 +28,6 @@ func GetSourceMethodistSportsMedicineCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Methodist Sports Medicine Center"
 	sourceDef.SourceType = pkg.SourceTypeMethodistSportsMedicineCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

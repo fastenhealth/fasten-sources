@@ -28,7 +28,6 @@ func GetSourceBrentWSherwoodMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Brent W Sherwood MD PA"
 	sourceDef.SourceType = pkg.SourceTypeBrentWSherwoodMdPa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

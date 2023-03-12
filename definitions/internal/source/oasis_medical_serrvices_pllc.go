@@ -28,7 +28,6 @@ func GetSourceOasisMedicalSerrvicesPllc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Oasis Medical Serrvices PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOasisMedicalSerrvicesPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://oasismed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

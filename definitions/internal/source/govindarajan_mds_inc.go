@@ -28,7 +28,6 @@ func GetSourceGovindarajanMdsInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Govindarajan MDs Inc"
 	sourceDef.SourceType = pkg.SourceTypeGovindarajanMdsInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "govindarajan-mds-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/gopal-govindarajan-md-inc-2c3329c9-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"

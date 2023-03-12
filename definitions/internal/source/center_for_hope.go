@@ -28,7 +28,6 @@ func GetSourceCenterForHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Center For Hope"
 	sourceDef.SourceType = pkg.SourceTypeCenterForHope
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

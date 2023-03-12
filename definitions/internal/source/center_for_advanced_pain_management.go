@@ -28,7 +28,6 @@ func GetSourceCenterForAdvancedPainManagement(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Center For Advanced Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeCenterForAdvancedPainManagement
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

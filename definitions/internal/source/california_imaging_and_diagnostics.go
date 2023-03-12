@@ -28,7 +28,6 @@ func GetSourceCaliforniaImagingAndDiagnostics(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "California Imaging and Diagnostics"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaImagingAndDiagnostics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

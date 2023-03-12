@@ -28,7 +28,6 @@ func GetSourceHeartCenterOfSouthernMarylandLlp(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Heart Center Of Southern Maryland LLP"
 	sourceDef.SourceType = pkg.SourceTypeHeartCenterOfSouthernMarylandLlp
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "heart-center-of-southern-maryland-llp.jpg"
 	sourceDef.PatientAccessUrl = "https://www.medstarhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

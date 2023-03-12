@@ -28,7 +28,6 @@ func GetSourceMitchellWainwrightMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Mitchell Wainwright MD"
 	sourceDef.SourceType = pkg.SourceTypeMitchellWainwrightMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.providence.org/doctors/family-medicine/ca/mission-viejo/mitchell-wainwright-1730138678"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

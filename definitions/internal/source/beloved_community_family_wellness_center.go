@@ -28,7 +28,6 @@ func GetSourceBelovedCommunityFamilyWellnessCenter(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Beloved Community Family Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeBelovedCommunityFamilyWellnessCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

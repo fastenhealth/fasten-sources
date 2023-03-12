@@ -28,7 +28,6 @@ func GetSourceAmarilloBoneAndJointClinicLlp(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Amarillo Bone & Joint Clinic LLP"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloBoneAndJointClinicLlp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceDesertOasisHealthcare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Desert Oasis Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeDesertOasisHealthcare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "desert-oasis-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

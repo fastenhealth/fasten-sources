@@ -28,7 +28,6 @@ func GetSourceRaminPooyanDoInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Ramin Pooyan DO Inc"
 	sourceDef.SourceType = pkg.SourceTypeRaminPooyanDoInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceEquinoxHealthAndHealing(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Equinox Health & Healing"
 	sourceDef.SourceType = pkg.SourceTypeEquinoxHealthAndHealing
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://goo.gl/maps/MJ39HtdCrrA6PU3r8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

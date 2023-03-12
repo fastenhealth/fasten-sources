@@ -28,7 +28,6 @@ func GetSourcePlannedParenthoodSoutheasternPa(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Planned Parenthood Southeastern PA"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodSoutheasternPa
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "planned-parenthood-southeastern-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PlannedParenthoodSEPA/"
 	sourceDef.SecretKeyPrefix = "nextgen"

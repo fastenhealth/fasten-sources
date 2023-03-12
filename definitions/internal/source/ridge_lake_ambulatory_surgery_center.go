@@ -28,7 +28,6 @@ func GetSourceRidgeLakeAmbulatorySurgeryCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Ridge Lake Ambulatory Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeRidgeLakeAmbulatorySurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ridge-lake-ambulatory-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://lakeridgesurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

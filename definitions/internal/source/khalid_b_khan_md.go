@@ -28,7 +28,6 @@ func GetSourceKhalidBKhanMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Khalid B Khan MD"
 	sourceDef.SourceType = pkg.SourceTypeKhalidBKhanMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/khalid-khan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

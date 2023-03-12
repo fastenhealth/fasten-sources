@@ -28,7 +28,6 @@ func GetSourceBluegrassEarNoseAndThroatClinic(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Bluegrass Ear Nose And Throat Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBluegrassEarNoseAndThroatClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

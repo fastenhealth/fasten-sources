@@ -28,7 +28,6 @@ func GetSourcePrairieFamilyMedicineAndObstetrics(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Prairie Family Medicine And Obstetrics"
 	sourceDef.SourceType = pkg.SourceTypePrairieFamilyMedicineAndObstetrics
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "prairie-family-medicine-and-obstetrics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

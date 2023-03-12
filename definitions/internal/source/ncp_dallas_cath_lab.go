@@ -28,7 +28,6 @@ func GetSourceNcpDallasCathLab(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NCP Dallas Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpDallasCathLab
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://fmcna.com/physician-solutions/cardiovascular-care/national-cardiovascular-partners/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

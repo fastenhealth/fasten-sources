@@ -28,7 +28,6 @@ func GetSourcePerinatalAssociatesOfSacramento(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Perinatal Associates of Sacramento"
 	sourceDef.SourceType = pkg.SourceTypePerinatalAssociatesOfSacramento
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

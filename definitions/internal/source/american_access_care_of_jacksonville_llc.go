@@ -28,7 +28,6 @@ func GetSourceAmericanAccessCareOfJacksonvilleLlc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "American Access Care of Jacksonville LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfJacksonvilleLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-vascular-care-jacksonville/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceLehighValleyEyeCenterPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Lehigh Valley Eye Center PC"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyEyeCenterPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/pa-pennsylvania/allentown/lehigh-valley-eye-center-pc-x8gknn"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

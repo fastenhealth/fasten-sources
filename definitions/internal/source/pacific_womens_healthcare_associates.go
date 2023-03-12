@@ -28,7 +28,6 @@ func GetSourcePacificWomensHealthcareAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pacific Womens Healthcare Associates"
 	sourceDef.SourceType = pkg.SourceTypePacificWomensHealthcareAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pacwha.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCitrusValleyGastroenterology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Citrus Valley Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeCitrusValleyGastroenterology
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

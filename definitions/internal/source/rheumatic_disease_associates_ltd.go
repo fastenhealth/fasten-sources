@@ -28,7 +28,6 @@ func GetSourceRheumaticDiseaseAssociatesLtd(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Rheumatic Disease Associates LTD"
 	sourceDef.SourceType = pkg.SourceTypeRheumaticDiseaseAssociatesLtd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.arthritispa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

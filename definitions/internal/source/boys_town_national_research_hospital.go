@@ -28,7 +28,6 @@ func GetSourceBoysTownNationalResearchHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Boys Town National Research Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBoysTownNationalResearchHospital
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "boys-town-national-research-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.boystownhospital.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourcePrimacareMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "PrimaCare Medical Centers"
 	sourceDef.SourceType = pkg.SourceTypePrimacareMedicalCenters
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

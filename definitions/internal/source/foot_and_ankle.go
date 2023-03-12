@@ -28,7 +28,6 @@ func GetSourceFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Foot And Ankle"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkle
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com › podiatrist"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceYavapaiCounty(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Yavapai County"
 	sourceDef.SourceType = pkg.SourceTypeYavapaiCounty
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

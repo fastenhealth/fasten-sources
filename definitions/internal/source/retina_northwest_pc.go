@@ -28,7 +28,6 @@ func GetSourceRetinaNorthwestPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Retina Northwest PC"
 	sourceDef.SourceType = pkg.SourceTypeRetinaNorthwestPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://retinanorthwest.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

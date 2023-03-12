@@ -28,7 +28,6 @@ func GetSourceRameshNDharawat(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Ramesh N Dharawat"
 	sourceDef.SourceType = pkg.SourceTypeRameshNDharawat
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.officialusa.com/names/Ramesh-Dharawat/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceBeaconOrthopaedicsSurgeryCentersLlc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Beacon Orthopaedics Surgery Centers LLC"
 	sourceDef.SourceType = pkg.SourceTypeBeaconOrthopaedicsSurgeryCentersLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

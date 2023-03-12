@@ -28,7 +28,6 @@ func GetSourcePensacolaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Pensacola ASC"
 	sourceDef.SourceType = pkg.SourceTypePensacolaAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

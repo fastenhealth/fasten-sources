@@ -28,7 +28,6 @@ func GetSourceGynOncologySpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Gyn Oncology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeGynOncologySpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.gynoncspecialists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAdventistHealthMendocinoCoast(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Adventist Health Mendocino Coast"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthMendocinoCoast
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

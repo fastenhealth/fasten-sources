@@ -28,7 +28,6 @@ func GetSourceOrthopedicPhysicianAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Orthopedic Physician Associates"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicPhysicianAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.opaortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

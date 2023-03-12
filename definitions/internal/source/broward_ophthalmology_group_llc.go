@@ -28,7 +28,6 @@ func GetSourceBrowardOphthalmologyGroupLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Broward Ophthalmology Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeBrowardOphthalmologyGroupLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

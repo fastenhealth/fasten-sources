@@ -28,7 +28,6 @@ func GetSourceJacksonNeurosurgeryClinic(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Jackson Neurosurgery Clinic"
 	sourceDef.SourceType = pkg.SourceTypeJacksonNeurosurgeryClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "jackson-neurosurgery-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://jacksonneurosurgery.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

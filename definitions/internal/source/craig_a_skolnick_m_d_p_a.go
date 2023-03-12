@@ -28,7 +28,6 @@ func GetSourceCraigASkolnickMDPA(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Craig A. Skolnick M.D. P.A."
 	sourceDef.SourceType = pkg.SourceTypeCraigASkolnickMDPA
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.skolnickeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

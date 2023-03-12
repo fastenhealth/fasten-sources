@@ -28,7 +28,6 @@ func GetSourceCapitalFamilyPhysiciansPsc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Capital Family Physicians PSC"
 	sourceDef.SourceType = pkg.SourceTypeCapitalFamilyPhysiciansPsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

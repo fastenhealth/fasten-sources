@@ -28,7 +28,6 @@ func GetSourceOncologyHematologyConsultants(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Oncology Hematology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeOncologyHematologyConsultants
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

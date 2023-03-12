@@ -28,7 +28,6 @@ func GetSourceClemsonEyePa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Clemson Eye PA"
 	sourceDef.SourceType = pkg.SourceTypeClemsonEyePa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceRadiationOncologyCentersOfNv(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Radiation Oncology Centers Of NV"
 	sourceDef.SourceType = pkg.SourceTypeRadiationOncologyCentersOfNv
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nv-nevada/las-vegas/radiation-oncology-centers-of-nevada-x3wg2ya"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

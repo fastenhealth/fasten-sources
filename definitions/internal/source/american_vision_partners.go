@@ -28,7 +28,6 @@ func GetSourceAmericanVisionPartners(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "American Vision Partners"
 	sourceDef.SourceType = pkg.SourceTypeAmericanVisionPartners
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://americanvisionpartners.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

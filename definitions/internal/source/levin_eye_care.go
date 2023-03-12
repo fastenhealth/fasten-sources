@@ -28,7 +28,6 @@ func GetSourceLevinEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Levin Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeLevinEyeCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.levineye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

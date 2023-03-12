@@ -28,7 +28,6 @@ func GetSourceVccsd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "VCCSD"
 	sourceDef.SourceType = pkg.SourceTypeVccsd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.visioncaresandiego.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

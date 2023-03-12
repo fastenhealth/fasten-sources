@@ -28,7 +28,6 @@ func GetSourceNaniOverpayments(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NANI Overpayments"
 	sourceDef.SourceType = pkg.SourceTypeNaniOverpayments
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://news.bloomberglaw.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

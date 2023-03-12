@@ -28,7 +28,6 @@ func GetSourceAccesshealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "AccessHealth"
 	sourceDef.SourceType = pkg.SourceTypeAccesshealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://myaccesshealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

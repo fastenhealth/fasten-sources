@@ -28,7 +28,6 @@ func GetSourceAdamsCountyHealthCenterInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Adams County Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeAdamsCountyHealthCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://achcid.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

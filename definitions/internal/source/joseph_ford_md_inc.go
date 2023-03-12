@@ -28,7 +28,6 @@ func GetSourceJosephFordMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Joseph Ford MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeJosephFordMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/joseph-ford-f17c1073-45b9-4e5e-a1dd-e473dc9d3edb-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceEssentialHealthcareGroupOr(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Essential Healthcare Group OR"
 	sourceDef.SourceType = pkg.SourceTypeEssentialHealthcareGroupOr
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

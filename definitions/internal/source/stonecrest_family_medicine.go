@@ -28,7 +28,6 @@ func GetSourceStonecrestFamilyMedicine(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Stonecrest Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeStonecrestFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.stonecrestmed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

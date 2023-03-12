@@ -28,7 +28,6 @@ func GetSourceMichiganPhysiciansGroupPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Michigan Physicians Group PC"
 	sourceDef.SourceType = pkg.SourceTypeMichiganPhysiciansGroupPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://mpghealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

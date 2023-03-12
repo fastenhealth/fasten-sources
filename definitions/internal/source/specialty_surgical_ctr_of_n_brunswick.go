@@ -28,7 +28,6 @@ func GetSourceSpecialtySurgicalCtrOfNBrunswick(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Specialty Surgical Ctr Of N Brunswick"
 	sourceDef.SourceType = pkg.SourceTypeSpecialtySurgicalCtrOfNBrunswick
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://northbrunswicksurgicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

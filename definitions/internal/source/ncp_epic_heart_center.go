@@ -28,7 +28,6 @@ func GetSourceNcpEpicHeartCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "NCP EPIC Heart Center"
 	sourceDef.SourceType = pkg.SourceTypeNcpEpicHeartCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.epicheartcenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

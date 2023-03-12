@@ -28,7 +28,6 @@ func GetSourceDenverPainReliefCenterPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Denver Pain Relief Center PC"
 	sourceDef.SourceType = pkg.SourceTypeDenverPainReliefCenterPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://coloradopaincare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

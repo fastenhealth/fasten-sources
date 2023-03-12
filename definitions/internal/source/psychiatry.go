@@ -28,7 +28,6 @@ func GetSourcePsychiatry(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Psychiatry"
 	sourceDef.SourceType = pkg.SourceTypePsychiatry
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/physician/texas/sherman/mehnaz-a-khan-1841411873.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

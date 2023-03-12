@@ -28,7 +28,6 @@ func GetSourceGibsonAreaFamilyMedicine(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Gibson Area Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeGibsonAreaFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gibson-area-family-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/image/2934"
 	sourceDef.SecretKeyPrefix = "nextgen"

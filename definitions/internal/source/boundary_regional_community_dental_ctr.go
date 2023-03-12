@@ -28,7 +28,6 @@ func GetSourceBoundaryRegionalCommunityDentalCtr(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Boundary Regional Community Dental Ctr"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryRegionalCommunityDentalCtr
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

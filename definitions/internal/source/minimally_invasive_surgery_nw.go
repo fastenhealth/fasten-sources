@@ -28,7 +28,6 @@ func GetSourceMinimallyInvasiveSurgeryNw(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Minimally Invasive Surgery NW"
 	sourceDef.SourceType = pkg.SourceTypeMinimallyInvasiveSurgeryNw
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "minimally-invasive-surgery-nw.jpg"
 	sourceDef.PatientAccessUrl = "http://www.misnw.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

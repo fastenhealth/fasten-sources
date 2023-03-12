@@ -28,7 +28,6 @@ func GetSourcePediatrixCardiologyAssocOfNewMexico(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Pediatrix Cardiology Assoc Of New Mexico"
 	sourceDef.SourceType = pkg.SourceTypePediatrixCardiologyAssocOfNewMexico
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pediatrix-cardiology-assoc-of-new-mexico.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

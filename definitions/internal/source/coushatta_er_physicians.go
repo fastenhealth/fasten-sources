@@ -28,7 +28,6 @@ func GetSourceCoushattaErPhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Coushatta ER Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCoushattaErPhysicians
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com/medical_billing/coding/national_provider_identifier/codes/npi_1427480680.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

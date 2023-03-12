@@ -28,7 +28,6 @@ func GetSourceStGeorgeEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "St George Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeStGeorgeEndoscopy
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://utahendocenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

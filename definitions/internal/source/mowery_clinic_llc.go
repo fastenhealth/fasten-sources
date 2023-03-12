@@ -28,7 +28,6 @@ func GetSourceMoweryClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Mowery Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeMoweryClinicLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://moweryclinic.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

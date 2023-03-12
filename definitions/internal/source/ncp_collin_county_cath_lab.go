@@ -28,7 +28,6 @@ func GetSourceNcpCollinCountyCathLab(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "NCP Collin County Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollinCountyCathLab
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.medfinityhealth.com/plano-texas-cath-lab-location.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

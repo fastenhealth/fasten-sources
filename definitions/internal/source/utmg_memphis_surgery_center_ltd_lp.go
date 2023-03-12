@@ -28,7 +28,6 @@ func GetSourceUtmgMemphisSurgeryCenterLtdLp(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "UTMG Memphis Surgery Center LTD LP"
 	sourceDef.SourceType = pkg.SourceTypeUtmgMemphisSurgeryCenterLtdLp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.universityclinicalhealth.com/memphis-surgery-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

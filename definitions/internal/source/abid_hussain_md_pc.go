@@ -28,7 +28,6 @@ func GetSourceAbidHussainMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Abid Hussain MD PC"
 	sourceDef.SourceType = pkg.SourceTypeAbidHussainMdPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.abidhussainmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

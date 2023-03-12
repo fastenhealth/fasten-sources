@@ -28,7 +28,6 @@ func GetSourceYuNeuroAndElec(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Yu Neuro And Elec"
 	sourceDef.SourceType = pkg.SourceTypeYuNeuroAndElec
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceSkinAndMohsSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Skin And Mohs Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeSkinAndMohsSurgeryCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

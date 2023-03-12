@@ -28,7 +28,6 @@ func GetSourceBriefTherapyInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Brief Therapy Institute"
 	sourceDef.SourceType = pkg.SourceTypeBriefTherapyInstitute
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

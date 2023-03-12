@@ -28,7 +28,6 @@ func GetSourceAuroraObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Aurora OBH"
 	sourceDef.SourceType = pkg.SourceTypeAuroraObh
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "aurora-obh.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceChildrensLungAsthmaAndSleepSpc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Childrens Lung Asthma And Sleep Spc"
 	sourceDef.SourceType = pkg.SourceTypeChildrensLungAsthmaAndSleepSpc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

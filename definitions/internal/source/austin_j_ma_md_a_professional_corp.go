@@ -28,7 +28,6 @@ func GetSourceAustinJMaMdAProfessionalCorp(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Austin J Ma MD A Professional Corp"
 	sourceDef.SourceType = pkg.SourceTypeAustinJMaMdAProfessionalCorp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

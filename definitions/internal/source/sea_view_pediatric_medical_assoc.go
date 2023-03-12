@@ -28,7 +28,6 @@ func GetSourceSeaViewPediatricMedicalAssoc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Sea View Pediatric Medical Assoc"
 	sourceDef.SourceType = pkg.SourceTypeSeaViewPediatricMedicalAssoc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "sea-view-pediatric-medical-assoc.jpg"
 	sourceDef.PatientAccessUrl = "https://seaview.choc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

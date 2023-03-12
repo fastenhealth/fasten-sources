@@ -28,7 +28,6 @@ func GetSourceMccannelEyeSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "McCannel Eye Surgery"
 	sourceDef.SourceType = pkg.SourceTypeMccannelEyeSurgery
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceJulieCoponDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Julie Copon DO"
 	sourceDef.SourceType = pkg.SourceTypeJulieCoponDo
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "julie-copon-do.jpg"
 	sourceDef.PatientAccessUrl = "https://www.memorialcare.org/providers/julie-copon"
 	sourceDef.SecretKeyPrefix = "nextgen"

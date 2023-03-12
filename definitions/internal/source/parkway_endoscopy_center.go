@@ -28,7 +28,6 @@ func GetSourceParkwayEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Parkway Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeParkwayEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "parkway-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://parkwayendoscopy.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

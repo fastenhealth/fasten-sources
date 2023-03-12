@@ -28,7 +28,6 @@ func GetSourceMorongoMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Morongo Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeMorongoMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.salhotramd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

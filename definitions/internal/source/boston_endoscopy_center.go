@@ -28,7 +28,6 @@ func GetSourceBostonEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Boston Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeBostonEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

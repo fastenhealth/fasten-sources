@@ -28,7 +28,6 @@ func GetSourceCernerGregoryDelost(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Cerner Gregory Delost"
 	sourceDef.SourceType = pkg.SourceTypeCernerGregoryDelost
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

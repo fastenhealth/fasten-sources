@@ -28,7 +28,6 @@ func GetSourcePeconicBayPrimaryMedicalCarePc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Peconic Bay Primary Medical Care PC"
 	sourceDef.SourceType = pkg.SourceTypePeconicBayPrimaryMedicalCarePc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "peconic-bay-primary-medical-care-pc.svg"
 	sourceDef.PatientAccessUrl = "https://www.pbmchealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

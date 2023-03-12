@@ -28,7 +28,6 @@ func GetSourceJFMcguckinMdOfMdPaWaldorf(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "J F McGuckin MD Of MD PA Waldorf"
 	sourceDef.SourceType = pkg.SourceTypeJFMcguckinMdOfMdPaWaldorf
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/murphy-s-martin-md-pllc-f731cfc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

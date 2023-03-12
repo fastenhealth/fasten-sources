@@ -28,7 +28,6 @@ func GetSourceAscensionBorgessAlleganOutpatient(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Ascension Borgess Allegan Outpatient"
 	sourceDef.SourceType = pkg.SourceTypeAscensionBorgessAlleganOutpatient
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

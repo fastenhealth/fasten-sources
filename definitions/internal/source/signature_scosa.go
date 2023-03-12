@@ -28,7 +28,6 @@ func GetSourceSignatureScosa(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Signature - SCOSA"
 	sourceDef.SourceType = pkg.SourceTypeSignatureScosa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.signaturemedicalgroup.com/locations/signature-orthopedics-ofallon/?utm_source=GMBSocialClimb&utm_medium=SignatureOrthopedics-O%27Fallon%7CSt.CharlesOrthopaedicSurgeryAssociates"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

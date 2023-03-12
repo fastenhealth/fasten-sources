@@ -28,7 +28,6 @@ func GetSourceAllinaTcsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Allina/TCSC"
 	sourceDef.SourceType = pkg.SourceTypeAllinaTcsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

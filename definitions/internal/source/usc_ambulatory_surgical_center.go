@@ -28,7 +28,6 @@ func GetSourceUscAmbulatorySurgicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "USC Ambulatory Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeUscAmbulatorySurgicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

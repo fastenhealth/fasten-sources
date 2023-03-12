@@ -28,7 +28,6 @@ func GetSourceTylerNephrologyAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Tyler Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypeTylerNephrologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ckcdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

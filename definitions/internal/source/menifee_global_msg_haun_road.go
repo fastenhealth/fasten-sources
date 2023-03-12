@@ -28,7 +28,6 @@ func GetSourceMenifeeGlobalMsgHaunRoad(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Menifee Global MSG - Haun Road"
 	sourceDef.SourceType = pkg.SourceTypeMenifeeGlobalMsgHaunRoad
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://menifeeglobalmedicalcenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

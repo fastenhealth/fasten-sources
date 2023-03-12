@@ -28,7 +28,6 @@ func GetSourceGlendoraAnesthesiaAssociatesLp(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Glendora Anesthesia Associates LP"
 	sourceDef.SourceType = pkg.SourceTypeGlendoraAnesthesiaAssociatesLp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

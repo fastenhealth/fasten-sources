@@ -28,7 +28,6 @@ func GetSourceMainLineVascularInstituteObl(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Main Line Vascular Institute (OBL)"
 	sourceDef.SourceType = pkg.SourceTypeMainLineVascularInstituteObl
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mainlinehealth.org/main-line-healthcare/our-practices/vascular-specialists"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

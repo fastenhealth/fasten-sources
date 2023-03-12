@@ -28,7 +28,6 @@ func GetSourceMurrietaValleyFamilyMedicalGroupInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Murrieta Valley Family Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeMurrietaValleyFamilyMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.valleyphysiciansnetwork.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

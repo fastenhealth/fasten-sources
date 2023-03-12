@@ -28,7 +28,6 @@ func GetSourceUtNewbornCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "UT Newborn Center"
 	sourceDef.SourceType = pkg.SourceTypeUtNewbornCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.uthsc.edu/pediatrics/fellowships/neonatal-perinatal-medicine/developmental-clinic.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

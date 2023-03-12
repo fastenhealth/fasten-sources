@@ -28,7 +28,6 @@ func GetSourceArizonaEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Arizona Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeArizonaEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://arizonadigestivehealth.com/arizona-endoscopy-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

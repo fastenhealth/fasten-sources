@@ -28,7 +28,6 @@ func GetSourceAncillaryDept(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Ancillary Dept"
 	sourceDef.SourceType = pkg.SourceTypeAncillaryDept
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://about.usps.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

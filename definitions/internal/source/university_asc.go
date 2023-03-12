@@ -28,7 +28,6 @@ func GetSourceUniversityAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "University ASC"
 	sourceDef.SourceType = pkg.SourceTypeUniversityAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/university-vascular-access-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

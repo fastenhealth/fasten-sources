@@ -28,7 +28,6 @@ func GetSourceRetinaAssociatesOfCoralSpringsLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Retina Associates Of Coral Springs LLC"
 	sourceDef.SourceType = pkg.SourceTypeRetinaAssociatesOfCoralSpringsLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://retinasurgeon.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

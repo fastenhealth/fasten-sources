@@ -28,7 +28,6 @@ func GetSourceLaurelEyeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Laurel Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeLaurelEyeClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/jaime-lim-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

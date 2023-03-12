@@ -28,7 +28,6 @@ func GetSourceMarcJGoldbergMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Marc J Goldberg MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeMarcJGoldbergMdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/marc-goldberg-md-00d95f55"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

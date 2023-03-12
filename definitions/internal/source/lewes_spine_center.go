@@ -28,7 +28,6 @@ func GetSourceLewesSpineCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Lewes Spine Center"
 	sourceDef.SourceType = pkg.SourceTypeLewesSpineCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.lewesspinecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

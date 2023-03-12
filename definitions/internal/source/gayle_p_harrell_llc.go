@@ -28,7 +28,6 @@ func GetSourceGaylePHarrellLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Gayle P Harrell LLC"
 	sourceDef.SourceType = pkg.SourceTypeGaylePHarrellLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://opennpi.com/provider/1427289743"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

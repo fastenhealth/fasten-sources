@@ -28,7 +28,6 @@ func GetSourcePhoenixMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Phoenix Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePhoenixMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

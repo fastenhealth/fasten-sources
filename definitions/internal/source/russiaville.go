@@ -28,7 +28,6 @@ func GetSourceRussiaville(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Russiaville"
 	sourceDef.SourceType = pkg.SourceTypeRussiaville
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

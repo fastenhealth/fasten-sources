@@ -28,7 +28,6 @@ func GetSourceCovidVaccineClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "COVID Vaccine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCovidVaccineClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "covid-vaccine-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/home"
 	sourceDef.SecretKeyPrefix = "nextgen"

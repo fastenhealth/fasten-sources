@@ -28,7 +28,6 @@ func GetSourceTwinCitiesPainClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Twin Cities Pain Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTwinCitiesPainClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://twincitiespainclinic.com/locations/edina/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

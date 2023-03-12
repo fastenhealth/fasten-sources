@@ -28,7 +28,6 @@ func GetSourceHamiltonCounty(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Hamilton County"
 	sourceDef.SourceType = pkg.SourceTypeHamiltonCounty
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hamiltoncountyohio.gov/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

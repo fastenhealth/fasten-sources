@@ -28,7 +28,6 @@ func GetSourceGlaucomaInstituteOfAustinPa(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "GLAUCOMA INSTITUTE OF AUSTIN PA"
 	sourceDef.SourceType = pkg.SourceTypeGlaucomaInstituteOfAustinPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.glaucomainstitute.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceQualityOfLifeHealthServicesInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Quality Of Life Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeQualityOfLifeHealthServicesInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

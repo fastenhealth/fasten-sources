@@ -28,7 +28,6 @@ func GetSourceOrangeCountyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Orange County ASC"
 	sourceDef.SourceType = pkg.SourceTypeOrangeCountyAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/orange-county-vascular-access/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceManuelArroyoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Manuel Arroyo MD"
 	sourceDef.SourceType = pkg.SourceTypeManuelArroyoMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

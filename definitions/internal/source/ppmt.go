@@ -28,7 +28,6 @@ func GetSourcePpmt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "PPMT"
 	sourceDef.SourceType = pkg.SourceTypePpmt
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

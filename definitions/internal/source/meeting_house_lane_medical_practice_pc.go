@@ -28,7 +28,6 @@ func GetSourceMeetingHouseLaneMedicalPracticePc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Meeting House Lane Medical Practice PC"
 	sourceDef.SourceType = pkg.SourceTypeMeetingHouseLaneMedicalPracticePc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://southampton.stonybrookmedicine.edu/services/meeting-house-lane-medical-practice"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAdvancedDermatologyCare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Advanced Dermatology Care"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedDermatologyCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3K3G488TSF5YB8QSH21IOB3DC5J5QZ?assignment_id=32UTUBMZ7UTURG1CUDR6M4Y2825VB9&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

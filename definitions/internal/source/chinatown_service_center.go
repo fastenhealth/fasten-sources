@@ -28,7 +28,6 @@ func GetSourceChinatownServiceCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Chinatown Service Center"
 	sourceDef.SourceType = pkg.SourceTypeChinatownServiceCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

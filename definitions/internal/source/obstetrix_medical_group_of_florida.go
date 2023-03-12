@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfFlorida(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Obstetrix Medical Group Of Florida"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfFlorida
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.practicelink.com/facility/Obstetrix-Medical-Group-Melbourne-FL/Pediatrix-Medical-Group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

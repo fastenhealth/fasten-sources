@@ -28,7 +28,6 @@ func GetSourceRichmondAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Richmond ASC"
 	sourceDef.SourceType = pkg.SourceTypeRichmondAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://richmondasc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceMercyBehavioralCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Mercy Behavioral Care"
 	sourceDef.SourceType = pkg.SourceTypeMercyBehavioralCare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

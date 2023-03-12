@@ -28,7 +28,6 @@ func GetSourceSalemPainAndSpineSpecialistsPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Salem Pain and Spine Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeSalemPainAndSpineSpecialistsPc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "salem-pain-and-spine-specialists-pc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.salempainandspine.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

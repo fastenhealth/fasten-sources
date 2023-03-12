@@ -28,7 +28,6 @@ func GetSourceLehighValleyVascularInstituteObl(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Lehigh Valley Vascular Institute (OBL)"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyVascularInstituteObl
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lvhn.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

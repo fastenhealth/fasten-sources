@@ -28,7 +28,6 @@ func GetSourceCorePhysicianServicesOfMa(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Core Physician Services of MA"
 	sourceDef.SourceType = pkg.SourceTypeCorePhysicianServicesOfMa
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

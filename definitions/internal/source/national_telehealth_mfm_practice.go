@@ -28,7 +28,6 @@ func GetSourceNationalTelehealthMfmPractice(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "National Telehealth MFM Practice"
 	sourceDef.SourceType = pkg.SourceTypeNationalTelehealthMfmPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

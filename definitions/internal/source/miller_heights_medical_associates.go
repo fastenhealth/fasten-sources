@@ -28,7 +28,6 @@ func GetSourceMillerHeightsMedicalAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Miller Heights Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeMillerHeightsMedicalAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://findalocation.slhn.org/details/581"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

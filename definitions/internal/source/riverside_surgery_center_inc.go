@@ -28,7 +28,6 @@ func GetSourceRiversideSurgeryCenterInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Riverside Surgery Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiversideSurgeryCenterInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.labdraw.com/ratings/doctors/details/1821047499"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

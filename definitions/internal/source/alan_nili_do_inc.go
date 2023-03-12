@@ -28,7 +28,6 @@ func GetSourceAlanNiliDoInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Alan Nili DO Inc."
 	sourceDef.SourceType = pkg.SourceTypeAlanNiliDoInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://alannili.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

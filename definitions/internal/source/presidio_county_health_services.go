@@ -28,7 +28,6 @@ func GetSourcePresidioCountyHealthServices(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Presidio County Health Services"
 	sourceDef.SourceType = pkg.SourceTypePresidioCountyHealthServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/mwlite/company/presidio-county-health-services-inc."
 	sourceDef.SecretKeyPrefix = "nextgen"
 

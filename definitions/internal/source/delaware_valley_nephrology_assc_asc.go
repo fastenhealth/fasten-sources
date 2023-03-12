@@ -28,7 +28,6 @@ func GetSourceDelawareValleyNephrologyAsscAsc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Delaware Valley Nephrology Assc ASC"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyNephrologyAsscAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://delawarevalleynephrology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

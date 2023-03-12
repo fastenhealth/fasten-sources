@@ -28,7 +28,6 @@ func GetSourceNorthwestFlGastroenterologyCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Northwest FL Gastroenterology Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestFlGastroenterologyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "northwest-fl-gastroenterology-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.digestivediseasescenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

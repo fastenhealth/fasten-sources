@@ -28,7 +28,6 @@ func GetSourceCareOpticalAndIpas(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Care Optical And IPAs"
 	sourceDef.SourceType = pkg.SourceTypeCareOpticalAndIpas
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://iecpvision.com/2014/04/17/ipa-defined/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

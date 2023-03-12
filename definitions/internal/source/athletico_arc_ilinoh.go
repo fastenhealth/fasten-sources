@@ -28,7 +28,6 @@ func GetSourceAthleticoArcIlinoh(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Athletico ARC ILINOH"
 	sourceDef.SourceType = pkg.SourceTypeAthleticoArcIlinoh
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "athletico-arc-ilinoh.svg"
 	sourceDef.PatientAccessUrl = "https://www.athletico.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceNewAlbany(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "New Albany"
 	sourceDef.SourceType = pkg.SourceTypeNewAlbany
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

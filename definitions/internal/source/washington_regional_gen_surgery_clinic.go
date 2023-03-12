@@ -28,7 +28,6 @@ func GetSourceWashingtonRegionalGenSurgeryClinic(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Washington Regional Gen Surgery Clinic"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonRegionalGenSurgeryClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "washington-regional-gen-surgery-clinic.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.wregional.com/main/washington-regional-general-surgery"
 	sourceDef.SecretKeyPrefix = "nextgen"

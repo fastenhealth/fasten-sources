@@ -28,7 +28,6 @@ func GetSourceCardiovascularAssociatesOfLakeCounty(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Cardiovascular Associates Of Lake County"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularAssociatesOfLakeCounty
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

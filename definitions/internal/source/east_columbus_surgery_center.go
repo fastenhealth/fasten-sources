@@ -28,7 +28,6 @@ func GetSourceEastColumbusSurgeryCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "East Columbus Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeEastColumbusSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.ecsc.md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceManikandaRajaMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Manikanda Raja MD"
 	sourceDef.SourceType = pkg.SourceTypeManikandaRajaMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.rajamdhemet.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

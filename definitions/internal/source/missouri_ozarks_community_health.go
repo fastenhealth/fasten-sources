@@ -28,7 +28,6 @@ func GetSourceMissouriOzarksCommunityHealth(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Missouri Ozarks Community Health"
 	sourceDef.SourceType = pkg.SourceTypeMissouriOzarksCommunityHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

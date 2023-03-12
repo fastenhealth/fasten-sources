@@ -28,7 +28,6 @@ func GetSourceGastrodiagnosticsAMedicalGroup(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Gastrodiagnostics A Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeGastrodiagnosticsAMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthy.kaiserpermanente.org/southern-california/front-door"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

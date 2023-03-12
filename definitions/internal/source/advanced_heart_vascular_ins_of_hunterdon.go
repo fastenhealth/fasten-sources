@@ -28,7 +28,6 @@ func GetSourceAdvancedHeartVascularInsOfHunterdon(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Advanced Heart Vascular Ins Of Hunterdon"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedHeartVascularInsOfHunterdon
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hunterdonheartandvascular.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

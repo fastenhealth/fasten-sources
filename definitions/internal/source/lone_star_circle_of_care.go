@@ -28,7 +28,6 @@ func GetSourceLoneStarCircleOfCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Lone Star Circle Of Care"
 	sourceDef.SourceType = pkg.SourceTypeLoneStarCircleOfCare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "lone-star-circle-of-care.svg"
 	sourceDef.PatientAccessUrl = "https://lonestarcares.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceVacOfNorthShoreLouisiana(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "VAC Of North Shore Louisiana"
 	sourceDef.SourceType = pkg.SourceTypeVacOfNorthShoreLouisiana
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.endo-health.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

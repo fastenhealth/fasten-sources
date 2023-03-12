@@ -28,7 +28,6 @@ func GetSourceLowerLightsChristianHealthCnt(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Lower Lights Christian Health Cnt"
 	sourceDef.SourceType = pkg.SourceTypeLowerLightsChristianHealthCnt
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://llchc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

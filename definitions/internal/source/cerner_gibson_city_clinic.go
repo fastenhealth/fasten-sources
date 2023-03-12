@@ -28,7 +28,6 @@ func GetSourceCernerGibsonCityClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cerner Gibson City Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCernerGibsonCityClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

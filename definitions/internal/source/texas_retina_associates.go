@@ -28,7 +28,6 @@ func GetSourceTexasRetinaAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Texas Retina Associates"
 	sourceDef.SourceType = pkg.SourceTypeTexasRetinaAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceNewportBeachMedicalAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Newport Beach Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeNewportBeachMedicalAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://nbmadoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

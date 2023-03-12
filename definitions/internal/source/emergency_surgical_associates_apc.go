@@ -28,7 +28,6 @@ func GetSourceEmergencySurgicalAssociatesApc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Emergency Surgical Associates APC"
 	sourceDef.SourceType = pkg.SourceTypeEmergencySurgicalAssociatesApc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "emergency-surgical-associates-apc.svg"
 	sourceDef.PatientAccessUrl = "https://www.vitadox.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

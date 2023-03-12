@@ -28,7 +28,6 @@ func GetSourceCentralMassAmbulatoryEndoscopyCenter(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Central Mass Ambulatory Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeCentralMassAmbulatoryEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

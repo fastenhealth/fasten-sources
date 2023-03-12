@@ -28,7 +28,6 @@ func GetSourceMidAmericaRheumatologyConsultantsPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Mid America Rheumatology Consultants PA"
 	sourceDef.SourceType = pkg.SourceTypeMidAmericaRheumatologyConsultantsPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.marckc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

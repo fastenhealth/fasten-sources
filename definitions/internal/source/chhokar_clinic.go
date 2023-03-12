@@ -28,7 +28,6 @@ func GetSourceChhokarClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Chhokar Clinic"
 	sourceDef.SourceType = pkg.SourceTypeChhokarClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

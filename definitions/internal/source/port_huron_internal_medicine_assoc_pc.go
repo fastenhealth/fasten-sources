@@ -28,7 +28,6 @@ func GetSourcePortHuronInternalMedicineAssocPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Port Huron Internal Medicine Assoc PC"
 	sourceDef.SourceType = pkg.SourceTypePortHuronInternalMedicineAssocPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

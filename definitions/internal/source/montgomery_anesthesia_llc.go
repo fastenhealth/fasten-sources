@@ -28,7 +28,6 @@ func GetSourceMontgomeryAnesthesiaLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Montgomery Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryAnesthesiaLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

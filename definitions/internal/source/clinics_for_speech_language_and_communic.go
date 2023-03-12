@@ -28,7 +28,6 @@ func GetSourceClinicsForSpeechLanguageAndCommunic(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Clinics for Speech Language and Communic"
 	sourceDef.SourceType = pkg.SourceTypeClinicsForSpeechLanguageAndCommunic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

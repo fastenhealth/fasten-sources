@@ -28,7 +28,6 @@ func GetSourceEugenePakMDPA(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Eugene Pak M.D. P.A."
 	sourceDef.SourceType = pkg.SourceTypeEugenePakMDPA
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eugene-pak-m-d-p-a.jpg"
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/eugene-pak-md"
 	sourceDef.SecretKeyPrefix = "nextgen"

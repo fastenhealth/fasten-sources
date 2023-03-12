@@ -28,7 +28,6 @@ func GetSourceKcsHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "KCS Health Center"
 	sourceDef.SourceType = pkg.SourceTypeKcsHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.kcsinc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

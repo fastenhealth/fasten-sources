@@ -28,7 +28,6 @@ func GetSourceAdultAndChildMentalHealth(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Adult And Child Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeAdultAndChildMentalHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://adultandchild.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCenterForVisualIndependence(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Center For Visual Independence"
 	sourceDef.SourceType = pkg.SourceTypeCenterForVisualIndependence
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

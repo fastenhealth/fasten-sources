@@ -28,7 +28,6 @@ func GetSourceDaytonInterventional(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Dayton Interventional"
 	sourceDef.SourceType = pkg.SourceTypeDaytonInterventional
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.daytonir.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

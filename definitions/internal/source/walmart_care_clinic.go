@@ -28,7 +28,6 @@ func GetSourceWalmartCareClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Walmart Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeWalmartCareClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.yelp.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

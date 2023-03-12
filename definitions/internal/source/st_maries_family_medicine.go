@@ -28,7 +28,6 @@ func GetSourceStMariesFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "St Maries Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeStMariesFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.bchmed.org/st-maries-family-medicine-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

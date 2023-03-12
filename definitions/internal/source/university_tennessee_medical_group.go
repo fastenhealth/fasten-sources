@@ -28,7 +28,6 @@ func GetSourceUniversityTennesseeMedicalGroup(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "University Tennessee Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeUniversityTennesseeMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/university-vascular-access-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

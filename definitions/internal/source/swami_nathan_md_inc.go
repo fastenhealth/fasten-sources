@@ -28,7 +28,6 @@ func GetSourceSwamiNathanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Swami Nathan MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeSwamiNathanMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/md-maryland/frederick/swami-nathan-md-inc-xbjv3t"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceVanguardMedicalSpecialistsLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Vanguard Medical Specialists LLC"
 	sourceDef.SourceType = pkg.SourceTypeVanguardMedicalSpecialistsLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vanguardskin.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

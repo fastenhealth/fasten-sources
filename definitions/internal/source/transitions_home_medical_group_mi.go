@@ -28,7 +28,6 @@ func GetSourceTransitionsHomeMedicalGroupMi(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Transitions Home Medical Group MI"
 	sourceDef.SourceType = pkg.SourceTypeTransitionsHomeMedicalGroupMi
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/hospice/1548731615-transitions-michigan-ii-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

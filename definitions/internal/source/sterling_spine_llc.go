@@ -28,7 +28,6 @@ func GetSourceSterlingSpineLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Sterling Spine LLC"
 	sourceDef.SourceType = pkg.SourceTypeSterlingSpineLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

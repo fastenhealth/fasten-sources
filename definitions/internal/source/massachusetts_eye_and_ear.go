@@ -28,7 +28,6 @@ func GetSourceMassachusettsEyeAndEar(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Massachusetts Eye And Ear"
 	sourceDef.SourceType = pkg.SourceTypeMassachusettsEyeAndEar
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "massachusetts-eye-and-ear.svg"
 	sourceDef.PatientAccessUrl = "https://www.masseyeandear.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

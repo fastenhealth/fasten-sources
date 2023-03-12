@@ -28,7 +28,6 @@ func GetSourceEyeCarePhysiciansAndSurgeons(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Eye Care Physicians and Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeEyeCarePhysiciansAndSurgeons
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://salemeyecare.com/pages/home"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

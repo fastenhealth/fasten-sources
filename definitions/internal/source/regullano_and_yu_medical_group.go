@@ -28,7 +28,6 @@ func GetSourceRegullanoAndYuMedicalGroup(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Regullano and Yu Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeRegullanoAndYuMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/regullano-and-yu-medical-group-e66ad4c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

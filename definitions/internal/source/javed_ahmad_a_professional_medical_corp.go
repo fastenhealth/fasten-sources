@@ -28,7 +28,6 @@ func GetSourceJavedAhmadAProfessionalMedicalCorp(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Javed Ahmad A Professional Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeJavedAhmadAProfessionalMedicalCorp
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "javed-ahmad-a-professional-medical-corp.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/javed-ahmad/"
 	sourceDef.SecretKeyPrefix = "nextgen"

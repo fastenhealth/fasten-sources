@@ -28,7 +28,6 @@ func GetSourceZeeBestPractice(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Zee Best Practice"
 	sourceDef.SourceType = pkg.SourceTypeZeeBestPractice
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

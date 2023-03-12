@@ -28,7 +28,6 @@ func GetSourceSunriseVascular(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Sunrise Vascular"
 	sourceDef.SourceType = pkg.SourceTypeSunriseVascular
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sunrisevascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

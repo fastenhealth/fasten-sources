@@ -28,7 +28,6 @@ func GetSourceMississippiRheumAndOsteoCtrPllc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Mississippi Rheum And Osteo Ctr PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMississippiRheumAndOsteoCtrPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://msrheumosteo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

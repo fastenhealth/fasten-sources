@@ -28,7 +28,6 @@ func GetSourceOphthalmicPhysiciansInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Ophthalmic Physicians Inc"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicPhysiciansInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://opivision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

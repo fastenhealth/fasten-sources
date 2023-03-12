@@ -28,7 +28,6 @@ func GetSourceTemeculaFamilyWellness(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Temecula Family Wellness"
 	sourceDef.SourceType = pkg.SourceTypeTemeculaFamilyWellness
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/temecula/temecula-family-wellness-xb9jd8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

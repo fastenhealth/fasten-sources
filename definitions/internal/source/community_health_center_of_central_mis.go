@@ -28,7 +28,6 @@ func GetSourceCommunityHealthCenterOfCentralMis(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Community Health Center Of Central Mis"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthCenterOfCentralMis
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.chccmo.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceTheEarNoseAndThroatClinic(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "The Ear Nose And Throat Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheEarNoseAndThroatClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/services/ent/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

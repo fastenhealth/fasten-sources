@@ -28,7 +28,6 @@ func GetSourceSoutheastVascularGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Southeast Vascular Group"
 	sourceDef.SourceType = pkg.SourceTypeSoutheastVascularGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.bodybylayne.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceBradleyWilsonDo(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Bradley Wilson DO"
 	sourceDef.SourceType = pkg.SourceTypeBradleyWilsonDo
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

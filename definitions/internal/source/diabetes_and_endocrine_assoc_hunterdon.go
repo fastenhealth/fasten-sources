@@ -28,7 +28,6 @@ func GetSourceDiabetesAndEndocrineAssocHunterdon(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Diabetes And Endocrine Assoc Hunterdon"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndEndocrineAssocHunterdon
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

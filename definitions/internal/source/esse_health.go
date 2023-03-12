@@ -28,7 +28,6 @@ func GetSourceEsseHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Esse Health"
 	sourceDef.SourceType = pkg.SourceTypeEsseHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

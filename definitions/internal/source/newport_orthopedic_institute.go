@@ -28,7 +28,6 @@ func GetSourceNewportOrthopedicInstitute(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Newport Orthopedic Institute"
 	sourceDef.SourceType = pkg.SourceTypeNewportOrthopedicInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.newportortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

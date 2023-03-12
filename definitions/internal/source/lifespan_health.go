@@ -28,7 +28,6 @@ func GetSourceLifespanHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Lifespan Health"
 	sourceDef.SourceType = pkg.SourceTypeLifespanHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

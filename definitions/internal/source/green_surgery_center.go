@@ -28,7 +28,6 @@ func GetSourceGreenSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Green Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGreenSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "green-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.greeneyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceVisionCareOfMaineLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Vision Care Of Maine LLC"
 	sourceDef.SourceType = pkg.SourceTypeVisionCareOfMaineLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "vision-care-of-maine-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.visioncareofmaine.com/locations/bangor/"
 	sourceDef.SecretKeyPrefix = "nextgen"

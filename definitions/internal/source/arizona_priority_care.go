@@ -28,7 +28,6 @@ func GetSourceArizonaPriorityCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Arizona Priority Care"
 	sourceDef.SourceType = pkg.SourceTypeArizonaPriorityCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3B286OTITREEVRYWH88QZL7DQOSAJJ?assignment_id=3L4PIM1GQ7DYBHD6VL0GTI70859YRX&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

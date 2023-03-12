@@ -28,7 +28,6 @@ func GetSourceMarkSSpringerMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mark S Springer MD PC"
 	sourceDef.SourceType = pkg.SourceTypeMarkSSpringerMdPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.lvhn.org/locations/mark-s-springer-md-pc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

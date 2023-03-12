@@ -28,7 +28,6 @@ func GetSourceOregonTrailEyeCenterAndEyeSurgery(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Oregon Trail Eye Center and Eye Surgery"
 	sourceDef.SourceType = pkg.SourceTypeOregonTrailEyeCenterAndEyeSurgery
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "oregon-trail-eye-center-and-eye-surgery.jpg"
 	sourceDef.PatientAccessUrl = "https://www.oregontraileyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

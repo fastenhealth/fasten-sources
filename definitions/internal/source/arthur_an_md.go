@@ -28,7 +28,6 @@ func GetSourceArthurAnMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Arthur An MD"
 	sourceDef.SourceType = pkg.SourceTypeArthurAnMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://westcoastneurology.com/dr-arthur-an/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

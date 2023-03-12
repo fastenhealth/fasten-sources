@@ -28,7 +28,6 @@ func GetSourceHallandaleOutPatientSurgicalCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Hallandale Out Patient Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeHallandaleOutPatientSurgicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hbosc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

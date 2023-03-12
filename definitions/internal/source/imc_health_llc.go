@@ -28,7 +28,6 @@ func GetSourceImcHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "IMC Health LLC"
 	sourceDef.SourceType = pkg.SourceTypeImcHealthLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.imchealth.com/home"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

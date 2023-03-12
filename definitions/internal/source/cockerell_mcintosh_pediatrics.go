@@ -28,7 +28,6 @@ func GetSourceCockerellMcintoshPediatrics(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Cockerell McIntosh Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeCockerellMcintoshPediatrics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceBoundaryRegionalCommunityHealthCtr(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Boundary Regional Community Health Ctr"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryRegionalCommunityHealthCtr
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

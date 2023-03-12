@@ -28,7 +28,6 @@ func GetSourceUtahCardiologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Utah Cardiology PC"
 	sourceDef.SourceType = pkg.SourceTypeUtahCardiologyPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.utahcardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

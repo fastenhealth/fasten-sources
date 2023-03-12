@@ -28,7 +28,6 @@ func GetSourceOcalaEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Ocala Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeOcalaEyeSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ocalaeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

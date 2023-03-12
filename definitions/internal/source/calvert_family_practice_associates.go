@@ -28,7 +28,6 @@ func GetSourceCalvertFamilyPracticeAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Calvert Family Practice Associates"
 	sourceDef.SourceType = pkg.SourceTypeCalvertFamilyPracticeAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

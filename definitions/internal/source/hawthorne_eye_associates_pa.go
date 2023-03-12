@@ -28,7 +28,6 @@ func GetSourceHawthorneEyeAssociatesPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Hawthorne Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeHawthorneEyeAssociatesPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hawthorneeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

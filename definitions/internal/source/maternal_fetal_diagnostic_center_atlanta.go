@@ -28,7 +28,6 @@ func GetSourceMaternalFetalDiagnosticCenterAtlanta(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Maternal Fetal Diagnostic Center-Atlanta"
 	sourceDef.SourceType = pkg.SourceTypeMaternalFetalDiagnosticCenterAtlanta
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/mfmdiagatlanta?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceEyeInstituteAtBoswell(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Eye Institute At Boswell"
 	sourceDef.SourceType = pkg.SourceTypeEyeInstituteAtBoswell
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

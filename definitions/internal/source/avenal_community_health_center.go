@@ -28,7 +28,6 @@ func GetSourceAvenalCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Avenal Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAvenalCommunityHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "avenal-community-health-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://ariachc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

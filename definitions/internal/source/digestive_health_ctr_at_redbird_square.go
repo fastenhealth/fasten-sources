@@ -28,7 +28,6 @@ func GetSourceDigestiveHealthCtrAtRedbirdSquare(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Digestive Health Ctr At Redbird Square"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthCtrAtRedbirdSquare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

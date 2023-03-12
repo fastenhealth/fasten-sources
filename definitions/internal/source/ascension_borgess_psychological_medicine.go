@@ -28,7 +28,6 @@ func GetSourceAscensionBorgessPsychologicalMedicine(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Ascension Borgess Psychological Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAscensionBorgessPsychologicalMedicine
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ascension-borgess-psychological-medicine.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/michigan/mikal/allegan-ascension-borgess-allegan-hospital-behavioral-health?utm_campaign=gmb&utm_medium=organic&utm_source=local"
 	sourceDef.SecretKeyPrefix = "nextgen"

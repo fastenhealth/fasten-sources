@@ -28,7 +28,6 @@ func GetSourceJamesWSikesJrDmdMdLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "James W Sikes Jr DMD MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeJamesWSikesJrDmdMdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sikesoms.com\\"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

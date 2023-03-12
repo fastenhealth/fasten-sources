@@ -28,7 +28,6 @@ func GetSourceAspireAllergyAndSinus(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Aspire Allergy & Sinus"
 	sourceDef.SourceType = pkg.SourceTypeAspireAllergyAndSinus
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3M47JKRKDAYOO8QA0RUNUQWDEU8685?assignment_id=3S4AW7T80PF7AC491UFDRHUU7CML4A&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

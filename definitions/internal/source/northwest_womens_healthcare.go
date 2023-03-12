@@ -28,7 +28,6 @@ func GetSourceNorthwestWomensHealthcare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Northwest Womens Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestWomensHealthcare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "northwest-womens-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nwwomenshealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

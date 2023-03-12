@@ -28,7 +28,6 @@ func GetSourceGoshenHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Goshen Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGoshenHospital
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

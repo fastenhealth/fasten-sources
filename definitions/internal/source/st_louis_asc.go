@@ -28,7 +28,6 @@ func GetSourceStLouisAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "St Louis ASC"
 	sourceDef.SourceType = pkg.SourceTypeStLouisAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-vascular-care-st-louis/?utm_source=yext&utm_medium=referral&utm_campaign=center-directory-listing&utm_content=website&y_source=1_MzI4MzA3NS00MjAtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D#"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

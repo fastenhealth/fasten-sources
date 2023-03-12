@@ -28,7 +28,6 @@ func GetSourceSchcDentalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "SCHC Dental Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSchcDentalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.shastahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

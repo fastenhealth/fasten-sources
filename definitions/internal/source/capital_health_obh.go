@@ -28,7 +28,6 @@ func GetSourceCapitalHealthObh(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Capital Health OBH"
 	sourceDef.SourceType = pkg.SourceTypeCapitalHealthObh
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

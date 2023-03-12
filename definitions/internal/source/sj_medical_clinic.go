@@ -28,7 +28,6 @@ func GetSourceSjMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "SJ Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSjMedicalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

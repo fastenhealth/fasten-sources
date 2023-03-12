@@ -28,7 +28,6 @@ func GetSourceVirtualCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Virtual Care"
 	sourceDef.SourceType = pkg.SourceTypeVirtualCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://virtualcare.pt/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

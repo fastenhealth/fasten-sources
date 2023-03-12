@@ -28,7 +28,6 @@ func GetSourceLibertyCataractCenterLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Liberty Cataract Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeLibertyCataractCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/liberty-cataract-center-dbc578c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceOhiohealthUrgentCareLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "OhioHealth Urgent Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeOhiohealthUrgentCareLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.fastmed.com/urgent-care-centers/mesa-az-walk-in-clinic-south-power-road/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

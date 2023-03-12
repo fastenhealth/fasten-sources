@@ -28,7 +28,6 @@ func GetSourceBucksMontEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Bucks Mont Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeBucksMontEyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

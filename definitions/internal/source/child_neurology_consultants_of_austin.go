@@ -28,7 +28,6 @@ func GetSourceChildNeurologyConsultantsOfAustin(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Child Neurology Consultants Of Austin"
 	sourceDef.SourceType = pkg.SourceTypeChildNeurologyConsultantsOfAustin
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

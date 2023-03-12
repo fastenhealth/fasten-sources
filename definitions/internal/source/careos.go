@@ -28,7 +28,6 @@ func GetSourceCareos(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "CAREOS"
 	sourceDef.SourceType = pkg.SourceTypeCareos
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

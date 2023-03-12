@@ -28,7 +28,6 @@ func GetSourceBeaconHandSurgicalCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Beacon Hand Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeBeaconHandSurgicalCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

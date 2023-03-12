@@ -28,7 +28,6 @@ func GetSourceTriCountyCommunityActionAgency(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Tri-County Community Action Agency"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyCommunityActionAgency
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "tri-county-community-action-agency.svg"
 	sourceDef.PatientAccessUrl = "https://tricountyva.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

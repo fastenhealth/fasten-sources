@@ -28,7 +28,6 @@ func GetSourceHerbertHLeeMdMphInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Herbert H. Lee MD MPH. Inc."
 	sourceDef.SourceType = pkg.SourceTypeHerbertHLeeMdMphInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.herbertleemd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSanPedroPediatricMedicalGroupInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "San Pedro Pediatric Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSanPedroPediatricMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sanpedropediatricmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

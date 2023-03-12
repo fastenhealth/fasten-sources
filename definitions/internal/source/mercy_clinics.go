@@ -28,7 +28,6 @@ func GetSourceMercyClinics(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Mercy Clinics"
 	sourceDef.SourceType = pkg.SourceTypeMercyClinics
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mercyone.org/location/mercyone-regency-family-medicine"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

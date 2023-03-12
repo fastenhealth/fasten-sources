@@ -28,7 +28,6 @@ func GetSourceColumbiaGastrointestinalEndoscopyCtr(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Columbia Gastrointestinal Endoscopy Ctr"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaGastrointestinalEndoscopyCtr
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

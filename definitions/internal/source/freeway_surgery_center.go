@@ -28,7 +28,6 @@ func GetSourceFreewaySurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Freeway Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeFreewaySurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

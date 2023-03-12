@@ -28,7 +28,6 @@ func GetSourcePivac(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "PIVAC"
 	sourceDef.SourceType = pkg.SourceTypePivac
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

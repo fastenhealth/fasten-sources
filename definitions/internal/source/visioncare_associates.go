@@ -28,7 +28,6 @@ func GetSourceVisioncareAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "VISIONCARE ASSOCIATES"
 	sourceDef.SourceType = pkg.SourceTypeVisioncareAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "visioncare-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.akronvisioncare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

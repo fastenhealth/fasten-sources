@@ -28,7 +28,6 @@ func GetSourceStillaguamishMassageClinic(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Stillaguamish Massage Clinic"
 	sourceDef.SourceType = pkg.SourceTypeStillaguamishMassageClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stillaguamish.com/departmentsandservices/massage-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

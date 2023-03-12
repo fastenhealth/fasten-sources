@@ -28,7 +28,6 @@ func GetSourceClinicaCampesina(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Clinica Campesina"
 	sourceDef.SourceType = pkg.SourceTypeClinicaCampesina
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

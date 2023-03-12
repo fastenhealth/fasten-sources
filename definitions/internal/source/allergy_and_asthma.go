@@ -28,7 +28,6 @@ func GetSourceAllergyAndAsthma(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Allergy And Asthma"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthma
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://allergyasthmanetwork.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

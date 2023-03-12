@@ -28,7 +28,6 @@ func GetSourceStLukesHealthcareBehaviorHealth(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "St Lukes Healthcare Behavior Health"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHealthcareBehaviorHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

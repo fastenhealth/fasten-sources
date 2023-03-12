@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfCa(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Obstetrix Medical Group Of CA"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfCa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/campbell/obstetrix-medical-group-x849gl1b"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

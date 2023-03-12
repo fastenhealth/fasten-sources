@@ -28,7 +28,6 @@ func GetSourceComprehensiveOrthopaedicsSC(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Comprehensive Orthopaedics S.C."
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveOrthopaedicsSC
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://comportho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

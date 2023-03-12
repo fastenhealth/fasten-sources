@@ -28,7 +28,6 @@ func GetSourceTexasHealthCarePLLC(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Texas Health Care P.L.L.C."
 	sourceDef.SourceType = pkg.SourceTypeTexasHealthCarePLLC
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

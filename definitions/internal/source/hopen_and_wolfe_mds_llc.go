@@ -28,7 +28,6 @@ func GetSourceHopenAndWolfeMdsLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hopen And Wolfe MDS LLC"
 	sourceDef.SourceType = pkg.SourceTypeHopenAndWolfeMdsLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/fl-florida/hollywood/hopen-and-wolfe-mds-x4rcsnb"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceTheProjectOfTheQuadCitiesInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "The Project Of  the Quad Cities Inc"
 	sourceDef.SourceType = pkg.SourceTypeTheProjectOfTheQuadCitiesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.tpqc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

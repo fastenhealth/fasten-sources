@@ -28,7 +28,6 @@ func GetSourceSquawPeakSurgicalFacility(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Squaw Peak Surgical Facility"
 	sourceDef.SourceType = pkg.SourceTypeSquawPeakSurgicalFacility
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.sciatica.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

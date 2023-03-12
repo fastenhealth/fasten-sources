@@ -28,7 +28,6 @@ func GetSourceMaternalFetalMedicineOfSwFlorida(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Maternal Fetal Medicine Of SW Florida"
 	sourceDef.SourceType = pkg.SourceTypeMaternalFetalMedicineOfSwFlorida
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

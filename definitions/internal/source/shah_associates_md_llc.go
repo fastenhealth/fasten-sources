@@ -28,7 +28,6 @@ func GetSourceShahAssociatesMdLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Shah Associates MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeShahAssociatesMdLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.medstarhealth.org/locations/physical-therapy-hollywood"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

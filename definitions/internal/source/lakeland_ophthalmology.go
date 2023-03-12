@@ -28,7 +28,6 @@ func GetSourceLakelandOphthalmology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Lakeland Ophthalmology"
 	sourceDef.SourceType = pkg.SourceTypeLakelandOphthalmology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/lakeland-ophthalmology-2243dcfa-a147-4918-87c4-2eae437097fd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

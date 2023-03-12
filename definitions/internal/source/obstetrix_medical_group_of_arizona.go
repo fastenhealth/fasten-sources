@@ -28,7 +28,6 @@ func GetSourceObstetrixMedicalGroupOfArizona(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Obstetrix Medical Group Of Arizona"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfArizona
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com › obgyn-clinic"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

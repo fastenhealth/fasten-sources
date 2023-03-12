@@ -28,7 +28,6 @@ func GetSourceBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeBehavioralHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

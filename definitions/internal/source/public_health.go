@@ -28,7 +28,6 @@ func GetSourcePublicHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Public Health"
 	sourceDef.SourceType = pkg.SourceTypePublicHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://yavapaiaz.gov/chs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

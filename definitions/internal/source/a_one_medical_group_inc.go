@@ -28,7 +28,6 @@ func GetSourceAOneMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "A-One Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeAOneMedicalGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.cylex.us.com/company/a-one-medical-group-27279259.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

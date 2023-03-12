@@ -28,7 +28,6 @@ func GetSourceSaintJosephPhysicianNetwork(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Saint Joseph Physician Network"
 	sourceDef.SourceType = pkg.SourceTypeSaintJosephPhysicianNetwork
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

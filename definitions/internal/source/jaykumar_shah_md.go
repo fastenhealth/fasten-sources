@@ -28,7 +28,6 @@ func GetSourceJaykumarShahMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "JayKumar Shah MD"
 	sourceDef.SourceType = pkg.SourceTypeJaykumarShahMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.optum.com/care/providers/ca/arcadia/jaykumar-harilal-shah-md.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

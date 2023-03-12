@@ -28,7 +28,6 @@ func GetSourceGeorgiaClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Georgia Clinic PC"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaClinicPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

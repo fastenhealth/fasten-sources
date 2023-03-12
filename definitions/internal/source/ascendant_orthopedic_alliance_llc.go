@@ -28,7 +28,6 @@ func GetSourceAscendantOrthopedicAllianceLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Ascendant Orthopedic Alliance LLC"
 	sourceDef.SourceType = pkg.SourceTypeAscendantOrthopedicAllianceLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ascendant-orthopedic-alliance-llc.jpg"
 	sourceDef.PatientAccessUrl = "Name: Ascendant Orthopedic Alliance LLC Address: 2310 California Rd City: Elkhart Zip: 46514 State: Indiana Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"

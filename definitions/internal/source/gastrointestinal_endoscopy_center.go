@@ -28,7 +28,6 @@ func GetSourceGastrointestinalEndoscopyCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Gastrointestinal Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeGastrointestinalEndoscopyCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gastrointestinal-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://metrodetroitgastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

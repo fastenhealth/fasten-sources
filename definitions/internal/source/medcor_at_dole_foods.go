@@ -28,7 +28,6 @@ func GetSourceMedcorAtDoleFoods(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Medcor At Dole Foods"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtDoleFoods
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/california/dole-packaged-foods-llc-354145231"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

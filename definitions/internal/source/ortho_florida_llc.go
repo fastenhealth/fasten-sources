@@ -28,7 +28,6 @@ func GetSourceOrthoFloridaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Ortho Florida LLC"
 	sourceDef.SourceType = pkg.SourceTypeOrthoFloridaLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.orthoflorida.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCaaOfColumbianaCounty(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "CAA Of Columbiana County"
 	sourceDef.SourceType = pkg.SourceTypeCaaOfColumbianaCounty
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

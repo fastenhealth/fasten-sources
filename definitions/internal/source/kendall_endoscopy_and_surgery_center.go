@@ -28,7 +28,6 @@ func GetSourceKendallEndoscopyAndSurgeryCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Kendall Endoscopy and Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeKendallEndoscopyAndSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

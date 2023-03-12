@@ -28,7 +28,6 @@ func GetSourceSouthTexasRuralHealthServicesInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "South Texas Rural Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasRuralHealthServicesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://southtexasruralhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

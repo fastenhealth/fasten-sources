@@ -28,7 +28,6 @@ func GetSourceGarnerDermatology(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Garner Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeGarnerDermatology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://garnerdermatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

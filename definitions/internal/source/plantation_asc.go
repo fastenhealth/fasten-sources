@@ -28,7 +28,6 @@ func GetSourcePlantationAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Plantation ASC"
 	sourceDef.SourceType = pkg.SourceTypePlantationAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-surgery-center-plantation/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

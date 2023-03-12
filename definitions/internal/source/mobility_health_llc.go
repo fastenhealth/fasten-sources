@@ -28,7 +28,6 @@ func GetSourceMobilityHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mobility Health LLC"
 	sourceDef.SourceType = pkg.SourceTypeMobilityHealthLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mobilityhealthlab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

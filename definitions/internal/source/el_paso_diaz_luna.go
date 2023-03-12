@@ -28,7 +28,6 @@ func GetSourceElPasoDiazLuna(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "El Paso Diaz Luna"
 	sourceDef.SourceType = pkg.SourceTypeElPasoDiazLuna
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/physicians/hector-diaz-luna/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

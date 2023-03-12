@@ -28,7 +28,6 @@ func GetSourceOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Orthopedics and Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicsAndSportsMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/services/orthopedics-sports-medicine/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

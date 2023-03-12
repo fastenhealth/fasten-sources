@@ -28,7 +28,6 @@ func GetSourceAlleghenyClinicPediatrics(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Allegheny Clinic Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeAlleghenyClinicPediatrics
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "allegheny-clinic-pediatrics.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.ahn.org/location-search/allegheny-clinic-pediatrics-369.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

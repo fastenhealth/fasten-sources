@@ -28,7 +28,6 @@ func GetSourceLasVegasAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Las Vegas ASC"
 	sourceDef.SourceType = pkg.SourceTypeLasVegasAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://lvdaysurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

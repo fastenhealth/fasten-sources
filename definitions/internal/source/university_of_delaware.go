@@ -28,7 +28,6 @@ func GetSourceUniversityOfDelaware(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "University Of Delaware"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfDelaware
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.udel.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

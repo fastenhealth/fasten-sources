@@ -28,7 +28,6 @@ func GetSourceBorlandGroover(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Borland Groover"
 	sourceDef.SourceType = pkg.SourceTypeBorlandGroover
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

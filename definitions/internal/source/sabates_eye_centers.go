@@ -28,7 +28,6 @@ func GetSourceSabatesEyeCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Sabates Eye Centers"
 	sourceDef.SourceType = pkg.SourceTypeSabatesEyeCenters
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

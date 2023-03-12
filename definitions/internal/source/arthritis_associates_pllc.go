@@ -28,7 +28,6 @@ func GetSourceArthritisAssociatesPllc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Arthritis Associates PLLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAssociatesPllc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "arthritis-associates-pllc.svg"
 	sourceDef.PatientAccessUrl = "https://www.arthritisassociateschatt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

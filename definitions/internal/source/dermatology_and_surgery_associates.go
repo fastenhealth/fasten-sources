@@ -28,7 +28,6 @@ func GetSourceDermatologyAndSurgeryAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Dermatology And Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAndSurgeryAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/dermatology-and-surgery-associates-40f755c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

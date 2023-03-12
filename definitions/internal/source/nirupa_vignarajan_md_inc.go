@@ -28,7 +28,6 @@ func GetSourceNirupaVignarajanMdInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Nirupa Vignarajan MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeNirupaVignarajanMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-nirupa-vignarajan-yjhs2"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

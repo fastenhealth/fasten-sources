@@ -28,7 +28,6 @@ func GetSourceEyeAssociatesOfSouthernIndiana(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Eye Associates Of Southern Indiana"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesOfSouthernIndiana
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eye-associates-of-southern-indiana.jpg"
 	sourceDef.PatientAccessUrl = "https://have2020.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

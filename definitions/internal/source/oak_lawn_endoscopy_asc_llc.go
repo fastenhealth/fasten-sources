@@ -28,7 +28,6 @@ func GetSourceOakLawnEndoscopyAscLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Oak Lawn Endoscopy ASC LLC"
 	sourceDef.SourceType = pkg.SourceTypeOakLawnEndoscopyAscLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

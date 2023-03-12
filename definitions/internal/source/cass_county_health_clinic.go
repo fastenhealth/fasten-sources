@@ -28,7 +28,6 @@ func GetSourceCassCountyHealthClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cass County Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCassCountyHealthClinic
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

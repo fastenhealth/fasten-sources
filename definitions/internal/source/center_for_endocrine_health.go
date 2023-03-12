@@ -28,7 +28,6 @@ func GetSourceCenterForEndocrineHealth(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Center For Endocrine Health"
 	sourceDef.SourceType = pkg.SourceTypeCenterForEndocrineHealth
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

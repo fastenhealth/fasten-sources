@@ -28,7 +28,6 @@ func GetSourceViaVerdeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Via Verde Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeViaVerdeMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.emanatehealth.org/locations/emanate-health-medical-group-family-practice-via-verde/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

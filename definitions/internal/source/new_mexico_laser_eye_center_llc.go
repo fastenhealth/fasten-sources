@@ -28,7 +28,6 @@ func GetSourceNewMexicoLaserEyeCenterLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "New Mexico Laser Eye Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeNewMexicoLaserEyeCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

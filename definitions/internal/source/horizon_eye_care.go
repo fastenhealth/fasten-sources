@@ -28,7 +28,6 @@ func GetSourceHorizonEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Horizon Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeHorizonEyeCare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "horizon-eye-care.jpg"
 	sourceDef.PatientAccessUrl = "https://horizoneyecare.com/wp-content/uploads/2022/05/Horizon-Eye-Care.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"

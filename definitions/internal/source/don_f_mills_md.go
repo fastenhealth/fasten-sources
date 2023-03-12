@@ -28,7 +28,6 @@ func GetSourceDonFMillsMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Don F Mills MD"
 	sourceDef.SourceType = pkg.SourceTypeDonFMillsMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.drmillsforpainrelief.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

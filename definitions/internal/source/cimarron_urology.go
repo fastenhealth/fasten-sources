@@ -28,7 +28,6 @@ func GetSourceCimarronUrology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Cimarron Urology"
 	sourceDef.SourceType = pkg.SourceTypeCimarronUrology
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

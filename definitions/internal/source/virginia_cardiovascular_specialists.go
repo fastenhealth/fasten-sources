@@ -28,7 +28,6 @@ func GetSourceVirginiaCardiovascularSpecialists(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Virginia Cardiovascular Specialists"
 	sourceDef.SourceType = pkg.SourceTypeVirginiaCardiovascularSpecialists
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "virginia-cardiovascular-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://www.vacardio.com/about-us/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"

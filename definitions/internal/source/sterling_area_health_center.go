@@ -28,7 +28,6 @@ func GetSourceSterlingAreaHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sterling Area Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSterlingAreaHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Sterling-Area-Health-Center-569747820203309/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

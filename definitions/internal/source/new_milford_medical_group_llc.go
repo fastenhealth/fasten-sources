@@ -28,7 +28,6 @@ func GetSourceNewMilfordMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "New Milford Medical Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeNewMilfordMedicalGroupLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.nmmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

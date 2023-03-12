@@ -28,7 +28,6 @@ func GetSourcePainSpecialistsOfOrangeCounty(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pain Specialists Of Orange County"
 	sourceDef.SourceType = pkg.SourceTypePainSpecialistsOfOrangeCounty
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.spinalpainspecialists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceNcpCollegeParkAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "NCP College Park ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollegeParkAsc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.collegeparkheart.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

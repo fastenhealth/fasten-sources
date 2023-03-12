@@ -28,7 +28,6 @@ func GetSourceSkagitNorthwestPtAndOt(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Skagit Northwest PT And OT"
 	sourceDef.SourceType = pkg.SourceTypeSkagitNorthwestPtAndOt
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://digital.skagitregionalhealth.org/orthopedics/?utm_source=eruptr&utm_medium=cpc&cr=ortho&utm_campaign=ortho&utm_term=skagit%20orthopedics&gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPI5kVZSJP2nh1MKfN67d4juBMsLtBxUmAZutq0ee2D7fdj6G1tkSy4aAsWfEALw_wcB"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

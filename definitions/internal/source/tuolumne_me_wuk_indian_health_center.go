@@ -28,7 +28,6 @@ func GetSourceTuolumneMeWukIndianHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Tuolumne Me Wuk Indian Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTuolumneMeWukIndianHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://tmwihc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

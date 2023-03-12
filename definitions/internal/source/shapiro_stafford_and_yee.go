@@ -28,7 +28,6 @@ func GetSourceShapiroStaffordAndYee(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Shapiro Stafford & Yee"
 	sourceDef.SourceType = pkg.SourceTypeShapiroStaffordAndYee
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/shapiro-stafford-and-yee-baff9e88-3e35-43ac-adf2-6fb4da2f139f"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceGreenportPrenatal(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Greenport Prenatal"
 	sourceDef.SourceType = pkg.SourceTypeGreenportPrenatal
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://hitesite.org/resource/1104"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

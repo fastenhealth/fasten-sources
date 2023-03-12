@@ -28,7 +28,6 @@ func GetSourceSteimanNeurologyGroupInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Steiman Neurology Group Inc."
 	sourceDef.SourceType = pkg.SourceTypeSteimanNeurologyGroupInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mountcarmelhealth.com/provider/gerald-s-steiman-md-child-neurology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

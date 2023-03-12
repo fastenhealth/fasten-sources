@@ -28,7 +28,6 @@ func GetSourceSupportiveCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Supportive Care"
 	sourceDef.SourceType = pkg.SourceTypeSupportiveCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/locations/james-m-stockman-cancer-institute-supportive-car/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

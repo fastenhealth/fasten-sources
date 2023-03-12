@@ -28,7 +28,6 @@ func GetSourceJdHealthAndWellnessCenterLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "JD Health and Wellness Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeJdHealthAndWellnessCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.jdhealthandwellness.com/#!"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

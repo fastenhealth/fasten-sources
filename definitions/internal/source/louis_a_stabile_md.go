@@ -28,7 +28,6 @@ func GetSourceLouisAStabileMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Louis A Stabile MD"
 	sourceDef.SourceType = pkg.SourceTypeLouisAStabileMd
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

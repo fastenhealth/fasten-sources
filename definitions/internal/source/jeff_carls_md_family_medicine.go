@@ -28,7 +28,6 @@ func GetSourceJeffCarlsMdFamilyMedicine(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Jeff Carls MD Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeJeffCarlsMdFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.drjeffreycarls.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceUrologySurgicalCenterLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Urology Surgical Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeUrologySurgicalCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://lincolnurologypc.com/surgical-center-overview/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

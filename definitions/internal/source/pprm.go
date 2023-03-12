@@ -28,7 +28,6 @@ func GetSourcePprm(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "PPRM"
 	sourceDef.SourceType = pkg.SourceTypePprm
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pprm.svg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

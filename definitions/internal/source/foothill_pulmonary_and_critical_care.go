@@ -28,7 +28,6 @@ func GetSourceFoothillPulmonaryAndCriticalCare(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Foothill Pulmonary And Critical Care"
 	sourceDef.SourceType = pkg.SourceTypeFoothillPulmonaryAndCriticalCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.foothillpulmonary.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

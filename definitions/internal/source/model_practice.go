@@ -28,7 +28,6 @@ func GetSourceModelPractice(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Model Practice"
 	sourceDef.SourceType = pkg.SourceTypeModelPractice
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

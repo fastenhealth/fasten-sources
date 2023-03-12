@@ -28,7 +28,6 @@ func GetSourceRamRaoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Ram Rao MD"
 	sourceDef.SourceType = pkg.SourceTypeRamRaoMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

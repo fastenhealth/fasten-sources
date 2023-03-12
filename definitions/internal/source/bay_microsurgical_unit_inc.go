@@ -28,7 +28,6 @@ func GetSourceBayMicrosurgicalUnitInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Bay Microsurgical Unit INC"
 	sourceDef.SourceType = pkg.SourceTypeBayMicrosurgicalUnitInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://carelistings.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

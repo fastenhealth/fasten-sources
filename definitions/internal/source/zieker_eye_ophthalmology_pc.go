@@ -28,7 +28,6 @@ func GetSourceZiekerEyeOphthalmologyPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Zieker Eye Ophthalmology PC"
 	sourceDef.SourceType = pkg.SourceTypeZiekerEyeOphthalmologyPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

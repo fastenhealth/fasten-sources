@@ -28,7 +28,6 @@ func GetSourceMedcorAtNovartis(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Medcor At Novartis"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtNovartis
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

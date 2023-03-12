@@ -28,7 +28,6 @@ func GetSourceArizonaEndoscopyCenterSedationPlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Arizona Endoscopy Center Sedation PLC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaEndoscopyCenterSedationPlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "arizona-endoscopy-center-sedation-plc.jpg"
 	sourceDef.PatientAccessUrl = "https://arizonadigestivehealth.com/arizona-endoscopy-center"
 	sourceDef.SecretKeyPrefix = "nextgen"

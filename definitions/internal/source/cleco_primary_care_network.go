@@ -28,7 +28,6 @@ func GetSourceClecoPrimaryCareNetwork(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "CLECO Primary Care Network"
 	sourceDef.SourceType = pkg.SourceTypeClecoPrimaryCareNetwork
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

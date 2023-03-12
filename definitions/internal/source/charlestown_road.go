@@ -28,7 +28,6 @@ func GetSourceCharlestownRoad(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Charlestown Road"
 	sourceDef.SourceType = pkg.SourceTypeCharlestownRoad
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/content/ahni/en.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

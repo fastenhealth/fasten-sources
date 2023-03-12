@@ -28,7 +28,6 @@ func GetSourceTexasArthritisAndRheumatology(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Texas Arthritis And Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeTexasArthritisAndRheumatology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://texasarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

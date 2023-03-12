@@ -28,7 +28,6 @@ func GetSourceCarondeletRheumatology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Carondelet Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeCarondeletRheumatology
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

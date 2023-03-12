@@ -28,7 +28,6 @@ func GetSourceVeraWholeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Vera Whole Health"
 	sourceDef.SourceType = pkg.SourceTypeVeraWholeHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/VeraWholeHealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

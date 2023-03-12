@@ -28,7 +28,6 @@ func GetSourceLibertySpineAndPainCenterPc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Liberty Spine and Pain Center PC"
 	sourceDef.SourceType = pkg.SourceTypeLibertySpineAndPainCenterPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://libertyspinecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

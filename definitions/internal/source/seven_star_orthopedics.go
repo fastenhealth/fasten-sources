@@ -28,7 +28,6 @@ func GetSourceSevenStarOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Seven Star Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarOrthopedics
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://orthopedic.io/clinic/seven-star-orthopedics-hemet-ca/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

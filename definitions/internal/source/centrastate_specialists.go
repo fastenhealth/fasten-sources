@@ -28,7 +28,6 @@ func GetSourceCentrastateSpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "CentraState Specialists"
 	sourceDef.SourceType = pkg.SourceTypeCentrastateSpecialists
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

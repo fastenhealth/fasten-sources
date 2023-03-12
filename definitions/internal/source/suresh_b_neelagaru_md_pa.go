@@ -28,7 +28,6 @@ func GetSourceSureshBNeelagaruMdPa(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Suresh B Neelagaru MD PA"
 	sourceDef.SourceType = pkg.SourceTypeSureshBNeelagaruMdPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/suresh-neelagaru-c6b7f446-3437-49b8-ab87-1685ee8b411a-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

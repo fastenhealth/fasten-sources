@@ -28,7 +28,6 @@ func GetSourceTurningPointCommunityPrograms(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Turning Point Community Programs"
 	sourceDef.SourceType = pkg.SourceTypeTurningPointCommunityPrograms
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.tpcp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

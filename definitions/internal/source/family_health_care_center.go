@@ -28,7 +28,6 @@ func GetSourceFamilyHealthCareCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Family Health Care Center"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.familyhealthcarecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

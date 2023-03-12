@@ -28,7 +28,6 @@ func GetSourceCompassCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Compass Community Health"
 	sourceDef.SourceType = pkg.SourceTypeCompassCommunityHealth
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "compass-community-health.jpg"
 	sourceDef.PatientAccessUrl = "https://compassch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

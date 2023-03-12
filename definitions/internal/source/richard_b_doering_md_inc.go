@@ -28,7 +28,6 @@ func GetSourceRichardBDoeringMdInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Richard B Doering MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeRichardBDoeringMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-richard-doering-xpq2v"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

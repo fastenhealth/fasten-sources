@@ -28,7 +28,6 @@ func GetSourceCenterForVeinRestorationMdLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Center For Vein Restoration MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeCenterForVeinRestorationMdLlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

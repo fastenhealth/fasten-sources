@@ -28,7 +28,6 @@ func GetSourcePalmettoRetinaCenterLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Palmetto Retina Center LLC"
 	sourceDef.SourceType = pkg.SourceTypePalmettoRetinaCenterLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "palmetto-retina-center-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.palmettoretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

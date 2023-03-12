@@ -28,7 +28,6 @@ func GetSourceCardiologyAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

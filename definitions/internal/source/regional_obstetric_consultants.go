@@ -28,7 +28,6 @@ func GetSourceRegionalObstetricConsultants(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Regional Obstetric Consultants"
 	sourceDef.SourceType = pkg.SourceTypeRegionalObstetricConsultants
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

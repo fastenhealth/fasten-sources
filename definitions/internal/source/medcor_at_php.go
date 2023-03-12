@@ -28,7 +28,6 @@ func GetSourceMedcorAtPhp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Medcor At PHP"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtPhp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

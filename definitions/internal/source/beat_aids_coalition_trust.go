@@ -28,7 +28,6 @@ func GetSourceBeatAidsCoalitionTrust(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "BEAT AIDS Coalition Trust"
 	sourceDef.SourceType = pkg.SourceTypeBeatAidsCoalitionTrust
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

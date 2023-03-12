@@ -28,7 +28,6 @@ func GetSourceCmsMedicalCareCorporation(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CMS Medical Care Corporation"
 	sourceDef.SourceType = pkg.SourceTypeCmsMedicalCareCorporation
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

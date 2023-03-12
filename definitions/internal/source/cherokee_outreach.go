@@ -28,7 +28,6 @@ func GetSourceCherokeeOutreach(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Cherokee Outreach"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeOutreach
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

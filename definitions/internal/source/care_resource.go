@@ -28,7 +28,6 @@ func GetSourceCareResource(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Care Resource"
 	sourceDef.SourceType = pkg.SourceTypeCareResource
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceAffiniaHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Affinia Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeAffiniaHealthcare
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

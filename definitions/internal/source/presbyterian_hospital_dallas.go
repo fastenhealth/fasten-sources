@@ -28,7 +28,6 @@ func GetSourcePresbyterianHospitalDallas(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Presbyterian Hospital Dallas"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianHospitalDallas
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "presbyterian-hospital-dallas.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/texashealthdallas/"
 	sourceDef.SecretKeyPrefix = "nextgen"

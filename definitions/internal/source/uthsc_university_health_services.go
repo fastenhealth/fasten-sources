@@ -28,7 +28,6 @@ func GetSourceUthscUniversityHealthServices(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "UTHSC University Health Services"
 	sourceDef.SourceType = pkg.SourceTypeUthscUniversityHealthServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.uthsc.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

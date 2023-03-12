@@ -28,7 +28,6 @@ func GetSourceNewportBeachInternalMedicineInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Newport Beach Internal Medicine Inc"
 	sourceDef.SourceType = pkg.SourceTypeNewportBeachInternalMedicineInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hoag.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

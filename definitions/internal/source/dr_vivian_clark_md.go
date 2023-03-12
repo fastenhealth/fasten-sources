@@ -28,7 +28,6 @@ func GetSourceDrVivianClarkMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Dr Vivian Clark MD"
 	sourceDef.SourceType = pkg.SourceTypeDrVivianClarkMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/physician/tennessee/elizabethton/vivian-clark-1205889508.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

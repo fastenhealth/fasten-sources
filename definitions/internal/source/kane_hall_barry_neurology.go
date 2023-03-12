@@ -28,7 +28,6 @@ func GetSourceKaneHallBarryNeurology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Kane Hall Barry Neurology"
 	sourceDef.SourceType = pkg.SourceTypeKaneHallBarryNeurology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://kanehallbarry.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

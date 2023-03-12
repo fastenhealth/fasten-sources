@@ -28,7 +28,6 @@ func GetSourceSandhillsRheumatologyLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sandhills Rheumatology LLC"
 	sourceDef.SourceType = pkg.SourceTypeSandhillsRheumatologyLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/sandhills-rheumatology-llc-d110780f-f560-e211-a5a4-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

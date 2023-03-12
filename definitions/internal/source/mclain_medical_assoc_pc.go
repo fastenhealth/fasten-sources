@@ -28,7 +28,6 @@ func GetSourceMclainMedicalAssocPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "McLain Medical Assoc PC"
 	sourceDef.SourceType = pkg.SourceTypeMclainMedicalAssocPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mclainmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

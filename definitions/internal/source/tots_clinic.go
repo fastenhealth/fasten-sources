@@ -28,7 +28,6 @@ func GetSourceTotsClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Tots Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTotsClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "tots-clinic.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/totsclinicdallas"
 	sourceDef.SecretKeyPrefix = "nextgen"

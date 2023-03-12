@@ -28,7 +28,6 @@ func GetSourceHeartmastersMedicalAssociatesPc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Heartmasters Medical Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeHeartmastersMedicalAssociatesPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.heartmastermedicalassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

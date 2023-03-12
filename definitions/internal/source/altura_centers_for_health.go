@@ -28,7 +28,6 @@ func GetSourceAlturaCentersForHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Altura Centers For Health"
 	sourceDef.SourceType = pkg.SourceTypeAlturaCentersForHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://altura.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

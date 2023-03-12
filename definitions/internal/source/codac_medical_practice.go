@@ -28,7 +28,6 @@ func GetSourceCodacMedicalPractice(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "CODAC Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeCodacMedicalPractice
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

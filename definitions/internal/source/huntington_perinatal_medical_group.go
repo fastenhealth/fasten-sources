@@ -28,7 +28,6 @@ func GetSourceHuntingtonPerinatalMedicalGroup(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Huntington Perinatal Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHuntingtonPerinatalMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/obgyn-clinic/1821449190-huntington-perinatal-group-inc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceValleyCardiology1(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Valley Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeValleyCardiology1
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://siliconvalleycardiology.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

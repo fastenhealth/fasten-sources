@@ -28,7 +28,6 @@ func GetSourceWheelerClinicInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Wheeler Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeWheelerClinicInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.wheelerclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

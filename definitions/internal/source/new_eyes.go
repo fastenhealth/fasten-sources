@@ -28,7 +28,6 @@ func GetSourceNewEyes(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "New Eyes"
 	sourceDef.SourceType = pkg.SourceTypeNewEyes
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

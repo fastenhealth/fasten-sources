@@ -28,7 +28,6 @@ func GetSourceAbramsEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Abrams Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeAbramsEyeInstitute
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceAlbuquerqueCenterForRheumatology(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Albuquerque Center for Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeAlbuquerqueCenterForRheumatology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.abqrheum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

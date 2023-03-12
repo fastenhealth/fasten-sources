@@ -28,7 +28,6 @@ func GetSourceColumbusNephrologyInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Columbus Nephrology Inc"
 	sourceDef.SourceType = pkg.SourceTypeColumbusNephrologyInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "columbus-nephrology-inc.svg"
 	sourceDef.PatientAccessUrl = "https://columbusnephrology.com/wp-content/themes/cni-template/img/cn_logo.svg"
 	sourceDef.SecretKeyPrefix = "nextgen"

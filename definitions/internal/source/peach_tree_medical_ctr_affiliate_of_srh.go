@@ -28,7 +28,6 @@ func GetSourcePeachTreeMedicalCtrAffiliateOfSrh(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Peach Tree Medical Ctr Affiliate Of SRH"
 	sourceDef.SourceType = pkg.SourceTypePeachTreeMedicalCtrAffiliateOfSrh
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "peach-tree-medical-ctr-affiliate-of-srh.jpg"
 	sourceDef.PatientAccessUrl = "https://www.peachtreemedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceRkmPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "RKM Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeRkmPrimaryCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.rkmcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

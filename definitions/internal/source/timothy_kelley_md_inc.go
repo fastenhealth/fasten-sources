@@ -28,7 +28,6 @@ func GetSourceTimothyKelleyMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Timothy Kelley MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeTimothyKelleyMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.hoag.org/physician/timothy-f-kelley-m-d/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

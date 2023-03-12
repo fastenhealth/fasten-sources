@@ -28,7 +28,6 @@ func GetSourceMontebelloMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Montebello Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMontebelloMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.injuredcare.com/provider-profile/CA/Montebello/Montebello-Medical-Center-390990"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

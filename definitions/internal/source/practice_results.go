@@ -28,7 +28,6 @@ func GetSourcePracticeResults(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Practice Results"
 	sourceDef.SourceType = pkg.SourceTypePracticeResults
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

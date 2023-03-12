@@ -28,7 +28,6 @@ func GetSourceWestCoastPulmonaryPhysiciansInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "West Coast Pulmonary Physicians Inc"
 	sourceDef.SourceType = pkg.SourceTypeWestCoastPulmonaryPhysiciansInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://wcpulmonary.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

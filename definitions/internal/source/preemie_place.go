@@ -28,7 +28,6 @@ func GetSourcePreemiePlace(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Preemie Place"
 	sourceDef.SourceType = pkg.SourceTypePreemiePlace
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "preemie-place.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

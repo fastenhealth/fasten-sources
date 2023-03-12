@@ -28,7 +28,6 @@ func GetSourceAmarilloPediatricClinicPllc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Amarillo Pediatric Clinic PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloPediatricClinicPllc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://apcamarillo.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

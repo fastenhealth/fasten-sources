@@ -28,7 +28,6 @@ func GetSourceArthritisAndOsteoporosisAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Arthritis And Osteoporosis Associates"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndOsteoporosisAssociates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

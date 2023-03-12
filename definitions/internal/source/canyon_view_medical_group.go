@@ -28,7 +28,6 @@ func GetSourceCanyonViewMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Canyon View Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCanyonViewMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

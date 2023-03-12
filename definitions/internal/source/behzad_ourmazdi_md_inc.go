@@ -28,7 +28,6 @@ func GetSourceBehzadOurmazdiMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Behzad Ourmazdi MD  Inc."
 	sourceDef.SourceType = pkg.SourceTypeBehzadOurmazdiMdInc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

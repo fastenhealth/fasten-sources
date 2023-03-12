@@ -28,7 +28,6 @@ func GetSourceVrfConverted(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "VRF Converted"
 	sourceDef.SourceType = pkg.SourceTypeVrfConverted
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://casetext.com/case/vrf-eye-specialty-group"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

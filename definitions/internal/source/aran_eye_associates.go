@@ -28,7 +28,6 @@ func GetSourceAranEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Aran Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeAranEyeAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.araneye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

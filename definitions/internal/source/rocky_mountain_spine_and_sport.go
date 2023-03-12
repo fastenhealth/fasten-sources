@@ -28,7 +28,6 @@ func GetSourceRockyMountainSpineAndSport(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Rocky Mountain Spine And Sport"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainSpineAndSport
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://rockymountain.urpt.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

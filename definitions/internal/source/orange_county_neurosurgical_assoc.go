@@ -28,7 +28,6 @@ func GetSourceOrangeCountyNeurosurgicalAssoc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Orange County Neurosurgical Assoc"
 	sourceDef.SourceType = pkg.SourceTypeOrangeCountyNeurosurgicalAssoc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ocneurosurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

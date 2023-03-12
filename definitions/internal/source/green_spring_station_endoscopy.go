@@ -28,7 +28,6 @@ func GetSourceGreenSpringStationEndoscopy(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Green Spring Station Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeGreenSpringStationEndoscopy
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

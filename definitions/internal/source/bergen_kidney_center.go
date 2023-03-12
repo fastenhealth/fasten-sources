@@ -28,7 +28,6 @@ func GetSourceBergenKidneyCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Bergen Kidney Center"
 	sourceDef.SourceType = pkg.SourceTypeBergenKidneyCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

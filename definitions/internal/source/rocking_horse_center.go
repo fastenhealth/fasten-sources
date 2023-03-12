@@ -28,7 +28,6 @@ func GetSourceRockingHorseCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Rocking Horse Center"
 	sourceDef.SourceType = pkg.SourceTypeRockingHorseCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.rockinghorsecenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

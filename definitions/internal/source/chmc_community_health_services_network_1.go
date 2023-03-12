@@ -28,7 +28,6 @@ func GetSourceChmcCommunityHealthServicesNetwork1(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "CHMC Community Health Services Network"
 	sourceDef.SourceType = pkg.SourceTypeChmcCommunityHealthServicesNetwork1
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

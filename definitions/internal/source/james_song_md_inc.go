@@ -28,7 +28,6 @@ func GetSourceJamesSongMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "James Song MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeJamesSongMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

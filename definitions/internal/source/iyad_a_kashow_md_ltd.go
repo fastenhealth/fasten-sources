@@ -28,7 +28,6 @@ func GetSourceIyadAKashowMdLtd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Iyad A. Kashow MD LTD"
 	sourceDef.SourceType = pkg.SourceTypeIyadAKashowMdLtd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/iyad-a-kashow-md-ltd-2ad258c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

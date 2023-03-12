@@ -28,7 +28,6 @@ func GetSourceSouthernCaliforniaPrimaryCareMedGrp(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Southern California Primary Care Med Grp"
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaliforniaPrimaryCareMedGrp
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.southern_california_primary_care_medical_group_inc.b42e6eb3f63334e3b9444e263848ad5f.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

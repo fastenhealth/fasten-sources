@@ -28,7 +28,6 @@ func GetSourceMaternalAndFamilyHealthServices(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Maternal & Family Health Services"
 	sourceDef.SourceType = pkg.SourceTypeMaternalAndFamilyHealthServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mfhs.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

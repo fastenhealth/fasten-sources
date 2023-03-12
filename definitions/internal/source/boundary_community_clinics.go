@@ -28,7 +28,6 @@ func GetSourceBoundaryCommunityClinics(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Boundary Community Clinics"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryCommunityClinics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

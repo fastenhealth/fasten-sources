@@ -28,7 +28,6 @@ func GetSourceBayEyeCareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Bay Eye Care Center"
 	sourceDef.SourceType = pkg.SourceTypeBayEyeCareCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "bay-eye-care-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.bayeyecarecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

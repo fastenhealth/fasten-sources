@@ -28,7 +28,6 @@ func GetSourceCentralMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Central Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCentralMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

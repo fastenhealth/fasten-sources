@@ -28,7 +28,6 @@ func GetSourceTaliaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Talia Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeTaliaMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/temecula/talia-medical-group-medspa-x9rlb8#:~:text=TALIA%20MEDICAL%20GROUP%20A%20PROFESSIONAL,(951)%20719%2D1111"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceInternalMedicineAssociatesOfRaleigh(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Internal Medicine Associates Of Raleigh"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAssociatesOfRaleigh
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.imaraleigh.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceSoOrthoAssocOrthoInstOfWKy(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "So Ortho Assoc/Ortho Inst Of W KY"
 	sourceDef.SourceType = pkg.SourceTypeSoOrthoAssocOrthoInstOfWKy
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "so-ortho-assoc-ortho-inst-of-w-ky.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sih.net/locations/orthopaedic-institute-of-southern-illinois-herrin"
 	sourceDef.SecretKeyPrefix = "nextgen"

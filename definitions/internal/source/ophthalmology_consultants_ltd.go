@@ -28,7 +28,6 @@ func GetSourceOphthalmologyConsultantsLtd(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Ophthalmology Consultants Ltd"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmologyConsultantsLtd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ophthalmology-consultants-ltd.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/OpthalmologyConsultants/"
 	sourceDef.SecretKeyPrefix = "nextgen"

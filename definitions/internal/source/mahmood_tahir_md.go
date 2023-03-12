@@ -28,7 +28,6 @@ func GetSourceMahmoodTahirMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Mahmood Tahir MD"
 	sourceDef.SourceType = pkg.SourceTypeMahmoodTahirMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://care.everydayhealth.com/providers/843117/dr-mahmood-tahir-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceMarloweDRossMdFccpInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Marlowe D. Ross MD FCCP Inc"
 	sourceDef.SourceType = pkg.SourceTypeMarloweDRossMdFccpInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ca.ltddir.com/companies/marlowe-d-ross-md-fccp-a-medical-corporation/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

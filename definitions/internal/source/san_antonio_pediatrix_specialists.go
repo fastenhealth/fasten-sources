@@ -28,7 +28,6 @@ func GetSourceSanAntonioPediatrixSpecialists(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "San Antonio Pediatrix Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioPediatrixSpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.baptistmedicalnetwork.com/specialties/pediatrics"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

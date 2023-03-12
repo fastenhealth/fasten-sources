@@ -28,7 +28,6 @@ func GetSourceHilltop(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Hilltop"
 	sourceDef.SourceType = pkg.SourceTypeHilltop
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.ahni.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

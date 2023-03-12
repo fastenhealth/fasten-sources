@@ -28,7 +28,6 @@ func GetSourceScarsManagementServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "SCARS Management Services"
 	sourceDef.SourceType = pkg.SourceTypeScarsManagementServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ocskincancer.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

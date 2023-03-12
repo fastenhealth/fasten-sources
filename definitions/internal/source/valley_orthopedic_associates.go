@@ -28,7 +28,6 @@ func GetSourceValleyOrthopedicAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Valley Orthopedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeValleyOrthopedicAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.valleyortho.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAsianPacificHealthCareVentureInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Asian Pacific Health Care Venture Inc"
 	sourceDef.SourceType = pkg.SourceTypeAsianPacificHealthCareVentureInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "asian-pacific-health-care-venture-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.aphcv.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

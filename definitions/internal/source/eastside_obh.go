@@ -28,7 +28,6 @@ func GetSourceEastsideObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Eastside OBH"
 	sourceDef.SourceType = pkg.SourceTypeEastsideObh
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.piedmont.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

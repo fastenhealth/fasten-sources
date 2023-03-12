@@ -28,7 +28,6 @@ func GetSourceHeidiMayerOd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "HEIDI MAYER OD"
 	sourceDef.SourceType = pkg.SourceTypeHeidiMayerOd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

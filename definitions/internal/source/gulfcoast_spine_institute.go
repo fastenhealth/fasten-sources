@@ -28,7 +28,6 @@ func GetSourceGulfcoastSpineInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Gulfcoast Spine Institute"
 	sourceDef.SourceType = pkg.SourceTypeGulfcoastSpineInstitute
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gulfcoast-spine-institute.svg"
 	sourceDef.PatientAccessUrl = "https://www.biospine.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

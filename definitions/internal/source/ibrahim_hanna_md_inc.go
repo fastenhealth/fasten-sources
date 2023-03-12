@@ -28,7 +28,6 @@ func GetSourceIbrahimHannaMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Ibrahim Hanna MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeIbrahimHannaMdInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.emanatehealth.org/doctors/providers/ibrahim-hanna-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceChicagoVascularAsc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Chicago Vascular ASC"
 	sourceDef.SourceType = pkg.SourceTypeChicagoVascularAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

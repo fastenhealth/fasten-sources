@@ -28,7 +28,6 @@ func GetSourceBirminghamHeartClinicPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Birmingham Heart Clinic PC"
 	sourceDef.SourceType = pkg.SourceTypeBirminghamHeartClinicPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

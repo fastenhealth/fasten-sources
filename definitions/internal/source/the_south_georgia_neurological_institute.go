@@ -28,7 +28,6 @@ func GetSourceTheSouthGeorgiaNeurologicalInstitute(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "The South Georgia Neurological Institute"
 	sourceDef.SourceType = pkg.SourceTypeTheSouthGeorgiaNeurologicalInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://nopage.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

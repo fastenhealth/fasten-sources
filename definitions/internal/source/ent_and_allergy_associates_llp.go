@@ -28,7 +28,6 @@ func GetSourceEntAndAllergyAssociatesLlp(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "ENT And Allergy Associates LLP"
 	sourceDef.SourceType = pkg.SourceTypeEntAndAllergyAssociatesLlp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

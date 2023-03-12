@@ -28,7 +28,6 @@ func GetSourceGeorgiaEyeInstituteSurgeryCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Georgia Eye Institute Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaEyeInstituteSurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://gaeyeinstitutesurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

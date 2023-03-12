@@ -28,7 +28,6 @@ func GetSourceEanwAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "EANW ASC"
 	sourceDef.SourceType = pkg.SourceTypeEanwAsc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "eanw-asc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.eanw.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

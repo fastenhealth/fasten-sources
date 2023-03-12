@@ -28,7 +28,6 @@ func GetSourceBakersfieldFamilyMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Bakersfield Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBakersfieldFamilyMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

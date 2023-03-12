@@ -28,7 +28,6 @@ func GetSourceUrologicalAssociatesOfSouthernAzPc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Urological Associates Of Southern AZ PC"
 	sourceDef.SourceType = pkg.SourceTypeUrologicalAssociatesOfSouthernAzPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.unitedurology.com/arizona-urology-specialists-tucson/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

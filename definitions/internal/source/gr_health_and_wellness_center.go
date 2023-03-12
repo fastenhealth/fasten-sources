@@ -28,7 +28,6 @@ func GetSourceGrHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "GR Health And Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeGrHealthAndWellnessCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "gr-health-and-wellness-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.grandronde.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

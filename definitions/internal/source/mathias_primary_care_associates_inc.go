@@ -28,7 +28,6 @@ func GetSourceMathiasPrimaryCareAssociatesInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Mathias Primary Care Associates Inc."
 	sourceDef.SourceType = pkg.SourceTypeMathiasPrimaryCareAssociatesInc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1508524083-mathias-primary-care-associates%2C-inc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

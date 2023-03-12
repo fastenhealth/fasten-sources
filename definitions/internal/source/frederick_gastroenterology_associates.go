@@ -28,7 +28,6 @@ func GetSourceFrederickGastroenterologyAssociates(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Frederick Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeFrederickGastroenterologyAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "frederick-gastroenterology-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fgamd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

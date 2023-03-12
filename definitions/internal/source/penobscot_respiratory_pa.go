@@ -28,7 +28,6 @@ func GetSourcePenobscotRespiratoryPa(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Penobscot Respiratory PA"
 	sourceDef.SourceType = pkg.SourceTypePenobscotRespiratoryPa
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://northernlighthealth.org/Our-System/Eastern-Maine-Medical-Center/Care-Centers-Services/Respiratory-Care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

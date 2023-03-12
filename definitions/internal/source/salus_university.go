@@ -28,7 +28,6 @@ func GetSourceSalusUniversity(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Salus University"
 	sourceDef.SourceType = pkg.SourceTypeSalusUniversity
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.salus.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceWhAmbulatorySurgeryCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "WH Ambulatory Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeWhAmbulatorySurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.wilmingtonhealth.com/specialties/robotic-surgery/general-surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCincinnatiAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cincinnati ASC"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

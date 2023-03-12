@@ -28,7 +28,6 @@ func GetSourceProlianceHandWristAndElbowPhysicians(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Proliance Hand Wrist & Elbow Physicians"
 	sourceDef.SourceType = pkg.SourceTypeProlianceHandWristAndElbowPhysicians
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "proliance-hand-wrist-and-elbow-physicians.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

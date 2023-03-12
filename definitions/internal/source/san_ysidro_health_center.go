@@ -28,7 +28,6 @@ func GetSourceSanYsidroHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "San Ysidro Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSanYsidroHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.syhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

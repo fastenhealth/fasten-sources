@@ -28,7 +28,6 @@ func GetSourceMerrillvillePainReliefCenterPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Merrillville Pain Relief Center PC"
 	sourceDef.SourceType = pkg.SourceTypeMerrillvillePainReliefCenterPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

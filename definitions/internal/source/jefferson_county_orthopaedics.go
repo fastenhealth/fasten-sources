@@ -28,7 +28,6 @@ func GetSourceJeffersonCountyOrthopaedics(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Jefferson County Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeJeffersonCountyOrthopaedics
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "jefferson-county-orthopaedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mercy.net"
 	sourceDef.SecretKeyPrefix = "nextgen"

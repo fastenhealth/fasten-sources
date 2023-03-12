@@ -28,7 +28,6 @@ func GetSourceBoulderBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Boulder Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeBoulderBoneAndJoint
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

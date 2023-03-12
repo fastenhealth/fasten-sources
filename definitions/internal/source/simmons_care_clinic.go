@@ -28,7 +28,6 @@ func GetSourceSimmonsCareClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Simmons Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSimmonsCareClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.simmonscareclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

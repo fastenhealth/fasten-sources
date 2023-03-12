@@ -28,7 +28,6 @@ func GetSourceAlexanderLChengMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Alexander L Cheng MD"
 	sourceDef.SourceType = pkg.SourceTypeAlexanderLChengMd
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "alexander-l-cheng-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

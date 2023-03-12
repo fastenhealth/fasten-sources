@@ -28,7 +28,6 @@ func GetSourceBakerEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Baker Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeBakerEyeInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://bakereyeinstitutedavidlittletonbakermd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceNcdpsIbhs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "NCDPS IBHS"
 	sourceDef.SourceType = pkg.SourceTypeNcdpsIbhs
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/NCPublicSafety/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

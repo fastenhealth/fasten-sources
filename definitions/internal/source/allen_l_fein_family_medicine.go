@@ -28,7 +28,6 @@ func GetSourceAllenLFeinFamilyMedicine(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Allen L. Fein Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAllenLFeinFamilyMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.stonybrookmedicine.edu/AllenFein"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceArcadiaPrimaryCarePhysicians(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Arcadia Primary Care Physicians"
 	sourceDef.SourceType = pkg.SourceTypeArcadiaPrimaryCarePhysicians
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

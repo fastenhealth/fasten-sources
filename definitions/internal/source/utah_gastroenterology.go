@@ -28,7 +28,6 @@ func GetSourceUtahGastroenterology(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Utah Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeUtahGastroenterology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/UtahGastroenterology/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceFamilyHealthcareOfPotomac(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Family Healthcare Of Potomac"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcareOfPotomac
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/family-health-care-of-potomac-9fcac683-0671-e411-99e8-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

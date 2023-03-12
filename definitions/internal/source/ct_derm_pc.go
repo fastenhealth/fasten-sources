@@ -28,7 +28,6 @@ func GetSourceCtDermPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "CT Derm PC"
 	sourceDef.SourceType = pkg.SourceTypeCtDermPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/mwlite/company/ct-derm-pc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

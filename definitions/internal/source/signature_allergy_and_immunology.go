@@ -28,7 +28,6 @@ func GetSourceSignatureAllergyAndImmunology(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Signature Allergy and Immunology"
 	sourceDef.SourceType = pkg.SourceTypeSignatureAllergyAndImmunology
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Name: Signature Allergy and Immunology Address: 425 N New Ballas Road City: Saint Louis Zip: 63141 State: Missouri Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

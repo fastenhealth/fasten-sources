@@ -28,7 +28,6 @@ func GetSourceMannEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Mann Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeMannEyeInstitute
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.manneye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

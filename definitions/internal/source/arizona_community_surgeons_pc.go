@@ -28,7 +28,6 @@ func GetSourceArizonaCommunitySurgeonsPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Arizona Community Surgeons PC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaCommunitySurgeonsPc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

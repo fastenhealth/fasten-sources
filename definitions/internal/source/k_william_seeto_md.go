@@ -28,7 +28,6 @@ func GetSourceKWilliamSeetoMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "K William Seeto MD"
 	sourceDef.SourceType = pkg.SourceTypeKWilliamSeetoMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.salemhealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

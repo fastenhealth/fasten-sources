@@ -28,7 +28,6 @@ func GetSourceVascularSurgeryAssociatesLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Vascular Surgery Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeVascularSurgeryAssociatesLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.vascularsurgeryassociates.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

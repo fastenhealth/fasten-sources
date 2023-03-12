@@ -28,7 +28,6 @@ func GetSourceWoodallWilsonAndManleyLlp(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Woodall Wilson and Manley LLP"
 	sourceDef.SourceType = pkg.SourceTypeWoodallWilsonAndManleyLlp
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

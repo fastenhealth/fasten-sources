@@ -28,7 +28,6 @@ func GetSourceAmericanAccessCareOfBaltimore(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "American Access Care Of Baltimore"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfBaltimore
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://npidb.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

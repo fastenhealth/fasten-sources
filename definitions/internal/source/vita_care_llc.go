@@ -28,7 +28,6 @@ func GetSourceVitaCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Vita Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeVitaCareLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://nopage.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

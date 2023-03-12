@@ -28,7 +28,6 @@ func GetSourceAmarilloAreaHealthcareSpecialists(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Amarillo Area Healthcare Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloAreaHealthcareSpecialists
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

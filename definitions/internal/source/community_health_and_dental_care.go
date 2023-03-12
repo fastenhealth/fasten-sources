@@ -28,7 +28,6 @@ func GetSourceCommunityHealthAndDentalCare(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Community Health And Dental Care"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthAndDentalCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://ch-dc.org/contact/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

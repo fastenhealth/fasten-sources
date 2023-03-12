@@ -28,7 +28,6 @@ func GetSourceGlenviewMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Glenview Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGlenviewMedicalClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/az-arizona/glendale/glenview-medical-clinic-x9w9w5a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

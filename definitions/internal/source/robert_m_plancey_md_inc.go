@@ -28,7 +28,6 @@ func GetSourceRobertMPlanceyMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Robert M Plancey MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeRobertMPlanceyMdInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "robert-m-plancey-md-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/in/robert-plancey-md-09125b158"
 	sourceDef.SecretKeyPrefix = "nextgen"

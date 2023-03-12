@@ -28,7 +28,6 @@ func GetSourceMindBodyConnection(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mind Body Connection"
 	sourceDef.SourceType = pkg.SourceTypeMindBodyConnection
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "mind-body-connection.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.mbctherapy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

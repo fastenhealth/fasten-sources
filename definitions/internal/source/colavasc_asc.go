@@ -28,7 +28,6 @@ func GetSourceColavascAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Colavasc ASC"
 	sourceDef.SourceType = pkg.SourceTypeColavascAsc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

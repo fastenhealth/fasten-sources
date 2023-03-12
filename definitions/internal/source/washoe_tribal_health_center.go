@@ -28,7 +28,6 @@ func GetSourceWashoeTribalHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Washoe Tribal Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWashoeTribalHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.washoetribe.us/contents/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

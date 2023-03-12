@@ -28,7 +28,6 @@ func GetSourceNorthwestOrthopaedicSportsMedicine(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Northwest Orthopaedic Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestOrthopaedicSportsMedicine
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.nworthopaedicspecialists.com/specialties/sports-medicine/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

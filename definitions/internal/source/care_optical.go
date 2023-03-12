@@ -28,7 +28,6 @@ func GetSourceCareOptical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Care Optical"
 	sourceDef.SourceType = pkg.SourceTypeCareOptical
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.care.com/b/l/first-quality-home-care-inc/miami-fl"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourcePineywoodsClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Pineywoods Clinic"
 	sourceDef.SourceType = pkg.SourceTypePineywoodsClinic
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

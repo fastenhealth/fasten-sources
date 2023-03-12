@@ -28,7 +28,6 @@ func GetSourceFisherPediatricClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Fisher Pediatric Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFisherPediatricClinic
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "fisher-pediatric-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.lcmchealth.org/find-a-provider/marc-a-fisher-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"

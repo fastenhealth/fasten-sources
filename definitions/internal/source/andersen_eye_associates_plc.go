@@ -28,7 +28,6 @@ func GetSourceAndersenEyeAssociatesPlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Andersen Eye Associates PLC"
 	sourceDef.SourceType = pkg.SourceTypeAndersenEyeAssociatesPlc
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

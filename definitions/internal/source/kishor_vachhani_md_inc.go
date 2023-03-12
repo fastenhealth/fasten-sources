@@ -28,7 +28,6 @@ func GetSourceKishorVachhaniMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kishor Vachhani MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeKishorVachhaniMdInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "kishor-vachhani-md-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/kishor-vachhani/"
 	sourceDef.SecretKeyPrefix = "nextgen"

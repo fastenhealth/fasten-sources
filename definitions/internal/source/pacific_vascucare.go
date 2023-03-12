@@ -28,7 +28,6 @@ func GetSourcePacificVascucare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Pacific VascuCare"
 	sourceDef.SourceType = pkg.SourceTypePacificVascucare
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "pacific-vascucare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/pacific-vascucare/"
 	sourceDef.SecretKeyPrefix = "nextgen"

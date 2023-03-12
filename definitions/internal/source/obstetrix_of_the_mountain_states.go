@@ -28,7 +28,6 @@ func GetSourceObstetrixOfTheMountainStates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Obstetrix of the Mountain States"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixOfTheMountainStates
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

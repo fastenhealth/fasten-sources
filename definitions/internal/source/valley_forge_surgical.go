@@ -28,7 +28,6 @@ func GetSourceValleyForgeSurgical(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Valley Forge Surgical"
 	sourceDef.SourceType = pkg.SourceTypeValleyForgeSurgical
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/valley-forge-surgical-associates-phoenixville"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

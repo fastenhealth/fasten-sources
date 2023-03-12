@@ -28,7 +28,6 @@ func GetSourceHarmanEyeCenterDominionEyeCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Harman Eye Center/Dominion Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeHarmanEyeCenterDominionEyeCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.harmaneye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

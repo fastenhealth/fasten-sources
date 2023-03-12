@@ -28,7 +28,6 @@ func GetSourceJcmc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "JCMC"
 	sourceDef.SourceType = pkg.SourceTypeJcmc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://jcmchealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

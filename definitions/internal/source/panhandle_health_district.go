@@ -28,7 +28,6 @@ func GetSourcePanhandleHealthDistrict(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Panhandle Health District"
 	sourceDef.SourceType = pkg.SourceTypePanhandleHealthDistrict
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://panhandlehealthdistrict.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

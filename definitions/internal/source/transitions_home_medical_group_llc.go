@@ -28,7 +28,6 @@ func GetSourceTransitionsHomeMedicalGroupLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Transitions Home Medical Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeTransitionsHomeMedicalGroupLlc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/illinois/huntley/transitions-home-medical-group-llc-7315124112.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

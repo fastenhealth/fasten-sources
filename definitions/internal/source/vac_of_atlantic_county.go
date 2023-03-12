@@ -28,7 +28,6 @@ func GetSourceVacOfAtlanticCounty(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "VAC Of Atlantic County"
 	sourceDef.SourceType = pkg.SourceTypeVacOfAtlanticCounty
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://atlanticcountyvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

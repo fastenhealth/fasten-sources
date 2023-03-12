@@ -28,7 +28,6 @@ func GetSourceEleanorJFiguerres(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Eleanor J. Figuerres"
 	sourceDef.SourceType = pkg.SourceTypeEleanorJFiguerres
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.dreleanorfiguerres.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

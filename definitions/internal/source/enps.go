@@ -28,7 +28,6 @@ func GetSourceEnps(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "ENPS"
 	sourceDef.SourceType = pkg.SourceTypeEnps
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

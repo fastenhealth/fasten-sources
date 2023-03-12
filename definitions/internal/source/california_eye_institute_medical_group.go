@@ -28,7 +28,6 @@ func GetSourceCaliforniaEyeInstituteMedicalGroup(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "California Eye Institute Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaEyeInstituteMedicalGroup
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

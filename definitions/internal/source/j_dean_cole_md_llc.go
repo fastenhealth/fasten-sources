@@ -28,7 +28,6 @@ func GetSourceJDeanColeMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "J Dean Cole MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeJDeanColeMdLlc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "j-dean-cole-md-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.arthritis-health.com/doctor/orthopedic-surgeon/j-dean-cole-orlando-fl"
 	sourceDef.SecretKeyPrefix = "nextgen"

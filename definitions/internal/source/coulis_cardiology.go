@@ -28,7 +28,6 @@ func GetSourceCoulisCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Coulis Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeCoulisCardiology
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "coulis-cardiology.jpg"
 	sourceDef.PatientAccessUrl = "https://couliscardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

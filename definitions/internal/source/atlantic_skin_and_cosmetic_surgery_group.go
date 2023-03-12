@@ -28,7 +28,6 @@ func GetSourceAtlanticSkinAndCosmeticSurgeryGroup(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Atlantic Skin & Cosmetic Surgery Group"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticSkinAndCosmeticSurgeryGroup
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.delawarevalleyderm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceLutherMangobaMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Luther Mangoba MD"
 	sourceDef.SourceType = pkg.SourceTypeLutherMangobaMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.riversideweightloss.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

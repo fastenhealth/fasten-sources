@@ -28,7 +28,6 @@ func GetSourceWesthamptonPrimaryCareCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Westhampton Primary Care Center"
 	sourceDef.SourceType = pkg.SourceTypeWesthamptonPrimaryCareCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://southampton.stonybrookmedicine.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

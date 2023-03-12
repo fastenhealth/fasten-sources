@@ -28,7 +28,6 @@ func GetSourceJimCKimMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Jim C Kim MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeJimCKimMdInc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "jim-c-kim-md-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.aracbakersfield.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourceTheCenterForPainAndSupportiveCare(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "The Center For Pain And Supportive Care"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForPainAndSupportiveCare
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://azcpsc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceCftss(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "CFTSS"
 	sourceDef.SourceType = pkg.SourceTypeCftss
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,7 +28,6 @@ func GetSourceAmbulatoryCareSpecialistsOfCranberry(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Ambulatory Care Specialists Of Cranberry"
 	sourceDef.SourceType = pkg.SourceTypeAmbulatoryCareSpecialistsOfCranberry
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

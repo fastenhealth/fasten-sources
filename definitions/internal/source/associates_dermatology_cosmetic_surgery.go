@@ -28,7 +28,6 @@ func GetSourceAssociatesDermatologyCosmeticSurgery(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Associates-Dermatology Cosmetic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesDermatologyCosmeticSurgery
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3NZ1E5QA7CYB72O3YK4STM8EQ5IB5T?assignment_id=3JV9LGBJW7BVSD0Q9NX6SNVRSM0OGH&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceAchieveConcierge(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Achieve Concierge"
 	sourceDef.SourceType = pkg.SourceTypeAchieveConcierge
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

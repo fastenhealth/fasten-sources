@@ -28,7 +28,6 @@ func GetSourceMaheshMehtaMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mahesh Mehta MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMaheshMehtaMdPllc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "mahesh-mehta-md-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.myccmc.org/staff/bio.php?doc_id=85499&specialty=Pain%20Management&sub=Static"
 	sourceDef.SecretKeyPrefix = "nextgen"

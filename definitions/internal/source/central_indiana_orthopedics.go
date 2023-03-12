@@ -28,7 +28,6 @@ func GetSourceCentralIndianaOrthopedics(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Central Indiana Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeCentralIndianaOrthopedics
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

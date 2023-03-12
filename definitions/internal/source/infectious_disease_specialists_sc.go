@@ -28,7 +28,6 @@ func GetSourceInfectiousDiseaseSpecialistsSc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Infectious Disease Specialists SC"
 	sourceDef.SourceType = pkg.SourceTypeInfectiousDiseaseSpecialistsSc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.idisease.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

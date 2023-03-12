@@ -28,7 +28,6 @@ func GetSourceVidaliaMedicalAssociatesPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Vidalia Medical Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeVidaliaMedicalAssociatesPc
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://prevention.md/index.cms"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

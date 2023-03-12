@@ -28,7 +28,6 @@ func GetSourceCvpSurgeryCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "CVP Surgery Centers"
 	sourceDef.SourceType = pkg.SourceTypeCvpSurgeryCenters
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "cvp-surgery-centers.svg"
 	sourceDef.PatientAccessUrl = "https://www.cincinnatieye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

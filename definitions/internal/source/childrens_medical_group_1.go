@@ -28,7 +28,6 @@ func GetSourceChildrensMedicalGroup1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "CHILDREN'S MEDICAL GROUP"
 	sourceDef.SourceType = pkg.SourceTypeChildrensMedicalGroup1
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

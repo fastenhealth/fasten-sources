@@ -28,7 +28,6 @@ func GetSourcePediatricSpecialistsOfNashville(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Pediatric Specialists Of Nashville"
 	sourceDef.SourceType = pkg.SourceTypePediatricSpecialistsOfNashville
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.tristarmedgroup.com/locations/tristar-medical-group-childrens-specialists"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

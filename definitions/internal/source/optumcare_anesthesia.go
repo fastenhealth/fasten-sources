@@ -28,7 +28,6 @@ func GetSourceOptumcareAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "OptumCare Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareAnesthesia
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nv-nevada/las-vegas/optumcare-anesthesia-x6q6n6"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

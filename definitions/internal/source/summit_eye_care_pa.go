@@ -28,7 +28,6 @@ func GetSourceSummitEyeCarePa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Summit Eye Care PA"
 	sourceDef.SourceType = pkg.SourceTypeSummitEyeCarePa
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "summit-eye-care-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.summiteyecare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,6 @@ func GetSourcePainCentersOfWisconsinSaukPrairie(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pain Centers Of Wisconsin Sauk Prairie"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfWisconsinSaukPrairie
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.saukprairiehealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

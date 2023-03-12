@@ -28,7 +28,6 @@ func GetSourceMillerOrthopedicSpecialists(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Miller Orthopedic Specialists"
 	sourceDef.SourceType = pkg.SourceTypeMillerOrthopedicSpecialists
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.millerortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

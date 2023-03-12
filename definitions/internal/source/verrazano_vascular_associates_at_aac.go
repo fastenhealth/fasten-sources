@@ -28,7 +28,6 @@ func GetSourceVerrazanoVascularAssociatesAtAac(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Verrazano Vascular Associates At AAC"
 	sourceDef.SourceType = pkg.SourceTypeVerrazanoVascularAssociatesAtAac
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/verrazano-vascular-associates/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceFqhcOfLaneCounty(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "FQHC of Lane County"
 	sourceDef.SourceType = pkg.SourceTypeFqhcOfLaneCounty
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Name: FQHC of Lane County Address: 2073 Olympic Street City: Springfield Zip: 974773413 State: Oregon Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

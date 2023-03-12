@@ -28,7 +28,6 @@ func GetSourceWaianaeCoastCompHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Waianae Coast Comp Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWaianaeCoastCompHealthCenter
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "waianae-coast-comp-health-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.wcchc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

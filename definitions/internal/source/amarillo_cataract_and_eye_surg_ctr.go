@@ -28,7 +28,6 @@ func GetSourceAmarilloCataractAndEyeSurgCtr(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Amarillo Cataract And Eye Surg Ctr"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloCataractAndEyeSurgCtr
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "amarillo-cataract-and-eye-surg-ctr.jpg"
 	sourceDef.PatientAccessUrl = "https://www.paneye.com/amarillocataract"
 	sourceDef.SecretKeyPrefix = "nextgen"

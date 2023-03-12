@@ -28,7 +28,6 @@ func GetSourceCardiacEpConsultantsSc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cardiac EP Consultants SC"
 	sourceDef.SourceType = pkg.SourceTypeCardiacEpConsultantsSc
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "cardiac-ep-consultants-sc.svg"
 	sourceDef.PatientAccessUrl = "https://doctors.prismahealth.org/specialty/Electrophysiology"
 	sourceDef.SecretKeyPrefix = "nextgen"

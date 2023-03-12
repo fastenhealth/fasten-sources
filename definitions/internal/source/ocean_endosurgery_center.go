@@ -28,7 +28,6 @@ func GetSourceOceanEndosurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Ocean Endosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeOceanEndosurgeryCenter
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

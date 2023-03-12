@@ -28,7 +28,6 @@ func GetSourceTomasAranetaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Tomas Araneta MD"
 	sourceDef.SourceType = pkg.SourceTypeTomasAranetaMd
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://draraneta.health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,6 @@ func GetSourceTheWomensClinicOfNorthernColorado(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "The Women's Clinic Of Northern Colorado"
 	sourceDef.SourceType = pkg.SourceTypeTheWomensClinicOfNorthernColorado
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://womensclinicnoco.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

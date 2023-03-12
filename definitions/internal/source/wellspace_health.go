@@ -28,7 +28,6 @@ func GetSourceWellspaceHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "WellSpace Health"
 	sourceDef.SourceType = pkg.SourceTypeWellspaceHealth
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.wellspacehealth.org/location/j-street-community-health-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

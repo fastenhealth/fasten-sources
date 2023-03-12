@@ -28,7 +28,6 @@ func GetSourceWashingtonCountyMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Washington County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonCountyMemorialHospital
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "washington-county-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://wcmhosp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

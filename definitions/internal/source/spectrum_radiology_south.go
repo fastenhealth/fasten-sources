@@ -28,7 +28,6 @@ func GetSourceSpectrumRadiologySouth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Spectrum Radiology South"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumRadiologySouth
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "spectrum-radiology-south.svg"
 	sourceDef.PatientAccessUrl = "https://spectrumhcp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

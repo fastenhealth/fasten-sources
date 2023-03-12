@@ -28,7 +28,6 @@ func GetSourceMedcorAtLrri(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Medcor At LRRI"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtLrri
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "Homehttps://medcor.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

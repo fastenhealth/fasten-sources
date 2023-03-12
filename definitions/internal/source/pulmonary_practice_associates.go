@@ -28,7 +28,6 @@ func GetSourcePulmonaryPracticeAssociates(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pulmonary Practice Associates"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryPracticeAssociates
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://pulmonarypracticeassociates.com/wp-content/uploads/2019/11/Logo-PNG-Pulmonary-Practice-Associates-1.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
