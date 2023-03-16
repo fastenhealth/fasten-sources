@@ -27,7 +27,7 @@ func GetSourceClearHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Clear Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeClearHealthAlliance
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

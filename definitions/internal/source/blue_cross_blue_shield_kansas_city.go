@@ -27,7 +27,7 @@ func GetSourceBlueCrossBlueShieldKansasCity(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Blue Cross Blue Shield Kansas City"
 	sourceDef.SourceType = pkg.SourceTypeBlueCrossBlueShieldKansasCity
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

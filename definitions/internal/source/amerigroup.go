@@ -27,7 +27,7 @@ func GetSourceAmerigroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Amerigroup"
 	sourceDef.SourceType = pkg.SourceTypeAmerigroup
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

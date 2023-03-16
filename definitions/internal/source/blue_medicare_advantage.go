@@ -27,7 +27,7 @@ func GetSourceBlueMedicareAdvantage(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Blue Medicare Advantage"
 	sourceDef.SourceType = pkg.SourceTypeBlueMedicareAdvantage
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

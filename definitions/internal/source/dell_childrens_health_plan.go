@@ -27,7 +27,7 @@ func GetSourceDellChildrensHealthPlan(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Dell Children's Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeDellChildrensHealthPlan
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

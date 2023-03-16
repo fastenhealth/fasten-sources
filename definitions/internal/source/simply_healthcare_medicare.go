@@ -27,7 +27,7 @@ func GetSourceSimplyHealthcareMedicare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Simply Healthcare Medicare"
 	sourceDef.SourceType = pkg.SourceTypeSimplyHealthcareMedicare
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

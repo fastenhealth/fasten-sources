@@ -27,7 +27,7 @@ func GetSourceSummitCommunityCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Summit Community Care"
 	sourceDef.SourceType = pkg.SourceTypeSummitCommunityCare
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

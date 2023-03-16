@@ -27,7 +27,7 @@ func GetSourceWellpoint(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Wellpoint"
 	sourceDef.SourceType = pkg.SourceTypeWellpoint
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

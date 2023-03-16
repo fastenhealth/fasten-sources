@@ -27,7 +27,7 @@ func GetSourceEmpireBlue(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Empire Blue"
 	sourceDef.SourceType = pkg.SourceTypeEmpireBlue
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

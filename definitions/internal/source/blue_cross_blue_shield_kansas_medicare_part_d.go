@@ -27,7 +27,7 @@ func GetSourceBlueCrossBlueShieldKansasMedicarePartD(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Blue Cross Blue Shield Kansas  Medicare Part D"
 	sourceDef.SourceType = pkg.SourceTypeBlueCrossBlueShieldKansasMedicarePartD
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }

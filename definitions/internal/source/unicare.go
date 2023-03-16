@@ -27,7 +27,7 @@ func GetSourceUnicare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Unicare"
 	sourceDef.SourceType = pkg.SourceTypeUnicare
-	sourceDef.SecretKeyPrefix = "careevolution"
+	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err
 }
