@@ -54,7 +54,7 @@ This list of platforms is sourced from various locations, including:
 | [Medicalmine](https://www.charmhealth.com/resources/fhir/index.html#api-endpoints)                                                                                                 |                                       |                                    |                                                         |                    |
 | [Microfour](https://oauth.patientwebportal.com/Fhir/Documentation#serviceBaseUrls)                                                                                                 |                                       |                                    |                                                         |                    |
 | [Magilenenterprises](https://www.qsmartcare.com/api-documentation.html)                                                                                                            |                                       |                                    |                                                         |                    |
-
+| [Patient First](https://www.patientfirst.com/applicationaccessapi) |  |  |  |  |
 # Research
 
 > https://www.healthit.gov/sites/default/files/facas/2018-10-17_HITAC_FHIR_Presentation_508.pdf
