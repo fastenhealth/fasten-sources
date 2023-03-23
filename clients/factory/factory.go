@@ -13761,6 +13761,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return sandbox.GetSourceClientAthena(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthit:
 		return sandbox.GetSourceClientHealthit(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeKaiser:
+		return sandbox.GetSourceClientKaiser(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLogica:
 		return sandbox.GetSourceClientLogica(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	default:

@@ -24,7 +24,6 @@ func GetSourceCareevolution(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"query"}
 	sourceDef.Audience = "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4"
-	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4"
 	// retrieve client-id, if available

@@ -6880,5 +6880,6 @@ const (
 	// sandbox
 	SourceTypeAthena   SourceType = "athena"
 	SourceTypeHealthit SourceType = "healthit"
+	SourceTypeKaiser   SourceType = "kaiser"
 	SourceTypeLogica   SourceType = "logica"
 )

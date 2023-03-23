@@ -30,7 +30,6 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART"
-	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART"
 	// retrieve client-id, if available
