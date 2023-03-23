@@ -18,7 +18,7 @@ func GetSourceKaiser(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.TokenEndpoint = "https://kpx-service-bus.kp.org/service/kpx/v1/oauth2/token"
 
 	sourceDef.Issuer = "https://kpx-service-bus.kp.org/service/cdo/siae/healthplankpxv1rc/FHIR/api"
-	sourceDef.Scopes = []string{"fhirUser", "launch/patient", "patient/*.read", "profile"}
+	sourceDef.Scopes = []string{"launch/patient", "patient/*.read", "profile"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
