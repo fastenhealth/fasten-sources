@@ -791,6 +791,43 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 
 		break
+	case fhir401.Media:
+
+		if sourceResourceTyped.Type != nil && sourceResourceTyped.Type.Text != nil {
+			sortTitle = sourceResourceTyped.Type.Text
+		} else if sourceResourceTyped.Type != nil && len(sourceResourceTyped.Type.Coding) > 0 && sourceResourceTyped.Type.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.Type.Coding[0].Display
+		}
+
+		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.BasedOn != nil && len(sourceResourceTyped.BasedOn) > 0 && sourceResourceTyped.BasedOn[0].Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.BasedOn[0].Reference)
+		}
+
+		if sourceResourceTyped.Subject != nil && sourceResourceTyped.Subject.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Subject.Reference)
+		}
+
+		if sourceResourceTyped.Encounter != nil && sourceResourceTyped.Encounter.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Encounter.Reference)
+		}
+
+		if sourceResourceTyped.Operator != nil && sourceResourceTyped.Operator.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Operator.Reference)
+		}
+
+		if sourceResourceTyped.Device != nil && sourceResourceTyped.Device.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Device.Reference)
+		}
+
+		if sourceResourceTyped.Content.Url != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Content.Url)
+		}
+
+		break
 	case fhir401.Medication:
 
 		if sourceResourceTyped.Code != nil && sourceResourceTyped.Code.Text != nil {
