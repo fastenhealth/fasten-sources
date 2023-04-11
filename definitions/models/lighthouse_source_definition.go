@@ -29,8 +29,8 @@ type LighthouseSourceDefinition struct {
 	GrantTypesSupported           []string `json:"grant_types_supported"`
 	ResponseType                  []string `json:"response_types_supported"`
 	ResponseModesSupported        []string `json:"response_modes_supported"`
-	Audience                      string   `json:"aud"` //optional - required for some providers
-	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported"`
+	Audience                      string   `json:"aud"`                              //optional - required for some providers
+	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported"` // If populated: PKCE is supported (can be used with Confidential true or false)
 
 	//Fasten custom configuration
 	UserInfoEndpoint   string `json:"userinfo_endpoint"`     //optional - supported by some providers, not others.
