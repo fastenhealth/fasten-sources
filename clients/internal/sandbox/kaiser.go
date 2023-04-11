@@ -28,7 +28,7 @@ func GetSourceClientKaiser(env pkg.FastenLighthouseEnvType, ctx context.Context,
 
 // Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html
 func (c SourceClientKaiser) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
-	bundle, err := c.GetResourceBundle("Patient")
+	bundle, err := c.GetResourceBundle("ExplanationOfBenefit?_includes=*")
 	if err != nil {
 		return models.UpsertSummary{UpdatedResources: []string{}}, err
 	}
