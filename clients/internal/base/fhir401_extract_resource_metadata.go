@@ -716,19 +716,19 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
-		//if sourceResourceTyped.Diagnosis != nil {
-		//	for _, r := range sourceResourceTyped.Diagnosis {
-		//		if r.DiagnosisReference.Reference != nil { //TODO: Condition
-		//			referencedResources = append(referencedResources, *r.DiagnosisReference.Reference)
-		//		}
-		//	}
-		//}
+		if sourceResourceTyped.Diagnosis != nil {
+			for _, r := range sourceResourceTyped.Diagnosis {
+				if r.DiagnosisReference.Reference != nil {
+					referencedResources = append(referencedResources, *r.DiagnosisReference.Reference)
+				}
+			}
+		}
 
 		if sourceResourceTyped.Procedure != nil {
 			for _, r := range sourceResourceTyped.Procedure {
-				//if r.ProcedureReference.Reference != nil { //TODO: Procedure
-				//	referencedResources = append(referencedResources, *r.ProcedureReference.Reference)
-				//}
+				if r.ProcedureReference.Reference != nil {
+					referencedResources = append(referencedResources, *r.ProcedureReference.Reference)
+				}
 				if r.Udi != nil {
 					for _, u := range r.Udi {
 						if u.Reference != nil {
@@ -741,7 +741,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Insurance != nil {
 			for _, r := range sourceResourceTyped.Insurance {
-				if r.Coverage.Reference != nil { //TODO: Condition
+				if r.Coverage.Reference != nil {
 					referencedResources = append(referencedResources, *r.Coverage.Reference)
 				}
 			}
