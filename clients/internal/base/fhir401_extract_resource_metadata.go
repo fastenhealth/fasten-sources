@@ -645,6 +645,152 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 
 		break
+	case fhir401.ExplanationOfBenefit:
+
+		if sourceResourceTyped.Type.Text != nil {
+			sortTitle = sourceResourceTyped.Type.Text
+		} else if len(sourceResourceTyped.Type.Coding) > 0 && sourceResourceTyped.Type.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.Type.Coding[0].Display
+		}
+
+		if sourceResourceTyped.BillablePeriod != nil && sourceResourceTyped.BillablePeriod.Start != nil {
+			sortDate = sourceResourceTyped.BillablePeriod.Start
+		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.Patient.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Patient.Reference)
+		}
+
+		if sourceResourceTyped.Enterer != nil && sourceResourceTyped.Enterer.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Enterer.Reference)
+		}
+
+		if sourceResourceTyped.Insurer.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Insurer.Reference)
+		}
+
+		if sourceResourceTyped.Provider.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Provider.Reference)
+		}
+
+		if sourceResourceTyped.Related != nil {
+			for _, r := range sourceResourceTyped.Related {
+				if r.Claim != nil && r.Claim.Reference != nil {
+					referencedResources = append(referencedResources, *r.Claim.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Prescription != nil && sourceResourceTyped.Prescription.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Prescription.Reference)
+		}
+
+		if sourceResourceTyped.OriginalPrescription != nil && sourceResourceTyped.OriginalPrescription.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.OriginalPrescription.Reference)
+		}
+
+		if sourceResourceTyped.Payee != nil && sourceResourceTyped.Payee.Party != nil && sourceResourceTyped.Payee.Party.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Payee.Party.Reference)
+		}
+
+		if sourceResourceTyped.Referral != nil && sourceResourceTyped.Referral.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Referral.Reference)
+		}
+		if sourceResourceTyped.Facility != nil && sourceResourceTyped.Facility.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Facility.Reference)
+		}
+		if sourceResourceTyped.Claim != nil && sourceResourceTyped.Claim.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Claim.Reference)
+		}
+		if sourceResourceTyped.ClaimResponse != nil && sourceResourceTyped.ClaimResponse.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.ClaimResponse.Reference)
+		}
+
+		if sourceResourceTyped.CareTeam != nil {
+			for _, r := range sourceResourceTyped.CareTeam {
+				if r.Provider.Reference != nil {
+					referencedResources = append(referencedResources, *r.Provider.Reference)
+				}
+			}
+		}
+
+		//if sourceResourceTyped.Diagnosis != nil {
+		//	for _, r := range sourceResourceTyped.Diagnosis {
+		//		if r.DiagnosisReference.Reference != nil { //TODO: Condition
+		//			referencedResources = append(referencedResources, *r.DiagnosisReference.Reference)
+		//		}
+		//	}
+		//}
+
+		if sourceResourceTyped.Procedure != nil {
+			for _, r := range sourceResourceTyped.Procedure {
+				//if r.ProcedureReference.Reference != nil { //TODO: Procedure
+				//	referencedResources = append(referencedResources, *r.ProcedureReference.Reference)
+				//}
+				if r.Udi != nil {
+					for _, u := range r.Udi {
+						if u.Reference != nil {
+							referencedResources = append(referencedResources, *u.Reference)
+						}
+					}
+				}
+			}
+		}
+
+		if sourceResourceTyped.Insurance != nil {
+			for _, r := range sourceResourceTyped.Insurance {
+				if r.Coverage.Reference != nil { //TODO: Condition
+					referencedResources = append(referencedResources, *r.Coverage.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Item != nil {
+			for _, r := range sourceResourceTyped.Item {
+				if r.Udi != nil {
+					for _, u := range r.Udi {
+						if u.Reference != nil {
+							referencedResources = append(referencedResources, *u.Reference)
+						}
+					}
+				}
+
+				if r.Encounter != nil {
+					for _, u := range r.Encounter {
+						if u.Reference != nil {
+							referencedResources = append(referencedResources, *u.Reference)
+						}
+					}
+				}
+				if r.Detail != nil {
+					for _, u := range r.Detail {
+						if u.Udi != nil {
+							for _, u := range u.Udi {
+								if u.Reference != nil {
+									referencedResources = append(referencedResources, *u.Reference)
+								}
+							}
+						}
+						//TODO: subdetail
+					}
+				}
+			}
+		}
+		if sourceResourceTyped.AddItem != nil {
+			for _, r := range sourceResourceTyped.AddItem {
+				if r.Provider != nil {
+					for _, p := range r.Provider {
+						if p.Reference != nil {
+							referencedResources = append(referencedResources, *p.Reference)
+						}
+					}
+				}
+			}
+		}
+
+		break
 	case fhir401.Goal:
 
 		if len(sourceResourceTyped.Note) > 0 {

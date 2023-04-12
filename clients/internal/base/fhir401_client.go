@@ -67,6 +67,14 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 		}
 	}
 
+	//process any pending resources
+	lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+
+	if len(syncErrors) > 0 {
+		//TODO: ignore errors.
+		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+	}
+
 	return summary, nil
 }
 
@@ -137,6 +145,17 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 	}
 
+	//process any pending resources
+	lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+
+	if len(syncErrors) > 0 {
+		//TODO: ignore errors.
+		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+	}
+	return summary, nil
+}
+
+func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseRepository, summary *models.UpsertSummary, lookupResourceReferences map[string]bool, syncErrors map[string]error) (map[string]bool, map[string]error) {
 	// now that we've processed all resources by resource type, lets see if there's any extracted resources that we haven't processed.
 	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
 	extractionLoopCount := 0
@@ -180,7 +199,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 			}
 
 			//process resource will store the resource in the database, and potentially extract new resources we need to process.
-			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, &summary)
+			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, summary)
 			if err != nil {
 				syncErrors[pendingResourceId] = err
 				continue
@@ -188,12 +207,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 		extractionLoopCount += 1
 	}
-
-	if len(syncErrors) > 0 {
-		//TODO: ignore errors.
-		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
-	}
-	return summary, nil
+	return lookupResourceReferences, syncErrors
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
