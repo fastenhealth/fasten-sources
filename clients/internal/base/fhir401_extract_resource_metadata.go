@@ -27,7 +27,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
 		}
 
-		if len(sourceResourceTyped.Reaction) > 0 && sourceResourceTyped.Reaction[0].Onset != nil {
+		if sourceResourceTyped.OnsetPeriod != nil && sourceResourceTyped.OnsetPeriod.Start != nil {
+			sortDate = sourceResourceTyped.OnsetPeriod.Start
+		} else if sourceResourceTyped.OnsetDateTime != nil {
+			sortDate = sourceResourceTyped.OnsetDateTime
+		} else if len(sourceResourceTyped.Reaction) > 0 && sourceResourceTyped.Reaction[0].Onset != nil {
 			sortDate = sourceResourceTyped.Reaction[0].Onset
 		} else if sourceResourceTyped.RecordedDate != nil {
 			sortDate = sourceResourceTyped.RecordedDate
@@ -176,8 +180,45 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Activity != nil {
 			for _, r := range sourceResourceTyped.Activity {
+				if r.OutcomeReference != nil {
+					for _, or := range r.OutcomeReference {
+						if or.Reference != nil {
+							referencedResources = append(referencedResources, *or.Reference)
+						}
+					}
+				}
 				if r.Reference != nil && r.Reference.Reference != nil {
 					referencedResources = append(referencedResources, *r.Reference.Reference)
+				}
+
+				if r.Detail != nil {
+					if r.Detail.ReasonReference != nil {
+						for _, dr := range r.Detail.ReasonReference {
+							if dr.Reference != nil {
+								referencedResources = append(referencedResources, *dr.Reference)
+							}
+						}
+					}
+					if r.Detail.Goal != nil {
+						for _, dg := range r.Detail.Goal {
+							if dg.Reference != nil {
+								referencedResources = append(referencedResources, *dg.Reference)
+							}
+						}
+					}
+					if r.Detail.Location != nil && r.Detail.Location.Reference != nil {
+						referencedResources = append(referencedResources, *r.Detail.Location.Reference)
+					}
+					if r.Detail.Performer != nil {
+						for _, dp := range r.Detail.Performer {
+							if dp.Reference != nil {
+								referencedResources = append(referencedResources, *dp.Reference)
+							}
+						}
+					}
+					if r.Detail.ProductReference != nil && r.Detail.ProductReference.Reference != nil {
+						referencedResources = append(referencedResources, *r.Detail.ProductReference.Reference)
+					}
 				}
 			}
 		}
@@ -253,7 +294,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Code.Coding[0].Code
 		}
 
-		if sourceResourceTyped.RecordedDate != nil {
+		if sourceResourceTyped.OnsetPeriod != nil && sourceResourceTyped.OnsetPeriod.Start != nil {
+			sortDate = sourceResourceTyped.OnsetPeriod.Start
+		} else if sourceResourceTyped.OnsetDateTime != nil {
+			sortDate = sourceResourceTyped.OnsetDateTime
+		} else if sourceResourceTyped.RecordedDate != nil {
 			sortDate = sourceResourceTyped.RecordedDate
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
@@ -282,6 +327,18 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		//- RelatedPerson
 		if sourceResourceTyped.Asserter != nil && sourceResourceTyped.Asserter.Reference != nil {
 			referencedResources = append(referencedResources, *sourceResourceTyped.Asserter.Reference)
+		}
+
+		if sourceResourceTyped.Stage != nil {
+			for _, s := range sourceResourceTyped.Stage {
+				if s.Assessment != nil {
+					for _, a := range s.Assessment {
+						if a.Reference != nil {
+							referencedResources = append(referencedResources, *a.Reference)
+						}
+					}
+				}
+			}
 		}
 
 		if sourceResourceTyped.Evidence != nil {
@@ -367,7 +424,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
 		}
 
-		if sourceResourceTyped.Issued != nil {
+		if sourceResourceTyped.EffectiveDateTime != nil {
+			sortDate = sourceResourceTyped.EffectiveDateTime
+		} else if sourceResourceTyped.EffectivePeriod != nil && sourceResourceTyped.EffectivePeriod.Start != nil {
+			sortDate = sourceResourceTyped.EffectivePeriod.Start
+		} else if sourceResourceTyped.Issued != nil {
 			sortDate = sourceResourceTyped.Issued
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
@@ -455,6 +516,14 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
+		if sourceResourceTyped.PresentedForm != nil {
+			for _, r := range sourceResourceTyped.PresentedForm {
+				if r.Url != nil && len(*r.Url) > 0 {
+					referencedResources = append(referencedResources, *r.Url)
+				}
+			}
+		}
+
 		break
 	case fhir401.DocumentReference:
 
@@ -526,6 +595,29 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
+
+		if sourceResourceTyped.Context != nil {
+			if sourceResourceTyped.Context.Encounter != nil {
+				for _, er := range sourceResourceTyped.Context.Encounter {
+					if er.Reference != nil {
+						referencedResources = append(referencedResources, *er.Reference)
+					}
+				}
+			}
+			if sourceResourceTyped.Context.SourcePatientInfo != nil {
+				if sourceResourceTyped.Context.SourcePatientInfo.Reference != nil {
+					referencedResources = append(referencedResources, *sourceResourceTyped.Context.SourcePatientInfo.Reference)
+				}
+			}
+			if sourceResourceTyped.Context.Related != nil {
+				for _, rr := range sourceResourceTyped.Context.Related {
+					if rr.Reference != nil {
+						referencedResources = append(referencedResources, *rr.Reference)
+					}
+				}
+			}
+		}
+		break
 	case fhir401.Encounter:
 
 		if len(sourceResourceTyped.Type) > 0 && sourceResourceTyped.Type[0].Text != nil {
@@ -716,6 +808,18 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
+		if sourceResourceTyped.SupportingInfo != nil {
+			for _, r := range sourceResourceTyped.SupportingInfo {
+				if r.ValueReference != nil && r.ValueReference.Reference != nil {
+					referencedResources = append(referencedResources, *r.ValueReference.Reference)
+				}
+
+				if r.ValueAttachment != nil && r.ValueAttachment.Url != nil {
+					referencedResources = append(referencedResources, *r.ValueAttachment.Url)
+				}
+			}
+		}
+
 		if sourceResourceTyped.Diagnosis != nil {
 			for _, r := range sourceResourceTyped.Diagnosis {
 				if r.DiagnosisReference.Reference != nil {
@@ -746,9 +850,17 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
+		if sourceResourceTyped.Accident != nil && sourceResourceTyped.Accident.LocationReference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Accident.LocationReference.Reference)
+		}
 
 		if sourceResourceTyped.Item != nil {
 			for _, r := range sourceResourceTyped.Item {
+
+				if r.LocationReference != nil {
+					referencedResources = append(referencedResources, *r.LocationReference.Reference)
+				}
+
 				if r.Udi != nil {
 					for _, u := range r.Udi {
 						if u.Reference != nil {
@@ -790,6 +902,10 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
+		if sourceResourceTyped.Form != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Form.Url)
+		}
+
 		break
 	case fhir401.Goal:
 
@@ -801,7 +917,9 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Description.Coding[0].Display
 		}
 
-		if sourceResourceTyped.StatusDate != nil {
+		if sourceResourceTyped.StartDate != nil {
+			sortDate = sourceResourceTyped.StartDate
+		} else if sourceResourceTyped.StatusDate != nil {
 			sortDate = sourceResourceTyped.StatusDate
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
@@ -945,12 +1063,23 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Type.Coding[0].Display
 		}
 
-		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+		if sourceResourceTyped.CreatedDateTime != nil {
+			sortDate = sourceResourceTyped.CreatedDateTime
+		} else if sourceResourceTyped.CreatedPeriod != nil && sourceResourceTyped.CreatedPeriod.Start != nil {
+			sortDate = sourceResourceTyped.CreatedPeriod.Start
+		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
 		}
 
 		if sourceResourceTyped.BasedOn != nil && len(sourceResourceTyped.BasedOn) > 0 && sourceResourceTyped.BasedOn[0].Reference != nil {
 			referencedResources = append(referencedResources, *sourceResourceTyped.BasedOn[0].Reference)
+		}
+		if sourceResourceTyped.PartOf != nil && len(sourceResourceTyped.PartOf) > 0 {
+			for _, r := range sourceResourceTyped.PartOf {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
 		}
 
 		if sourceResourceTyped.Subject != nil && sourceResourceTyped.Subject.Reference != nil {
@@ -1000,6 +1129,14 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortDate = sourceResourceTyped.AuthoredOn
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.ReportedReference != nil && sourceResourceTyped.ReportedReference.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.ReportedReference.Reference)
+		}
+
+		if sourceResourceTyped.MedicationReference.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.MedicationReference.Reference)
 		}
 
 		if sourceResourceTyped.Subject.Reference != nil {
@@ -1094,7 +1231,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
 		}
 
-		if sourceResourceTyped.Issued != nil {
+		if sourceResourceTyped.EffectivePeriod != nil && sourceResourceTyped.EffectivePeriod.Start != nil {
+			sortDate = sourceResourceTyped.EffectivePeriod.Start
+		} else if sourceResourceTyped.EffectiveDateTime != nil {
+			sortDate = sourceResourceTyped.EffectiveDateTime
+		} else if sourceResourceTyped.Issued != nil {
 			sortDate = sourceResourceTyped.Issued
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
@@ -1190,6 +1331,33 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		break
 	case fhir401.Patient:
 
+		if len(sourceResourceTyped.Name) > 0 && sourceResourceTyped.Name[0].Text != nil {
+			sortTitle = sourceResourceTyped.Name[0].Text
+		} else if len(sourceResourceTyped.Name) > 0 && len(sourceResourceTyped.Name[0].Given) > 0 && sourceResourceTyped.Name[0].Family != nil {
+			name := fmt.Sprintf("%s, %s", *sourceResourceTyped.Name[0].Family, sourceResourceTyped.Name[0].Given[0])
+			sortTitle = &name
+		}
+
+		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.Photo != nil {
+			for _, r := range sourceResourceTyped.Photo {
+				if r.Url != nil {
+					referencedResources = append(referencedResources, *r.Url)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Contact != nil {
+			for _, r := range sourceResourceTyped.Contact {
+				if r.Organization != nil && r.Organization.Reference != nil {
+					referencedResources = append(referencedResources, *r.Organization.Reference)
+				}
+			}
+		}
+
 		if sourceResourceTyped.GeneralPractitioner != nil {
 			for _, r := range sourceResourceTyped.GeneralPractitioner {
 				if r.Reference != nil {
@@ -1200,6 +1368,15 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		if sourceResourceTyped.ManagingOrganization != nil && sourceResourceTyped.ManagingOrganization.Reference != nil {
 			referencedResources = append(referencedResources, *sourceResourceTyped.ManagingOrganization.Reference)
 		}
+
+		if sourceResourceTyped.Link != nil {
+			for _, r := range sourceResourceTyped.Link {
+				if r.Other.Reference != nil {
+					referencedResources = append(referencedResources, *r.Other.Reference)
+				}
+			}
+		}
+
 		break
 	case fhir401.Practitioner:
 
@@ -1212,6 +1389,22 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.Photo != nil {
+			for _, r := range sourceResourceTyped.Photo {
+				if r.Url != nil {
+					referencedResources = append(referencedResources, *r.Url)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Qualification != nil {
+			for _, r := range sourceResourceTyped.Qualification {
+				if r.Issuer != nil && r.Issuer.Reference != nil {
+					referencedResources = append(referencedResources, *r.Issuer.Reference)
+				}
+			}
 		}
 
 		break
@@ -1251,7 +1444,6 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
-		//TODO: healthcareService
 		if sourceResourceTyped.HealthcareService != nil {
 			for _, r := range sourceResourceTyped.HealthcareService {
 				if r.Reference != nil {
@@ -1260,7 +1452,6 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
-		//TODO: endpoint
 		break
 	case fhir401.Procedure:
 
@@ -1270,7 +1461,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
 		}
 
-		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+		if sourceResourceTyped.PerformedDateTime != nil {
+			sortDate = sourceResourceTyped.PerformedDateTime
+		} else if sourceResourceTyped.PerformedPeriod != nil && sourceResourceTyped.PerformedPeriod.Start != nil {
+			sortDate = sourceResourceTyped.PerformedPeriod.Start
+		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
 		}
 
@@ -1331,8 +1526,71 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
+
+		if sourceResourceTyped.FocalDevice != nil {
+			for _, r := range sourceResourceTyped.FocalDevice {
+				if r.Manipulated.Reference != nil {
+					referencedResources = append(referencedResources, *r.Manipulated.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.UsedReference != nil {
+			for _, r := range sourceResourceTyped.UsedReference {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
 		break
 	case fhir401.Provenance:
+
+		if sourceResourceTyped.Activity != nil && sourceResourceTyped.Activity.Text != nil {
+			sortTitle = sourceResourceTyped.Activity.Text
+		} else if sourceResourceTyped.Activity != nil && len(sourceResourceTyped.Activity.Coding) > 0 && sourceResourceTyped.Activity.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.Activity.Coding[0].Display
+		}
+
+		if sourceResourceTyped.OccurredPeriod != nil && sourceResourceTyped.OccurredPeriod.Start != nil {
+			sortDate = sourceResourceTyped.OccurredPeriod.Start
+		} else if sourceResourceTyped.OccurredDateTime != nil {
+			sortDate = sourceResourceTyped.OccurredDateTime
+		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.Target != nil {
+			for _, r := range sourceResourceTyped.Target {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Location != nil && sourceResourceTyped.Location.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Location.Reference)
+		}
+
+		if sourceResourceTyped.Agent != nil {
+			for _, r := range sourceResourceTyped.Agent {
+				if r.Who.Reference != nil {
+					referencedResources = append(referencedResources, *r.Who.Reference)
+				}
+				if r.OnBehalfOf != nil && r.OnBehalfOf.Reference != nil {
+					referencedResources = append(referencedResources, *r.OnBehalfOf.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Entity != nil {
+			for _, e := range sourceResourceTyped.Entity {
+				if e.What.Reference != nil {
+					referencedResources = append(referencedResources, *e.What.Reference)
+				}
+			}
+		}
+
 		break
 	case fhir401.RelatedPerson:
 		if len(sourceResourceTyped.Name) > 0 && sourceResourceTyped.Name[0].Text != nil {
@@ -1345,6 +1603,19 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
 		}
+
+		if sourceResourceTyped.Patient.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Patient.Reference)
+		}
+
+		if sourceResourceTyped.Photo != nil {
+			for _, r := range sourceResourceTyped.Photo {
+				if r.Url != nil {
+					referencedResources = append(referencedResources, *r.Url)
+				}
+			}
+		}
+
 		break
 	case fhir401.ServiceRequest:
 
@@ -1356,7 +1627,11 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.OrderDetail[0].Text
 		}
 
-		if sourceResourceTyped.AuthoredOn != nil {
+		if sourceResourceTyped.OccurrencePeriod != nil && sourceResourceTyped.OccurrencePeriod.Start != nil {
+			sortDate = sourceResourceTyped.OccurrencePeriod.Start
+		} else if sourceResourceTyped.OccurrenceDateTime != nil {
+			sortDate = sourceResourceTyped.OccurrenceDateTime
+		} else if sourceResourceTyped.AuthoredOn != nil {
 			sortDate = sourceResourceTyped.AuthoredOn
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
