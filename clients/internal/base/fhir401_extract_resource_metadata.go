@@ -356,7 +356,9 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		break
 	case fhir401.Coverage:
 
-		if len(sourceResourceTyped.Identifier) > 0 && sourceResourceTyped.Identifier[0].Value != nil {
+		if len(sourceResourceTyped.Class) > 0 && sourceResourceTyped.Class[0].Name != nil {
+			sortTitle = sourceResourceTyped.Class[0].Name
+		} else if len(sourceResourceTyped.Identifier) > 0 && sourceResourceTyped.Identifier[0].Value != nil {
 			sortTitle = sourceResourceTyped.Identifier[0].Value
 		}
 
@@ -1778,12 +1780,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 	//before storing resource references, we need to determine if any of them are internal bundle references, and replace them if so.
 	for ndx, _ := range cleanResourceRefs {
 		internalRef := cleanResourceRefs[ndx]
-		if strings.HasPrefix(internalRef, "urn:uuid:") {
-			if relativeReference, relativeReferenceOk := internalFragmentReferenceLookup[internalRef]; relativeReferenceOk {
-				//replace internal reference with relative reference
-				cleanResourceRefs[ndx] = relativeReference
-			}
-		}
+		cleanResourceRefs[ndx] = normalizeReferenceId(internalRef, internalFragmentReferenceLookup)
 	}
 	resource.ReferencedResources = cleanResourceRefs
 
@@ -1797,6 +1794,46 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 	}
 
+}
+
+//normalizeReference takes a reference string and returns a normalized reference string
+//FHIR references come in multiple forms:
+//
+// [id] the logical [id] of a resource using a local reference (i.e. a relative reference).
+// [type]/[id] the logical [id] of a resource of a specified type using a local reference (i.e. a relative reference), for when the reference can point to different types of resources (e.g. Observation.subject).
+// [type]/[id]/_history/[version] TU the logical [id] of a resource of a specified type using a local reference (i.e. a relative reference), for when the reference can point to different types of resources and a specific version is requested. Note that server implementations MAY return an error when using this syntax if resource versions are not supported. For more information, see References and Versions.
+// [url] where the [url] is an absolute URL - a reference to a resource by its absolute location, or by its canonical URL
+// [url]|[version] TU where the search element is a canonical reference, the [url] is an absolute URL, and a specific version or partial version is desired. For more information, see References and Versions.
+//
+// see https://build.fhir.org/search.html#reference
+// see https://build.fhir.org/references.html
+func normalizeReferenceId(originalReference string, internalFragmentReferenceLookup map[string]string) string {
+	if strings.HasPrefix(originalReference, "urn:uuid:") {
+		if relativeReference, relativeReferenceOk := internalFragmentReferenceLookup[originalReference]; relativeReferenceOk {
+			//replace internal reference with relative reference
+			return relativeReference
+		}
+	}
+
+	// handle absolute urls
+	if strings.HasPrefix(originalReference, "http://") || strings.HasPrefix(originalReference, "https://") {
+		//do nothing, absolute urls must be handled as-is
+		return originalReference
+
+	} else {
+		if strings.Contains(originalReference, "|") {
+			//split on | and drop second part
+			originalReference = strings.SplitN(originalReference, "|", 2)[0]
+		}
+
+		if strings.Contains(originalReference, "/_history/") {
+			//split on _history and drop second part
+			return strings.SplitN(originalReference, "/_history/", 2)[0]
+		}
+	}
+
+	//fallback, do nothing
+	return originalReference
 }
 
 func removeDuplicateStr(strSlice []string) []string {
