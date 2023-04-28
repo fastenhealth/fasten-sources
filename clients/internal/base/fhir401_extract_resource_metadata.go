@@ -741,7 +741,13 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		break
 	case fhir401.ExplanationOfBenefit:
 
-		if sourceResourceTyped.Type.Text != nil {
+		if sourceResourceTyped.Diagnosis != nil && len(sourceResourceTyped.Diagnosis) > 0 {
+			if sourceResourceTyped.Diagnosis[0].DiagnosisCodeableConcept.Text != nil {
+				sortTitle = sourceResourceTyped.Diagnosis[0].DiagnosisCodeableConcept.Text
+			} else if sourceResourceTyped.Diagnosis[0].DiagnosisReference.Display != nil {
+				sortTitle = sourceResourceTyped.Diagnosis[0].DiagnosisReference.Display
+			}
+		} else if sourceResourceTyped.Type.Text != nil {
 			sortTitle = sourceResourceTyped.Type.Text
 		} else if len(sourceResourceTyped.Type.Coding) > 0 && sourceResourceTyped.Type.Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.Type.Coding[0].Display
