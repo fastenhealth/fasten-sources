@@ -16,12 +16,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test Backend
+      - name: Test
         run: |
           go install github.com/golang/mock/mockgen@v1.6.0
           go generate ./...
           go test -coverprofile=coverage.txt -covermode=atomic -v ./...
-      - name: Upload coverage
+      - name: Archive coverage
         uses: actions/upload-artifact@v3
         with:
           name: coverage
