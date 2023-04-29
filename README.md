@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/fastenhealth/fasten-onprem">
-  <img width="400" alt="fasten_view" src="frontend/src/assets/banner/banner.png">
+  <img width="400" alt="fasten_view" src="https://github.com/fastenhealth/fasten-onprem/raw/main/frontend/src/assets/banner/banner.png">
   </a>
 </p>
 
