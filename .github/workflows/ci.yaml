@@ -23,12 +23,14 @@ jobs:
           go test -coverprofile=coverage.txt -covermode=atomic -v ./...
       - name: Archive coverage
         uses: actions/upload-artifact@v3
+        if: success() || failure()
         with:
           name: coverage
           path: ${{ github.workspace }}/coverage.txt
           retention-days: 1
       - name: Upload coverage report
         uses: codecov/codecov-action@v2
+        if: success() || failure()
         with:
           files: ${{ github.workspace }}/coverage.txt
           flags: unittests
