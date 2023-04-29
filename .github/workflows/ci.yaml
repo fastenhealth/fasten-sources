@@ -20,4 +20,17 @@ jobs:
         run: |
           go install github.com/golang/mock/mockgen@v1.6.0
           go generate ./...
-          go test ./...
+          go -coverprofile=coverage.txt -covermode=atomic -v test ./...
+      - name: Upload coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: ${{ github.workspace }}/coverage.txt
+          retention-days: 1
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v2
+        with:
+          files: ${{ github.workspace }}/coverage.txt
+          flags: unittests
+          fail_ci_if_error: true
+          verbose: true
