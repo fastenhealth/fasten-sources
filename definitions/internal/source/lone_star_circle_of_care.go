@@ -28,6 +28,9 @@ func GetSourceLoneStarCircleOfCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Lone Star Circle Of Care"
 	sourceDef.SourceType = pkg.SourceTypeLoneStarCircleOfCare
+	sourceDef.Category = []string{"261QF0400X", "207V00000X", "208000000X", "1041C0700X", "363LF0000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"LONE STAR CIRCLE OF CARE HEALTH CENTER AT TAYLOR", "LONE STAR CIRCLE OF CARE PEDIATRICS AT HARKER HEIGHTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457650483", "1962683599", "1043633308", "1164846952", "1659703924", "1588096473", "1497408298", "1417195942", "1710284542", "1710027859"}}
 	sourceDef.BrandLogo = "lone-star-circle-of-care.svg"
 	sourceDef.PatientAccessUrl = "https://lonestarcares.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

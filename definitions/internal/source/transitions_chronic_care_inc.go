@@ -28,6 +28,8 @@ func GetSourceTransitionsChronicCareInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Transitions Chronic Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeTransitionsChronicCareInc
+	sourceDef.Category = []string{"171M00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245669431"}}
 	sourceDef.PatientAccessUrl = "https://www.mytransitionscare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

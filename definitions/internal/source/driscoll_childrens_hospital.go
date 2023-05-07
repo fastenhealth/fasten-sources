@@ -28,6 +28,9 @@ func GetSourceDriscollChildrensHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Driscoll Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDriscollChildrensHospital
+	sourceDef.Category = []string{"282NC2000X", "344800000X", "341600000X", "261QE0700X", "261QG0250X", "281PC2000X"}
+	sourceDef.Aliases = []string{"DRISCOLL CHILDREN'S HOSPITAL RIO GRANDE VALLEY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124796081", "1215064506", "1861658205", "1437405115", "1265665475", "1033357645", "1689067910", "1336495910"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

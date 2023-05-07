@@ -28,6 +28,8 @@ func GetSourceNeurologicalAndSpinalSurgeryLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Neurological And Spinal Surgery LLC"
 	sourceDef.SourceType = pkg.SourceTypeNeurologicalAndSpinalSurgeryLlc
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346206117"}}
 	sourceDef.PatientAccessUrl = "https://nssne.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

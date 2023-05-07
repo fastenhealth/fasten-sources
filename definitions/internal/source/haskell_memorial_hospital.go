@@ -29,6 +29,9 @@ func GetSourceHaskellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Haskell Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHaskellMemorialHospital
+	sourceDef.Category = []string{"275N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"HASKELL MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184607897"}}
 	sourceDef.BrandLogo = "haskell-memorial-hospital.jpeg"
 	sourceDef.PatientAccessUrl = "http://www.haskellmemorialhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

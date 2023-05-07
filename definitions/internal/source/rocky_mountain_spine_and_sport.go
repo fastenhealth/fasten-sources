@@ -28,6 +28,9 @@ func GetSourceRockyMountainSpineAndSport(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Rocky Mountain Spine And Sport"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainSpineAndSport
+	sourceDef.Category = []string{"261QP2000X"}
+	sourceDef.Aliases = []string{"ROCKY MOUNTAIN SPINE AND SPORT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821610031"}}
 	sourceDef.PatientAccessUrl = "https://rockymountain.urpt.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

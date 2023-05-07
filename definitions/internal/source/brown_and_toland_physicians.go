@@ -28,6 +28,9 @@ func GetSourceBrownAndTolandPhysicians(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Brown & Toland Physicians"
 	sourceDef.SourceType = pkg.SourceTypeBrownAndTolandPhysicians
+	sourceDef.Category = []string{"251B00000X"}
+	sourceDef.Aliases = []string{"BROWN & TOLAND PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215655717"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

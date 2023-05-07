@@ -28,6 +28,9 @@ func GetSourceArthritisHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Arthritis Health"
 	sourceDef.SourceType = pkg.SourceTypeArthritisHealth
+	sourceDef.Category = []string{"207RR0500X", "261QM2500X"}
+	sourceDef.Aliases = []string{"ARTHRITIS HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720554926"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceGeisinger(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Geisinger"
 	sourceDef.SourceType = pkg.SourceTypeGeisinger
+	sourceDef.Category = []string{"363A00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619342862"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

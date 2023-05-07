@@ -28,6 +28,9 @@ func GetSourceSpectrumAmbulatorySurgeryCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Spectrum Ambulatory Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumAmbulatorySurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SPECTRUM AMBULATORY SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518382936"}}
 	sourceDef.BrandLogo = "spectrum-ambulatory-surgery-center.svg"
 	sourceDef.PatientAccessUrl = "https://spectrumhcp.com/find-a-provider/"
 	sourceDef.SecretKeyPrefix = "nextgen"

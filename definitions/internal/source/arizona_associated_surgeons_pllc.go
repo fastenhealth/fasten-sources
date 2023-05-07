@@ -28,6 +28,8 @@ func GetSourceArizonaAssociatedSurgeonsPllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Arizona Associated Surgeons PLLC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaAssociatedSurgeonsPllc
+	sourceDef.Category = []string{"208C00000X", "208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396843272"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

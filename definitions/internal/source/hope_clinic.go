@@ -28,6 +28,9 @@ func GetSourceHopeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Hope Clinic"
 	sourceDef.SourceType = pkg.SourceTypeHopeClinic
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"HOPE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326236464"}}
 	sourceDef.PatientAccessUrl = "https://www.hopehealthtx.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

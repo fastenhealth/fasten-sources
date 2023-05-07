@@ -29,6 +29,9 @@ func GetSourceRehobothMckinleyChristianHealthCareServices(env pkg.FastenLighthou
 
 	sourceDef.Display = "Rehoboth McKinley Christian Health Care Services"
 	sourceDef.SourceType = pkg.SourceTypeRehobothMckinleyChristianHealthCareServices
+	sourceDef.Category = []string{"332BD1200X", "332B00000X"}
+	sourceDef.Aliases = []string{"RMCHCS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164572533"}}
 	sourceDef.PatientAccessUrl = "https://www.rmch.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

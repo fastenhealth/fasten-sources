@@ -28,6 +28,9 @@ func GetSourceFranklinPrimaryHealthCenterInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Franklin Primary Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeFranklinPrimaryHealthCenterInc
+	sourceDef.Category = []string{"104100000X", "207Q00000X", "207QA0505X", "207R00000X", "207V00000X", "208000000X", "2085B0100X", "208M00000X", "261QF0400X", "3336C0002X", "3336C0003X", "122300000X", "1223D0001X", "1223E0200X", "1223G0001X", "1223P0221X", "1223P0300X", "1223P0700X", "122400000X", "124Q00000X", "126800000X", "126900000X", "343900000X", "207W00000X", "207X00000X", "261QM2500X"}
+	sourceDef.Aliases = []string{"BALDWIN FAMILY HEALTH CENTER", "FRANKLIN PHARMACY", "FRANKLIN MEDICAL & DENTAL EXPRESS", "WEST MOBILE FAMILY MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932416195", "1659392389", "1427221993", "1154551703"}}
 	sourceDef.PatientAccessUrl = "https://franklinprimary.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

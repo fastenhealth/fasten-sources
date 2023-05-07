@@ -28,6 +28,9 @@ func GetSourceZanesvillePediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Zanesville Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeZanesvillePediatrics
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{"ZANESVILLE PEDIATRICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992003313"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceProlianceEastsideEnt(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Proliance Eastside ENT"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideEnt
+	sourceDef.Category = []string{"207YX0905X", "261QM1300X", "363AS0400X", "207Y00000X"}
+	sourceDef.Aliases = []string{"PROLIANCE EASTSIDE ENT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528304292"}}
 	sourceDef.PatientAccessUrl = "https://www.eastsideent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

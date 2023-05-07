@@ -28,6 +28,9 @@ func GetSourceArchboldBrooksPrimaryCare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Archbold Brooks Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeArchboldBrooksPrimaryCare
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"ARCHBOLD BROOKS PRIMARY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063841138"}}
 	sourceDef.PatientAccessUrl = "https://archbold.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

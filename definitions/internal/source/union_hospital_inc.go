@@ -29,6 +29,8 @@ func GetSourceUnionHospitalInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Union Hospital Inc."
 	sourceDef.SourceType = pkg.SourceTypeUnionHospitalInc
+	sourceDef.Category = []string{"103T00000X", "207L00000X", "363A00000X", "363L00000X", "367A00000X", "207Q00000X", "282N00000X", "2085R0202X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699753137", "1063493930", "1508857145", "1619975331", "1548241532"}}
 	sourceDef.PatientAccessUrl = "https://www.myunionhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

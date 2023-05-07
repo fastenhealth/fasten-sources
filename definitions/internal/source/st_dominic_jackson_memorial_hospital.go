@@ -29,6 +29,8 @@ func GetSourceStDominicJacksonMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "St. Dominic-Jackson Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStDominicJacksonMemorialHospital
+	sourceDef.Category = []string{"3336I0012X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003979386"}}
 	sourceDef.BrandLogo = "st-dominic-jackson-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.stdom.com/about-us/about-the-facility"
 	sourceDef.SecretKeyPrefix = "cerner"

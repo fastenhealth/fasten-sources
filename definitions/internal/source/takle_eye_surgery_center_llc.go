@@ -28,6 +28,8 @@ func GetSourceTakleEyeSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Takle Eye Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeTakleEyeSurgeryCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740776517"}}
 	sourceDef.PatientAccessUrl = "https://www.takleeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

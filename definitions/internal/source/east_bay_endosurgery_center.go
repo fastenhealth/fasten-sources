@@ -28,6 +28,9 @@ func GetSourceEastBayEndosurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "East Bay Endosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeEastBayEndosurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"EAST BAY ENDOSURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053496240"}}
 	sourceDef.PatientAccessUrl = "https://eastbayendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

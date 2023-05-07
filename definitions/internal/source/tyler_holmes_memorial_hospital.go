@@ -29,6 +29,9 @@ func GetSourceTylerHolmesMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Tyler Holmes Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTylerHolmesMemorialHospital
+	sourceDef.Category = []string{"261QP2300X", "261QR1300X", "207Q00000X", "282NC0060X", "275N00000X"}
+	sourceDef.Aliases = []string{"CROSSROADS FAMILY MEDICINE", "TYLER HOLMES CARROLLTON CLINIC", "WINONA FMAILY PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730367459", "1548883481", "1285649855", "1205868627", "1841449501"}}
 	sourceDef.PatientAccessUrl = "https://thmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

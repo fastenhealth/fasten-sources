@@ -28,6 +28,8 @@ func GetSourceNeurosurgeryAssociatesOfLubbockLlp(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Neurosurgery Associates of Lubbock, LLP"
 	sourceDef.SourceType = pkg.SourceTypeNeurosurgeryAssociatesOfLubbockLlp
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679994586"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

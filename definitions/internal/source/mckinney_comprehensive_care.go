@@ -28,6 +28,8 @@ func GetSourceMckinneyComprehensiveCare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "McKinney Comprehensive Care"
 	sourceDef.SourceType = pkg.SourceTypeMckinneyComprehensiveCare
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396922050"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

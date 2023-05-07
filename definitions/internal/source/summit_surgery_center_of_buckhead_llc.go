@@ -28,6 +28,8 @@ func GetSourceSummitSurgeryCenterOfBuckheadLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Summit Surgery Center Of Buckhead LLC"
 	sourceDef.SourceType = pkg.SourceTypeSummitSurgeryCenterOfBuckheadLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316435779"}}
 	sourceDef.PatientAccessUrl = "https://www.zoominfo.com/c/summit-surgery-center-of-buckhead-llc/1197175508"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceWesternMichiganUniversitySchoolOfMedicine(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Western Michigan University School of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWesternMichiganUniversitySchoolOfMedicine
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"WMED HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316212343"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

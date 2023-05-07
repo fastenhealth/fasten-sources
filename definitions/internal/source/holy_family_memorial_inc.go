@@ -29,6 +29,9 @@ func GetSourceHolyFamilyMemorialInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Holy Family Memorial Inc"
 	sourceDef.SourceType = pkg.SourceTypeHolyFamilyMemorialInc
+	sourceDef.Category = []string{"207RI0011X", "282N00000X", "207RR0500X", "163WW0000X", "207QA0000X", "207QA0505X", "207QG0300X", "207Q00000X", "261QE0700X", "207VX0000X", "207VG0400X", "261Q00000X", "261QM0801X", "103T00000X", "291U00000X", "207ZP0102X", "261QX0203X", "261QX0200X"}
+	sourceDef.Aliases = []string{"HFM HEART AND VASCULAR CENTER", "HFM WOUND CLINIC", "HFM FAMILY MEDICINE", "HFM WOMEN'S HEALTH", "HFM BEHAVIORAL HEALTH", "PATHOLOGY PHYSICIANS", "THE CANCER CARE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134223399", "1972745958", "1336435585", "1811405467", "1205871746", "1235235474", "1194828442", "1467473074", "1457455198", "1720182462"}}
 	sourceDef.PatientAccessUrl = "https://www.hfmhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

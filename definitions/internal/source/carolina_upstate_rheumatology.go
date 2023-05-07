@@ -28,6 +28,9 @@ func GetSourceCarolinaUpstateRheumatology(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Carolina Upstate Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaUpstateRheumatology
+	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{"CAROLINA UPSTATE RHEUMATOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518597202"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

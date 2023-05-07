@@ -28,6 +28,8 @@ func GetSourceRetinaConsultantsPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Retina Consultants PA"
 	sourceDef.SourceType = pkg.SourceTypeRetinaConsultantsPa
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154303055"}}
 	sourceDef.BrandLogo = "retina-consultants-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.retinaconsultantsnj.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

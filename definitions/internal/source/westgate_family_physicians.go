@@ -28,6 +28,8 @@ func GetSourceWestgateFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Westgate Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeWestgateFamilyPhysicians
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174577258", "1427019355"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

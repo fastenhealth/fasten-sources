@@ -28,6 +28,9 @@ func GetSourceEastStroudsburgUniversity(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "East Stroudsburg University"
 	sourceDef.SourceType = pkg.SourceTypeEastStroudsburgUniversity
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Aliases = []string{"ESU SPORTS MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467927210"}}
 	sourceDef.PatientAccessUrl = "https://www.esu.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceMycareHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mycare Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMycareHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720482128", "1609271105", "1811391212", "1770284564", "1265749683", "1639573033"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

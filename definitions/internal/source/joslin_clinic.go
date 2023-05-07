@@ -28,6 +28,8 @@ func GetSourceJoslinClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Joslin Clinic"
 	sourceDef.SourceType = pkg.SourceTypeJoslinClinic
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255574901"}}
 	sourceDef.PatientAccessUrl = "https://www.joslin.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

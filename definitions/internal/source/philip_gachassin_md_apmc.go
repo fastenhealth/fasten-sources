@@ -29,6 +29,8 @@ func GetSourcePhilipGachassinMdApmc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Philip Gachassin MD APMC"
 	sourceDef.SourceType = pkg.SourceTypePhilipGachassinMdApmc
+	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982892543"}}
 	sourceDef.PatientAccessUrl = "https://acadianaweightlosssurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

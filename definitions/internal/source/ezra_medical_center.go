@@ -28,6 +28,9 @@ func GetSourceEzraMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Ezra Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEzraMedicalCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"EZRA MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326768862"}}
 	sourceDef.PatientAccessUrl = "https://www.ezramedical.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

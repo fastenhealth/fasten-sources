@@ -28,6 +28,9 @@ func GetSourceEyeAssociatesSurgeryCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Eye Associates Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesSurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"CASCADIA SURGICAL", "EYE ASSOCIATES SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225252257"}}
 	sourceDef.BrandLogo = "eye-associates-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ncascade.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

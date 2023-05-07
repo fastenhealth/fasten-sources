@@ -28,6 +28,9 @@ func GetSourceFamilyCareOfFairview1(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Family Care of Fairview"
 	sourceDef.SourceType = pkg.SourceTypeFamilyCareOfFairview1
+	sourceDef.Category = []string{"207R00000X", "363A00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"FAMILY CARE OF FAIRVIEW"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306397898"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,9 @@ func GetSourceSomersetPainManagement(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Somerset Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeSomersetPainManagement
+	sourceDef.Category = []string{"208VP0014X", "208VP0000X"}
+	sourceDef.Aliases = []string{"SOMERSET PAIN MANAGEMENT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841509387"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

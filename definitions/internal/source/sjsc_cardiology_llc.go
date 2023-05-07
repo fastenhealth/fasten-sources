@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10087695/metadata
 func GetSourceSjscCardiologyLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10087695/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10087695/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorizationV2/10087695/connect/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorizationV2/10087695/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10087695"
 

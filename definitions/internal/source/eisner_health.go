@@ -28,6 +28,9 @@ func GetSourceEisnerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Eisner Health"
 	sourceDef.SourceType = pkg.SourceTypeEisnerHealth
+	sourceDef.Category = []string{"261QM0801X"}
+	sourceDef.Aliases = []string{"EISNER HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528337029"}}
 	sourceDef.BrandLogo = "eisner-health.jpg"
 	sourceDef.PatientAccessUrl = "https://eisnerhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

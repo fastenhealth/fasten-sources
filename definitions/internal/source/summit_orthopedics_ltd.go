@@ -28,6 +28,9 @@ func GetSourceSummitOrthopedicsLtd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Summit Orthopedics Ltd"
 	sourceDef.SourceType = pkg.SourceTypeSummitOrthopedicsLtd
+	sourceDef.Category = []string{"261QM1200X", "207XX0005X", "261Q00000X", "207X00000X", "2251X0800X", "225XH1200X", "261QA1903X", "332B00000X", "207QS0010X", "207XS0106X", "2083X0100X"}
+	sourceDef.Aliases = []string{"EAGAN SURGERY CENTER", "SUMMIT ORTHOPEDICS - SHAKOPEE CLINIC", "DBA LANDMARK SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063176386", "1386007417", "1558870196", "1053955385", "1306899463", "1164870895", "1962944827", "1770207193", "1043566045", "1811973639"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

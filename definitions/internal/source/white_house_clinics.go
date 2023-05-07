@@ -28,6 +28,9 @@ func GetSourceWhiteHouseClinics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "White House Clinics"
 	sourceDef.SourceType = pkg.SourceTypeWhiteHouseClinics
+	sourceDef.Category = []string{"261QF0400X", "261Q00000X"}
+	sourceDef.Aliases = []string{"WHITE HOUSE CLINICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437407723", "1952733842"}}
 	sourceDef.PatientAccessUrl = "https://whitehouseclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

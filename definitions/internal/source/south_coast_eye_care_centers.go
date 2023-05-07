@@ -28,6 +28,8 @@ func GetSourceSouthCoastEyeCareCenters(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "South Coast Eye Care Centers"
 	sourceDef.SourceType = pkg.SourceTypeSouthCoastEyeCareCenters
+	sourceDef.Category = []string{"332H00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942473889", "1518935725"}}
 	sourceDef.PatientAccessUrl = "https://www.southcoasteye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

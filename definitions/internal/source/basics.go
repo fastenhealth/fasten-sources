@@ -28,6 +28,9 @@ func GetSourceBasics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "BASICS"
 	sourceDef.SourceType = pkg.SourceTypeBasics
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"BASICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568492718"}}
 	sourceDef.PatientAccessUrl = "https://basicslife.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

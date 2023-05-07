@@ -29,6 +29,8 @@ func GetSourceJewellCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Jewell County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJewellCountyHospital
+	sourceDef.Category = []string{"282NC0060X", "275N00000X", "208D00000X", "261QR1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336184647", "1811925290", "1447418827", "1386689586"}}
 	sourceDef.PatientAccessUrl = "https://www.jewellcohospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

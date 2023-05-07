@@ -28,6 +28,9 @@ func GetSourceExtendedArmPhysiciansInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Extended Arm Physicians Inc"
 	sourceDef.SourceType = pkg.SourceTypeExtendedArmPhysiciansInc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{"EXTENDED ARM PHYSICIANS INC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326009366"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/montgomery/extended-arm-physicians-inc-x5b9m40a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

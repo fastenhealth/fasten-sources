@@ -28,6 +28,9 @@ func GetSourceLowerElwhaHealthDepartment(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Lower Elwha Health Department"
 	sourceDef.SourceType = pkg.SourceTypeLowerElwhaHealthDepartment
+	sourceDef.Category = []string{"261QM0801X"}
+	sourceDef.Aliases = []string{"ELWHA KLALLAM MENTAL HEALTH", "LOWER ELWHA HEALTH DEPARTMENT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841316700"}}
 	sourceDef.PatientAccessUrl = "https://www.elwha.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

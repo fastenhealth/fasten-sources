@@ -28,6 +28,9 @@ func GetSourceOmniEyeSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Omni Eye Specialists"
 	sourceDef.SourceType = pkg.SourceTypeOmniEyeSpecialists
+	sourceDef.Category = []string{"152W00000X", "207W00000X"}
+	sourceDef.Aliases = []string{"OMNI EYE SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154929602", "1699768663", "1194323444", "1033716212", "1750988994", "1831796010", "1154928331"}}
 	sourceDef.PatientAccessUrl = "https://www.omnieye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

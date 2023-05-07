@@ -28,6 +28,9 @@ func GetSourceAdvancedEndoscopyAndSurgicalCenterLlc(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Advanced Endoscopy & Surgical Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedEndoscopyAndSurgicalCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"ADVANCED ENDOSCOPY & SURGICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114965803"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

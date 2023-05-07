@@ -28,6 +28,9 @@ func GetSourceNorthEastMedicalServices(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "North East Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeNorthEastMedicalServices
+	sourceDef.Category = []string{"261QF0400X", "171100000X", "171M00000X", "251X00000X"}
+	sourceDef.Aliases = []string{"NORTH EAST MEDICAL SERVICES - 1422 NORIEGA", "NEMS TRADITIONAL MEDICINE CENTER - SUITE 503", "NORTH EAST MEDICAL SERVICES - NORIEGA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104103001", "1881825305", "1346527918", "1598009243", "1811424039", "1275017691", "1891254603", "1093992844", "1982784740", "1659558369"}}
 	sourceDef.PatientAccessUrl = "https://nems.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

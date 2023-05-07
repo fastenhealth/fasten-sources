@@ -28,6 +28,8 @@ func GetSourceUsCardioGreensburgLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "US Cardio Greensburg LLC"
 	sourceDef.SourceType = pkg.SourceTypeUsCardioGreensburgLlc
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306298823"}}
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1306298823"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://apps.genesyspho.com/fhir/metadata
+// https://apps.genesyspho.com/FHIR/metadata
 func GetSourceGenesysPho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://apps.genesyspho.com/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://apps.genesyspho.com/authorization/connect/token"
 
-	sourceDef.Audience = "https://apps.genesyspho.com/fhir"
+	sourceDef.Audience = "https://apps.genesyspho.com/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://apps.genesyspho.com/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://apps.genesyspho.com/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeGenesysPho]; clientIdOk {
 		sourceDef.ClientId = clientId

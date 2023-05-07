@@ -28,6 +28,9 @@ func GetSourceBoneAndJointCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Bone & Joint Center"
 	sourceDef.SourceType = pkg.SourceTypeBoneAndJointCenter
+	sourceDef.Category = []string{"207X00000X", "2081P2900X"}
+	sourceDef.Aliases = []string{"BONE & JOINT CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326281494"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

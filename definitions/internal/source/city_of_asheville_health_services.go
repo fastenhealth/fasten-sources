@@ -29,6 +29,8 @@ func GetSourceCityOfAshevilleHealthServices(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "City of Asheville Health Services"
 	sourceDef.SourceType = pkg.SourceTypeCityOfAshevilleHealthServices
+	sourceDef.Category = []string{"261QH0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437406519"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

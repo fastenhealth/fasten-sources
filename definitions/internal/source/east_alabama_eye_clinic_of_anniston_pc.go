@@ -29,6 +29,8 @@ func GetSourceEastAlabamaEyeClinicOfAnnistonPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "East Alabama Eye Clinic of Anniston, PC"
 	sourceDef.SourceType = pkg.SourceTypeEastAlabamaEyeClinicOfAnnistonPc
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841375896"}}
 	sourceDef.PatientAccessUrl = "https://www.eastalabamaeyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

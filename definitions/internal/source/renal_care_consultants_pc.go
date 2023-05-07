@@ -28,6 +28,8 @@ func GetSourceRenalCareConsultantsPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Renal Care Consultants, PC"
 	sourceDef.SourceType = pkg.SourceTypeRenalCareConsultantsPc
+	sourceDef.Category = []string{"363AM0700X", "207RN0300X", "133VN1005X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174764013", "1740433648", "1356582290", "1962768754", "1215170725", "1891936738", "1619118551"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

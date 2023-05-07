@@ -28,6 +28,9 @@ func GetSourceValleyInternalPhysicians(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Valley Internal Physicians"
 	sourceDef.SourceType = pkg.SourceTypeValleyInternalPhysicians
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{"VALLEY INTERNAL PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902113186"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/valley-internal-physician-3b28cfc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceHaycoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Hayco LLC"
 	sourceDef.SourceType = pkg.SourceTypeHaycoLlc
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346848694"}}
 	sourceDef.PatientAccessUrl = "https://opencorporates.com/companies/us_ms/1234453"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

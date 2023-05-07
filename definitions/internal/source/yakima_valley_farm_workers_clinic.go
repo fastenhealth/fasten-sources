@@ -28,6 +28,9 @@ func GetSourceYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Yakima Valley Farm Workers Clinic"
 	sourceDef.SourceType = pkg.SourceTypeYakimaValleyFarmWorkersClinic
+	sourceDef.Category = []string{"261QF0400X", "3336C0003X", "261QD0000X"}
+	sourceDef.Aliases = []string{"SALUD MEDICAL CENTER", "FAMILY DENTAL CENTER", "COMMUNITY DENTAL CENTER", "YAKIMA VALLEY FARMWORKERS DENTAL CLINIC AT THE YV TECH CAMPUS", "UNIFY COMMUNITY HEALTH", "LANCASTER FAMILY HEALTH CENTER AT LANCASTER", "UNIFY FAMILY DENTAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972556496", "1831285162", "1740376078", "1023147220", "1992834196", "1114344611", "1285068502", "1467868851", "1467995852", "1710462304"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

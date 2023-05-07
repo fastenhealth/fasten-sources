@@ -28,6 +28,8 @@ func GetSourceClevelandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Cleveland Clinic"
 	sourceDef.SourceType = pkg.SourceTypeClevelandClinic
+	sourceDef.Category = []string{"281P00000X", "261Q00000X", "282N00000X", "261QP2000X", "1835P2201X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962837658", "1558319491", "1275791162", "1356508964", "1053563767", "1336316389", "1841616752", "1487102679", "1104099217", "1629255575"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

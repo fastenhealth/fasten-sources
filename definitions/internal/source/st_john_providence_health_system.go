@@ -29,6 +29,8 @@ func GetSourceStJohnProvidenceHealthSystem(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "St. John Providence Health System"
 	sourceDef.SourceType = pkg.SourceTypeStJohnProvidenceHealthSystem
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154612745", "1477967446"}}
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/profile.php?id=116944671718098"
 	sourceDef.SecretKeyPrefix = "cerner"
 

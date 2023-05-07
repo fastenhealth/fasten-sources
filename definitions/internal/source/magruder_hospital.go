@@ -29,6 +29,9 @@ func GetSourceMagruderHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Magruder Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMagruderHospital
+	sourceDef.Category = []string{"261QU0200X", "282NC0060X", "314000000X", "275N00000X"}
+	sourceDef.Aliases = []string{"MAGRUDER HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922079532", "1770683906"}}
 	sourceDef.BrandLogo = "magruder-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.magruderhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

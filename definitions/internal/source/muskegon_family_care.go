@@ -28,6 +28,9 @@ func GetSourceMuskegonFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Muskegon Family Care"
 	sourceDef.SourceType = pkg.SourceTypeMuskegonFamilyCare
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"MUSKEGON FAMILY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255331583"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

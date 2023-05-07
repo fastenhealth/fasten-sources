@@ -29,6 +29,9 @@ func GetSourceHerefordRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Hereford Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHerefordRegionalMedicalCenter
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"HEREFORD REGIONAL MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568454403"}}
 	sourceDef.PatientAccessUrl = "https://dschd.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

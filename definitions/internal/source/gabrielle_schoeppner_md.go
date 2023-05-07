@@ -28,6 +28,9 @@ func GetSourceGabrielleSchoeppnerMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Gabrielle Schoeppner MD"
 	sourceDef.SourceType = pkg.SourceTypeGabrielleSchoeppnerMd
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{"NORTHWOOD OPTICAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083801088"}}
 	sourceDef.BrandLogo = "gabrielle-schoeppner-md.jpg"
 	sourceDef.PatientAccessUrl = "https://findadoctor.slhn.org/details/239/gabrielle-schoeppner-ophthalmology-easton"
 	sourceDef.SecretKeyPrefix = "nextgen"

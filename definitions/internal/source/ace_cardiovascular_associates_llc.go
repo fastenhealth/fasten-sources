@@ -28,6 +28,8 @@ func GetSourceAceCardiovascularAssociatesLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Ace Cardiovascular Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeAceCardiovascularAssociatesLlc
+	sourceDef.Category = []string{"207RC0000X", "207UN0901X", "207RI0011X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043454556"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

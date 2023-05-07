@@ -28,6 +28,8 @@ func GetSourcePrimaryCarePhysiciansOfGainesville(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Primary Care Physicians of Gainesville"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCarePhysiciansOfGainesville
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417498031"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

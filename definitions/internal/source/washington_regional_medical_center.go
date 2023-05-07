@@ -28,6 +28,9 @@ func GetSourceWashingtonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Washington Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonRegionalMedicalCenter
+	sourceDef.Category = []string{"341600000X", "282NC0060X", "207P00000X", "275N00000X", "282N00000X", "122300000X", "273R00000X", "251E00000X", "251G00000X"}
+	sourceDef.Aliases = []string{"WASHINGTON CO HOSPITAL AMBULANCE", "WASHINGTON COUNTY HOSPITAL", "WASHINGTON REGIONAL MEDICAL CENTER", "WASHINGTON REGIONAL HOME HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053351031", "1124018494", "1972119782", "1902412729", "1558977371", "1083609150", "1669877668", "1063407138", "1497956213", "1811198641"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

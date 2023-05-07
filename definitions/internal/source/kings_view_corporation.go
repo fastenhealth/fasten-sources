@@ -29,6 +29,9 @@ func GetSourceKingsViewCorporation(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Kings View Corporation"
 	sourceDef.SourceType = pkg.SourceTypeKingsViewCorporation
+	sourceDef.Category = []string{"251S00000X", "261QM0801X", "171M00000X"}
+	sourceDef.Aliases = []string{"METRO CIT", "FAMILY URGENT RESPONSE SYSTEM (FURS)", "KINGS VIEW SERVICES", "KINGS VIEW TELEPSYCHIATRY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982162731", "1255065553", "1003413600", "1790114007"}}
 	sourceDef.PatientAccessUrl = "https://www.kingsview.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

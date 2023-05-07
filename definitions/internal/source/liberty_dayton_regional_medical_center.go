@@ -29,6 +29,9 @@ func GetSourceLibertyDaytonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Liberty Dayton Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeLibertyDaytonRegionalMedicalCenter
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"LIBERTY DAYTON REGIONAL MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154324952"}}
 	sourceDef.PatientAccessUrl = "http://www.libertydaytonrmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

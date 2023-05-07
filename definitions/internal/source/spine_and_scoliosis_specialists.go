@@ -28,6 +28,9 @@ func GetSourceSpineAndScoliosisSpecialists(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Spine And Scoliosis Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSpineAndScoliosisSpecialists
+	sourceDef.Category = []string{"207XS0117X"}
+	sourceDef.Aliases = []string{"SPINE AND SCOLIOSIS SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114340213", "1255466355"}}
 	sourceDef.BrandLogo = "spine-and-scoliosis-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://triadspine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

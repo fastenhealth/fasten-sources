@@ -28,6 +28,8 @@ func GetSourceLaurelEyeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Laurel Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeLaurelEyeClinic
+	sourceDef.Category = []string{"207W00000X", "152W00000X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235120072", "1003878729", "1104405554", "1700956034", "1790887131", "1629186077"}}
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/jaime-lim-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.cardassoc.com/fhir/metadata
+// https://fhir.cardassoc.com/FHIR/metadata
 func GetSourceCardiologyAssociatesOfMobile(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.cardassoc.com/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.cardassoc.com/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhir.cardassoc.com/fhir"
+	sourceDef.Audience = "https://fhir.cardassoc.com/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.cardassoc.com/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.cardassoc.com/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCardiologyAssociatesOfMobile]; clientIdOk {
 		sourceDef.ClientId = clientId

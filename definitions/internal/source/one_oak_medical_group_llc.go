@@ -29,6 +29,8 @@ func GetSourceOneOakMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "One Oak Medical Group, LLC"
 	sourceDef.SourceType = pkg.SourceTypeOneOakMedicalGroupLlc
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366055303"}}
 	sourceDef.PatientAccessUrl = "https://www.oneoakmedical.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

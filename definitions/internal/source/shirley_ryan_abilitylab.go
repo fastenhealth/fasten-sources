@@ -29,6 +29,9 @@ func GetSourceShirleyRyanAbilitylab(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Shirley Ryan AbilityLab"
 	sourceDef.SourceType = pkg.SourceTypeShirleyRyanAbilitylab
+	sourceDef.Category = []string{"283X00000X"}
+	sourceDef.Aliases = []string{"SHIRLEY RYAN ABILITYLAB"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205879095"}}
 	sourceDef.PatientAccessUrl = "https://www.sralab.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

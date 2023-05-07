@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprod.rwjbh.org/fhir/metadata
+// https://fhirprod.rwjbh.org/FHIR/metadata
 func GetSourceRobertWoodJohnson(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprod.rwjbh.org/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprod.rwjbh.org/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhirprod.rwjbh.org/fhir"
+	sourceDef.Audience = "https://fhirprod.rwjbh.org/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.rwjbh.org/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.rwjbh.org/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeRobertWoodJohnson]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,6 +28,9 @@ func GetSourceRobertWoodJohnson(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Robert Wood Johnson"
 	sourceDef.SourceType = pkg.SourceTypeRobertWoodJohnson
+	sourceDef.Category = []string{"282N00000X", "3416A0800X"}
+	sourceDef.Aliases = []string{"ROBERT WOOD JOHNSON"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912386731", "1083969596"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,9 @@ func GetSourceFayetteSurgicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Fayette Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeFayetteSurgicalAssociates
+	sourceDef.Category = []string{"2086S0129X", "363A00000X", "363AS0400X", "208600000X", "174400000X"}
+	sourceDef.Aliases = []string{"FAYETTE SURGICAL ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831140565", "1871773549"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

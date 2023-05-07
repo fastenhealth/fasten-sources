@@ -28,6 +28,8 @@ func GetSourceKeyClinicsLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Key Clinics LLC"
 	sourceDef.SourceType = pkg.SourceTypeKeyClinicsLlc
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588072854", "1851709125", "1659770709", "1306254677"}}
 	sourceDef.BrandLogo = "key-clinics-llc.svg"
 	sourceDef.PatientAccessUrl = "https://www.keyclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

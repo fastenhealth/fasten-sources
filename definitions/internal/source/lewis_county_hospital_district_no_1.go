@@ -29,6 +29,9 @@ func GetSourceLewisCountyHospitalDistrictNo1(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Lewis County Hospital District No. 1"
 	sourceDef.SourceType = pkg.SourceTypeLewisCountyHospitalDistrictNo1
+	sourceDef.Category = []string{"163WX0106X", "2085B0100X", "208600000X", "207P00000X", "207R00000X", "207V00000X", "207Y00000X", "261QR1300X", "207Q00000X", "367500000X", "282NR1301X", "275N00000X", "261Q00000X"}
+	sourceDef.Aliases = []string{"ARBOR HEALTH MORTON HOSPITAL", "ARBOR HEALTH SPECIALTY CLINIC", "ARBOR HEALTH PACKWOOD CLINIC", "ANESTHESIA GROUP", "ARBOR HEALTH RANDLE CLINIC", "ARBOR HEALTH", "RANDLE CLINIC", "ARBOR HEALTH MORTON CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205882909", "1386679777", "1497466494", "1053467712", "1689604563", "1033470505", "1427092162", "1427083815", "1427310341", "1952415432"}}
 	sourceDef.PatientAccessUrl = "https://www.myarborhealth.org/locations/arbor-health-morton-hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

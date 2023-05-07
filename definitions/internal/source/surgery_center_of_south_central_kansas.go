@@ -28,6 +28,9 @@ func GetSourceSurgeryCenterOfSouthCentralKansas(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Surgery Center Of South Central Kansas"
 	sourceDef.SourceType = pkg.SourceTypeSurgeryCenterOfSouthCentralKansas
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SURGERY CENTER OF SOUTH CENTRAL KANSAS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043283294"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

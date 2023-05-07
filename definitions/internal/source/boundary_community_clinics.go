@@ -28,6 +28,9 @@ func GetSourceBoundaryCommunityClinics(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Boundary Community Clinics"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryCommunityClinics
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"BOUNDARY COMMUNITY CLINICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801273552"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

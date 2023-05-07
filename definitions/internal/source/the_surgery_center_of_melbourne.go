@@ -28,6 +28,9 @@ func GetSourceTheSurgeryCenterOfMelbourne(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "The Surgery Center Of Melbourne"
 	sourceDef.SourceType = pkg.SourceTypeTheSurgeryCenterOfMelbourne
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"THE SURGERY CENTER OF MELBOURNE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255311635"}}
 	sourceDef.PatientAccessUrl = "https://surgerymelbourne.com/location/surgery-center-of-melbourne/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

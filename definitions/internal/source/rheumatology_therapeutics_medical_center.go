@@ -28,6 +28,9 @@ func GetSourceRheumatologyTherapeuticsMedicalCenter(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Rheumatology Therapeutics Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyTherapeuticsMedicalCenter
+	sourceDef.Category = []string{"207RR0500X", "332900000X"}
+	sourceDef.Aliases = []string{"RHEUMATOLOGY THERAPEUTICS MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700999117", "1437410909"}}
 	sourceDef.BrandLogo = "rheumatology-therapeutics-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/arthritisconsult/"
 	sourceDef.SecretKeyPrefix = "nextgen"

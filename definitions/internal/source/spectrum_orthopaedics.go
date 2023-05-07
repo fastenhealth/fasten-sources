@@ -28,6 +28,9 @@ func GetSourceSpectrumOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Spectrum Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumOrthopaedics
+	sourceDef.Category = []string{"261QM1300X", "332B00000X"}
+	sourceDef.Aliases = []string{"SPECTRUM ORTHOPAEDICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275128688", "1356766828"}}
 	sourceDef.PatientAccessUrl = "https://orthospectrum.com/locations/orthoaccess-walk-in-clinic-portland/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

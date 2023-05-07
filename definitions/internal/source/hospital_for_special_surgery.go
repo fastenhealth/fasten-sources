@@ -28,6 +28,9 @@ func GetSourceHospitalForSpecialSurgery(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hospital for Special Surgery"
 	sourceDef.SourceType = pkg.SourceTypeHospitalForSpecialSurgery
+	sourceDef.Category = []string{"282N00000X", "207RR0500X", "284300000X", "261QR0200X"}
+	sourceDef.Aliases = []string{"HOSPITAL FOR SPECIAL SURGERY", "HSS RHEUMATOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184038663", "1992946776", "1760880405", "1235392606", "1467539494", "1497913529", "1295003390", "1760758486", "1023705803", "1598703019"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceWarrenEKaplanDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Warren E. Kaplan, DPM"
 	sourceDef.SourceType = pkg.SourceTypeWarrenEKaplanDpm
+	sourceDef.Category = []string{"213ES0103X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407033624"}}
 	sourceDef.PatientAccessUrl = "https://www.kaplanpodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

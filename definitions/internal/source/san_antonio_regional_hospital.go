@@ -29,6 +29,8 @@ func GetSourceSanAntonioRegionalHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "San Antonio Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioRegionalHospital
+	sourceDef.Category = []string{"282N00000X", "333600000X", "3336I0012X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780681189", "1104370881"}}
 	sourceDef.PatientAccessUrl = "https://www.sarh.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

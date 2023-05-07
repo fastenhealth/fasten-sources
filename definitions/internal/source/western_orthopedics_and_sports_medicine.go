@@ -28,6 +28,9 @@ func GetSourceWesternOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Western Orthopedics and Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWesternOrthopedicsAndSportsMedicine
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"WESTERN ORTHOPEDICS AND SPORTS MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003319492"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

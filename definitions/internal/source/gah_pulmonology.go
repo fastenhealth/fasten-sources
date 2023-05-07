@@ -28,6 +28,9 @@ func GetSourceGahPulmonology(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "GAH Pulmonology"
 	sourceDef.SourceType = pkg.SourceTypeGahPulmonology
+	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{"GAH PULMONOLOGY", "GIBSON AREA HOSPITAL PULMONOLOGY CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114507753"}}
 	sourceDef.BrandLogo = "gah-pulmonology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/home"
 	sourceDef.SecretKeyPrefix = "nextgen"

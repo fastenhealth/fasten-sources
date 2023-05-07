@@ -29,6 +29,9 @@ func GetSourceGothenburgMemorialHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gothenburg Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGothenburgMemorialHospital
+	sourceDef.Category = []string{"261QR1300X", "207Q00000X", "275N00000X", "282NC0060X", "363L00000X", "363A00000X"}
+	sourceDef.Aliases = []string{"GOTHENBURG CLINIC", "BRADY CLINIC", "GOTHENBURG HEALTH", "GOTHENBURG HEALTH QUALITY PROGRAMS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477953305", "1912445404", "1265502538", "1922051531", "1962059766"}}
 	sourceDef.PatientAccessUrl = "https://www.gothenburghealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceNephrologyPhysiciansLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Nephrology Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyPhysiciansLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003357377"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/MichianaRegionalVascularCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

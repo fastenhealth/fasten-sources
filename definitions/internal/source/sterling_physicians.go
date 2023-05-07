@@ -28,6 +28,8 @@ func GetSourceSterlingPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Sterling Physicians"
 	sourceDef.SourceType = pkg.SourceTypeSterlingPhysicians
+	sourceDef.Category = []string{"207ZP0102X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275006025"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

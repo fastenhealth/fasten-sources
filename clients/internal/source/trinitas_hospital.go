@@ -18,7 +18,7 @@ type SourceClientTrinitasHospital struct {
 	models.SourceClient
 }
 
-// https://fhirprod.trinitas.org/fhir/metadata
+// https://fhirprod.trinitas.org/FHIR/metadata
 func GetSourceClientTrinitasHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

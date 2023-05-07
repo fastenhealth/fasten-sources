@@ -28,6 +28,8 @@ func GetSourceAspirus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Aspirus"
 	sourceDef.SourceType = pkg.SourceTypeAspirus
+	sourceDef.Category = []string{"332900000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265515597"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

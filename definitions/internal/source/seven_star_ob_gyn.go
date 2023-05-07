@@ -28,6 +28,9 @@ func GetSourceSevenStarObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Seven Star OB/GYN"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarObGyn
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR OB/GYN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093318172"}}
 	sourceDef.PatientAccessUrl = "https://sevenstarhealth.com/office-locations/seven-star-obgyn-hemet"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

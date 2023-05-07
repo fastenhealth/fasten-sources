@@ -28,6 +28,9 @@ func GetSourceAndersonExpressCareClinic(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Anderson Express Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeAndersonExpressCareClinic
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{"ANDERSON EXPRESS CARE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710352356"}}
 	sourceDef.PatientAccessUrl = "https://www.andersonregional.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

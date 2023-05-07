@@ -28,6 +28,8 @@ func GetSourceApexHospitalistMedicalGroupInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Apex Hospitalist Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeApexHospitalistMedicalGroupInc
+	sourceDef.Category = []string{"208D00000X", "208M00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104272384", "1669899225"}}
 	sourceDef.BrandLogo = "apex-hospitalist-medical-group-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.vitadox.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

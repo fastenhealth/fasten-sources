@@ -28,6 +28,8 @@ func GetSourceMoweryClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Mowery Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeMoweryClinicLlc
+	sourceDef.Category = []string{"207RC0000X", "207RG0100X", "207RH0003X", "207RI0011X", "207RN0300X", "207RP1001X", "207V00000X", "208000000X", "208600000X", "207RX0202X", "207RE0101X", "207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790742278"}}
 	sourceDef.PatientAccessUrl = "https://moweryclinic.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

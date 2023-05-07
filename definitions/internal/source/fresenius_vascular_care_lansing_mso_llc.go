@@ -28,6 +28,9 @@ func GetSourceFreseniusVascularCareLansingMsoLlc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Fresenius Vascular Care Lansing MSO LLC"
 	sourceDef.SourceType = pkg.SourceTypeFreseniusVascularCareLansingMsoLlc
+	sourceDef.Category = []string{"2085R0204X"}
+	sourceDef.Aliases = []string{"FRESENIUS VASCULAR CARE LANSING MSO LLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255603767"}}
 	sourceDef.PatientAccessUrl = "https://www.freseniuskidneycare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

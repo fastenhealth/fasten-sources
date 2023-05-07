@@ -28,6 +28,8 @@ func GetSourceObstetrixMedicalGroupOfArizona(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Obstetrix Medical Group Of Arizona"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfArizona
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093998270"}}
 	sourceDef.PatientAccessUrl = "https://npino.com › obgyn-clinic"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

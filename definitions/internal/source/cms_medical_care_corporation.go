@@ -28,6 +28,8 @@ func GetSourceCmsMedicalCareCorporation(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CMS Medical Care Corporation"
 	sourceDef.SourceType = pkg.SourceTypeCmsMedicalCareCorporation
+	sourceDef.Category = []string{"2084P0800X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306925003"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

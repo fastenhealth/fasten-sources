@@ -28,6 +28,9 @@ func GetSourceCitrusAmbulatorySurgeryCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Citrus Ambulatory Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeCitrusAmbulatorySurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"CITRUS AMBULATORY SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376518357"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

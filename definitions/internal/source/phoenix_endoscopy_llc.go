@@ -28,6 +28,8 @@ func GetSourcePhoenixEndoscopyLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Phoenix Endoscopy LLC"
 	sourceDef.SourceType = pkg.SourceTypePhoenixEndoscopyLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851516728"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

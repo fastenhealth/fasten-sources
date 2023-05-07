@@ -11,7 +11,6 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://mcproxyprd.med.umich.edu/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://mcproxyprd.med.umich.edu/FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceMichiganMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)

@@ -28,6 +28,8 @@ func GetSourcePrairieClinicSc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Prairie Clinic SC"
 	sourceDef.SourceType = pkg.SourceTypePrairieClinicSc
+	sourceDef.Category = []string{"332B00000X", "207R00000X", "207V00000X", "208000000X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407060791", "1235163494"}}
 	sourceDef.BrandLogo = "prairie-clinic-sc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.prairieclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

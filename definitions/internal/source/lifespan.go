@@ -28,6 +28,9 @@ func GetSourceLifespan(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Lifespan"
 	sourceDef.SourceType = pkg.SourceTypeLifespan
+	sourceDef.Category = []string{"251B00000X", "251V00000X", "332U00000X", "251C00000X", "251S00000X", "253Z00000X"}
+	sourceDef.Aliases = []string{"LIFESPAN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962924381", "1376927236", "1861745416", "1538402979", "1275982688"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

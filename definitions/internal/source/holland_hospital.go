@@ -29,6 +29,9 @@ func GetSourceHollandHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Holland Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHollandHospital
+	sourceDef.Category = []string{"282N00000X", "174400000X", "251E00000X"}
+	sourceDef.Aliases = []string{"HOLLAND HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336508183", "1871672618"}}
 	sourceDef.BrandLogo = "holland-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hollandhospital.org/hh/home.aspx"
 	sourceDef.SecretKeyPrefix = "cerner"

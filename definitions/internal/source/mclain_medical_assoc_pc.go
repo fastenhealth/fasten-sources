@@ -28,6 +28,9 @@ func GetSourceMclainMedicalAssocPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "McLain Medical Assoc PC"
 	sourceDef.SourceType = pkg.SourceTypeMclainMedicalAssocPc
+	sourceDef.Category = []string{"174400000X", "207RR0500X"}
+	sourceDef.Aliases = []string{"MCLAIN MEDICAL ASSOC PC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164479184", "1215114004"}}
 	sourceDef.PatientAccessUrl = "https://www.mclainmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

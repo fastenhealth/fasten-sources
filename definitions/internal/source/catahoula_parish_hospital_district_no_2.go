@@ -28,6 +28,9 @@ func GetSourceCatahoulaParishHospitalDistrictNo2(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Catahoula Parish Hospital District No 2"
 	sourceDef.SourceType = pkg.SourceTypeCatahoulaParishHospitalDistrictNo2
+	sourceDef.Category = []string{"261QM0801X", "261QF0400X"}
+	sourceDef.Aliases = []string{"OUTPATIENT BEHAVIORAL SERVICES", "CATAHOULA PARISH HOSPITAL DIST. #2", "ISLAND MEDICAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891499356", "1245629260", "1770622631"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

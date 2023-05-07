@@ -28,6 +28,8 @@ func GetSourceUropartnersLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "UroPartners, LLC"
 	sourceDef.SourceType = pkg.SourceTypeUropartnersLlc
+	sourceDef.Category = []string{"208800000X", "363A00000X", "363L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396801197", "1356395321", "1427021518", "1114972965", "1346295128", "1639124464", "1215982087", "1821042755", "1043535909", "1154487957"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

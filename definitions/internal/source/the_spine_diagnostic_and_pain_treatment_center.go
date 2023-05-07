@@ -28,6 +28,9 @@ func GetSourceTheSpineDiagnosticAndPainTreatmentCenter(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "The Spine Diagnostic and Pain Treatment Center"
 	sourceDef.SourceType = pkg.SourceTypeTheSpineDiagnosticAndPainTreatmentCenter
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"THE SPINE DIAGNOSTIC AND PAIN TREATMENT CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790712214"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

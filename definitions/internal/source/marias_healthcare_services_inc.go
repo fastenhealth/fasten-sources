@@ -28,6 +28,8 @@ func GetSourceMariasHealthcareServicesInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Marias Healthcare Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeMariasHealthcareServicesInc
+	sourceDef.Category = []string{"332B00000X", "3336C0003X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932762515", "1245481159", "1881697209", "1790275709"}}
 	sourceDef.BrandLogo = "marias-healthcare-services-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mariashealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

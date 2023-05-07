@@ -28,6 +28,9 @@ func GetSourcePomonaCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pomona Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypePomonaCommunityHealthCenter
+	sourceDef.Category = []string{"1223G0001X", "261QD0000X", "261QC1500X"}
+	sourceDef.Aliases = []string{"PARKTREE COMMUNITY HEALTH CENTER", "POMONA COMMUNITY HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538626312", "1710444534", "1962033902", "1659838431", "1154860963", "1538486741", "1154788560", "1508323379", "1174080980", "1134686918"}}
 	sourceDef.PatientAccessUrl = "https://www.parktreechc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

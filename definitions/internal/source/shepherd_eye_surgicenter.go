@@ -28,6 +28,9 @@ func GetSourceShepherdEyeSurgicenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Shepherd Eye Surgicenter"
 	sourceDef.SourceType = pkg.SourceTypeShepherdEyeSurgicenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SHEPHERD EYE SURGICENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982677191"}}
 	sourceDef.BrandLogo = "shepherd-eye-surgicenter.jpg"
 	sourceDef.PatientAccessUrl = "https://www.shepherdeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

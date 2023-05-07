@@ -28,6 +28,9 @@ func GetSourceCassCountyHealthClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cass County Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCassCountyHealthClinic
+	sourceDef.Category = []string{"261QF0400X", "251B00000X"}
+	sourceDef.Aliases = []string{"CASS COUNTY HEALTH CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144703372", "1154804383"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

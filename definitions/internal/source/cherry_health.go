@@ -28,6 +28,8 @@ func GetSourceCherryHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Cherry Health"
 	sourceDef.SourceType = pkg.SourceTypeCherryHealth
+	sourceDef.Category = []string{"385H00000X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235594920", "1023558533"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceMckenzieMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "McKenzie Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMckenzieMedicalCenter
+	sourceDef.Category = []string{"261QR1300X", "291U00000X", "207Q00000X", "333600000X", "3336C0003X", "261QS1200X", "207R00000X", "208000000X", "208600000X", "363A00000X", "363LF0000X", "261QU0200X"}
+	sourceDef.Aliases = []string{"MCKENZIE MEDICAL CENTER", "MMC URGENT CARE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477747293", "1790075281", "1225267479", "1841696192"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

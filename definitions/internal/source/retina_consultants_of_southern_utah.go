@@ -28,6 +28,9 @@ func GetSourceRetinaConsultantsOfSouthernUtah(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Retina Consultants Of Southern Utah"
 	sourceDef.SourceType = pkg.SourceTypeRetinaConsultantsOfSouthernUtah
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"RETINA CONSULTANTS OF SOUTHERN UTAH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669410098"}}
 	sourceDef.PatientAccessUrl = "https://southernutahretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

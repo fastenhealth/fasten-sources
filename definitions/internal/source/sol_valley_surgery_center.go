@@ -28,6 +28,9 @@ func GetSourceSolValleySurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Sol Valley Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSolValleySurgeryCenter
+	sourceDef.Category = []string{"2471C1101X", "261QA1903X"}
+	sourceDef.Aliases = []string{"SOL VALLEY SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497367262"}}
 	sourceDef.PatientAccessUrl = "https://azcarenetwork.org/resource/facility/sol-valley-surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

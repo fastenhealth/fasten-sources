@@ -28,6 +28,9 @@ func GetSourceProlianceSouthwestSeattleOrthopedics(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Proliance Southwest Seattle Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSouthwestSeattleOrthopedics
+	sourceDef.Category = []string{"207XS0106X", "207XS0117X", "207XX0005X", "207X00000X"}
+	sourceDef.Aliases = []string{"PROLIANCE SOUTHWEST SEATTLE ORTHOPEDICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538343033"}}
 	sourceDef.BrandLogo = "proliance-southwest-seattle-orthopedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.prolianceswseattleortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

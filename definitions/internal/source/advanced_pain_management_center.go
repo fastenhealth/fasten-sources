@@ -28,6 +28,8 @@ func GetSourceAdvancedPainManagementCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Advanced Pain Management Center"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainManagementCenter
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467773663"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

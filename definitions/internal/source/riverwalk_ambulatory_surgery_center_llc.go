@@ -28,6 +28,8 @@ func GetSourceRiverwalkAmbulatorySurgeryCenterLlc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Riverwalk Ambulatory Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeRiverwalkAmbulatorySurgeryCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588839609"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/riverwalkasc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourcePioneerHeartInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Pioneer Heart Institute"
 	sourceDef.SourceType = pkg.SourceTypePioneerHeartInstitute
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{"PIONEER HEART INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346731759"}}
 	sourceDef.PatientAccessUrl = "https://pioneerheart.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

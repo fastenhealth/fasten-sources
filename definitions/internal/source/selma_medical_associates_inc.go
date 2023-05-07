@@ -28,6 +28,8 @@ func GetSourceSelmaMedicalAssociatesInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Selma Medical Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeSelmaMedicalAssociatesInc
+	sourceDef.Category = []string{"291U00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144319153"}}
 	sourceDef.PatientAccessUrl = "https://www.selmamed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

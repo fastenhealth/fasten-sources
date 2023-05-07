@@ -29,6 +29,9 @@ func GetSourceStJosephsRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "St. Joseph's Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeStJosephsRegionalMedicalCenter
+	sourceDef.Category = []string{"207R00000X", "390200000X", "322D00000X"}
+	sourceDef.Aliases = []string{"ST. JOSEPH'S REGIONAL MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992113914", "1992911937", "1801274634"}}
 	sourceDef.PatientAccessUrl = "http://www.stjosephshealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

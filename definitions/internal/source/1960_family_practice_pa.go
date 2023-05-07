@@ -28,6 +28,8 @@ func GetSource1960FamilyPracticePa(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "1960 Family Practice PA"
 	sourceDef.SourceType = pkg.SourceType1960FamilyPracticePa
+	sourceDef.Category = []string{"207R00000X", "207Q00000X", "3336C0003X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760438840", "1154608933"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

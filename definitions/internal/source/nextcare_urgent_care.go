@@ -28,6 +28,9 @@ func GetSourceNextcareUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "NextCare Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeNextcareUrgentCare
+	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{"NEXTCARE URGENT CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396923181", "1831707272", "1851909287", "1801408653", "1144251976", "1447868880", "1336757947", "1255949681", "1831707447", "1811224371"}}
 	sourceDef.PatientAccessUrl = "https://nextcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

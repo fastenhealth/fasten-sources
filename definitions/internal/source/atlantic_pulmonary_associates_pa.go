@@ -28,6 +28,8 @@ func GetSourceAtlanticPulmonaryAssociatesPa(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Atlantic Pulmonary Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticPulmonaryAssociatesPa
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194714626"}}
 	sourceDef.BrandLogo = "atlantic-pulmonary-associates-pa.svg"
 	sourceDef.PatientAccessUrl = "https://www.sentara.com/findadoctor/healthcare-provider/heyder-albrecht-2861.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"

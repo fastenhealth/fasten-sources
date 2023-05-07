@@ -28,6 +28,8 @@ func GetSourceSouthernIndianaCommunityHealthCare(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Southern Indiana Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIndianaCommunityHealthCare
+	sourceDef.Category = []string{"261QR1300X", "363LF0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083863567", "1841692035", "1174772651"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

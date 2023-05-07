@@ -28,6 +28,9 @@ func GetSourceErgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "ERgent Care"
 	sourceDef.SourceType = pkg.SourceTypeErgentCare
+	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{"ERGENT CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386147882"}}
 	sourceDef.BrandLogo = "ergent-care.jpg"
 	sourceDef.PatientAccessUrl = "http://www.ergentcare-jax.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

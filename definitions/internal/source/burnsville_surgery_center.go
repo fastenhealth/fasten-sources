@@ -28,6 +28,9 @@ func GetSourceBurnsvilleSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Burnsville Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeBurnsvilleSurgeryCenter
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"BURNSVILLE SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548885254"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

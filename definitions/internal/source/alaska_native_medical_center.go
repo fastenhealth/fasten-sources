@@ -30,6 +30,9 @@ func GetSourceAlaskaNativeMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Alaska Native Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeAlaskaNativeMedicalCenter
+	sourceDef.Category = []string{"282N00000X", "367500000X"}
+	sourceDef.Aliases = []string{"ALASKA NATIVE MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437189339", "1578056479"}}
 	sourceDef.PatientAccessUrl = "https://anmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

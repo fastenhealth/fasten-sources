@@ -29,6 +29,9 @@ func GetSourceAstriaSunnysideHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Astria Sunnyside Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAstriaSunnysideHospital
+	sourceDef.Category = []string{"261QM1300X", "275N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"ASTRIA SUNNYSIDE HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225033814"}}
 	sourceDef.PatientAccessUrl = "https://www.astria.health/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

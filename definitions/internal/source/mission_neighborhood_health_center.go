@@ -28,6 +28,9 @@ func GetSourceMissionNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Mission Neighborhood Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMissionNeighborhoodHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"MISSION NEIGHBORHOOD HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457427411"}}
 	sourceDef.PatientAccessUrl = "https://www.mnhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceBassettHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Bassett Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeBassettHealthcare
+	sourceDef.Category = []string{"282N00000X", "282NR1301X"}
+	sourceDef.Aliases = []string{"BASSETT HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851452890", "1780600577"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

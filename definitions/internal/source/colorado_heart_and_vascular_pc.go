@@ -28,6 +28,8 @@ func GetSourceColoradoHeartAndVascularPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Colorado Heart And Vascular PC"
 	sourceDef.SourceType = pkg.SourceTypeColoradoHeartAndVascularPc
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598367955", "1942802004", "1679175038"}}
 	sourceDef.PatientAccessUrl = "https://www.chvpc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

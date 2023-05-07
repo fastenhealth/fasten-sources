@@ -28,6 +28,9 @@ func GetSourceJordanValleyCommunityHealthCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Jordan Valley Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeJordanValleyCommunityHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"JORDAN VALLEY COMMUNITY HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700539301", "1609413947", "1104572312", "1952410995", "1356424352", "1346783222", "1699445452", "1396273074", "1407490741", "1356519524"}}
 	sourceDef.BrandLogo = "jordan-valley-community-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.jordanvalley.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

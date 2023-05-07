@@ -28,6 +28,9 @@ func GetSourceOrthopedicRehabilitationAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Orthopedic Rehabilitation Associates"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicRehabilitationAssociates
+	sourceDef.Category = []string{"261QP2000X"}
+	sourceDef.Aliases = []string{"ORTHOPEDIC REHABILITATION ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538781604", "1003527755", "1194390518", "1083236186", "1265054365", "1124730742", "1629690722", "1811519911"}}
 	sourceDef.BrandLogo = "orthopedic-rehabilitation-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://ora.urpt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

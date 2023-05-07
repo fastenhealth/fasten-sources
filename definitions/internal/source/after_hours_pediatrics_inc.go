@@ -28,6 +28,8 @@ func GetSourceAfterHoursPediatricsInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "After Hours Pediatrics, Inc"
 	sourceDef.SourceType = pkg.SourceTypeAfterHoursPediatricsInc
+	sourceDef.Category = []string{"2080P0204X", "261QU0200X", "261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922776871"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

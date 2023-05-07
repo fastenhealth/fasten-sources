@@ -28,6 +28,9 @@ func GetSourceSaintJosephPhysicianNetwork(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Saint Joseph Physician Network"
 	sourceDef.SourceType = pkg.SourceTypeSaintJosephPhysicianNetwork
+	sourceDef.Category = []string{"207R00000X", "207RI0200X", "207V00000X", "208000000X", "261QU0200X", "363L00000X", "363LF0000X", "363LP0200X", "207Q00000X", "207RC0000X", "207RC0001X", "207RI0011X", "207VM0101X", "2084N0400X", "2086S0129X", "208800000X", "208G00000X", "363A00000X", "207RP1001X"}
+	sourceDef.Aliases = []string{"SAINT JOSEPH PHYSICIAN NETWORK"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467406074", "1225082878"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

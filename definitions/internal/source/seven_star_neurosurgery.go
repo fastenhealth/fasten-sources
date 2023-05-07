@@ -28,6 +28,9 @@ func GetSourceSevenStarNeurosurgery(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Seven Star Neurosurgery"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarNeurosurgery
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR NEUROSURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063015154"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/menifee/seven-star-medical-group-x9sm63a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

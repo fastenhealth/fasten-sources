@@ -28,6 +28,8 @@ func GetSourceProctorEntPlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Proctor ENT PLC"
 	sourceDef.SourceType = pkg.SourceTypeProctorEntPlc
+	sourceDef.Category = []string{"207Y00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659421048"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

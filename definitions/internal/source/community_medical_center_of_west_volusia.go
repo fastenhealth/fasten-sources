@@ -28,6 +28,8 @@ func GetSourceCommunityMedicalCenterOfWestVolusia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Community Medical Center of West Volusia"
 	sourceDef.SourceType = pkg.SourceTypeCommunityMedicalCenterOfWestVolusia
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619046927"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

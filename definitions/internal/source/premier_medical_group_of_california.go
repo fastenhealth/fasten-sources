@@ -29,6 +29,8 @@ func GetSourcePremierMedicalGroupOfCalifornia(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Premier Medical Group Of California"
 	sourceDef.SourceType = pkg.SourceTypePremierMedicalGroupOfCalifornia
+	sourceDef.Category = []string{"207R00000X", "207RH0002X", "2083B0002X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629523014"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

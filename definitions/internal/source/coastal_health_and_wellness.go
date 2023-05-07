@@ -28,6 +28,9 @@ func GetSourceCoastalHealthAndWellness(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Coastal Health &  Wellness"
 	sourceDef.SourceType = pkg.SourceTypeCoastalHealthAndWellness
+	sourceDef.Category = []string{"122300000X", "261QF0400X"}
+	sourceDef.Aliases = []string{"GALVESTON COUNTY COORDINATED COMMUNITY CLINICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578588406", "1871766584"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

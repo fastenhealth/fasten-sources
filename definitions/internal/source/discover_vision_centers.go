@@ -28,6 +28,9 @@ func GetSourceDiscoverVisionCenters(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Discover Vision Centers"
 	sourceDef.SourceType = pkg.SourceTypeDiscoverVisionCenters
+	sourceDef.Category = []string{"332H00000X"}
+	sourceDef.Aliases = []string{"DISCOVER VISION CENTERS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164548269"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

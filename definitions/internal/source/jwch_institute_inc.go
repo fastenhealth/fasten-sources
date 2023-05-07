@@ -28,6 +28,9 @@ func GetSourceJwchInstituteInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "JWCH Institute Inc"
 	sourceDef.SourceType = pkg.SourceTypeJwchInstituteInc
+	sourceDef.Category = []string{"171M00000X", "251X00000X", "261QC1500X", "261QD0000X", "261QF0400X", "261Q00000X", "261QP2300X"}
+	sourceDef.Aliases = []string{"JWCH INSTITUTE INC MEDICAL CLINIC WEINGART CENTER", "WESLEY HEALTH CENTERS - HEALTH AND WELLNESS CENTER 2", "WESLEY HEALTH CENTERS BELL OASIS", "BELL GARDENS DENTAL CLINIC", "WESLEY HEALTH CENTERS (LYNWOOD)"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407808058", "1881065548", "1073209177", "1992404305", "1023774387", "1386902708"}}
 	sourceDef.PatientAccessUrl = "https://taggs.hhs.gov/Detail/RecipDetail?arg_EntityId=LUyYsTzclxQl6g6nlyAkzw%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

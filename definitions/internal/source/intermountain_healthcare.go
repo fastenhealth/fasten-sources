@@ -28,6 +28,9 @@ func GetSourceIntermountainHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Intermountain Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeIntermountainHealthcare
+	sourceDef.Category = []string{"207Q00000X", "2083X0100X", "363AM0700X", "363LP2300X", "207R00000X", "207RH0003X", "207N00000X", "207RE0101X", "213E00000X", "207RC0000X", "213ES0103X", "208000000X", "2085R0001X", "208M00000X", "247100000X"}
+	sourceDef.Aliases = []string{"INTERMOUNTAIN HEALTHCARE", "HEALTHCARE PARTNERS MEDICAL GROUP", "HEALTHCARE PARTNERS - E FLAMINGO SPECIALTY", "HEALTHCARE PARTNERS - HIGHWAY 160 SPECIALTY", "HEALTHCARE PARTNERS MEDICAL GROUP COATS LTD", "HEALTHCARE PARTNERS - W. LAKE MEAD"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043537301", "1992717722", "1194153478", "1306274626", "1902883341", "1447694039", "1023335387", "1235116716", "1093032344", "1699092957"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

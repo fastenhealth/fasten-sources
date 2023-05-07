@@ -29,6 +29,9 @@ func GetSourceSumnerRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Sumner Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSumnerRegionalMedicalCenter
+	sourceDef.Category = []string{"207Q00000X", "282N00000X", "273R00000X", "314000000X", "261QE0002X"}
+	sourceDef.Aliases = []string{"SUMMARY PRIMARY CARE", "SUMMER PRIMARY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548731904", "1679578223", "1053317008", "1962408914", "1396849840"}}
 	sourceDef.PatientAccessUrl = "https://www.mysumnermedical.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

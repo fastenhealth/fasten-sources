@@ -28,6 +28,8 @@ func GetSourceSalusUniversity(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Salus University"
 	sourceDef.SourceType = pkg.SourceTypeSalusUniversity
+	sourceDef.Category = []string{"261QH0700X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538564927"}}
 	sourceDef.PatientAccessUrl = "https://www.salus.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

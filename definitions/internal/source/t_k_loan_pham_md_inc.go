@@ -28,6 +28,8 @@ func GetSourceTKLoanPhamMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "T K Loan Pham MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeTKLoanPhamMdInc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457597411"}}
 	sourceDef.PatientAccessUrl = "Name: T K Loan Pham MD Inc Address: PO Box 13550 City: Palm Desert Zip: 922553550 State: California Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

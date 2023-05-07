@@ -28,6 +28,8 @@ func GetSourceGlendoraAnesthesiaAssociatesLp(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Glendora Anesthesia Associates LP"
 	sourceDef.SourceType = pkg.SourceTypeGlendoraAnesthesiaAssociatesLp
+	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750748331"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

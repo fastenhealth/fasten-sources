@@ -29,6 +29,8 @@ func GetSourceBlueRidgeBehavioralHealthcare(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Blue Ridge Behavioral Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeBlueRidgeBehavioralHealthcare
+	sourceDef.Category = []string{"101Y00000X", "101YA0400X", "261QM0801X", "251C00000X", "251S00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508833294", "1437137734", "1255442570", "1679717151"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

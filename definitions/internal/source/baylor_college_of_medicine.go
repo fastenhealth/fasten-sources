@@ -28,6 +28,9 @@ func GetSourceBaylorCollegeOfMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Baylor College of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeBaylorCollegeOfMedicine
+	sourceDef.Category = []string{"207RE0101X", "207N00000X", "207L00000X", "207R00000X", "207V00000X", "207W00000X", "207X00000X", "207Y00000X", "208000000X", "208100000X", "2084N0400X", "2084P0800X", "2085R0202X", "208600000X", "208800000X", "207Q00000X", "170100000X", "207T00000X", "208200000X", "282N00000X", "283Q00000X", "284300000X"}
+	sourceDef.Aliases = []string{"BCM PHYSICIANS OF SAN ANTONIO", "BCM PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982778544", "1457556565", "1285079764", "1881026664", "1124413513", "1821548488", "1730132721", "1386691681", "1164463287", "1801177555", "1497843700"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

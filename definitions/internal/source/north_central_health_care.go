@@ -29,6 +29,9 @@ func GetSourceNorthCentralHealthCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "North Central Health Care"
 	sourceDef.SourceType = pkg.SourceTypeNorthCentralHealthCare
+	sourceDef.Category = []string{"283Q00000X", "261QM1300X", "324500000X", "314000000X"}
+	sourceDef.Aliases = []string{"NORTH CENTRAL HEALTH CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306850177", "1205944543", "1780222083", "1669580908"}}
 	sourceDef.PatientAccessUrl = "https://www.norcen.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceShenandoahWomensHealthcare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Shenandoah Womens Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeShenandoahWomensHealthcare
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235112970"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

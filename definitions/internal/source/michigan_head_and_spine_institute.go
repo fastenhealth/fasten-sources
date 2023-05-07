@@ -28,6 +28,9 @@ func GetSourceMichiganHeadAndSpineInstitute(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Michigan Head And Spine Institute"
 	sourceDef.SourceType = pkg.SourceTypeMichiganHeadAndSpineInstitute
+	sourceDef.Category = []string{"2085R0202X", "225000000X", "174400000X"}
+	sourceDef.Aliases = []string{"MICHIGAN HEAD AND SPINE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366996829", "1699761379"}}
 	sourceDef.BrandLogo = "michigan-head-and-spine-institute.svg"
 	sourceDef.PatientAccessUrl = "https://www.mhsi.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

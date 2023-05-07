@@ -29,6 +29,9 @@ func GetSourceLittleColoradoMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Little Colorado Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeLittleColoradoMedicalCenter
+	sourceDef.Category = []string{"261QR1300X", "282NC0060X"}
+	sourceDef.Aliases = []string{"LITTLE COLORADO MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477653889"}}
 	sourceDef.PatientAccessUrl = "https://www.lcmcwmh.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

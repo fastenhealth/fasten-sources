@@ -28,6 +28,8 @@ func GetSourceSwitchbackMedicalCenterPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Switchback Medical Center PC"
 	sourceDef.SourceType = pkg.SourceTypeSwitchbackMedicalCenterPc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487773966"}}
 	sourceDef.PatientAccessUrl = "https://www.lvhn.org/locations/switchback-medical-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

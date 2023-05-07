@@ -29,6 +29,9 @@ func GetSourceMethodistFremontHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Methodist Fremont Health"
 	sourceDef.SourceType = pkg.SourceTypeMethodistFremontHealth
+	sourceDef.Category = []string{"282NR1301X", "3336L0003X", "3336C0003X", "251G00000X", "251E00000X", "133V00000X", "207P00000X", "207RI0200X", "207Q00000X", "207QH0002X", "207R00000X", "273R00000X", "314000000X"}
+	sourceDef.Aliases = []string{"METHODIST FREMONT HEALTH PHARMACY", "METHODIST FREMONT HEALTH HOSPICE", "METHODIST FREMONT HEALTH HOME CARE", "METHODIST FREMONT HEALTH PROFESSIONAL SERVICES", "DUNKLAU GARDENS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033698543", "1144798729", "1245719228", "1619456696", "1235618216", "1144709122", "1982183968"}}
 	sourceDef.BrandLogo = "methodist-fremont-health.jpg"
 	sourceDef.PatientAccessUrl = "https://bestcare.org/locations/methodist-fremont-health"
 	sourceDef.SecretKeyPrefix = "cerner"

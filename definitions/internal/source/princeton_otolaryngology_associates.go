@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10050802/metadata
 func GetSourcePrincetonOtolaryngologyAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10050802/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10050802/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorizationV2/10050802/connect/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorizationV2/10050802/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10050802"
 

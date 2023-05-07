@@ -28,6 +28,9 @@ func GetSourceInterventionalPainSpecialists(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Interventional Pain Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalPainSpecialists
+	sourceDef.Category = []string{"363L00000X", "363LF0000X", "208VP0014X", "207LP2900X"}
+	sourceDef.Aliases = []string{"INTERVENTIONAL PAIN SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174528392"}}
 	sourceDef.BrandLogo = "interventional-pain-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://www.stelizabeth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

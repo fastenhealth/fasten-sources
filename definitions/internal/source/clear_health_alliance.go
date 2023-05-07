@@ -27,6 +27,9 @@ func GetSourceClearHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Clear Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeClearHealthAlliance
+	sourceDef.Category = []string{"302R00000X"}
+	sourceDef.Aliases = []string{"CLEAR HEALTH ALLIANCE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841943446", "1801549407", "1780337386", "1215680814", "1003569609", "1821741422", "1750034351", "1962155564", "1912650516", "1376296970"}}
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

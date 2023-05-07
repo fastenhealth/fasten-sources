@@ -29,6 +29,8 @@ func GetSourceSouthernInternalMedicineLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Southern Internal Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthernInternalMedicineLlc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316121619"}}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceKeystoneCollege(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Keystone College"
 	sourceDef.SourceType = pkg.SourceTypeKeystoneCollege
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649403007"}}
 	sourceDef.PatientAccessUrl = "https://www.keystone.edu"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

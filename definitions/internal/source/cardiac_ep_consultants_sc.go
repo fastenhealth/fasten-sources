@@ -28,6 +28,8 @@ func GetSourceCardiacEpConsultantsSc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cardiac EP Consultants SC"
 	sourceDef.SourceType = pkg.SourceTypeCardiacEpConsultantsSc
+	sourceDef.Category = []string{"207RC0001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730139924"}}
 	sourceDef.BrandLogo = "cardiac-ep-consultants-sc.svg"
 	sourceDef.PatientAccessUrl = "https://doctors.prismahealth.org/specialty/Electrophysiology"
 	sourceDef.SecretKeyPrefix = "nextgen"

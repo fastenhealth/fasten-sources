@@ -28,6 +28,9 @@ func GetSourceReidHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Reid Health"
 	sourceDef.SourceType = pkg.SourceTypeReidHealth
+	sourceDef.Category = []string{"251G00000X", "133VN1006X", "333600000X", "332B00000X"}
+	sourceDef.Aliases = []string{"REID HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891724142", "1508895863"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

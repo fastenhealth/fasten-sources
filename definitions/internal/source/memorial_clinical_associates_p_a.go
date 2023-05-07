@@ -28,6 +28,8 @@ func GetSourceMemorialClinicalAssociatesPA(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Memorial Clinical Associates, P.A."
 	sourceDef.SourceType = pkg.SourceTypeMemorialClinicalAssociatesPA
+	sourceDef.Category = []string{"207R00000X", "363A00000X", "363LF0000X", "207N00000X", "207Q00000X", "207RC0200X", "207RP1001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912952870"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

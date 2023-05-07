@@ -28,6 +28,8 @@ func GetSourceUniversityOrthopedicsCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "University Orthopedics Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOrthopedicsCenter
+	sourceDef.Category = []string{"207X00000X", "332BC3200X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750673133", "1730383852"}}
 	sourceDef.PatientAccessUrl = "https://www.uoc.com/locations/state-college"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceHannibalRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Hannibal Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHannibalRegionalHospital
+	sourceDef.Category = []string{"2255A2300X", "282N00000X", "261QP2300X", "207RG0100X", "152W00000X", "261QM1300X", "261QM0855X", "261QM0850X", "332H00000X"}
+	sourceDef.Aliases = []string{"CENTER FAMILY PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174585103", "1174671234", "1073532560", "1922356765", "1861632226", "1508155888", "1225382435", "1447307905", "1871892158", "1245510221"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

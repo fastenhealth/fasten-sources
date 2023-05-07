@@ -28,6 +28,9 @@ func GetSourceAccentPhysicianSpecialists(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Accent Physician Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAccentPhysicianSpecialists
+	sourceDef.Category = []string{"207YX0905X"}
+	sourceDef.Aliases = []string{"ACCENT PHYSICIAN SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376970731"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

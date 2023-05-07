@@ -29,6 +29,9 @@ func GetSourceNevadaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Nevada Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNevadaRegionalMedicalCenter
+	sourceDef.Category = []string{"273R00000X", "275N00000X", "282NR1301X"}
+	sourceDef.Aliases = []string{"NEVADA REGIONAL MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942283866"}}
 	sourceDef.PatientAccessUrl = "https://www.nrmchealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

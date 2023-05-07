@@ -28,6 +28,9 @@ func GetSourceArthritisCenterOfNorthGeorgia(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Arthritis Center Of North Georgia"
 	sourceDef.SourceType = pkg.SourceTypeArthritisCenterOfNorthGeorgia
+	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{"ARTHRITIS CENTER OF NORTH GEORGIA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629464805"}}
 	sourceDef.BrandLogo = "arthritis-center-of-north-georgia.jpg"
 	sourceDef.PatientAccessUrl = "https://arthritiscenternorthgeorgia.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

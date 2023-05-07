@@ -28,6 +28,8 @@ func GetSourceGastroenterologyConsultants(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Gastroenterology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyConsultants
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366568651"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

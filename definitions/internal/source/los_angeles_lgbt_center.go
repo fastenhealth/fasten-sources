@@ -28,6 +28,9 @@ func GetSourceLosAngelesLgbtCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Los Angeles LGBT Center"
 	sourceDef.SourceType = pkg.SourceTypeLosAngelesLgbtCenter
+	sourceDef.Category = []string{"261QP2300X", "1041C0700X", "106H00000X", "133V00000X", "2084P0800X", "208D00000X"}
+	sourceDef.Aliases = []string{"LOS ANGELES LGBT CENTER-WEHO", "LOS ANGELES LGBT CENTER - CENTER SOUTH", "LOS ANGELES LGBT CENTER - TRIANGLE SQUARE", "LOS ANGELES LGBT CENTER - MI CENTRO", "LOS ANGELES GAY AND LESBIAN COMMUNITY SERVICE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720451396", "1467057166", "1881299055", "1710582432", "1548298532"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

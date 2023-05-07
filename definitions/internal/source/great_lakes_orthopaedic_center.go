@@ -28,6 +28,8 @@ func GetSourceGreatLakesOrthopaedicCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Great Lakes Orthopaedic Center"
 	sourceDef.SourceType = pkg.SourceTypeGreatLakesOrthopaedicCenter
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629234042"}}
 	sourceDef.PatientAccessUrl = "https://gogloc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

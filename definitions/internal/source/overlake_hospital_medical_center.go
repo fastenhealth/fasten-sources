@@ -28,6 +28,8 @@ func GetSourceOverlakeHospitalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Overlake Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeOverlakeHospitalMedicalCenter
+	sourceDef.Category = []string{"363LA2200X", "282N00000X", "273R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326283375", "1285848432", "1811904063", "1861432726"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

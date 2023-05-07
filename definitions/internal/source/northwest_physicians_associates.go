@@ -28,6 +28,8 @@ func GetSourceNorthwestPhysiciansAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Northwest Physicians Associates"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestPhysiciansAssociates
+	sourceDef.Category = []string{"111N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093889040"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,9 @@ func GetSourceNorthCaddoMedicalCenter1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "North Caddo Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthCaddoMedicalCenter1
+	sourceDef.Category = []string{"207P00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"NORTH CADDO MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417124959", "1962679407", "1326016684"}}
 	sourceDef.BrandLogo = "north-caddo-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://ncmcla.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

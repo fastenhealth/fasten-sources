@@ -28,6 +28,9 @@ func GetSourceSunyCollegeOfOptometry(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "SUNY College of Optometry"
 	sourceDef.SourceType = pkg.SourceTypeSunyCollegeOfOptometry
+	sourceDef.Category = []string{"152W00000X"}
+	sourceDef.Aliases = []string{"UNIVERSITY EYE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407829856"}}
 	sourceDef.PatientAccessUrl = "https://www.sunyopt.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

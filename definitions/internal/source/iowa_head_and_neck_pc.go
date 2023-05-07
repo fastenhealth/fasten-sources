@@ -28,6 +28,8 @@ func GetSourceIowaHeadAndNeckPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Iowa Head & Neck PC"
 	sourceDef.SourceType = pkg.SourceTypeIowaHeadAndNeckPc
+	sourceDef.Category = []string{"207Y00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760655138"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

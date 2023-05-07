@@ -28,6 +28,9 @@ func GetSourceThunderbirdEndoscopyCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Thunderbird Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeThunderbirdEndoscopyCenter
+	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Aliases = []string{"THUNDERBIRD ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801842927", "1386823854"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

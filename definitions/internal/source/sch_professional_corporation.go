@@ -28,6 +28,8 @@ func GetSourceSchProfessionalCorporation(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "SCH Professional Corporation"
 	sourceDef.SourceType = pkg.SourceTypeSchProfessionalCorporation
+	sourceDef.Category = []string{"208600000X", "208M00000X", "208VP0000X", "261QX0200X", "207Y00000X", "208000000X", "207R00000X", "207RG0100X", "208200000X", "207X00000X", "2084N0400X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619959822"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

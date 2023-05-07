@@ -28,6 +28,9 @@ func GetSourceDaytonChildrensHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Dayton Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDaytonChildrensHospital
+	sourceDef.Category = []string{"282NC2000X", "3336C0004X", "332B00000X", "3336C0003X", "291U00000X", "101YM0800X", "101YP2500X", "103TC2200X", "1041C0700X", "2084P0800X", "363LP0200X", "364SP0807X", "364SP0808X", "2084P0804X", "3336S0011X", "363A00000X", "363L00000X", "261QU0200X", "2080P0204X"}
+	sourceDef.Aliases = []string{"DAYTON CHILDREN'S HOSPITAL OUTPATIENT PHARMACY", "THE CHILDREN'S MEDICAL CENTER PHARMACY", "DAYTON CHILDREN'S HOSPITAL REFERENCE LAB", "DAYTON CHILDREN'S HOSPITAL SPECIALTY PHARMACY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457379448", "1669546081", "1407377500", "1952480030", "1255942868", "1366994584", "1730392309", "1073848321"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

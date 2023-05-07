@@ -28,6 +28,9 @@ func GetSourceCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cure 4 The Kids Foundation"
 	sourceDef.SourceType = pkg.SourceTypeCure4TheKidsFoundation
+	sourceDef.Category = []string{"174400000X", "2080P0207X", "2080P0216X", "2251P0200X", "103TC0700X", "207SG0201X", "207XP3100X"}
+	sourceDef.Aliases = []string{"CURE 4 THE KIDS FOUNDATION"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033820980", "1013292689"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

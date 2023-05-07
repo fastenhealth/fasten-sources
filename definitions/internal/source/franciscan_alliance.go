@@ -28,6 +28,8 @@ func GetSourceFranciscanAlliance(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Franciscan Alliance"
 	sourceDef.SourceType = pkg.SourceTypeFranciscanAlliance
+	sourceDef.Category = []string{"282N00000X", "251B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023448057", "1275885568"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

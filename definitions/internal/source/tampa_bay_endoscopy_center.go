@@ -28,6 +28,9 @@ func GetSourceTampaBayEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Tampa Bay Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTampaBayEndoscopyCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"TAMPA BAY ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972577161"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

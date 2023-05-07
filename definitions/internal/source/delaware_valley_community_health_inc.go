@@ -28,6 +28,8 @@ func GetSourceDelawareValleyCommunityHealthInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Delaware Valley Community Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyCommunityHealthInc
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881854578"}}
 	sourceDef.PatientAccessUrl = "https://dvch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

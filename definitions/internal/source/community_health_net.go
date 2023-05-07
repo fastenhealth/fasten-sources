@@ -28,6 +28,9 @@ func GetSourceCommunityHealthNet(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Community Health Net"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthNet
+	sourceDef.Category = []string{"261QF0400X", "261QD0000X", "3336C0003X"}
+	sourceDef.Aliases = []string{"HARBORCREEK HEALTH CENTER", "COMMUNITY HEALTH NET PHARMACY", "GIRARD SCHOOL-BASED HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972826626", "1831484922", "1093026510", "1245209170", "1992185458", "1447574785", "1336301092"}}
 	sourceDef.PatientAccessUrl = "https://www.community-healthnet.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceSpectrumRadiologySouth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Spectrum Radiology South"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumRadiologySouth
+	sourceDef.Category = []string{"2085R0001X", "2085R0204X", "363A00000X", "363L00000X", "2085R0202X"}
+	sourceDef.Aliases = []string{"SPECTRUM MEDICAL GROUP, PA", "SPECTRUM RADIOLOGY SOUTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669488011"}}
 	sourceDef.BrandLogo = "spectrum-radiology-south.svg"
 	sourceDef.PatientAccessUrl = "https://spectrumhcp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

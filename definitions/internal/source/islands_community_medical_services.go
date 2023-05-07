@@ -28,6 +28,8 @@ func GetSourceIslandsCommunityMedicalServices(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Islands Community Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeIslandsCommunityMedicalServices
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457738247"}}
 	sourceDef.PatientAccessUrl = "https://www.icmsvh.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -18,7 +18,7 @@ type SourceClientLompocValley1 struct {
 	models.SourceClient
 }
 
-// https://fhirprod184.lompocvmc.com/fhir/metadata
+// https://fhirprod184.lompocvmc.com/FHIR/metadata
 func GetSourceClientLompocValley1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

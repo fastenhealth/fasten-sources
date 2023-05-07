@@ -28,6 +28,9 @@ func GetSourceSomersetFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Somerset Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSomersetFamilyMedicine
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"SOMERSET FAMILY MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740885318"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

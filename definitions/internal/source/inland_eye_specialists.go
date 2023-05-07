@@ -28,6 +28,9 @@ func GetSourceInlandEyeSpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Inland Eye Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInlandEyeSpecialists
+	sourceDef.Category = []string{"152W00000X", "207W00000X", "332B00000X", "261QA1903X"}
+	sourceDef.Aliases = []string{"INLAND EYE SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649540303", "1942235643", "1871538140"}}
 	sourceDef.PatientAccessUrl = "https://www.inlandeyespecialists.com/locations/murrieta/?y_source=1_MjAxNDg3MDYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,9 @@ func GetSourceWinonaHealthServices(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Winona Health Services"
 	sourceDef.SourceType = pkg.SourceTypeWinonaHealthServices
+	sourceDef.Category = []string{"273R00000X", "208D00000X", "282N00000X", "332900000X", "261QR1300X", "261QM1300X", "261QP2300X", "3336L0003X", "3336C0003X", "261QE0700X", "332B00000X", "275N00000X", "332BC3200X", "332H00000X", "335E00000X"}
+	sourceDef.Aliases = []string{"WINONA COMMUNITY MEMORIAL HOSPITAL", "WINONA HEALTH SERVICES", "RUSHFORD CLINIC", "WINONA HEALTH SERVICES MAIN STREET CLINIC", "WINONA HEALTH SERVICES CLINIC PHARMACY", "WINONA HOME MEDICAL", "WINONA HEALTH SERVICES- SWING BED", "WINONA HEALTH SERVICES PHYSICIAN GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538243795", "1295789352", "1275961922", "1801133400", "1922758945", "1144521089", "1447334602", "1265469530", "1578078036", "1720210099"}}
 	sourceDef.PatientAccessUrl = "https://www.winonahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

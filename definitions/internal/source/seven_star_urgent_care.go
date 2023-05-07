@@ -28,6 +28,9 @@ func GetSourceSevenStarUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Seven Star Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarUrgentCare
+	sourceDef.Category = []string{"261QU0200X", "207R00000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR URGENT CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982207064"}}
 	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/hemet-ca-92543/seven-star-urgent-care/5nwXzW2mfmHnRN6hM7j2j"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

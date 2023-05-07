@@ -28,6 +28,8 @@ func GetSourcePartnersInFreedomLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Partners in Freedom LLC"
 	sourceDef.SourceType = pkg.SourceTypePartnersInFreedomLlc
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "332900000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114978939", "1215226253", "1841592144"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

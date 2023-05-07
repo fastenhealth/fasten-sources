@@ -28,6 +28,9 @@ func GetSourceOldTownEndoscopyCenterLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Old Town Endoscopy Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeOldTownEndoscopyCenterLlc
+	sourceDef.Category = []string{"261QA1903X", "367500000X"}
+	sourceDef.Aliases = []string{"DIGESTIVE HEALTH CENTER OF DALLAS", "OLD TOWN ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821067554", "1851890636"}}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

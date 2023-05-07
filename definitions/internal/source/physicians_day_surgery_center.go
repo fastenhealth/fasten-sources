@@ -28,6 +28,8 @@ func GetSourcePhysiciansDaySurgeryCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Physicians Day Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansDaySurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023057916"}}
 	sourceDef.PatientAccessUrl = "https://npino.com/surgery-center/1023057916-physicians-day-surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

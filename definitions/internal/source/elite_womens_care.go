@@ -28,6 +28,8 @@ func GetSourceEliteWomensCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Elite Womens Care"
 	sourceDef.SourceType = pkg.SourceTypeEliteWomensCare
+	sourceDef.Category = []string{"207VG0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336702109"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

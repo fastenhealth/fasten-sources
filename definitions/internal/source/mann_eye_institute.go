@@ -28,6 +28,9 @@ func GetSourceMannEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Mann Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeMannEyeInstitute
+	sourceDef.Category = []string{"207W00000X", "152W00000X", "261Q00000X"}
+	sourceDef.Aliases = []string{"MANN EYE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770050254", "1356479901", "1629081799"}}
 	sourceDef.PatientAccessUrl = "https://www.manneye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

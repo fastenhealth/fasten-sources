@@ -28,6 +28,9 @@ func GetSourceFamilyTreeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Family Tree Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFamilyTreeClinic
+	sourceDef.Category = []string{"261QA0005X"}
+	sourceDef.Aliases = []string{"FAMILY TREE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952417412"}}
 	sourceDef.BrandLogo = "family-tree-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.familytreeclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

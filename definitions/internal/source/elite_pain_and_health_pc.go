@@ -28,6 +28,8 @@ func GetSourceElitePainAndHealthPc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Elite Pain & Health PC"
 	sourceDef.SourceType = pkg.SourceTypeElitePainAndHealthPc
+	sourceDef.Category = []string{"208VP0014X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700235645"}}
 	sourceDef.PatientAccessUrl = "https://epainhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

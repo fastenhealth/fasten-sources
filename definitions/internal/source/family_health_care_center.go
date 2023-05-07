@@ -28,6 +28,9 @@ func GetSourceFamilyHealthCareCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Family Health Care Center"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareCenter
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTH CARE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205855988"}}
 	sourceDef.PatientAccessUrl = "https://www.familyhealthcarecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

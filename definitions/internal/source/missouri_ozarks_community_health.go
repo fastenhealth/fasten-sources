@@ -28,6 +28,9 @@ func GetSourceMissouriOzarksCommunityHealth(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Missouri Ozarks Community Health"
 	sourceDef.SourceType = pkg.SourceTypeMissouriOzarksCommunityHealth
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"MISSOURI OZARKS COMMUNITY HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629639109"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

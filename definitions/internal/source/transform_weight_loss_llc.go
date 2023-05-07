@@ -28,6 +28,8 @@ func GetSourceTransformWeightLossLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Transform Weight Loss LLC"
 	sourceDef.SourceType = pkg.SourceTypeTransformWeightLossLlc
+	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598238966"}}
 	sourceDef.BrandLogo = "transform-weight-loss-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/TransformWL/"
 	sourceDef.SecretKeyPrefix = "nextgen"

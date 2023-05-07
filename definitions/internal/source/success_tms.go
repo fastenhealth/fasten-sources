@@ -28,6 +28,9 @@ func GetSourceSuccessTms(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Success TMS"
 	sourceDef.SourceType = pkg.SourceTypeSuccessTms
+	sourceDef.Category = []string{"261QM0801X", "2084P0800X"}
+	sourceDef.Aliases = []string{"SUCCESS TMS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174197511"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Success-TMS-Advanced-Depression-Therapy-113520390083783/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

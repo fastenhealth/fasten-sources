@@ -28,6 +28,9 @@ func GetSourceProlianceOrthopedicAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Proliance Orthopedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeProlianceOrthopedicAssociates
+	sourceDef.Category = []string{"207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "207XX0801X", "261QM1300X", "363AS0400X", "363L00000X", "207X00000X", "2081P2900X", "2083X0100X", "332B00000X", "261QM1200X", "363LF0000X", "363LG0600X", "207QS0010X"}
+	sourceDef.Aliases = []string{"PROLIANCE ORTHOPEDIC ASSOCIATES", "PROLIANCE ORTHOPEDIC ASSOCIATES MRI"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417512021", "1417990797", "1932262904", "1962894626"}}
 	sourceDef.BrandLogo = "proliance-orthopedic-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://hi-in.facebook.com/POARenton/"
 	sourceDef.SecretKeyPrefix = "nextgen"

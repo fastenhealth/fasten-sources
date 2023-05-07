@@ -28,6 +28,9 @@ func GetSourceSevenStarFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Seven Star Family Care"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarFamilyCare
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR FAMILY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346843422"}}
 	sourceDef.PatientAccessUrl = "https://sevenstarhealth.com/our-services/family-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

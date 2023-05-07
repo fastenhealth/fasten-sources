@@ -28,6 +28,9 @@ func GetSourceTexasHeartAndVascularCarePllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Texas Heart and Vascular Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeTexasHeartAndVascularCarePllc
+	sourceDef.Category = []string{"207RC0000X", "207RI0011X"}
+	sourceDef.Aliases = []string{"TEXAS HEART AND VASCULAR CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710589122"}}
 	sourceDef.PatientAccessUrl = "https://thandv.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

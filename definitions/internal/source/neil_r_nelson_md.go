@@ -28,6 +28,8 @@ func GetSourceNeilRNelsonMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Neil R Nelson MD"
 	sourceDef.SourceType = pkg.SourceTypeNeilRNelsonMd
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295906667"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-neil-nelson-3gv49"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

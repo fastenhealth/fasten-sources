@@ -28,6 +28,8 @@ func GetSourceJilinBaiMdProfessionalCorporation(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Jilin Bai MD Professional Corporation"
 	sourceDef.SourceType = pkg.SourceTypeJilinBaiMdProfessionalCorporation
+	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336691740"}}
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1336691740-jilin-bai-md-professional-corporation/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

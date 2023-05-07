@@ -28,6 +28,9 @@ func GetSourceIllinoisCollegeOfOptometry(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Illinois College Of Optometry"
 	sourceDef.SourceType = pkg.SourceTypeIllinoisCollegeOfOptometry
+	sourceDef.Category = []string{"390200000X", "332B00000X", "152W00000X"}
+	sourceDef.Aliases = []string{"ILLINOIS EYE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982082087", "1285612390"}}
 	sourceDef.PatientAccessUrl = "https://www.ico.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

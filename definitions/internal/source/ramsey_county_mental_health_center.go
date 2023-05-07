@@ -28,6 +28,8 @@ func GetSourceRamseyCountyMentalHealthCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Ramsey County Mental Health Center"
 	sourceDef.SourceType = pkg.SourceTypeRamseyCountyMentalHealthCenter
+	sourceDef.Category = []string{"261QM0801X", "314000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235299124", "1699760785"}}
 	sourceDef.PatientAccessUrl = "https://www.ramseycounty.us/content/1919-university"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,9 @@ func GetSourceKahukuMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kahuku Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeKahukuMedicalCenter
+	sourceDef.Category = []string{"282NC0060X", "174400000X", "275N00000X", "261QR1300X", "207Q00000X", "3336L0003X", "3336I0012X", "313M00000X"}
+	sourceDef.Aliases = []string{"THE CLINIC IN HALEIWA", "THE CLINIC AT HALEIWA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245430065", "1902087109", "1881858447", "1780125179", "1639666233", "1730360934", "1720691926", "1225228687"}}
 	sourceDef.PatientAccessUrl = "https://www.kmc-hi.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

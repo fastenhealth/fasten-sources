@@ -29,6 +29,8 @@ func GetSourceUpstatePodiatryGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Upstate Podiatry Group"
 	sourceDef.SourceType = pkg.SourceTypeUpstatePodiatryGroup
+	sourceDef.Category = []string{"261QP1100X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952979890"}}
 	sourceDef.PatientAccessUrl = "https://upstatepodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

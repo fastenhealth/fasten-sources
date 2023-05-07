@@ -29,6 +29,9 @@ func GetSourceElCentroRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "El Centro Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeElCentroRegionalMedicalCenter
+	sourceDef.Category = []string{"261QR1300X", "282N00000X"}
+	sourceDef.Aliases = []string{"CALEXICO OUTPATIENT CENTER", "EL CENTRO COMMUNITY HOSPITAL", "IMPERIAL VALLEY PROVIDER BILLING SERVICES", "ECRMC OUTPATIENT CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598840258", "1861409823", "1124584420", "1144300476"}}
 	sourceDef.PatientAccessUrl = "https://www.ecrmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

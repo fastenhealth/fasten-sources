@@ -28,6 +28,9 @@ func GetSourceFreseniusMedicalCareNorthAmerica(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Fresenius Medical Care North America"
 	sourceDef.SourceType = pkg.SourceTypeFreseniusMedicalCareNorthAmerica
+	sourceDef.Category = []string{"333600000X"}
+	sourceDef.Aliases = []string{"FRESENIUS MEDICAL CARE NORTH AMERICA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255813564"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

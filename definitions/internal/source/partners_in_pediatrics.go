@@ -29,6 +29,9 @@ func GetSourcePartnersInPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Partners In Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypePartnersInPediatrics
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{"PARTNERS IN PEDIATRICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013278720"}}
 	sourceDef.BrandLogo = "partners-in-pediatrics.svg"
 	sourceDef.PatientAccessUrl = "https://www.pipstop.com"
 	sourceDef.SecretKeyPrefix = "cerner"

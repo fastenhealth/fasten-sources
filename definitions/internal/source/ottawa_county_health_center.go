@@ -29,6 +29,9 @@ func GetSourceOttawaCountyHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Ottawa County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeOttawaCountyHealthCenter
+	sourceDef.Category = []string{"282NC0060X", "275N00000X"}
+	sourceDef.Aliases = []string{"OTTAWA COUNTY HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760767339", "1689727208", "1902914823"}}
 	sourceDef.BrandLogo = "ottawa-county-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Ottawa-County-Health-Center-111568958883951/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,9 @@ func GetSourceGarnetHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Garnet Health"
 	sourceDef.SourceType = pkg.SourceTypeGarnetHealth
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{"GARNET MOBILE DIAGNOSTICS", "GARNET HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346859089"}}
 	sourceDef.BrandLogo = "garnet-health.png.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

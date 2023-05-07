@@ -29,6 +29,9 @@ func GetSourceJohnsonMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Johnson Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJohnsonMemorialHospital
+	sourceDef.Category = []string{"3336C0003X", "332BN1400X", "332BP3500X", "314000000X", "208M00000X", "207RP1001X", "207R00000X", "273Y00000X"}
+	sourceDef.Aliases = []string{"JOHNSON MEMORIAL HOSPITAL OUTPATIENT PHARMACY", "MILLER'S MERRY MANOR", "THE WATERS OF PERU SKILLED NURSING FACILITY", "THE WATERS OF CHESTERFIELD SKILLED NURSING FACILITY", "THE WATERS OF FORT WAYNE SKILLED NURSING FACILITY", "THE WATERS OF TIPTON SKILLED NURSING FACILITY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699480087", "1801817945", "1427079565", "1780605824", "1154321099", "1255331104", "1114947686", "1952324394", "1033132477", "1902829344"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/36JW4WBR1JHD0CKE4ORX192PA41FHG?assignment_id=3KYQYYSHY94SGTQZ7XWYM2SULE3DOP&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

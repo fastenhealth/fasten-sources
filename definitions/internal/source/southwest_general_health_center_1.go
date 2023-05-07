@@ -29,6 +29,9 @@ func GetSourceSouthwestGeneralHealthCenter1(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Southwest General Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestGeneralHealthCenter1
+	sourceDef.Category = []string{"273R00000X", "282N00000X", "251F00000X", "273Y00000X", "363L00000X", "364S00000X", "363A00000X", "261QP2000X", "261QA1903X", "251E00000X", "315D00000X", "251G00000X"}
+	sourceDef.Aliases = []string{"HOME INFUSION", "ACUTE REHAB", "SOUTHWEST HOUSE PROVIDERS", "SOUTHWEST GENERAL PHYSICAL THERAPY", "THE SURGERY CENTER OF SOUTHWEST GENERAL", "BIG CREEK SURGERY CENTER OF SOUTHWEST GENERAL", "SOUTHWEST GENERAL HOME HEALTH", "SOUTHWEST HOSPICE SERVICES", "PSYCHIATRIC UNIT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154353993", "1407888241", "1235326851", "1740608306", "1508368283", "1871096289", "1649718321", "1598797334", "1063444800", "1376579532"}}
 	sourceDef.BrandLogo = "southwest-general-health-center.png"
 	sourceDef.PatientAccessUrl = "https://www.swgeneral.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

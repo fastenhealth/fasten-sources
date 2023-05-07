@@ -28,6 +28,8 @@ func GetSourceWoodburnPediatricClinicLlp(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Woodburn Pediatric Clinic LLP"
 	sourceDef.SourceType = pkg.SourceTypeWoodburnPediatricClinicLlp
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790969624"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

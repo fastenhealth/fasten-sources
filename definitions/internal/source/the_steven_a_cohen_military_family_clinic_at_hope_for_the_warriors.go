@@ -29,6 +29,9 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtHopeForTheWarriors(env pkg.Fa
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Hope For The Warriors"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtHopeForTheWarriors
+	sourceDef.Category = []string{"261QM0801X"}
+	sourceDef.Aliases = []string{"THE STEVEN A. COHEN MILITARY FAMILY CLINIC AT HOPE FOR THE WARRIORS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083225494"}}
 	sourceDef.PatientAccessUrl = "https://www.hopeforthewarriors.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

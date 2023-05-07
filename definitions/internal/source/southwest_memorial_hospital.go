@@ -29,6 +29,9 @@ func GetSourceSouthwestMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Southwest Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestMemorialHospital
+	sourceDef.Category = []string{"275N00000X"}
+	sourceDef.Aliases = []string{"SOUTHWEST MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164037990"}}
 	sourceDef.PatientAccessUrl = "https://www.swhealth.org/about-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

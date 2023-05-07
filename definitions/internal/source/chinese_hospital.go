@@ -29,6 +29,9 @@ func GetSourceChineseHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Chinese Hospital"
 	sourceDef.SourceType = pkg.SourceTypeChineseHospital
+	sourceDef.Category = []string{"171100000X"}
+	sourceDef.Aliases = []string{"CHINESE HOSPITAL EAST WEST HEALTH SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356694202"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

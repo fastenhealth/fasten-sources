@@ -29,6 +29,9 @@ func GetSourceMarletteRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Marlette Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMarletteRegionalHospital
+	sourceDef.Category = []string{"314000000X", "207X00000X", "207Q00000X", "261QR1300X", "367500000X", "208600000X", "273Y00000X", "341600000X", "282NC0060X", "333600000X", "3336I0012X", "315D00000X", "251G00000X", "363L00000X"}
+	sourceDef.Aliases = []string{"UNITED HOSPICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982789855", "1225495013", "1235333931", "1073698981", "1164679221", "1053496935", "1346325214", "1881609493", "1902981889", "1700934767"}}
 	sourceDef.PatientAccessUrl = "https://marletteregionalhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

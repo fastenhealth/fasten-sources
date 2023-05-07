@@ -28,6 +28,9 @@ func GetSourceCommunityMedicalCentersInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Community Medical Centers Inc"
 	sourceDef.SourceType = pkg.SourceTypeCommunityMedicalCentersInc
+	sourceDef.Category = []string{"261QF0400X", "3336C0002X", "324500000X"}
+	sourceDef.Aliases = []string{"COMMUNITY MEDICAL CENTERS, TRACY DENTAL", "COMMUNITY MEDICAL CENTERS GRANT LINE PHARMACY", "COMMUNITY MEDICAL CENTERS, RESPITE RESIDENTIAL CENTER", "COMMUNITY MEDICAL CENTERS, CALIFORNIA STREET", "COMMUNITY MEDICAL CENTERS, CARE VAN", "COMMUNITY MEDICAL CENTERS, MOBILE UNIT 104", "COMMUNITY MEDICAL CENTERS, CHANNEL II", "COMMUNITY MEDICAL CENTERS, ST MARY'S DINING ROOM", "COMMUNITY MEDICAL CENTERS, TRACY GRANT LINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497261606", "1639875354", "1457058869", "1205306628", "1194496380", "1457097800", "1649493198", "1235745928", "1619562378", "1164919049"}}
 	sourceDef.PatientAccessUrl = "https://www.communitymedicalcenters.org/Portals/2/logo.png?ver=2021-10-18-163821-167"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceDermatologyAssociates1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Dermatology Associates"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociates1
+	sourceDef.Category = []string{"207N00000X", "207P00000X"}
+	sourceDef.Aliases = []string{"DERMATOLOGY ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821273681", "1932132446", "1811215130", "1336177880", "1356523039", "1508256660"}}
 	sourceDef.BrandLogo = "dermatology-associates.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

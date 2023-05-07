@@ -28,6 +28,9 @@ func GetSourceWesternCommunityHealthResources(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Western Community Health Resources"
 	sourceDef.SourceType = pkg.SourceTypeWesternCommunityHealthResources
+	sourceDef.Category = []string{"251S00000X", "251K00000X"}
+	sourceDef.Aliases = []string{"WESTERN COMMUNITY HEALTH RESOURCES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134342306", "1972055036", "1215352679", "1720145188"}}
 	sourceDef.BrandLogo = "western-community-health-resources.jpeg"
 	sourceDef.PatientAccessUrl = "http://www.wchr.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

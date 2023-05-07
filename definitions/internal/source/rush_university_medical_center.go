@@ -28,6 +28,9 @@ func GetSourceRushUniversityMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Rush University Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeRushUniversityMedicalCenter
+	sourceDef.Category = []string{"2085N0700X", "2085R0204X", "2085R0202X", "208000000X", "207R00000X", "363L00000X", "207VM0101X", "207V00000X", "282NC2000X", "261Q00000X", "174400000X", "281P00000X", "282N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"RADIOLOGY SERVICES", "RUSH COLLEGE OF NURSING SUE GIN HEALTH CENTER AT OAKLEY SQUARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184269425", "1902873003", "1154382893", "1316067994", "1396906103", "1699921007", "1093036980", "1396184669", "1790116176", "1356891618"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

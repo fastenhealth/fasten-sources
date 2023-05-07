@@ -28,6 +28,9 @@ func GetSourceCompleteFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Complete Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCompleteFamilyMedicine
+	sourceDef.Category = []string{"332900000X", "305R00000X", "208100000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"COMPLETE FAMILY MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407500085", "1154362655", "1568454148"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

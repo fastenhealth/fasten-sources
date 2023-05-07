@@ -28,6 +28,9 @@ func GetSourceAndersonProfessionalServices(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Anderson Professional Services"
 	sourceDef.SourceType = pkg.SourceTypeAndersonProfessionalServices
+	sourceDef.Category = []string{"2085R0001X", "208600000X", "174400000X"}
+	sourceDef.Aliases = []string{"ANDERSON PROFESSIONAL SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043764699"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3EAWOID6N6URL9086VPGD36UCPMV0X?assignment_id=3SB5N7Y3OH1APW8772VV2MZ9UJKG0J&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

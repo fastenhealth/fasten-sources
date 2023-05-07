@@ -28,6 +28,8 @@ func GetSourceNsSurgicalCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "NS SURGICAL CENTER LLC"
 	sourceDef.SourceType = pkg.SourceTypeNsSurgicalCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801323191"}}
 	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/location/ns-surgical-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceAbidHussainMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Abid Hussain MD PC"
 	sourceDef.SourceType = pkg.SourceTypeAbidHussainMdPc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346506037"}}
 	sourceDef.PatientAccessUrl = "https://www.abidhussainmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

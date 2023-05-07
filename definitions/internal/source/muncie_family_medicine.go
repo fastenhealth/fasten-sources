@@ -28,6 +28,8 @@ func GetSourceMuncieFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Muncie Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMuncieFamilyMedicine
+	sourceDef.Category = []string{"207K00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346430832"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

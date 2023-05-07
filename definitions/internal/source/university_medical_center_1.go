@@ -28,6 +28,9 @@ func GetSourceUniversityMedicalCenter1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "University Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityMedicalCenter1
+	sourceDef.Category = []string{"282N00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"UNIVERSITY MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962567107", "1740397751"}}
 	sourceDef.BrandLogo = "university-medical-center.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

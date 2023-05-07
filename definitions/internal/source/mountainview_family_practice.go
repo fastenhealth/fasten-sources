@@ -28,6 +28,9 @@ func GetSourceMountainviewFamilyPractice(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Mountainview Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMountainviewFamilyPractice
+	sourceDef.Category = []string{"261Q00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"MOUNTAIN VIEW FAMILY PRACTICE", "MOUNTAINVIEW FAMILY PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922383074"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceGastroGroupOfThePalmBeachesLlp(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Gastro Group Of The Palm Beaches Llp"
 	sourceDef.SourceType = pkg.SourceTypeGastroGroupOfThePalmBeachesLlp
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861700833"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

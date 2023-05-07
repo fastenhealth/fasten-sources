@@ -29,6 +29,9 @@ func GetSourceKatherineShawBetheaHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Katherine Shaw Bethea Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKatherineShawBetheaHospital
+	sourceDef.Category = []string{"273R00000X", "3336C0003X", "251G00000X", "251E00000X", "275N00000X", "146D00000X", "282N00000X"}
+	sourceDef.Aliases = []string{"KSB HOME HEALTH CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023003720", "1497281620", "1205031721", "1811987134", "1962600072", "1770578395", "1427043546", "1912404765"}}
 	sourceDef.PatientAccessUrl = "https://www.ksbhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

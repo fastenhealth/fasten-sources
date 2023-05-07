@@ -28,6 +28,8 @@ func GetSourceFirsthealthOfTheCarolinas(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "FirstHealth of the Carolinas"
 	sourceDef.SourceType = pkg.SourceTypeFirsthealthOfTheCarolinas
+	sourceDef.Category = []string{"282E00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275684045"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

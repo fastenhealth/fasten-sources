@@ -28,6 +28,8 @@ func GetSourceWilliamHCherryMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "William H Cherry MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeWilliamHCherryMdInc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801807417"}}
 	sourceDef.PatientAccessUrl = "https://drcherry.health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

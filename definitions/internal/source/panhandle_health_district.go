@@ -28,6 +28,9 @@ func GetSourcePanhandleHealthDistrict(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Panhandle Health District"
 	sourceDef.SourceType = pkg.SourceTypePanhandleHealthDistrict
+	sourceDef.Category = []string{"251K00000X"}
+	sourceDef.Aliases = []string{"PANHANDLE HEALTH DISTRICT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841212933", "1851511224"}}
 	sourceDef.PatientAccessUrl = "https://panhandlehealthdistrict.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

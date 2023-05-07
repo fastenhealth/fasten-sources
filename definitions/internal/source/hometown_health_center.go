@@ -28,6 +28,9 @@ func GetSourceHometownHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "HOMETOWN Health Center"
 	sourceDef.SourceType = pkg.SourceTypeHometownHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"HOMETOWN HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023621273"}}
 	sourceDef.PatientAccessUrl = "https://www.hometownhealthcenters.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

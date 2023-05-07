@@ -28,6 +28,9 @@ func GetSourceFamilyHealthCareOfCissnaPark(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Family Health Care Of Cissna Park"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareOfCissnaPark
+	sourceDef.Category = []string{"261QM1300X", "261QR1300X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTH CARE OF CISSNA PARK"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356884993"}}
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-health-of-cissna-park"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

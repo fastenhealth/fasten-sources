@@ -29,6 +29,9 @@ func GetSourceMillerCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Miller County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMillerCountyHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"MILLER COUNTY HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114085297"}}
 	sourceDef.BrandLogo = "miller-county-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/millercountyhospital/"
 	sourceDef.SecretKeyPrefix = "cerner"

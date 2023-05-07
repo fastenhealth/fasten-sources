@@ -29,6 +29,9 @@ func GetSourceThreeCrossesRegionalHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Three Crosses Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeThreeCrossesRegionalHospital
+	sourceDef.Category = []string{"207L00000X"}
+	sourceDef.Aliases = []string{"THREE CROSSES REGIONAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073134748"}}
 	sourceDef.PatientAccessUrl = "https://www.threecrossesregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

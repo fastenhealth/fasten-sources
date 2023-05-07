@@ -28,6 +28,8 @@ func GetSourceBsaAmarilloDiagnosticClinicInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "BSA Amarillo Diagnostic Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeBsaAmarilloDiagnosticClinicInc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134559826"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

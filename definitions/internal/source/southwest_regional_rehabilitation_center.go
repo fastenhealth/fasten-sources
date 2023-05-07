@@ -29,6 +29,8 @@ func GetSourceSouthwestRegionalRehabilitationCenter(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Southwest Regional Rehabilitation Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestRegionalRehabilitationCenter
+	sourceDef.Category = []string{"283X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043229560"}}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/mwlite/company/southwest-regional-rehabilitation-center"
 	sourceDef.SecretKeyPrefix = "cerner"
 

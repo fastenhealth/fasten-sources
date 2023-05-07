@@ -29,6 +29,9 @@ func GetSourceHarrisonCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Harrison County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHarrisonCountyHospital
+	sourceDef.Category = []string{"207P00000X", "207R00000X", "363LF0000X", "363LN0000X", "208000000X", "207Q00000X", "282NC0060X", "291U00000X", "341600000X", "261Q00000X", "261QC0050X", "282N00000X", "367500000X", "207N00000X", "174H00000X"}
+	sourceDef.Aliases = []string{"HARRISON COUNTY HOSPITAL PHYSICIANS", "KIDS FIRST PEDIATRICS", "HARRISON CRAWFORD HEALTHCARE", "SHARON LAUFER MD", "HARRISON COUNTY HOSPITAL ANESTHESIA", "DERMATOLOGY AND SKIN CANCER CENTER OF SOUTHERN INDIANA", "HARRISON COUNTY EMS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336256361", "1184615270", "1710093091", "1427165455", "1679740815", "1184990020", "1932629722", "1194383463", "1073620001", "1760599468"}}
 	sourceDef.BrandLogo = "harrison-county-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.hchin.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

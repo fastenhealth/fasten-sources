@@ -28,6 +28,9 @@ func GetSourceCommunityHealthNorthwestFlorida(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Community Health Northwest Florida"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthNorthwestFlorida
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"COMMUNITY HEALTH NORTHWEST FLORIDA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447615455"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

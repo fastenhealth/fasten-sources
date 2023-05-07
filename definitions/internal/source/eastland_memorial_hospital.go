@@ -29,6 +29,9 @@ func GetSourceEastlandMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Eastland Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeEastlandMemorialHospital
+	sourceDef.Category = []string{"282NC0060X", "282N00000X"}
+	sourceDef.Aliases = []string{"EASTLAND MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437851680", "1689650921"}}
 	sourceDef.PatientAccessUrl = "https://www.eastlandmemorial.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

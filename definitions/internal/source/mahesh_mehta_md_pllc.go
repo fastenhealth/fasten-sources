@@ -28,6 +28,8 @@ func GetSourceMaheshMehtaMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mahesh Mehta MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMaheshMehtaMdPllc
+	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710562392"}}
 	sourceDef.BrandLogo = "mahesh-mehta-md-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.myccmc.org/staff/bio.php?doc_id=85499&specialty=Pain%20Management&sub=Static"
 	sourceDef.SecretKeyPrefix = "nextgen"

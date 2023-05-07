@@ -28,6 +28,8 @@ func GetSourceCaliforniaEyeInstituteMedicalGroup(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "California Eye Institute Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaEyeInstituteMedicalGroup
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669496246"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

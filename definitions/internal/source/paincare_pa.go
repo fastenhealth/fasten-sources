@@ -28,6 +28,8 @@ func GetSourcePaincarePa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "PainCare PA"
 	sourceDef.SourceType = pkg.SourceTypePaincarePa
+	sourceDef.Category = []string{"225100000X", "208VP0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811933716"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

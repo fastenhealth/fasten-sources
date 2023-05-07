@@ -29,6 +29,9 @@ func GetSourceMosaicLifeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Mosaic Life Care"
 	sourceDef.SourceType = pkg.SourceTypeMosaicLifeCare
+	sourceDef.Category = []string{"251G00000X", "207T00000X", "207V00000X", "207X00000X", "207Y00000X", "207L00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RP1001X", "207RR0500X", "208G00000X", "2084P0800X", "208600000X", "2086S0129X", "208D00000X"}
+	sourceDef.Aliases = []string{"MOSAIC LIFE CARE", "MOSAIC LIFE CARE HOSPICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912007006", "1538200357"}}
 	sourceDef.PatientAccessUrl = "https://www.mymlc.com/Main/Location/st-joseph-mo/mosaic-life-care-at-st.-joseph-medical-center/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

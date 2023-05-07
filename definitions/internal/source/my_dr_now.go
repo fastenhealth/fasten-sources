@@ -28,6 +28,9 @@ func GetSourceMyDrNow(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "MY DR NOW"
 	sourceDef.SourceType = pkg.SourceTypeMyDrNow
+	sourceDef.Category = []string{"261QP2300X", "207Q00000X", "207QA0505X"}
+	sourceDef.Aliases = []string{"MY DR NOW"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861879140", "1144764432", "1013394386", "1740545375", "1679857825", "1487367504", "1720604069", "1417521659", "1063573079", "1881032670"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

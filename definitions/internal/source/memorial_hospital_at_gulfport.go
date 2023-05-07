@@ -29,6 +29,9 @@ func GetSourceMemorialHospitalAtGulfport(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Memorial Hospital at Gulfport"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHospitalAtGulfport
+	sourceDef.Category = []string{"207R00000X", "208000000X", "207Q00000X", "207L00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RH0003X", "207RN0300X", "207RP1001X", "207RR0500X", "207RX0202X", "207T00000X", "207X00000X", "363A00000X", "363L00000X", "208800000X", "207RI0200X", "282N00000X", "207K00000X", "174400000X"}
+	sourceDef.Aliases = []string{"MEMORIAL SURGERY CENTER GULF SOUTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982936621", "1609203173", "1093142598", "1740617232", "1376153023", "1750543286", "1942462478", "1417118720", "1194056515", "1316185002"}}
 	sourceDef.BrandLogo = "memorial-hospital-at-gulfport.svg"
 	sourceDef.PatientAccessUrl = "https://wearememorial.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

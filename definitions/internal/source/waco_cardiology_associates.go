@@ -28,6 +28,8 @@ func GetSourceWacoCardiologyAssociates(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Waco Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeWacoCardiologyAssociates
+	sourceDef.Category = []string{"207RC0000X", "363L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003093998", "1982607735", "1568467314"}}
 	sourceDef.PatientAccessUrl = "http://www.wacocardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

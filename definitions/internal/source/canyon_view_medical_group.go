@@ -28,6 +28,8 @@ func GetSourceCanyonViewMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Canyon View Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCanyonViewMedicalGroup
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871654947", "1184786352"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

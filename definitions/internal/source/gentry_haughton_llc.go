@@ -28,6 +28,8 @@ func GetSourceGentryHaughtonLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gentry Haughton LLC"
 	sourceDef.SourceType = pkg.SourceTypeGentryHaughtonLlc
+	sourceDef.Category = []string{"213ES0103X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245503119"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

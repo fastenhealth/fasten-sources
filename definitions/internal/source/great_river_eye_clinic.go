@@ -28,6 +28,9 @@ func GetSourceGreatRiverEyeClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Great River Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGreatRiverEyeClinic
+	sourceDef.Category = []string{"152W00000X", "152WC0802X", "152WL0500X", "152WP0200X", "152WS0006X", "152WV0400X", "152WX0102X", "261QH0100X"}
+	sourceDef.Aliases = []string{"GREAT RIVER EYE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023424926"}}
 	sourceDef.BrandLogo = "great-river-eye-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://greatrivereyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

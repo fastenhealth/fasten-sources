@@ -28,6 +28,9 @@ func GetSourcePeacehealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "PeaceHealth"
 	sourceDef.SourceType = pkg.SourceTypePeacehealth
+	sourceDef.Category = []string{"282NR1301X", "261QR1300X", "333600000X", "3336S0011X", "3336C0003X", "332B00000X", "208800000X", "2086S0129X", "208C00000X", "208G00000X", "208M00000X", "261QS1200X", "207K00000X", "207N00000X", "207Q00000X", "207RE0101X", "207V00000X", "207X00000X", "208000000X", "2084N0400X", "2084P0800X", "207R00000X", "207QA0505X", "363LF0000X", "282NC0060X", "208600000X", "251G00000X", "332BX2000X"}
+	sourceDef.Aliases = []string{"PEACEHEALTH ST JOHN MEDICAL CENTER RETAIL PHARMACY", "PEACEHEALTH LONGVIEW UROLOGY", "PEACEHEALTH MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487904546", "1669766457", "1528506961", "1477209864", "1255977591", "1356309553", "1871810945", "1902892391", "1235556846", "1215918719", "1801909171"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceLenaweeAdultAndPediatricMedicine(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Lenawee Adult & Pediatric Medicine"
 	sourceDef.SourceType = pkg.SourceTypeLenaweeAdultAndPediatricMedicine
+	sourceDef.Category = []string{"207R00000X", "208000000X", "363AM0700X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497942890"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

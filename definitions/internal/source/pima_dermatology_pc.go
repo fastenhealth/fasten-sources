@@ -28,6 +28,8 @@ func GetSourcePimaDermatologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Pima Dermatology PC"
 	sourceDef.SourceType = pkg.SourceTypePimaDermatologyPc
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710051412"}}
 	sourceDef.PatientAccessUrl = "https://NA.COM"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

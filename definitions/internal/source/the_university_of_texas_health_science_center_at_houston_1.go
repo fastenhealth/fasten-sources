@@ -28,6 +28,9 @@ func GetSourceTheUniversityOfTexasHealthScienceCenterAtHouston1(env pkg.FastenLi
 
 	sourceDef.Display = "The University of Texas Health Science Center at Houston"
 	sourceDef.SourceType = pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston1
+	sourceDef.Category = []string{"1223P0300X", "1223G0001X", "122300000X", "291U00000X", "1223D0001X", "1223P0221X", "1223E0200X", "1223S0112X"}
+	sourceDef.Aliases = []string{"UNIVERSITY DENTAL CENTER", "UT DENTISTS", "ORAL PATHOLOGY SERVICES", "UT DENTAL BRANCH AT HOUSTON", "UTHEALTH HOUSTON SCHOOL OF DENTISTRY", "UTHEALTH SCHOOL OF DENTISTRY", "UTHEALTH DENTISTRY GREENSPOINT", "UT HOUSTON ENDODONTICS", "UT PEDIATRIC DENTISTRY", "UT OMS SMT", "UT ORAL & MAXILLOFACIAL SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831372911", "1265561245", "1790812287", "1073971164", "1598894750", "1619010204", "1154745651", "1922280114", "1104865013", "1487784385"}}
 	sourceDef.BrandLogo = "the-university-of-texas-health-science-center-at-houston.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

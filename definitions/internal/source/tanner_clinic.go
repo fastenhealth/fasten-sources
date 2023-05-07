@@ -28,6 +28,9 @@ func GetSourceTannerClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Tanner Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTannerClinic
+	sourceDef.Category = []string{"213EP1101X", "207Q00000X", "261QP2300X", "207KA0200X"}
+	sourceDef.Aliases = []string{"TANNER CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174295562", "1447845730", "1104356013"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

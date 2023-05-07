@@ -28,6 +28,9 @@ func GetSourceTroyInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Troy Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeTroyInternalMedicine
+	sourceDef.Category = []string{"207R00000X", "363A00000X", "363L00000X", "282N00000X", "261QM1300X"}
+	sourceDef.Aliases = []string{"TROY INTERNAL MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326410937", "1134603194"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

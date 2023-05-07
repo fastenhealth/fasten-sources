@@ -28,6 +28,9 @@ func GetSourceFamilyHealthClinicOfFarmerCity(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Family Health Clinic Of Farmer City"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthClinicOfFarmerCity
+	sourceDef.Category = []string{"261QM1300X", "261QR1300X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTH CLINIC OF FARMER CITY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790913903"}}
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/family-health-care-of-farmer-city"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

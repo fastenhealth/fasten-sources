@@ -29,6 +29,9 @@ func GetSourceMercyMedicalCenterNewHampton(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Mercy Medical Center-New Hampton"
 	sourceDef.SourceType = pkg.SourceTypeMercyMedicalCenterNewHampton
+	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Aliases = []string{"MERCYONE NEW HAMPTON MEDICAL CENTER-CRNA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093986093"}}
 	sourceDef.BrandLogo = "mercy-medical-center-new-hampton.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mercyone.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

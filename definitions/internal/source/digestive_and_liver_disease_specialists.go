@@ -28,6 +28,8 @@ func GetSourceDigestiveAndLiverDiseaseSpecialists(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Digestive & Liver Disease Specialists"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveAndLiverDiseaseSpecialists
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194760553"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

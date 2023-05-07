@@ -29,6 +29,9 @@ func GetSourceLakelandRegionalHealthSystemsInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Lakeland Regional Health Systems, Inc."
 	sourceDef.SourceType = pkg.SourceTypeLakelandRegionalHealthSystemsInc
+	sourceDef.Category = []string{"261QM1300X", "207Q00000X", "207R00000X", "207RE0101X", "213E00000X", "208D00000X", "208G00000X", "207L00000X", "207RN0300X", "207RP1001X", "207X00000X", "207XX0801X", "2084P0800X", "2084P0804X", "2086S0102X", "2086S0122X", "2086S0127X", "363LP0200X", "208000000X", "207RG0300X", "363LF0000X", "207LC0200X", "207RC0001X", "207RC0200X", "207RI0200X", "207RR0500X", "207V00000X", "207XX0005X", "207Y00000X", "207YX0905X", "2084N0400X", "2086S0105X", "207RI0011X", "208600000X", "208800000X", "207RC0000X", "207RG0100X", "2086X0206X", "363LA2200X", "363LX0001X", "207RH0000X", "207RH0003X", "207VX0201X", "2085R0001X", "207N00000X"}
+	sourceDef.Aliases = []string{"FLORIDA POLY TECH", "GRASSLANDS CAMPUS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619381803", "1902241482", "1184820037", "1497748743", "1053757526", "1063858538", "1831534312", "1669817144", "1619312360", "1609280635"}}
 	sourceDef.BrandLogo = "lakeland-regional-health-systems-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.mylrh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

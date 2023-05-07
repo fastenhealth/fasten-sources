@@ -28,6 +28,8 @@ func GetSourceExclusivePhysiciansPllc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Exclusive Physicians PLLC"
 	sourceDef.SourceType = pkg.SourceTypeExclusivePhysiciansPllc
+	sourceDef.Category = []string{"291U00000X", "207Q00000X", "207R00000X", "208000000X", "261QM1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215539911", "1811226749"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

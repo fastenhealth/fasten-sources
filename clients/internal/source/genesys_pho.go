@@ -18,7 +18,7 @@ type SourceClientGenesysPho struct {
 	models.SourceClient
 }
 
-// https://apps.genesyspho.com/fhir/metadata
+// https://apps.genesyspho.com/FHIR/metadata
 func GetSourceClientGenesysPho(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

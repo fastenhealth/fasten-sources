@@ -28,6 +28,8 @@ func GetSourcePediatricAffiliatesMedicalGroupInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Pediatric Affiliates Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypePediatricAffiliatesMedicalGroupInc
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053410506"}}
 	sourceDef.BrandLogo = "pediatric-affiliates-medical-group-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/pediatricaffiliates/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceQualityOfLifeHealthServicesInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Quality Of Life Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeQualityOfLifeHealthServicesInc
+	sourceDef.Category = []string{"3336C0002X", "333600000X", "3336C0003X", "3336M0002X", "3336C0004X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366875403", "1902198724"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

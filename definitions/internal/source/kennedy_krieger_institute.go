@@ -28,6 +28,9 @@ func GetSourceKennedyKriegerInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Kennedy Krieger Institute"
 	sourceDef.SourceType = pkg.SourceTypeKennedyKriegerInstitute
+	sourceDef.Category = []string{"291U00000X", "103TC2200X", "281PC2000X", "282E00000X", "283Q00000X", "283XC2000X", "284300000X", "261QD1600X", "261QH0700X"}
+	sourceDef.Aliases = []string{"KENNEDY KRIEGER INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649595141", "1053572958", "1619075926", "1699778415", "1710387550", "1730505363"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

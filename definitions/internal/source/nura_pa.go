@@ -28,6 +28,9 @@ func GetSourceNuraPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Nura PA"
 	sourceDef.SourceType = pkg.SourceTypeNuraPa
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{"NURA PA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003287020", "1558732461", "1770941478", "1285014811"}}
 	sourceDef.BrandLogo = "nura-pa.svg"
 	sourceDef.PatientAccessUrl = "https://www.nuraclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

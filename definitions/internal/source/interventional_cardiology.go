@@ -28,6 +28,9 @@ func GetSourceInterventionalCardiology(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Interventional Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalCardiology
+	sourceDef.Category = []string{"207RC0000X", "207RI0011X"}
+	sourceDef.Aliases = []string{"INTERVENTIONAL CARDIOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336510643", "1013019157"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

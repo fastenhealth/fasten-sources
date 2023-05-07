@@ -29,6 +29,9 @@ func GetSourceWinklerCountyMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Winkler County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWinklerCountyMemorialHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"WINKLER COUNTY MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730183658"}}
 	sourceDef.PatientAccessUrl = "https://www.wcmh.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

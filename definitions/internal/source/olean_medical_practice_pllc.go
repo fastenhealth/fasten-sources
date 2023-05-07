@@ -29,6 +29,9 @@ func GetSourceOleanMedicalPracticePllc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Olean Medical Practice PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOleanMedicalPracticePllc
+	sourceDef.Category = []string{"332B00000X", "261QM1300X", "261Q00000X"}
+	sourceDef.Aliases = []string{"OLEAN MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891435608", "1679223366", "1285384412", "1386394518", "1093465221", "1003566233", "1700528213"}}
 	sourceDef.PatientAccessUrl = "https://oleanmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

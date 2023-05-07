@@ -28,6 +28,9 @@ func GetSourceWilsonHealthMedicalGroup(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Wilson Health Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWilsonHealthMedicalGroup
+	sourceDef.Category = []string{"207V00000X", "208000000X", "363L00000X", "207R00000X", "207RE0101X", "207Q00000X"}
+	sourceDef.Aliases = []string{"WILSON HEALTH MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205886926"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

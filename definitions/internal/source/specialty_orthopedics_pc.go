@@ -28,6 +28,8 @@ func GetSourceSpecialtyOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Specialty Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceTypeSpecialtyOrthopedicsPc
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669508305"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

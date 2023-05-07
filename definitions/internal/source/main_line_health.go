@@ -28,6 +28,8 @@ func GetSourceMainLineHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Main Line Health"
 	sourceDef.SourceType = pkg.SourceTypeMainLineHealth
+	sourceDef.Category = []string{"282N00000X", "251S00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851636591", "1639568199"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

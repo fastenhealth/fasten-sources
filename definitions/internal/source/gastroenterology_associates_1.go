@@ -28,6 +28,9 @@ func GetSourceGastroenterologyAssociates1(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyAssociates1
+	sourceDef.Category = []string{"363A00000X", "363L00000X", "367500000X", "207RG0100X", "363LA2100X", "363LF0000X", "174400000X"}
+	sourceDef.Aliases = []string{"GASTROENTEROLOGY ASSOCIATES", "CAPITAL DIGESTIVE CARE, LLC - CHESAPEAKE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811556442", "1265640726", "1376751891", "1124064589", "1770578270", "1235330994", "1790963106", "1326073925", "1588688949"}}
 	sourceDef.BrandLogo = "gastroenterology-associates.png"
 	sourceDef.PatientAccessUrl = "https://www.insitedigestive.com/locations/pasadena-raymond-office/"
 	sourceDef.SecretKeyPrefix = "nextgen"

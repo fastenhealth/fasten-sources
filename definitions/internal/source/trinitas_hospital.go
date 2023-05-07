@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprod.trinitas.org/fhir/metadata
+// https://fhirprod.trinitas.org/FHIR/metadata
 func GetSourceTrinitasHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprod.trinitas.org/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprod.trinitas.org/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhirprod.trinitas.org/fhir"
+	sourceDef.Audience = "https://fhirprod.trinitas.org/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.trinitas.org/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.trinitas.org/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTrinitasHospital]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,6 +28,8 @@ func GetSourceTrinitasHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Trinitas Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTrinitasHospital
+	sourceDef.Category = []string{"282N00000X", "261QM0850X", "283Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497909543", "1306981451", "1710131909", "1053522474", "1588870307"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

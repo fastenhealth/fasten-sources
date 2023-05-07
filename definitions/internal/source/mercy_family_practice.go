@@ -28,6 +28,9 @@ func GetSourceMercyFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Mercy Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMercyFamilyPractice
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"MERCY FAMILY PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902376783"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

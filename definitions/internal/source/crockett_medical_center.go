@@ -29,6 +29,9 @@ func GetSourceCrockettMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Crockett Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCrockettMedicalCenter
+	sourceDef.Category = []string{"282N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"CROCKETT MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114435260"}}
 	sourceDef.PatientAccessUrl = "https://www.crockettmedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

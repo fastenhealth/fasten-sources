@@ -28,6 +28,8 @@ func GetSourceGeorgiaUrologyPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Georgia Urology PA"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaUrologyPa
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447772348", "1467628586", "1720510241", "1154855740", "1881819076", "1508081795", "1851517072", "1952541708", "1891227302", "1851826036"}}
 	sourceDef.PatientAccessUrl = "https://www.gaurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

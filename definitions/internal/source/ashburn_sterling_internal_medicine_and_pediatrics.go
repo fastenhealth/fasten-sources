@@ -28,6 +28,9 @@ func GetSourceAshburnSterlingInternalMedicineAndPediatrics(env pkg.FastenLightho
 
 	sourceDef.Display = "Ashburn Sterling Internal Medicine & Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeAshburnSterlingInternalMedicineAndPediatrics
+	sourceDef.Category = []string{"208000000X", "207R00000X"}
+	sourceDef.Aliases = []string{"ASHBURN STERLING INTERNAL MEDICINE & PEDIATRICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366709651"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

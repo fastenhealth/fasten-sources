@@ -29,6 +29,9 @@ func GetSourceVhsPhysiciansOfMichigan(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "VHS Physicians of Michigan"
 	sourceDef.SourceType = pkg.SourceTypeVhsPhysiciansOfMichigan
+	sourceDef.Category = []string{"207R00000X", "207RC0000X"}
+	sourceDef.Aliases = []string{"DMC MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902157498", "1043221435"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

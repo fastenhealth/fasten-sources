@@ -28,6 +28,8 @@ func GetSourceRetinalConsultantsOfArizonaLtd(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Retinal Consultants Of Arizona Ltd"
 	sourceDef.SourceType = pkg.SourceTypeRetinalConsultantsOfArizonaLtd
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700823051"}}
 	sourceDef.PatientAccessUrl = "https://www.retinalconsultantsaz.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

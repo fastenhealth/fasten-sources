@@ -28,6 +28,8 @@ func GetSourceJoshuaRCasonLimitedApmc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Joshua R Cason Limited APMC"
 	sourceDef.SourceType = pkg.SourceTypeJoshuaRCasonLimitedApmc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073861837"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

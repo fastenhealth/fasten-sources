@@ -29,6 +29,8 @@ func GetSourceGilletteChildrensSpecialtyHealthcare(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Gillette Children's Specialty Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeGilletteChildrensSpecialtyHealthcare
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225119175"}}
 	sourceDef.BrandLogo = "gillette-childrens-specialty-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gillettechildrens.org/locations/st-paul-campus"
 	sourceDef.SecretKeyPrefix = "cerner"

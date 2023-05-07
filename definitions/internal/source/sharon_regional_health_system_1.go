@@ -29,6 +29,8 @@ func GetSourceSharonRegionalHealthSystem1(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Sharon Regional Health System"
 	sourceDef.SourceType = pkg.SourceTypeSharonRegionalHealthSystem1
+	sourceDef.Category = []string{"261QM0855X", "251S00000X", "261Q00000X", "261QM0850X", "261QM0801X", "207RH0000X", "207RX0202X", "207RH0003X", "103T00000X", "207Q00000X", "207RS0012X", "207ZP0101X", "2084P0800X", "2084P0804X", "291U00000X", "282N00000X", "261QR1300X", "207ZP0102X", "231H00000X", "363LA2200X", "363LP0808X", "104100000X", "1041C0700X", "103TC0700X", "363AM0700X", "207R00000X", "251E00000X", "251J00000X", "251G00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487767315", "1235150954", "1457370850", "1437104015", "1184672214", "1982653176", "1033160007", "1386607125", "1023028099", "1689787475"}}
 	sourceDef.BrandLogo = "sharon-regional-health-system.png"
 	sourceDef.PatientAccessUrl = "https://www.sharonregionalmedical.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

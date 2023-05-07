@@ -28,6 +28,8 @@ func GetSourceShohetEarAssociatesMedicalGroupInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Shohet Ear Associates Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeShohetEarAssociatesMedicalGroupInc
+	sourceDef.Category = []string{"207YX0901X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699017301", "1144420738"}}
 	sourceDef.PatientAccessUrl = "https://www.eardoctor.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

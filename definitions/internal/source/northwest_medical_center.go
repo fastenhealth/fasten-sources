@@ -29,6 +29,9 @@ func GetSourceNorthwestMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Northwest Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestMedicalCenter
+	sourceDef.Category = []string{"273Y00000X", "275N00000X", "314000000X", "261QR0200X", "261QU0200X", "282N00000X"}
+	sourceDef.Aliases = []string{"NORTHWEST MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073954186", "1922604123", "1104429679", "1487607784"}}
 	sourceDef.BrandLogo = "northwest-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.healthiertucson.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

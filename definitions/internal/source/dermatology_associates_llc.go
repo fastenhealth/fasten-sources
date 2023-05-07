@@ -28,6 +28,8 @@ func GetSourceDermatologyAssociatesLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Dermatology Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesLlc
+	sourceDef.Category = []string{"261QM2500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235318874"}}
 	sourceDef.BrandLogo = "dermatology-associates-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.dermatologyassociatesllc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

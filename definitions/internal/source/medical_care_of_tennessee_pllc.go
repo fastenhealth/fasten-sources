@@ -28,6 +28,8 @@ func GetSourceMedicalCareOfTennesseePllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Medical Care of Tennessee PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCareOfTennesseePllc
+	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629730411", "1982366779"}}
 	sourceDef.BrandLogo = "medical-care-of-tennessee-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.medicalofmemphis.com/contact-locations/complete-health-care-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"

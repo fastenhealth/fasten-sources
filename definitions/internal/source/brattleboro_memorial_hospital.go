@@ -29,6 +29,9 @@ func GetSourceBrattleboroMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Brattleboro Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBrattleboroMemorialHospital
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RC0000X", "207V00000X", "207X00000X", "207Y00000X", "207YX0602X", "208000000X", "208600000X", "208800000X", "282N00000X", "261QE0002X"}
+	sourceDef.Aliases = []string{"BRATTLEBORO MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306849708", "1669532370"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

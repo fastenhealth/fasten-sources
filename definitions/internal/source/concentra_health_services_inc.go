@@ -28,6 +28,8 @@ func GetSourceConcentraHealthServicesInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Concentra Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeConcentraHealthServicesInc
+	sourceDef.Category = []string{"261QH0100X", "261QP2000X", "261QX0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760630867", "1174642326", "1780703058", "1205085206", "1942458047", "1013166057", "1386763589", "1518086792", "1306965553", "1346369626"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

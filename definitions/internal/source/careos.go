@@ -28,6 +28,9 @@ func GetSourceCareos(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "CAREOS"
 	sourceDef.SourceType = pkg.SourceTypeCareos
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"CAREOS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750913109"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

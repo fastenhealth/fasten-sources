@@ -28,6 +28,9 @@ func GetSourcePowellValleyClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Powell Valley Clinic"
 	sourceDef.SourceType = pkg.SourceTypePowellValleyClinic
+	sourceDef.Category = []string{"207XS0106X", "208000000X", "2085R0202X", "208600000X", "207L00000X", "207P00000X", "207R00000X", "207V00000X", "207X00000X", "261QU0200X", "332B00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"POWELL VALLEY CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699721316"}}
 	sourceDef.PatientAccessUrl = "Name: Powell Valley Clinic Address: 777 Avenue H City: Powell Zip: 82435 State: Wyoming Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

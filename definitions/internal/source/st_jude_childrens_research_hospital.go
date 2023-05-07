@@ -28,6 +28,8 @@ func GetSourceStJudeChildrensResearchHospital(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "St. Jude Children's Research Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStJudeChildrensResearchHospital
+	sourceDef.Category = []string{"2080P0207X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063428688"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

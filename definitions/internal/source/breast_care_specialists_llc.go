@@ -28,6 +28,8 @@ func GetSourceBreastCareSpecialistsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Breast Care Specialists, LLC"
 	sourceDef.SourceType = pkg.SourceTypeBreastCareSpecialistsLlc
+	sourceDef.Category = []string{"261QR0206X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780998203"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://har-fhir.allscriptscloud.com/fhir/metadata
+// https://har-fhir.allscriptscloud.com/FHIR/metadata
 func GetSourceHarringtonMemorialHospitalProd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://har-fhir.allscriptscloud.com/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://har-fhir.allscriptscloud.com/authorization/connect/token"
 
-	sourceDef.Audience = "https://har-fhir.allscriptscloud.com/fhir"
+	sourceDef.Audience = "https://har-fhir.allscriptscloud.com/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://har-fhir.allscriptscloud.com/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://har-fhir.allscriptscloud.com/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHarringtonMemorialHospitalProd]; clientIdOk {
 		sourceDef.ClientId = clientId

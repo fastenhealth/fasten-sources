@@ -28,6 +28,8 @@ func GetSourceLibertyCataractCenterLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Liberty Cataract Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeLibertyCataractCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225070527"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/liberty-cataract-center-dbc578c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

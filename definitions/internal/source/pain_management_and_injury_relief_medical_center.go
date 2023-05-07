@@ -28,6 +28,9 @@ func GetSourcePainManagementAndInjuryReliefMedicalCenter(env pkg.FastenLighthous
 
 	sourceDef.Display = "Pain Management & Injury Relief Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePainManagementAndInjuryReliefMedicalCenter
+	sourceDef.Category = []string{"207L00000X", "207LP2900X"}
+	sourceDef.Aliases = []string{"PAIN MANAGEMENT & INJURY RELIEF MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063511475"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

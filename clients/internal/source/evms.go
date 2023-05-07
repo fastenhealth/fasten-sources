@@ -18,7 +18,7 @@ type SourceClientEvms struct {
 	models.SourceClient
 }
 
-// https://mg-ns-fhir.evms.edu/fhir/metadata
+// https://MG-NS-FHIR.evms.edu/FHIR/metadata
 func GetSourceClientEvms(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

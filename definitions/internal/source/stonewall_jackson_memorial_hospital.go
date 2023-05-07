@@ -29,6 +29,8 @@ func GetSourceStonewallJacksonMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Stonewall Jackson Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStonewallJacksonMemorialHospital
+	sourceDef.Category = []string{"207Q00000X", "261QP2000X", "207X00000X", "207V00000X", "251E00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225299605", "1063764348", "1841451226", "1669633962", "1083617989"}}
 	sourceDef.PatientAccessUrl = "https://www.stonewalljacksonhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

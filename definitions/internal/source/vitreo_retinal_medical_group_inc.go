@@ -28,6 +28,8 @@ func GetSourceVitreoRetinalMedicalGroupInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Vitreo-Retinal Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeVitreoRetinalMedicalGroupInc
+	sourceDef.Category = []string{"207WX0107X", "207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144733403", "1740437920"}}
 	sourceDef.PatientAccessUrl = "https://www.vitreo-retinal.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

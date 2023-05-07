@@ -28,6 +28,9 @@ func GetSourceHeritageHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Heritage Health"
 	sourceDef.SourceType = pkg.SourceTypeHeritageHealth
+	sourceDef.Category = []string{"101Y00000X", "101YS0200X", "103TC1900X", "1041C0700X", "101YM0800X", "104100000X", "207Q00000X", "2084P0800X", "363A00000X", "261QF0400X", "101YA0400X", "101YP2500X", "103G00000X", "1041S0200X", "106H00000X", "175T00000X", "207R00000X", "363AM0700X", "363L00000X", "363LF0000X", "122300000X", "1223G0001X", "133V00000X", "183500000X", "103T00000X", "363LP0808X", "103TH0004X"}
+	sourceDef.Aliases = []string{"HERITAGE HEALTH", "HERITAGE HEALTH FAMILY SUPPORT SERVICES", "HERITAGE HEALTH HOMELESS PROGRAM", "STREET MEDICINE COMMUNITY OUTREACH", "HERITAGE FAMILY SUPPORT SERVICES OF NORTH IDAHO"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194397240", "1053980110", "1699407478", "1619622578", "1720564271", "1336899772", "1689068413", "1447305610", "1285686477", "1255756730"}}
 	sourceDef.PatientAccessUrl = "https://www.myheritagehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

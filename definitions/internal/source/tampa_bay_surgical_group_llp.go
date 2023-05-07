@@ -28,6 +28,8 @@ func GetSourceTampaBaySurgicalGroupLlp(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Tampa Bay Surgical Group Llp"
 	sourceDef.SourceType = pkg.SourceTypeTampaBaySurgicalGroupLlp
+	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083085328"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

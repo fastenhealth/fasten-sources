@@ -28,6 +28,8 @@ func GetSourceNationalIntegratedHealthAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "National Integrated Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeNationalIntegratedHealthAssociates
+	sourceDef.Category = []string{"122300000X", "175F00000X", "207Q00000X", "207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174640288"}}
 	sourceDef.PatientAccessUrl = "https://www.nihadc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

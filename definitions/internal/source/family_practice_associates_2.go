@@ -28,6 +28,9 @@ func GetSourceFamilyPracticeAssociates2(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Family Practice Associates"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeAssociates2
+	sourceDef.Category = []string{"207Q00000X", "208D00000X", "363A00000X", "363L00000X", "261QP2300X", "302F00000X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTH CONVENIENT CARE CLINIC", "FAMILY HEALTH CENTER", "FAMILY PRACTICE ASSOCIATES", "DEACONESS IL CLINIC ELEVEN S"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568576619", "1679952154", "1962128256", "1447329370", "1366499931", "1568513273", "1982685293", "1700982295", "1730623943", "1104014463"}}
 	sourceDef.BrandLogo = "family-practice-associates.png"
 	sourceDef.PatientAccessUrl = "https://www.ourfpa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

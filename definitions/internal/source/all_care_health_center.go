@@ -28,6 +28,9 @@ func GetSourceAllCareHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "All Care Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAllCareHealthCenter
+	sourceDef.Category = []string{"3336C0003X", "261QD0000X", "261QF0400X"}
+	sourceDef.Aliases = []string{"ALL CARE HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124461363", "1114906906"}}
 	sourceDef.PatientAccessUrl = "https://www.allcarehealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

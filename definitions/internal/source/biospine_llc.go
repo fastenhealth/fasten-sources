@@ -28,6 +28,9 @@ func GetSourceBiospineLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "BioSpine LLC"
 	sourceDef.SourceType = pkg.SourceTypeBiospineLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"BIOSPINE LLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154747566"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

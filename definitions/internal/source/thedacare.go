@@ -28,6 +28,8 @@ func GetSourceThedacare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "ThedaCare"
 	sourceDef.SourceType = pkg.SourceTypeThedacare
+	sourceDef.Category = []string{"282N00000X", "282NR1301X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235488867", "1942651401"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

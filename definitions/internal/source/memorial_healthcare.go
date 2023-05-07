@@ -28,6 +28,9 @@ func GetSourceMemorialHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Memorial Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHealthcare
+	sourceDef.Category = []string{"282N00000X", "3336C0002X", "3336H0001X", "3336I0012X", "3336L0003X", "3336S0011X", "3336C0003X", "251B00000X", "363A00000X", "363L00000X", "208D00000X", "251E00000X", "251G00000X", "273R00000X"}
+	sourceDef.Aliases = []string{"MEMORIAL HEALTHCARE", "COMMUNITY ACTION TREATMENT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093198624", "1407443831", "1538795356", "1063414233", "1144428202", "1609030600", "1952498610", "1396832507", "1609073709", "1588751796"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

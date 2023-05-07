@@ -28,6 +28,9 @@ func GetSourceSureshBNeelagaruMdPa(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Suresh B Neelagaru MD PA"
 	sourceDef.SourceType = pkg.SourceTypeSureshBNeelagaruMdPa
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{"SAN ANTONIO CARDIOVASCULAR AND RHYTHM CENTER ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639359458"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/suresh-neelagaru-c6b7f446-3437-49b8-ab87-1685ee8b411a-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceAssociatesInWomensHealthPa(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Associates In Womens Health PA"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInWomensHealthPa
+	sourceDef.Category = []string{"207VX0201X", "207VM0101X", "207R00000X", "207V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124139514", "1699951863", "1922284108"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

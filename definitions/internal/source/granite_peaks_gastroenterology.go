@@ -28,6 +28,9 @@ func GetSourceGranitePeaksGastroenterology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Granite Peaks Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeGranitePeaksGastroenterology
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{"GRANITE PEAKS GASTROENTEROLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689872897"}}
 	sourceDef.PatientAccessUrl = "https://www.granitepeaksgi.com/?utm_source=GMBSocialClimb&utm_medium=GranitePeaksGastroenterology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

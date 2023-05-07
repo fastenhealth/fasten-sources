@@ -18,7 +18,7 @@ type SourceClientUbmdProduction struct {
 	models.SourceClient
 }
 
-// https://fhirubmd.med.buffalo.edu/fhir/metadata
+// https://fhirubmd.med.buffalo.edu/FHIR/metadata
 func GetSourceClientUbmdProduction(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

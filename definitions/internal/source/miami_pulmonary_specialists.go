@@ -29,6 +29,9 @@ func GetSourceMiamiPulmonarySpecialists(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Miami Pulmonary Specialists"
 	sourceDef.SourceType = pkg.SourceTypeMiamiPulmonarySpecialists
+	sourceDef.Category = []string{"207RC0200X", "207RP1001X"}
+	sourceDef.Aliases = []string{"MIAMI PULMONARY SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629430756"}}
 	sourceDef.PatientAccessUrl = "https://miamipulmonaryspecialists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

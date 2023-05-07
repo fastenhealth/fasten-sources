@@ -28,6 +28,9 @@ func GetSourceCannonMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cannon Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCannonMemorialHospital
+	sourceDef.Category = []string{"207X00000X", "363A00000X", "367500000X", "207P00000X", "207Q00000X", "261QR1300X", "207Y00000X", "282N00000X"}
+	sourceDef.Aliases = []string{"ANMED CANNON", "ANMED PRIMARY CARE - EASLEY", "ANMED SPECIALTY CARE - PICKENS", "ANMED ORTHOPAEDICS & SPORTS MEDICINE - PICKENS", "CANNON FAMILY PRACTICE - LIBERTY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679738199", "1245930064", "1700890084", "1861416216", "1952073587", "1497744254", "1750304135", "1629215298", "1760685143", "1497910772"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

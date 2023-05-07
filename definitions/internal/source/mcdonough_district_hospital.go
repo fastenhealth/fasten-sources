@@ -29,6 +29,9 @@ func GetSourceMcdonoughDistrictHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "McDonough District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMcdonoughDistrictHospital
+	sourceDef.Category = []string{"282N00000X", "275N00000X"}
+	sourceDef.Aliases = []string{"MCDONOUGH DISTRICT HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851705370"}}
 	sourceDef.PatientAccessUrl = "https://www.mdh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

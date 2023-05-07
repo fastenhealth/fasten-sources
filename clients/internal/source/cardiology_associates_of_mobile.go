@@ -18,7 +18,7 @@ type SourceClientCardiologyAssociatesOfMobile struct {
 	models.SourceClient
 }
 
-// https://fhir.cardassoc.com/fhir/metadata
+// https://fhir.cardassoc.com/FHIR/metadata
 func GetSourceClientCardiologyAssociatesOfMobile(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

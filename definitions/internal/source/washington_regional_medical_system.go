@@ -29,6 +29,9 @@ func GetSourceWashingtonRegionalMedicalSystem(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Washington Regional Medical System"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonRegionalMedicalSystem
+	sourceDef.Category = []string{"207Q00000X", "207RC0000X", "207R00000X", "208D00000X", "261QM1300X", "208600000X", "208800000X", "207V00000X"}
+	sourceDef.Aliases = []string{"JOHNSON URGENT CARE - WASHINGTON REGIONAL", "WASHINGTON REGIONAL OZARK SURGICAL CLINIC", "WR OZARK UROLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326376419", "1689994931", "1770846826", "1699139345", "1881650497", "1922745470", "1205073657", "1760432629", "1437102662", "1275839011"}}
 	sourceDef.PatientAccessUrl = "https://www.wregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

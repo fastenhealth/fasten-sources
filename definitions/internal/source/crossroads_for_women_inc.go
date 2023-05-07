@@ -29,6 +29,8 @@ func GetSourceCrossroadsForWomenInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Crossroads for Women, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsForWomenInc
+	sourceDef.Category = []string{"101Y00000X", "101YM0800X", "2084P0800X", "251S00000X", "324500000X", "101YA0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326030701", "1740272129", "1265760185"}}
 	sourceDef.PatientAccessUrl = "https://crossroadsme.org/wp-content/uploads/2019/09/Crossroads-Maine-Addiction-and-Behavioral-Health-Treatment-Center.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 

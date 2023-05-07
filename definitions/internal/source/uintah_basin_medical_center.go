@@ -29,6 +29,9 @@ func GetSourceUintahBasinMedicalCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Uintah Basin Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUintahBasinMedicalCenter
+	sourceDef.Category = []string{"261QE0700X", "251E00000X", "261QM1300X", "261QR1300X", "251G00000X", "261Q00000X", "332B00000X", "341600000X", "282N00000X"}
+	sourceDef.Aliases = []string{"UINTAH BASIN MEDICAL CENTER DIALYSIS", "UINTAH BASIN HOME HEALTH", "UINTAH BASIN MEDICAL CENTER THE CLINIC VERNAL", "UBMC CLINIC DUCHESNE", "DME", "UBMC CLINIC", "UINTAH BASIN MEDICAL CENTER EMS", "UINTAH BASIN MEDICAL CENTER DIALYSIS VERNAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922280007", "1508822347", "1760180566", "1629034376", "1679193338", "1235736059", "1851920151", "1598335903", "1871556217", "1265613541"}}
 	sourceDef.BrandLogo = "uintah-basin-medical-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://ubh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

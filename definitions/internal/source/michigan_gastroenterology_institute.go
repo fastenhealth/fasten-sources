@@ -28,6 +28,9 @@ func GetSourceMichiganGastroenterologyInstitute(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Michigan Gastroenterology Institute"
 	sourceDef.SourceType = pkg.SourceTypeMichiganGastroenterologyInstitute
+	sourceDef.Category = []string{"208C00000X", "207RG0100X"}
+	sourceDef.Aliases = []string{"MICHIGAN GASTROENTEROLOGY INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699880591", "1770250219"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

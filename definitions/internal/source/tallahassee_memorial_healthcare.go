@@ -29,6 +29,9 @@ func GetSourceTallahasseeMemorialHealthcare(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tallahassee Memorial HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeTallahasseeMemorialHealthcare
+	sourceDef.Category = []string{"282N00000X", "283Q00000X", "207RR0500X", "146D00000X"}
+	sourceDef.Aliases = []string{"PHYSICIAN PARTNERS RHEUMATOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669874566", "1134258726", "1093489619", "1518099779", "1992841282", "1013145341"}}
 	sourceDef.BrandLogo = "tallahassee-memorial-healthcare.svg"
 	sourceDef.PatientAccessUrl = "https://www.tmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

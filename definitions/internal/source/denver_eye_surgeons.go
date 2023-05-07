@@ -28,6 +28,9 @@ func GetSourceDenverEyeSurgeons(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Denver Eye Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeDenverEyeSurgeons
+	sourceDef.Category = []string{"152W00000X", "207W00000X"}
+	sourceDef.Aliases = []string{"DENVER EYE SURGEONS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235860420"}}
 	sourceDef.PatientAccessUrl = "https://denvereyesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

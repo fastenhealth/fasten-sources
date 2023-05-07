@@ -28,6 +28,8 @@ func GetSourceMontanaArthritisCenterLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Montana Arthritis Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeMontanaArthritisCenterLlc
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114550829"}}
 	sourceDef.PatientAccessUrl = "https://montanaarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

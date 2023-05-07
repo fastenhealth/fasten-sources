@@ -28,6 +28,8 @@ func GetSourceDermatologyAndSkinCancerCenterPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Dermatology & Skin Cancer Center PC"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAndSkinCancerCenterPc
+	sourceDef.Category = []string{"207ND0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528379823"}}
 	sourceDef.PatientAccessUrl = "https://www.dermscc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

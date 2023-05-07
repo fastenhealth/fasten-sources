@@ -28,6 +28,9 @@ func GetSourceMedicalGroupOfMitchellCounty(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Medical Group of Mitchell County"
 	sourceDef.SourceType = pkg.SourceTypeMedicalGroupOfMitchellCounty
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"MEDICAL GROUP OF MITCHELL COUNTY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922211515"}}
 	sourceDef.PatientAccessUrl = "https://archbold.org/mgmc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

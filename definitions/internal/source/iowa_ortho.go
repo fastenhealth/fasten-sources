@@ -28,6 +28,9 @@ func GetSourceIowaOrtho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Iowa Ortho"
 	sourceDef.SourceType = pkg.SourceTypeIowaOrtho
+	sourceDef.Category = []string{"2081P2900X", "2086S0105X", "332B00000X", "363AS0400X", "207X00000X", "207XP3100X", "207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "207XX0801X"}
+	sourceDef.Aliases = []string{"IOWA ORTHO"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598955817", "1639655087"}}
 	sourceDef.BrandLogo = "iowa-ortho.jpg"
 	sourceDef.PatientAccessUrl = "https://www.iowaortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

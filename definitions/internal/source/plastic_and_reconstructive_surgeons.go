@@ -28,6 +28,9 @@ func GetSourcePlasticAndReconstructiveSurgeons(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Plastic & Reconstructive Surgeons"
 	sourceDef.SourceType = pkg.SourceTypePlasticAndReconstructiveSurgeons
+	sourceDef.Category = []string{"208200000X"}
+	sourceDef.Aliases = []string{"PLASTIC & RECONSTRUCTIVE SURGEONS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841610169"}}
 	sourceDef.BrandLogo = "plastic-and-reconstructive-surgeons.svg"
 	sourceDef.PatientAccessUrl = "https://www.prsurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

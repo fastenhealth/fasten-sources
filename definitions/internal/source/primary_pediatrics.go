@@ -29,6 +29,8 @@ func GetSourcePrimaryPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Primary Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypePrimaryPediatrics
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164573564"}}
 	sourceDef.BrandLogo = "primary-pediatrics.jpg"
 	sourceDef.PatientAccessUrl = "http://www.primaryped.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

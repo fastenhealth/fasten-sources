@@ -28,6 +28,9 @@ func GetSourceLegacyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Legacy Health"
 	sourceDef.SourceType = pkg.SourceTypeLegacyHealth
+	sourceDef.Category = []string{"101YA0400X", "101YP1600X", "103TA0400X", "1041C0700X", "133NN1002X", "163W00000X", "164W00000X", "202C00000X", "207Q00000X", "207R00000X", "2083P0500X", "2084P0802X", "208VP0000X", "363A00000X", "2083A0300X", "247200000X", "261QH0100X", "251S00000X"}
+	sourceDef.Aliases = []string{"LEGACY HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487273223", "1720537111", "1780147108", "1295329001"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

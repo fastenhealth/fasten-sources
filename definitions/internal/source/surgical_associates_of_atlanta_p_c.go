@@ -29,6 +29,8 @@ func GetSourceSurgicalAssociatesOfAtlantaPC(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Surgical Associates of Atlanta, P.C."
 	sourceDef.SourceType = pkg.SourceTypeSurgicalAssociatesOfAtlantaPC
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821114786"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/SAMABariatrics/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

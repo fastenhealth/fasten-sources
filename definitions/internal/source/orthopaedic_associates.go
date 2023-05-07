@@ -28,6 +28,9 @@ func GetSourceOrthopaedicAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Orthopaedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicAssociates
+	sourceDef.Category = []string{"207X00000X", "332B00000X", "207XX0005X", "208100000X"}
+	sourceDef.Aliases = []string{"ORTHOPAEDIC ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679626147", "1295709178", "1124155783", "1386686756", "1710069091"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

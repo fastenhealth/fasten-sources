@@ -28,6 +28,8 @@ func GetSourceJacksonBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Jackson Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeJacksonBoneAndJoint
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831360510"}}
 	sourceDef.BrandLogo = "jackson-bone-and-joint.jpg"
 	sourceDef.PatientAccessUrl = "https://www.wtbjc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

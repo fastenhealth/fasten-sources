@@ -28,6 +28,8 @@ func GetSourceNorthwestNeurology(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Northwest Neurology"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestNeurology
+	sourceDef.Category = []string{"2084N0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972728210"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

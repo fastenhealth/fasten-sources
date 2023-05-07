@@ -28,6 +28,8 @@ func GetSourcePeripheralVascularAssociatesPA(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Peripheral Vascular Associates, P.A."
 	sourceDef.SourceType = pkg.SourceTypePeripheralVascularAssociatesPA
+	sourceDef.Category = []string{"207RI0011X", "208100000X", "213ES0103X", "224P00000X", "363A00000X", "363L00000X", "363LA2100X", "363LA2200X", "363LF0000X", "2086S0129X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396791570"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

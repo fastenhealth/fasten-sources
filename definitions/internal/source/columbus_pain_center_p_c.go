@@ -29,6 +29,8 @@ func GetSourceColumbusPainCenterPC(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Columbus Pain Center, P.C."
 	sourceDef.SourceType = pkg.SourceTypeColumbusPainCenterPC
+	sourceDef.Category = []string{"208VP0014X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093750176"}}
 	sourceDef.PatientAccessUrl = "http://www.columbuspaincenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

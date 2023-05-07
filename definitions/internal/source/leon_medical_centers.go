@@ -28,6 +28,9 @@ func GetSourceLeonMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Leon Medical Centers"
 	sourceDef.SourceType = pkg.SourceTypeLeonMedicalCenters
+	sourceDef.Category = []string{"3336C0002X", "3336M0003X", "333600000X"}
+	sourceDef.Aliases = []string{"LEON MEDICAL CENTERS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629102587", "1306961248", "1568587087", "1457477689", "1114042322", "1821116716"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

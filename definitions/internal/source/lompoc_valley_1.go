@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprod184.lompocvmc.com/fhir/metadata
+// https://fhirprod184.lompocvmc.com/FHIR/metadata
 func GetSourceLompocValley1(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprod184.lompocvmc.com/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprod184.lompocvmc.com/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhirprod184.lompocvmc.com/fhir"
+	sourceDef.Audience = "https://fhirprod184.lompocvmc.com/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhirprod184.lompocvmc.com/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhirprod184.lompocvmc.com/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeLompocValley1]; clientIdOk {
 		sourceDef.ClientId = clientId

@@ -28,6 +28,9 @@ func GetSourceKirbyEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Kirby Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeKirbyEyeCenter
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"KIRBY EYE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598978553"}}
 	sourceDef.PatientAccessUrl = "https://kirbyeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

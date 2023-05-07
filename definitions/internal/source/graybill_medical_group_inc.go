@@ -28,6 +28,8 @@ func GetSourceGraybillMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Graybill Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeGraybillMedicalGroupInc
+	sourceDef.Category = []string{"207QS0010X", "207R00000X", "207RC0000X", "207X00000X", "207Y00000X", "208000000X", "208600000X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891729745"}}
 	sourceDef.PatientAccessUrl = "https://www.graybill.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

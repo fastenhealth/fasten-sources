@@ -29,6 +29,9 @@ func GetSourceMountDesertIslandHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Mount Desert Island Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMountDesertIslandHospital
+	sourceDef.Category = []string{"332B00000X", "122300000X", "251S00000X", "261QI0500X", "261QM1200X", "261QP2000X", "261QP2300X", "261QR0206X", "261QS0132X", "282NC0060X"}
+	sourceDef.Aliases = []string{"COMMUNITY DENTAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518064047", "1790764512"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

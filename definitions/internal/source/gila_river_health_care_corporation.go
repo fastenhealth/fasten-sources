@@ -29,6 +29,9 @@ func GetSourceGilaRiverHealthCareCorporation(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Gila River Health Care Corporation"
 	sourceDef.SourceType = pkg.SourceTypeGilaRiverHealthCareCorporation
+	sourceDef.Category = []string{"251S00000X", "341600000X", "282NR1301X", "282NC0060X", "343900000X", "251B00000X", "332800000X", "261QE0700X"}
+	sourceDef.Aliases = []string{"RED TAIL HAWK BHS-OP", "RED TAIL HAWK BHS-CM", "RED TAIL HAWK HEALTH CENTER", "RED TAIL HAWK HEALTH CENTER PHARMACY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821599424", "1851600191", "1851441075", "1386633915", "1376538231", "1053523357", "1629579230", "1437664182", "1114430147", "1891776902"}}
 	sourceDef.PatientAccessUrl = "http://grhc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

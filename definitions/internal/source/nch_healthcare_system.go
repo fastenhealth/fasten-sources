@@ -28,6 +28,9 @@ func GetSourceNchHealthcareSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "NCH Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeNchHealthcareSystem
+	sourceDef.Category = []string{"283X00000X"}
+	sourceDef.Aliases = []string{"NCH HEALTHCARE SYSTEM"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831352087"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

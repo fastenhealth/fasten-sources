@@ -28,6 +28,8 @@ func GetSourcePacificMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Pacific Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePacificMedicalGroup
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841465150"}}
 	sourceDef.PatientAccessUrl = "https://pacificmedicalgroup.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

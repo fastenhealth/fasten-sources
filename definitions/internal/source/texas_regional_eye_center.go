@@ -28,6 +28,9 @@ func GetSourceTexasRegionalEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Texas Regional Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeTexasRegionalEyeCenter
+	sourceDef.Category = []string{"152W00000X", "207W00000X"}
+	sourceDef.Aliases = []string{"TEXAS REGIONAL EYE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790855898"}}
 	sourceDef.PatientAccessUrl = "https://texasregionaleye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

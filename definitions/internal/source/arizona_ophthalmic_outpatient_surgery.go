@@ -28,6 +28,9 @@ func GetSourceArizonaOphthalmicOutpatientSurgery(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Arizona Ophthalmic Outpatient Surgery"
 	sourceDef.SourceType = pkg.SourceTypeArizonaOphthalmicOutpatientSurgery
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"ARIZONA OPHTHALMIC OUTPATIENT SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760454557"}}
 	sourceDef.PatientAccessUrl = "https://arizonaeyesurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

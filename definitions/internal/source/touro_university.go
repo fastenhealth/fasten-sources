@@ -28,6 +28,8 @@ func GetSourceTouroUniversity(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Touro University"
 	sourceDef.SourceType = pkg.SourceTypeTouroUniversity
+	sourceDef.Category = []string{"207RG0300X", "103T00000X", "247200000X", "103K00000X", "174H00000X", "207Q00000X", "207QG0300X", "207R00000X", "208D00000X", "363L00000X", "204D00000X", "207RR0500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285933978", "1265731152", "1477852168", "1831498526", "1205135043", "1265706238", "1275906521", "1689226565", "1811177454", "1710251780"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

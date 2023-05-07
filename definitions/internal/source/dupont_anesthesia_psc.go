@@ -28,6 +28,8 @@ func GetSourceDupontAnesthesiaPsc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dupont Anesthesia PSC"
 	sourceDef.SourceType = pkg.SourceTypeDupontAnesthesiaPsc
+	sourceDef.Category = []string{"367500000X", "207L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639199557"}}
 	sourceDef.PatientAccessUrl = "https://www.dupontsurgerycenter.com/billing-and-insurance"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

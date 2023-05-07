@@ -29,6 +29,9 @@ func GetSourceRehabilitationHospitalOfThePacific(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Rehabilitation Hospital of the Pacific"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitationHospitalOfThePacific
+	sourceDef.Category = []string{"261QR0400X", "3336I0012X", "283X00000X", "261QM2500X", "261QP2300X", "261QP3300X", "261QR0200X", "261QM1300X", "314000000X", "332B00000X"}
+	sourceDef.Aliases = []string{"REHAB AT HILO", "REHABILITATION HOSPITAL OF THE PACIFIC PHYSICIANS CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174632897", "1073617635", "1598785388", "1114036894", "1023127750", "1730580424", "1073537510", "1487758199"}}
 	sourceDef.BrandLogo = "rehabilitation-hospital-of-the-pacific.svg"
 	sourceDef.PatientAccessUrl = "https://www.rehabhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,9 @@ func GetSourceRockRegionalHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Rock Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRockRegionalHospital
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"ROCK REGIONAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518454842"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/RockRegionalHospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

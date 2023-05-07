@@ -28,6 +28,9 @@ func GetSourceTheOnargaClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "The Onarga Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheOnargaClinic
+	sourceDef.Category = []string{"261QM1300X", "261QR1300X"}
+	sourceDef.Aliases = []string{"THE ONARGA CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972509701"}}
 	sourceDef.BrandLogo = "the-onarga-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-health-of-onarga"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceAltamed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "AltaMed"
 	sourceDef.SourceType = pkg.SourceTypeAltamed
+	sourceDef.Category = []string{"302R00000X", "174H00000X", "251B00000X", "207RG0300X", "261QH0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386020303", "1508110297", "1245608959", "1871030718", "1407109580", "1730536210"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceBalconesPainConsultants(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Balcones Pain Consultants"
 	sourceDef.SourceType = pkg.SourceTypeBalconesPainConsultants
+	sourceDef.Category = []string{"208VP0014X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720419617"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

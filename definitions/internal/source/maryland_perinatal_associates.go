@@ -28,6 +28,8 @@ func GetSourceMarylandPerinatalAssociates(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Maryland Perinatal Associates"
 	sourceDef.SourceType = pkg.SourceTypeMarylandPerinatalAssociates
+	sourceDef.Category = []string{"207VM0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326148347"}}
 	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

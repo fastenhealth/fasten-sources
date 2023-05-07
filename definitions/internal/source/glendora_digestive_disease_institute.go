@@ -28,6 +28,9 @@ func GetSourceGlendoraDigestiveDiseaseInstitute(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Glendora Digestive Disease Institute"
 	sourceDef.SourceType = pkg.SourceTypeGlendoraDigestiveDiseaseInstitute
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"GLENDORA DIGESTIVE DISEASE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821285073"}}
 	sourceDef.PatientAccessUrl = "https://glendoradigestive.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

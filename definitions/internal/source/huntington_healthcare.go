@@ -28,6 +28,9 @@ func GetSourceHuntingtonHealthcare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Huntington HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeHuntingtonHealthcare
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{"HUNTINGTON HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477797306"}}
 	sourceDef.BrandLogo = "huntington-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.huntingtonhealth.org/huntington-health-physicians/"
 	sourceDef.SecretKeyPrefix = "nextgen"

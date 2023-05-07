@@ -28,6 +28,9 @@ func GetSourceGreaterFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Greater Family Health"
 	sourceDef.SourceType = pkg.SourceTypeGreaterFamilyHealth
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"GREATER ELGIN FAMILY CARE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720142557", "1285061879", "1710604111", "1396462818", "1295014116", "1487378204", "1720704893", "1275258618", "1376294793", "1861885949"}}
 	sourceDef.PatientAccessUrl = "https://greaterfamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

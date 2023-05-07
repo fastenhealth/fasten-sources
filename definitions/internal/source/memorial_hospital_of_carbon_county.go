@@ -29,6 +29,9 @@ func GetSourceMemorialHospitalOfCarbonCounty(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Memorial Hospital of Carbon County"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHospitalOfCarbonCounty
+	sourceDef.Category = []string{"207Q00000X", "251E00000X", "275N00000X", "282N00000X", "291U00000X", "261Q00000X", "333600000X", "282NC0060X", "208D00000X", "207X00000X"}
+	sourceDef.Aliases = []string{"MEMORIAL HOSPITAL OF CARBON COUNTY PHARMACY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508900341", "1295896496", "1891006839", "1417031311", "1992929285", "1174833719", "1598371692", "1710298757", "1548560204", "1922142777"}}
 	sourceDef.PatientAccessUrl = "https://www.imhcc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

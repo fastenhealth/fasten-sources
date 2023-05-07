@@ -29,6 +29,9 @@ func GetSourceKaneCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Kane County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKaneCountyHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"KANE COUNTY HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740519370"}}
 	sourceDef.PatientAccessUrl = "https://kchosp.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

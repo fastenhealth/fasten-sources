@@ -29,6 +29,8 @@ func GetSourceAllinaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Allina Health"
 	sourceDef.SourceType = pkg.SourceTypeAllinaHealth
+	sourceDef.Category = []string{"283X00000X", "261QP2000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679959878", "1699165050", "1629421482"}}
 	sourceDef.BrandLogo = "allina-health.svg"
 	sourceDef.PatientAccessUrl = "https://account.allinahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

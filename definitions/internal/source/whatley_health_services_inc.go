@@ -28,6 +28,9 @@ func GetSourceWhatleyHealthServicesInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Whatley Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeWhatleyHealthServicesInc
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"MAUDE L. WHATLEY HEALTH CENTERS", "SIPSEY HEALTH CENTER", "SUMTER COUNTY HEALTH CENTER", "LABRIDGETTE R. ELLIS MEDICAL AND DENTAL CENTER", "OAKMAN STUDENT HEALTH AND WELLNESS CENTER", "JAMES O. ELLIS HEALTH CENTER", "EUTAW HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063422756", "1356369078", "1801817549", "1285655936", "1487104691", "1063606358", "1831133958"}}
 	sourceDef.PatientAccessUrl = "https://whatleyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

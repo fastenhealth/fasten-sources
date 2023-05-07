@@ -28,6 +28,9 @@ func GetSourceGreaterPortlandHealth(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Greater Portland Health"
 	sourceDef.SourceType = pkg.SourceTypeGreaterPortlandHealth
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"GREATER PORTLAND HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073144622", "1912610197", "1700510062", "1982338240"}}
 	sourceDef.PatientAccessUrl = "http://greaterportlandhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

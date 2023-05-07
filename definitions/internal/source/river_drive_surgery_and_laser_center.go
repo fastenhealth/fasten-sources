@@ -28,6 +28,9 @@ func GetSourceRiverDriveSurgeryAndLaserCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "River Drive Surgery And Laser Center"
 	sourceDef.SourceType = pkg.SourceTypeRiverDriveSurgeryAndLaserCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"RIVER DRIVE SURGERY AND LASER CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649218009"}}
 	sourceDef.PatientAccessUrl = "https://riverdrivesurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

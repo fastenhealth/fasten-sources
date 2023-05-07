@@ -28,6 +28,9 @@ func GetSourceClinicalSupportProviders(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Clinical Support Providers"
 	sourceDef.SourceType = pkg.SourceTypeClinicalSupportProviders
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"CLINICAL SUPPORT PROVIDERS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922583616"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

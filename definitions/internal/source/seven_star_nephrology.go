@@ -28,6 +28,9 @@ func GetSourceSevenStarNephrology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Seven Star Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarNephrology
+	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{"SEVEN STAR NEPHROLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710580808"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/hemet/seven-star-medical-group-xb6t9ma"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

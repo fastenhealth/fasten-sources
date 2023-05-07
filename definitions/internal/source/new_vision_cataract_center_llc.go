@@ -28,6 +28,9 @@ func GetSourceNewVisionCataractCenterLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "New Vision Cataract Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeNewVisionCataractCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"NEW VISION CATARACT CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386794980"}}
 	sourceDef.PatientAccessUrl = "https://www.newvisioncataractcenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

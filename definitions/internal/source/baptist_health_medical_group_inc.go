@@ -29,6 +29,9 @@ func GetSourceBaptistHealthMedicalGroupInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Baptist Health Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthMedicalGroupInc
+	sourceDef.Category = []string{"101YP2500X", "103T00000X", "1041C0700X", "2084P0800X", "2085P0229X", "213E00000X", "225100000X", "261Q00000X", "261QP2300X", "261QR1300X", "363A00000X", "363L00000X", "207R00000X", "208600000X", "208D00000X", "208C00000X", "208G00000X", "208000000X", "207P00000X", "207PP0204X", "2084N0400X", "2085R0001X", "363AS0400X", "207V00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"PRINCETON RURAL HEALTH CLINIC", "BEREA RURAL HEALTH CENTER", "RURAL HEALTH CLINIC WILLIAMSBURG", "RURAL HEALTH CLINIC BARBOURVILLE", "SCOTTSBURG PRIMARY CARE", "BHMG PSYCHIATRY CORBIN", "BHMG WOMAN'S CARE", "BRANNON CROSSING URGENT CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518360296", "1689762973", "1447728043", "1831668375", "1548755739", "1184119398", "1467057042", "1619567559", "1265072946", "1104471440"}}
 	sourceDef.BrandLogo = "baptist-health-medical-group-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.baptisthealth.com/about/baptist-health-medical-group"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceAlamogordoSurgicalAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Alamogordo Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeAlamogordoSurgicalAssociates
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407861248"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/356TQKY9YSU7S84FJ1ZF04W995S876?assignment_id=3CPLWGV3M2WYVID6U2RJLH9ZYZ29NY&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

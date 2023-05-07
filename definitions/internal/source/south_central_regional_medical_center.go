@@ -29,6 +29,9 @@ func GetSourceSouthCentralRegionalMedicalCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "South Central Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthCentralRegionalMedicalCenter
+	sourceDef.Category = []string{"207RH0003X", "313M00000X", "3336I0012X", "207V00000X", "207N00000X", "207R00000X", "251E00000X", "341600000X"}
+	sourceDef.Aliases = []string{"SOUTH CENTRAL REG MED CTR-CHEMO", "COMFORT CARE NURSING HOME", "SOUTH CENTRAL DERMATOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134762610", "1730121088", "1396821054", "1174562979", "1467183418", "1700934676", "1093790404", "1417005067", "1922157023", "1629058094"}}
 	sourceDef.PatientAccessUrl = "https://scrmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

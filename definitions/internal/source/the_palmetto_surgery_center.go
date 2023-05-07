@@ -28,6 +28,9 @@ func GetSourceThePalmettoSurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "The Palmetto Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeThePalmettoSurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"THE PALMETTO SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982676227"}}
 	sourceDef.BrandLogo = "the-palmetto-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.palmettosurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

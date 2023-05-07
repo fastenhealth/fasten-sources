@@ -28,6 +28,8 @@ func GetSourcePulmonaryHealthPhysiciansPc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pulmonary Health Physicians Pc"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryHealthPhysiciansPc
+	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063450484"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

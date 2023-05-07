@@ -28,6 +28,9 @@ func GetSourceUtHealthEastTexasPhysicians(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "UT Health East Texas Physicians"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthEastTexasPhysicians
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{"UT HEALTH EAST TEXAS PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720578941", "1891285946"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

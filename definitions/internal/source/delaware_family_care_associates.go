@@ -28,6 +28,8 @@ func GetSourceDelawareFamilyCareAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Delaware Family Care Associates"
 	sourceDef.SourceType = pkg.SourceTypeDelawareFamilyCareAssociates
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639155625"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

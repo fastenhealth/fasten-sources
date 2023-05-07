@@ -28,6 +28,8 @@ func GetSourceGundersonOrthopedicsLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Gunderson Orthopedics LLC"
 	sourceDef.SourceType = pkg.SourceTypeGundersonOrthopedicsLlc
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548674211"}}
 	sourceDef.PatientAccessUrl = "https://www.gundersenhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

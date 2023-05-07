@@ -28,6 +28,8 @@ func GetSourceMoningerEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "MONINGER EYE CARE"
 	sourceDef.SourceType = pkg.SourceTypeMoningerEyeCare
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023550332"}}
 	sourceDef.PatientAccessUrl = "http://drmoninger.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceRevaskSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "ReVASK Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeRevaskSurgeryCenterLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"REVASK SURGERY CENTER LLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396238010"}}
 	sourceDef.BrandLogo = "revask-surgery-center-llc.svg"
 	sourceDef.PatientAccessUrl = "https://wichitanephrology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,9 @@ func GetSourceCardiovascularConsultantsLtd(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Cardiovascular Consultants LTD"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularConsultantsLtd
+	sourceDef.Category = []string{"2085R0202X", "2085R0204X", "332900000X", "261QM2500X"}
+	sourceDef.Aliases = []string{"DESERT VEIN & VASCULAR INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215509989", "1023073525"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

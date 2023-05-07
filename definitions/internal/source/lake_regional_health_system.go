@@ -29,6 +29,9 @@ func GetSourceLakeRegionalHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Lake Regional Health System"
 	sourceDef.SourceType = pkg.SourceTypeLakeRegionalHealthSystem
+	sourceDef.Category = []string{"261QR1300X", "282N00000X", "282NR1301X", "133V00000X", "207PE0004X", "251G00000X", "207Q00000X", "207RH0003X", "207RI0200X", "207V00000X", "208000000X", "208M00000X", "363L00000X", "207R00000X", "251E00000X", "314000000X"}
+	sourceDef.Aliases = []string{"LAKE REGIONAL OBSTETRICS & GYNECOLOGY", "LAKE REGIONAL EXPRESS CARE-CAMDENTON"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437440856", "1316616212", "1184393092", "1386619450", "1427162254", "1053581454", "1417492091", "1962828616", "1740255520", "1831164615"}}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/best-hospitals/area/mo/lake-regional-hospital-6630786"
 	sourceDef.SecretKeyPrefix = "cerner"
 

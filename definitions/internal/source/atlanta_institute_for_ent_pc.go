@@ -28,6 +28,9 @@ func GetSourceAtlantaInstituteForEntPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Atlanta Institute for ENT PC"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaInstituteForEntPc
+	sourceDef.Category = []string{"174400000X", "207YP0228X", "207YS0123X", "207Y00000X"}
+	sourceDef.Aliases = []string{"PRADEEP K SINHA MD PC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902899628"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

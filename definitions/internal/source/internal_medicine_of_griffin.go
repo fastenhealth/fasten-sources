@@ -28,6 +28,8 @@ func GetSourceInternalMedicineOfGriffin(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Internal Medicine of Griffin"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineOfGriffin
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073562633"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

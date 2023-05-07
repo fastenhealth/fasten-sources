@@ -28,6 +28,9 @@ func GetSourceSanfordHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Sanford Health"
 	sourceDef.SourceType = pkg.SourceTypeSanfordHealth
+	sourceDef.Category = []string{"282N00000X", "261QR1300X", "261Q00000X", "261QX0100X"}
+	sourceDef.Aliases = []string{"SANFORD HEALTH NETWORK"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144571365", "1033272695", "1407108053", "1528313657", "1295143030"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

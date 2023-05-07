@@ -28,6 +28,9 @@ func GetSourceSjMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "SJ Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSjMedicalClinic
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"SJ MEDICAL CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023534328"}}
 	sourceDef.PatientAccessUrl = "https://www.adventhealth.com/hospital/adventhealth-altamonte-springs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

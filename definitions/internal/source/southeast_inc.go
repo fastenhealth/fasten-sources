@@ -28,6 +28,9 @@ func GetSourceSoutheastInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Southeast Inc"
 	sourceDef.SourceType = pkg.SourceTypeSoutheastInc
+	sourceDef.Category = []string{"261QF0400X", "3336S0011X", "333600000X", "3336L0003X"}
+	sourceDef.Aliases = []string{"SOUTHEAST HEALTHCARE", "APOTHECARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033866140", "1760495089", "1073262481", "1265152680", "1710607130", "1689394900", "1093295313", "1497402507"}}
 	sourceDef.BrandLogo = "southeast-inc.svg"
 	sourceDef.PatientAccessUrl = "https://southeasthc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

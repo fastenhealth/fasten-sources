@@ -28,6 +28,9 @@ func GetSourceDigestiveHealthClinicLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Digestive Health Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthClinicLlc
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{"NAMPA DIGESTIVE HEALTH CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750498333", "1891310561"}}
 	sourceDef.PatientAccessUrl = "http://digestivehealthclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

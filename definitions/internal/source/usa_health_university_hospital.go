@@ -29,6 +29,9 @@ func GetSourceUsaHealthUniversityHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "USA Health University Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUsaHealthUniversityHospital
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"USA HEALTH UNIVERSITY HOSPITAL", "USA MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245890045", "1063468072"}}
 	sourceDef.PatientAccessUrl = "https://www.usahealthsystem.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

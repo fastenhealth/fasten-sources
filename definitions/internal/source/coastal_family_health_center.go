@@ -28,6 +28,9 @@ func GetSourceCoastalFamilyHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Coastal Family Health Center"
 	sourceDef.SourceType = pkg.SourceTypeCoastalFamilyHealthCenter
+	sourceDef.Category = []string{"261QF0400X", "261QD0000X"}
+	sourceDef.Aliases = []string{"COASTAL FAMILY HEALTH CENTER", "COASTAL FAMILY HEALTH CENTER, INC - SAUCIER HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841220357", "1619908118", "1417988916", "1124288501", "1578578290", "1225298607", "1487686580", "1942298195"}}
 	sourceDef.PatientAccessUrl = "https://coastalfamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

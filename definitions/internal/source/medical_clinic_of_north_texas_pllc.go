@@ -28,6 +28,9 @@ func GetSourceMedicalClinicOfNorthTexasPllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medical Clinic Of North Texas PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalClinicOfNorthTexasPllc
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{"USMD PHYSICIAN SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184854309", "1568740652"}}
 	sourceDef.PatientAccessUrl = "https://www.usmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

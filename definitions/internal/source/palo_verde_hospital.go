@@ -28,6 +28,9 @@ func GetSourcePaloVerdeHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Palo Verde Hospital"
 	sourceDef.SourceType = pkg.SourceTypePaloVerdeHospital
+	sourceDef.Category = []string{"282NC0060X", "275N00000X"}
+	sourceDef.Aliases = []string{"PALO VERDE HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528671583", "1114690609"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

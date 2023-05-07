@@ -28,6 +28,8 @@ func GetSourceInfectionsLimited(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Infections Limited"
 	sourceDef.SourceType = pkg.SourceTypeInfectionsLimited
+	sourceDef.Category = []string{"207RI0200X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366750408"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

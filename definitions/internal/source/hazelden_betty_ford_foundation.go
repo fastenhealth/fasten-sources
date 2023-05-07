@@ -29,6 +29,9 @@ func GetSourceHazeldenBettyFordFoundation(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hazelden Betty Ford Foundation"
 	sourceDef.SourceType = pkg.SourceTypeHazeldenBettyFordFoundation
+	sourceDef.Category = []string{"261QR0405X", "324500000X"}
+	sourceDef.Aliases = []string{"HAZELDEN BETTY FORD - MENASHA", "HAZELDEN BETTY FORD COLORADO"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437634730", "1376922856", "1669194932", "1649937392"}}
 	sourceDef.PatientAccessUrl = "https://www.hazeldenbettyford.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

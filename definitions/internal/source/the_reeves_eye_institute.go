@@ -28,6 +28,8 @@ func GetSourceTheReevesEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "The Reeves Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeTheReevesEyeInstitute
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306115423"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/ReevesSurgeryCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

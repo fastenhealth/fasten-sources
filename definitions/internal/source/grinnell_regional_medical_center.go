@@ -28,6 +28,9 @@ func GetSourceGrinnellRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Grinnell Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeGrinnellRegionalMedicalCenter
+	sourceDef.Category = []string{"251E00000X", "261QC1500X", "363A00000X", "207R00000X", "363L00000X", "207Q00000X", "207RH0003X", "207RR0500X", "207X00000X", "207LP2900X", "207Y00000X", "2083X0100X", "367500000X", "208600000X", "282N00000X", "251G00000X"}
+	sourceDef.Aliases = []string{"GRINNELL REGIONAL HOME CARE", "UNITYPOINT HEALTH - GRINNELL PROFESSIONAL SERVICES", "UNITYPOINT HEALTH - GRINNELL REGIONAL MEDICAL CENTER", "GRINNELL REGIONAL HOSPICE", "UNITYPOINT HEALTH - GRINNELL PUBLIC HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780681379", "1801960927", "1740500487", "1437663242", "1548336084", "1194086470", "1760738579", "1669420501", "1144289455", "1043511850"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

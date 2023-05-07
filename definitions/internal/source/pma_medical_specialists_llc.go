@@ -28,6 +28,8 @@ func GetSourcePmaMedicalSpecialistsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "PMA Medical Specialists LLC"
 	sourceDef.SourceType = pkg.SourceTypePmaMedicalSpecialistsLlc
+	sourceDef.Category = []string{"207ZP0102X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851836191"}}
 	sourceDef.PatientAccessUrl = "https://www.pma-physicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

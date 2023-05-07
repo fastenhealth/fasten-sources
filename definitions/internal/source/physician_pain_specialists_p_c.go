@@ -29,6 +29,8 @@ func GetSourcePhysicianPainSpecialistsPC(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Physician Pain Specialists, P.C."
 	sourceDef.SourceType = pkg.SourceTypePhysicianPainSpecialistsPC
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639190994"}}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,9 @@ func GetSourceBeebeHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Beebe Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeBeebeHealthcare
+	sourceDef.Category = []string{"282NW0100X", "251J00000X", "282N00000X", "282NC0060X", "261QI0500X"}
+	sourceDef.Aliases = []string{"BEEBE HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184012361", "1144872946", "1578935565", "1366995607", "1154704641", "1285022103", "1487019725"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

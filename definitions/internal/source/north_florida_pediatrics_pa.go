@@ -28,6 +28,8 @@ func GetSourceNorthFloridaPediatricsPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "North Florida Pediatrics PA"
 	sourceDef.SourceType = pkg.SourceTypeNorthFloridaPediatricsPa
+	sourceDef.Category = []string{"208000000X", "261QR1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235808668", "1336818632", "1548758428"}}
 	sourceDef.BrandLogo = "north-florida-pediatrics-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/North-Florida-Pediatrics-221118198675776/"
 	sourceDef.SecretKeyPrefix = "nextgen"

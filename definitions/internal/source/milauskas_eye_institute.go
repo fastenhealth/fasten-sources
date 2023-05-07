@@ -28,6 +28,9 @@ func GetSourceMilauskasEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Milauskas Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeMilauskasEyeInstitute
+	sourceDef.Category = []string{"152W00000X", "332B00000X", "207W00000X"}
+	sourceDef.Aliases = []string{"MILAUSKAS EYE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235210584"}}
 	sourceDef.PatientAccessUrl = "https://www.milauskas-eye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

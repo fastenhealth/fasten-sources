@@ -28,6 +28,9 @@ func GetSourceMethodistHospitalOfSouthernCalifornia(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Methodist Hospital of Southern California"
 	sourceDef.SourceType = pkg.SourceTypeMethodistHospitalOfSouthernCalifornia
+	sourceDef.Category = []string{"273Y00000X", "314000000X", "282N00000X"}
+	sourceDef.Aliases = []string{"METHODIST HOSPITAL OF SOUTHERN CALIFORNIA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164410593", "1891783239", "1508851288"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

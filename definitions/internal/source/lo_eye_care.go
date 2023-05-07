@@ -28,6 +28,9 @@ func GetSourceLoEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "LO Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeLoEyeCare
+	sourceDef.Category = []string{"363AS0400X", "207W00000X", "152W00000X"}
+	sourceDef.Aliases = []string{"LO EYE CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336234566", "1265415301", "1083912059", "1962485342"}}
 	sourceDef.BrandLogo = "lo-eye-care.svg"
 	sourceDef.PatientAccessUrl = "http://www.loeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,9 @@ func GetSourceTheCamillaPediatricCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "The Camilla Pediatric Center"
 	sourceDef.SourceType = pkg.SourceTypeTheCamillaPediatricCenter
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"THE CAMILLA PEDIATRIC CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366472003"}}
 	sourceDef.PatientAccessUrl = "https://archbold.org/hospitals-locations/primary-care/camilla-pediatric-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

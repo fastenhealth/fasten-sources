@@ -28,6 +28,9 @@ func GetSourceVictoriaEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Victoria Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeVictoriaEyeCenter
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"VICTORIA EYE CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548228364"}}
 	sourceDef.PatientAccessUrl = "https://www.victoriaeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

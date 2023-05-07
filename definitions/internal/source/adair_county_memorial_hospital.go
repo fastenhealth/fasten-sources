@@ -29,6 +29,9 @@ func GetSourceAdairCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Adair County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAdairCountyMemorialHospital
+	sourceDef.Category = []string{"207P00000X", "282NC0060X", "363LF0000X", "251K00000X", "261QR1300X", "275N00000X"}
+	sourceDef.Aliases = []string{"ADAIR COUNTY MEMORIAL HOSPITAL ER GROUP", "ADAIR COUNTY HOME CARE", "ADAIR COUNTY MEDICAL CLINIC STUART", "ADAIR COUNTY HEALTH SYSTEM", "ADAIR COUNTY MEDICAL CLINIC (GREENFIELD)"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366531345", "1780667519", "1902943384", "1285614818", "1932440146", "1760436257", "1720191059", "1992843353", "1710926506", "1457398414"}}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/best-hospitals/area/ia/adair-county-memorial-hospital-6620644"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourceCentromed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "CentroMed"
 	sourceDef.SourceType = pkg.SourceTypeCentromed
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"CENTROMED"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457065849"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceYumaDistrictHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Yuma District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeYumaDistrictHospital
+	sourceDef.Category = []string{"275N00000X", "251E00000X", "261QC0050X", "282NC0060X", "261QP2300X", "261QR1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336263417", "1720086333", "1841343407", "1629074182", "1144227588"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

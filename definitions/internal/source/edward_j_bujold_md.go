@@ -28,6 +28,9 @@ func GetSourceEdwardJBujoldMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Edward J. Bujold MD"
 	sourceDef.SourceType = pkg.SourceTypeEdwardJBujoldMd
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"GRANITE FALLS FAMILY MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861685364"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

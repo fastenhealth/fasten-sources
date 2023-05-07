@@ -28,6 +28,8 @@ func GetSourceSantaYnezTribalHealthClinic(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Santa Ynez Tribal Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSantaYnezTribalHealthClinic
+	sourceDef.Category = []string{"1223G0001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699861302"}}
 	sourceDef.PatientAccessUrl = "https://sythc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

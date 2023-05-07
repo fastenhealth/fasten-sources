@@ -28,6 +28,8 @@ func GetSourceBaylorScottAndWhite(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Baylor Scott & White"
 	sourceDef.SourceType = pkg.SourceTypeBaylorScottAndWhite
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811371784"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

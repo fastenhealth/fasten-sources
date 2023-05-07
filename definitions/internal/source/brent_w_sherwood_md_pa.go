@@ -28,6 +28,8 @@ func GetSourceBrentWSherwoodMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Brent W Sherwood MD PA"
 	sourceDef.SourceType = pkg.SourceTypeBrentWSherwoodMdPa
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720414147"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

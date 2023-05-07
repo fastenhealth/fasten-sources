@@ -29,6 +29,8 @@ func GetSourceLakeRegionHealthcareCorporation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Lake Region Healthcare Corporation"
 	sourceDef.SourceType = pkg.SourceTypeLakeRegionHealthcareCorporation
+	sourceDef.Category = []string{"332900000X", "111N00000X", "273R00000X", "273Y00000X", "314000000X", "282N00000X", "332H00000X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194862557", "1265148480", "1093713372", "1922471804"}}
 	sourceDef.BrandLogo = "lake-region-healthcare-corporation.jpg"
 	sourceDef.PatientAccessUrl = "https://www.lrhc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

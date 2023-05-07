@@ -14,8 +14,8 @@ import (
 // https://api.utmsa.com/fhir/api/FHIR/R4/metadata
 func GetSourceUtHealthSanAntonio(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://api.utmsa.com/fhir/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://api.utmsa.com/fhir/oauth2/token"
+	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0582.epichosted.com/FHIRProxy/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://epicproxy.et0582.epichosted.com/FHIRProxy/oauth2/token"
 
 	sourceDef.Audience = "https://api.utmsa.com/fhir/api/FHIR/R4"
 

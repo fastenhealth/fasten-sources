@@ -29,6 +29,9 @@ func GetSourcePerryCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Perry County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypePerryCountyMemorialHospital
+	sourceDef.Category = []string{"3416L0300X", "282NC0060X"}
+	sourceDef.Aliases = []string{"PERRY COUNTY MEMORIAL HOSPITAL AMBULANCE SERVICE LLC", "PERRY COUNTY MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407158678", "1982699328", "1245360213"}}
 	sourceDef.PatientAccessUrl = "http://www.pchmo.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

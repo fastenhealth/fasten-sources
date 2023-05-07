@@ -29,6 +29,8 @@ func GetSourceInspiraMedicalCenterWoodburyInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Inspira Medical Center Woodbury, Inc."
 	sourceDef.SourceType = pkg.SourceTypeInspiraMedicalCenterWoodburyInc
+	sourceDef.Category = []string{"282N00000X", "333300000X", "314000000X", "273R00000X", "283Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184601288", "1568868602", "1376520346", "1629055694"}}
 	sourceDef.BrandLogo = "inspira-medical-center-woodbury-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.inspirahealthnetwork.org/locations/inspira-health-center-woodbury"
 	sourceDef.SecretKeyPrefix = "cerner"

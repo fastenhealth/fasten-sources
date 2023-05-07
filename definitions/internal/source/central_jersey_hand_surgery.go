@@ -28,6 +28,9 @@ func GetSourceCentralJerseyHandSurgery(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Central Jersey Hand Surgery"
 	sourceDef.SourceType = pkg.SourceTypeCentralJerseyHandSurgery
+	sourceDef.Category = []string{"261QM2500X", "207XS0106X", "2086S0105X"}
+	sourceDef.Aliases = []string{"NEW JERSEY HAND SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407255045", "1881017739", "1528052446"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

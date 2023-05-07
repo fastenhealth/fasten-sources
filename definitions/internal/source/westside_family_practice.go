@@ -28,6 +28,8 @@ func GetSourceWestsideFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Westside Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeWestsideFamilyPractice
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104971472"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/westside-family-practice-cd2e29c9-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

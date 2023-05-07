@@ -28,6 +28,9 @@ func GetSourceCenterForHealthyWeight(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Center For Healthy Weight"
 	sourceDef.SourceType = pkg.SourceTypeCenterForHealthyWeight
+	sourceDef.Category = []string{"207RE0101X"}
+	sourceDef.Aliases = []string{"CENTER FOR HEALTHY WEIGHT"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891328332"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

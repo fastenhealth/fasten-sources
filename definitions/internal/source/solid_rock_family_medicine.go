@@ -28,6 +28,9 @@ func GetSourceSolidRockFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Solid Rock Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSolidRockFamilyMedicine
+	sourceDef.Category = []string{"363L00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"SOLID ROCK FAMILY MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841741014"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

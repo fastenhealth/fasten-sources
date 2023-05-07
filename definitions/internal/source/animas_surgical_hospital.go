@@ -29,6 +29,9 @@ func GetSourceAnimasSurgicalHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Animas Surgical Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAnimasSurgicalHospital
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"ANIMAS SURGICAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508842964"}}
 	sourceDef.PatientAccessUrl = "https://www.animassurgical.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

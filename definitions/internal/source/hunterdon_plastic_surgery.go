@@ -28,6 +28,9 @@ func GetSourceHunterdonPlasticSurgery(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Hunterdon Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonPlasticSurgery
+	sourceDef.Category = []string{"208200000X"}
+	sourceDef.Aliases = []string{"HUNTERDON MEDISPA AND PLASTIC SURGERY", "HUNTERDON PLASTIC SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609396449"}}
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

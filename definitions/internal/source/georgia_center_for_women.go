@@ -29,6 +29,9 @@ func GetSourceGeorgiaCenterForWomen(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Georgia Center for Women"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaCenterForWomen
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"GEORGIA CENTER FOR WOMEN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285353946", "1770202426", "1790404457"}}
 	sourceDef.PatientAccessUrl = "https://www.gacfw.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

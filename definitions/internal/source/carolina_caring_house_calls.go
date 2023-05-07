@@ -28,6 +28,9 @@ func GetSourceCarolinaCaringHouseCalls(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Carolina Caring House Calls"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaCaringHouseCalls
+	sourceDef.Category = []string{"207QG0300X", "207Q00000X"}
+	sourceDef.Aliases = []string{"CAROLINA CARING HOUSE CALLS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093901696"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

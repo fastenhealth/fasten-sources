@@ -28,6 +28,8 @@ func GetSourcePlasticSurgeryConsultantsLtd(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Plastic Surgery Consultants Ltd"
 	sourceDef.SourceType = pkg.SourceTypePlasticSurgeryConsultantsLtd
+	sourceDef.Category = []string{"207N00000X", "208200000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023133071"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

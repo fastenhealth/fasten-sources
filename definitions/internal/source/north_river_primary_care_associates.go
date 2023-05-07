@@ -29,6 +29,9 @@ func GetSourceNorthRiverPrimaryCareAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "North River Primary Care Associates"
 	sourceDef.SourceType = pkg.SourceTypeNorthRiverPrimaryCareAssociates
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"NORTH RIVER PRIMARY CARE ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336474964"}}
 	sourceDef.PatientAccessUrl = "http://northriverpca.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

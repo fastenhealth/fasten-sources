@@ -28,6 +28,8 @@ func GetSourceIvySpringsMedicalCareInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Ivy Springs Medical Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeIvySpringsMedicalCareInc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477706844"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/murrieta/ivy-springs-medical-care-x2w3x2"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

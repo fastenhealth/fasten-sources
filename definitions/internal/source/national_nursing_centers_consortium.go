@@ -28,6 +28,8 @@ func GetSourceNationalNursingCentersConsortium(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "National Nursing Centers Consortium"
 	sourceDef.SourceType = pkg.SourceTypeNationalNursingCentersConsortium
+	sourceDef.Category = []string{"104100000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124204904"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

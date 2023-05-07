@@ -28,6 +28,8 @@ func GetSourceSpineConsultantsLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Spine Consultants LLC"
 	sourceDef.SourceType = pkg.SourceTypeSpineConsultantsLlc
+	sourceDef.Category = []string{"261QP2000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801112404"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

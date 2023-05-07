@@ -28,6 +28,9 @@ func GetSourceSakdcSurgicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "SAKDC Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeSakdcSurgicalCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SAKDC SURGICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417594995"}}
 	sourceDef.PatientAccessUrl = "https://www.sakidney.com/contactus.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

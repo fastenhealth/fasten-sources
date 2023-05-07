@@ -28,6 +28,8 @@ func GetSourceZhiwenLuMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "ZhiWen Lu MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeZhiwenLuMdInc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245214261"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceWrightAndAssociatesFamilyHealthcarePllc(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "Wright & Associates Family Healthcare, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWrightAndAssociatesFamilyHealthcarePllc
+	sourceDef.Category = []string{"363LA2200X", "363LF0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275755324"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

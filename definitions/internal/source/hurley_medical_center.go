@@ -28,6 +28,9 @@ func GetSourceHurleyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hurley Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHurleyMedicalCenter
+	sourceDef.Category = []string{"207Q00000X", "207V00000X", "1041C0700X", "282N00000X", "208G00000X", "282NW0100X", "261QM0850X", "207R00000X", "2085R0202X"}
+	sourceDef.Aliases = []string{"LAPEER FAMILY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093207425", "1821178567", "1093915373", "1760730469", "1841545209", "1710296348", "1316383706", "1730420217", "1952709834", "1003271792"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

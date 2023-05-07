@@ -28,6 +28,8 @@ func GetSourceHunterdonCardiovascularAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Hunterdon Cardiovascular Associates"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonCardiovascularAssociates
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053334276"}}
 	sourceDef.PatientAccessUrl = "https://hunterdoncardiovascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

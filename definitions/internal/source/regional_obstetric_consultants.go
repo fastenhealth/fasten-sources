@@ -28,6 +28,8 @@ func GetSourceRegionalObstetricConsultants(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Regional Obstetric Consultants"
 	sourceDef.SourceType = pkg.SourceTypeRegionalObstetricConsultants
+	sourceDef.Category = []string{"207VM0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215078977"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

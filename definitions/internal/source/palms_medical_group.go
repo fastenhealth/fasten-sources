@@ -28,6 +28,9 @@ func GetSourcePalmsMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Palms Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePalmsMedicalGroup
+	sourceDef.Category = []string{"261QD0000X", "261QF0400X"}
+	sourceDef.Aliases = []string{"PALMS MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801826268"}}
 	sourceDef.BrandLogo = "palms-medical-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.palmsmg.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

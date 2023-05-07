@@ -28,6 +28,8 @@ func GetSourceMorenoSpineAndScoliosis(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Moreno Spine and Scoliosis"
 	sourceDef.SourceType = pkg.SourceTypeMorenoSpineAndScoliosis
+	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508059635"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceSunsetCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Sunset Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSunsetCommunityHealthCenter
+	sourceDef.Category = []string{"1223G0001X", "3336C0003X", "333600000X", "208000000X", "207R00000X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447331806", "1730278326", "1780798678", "1508947946", "1407832181", "1225461627", "1548693286", "1245663996", "1093964959", "1366812166"}}
 	sourceDef.BrandLogo = "sunset-community-health-center.svg"
 	sourceDef.PatientAccessUrl = "https://mysunsethealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

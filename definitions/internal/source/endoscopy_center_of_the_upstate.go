@@ -28,6 +28,9 @@ func GetSourceEndoscopyCenterOfTheUpstate(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Endoscopy Center Of The Upstate"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopyCenterOfTheUpstate
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"ENDOSCOPY CENTER OF THE UPSTATE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316910086"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,9 @@ func GetSourceLincolnCommunityHospitalAndNursingHome(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Lincoln Community Hospital and Nursing Home"
 	sourceDef.SourceType = pkg.SourceTypeLincolnCommunityHospitalAndNursingHome
+	sourceDef.Category = []string{"314000000X"}
+	sourceDef.Aliases = []string{"LINCOLN COMMUNITY HOSPITAL AND NURSING HOME"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437751419"}}
 	sourceDef.PatientAccessUrl = "https://www.mdlinx.com/hospital/lincoln-community-hospital-and-nursing-home"
 	sourceDef.SecretKeyPrefix = "cerner"
 

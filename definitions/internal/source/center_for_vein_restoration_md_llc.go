@@ -28,6 +28,8 @@ func GetSourceCenterForVeinRestorationMdLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Center For Vein Restoration MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeCenterForVeinRestorationMdLlc
+	sourceDef.Category = []string{"2086S0129X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487772349", "1770741753"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

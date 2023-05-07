@@ -28,6 +28,8 @@ func GetSourceInfectiousDiseaseConsultants(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Infectious Disease Consultants"
 	sourceDef.SourceType = pkg.SourceTypeInfectiousDiseaseConsultants
+	sourceDef.Category = []string{"174400000X", "207RI0200X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972580884", "1558417394", "1710078951", "1790844884", "1700819562"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

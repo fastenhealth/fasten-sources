@@ -28,6 +28,8 @@ func GetSourceHunterdonOtolaryngologyAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Hunterdon Otolaryngology Associates"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonOtolaryngologyAssociates
+	sourceDef.Category = []string{"207Y00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821181462"}}
 	sourceDef.BrandLogo = "hunterdon-otolaryngology-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

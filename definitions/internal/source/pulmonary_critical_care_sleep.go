@@ -28,6 +28,8 @@ func GetSourcePulmonaryCriticalCareSleep(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Pulmonary Critical Care Sleep"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryCriticalCareSleep
+	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740257518"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

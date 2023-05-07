@@ -29,6 +29,9 @@ func GetSourceClayPlatteFamilyMedicineClinic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Clay Platte Family Medicine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeClayPlatteFamilyMedicineClinic
+	sourceDef.Category = []string{"332B00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"COBBLESTONE FAMILY MEDICINE CLINIC", "SUMMIT FAMILY & SPORTS MEDICINE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073570487", "1366169922", "1588138820"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,9 @@ func GetSourceGraceCottageHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Grace Cottage Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGraceCottageHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"GRACE COTTAGE HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255337473"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

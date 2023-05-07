@@ -28,6 +28,9 @@ func GetSourceBealsInstitutePc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Beals Institute PC"
 	sourceDef.SourceType = pkg.SourceTypeBealsInstitutePc
+	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{"GREAT LAKES CENTER OF RHEUMATOLOGY WEST"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952498198"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

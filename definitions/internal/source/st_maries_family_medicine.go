@@ -28,6 +28,9 @@ func GetSourceStMariesFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "St Maries Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeStMariesFamilyMedicine
+	sourceDef.Category = []string{"261QM1300X", "261QR1300X"}
+	sourceDef.Aliases = []string{"ST MARIES FAMILY MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386632180"}}
 	sourceDef.PatientAccessUrl = "https://www.bchmed.org/st-maries-family-medicine-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

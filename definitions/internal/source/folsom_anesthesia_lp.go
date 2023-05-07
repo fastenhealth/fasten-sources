@@ -28,6 +28,8 @@ func GetSourceFolsomAnesthesiaLp(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Folsom Anesthesia LP"
 	sourceDef.SourceType = pkg.SourceTypeFolsomAnesthesiaLp
+	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043700941"}}
 	sourceDef.BrandLogo = "folsom-anesthesia-lp.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/california/folsom/folsom-anesthesia-lp-4981956729.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

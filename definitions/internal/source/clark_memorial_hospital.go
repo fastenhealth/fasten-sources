@@ -28,6 +28,9 @@ func GetSourceClarkMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Clark Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeClarkMemorialHospital
+	sourceDef.Category = []string{"282N00000X", "276400000X", "207R00000X", "208000000X", "207RC0000X", "207X00000X", "207Q00000X", "291U00000X"}
+	sourceDef.Aliases = []string{"CLARK MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134186315", "1710082102", "1629015953", "1891839874"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

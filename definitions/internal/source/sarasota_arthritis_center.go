@@ -28,6 +28,9 @@ func GetSourceSarasotaArthritisCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Sarasota Arthritis Center"
 	sourceDef.SourceType = pkg.SourceTypeSarasotaArthritisCenter
+	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{"SARASOTA ARTHRITIS CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659358927"}}
 	sourceDef.PatientAccessUrl = "https://www.arthritiscenters.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

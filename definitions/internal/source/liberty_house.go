@@ -28,6 +28,8 @@ func GetSourceLibertyHouse(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Liberty House"
 	sourceDef.SourceType = pkg.SourceTypeLibertyHouse
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639244056"}}
 	sourceDef.BrandLogo = "liberty-house.jpg"
 	sourceDef.PatientAccessUrl = "http://www.libertyhouseofalbany.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

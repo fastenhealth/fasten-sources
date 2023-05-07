@@ -29,6 +29,8 @@ func GetSourceMissouriCancerAssociatesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Missouri Cancer Associates, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMissouriCancerAssociatesLlc
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942605175"}}
 	sourceDef.PatientAccessUrl = "https://missouricancer.com/locations/columbia/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

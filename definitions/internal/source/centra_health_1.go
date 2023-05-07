@@ -29,6 +29,8 @@ func GetSourceCentraHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Centra Health"
 	sourceDef.SourceType = pkg.SourceTypeCentraHealth1
+	sourceDef.Category = []string{"320700000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093147795"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

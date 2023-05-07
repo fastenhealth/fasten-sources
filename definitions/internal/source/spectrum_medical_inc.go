@@ -28,6 +28,9 @@ func GetSourceSpectrumMedicalInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "SPECTRUM MEDICAL INC"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumMedicalInc
+	sourceDef.Category = []string{"207LP2900X", "207RR0500X", "207XS0117X", "207XX0004X", "2084N0400X", "207X00000X", "225100000X"}
+	sourceDef.Aliases = []string{"SPECTRUM MEDICAL INC."}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861597072", "1326208604"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

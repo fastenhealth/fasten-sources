@@ -28,6 +28,8 @@ func GetSourceTexasArthritisAndRheumatology(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Texas Arthritis And Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeTexasArthritisAndRheumatology
+	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225082308"}}
 	sourceDef.PatientAccessUrl = "http://texasarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,9 @@ func GetSourceKaleidaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Kaleida Health"
 	sourceDef.SourceType = pkg.SourceTypeKaleidaHealth
+	sourceDef.Category = []string{"261QE0700X", "282NC2000X", "2085P0229X", "284300000X", "273R00000X", "2085R0204X", "207RH0003X", "282N00000X", "311ZA0620X"}
+	sourceDef.Aliases = []string{"JOHN R. OISHEI CHILDREN'S HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689708885", "1003166091", "1730139536", "1184774226", "1851476741", "1780772400", "1407944127", "1093084006", "1245365196", "1366483695"}}
 	sourceDef.BrandLogo = "kaleida-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kaleidahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

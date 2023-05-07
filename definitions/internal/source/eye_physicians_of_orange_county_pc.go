@@ -28,6 +28,8 @@ func GetSourceEyePhysiciansOfOrangeCountyPc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Eye Physicians of Orange County PC"
 	sourceDef.SourceType = pkg.SourceTypeEyePhysiciansOfOrangeCountyPc
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457331266"}}
 	sourceDef.PatientAccessUrl = "https://epocny.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

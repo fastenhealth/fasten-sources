@@ -28,6 +28,9 @@ func GetSourceSeasideWellnessOfShallotte(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Seaside Wellness of Shallotte"
 	sourceDef.SourceType = pkg.SourceTypeSeasideWellnessOfShallotte
+	sourceDef.Category = []string{"363L00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"SEASIDE WELLNESS OF SHALLOTTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689125858"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

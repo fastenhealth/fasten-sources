@@ -28,6 +28,8 @@ func GetSourceHouserNewmanAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Houser Newman Associates"
 	sourceDef.SourceType = pkg.SourceTypeHouserNewmanAssociates
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477648863"}}
 	sourceDef.PatientAccessUrl = "https://housernewman.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

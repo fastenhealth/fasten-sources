@@ -28,6 +28,9 @@ func GetSourceTheBrooklynHospitalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "The Brooklyn Hospital Center"
 	sourceDef.SourceType = pkg.SourceTypeTheBrooklynHospitalCenter
+	sourceDef.Category = []string{"207Y00000X", "261QD0000X", "3336C0002X", "261QR0400X", "282N00000X", "261Q00000X", "208000000X", "207R00000X", "207N00000X", "207V00000X"}
+	sourceDef.Aliases = []string{"TBHC DOWNTOWN BROOKLYN PHARMACY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790813939", "1447392345", "1093431850", "1790719524", "1326046467", "1174651301", "1457489684", "1922209659", "1588072953", "1881722015"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

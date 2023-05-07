@@ -29,6 +29,9 @@ func GetSourceTrinityHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Trinity Health"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealth
+	sourceDef.Category = []string{"261QA1903X", "261QR0200X", "332H00000X", "335V00000X", "332B00000X", "291U00000X"}
+	sourceDef.Aliases = []string{"TCC-WESTERN DAKOTA X-RAY", "VISION GALLERIA - WESTERN DAKOTA", "TCC WESTERN DAKOTA SURGERY (ASC)", "WESTERN DAKOTA SURGERY", "TRINITY PORTABLE X-RAY", "VISION GALLERIA (MINOT)", "VISION GALLERIA", "TCC-WESTERN DAKOTA LAB", "TRINITY COMMUNITY CLINIC WESTERN DAKOTA LAB"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730233677", "1962738542", "1245285816", "1679619548", "1841526332", "1629636204", "1013180405", "1811030752", "1982770996", "1316273998", "1538214689", "1902949845"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

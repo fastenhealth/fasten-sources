@@ -28,6 +28,9 @@ func GetSourceTeamVisionSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Team Vision Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeTeamVisionSurgeryCenter
+	sourceDef.Category = []string{"261QS0132X"}
+	sourceDef.Aliases = []string{"TEAM VISION SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336184993"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

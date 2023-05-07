@@ -28,6 +28,9 @@ func GetSourceArizonaCommunityPhysicians1(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Arizona Community Physicians"
 	sourceDef.SourceType = pkg.SourceTypeArizonaCommunityPhysicians1
+	sourceDef.Category = []string{"261QH0700X", "261QM2500X", "261QS1200X", "261QM1300X"}
+	sourceDef.Aliases = []string{"ARIZONA COMMUNITY PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730305442"}}
 	sourceDef.BrandLogo = "arizona-community-physicians.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

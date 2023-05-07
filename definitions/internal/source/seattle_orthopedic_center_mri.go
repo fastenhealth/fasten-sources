@@ -28,6 +28,9 @@ func GetSourceSeattleOrthopedicCenterMri(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Seattle Orthopedic Center MRI"
 	sourceDef.SourceType = pkg.SourceTypeSeattleOrthopedicCenterMri
+	sourceDef.Category = []string{"2085R0202X", "261QM1200X"}
+	sourceDef.Aliases = []string{"SEATTLE ORTHOPEDIC CENTER MRI"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003441783"}}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/seattle-orthopedic-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

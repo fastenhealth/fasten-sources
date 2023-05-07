@@ -28,6 +28,9 @@ func GetSourceSevenStarSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Seven Star Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarSurgery
+	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265035356"}}
 	sourceDef.PatientAccessUrl = "https://www.vitadox.com/practice/hemet-ca-92543/seven-star-surgery/egSrfAq7YwMMe8dd2hLVad"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

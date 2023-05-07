@@ -28,6 +28,8 @@ func GetSourceMuskingumPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Muskingum Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeMuskingumPediatrics
+	sourceDef.Category = []string{"173000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689888430"}}
 	sourceDef.PatientAccessUrl = "https://ms-my.facebook.com/Muskingumpediatrics/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceLickingMemorialHealthSystems(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Licking Memorial Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeLickingMemorialHealthSystems
+	sourceDef.Category = []string{"3336S0011X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073724522"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

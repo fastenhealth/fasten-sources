@@ -29,6 +29,9 @@ func GetSourceNorthBrowardHospitalDistrict(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "North Broward Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeNorthBrowardHospitalDistrict
+	sourceDef.Category = []string{"261QM1300X", "333600000X", "3336C0003X"}
+	sourceDef.Aliases = []string{"COUMADIN CLINIC", "BHMC OUTPATIENT PHARMACY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891169389", "1548288087"}}
 	sourceDef.PatientAccessUrl = "https://www.browardhealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

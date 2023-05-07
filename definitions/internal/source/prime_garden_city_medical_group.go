@@ -28,6 +28,9 @@ func GetSourcePrimeGardenCityMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Prime Garden City Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePrimeGardenCityMedicalGroup
+	sourceDef.Category = []string{"207QS0010X", "207Q00000X", "207V00000X", "207R00000X", "207U00000X", "2085N0904X", "2085R0204X", "2085U0001X", "2085R0202X"}
+	sourceDef.Aliases = []string{"INTERNAL MEDICINE CONTINUITY CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427208537", "1598179954", "1437371739", "1104163013", "1548802218", "1508072729", "1538380621", "1639391808", "1063512010", "1023295722"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

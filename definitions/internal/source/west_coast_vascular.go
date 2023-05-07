@@ -28,6 +28,9 @@ func GetSourceWestCoastVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "West Coast Vascular"
 	sourceDef.SourceType = pkg.SourceTypeWestCoastVascular
+	sourceDef.Category = []string{"2086S0129X", "335E00000X"}
+	sourceDef.Aliases = []string{"WEST COAST VASCULAR"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174928329", "1366926321", "1881197911", "1053575548"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

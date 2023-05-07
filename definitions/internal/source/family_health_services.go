@@ -28,6 +28,9 @@ func GetSourceFamilyHealthServices(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Family Health Services"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthServices
+	sourceDef.Category = []string{"101YM0800X", "101YS0200X", "104100000X", "1041S0200X", "261QF0400X", "1041C0700X", "1223G0001X", "124Q00000X", "183500000X", "207Q00000X", "208U00000X", "333600000X", "3336C0003X", "363A00000X", "363L00000X", "101Y00000X", "103T00000X", "133V00000X", "122300000X", "101YP2500X", "2084P0800X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTH SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528726197", "1922661404", "1710503909", "1841932498", "1235279217", "1932841582", "1669114211", "1003862525", "1285297804", "1194341388"}}
 	sourceDef.PatientAccessUrl = "https://fhsid.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

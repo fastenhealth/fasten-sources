@@ -28,6 +28,8 @@ func GetSourcePiedmontHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Piedmont Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePiedmontHealthcare1
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790173094"}}
 	sourceDef.BrandLogo = "piedmont-healthcare.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

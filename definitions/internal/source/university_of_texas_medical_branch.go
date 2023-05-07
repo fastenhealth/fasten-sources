@@ -28,6 +28,9 @@ func GetSourceUniversityOfTexasMedicalBranch(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "University of Texas Medical Branch"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTexasMedicalBranch
+	sourceDef.Category = []string{"3336C0002X", "302R00000X", "261QP0905X", "282N00000X", "261QD1600X", "261QM1300X", "207Q00000X", "282NW0100X", "261QA1903X", "261QC0050X", "281P00000X", "341600000X"}
+	sourceDef.Aliases = []string{"UNIVERSITY OF TEXAS MEDICAL BRANCH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306802384", "1912207911", "1033310388", "1710292800", "1629283569", "1295119493", "1407524135", "1962871699", "1457802472", "1548226988"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

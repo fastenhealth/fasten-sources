@@ -28,6 +28,8 @@ func GetSourcePlannedParenthoodMarMonte(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Planned Parenthood Mar Monte"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodMarMonte
+	sourceDef.Category = []string{"261QC1500X", "291U00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316221617", "1538351077", "1043593551"}}
 	sourceDef.BrandLogo = "planned-parenthood-mar-monte.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/health-center/california/san-jose/95126/san-jose-central-health-center-3263-90130?utm_campaign=san-jose-central-health-center&utm_medium=organic&utm_source=local-listing"
 	sourceDef.SecretKeyPrefix = "nextgen"

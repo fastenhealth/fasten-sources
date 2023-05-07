@@ -29,6 +29,8 @@ func GetSourceChangingTidesFamilyServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Changing Tides Family Services"
 	sourceDef.SourceType = pkg.SourceTypeChangingTidesFamilyServices
+	sourceDef.Category = []string{"251S00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992338669", "1336489202", "1336453505", "1871628578"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

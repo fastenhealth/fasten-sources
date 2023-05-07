@@ -28,6 +28,9 @@ func GetSourceMiddletownEyePhysiciansPlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Middletown Eye Physicians PLC"
 	sourceDef.SourceType = pkg.SourceTypeMiddletownEyePhysiciansPlc
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"FRANK R. BURNS, MD, PLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861672362"}}
 	sourceDef.PatientAccessUrl = "https://middletown-eyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

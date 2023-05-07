@@ -28,6 +28,8 @@ func GetSourceMadisonMedicalDermatologyLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Madison Medical Dermatology LLC"
 	sourceDef.SourceType = pkg.SourceTypeMadisonMedicalDermatologyLlc
+	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831506187"}}
 	sourceDef.BrandLogo = "madison-medical-dermatology-llc.jpg"
 	sourceDef.PatientAccessUrl = "http://madmedgroup.com/madison-medical-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"

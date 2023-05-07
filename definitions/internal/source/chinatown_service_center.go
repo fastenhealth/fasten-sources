@@ -28,6 +28,9 @@ func GetSourceChinatownServiceCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Chinatown Service Center"
 	sourceDef.SourceType = pkg.SourceTypeChinatownServiceCenter
+	sourceDef.Category = []string{"261QF0400X", "261QP2300X", "171M00000X", "261QD0000X", "251S00000X", "261QH0100X"}
+	sourceDef.Aliases = []string{"CSC HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134830862", "1306373964", "1013444660", "1427046754", "1427424654", "1265963649", "1134482326"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

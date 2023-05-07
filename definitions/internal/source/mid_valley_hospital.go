@@ -29,6 +29,9 @@ func GetSourceMidValleyHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mid-Valley Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMidValleyHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"MID-VALLEY HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255387403"}}
 	sourceDef.PatientAccessUrl = "https://www.mvhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

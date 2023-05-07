@@ -28,6 +28,9 @@ func GetSourceGonzalesHealthcareSystems(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Gonzales Healthcare Systems"
 	sourceDef.SourceType = pkg.SourceTypeGonzalesHealthcareSystems
+	sourceDef.Category = []string{"207Q00000X", "208000000X", "261QR1300X", "251E00000X", "314000000X", "282NR1301X", "282N00000X"}
+	sourceDef.Aliases = []string{"SIEVERS MEDICAL CLINIC", "MEMORIAL HOSPITAL HOME HEALTH", "SIEVERS MEDICAL CLINIC - WAELDER", "THE HEIGHTS OF GONZALES", "SIEVERS MEDICAL CLINIC - SHINER", "MEMORIAL HOSPITAL", "TEXAN NURSING & REHAB OF GONZALES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013916287", "1437158714", "1811999337", "1710318316", "1821551581", "1932108214", "1699013599", "1699768705"}}
 	sourceDef.BrandLogo = "gonzales-healthcare-systems.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gonzaleshealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

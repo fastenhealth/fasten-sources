@@ -28,6 +28,8 @@ func GetSourceMeadowLaneSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Meadow Lane Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeMeadowLaneSurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023189453"}}
 	sourceDef.PatientAccessUrl = "https://www.groupon.com/biz/new-port-richey-fl/meadow-lane-surgery-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

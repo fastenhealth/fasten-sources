@@ -28,6 +28,9 @@ func GetSourceTexasGiEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Texas GI Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTexasGiEndoscopyCenter
+	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Aliases = []string{"TEXAS GI ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396762027", "1528253523"}}
 	sourceDef.BrandLogo = "texas-gi-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://texasgicenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

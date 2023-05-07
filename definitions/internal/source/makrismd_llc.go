@@ -28,6 +28,8 @@ func GetSourceMakrismdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "MakrisMD LLC"
 	sourceDef.SourceType = pkg.SourceTypeMakrismdLlc
+	sourceDef.Category = []string{"2085R0202X", "2085R0204X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134406291"}}
 	sourceDef.PatientAccessUrl = "http://makrismd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

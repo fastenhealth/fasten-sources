@@ -28,6 +28,8 @@ func GetSourceElPasoAnesthesiaAssociatesLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "El Paso Anesthesia Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeElPasoAnesthesiaAssociatesLlc
+	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194293076"}}
 	sourceDef.PatientAccessUrl = "https://pay.instamed.com/Form/Payments/New?id=PASO"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

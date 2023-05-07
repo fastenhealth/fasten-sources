@@ -28,6 +28,8 @@ func GetSourceMemorialNeurologicalAssociation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Memorial Neurological Association"
 	sourceDef.SourceType = pkg.SourceTypeMemorialNeurologicalAssociation
+	sourceDef.Category = []string{"2084N0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992806640"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

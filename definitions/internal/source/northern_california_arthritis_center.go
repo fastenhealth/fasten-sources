@@ -28,6 +28,9 @@ func GetSourceNorthernCaliforniaArthritisCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Northern California Arthritis Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthernCaliforniaArthritisCenter
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"NORTHERN CALIFORNIA ARTHRITIS CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154403483"}}
 	sourceDef.PatientAccessUrl = "https://ncacmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

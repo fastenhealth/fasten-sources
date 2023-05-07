@@ -28,6 +28,9 @@ func GetSourceTheFemalePelvicHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "The Female Pelvic Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTheFemalePelvicHealthCenter
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{"THE FEMALE PELVIC HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790917342"}}
 	sourceDef.PatientAccessUrl = "https://www.fphcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

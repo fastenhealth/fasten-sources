@@ -28,6 +28,9 @@ func GetSourceBrownFertility(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Brown Fertility"
 	sourceDef.SourceType = pkg.SourceTypeBrownFertility
+	sourceDef.Category = []string{"363LW0102X", "207VE0102X"}
+	sourceDef.Aliases = []string{"BROWN FERTILITY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326519166"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

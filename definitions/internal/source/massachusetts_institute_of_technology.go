@@ -29,6 +29,9 @@ func GetSourceMassachusettsInstituteOfTechnology(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Massachusetts Institute of Technology"
 	sourceDef.SourceType = pkg.SourceTypeMassachusettsInstituteOfTechnology
+	sourceDef.Category = []string{"261QU0200X", "1223P0300X", "1223P0700X", "1223G0001X", "261QM1300X", "3416L0300X"}
+	sourceDef.Aliases = []string{"MIT DENTAL", "MIT MEDICAL", "MASSACHUSETTS INSTITUTE OF TECHNOLOGY EMERGENCY MEDICAL SERVICES", "MIT EMERGENCY MEDICAL SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457607756", "1588133946", "1346308723", "1518578061"}}
 	sourceDef.PatientAccessUrl = "https://web.mit.edu/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

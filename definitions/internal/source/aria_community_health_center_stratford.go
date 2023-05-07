@@ -28,6 +28,9 @@ func GetSourceAriaCommunityHealthCenterStratford(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Aria Community Health Center Stratford"
 	sourceDef.SourceType = pkg.SourceTypeAriaCommunityHealthCenterStratford
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"ARIA COMMUNITY HEALTH CENTER STRATFORD"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992176267", "1467849497"}}
 	sourceDef.BrandLogo = "aria-community-health-center-stratford.jpg"
 	sourceDef.PatientAccessUrl = "https://ariachc.org/stratford/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceJeffPanMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Jeff Pan, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeJeffPanMdPc
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104835545"}}
 	sourceDef.PatientAccessUrl = "https://www.jeffpanmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,9 @@ func GetSourceUniversityMedicalCenterOfElPaso(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "University Medical Center of El Paso"
 	sourceDef.SourceType = pkg.SourceTypeUniversityMedicalCenterOfElPaso
+	sourceDef.Category = []string{"261QA0005X", "174400000X", "282N00000X"}
+	sourceDef.Aliases = []string{"UNIVERSITY MEDICAL CENTER OF EL PASO"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578883286", "1881914943", "1437442134", "1417277575", "1316936990", "1427493535"}}
 	sourceDef.BrandLogo = "university-medical-center-of-el-paso.jpg"
 	sourceDef.PatientAccessUrl = "https://www.umcelpaso.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,9 @@ func GetSourceSarasotaMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sarasota Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSarasotaMemorialHospital
+	sourceDef.Category = []string{"282N00000X", "273R00000X", "273Y00000X"}
+	sourceDef.Aliases = []string{"SARASOTA COUNTY PUBLIC HOSPITAL BOARD", "SARASOTA MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730639568", "1245294826"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,9 @@ func GetSourceAbramsEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Abrams Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeAbramsEyeInstitute
+	sourceDef.Category = []string{"152WC0802X", "261QS0132X"}
+	sourceDef.Aliases = []string{"ABRAMS EYE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881611887"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceDavisMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Davis Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDavisMedicalCenter
+	sourceDef.Category = []string{"207V00000X", "282N00000X"}
+	sourceDef.Aliases = []string{"DAVIS MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013671767", "1619964806"}}
 	sourceDef.BrandLogo = "davis-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.davishealthsystem.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

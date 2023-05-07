@@ -28,6 +28,8 @@ func GetSourceCoushattaErPhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Coushatta ER Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCoushattaErPhysicians
+	sourceDef.Category = []string{"207P00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427480680"}}
 	sourceDef.PatientAccessUrl = "https://www.hipaaspace.com/medical_billing/coding/national_provider_identifier/codes/npi_1427480680.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

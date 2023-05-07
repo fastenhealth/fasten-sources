@@ -29,6 +29,9 @@ func GetSourceMammothHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Mammoth Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMammothHospital
+	sourceDef.Category = []string{"261QC0050X"}
+	sourceDef.Aliases = []string{"MAMMOTH HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962444059"}}
 	sourceDef.PatientAccessUrl = "http://www.mammothhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

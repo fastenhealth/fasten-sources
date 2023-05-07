@@ -28,6 +28,8 @@ func GetSourcePresbyterianHealthcareServices(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Presbyterian Healthcare Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianHealthcareServices
+	sourceDef.Category = []string{"261QE0002X", "3336C0002X", "282N00000X", "207P00000X", "207R00000X", "261QH0100X", "251G00000X", "3416L0300X", "282NR1301X", "282NC0060X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447632617", "1144592866", "1528312717", "1275518151", "1245216688", "1154307593", "1962488304", "1336125764", "1114903374", "1184952368"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

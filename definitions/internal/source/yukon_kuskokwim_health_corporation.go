@@ -29,6 +29,8 @@ func GetSourceYukonKuskokwimHealthCorporation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Yukon-Kuskokwim Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeYukonKuskokwimHealthCorporation
+	sourceDef.Category = []string{"261QA1903X", "282NR1301X", "251B00000X", "347E00000X", "261QM0850X", "261QM0855X", "363AM0700X", "363LF0000X", "367500000X", "367A00000X", "101YM0800X", "103TC0700X", "152W00000X", "207Q00000X", "208D00000X", "225100000X", "231H00000X", "235Z00000X", "281P00000X", "363A00000X", "333600000X", "332800000X", "323P00000X", "261QH0100X", "314000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063567691", "1518170836", "1457565731", "1306299714", "1346585056", "1447477815", "1689719825", "1467679936", "1821476599", "1821438342"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

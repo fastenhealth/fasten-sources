@@ -28,6 +28,9 @@ func GetSourceSpindaleFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Spindale Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeSpindaleFamilyPractice
+	sourceDef.Category = []string{"363A00000X", "363L00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"SPINDALE FAMILY PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063948297"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

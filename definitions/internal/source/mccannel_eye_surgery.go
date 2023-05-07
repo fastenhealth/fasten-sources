@@ -28,6 +28,9 @@ func GetSourceMccannelEyeSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "McCannel Eye Surgery"
 	sourceDef.SourceType = pkg.SourceTypeMccannelEyeSurgery
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"MCCANNEL EYE SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437123270"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceKaneHallBarryNeurology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Kane Hall Barry Neurology"
 	sourceDef.SourceType = pkg.SourceTypeKaneHallBarryNeurology
+	sourceDef.Category = []string{"2084N0400X"}
+	sourceDef.Aliases = []string{"KANE HALL BARRY NEUROLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023119336"}}
 	sourceDef.PatientAccessUrl = "https://kanehallbarry.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

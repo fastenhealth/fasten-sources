@@ -28,6 +28,9 @@ func GetSourceSamaritanHealthServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Samaritan Health Services"
 	sourceDef.SourceType = pkg.SourceTypeSamaritanHealthServices
+	sourceDef.Category = []string{"251E00000X", "273R00000X", "282N00000X", "261QH0100X"}
+	sourceDef.Aliases = []string{"SAMARITAN HEALTH SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790452035", "1760612519", "1114469103"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

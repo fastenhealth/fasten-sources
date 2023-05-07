@@ -28,6 +28,9 @@ func GetSourceSpaceCoastEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Space Coast Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeSpaceCoastEndoscopyCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SPACE COAST ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124092945"}}
 	sourceDef.PatientAccessUrl = "https://spacecoastendocenter.com/location/space-coast-endoscopy-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceNorthwesternMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Northwestern Medicine"
 	sourceDef.SourceType = pkg.SourceTypeNorthwesternMedicine
+	sourceDef.Category = []string{"261QM0801X", "261Q00000X", "282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306417076", "1649668401", "1730541699"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

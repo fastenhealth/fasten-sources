@@ -29,6 +29,8 @@ func GetSourceAtlantaRehabilitationPhysiciansPC(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Atlanta Rehabilitation Physicians, P.C."
 	sourceDef.SourceType = pkg.SourceTypeAtlantaRehabilitationPhysiciansPC
+	sourceDef.Category = []string{"208100000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104224641"}}
 	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

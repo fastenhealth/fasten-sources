@@ -28,6 +28,8 @@ func GetSourceSouthBayFamilyHealthCare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "South Bay Family Health Care"
 	sourceDef.SourceType = pkg.SourceTypeSouthBayFamilyHealthCare
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730595505"}}
 	sourceDef.PatientAccessUrl = "https://www.sbfhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

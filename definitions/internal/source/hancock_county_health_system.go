@@ -29,6 +29,9 @@ func GetSourceHancockCountyHealthSystem(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hancock County Health System"
 	sourceDef.SourceType = pkg.SourceTypeHancockCountyHealthSystem
+	sourceDef.Category = []string{"251K00000X", "251E00000X", "282NC0060X", "207Q00000X", "275N00000X"}
+	sourceDef.Aliases = []string{"HANCOCK COUNTY HEALTH SYSTEM COMMUNITY HEALTH", "HANCOCK COUNTY HEALTH SYSTEM"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699737270", "1639363054", "1912938606", "1144434283", "1386878734", "1245256189", "1689721318"}}
 	sourceDef.PatientAccessUrl = "https://www.mercyonenorthiowaaffiliates.org/hchs/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourceSiletzCommunityHealthClinic(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Siletz Community Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSiletzCommunityHealthClinic
+	sourceDef.Category = []string{"251B00000X", "261QF0400X"}
+	sourceDef.Aliases = []string{"SILETZ COMMUNITY HEALTH CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316040249"}}
 	sourceDef.BrandLogo = "siletz-community-health-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ctsi.nsn.us/tribal-services/healthcare/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,9 @@ func GetSourceTulsaEmergencyMedicalCenterInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Tulsa Emergency Medical Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeTulsaEmergencyMedicalCenterInc
+	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{"ACCESS MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063479087"}}
 	sourceDef.PatientAccessUrl = "https://tulsaer.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

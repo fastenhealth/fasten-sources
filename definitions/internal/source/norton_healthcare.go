@@ -28,6 +28,8 @@ func GetSourceNortonHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Norton Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeNortonHealthcare
+	sourceDef.Category = []string{"333600000X", "3336I0012X", "261QP1100X", "363L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003850454", "1093199754", "1659868107"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

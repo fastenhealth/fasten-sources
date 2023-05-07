@@ -28,6 +28,9 @@ func GetSourceColoradoMountainMedicalLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Colorado Mountain Medical, LLC"
 	sourceDef.SourceType = pkg.SourceTypeColoradoMountainMedicalLlc
+	sourceDef.Category = []string{"251S00000X", "261QM1300X", "101YM0800X", "103TC0700X", "1041C0700X", "207N00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RG0100X", "207RN0300X", "207V00000X", "207Y00000X", "208000000X", "208800000X", "261QU0200X", "101YP2500X", "104100000X", "207RE0101X"}
+	sourceDef.Aliases = []string{"COLORADO MOUNTAIN MEDICAL, LLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902515141", "1376134684", "1881274827", "1710563663", "1093328320", "1356930622", "1730747445", "1063038073", "1215553227", "1598381154"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

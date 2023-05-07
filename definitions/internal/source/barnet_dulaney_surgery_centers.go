@@ -28,6 +28,8 @@ func GetSourceBarnetDulaneySurgeryCenters(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Barnet Dulaney Surgery Centers"
 	sourceDef.SourceType = pkg.SourceTypeBarnetDulaneySurgeryCenters
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093018053"}}
 	sourceDef.PatientAccessUrl = "https://www.goodeyes.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

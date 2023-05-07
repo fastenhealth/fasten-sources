@@ -28,6 +28,9 @@ func GetSourceArizonaPediatricCardiologyConsultants(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Arizona Pediatric Cardiology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeArizonaPediatricCardiologyConsultants
+	sourceDef.Category = []string{"2080P0202X"}
+	sourceDef.Aliases = []string{"ARIZONA PEDIATRIC CARDIOLOGY CONSULTANTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346269594"}}
 	sourceDef.PatientAccessUrl = "https://www.superdoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

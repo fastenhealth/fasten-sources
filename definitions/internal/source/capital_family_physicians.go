@@ -28,6 +28,9 @@ func GetSourceCapitalFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Capital Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCapitalFamilyPhysicians
+	sourceDef.Category = []string{"363L00000X", "363A00000X", "207RC0000X"}
+	sourceDef.Aliases = []string{"CAPITAL CARDIOLOGY OR HEALTHWORKS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770891483", "1184932808", "1376632950"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

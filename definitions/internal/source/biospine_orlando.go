@@ -28,6 +28,8 @@ func GetSourceBiospineOrlando(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "BioSpine Orlando"
 	sourceDef.SourceType = pkg.SourceTypeBiospineOrlando
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841755436"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

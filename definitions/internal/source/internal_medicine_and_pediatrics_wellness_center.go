@@ -28,6 +28,8 @@ func GetSourceInternalMedicineAndPediatricsWellnessCenter(env pkg.FastenLighthou
 
 	sourceDef.Display = "Internal Medicine & Pediatrics Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAndPediatricsWellnessCenter
+	sourceDef.Category = []string{"208000000X", "207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992825145"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

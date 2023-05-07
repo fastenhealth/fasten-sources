@@ -28,6 +28,8 @@ func GetSourceMyhealthForTeensAndYoungAdults(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "MyHealth For Teens & Young Adults"
 	sourceDef.SourceType = pkg.SourceTypeMyhealthForTeensAndYoungAdults
+	sourceDef.Category = []string{"261QC1500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386951317"}}
 	sourceDef.BrandLogo = "myhealth-for-teens-and-young-adults.jpg"
 	sourceDef.PatientAccessUrl = "https://myhealthmn.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceBayhealthMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Bayhealth Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBayhealthMedicalCenter
+	sourceDef.Category = []string{"283Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992892848"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

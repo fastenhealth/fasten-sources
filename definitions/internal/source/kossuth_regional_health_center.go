@@ -29,6 +29,9 @@ func GetSourceKossuthRegionalHealthCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Kossuth Regional Health Center"
 	sourceDef.SourceType = pkg.SourceTypeKossuthRegionalHealthCenter
+	sourceDef.Category = []string{"3336C0003X", "282NC0060X", "261QR1300X", "207Q00000X", "251E00000X", "367500000X"}
+	sourceDef.Aliases = []string{"KRHC FAMILY PHARMACY", "KOSSUTH REGIONAL HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295898500", "1376614040", "1194935726", "1184636557", "1285704692", "1669093217", "1891869798", "1679644330", "1841361276"}}
 	sourceDef.BrandLogo = "kossuth-regional-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mercyonenorthiowaaffiliates.org/kossuth/"
 	sourceDef.SecretKeyPrefix = "cerner"

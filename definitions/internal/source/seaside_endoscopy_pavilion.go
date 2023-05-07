@@ -28,6 +28,9 @@ func GetSourceSeasideEndoscopyPavilion(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Seaside Endoscopy Pavilion"
 	sourceDef.SourceType = pkg.SourceTypeSeasideEndoscopyPavilion
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SEASIDE ENDOSCOPY PAVILION"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386618783"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceGibsonAreaHospitalOrthopaedics(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Gibson Area Hospital Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypeGibsonAreaHospitalOrthopaedics
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"GIBSON AREA HOSPITAL ORTHOPAEDICS", "GIBSON AREA HOSPITAL ORTHOPAEDICS CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578799797"}}
 	sourceDef.BrandLogo = "gibson-area-hospital-orthopaedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.freseniuskidneycare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

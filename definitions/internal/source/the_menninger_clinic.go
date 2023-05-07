@@ -29,6 +29,8 @@ func GetSourceTheMenningerClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Menninger Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheMenningerClinic
+	sourceDef.Category = []string{"3336C0003X", "283Q00000X", "261QM0801X", "273R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366986531", "1629291505", "1619361748", "1497482764", "1073241022", "1164973673"}}
 	sourceDef.BrandLogo = "the-menninger-clinic.svg"
 	sourceDef.PatientAccessUrl = "https://www.menningerclinic.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

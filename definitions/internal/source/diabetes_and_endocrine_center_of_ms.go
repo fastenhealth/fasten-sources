@@ -28,6 +28,8 @@ func GetSourceDiabetesAndEndocrineCenterOfMs(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Diabetes And Endocrine Center Of MS"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndEndocrineCenterOfMs
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568764504"}}
 	sourceDef.BrandLogo = "diabetes-and-endocrine-center-of-ms.jpg"
 	sourceDef.PatientAccessUrl = "https://www.decm.ms"
 	sourceDef.SecretKeyPrefix = "nextgen"

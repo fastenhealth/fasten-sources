@@ -28,6 +28,9 @@ func GetSourceDigestiveDiseaseAssociatesLtd(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Digestive Disease Associates, LTD"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveDiseaseAssociatesLtd
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{"DIGESTIVE DISEASE ASSOCIATES, LTD", "MAIN LINE GASTROENTEROLOGY ASSOCIATES, PC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154422806", "1699742080"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

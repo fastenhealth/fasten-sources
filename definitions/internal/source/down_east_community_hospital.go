@@ -29,6 +29,9 @@ func GetSourceDownEastCommunityHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Down East Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDownEastCommunityHospital
+	sourceDef.Category = []string{"261QR1300X", "207Q00000X", "261QM1300X", "367500000X", "282N00000X", "282NC0060X", "275N00000X"}
+	sourceDef.Aliases = []string{"DOWN EAST HEALTH CENTER", "DECH FAMILY PRACTIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851397475", "1740887025", "1972015774", "1700883139", "1922550417", "1689670242", "1528087004", "1336587542"}}
 	sourceDef.PatientAccessUrl = "https://www.dech.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

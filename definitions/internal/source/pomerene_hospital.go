@@ -28,6 +28,8 @@ func GetSourcePomereneHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Pomerene Hospital"
 	sourceDef.SourceType = pkg.SourceTypePomereneHospital
+	sourceDef.Category = []string{"282NR1301X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770957185"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

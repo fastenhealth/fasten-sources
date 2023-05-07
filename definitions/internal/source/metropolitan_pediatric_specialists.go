@@ -28,6 +28,9 @@ func GetSourceMetropolitanPediatricSpecialists(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Metropolitan Pediatric Specialists"
 	sourceDef.SourceType = pkg.SourceTypeMetropolitanPediatricSpecialists
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{"METROPOLITAN PEDIATRIC SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164706602", "1578830733"}}
 	sourceDef.BrandLogo = "metropolitan-pediatric-specialists.svg"
 	sourceDef.PatientAccessUrl = "https://www.metropeds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

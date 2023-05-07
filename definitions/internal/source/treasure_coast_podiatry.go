@@ -29,6 +29,9 @@ func GetSourceTreasureCoastPodiatry(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Treasure Coast Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeTreasureCoastPodiatry
+	sourceDef.Category = []string{"213E00000X"}
+	sourceDef.Aliases = []string{"TREASURE COAST PODIATRY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174977425", "1144396110"}}
 	sourceDef.PatientAccessUrl = "https://www.footsurgicalspecialist.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

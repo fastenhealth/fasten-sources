@@ -29,6 +29,8 @@ func GetSourceGeraldChampionRegionalMedicalCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Gerald Champion Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeGeraldChampionRegionalMedicalCenter
+	sourceDef.Category = []string{"207VG0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396880084"}}
 	sourceDef.PatientAccessUrl = "https://www.gcrmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

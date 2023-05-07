@@ -28,6 +28,8 @@ func GetSourceSquirrelHillHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Squirrel Hill Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSquirrelHillHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538531710", "1982658308", "1992469506"}}
 	sourceDef.BrandLogo = "squirrel-hill-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://squirrelhillhealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

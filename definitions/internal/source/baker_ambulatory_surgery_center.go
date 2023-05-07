@@ -28,6 +28,8 @@ func GetSourceBakerAmbulatorySurgeryCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Baker Ambulatory Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeBakerAmbulatorySurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053301473"}}
 	sourceDef.PatientAccessUrl = "http://bakereyeinstitutedavidlittletonbakermd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceCarrboroFamilyMedicineCenterPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Carrboro Family Medicine Center, PA"
 	sourceDef.SourceType = pkg.SourceTypeCarrboroFamilyMedicineCenterPa
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972719698"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

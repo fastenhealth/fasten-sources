@@ -29,6 +29,8 @@ func GetSourceBaptistHealthSystemInc1(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Baptist Health System Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthSystemInc1
+	sourceDef.Category = []string{"163WW0101X", "332B00000X", "273R00000X", "251E00000X", "282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952575789", "1295072502", "1396833844", "1700087848", "1497843940"}}
 	sourceDef.BrandLogo = "baptist-health-system-inc.png"
 	sourceDef.PatientAccessUrl = "https://www.baptistjax.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,9 @@ func GetSourceSalemHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Salem Health"
 	sourceDef.SourceType = pkg.SourceTypeSalemHealth
+	sourceDef.Category = []string{"3336C0003X", "261QP2300X", "207Q00000X", "251E00000X", "273R00000X", "273Y00000X", "291U00000X", "282N00000X", "261QR0200X"}
+	sourceDef.Aliases = []string{"RIVER ROAD PHARMACY", "SALEM HOSPITAL", "SSALEM HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164099248", "1689128308", "1568059707", "1578112066", "1265431829", "1952952079", "1013505288"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,9 @@ func GetSourceFairbanksMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Fairbanks Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFairbanksMemorialHospital
+	sourceDef.Category = []string{"332B00000X", "2084N0400X", "282N00000X", "333300000X", "332BC3200X", "251E00000X"}
+	sourceDef.Aliases = []string{"FAIRBANKS MEMORIAL LIFELINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669410767", "1184665663", "1255092896", "1265470298"}}
 	sourceDef.BrandLogo = "fairbanks-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.foundationhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

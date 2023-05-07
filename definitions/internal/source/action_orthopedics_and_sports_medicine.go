@@ -28,6 +28,8 @@ func GetSourceActionOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Action Orthopedics And Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeActionOrthopedicsAndSportsMedicine
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639516594"}}
 	sourceDef.PatientAccessUrl = "http://www.actionorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

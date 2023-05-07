@@ -28,6 +28,8 @@ func GetSourceKathleenJDrinanDoLtd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Kathleen J Drinan Do Ltd"
 	sourceDef.SourceType = pkg.SourceTypeKathleenJDrinanDoLtd
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366453797"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

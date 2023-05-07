@@ -29,6 +29,8 @@ func GetSourceRockefellerUniversityHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Rockefeller University Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRockefellerUniversityHospital
+	sourceDef.Category = []string{"284300000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649325119"}}
 	sourceDef.PatientAccessUrl = "https://www.rucares.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourceTriangleEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Triangle Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTriangleEndoscopyCenter
+	sourceDef.Category = []string{"261QE0800X"}
+	sourceDef.Aliases = []string{"TRIANGLE ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881793990"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceGynOncologySpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Gyn Oncology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeGynOncologySpecialists
+	sourceDef.Category = []string{"207VX0201X"}
+	sourceDef.Aliases = []string{"GYN ONCOLOGY SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588298442"}}
 	sourceDef.PatientAccessUrl = "https://www.gynoncspecialists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

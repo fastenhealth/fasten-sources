@@ -28,6 +28,8 @@ func GetSourceFortWayneOrthopaedicsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Fort Wayne Orthopaedics LLC"
 	sourceDef.SourceType = pkg.SourceTypeFortWayneOrthopaedicsLlc
+	sourceDef.Category = []string{"332B00000X", "207XS0106X", "207XS0117X", "207XX0005X", "207XX0801X", "213E00000X", "213ES0103X", "363A00000X", "363L00000X", "363LF0000X", "207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275059958", "1497758429"}}
 	sourceDef.BrandLogo = "fort-wayne-orthopaedics-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fwortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

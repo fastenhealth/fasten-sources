@@ -28,6 +28,9 @@ func GetSourceWaimanaloHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Waimanalo Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWaimanaloHealthCenter
+	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "103T00000X", "122300000X", "124Q00000X", "133V00000X", "152W00000X", "207Q00000X", "208000000X", "225700000X", "261QM1300X", "261QP2300X", "333600000X", "363LF0000X", "261QD0000X", "3336C0002X"}
+	sourceDef.Aliases = []string{"WAIMANALO HEALTH CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780738005", "1952073397", "1427295195", "1134773344"}}
 	sourceDef.BrandLogo = "waimanalo-health-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://waimanalohealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

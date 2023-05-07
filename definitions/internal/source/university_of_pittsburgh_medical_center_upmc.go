@@ -28,6 +28,8 @@ func GetSourceUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "University of Pittsburgh Medical Center (UPMC)"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfPittsburghMedicalCenterUpmc
+	sourceDef.Category = []string{"281P00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386909588"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

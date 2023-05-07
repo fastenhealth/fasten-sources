@@ -28,6 +28,9 @@ func GetSourceAmericanAccessCareOfRichmondLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "American Access Care Of Richmond LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfRichmondLlc
+	sourceDef.Category = []string{"2085R0204X"}
+	sourceDef.Aliases = []string{"AZURA VASCULAR CARE RIVER CITY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407947898"}}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

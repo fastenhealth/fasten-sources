@@ -28,6 +28,8 @@ func GetSourceNeighborhoodMedicalClinicOfRiverside(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Neighborhood Medical Clinic Of Riverside"
 	sourceDef.SourceType = pkg.SourceTypeNeighborhoodMedicalClinicOfRiverside
+	sourceDef.Category = []string{"101YP2500X", "1041C0700X", "2084P0805X", "2084P0800X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073663605"}}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

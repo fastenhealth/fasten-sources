@@ -29,6 +29,9 @@ func GetSourceSilverCrossHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Silver Cross Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSilverCrossHospital
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"SILVER CROSS HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568553519"}}
 	sourceDef.BrandLogo = "silver-cross-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.silvercross.org/?utm_source=SCH-HOSPITAL&utm_campaign=Local-Listings&utm_medium=Google-My-Business"
 	sourceDef.SecretKeyPrefix = "cerner"

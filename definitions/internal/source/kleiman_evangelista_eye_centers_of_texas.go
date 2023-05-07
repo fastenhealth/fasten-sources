@@ -28,6 +28,9 @@ func GetSourceKleimanEvangelistaEyeCentersOfTexas(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Kleiman Evangelista Eye Centers Of Texas"
 	sourceDef.SourceType = pkg.SourceTypeKleimanEvangelistaEyeCentersOfTexas
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{"RADIANCE WELLNESS MEDISPA", "KLEIMAN EVANGELISTA EYE CENTERS OF TEXAS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639276843"}}
 	sourceDef.PatientAccessUrl = "https://keeyecenters.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

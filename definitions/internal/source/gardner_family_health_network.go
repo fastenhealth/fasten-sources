@@ -28,6 +28,9 @@ func GetSourceGardnerFamilyHealthNetwork(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gardner Family Health Network"
 	sourceDef.SourceType = pkg.SourceTypeGardnerFamilyHealthNetwork
+	sourceDef.Category = []string{"261QC1500X"}
+	sourceDef.Aliases = []string{"SPECIALTY MENTAL HEALTH ALVISO"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922625847"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

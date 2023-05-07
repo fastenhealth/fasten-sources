@@ -28,6 +28,8 @@ func GetSourceSeattleIndianHealthBoard(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Seattle Indian Health Board"
 	sourceDef.SourceType = pkg.SourceTypeSeattleIndianHealthBoard
+	sourceDef.Category = []string{"324500000X", "261QF0400X", "207Q00000X", "101YA0400X", "261QR0405X", "261QD0000X", "261QM2500X", "333600000X", "261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215002365", "1497820542", "1316012461", "1154469104", "1376118695", "1114501947", "1598341240", "1336715762", "1922673367", "1245378298"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

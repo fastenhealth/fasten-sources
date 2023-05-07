@@ -28,6 +28,9 @@ func GetSourceGeneseeCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Genesee Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeGeneseeCommunityHealthCenter
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"GENESEE COMMUNITY HEALTH CENTER", "CHILDREN'S INTEGRATED SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205346939", "1962140137"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/GeneseeCommunityHealthCenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

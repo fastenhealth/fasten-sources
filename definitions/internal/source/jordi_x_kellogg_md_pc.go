@@ -28,6 +28,8 @@ func GetSourceJordiXKelloggMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Jordi X Kellogg MD PC"
 	sourceDef.SourceType = pkg.SourceTypeJordiXKelloggMdPc
+	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114106192"}}
 	sourceDef.PatientAccessUrl = "https://www.kelloggbrainspine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

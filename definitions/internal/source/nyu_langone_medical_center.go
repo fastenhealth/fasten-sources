@@ -28,6 +28,8 @@ func GetSourceNyuLangoneMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "NYU Langone Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNyuLangoneMedicalCenter
+	sourceDef.Category = []string{"282N00000X", "390200000X", "284300000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093123762", "1649727728", "1336673813", "1225561764", "1427595594", "1538458252", "1730448317", "1972863249", "1861842304", "1821474644"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

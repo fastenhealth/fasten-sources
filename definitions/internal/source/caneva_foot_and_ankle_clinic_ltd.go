@@ -29,6 +29,8 @@ func GetSourceCanevaFootAndAnkleClinicLtd(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Caneva Foot & Ankle Clinic, LTD."
 	sourceDef.SourceType = pkg.SourceTypeCanevaFootAndAnkleClinicLtd
+	sourceDef.Category = []string{"213E00000X", "332BC3200X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902092554", "1801505961"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

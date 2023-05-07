@@ -28,6 +28,9 @@ func GetSourceKootenaiOutpatientSurgery(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Kootenai Outpatient Surgery"
 	sourceDef.SourceType = pkg.SourceTypeKootenaiOutpatientSurgery
+	sourceDef.Category = []string{"332B00000X", "261QA1903X"}
+	sourceDef.Aliases = []string{"KOOTENAI OUTPATIENT SURGERY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740289024"}}
 	sourceDef.BrandLogo = "kootenai-outpatient-surgery.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kh.org/kootenai-outpatient-surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"

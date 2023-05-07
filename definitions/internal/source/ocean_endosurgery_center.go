@@ -28,6 +28,9 @@ func GetSourceOceanEndosurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Ocean Endosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeOceanEndosurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"OCEAN ENDOSURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972541415"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

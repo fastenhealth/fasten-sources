@@ -28,6 +28,9 @@ func GetSourceWestglenEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Westglen Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeWestglenEndoscopyCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"WESTGLEN ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588644520"}}
 	sourceDef.BrandLogo = "westglen-endoscopy-center.jpeg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

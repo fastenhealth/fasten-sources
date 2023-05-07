@@ -29,6 +29,8 @@ func GetSourceLakeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Lake Health"
 	sourceDef.SourceType = pkg.SourceTypeLakeHealth
+	sourceDef.Category = []string{"133V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134489677"}}
 	sourceDef.BrandLogo = "lake-health.svg"
 	sourceDef.PatientAccessUrl = "https://lakehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

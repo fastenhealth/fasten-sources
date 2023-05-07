@@ -28,6 +28,8 @@ func GetSourceFoothillUrologyAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Foothill Urology Associates"
 	sourceDef.SourceType = pkg.SourceTypeFoothillUrologyAssociates
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003963216"}}
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/foothill-urology-associates-pasadena"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

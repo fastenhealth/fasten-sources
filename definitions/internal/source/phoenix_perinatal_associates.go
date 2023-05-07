@@ -28,6 +28,9 @@ func GetSourcePhoenixPerinatalAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Phoenix Perinatal Associates"
 	sourceDef.SourceType = pkg.SourceTypePhoenixPerinatalAssociates
+	sourceDef.Category = []string{"207VM0101X", "2080P0203X", "363LN0000X", "367A00000X", "2080N0001X"}
+	sourceDef.Aliases = []string{"PHOENIX PERINATAL ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407957152"}}
 	sourceDef.BrandLogo = "phoenix-perinatal-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PhoenixPerinatalAssociates/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,9 @@ func GetSourceUsaHealthDermatology(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "USA Health Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeUsaHealthDermatology
+	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Aliases = []string{"USA HEALTH DERMATOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255994141"}}
 	sourceDef.BrandLogo = "usa-health-dermatology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.usahealthsystem.com/locations/usa-health-dermatology"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,9 @@ func GetSourceVanguardMedicalSpecialistsLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Vanguard Medical Specialists LLC"
 	sourceDef.SourceType = pkg.SourceTypeVanguardMedicalSpecialistsLlc
+	sourceDef.Category = []string{"207YX0905X", "208200000X", "2082S0099X", "207NS0135X", "207YS0123X", "207YX0007X", "207ND0101X", "207ND0900X", "207NP0225X", "207N00000X"}
+	sourceDef.Aliases = []string{"VANGUARD SKIN SPECIALISTS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013538354", "1639799257", "1821618190", "1366062994", "1497324297", "1558981175", "1518105253", "1588284103"}}
 	sourceDef.PatientAccessUrl = "https://www.vanguardskin.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

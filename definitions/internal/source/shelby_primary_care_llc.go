@@ -28,6 +28,8 @@ func GetSourceShelbyPrimaryCareLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Shelby Primary Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeShelbyPrimaryCareLlc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174660112"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceAnesthesiaAssociatesOfJoplinLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Anesthesia Associates Of Joplin LLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaAssociatesOfJoplinLlc
+	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588032742"}}
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

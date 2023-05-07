@@ -29,6 +29,9 @@ func GetSourceConwayMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Conway Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeConwayMedicalCenter
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"CONWAY MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134172000"}}
 	sourceDef.BrandLogo = "conway-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.conwaymedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,9 @@ func GetSourceOlanskyDermatologyAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Olansky Dermatology Associates"
 	sourceDef.SourceType = pkg.SourceTypeOlanskyDermatologyAssociates
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"OLANSKY DERMATOLOGY ASSOCIATES,PC", "OLANSKY DERMATOLOGY ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558380527"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

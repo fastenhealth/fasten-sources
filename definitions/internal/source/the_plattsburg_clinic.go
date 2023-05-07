@@ -28,6 +28,9 @@ func GetSourceThePlattsburgClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "The Plattsburg Clinic"
 	sourceDef.SourceType = pkg.SourceTypeThePlattsburgClinic
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"THE PLATTSBURG CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154053833"}}
 	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/locations/the-plattsburg-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

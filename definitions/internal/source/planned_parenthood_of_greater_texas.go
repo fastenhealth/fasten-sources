@@ -28,6 +28,9 @@ func GetSourcePlannedParenthoodOfGreaterTexas(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Planned Parenthood Of Greater Texas"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfGreaterTexas
+	sourceDef.Category = []string{"363LF0000X", "3336C0002X", "261QA0005X"}
+	sourceDef.Aliases = []string{"PLANNED PARENTHOOD OF GREATER TEXAS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518384866", "1376971499", "1528147204"}}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

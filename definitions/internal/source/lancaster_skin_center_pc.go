@@ -28,6 +28,8 @@ func GetSourceLancasterSkinCenterPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Lancaster Skin Center Pc"
 	sourceDef.SourceType = pkg.SourceTypeLancasterSkinCenterPc
+	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093781783"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

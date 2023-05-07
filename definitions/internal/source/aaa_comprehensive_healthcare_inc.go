@@ -28,6 +28,8 @@ func GetSourceAaaComprehensiveHealthcareInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "AAA Comprehensive Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeAaaComprehensiveHealthcareInc
+	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "261QD0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396067500", "1477248839"}}
 	sourceDef.PatientAccessUrl = "https://aaachc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

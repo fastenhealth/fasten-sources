@@ -28,6 +28,9 @@ func GetSourceFirstCarePc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "First Care PC"
 	sourceDef.SourceType = pkg.SourceTypeFirstCarePc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"FIRST CARE PC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366553364", "1770190191"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

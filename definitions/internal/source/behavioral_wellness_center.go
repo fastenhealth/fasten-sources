@@ -28,6 +28,9 @@ func GetSourceBehavioralWellnessCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Behavioral Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeBehavioralWellnessCenter
+	sourceDef.Category = []string{"2084P0800X"}
+	sourceDef.Aliases = []string{"BEHAVIORAL WELLNESS CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366883431"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

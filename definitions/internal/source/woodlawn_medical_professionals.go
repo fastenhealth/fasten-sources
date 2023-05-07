@@ -28,6 +28,9 @@ func GetSourceWoodlawnMedicalProfessionals(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Woodlawn Medical Professionals"
 	sourceDef.SourceType = pkg.SourceTypeWoodlawnMedicalProfessionals
+	sourceDef.Category = []string{"207Q00000X", "208000000X", "363LF0000X", "261QR1300X"}
+	sourceDef.Aliases = []string{"WOODLAWN MEDICAL PROFESSIONALS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932315264", "1699338574"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

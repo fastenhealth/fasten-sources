@@ -29,6 +29,9 @@ func GetSourceOsfSaintClareMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "OSF Saint Clare Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeOsfSaintClareMedicalCenter
+	sourceDef.Category = []string{"261Q00000X", "275N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"OSF SAINT CLARE MEDICAL CENTER", "OSF SAINT CLARE MEDICAL CENTER SWING BED"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790363505", "1447843891", "1093308439"}}
 	sourceDef.PatientAccessUrl = "https://www.osfhealthcare.org/saint-clare/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceAmsurgOaklandAnesthesiaLp(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "AmSurg Oakland Anesthesia LP"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgOaklandAnesthesiaLp
+	sourceDef.Category = []string{"207L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679847727"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

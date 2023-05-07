@@ -29,6 +29,9 @@ func GetSourcePikeCountyMemorialHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Pike County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypePikeCountyMemorialHospital
+	sourceDef.Category = []string{"282NC0060X", "261QR1300X", "207Q00000X"}
+	sourceDef.Aliases = []string{"MEDICAL WALK-IN CLINIC", "PCMH CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205837218", "1134633456", "1538513072", "1891201331", "1528282639", "1962933143", "1033578588", "1346464450", "1124030424", "1437373545"}}
 	sourceDef.BrandLogo = "pike-county-memorial-hospital.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.pcmh-mo.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

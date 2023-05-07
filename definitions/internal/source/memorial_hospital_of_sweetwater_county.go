@@ -29,6 +29,9 @@ func GetSourceMemorialHospitalOfSweetwaterCounty(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Memorial Hospital of Sweetwater County"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHospitalOfSweetwaterCounty
+	sourceDef.Category = []string{"282N00000X", "207R00000X"}
+	sourceDef.Aliases = []string{"COUNTY OF SWEETWATER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558361949", "1437312436", "1063840775"}}
 	sourceDef.PatientAccessUrl = "https://www.sweetwatermemorial.com/?utm_source=GMB&utm_medium=organic&utm_campaign=rocksprings"
 	sourceDef.SecretKeyPrefix = "cerner"
 

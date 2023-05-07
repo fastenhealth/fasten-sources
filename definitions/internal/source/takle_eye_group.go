@@ -28,6 +28,9 @@ func GetSourceTakleEyeGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Takle Eye Group"
 	sourceDef.SourceType = pkg.SourceTypeTakleEyeGroup
+	sourceDef.Category = []string{"152W00000X", "261QS0132X"}
+	sourceDef.Aliases = []string{"TAKLE EYE GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568665404"}}
 	sourceDef.PatientAccessUrl = "https://www.takleeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceCenterForSightPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Center For Sight PC"
 	sourceDef.SourceType = pkg.SourceTypeCenterForSightPc
+	sourceDef.Category = []string{"156FX1100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144365651"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

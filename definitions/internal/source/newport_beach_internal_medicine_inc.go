@@ -28,6 +28,8 @@ func GetSourceNewportBeachInternalMedicineInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Newport Beach Internal Medicine Inc"
 	sourceDef.SourceType = pkg.SourceTypeNewportBeachInternalMedicineInc
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841495843"}}
 	sourceDef.PatientAccessUrl = "https://www.hoag.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

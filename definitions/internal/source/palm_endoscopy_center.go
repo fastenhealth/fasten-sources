@@ -28,6 +28,9 @@ func GetSourcePalmEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Palm Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypePalmEndoscopyCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"PALM ENDOSCOPY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518155811"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

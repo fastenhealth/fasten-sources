@@ -28,6 +28,8 @@ func GetSourceVascularSurgicalAssoc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Vascular Surgical Assoc"
 	sourceDef.SourceType = pkg.SourceTypeVascularSurgicalAssoc
+	sourceDef.Category = []string{"2086S0129X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992882211"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

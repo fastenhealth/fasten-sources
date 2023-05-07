@@ -28,6 +28,8 @@ func GetSourceEastwindWomensHealthInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Eastwind Womens Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeEastwindWomensHealthInc
+	sourceDef.Category = []string{"207VG0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649410135"}}
 	sourceDef.BrandLogo = "eastwind-womens-health-inc.jpg"
 	sourceDef.PatientAccessUrl = "http://eastwindwomenshealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

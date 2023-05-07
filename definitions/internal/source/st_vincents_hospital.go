@@ -29,6 +29,8 @@ func GetSourceStVincentsHospital(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "St. Vincent's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStVincentsHospital
+	sourceDef.Category = []string{"2084P0800X", "363AS0400X", "335V00000X", "333600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518107119", "1134255409", "1245375963"}}
 	sourceDef.BrandLogo = "st-vincents-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://saint-vincent.childrensmiraclenetworkhospitals.org/?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPIf-KV5iByToG-IFAzZYZBEMyyxP4GGNn8atvmA9Qo_2Wx7pJs4VzsaAlDNEALw_wcB"
 	sourceDef.SecretKeyPrefix = "cerner"

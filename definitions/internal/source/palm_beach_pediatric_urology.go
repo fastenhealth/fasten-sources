@@ -28,6 +28,8 @@ func GetSourcePalmBeachPediatricUrology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Palm Beach Pediatric Urology"
 	sourceDef.SourceType = pkg.SourceTypePalmBeachPediatricUrology
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598739831"}}
 	sourceDef.PatientAccessUrl = "https://www.n/a.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

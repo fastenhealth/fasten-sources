@@ -29,6 +29,9 @@ func GetSourceMedicalPlazaEntPhysicians(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Medical Plaza Ent Physicians"
 	sourceDef.SourceType = pkg.SourceTypeMedicalPlazaEntPhysicians
+	sourceDef.Category = []string{"207Y00000X"}
+	sourceDef.Aliases = []string{"MEDICAL PLAZA ENT PHYSICIANS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124283163"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/la-louisiana/metairie/medical-plaza-en-t-physicians-x9wt9f"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourceNextcareNewMexicoLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "NextCare New Mexico LLC"
 	sourceDef.SourceType = pkg.SourceTypeNextcareNewMexicoLlc
+	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{"NEXTCARE URGENT CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619300118"}}
 	sourceDef.PatientAccessUrl = "https://nextcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

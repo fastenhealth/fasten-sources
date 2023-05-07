@@ -28,6 +28,9 @@ func GetSourceThePaxtonClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "The Paxton Clinic"
 	sourceDef.SourceType = pkg.SourceTypeThePaxtonClinic
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Aliases = []string{"THE PAXTON CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992700595"}}
 	sourceDef.BrandLogo = "the-paxton-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/thepaxtonclinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"

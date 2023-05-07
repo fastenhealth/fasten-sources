@@ -28,6 +28,8 @@ func GetSourceInfirmaryHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Infirmary Health"
 	sourceDef.SourceType = pkg.SourceTypeInfirmaryHealth
+	sourceDef.Category = []string{"282E00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548710197"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

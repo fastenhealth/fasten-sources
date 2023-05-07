@@ -28,6 +28,8 @@ func GetSourceOzarkSurgicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Ozark Surgical Group"
 	sourceDef.SourceType = pkg.SourceTypeOzarkSurgicalGroup
+	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336155167"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

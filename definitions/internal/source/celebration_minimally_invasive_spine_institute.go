@@ -29,6 +29,8 @@ func GetSourceCelebrationMinimallyInvasiveSpineInstitute(env pkg.FastenLighthous
 
 	sourceDef.Display = "Celebration Minimally Invasive Spine Institute"
 	sourceDef.SourceType = pkg.SourceTypeCelebrationMinimallyInvasiveSpineInstitute
+	sourceDef.Category = []string{"207XS0117X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821485608"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

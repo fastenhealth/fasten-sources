@@ -28,6 +28,9 @@ func GetSourceConnecticutChildrensMedicalCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Connecticut Children's Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeConnecticutChildrensMedicalCenter
+	sourceDef.Category = []string{"282NC2000X", "261QE0700X", "2080P0214X", "2080P0207X"}
+	sourceDef.Aliases = []string{"CONNECTICUT CHILDREN'S", "CONNECTICUT CHILDREN'S MEDICAL CENTER HTC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215947387", "1578106951", "1134271661", "1467541805", "1477257160"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

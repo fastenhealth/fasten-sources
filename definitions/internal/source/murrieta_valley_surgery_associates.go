@@ -28,6 +28,9 @@ func GetSourceMurrietaValleySurgeryAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Murrieta Valley Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeMurrietaValleySurgeryAssociates
+	sourceDef.Category = []string{"208600000X", "2086S0129X"}
+	sourceDef.Aliases = []string{"MURRIETA VALLEY SURGERY ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760743454"}}
 	sourceDef.PatientAccessUrl = "https://murrietavalleysurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

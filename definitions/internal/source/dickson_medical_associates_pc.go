@@ -28,6 +28,9 @@ func GetSourceDicksonMedicalAssociatesPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Dickson Medical Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeDicksonMedicalAssociatesPc
+	sourceDef.Category = []string{"261QR1300X", "207Q00000X", "261QM1300X"}
+	sourceDef.Aliases = []string{"DICKSON MEDICAL ASSOCIATES CRESTVIEW WALK IN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285227470", "1568464873", "1437725314"}}
 	sourceDef.PatientAccessUrl = "https://dicksonmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

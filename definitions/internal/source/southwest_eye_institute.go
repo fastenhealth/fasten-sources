@@ -28,6 +28,9 @@ func GetSourceSouthwestEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Southwest Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestEyeInstitute
+	sourceDef.Category = []string{"207L00000X", "207W00000X", "152W00000X"}
+	sourceDef.Aliases = []string{"SOUTHWEST EYE INSTITUTE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053530907", "1730751454"}}
 	sourceDef.PatientAccessUrl = "https://southwesteye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceOrleansMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Orleans Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeOrleansMedicalClinic
+	sourceDef.Category = []string{"261QR1300X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467540211", "1912025552"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

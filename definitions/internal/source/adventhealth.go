@@ -28,6 +28,9 @@ func GetSourceAdventhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "AdventHealth"
 	sourceDef.SourceType = pkg.SourceTypeAdventhealth
+	sourceDef.Category = []string{"261QP2000X", "2084P0800X", "261QM0801X", "261QM0850X", "282N00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"ADVENTHEALTH MEDICAL GROUP", "ADVENTHEALTH", "ADVENTHEALTH HENDERSONVILLE", "ADVENTHEALTH MEDICAL GROUP URGENT AND FAMILY CARE AT TRYON", "ADVENTHEALTH MEDICAL GROUP FAMILY MEDICINE AT ETOWAH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447965132", "1720292261", "1477995124"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

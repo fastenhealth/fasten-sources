@@ -28,6 +28,9 @@ func GetSourceTheRegionalEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "The Regional Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeTheRegionalEyeSurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"THE REGIONAL EYE SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649244211"}}
 	sourceDef.BrandLogo = "the-regional-eye-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.regionaleye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

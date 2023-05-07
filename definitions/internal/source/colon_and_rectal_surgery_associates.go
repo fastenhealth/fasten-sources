@@ -29,6 +29,8 @@ func GetSourceColonAndRectalSurgeryAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Colon & Rectal Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeColonAndRectalSurgeryAssociates
+	sourceDef.Category = []string{"208C00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184689507"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

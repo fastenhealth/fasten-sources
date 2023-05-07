@@ -28,6 +28,8 @@ func GetSourceFamilyPracticeAssoc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Family Practice Assoc"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeAssoc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710941463"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

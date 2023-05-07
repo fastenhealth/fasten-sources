@@ -28,6 +28,9 @@ func GetSourceSevenStarOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Seven Star Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSevenStarOrthopedics
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Aliases = []string{"SEVEN STAR ORTHOPEDICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295338374"}}
 	sourceDef.PatientAccessUrl = "https://orthopedic.io/clinic/seven-star-orthopedics-hemet-ca/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

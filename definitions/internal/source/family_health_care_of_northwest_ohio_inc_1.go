@@ -28,6 +28,8 @@ func GetSourceFamilyHealthCareOfNorthwestOhioInc1(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Family Health Care Of Northwest Ohio Inc"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareOfNorthwestOhioInc1
+	sourceDef.Category = []string{"261QC1500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134296502"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

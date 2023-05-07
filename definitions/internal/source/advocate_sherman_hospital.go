@@ -29,6 +29,9 @@ func GetSourceAdvocateShermanHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Advocate Sherman Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAdvocateShermanHospital
+	sourceDef.Category = []string{"261QU0200X", "282N00000X"}
+	sourceDef.Aliases = []string{"SHERMAN FAMILY HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629026364"}}
 	sourceDef.PatientAccessUrl = "https://www.advocatehealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

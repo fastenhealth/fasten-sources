@@ -28,6 +28,9 @@ func GetSourceWilmingtonMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Wilmington Maternal-Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWilmingtonMaternalFetalMedicine
+	sourceDef.Category = []string{"207VM0101X"}
+	sourceDef.Aliases = []string{"WILMINGTON MATERNAL-FETAL MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508113689"}}
 	sourceDef.PatientAccessUrl = "https://www.wilmingtonmfm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

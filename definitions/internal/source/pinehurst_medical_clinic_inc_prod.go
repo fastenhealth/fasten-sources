@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.pinehurstmedical.com/fhir/metadata
+// https://fhir.pinehurstmedical.com/FHIR/metadata
 func GetSourcePinehurstMedicalClinicIncProd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.pinehurstmedical.com/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.pinehurstmedical.com/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhir.pinehurstmedical.com/fhir"
+	sourceDef.Audience = "https://fhir.pinehurstmedical.com/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.pinehurstmedical.com/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.pinehurstmedical.com/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePinehurstMedicalClinicIncProd]; clientIdOk {
 		sourceDef.ClientId = clientId

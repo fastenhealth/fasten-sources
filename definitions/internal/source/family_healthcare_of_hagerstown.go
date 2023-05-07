@@ -28,6 +28,9 @@ func GetSourceFamilyHealthcareOfHagerstown(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Family Healthcare Of Hagerstown"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcareOfHagerstown
+	sourceDef.Category = []string{"261QF0400X", "261QD0000X"}
+	sourceDef.Aliases = []string{"FAMILY HEALTHCARE OF HAGERSTOWN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497222103", "1194276832"}}
 	sourceDef.BrandLogo = "family-healthcare-of-hagerstown.jpg"
 	sourceDef.PatientAccessUrl = "https://familyhch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

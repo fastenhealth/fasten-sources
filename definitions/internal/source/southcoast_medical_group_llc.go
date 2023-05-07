@@ -28,6 +28,8 @@ func GetSourceSouthcoastMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "SouthCoast Medical Group, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthcoastMedicalGroupLlc
+	sourceDef.Category = []string{"207R00000X", "207Q00000X", "207W00000X", "2084N0400X", "2085R0202X", "363A00000X", "363L00000X", "207RN0300X", "207RC0000X", "207RI0200X", "207RP1001X", "208000000X", "225100000X", "207V00000X", "208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881947802", "1861745119", "1467451922"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

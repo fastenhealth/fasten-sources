@@ -28,6 +28,8 @@ func GetSourceArthritisNorthwestPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Arthritis Northwest PLLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisNorthwestPllc
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558408104"}}
 	sourceDef.BrandLogo = "arthritis-northwest-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.arthritisnw.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"

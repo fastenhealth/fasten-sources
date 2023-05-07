@@ -29,6 +29,9 @@ func GetSourceNorthernInyoHealthcareDistrict(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Northern Inyo Healthcare District"
 	sourceDef.SourceType = pkg.SourceTypeNorthernInyoHealthcareDistrict
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "261Q00000X", "208D00000X"}
+	sourceDef.Aliases = []string{"BRONCO CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417032921", "1669798815", "1922198712", "1104431980", "1780230573"}}
 	sourceDef.PatientAccessUrl = "https://www.nih.org/?utm_source=GMBSocialClimb&utm_medium=NorthernInyoHospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceLudwickEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Ludwick Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeLudwickEyeCenter
+	sourceDef.Category = []string{"152W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417155235", "1851542963"}}
 	sourceDef.BrandLogo = "ludwick-eye-center.svg"
 	sourceDef.PatientAccessUrl = "https://oomc.com/ludwick/"
 	sourceDef.SecretKeyPrefix = "nextgen"

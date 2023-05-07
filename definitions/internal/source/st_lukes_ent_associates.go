@@ -29,6 +29,9 @@ func GetSourceStLukesEntAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "St. Luke's ENT Associates"
 	sourceDef.SourceType = pkg.SourceTypeStLukesEntAssociates
+	sourceDef.Category = []string{"207Y00000X"}
+	sourceDef.Aliases = []string{"ST. LUKE'S ENT ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033653209"}}
 	sourceDef.PatientAccessUrl = "https://www.slhduluth.com/locations/st-lukes-ear-nose-throat-associates/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourceThinkWholePersonHealthcare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Think Whole Person Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeThinkWholePersonHealthcare
+	sourceDef.Category = []string{"261QM1300X", "133NN1002X"}
+	sourceDef.Aliases = []string{"THINK WHOLE PERSON HEALTHCARE", "THINK AKSARBEN, LLP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316357676", "1114440062"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

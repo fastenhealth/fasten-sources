@@ -29,6 +29,9 @@ func GetSourceAdventistHealthDelano1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Adventist Health Delano"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthDelano1
+	sourceDef.Category = []string{"261QR1300X", "282N00000X", "282E00000X", "332B00000X", "333600000X", "3336C0003X", "133V00000X"}
+	sourceDef.Aliases = []string{"DELANO WOMEN'S MEDICAL CLINIC", "DELANO FAMILY PHARMACY", "WASCO MEDICAL PLAZA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851429658", "1568594877", "1033644588", "1073645388", "1144237272", "1639207343", "1407069537", "1578798047", "1033247622"}}
 	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/delano/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

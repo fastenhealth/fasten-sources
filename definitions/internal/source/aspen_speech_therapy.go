@@ -28,6 +28,9 @@ func GetSourceAspenSpeechTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Aspen Speech Therapy"
 	sourceDef.SourceType = pkg.SourceTypeAspenSpeechTherapy
+	sourceDef.Category = []string{"235Z00000X"}
+	sourceDef.Aliases = []string{"ASPEN SPEECH THERAPY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669733267", "1942595376"}}
 	sourceDef.PatientAccessUrl = "https://www.aspenspeechtherapy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

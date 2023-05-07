@@ -29,6 +29,8 @@ func GetSourceUnifiedHealthAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Unified Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeUnifiedHealthAssociates
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326773672"}}
 	sourceDef.BrandLogo = "unified-health-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/unifiedhp/"
 	sourceDef.SecretKeyPrefix = "cerner"

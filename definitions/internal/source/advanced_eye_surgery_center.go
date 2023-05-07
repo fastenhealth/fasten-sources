@@ -28,6 +28,9 @@ func GetSourceAdvancedEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Advanced Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedEyeSurgeryCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"AESC ANESTHESIA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073713004", "1376257436"}}
 	sourceDef.PatientAccessUrl = "https://www.advancedeyesurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

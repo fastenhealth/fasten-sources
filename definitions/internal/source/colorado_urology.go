@@ -28,6 +28,9 @@ func GetSourceColoradoUrology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Colorado Urology"
 	sourceDef.SourceType = pkg.SourceTypeColoradoUrology
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Aliases = []string{"COLORADO UROLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174297048", "1255981833", "1316597990", "1962501551", "1356991939"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,9 @@ func GetSourceCibolaGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cibola General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCibolaGeneralHospital
+	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{"CIBOLA GENERAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780677039"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

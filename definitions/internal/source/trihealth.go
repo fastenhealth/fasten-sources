@@ -28,6 +28,8 @@ func GetSourceTrihealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "TriHealth"
 	sourceDef.SourceType = pkg.SourceTypeTrihealth
+	sourceDef.Category = []string{"207Q00000X", "282N00000X", "225700000X", "261QH0100X", "305R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467655977", "1538363650", "1407050537", "1760780795", "1215415906", "1770839888", "1942547682", "1154857340"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

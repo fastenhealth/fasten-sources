@@ -29,6 +29,9 @@ func GetSourceWilkesRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Wilkes Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWilkesRegionalMedicalCenter
+	sourceDef.Category = []string{"282N00000X", "314000000X"}
+	sourceDef.Aliases = []string{"WILKES REGIONAL MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881614071", "1285656272"}}
 	sourceDef.PatientAccessUrl = "https://www.wakehealth.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

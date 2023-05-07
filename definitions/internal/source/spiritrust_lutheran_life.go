@@ -29,6 +29,8 @@ func GetSourceSpiritrustLutheranLife(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "SpiriTrust Lutheran LIFE"
 	sourceDef.SourceType = pkg.SourceTypeSpiritrustLutheranLife
+	sourceDef.Category = []string{"251T00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740467570"}}
 	sourceDef.PatientAccessUrl = "https://www.spiritrustlutheran.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceColumbiaEyeClinicPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Columbia Eye Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaEyeClinicPa
+	sourceDef.Category = []string{"207W00000X", "261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760573984", "1720044514"}}
 	sourceDef.PatientAccessUrl = "https://columbiaeyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,9 @@ func GetSourceNewEnglandFootAndAnklePc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "New England Foot & Ankle PC"
 	sourceDef.SourceType = pkg.SourceTypeNewEnglandFootAndAnklePc
+	sourceDef.Category = []string{"213ES0103X"}
+	sourceDef.Aliases = []string{"NEW ENGLAND FOOT & ANKLE PC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316522345"}}
 	sourceDef.BrandLogo = "new-england-foot-and-ankle-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/newenglandfootankle/"
 	sourceDef.SecretKeyPrefix = "cerner"

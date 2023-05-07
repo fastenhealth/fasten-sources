@@ -28,6 +28,9 @@ func GetSourceTheSouthBendClinicLlp(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "The South Bend Clinic LLP"
 	sourceDef.SourceType = pkg.SourceTypeTheSouthBendClinicLlp
+	sourceDef.Category = []string{"261QM1300X", "261QU0200X", "261Q00000X", "291U00000X", "3336C0002X"}
+	sourceDef.Aliases = []string{"THE SOUTH BEND CLINIC LABORATORY", "THE SOUTH BEND CLINIC PHARMACY AT DAY RD"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538257167", "1528659216", "1174187553"}}
 	sourceDef.PatientAccessUrl = "https://www.southbendclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

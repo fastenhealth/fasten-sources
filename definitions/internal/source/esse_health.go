@@ -28,6 +28,9 @@ func GetSourceEsseHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Esse Health"
 	sourceDef.SourceType = pkg.SourceTypeEsseHealth
+	sourceDef.Category = []string{"133V00000X", "207Q00000X", "363A00000X", "363L00000X", "363LA2200X", "363LF0000X", "207R00000X", "207K00000X", "207X00000X", "208000000X", "2084P0804X", "2085R0202X", "208800000X", "363LG0600X", "363LP0200X"}
+	sourceDef.Aliases = []string{"ESSE HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780314781", "1972559532"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceLongIslandBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Long Island Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeLongIslandBoneAndJoint
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740241884"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

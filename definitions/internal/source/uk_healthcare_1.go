@@ -28,6 +28,8 @@ func GetSourceUkHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "UK Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeUkHealthcare1
+	sourceDef.Category = []string{"282N00000X", "207ZP0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902214448", "1043740244"}}
 	sourceDef.BrandLogo = "uk-healthcare.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

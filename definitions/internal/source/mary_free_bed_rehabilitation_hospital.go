@@ -29,6 +29,9 @@ func GetSourceMaryFreeBedRehabilitationHospital(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Mary Free Bed Rehabilitation Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMaryFreeBedRehabilitationHospital
+	sourceDef.Category = []string{"208100000X", "283X00000X", "283XC2000X"}
+	sourceDef.Aliases = []string{"MARY FREE BED REHABILITATION HOSPITAL", "MARY FREE BED MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932372919", "1730133463", "1053641589", "1659791341", "1053550590", "1467801894"}}
 	sourceDef.BrandLogo = "mary-free-bed-rehabilitation-hospital.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.maryfreebed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,9 @@ func GetSourceGlensFallsHospital(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Glens Falls Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGlensFallsHospital
+	sourceDef.Category = []string{"273R00000X", "314000000X", "208M00000X", "208000000X", "207Q00000X", "251S00000X", "273Y00000X"}
+	sourceDef.Aliases = []string{"WHITEHALL FAMILY MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407969397", "1679845978", "1194786285", "1861749475", "1508919614", "1598878480"}}
 	sourceDef.BrandLogo = "glens-falls-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.glensfallshospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

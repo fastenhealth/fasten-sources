@@ -18,7 +18,7 @@ type SourceClientRobertWoodJohnson struct {
 	models.SourceClient
 }
 
-// https://fhirprod.rwjbh.org/fhir/metadata
+// https://fhirprod.rwjbh.org/FHIR/metadata
 func GetSourceClientRobertWoodJohnson(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
 	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 

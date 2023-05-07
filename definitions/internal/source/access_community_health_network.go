@@ -28,6 +28,8 @@ func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Access Community Health Network"
 	sourceDef.SourceType = pkg.SourceTypeAccessCommunityHealthNetwork
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013086115", "1144463712", "1124152657", "1952480287", "1043381486", "1447321898", "1629156807", "1780754523", "1598844268", "1922170349"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

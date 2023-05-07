@@ -29,6 +29,9 @@ func GetSourceTheHospitalOfCentralConnecticut(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "The Hospital of Central Connecticut"
 	sourceDef.SourceType = pkg.SourceTypeTheHospitalOfCentralConnecticut
+	sourceDef.Category = []string{"282N00000X", "261QE0700X", "273R00000X", "207RC0200X", "207RE0101X", "207RH0003X", "207RI0200X", "207R00000X", "207RC0000X", "207RP1001X", "207T00000X", "207V00000X", "2080P0203X", "2084P0800X", "2086S0102X", "2086X0206X", "208M00000X"}
+	sourceDef.Aliases = []string{"THE HOSPITAL OF CENTRAL CONNECTICUT", "NEW BRITAIN GENERAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053477075", "1568532810", "1508928615", "1992867006", "1063461481"}}
 	sourceDef.PatientAccessUrl = "https://thocc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

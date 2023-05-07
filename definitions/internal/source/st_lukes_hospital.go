@@ -29,6 +29,9 @@ func GetSourceStLukesHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "St. Luke's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHospital
+	sourceDef.Category = []string{"282N00000X", "251B00000X", "273Y00000X", "367A00000X"}
+	sourceDef.Aliases = []string{"ST. LUKE'S HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972749570", "1952446551", "1346251543", "1124051974", "1053697383", "1750387031"}}
 	sourceDef.PatientAccessUrl = "https://www.stlukes-stl.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,9 @@ func GetSourcePremierHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Premier Health"
 	sourceDef.SourceType = pkg.SourceTypePremierHealth
+	sourceDef.Category = []string{"207Q00000X", "283X00000X"}
+	sourceDef.Aliases = []string{"PREMIER HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922775865", "1952778003"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

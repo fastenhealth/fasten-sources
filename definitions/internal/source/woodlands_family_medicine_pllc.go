@@ -28,6 +28,9 @@ func GetSourceWoodlandsFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Woodlands Family Medicine PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWoodlandsFamilyMedicinePllc
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{"WOODLANDS FAMILY AND COMMUNITY MEDICINE", "WOODLANDS FAMILY MEDICINE PROFESSIONAL LIMITED LIABILITY COMPANY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912453473"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,9 @@ func GetSourceExodusRecoveryInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Exodus Recovery, Inc."
 	sourceDef.SourceType = pkg.SourceTypeExodusRecoveryInc
+	sourceDef.Category = []string{"251S00000X", "251B00000X", "251X00000X"}
+	sourceDef.Aliases = []string{"FIELD-BASED CRISIS SERVICE PROGRAM-GGT", "BUTTERFLY GARDENS", "EXODUS AB109 ESCONDIDO", "EXODUS HARBOR-UCLA UCC", "VISTA BEHAVIORAL HEALTH CRISIS STABILIZATION UNIT", "RENAISSANCE AT TRINITY", "RENAISSANCE AT ALTA MONTE", "CAL-AIM LA"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700572641", "1164660528", "1831434000", "1144950411", "1235600545", "1912407834", "1659049807", "1134858202", "1841929916", "1164145686"}}
 	sourceDef.PatientAccessUrl = "https://www.exodusrecovery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

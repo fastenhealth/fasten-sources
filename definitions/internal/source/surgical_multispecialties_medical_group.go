@@ -29,6 +29,8 @@ func GetSourceSurgicalMultispecialtiesMedicalGroup(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Surgical Multispecialties Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalMultispecialtiesMedicalGroup
+	sourceDef.Category = []string{"208600000X", "2086S0129X", "208G00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659385599"}}
 	sourceDef.PatientAccessUrl = "https://www.smmgsurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

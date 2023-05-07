@@ -29,6 +29,9 @@ func GetSourceVanDiestMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Van Diest Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeVanDiestMedicalCenter
+	sourceDef.Category = []string{"3416L0300X"}
+	sourceDef.Aliases = []string{"VAN DIEST MEDICAL CENTER AMBULANCE", "HAMILTON HOSPITAL AMBULANCE", "VAN DIEST MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083767321"}}
 	sourceDef.PatientAccessUrl = "https://www.vandiestmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

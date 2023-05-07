@@ -28,6 +28,9 @@ func GetSourceGoodmanCampbellBrainAndSpine(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Goodman Campbell Brain And Spine"
 	sourceDef.SourceType = pkg.SourceTypeGoodmanCampbellBrainAndSpine
+	sourceDef.Category = []string{"163W00000X", "207LP2900X", "208100000X", "2085R0204X", "363A00000X", "363L00000X", "207T00000X"}
+	sourceDef.Aliases = []string{"GOODMAN CAMPBELL BRAIN AND SPINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275580318"}}
 	sourceDef.BrandLogo = "goodman-campbell-brain-and-spine.svg"
 	sourceDef.PatientAccessUrl = "https://www.goodmancampbell.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

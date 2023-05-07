@@ -28,6 +28,9 @@ func GetSourceOrthopedicSpecialistsOfSeattle(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Orthopedic Specialists of Seattle"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicSpecialistsOfSeattle
+	sourceDef.Category = []string{"207XS0106X", "207XS0114X", "207XX0004X", "207XX0005X", "207XX0801X", "261QM1300X", "363AS0400X", "207X00000X"}
+	sourceDef.Aliases = []string{"ORTHOPEDIC SPECIALISTS OF SEATTLE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245802362"}}
 	sourceDef.PatientAccessUrl = "https://orthopedicspecialistsofseattle.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

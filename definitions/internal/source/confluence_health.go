@@ -28,6 +28,9 @@ func GetSourceConfluenceHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Confluence Health"
 	sourceDef.SourceType = pkg.SourceTypeConfluenceHealth
+	sourceDef.Category = []string{"251B00000X"}
+	sourceDef.Aliases = []string{"CONFLUENCE HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295264711"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

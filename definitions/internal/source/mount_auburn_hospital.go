@@ -28,6 +28,8 @@ func GetSourceMountAuburnHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Mount Auburn Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMountAuburnHospital
+	sourceDef.Category = []string{"282N00000X", "251E00000X", "273R00000X", "207R00000X", "208000000X", "2080N0001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689670259", "1538542006", "1710360292", "1902880016", "1649254491", "1326352576", "1811540727", "1518212554", "1255548251", "1902168339"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

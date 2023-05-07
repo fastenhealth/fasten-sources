@@ -28,6 +28,9 @@ func GetSourceSonrisePediatricsAndWellness(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "SonRise Pediatrics & Wellness"
 	sourceDef.SourceType = pkg.SourceTypeSonrisePediatricsAndWellness
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{"SONRISE PEDIATRICS & WELLNESS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538739206"}}
 	sourceDef.PatientAccessUrl = "https://sonrisepediatrics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

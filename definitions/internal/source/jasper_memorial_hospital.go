@@ -29,6 +29,9 @@ func GetSourceJasperMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Jasper Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJasperMemorialHospital
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "282NC0060X", "333600000X"}
+	sourceDef.Aliases = []string{"JASPER MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225031750", "1255082327"}}
 	sourceDef.PatientAccessUrl = "https://www.jaspermemorialhospital.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

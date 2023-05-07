@@ -28,6 +28,8 @@ func GetSourceWyomingCardiopulmonaryServicesPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Wyoming Cardiopulmonary Services, PC"
 	sourceDef.SourceType = pkg.SourceTypeWyomingCardiopulmonaryServicesPc
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992866560"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

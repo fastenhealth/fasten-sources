@@ -28,6 +28,9 @@ func GetSourceDavidRainesCommunityHealthCenterInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "David Raines Community Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeDavidRainesCommunityHealthCenterInc
+	sourceDef.Category = []string{"261QF0400X", "3336C0002X", "3336M0003X", "333600000X", "3336C0003X"}
+	sourceDef.Aliases = []string{"DAVID RAINES COMMUNITY HEALTH CENTER - MOBILE DENTAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144705930", "1861415721", "1639489990", "1265438998"}}
 	sourceDef.PatientAccessUrl = "https://www.davidraineschc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

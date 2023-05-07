@@ -28,6 +28,9 @@ func GetSourceAllForHealthHealthForAll(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "All For Health Health For All"
 	sourceDef.SourceType = pkg.SourceTypeAllForHealthHealthForAll
+	sourceDef.Category = []string{"3336C0002X", "3336C0003X"}
+	sourceDef.Aliases = []string{"ALL FOR HEALTH HEALTH FOR ALL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477699940"}}
 	sourceDef.PatientAccessUrl = "http://all4health.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

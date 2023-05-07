@@ -29,6 +29,8 @@ func GetSourceBillieABondarDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Billie A. Bondar, DPM"
 	sourceDef.SourceType = pkg.SourceTypeBillieABondarDpm
+	sourceDef.Category = []string{"213E00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356528244"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

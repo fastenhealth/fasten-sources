@@ -28,6 +28,8 @@ func GetSourceUniversityOfCaliforniaSanDiego(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "University of California San Diego"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfCaliforniaSanDiego
+	sourceDef.Category = []string{"261QR1100X", "302R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841600806", "1679831325"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

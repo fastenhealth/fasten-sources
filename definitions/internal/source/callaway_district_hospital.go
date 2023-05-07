@@ -29,6 +29,9 @@ func GetSourceCallawayDistrictHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Callaway District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCallawayDistrictHospital
+	sourceDef.Category = []string{"282NC0060X", "275N00000X"}
+	sourceDef.Aliases = []string{"CALLAWAY DISTRICT HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871600981", "1740397850"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -28,6 +28,9 @@ func GetSourceOceanSurgicalPavilion(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Ocean Surgical Pavilion"
 	sourceDef.SourceType = pkg.SourceTypeOceanSurgicalPavilion
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"OCEAN SURGICAL PAVILION"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144291261"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

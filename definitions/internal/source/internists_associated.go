@@ -28,6 +28,8 @@ func GetSourceInternistsAssociated(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Internists Associated"
 	sourceDef.SourceType = pkg.SourceTypeInternistsAssociated
+	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780807859"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

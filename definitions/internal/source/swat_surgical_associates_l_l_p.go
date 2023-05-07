@@ -28,6 +28,8 @@ func GetSourceSwatSurgicalAssociatesLLP(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "SWAT Surgical Associates, L.L.P."
 	sourceDef.SourceType = pkg.SourceTypeSwatSurgicalAssociatesLLP
+	sourceDef.Category = []string{"2086S0105X", "2086X0206X", "208600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740219724"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

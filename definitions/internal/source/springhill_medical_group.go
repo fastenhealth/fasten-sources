@@ -28,6 +28,9 @@ func GetSourceSpringhillMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Springhill Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSpringhillMedicalGroup
+	sourceDef.Category = []string{"207RE0101X", "207Q00000X", "207RI0011X", "207RP1001X", "207R00000X"}
+	sourceDef.Aliases = []string{"SPRINGHILL MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619922911"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

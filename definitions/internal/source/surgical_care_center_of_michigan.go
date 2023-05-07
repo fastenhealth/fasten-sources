@@ -28,6 +28,9 @@ func GetSourceSurgicalCareCenterOfMichigan(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Surgical Care Center Of Michigan"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalCareCenterOfMichigan
+	sourceDef.Category = []string{"261Q00000X", "261QA1903X"}
+	sourceDef.Aliases = []string{"SURGICAL CARE CENTER OF MICHIGAN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700967106"}}
 	sourceDef.PatientAccessUrl = "https://www.seeitclear.com/gro-locations/surgical-care-center-of-michigan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

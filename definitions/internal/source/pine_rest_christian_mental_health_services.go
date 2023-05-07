@@ -28,6 +28,8 @@ func GetSourcePineRestChristianMentalHealthServices(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Pine Rest Christian Mental Health Services"
 	sourceDef.SourceType = pkg.SourceTypePineRestChristianMentalHealthServices
+	sourceDef.Category = []string{"324500000X", "363A00000X", "363LP0808X", "101YA0400X", "101YP2500X", "103T00000X", "1041C0700X", "207RA0401X", "2084P0800X", "283Q00000X", "208D00000X", "104100000X", "363L00000X", "101Y00000X", "103G00000X", "207R00000X", "208000000X", "235Z00000X", "101YM0800X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952818551", "1609884642", "1699786335", "1275544413", "1033129101", "1609887843", "1891703252", "1245372150", "1467873414", "1679777049"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

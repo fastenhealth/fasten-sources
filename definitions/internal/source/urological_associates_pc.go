@@ -28,6 +28,8 @@ func GetSourceUrologicalAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Urological Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeUrologicalAssociatesPc
+	sourceDef.Category = []string{"174400000X", "2085R0202X", "261QR0200X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346229192", "1790352409"}}
 	sourceDef.BrandLogo = "urological-associates-pc.svg"
 	sourceDef.PatientAccessUrl = "https://www.urologyqc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceColdHollowFamilyPractice(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Cold Hollow Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeColdHollowFamilyPractice
+	sourceDef.Category = []string{"3336C0002X", "207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902064496", "1396904520"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceScotlandMedicalCenterPA(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Scotland Medical Center P.A."
 	sourceDef.SourceType = pkg.SourceTypeScotlandMedicalCenterPA
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336102243"}}
 	sourceDef.BrandLogo = "scotland-medical-center-p-a.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/scotlandmedicalcenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"

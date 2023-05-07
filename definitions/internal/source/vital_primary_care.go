@@ -28,6 +28,9 @@ func GetSourceVitalPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Vital Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeVitalPrimaryCare
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{"VITAL PRIMARY CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417274952"}}
 	sourceDef.PatientAccessUrl = "https://www.vitalurgentcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

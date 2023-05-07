@@ -29,6 +29,9 @@ func GetSourceCrystalClinicOrthopaedicCenterLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Crystal Clinic Orthopaedic Center, LLC"
 	sourceDef.SourceType = pkg.SourceTypeCrystalClinicOrthopaedicCenterLlc
+	sourceDef.Category = []string{"284300000X", "333600000X"}
+	sourceDef.Aliases = []string{"CRYSTAL CLINIC ORTHOPAEDIC CENTER - ORTHOPAEDIC SURGEONS", "CRYSTAL CLINIC ORTHOPAEDIC CENTER QUICKCARE CLINIC", "CRYSTAL CLINIC ORTHOPAEDIC CENTER OUTPATIENT PHARMACY", "CCOC - CRYSTAL PLASTIC SURGEONS", "CRYSTAL CLINIC ORTHOPAEDIC CENTER - GREEN", "CRYSTAL CLINIC ORTHOPAEDIC CENTER - SUMMIT HAND", "CRYSTAL CLINIC ORTHOPAEDIC CENTER - SURGERY CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265678882", "1013428259", "1578005708", "1467979971", "1881138063", "1447528930", "1992941504", "1669669917", "1922244623", "1053558056"}}
 	sourceDef.PatientAccessUrl = "https://www.crystalclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

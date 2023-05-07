@@ -29,6 +29,9 @@ func GetSourceNorthsideHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Northside Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNorthsideHospital
+	sourceDef.Category = []string{"282N00000X", "332B00000X"}
+	sourceDef.Aliases = []string{"NORTHSIDE HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457396079", "1215098405"}}
 	sourceDef.PatientAccessUrl = "https://www.northside.com/locations/northside-hospital-atlanta"
 	sourceDef.SecretKeyPrefix = "cerner"
 

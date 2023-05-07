@@ -29,6 +29,8 @@ func GetSourceAllergyAndAsthmaClinicOfAlexandria1(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Allergy & Asthma Clinic of Alexandria"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaClinicOfAlexandria1
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508862673"}}
 	sourceDef.BrandLogo = "allergy-and-asthma-clinic-of-alexandria.png"
 	sourceDef.PatientAccessUrl = "https://www.allergyandasthmacarecenterpc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

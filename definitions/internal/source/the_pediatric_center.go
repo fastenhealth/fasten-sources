@@ -28,6 +28,9 @@ func GetSourceThePediatricCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Pediatric Center"
 	sourceDef.SourceType = pkg.SourceTypeThePediatricCenter
+	sourceDef.Category = []string{"208000000X", "261QP2300X", "261QR1300X", "363LP0200X", "163WP0200X"}
+	sourceDef.Aliases = []string{"THE PEDIATRIC CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902091572", "1376717959", "1497264329", "1356431274", "1477822690", "1558415844", "1659485415", "1528003365"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,9 @@ func GetSourceKiowaCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Kiowa County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKiowaCountyMemorialHospital
+	sourceDef.Category = []string{"208000000X", "363A00000X", "261QR1300X", "208D00000X", "282NC0060X", "275N00000X", "341600000X", "261QP2300X"}
+	sourceDef.Aliases = []string{"GREENSBURG FAMILY PRACTICE", "GREENSBURG FAMILY PRACTICE (NON RHC)", "KIOWA COUNTY MEMORIAL HOSPITA-SSB", "KIOWA COUNTY MEMORIAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417901927", "1831431030", "1538776299", "1952406514", "1942309166", "1063009819"}}
 	sourceDef.BrandLogo = "kiowa-county-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://kcmh.net/"
 	sourceDef.SecretKeyPrefix = "cerner"

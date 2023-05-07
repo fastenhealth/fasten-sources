@@ -28,6 +28,9 @@ func GetSourceAccordiaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Accordia Health"
 	sourceDef.SourceType = pkg.SourceTypeAccordiaHealth
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"ACCORDIA HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972083012"}}
 	sourceDef.PatientAccessUrl = "https://accordia-health.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

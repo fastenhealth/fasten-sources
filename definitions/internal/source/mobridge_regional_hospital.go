@@ -29,6 +29,9 @@ func GetSourceMobridgeRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mobridge Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMobridgeRegionalHospital
+	sourceDef.Category = []string{"282NC0060X", "251E00000X", "275N00000X", "310400000X", "207Q00000X", "261QR1300X", "333600000X", "3336I0012X"}
+	sourceDef.Aliases = []string{"MOBRIDGE REGIONAL HOSPITAL-HOME HEALTH", "SWINGBED", "MOBRIDGE REGIONAL HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356483242", "1184766073", "1902948896", "1710029608", "1265574156", "1992847883", "1275502577", "1871554311", "1942243274", "1639211527"}}
 	sourceDef.BrandLogo = "mobridge-regional-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.mobridgehospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

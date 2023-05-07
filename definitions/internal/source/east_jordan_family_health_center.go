@@ -28,6 +28,8 @@ func GetSourceEastJordanFamilyHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "East Jordan Family Health Center"
 	sourceDef.SourceType = pkg.SourceTypeEastJordanFamilyHealthCenter
+	sourceDef.Category = []string{"333600000X", "3336C0003X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326038688", "1669865838", "1114958691"}}
 	sourceDef.PatientAccessUrl = "https://ejfhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

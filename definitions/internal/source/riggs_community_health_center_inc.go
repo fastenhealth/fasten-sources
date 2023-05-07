@@ -28,6 +28,8 @@ func GetSourceRiggsCommunityHealthCenterInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Riggs Community Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiggsCommunityHealthCenterInc
+	sourceDef.Category = []string{"261QF0400X", "261QD0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326214735", "1134356405", "1386876233", "1386660900"}}
 	sourceDef.PatientAccessUrl = "https://www.riggshealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

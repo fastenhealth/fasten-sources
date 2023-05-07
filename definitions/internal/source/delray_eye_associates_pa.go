@@ -28,6 +28,9 @@ func GetSourceDelrayEyeAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Delray Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeDelrayEyeAssociatesPa
+	sourceDef.Category = []string{"152W00000X", "332B00000X", "207W00000X", "332H00000X"}
+	sourceDef.Aliases = []string{"PRECISION EYEWEAR"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851957112", "1164516324"}}
 	sourceDef.PatientAccessUrl = "https://delrayeyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

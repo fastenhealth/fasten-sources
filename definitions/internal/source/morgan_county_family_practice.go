@@ -28,6 +28,8 @@ func GetSourceMorganCountyFamilyPractice(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Morgan County Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMorganCountyFamilyPractice
+	sourceDef.Category = []string{"261QR1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346594801"}}
 	sourceDef.PatientAccessUrl = "http://permanentlyclosed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,9 @@ func GetSourceAranEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Aran Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeAranEyeAssociates
+	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"ARAN EYE ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427781475", "1972200574"}}
 	sourceDef.PatientAccessUrl = "https://www.araneye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

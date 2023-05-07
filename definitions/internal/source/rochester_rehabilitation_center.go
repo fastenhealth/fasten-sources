@@ -29,6 +29,8 @@ func GetSourceRochesterRehabilitationCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Rochester Rehabilitation Center"
 	sourceDef.SourceType = pkg.SourceTypeRochesterRehabilitationCenter
+	sourceDef.Category = []string{"251S00000X", "261QM0801X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194060566", "1710126990"}}
 	sourceDef.BrandLogo = "rochester-rehabilitation-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.rochesterrehab.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

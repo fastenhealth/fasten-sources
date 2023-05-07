@@ -28,6 +28,8 @@ func GetSourceMedicalHomePrimaryCareCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Medical Home Primary Care Center"
 	sourceDef.SourceType = pkg.SourceTypeMedicalHomePrimaryCareCenter
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578870911"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/profile.php?id=100063744770550"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

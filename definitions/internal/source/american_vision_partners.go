@@ -28,6 +28,9 @@ func GetSourceAmericanVisionPartners(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "American Vision Partners"
 	sourceDef.SourceType = pkg.SourceTypeAmericanVisionPartners
+	sourceDef.Category = []string{"207WX0009X", "207WX0107X", "207WX0120X", "207W00000X", "332B00000X", "261QA1903X", "207WX0108X", "207WX0200X"}
+	sourceDef.Aliases = []string{"AMERICAN VISION PARTNERS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649202771", "1801387261", "1760973259", "1336742790", "1497727093", "1689619272", "1851317861", "1306119615", "1306922513", "1013952522"}}
 	sourceDef.PatientAccessUrl = "https://americanvisionpartners.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

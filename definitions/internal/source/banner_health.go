@@ -29,6 +29,9 @@ func GetSourceBannerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Banner Health"
 	sourceDef.SourceType = pkg.SourceTypeBannerHealth
+	sourceDef.Category = []string{"282N00000X", "3336C0003X", "2865M2000X", "261QU0200X", "341600000X", "275N00000X", "261QR1300X", "3336C0002X", "332900000X"}
+	sourceDef.Aliases = []string{"BANNER OCOTILLO MEDICAL CENTER", "BANNER FAMILY PHARMACY", "USAF", "BANNER CASA GRANDE URGENT CARE", "BANNER FORT COLLINS MEDICAL CENTER", "BANNER PAYSON MEDICAL CENTER", "BANNER PAYSON MEDICAL CENTER - BANNER HEALTH CLINIC PINE", "BANNER GOOD SAMARITAN OP CLINIC PHARMACY", "BANNER HEALTH CLINIC-32ND ST INTERNAL MEDICINE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972139004", "1023327137", "1538402995", "1942613435", "1124532924", "1861077414", "1245940287", "1114301017", "1497848824", "1326476813"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3Y3N5A7N5T65SH2K0BZYIZH1X9PYMK?assignment_id=39PAAFCOD0XUN2VTUZIRMY4OE94TVW&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

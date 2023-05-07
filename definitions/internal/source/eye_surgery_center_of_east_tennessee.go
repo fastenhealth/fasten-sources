@@ -28,6 +28,9 @@ func GetSourceEyeSurgeryCenterOfEastTennessee(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Eye Surgery Center Of East Tennessee"
 	sourceDef.SourceType = pkg.SourceTypeEyeSurgeryCenterOfEastTennessee
+	sourceDef.Category = []string{"261QA1903X", "367500000X"}
+	sourceDef.Aliases = []string{"EYE SURGERY CENTER OF EAST TENNESSEE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013997915", "1568622413"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

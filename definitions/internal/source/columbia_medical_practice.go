@@ -28,6 +28,9 @@ func GetSourceColumbiaMedicalPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Columbia Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaMedicalPractice
+	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Aliases = []string{"COLUMBIA MEDICAL PRACTICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558406017"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

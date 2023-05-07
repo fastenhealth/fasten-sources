@@ -29,6 +29,9 @@ func GetSourceEffinghamHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Effingham Health System"
 	sourceDef.SourceType = pkg.SourceTypeEffinghamHealthSystem
+	sourceDef.Category = []string{"275N00000X", "282NC0060X", "3336C0003X", "3336I0012X"}
+	sourceDef.Aliases = []string{"EFFINGHAM HEALTH SYSTEM"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811962756", "1477893857", "1245867688"}}
 	sourceDef.PatientAccessUrl = "https://www.effinghamhealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

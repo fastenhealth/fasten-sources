@@ -29,6 +29,9 @@ func GetSourceHansenFamilyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Hansen Family Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHansenFamilyHospital
+	sourceDef.Category = []string{"275N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{"HANSEN FAMILY HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609930460", "1831296052"}}
 	sourceDef.PatientAccessUrl = "https://www.mercyonenorthiowaaffiliates.org/hansenfamilyhospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

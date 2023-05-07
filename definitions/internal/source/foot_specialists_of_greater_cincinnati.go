@@ -29,6 +29,8 @@ func GetSourceFootSpecialistsOfGreaterCincinnati(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Foot Specialists of Greater Cincinnati"
 	sourceDef.SourceType = pkg.SourceTypeFootSpecialistsOfGreaterCincinnati
+	sourceDef.Category = []string{"335E00000X", "213ES0131X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467511162", "1235152448", "1184782690", "1730247248", "1548545395", "1275691784"}}
 	sourceDef.PatientAccessUrl = "http://www.nkyfootdoc.com/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

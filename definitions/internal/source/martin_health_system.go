@@ -11,7 +11,6 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4/.well-known/smart-configuration
 // https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceMartinHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)

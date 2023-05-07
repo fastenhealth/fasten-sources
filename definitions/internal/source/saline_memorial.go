@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirprod.salinememorial.org/fhir/metadata
+// https://fhirprod.salinememorial.org/FHIR/metadata
 func GetSourceSalineMemorial(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprod.salinememorial.org/authorization/connect/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprod.salinememorial.org/authorization/connect/token"
 
-	sourceDef.Audience = "https://fhirprod.salinememorial.org/fhir"
+	sourceDef.Audience = "https://fhirprod.salinememorial.org/FHIR"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.salinememorial.org/fhir"
+	sourceDef.ApiEndpointBaseUrl = "https://fhirprod.salinememorial.org/FHIR"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSalineMemorial]; clientIdOk {
 		sourceDef.ClientId = clientId

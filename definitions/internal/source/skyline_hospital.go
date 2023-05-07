@@ -29,6 +29,9 @@ func GetSourceSkylineHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Skyline Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSkylineHospital
+	sourceDef.Category = []string{"282NC0060X", "341600000X"}
+	sourceDef.Aliases = []string{"SKYLINE HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760455687"}}
 	sourceDef.PatientAccessUrl = "https://myskylinehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
