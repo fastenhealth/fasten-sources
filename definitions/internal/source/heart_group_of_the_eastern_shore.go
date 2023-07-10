@@ -29,6 +29,7 @@ func GetSourceHeartGroupOfTheEasternShore(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Heart Group of the Eastern Shore"
 	sourceDef.SourceType = pkg.SourceTypeHeartGroupOfTheEasternShore
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://heartgroupes.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

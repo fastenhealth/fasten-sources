@@ -28,6 +28,7 @@ func GetSourceCentralMississippiHealthServicesInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Central Mississippi Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeCentralMississippiHealthServicesInc
+	sourceDef.PatientAccessUrl = "https://www.centralmshealth.center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

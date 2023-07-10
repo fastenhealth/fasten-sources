@@ -29,6 +29,7 @@ func GetSourceCityOfLenexaKs(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "City of Lenexa KS"
 	sourceDef.SourceType = pkg.SourceTypeCityOfLenexaKs
+	sourceDef.PatientAccessUrl = "https://www.lenexa.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

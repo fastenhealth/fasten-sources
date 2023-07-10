@@ -29,7 +29,7 @@ func GetSourceLibertyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Liberty Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeLibertyMedicalCenter
 	sourceDef.Category = []string{"261Q00000X", "282NC0060X"}
-	sourceDef.Aliases = []string{"LIBERTY MEDICAL CENTER OF TEXAS", "LOGAN HEALTH CHESTER", "LIBERTY MEDICAL CENTER"}
+	sourceDef.Aliases = []string{"LIBERTY MEDICAL CENTER", "LIBERTY MEDICAL CENTER OF TEXAS", "LOGAN HEALTH CHESTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417537879", "1497754782"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

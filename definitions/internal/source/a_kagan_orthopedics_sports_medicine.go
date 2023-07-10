@@ -28,7 +28,10 @@ func GetSourceAKaganOrthopedicsSportsMedicine(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "A Kagan Orthopedics  Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAKaganOrthopedicsSportsMedicine
+	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437110160"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.kaganortho.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

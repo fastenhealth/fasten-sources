@@ -29,6 +29,8 @@ func GetSourceHackleyCommunityCareCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Hackley Community Care Center"
 	sourceDef.SourceType = pkg.SourceTypeHackleyCommunityCareCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hackley-community-care-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.hackleycommunitycare.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

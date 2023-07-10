@@ -29,7 +29,7 @@ func GetSourceMidwayClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Midway Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMidwayClinic
 	sourceDef.Category = []string{"261QR1300X"}
-	sourceDef.Aliases = []string{"MIDWAY CLINIC", "EDWARDS COUNTY MEDICAL CENTER"}
+	sourceDef.Aliases = []string{"EDWARDS COUNTY MEDICAL CENTER", "MIDWAY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649372012"}}
 	sourceDef.PatientAccessUrl = "https://edcomed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

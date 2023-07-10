@@ -29,6 +29,8 @@ func GetSourceBucklesFamilyHealthCare(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Buckles Family Health Care"
 	sourceDef.SourceType = pkg.SourceTypeBucklesFamilyHealthCare
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "buckles-family-health-care.jpg"
+	sourceDef.PatientAccessUrl = "https://bucklesfamilyhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

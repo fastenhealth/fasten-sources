@@ -29,7 +29,8 @@ func GetSourceAdventistHealthCorporateOffice(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Adventist Health - Corporate Office"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthCorporateOffice
-	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org ›"
+	sourceDef.BrandLogo = "adventist-health-west.png"
+	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

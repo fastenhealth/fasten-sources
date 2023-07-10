@@ -29,6 +29,7 @@ func GetSourceBeaconHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Beacon Health System"
 	sourceDef.SourceType = pkg.SourceTypeBeaconHealthSystem
+	sourceDef.PatientAccessUrl = "https://www.beaconhealthsystem.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

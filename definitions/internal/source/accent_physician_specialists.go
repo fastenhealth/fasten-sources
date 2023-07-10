@@ -32,6 +32,8 @@ func GetSourceAccentPhysicianSpecialists(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Aliases = []string{"ACCENT PHYSICIAN SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376970731"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "accent-physician-specialists.svg"
+	sourceDef.PatientAccessUrl = "https://accentmd.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

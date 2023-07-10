@@ -29,6 +29,8 @@ func GetSourceBitterrootHealthDalyHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Bitterroot Health - Daly Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBitterrootHealthDalyHospital
+	sourceDef.BrandLogo = "bitterroot-health-daly-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.bitterroothealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

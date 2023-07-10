@@ -31,8 +31,8 @@ func GetSourceColumbusRegionalHealthcareSystem1(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeColumbusRegionalHealthcareSystem1
 	sourceDef.Category = []string{"333600000X", "3336C0003X", "3336S0011X", "282N00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275079451", "1376537555"}}
-	sourceDef.BrandLogo = "columbus-regional-healthcare-system.png"
-	sourceDef.PatientAccessUrl = "https://www.facebook.com/CRHealthcare/"
+	sourceDef.BrandLogo = "columbus-regional-health.png"
+	sourceDef.PatientAccessUrl = "https://www.crh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

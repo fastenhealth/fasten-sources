@@ -29,7 +29,7 @@ func GetSourceFronteraHealthcareNetwork(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Frontera Healthcare Network"
 	sourceDef.SourceType = pkg.SourceTypeFronteraHealthcareNetwork
 	sourceDef.Category = []string{"261QF0400X", "261Q00000X", "3336C0002X"}
-	sourceDef.Aliases = []string{"FRONTERA HEALTHCARE NETWORK - BRADY DENTAL", "FRONTERA HEALTHCARE NETWORK - JUNCTION CLINIC", "FRONTERA HEALTHCARE - FREDERICKSBURG CLINIC", "FRONTERA HEALTHCARE NETWORK - HEALTHCENTER PHARMACY", "FRONTERA HEALTHCARE NETWORK - BRADY MEDICAL", "FRONTERA HEALTHCARE NETWORK - MENARD MEDICAL"}
+	sourceDef.Aliases = []string{"FRONTERA HEALTHCARE - FREDERICKSBURG CLINIC", "FRONTERA HEALTHCARE NETWORK - BRADY DENTAL", "FRONTERA HEALTHCARE NETWORK - BRADY MEDICAL", "FRONTERA HEALTHCARE NETWORK - HEALTHCENTER PHARMACY", "FRONTERA HEALTHCARE NETWORK - JUNCTION CLINIC", "FRONTERA HEALTHCARE NETWORK - MENARD MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205375037", "1841739679", "1235381088", "1548517303", "1528258555", "1992396949", "1720660582", "1801143664", "1447594247"}}
 	sourceDef.BrandLogo = "frontera-healthcare-network.jpg"
 	sourceDef.PatientAccessUrl = "http://www.fronterahcn.org/"

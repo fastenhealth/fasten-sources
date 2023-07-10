@@ -29,6 +29,7 @@ func GetSourceFamilyFirstOfJacksonville(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Family First Of Jacksonville"
 	sourceDef.SourceType = pkg.SourceTypeFamilyFirstOfJacksonville
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://familyfirstjville.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

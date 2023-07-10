@@ -29,7 +29,7 @@ func GetSourceShastaCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Shasta Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeShastaCommunityHealthCenter
 	sourceDef.Category = []string{"122300000X", "1041C0700X", "363L00000X", "207Q00000X", "207RE0101X", "207RR0500X", "207VM0101X", "2084N0400X", "2084P0800X", "2084P0804X", "174400000X", "207R00000X", "207RG0100X", "207RN0300X", "207RP1001X", "207W00000X", "208600000X", "213E00000X", "363A00000X", "363LF0000X", "103G00000X", "207NP0225X", "207RI0200X", "207V00000X", "208000000X", "2080P0202X", "208200000X", "2085U0001X", "363AM0700X", "302R00000X"}
-	sourceDef.Aliases = []string{"SHASTA COMMUNITY TELEMEDICINE AND TRAINING CENTER", "PRIMARY CARE NEUROPSYCHIATRY AND SPECIALTY CARE CLINIC"}
+	sourceDef.Aliases = []string{"PRIMARY CARE NEUROPSYCHIATRY AND SPECIALTY CARE CLINIC", "SHASTA COMMUNITY TELEMEDICINE AND TRAINING CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538181557", "1164848487", "1114533171", "1356815542", "1952328403", "1942225719", "1891710638", "1013931476", "1417033614", "1699171660"}}
 	sourceDef.PatientAccessUrl = "https://www.shastahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

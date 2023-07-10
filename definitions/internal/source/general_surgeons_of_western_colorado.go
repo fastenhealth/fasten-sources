@@ -29,6 +29,7 @@ func GetSourceGeneralSurgeonsOfWesternColorado(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "General Surgeons Of Western Colorado"
 	sourceDef.SourceType = pkg.SourceTypeGeneralSurgeonsOfWesternColorado
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.coloradosurgeons.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

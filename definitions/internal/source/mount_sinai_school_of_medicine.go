@@ -29,7 +29,7 @@ func GetSourceMountSinaiSchoolOfMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Mount Sinai School of Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMountSinaiSchoolOfMedicine
 	sourceDef.Category = []string{"2080P0205X", "207VE0102X", "207VF0040X", "207VM0101X", "207VX0201X", "208100000X", "207V00000X", "103G00000X", "208600000X", "2086S0120X", "2080T0004X", "204F00000X", "281P00000X", "207RC0000X", "208000000X", "2080P0208X", "2080P0207X"}
-	sourceDef.Aliases = []string{"MOUNT SINAI SCHOOL OF MEDICINE", "MOUNT SINAI ELMHURST FACULTY PRACTICE GROUP"}
+	sourceDef.Aliases = []string{"MOUNT SINAI ELMHURST FACULTY PRACTICE GROUP", "MOUNT SINAI SCHOOL OF MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790967685", "1578817540", "1528087541", "1588857528", "1639338635", "1326207705", "1952538498", "1740505726", "1194907105", "1417139411"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

@@ -29,6 +29,8 @@ func GetSourceChantillyFamilyPracticeCtr(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Chantilly Family Practice Ctr."
 	sourceDef.SourceType = pkg.SourceTypeChantillyFamilyPracticeCtr
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "chantilly-family-practice-ctr.jpg"
+	sourceDef.PatientAccessUrl = "https://chantillyfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

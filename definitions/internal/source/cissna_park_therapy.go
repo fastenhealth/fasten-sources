@@ -31,6 +31,7 @@ func GetSourceCissnaParkTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QP2000X"}
 	sourceDef.Aliases = []string{"CISSNA PARK THERAPY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295343374"}}
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/therapy-services-cissna-park"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

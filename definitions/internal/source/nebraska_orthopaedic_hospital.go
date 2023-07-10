@@ -29,7 +29,8 @@ func GetSourceNebraskaOrthopaedicHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Nebraska Orthopaedic Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNebraskaOrthopaedicHospital
-	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/hospital/nebraska/omaha/nebraska-orthopaedic-hospital-280129.html"
+	sourceDef.Aliases = []string{"Nebraska Orthopaedic Hospital dba OrthoNebraska"}
+	sourceDef.PatientAccessUrl = "https://orthonebraska.consumeridp.us-1.healtheintent.com/saml2/sso/login?authenticationRequestId=c2241eb7-d554-40c7-9c08-8bfda5bceadc"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

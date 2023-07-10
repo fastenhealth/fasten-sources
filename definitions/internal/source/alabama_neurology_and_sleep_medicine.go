@@ -29,6 +29,7 @@ func GetSourceAlabamaNeurologyAndSleepMedicine(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Alabama Neurology & Sleep Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAlabamaNeurologyAndSleepMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.neurologysleepmedicine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

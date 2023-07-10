@@ -29,8 +29,10 @@ func GetSourceCaremoreMedicalGroupOfNevada(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "CareMore Medical Group Of Nevada"
 	sourceDef.SourceType = pkg.SourceTypeCaremoreMedicalGroupOfNevada
 	sourceDef.Category = []string{"207R00000X"}
-	sourceDef.Aliases = []string{"CAREMORE MEDICAL GROUP OF NEVADA (WORKU), PC", "CAREMORE MEDICAL GROUP OF NEVADA"}
+	sourceDef.Aliases = []string{"CAREMORE MEDICAL GROUP OF NEVADA", "CAREMORE MEDICAL GROUP OF NEVADA (WORKU), PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578840724"}}
+	sourceDef.BrandLogo = "caremore-medical-group-of-nevada.svg"
+	sourceDef.PatientAccessUrl = "https://www.caremore.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

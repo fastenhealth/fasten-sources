@@ -40,6 +40,7 @@ func GetSourceHealthit(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.PlatformType = pkg.SourceTypeHealthit
 	sourceDef.SourceType = pkg.SourceTypeHealthit
 	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.PatientAccessUrl = "https://www.healthit.com"
 
 	return sourceDef, nil
 }

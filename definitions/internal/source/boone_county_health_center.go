@@ -30,8 +30,10 @@ func GetSourceBooneCountyHealthCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Boone County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeBooneCountyHealthCenter
 	sourceDef.Category = []string{"3336I0012X", "261QR1300X", "363A00000X", "363L00000X", "207Q00000X", "282NC0060X", "275N00000X", "101YM0800X", "133V00000X", "363AM0700X", "367500000X", "251E00000X"}
-	sourceDef.Aliases = []string{"BOONE COUNTY HEALTH CENTER", "NEWMAN GROVE MEDICAL CLINIC", "BOONE COUNTY HEALTH CENTER PCMH", "BOONE COUNTY MEDICAL CLINIC", "ELGIN VETERANS' MEDICAL CLINIC", "SPALDING MEDICAL CLINIC", "BOONE COUNTY PROFESSIONAL SERVICES", "BOONE COUNTY HEALTH CENTER HOME HEALTH", "NANCE COUNTY MEDICAL CLINIC"}
+	sourceDef.Aliases = []string{"BOONE COUNTY HEALTH CENTER", "BOONE COUNTY HEALTH CENTER HOME HEALTH", "BOONE COUNTY HEALTH CENTER PCMH", "BOONE COUNTY MEDICAL CLINIC", "BOONE COUNTY PROFESSIONAL SERVICES", "ELGIN VETERANS' MEDICAL CLINIC", "NANCE COUNTY MEDICAL CLINIC", "NEWMAN GROVE MEDICAL CLINIC", "SPALDING MEDICAL CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386833804", "1750778940", "1780106732", "1023043270", "1588698914", "1245699958", "1497789812", "1669407821", "1114952363", "1730113150"}}
+	sourceDef.BrandLogo = "boone-county-health-center.svg"
+	sourceDef.PatientAccessUrl = "https://boonecohealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

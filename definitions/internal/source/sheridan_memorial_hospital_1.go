@@ -32,7 +32,7 @@ func GetSourceSheridanMemorialHospital1(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207P00000X", "261QU0200X", "282N00000X"}
 	sourceDef.Aliases = []string{"SHERIDAN MEMORIAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487707188"}}
-	sourceDef.PatientAccessUrl = "Name: Sheridan Memorial Hospital Address: 1401 West Fifth Street City: Sheridan Zip: 82801 State: Wyoming Country: USA"
+	sourceDef.PatientAccessUrl = "https://www.sheridanhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

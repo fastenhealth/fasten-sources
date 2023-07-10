@@ -29,6 +29,8 @@ func GetSourceBlueCrossAndBlueShieldOfVermont2(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Blue Cross and Blue Shield of Vermont"
 	sourceDef.SourceType = pkg.SourceTypeBlueCrossAndBlueShieldOfVermont2
+	sourceDef.BrandLogo = "blue-cross-and-blue-shield-of-vermont.svg"
+	sourceDef.PatientAccessUrl = "https://www.bluecrossvt.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

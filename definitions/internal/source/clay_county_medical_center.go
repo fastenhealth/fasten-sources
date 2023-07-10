@@ -32,6 +32,7 @@ func GetSourceClayCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QR1300X", "282NC0060X", "275N00000X", "133V00000X", "208600000X", "363L00000X", "367500000X", "251G00000X", "261QH0100X"}
 	sourceDef.Aliases = []string{"CLAY CENTER FAMILY PHYSICIANS", "GLASCO FAMILY PHYSICIANS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710340690", "1841245396", "1134163389", "1396108213", "1265485817", "1205299120", "1528641321", "1073568523", "1114961174"}}
+	sourceDef.PatientAccessUrl = "https://www.ccmcks.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

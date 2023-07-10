@@ -29,6 +29,9 @@ func GetSourceAbileneDermatologyAndSkinSurgeryCenter(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Abilene Dermatology & Skin Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeAbileneDermatologyAndSkinSurgeryCenter
+	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962681304"}}
+	sourceDef.BrandLogo = "abilene-dermatology-and-skin-surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.abilenederm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

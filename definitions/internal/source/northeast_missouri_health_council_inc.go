@@ -29,7 +29,7 @@ func GetSourceNortheastMissouriHealthCouncilInc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Northeast Missouri Health Council Inc"
 	sourceDef.SourceType = pkg.SourceTypeNortheastMissouriHealthCouncilInc
 	sourceDef.Category = []string{"207Q00000X", "261QF0400X", "103T00000X", "207V00000X", "1041C0700X", "363LF0000X", "207R00000X", "208000000X"}
-	sourceDef.Aliases = []string{"NORTHEAST FAMILY HEALTH ANNEX", "MEMPHIS COMMUNITY HEALTH CENTER"}
+	sourceDef.Aliases = []string{"MEMPHIS COMMUNITY HEALTH CENTER", "NORTHEAST FAMILY HEALTH ANNEX"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336679836", "1144366154", "1962548974", "1881307155", "1053457069"}}
 	sourceDef.BrandLogo = "northeast-missouri-health-council-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nemohealthcouncil.com/"

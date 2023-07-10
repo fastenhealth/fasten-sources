@@ -29,8 +29,10 @@ func GetSourceBluestemHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Bluestem Health"
 	sourceDef.SourceType = pkg.SourceTypeBluestemHealth
 	sourceDef.Category = []string{"101YM0800X", "1223D0001X", "1223G0001X", "207Q00000X", "208000000X", "261QF0400X"}
-	sourceDef.Aliases = []string{"BLUESTEM HEALTH KRESHEL CLINIC", "BLUESTEM HEALTH ADMINISTRATION", "BLUESTEM HEALTH 360", "BLUESTEM HEALTH THOMPSON CLINIC", "THOMPSON CLINIC", "BLUESTEM MOBILE UNIT", "BLUESTEM HEALTH PIEDMONT CLINIC"}
+	sourceDef.Aliases = []string{"BLUESTEM HEALTH 360", "BLUESTEM HEALTH ADMINISTRATION", "BLUESTEM HEALTH KRESHEL CLINIC", "BLUESTEM HEALTH PIEDMONT CLINIC", "BLUESTEM HEALTH THOMPSON CLINIC", "BLUESTEM MOBILE UNIT", "THOMPSON CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932156114", "1184194557", "1326436577", "1558720326", "1770033912", "1043933591", "1508486416"}}
+	sourceDef.BrandLogo = "bluestem-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.bluestemlincoln.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceFoothillsPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Foothills Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeFoothillsPodiatry
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.foothillpodiatryclinic.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

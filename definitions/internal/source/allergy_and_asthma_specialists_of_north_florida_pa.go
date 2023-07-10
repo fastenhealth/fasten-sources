@@ -29,6 +29,8 @@ func GetSourceAllergyAndAsthmaSpecialistsOfNorthFloridaPa(env pkg.FastenLighthou
 	sourceDef.Display = "Allergy & Asthma Specialists of North Florida, PA"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaSpecialistsOfNorthFloridaPa
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "allergy-and-asthma-specialists-of-north-florida-pa.webp"
+	sourceDef.PatientAccessUrl = "https://www.jaxallergy.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

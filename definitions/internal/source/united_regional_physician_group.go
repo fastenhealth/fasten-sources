@@ -30,6 +30,7 @@ func GetSourceUnitedRegionalPhysicianGroup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeUnitedRegionalPhysicianGroup
 	sourceDef.Category = []string{"207R00000X", "207T00000X", "207X00000X", "208600000X", "208G00000X", "207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407890775"}}
+	sourceDef.PatientAccessUrl = "https://urphysiciangroup.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,8 +29,9 @@ func GetSourceUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnv
 	sourceDef.Display = "University of Arkansas for Medical Sciences"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfArkansasForMedicalSciences
 	sourceDef.Category = []string{"3336S0011X", "207L00000X", "207P00000X", "207W00000X", "207XP3100X", "207YP0228X", "2080N0001X", "2080P0202X", "2080P0203X", "2080P0207X", "2084P0804X", "2085R0202X", "2086S0120X", "2088P0231X", "208000000X", "2080P0006X", "207R00000X", "332B00000X", "363L00000X", "104100000X", "133V00000X", "273R00000X"}
-	sourceDef.Aliases = []string{"CHILDREN'S UNIVERSITY MEDICAL GROUP", "CHILDRENS UNIVERSITY MEDICAL GROUP", "CHILD STUDY CENTER", "KIDS FIRST SEARCY", "UAMS INTERNAL MEDICINE GROUP PCP", "MCPG DME JEI OPTICAL SHOP", "NURSE PRACTITIONER SERVICES"}
+	sourceDef.Aliases = []string{"CHILD STUDY CENTER", "CHILDREN'S UNIVERSITY MEDICAL GROUP", "CHILDRENS UNIVERSITY MEDICAL GROUP", "KIDS FIRST SEARCY", "MCPG DME JEI OPTICAL SHOP", "NURSE PRACTITIONER SERVICES", "UAMS INTERNAL MEDICINE GROUP PCP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477998847", "1346230968", "1467528026", "1750457842", "1669534749", "1043373590", "1629130802", "1750533642", "1679725543", "1215167937"}}
+	sourceDef.PatientAccessUrl = "https://uamshealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

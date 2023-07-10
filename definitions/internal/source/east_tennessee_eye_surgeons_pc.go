@@ -28,6 +28,9 @@ func GetSourceEastTennesseeEyeSurgeonsPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "East Tennessee Eye Surgeons PC"
 	sourceDef.SourceType = pkg.SourceTypeEastTennesseeEyeSurgeonsPc
+	sourceDef.Category = []string{"261QM2500X"}
+	sourceDef.Aliases = []string{"WILLIAM N. WILLIFORD, M.D. P.C."}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952484354"}}
 	sourceDef.PatientAccessUrl = "https://www.easttneyes.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

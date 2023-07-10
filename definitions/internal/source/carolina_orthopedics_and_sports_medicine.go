@@ -28,6 +28,8 @@ func GetSourceCarolinaOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Carolina Orthopedics & Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaOrthopedicsAndSportsMedicine
+	sourceDef.BrandLogo = "carolina-orthopedics-and-sports-medicine.svg"
+	sourceDef.PatientAccessUrl = "https://www.carolinaorthopaedic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

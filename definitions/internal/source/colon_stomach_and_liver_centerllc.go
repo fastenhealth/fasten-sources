@@ -29,6 +29,7 @@ func GetSourceColonStomachAndLiverCenterllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Colon Stomach & Liver CenterLLC"
 	sourceDef.SourceType = pkg.SourceTypeColonStomachAndLiverCenterllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.loudouncslcenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

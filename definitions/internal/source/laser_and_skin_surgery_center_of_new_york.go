@@ -29,7 +29,7 @@ func GetSourceLaserAndSkinSurgeryCenterOfNewYork(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Laser & Skin Surgery Center Of New York"
 	sourceDef.SourceType = pkg.SourceTypeLaserAndSkinSurgeryCenterOfNewYork
 	sourceDef.Category = []string{"174400000X", "207ND0101X"}
-	sourceDef.Aliases = []string{"EASTSIDE DERMATOLOGY SERVICES PC", "LASER & SKIN SURGERY CENTER OF NEW YORK", "DR. R. G. GERONEMUS, M.D., P.C."}
+	sourceDef.Aliases = []string{"DR. R. G. GERONEMUS, M.D., P.C.", "EASTSIDE DERMATOLOGY SERVICES PC", "LASER & SKIN SURGERY CENTER OF NEW YORK"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023063906"}}
 	sourceDef.BrandLogo = "laser-and-skin-surgery-center-of-new-york.svg"
 	sourceDef.PatientAccessUrl = "https://www.laserskinsurgery.com/"

@@ -29,6 +29,8 @@ func GetSourceFamilyMedicalAssociatesOfRaleigh(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Family Medical Associates of Raleigh"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicalAssociatesOfRaleigh
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-medical-associates-of-raleigh.jpeg"
+	sourceDef.PatientAccessUrl = "http://fmaraleigh.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

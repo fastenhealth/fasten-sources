@@ -32,6 +32,7 @@ func GetSourceCarlinvilleAreaHospital(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Aliases = []string{"CARLINVILLE AREA HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841366556", "1750457461", "1932275641", "1053425124"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cahcare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

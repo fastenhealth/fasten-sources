@@ -31,6 +31,8 @@ func GetSourceCarolinaSurgeryAndCancerCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124083753"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "carolina-surgery-and-cancer-center.gif"
+	sourceDef.PatientAccessUrl = "https://www.carolinasurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

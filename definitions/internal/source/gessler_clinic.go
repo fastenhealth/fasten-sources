@@ -29,6 +29,7 @@ func GetSourceGesslerClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Gessler Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGesslerClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gesslerclinic.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

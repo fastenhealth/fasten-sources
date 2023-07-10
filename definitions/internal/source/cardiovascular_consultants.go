@@ -32,6 +32,7 @@ func GetSourceCardiovascularConsultants(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Aliases = []string{"CARDIOVASCULAR CONSULTANTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194136523", "1811967144"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cccma.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

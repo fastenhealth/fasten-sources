@@ -31,6 +31,7 @@ func GetSourceHeritageValleyHealthSystem(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"282NR1301X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326238734"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.heritagevalley.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -32,6 +32,8 @@ func GetSourceAshburnSterlingInternalMedicineAndPediatrics(env pkg.FastenLightho
 	sourceDef.Aliases = []string{"ASHBURN STERLING INTERNAL MEDICINE & PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366709651"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ashburn-sterling-internal-medicine-and-pediatrics.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.myhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

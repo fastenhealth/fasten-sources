@@ -31,6 +31,7 @@ func GetSourceCardiovascularAssociatesOfLakeCounty(env pkg.FastenLighthouseEnvTy
 	sourceDef.Category = []string{"207L00000X"}
 	sourceDef.Aliases = []string{"CARDIOVASCULAR ASSOCIATES OF LAKE COUNTY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407427560"}}
+	sourceDef.PatientAccessUrl = "https://www.cvalakecounty.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

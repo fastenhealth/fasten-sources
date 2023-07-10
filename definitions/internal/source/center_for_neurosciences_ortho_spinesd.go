@@ -29,6 +29,8 @@ func GetSourceCenterForNeurosciencesOrthoSpinesd(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Center For Neurosciences Ortho SpineSD"
 	sourceDef.SourceType = pkg.SourceTypeCenterForNeurosciencesOrthoSpinesd
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "center-for-neurosciences-ortho-spinesd.svg"
+	sourceDef.PatientAccessUrl = "https://www.cnos.net/about/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

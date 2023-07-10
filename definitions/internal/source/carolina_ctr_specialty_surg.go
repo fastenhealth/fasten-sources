@@ -28,6 +28,7 @@ func GetSourceCarolinaCtrSpecialtySurg(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Carolina Ctr Specialty Surg"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaCtrSpecialtySurg
+	sourceDef.PatientAccessUrl = "https://www.carolinaspecialtysurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDallasFortWorthSarcomaGroupPa(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Dallas Fort Worth Sarcoma Group PA"
 	sourceDef.SourceType = pkg.SourceTypeDallasFortWorthSarcomaGroupPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://dfwsarcoma.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

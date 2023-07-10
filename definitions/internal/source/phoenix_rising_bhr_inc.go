@@ -28,6 +28,9 @@ func GetSourcePhoenixRisingBhrInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Phoenix Rising BHR Inc"
 	sourceDef.SourceType = pkg.SourceTypePhoenixRisingBhrInc
+	sourceDef.Category = []string{"251B00000X", "251S00000X", "261QM0850X", "261QM0855X", "261QM0801X"}
+	sourceDef.Aliases = []string{"PHOENIX RISING BHR"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891737292"}}
 	sourceDef.PatientAccessUrl = "https://www.phoenixrisingbhr.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

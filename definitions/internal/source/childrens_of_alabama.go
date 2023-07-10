@@ -30,6 +30,7 @@ func GetSourceChildrensOfAlabama(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeChildrensOfAlabama
 	sourceDef.Category = []string{"261QX0200X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326305186"}}
+	sourceDef.PatientAccessUrl = "https://www.childrensal.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

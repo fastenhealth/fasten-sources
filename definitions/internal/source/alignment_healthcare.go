@@ -31,6 +31,7 @@ func GetSourceAlignmentHealthcare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"302R00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104439264"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.alignmenthealth.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -32,6 +32,8 @@ func GetSourceColoradoMountainMedicalLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Aliases = []string{"COLORADO MOUNTAIN MEDICAL, LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902515141", "1376134684", "1881274827", "1710563663", "1093328320", "1356930622", "1730747445", "1063038073", "1215553227", "1598381154"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "colorado-mountain-medical-llc.svg"
+	sourceDef.PatientAccessUrl = "https://www.cmmhealth.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

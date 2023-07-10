@@ -29,7 +29,7 @@ func GetSourceRetinaConsultantsOfNevada(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Retina Consultants Of Nevada"
 	sourceDef.SourceType = pkg.SourceTypeRetinaConsultantsOfNevada
 	sourceDef.Category = []string{"207WX0009X", "207WX0107X", "207WX0108X", "207WX0200X", "207W00000X"}
-	sourceDef.Aliases = []string{"RETINA CONSULTANTS OF NEVADA", "NEVADA EYE PHYSICIANS", "SIERRA NEVADA EYE CENTER", "NEW EYES"}
+	sourceDef.Aliases = []string{"NEVADA EYE PHYSICIANS", "NEW EYES", "RETINA CONSULTANTS OF NEVADA", "SIERRA NEVADA EYE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053359489"}}
 	sourceDef.PatientAccessUrl = "https://retinanevada.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

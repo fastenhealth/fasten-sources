@@ -29,6 +29,8 @@ func GetSourceInspireEntAndPulmonology(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Inspire ENT and Pulmonology"
 	sourceDef.SourceType = pkg.SourceTypeInspireEntAndPulmonology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "inspire-ent-and-pulmonology.jpg"
+	sourceDef.PatientAccessUrl = "https://inspire-med.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

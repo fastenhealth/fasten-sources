@@ -28,6 +28,10 @@ func GetSourceDukeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Duke Health"
 	sourceDef.SourceType = pkg.SourceTypeDukeHealth
+	sourceDef.Category = []string{"261QE0700X", "273Y00000X", "3416A0800X", "3418M1120X", "3416L0300X"}
+	sourceDef.Aliases = []string{"DUKE UNIVERSITY HOSPITAL"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821094509", "1538166061", "1417954942"}}
+	sourceDef.PatientAccessUrl = "https://www.dukehealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

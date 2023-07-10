@@ -29,6 +29,7 @@ func GetSourceDothanPediatricClinicPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Dothan Pediatric Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeDothanPediatricClinicPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dothanpediatricclinic.com/Graphics/DPC_Logo.png"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

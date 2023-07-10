@@ -29,8 +29,10 @@ func GetSourceCardiologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Cardiology PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyPc
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{"Hartford HealthCare"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003922287"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hartfordhealthcare.org/services/heart-vascular/team/cardiology-pc"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

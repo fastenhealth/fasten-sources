@@ -31,6 +31,7 @@ func GetSourceHenryFordHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QE0700X", "261Q00000X", "282E00000X", "261QM0855X", "251T00000X", "2088P0231X", "3336C0003X", "207XS0114X", "207XX0005X", "207X00000X", "261QA1903X", "332BX2000X", "332B00000X", "333600000X"}
 	sourceDef.Aliases = []string{"HENRY FORD HEALTH- ORTHO JOINT SPECIALISTS", "HENRY FORD MEDICAL CENTER - PLYMOUTH", "HENRY FORD PHARMACY ADVANTAGE SOUTHFIELD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518987908", "1447363270", "1538426655", "1891075958", "1083809297", "1770793325", "1942931720", "1639807852", "1417680893", "1073799276"}}
+	sourceDef.PatientAccessUrl = "https://www.henryford.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceButlerCountyHealthCareCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeButlerCountyHealthCareCenter
 	sourceDef.Category = []string{"3336C0003X", "3336I0012X", "275N00000X", "261QR1300X", "363A00000X", "207P00000X", "213E00000X", "231H00000X", "282NC0060X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063529618", "1588601629", "1396782439", "1790780237"}}
+	sourceDef.PatientAccessUrl = "https://www.bchccnet.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

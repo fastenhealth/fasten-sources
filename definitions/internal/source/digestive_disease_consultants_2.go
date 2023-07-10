@@ -29,7 +29,7 @@ func GetSourceDigestiveDiseaseConsultants2(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Digestive Disease Consultants"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveDiseaseConsultants2
 	sourceDef.BrandLogo = "digestive-disease-consultants.png"
-	sourceDef.PatientAccessUrl = "https://www.mygidocs.com/"
+	sourceDef.PatientAccessUrl = "https://daytongastro.mygportal.com/PP6-0-0/Account/LogOn"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

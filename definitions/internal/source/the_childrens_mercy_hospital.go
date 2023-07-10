@@ -30,7 +30,7 @@ func GetSourceTheChildrensMercyHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "The Children's Mercy Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTheChildrensMercyHospital
 	sourceDef.Category = []string{"261QE0700X", "332BP3500X", "332B00000X", "251E00000X", "333600000X", "3336C0004X", "3336H0001X", "3336S0011X", "3416A0800X", "341600000X", "282NC2000X", "3336C0003X", "103TC0700X", "363L00000X", "363LP0200X", "208000000X"}
-	sourceDef.Aliases = []string{"THE CHILDREN'S MERCY HOSPITAL", "CHILDREN'S MERCY HOME CARE", "CHILDREN'S MERCY HOME CARE PHARMACY", "CHILDREN'S MERCY CRITICAL CARE TRANSPORT", "THE CHILDRENS MERCY HOSPITAL PHARMACY", "CMH PROFESSIONAL GROUP"}
+	sourceDef.Aliases = []string{"CHILDREN'S MERCY CRITICAL CARE TRANSPORT", "CHILDREN'S MERCY HOME CARE", "CHILDREN'S MERCY HOME CARE PHARMACY", "CMH PROFESSIONAL GROUP", "THE CHILDREN'S MERCY HOSPITAL", "THE CHILDRENS MERCY HOSPITAL PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124164082", "1184768293", "1144462029", "1598809600", "1942346804", "1366515488", "1356408520", "1851437719"}}
 	sourceDef.PatientAccessUrl = "https://www.childrensmercy.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

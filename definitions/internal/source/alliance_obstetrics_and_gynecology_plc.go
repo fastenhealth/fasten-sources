@@ -29,6 +29,7 @@ func GetSourceAllianceObstetricsAndGynecologyPlc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Alliance Obstetrics And Gynecology, PLC"
 	sourceDef.SourceType = pkg.SourceTypeAllianceObstetricsAndGynecologyPlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.alliance-obgyn.com/telehealth/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

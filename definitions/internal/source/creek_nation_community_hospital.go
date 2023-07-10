@@ -30,7 +30,7 @@ func GetSourceCreekNationCommunityHospital(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Creek Nation Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCreekNationCommunityHospital
 	sourceDef.Category = []string{"282NC0060X", "207Q00000X", "261QA1903X"}
-	sourceDef.Aliases = []string{"CREEK NATION COMMUNITY HOSPITAL", "EUFAULA INDIAN HEALTH CENTER", "OKEMAH INDIAN HEALTH CENTER", "SAPULPA INDIAN HEALTH CENTER", "KOWETA INDIAN HEALTH CENTER", "OKMULGEE INDIAN HEALTH CENTER", "WETUMKA INDIAN HEALTH CENTER"}
+	sourceDef.Aliases = []string{"CREEK NATION COMMUNITY HOSPITAL", "EUFAULA INDIAN HEALTH CENTER", "KOWETA INDIAN HEALTH CENTER", "OKEMAH INDIAN HEALTH CENTER", "OKMULGEE INDIAN HEALTH CENTER", "SAPULPA INDIAN HEALTH CENTER", "WETUMKA INDIAN HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700890530", "1467053173", "1952065633"}}
 	sourceDef.PatientAccessUrl = "https://www.creekhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

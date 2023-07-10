@@ -28,6 +28,7 @@ func GetSourceBoundaryRegionalCommunityDentalCtr(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Boundary Regional Community Dental Ctr"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryRegionalCommunityDentalCtr
+	sourceDef.PatientAccessUrl = "https://www.boundarycommunityhospital.org/clinics/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

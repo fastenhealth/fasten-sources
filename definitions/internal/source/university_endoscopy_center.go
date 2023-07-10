@@ -31,6 +31,7 @@ func GetSourceUniversityEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"UNIVERSITY ENDOSCOPY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780656801"}}
+	sourceDef.PatientAccessUrl = "https://urphysiciangroup.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

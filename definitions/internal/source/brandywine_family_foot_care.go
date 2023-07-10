@@ -28,6 +28,8 @@ func GetSourceBrandywineFamilyFootCare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Brandywine Family Foot Care"
 	sourceDef.SourceType = pkg.SourceTypeBrandywineFamilyFootCare
+	sourceDef.BrandLogo = "brandywine-family-foot-care.jpg"
+	sourceDef.PatientAccessUrl = "https://www.brandywinefootandankleassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

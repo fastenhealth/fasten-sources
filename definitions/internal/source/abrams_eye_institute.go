@@ -31,6 +31,7 @@ func GetSourceAbramsEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"152WC0802X", "261QS0132X"}
 	sourceDef.Aliases = []string{"ABRAMS EYE INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881611887"}}
+	sourceDef.PatientAccessUrl = "https://www.abramseyeinstitute.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

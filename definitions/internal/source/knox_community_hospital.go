@@ -29,7 +29,7 @@ func GetSourceKnoxCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Knox Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKnoxCommunityHospital
 	sourceDef.Category = []string{"332B00000X", "261Q00000X", "261QU0200X", "332BP3500X", "3336H0001X", "273Y00000X", "207L00000X"}
-	sourceDef.Aliases = []string{"PHYSICIAN PRACTICES", "KNOX COMMUNITY HOSPITAL CENTER FOR REHABILITATION AND WELLNESS", "KCH HOME INFUSION PHARMACY"}
+	sourceDef.Aliases = []string{"KCH HOME INFUSION PHARMACY", "KNOX COMMUNITY HOSPITAL CENTER FOR REHABILITATION AND WELLNESS", "PHYSICIAN PRACTICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386003796", "1801045406", "1003065681", "1003115585", "1144746678", "1205351004", "1861097917", "1083236921", "1679626287", "1770009292"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

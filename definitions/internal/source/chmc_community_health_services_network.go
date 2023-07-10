@@ -30,7 +30,7 @@ func GetSourceChmcCommunityHealthServicesNetwork(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "CHMC Community Health Services Network"
 	sourceDef.SourceType = pkg.SourceTypeChmcCommunityHealthServicesNetwork
 	sourceDef.Category = []string{"208000000X", "103T00000X", "152W00000X", "101Y00000X", "103G00000X", "207LP3000X", "363A00000X", "363L00000X", "364S00000X"}
-	sourceDef.Aliases = []string{"CINCINNATI CHILDREN'S ANDERSON PRIMARY CARE", "CHILDREN'S HEALTH CARE", "CINCINNATI CHILDREN'S MASON-LIBERTY-SPRINGDALE", "CINCINNATI CHILDREN'S FLORENCE PRIMARY CARE"}
+	sourceDef.Aliases = []string{"CHILDREN'S HEALTH CARE", "CINCINNATI CHILDREN'S ANDERSON PRIMARY CARE", "CINCINNATI CHILDREN'S FLORENCE PRIMARY CARE", "CINCINNATI CHILDREN'S MASON-LIBERTY-SPRINGDALE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023637774", "1053464305", "1942801022", "1568069144", "1245821271"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -31,6 +31,7 @@ func GetSourceCarrboroFamilyMedicineCenterPa(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972719698"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://carrborofamilymedicine.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

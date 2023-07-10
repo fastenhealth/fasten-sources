@@ -29,6 +29,7 @@ func GetSourceCharlestonAreaMedicalCenterInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Charleston Area Medical Center, Inc"
 	sourceDef.SourceType = pkg.SourceTypeCharlestonAreaMedicalCenterInc
+	sourceDef.PatientAccessUrl = "https://www.camc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

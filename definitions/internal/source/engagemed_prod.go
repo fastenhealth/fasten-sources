@@ -29,6 +29,7 @@ func GetSourceEngagemedProd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "EngageMED-Prod"
 	sourceDef.SourceType = pkg.SourceTypeEngagemedProd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.engagemed.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

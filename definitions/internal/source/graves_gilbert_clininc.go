@@ -29,6 +29,7 @@ func GetSourceGravesGilbertClininc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Graves Gilbert Clininc"
 	sourceDef.SourceType = pkg.SourceTypeGravesGilbertClininc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gravesgilbert.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

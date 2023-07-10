@@ -28,7 +28,8 @@ func GetSourceFamilyHealthcareOfPotomac(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Family Healthcare Of Potomac"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcareOfPotomac
-	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/family-health-care-of-potomac-9fcac683-0671-e411-99e8-001f29e3eb44"
+	sourceDef.BrandLogo = "family-healthcare-of-potomac.jpg"
+	sourceDef.PatientAccessUrl = "https://www.potomacfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

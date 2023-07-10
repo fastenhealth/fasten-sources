@@ -28,6 +28,7 @@ func GetSourceCottageHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cottage Health"
 	sourceDef.SourceType = pkg.SourceTypeCottageHealth
+	sourceDef.PatientAccessUrl = "https://www.cottagehealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

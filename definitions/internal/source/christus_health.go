@@ -31,6 +31,8 @@ func GetSourceChristusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"302R00000X", "251E00000X", "251G00000X", "261QC0050X", "261QR1300X", "282NC2000X", "283Q00000X", "283X00000X", "314000000X", "315D00000X", "282E00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"US FAMILY HEALTH PLAN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851454102", "1144387572", "1881746030"}}
+	sourceDef.BrandLogo = "christus-health.ashx"
+	sourceDef.PatientAccessUrl = "https://www.christushealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

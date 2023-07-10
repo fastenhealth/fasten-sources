@@ -29,6 +29,7 @@ func GetSourceClintonCountyMedicalCenterPC(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Clinton County Medical Center,P.C."
 	sourceDef.SourceType = pkg.SourceTypeClintonCountyMedicalCenterPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://clintoncountymedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceCoastalNeurologyPA(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QM2500X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750346789"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://coastalneurology.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

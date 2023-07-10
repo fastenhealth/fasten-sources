@@ -29,6 +29,7 @@ func GetSourceIndianolaFamilyMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Indianola Family Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeIndianolaFamilyMedicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.southsunflower.com"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

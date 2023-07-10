@@ -28,6 +28,7 @@ func GetSourceAscensionWisconsin(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Ascension Wisconsin"
 	sourceDef.SourceType = pkg.SourceTypeAscensionWisconsin
+	sourceDef.BrandLogo = "ascension-health.svg"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

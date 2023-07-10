@@ -28,7 +28,11 @@ func GetSourceAlabamaMedicalGroupPC(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Alabama Medical Group, P.C."
 	sourceDef.SourceType = pkg.SourceTypeAlabamaMedicalGroupPC
+	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{"INTERNAL MEDICINE CENTER LLC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841712684"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.alabamamedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

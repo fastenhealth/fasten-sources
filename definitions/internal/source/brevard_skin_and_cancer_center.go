@@ -29,6 +29,7 @@ func GetSourceBrevardSkinAndCancerCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "BREVARD SKIN & CANCER CENTER"
 	sourceDef.SourceType = pkg.SourceTypeBrevardSkinAndCancerCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.brevardskin.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

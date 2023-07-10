@@ -31,6 +31,7 @@ func GetSourceCascadeEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"CASCADE ENDOSCOPY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427028919"}}
+	sourceDef.PatientAccessUrl = "https://cascadeendocenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

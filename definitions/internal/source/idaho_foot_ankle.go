@@ -29,6 +29,8 @@ func GetSourceIdahoFootAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Idaho Foot  Ankle"
 	sourceDef.SourceType = pkg.SourceTypeIdahoFootAnkle
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "idaho-foot-ankle.webp"
+	sourceDef.PatientAccessUrl = "https://www.idahofootandankle.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

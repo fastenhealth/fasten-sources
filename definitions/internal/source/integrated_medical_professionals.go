@@ -29,6 +29,7 @@ func GetSourceIntegratedMedicalProfessionals(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Integrated Medical Professionals"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedMedicalProfessionals
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.imppllc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

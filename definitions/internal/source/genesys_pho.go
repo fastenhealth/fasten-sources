@@ -29,6 +29,7 @@ func GetSourceGenesysPho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "Genesys PHO"
 	sourceDef.SourceType = pkg.SourceTypeGenesysPho
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://genesyspho.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

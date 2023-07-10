@@ -29,6 +29,7 @@ func GetSourceInternalMedicineOfYuma(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Internal Medicine of Yuma"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineOfYuma
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://imyuma.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

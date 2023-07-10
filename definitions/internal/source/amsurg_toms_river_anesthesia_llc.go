@@ -30,7 +30,8 @@ func GetSourceAmsurgTomsRiverAnesthesiaLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeAmsurgTomsRiverAnesthesiaLlc
 	sourceDef.Category = []string{"207L00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285991075"}}
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3LCXHSGDM63AK7YYK7JQN5OR7M2SEB?assignment_id=3OCHAWUVG2HNO8A1055H9SEDB7MXKY&from_queue=true"
+	sourceDef.BrandLogo = "amsurg-willoughby-anesthesia-llc.png"
+	sourceDef.PatientAccessUrl = "https://www.amsurg.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

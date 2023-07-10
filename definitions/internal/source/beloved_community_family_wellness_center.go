@@ -30,6 +30,7 @@ func GetSourceBelovedCommunityFamilyWellnessCenter(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeBelovedCommunityFamilyWellnessCenter
 	sourceDef.Category = []string{"261QC1500X", "261QF0400X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114278009"}}
+	sourceDef.PatientAccessUrl = "https://www.bcfwc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

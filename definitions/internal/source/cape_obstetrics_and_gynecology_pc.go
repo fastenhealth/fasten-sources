@@ -29,6 +29,7 @@ func GetSourceCapeObstetricsAndGynecologyPc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Cape Obstetrics & Gynecology PC"
 	sourceDef.SourceType = pkg.SourceTypeCapeObstetricsAndGynecologyPc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.capecodhealth.org"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

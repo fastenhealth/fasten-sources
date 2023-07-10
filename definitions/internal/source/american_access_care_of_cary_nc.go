@@ -29,7 +29,7 @@ func GetSourceAmericanAccessCareOfCaryNc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "American Access Care Of Cary Nc"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCareOfCaryNc
 	sourceDef.BrandLogo = "american-access-care-of-cary-nc.jpg"
-	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/triangle-vascular-associates/?utm_source=local&utm_medium=organic&utm_campaign=gmb-center-listing&utm_content=website&y_source=1_MzI4MzA4NC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
+	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

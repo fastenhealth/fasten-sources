@@ -29,6 +29,7 @@ func GetSourceBlueRidgeEntAndPlasticSurgeryInc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Blue Ridge Ent & Plastic Surgery Inc"
 	sourceDef.SourceType = pkg.SourceTypeBlueRidgeEntAndPlasticSurgeryInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://blueridgeentps.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

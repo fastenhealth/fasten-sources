@@ -28,6 +28,7 @@ func GetSourceInovaAndValleyHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Inova and Valley Health"
 	sourceDef.SourceType = pkg.SourceTypeInovaAndValleyHealth
+	sourceDef.PatientAccessUrl = "https://www.inovanewsroom.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

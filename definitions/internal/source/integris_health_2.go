@@ -32,6 +32,7 @@ func GetSourceIntegrisHealth2(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"261QR0401X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083065452"}}
 	sourceDef.BrandLogo = "integris-health.png"
+	sourceDef.PatientAccessUrl = "https://integrisok.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

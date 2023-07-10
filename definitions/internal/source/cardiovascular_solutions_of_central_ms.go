@@ -28,7 +28,9 @@ func GetSourceCardiovascularSolutionsOfCentralMs(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Cardiovascular Solutions of Central MS"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularSolutionsOfCentralMs
+	sourceDef.Aliases = []string{"Cardiovascular Solutions of Central Mississippi"}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://padadvocate.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

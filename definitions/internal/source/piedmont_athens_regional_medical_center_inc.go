@@ -29,6 +29,8 @@ func GetSourcePiedmontAthensRegionalMedicalCenterInc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Piedmont Athens Regional Medical Center Inc."
 	sourceDef.SourceType = pkg.SourceTypePiedmontAthensRegionalMedicalCenterInc
+	sourceDef.Category = []string{"333600000X", "3336C0003X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508212390"}}
 	sourceDef.PatientAccessUrl = "https://www.piedmont.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

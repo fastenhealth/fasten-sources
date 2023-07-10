@@ -28,6 +28,7 @@ func GetSourceExcelPhysiciansMedCorp(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Excel Physicians Med Corp"
 	sourceDef.SourceType = pkg.SourceTypeExcelPhysiciansMedCorp
+	sourceDef.BrandLogo = "excel-physicians-med-corp.jpg"
 	sourceDef.PatientAccessUrl = "https://excelmd.info/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

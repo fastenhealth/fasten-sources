@@ -29,6 +29,7 @@ func GetSourceFairhopeInternalMedicine(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Fairhope Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeFairhopeInternalMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://fimpc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceOcoeeRegionalHealthCorporation(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Ocoee Regional Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeOcoeeRegionalHealthCorporation
 	sourceDef.Category = []string{"261QF0400X"}
-	sourceDef.Aliases = []string{"SPRING CITY MIDDLE SCHOOL", "FRAZIER ELEMENTARY SCHOOL", "BENTON ELEMENTARY SCHOOL", "SPRING CITY ELEMENTARY SCHOOL", "RHEA COUNTY MIDDLE SCHOOL", "GRAYSVILLE ELEMENTARY SCHOOL", "COPPER BASIN ELEMENTARY SCHOOL", "SOUTH POLK ELEMENTARY"}
+	sourceDef.Aliases = []string{"BENTON ELEMENTARY SCHOOL", "COPPER BASIN ELEMENTARY SCHOOL", "FRAZIER ELEMENTARY SCHOOL", "GRAYSVILLE ELEMENTARY SCHOOL", "RHEA COUNTY MIDDLE SCHOOL", "SOUTH POLK ELEMENTARY", "SPRING CITY ELEMENTARY SCHOOL", "SPRING CITY MIDDLE SCHOOL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053981415", "1144993171", "1982377941", "1275206229", "1558931915", "1386857381", "1376116541", "1326711383", "1538739909", "1619181484"}}
 	sourceDef.BrandLogo = "ocoee-regional-health-corporation.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"

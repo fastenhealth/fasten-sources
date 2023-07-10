@@ -29,6 +29,7 @@ func GetSourceHamptonRoadsEntAllergy(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Hampton Roads ENT - Allergy"
 	sourceDef.SourceType = pkg.SourceTypeHamptonRoadsEntAllergy
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hamptonroadsent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

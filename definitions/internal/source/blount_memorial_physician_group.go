@@ -28,6 +28,8 @@ func GetSourceBlountMemorialPhysicianGroup(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Blount Memorial Physician Group"
 	sourceDef.SourceType = pkg.SourceTypeBlountMemorialPhysicianGroup
+	sourceDef.BrandLogo = "blount-memorial-physician-group.jpg"
+	sourceDef.PatientAccessUrl = "https://blountmemorial.org/physicians_group"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

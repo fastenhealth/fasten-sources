@@ -28,6 +28,7 @@ func GetSourceCarolinaCaring(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Carolina Caring"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaCaring
+	sourceDef.PatientAccessUrl = "https://www.carolinacaring.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

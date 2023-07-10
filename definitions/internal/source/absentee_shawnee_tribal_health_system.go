@@ -28,7 +28,11 @@ func GetSourceAbsenteeShawneeTribalHealthSystem(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Absentee Shawnee Tribal Health System"
 	sourceDef.SourceType = pkg.SourceTypeAbsenteeShawneeTribalHealthSystem
+	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{"ABSENTEE SHAWNEE TRIBAL HEALTH SYSTEM - SHAWNEE CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942253521"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.asthealth.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceCentralValleyHealthCare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Central Valley Health Care"
 	sourceDef.SourceType = pkg.SourceTypeCentralValleyHealthCare
+	sourceDef.PatientAccessUrl = "http://cvhnclinics.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

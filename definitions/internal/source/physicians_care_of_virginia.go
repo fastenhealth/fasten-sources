@@ -28,7 +28,10 @@ func GetSourcePhysiciansCareOfVirginia(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Physicians Care of Virginia"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansCareOfVirginia
+	sourceDef.Category = []string{"207RC0000X", "207RG0100X", "208600000X", "207RN0300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770688145"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://pavclinics.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

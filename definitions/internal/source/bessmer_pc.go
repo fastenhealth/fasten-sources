@@ -31,6 +31,7 @@ func GetSourceBessmerPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeBessmerPc
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366773954"}}
+	sourceDef.BrandLogo = "bessmer-pc.jpg"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

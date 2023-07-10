@@ -31,6 +31,7 @@ func GetSourceCoddingtonMedicalFamilyPractice(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205264231"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://coddingtonmed.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

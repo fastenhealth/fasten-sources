@@ -31,7 +31,7 @@ func GetSourceExtendedCareClinicalServicesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"EXTENDED CARE CLINICAL SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134741945"}}
-	sourceDef.PatientAccessUrl = "https://na.com"
+	sourceDef.PatientAccessUrl = "https://extendedcarellc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

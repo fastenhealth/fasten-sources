@@ -29,6 +29,7 @@ func GetSourceDelawareHealthNetInc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Delaware Health Net, Inc."
 	sourceDef.SourceType = pkg.SourceTypeDelawareHealthNetInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.delawarehealth.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

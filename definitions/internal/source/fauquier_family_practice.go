@@ -29,6 +29,7 @@ func GetSourceFauquierFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Fauquier Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeFauquierFamilyPractice
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fauquierfp.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

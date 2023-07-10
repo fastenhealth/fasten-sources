@@ -28,6 +28,7 @@ func GetSourceCastellanosFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Castellanos Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeCastellanosFamilyPractice
+	sourceDef.PatientAccessUrl = "https://covinadoctor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceCountyOfIngham(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "County Of Ingham"
 	sourceDef.SourceType = pkg.SourceTypeCountyOfIngham
 	sourceDef.Category = []string{"251K00000X", "261QF0400X"}
-	sourceDef.Aliases = []string{"ALLEN ICHD", "BIRCH ICHD", "EASTERN COMMUNITY HEALTH CENTER", "EVERETT ICHD", "WILLOW COMMUNITY HEALTH CENTER", "WELL CHILD HEALTH CENTER OF INGHAM COUNTY", "SEXTON COMMUNITY HEALTH CENTER", "NEW HOPE COMMUNITY HEALTH CENTER", "GARDNER ICHD"}
+	sourceDef.Aliases = []string{"ALLEN ICHD", "BIRCH ICHD", "EASTERN COMMUNITY HEALTH CENTER", "EVERETT ICHD", "GARDNER ICHD", "NEW HOPE COMMUNITY HEALTH CENTER", "SEXTON COMMUNITY HEALTH CENTER", "WELL CHILD HEALTH CENTER OF INGHAM COUNTY", "WILLOW COMMUNITY HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235854985", "1629523212", "1700431632", "1679120810", "1710386776", "1013299130", "1285007740", "1487930152", "1326560145", "1487201620"}}
 	sourceDef.BrandLogo = "county-of-ingham.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/InghamHealth/"

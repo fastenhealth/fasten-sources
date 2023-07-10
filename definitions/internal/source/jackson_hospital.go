@@ -32,6 +32,7 @@ func GetSourceJacksonHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Aliases = []string{"JACKSON HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275733693", "1518395342", "1538108725", "1649311507", "1306046131", "1043334162"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.jackson.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

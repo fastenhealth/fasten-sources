@@ -29,7 +29,9 @@ func GetSourceDrAmyMorris(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Dr. Amy Morris"
 	sourceDef.SourceType = pkg.SourceTypeDrAmyMorris
-	sourceDef.PatientAccessUrl = "https://centerfordermatology.info"
+	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316914583"}}
+	sourceDef.PatientAccessUrl = "https://patientportal.advancedmd.com/126242/account/logon"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBergenKidneyCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeBergenKidneyCenter
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679770952"}}
+	sourceDef.PatientAccessUrl = "http://bergenkidneycenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceEastAlabamaWomensClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "East Alabama Women's Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEastAlabamaWomensClinic
+	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962501825"}}
 	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/find-a-service/womens-health/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

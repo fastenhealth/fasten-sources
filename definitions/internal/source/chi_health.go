@@ -31,6 +31,8 @@ func GetSourceChiHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Category = []string{"3336C0003X", "163W00000X", "101Y00000X", "103T00000X", "1041C0700X", "133V00000X", "2084P0800X", "208M00000X", "363L00000X", "364S00000X", "207R00000X"}
 	sourceDef.Aliases = []string{"CHI HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598423220", "1033288923"}}
+	sourceDef.BrandLogo = "chi-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.chihealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

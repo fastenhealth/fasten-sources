@@ -31,6 +31,7 @@ func GetSourceCumberlandValleyEntConsultants(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207Y00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649272824"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cventdocs.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

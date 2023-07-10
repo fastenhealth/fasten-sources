@@ -29,7 +29,7 @@ func GetSourceValleyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Valley Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeValleyMedicalCenter
 	sourceDef.Category = []string{"2085R0202X", "282N00000X", "261QR1300X", "283Q00000X", "282E00000X", "207Q00000X"}
-	sourceDef.Aliases = []string{"VALLEY MEDICAL CENTER", "ATRIUM HEALTH NAVICENT PRIMARY CARE FORT VALLEY"}
+	sourceDef.Aliases = []string{"ATRIUM HEALTH NAVICENT PRIMARY CARE FORT VALLEY", "VALLEY MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245230598", "1649209230", "1275775314", "1467699702", "1922363209", "1831543099", "1487376422"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

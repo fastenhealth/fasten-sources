@@ -27,6 +27,7 @@ func GetSourceHighmarkWesternNewYork(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Highmark Western New York"
 	sourceDef.SourceType = pkg.SourceTypeHighmarkWesternNewYork
+	sourceDef.PatientAccessUrl = "https://www.bcbswny.com/"
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

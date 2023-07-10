@@ -29,8 +29,9 @@ func GetSourceAffiniaHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Affinia Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeAffiniaHealthcare
 	sourceDef.Category = []string{"261QF0400X", "3336C0002X", "122300000X"}
-	sourceDef.Aliases = []string{"SALVATION ARMY", "ASPIRE ACADEMY CONFLUENCE CHARTER SCHOOL", "NORMANDY HIGHSCHOOL"}
+	sourceDef.Aliases = []string{"ASPIRE ACADEMY CONFLUENCE CHARTER SCHOOL", "NORMANDY HIGHSCHOOL", "SALVATION ARMY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407393960", "1134134745", "1346634003", "1902816077", "1013925890", "1003392697", "1023584232", "1093723959", "1093731945", "1295252088"}}
+	sourceDef.PatientAccessUrl = "https://affiniahealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

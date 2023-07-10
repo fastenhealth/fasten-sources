@@ -29,7 +29,7 @@ func GetSourcePeachTreeHealthcare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Peach Tree Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePeachTreeHealthcare
 	sourceDef.Category = []string{"171M00000X", "261QF0400X", "213E00000X", "363A00000X", "363L00000X", "207V00000X", "207W00000X", "208000000X", "2084P0800X", "208D00000X", "103T00000X", "1041C0700X", "152W00000X", "171100000X", "207QS0010X", "3336C0003X", "207Q00000X"}
-	sourceDef.Aliases = []string{"PEACH TREE NORTH SACRAMENTO", "PEACH TREE VISION CHICO", "PEACH TREE CLINIC", "PEACH TREE LINDHURST HIGH SCHOOL", "PEACH TREE HEALTH PHARMACY", "PEACH TREE YUBA COUNTY PROBATION", "PEACH TREE CHIROPRACTIC", "LIVE OAK MEDICAL CLINIC"}
+	sourceDef.Aliases = []string{"LIVE OAK MEDICAL CLINIC", "PEACH TREE CHIROPRACTIC", "PEACH TREE CLINIC", "PEACH TREE HEALTH PHARMACY", "PEACH TREE LINDHURST HIGH SCHOOL", "PEACH TREE NORTH SACRAMENTO", "PEACH TREE VISION CHICO", "PEACH TREE YUBA COUNTY PROBATION"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841723327", "1164886040", "1922598226", "1003863622", "1104526664", "1467103358", "1619549383", "1114643871", "1891454468", "1316096894"}}
 	sourceDef.BrandLogo = "peach-tree-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://pickpeach.org/peach-tree-facts-and-figures/"

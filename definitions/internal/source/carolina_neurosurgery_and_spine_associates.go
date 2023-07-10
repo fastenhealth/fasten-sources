@@ -28,6 +28,7 @@ func GetSourceCarolinaNeurosurgeryAndSpineAssociates(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Carolina Neurosurgery & Spine Associates"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaNeurosurgeryAndSpineAssociates
+	sourceDef.PatientAccessUrl = "https://www.cnsa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

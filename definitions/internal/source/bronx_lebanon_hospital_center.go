@@ -29,6 +29,7 @@ func GetSourceBronxLebanonHospitalCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Bronx-Lebanon Hospital Center"
 	sourceDef.SourceType = pkg.SourceTypeBronxLebanonHospitalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.bronxcare.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

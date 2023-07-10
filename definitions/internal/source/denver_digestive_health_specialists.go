@@ -29,6 +29,7 @@ func GetSourceDenverDigestiveHealthSpecialists(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Denver Digestive Health Specialists"
 	sourceDef.SourceType = pkg.SourceTypeDenverDigestiveHealthSpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://denverdigestive.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

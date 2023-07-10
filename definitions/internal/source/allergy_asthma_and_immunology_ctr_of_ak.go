@@ -29,6 +29,7 @@ func GetSourceAllergyAsthmaAndImmunologyCtrOfAk(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Allergy, Asthma & Immunology Ctr Of Ak"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAsthmaAndImmunologyCtrOfAk
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.allergyalaska.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

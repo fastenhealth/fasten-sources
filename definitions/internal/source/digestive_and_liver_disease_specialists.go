@@ -31,6 +31,7 @@ func GetSourceDigestiveAndLiverDiseaseSpecialists(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Category = []string{"207RG0100X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194760553"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.wellstar.org/locations/medical-practice/georgia-gastrointestinal-and-liver-disease-assoc-cartersville-962-joe-frank-harris-parkway-suite-106"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

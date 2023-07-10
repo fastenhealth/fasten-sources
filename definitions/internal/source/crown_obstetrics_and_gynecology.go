@@ -29,6 +29,7 @@ func GetSourceCrownObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Crown Obstetrics & Gynecology"
 	sourceDef.SourceType = pkg.SourceTypeCrownObstetricsAndGynecology
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://crownobgyn.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,9 +29,10 @@ func GetSourceCatholicMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Catholic Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCatholicMedicalCenter
 	sourceDef.Category = []string{"261QF0400X", "261QP2300X", "207R00000X", "251S00000X", "273R00000X", "282N00000X", "1223D0001X", "2086S0129X", "207Q00000X"}
-	sourceDef.Aliases = []string{"HEALTH CARE FOR THE HOMELESS PROGRAM", "CATHOLIC MEDICAL CENTER", "THE DOORWAY OF GREATER MANCHESTER", "POISSON DENTAL FACILITY", "THE SURGICAL CARE GROUP"}
+	sourceDef.Aliases = []string{"CATHOLIC MEDICAL CENTER", "HEALTH CARE FOR THE HOMELESS PROGRAM", "POISSON DENTAL FACILITY", "THE DOORWAY OF GREATER MANCHESTER", "THE SURGICAL CARE GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154984714", "1811236664", "1265487755", "1952008799", "1528150273", "1194733691", "1235370057", "1972559904", "1902900129", "1336245240"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.catholicmedicalcenter.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

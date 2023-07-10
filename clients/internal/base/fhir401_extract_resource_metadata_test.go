@@ -47,6 +47,11 @@ func TestNormalizeReferenceId(t *testing.T) {
 			map[string]string{},
 			"http://example.org/fhir/Observation/1x2/_history/2",
 		},
+		{
+			" https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/Schedule?patient=12345-12345-12345-12345-12345",
+			map[string]string{},
+			" https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/Schedule?patient=12345-12345-12345-12345-12345",
+		},
 	}
 
 	for _, tt := range tests {

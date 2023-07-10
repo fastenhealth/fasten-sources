@@ -28,6 +28,7 @@ func GetSourceCoastalVisionCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Coastal Vision Center"
 	sourceDef.SourceType = pkg.SourceTypeCoastalVisionCenter
+	sourceDef.PatientAccessUrl = "https://coastalvisioncenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

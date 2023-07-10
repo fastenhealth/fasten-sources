@@ -32,6 +32,8 @@ func GetSourceHannibalRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Aliases = []string{"CENTER FAMILY PRACTICE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174585103", "1174671234", "1073532560", "1922356765", "1861632226", "1508155888", "1225382435", "1447307905", "1871892158", "1245510221"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hannibal-regional-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://www.hannibalregional.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

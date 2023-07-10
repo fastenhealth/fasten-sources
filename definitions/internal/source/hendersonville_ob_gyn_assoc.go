@@ -29,6 +29,7 @@ func GetSourceHendersonvilleObGynAssoc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Hendersonville OB GYN Assoc"
 	sourceDef.SourceType = pkg.SourceTypeHendersonvilleObGynAssoc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hvilleobgyn.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

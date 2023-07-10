@@ -28,6 +28,7 @@ func GetSourceBeachObAndGynMedicalGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Beach OB & Gyn Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBeachObAndGynMedicalGroup
+	sourceDef.PatientAccessUrl = "https://www.beachobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

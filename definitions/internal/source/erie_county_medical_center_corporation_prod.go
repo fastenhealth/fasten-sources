@@ -29,6 +29,7 @@ func GetSourceErieCountyMedicalCenterCorporationProd(env pkg.FastenLighthouseEnv
 	sourceDef.Display = "Erie County Medical Center Corporation - Prod"
 	sourceDef.SourceType = pkg.SourceTypeErieCountyMedicalCenterCorporationProd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ecmc.edu/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

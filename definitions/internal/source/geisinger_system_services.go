@@ -29,7 +29,7 @@ func GetSourceGeisingerSystemServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Geisinger System Services"
 	sourceDef.SourceType = pkg.SourceTypeGeisingerSystemServices
-	sourceDef.BrandLogo = "geisinger-system-services.jpg"
+	sourceDef.BrandLogo = "geisinger-health-plan.svg"
 	sourceDef.PatientAccessUrl = "https://www.geisinger.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

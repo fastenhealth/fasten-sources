@@ -28,6 +28,7 @@ func GetSourceForefrontDermatologyWestPC(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Forefront Dermatology-West P.C."
 	sourceDef.SourceType = pkg.SourceTypeForefrontDermatologyWestPC
+	sourceDef.BrandLogo = "forefront-dermatology-s-c.png"
 	sourceDef.PatientAccessUrl = "https://forefrontdermatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

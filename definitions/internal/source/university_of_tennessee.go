@@ -29,7 +29,7 @@ func GetSourceUniversityOfTennessee(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "University Of Tennessee"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTennessee
 	sourceDef.Category = []string{"1223P0221X", "390200000X", "229N00000X", "156FX1700X", "363LF0000X", "282N00000X", "207Q00000X", "225100000X", "1223P0106X", "1223X0400X"}
-	sourceDef.Aliases = []string{"UNIV. OF TN HEALTH SCIENCE CENTER COLLEGE OF NURSING", "DURABLE MEDICAL EQUIPMENT"}
+	sourceDef.Aliases = []string{"DURABLE MEDICAL EQUIPMENT", "UNIV. OF TN HEALTH SCIENCE CENTER COLLEGE OF NURSING"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821164724", "1740577428", "1902278179", "1174221337", "1235666793", "1598767980", "1386735298", "1780686170", "1487723094", "1427420561"}}
 	sourceDef.BrandLogo = "university-of-tennessee.svg"
 	sourceDef.PatientAccessUrl = "https://www.utk.edu/"

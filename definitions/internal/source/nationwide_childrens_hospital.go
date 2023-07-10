@@ -30,6 +30,7 @@ func GetSourceNationwideChildrensHospital(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeNationwideChildrensHospital
 	sourceDef.Category = []string{"332B00000X", "251F00000X", "261QM2500X", "333600000X", "251G00000X", "251E00000X", "3336S0011X", "251S00000X", "2255A2300X", "282NC2000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275198780", "1558702662", "1679977060", "1093370595", "1750946257", "1235866203", "1912606708", "1790169860", "1417403569", "1376099556"}}
+	sourceDef.PatientAccessUrl = "https://mychart.nationwidechildrens.org"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

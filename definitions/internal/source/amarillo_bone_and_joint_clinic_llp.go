@@ -28,6 +28,8 @@ func GetSourceAmarilloBoneAndJointClinicLlp(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Amarillo Bone & Joint Clinic LLP"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloBoneAndJointClinicLlp
+	sourceDef.BrandLogo = "amarillo-bone-and-joint-clinic-llp.svg"
+	sourceDef.PatientAccessUrl = "https://amarilloboneandjoint.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

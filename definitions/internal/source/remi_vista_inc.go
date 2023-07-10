@@ -30,7 +30,7 @@ func GetSourceRemiVistaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Remi Vista, Inc."
 	sourceDef.SourceType = pkg.SourceTypeRemiVistaInc
 	sourceDef.Category = []string{"171M00000X", "251B00000X", "320800000X", "322D00000X", "251S00000X", "104100000X", "106H00000X"}
-	sourceDef.Aliases = []string{"REMI VISTA INC. TEHAMA COUNTY", "REMI VISTA INC."}
+	sourceDef.Aliases = []string{"REMI VISTA INC.", "REMI VISTA INC. TEHAMA COUNTY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508479643", "1134702327", "1982007076", "1023556701", "1982234787", "1861904815", "1578516175", "1194913459"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,7 @@ func GetSourceFirstCoastHeartAndVascularCenterPa(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "First Coast Heart and Vascular Center PA"
 	sourceDef.SourceType = pkg.SourceTypeFirstCoastHeartAndVascularCenterPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.firstcoastheart.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

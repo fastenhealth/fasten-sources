@@ -29,6 +29,8 @@ func GetSourceCarolinaEntHeadAndNeckSurgeryCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Carolina ENT Head and Neck Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaEntHeadAndNeckSurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "carolina-ent-head-and-neck-surgery-center.svg"
+	sourceDef.PatientAccessUrl = "https://easterncarolinaent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

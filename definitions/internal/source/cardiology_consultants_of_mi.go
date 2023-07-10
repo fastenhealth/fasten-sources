@@ -29,6 +29,7 @@ func GetSourceCardiologyConsultantsOfMi(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Cardiology Consultants of MI"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyConsultantsOfMi
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ccemonline.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

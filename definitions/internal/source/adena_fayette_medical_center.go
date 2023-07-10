@@ -32,6 +32,8 @@ func GetSourceAdenaFayetteMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Aliases = []string{"ADENA HEALTH CENTER - FAYETTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508978677", "1013220805"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "adena-fayette-medical-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.adena.org/locations/adena-fayette-medical-center"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

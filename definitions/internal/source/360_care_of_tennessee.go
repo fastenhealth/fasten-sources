@@ -28,7 +28,8 @@ func GetSource360CareOfTennessee(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "360care Of Tennessee"
 	sourceDef.SourceType = pkg.SourceType360CareOfTennessee
-	sourceDef.PatientAccessUrl = "https://www.ihca.org/vendor/360care/"
+	sourceDef.BrandLogo = "360care-of-delaware.png"
+	sourceDef.PatientAccessUrl = "https://360care.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -31,6 +31,8 @@ func GetSourceChicoEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{"CHICO EYE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093756496"}}
+	sourceDef.BrandLogo = "chico-eye-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.chicoeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

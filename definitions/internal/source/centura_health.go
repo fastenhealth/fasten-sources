@@ -31,6 +31,8 @@ func GetSourceCenturaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"282N00000X", "261QP2300X", "261QU0200X", "261QE0002X"}
 	sourceDef.Aliases = []string{"CENTURA HEALTH EMERGENCY AND URGENT CARE - LAKEWOOD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922342625", "1568907905", "1912200718", "1013544014"}}
+	sourceDef.BrandLogo = "centura-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.centura.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

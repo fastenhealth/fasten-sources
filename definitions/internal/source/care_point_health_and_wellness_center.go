@@ -29,6 +29,7 @@ func GetSourceCarePointHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Care Point Health & Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeCarePointHealthAndWellnessCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://carepointwellness.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

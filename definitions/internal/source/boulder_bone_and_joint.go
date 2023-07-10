@@ -31,6 +31,7 @@ func GetSourceBoulderBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{"BOULDER BONE AND JOINT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588849301"}}
+	sourceDef.PatientAccessUrl = "http://boulderboneandjoint.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

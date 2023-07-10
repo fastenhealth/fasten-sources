@@ -28,7 +28,7 @@ func GetSourceAccessCenterOfIndiana(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Access Center Of Indiana"
 	sourceDef.SourceType = pkg.SourceTypeAccessCenterOfIndiana
-	sourceDef.PatientAccessUrl = "https://www.achn.net/?&matchtype=b&network=g&device=c&adposition=&keyword=access%20community%20health%20centers&gclid=CjwKCAiAxP2eBhBiEiwA5puhNYLHETMqupTAsAk1kh5f3Krvo8a3UeaKfrLuu9iwomjuKUQYLODwfxoCRaUQAvD_BwE"
+	sourceDef.PatientAccessUrl = "https://www.achn.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceBiltmoreMedicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Biltmore Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeBiltmoreMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.biltmoremedical.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

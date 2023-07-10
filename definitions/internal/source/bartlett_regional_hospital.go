@@ -30,7 +30,7 @@ func GetSourceBartlettRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Bartlett Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBartlettRegionalHospital
 	sourceDef.Category = []string{"282N00000X", "261QR0405X", "324500000X", "251S00000X", "261QM1300X", "261QM0801X", "333600000X", "207P00000X", "208600000X", "273R00000X"}
-	sourceDef.Aliases = []string{"HEALTH MATTERS", "1115 SUD WAIVER", "RAINFOREST RECOVERY CENTER", "SOUTHEAST PHYSICIANS SERVICES", "1115 MH WAIVER", "SOUTHEAST PHYSICIAN SERVICES", "BARTLETT REGIONAL HOSPITAL PHARMACY"}
+	sourceDef.Aliases = []string{"1115 MH WAIVER", "1115 SUD WAIVER", "BARTLETT REGIONAL HOSPITAL PHARMACY", "HEALTH MATTERS", "RAINFOREST RECOVERY CENTER", "SOUTHEAST PHYSICIAN SERVICES", "SOUTHEAST PHYSICIANS SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326506767", "1598397911", "1891849261", "1154331734", "1184778698", "1851921118", "1356918999", "1255477063", "1508044835", "1235283607"}}
 	sourceDef.PatientAccessUrl = "https://www.bartletthospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

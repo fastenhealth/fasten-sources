@@ -31,6 +31,7 @@ func GetSourceEyeInstituteAtBoswell(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"EYE INSTITUTE AT BOSWELL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578535233"}}
+	sourceDef.PatientAccessUrl = "https://eyeinstituteboswell.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

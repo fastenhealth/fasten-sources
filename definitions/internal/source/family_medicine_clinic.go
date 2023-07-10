@@ -29,7 +29,7 @@ func GetSourceFamilyMedicineClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Family Medicine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicineClinic
 	sourceDef.Category = []string{"207Q00000X", "207QG0300X", "207QS0010X", "302R00000X", "286500000X", "208D00000X", "363A00000X"}
-	sourceDef.Aliases = []string{"OCHSNER ACADIA GENERAL HEALTH CENTER - CROWLEY", "FAMILY MEDICINE CLINIC"}
+	sourceDef.Aliases = []string{"FAMILY MEDICINE CLINIC", "OCHSNER ACADIA GENERAL HEALTH CENTER - CROWLEY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164645479", "1811653686", "1114109923", "1124026489", "1750563276", "1588753453", "1841868965", "1760675698", "1992023642"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

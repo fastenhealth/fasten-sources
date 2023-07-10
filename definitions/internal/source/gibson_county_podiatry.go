@@ -29,8 +29,8 @@ func GetSourceGibsonCountyPodiatry(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Gibson County Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeGibsonCountyPodiatry
-	sourceDef.BrandLogo = "gibson-county-podiatry.jpg"
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/30F94FBDO4HDS4ZTZGMQW2ES603TBL?assignment_id=3FQ5JJ512ZLICEWXYZI8BQNFFDVNKX&from_queue=true"
+	sourceDef.BrandLogo = "gibson-county-podiatry.gif"
+	sourceDef.PatientAccessUrl = "http://gibsoncountypodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -32,6 +32,7 @@ func GetSourceAffiliatedEndoscopyServicesOfClifton(env pkg.FastenLighthouseEnvTy
 	sourceDef.Aliases = []string{"AFFILIATED ENDOSCOPY SERVICES OF CLIFTON"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609803204"}}
 	sourceDef.BrandLogo = "affiliated-endoscopy-services-of-clifton.jpg"
+	sourceDef.PatientAccessUrl = "https://affiliatedendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

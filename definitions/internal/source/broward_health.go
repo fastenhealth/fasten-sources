@@ -30,6 +30,7 @@ func GetSourceBrowardHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeBrowardHealth
 	sourceDef.Category = []string{"282NR1301X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215353933"}}
+	sourceDef.PatientAccessUrl = "https://www.browardhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

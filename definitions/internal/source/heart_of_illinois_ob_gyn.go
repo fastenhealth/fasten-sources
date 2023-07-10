@@ -28,6 +28,7 @@ func GetSourceHeartOfIllinoisObGyn(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Heart Of Illinois OB GYN"
 	sourceDef.SourceType = pkg.SourceTypeHeartOfIllinoisObGyn
+	sourceDef.BrandLogo = "heart-of-illinois-ob-gyn.svg"
 	sourceDef.PatientAccessUrl = "https://hoiobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

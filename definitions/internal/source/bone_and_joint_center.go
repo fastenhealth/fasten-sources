@@ -32,6 +32,7 @@ func GetSourceBoneAndJointCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Aliases = []string{"BONE & JOINT CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326281494"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://hollandboneandjoint.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

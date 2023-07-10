@@ -28,7 +28,7 @@ func GetSourceAthleticoNortheast(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Athletico Northeast"
 	sourceDef.SourceType = pkg.SourceTypeAthleticoNortheast
-	sourceDef.BrandLogo = "athletico-northeast.svg"
+	sourceDef.BrandLogo = "athletico-south-central.jpg"
 	sourceDef.PatientAccessUrl = "https://www.athletico.com/locations/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

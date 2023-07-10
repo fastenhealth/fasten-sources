@@ -28,6 +28,8 @@ func GetSourceDiabetesAndThyroidCenterOfFtWorth(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Diabetes & Thyroid Center Of Ft. Worth"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndThyroidCenterOfFtWorth
+	sourceDef.Category = []string{"207RE0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326373143"}}
 	sourceDef.PatientAccessUrl = "https://www.dtc-fw.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

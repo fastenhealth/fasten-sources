@@ -31,6 +31,7 @@ func GetSourceUnitypointHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"261Q00000X", "261QM0801X"}
 	sourceDef.Aliases = []string{"UNITYPOINT HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538541362", "1336770460"}}
+	sourceDef.PatientAccessUrl = "https://www.unitypoint.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

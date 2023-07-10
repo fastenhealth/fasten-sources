@@ -29,6 +29,7 @@ func GetSourceAccentFamilyHealthcare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Accent Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeAccentFamilyHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.accentfamilyhlth.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

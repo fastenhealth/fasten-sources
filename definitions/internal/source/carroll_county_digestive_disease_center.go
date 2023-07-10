@@ -31,6 +31,7 @@ func GetSourceCarrollCountyDigestiveDiseaseCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Category = []string{"261QE0800X"}
 	sourceDef.Aliases = []string{"CARROLL COUNTY DIGESTIVE DISEASE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386614832"}}
+	sourceDef.PatientAccessUrl = "https://carrolldigestivediseasecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -30,7 +30,7 @@ func GetSourceKittitasValleyHealthcare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Kittitas Valley Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeKittitasValleyHealthcare
 	sourceDef.Category = []string{"282NC0060X", "275N00000X", "273Y00000X"}
-	sourceDef.Aliases = []string{"KITTITAS VALLEY HEALTHCARE", "KITTITAS VALLEY COMMUNITY HOSPITAL"}
+	sourceDef.Aliases = []string{"KITTITAS VALLEY COMMUNITY HOSPITAL", "KITTITAS VALLEY HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356375307", "1033139431"}}
 	sourceDef.PatientAccessUrl = "https://www.kvhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

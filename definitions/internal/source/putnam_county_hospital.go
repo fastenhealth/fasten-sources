@@ -29,7 +29,7 @@ func GetSourcePutnamCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Putnam County Hospital"
 	sourceDef.SourceType = pkg.SourceTypePutnamCountyHospital
 	sourceDef.Category = []string{"314000000X", "313M00000X", "261QR1300X", "332B00000X"}
-	sourceDef.Aliases = []string{"THE WATERS OF SCOTTSBURG", "CENTURY VILLA HEALTH CARE", "ELWOOD HEALTH AND LIVING", "RANDOLPH NURSING HOME"}
+	sourceDef.Aliases = []string{"CENTURY VILLA HEALTH CARE", "ELWOOD HEALTH AND LIVING", "RANDOLPH NURSING HOME", "THE WATERS OF SCOTTSBURG"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972863421", "1114986924", "1699833129", "1932449154", "1164782942", "1295874097", "1518068881", "1578621389", "1376601559", "1841285913"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

@@ -29,6 +29,7 @@ func GetSourceJacksonvilleBrainAndSpinePllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Jacksonville Brain and Spine Pllc"
 	sourceDef.SourceType = pkg.SourceTypeJacksonvilleBrainAndSpinePllc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://jacksonvillebrainandspine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

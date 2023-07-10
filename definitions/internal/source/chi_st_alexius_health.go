@@ -29,8 +29,9 @@ func GetSourceChiStAlexiusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "CHI St. Alexius Health"
 	sourceDef.SourceType = pkg.SourceTypeChiStAlexiusHealth
 	sourceDef.Category = []string{"261QR1300X", "133V00000X", "367500000X", "261QA1903X", "282N00000X"}
-	sourceDef.Aliases = []string{"CHI ST. ALEXIUS HEALTH TURTLE LAKE", "CHI ST. ALEXIUS HEALTH TURTLE LAKE CLINIC", "CHI ST. ALEXIUS HEALTH"}
+	sourceDef.Aliases = []string{"CHI ST. ALEXIUS HEALTH", "CHI ST. ALEXIUS HEALTH TURTLE LAKE", "CHI ST. ALEXIUS HEALTH TURTLE LAKE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336708536", "1629121074", "1306832654"}}
+	sourceDef.PatientAccessUrl = "https://www.chistalexiushealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceChurnCreekHealthCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Churn Creek Health Care"
 	sourceDef.SourceType = pkg.SourceTypeChurnCreekHealthCare
+	sourceDef.PatientAccessUrl = "https://www.rrths.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

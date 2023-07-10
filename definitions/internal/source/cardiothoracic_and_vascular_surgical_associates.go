@@ -29,6 +29,7 @@ func GetSourceCardiothoracicAndVascularSurgicalAssociates(env pkg.FastenLighthou
 	sourceDef.Display = "Cardiothoracic And Vascular Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeCardiothoracicAndVascularSurgicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://ctvsjax.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

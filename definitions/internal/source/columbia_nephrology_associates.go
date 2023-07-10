@@ -29,6 +29,7 @@ func GetSourceColumbiaNephrologyAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Columbia Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaNephrologyAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://columbianephrology.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

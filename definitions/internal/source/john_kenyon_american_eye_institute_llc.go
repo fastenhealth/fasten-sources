@@ -29,7 +29,7 @@ func GetSourceJohnKenyonAmericanEyeInstituteLlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "John Kenyon American Eye Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeJohnKenyonAmericanEyeInstituteLlc
 	sourceDef.Category = []string{"152W00000X", "207WX0009X", "207WX0107X", "207W00000X"}
-	sourceDef.Aliases = []string{"JOHN KENYON AMERICAN EYE INSTITUTE PC", "AMERICAN EYE INSTITUTE PC"}
+	sourceDef.Aliases = []string{"AMERICAN EYE INSTITUTE PC", "JOHN KENYON AMERICAN EYE INSTITUTE PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447259510"}}
 	sourceDef.PatientAccessUrl = "https://www.johnkenyon.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

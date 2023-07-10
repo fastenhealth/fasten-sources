@@ -28,6 +28,8 @@ func GetSourceUnitedMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "United Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUnitedMedicalCenter
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346372240"}}
 	sourceDef.BrandLogo = "united-medical-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://umchealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

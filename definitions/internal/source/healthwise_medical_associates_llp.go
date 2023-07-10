@@ -29,6 +29,7 @@ func GetSourceHealthwiseMedicalAssociatesLlp(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Healthwise Medical Associates LLP"
 	sourceDef.SourceType = pkg.SourceTypeHealthwiseMedicalAssociatesLlp
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.healthwiseny.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

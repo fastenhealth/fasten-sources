@@ -28,6 +28,9 @@ func GetSourceFoothillCardiologyMedicalGroupInc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Foothill Cardiology Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeFoothillCardiologyMedicalGroupInc
+	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{"FOOTHILL CARDIOLOGY CALIFORNIA HEART MEDICAL GROUP INC."}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255382545"}}
 	sourceDef.PatientAccessUrl = "http://foothillcardiology.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

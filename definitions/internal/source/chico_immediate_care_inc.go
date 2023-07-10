@@ -29,6 +29,7 @@ func GetSourceChicoImmediateCareInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Chico Immediate Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeChicoImmediateCareInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.chicoicmc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

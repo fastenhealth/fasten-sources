@@ -29,6 +29,7 @@ func GetSourceGynobAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "GynOb Assoc"
 	sourceDef.SourceType = pkg.SourceTypeGynobAssoc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://gynobassociates.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceHarnettHealthSystems(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Harnett Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeHarnettHealthSystems
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "harnett-health-systems.jpg"
+	sourceDef.PatientAccessUrl = "https://myharnetthealth.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

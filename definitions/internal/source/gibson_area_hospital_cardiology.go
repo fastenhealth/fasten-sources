@@ -31,7 +31,7 @@ func GetSourceGibsonAreaHospitalCardiology(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{"GIBSON AREA HOSPITAL CARDIOLOGY", "GIBSON AREA HOSPITAL CARDIOLOGY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134540750"}}
-	sourceDef.BrandLogo = "gibson-area-hospital-cardiology.jpg"
+	sourceDef.BrandLogo = "gibson-area-family-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

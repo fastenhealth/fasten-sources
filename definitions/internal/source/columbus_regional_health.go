@@ -28,6 +28,7 @@ func GetSourceColumbusRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Columbus Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeColumbusRegionalHealth
+	sourceDef.PatientAccessUrl = "https://www.crh.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,10 @@ func GetSourceUspiJacksonvilleEndoscopy(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "USPI Jacksonville Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeUspiJacksonvilleEndoscopy
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"JACKSONVILLE CENTER FOR ENDOSCOPY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366982845"}}
+	sourceDef.PatientAccessUrl = "https://www.jacksonvilleendoscopy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

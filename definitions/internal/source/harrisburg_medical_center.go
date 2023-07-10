@@ -32,6 +32,7 @@ func GetSourceHarrisburgMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Aliases = []string{"HARRISBURG MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487655981"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://harrisburgmc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

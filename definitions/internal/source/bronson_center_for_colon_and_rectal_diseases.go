@@ -29,6 +29,7 @@ func GetSourceBronsonCenterForColonAndRectalDiseases(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Bronson Center for Colon & Rectal Diseases"
 	sourceDef.SourceType = pkg.SourceTypeBronsonCenterForColonAndRectalDiseases
+	sourceDef.PatientAccessUrl = "https://www.bronsonhealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

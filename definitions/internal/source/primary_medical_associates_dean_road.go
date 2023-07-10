@@ -29,6 +29,8 @@ func GetSourcePrimaryMedicalAssociatesDeanRoad(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Primary Medical Associates Dean Road"
 	sourceDef.SourceType = pkg.SourceTypePrimaryMedicalAssociatesDeanRoad
+	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407099286"}}
 	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/location/primary-medicine-associates-auburn"
 	sourceDef.SecretKeyPrefix = "cerner"
 

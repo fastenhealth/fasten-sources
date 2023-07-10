@@ -28,6 +28,7 @@ func GetSourceChesapeakeWomensCarePA(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Chesapeake Women's Care P.A."
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeWomensCarePA
+	sourceDef.PatientAccessUrl = "https://chesapeakewomenscare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceChelmsfordPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeChelmsfordPediatrics
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316017536"}}
+	sourceDef.PatientAccessUrl = "https://www.chelmsfordpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

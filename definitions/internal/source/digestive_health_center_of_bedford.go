@@ -29,8 +29,9 @@ func GetSourceDigestiveHealthCenterOfBedford(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Digestive Health Center Of Bedford"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthCenterOfBedford
 	sourceDef.Category = []string{"261QA1903X"}
-	sourceDef.Aliases = []string{"DIGESTIVE HEALTH CENTER OF BEDFORD"}
+	sourceDef.Aliases = []string{"CENTRAL PARK ENDOSCOPY CENTER LLC", "DIGESTIVE HEALTH CENTER OF BEDFORD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902875438"}}
+	sourceDef.PatientAccessUrl = "https://www.dhcoftx.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

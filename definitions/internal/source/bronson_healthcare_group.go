@@ -28,6 +28,7 @@ func GetSourceBronsonHealthcareGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Bronson Healthcare Group"
 	sourceDef.SourceType = pkg.SourceTypeBronsonHealthcareGroup
+	sourceDef.PatientAccessUrl = "https://www.bronsonhealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

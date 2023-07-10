@@ -29,6 +29,7 @@ func GetSourceBoyleHeightsNephrology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Boyle Heights Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeBoyleHeightsNephrology
+	sourceDef.PatientAccessUrl = "http://www.boyleheightsnephrology.com/index.php"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

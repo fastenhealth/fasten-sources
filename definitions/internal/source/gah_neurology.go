@@ -29,8 +29,9 @@ func GetSourceGahNeurology(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "GAH Neurology"
 	sourceDef.SourceType = pkg.SourceTypeGahNeurology
 	sourceDef.Category = []string{"2084N0400X"}
-	sourceDef.Aliases = []string{"GIBSON AREA HOSPITAL NEUROLOGY CLINIC", "GAH NEUROLOGY"}
+	sourceDef.Aliases = []string{"GAH NEUROLOGY", "GIBSON AREA HOSPITAL NEUROLOGY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558941195"}}
+	sourceDef.BrandLogo = "gah-cosmedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-area-hospital"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

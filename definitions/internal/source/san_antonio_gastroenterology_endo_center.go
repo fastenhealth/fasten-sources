@@ -28,6 +28,7 @@ func GetSourceSanAntonioGastroenterologyEndoCenter(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "San Antonio Gastroenterology Endo Center"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioGastroenterologyEndoCenter
+	sourceDef.PatientAccessUrl = "https://www.sagastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

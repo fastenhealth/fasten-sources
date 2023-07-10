@@ -32,6 +32,7 @@ func GetSourceCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Aliases = []string{"CURE 4 THE KIDS FOUNDATION"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033820980", "1013292689"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://cure4thekids.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

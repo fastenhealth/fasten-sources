@@ -29,6 +29,7 @@ func GetSourceGreaterHoustonNeurosurgeryCenter(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Greater Houston Neurosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGreaterHoustonNeurosurgeryCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://ghnc.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

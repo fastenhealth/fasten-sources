@@ -28,6 +28,7 @@ func GetSourceCardiovascularMedicinePc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Cardiovascular Medicine PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularMedicinePc
+	sourceDef.PatientAccessUrl = "https://www.cvmedpc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

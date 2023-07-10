@@ -29,7 +29,7 @@ func GetSourceJeffersonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Jefferson Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeJeffersonRegionalMedicalCenter
 	sourceDef.Category = []string{"333600000X", "3336C0002X", "3336I0012X", "273R00000X", "273Y00000X", "282N00000X", "314000000X", "3336C0003X", "101YP2500X", "103T00000X", "1041C0700X", "2084P0800X"}
-	sourceDef.Aliases = []string{"JEFFERSON REGIONAL MEDICAL CENTER", "JEFFERSON HOSPITAL COUNSELING SERVICES"}
+	sourceDef.Aliases = []string{"JEFFERSON HOSPITAL COUNSELING SERVICES", "JEFFERSON REGIONAL MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316481989", "1710931985", "1336117787", "1821104753", "1851421861", "1366488108", "1891763249", "1467531038", "1962748913", "1578560504"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

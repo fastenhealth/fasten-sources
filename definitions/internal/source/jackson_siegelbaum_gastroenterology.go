@@ -29,6 +29,7 @@ func GetSourceJacksonSiegelbaumGastroenterology(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Jackson Siegelbaum Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeJacksonSiegelbaumGastroenterology
+	sourceDef.BrandLogo = "jackson-siegelbaum-gastroenterology.svg"
 	sourceDef.PatientAccessUrl = "https://www.gicare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

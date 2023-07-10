@@ -31,6 +31,7 @@ func GetSourceCaduceusCorporation(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207RP1001X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295785848"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.caduceuscorporation.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

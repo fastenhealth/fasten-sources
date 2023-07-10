@@ -29,6 +29,8 @@ func GetSourceCentersForAdvancedEntCareSiegelBosworthAndSorensenDivision(env pkg
 	sourceDef.Display = "Centers for Advanced ENT Care - Siegel Bosworth and Sorensen Division"
 	sourceDef.SourceType = pkg.SourceTypeCentersForAdvancedEntCareSiegelBosworthAndSorensenDivision
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "centers-for-advanced-ent-care-siegel-bosworth-and-sorensen-division.jpg"
+	sourceDef.PatientAccessUrl = "https://ent-md.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

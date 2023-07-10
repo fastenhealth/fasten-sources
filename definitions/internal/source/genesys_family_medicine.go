@@ -29,6 +29,7 @@ func GetSourceGenesysFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Genesys Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeGenesysFamilyMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://genesysfamilymed.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBostonEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QE0800X"}
 	sourceDef.Aliases = []string{"BOSTON ENDOSCOPY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477802387"}}
+	sourceDef.PatientAccessUrl = "https://bostonendoscopycenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

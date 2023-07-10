@@ -30,7 +30,7 @@ func GetSourceDavisCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Davis County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDavisCountyHospital
 	sourceDef.Category = []string{"275N00000X", "261QR1300X", "174400000X", "282NC0060X", "314000000X", "251E00000X"}
-	sourceDef.Aliases = []string{"DAVIS COUNTY HOSPITAL SWING BED", "DAVIS COUNTY MEDICAL ASSOCIATES", "DAVIS COUTNY HOSPITAL PHYSICIAN GROUP", "DAVIS COUNTY HOSPITAL SKILLED CARE", "DAVIS COUNTY HOSPITAL HOME AND COMMUNITY HEALTH"}
+	sourceDef.Aliases = []string{"DAVIS COUNTY HOSPITAL HOME AND COMMUNITY HEALTH", "DAVIS COUNTY HOSPITAL SKILLED CARE", "DAVIS COUNTY HOSPITAL SWING BED", "DAVIS COUNTY MEDICAL ASSOCIATES", "DAVIS COUTNY HOSPITAL PHYSICIAN GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477508190", "1821413667", "1487740486", "1942255666", "1437102068", "1942253570"}}
 	sourceDef.PatientAccessUrl = "https://www.dchc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

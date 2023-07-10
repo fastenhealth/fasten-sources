@@ -28,7 +28,9 @@ func GetSourceAllergyAssocOfNh(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Allergy Assoc Of NH"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAssocOfNh
+	sourceDef.Aliases = []string{"Allergy Associates of New Hampshire"}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.allergiesnh.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

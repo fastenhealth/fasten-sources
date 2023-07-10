@@ -28,6 +28,7 @@ func GetSourceChildCardiologyAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Child Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeChildCardiologyAssociates
+	sourceDef.PatientAccessUrl = "https://www.inova.org/locations/inova-childrens-cardiology-fairfax"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

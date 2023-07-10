@@ -28,6 +28,8 @@ func GetSourceChurchHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Church Health"
 	sourceDef.SourceType = pkg.SourceTypeChurchHealth
+	sourceDef.BrandLogo = "church-health.svg"
+	sourceDef.PatientAccessUrl = "https://churchhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

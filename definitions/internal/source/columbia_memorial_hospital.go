@@ -30,7 +30,7 @@ func GetSourceColumbiaMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Columbia Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaMemorialHospital
 	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207RC0000X", "207RE0101X", "207RX0202X", "207V00000X", "207X00000X", "208C00000X", "282NC0060X", "261QR1300X", "207RP1001X", "207RH0003X", "207Y00000X", "208000000X", "208800000X", "208D00000X", "261QC0050X", "208600000X"}
-	sourceDef.Aliases = []string{"COLUMBIA MEMORIAL HOSPITAL", "CMH ASTORIA PRIMARY CARE CLINIC"}
+	sourceDef.Aliases = []string{"CMH ASTORIA PRIMARY CARE CLINIC", "COLUMBIA MEMORIAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437694288", "1093294571", "1821254129", "1134146939", "1932814704"}}
 	sourceDef.BrandLogo = "columbia-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.columbiamemorial.org/"

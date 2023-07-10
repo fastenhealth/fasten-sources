@@ -32,6 +32,7 @@ func GetSourceCentralJerseyHandSurgery(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Aliases = []string{"NEW JERSEY HAND SURGERY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407255045", "1881017739", "1528052446"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.centraljerseyhand.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

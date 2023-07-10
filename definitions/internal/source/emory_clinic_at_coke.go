@@ -29,6 +29,7 @@ func GetSourceEmoryClinicAtCoke(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Emory Clinic at Coke"
 	sourceDef.SourceType = pkg.SourceTypeEmoryClinicAtCoke
+	sourceDef.BrandLogo = "emory-healthcare.png"
 	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/locations/offices/emory-clinic-at-coca-cola.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -31,6 +31,8 @@ func GetSourceCareResource(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"251S00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"CARE RESOURCE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053311373", "1891102224"}}
+	sourceDef.BrandLogo = "care-resource.svg"
+	sourceDef.PatientAccessUrl = "https://careresource.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

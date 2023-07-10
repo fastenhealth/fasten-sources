@@ -31,6 +31,7 @@ func GetSourceFriendsOfFamilyHealthCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"261QF0400X", "208000000X", "363LF0000X", "1223P0221X", "207R00000X", "363LP0200X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922489665", "1871818138", "1982334579", "1023748571", "1003546342", "1124758727", "1124758883"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://fofhealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

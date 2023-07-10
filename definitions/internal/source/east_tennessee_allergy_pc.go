@@ -29,6 +29,8 @@ func GetSourceEastTennesseeAllergyPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "East Tennessee Allergy, PC"
 	sourceDef.SourceType = pkg.SourceTypeEastTennesseeAllergyPc
+	sourceDef.Category = []string{"207K00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033213764"}}
 	sourceDef.PatientAccessUrl = "https://et-ents.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

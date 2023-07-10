@@ -31,6 +31,7 @@ func GetSourceDerryMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QR0200X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992834568"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dmcprimarycare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

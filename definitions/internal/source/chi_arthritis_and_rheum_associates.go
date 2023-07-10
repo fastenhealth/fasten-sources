@@ -28,6 +28,7 @@ func GetSourceChiArthritisAndRheumAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Chi Arthritis And Rheum Associates"
 	sourceDef.SourceType = pkg.SourceTypeChiArthritisAndRheumAssociates
+	sourceDef.PatientAccessUrl = "https://chiarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

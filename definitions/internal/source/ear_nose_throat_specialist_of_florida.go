@@ -29,6 +29,8 @@ func GetSourceEarNoseThroatSpecialistOfFlorida(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Ear Nose  Throat Specialist of Florida"
 	sourceDef.SourceType = pkg.SourceTypeEarNoseThroatSpecialistOfFlorida
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ear-nose-throat-specialist-of-florida.jpg"
+	sourceDef.PatientAccessUrl = "https://entfl.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

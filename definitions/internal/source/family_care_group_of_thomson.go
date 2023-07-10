@@ -29,6 +29,7 @@ func GetSourceFamilyCareGroupOfThomson(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Family Care Group of Thomson"
 	sourceDef.SourceType = pkg.SourceTypeFamilyCareGroupOfThomson
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://familycaregroup.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

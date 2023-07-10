@@ -29,6 +29,8 @@ func GetSourceHeritageMedicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Heritage Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeHeritageMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "heritage-medical-associates-pa.png"
+	sourceDef.PatientAccessUrl = "https://www.heritagemedical.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

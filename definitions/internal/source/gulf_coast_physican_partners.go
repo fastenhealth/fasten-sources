@@ -29,6 +29,7 @@ func GetSourceGulfCoastPhysicanPartners(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Gulf Coast Physican Partners"
 	sourceDef.SourceType = pkg.SourceTypeGulfCoastPhysicanPartners
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gcpp.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

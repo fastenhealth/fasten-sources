@@ -29,6 +29,8 @@ func GetSourceCapeRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Cape Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCapeRegionalMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "cape-regional-medical-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.caperegional.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

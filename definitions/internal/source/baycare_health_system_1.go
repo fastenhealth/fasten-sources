@@ -31,6 +31,8 @@ func GetSourceBaycareHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBaycareHealthSystem1
 	sourceDef.Category = []string{"261Q00000X", "282N00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902146947", "1669453171"}}
+	sourceDef.BrandLogo = "baycare-health-system.svg"
+	sourceDef.PatientAccessUrl = "https://baycare.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

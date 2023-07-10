@@ -27,6 +27,7 @@ func GetSourceHealthyBlueMo(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Healthy Blue MO"
 	sourceDef.SourceType = pkg.SourceTypeHealthyBlueMo
+	sourceDef.PatientAccessUrl = "https://www.healthybluemo.com"
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

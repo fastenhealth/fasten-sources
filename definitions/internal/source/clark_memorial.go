@@ -29,6 +29,8 @@ func GetSourceClarkMemorial(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Clark Memorial"
 	sourceDef.SourceType = pkg.SourceTypeClarkMemorial
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "clark-memorial.svg"
+	sourceDef.PatientAccessUrl = "https://www.clarkmemorial.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,7 +28,7 @@ func GetSourceGreaterPhiladelphiaHealthActionInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Greater Philadelphia Health Action Inc"
 	sourceDef.SourceType = pkg.SourceTypeGreaterPhiladelphiaHealthActionInc
-	sourceDef.BrandLogo = "greater-philadelphia-health-action-inc.jpg"
+	sourceDef.BrandLogo = "greater-philadelphia-health-action-inc.svg"
 	sourceDef.PatientAccessUrl = "https://gphainc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

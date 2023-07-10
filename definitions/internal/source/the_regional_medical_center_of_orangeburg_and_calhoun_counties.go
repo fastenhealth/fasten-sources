@@ -30,7 +30,7 @@ func GetSourceTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env pkg.Fas
 	sourceDef.Display = "The Regional Medical Center of Orangeburg and Calhoun Counties"
 	sourceDef.SourceType = pkg.SourceTypeTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties
 	sourceDef.Category = []string{"1835X0200X", "261QX0203X", "261QX0200X", "2083X0100X", "332B00000X", "204C00000X", "2086S0129X", "208600000X", "207R00000X", "261QM1300X", "2085R0202X", "207V00000X", "261QR1300X"}
-	sourceDef.Aliases = []string{"THE MABRY CENTER FOR CANCER CARE", "RMC OCCUPATIONAL MEDICINE", "PALMETTO SURGICAL GROUP", "RMC TRANSITIONAL CARE", "RMC MULTISPECIALTY HOSPITALIST", "RMC WOMENS CENTER"}
+	sourceDef.Aliases = []string{"PALMETTO SURGICAL GROUP", "RMC MULTISPECIALTY HOSPITALIST", "RMC OCCUPATIONAL MEDICINE", "RMC TRANSITIONAL CARE", "RMC WOMENS CENTER", "THE MABRY CENTER FOR CANCER CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467165118", "1629580907", "1922063858", "1023457389", "1316223860", "1568891844", "1639652464", "1962997171", "1205082500", "1972939957"}}
 	sourceDef.BrandLogo = "the-regional-medical-center-of-orangeburg-and-calhoun-counties.jpg"
 	sourceDef.PatientAccessUrl = "http://www.trmchealth.org/"

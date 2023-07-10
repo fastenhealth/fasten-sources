@@ -28,7 +28,10 @@ func GetSourceUabHuntsvilleRegionalCampus(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "UAB-Huntsville Regional Campus"
 	sourceDef.SourceType = pkg.SourceTypeUabHuntsvilleRegionalCampus
+	sourceDef.Aliases = []string{"UAB Huntsville"}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "uab-huntsville-regional-campus.svg"
+	sourceDef.PatientAccessUrl = "https://www.uabmedicine.org/locations/uab-medicine-huntsville/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

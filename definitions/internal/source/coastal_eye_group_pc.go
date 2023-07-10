@@ -28,6 +28,7 @@ func GetSourceCoastalEyeGroupPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Coastal Eye Group PC"
 	sourceDef.SourceType = pkg.SourceTypeCoastalEyeGroupPc
+	sourceDef.PatientAccessUrl = "https://coastaleyegroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

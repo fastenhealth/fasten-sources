@@ -30,6 +30,7 @@ func GetSourceCarolinaAsthmaAndAllergyCenterPa(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCarolinaAsthmaAndAllergyCenterPa
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215995444"}}
+	sourceDef.PatientAccessUrl = "https://www.carolinaasthma.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCrystalLakeHealthCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Crystal Lake Health Center"
 	sourceDef.SourceType = pkg.SourceTypeCrystalLakeHealthCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://crystallakehealthcenters.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

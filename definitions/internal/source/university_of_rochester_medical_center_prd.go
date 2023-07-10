@@ -28,6 +28,7 @@ func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "University of Rochester Medical Center - PRD"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfRochesterMedicalCenterPrd
+	sourceDef.PatientAccessUrl = "https://www.urmc.rochester.edu/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

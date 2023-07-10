@@ -32,6 +32,7 @@ func GetSourceGastroenterologyConsultantsPc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Aliases = []string{"GASTROENTEROLOGY CONSULTANTS PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568546380", "1437196045", "1972620060"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gastroenterologyconsultants.net/office-roswell.php"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

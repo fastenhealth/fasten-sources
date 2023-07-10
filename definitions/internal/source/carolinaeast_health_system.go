@@ -32,6 +32,8 @@ func GetSourceCarolinaeastHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"335E00000X", "282NR1301X", "208M00000X", "282N00000X", "283X00000X", "367500000X"}
 	sourceDef.Aliases = []string{"CAROLINAEAST HEALTH SYSTEM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427084680", "1942496559", "1043922156", "1801852835", "1710923875"}}
+	sourceDef.BrandLogo = "carolinaeast-health-system.svg"
+	sourceDef.PatientAccessUrl = "https://www.carolinaeasthealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

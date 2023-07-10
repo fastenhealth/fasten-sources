@@ -29,6 +29,7 @@ func GetSourceHeartOfOhioInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Heart of Ohio Inc"
 	sourceDef.SourceType = pkg.SourceTypeHeartOfOhioInc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.heartofohiofamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,9 +29,10 @@ func GetSourceChildrensMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "CHILDREN'S MEDICAL GROUP"
 	sourceDef.SourceType = pkg.SourceTypeChildrensMedicalGroup
 	sourceDef.Category = []string{"101YM0800X", "101YP2500X", "103TC2200X", "104100000X", "1041C0700X", "106H00000X", "2084P0800X", "2084P0804X", "208000000X", "2080A0000X"}
-	sourceDef.Aliases = []string{"CEDARBURG PEDIATRICS", "NORTH SHORE PEDIATRICS", "GOOD HOPE PEDIATRICS", "NEXT DOOR PEDIATRICS"}
+	sourceDef.Aliases = []string{"CEDARBURG PEDIATRICS", "GOOD HOPE PEDIATRICS", "NEXT DOOR PEDIATRICS", "NORTH SHORE PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174999163", "1295951051", "1114192499", "1801061064", "1326213562", "1255506598", "1922273184", "1275708539", "1659546877", "1831502327"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.childrensmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

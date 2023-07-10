@@ -29,9 +29,10 @@ func GetSourceFamilyCareCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Family Care Centers"
 	sourceDef.SourceType = pkg.SourceTypeFamilyCareCenters
 	sourceDef.Category = []string{"207Q00000X", "207QS0010X", "363A00000X", "363LF0000X", "261QM1300X", "208D00000X", "207QG0300X", "363L00000X"}
-	sourceDef.Aliases = []string{"FAMILY CARE CENTERS MEDICAL GROUP", "FAMILY CARE CENTERS", "WOODBRIDGE WALK-IN MEDICAL GROUP, INC.", "FAMILY CARE CENTERS MEDCIAL GROUP"}
+	sourceDef.Aliases = []string{"FAMILY CARE CENTERS", "FAMILY CARE CENTERS MEDCIAL GROUP", "FAMILY CARE CENTERS MEDICAL GROUP", "WOODBRIDGE WALK-IN MEDICAL GROUP, INC."}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093766677", "1356392278", "1558312470", "1275584120"}}
-	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1134557655-family-care-centers-medical-group/"
+	sourceDef.BrandLogo = "family-care-centers.webp"
+	sourceDef.PatientAccessUrl = "https://www.fccmg.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

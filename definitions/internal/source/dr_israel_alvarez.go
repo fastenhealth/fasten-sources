@@ -29,7 +29,9 @@ func GetSourceDrIsraelAlvarez(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Dr. Israel Alvarez"
 	sourceDef.SourceType = pkg.SourceTypeDrIsraelAlvarez
-	sourceDef.PatientAccessUrl = "https://www.mhs.net/physicians/a/alvarez-israel-d"
+	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770514648"}}
+	sourceDef.PatientAccessUrl = "https://mychart.mhs.net/mychart/Authentication/Login?"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

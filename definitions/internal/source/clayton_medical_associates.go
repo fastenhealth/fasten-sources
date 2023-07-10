@@ -29,6 +29,7 @@ func GetSourceClaytonMedicalAssociates(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Clayton Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeClaytonMedicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://claytonmedicalassociates.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

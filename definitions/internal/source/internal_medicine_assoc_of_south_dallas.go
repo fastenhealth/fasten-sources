@@ -29,6 +29,7 @@ func GetSourceInternalMedicineAssocOfSouthDallas(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Internal Medicine Assoc Of South Dallas"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAssocOfSouthDallas
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dallasinternists.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCatawbaPediatricAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Catawba Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeCatawbaPediatricAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "catawba-pediatric-associates.webp"
+	sourceDef.PatientAccessUrl = "https://www.catawbapediatrics.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

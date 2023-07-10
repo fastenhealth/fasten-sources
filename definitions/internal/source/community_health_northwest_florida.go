@@ -32,6 +32,8 @@ func GetSourceCommunityHealthNorthwestFlorida(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Aliases = []string{"COMMUNITY HEALTH NORTHWEST FLORIDA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447615455"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "community-health-northwest-florida.svg"
+	sourceDef.PatientAccessUrl = "https://healthcarewithinreach.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

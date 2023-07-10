@@ -29,6 +29,7 @@ func GetSourceUtHealthSanAntonio1(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "UT Health San Antonio"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthSanAntonio1
 	sourceDef.BrandLogo = "ut-health-san-antonio.png"
+	sourceDef.PatientAccessUrl = "https://uthscsa.edu/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

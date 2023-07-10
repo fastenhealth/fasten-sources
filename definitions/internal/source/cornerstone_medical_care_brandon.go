@@ -29,6 +29,7 @@ func GetSourceCornerstoneMedicalCareBrandon(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Cornerstone Medical Care Brandon"
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneMedicalCareBrandon
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cmcb.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

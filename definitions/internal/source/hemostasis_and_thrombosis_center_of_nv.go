@@ -29,6 +29,7 @@ func GetSourceHemostasisAndThrombosisCenterOfNv(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Hemostasis and Thrombosis Center of NV"
 	sourceDef.SourceType = pkg.SourceTypeHemostasisAndThrombosisCenterOfNv
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.htcnv.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -32,6 +32,7 @@ func GetSourceChildrensHospitalsAndClinicsOfMinnesota(env pkg.FastenLighthouseEn
 	sourceDef.Category = []string{"333600000X", "3336C0004X", "3336S0011X", "3336C0003X", "291U00000X"}
 	sourceDef.Aliases = []string{"CHILDREN'S HOSPITALS AND CLINICS OF MINNESOTA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558061465", "1538792353", "1164122065", "1447883269", "1275936262"}}
+	sourceDef.PatientAccessUrl = "https://www.childrensmn.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

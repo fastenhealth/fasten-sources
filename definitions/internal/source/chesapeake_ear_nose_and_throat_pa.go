@@ -28,6 +28,8 @@ func GetSourceChesapeakeEarNoseAndThroatPa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Chesapeake Ear Nose And Throat PA"
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeEarNoseAndThroatPa
+	sourceDef.BrandLogo = "chesapeake-ear-nose-and-throat-pa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.baltimoreent.com/chesapeake-ear-nose-throat-office-owings-mills-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

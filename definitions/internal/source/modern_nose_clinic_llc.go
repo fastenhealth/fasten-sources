@@ -29,7 +29,7 @@ func GetSourceModernNoseClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Modern Nose Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeModernNoseClinicLlc
 	sourceDef.Category = []string{"207Y00000X"}
-	sourceDef.Aliases = []string{"MODERN NOSE CLINIC LLC", "MODERN NOSE CLINIC"}
+	sourceDef.Aliases = []string{"MODERN NOSE CLINIC", "MODERN NOSE CLINIC LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043874696", "1851825566"}}
 	sourceDef.PatientAccessUrl = "https://www.modernnoseclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,7 @@ func GetSourceBeloitHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Beloit Health System"
 	sourceDef.SourceType = pkg.SourceTypeBeloitHealthSystem
+	sourceDef.PatientAccessUrl = "https://www.beloithealthsystem.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGastroenterologyAssociatesOfCentralVirginia(env pkg.FastenLighthou
 	sourceDef.Display = "Gastroenterology Associates of Central Virginia"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyAssociatesOfCentralVirginia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://gastrocentralva.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,9 +29,10 @@ func GetSourceAdvancedUrology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Advanced Urology"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedUrology
 	sourceDef.Category = []string{"207RC0000X", "207RI0011X", "208600000X", "208800000X", "207R00000X", "332900000X"}
-	sourceDef.Aliases = []string{"RALEIGH CARDIAC", "RALEIGH GENERAL SURGERY", "RALEIGH CARDIAC CENTER", "ADVANCED UROLOGY", "RALEIGH HEART AND HEALTH CLINIC", "SOUTHEAST UROLOGY"}
+	sourceDef.Aliases = []string{"ADVANCED UROLOGY", "RALEIGH CARDIAC", "RALEIGH CARDIAC CENTER", "RALEIGH GENERAL SURGERY", "RALEIGH HEART AND HEALTH CLINIC", "SOUTHEAST UROLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114475746", "1598262016", "1801126479", "1023589884"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://crhealthcare.org/locations/advanced-urology/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

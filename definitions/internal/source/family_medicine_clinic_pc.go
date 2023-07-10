@@ -31,6 +31,7 @@ func GetSourceFamilyMedicineClinicPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063418820"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.fmconawa.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

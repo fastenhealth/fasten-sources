@@ -28,6 +28,8 @@ func GetSourceAbdulSThannounMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Abdul S Thannoun Md"
 	sourceDef.SourceType = pkg.SourceTypeAbdulSThannounMd
+	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962438713"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

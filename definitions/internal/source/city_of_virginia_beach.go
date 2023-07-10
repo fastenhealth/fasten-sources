@@ -31,6 +31,7 @@ func GetSourceCityOfVirginiaBeach(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeCityOfVirginiaBeach
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861562472"}}
+	sourceDef.PatientAccessUrl = "https://www.vbgov.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

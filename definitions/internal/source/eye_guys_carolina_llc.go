@@ -29,7 +29,7 @@ func GetSourceEyeGuysCarolinaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Eye Guys Carolina LLC"
 	sourceDef.SourceType = pkg.SourceTypeEyeGuysCarolinaLlc
 	sourceDef.Category = []string{"332H00000X", "156FC0800X", "156FC0801X", "156FX1800X", "152W00000X"}
-	sourceDef.Aliases = []string{"EYE GUYS SPECS VISION CENTER", "EYE GUYS SPEC'S VISION CENTER"}
+	sourceDef.Aliases = []string{"EYE GUYS SPEC'S VISION CENTER", "EYE GUYS SPECS VISION CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881305852", "1457841991"}}
 	sourceDef.PatientAccessUrl = "https://www.eyeguys.com/aiken/"
 	sourceDef.SecretKeyPrefix = "nextgen"

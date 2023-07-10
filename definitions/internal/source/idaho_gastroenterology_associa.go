@@ -29,6 +29,7 @@ func GetSourceIdahoGastroenterologyAssocia(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Idaho Gastroenterology Associa"
 	sourceDef.SourceType = pkg.SourceTypeIdahoGastroenterologyAssocia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.idahogastro.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

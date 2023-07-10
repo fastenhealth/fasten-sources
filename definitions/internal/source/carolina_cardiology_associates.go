@@ -31,6 +31,8 @@ func GetSourceCarolinaCardiologyAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{"CAROLINA CARDIOLOGY ASSOCIATES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134166507"}}
+	sourceDef.BrandLogo = "carolina-cardiology-associates.svg"
+	sourceDef.PatientAccessUrl = "https://www.carolinacardiologyassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

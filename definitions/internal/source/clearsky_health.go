@@ -29,6 +29,7 @@ func GetSourceClearskyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "ClearSky Health"
 	sourceDef.SourceType = pkg.SourceTypeClearskyHealth
+	sourceDef.PatientAccessUrl = "https://clearskyhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

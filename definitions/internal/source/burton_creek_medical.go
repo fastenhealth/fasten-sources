@@ -29,6 +29,7 @@ func GetSourceBurtonCreekMedical(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Burton Creek Medical"
 	sourceDef.SourceType = pkg.SourceTypeBurtonCreekMedical
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://burtonmc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

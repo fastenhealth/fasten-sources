@@ -28,6 +28,7 @@ func GetSourceHamptonFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Hampton Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeHamptonFamilyPractice
+	sourceDef.BrandLogo = "hampton-family-practice.webp"
 	sourceDef.PatientAccessUrl = "https://www.hamptonfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

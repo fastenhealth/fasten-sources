@@ -29,7 +29,8 @@ func GetSourceNeurologyCenterOfEastAlabama(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Neurology Center of East Alabama"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyCenterOfEastAlabama
-	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/find-a-service/neurology-center/"
+	sourceDef.Aliases = []string{"East Alabama Medical Center"}
+	sourceDef.PatientAccessUrl = "https://eamc.consumeridp.us-1.healtheintent.com/saml2/sso/login?authenticationRequestId=e802d854-783e-4f70-994d-e522f43d0d94"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

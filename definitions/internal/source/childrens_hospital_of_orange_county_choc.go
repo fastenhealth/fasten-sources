@@ -29,6 +29,7 @@ func GetSourceChildrensHospitalOfOrangeCountyChoc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Children's Hospital of Orange County (CHOC)"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalOfOrangeCountyChoc
+	sourceDef.PatientAccessUrl = "https://www.choc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

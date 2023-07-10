@@ -29,7 +29,7 @@ func GetSourceFamilyHealthCenterSandpoint(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Family Health Center Sandpoint"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCenterSandpoint
 	sourceDef.BrandLogo = "family-health-center-sandpoint.jpeg"
-	sourceDef.PatientAccessUrl = "https://healthcare.com"
+	sourceDef.PatientAccessUrl = "https://fhcsandpoint.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceCorePhysiciansLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Core Physicians LLC"
 	sourceDef.SourceType = pkg.SourceTypeCorePhysiciansLlc
 	sourceDef.Category = []string{"332B00000X"}
-	sourceDef.Aliases = []string{"CORE PODIATRY", "CORE GENERAL AND VASCULAR SURGERY", "EXETER PULMONARY AND CRITICAL CARE MEDICINE"}
+	sourceDef.Aliases = []string{"CORE GENERAL AND VASCULAR SURGERY", "CORE PODIATRY", "EXETER PULMONARY AND CRITICAL CARE MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083085724", "1194036202", "1316267099"}}
 	sourceDef.BrandLogo = "core-physicians-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.corephysicians.org/Home"

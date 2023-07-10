@@ -29,6 +29,7 @@ func GetSourceCoastalPlainCommunityMhmrCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Coastal Plain Community MHMR Center"
 	sourceDef.SourceType = pkg.SourceTypeCoastalPlainCommunityMhmrCenter
+	sourceDef.PatientAccessUrl = "https://coastalplainsctr.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -28,7 +28,10 @@ func GetSourceUrologyAssociatesOfCentralCaliforniaLlc(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "Urology Associates Of Central California, LLC"
 	sourceDef.SourceType = pkg.SourceTypeUrologyAssociatesOfCentralCaliforniaLlc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194720730"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.urologyassociates.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

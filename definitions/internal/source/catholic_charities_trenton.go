@@ -29,6 +29,7 @@ func GetSourceCatholicCharitiesTrenton(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Catholic Charities Trenton"
 	sourceDef.SourceType = pkg.SourceTypeCatholicCharitiesTrenton
+	sourceDef.PatientAccessUrl = "https://www.catholiccharitiestrenton.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

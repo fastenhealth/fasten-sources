@@ -28,6 +28,8 @@ func GetSourceBozemanHealthPrd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Bozeman Health - PRD"
 	sourceDef.SourceType = pkg.SourceTypeBozemanHealthPrd
+	sourceDef.BrandLogo = "bozeman-health-prd.svg"
+	sourceDef.PatientAccessUrl = "https://www.bozemanhealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

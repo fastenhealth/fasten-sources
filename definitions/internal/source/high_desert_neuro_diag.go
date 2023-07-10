@@ -29,6 +29,7 @@ func GetSourceHighDesertNeuroDiag(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "HIGH DESERT NEURO DIAG"
 	sourceDef.SourceType = pkg.SourceTypeHighDesertNeuroDiag
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.highdesertneuro.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceChiStVincent(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "CHI St. Vincent"
 	sourceDef.SourceType = pkg.SourceTypeChiStVincent
+	sourceDef.PatientAccessUrl = "https://www.chistvincent.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

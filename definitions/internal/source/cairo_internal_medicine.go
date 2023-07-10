@@ -28,6 +28,7 @@ func GetSourceCairoInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cairo Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCairoInternalMedicine
+	sourceDef.PatientAccessUrl = "https://archbold.org/cairo-internal-medicine"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

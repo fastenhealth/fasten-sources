@@ -31,6 +31,7 @@ func GetSourceChesapeakeUrologyAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"208800000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003229170"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.unitedurology.com"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

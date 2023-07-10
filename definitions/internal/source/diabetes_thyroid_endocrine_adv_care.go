@@ -28,6 +28,8 @@ func GetSourceDiabetesThyroidEndocrineAdvCare(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Diabetes Thyroid Endocrine Adv Care"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesThyroidEndocrineAdvCare
+	sourceDef.Category = []string{"207RE0101X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700281813"}}
 	sourceDef.PatientAccessUrl = "https://www.detsutah.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

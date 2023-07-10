@@ -31,6 +31,7 @@ func GetSourceAbileneEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"ABILENE ENDOSCOPY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144200163"}}
+	sourceDef.PatientAccessUrl = "https://abileneendoscopy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

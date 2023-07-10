@@ -28,6 +28,7 @@ func GetSourceCapitalWomensCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Capital Womens Care"
 	sourceDef.SourceType = pkg.SourceTypeCapitalWomensCare
+	sourceDef.PatientAccessUrl = "https://www.cwcare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

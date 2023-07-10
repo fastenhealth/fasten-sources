@@ -28,6 +28,8 @@ func GetSourceCcap(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "CCAP"
 	sourceDef.SourceType = pkg.SourceTypeCcap
+	sourceDef.Aliases = []string{"Comprehensive Community Action Program"}
+	sourceDef.PatientAccessUrl = "https://www.comcap.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

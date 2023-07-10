@@ -28,6 +28,9 @@ func GetSourceAbileneDiagnosticClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Abilene Diagnostic Clinic"
 	sourceDef.SourceType = pkg.SourceTypeAbileneDiagnosticClinic
+	sourceDef.Category = []string{"251E00000X"}
+	sourceDef.Aliases = []string{"The doctors of West Texas Health", "SAN ANGELO HOME HEALTH", "PARADIGM HOMECARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518139237"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 

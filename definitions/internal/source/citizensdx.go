@@ -28,6 +28,7 @@ func GetSourceCitizensdx(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "CitizensDX"
 	sourceDef.SourceType = pkg.SourceTypeCitizensdx
+	sourceDef.PatientAccessUrl = "https://www.citizensdx.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

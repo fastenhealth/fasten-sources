@@ -29,6 +29,7 @@ func GetSourceDchPracticeManagement(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "DCH Practice Management"
 	sourceDef.SourceType = pkg.SourceTypeDchPracticeManagement
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.dchosp.org"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

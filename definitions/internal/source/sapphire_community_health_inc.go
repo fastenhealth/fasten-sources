@@ -29,6 +29,7 @@ func GetSourceSapphireCommunityHealthInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Sapphire Community Health, Inc."
 	sourceDef.SourceType = pkg.SourceTypeSapphireCommunityHealthInc
+	sourceDef.BrandLogo = "sapphire-community-health-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sapphirechc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

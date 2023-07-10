@@ -30,7 +30,7 @@ func GetSourceTheEastAlabamaHealthCareAuthority(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "The East Alabama Health Care Authority"
 	sourceDef.SourceType = pkg.SourceTypeTheEastAlabamaHealthCareAuthority
 	sourceDef.Category = []string{"314000000X", "282N00000X"}
-	sourceDef.Aliases = []string{"EAST ALABAMA MEDICAL CENTER SKILLED NURSING FACILITY", "EAST ALABAMA MEDICAL CENTER"}
+	sourceDef.Aliases = []string{"EAST ALABAMA MEDICAL CENTER", "EAST ALABAMA MEDICAL CENTER SKILLED NURSING FACILITY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871661298", "1154386431", "1073685483"}}
 	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"

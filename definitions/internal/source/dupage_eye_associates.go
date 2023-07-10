@@ -29,7 +29,7 @@ func GetSourceDupageEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Dupage Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeDupageEyeAssociates
 	sourceDef.Category = []string{"152W00000X", "207W00000X"}
-	sourceDef.Aliases = []string{"ROCKFORD RETINA CLINIC", "DUPAGE EYE ASSOCIATES", "VZN EYE CARE", "RETINA GROUP CHICAGO", "VISION ONE", "LAKESIDE EYE GROUP", "CHICAGO EYE CONSULTANTS", "LAWRENCE EYE CARE", "YAVITZ EYE CENTER", "SMITH-PERRY EYE CENTER", "HAUSER-ROSS EYE INSTITUTE", "MIDWEST EYE CENTER", "ARLINGTON EYE PHYSICIANS"}
+	sourceDef.Aliases = []string{"ARLINGTON EYE PHYSICIANS", "CHICAGO EYE CONSULTANTS", "DUPAGE EYE ASSOCIATES", "HAUSER-ROSS EYE INSTITUTE", "LAKESIDE EYE GROUP", "LAWRENCE EYE CARE", "MIDWEST EYE CENTER", "RETINA GROUP CHICAGO", "ROCKFORD RETINA CLINIC", "SMITH-PERRY EYE CENTER", "VISION ONE", "VZN EYE CARE", "YAVITZ EYE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326380510"}}
 	sourceDef.PatientAccessUrl = "https://www.dupageeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

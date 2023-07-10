@@ -28,8 +28,11 @@ func GetSourceDohcPalliativeCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "DOHC Palliative Care"
 	sourceDef.SourceType = pkg.SourceTypeDohcPalliativeCare
+	sourceDef.Category = []string{"207RG0300X"}
+	sourceDef.Aliases = []string{"DESERT OASIS HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639407208"}}
 	sourceDef.BrandLogo = "dohc-palliative-care.svg"
-	sourceDef.PatientAccessUrl = "https://www.mydohc.com/care-treatment/palliative/"
+	sourceDef.PatientAccessUrl = "https://www.nextmd.com/ud2/Login/Login.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceCentersForAdvOrthoCalvertDiv41(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Centers For Adv Ortho Calvert Div 41"
 	sourceDef.SourceType = pkg.SourceTypeCentersForAdvOrthoCalvertDiv41
+	sourceDef.PatientAccessUrl = "https://www.cfaortho.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

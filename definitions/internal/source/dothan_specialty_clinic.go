@@ -29,6 +29,7 @@ func GetSourceDothanSpecialtyClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Dothan Specialty Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDothanSpecialtyClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://dothanspecialty.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

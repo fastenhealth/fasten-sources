@@ -28,6 +28,8 @@ func GetSourceDownersGroveEyeCenterPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Downers Grove Eye Center PC"
 	sourceDef.SourceType = pkg.SourceTypeDownersGroveEyeCenterPc
+	sourceDef.Category = []string{"152W00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801997655"}}
 	sourceDef.PatientAccessUrl = "https://www.dgeyecenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

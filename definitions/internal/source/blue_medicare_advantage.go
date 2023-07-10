@@ -27,6 +27,8 @@ func GetSourceBlueMedicareAdvantage(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Blue Medicare Advantage"
 	sourceDef.SourceType = pkg.SourceTypeBlueMedicareAdvantage
+	sourceDef.BrandLogo = "blue-medicare-advantage.svg"
+	sourceDef.PatientAccessUrl = "https://www.bcbs.com/medicare/medicare-advantage"
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

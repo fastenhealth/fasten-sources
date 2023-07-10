@@ -28,7 +28,10 @@ func GetSourceCommunityHealthOfCentralWashingtonwa(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Community Health Of Central WashingtonWA"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthOfCentralWashingtonwa
+	sourceDef.Aliases = []string{"Community Health Of Central Washington"}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "community-health-of-central-washingtonwa.jpg"
+	sourceDef.PatientAccessUrl = "https://www.chcw.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

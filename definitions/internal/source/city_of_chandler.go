@@ -29,6 +29,8 @@ func GetSourceCityOfChandler(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "City of Chandler"
 	sourceDef.SourceType = pkg.SourceTypeCityOfChandler
+	sourceDef.BrandLogo = "city-of-chandler.svg"
+	sourceDef.PatientAccessUrl = "https://www.chandleraz.gov/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceGriegoFamilyMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Griego Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeGriegoFamilyMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.metroplexmedicalcentres.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

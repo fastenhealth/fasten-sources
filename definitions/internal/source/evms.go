@@ -28,7 +28,10 @@ func GetSourceEvms(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "EVMS"
 	sourceDef.SourceType = pkg.SourceTypeEvms
+	sourceDef.Aliases = []string{"Eastern Virginia Medical School"}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "evms.svg"
+	sourceDef.PatientAccessUrl = "https://www.evms.edu/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceDermatologySpecialistsOfOmaha(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Dermatology Specialists of Omaha"
 	sourceDef.SourceType = pkg.SourceTypeDermatologySpecialistsOfOmaha
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://omahaderm.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

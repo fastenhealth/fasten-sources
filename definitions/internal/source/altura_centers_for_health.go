@@ -28,7 +28,7 @@ func GetSourceAlturaCentersForHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Altura Centers For Health"
 	sourceDef.SourceType = pkg.SourceTypeAlturaCentersForHealth
-	sourceDef.Category = []string{"261QA0005X", "261QD0000X", "261QM1300X", "261QF0400X", "261Q00000X", "261QC1500X"}
+	sourceDef.Category = []string{"261QA0005X", "261QD0000X", "261QM1300X", "261QF0400X", "261Q00000X", "261QC1500X", "171M00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023011632", "1689011637", "1811174725", "1346486511", "1790105559", "1568827210", "1942506605", "1932529831", "1568126654"}}
 	sourceDef.PatientAccessUrl = "https://altura.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

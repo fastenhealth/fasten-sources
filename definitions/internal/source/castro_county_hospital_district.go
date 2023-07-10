@@ -29,8 +29,8 @@ func GetSourceCastroCountyHospitalDistrict(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Castro County Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeCastroCountyHospitalDistrict
-	sourceDef.Category = []string{"363LF0000X", "275N00000X", "251G00000X", "282NC0060X", "207Q00000X", "332B00000X", "208600000X", "251E00000X", "341600000X", "261QA1903X"}
-	sourceDef.Aliases = []string{"PLAINS MEMORIAL HOSPITAL", "MEDICAL CENTER OF DIMMITT"}
+	sourceDef.Category = []string{"363LF0000X", "275N00000X", "251G00000X", "282NC0060X", "207Q00000X", "332B00000X", "208600000X", "261QR1300X", "251E00000X", "341600000X", "261QA1903X"}
+	sourceDef.Aliases = []string{"MEDICAL CENTER OF DIMMITT", "PLAINS MEMORIAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942491774", "1710025077", "1346206828", "1033118716", "1306052089", "1013123744", "1558313171", "1912963083", "1952434375", "1154454585"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 

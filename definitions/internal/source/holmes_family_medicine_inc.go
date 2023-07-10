@@ -29,6 +29,8 @@ func GetSourceHolmesFamilyMedicineInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Holmes Family Medicine, Inc."
 	sourceDef.SourceType = pkg.SourceTypeHolmesFamilyMedicineInc
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "holmes-family-medicine-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.holmesfm.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

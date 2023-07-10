@@ -28,7 +28,7 @@ func GetSourceHunterdonFamilySportsMedAtHopewell(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Hunterdon Family Sports Med At Hopewell"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilySportsMedAtHopewell
-	sourceDef.BrandLogo = "hunterdon-family-sports-med-at-hopewell.jpg"
+	sourceDef.BrandLogo = "hunterdon-behavioral-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/locations/hunterdon-family-sports-medicine-hopewell-valley"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,7 +29,8 @@ func GetSourceAdventistHealthRevenueCycleIntentRci(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Adventist Health - Revenue Cycle Intent (RCI)"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthRevenueCycleIntentRci
-	sourceDef.PatientAccessUrl = "https://careers.adventisthealth.org/landingpages/revenue-cycle-opportunities-at-adventist-health-9"
+	sourceDef.BrandLogo = "adventist-health-west.png"
+	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

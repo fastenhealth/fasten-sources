@@ -28,8 +28,8 @@ func GetSourceHunterdonFamilyMedAtHickoryRun(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Hunterdon Family Med At Hickory Run"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonFamilyMedAtHickoryRun
-	sourceDef.BrandLogo = "hunterdon-family-med-at-hickory-run.svg"
-	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/hunterdon-family-medicine-hickory-run"
+	sourceDef.BrandLogo = "hunterdon-behavioral-health.svg"
+	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

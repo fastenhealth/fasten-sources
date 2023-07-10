@@ -29,6 +29,7 @@ func GetSourceAlbanyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Albany Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeAlbanyMedicalCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.albanymed.org/albany-medical-center/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

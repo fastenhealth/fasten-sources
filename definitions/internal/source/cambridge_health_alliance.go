@@ -29,7 +29,9 @@ func GetSourceCambridgeHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Cambridge Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeCambridgeHealthAlliance
 	sourceDef.Category = []string{"282N00000X", "172V00000X", "261QE0800X", "261QA1903X", "261QM0801X", "261QP2000X", "261QP2300X"}
+	sourceDef.Aliases = []string{"Harvard Medical School Teaching Hospital"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972782076", "1851624126", "1922324508", "1376868943", "1174826556", "1598047417", "1275839649", "1831479997", "1609248699", "1992151070"}}
+	sourceDef.PatientAccessUrl = "https://www.challiance.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceClinicaDeSaludDelValle(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Clinica De Salud Del Valle"
 	sourceDef.SourceType = pkg.SourceTypeClinicaDeSaludDelValle
+	sourceDef.PatientAccessUrl = "https://csvs.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

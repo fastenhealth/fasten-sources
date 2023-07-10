@@ -29,6 +29,7 @@ func GetSourceInfectiousDiseaseSpecialistsOfAtlantaPC(env pkg.FastenLighthouseEn
 	sourceDef.Display = "INFECTIOUS DISEASE SPECIALISTS OF ATLANTA, P.C."
 	sourceDef.SourceType = pkg.SourceTypeInfectiousDiseaseSpecialistsOfAtlantaPC
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.idsatlanta.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

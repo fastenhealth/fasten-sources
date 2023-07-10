@@ -29,6 +29,8 @@ func GetSourceFayettevilleOtolaryngology(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Fayetteville Otolaryngology"
 	sourceDef.SourceType = pkg.SourceTypeFayettevilleOtolaryngology
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "fayetteville-otolaryngology.svg"
+	sourceDef.PatientAccessUrl = "https://www.fayent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

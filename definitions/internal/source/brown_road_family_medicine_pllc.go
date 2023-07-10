@@ -28,6 +28,7 @@ func GetSourceBrownRoadFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Brown Road Family Medicine PLLC"
 	sourceDef.SourceType = pkg.SourceTypeBrownRoadFamilyMedicinePllc
+	sourceDef.PatientAccessUrl = "https://brownroadfm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

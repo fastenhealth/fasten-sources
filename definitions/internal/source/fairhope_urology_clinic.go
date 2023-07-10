@@ -29,6 +29,7 @@ func GetSourceFairhopeUrologyClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Fairhope Urology Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFairhopeUrologyClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.uampa.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,8 +29,9 @@ func GetSourceGreaterBaltimoreMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Greater Baltimore Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeGreaterBaltimoreMedicalCenter
 	sourceDef.Category = []string{"282N00000X", "133NN1002X", "133V00000X", "332H00000X", "390200000X"}
-	sourceDef.Aliases = []string{"GBMC, INC.", "GBMC OPTICAL CENTER, LLC"}
+	sourceDef.Aliases = []string{"GBMC OPTICAL CENTER, LLC", "GBMC, INC."}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952333692", "1932651676", "1114665551", "1972846830", "1265619498"}}
+	sourceDef.PatientAccessUrl = "https://www.gbmc.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

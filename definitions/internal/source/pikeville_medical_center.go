@@ -28,6 +28,9 @@ func GetSourcePikevilleMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Pikeville Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePikevilleMedicalCenter
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285621623"}}
+	sourceDef.PatientAccessUrl = "https://www.pikevillehospital.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

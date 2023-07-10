@@ -28,7 +28,10 @@ func GetSourceUrologySpecialistsOfTheCarolinas(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Urology Specialists of the Carolinas"
 	sourceDef.SourceType = pkg.SourceTypeUrologySpecialistsOfTheCarolinas
+	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669404208"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://urologyspecialistsnc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,7 @@ func GetSourceBoulderValleyWomensHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Boulder Valley Womens Health Center"
 	sourceDef.SourceType = pkg.SourceTypeBoulderValleyWomensHealthCenter
+	sourceDef.PatientAccessUrl = "https://bouldervalleyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

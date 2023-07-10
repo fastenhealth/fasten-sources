@@ -28,8 +28,8 @@ func GetSource360CareOfMississippi(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "360care Of Mississippi"
 	sourceDef.SourceType = pkg.SourceType360CareOfMississippi
-	sourceDef.BrandLogo = "360care-of-mississippi.jpg"
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3NI0WFPPJMD66JL75NH81BQVVWW06C?assignment_id=39N5ACM9HSKYY3PJAH4BP6EUYE39PU&from_queue=true"
+	sourceDef.BrandLogo = "360care-of-delaware.png"
+	sourceDef.PatientAccessUrl = "https://360care.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

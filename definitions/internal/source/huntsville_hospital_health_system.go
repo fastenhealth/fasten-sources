@@ -29,8 +29,9 @@ func GetSourceHuntsvilleHospitalHealthSystem(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Huntsville Hospital Health System"
 	sourceDef.SourceType = pkg.SourceTypeHuntsvilleHospitalHealthSystem
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447221056 ", "1407021082 ", " 1548208291 ", " 1609389014"}}
 	sourceDef.BrandLogo = "huntsville-hospital-health-system.jpg"
-	sourceDef.PatientAccessUrl = "https://www.huntsvillehospital.org/"
+	sourceDef.PatientAccessUrl = "https://www.huntsvillehospital.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

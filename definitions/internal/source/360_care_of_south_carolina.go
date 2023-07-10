@@ -28,8 +28,10 @@ func GetSource360CareOfSouthCarolina(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "360care Of South Carolina"
 	sourceDef.SourceType = pkg.SourceType360CareOfSouthCarolina
-	sourceDef.BrandLogo = "360care-of-south-carolina.jpg"
-	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3INZSNUD9DNNNMOZF68F0S1GFMDD9T?assignment_id=3GNCZX450WKC3MZO2NIBL1PE4WJAP8&from_queue=true"
+	sourceDef.Category = []string{"1223G0001X", "363L00000X", "213E00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336760909", "1497377980", "1780206276"}}
+	sourceDef.BrandLogo = "360care-of-delaware.png"
+	sourceDef.PatientAccessUrl = "https://360care.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

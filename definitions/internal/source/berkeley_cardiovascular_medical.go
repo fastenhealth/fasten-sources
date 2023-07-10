@@ -28,6 +28,8 @@ func GetSourceBerkeleyCardiovascularMedical(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Berkeley Cardiovascular Medical"
 	sourceDef.SourceType = pkg.SourceTypeBerkeleyCardiovascularMedical
+	sourceDef.BrandLogo = "berkeley-cardiovascular-medical.jpg"
+	sourceDef.PatientAccessUrl = "http://www.berkeleycardiovascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

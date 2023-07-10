@@ -29,6 +29,7 @@ func GetSourceGarnerInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Garner Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeGarnerInternalMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.garnerinternalmedicine.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

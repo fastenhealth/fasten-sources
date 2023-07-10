@@ -29,6 +29,8 @@ func GetSourceFranciscoGilProfessionalMedicalCorp(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Francisco Gil Professional Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeFranciscoGilProfessionalMedicalCorp
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "francisco-gil-professional-medical-corp.webp"
+	sourceDef.PatientAccessUrl = "https://www.gilfamilymedicine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

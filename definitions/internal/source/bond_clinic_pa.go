@@ -30,6 +30,7 @@ func GetSourceBondClinicPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeBondClinicPa
 	sourceDef.Category = []string{"332B00000X", "207Q00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RH0003X", "207RN0300X", "207RP1001X", "207RR0500X", "207V00000X", "207W00000X", "207X00000X", "208000000X", "208600000X", "208800000X", "207R00000X", "261QM1300X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508227091", "1215398284", "1881639193", "1053943787", "1629439195"}}
+	sourceDef.PatientAccessUrl = "https://www.bondclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

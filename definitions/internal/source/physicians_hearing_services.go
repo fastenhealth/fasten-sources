@@ -28,6 +28,8 @@ func GetSourcePhysiciansHearingServices(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Physicians Hearing Services"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansHearingServices
+	sourceDef.Category = []string{"261QH0700X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659595585"}}
 	sourceDef.PatientAccessUrl = "https://www.healthyhearing.com/hearing-aids/29538-orange-county-physicians-hearing-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

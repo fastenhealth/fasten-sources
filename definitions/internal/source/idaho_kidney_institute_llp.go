@@ -31,6 +31,7 @@ func GetSourceIdahoKidneyInstituteLlp(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013064690"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://idahokidney.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceGeneralSurgeryMedicalGroupOfVenturaCounty(env pkg.FastenLighthouse
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275511644"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.mygeneralsurgeon.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

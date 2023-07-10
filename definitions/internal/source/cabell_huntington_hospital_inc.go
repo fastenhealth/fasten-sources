@@ -29,6 +29,7 @@ func GetSourceCabellHuntingtonHospitalInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Cabell Huntington Hospital, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCabellHuntingtonHospitalInc
+	sourceDef.PatientAccessUrl = "https://cabellhuntington.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceShepherdEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Shepherd Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeShepherdEyeCenter
 	sourceDef.Category = []string{"152W00000X", "207W00000X", "332B00000X"}
-	sourceDef.Aliases = []string{"SHEPHERD EYE CENTER", "NEVADA EYE PHYSICIANS", "NEW EYES"}
+	sourceDef.Aliases = []string{"NEVADA EYE PHYSICIANS", "NEW EYES", "SHEPHERD EYE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487604054", "1629191960"}}
 	sourceDef.BrandLogo = "shepherd-eye-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.shepherdeye.com/"

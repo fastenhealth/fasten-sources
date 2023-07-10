@@ -28,7 +28,9 @@ func GetSourceUtahVascularCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Utah Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeUtahVascularCenter
-	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/utah-vascular-and-interventional-specialists-8331c2d8-fc5c-4bb9-848f-fa25500d44f8"
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336264050"}}
+	sourceDef.PatientAccessUrl = "https://intermountainhealthcare.org/locations/utah-valley-clinic/medical-services/vascular-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

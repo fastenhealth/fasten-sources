@@ -28,6 +28,7 @@ func GetSourceCentralFloridaPulmonaryGroupPA(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Central Florida Pulmonary Group P.A."
 	sourceDef.SourceType = pkg.SourceTypeCentralFloridaPulmonaryGroupPA
+	sourceDef.PatientAccessUrl = "https://www.cfpulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

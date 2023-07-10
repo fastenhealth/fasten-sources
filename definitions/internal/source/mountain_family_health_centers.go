@@ -29,7 +29,7 @@ func GetSourceMountainFamilyHealthCenters(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Mountain Family Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeMountainFamilyHealthCenters
 	sourceDef.Category = []string{"261QF0400X", "261QC1500X"}
-	sourceDef.Aliases = []string{"MOUNTAIN FAMILY HEALTH CENTERS SMILES BEA UNDERWOOD ELEMENTARY SCHOOL", "MOUNTAIN FAMILY HEALTH CENTERS", "MFHC BASALT ELEMENTARY SBHC", "MFHC BASALT MIDDLE SBHC", "MOUNTAIN FAMILY HEALTH CENTERS AVON", "MOUNTAIN FAMILY HEALTH CENTERS AVON SCHOOL BASED HEALTH CENTER"}
+	sourceDef.Aliases = []string{"MFHC BASALT ELEMENTARY SBHC", "MFHC BASALT MIDDLE SBHC", "MOUNTAIN FAMILY HEALTH CENTERS", "MOUNTAIN FAMILY HEALTH CENTERS AVON", "MOUNTAIN FAMILY HEALTH CENTERS AVON SCHOOL BASED HEALTH CENTER", "MOUNTAIN FAMILY HEALTH CENTERS SMILES BEA UNDERWOOD ELEMENTARY SCHOOL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861904666", "1003328840", "1235720582", "1740879873", "1548569924", "1972933992", "1235292293", "1174114417", "1982328969", "1548613409"}}
 	sourceDef.PatientAccessUrl = "http://www.mountainfamily.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

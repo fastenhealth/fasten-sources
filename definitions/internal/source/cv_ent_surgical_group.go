@@ -29,6 +29,7 @@ func GetSourceCvEntSurgicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "CV ENT Surgical Group"
 	sourceDef.SourceType = pkg.SourceTypeCvEntSurgicalGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cvsurgicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

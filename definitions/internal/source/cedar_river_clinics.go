@@ -30,6 +30,8 @@ func GetSourceCedarRiverClinics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCedarRiverClinics
 	sourceDef.Category = []string{"261QF0050X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578708921"}}
+	sourceDef.BrandLogo = "cedar-river-clinics.webp"
+	sourceDef.PatientAccessUrl = "https://cedarriverclinics.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

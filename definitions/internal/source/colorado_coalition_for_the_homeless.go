@@ -29,7 +29,7 @@ func GetSourceColoradoCoalitionForTheHomeless(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Colorado Coalition For The Homeless"
 	sourceDef.SourceType = pkg.SourceTypeColoradoCoalitionForTheHomeless
 	sourceDef.Category = []string{"261QF0400X", "251V00000X", "261Q00000X", "261QP2300X", "385H00000X"}
-	sourceDef.Aliases = []string{"RENAISSANCE AT CONCORD PLAZA", "CCH- ADMINISTRATION/CLINICAL & SUPPORT SERVICES", "URBAN PEAK", "FUSION STUDIOS", "STOUT STREET CLINIC", "RENAISSANCE LORETTO HEIGHTS", "STOUT STREET RECUPERATIVE CARE CENTER", "RENAISSANCE XENIA VILLAGE", "RENAISSANCE AT RIVER FRONT"}
+	sourceDef.Aliases = []string{"CCH- ADMINISTRATION/CLINICAL & SUPPORT SERVICES", "FUSION STUDIOS", "RENAISSANCE AT CONCORD PLAZA", "RENAISSANCE AT RIVER FRONT", "RENAISSANCE LORETTO HEIGHTS", "RENAISSANCE XENIA VILLAGE", "STOUT STREET CLINIC", "STOUT STREET RECUPERATIVE CARE CENTER", "URBAN PEAK"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073279618", "1649436932", "1538557889", "1437547783", "1871263046", "1396793030", "1427711852", "1841936572", "1134882566", "1164188702"}}
 	sourceDef.PatientAccessUrl = "https://www.coloradocoalition.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

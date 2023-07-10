@@ -29,8 +29,9 @@ func GetSourceCharlesDrewHealthCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Charles Drew Health Center"
 	sourceDef.SourceType = pkg.SourceTypeCharlesDrewHealthCenter
 	sourceDef.Category = []string{"363A00000X", "363LC1500X", "261QF0400X", "333600000X", "3336C0003X", "261QD0000X", "343900000X"}
-	sourceDef.Aliases = []string{"CHARLES DREW HOMELESS CLINIC", "CHARLES DREW HEALTH CENTER - PHARMACY", "CHARLES DREW HEALTH CENTER, INC TOOTHMOBILE", "CHARLES DREW HEALTH CENTER, INC MEDICAL MOBILE UNIT", "CHARLES DREW HEALTH CENTER, INC DENTAL MOBILE UNIT - TOOTH MOBILE", "CHARLES DREW HEALTH CENTER, INC. DENTAL MOBILE UNIT - TOOTH MOBILE"}
+	sourceDef.Aliases = []string{"CHARLES DREW HEALTH CENTER - PHARMACY", "CHARLES DREW HEALTH CENTER, INC DENTAL MOBILE UNIT - TOOTH MOBILE", "CHARLES DREW HEALTH CENTER, INC MEDICAL MOBILE UNIT", "CHARLES DREW HEALTH CENTER, INC TOOTHMOBILE", "CHARLES DREW HEALTH CENTER, INC. DENTAL MOBILE UNIT - TOOTH MOBILE", "CHARLES DREW HOMELESS CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467818666", "1659743920", "1871962944"}}
+	sourceDef.PatientAccessUrl = "https://charlesdrew.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

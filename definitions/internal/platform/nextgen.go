@@ -34,6 +34,7 @@ func GetSourceNextgen(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.PlatformType = pkg.SourceTypeNextgen
 	sourceDef.SourceType = pkg.SourceTypeNextgen
 	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.PatientAccessUrl = "www.nextgen.com"
 
 	return sourceDef, nil
 }

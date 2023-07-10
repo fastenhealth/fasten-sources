@@ -29,6 +29,7 @@ func GetSourceColorectalSurgicalAndGastroenterologyAssocia(env pkg.FastenLightho
 	sourceDef.Display = "Colorectal Surgical And Gastroenterology Associa"
 	sourceDef.SourceType = pkg.SourceTypeColorectalSurgicalAndGastroenterologyAssocia
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://csgaky.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

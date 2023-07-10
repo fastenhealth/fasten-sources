@@ -28,6 +28,8 @@ func GetSourceChildMindMedicalPracticePllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Child Mind Medical Practice PLLC"
 	sourceDef.SourceType = pkg.SourceTypeChildMindMedicalPracticePllc
+	sourceDef.BrandLogo = "child-mind-medical-practice-pllc.svg"
+	sourceDef.PatientAccessUrl = "https://childmind.org/about-us/our-offices/new-york-midtown/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

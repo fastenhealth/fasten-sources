@@ -28,6 +28,7 @@ func GetSourceAndersonRegionalMedicalCenterSouth(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Anderson Regional Medical Center - South"
 	sourceDef.SourceType = pkg.SourceTypeAndersonRegionalMedicalCenterSouth
+	sourceDef.BrandLogo = "anderson-regional-medical-center-south.webp"
 	sourceDef.PatientAccessUrl = "https://www.andersonregional.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

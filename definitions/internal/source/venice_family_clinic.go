@@ -29,7 +29,7 @@ func GetSourceVeniceFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Venice Family Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVeniceFamilyClinic
 	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "3336C0003X"}
-	sourceDef.Aliases = []string{"VENICE FAMILY CLINIC - FPACT", "VENICE FAMILY", "BILL'S CLINIC AT SAFE PLACE FOR YOUTH", "COMMON GROUND", "SIMMS/MANN HEALTH & WELLNESS CENTER FPACT", "IRMA COLEN HEALTH CENTER FPACT", "ROBERT LEVINE FAMILY HEALTH CENTER", "IRMA COLEN FAMILY HEALTH CENTER CDP", "SAMO HI"}
+	sourceDef.Aliases = []string{"BILL'S CLINIC AT SAFE PLACE FOR YOUTH", "COMMON GROUND", "IRMA COLEN FAMILY HEALTH CENTER CDP", "IRMA COLEN HEALTH CENTER FPACT", "ROBERT LEVINE FAMILY HEALTH CENTER", "SAMO HI", "SIMMS/MANN HEALTH & WELLNESS CENTER FPACT", "VENICE FAMILY", "VENICE FAMILY CLINIC - FPACT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184885972", "1871837344", "1053854836", "1861935652", "1457510208", "1184883936", "1992964746", "1124054564", "1992966782", "1679016463"}}
 	sourceDef.PatientAccessUrl = "https://venicefamilyclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

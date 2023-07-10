@@ -29,6 +29,7 @@ func GetSourceGrantsPassClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Grants Pass Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGrantsPassClinic
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.grantspassclinic.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

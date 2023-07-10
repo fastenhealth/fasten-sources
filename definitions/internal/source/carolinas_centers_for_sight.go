@@ -28,6 +28,7 @@ func GetSourceCarolinasCentersForSight(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Carolinas Centers for Sight"
 	sourceDef.SourceType = pkg.SourceTypeCarolinasCentersForSight
+	sourceDef.PatientAccessUrl = "https://www.ccfs2020.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

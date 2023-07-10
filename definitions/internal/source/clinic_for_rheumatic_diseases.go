@@ -31,6 +31,8 @@ func GetSourceClinicForRheumaticDiseases(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207RR0500X"}
 	sourceDef.Aliases = []string{"CLINIC FOR RHEUMATIC DISEASES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497739346"}}
+	sourceDef.BrandLogo = "clinic-for-rheumatic-diseases.jpg"
+	sourceDef.PatientAccessUrl = "https://www.clinicforrheumaticdiseases.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

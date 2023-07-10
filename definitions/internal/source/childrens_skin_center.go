@@ -29,6 +29,7 @@ func GetSourceChildrensSkinCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Children's Skin Center"
 	sourceDef.SourceType = pkg.SourceTypeChildrensSkinCenter
+	sourceDef.PatientAccessUrl = "https://www.childrensskincenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

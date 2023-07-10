@@ -29,7 +29,7 @@ func GetSourcePresbyterianIntercommunityHospital(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Presbyterian Intercommunity Hospital"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianIntercommunityHospital
 	sourceDef.Category = []string{"3336I0012X", "282N00000X", "314000000X", "273Y00000X"}
-	sourceDef.Aliases = []string{"PRESBYTERIAN INTERCOMMUNITY HOSPITAL, INC.", "PRESBYTERIAN INTERCOMMUNITY HOSPITAL", "PIH HEALTH HOSPITAL WHITTIER", "PIH HEALTH HOSPITAL-WHITTIER", "PRESBYTERIAN INCOMMUNITY HOSPITAL"}
+	sourceDef.Aliases = []string{"PIH HEALTH HOSPITAL WHITTIER", "PIH HEALTH HOSPITAL-WHITTIER", "PRESBYTERIAN INCOMMUNITY HOSPITAL", "PRESBYTERIAN INTERCOMMUNITY HOSPITAL", "PRESBYTERIAN INTERCOMMUNITY HOSPITAL, INC."}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720142177", "1043215379", "1417952334", "1972508893"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

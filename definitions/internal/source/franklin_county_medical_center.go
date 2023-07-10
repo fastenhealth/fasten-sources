@@ -32,6 +32,7 @@ func GetSourceFranklinCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Aliases = []string{"WILLOW VALLEY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376579003", "1144663543", "1548355811", "1093056475"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.fcmc.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

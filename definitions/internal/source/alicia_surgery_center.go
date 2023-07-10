@@ -28,6 +28,7 @@ func GetSourceAliciaSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Alicia Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeAliciaSurgeryCenter
+	sourceDef.BrandLogo = "alicia-surgery-center.gif"
 	sourceDef.PatientAccessUrl = "https://aliciasurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

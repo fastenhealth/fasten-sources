@@ -29,6 +29,7 @@ func GetSourceCincinnatiGi(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Cincinnati GI"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiGi
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://cincinnati-gi.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

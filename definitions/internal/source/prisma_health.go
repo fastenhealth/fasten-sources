@@ -29,7 +29,7 @@ func GetSourcePrismaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Prisma Health"
 	sourceDef.SourceType = pkg.SourceTypePrismaHealth
 	sourceDef.Category = []string{"273Y00000X", "101YP2500X"}
-	sourceDef.Aliases = []string{"PRISMA HEALTH ORTHOPEDIC REHABILITATION SPECIALISTS", "PALMETTO HEALTH ORTHOPEDIC REHABILITATION SPECIALISTS", "PRISMA HEALTH COUNSELING BAPTIST"}
+	sourceDef.Aliases = []string{"PALMETTO HEALTH ORTHOPEDIC REHABILITATION SPECIALISTS", "PRISMA HEALTH COUNSELING BAPTIST", "PRISMA HEALTH ORTHOPEDIC REHABILITATION SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558739649", "1881617660"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

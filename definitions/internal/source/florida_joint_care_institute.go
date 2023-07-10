@@ -29,6 +29,7 @@ func GetSourceFloridaJointCareInstitute(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Florida Joint Care Institute"
 	sourceDef.SourceType = pkg.SourceTypeFloridaJointCareInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.floridajointcare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

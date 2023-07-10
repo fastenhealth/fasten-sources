@@ -28,6 +28,7 @@ func GetSourceChmcAndersonPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "CHMC Anderson Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeChmcAndersonPrimaryCare
+	sourceDef.PatientAccessUrl = "https://www.cincinnatichildrens.org/service/p/primary-care/anderson"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

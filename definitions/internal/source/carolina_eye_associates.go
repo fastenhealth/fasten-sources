@@ -28,6 +28,8 @@ func GetSourceCarolinaEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Carolina Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaEyeAssociates
+	sourceDef.BrandLogo = "carolina-eye-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.carolinaeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceGoshenPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Goshen Physicians"
 	sourceDef.SourceType = pkg.SourceTypeGoshenPhysicians
+	sourceDef.BrandLogo = "goshen-physicians.svg"
+	sourceDef.PatientAccessUrl = "https://goshenhealth.com/care-services/cancer-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

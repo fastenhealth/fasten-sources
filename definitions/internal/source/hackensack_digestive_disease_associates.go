@@ -29,6 +29,7 @@ func GetSourceHackensackDigestiveDiseaseAssociates(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Hackensack Digestive Disease Associates"
 	sourceDef.SourceType = pkg.SourceTypeHackensackDigestiveDiseaseAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ganjllc.com/hackensack-digestive-disease-associates/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

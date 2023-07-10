@@ -29,6 +29,7 @@ func GetSourceFootAndAnkleClinicOfTheVirginias(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Foot And Ankle Clinic Of The Virginias"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkleClinicOfTheVirginias
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://drfootpain.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

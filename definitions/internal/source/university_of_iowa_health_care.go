@@ -28,6 +28,10 @@ func GetSourceUniversityOfIowaHealthCare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "University of Iowa Health Care"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfIowaHealthCare
+	sourceDef.Category = []string{"261QU0200X", "261QX0100X", "261QR1300X"}
+	sourceDef.Aliases = []string{"UI HEALTH CARE URGENT CARE CEDAR RAPIDS", "UI HEALTH CARE HOLIDAY ROAD URGENT CARE", "UI HEALTH CARE HOLIDAY ROAD--OCCUPATIONAL HEALTH", "UI HEALTH CARE RIVER CROSSING RURAL HEALTH CLINIC"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215681283", "1821634825", "1962047522", "1982353785"}}
+	sourceDef.PatientAccessUrl = "https://uihealthcare.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

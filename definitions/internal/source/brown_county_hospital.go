@@ -30,7 +30,7 @@ func GetSourceBrownCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Brown County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBrownCountyHospital
 	sourceDef.Category = []string{"207Y00000X", "213E00000X", "367500000X", "207P00000X", "275N00000X", "251E00000X", "207Q00000X", "363L00000X", "261QR1300X", "282NC0060X"}
-	sourceDef.Aliases = []string{"BCH PROFESSIONAL SERVICES", "BROWN COUNTY HOSPITAL SWING BED", "BROWN COUNTY HOSPITAL HOME HEALTH", "AINSWORTH FAMILY CLINIC"}
+	sourceDef.Aliases = []string{"AINSWORTH FAMILY CLINIC", "BCH PROFESSIONAL SERVICES", "BROWN COUNTY HOSPITAL HOME HEALTH", "BROWN COUNTY HOSPITAL SWING BED"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417027210", "1265450860", "1891763512", "1073861456", "1760464283"}}
 	sourceDef.BrandLogo = "brown-county-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://browncountyhospital.org/"

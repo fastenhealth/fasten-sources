@@ -29,9 +29,10 @@ func GetSourceUnionMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Union Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUnionMedicalCenter
 	sourceDef.Category = []string{"363A00000X", "363L00000X", "207R00000X", "207Q00000X", "261QR1300X", "207P00000X", "282N00000X", "207V00000X", "208000000X", "152W00000X", "156FX1800X", "163WD0400X", "207W00000X", "207Y00000X", "2085R0202X", "2085U0001X", "208800000X", "213E00000X"}
-	sourceDef.Aliases = []string{"UNION MEDICAL CENTER- CENTER FOR FAMILY MEDICINE", "UNION MEDICAL CENTER", "UNION MEDICAL CENTER- CENTER FOR OB/GYN", "UNION MEDICAL CENTER - CENTER FOR PEDIATRICS", "UNION MEDICAL CENTER- CENTER FOR PEDIATRICS"}
+	sourceDef.Aliases = []string{"UNION MEDICAL CENTER", "UNION MEDICAL CENTER - CENTER FOR PEDIATRICS", "UNION MEDICAL CENTER- CENTER FOR FAMILY MEDICINE", "UNION MEDICAL CENTER- CENTER FOR OB/GYN", "UNION MEDICAL CENTER- CENTER FOR PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467837906", "1902308984", "1184126955", "1487039921", "1396129201", "1780186569", "1144722919", "1275035255", "1811499890", "1215951785"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.uniongeneralhealthsystem.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

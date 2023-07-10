@@ -28,6 +28,7 @@ func GetSourceCherokeeOutreach(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Cherokee Outreach"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeOutreach
+	sourceDef.PatientAccessUrl = "https://www.cherokeehealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

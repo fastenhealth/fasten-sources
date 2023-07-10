@@ -30,7 +30,7 @@ func GetSourceSheridanCommunityHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Sheridan Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSheridanCommunityHospital
 	sourceDef.Category = []string{"207Q00000X", "208D00000X", "207P00000X", "208600000X", "207R00000X", "275N00000X", "282NC0060X"}
-	sourceDef.Aliases = []string{"SHERIDAN CARE", "SCH CLINICS", "SHERIDAN WALK-IN CLINIC"}
+	sourceDef.Aliases = []string{"SCH CLINICS", "SHERIDAN CARE", "SHERIDAN WALK-IN CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740372754", "1528090594", "1740345958", "1184289043", "1225072853", "1689618324"}}
 	sourceDef.PatientAccessUrl = "http://www.sheridanhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

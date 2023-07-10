@@ -28,6 +28,8 @@ func GetSourceDialysisAccessCenterOfCincinnatiAsc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Dialysis Access Center Of Cincinnati ASC"
 	sourceDef.SourceType = pkg.SourceTypeDialysisAccessCenterOfCincinnatiAsc
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427577840"}}
 	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

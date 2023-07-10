@@ -29,6 +29,7 @@ func GetSourceFloridaOtolaryngologyGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Florida Otolaryngology Group"
 	sourceDef.SourceType = pkg.SourceTypeFloridaOtolaryngologyGroup
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://flotogroup.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

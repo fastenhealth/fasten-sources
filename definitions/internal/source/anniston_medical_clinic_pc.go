@@ -31,6 +31,8 @@ func GetSourceAnnistonMedicalClinicPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X", "207RH0003X", "207RR0500X", "261QM1300X", "207RP1001X", "207R00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619080017"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "anniston-medical-clinic-pc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.annistonmedicalclinic.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

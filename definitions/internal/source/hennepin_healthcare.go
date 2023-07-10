@@ -28,6 +28,7 @@ func GetSourceHennepinHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hennepin Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeHennepinHealthcare
+	sourceDef.PatientAccessUrl = "https://www.hennepinhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

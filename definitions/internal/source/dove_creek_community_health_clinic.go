@@ -28,8 +28,11 @@ func GetSourceDoveCreekCommunityHealthClinic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Dove Creek Community Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDoveCreekCommunityHealthClinic
+	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{"AXIS HEALTH SYSTEM", "DOVE CREEK INTEGRATED HEALTHCARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699301671"}}
 	sourceDef.BrandLogo = "dove-creek-community-health-clinic.jpg"
-	sourceDef.PatientAccessUrl = "https://www.axishealthsystem.org/locations/dove-creek/dove-creek-integrated-healthcare/"
+	sourceDef.PatientAccessUrl = "https://myhealthrecord.com/Portal/SSO"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

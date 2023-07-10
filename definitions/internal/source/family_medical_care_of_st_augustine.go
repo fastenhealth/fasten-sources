@@ -29,6 +29,7 @@ func GetSourceFamilyMedicalCareOfStAugustine(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Family Medical Care Of St Augustine"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicalCareOfStAugustine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.familymedicinestaugustine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

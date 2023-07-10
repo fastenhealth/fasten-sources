@@ -28,7 +28,9 @@ func GetSourceHvhsProd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "HVHS-Prod"
 	sourceDef.SourceType = pkg.SourceTypeHvhsProd
+	sourceDef.Aliases = []string{"Heritage Valley Health System"}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.heritagevalley.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

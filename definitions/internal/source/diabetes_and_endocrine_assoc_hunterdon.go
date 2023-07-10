@@ -28,6 +28,7 @@ func GetSourceDiabetesAndEndocrineAssocHunterdon(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Diabetes And Endocrine Assoc Hunterdon"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndEndocrineAssocHunterdon
+	sourceDef.BrandLogo = "diabetes-and-endocrine-assoc-hunterdon.svg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

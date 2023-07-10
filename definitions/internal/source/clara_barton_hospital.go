@@ -32,6 +32,7 @@ func GetSourceClaraBartonHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"275N00000X"}
 	sourceDef.Aliases = []string{"CLARA BARTON HOSPITAL", "CLARA BARTON HOSPITAL SWING BED UNIT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144263625"}}
+	sourceDef.PatientAccessUrl = "https://clarabartonhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

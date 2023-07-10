@@ -29,6 +29,8 @@ func GetSourceC2IGenomicsInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "C2i Genomics, Inc."
 	sourceDef.SourceType = pkg.SourceTypeC2IGenomicsInc
+	sourceDef.BrandLogo = "c2i-genomics-inc.svg"
+	sourceDef.PatientAccessUrl = "https://c2i-genomics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

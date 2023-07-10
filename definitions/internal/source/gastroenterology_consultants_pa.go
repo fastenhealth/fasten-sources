@@ -29,6 +29,7 @@ func GetSourceGastroenterologyConsultantsPa(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Gastroenterology Consultants, PA"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyConsultantsPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gastroconsultants.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

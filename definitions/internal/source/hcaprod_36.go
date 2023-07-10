@@ -29,6 +29,7 @@ func GetSourceHcaprod36(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "HCAPROD_36"
 	sourceDef.SourceType = pkg.SourceTypeHcaprod36
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "hca-mountain.png"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

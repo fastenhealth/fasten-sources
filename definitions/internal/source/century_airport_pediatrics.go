@@ -32,6 +32,8 @@ func GetSourceCenturyAirportPediatrics(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Aliases = []string{"CENTURY AIRPORT PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508890393"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "century-airport-pediatrics.jpg"
+	sourceDef.PatientAccessUrl = "https://www.century-airportpeds.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

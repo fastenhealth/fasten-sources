@@ -31,6 +31,8 @@ func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"1223S0112X", "1223G0001X"}
 	sourceDef.Aliases = []string{"HARRIS HEALTH SYSTEM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538833231"}}
+	sourceDef.BrandLogo = "harris-health-system.jpg"
+	sourceDef.PatientAccessUrl = "https://www.harrishealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

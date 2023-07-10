@@ -29,7 +29,7 @@ func GetSourceWestRiverHealthServices(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "West River Health Services"
 	sourceDef.SourceType = pkg.SourceTypeWestRiverHealthServices
 	sourceDef.Category = []string{"282NC0060X", "251E00000X", "152W00000X", "261QP1100X", "261Q00000X", "261QR1300X", "3416L0300X", "261QP2000X", "261QC0050X"}
-	sourceDef.Aliases = []string{"WEST RIVER REGIONAL MEDICAL CENTER", "HETTINGER CLINIC"}
+	sourceDef.Aliases = []string{"HETTINGER CLINIC", "WEST RIVER REGIONAL MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588763247", "1902992704", "1588784870", "1629169008", "1497856025", "1518089499", "1801987904", "1760570394", "1902526411", "1174606271"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

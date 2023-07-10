@@ -31,6 +31,7 @@ func GetSourceFamilyMedicalGroupOfTexarkana(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831233766"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://fmgoftexarkana.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

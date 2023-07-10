@@ -29,6 +29,7 @@ func GetSourceAmarilloFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Amarillo Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeAmarilloFamilyPhysicians
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.amarillofp.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

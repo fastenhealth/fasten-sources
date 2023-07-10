@@ -29,6 +29,7 @@ func GetSourceHorizonFamilyMedicalPa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Horizon Family Medical, PA"
 	sourceDef.SourceType = pkg.SourceTypeHorizonFamilyMedicalPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.horizonfamilymedical.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

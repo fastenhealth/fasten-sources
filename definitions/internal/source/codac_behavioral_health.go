@@ -28,6 +28,7 @@ func GetSourceCodacBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "CODAC Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeCodacBehavioralHealth
+	sourceDef.PatientAccessUrl = "https://codacinc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

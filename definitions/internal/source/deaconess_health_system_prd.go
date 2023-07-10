@@ -28,6 +28,7 @@ func GetSourceDeaconessHealthSystemPrd(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Deaconess Health System - PRD"
 	sourceDef.SourceType = pkg.SourceTypeDeaconessHealthSystemPrd
+	sourceDef.PatientAccessUrl = "https://www.deaconess.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

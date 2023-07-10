@@ -29,6 +29,7 @@ func GetSourceBurickCtrForHealthwellness(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Burick Ctr For HealthWellness"
 	sourceDef.SourceType = pkg.SourceTypeBurickCtrForHealthwellness
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://burickcenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

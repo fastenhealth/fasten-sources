@@ -29,6 +29,7 @@ func GetSourceDenverEndoDiabetesAndThyroidCenter(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Denver Endo,Diabetes & Thyroid Center"
 	sourceDef.SourceType = pkg.SourceTypeDenverEndoDiabetesAndThyroidCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://denverendocenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

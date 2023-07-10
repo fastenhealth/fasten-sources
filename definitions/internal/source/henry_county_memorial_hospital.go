@@ -30,7 +30,7 @@ func GetSourceHenryCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Henry County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHenryCountyMemorialHospital
 	sourceDef.Category = []string{"261Q00000X", "207Q00000X", "251G00000X", "314000000X", "207R00000X", "363L00000X", "363LF0000X", "261QR1300X", "146D00000X"}
-	sourceDef.Aliases = []string{"CENTERVILLE FAMILY MEDICINE", "HENRY COUNTY MEMORIAL HOSPITAL HOSPICE", "THE WATERS OF MUNCIE", "THE WATERS OF YORKTOWN", "THE WATERS OF DUNELAND", "HERITAGE HOUSE OF NEW CASTLE", "HCMH LIFELINE", "GLEN OAKS HEALTH CAMPUS", "HICKORY CREEK AT NEW CASTLE"}
+	sourceDef.Aliases = []string{"CENTERVILLE FAMILY MEDICINE", "GLEN OAKS HEALTH CAMPUS", "HCMH LIFELINE", "HENRY COUNTY MEMORIAL HOSPITAL HOSPICE", "HERITAGE HOUSE OF NEW CASTLE", "HICKORY CREEK AT NEW CASTLE", "THE WATERS OF DUNELAND", "THE WATERS OF MUNCIE", "THE WATERS OF YORKTOWN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346867942", "1376616581", "1134489339", "1861752065", "1487914602", "1124399910", "1518044692", "1578636783", "1326093212", "1811926694"}}
 	sourceDef.PatientAccessUrl = "https://www.hchcares.org/?y_source=1_NjM1NjA3MjYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "cerner"

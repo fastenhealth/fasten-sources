@@ -28,6 +28,8 @@ func GetSourceUrologySpecialistsOfNevada(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Urology Specialists Of Nevada"
 	sourceDef.SourceType = pkg.SourceTypeUrologySpecialistsOfNevada
+	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063458594"}}
 	sourceDef.BrandLogo = "urology-specialists-of-nevada.svg"
 	sourceDef.PatientAccessUrl = "https://www.usonv.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -32,6 +32,8 @@ func GetSourceFirstCarePc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Aliases = []string{"FIRST CARE PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366553364", "1770190191"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "first-care-pc.webp"
+	sourceDef.PatientAccessUrl = "http://www.firstcarepc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

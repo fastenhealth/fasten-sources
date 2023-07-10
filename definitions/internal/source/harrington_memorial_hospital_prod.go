@@ -29,6 +29,7 @@ func GetSourceHarringtonMemorialHospitalProd(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Harrington Memorial Hospital - PROD"
 	sourceDef.SourceType = pkg.SourceTypeHarringtonMemorialHospitalProd
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.harringtonhospital.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

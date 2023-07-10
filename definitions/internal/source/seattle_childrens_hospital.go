@@ -30,7 +30,7 @@ func GetSourceSeattleChildrensHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Seattle Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSeattleChildrensHospital
 	sourceDef.Category = []string{"335E00000X", "174400000X", "261QP2300X", "282NC2000X", "332B00000X", "332BP3500X", "332BX2000X", "3336H0001X", "251F00000X", "261QE0700X", "273R00000X", "261QS0112X", "261QD0000X", "237600000X"}
-	sourceDef.Aliases = []string{"ODESSA BROWN CHILDREN'S CLINIC", "SEATTLE CHILDREN'S TRI-CITIES CLINIC", "SEATTLE CHILDREN'S HOSPITAL"}
+	sourceDef.Aliases = []string{"ODESSA BROWN CHILDREN'S CLINIC", "SEATTLE CHILDREN'S HOSPITAL", "SEATTLE CHILDREN'S TRI-CITIES CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033288444", "1134251747", "1346548963", "1245383348", "1811041692", "1225269715", "1477622595", "1467704841", "1265505432", "1003319500"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 

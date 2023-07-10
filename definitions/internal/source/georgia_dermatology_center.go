@@ -29,6 +29,7 @@ func GetSourceGeorgiaDermatologyCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Georgia Dermatology Center"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaDermatologyCenter
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gaderm.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

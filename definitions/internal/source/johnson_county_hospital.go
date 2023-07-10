@@ -30,7 +30,7 @@ func GetSourceJohnsonCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Johnson County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJohnsonCountyHospital
 	sourceDef.Category = []string{"261QR1300X", "251E00000X", "363AM0700X", "363LF0000X", "207Q00000X", "282NC0060X", "275N00000X"}
-	sourceDef.Aliases = []string{"ADAMS PRIMARY CARE", "TECUMSEH FAMILY HEALTH", "JOHNSON COUNTY HOSPITAL HOME HEALTH SERVICES", "JCH PROFESSIONAL SERVICES"}
+	sourceDef.Aliases = []string{"ADAMS PRIMARY CARE", "JCH PROFESSIONAL SERVICES", "JOHNSON COUNTY HOSPITAL HOME HEALTH SERVICES", "TECUMSEH FAMILY HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003027442", "1609087030", "1821001405", "1780895110", "1285624825", "1841383148"}}
 	sourceDef.PatientAccessUrl = "https://jchosp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,7 +29,7 @@ func GetSourceCommonwealthEyeCareAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Commonwealth Eye Care Associates"
 	sourceDef.SourceType = pkg.SourceTypeCommonwealthEyeCareAssociates
 	sourceDef.Category = []string{"152W00000X", "207W00000X"}
-	sourceDef.Aliases = []string{"VIRGINIA EYE CONSULTANTS", "COMMONWEALTH EYE CARE ASSOCIATES", "RETINA INSTITUTE OF VIRGINIA"}
+	sourceDef.Aliases = []string{"COMMONWEALTH EYE CARE ASSOCIATES", "RETINA INSTITUTE OF VIRGINIA", "VIRGINIA EYE CONSULTANTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992727820"}}
 	sourceDef.BrandLogo = "commonwealth-eye-care-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.commonwealtheye.com/templates/commonwealtheyecareassociates/images/logo.jpg"

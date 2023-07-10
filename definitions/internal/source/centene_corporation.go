@@ -29,6 +29,8 @@ func GetSourceCenteneCorporation(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Centene Corporation"
 	sourceDef.SourceType = pkg.SourceTypeCenteneCorporation
+	sourceDef.BrandLogo = "centene-corporation.jpg"
+	sourceDef.PatientAccessUrl = "https://www.centene.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

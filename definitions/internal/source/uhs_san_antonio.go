@@ -28,6 +28,7 @@ func GetSourceUhsSanAntonio(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "UHS San Antonio"
 	sourceDef.SourceType = pkg.SourceTypeUhsSanAntonio
+	sourceDef.PatientAccessUrl = "https://www.universityhealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

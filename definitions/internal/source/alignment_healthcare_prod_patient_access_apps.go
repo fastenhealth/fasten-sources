@@ -29,6 +29,7 @@ func GetSourceAlignmentHealthcareProdPatientAccessApps(env pkg.FastenLighthouseE
 	sourceDef.Display = "Alignment healthcare-PROD Patient Access (Apps)"
 	sourceDef.SourceType = pkg.SourceTypeAlignmentHealthcareProdPatientAccessApps
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.alignmenthealth.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

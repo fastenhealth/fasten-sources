@@ -28,6 +28,8 @@ func GetSourceClinicalNephrologyAssociatesAsc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Clinical Nephrology Associates ASC"
 	sourceDef.SourceType = pkg.SourceTypeClinicalNephrologyAssociatesAsc
+	sourceDef.BrandLogo = "clinical-nephrology-associates-asc.jpg"
+	sourceDef.PatientAccessUrl = "https://clinicalrenal.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

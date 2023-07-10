@@ -28,6 +28,10 @@ func GetSourceUmcSouthernNevada(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "UMC Southern Nevada"
 	sourceDef.SourceType = pkg.SourceTypeUmcSouthernNevada
+	sourceDef.Category = []string{"282N00000X", "261QU0200X"}
+	sourceDef.Aliases = []string{"UNIVERSITY MEDICAL CENTER", "UMC NELLIS QUICK CARE", "UMC SPRING VALLEY QUICK CARE", "UMC SUNSET QUICK CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548393127", "1104538966", "1376105478", "1467014571", "1538721642"}}
+	sourceDef.PatientAccessUrl = "https://www.umcsn.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

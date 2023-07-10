@@ -29,6 +29,8 @@ func GetSourceCoryellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Coryell Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCoryellMemorialHospital
+	sourceDef.BrandLogo = "coryell-memorial-hospital.svg"
+	sourceDef.PatientAccessUrl = "https://coryellhealth.org/services/hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

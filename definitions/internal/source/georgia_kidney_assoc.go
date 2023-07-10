@@ -29,6 +29,7 @@ func GetSourceGeorgiaKidneyAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Georgia Kidney Assoc"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaKidneyAssoc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.georgiakidney.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

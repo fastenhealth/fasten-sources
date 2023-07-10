@@ -30,7 +30,7 @@ func GetSourceMontgomeryCountyMemorialHospital(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Montgomery County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryCountyMemorialHospital
 	sourceDef.Category = []string{"282NC0060X", "207V00000X", "133V00000X", "332U00000X", "314000000X", "275N00000X", "207P00000X", "208600000X", "363A00000X", "363LF0000X", "367500000X", "207R00000X", "251E00000X", "251G00000X", "261QR1300X"}
-	sourceDef.Aliases = []string{"VILLISCA MEDICAL CLINIC", "RED OAK MEDICAL CLINIC", "MALVERN MEDICAL CLINIC"}
+	sourceDef.Aliases = []string{"MALVERN MEDICAL CLINIC", "RED OAK MEDICAL CLINIC", "VILLISCA MEDICAL CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376539338", "1356314637", "1558496620", "1831162023", "1265405310", "1770571267", "1255447546", "1417667072", "1891405452", "1639768401"}}
 	sourceDef.PatientAccessUrl = "http://www.mcmh.org"
 	sourceDef.SecretKeyPrefix = "cerner"

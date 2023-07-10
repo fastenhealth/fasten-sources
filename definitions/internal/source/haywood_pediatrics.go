@@ -29,6 +29,7 @@ func GetSourceHaywoodPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Haywood Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeHaywoodPediatrics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.haywoodpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceClinicalNeurophyiologyServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Clinical Neurophyiology Services"
 	sourceDef.SourceType = pkg.SourceTypeClinicalNeurophyiologyServices
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.sleepandattentiondisorders.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceChattanoogaEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Chattanooga Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeChattanoogaEyeInstitute
+	sourceDef.BrandLogo = "chattanooga-eye-institute.jpg"
+	sourceDef.PatientAccessUrl = "https://www.chatteye.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

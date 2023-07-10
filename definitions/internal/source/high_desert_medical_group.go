@@ -28,6 +28,7 @@ func GetSourceHighDesertMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "High Desert Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHighDesertMedicalGroup
+	sourceDef.PatientAccessUrl = "https://www.hdmg.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

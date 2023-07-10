@@ -32,6 +32,8 @@ func GetSourceFamilyMedicineAssociates(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Aliases = []string{"FAMILY MEDICINE ASSOCIATES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467497677", "1376240358", "1801893656", "1427198365", "1831330364", "1164573358", "1023153640", "1639533656", "1932170644", "1144390626"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "family-medicine-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://www.fhcatx.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceCommunityHealthCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthCare
 	sourceDef.Category = []string{"261QF0400X", "261QD0000X", "261QC1500X", "3336C0002X"}
-	sourceDef.Aliases = []string{"HILLTOP DENAL", "LAKEWOOD DENTAL", "BETHEL LEARNING CLINIC", "HILLTOP REGIONAL HEALTH CENTER", "SPANAWAY CLINIC", "COMMUNITY HEALTH CARE PHARMACY - PARKLAND", "COMMUNITY HEALTH CARE PHARMACY - SPANAWAY", "COMMUNITY HEALTH CARE PHARMACY - KEY MEDICAL CENTER", "CLR DENTAL CLINIC"}
+	sourceDef.Aliases = []string{"BETHEL LEARNING CLINIC", "CLR DENTAL CLINIC", "COMMUNITY HEALTH CARE PHARMACY - KEY MEDICAL CENTER", "COMMUNITY HEALTH CARE PHARMACY - PARKLAND", "COMMUNITY HEALTH CARE PHARMACY - SPANAWAY", "HILLTOP DENAL", "HILLTOP REGIONAL HEALTH CENTER", "LAKEWOOD DENTAL", "SPANAWAY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790762755", "1851511570", "1760602486", "1952954893", "1407076110", "1497973663", "1538258223", "1891225314", "1053916148", "1154081966"}}
 	sourceDef.PatientAccessUrl = "https://www.commhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

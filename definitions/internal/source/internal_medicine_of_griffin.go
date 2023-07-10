@@ -31,6 +31,7 @@ func GetSourceInternalMedicineOfGriffin(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073562633"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.imgriffin.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

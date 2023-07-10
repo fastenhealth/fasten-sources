@@ -29,7 +29,8 @@ func GetSourceDoctorsHospitalAtRenaissance(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Doctors Hospital at Renaissance"
 	sourceDef.SourceType = pkg.SourceTypeDoctorsHospitalAtRenaissance
-	sourceDef.PatientAccessUrl = "https://www.dhrhealth.com/"
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710600556 ", " 1053317362 ", " 1306186887 ", " 1568657583"}}
+	sourceDef.PatientAccessUrl = "https://dhrhs.consumeridp.us-1.healtheintent.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

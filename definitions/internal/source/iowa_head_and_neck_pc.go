@@ -31,6 +31,7 @@ func GetSourceIowaHeadAndNeckPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207Y00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760655138"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ihnclinic.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

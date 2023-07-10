@@ -28,6 +28,7 @@ func GetSourceCentralMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Central Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCentralMedicalGroup
+	sourceDef.PatientAccessUrl = "https://centralmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

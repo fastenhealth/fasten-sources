@@ -28,6 +28,8 @@ func GetSourcePiedmontPediatricsPLC(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "PIEDMONT PEDIATRICS  P L C"
 	sourceDef.SourceType = pkg.SourceTypePiedmontPediatricsPLC
+	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205802402"}}
 	sourceDef.BrandLogo = "piedmont-pediatrics-p-l-c.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/piedmontpediatricsplc/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,7 @@ func GetSourceChiMemorial(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "CHI Memorial"
 	sourceDef.SourceType = pkg.SourceTypeChiMemorial
+	sourceDef.PatientAccessUrl = "https://www.memorial.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

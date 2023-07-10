@@ -31,6 +31,8 @@ func GetSourceAscensionProvidence(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"273R00000X", "333600000X", "3336C0003X", "282N00000X"}
 	sourceDef.Aliases = []string{"ASCENSION PROVIDENCE DEPAUL CENTER", "ASCENSION PROVIDENCE PLAZA OUTPATIENT PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730406265", "1386784304", "1093708679"}}
+	sourceDef.BrandLogo = "ascension-health.svg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

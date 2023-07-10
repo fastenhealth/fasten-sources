@@ -28,6 +28,9 @@ func GetSourcePhysicianServicesOncology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Physician Services Oncology"
 	sourceDef.SourceType = pkg.SourceTypePhysicianServicesOncology
+	sourceDef.Category = []string{"208D00000X", "207T00000X", "2081P2900X", "2084N0400X", "207R00000X", "208600000X", "174400000X", "208800000X", "207RG0100X", "207Q00000X", "207Y00000X", "261QM1300X", "207RP1001X"}
+	sourceDef.Aliases = []string{"UROLOGY ASSOCIATES OF ARCHBOLD", "ARCHBOLD PULMONARY MEDICINE & CRITICAL CARE SERVICES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508132887", "1104910520", "1265798185", "1346557717", "1598057655", "1609215680", "1619336898", "1720452246", "1730564998", "1831353036", "1912335308", "1972097293"}}
 	sourceDef.PatientAccessUrl = "https://archbold.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

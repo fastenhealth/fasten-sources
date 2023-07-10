@@ -29,7 +29,7 @@ func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Oregon Health & Science University"
 	sourceDef.SourceType = pkg.SourceTypeOregonHealthAndScienceUniversity
 	sourceDef.Category = []string{"208D00000X", "282N00000X", "207R00000X", "3336I0012X", "333600000X", "3336C0002X", "3336C0003X", "261QR1300X", "122300000X", "261QE0700X", "261QP0905X", "261Q00000X"}
-	sourceDef.Aliases = []string{"OHSU KNIGHT CANCER INSTITUTE-BEAVERTON HEMATOLOGY AND ONCOLOGY OUTPATI", "OHSU SCAPPOOSE RURAL HEALTH CLINIC", "OHSU OUTPATIENT PHARMACY", "OHSU CHH RETAIL PHARMACY"}
+	sourceDef.Aliases = []string{"OHSU CHH RETAIL PHARMACY", "OHSU KNIGHT CANCER INSTITUTE-BEAVERTON HEMATOLOGY AND ONCOLOGY OUTPATI", "OHSU OUTPATIENT PHARMACY", "OHSU SCAPPOOSE RURAL HEALTH CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609824010", "1649623406", "1114164381", "1417969304", "1346263340", "1790878973", "1396800330", "1033650353", "1609123124", "1003278920"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

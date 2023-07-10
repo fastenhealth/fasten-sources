@@ -36,6 +36,7 @@ func GetSourceAetna(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "Aetna"
 	sourceDef.PlatformType = pkg.SourceTypeAetna
 	sourceDef.SourceType = pkg.SourceTypeAetna
+	sourceDef.PatientAccessUrl = "https://www.aetna.com/"
 
 	return sourceDef, nil
 }

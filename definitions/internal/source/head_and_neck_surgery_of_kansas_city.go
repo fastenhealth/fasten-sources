@@ -29,6 +29,7 @@ func GetSourceHeadAndNeckSurgeryOfKansasCity(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Head and Neck Surgery Of Kansas City"
 	sourceDef.SourceType = pkg.SourceTypeHeadAndNeckSurgeryOfKansasCity
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hnskc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourcePlannedParenthood(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Planned Parenthood"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthood
 	sourceDef.Category = []string{"251K00000X", "261QC1500X", "261QP2300X", "261QA0005X", "363LX0001X", "261QF0050X"}
-	sourceDef.Aliases = []string{"PLANNED PARENTHOOD NORTHERN CALIFORNIA", "MARYVALE CENTER"}
+	sourceDef.Aliases = []string{"MARYVALE CENTER", "PLANNED PARENTHOOD NORTHERN CALIFORNIA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174514095", "1699112037", "1710023510", "1326265125", "1295893550", "1962456558", "1003061862", "1528120821", "1093068314", "1558551325"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

@@ -28,6 +28,7 @@ func GetSourceCentralNeOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Central NE Orthopedics & Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCentralNeOrthopedicsAndSportsMedicine
+	sourceDef.PatientAccessUrl = "https://cnorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

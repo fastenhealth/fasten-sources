@@ -29,6 +29,7 @@ func GetSourceCentralVirginiaOrthopaedicsAndSportsMedicine(env pkg.FastenLightho
 	sourceDef.Display = "Central Virginia Orthopaedics and Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCentralVirginiaOrthopaedicsAndSportsMedicine
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://cvosm.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

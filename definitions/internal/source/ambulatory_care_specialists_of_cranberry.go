@@ -28,6 +28,10 @@ func GetSourceAmbulatoryCareSpecialistsOfCranberry(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Ambulatory Care Specialists Of Cranberry"
 	sourceDef.SourceType = pkg.SourceTypeAmbulatoryCareSpecialistsOfCranberry
+	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{"SCAC LLC", "SURGERY CENTER AT CRANBERRY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902876212"}}
+	sourceDef.PatientAccessUrl = "https://cranberrysurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

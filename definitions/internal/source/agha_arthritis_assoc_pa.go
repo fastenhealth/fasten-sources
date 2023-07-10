@@ -29,6 +29,7 @@ func GetSourceAghaArthritisAssocPa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Agha Arthritis Assoc Pa"
 	sourceDef.SourceType = pkg.SourceTypeAghaArthritisAssocPa
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://aghaarthritis.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceEntCentersOfExcellence(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207Y00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689043515"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://entcoe.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

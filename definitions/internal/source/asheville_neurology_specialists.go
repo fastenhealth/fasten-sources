@@ -29,6 +29,7 @@ func GetSourceAshevilleNeurologySpecialists(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Asheville Neurology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAshevilleNeurologySpecialists
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.ashneuro.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

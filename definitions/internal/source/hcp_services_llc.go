@@ -31,6 +31,7 @@ func GetSourceHcpServicesLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"253Z00000X", "251E00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427200096"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hcphomehealthcare.com/contact_us.php"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

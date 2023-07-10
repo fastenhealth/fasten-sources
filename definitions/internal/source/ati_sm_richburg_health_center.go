@@ -29,7 +29,7 @@ func GetSourceAtiSmRichburgHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "ATI SM Richburg Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAtiSmRichburgHealthCenter
-	sourceDef.BrandLogo = "ati-sm-richburg-health-center.jpg"
+	sourceDef.BrandLogo = "ati-sm-occupational-health-center.png"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3JYPJ2TAZV55DTI2N1Z2AI4GW3BFP1?assignment_id=352YTHGRO9A5OGLJA90FZP1NQVF4HO&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

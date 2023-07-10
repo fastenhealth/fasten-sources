@@ -28,6 +28,8 @@ func GetSourceCvsHealthAndMinuteClinic(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "CVS Health & Minute Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCvsHealthAndMinuteClinic
+	sourceDef.BrandLogo = "cvs-health-and-minute-clinic.svg"
+	sourceDef.PatientAccessUrl = "https://www.cvs.com/minuteclinic"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,8 +29,11 @@ func GetSourceFloydHealthcareManagement(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Floyd Healthcare Management"
 	sourceDef.SourceType = pkg.SourceTypeFloydHealthcareManagement
+	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{"ATRIUM HEALTH FLOYD MEDICAL CENTER"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154377166"}}
 	sourceDef.BrandLogo = "floyd-healthcare-management.jpg"
-	sourceDef.PatientAccessUrl = "https://www.floyd.org/style%20library/_img/floyd-logo.png"
+	sourceDef.PatientAccessUrl = "https://www.floyd.org/Pages/default.aspx"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

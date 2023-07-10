@@ -32,6 +32,7 @@ func GetSourceEasternPlumasHealthCare(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"171M00000X", "261QR1300X", "282N00000X", "282NC0060X", "332B00000X", "341600000X"}
 	sourceDef.Aliases = []string{"EASTERN PLUMAS HEALTH CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487650313", "1396705067", "1346247764", "1275539116", "1588660310", "1093711608", "1952308173", "1669478590"}}
+	sourceDef.PatientAccessUrl = "https://www.ephc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -30,7 +30,7 @@ func GetSourceTropicalTexasBehavioralHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Tropical Texas Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeTropicalTexasBehavioralHealth
 	sourceDef.Category = []string{"251S00000X", "261QM0850X", "101Y00000X", "171M00000X", "207Q00000X", "2084P0800X", "261Q00000X", "261QM1300X", "324500000X", "251B00000X", "101YA0400X", "261QR0405X"}
-	sourceDef.Aliases = []string{"TROPICAL TEXAS CENTER FOR MHMR", "TROPCIAL TEXAS CENTER FOR MHMR"}
+	sourceDef.Aliases = []string{"TROPCIAL TEXAS CENTER FOR MHMR", "TROPICAL TEXAS CENTER FOR MHMR"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417158817", "1093916835", "1588643787", "1396447421", "1043405921", "1124337225"}}
 	sourceDef.BrandLogo = "tropical-texas-behavioral-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/tropical-texas-behavioral-health"

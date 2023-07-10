@@ -28,6 +28,7 @@ func GetSourceChiStLukesHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "CHI St. Luke's Health"
 	sourceDef.SourceType = pkg.SourceTypeChiStLukesHealth
+	sourceDef.PatientAccessUrl = "https://www.stlukeshealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

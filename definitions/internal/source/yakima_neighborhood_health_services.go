@@ -29,7 +29,7 @@ func GetSourceYakimaNeighborhoodHealthServices(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Yakima Neighborhood Health Services"
 	sourceDef.SourceType = pkg.SourceTypeYakimaNeighborhoodHealthServices
 	sourceDef.Category = []string{"261QF0400X", "261QP0905X", "332H00000X", "261QD0000X", "261QF0050X", "333600000X", "3336C0002X"}
-	sourceDef.Aliases = []string{"YNHS HAUFF RESOURCE CENTER", "CHUCK AUSTIN PLACE DENTAL", "NEIGHBORHOOD HEALTH TERRACE HEIGHTS"}
+	sourceDef.Aliases = []string{"CHUCK AUSTIN PLACE DENTAL", "NEIGHBORHOOD HEALTH TERRACE HEIGHTS", "YNHS HAUFF RESOURCE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194379354", "1285771204", "1902112196", "1083021075", "1669831970", "1871783803", "1962178921", "1467599480", "1184841629", "1760073209"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

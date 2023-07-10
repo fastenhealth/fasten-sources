@@ -29,6 +29,7 @@ func GetSourceHickoryAdultMedicineKidneySpecialist(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Hickory Adult Medicine Kidney Specialist"
 	sourceDef.SourceType = pkg.SourceTypeHickoryAdultMedicineKidneySpecialist
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.hickoryadultmedicine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

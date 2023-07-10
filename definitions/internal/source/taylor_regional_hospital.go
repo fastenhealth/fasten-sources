@@ -29,7 +29,7 @@ func GetSourceTaylorRegionalHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Taylor Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTaylorRegionalHospital
 	sourceDef.Category = []string{"213E00000X", "208600000X", "3336C0003X", "341600000X", "314000000X", "282NR1301X", "207Q00000X"}
-	sourceDef.Aliases = []string{"TAYLOR PHYSICIANS PRACTICE # 14", "TAYLOR PHYSICIANS PRACTICE # 5", "TAYLOR PHYSICIANS PRACTICE # 17", "TAYLOR RETAIL PHARMACY"}
+	sourceDef.Aliases = []string{"TAYLOR PHYSICIANS PRACTICE # 14", "TAYLOR PHYSICIANS PRACTICE # 17", "TAYLOR PHYSICIANS PRACTICE # 5", "TAYLOR RETAIL PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568711380", "1811248123", "1619228046", "1972935245", "1376135558", "1124192604", "1962800052", "1720189517", "1841509577", "1780934539"}}
 	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"

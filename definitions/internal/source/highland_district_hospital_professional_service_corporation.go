@@ -29,6 +29,8 @@ func GetSourceHighlandDistrictHospitalProfessionalServiceCorporation(env pkg.Fas
 	sourceDef.Display = "Highland District Hospital Professional Service Corporation"
 	sourceDef.SourceType = pkg.SourceTypeHighlandDistrictHospitalProfessionalServiceCorporation
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "highland-district-hospital-professional-service-corporation.svg"
+	sourceDef.PatientAccessUrl = "https://www.hdh.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

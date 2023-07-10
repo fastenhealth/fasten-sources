@@ -28,7 +28,10 @@ func GetSourcePiedmontEnt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Piedmont ENT"
 	sourceDef.SourceType = pkg.SourceTypePiedmontEnt
+	sourceDef.Category = []string{"332S00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942502075"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.piedent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

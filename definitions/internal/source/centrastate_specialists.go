@@ -28,6 +28,8 @@ func GetSourceCentrastateSpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "CentraState Specialists"
 	sourceDef.SourceType = pkg.SourceTypeCentrastateSpecialists
+	sourceDef.BrandLogo = "centrastate-specialists.svg"
+	sourceDef.PatientAccessUrl = "https://www.centrastate.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

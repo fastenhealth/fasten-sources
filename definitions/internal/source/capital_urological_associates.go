@@ -29,6 +29,8 @@ func GetSourceCapitalUrologicalAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Capital Urological Associates"
 	sourceDef.SourceType = pkg.SourceTypeCapitalUrologicalAssociates
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "capital-urological-associates.jpg"
+	sourceDef.PatientAccessUrl = "https://capitalu.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

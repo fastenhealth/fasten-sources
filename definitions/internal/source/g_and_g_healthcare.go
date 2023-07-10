@@ -29,6 +29,7 @@ func GetSourceGAndGHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "G and G Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeGAndGHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gandghealthcare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

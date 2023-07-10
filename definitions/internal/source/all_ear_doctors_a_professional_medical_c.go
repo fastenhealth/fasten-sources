@@ -28,6 +28,9 @@ func GetSourceAllEarDoctorsAProfessionalMedicalC(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "All Ear Doctors A Professional Medical C"
 	sourceDef.SourceType = pkg.SourceTypeAllEarDoctorsAProfessionalMedicalC
+	sourceDef.Category = []string{"332S00000X"}
+	sourceDef.Aliases = []string{"ALL EAR DOCTORS A PROFESSIONAL MEDICAL CORPORATION"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205908365"}}
 	sourceDef.PatientAccessUrl = "https://alleardoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

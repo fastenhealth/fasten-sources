@@ -31,6 +31,7 @@ func GetSourceClinicsOfNorthTexasLlp(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207U00000X", "2085B0100X", "2085U0001X", "2085R0202X", "332B00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124007760", "1477555167"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://clinicsofnorthtexas.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

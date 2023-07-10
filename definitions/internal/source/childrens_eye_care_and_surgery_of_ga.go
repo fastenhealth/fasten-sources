@@ -28,6 +28,8 @@ func GetSourceChildrensEyeCareAndSurgeryOfGa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Childrens Eye Care and Surgery of GA"
 	sourceDef.SourceType = pkg.SourceTypeChildrensEyeCareAndSurgeryOfGa
+	sourceDef.BrandLogo = "childrens-eye-care-and-surgery-of-ga.jpg"
+	sourceDef.PatientAccessUrl = "https://childrenseyega.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

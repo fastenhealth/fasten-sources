@@ -30,6 +30,8 @@ func GetSourceGeisinger(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeGeisinger
 	sourceDef.Category = []string{"363A00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619342862"}}
+	sourceDef.BrandLogo = "geisinger-health-plan.svg"
+	sourceDef.PatientAccessUrl = "https://www.geisinger.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

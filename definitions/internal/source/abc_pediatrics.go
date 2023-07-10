@@ -29,6 +29,8 @@ func GetSourceAbcPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "ABC Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeAbcPediatrics
+	sourceDef.Category = []string{"261QM2500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497138952"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

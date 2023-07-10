@@ -31,6 +31,7 @@ func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"332B00000X", "261QM1300X", "3416A0800X", "251G00000X", "251B00000X", "261QM2500X", "207RI0200X"}
 	sourceDef.Aliases = []string{"MAYO CLINIC CENTER OF EXCELLENCE PROGRAM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467622092", "1881018208", "1538568928", "1821326570", "1164758868", "1588895643", "1023405065", "1912403536", "1427235068", "1114343860"}}
+	sourceDef.PatientAccessUrl = "https://www.mayoclinichealthsystem.org/patient-online-services"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

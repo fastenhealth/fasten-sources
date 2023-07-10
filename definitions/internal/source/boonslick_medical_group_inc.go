@@ -30,6 +30,8 @@ func GetSourceBoonslickMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeBoonslickMedicalGroupInc
 	sourceDef.Category = []string{"207V00000X", "207N00000X", "207RG0100X", "207R00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588662803"}}
+	sourceDef.BrandLogo = "boonslick-medical-group-inc.jpg"
+	sourceDef.PatientAccessUrl = "https://boonmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

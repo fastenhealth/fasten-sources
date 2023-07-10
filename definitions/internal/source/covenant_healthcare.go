@@ -31,6 +31,7 @@ func GetSourceCovenantHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"282N00000X", "282NC0060X", "207P00000X", "367500000X"}
 	sourceDef.Aliases = []string{"COVENANT HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588656946", "1033259569", "1255497764", "1972590412", "1225151897"}}
+	sourceDef.PatientAccessUrl = "https://www.covenanthealthcare.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

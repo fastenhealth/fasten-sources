@@ -31,6 +31,8 @@ func GetSourceCrystalCoastFamilyPractice(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356366413"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "crystal-coast-family-practice.jpeg"
+	sourceDef.PatientAccessUrl = "https://www.crystalcoastfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

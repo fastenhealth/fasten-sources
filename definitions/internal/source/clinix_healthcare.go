@@ -29,6 +29,7 @@ func GetSourceClinixHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Clinix Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeClinixHealthcare
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://clinixhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

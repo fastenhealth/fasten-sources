@@ -31,6 +31,7 @@ func GetSourceAdvancedPainManagementCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"332B00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467773663"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.apmconline.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

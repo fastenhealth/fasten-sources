@@ -28,6 +28,7 @@ func GetSourceCghMedicalCenterClinics(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "CGH Medical Center - Clinics"
 	sourceDef.SourceType = pkg.SourceTypeCghMedicalCenterClinics
+	sourceDef.PatientAccessUrl = "https://www.cghmc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

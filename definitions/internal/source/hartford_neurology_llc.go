@@ -29,6 +29,7 @@ func GetSourceHartfordNeurologyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Hartford Neurology Llc"
 	sourceDef.SourceType = pkg.SourceTypeHartfordNeurologyLlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.hartfordneurology.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

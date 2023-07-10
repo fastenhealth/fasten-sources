@@ -29,6 +29,7 @@ func GetSourceEasternOklahomaEarNoseAndThroat(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Eastern Oklahoma Ear Nose and Throat"
 	sourceDef.SourceType = pkg.SourceTypeEasternOklahomaEarNoseAndThroat
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://eoent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

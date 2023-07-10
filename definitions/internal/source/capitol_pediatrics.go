@@ -31,6 +31,7 @@ func GetSourceCapitolPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700958410"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.cappediatrics.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

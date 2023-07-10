@@ -28,6 +28,7 @@ func GetSourceCardiologyAssociatesOfPortHuronPc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Cardiology Associates Of Port Huron PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyAssociatesOfPortHuronPc
+	sourceDef.PatientAccessUrl = "https://www.porthuronheartcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

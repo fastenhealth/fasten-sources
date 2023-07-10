@@ -28,6 +28,7 @@ func GetSourceEastonFamilyPracticePC(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Easton Family Practice P C"
 	sourceDef.SourceType = pkg.SourceTypeEastonFamilyPracticePC
+	sourceDef.PatientAccessUrl = "https://www.eastonfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

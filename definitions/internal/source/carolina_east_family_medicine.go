@@ -31,6 +31,8 @@ func GetSourceCarolinaEastFamilyMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942252341"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "carolina-east-family-medicine.jpg"
+	sourceDef.PatientAccessUrl = "https://www.carolinaeastfamilymedicine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

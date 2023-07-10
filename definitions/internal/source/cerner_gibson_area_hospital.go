@@ -28,6 +28,7 @@ func GetSourceCernerGibsonAreaHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Cerner Gibson Area Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCernerGibsonAreaHospital
+	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

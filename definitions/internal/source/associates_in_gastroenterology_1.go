@@ -29,9 +29,11 @@ func GetSourceAssociatesInGastroenterology1(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Associates In Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInGastroenterology1
 	sourceDef.Category = []string{"207ZP0102X", "363L00000X", "367500000X", "207RG0100X"}
-	sourceDef.Aliases = []string{"MIDSTATE GASTROENTEROLOGY", "GASTROENTEROLOGY ASSOCIATES OF NORTH MISSISSIPPI", "FRANKLIN GASTROENTEROLOGY", "DIGESTIVE HEALTH SPECIALISTS", "SKYLINE GASTROENTEROLOGY OF WEST TENNESSEE", "ASSOCIATES IN GASTROENTEROLOGY", "GASTRO ONE"}
+	sourceDef.Aliases = []string{"ASSOCIATES IN GASTROENTEROLOGY", "DIGESTIVE HEALTH SPECIALISTS", "FRANKLIN GASTROENTEROLOGY", "GASTRO ONE", "GASTROENTEROLOGY ASSOCIATES OF NORTH MISSISSIPPI", "MIDSTATE GASTROENTEROLOGY", "SKYLINE GASTROENTEROLOGY OF WEST TENNESSEE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417932492", "1730170713", "1285624536", "1700877487"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "associates-in-gastroenterology.jpg"
+	sourceDef.PatientAccessUrl = "https://www.associatesingastro.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

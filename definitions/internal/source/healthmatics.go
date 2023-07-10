@@ -29,6 +29,7 @@ func GetSourceHealthmatics(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "HealthMatics"
 	sourceDef.SourceType = pkg.SourceTypeHealthmatics
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.healthmatics.com.au/our-experience/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

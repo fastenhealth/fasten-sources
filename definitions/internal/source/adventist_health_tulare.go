@@ -32,7 +32,7 @@ func GetSourceAdventistHealthTulare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"282N00000X"}
 	sourceDef.Aliases = []string{"TULARE REGIONAL MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801366711"}}
-	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/tulare/"
+	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

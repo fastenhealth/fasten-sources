@@ -29,7 +29,9 @@ func GetSourceCaliforniaEyeInstituteMedicalGroup(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "California Eye Institute Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaEyeInstituteMedicalGroup
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{"Eye Medical Center of Fresno, Insight Vision Center, Fogg Remington Eye Care"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669496246"}}
+	sourceDef.PatientAccessUrl = "https://www.caleyeinstitute.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

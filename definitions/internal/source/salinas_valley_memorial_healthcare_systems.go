@@ -28,6 +28,7 @@ func GetSourceSalinasValleyMemorialHealthcareSystems(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Salinas Valley Memorial Healthcare Systems"
 	sourceDef.SourceType = pkg.SourceTypeSalinasValleyMemorialHealthcareSystems
+	sourceDef.PatientAccessUrl = "https://www.salinasvalleyhealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

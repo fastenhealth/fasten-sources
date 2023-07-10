@@ -29,6 +29,8 @@ func GetSourceEllisPainCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Ellis Pain Center"
 	sourceDef.SourceType = pkg.SourceTypeEllisPainCenter
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "ellis-pain-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.ellispain.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

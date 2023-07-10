@@ -29,6 +29,7 @@ func GetSourceBestselfBehavioralHealthInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "BestSelf Behavioral Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeBestselfBehavioralHealthInc
+	sourceDef.PatientAccessUrl = "https://www.bestselfwny.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

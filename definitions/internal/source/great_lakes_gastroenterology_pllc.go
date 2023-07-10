@@ -31,6 +31,7 @@ func GetSourceGreatLakesGastroenterologyPllc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207RG0100X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780691899"}}
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://greatlakesgastro.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

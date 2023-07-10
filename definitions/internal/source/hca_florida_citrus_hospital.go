@@ -32,7 +32,7 @@ func GetSourceHcaFloridaCitrusHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"282N00000X"}
 	sourceDef.Aliases = []string{"HCA FLORIDA CITRUS HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750780342"}}
-	sourceDef.BrandLogo = "hca-florida-citrus-hospital.svg"
+	sourceDef.BrandLogo = "hca-mountain.png"
 	sourceDef.PatientAccessUrl = "https://www.hcafloridahealthcare.com/locations/citrus-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 

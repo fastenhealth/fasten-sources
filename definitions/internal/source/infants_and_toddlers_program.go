@@ -31,7 +31,7 @@ func GetSourceInfantsAndToddlersProgram(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"251300000X"}
 	sourceDef.Aliases = []string{"INFANTS AND TODDLERS PROGRAM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689796419"}}
-	sourceDef.PatientAccessUrl = "https://www.montgomerycountymd.gov/infantsandtoddlers"
+	sourceDef.PatientAccessUrl = "https://marylandpublicschools.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

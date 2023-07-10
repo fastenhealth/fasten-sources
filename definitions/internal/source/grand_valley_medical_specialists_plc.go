@@ -29,6 +29,7 @@ func GetSourceGrandValleyMedicalSpecialistsPlc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Grand Valley Medical Specialists, PLC"
 	sourceDef.SourceType = pkg.SourceTypeGrandValleyMedicalSpecialistsPlc
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://www.gvmsonline.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

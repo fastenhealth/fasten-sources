@@ -29,6 +29,7 @@ func GetSourceGreaterKnoxvilleEarNoseAndThroatAssociates(env pkg.FastenLighthous
 	sourceDef.Display = "Greater Knoxville Ear Nose & Throat Associates"
 	sourceDef.SourceType = pkg.SourceTypeGreaterKnoxvilleEarNoseAndThroatAssociates
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://greaterknoxent.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceUrologyAssociatesOfDenton(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Urology Associates of Denton"
 	sourceDef.SourceType = pkg.SourceTypeUrologyAssociatesOfDenton
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "https://urologyclinics.com/locations/denton-office/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

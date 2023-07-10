@@ -31,6 +31,7 @@ func GetSourceBethelFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"BETHEL FAMILY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124078019", "1891279097", "1548866270"}}
+	sourceDef.PatientAccessUrl = "https://bethelfamilyclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

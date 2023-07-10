@@ -32,6 +32,8 @@ func GetSourceClintonMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Aliases = []string{"CLINTON MEDICAL CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598160822"}}
 	sourceDef.Hidden = true
+	sourceDef.BrandLogo = "clinton-medical-clinic.webp"
+	sourceDef.PatientAccessUrl = "https://www.clinton-med.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCarolinaHeadacheInstitute(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Carolina Headache Institute"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaHeadacheInstitute
 	sourceDef.Hidden = true
+	sourceDef.PatientAccessUrl = "http://www.chi09.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

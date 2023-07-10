@@ -30,7 +30,7 @@ func GetSourceNortonCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Norton County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNortonCountyHospital
 	sourceDef.Category = []string{"314000000X", "251E00000X", "282NC0060X", "261QM1300X", "261QR1300X", "261QP2300X"}
-	sourceDef.Aliases = []string{"NORTON MEDICAL CLINIC", "LOGAN CLINIC"}
+	sourceDef.Aliases = []string{"LOGAN CLINIC", "NORTON MEDICAL CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427088038", "1730519174", "1285659813", "1558380667", "1366043796", "1134125073", "1801892740", "1659724524"}}
 	sourceDef.PatientAccessUrl = "https://www.ntcohosp.com"
 	sourceDef.SecretKeyPrefix = "cerner"
