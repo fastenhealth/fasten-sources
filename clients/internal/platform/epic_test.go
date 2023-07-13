@@ -28,7 +28,7 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, _, err := GetSourceClientEpic(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetSourceClientEpic(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)
@@ -36,6 +36,6 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 15, resp.TotalResources)
+	require.Equal(t, 17, resp.TotalResources)
 	require.Equal(t, 13, len(resp.UpdatedResources))
 }

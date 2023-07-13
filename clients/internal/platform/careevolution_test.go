@@ -28,7 +28,7 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, _, err := GetSourceClientCareevolution(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetSourceClientCareevolution(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)
@@ -36,6 +36,6 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 158, resp.TotalResources)
+	require.Equal(t, 164, resp.TotalResources)
 	require.Equal(t, 158, len(resp.UpdatedResources))
 }
