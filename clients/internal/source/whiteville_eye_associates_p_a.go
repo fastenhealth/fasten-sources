@@ -19,8 +19,8 @@ type SourceClientWhitevilleEyeAssociatesPA struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/cd0e7390-249a-4a9b-90a3-cd8f40025a49/metadata
-func GetSourceClientWhitevilleEyeAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWhitevilleEyeAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWhitevilleEyeAssociatesPA{baseClient}, updatedSourceCred, err
+	return SourceClientWhitevilleEyeAssociatesPA{baseClient}, err
 }

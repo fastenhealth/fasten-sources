@@ -19,8 +19,8 @@ type SourceClientGaryDWikholmMdAPc struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientGaryDWikholmMdAPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGaryDWikholmMdAPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGaryDWikholmMdAPc{baseClient}, updatedSourceCred, err
+	return SourceClientGaryDWikholmMdAPc{baseClient}, err
 }

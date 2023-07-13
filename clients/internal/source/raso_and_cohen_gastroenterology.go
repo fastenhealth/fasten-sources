@@ -19,8 +19,8 @@ type SourceClientRasoAndCohenGastroenterology struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1d6c3167-ceed-47b0-b6f7-156a9cb2ffbe/metadata
-func GetSourceClientRasoAndCohenGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRasoAndCohenGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRasoAndCohenGastroenterology{baseClient}, updatedSourceCred, err
+	return SourceClientRasoAndCohenGastroenterology{baseClient}, err
 }

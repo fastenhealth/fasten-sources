@@ -19,8 +19,8 @@ type SourceClientNewEnglandHerniaCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/5702a1ef-1ffa-4749-8a59-5b2ca3bf45eb/metadata
-func GetSourceClientNewEnglandHerniaCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNewEnglandHerniaCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNewEnglandHerniaCenter{baseClient}, updatedSourceCred, err
+	return SourceClientNewEnglandHerniaCenter{baseClient}, err
 }

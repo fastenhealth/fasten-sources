@@ -19,8 +19,8 @@ type SourceClientDigestiveAndLiverDiseaseSpecialists struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10034142/metadata
-func GetSourceClientDigestiveAndLiverDiseaseSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDigestiveAndLiverDiseaseSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDigestiveAndLiverDiseaseSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientDigestiveAndLiverDiseaseSpecialists{baseClient}, err
 }

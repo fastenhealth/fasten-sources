@@ -19,8 +19,8 @@ type SourceClientMaineGeneral struct {
 }
 
 // https://fhirprod.mainegeneral.org/FHIR/metadata
-func GetSourceClientMaineGeneral(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMaineGeneral(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMaineGeneral{baseClient}, updatedSourceCred, err
+	return SourceClientMaineGeneral{baseClient}, err
 }

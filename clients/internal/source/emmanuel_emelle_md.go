@@ -19,8 +19,8 @@ type SourceClientEmmanuelEmelleMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/otCmFR9xLPoc2YGLoEEuj1ulH3uzON_F/metadata
-func GetSourceClientEmmanuelEmelleMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEmmanuelEmelleMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEmmanuelEmelleMd{baseClient}, updatedSourceCred, err
+	return SourceClientEmmanuelEmelleMd{baseClient}, err
 }

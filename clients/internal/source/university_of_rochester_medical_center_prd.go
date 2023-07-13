@@ -19,8 +19,8 @@ type SourceClientUniversityOfRochesterMedicalCenterPrd struct {
 }
 
 // https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityOfRochesterMedicalCenterPrd{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityOfRochesterMedicalCenterPrd{baseClient}, err
 }

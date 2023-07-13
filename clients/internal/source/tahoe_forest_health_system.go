@@ -19,8 +19,8 @@ type SourceClientTahoeForestHealthSystem struct {
 }
 
 // https://epic-fhir.mercy.net/PRDFHIRAOK2/TAO/api/FHIR/R4/metadata
-func GetSourceClientTahoeForestHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTahoeForestHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTahoeForestHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientTahoeForestHealthSystem{baseClient}, err
 }

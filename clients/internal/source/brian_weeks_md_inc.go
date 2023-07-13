@@ -19,8 +19,8 @@ type SourceClientBrianWeeksMdInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f9f2e2ba-3339-41a9-9c68-c52b1c13921e/metadata
-func GetSourceClientBrianWeeksMdInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBrianWeeksMdInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBrianWeeksMdInc{baseClient}, updatedSourceCred, err
+	return SourceClientBrianWeeksMdInc{baseClient}, err
 }

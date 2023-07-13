@@ -19,8 +19,8 @@ type SourceClientAbrahamMedicalClinic struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10027358/metadata
-func GetSourceClientAbrahamMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAbrahamMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAbrahamMedicalClinic{baseClient}, updatedSourceCred, err
+	return SourceClientAbrahamMedicalClinic{baseClient}, err
 }

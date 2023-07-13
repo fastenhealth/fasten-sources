@@ -19,8 +19,8 @@ type SourceClientAnesthesiaServiceGasGasLlc struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientAnesthesiaServiceGasGasLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAnesthesiaServiceGasGasLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAnesthesiaServiceGasGasLlc{baseClient}, updatedSourceCred, err
+	return SourceClientAnesthesiaServiceGasGasLlc{baseClient}, err
 }

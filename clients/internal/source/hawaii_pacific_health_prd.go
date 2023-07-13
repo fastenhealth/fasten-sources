@@ -19,8 +19,8 @@ type SourceClientHawaiiPacificHealthPrd struct {
 }
 
 // https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4/metadata
-func GetSourceClientHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHawaiiPacificHealthPrd{baseClient}, updatedSourceCred, err
+	return SourceClientHawaiiPacificHealthPrd{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientCommunityFamilyMedicine struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73500/metadata
-func GetSourceClientCommunityFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCommunityFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCommunityFamilyMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientCommunityFamilyMedicine{baseClient}, err
 }

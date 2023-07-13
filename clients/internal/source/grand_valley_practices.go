@@ -19,8 +19,8 @@ type SourceClientGrandValleyPractices struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10011467/metadata
-func GetSourceClientGrandValleyPractices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGrandValleyPractices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGrandValleyPractices{baseClient}, updatedSourceCred, err
+	return SourceClientGrandValleyPractices{baseClient}, err
 }

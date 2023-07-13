@@ -19,8 +19,8 @@ type SourceClientAdvancedSurgicalAssociatesLlc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10061823/metadata
-func GetSourceClientAdvancedSurgicalAssociatesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdvancedSurgicalAssociatesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdvancedSurgicalAssociatesLlc{baseClient}, updatedSourceCred, err
+	return SourceClientAdvancedSurgicalAssociatesLlc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientProdr4Scm6 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/PRSCM/metadata
-func GetSourceClientProdr4Scm6(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientProdr4Scm6(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientProdr4Scm6{baseClient}, updatedSourceCred, err
+	return SourceClientProdr4Scm6{baseClient}, err
 }

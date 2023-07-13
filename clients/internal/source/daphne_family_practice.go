@@ -19,8 +19,8 @@ type SourceClientDaphneFamilyPractice struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044205/metadata
-func GetSourceClientDaphneFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDaphneFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDaphneFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientDaphneFamilyPractice{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientBallardFamilyMedical struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/NIiS30uhuk8X8j0rh7g_x24gSD2gAgj9/metadata
-func GetSourceClientBallardFamilyMedical(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBallardFamilyMedical(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBallardFamilyMedical{baseClient}, updatedSourceCred, err
+	return SourceClientBallardFamilyMedical{baseClient}, err
 }

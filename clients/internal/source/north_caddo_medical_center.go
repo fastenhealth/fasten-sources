@@ -19,8 +19,8 @@ type SourceClientNorthCaddoMedicalCenter struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041079/metadata
-func GetSourceClientNorthCaddoMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthCaddoMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthCaddoMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientNorthCaddoMedicalCenter{baseClient}, err
 }

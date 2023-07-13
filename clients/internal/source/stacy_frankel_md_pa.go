@@ -19,8 +19,8 @@ type SourceClientStacyFrankelMdPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ece3b0d0-e9d1-4d87-8810-05245549aaf1/metadata
-func GetSourceClientStacyFrankelMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStacyFrankelMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStacyFrankelMdPa{baseClient}, updatedSourceCred, err
+	return SourceClientStacyFrankelMdPa{baseClient}, err
 }

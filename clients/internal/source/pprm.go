@@ -19,8 +19,8 @@ type SourceClientPprm struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientPprm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPprm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPprm{baseClient}, updatedSourceCred, err
+	return SourceClientPprm{baseClient}, err
 }

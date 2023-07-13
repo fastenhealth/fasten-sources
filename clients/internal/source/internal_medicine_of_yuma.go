@@ -19,8 +19,8 @@ type SourceClientInternalMedicineOfYuma struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10040158/metadata
-func GetSourceClientInternalMedicineOfYuma(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInternalMedicineOfYuma(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInternalMedicineOfYuma{baseClient}, updatedSourceCred, err
+	return SourceClientInternalMedicineOfYuma{baseClient}, err
 }

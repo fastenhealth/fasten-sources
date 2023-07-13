@@ -19,8 +19,8 @@ type SourceClientSeacoastAreaPhysiatry struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10029270/metadata
-func GetSourceClientSeacoastAreaPhysiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSeacoastAreaPhysiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSeacoastAreaPhysiatry{baseClient}, updatedSourceCred, err
+	return SourceClientSeacoastAreaPhysiatry{baseClient}, err
 }

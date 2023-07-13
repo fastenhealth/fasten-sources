@@ -19,8 +19,8 @@ type SourceClientCarolinaRheumatologyAndNeurologyAssociatessc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063250/metadata
-func GetSourceClientCarolinaRheumatologyAndNeurologyAssociatessc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCarolinaRheumatologyAndNeurologyAssociatessc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCarolinaRheumatologyAndNeurologyAssociatessc{baseClient}, updatedSourceCred, err
+	return SourceClientCarolinaRheumatologyAndNeurologyAssociatessc{baseClient}, err
 }

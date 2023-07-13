@@ -19,8 +19,8 @@ type SourceClientMillerOrthopedicSpecialists struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientMillerOrthopedicSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMillerOrthopedicSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMillerOrthopedicSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientMillerOrthopedicSpecialists{baseClient}, err
 }

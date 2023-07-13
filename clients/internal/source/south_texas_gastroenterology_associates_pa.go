@@ -19,8 +19,8 @@ type SourceClientSouthTexasGastroenterologyAssociatesPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/7CLnKVgLsZxSnfsPqWs4-5n14oIQd_lY/metadata
-func GetSourceClientSouthTexasGastroenterologyAssociatesPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthTexasGastroenterologyAssociatesPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthTexasGastroenterologyAssociatesPa{baseClient}, updatedSourceCred, err
+	return SourceClientSouthTexasGastroenterologyAssociatesPa{baseClient}, err
 }

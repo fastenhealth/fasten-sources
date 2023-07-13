@@ -19,8 +19,8 @@ type SourceClientBhaveshPatel struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3fe60ded-faad-4fdb-aaa0-2885c5eec160/metadata
-func GetSourceClientBhaveshPatel(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBhaveshPatel(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBhaveshPatel{baseClient}, updatedSourceCred, err
+	return SourceClientBhaveshPatel{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMosaicMentalHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/507190e3-553c-45ab-80f1-7f5686edd221/metadata
-func GetSourceClientMosaicMentalHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMosaicMentalHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMosaicMentalHealth{baseClient}, updatedSourceCred, err
+	return SourceClientMosaicMentalHealth{baseClient}, err
 }

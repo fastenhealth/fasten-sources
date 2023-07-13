@@ -19,8 +19,8 @@ type SourceClientTennesseeOrthopaedicAlliance struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientTennesseeOrthopaedicAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTennesseeOrthopaedicAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTennesseeOrthopaedicAlliance{baseClient}, updatedSourceCred, err
+	return SourceClientTennesseeOrthopaedicAlliance{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientInovaAndValleyHealth struct {
 }
 
 // https://epicrpprd.inova.org/fhirrp/api/FHIR/R4/metadata
-func GetSourceClientInovaAndValleyHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInovaAndValleyHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInovaAndValleyHealth{baseClient}, updatedSourceCred, err
+	return SourceClientInovaAndValleyHealth{baseClient}, err
 }

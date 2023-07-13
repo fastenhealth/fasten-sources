@@ -19,8 +19,8 @@ type SourceClientWilliamRWelbornIiiMd1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/U__BCE_A12uzjmoaZJl9K8gIrXuwQUav/metadata
-func GetSourceClientWilliamRWelbornIiiMd1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWilliamRWelbornIiiMd1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWilliamRWelbornIiiMd1{baseClient}, updatedSourceCred, err
+	return SourceClientWilliamRWelbornIiiMd1{baseClient}, err
 }

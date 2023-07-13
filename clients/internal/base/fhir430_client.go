@@ -16,12 +16,12 @@ type SourceClientFHIR430 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR430, *models.SourceCredential, error) {
-	baseClient, updatedSource, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR430, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	baseClient.FhirVersion = "4.3.0"
 	return &SourceClientFHIR430{
 		baseClient,
-	}, updatedSource, err
+	}, err
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

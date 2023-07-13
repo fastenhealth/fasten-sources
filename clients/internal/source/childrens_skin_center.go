@@ -19,8 +19,8 @@ type SourceClientChildrensSkinCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/bf8f05ba-6e12-4216-9197-5290cecb808c/metadata
-func GetSourceClientChildrensSkinCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChildrensSkinCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChildrensSkinCenter{baseClient}, updatedSourceCred, err
+	return SourceClientChildrensSkinCenter{baseClient}, err
 }

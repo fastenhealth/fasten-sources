@@ -19,8 +19,8 @@ type SourceClientMemorialClinicalAssociatesPA struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10029918/metadata
-func GetSourceClientMemorialClinicalAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMemorialClinicalAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMemorialClinicalAssociatesPA{baseClient}, updatedSourceCred, err
+	return SourceClientMemorialClinicalAssociatesPA{baseClient}, err
 }

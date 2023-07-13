@@ -19,8 +19,8 @@ type SourceClientArManagementServices struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10022418/metadata
-func GetSourceClientArManagementServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientArManagementServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientArManagementServices{baseClient}, updatedSourceCred, err
+	return SourceClientArManagementServices{baseClient}, err
 }

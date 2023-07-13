@@ -19,8 +19,8 @@ type SourceClientUpmcCentralPa struct {
 }
 
 // https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4/metadata
-func GetSourceClientUpmcCentralPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUpmcCentralPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUpmcCentralPa{baseClient}, updatedSourceCred, err
+	return SourceClientUpmcCentralPa{baseClient}, err
 }

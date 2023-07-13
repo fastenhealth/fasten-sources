@@ -19,8 +19,8 @@ type SourceClientOcalaEnt struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035872/metadata
-func GetSourceClientOcalaEnt(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOcalaEnt(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOcalaEnt{baseClient}, updatedSourceCred, err
+	return SourceClientOcalaEnt{baseClient}, err
 }

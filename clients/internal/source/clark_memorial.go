@@ -19,8 +19,8 @@ type SourceClientClarkMemorial struct {
 }
 
 // https://fhirprod.clarkmemorial.org/FHIR/metadata
-func GetSourceClientClarkMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClarkMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClarkMemorial{baseClient}, updatedSourceCred, err
+	return SourceClientClarkMemorial{baseClient}, err
 }

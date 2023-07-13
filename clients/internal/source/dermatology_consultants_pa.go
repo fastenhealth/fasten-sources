@@ -19,8 +19,8 @@ type SourceClientDermatologyConsultantsPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/LE53-9reSSl1ATIUbSTE0HLYhIbs7hug/metadata
-func GetSourceClientDermatologyConsultantsPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDermatologyConsultantsPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDermatologyConsultantsPa{baseClient}, updatedSourceCred, err
+	return SourceClientDermatologyConsultantsPa{baseClient}, err
 }

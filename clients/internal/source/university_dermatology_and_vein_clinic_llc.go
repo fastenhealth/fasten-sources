@@ -19,8 +19,8 @@ type SourceClientUniversityDermatologyAndVeinClinicLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/J3trBeALwJU1F3hepm2v21jJ96hxu50P/metadata
-func GetSourceClientUniversityDermatologyAndVeinClinicLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityDermatologyAndVeinClinicLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityDermatologyAndVeinClinicLlc{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityDermatologyAndVeinClinicLlc{baseClient}, err
 }

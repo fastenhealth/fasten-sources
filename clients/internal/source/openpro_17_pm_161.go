@@ -19,8 +19,8 @@ type SourceClientOpenpro17Pm161 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/CustProQAopenpro17-pm16/metadata
-func GetSourceClientOpenpro17Pm161(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOpenpro17Pm161(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOpenpro17Pm161{baseClient}, updatedSourceCred, err
+	return SourceClientOpenpro17Pm161{baseClient}, err
 }

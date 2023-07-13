@@ -19,8 +19,8 @@ type SourceClientDeltaObstetricsGynecology struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10037202/metadata
-func GetSourceClientDeltaObstetricsGynecology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDeltaObstetricsGynecology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDeltaObstetricsGynecology{baseClient}, updatedSourceCred, err
+	return SourceClientDeltaObstetricsGynecology{baseClient}, err
 }

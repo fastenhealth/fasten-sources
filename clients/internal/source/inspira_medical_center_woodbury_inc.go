@@ -19,8 +19,8 @@ type SourceClientInspiraMedicalCenterWoodburyInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c2a40efd-16d2-4828-be53-a20ad0090e09/metadata
-func GetSourceClientInspiraMedicalCenterWoodburyInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInspiraMedicalCenterWoodburyInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInspiraMedicalCenterWoodburyInc{baseClient}, updatedSourceCred, err
+	return SourceClientInspiraMedicalCenterWoodburyInc{baseClient}, err
 }

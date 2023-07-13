@@ -19,8 +19,8 @@ type SourceClientEndoscopyCenterAtMeridianAnesthesia struct {
 }
 
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
-func GetSourceClientEndoscopyCenterAtMeridianAnesthesia(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEndoscopyCenterAtMeridianAnesthesia(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEndoscopyCenterAtMeridianAnesthesia{baseClient}, updatedSourceCred, err
+	return SourceClientEndoscopyCenterAtMeridianAnesthesia{baseClient}, err
 }

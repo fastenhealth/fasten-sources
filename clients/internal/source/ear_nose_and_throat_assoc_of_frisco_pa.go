@@ -19,8 +19,8 @@ type SourceClientEarNoseAndThroatAssocOfFriscoPa struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10027574/metadata
-func GetSourceClientEarNoseAndThroatAssocOfFriscoPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEarNoseAndThroatAssocOfFriscoPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEarNoseAndThroatAssocOfFriscoPa{baseClient}, updatedSourceCred, err
+	return SourceClientEarNoseAndThroatAssocOfFriscoPa{baseClient}, err
 }

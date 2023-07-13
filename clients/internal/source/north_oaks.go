@@ -19,8 +19,8 @@ type SourceClientNorthOaks struct {
 }
 
 // https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4/metadata
-func GetSourceClientNorthOaks(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthOaks(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthOaks{baseClient}, updatedSourceCred, err
+	return SourceClientNorthOaks{baseClient}, err
 }

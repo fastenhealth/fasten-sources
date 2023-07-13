@@ -19,8 +19,8 @@ type SourceClientPediatricPulmonologyOfCentralGeorgiaLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d56d19c5-1f59-4682-8c35-bc6d80287bb8/metadata
-func GetSourceClientPediatricPulmonologyOfCentralGeorgiaLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPediatricPulmonologyOfCentralGeorgiaLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPediatricPulmonologyOfCentralGeorgiaLlc{baseClient}, updatedSourceCred, err
+	return SourceClientPediatricPulmonologyOfCentralGeorgiaLlc{baseClient}, err
 }

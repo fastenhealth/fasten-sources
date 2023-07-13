@@ -19,8 +19,8 @@ type SourceClientSolidRockFamilyMedicine struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10091597/metadata
-func GetSourceClientSolidRockFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSolidRockFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSolidRockFamilyMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientSolidRockFamilyMedicine{baseClient}, err
 }

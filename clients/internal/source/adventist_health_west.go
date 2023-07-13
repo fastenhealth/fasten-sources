@@ -19,8 +19,8 @@ type SourceClientAdventistHealthWest struct {
 }
 
 // https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceClientAdventistHealthWest(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdventistHealthWest(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdventistHealthWest{baseClient}, updatedSourceCred, err
+	return SourceClientAdventistHealthWest{baseClient}, err
 }

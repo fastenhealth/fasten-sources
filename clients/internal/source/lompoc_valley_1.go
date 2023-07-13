@@ -19,8 +19,8 @@ type SourceClientLompocValley1 struct {
 }
 
 // https://fhirprod184.lompocvmc.com/FHIR/metadata
-func GetSourceClientLompocValley1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLompocValley1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLompocValley1{baseClient}, updatedSourceCred, err
+	return SourceClientLompocValley1{baseClient}, err
 }

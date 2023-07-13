@@ -19,8 +19,8 @@ type SourceClientBlairFootAndAnkle struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/02cf5ef5-9abb-4937-8933-e06c47e975a4/metadata
-func GetSourceClientBlairFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBlairFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlairFootAndAnkle{baseClient}, updatedSourceCred, err
+	return SourceClientBlairFootAndAnkle{baseClient}, err
 }

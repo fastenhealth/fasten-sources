@@ -19,8 +19,8 @@ type SourceClientNortheasternNephrologyAssoc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10060336/metadata
-func GetSourceClientNortheasternNephrologyAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNortheasternNephrologyAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNortheasternNephrologyAssoc{baseClient}, updatedSourceCred, err
+	return SourceClientNortheasternNephrologyAssoc{baseClient}, err
 }

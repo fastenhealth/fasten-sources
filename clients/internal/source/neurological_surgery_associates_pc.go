@@ -19,8 +19,8 @@ type SourceClientNeurologicalSurgeryAssociatesPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/FbEd2u1hjjAzrJT3wpsP33KAKZk6Vh2g/metadata
-func GetSourceClientNeurologicalSurgeryAssociatesPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNeurologicalSurgeryAssociatesPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNeurologicalSurgeryAssociatesPc{baseClient}, updatedSourceCred, err
+	return SourceClientNeurologicalSurgeryAssociatesPc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientEyeCareOfSanDiego struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a95a5536-8b81-4f15-a520-dda51bc46a6a/metadata
-func GetSourceClientEyeCareOfSanDiego(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEyeCareOfSanDiego(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEyeCareOfSanDiego{baseClient}, updatedSourceCred, err
+	return SourceClientEyeCareOfSanDiego{baseClient}, err
 }

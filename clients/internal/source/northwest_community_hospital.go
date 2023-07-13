@@ -19,8 +19,8 @@ type SourceClientNorthwestCommunityHospital struct {
 }
 
 // https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientNorthwestCommunityHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthwestCommunityHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthwestCommunityHospital{baseClient}, updatedSourceCred, err
+	return SourceClientNorthwestCommunityHospital{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientJohnKnoxVillageOfCentralFloridaInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/69da70dc-14a1-4b28-99e5-107b69008127/metadata
-func GetSourceClientJohnKnoxVillageOfCentralFloridaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJohnKnoxVillageOfCentralFloridaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJohnKnoxVillageOfCentralFloridaInc{baseClient}, updatedSourceCred, err
+	return SourceClientJohnKnoxVillageOfCentralFloridaInc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPhysiciansPrimaryCareOfSouthwestFlorida struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10028533/metadata
-func GetSourceClientPhysiciansPrimaryCareOfSouthwestFlorida(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPhysiciansPrimaryCareOfSouthwestFlorida(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPhysiciansPrimaryCareOfSouthwestFlorida{baseClient}, updatedSourceCred, err
+	return SourceClientPhysiciansPrimaryCareOfSouthwestFlorida{baseClient}, err
 }

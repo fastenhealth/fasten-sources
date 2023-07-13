@@ -19,8 +19,8 @@ type SourceClientTooTallDocsPA struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d7b2ef3a-7b20-4ec5-af14-9c525d5c485d/metadata
-func GetSourceClientTooTallDocsPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTooTallDocsPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTooTallDocsPA{baseClient}, updatedSourceCred, err
+	return SourceClientTooTallDocsPA{baseClient}, err
 }

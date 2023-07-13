@@ -19,8 +19,8 @@ type SourceClientChesapeakeUrologyAssociates struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10026644/metadata
-func GetSourceClientChesapeakeUrologyAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChesapeakeUrologyAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChesapeakeUrologyAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientChesapeakeUrologyAssociates{baseClient}, err
 }

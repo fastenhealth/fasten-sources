@@ -19,8 +19,8 @@ type SourceClientMigqa struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/MIGQA/metadata
-func GetSourceClientMigqa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMigqa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMigqa{baseClient}, updatedSourceCred, err
+	return SourceClientMigqa{baseClient}, err
 }

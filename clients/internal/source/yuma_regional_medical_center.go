@@ -19,8 +19,8 @@ type SourceClientYumaRegionalMedicalCenter struct {
 }
 
 // https://yrmccare1.yumaregional.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientYumaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientYumaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientYumaRegionalMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientYumaRegionalMedicalCenter{baseClient}, err
 }

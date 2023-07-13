@@ -19,8 +19,8 @@ type SourceClientFirepointProdCustomerB struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/custproprodb/metadata
-func GetSourceClientFirepointProdCustomerB(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFirepointProdCustomerB(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFirepointProdCustomerB{baseClient}, updatedSourceCred, err
+	return SourceClientFirepointProdCustomerB{baseClient}, err
 }

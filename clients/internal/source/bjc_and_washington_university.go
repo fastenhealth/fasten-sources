@@ -19,8 +19,8 @@ type SourceClientBjcAndWashingtonUniversity struct {
 }
 
 // https://epicproxy.et0965.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientBjcAndWashingtonUniversity(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBjcAndWashingtonUniversity(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBjcAndWashingtonUniversity{baseClient}, updatedSourceCred, err
+	return SourceClientBjcAndWashingtonUniversity{baseClient}, err
 }

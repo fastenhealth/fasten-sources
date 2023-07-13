@@ -19,8 +19,8 @@ type SourceClientVenturaCardiologyConsultants struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10009880/metadata
-func GetSourceClientVenturaCardiologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVenturaCardiologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVenturaCardiologyConsultants{baseClient}, updatedSourceCred, err
+	return SourceClientVenturaCardiologyConsultants{baseClient}, err
 }

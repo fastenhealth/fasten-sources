@@ -19,8 +19,8 @@ type SourceClientMichaelJEveroskiMDPC struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/b69fa4dd-a04c-4304-b660-7554d71b5970/metadata
-func GetSourceClientMichaelJEveroskiMDPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMichaelJEveroskiMDPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMichaelJEveroskiMDPC{baseClient}, updatedSourceCred, err
+	return SourceClientMichaelJEveroskiMDPC{baseClient}, err
 }

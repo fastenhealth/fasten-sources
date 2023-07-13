@@ -19,8 +19,8 @@ type SourceClientNorthMemorialHealth struct {
 }
 
 // https://minerva.northmemorial.com/fhir/api/FHIR/R4/metadata
-func GetSourceClientNorthMemorialHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthMemorialHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthMemorialHealth{baseClient}, updatedSourceCred, err
+	return SourceClientNorthMemorialHealth{baseClient}, err
 }

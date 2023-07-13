@@ -19,8 +19,8 @@ type SourceClientJulieLorberMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/60edb781-d390-460f-addf-01761109a186/metadata
-func GetSourceClientJulieLorberMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJulieLorberMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJulieLorberMd{baseClient}, updatedSourceCred, err
+	return SourceClientJulieLorberMd{baseClient}, err
 }

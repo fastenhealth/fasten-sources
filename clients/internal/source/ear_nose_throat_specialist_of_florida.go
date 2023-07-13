@@ -19,8 +19,8 @@ type SourceClientEarNoseThroatSpecialistOfFlorida struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10069211/metadata
-func GetSourceClientEarNoseThroatSpecialistOfFlorida(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEarNoseThroatSpecialistOfFlorida(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEarNoseThroatSpecialistOfFlorida{baseClient}, updatedSourceCred, err
+	return SourceClientEarNoseThroatSpecialistOfFlorida{baseClient}, err
 }

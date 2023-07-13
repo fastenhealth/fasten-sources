@@ -19,8 +19,8 @@ type SourceClientPenndocFootAndAnkleCenterLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/t0FnDeiv5UB5yBJtCG5ByjAAa3LXYuNV/metadata
-func GetSourceClientPenndocFootAndAnkleCenterLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPenndocFootAndAnkleCenterLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPenndocFootAndAnkleCenterLlc{baseClient}, updatedSourceCred, err
+	return SourceClientPenndocFootAndAnkleCenterLlc{baseClient}, err
 }

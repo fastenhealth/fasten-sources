@@ -19,8 +19,8 @@ type SourceClientLumbertonChildrensClinicPa struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035106/metadata
-func GetSourceClientLumbertonChildrensClinicPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLumbertonChildrensClinicPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLumbertonChildrensClinicPa{baseClient}, updatedSourceCred, err
+	return SourceClientLumbertonChildrensClinicPa{baseClient}, err
 }

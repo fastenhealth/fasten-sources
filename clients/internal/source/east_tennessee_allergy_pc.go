@@ -19,8 +19,8 @@ type SourceClientEastTennesseeAllergyPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/RSsjLyaRvTYWAeaQBMnsMtHYA_5kMLc7/metadata
-func GetSourceClientEastTennesseeAllergyPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEastTennesseeAllergyPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEastTennesseeAllergyPc{baseClient}, updatedSourceCred, err
+	return SourceClientEastTennesseeAllergyPc{baseClient}, err
 }

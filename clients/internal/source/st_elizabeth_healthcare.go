@@ -19,8 +19,8 @@ type SourceClientStElizabethHealthcare struct {
 }
 
 // https://sehproxy.stelizabeth.com/arr-fhir/SEH/api/FHIR/R4/metadata
-func GetSourceClientStElizabethHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStElizabethHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStElizabethHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientStElizabethHealthcare{baseClient}, err
 }

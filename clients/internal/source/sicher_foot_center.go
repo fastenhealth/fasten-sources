@@ -19,8 +19,8 @@ type SourceClientSicherFootCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/G__Wo5W0WCpQT7T6QvV3hXEro56vpA07/metadata
-func GetSourceClientSicherFootCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSicherFootCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSicherFootCenter{baseClient}, updatedSourceCred, err
+	return SourceClientSicherFootCenter{baseClient}, err
 }

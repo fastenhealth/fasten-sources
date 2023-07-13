@@ -19,8 +19,8 @@ type SourceClientRobertGDaviesMdPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/dwhAq_O9BidQ7ZRkXqd_sYwbRV_jXRZb/metadata
-func GetSourceClientRobertGDaviesMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRobertGDaviesMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRobertGDaviesMdPa{baseClient}, updatedSourceCred, err
+	return SourceClientRobertGDaviesMdPa{baseClient}, err
 }

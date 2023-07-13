@@ -19,8 +19,8 @@ type SourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10043022/metadata
-func GetSourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates{baseClient}, err
 }

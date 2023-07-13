@@ -19,8 +19,8 @@ type SourceClientTMobile struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/b363650e-9d3c-47f1-8011-4943dcc79def/metadata
-func GetSourceClientTMobile(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTMobile(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTMobile{baseClient}, updatedSourceCred, err
+	return SourceClientTMobile{baseClient}, err
 }

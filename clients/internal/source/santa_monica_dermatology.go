@@ -19,8 +19,8 @@ type SourceClientSantaMonicaDermatology struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/e1A5O_wfjp6bxazsKQMUgQtMMK_UwF9x/metadata
-func GetSourceClientSantaMonicaDermatology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSantaMonicaDermatology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSantaMonicaDermatology{baseClient}, updatedSourceCred, err
+	return SourceClientSantaMonicaDermatology{baseClient}, err
 }

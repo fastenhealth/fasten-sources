@@ -19,8 +19,8 @@ type SourceClientMichiganHeartGroupPC struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10026211/metadata
-func GetSourceClientMichiganHeartGroupPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMichiganHeartGroupPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMichiganHeartGroupPC{baseClient}, updatedSourceCred, err
+	return SourceClientMichiganHeartGroupPC{baseClient}, err
 }

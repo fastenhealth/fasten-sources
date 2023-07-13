@@ -19,8 +19,8 @@ type SourceClientEmmaGoldmanClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/52689f1e-9825-4b5d-8853-96de57ae62a9/metadata
-func GetSourceClientEmmaGoldmanClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEmmaGoldmanClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEmmaGoldmanClinic{baseClient}, updatedSourceCred, err
+	return SourceClientEmmaGoldmanClinic{baseClient}, err
 }

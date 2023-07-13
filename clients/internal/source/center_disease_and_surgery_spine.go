@@ -19,8 +19,8 @@ type SourceClientCenterDiseaseAndSurgerySpine struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10082049/metadata
-func GetSourceClientCenterDiseaseAndSurgerySpine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCenterDiseaseAndSurgerySpine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCenterDiseaseAndSurgerySpine{baseClient}, updatedSourceCred, err
+	return SourceClientCenterDiseaseAndSurgerySpine{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientUltimateAccessPrimaryCare struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6a4397dc-1436-41a9-b8c9-171f0d1bd37f/metadata
-func GetSourceClientUltimateAccessPrimaryCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUltimateAccessPrimaryCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUltimateAccessPrimaryCare{baseClient}, updatedSourceCred, err
+	return SourceClientUltimateAccessPrimaryCare{baseClient}, err
 }

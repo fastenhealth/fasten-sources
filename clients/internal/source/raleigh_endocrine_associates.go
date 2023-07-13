@@ -19,8 +19,8 @@ type SourceClientRaleighEndocrineAssociates struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10031277/metadata
-func GetSourceClientRaleighEndocrineAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRaleighEndocrineAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRaleighEndocrineAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientRaleighEndocrineAssociates{baseClient}, err
 }

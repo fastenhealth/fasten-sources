@@ -19,8 +19,8 @@ type SourceClientCatawbaPediatricAssociates struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10021952/metadata
-func GetSourceClientCatawbaPediatricAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCatawbaPediatricAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCatawbaPediatricAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientCatawbaPediatricAssociates{baseClient}, err
 }

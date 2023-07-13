@@ -19,8 +19,8 @@ type SourceClientNorthIdahoEyeInstitution struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f48d2c7a-9228-4762-86d2-630e37d8a7eb/metadata
-func GetSourceClientNorthIdahoEyeInstitution(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthIdahoEyeInstitution(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthIdahoEyeInstitution{baseClient}, updatedSourceCred, err
+	return SourceClientNorthIdahoEyeInstitution{baseClient}, err
 }

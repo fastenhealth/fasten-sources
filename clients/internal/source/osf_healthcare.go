@@ -19,8 +19,8 @@ type SourceClientOsfHealthcare struct {
 }
 
 // https://ssproxy.osfhealthcare.org/fhir-proxy/api/FHIR/R4/metadata
-func GetSourceClientOsfHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOsfHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOsfHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientOsfHealthcare{baseClient}, err
 }

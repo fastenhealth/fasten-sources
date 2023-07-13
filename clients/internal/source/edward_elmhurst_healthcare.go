@@ -19,8 +19,8 @@ type SourceClientEdwardElmhurstHealthcare struct {
 }
 
 // https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4/metadata
-func GetSourceClientEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEdwardElmhurstHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientEdwardElmhurstHealthcare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientOrthopaedicAssociatesOfMarshallCounty struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10069070/metadata
-func GetSourceClientOrthopaedicAssociatesOfMarshallCounty(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOrthopaedicAssociatesOfMarshallCounty(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOrthopaedicAssociatesOfMarshallCounty{baseClient}, updatedSourceCred, err
+	return SourceClientOrthopaedicAssociatesOfMarshallCounty{baseClient}, err
 }

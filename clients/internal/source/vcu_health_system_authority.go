@@ -19,8 +19,8 @@ type SourceClientVcuHealthSystemAuthority struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/072ee25e-9ba2-4626-bd4b-17ff1ccdc763/metadata
-func GetSourceClientVcuHealthSystemAuthority(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVcuHealthSystemAuthority(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVcuHealthSystemAuthority{baseClient}, updatedSourceCred, err
+	return SourceClientVcuHealthSystemAuthority{baseClient}, err
 }

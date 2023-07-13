@@ -19,8 +19,8 @@ type SourceClientOrthocarolina struct {
 }
 
 // https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientOrthocarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOrthocarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOrthocarolina{baseClient}, updatedSourceCred, err
+	return SourceClientOrthocarolina{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientCenterForDigestiveHealthAndNutrition struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10057276/metadata
-func GetSourceClientCenterForDigestiveHealthAndNutrition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCenterForDigestiveHealthAndNutrition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCenterForDigestiveHealthAndNutrition{baseClient}, updatedSourceCred, err
+	return SourceClientCenterForDigestiveHealthAndNutrition{baseClient}, err
 }

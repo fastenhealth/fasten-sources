@@ -19,8 +19,8 @@ type SourceClientBonSecoursHealthSystem struct {
 }
 
 // https://haiku.bshsi.org/fhir/BSHSI_OAUTH/api/FHIR/R4/metadata
-func GetSourceClientBonSecoursHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBonSecoursHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBonSecoursHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientBonSecoursHealthSystem{baseClient}, err
 }

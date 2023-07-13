@@ -19,8 +19,8 @@ type SourceClientMountAuburnHospital struct {
 }
 
 // https://fhir.mah.org/prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientMountAuburnHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMountAuburnHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMountAuburnHospital{baseClient}, updatedSourceCred, err
+	return SourceClientMountAuburnHospital{baseClient}, err
 }

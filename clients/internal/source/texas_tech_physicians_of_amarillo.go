@@ -19,8 +19,8 @@ type SourceClientTexasTechPhysiciansOfAmarillo struct {
 }
 
 // https://Amarillohealth.ttuhsc.edu/FHIR/metadata
-func GetSourceClientTexasTechPhysiciansOfAmarillo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTexasTechPhysiciansOfAmarillo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTexasTechPhysiciansOfAmarillo{baseClient}, updatedSourceCred, err
+	return SourceClientTexasTechPhysiciansOfAmarillo{baseClient}, err
 }

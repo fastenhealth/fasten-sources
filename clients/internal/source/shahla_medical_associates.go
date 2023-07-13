@@ -19,8 +19,8 @@ type SourceClientShahlaMedicalAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/Xn4xUXZWRzcyVaayUfDGK1rXLAig3w6X/metadata
-func GetSourceClientShahlaMedicalAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientShahlaMedicalAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientShahlaMedicalAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientShahlaMedicalAssociates{baseClient}, err
 }

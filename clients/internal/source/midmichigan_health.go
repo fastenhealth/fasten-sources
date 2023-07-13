@@ -19,8 +19,8 @@ type SourceClientMidmichiganHealth struct {
 }
 
 // https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4/metadata
-func GetSourceClientMidmichiganHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMidmichiganHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMidmichiganHealth{baseClient}, updatedSourceCred, err
+	return SourceClientMidmichiganHealth{baseClient}, err
 }

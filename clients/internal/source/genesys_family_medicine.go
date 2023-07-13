@@ -19,8 +19,8 @@ type SourceClientGenesysFamilyMedicine struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10040560/metadata
-func GetSourceClientGenesysFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGenesysFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGenesysFamilyMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientGenesysFamilyMedicine{baseClient}, err
 }

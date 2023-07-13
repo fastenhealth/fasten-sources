@@ -19,8 +19,8 @@ type SourceClientSmokyMountainFootClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/01b09d82-4514-482c-85d3-2d53721811fb/metadata
-func GetSourceClientSmokyMountainFootClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSmokyMountainFootClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSmokyMountainFootClinic{baseClient}, updatedSourceCred, err
+	return SourceClientSmokyMountainFootClinic{baseClient}, err
 }

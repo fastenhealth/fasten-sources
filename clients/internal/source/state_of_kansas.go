@@ -19,8 +19,8 @@ type SourceClientStateOfKansas struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/e13c1e21-bd04-471c-b46a-cb74f87dcaaa/metadata
-func GetSourceClientStateOfKansas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStateOfKansas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStateOfKansas{baseClient}, updatedSourceCred, err
+	return SourceClientStateOfKansas{baseClient}, err
 }

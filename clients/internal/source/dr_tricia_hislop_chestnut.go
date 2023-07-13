@@ -19,8 +19,8 @@ type SourceClientDrTriciaHislopChestnut struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/fad27769-c4c9-439b-8aeb-2f16c753ac96/metadata
-func GetSourceClientDrTriciaHislopChestnut(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrTriciaHislopChestnut(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrTriciaHislopChestnut{baseClient}, updatedSourceCred, err
+	return SourceClientDrTriciaHislopChestnut{baseClient}, err
 }

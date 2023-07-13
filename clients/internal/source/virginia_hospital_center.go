@@ -19,8 +19,8 @@ type SourceClientVirginiaHospitalCenter struct {
 }
 
 // https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceClientVirginiaHospitalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVirginiaHospitalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVirginiaHospitalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientVirginiaHospitalCenter{baseClient}, err
 }

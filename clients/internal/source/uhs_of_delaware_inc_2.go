@@ -19,8 +19,8 @@ type SourceClientUhsOfDelawareInc2 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/da0b5d99-573c-4f5e-aaf6-8d39fa93d033/metadata
-func GetSourceClientUhsOfDelawareInc2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUhsOfDelawareInc2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUhsOfDelawareInc2{baseClient}, updatedSourceCred, err
+	return SourceClientUhsOfDelawareInc2{baseClient}, err
 }

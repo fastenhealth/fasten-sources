@@ -19,8 +19,8 @@ type SourceClientMissionOccumed struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/J9_gd6aAFs2BCqQ-HDr4haXIslVxaBcd/metadata
-func GetSourceClientMissionOccumed(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMissionOccumed(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMissionOccumed{baseClient}, updatedSourceCred, err
+	return SourceClientMissionOccumed{baseClient}, err
 }

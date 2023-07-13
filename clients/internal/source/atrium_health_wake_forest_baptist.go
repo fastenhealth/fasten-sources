@@ -20,8 +20,8 @@ type SourceClientAtriumHealthWakeForestBaptist struct {
 
 // https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAtriumHealthWakeForestBaptist{baseClient}, updatedSourceCred, err
+	return SourceClientAtriumHealthWakeForestBaptist{baseClient}, err
 }

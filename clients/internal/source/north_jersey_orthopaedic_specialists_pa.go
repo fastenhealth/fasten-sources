@@ -19,8 +19,8 @@ type SourceClientNorthJerseyOrthopaedicSpecialistsPa struct {
 }
 
 // https://fhireastus.allscripts.pro/fhirroute/fhir/0010709/metadata
-func GetSourceClientNorthJerseyOrthopaedicSpecialistsPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthJerseyOrthopaedicSpecialistsPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthJerseyOrthopaedicSpecialistsPa{baseClient}, updatedSourceCred, err
+	return SourceClientNorthJerseyOrthopaedicSpecialistsPa{baseClient}, err
 }

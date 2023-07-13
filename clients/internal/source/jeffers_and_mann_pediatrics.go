@@ -19,8 +19,8 @@ type SourceClientJeffersAndMannPediatrics struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10020909/metadata
-func GetSourceClientJeffersAndMannPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJeffersAndMannPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJeffersAndMannPediatrics{baseClient}, updatedSourceCred, err
+	return SourceClientJeffersAndMannPediatrics{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientHartfordNeurologyLlc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/62342/metadata
-func GetSourceClientHartfordNeurologyLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHartfordNeurologyLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHartfordNeurologyLlc{baseClient}, updatedSourceCred, err
+	return SourceClientHartfordNeurologyLlc{baseClient}, err
 }

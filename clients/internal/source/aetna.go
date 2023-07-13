@@ -21,10 +21,10 @@ type SourceClientAetna struct {
 // https://vteapif1.aetna.com/fhirdemo/.well-known/smart-configuration
 // https://vteapif1.aetna.com/fhirdemo/v1/patientaccess/metadata
 // https://developerportal.aetna.com/Aetna_TestMember_Data_V6.xls
-func GetSourceClientAetna(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAetna(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAetna{baseClient}, updatedSourceCred, err
+	return SourceClientAetna{baseClient}, err
 }
 
 // Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html

@@ -19,8 +19,8 @@ type SourceClientCornerstoneMedicalClinicPllc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10032590/metadata
-func GetSourceClientCornerstoneMedicalClinicPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCornerstoneMedicalClinicPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCornerstoneMedicalClinicPllc{baseClient}, updatedSourceCred, err
+	return SourceClientCornerstoneMedicalClinicPllc{baseClient}, err
 }

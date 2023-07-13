@@ -19,8 +19,8 @@ type SourceClientPineRestChristianMentalHealthServices struct {
 }
 
 // https://wecare.pinerest.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientPineRestChristianMentalHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPineRestChristianMentalHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPineRestChristianMentalHealthServices{baseClient}, updatedSourceCred, err
+	return SourceClientPineRestChristianMentalHealthServices{baseClient}, err
 }

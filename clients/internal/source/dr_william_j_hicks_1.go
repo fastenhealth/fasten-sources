@@ -19,8 +19,8 @@ type SourceClientDrWilliamJHicks1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c75536dc-dc0f-4d24-99bf-fa4c77623097/metadata
-func GetSourceClientDrWilliamJHicks1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrWilliamJHicks1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrWilliamJHicks1{baseClient}, updatedSourceCred, err
+	return SourceClientDrWilliamJHicks1{baseClient}, err
 }

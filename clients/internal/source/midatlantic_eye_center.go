@@ -19,8 +19,8 @@ type SourceClientMidatlanticEyeCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/N6G4uZFC_0VHckv5d67VADXkySFwDJK1/metadata
-func GetSourceClientMidatlanticEyeCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMidatlanticEyeCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMidatlanticEyeCenter{baseClient}, updatedSourceCred, err
+	return SourceClientMidatlanticEyeCenter{baseClient}, err
 }

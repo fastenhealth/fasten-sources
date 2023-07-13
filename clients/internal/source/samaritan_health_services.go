@@ -19,8 +19,8 @@ type SourceClientSamaritanHealthServices struct {
 }
 
 // https://fhir.samhealth.org/fhir-arr/api/FHIR/R4/metadata
-func GetSourceClientSamaritanHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSamaritanHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSamaritanHealthServices{baseClient}, updatedSourceCred, err
+	return SourceClientSamaritanHealthServices{baseClient}, err
 }

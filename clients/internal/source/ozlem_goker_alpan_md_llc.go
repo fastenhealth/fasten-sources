@@ -19,8 +19,8 @@ type SourceClientOzlemGokerAlpanMdLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/95bfb368-cccf-467f-b483-6c8f83ef71d6/metadata
-func GetSourceClientOzlemGokerAlpanMdLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOzlemGokerAlpanMdLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOzlemGokerAlpanMdLlc{baseClient}, updatedSourceCred, err
+	return SourceClientOzlemGokerAlpanMdLlc{baseClient}, err
 }

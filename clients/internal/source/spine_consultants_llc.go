@@ -19,8 +19,8 @@ type SourceClientSpineConsultantsLlc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10037463/metadata
-func GetSourceClientSpineConsultantsLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSpineConsultantsLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSpineConsultantsLlc{baseClient}, updatedSourceCred, err
+	return SourceClientSpineConsultantsLlc{baseClient}, err
 }

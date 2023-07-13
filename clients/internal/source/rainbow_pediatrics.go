@@ -19,8 +19,8 @@ type SourceClientRainbowPediatrics struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/68523AR/metadata
-func GetSourceClientRainbowPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRainbowPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRainbowPediatrics{baseClient}, updatedSourceCred, err
+	return SourceClientRainbowPediatrics{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientBarclayInternist struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/5a379cca-ccf1-43ac-a865-97b631da6504/metadata
-func GetSourceClientBarclayInternist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBarclayInternist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBarclayInternist{baseClient}, updatedSourceCred, err
+	return SourceClientBarclayInternist{baseClient}, err
 }

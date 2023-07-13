@@ -19,8 +19,8 @@ type SourceClientFiferAndHeligmanMdPa struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10009113/metadata
-func GetSourceClientFiferAndHeligmanMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFiferAndHeligmanMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFiferAndHeligmanMdPa{baseClient}, updatedSourceCred, err
+	return SourceClientFiferAndHeligmanMdPa{baseClient}, err
 }

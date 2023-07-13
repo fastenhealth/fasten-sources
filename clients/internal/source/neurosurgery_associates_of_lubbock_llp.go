@@ -19,8 +19,8 @@ type SourceClientNeurosurgeryAssociatesOfLubbockLlp struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10207843/metadata
-func GetSourceClientNeurosurgeryAssociatesOfLubbockLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNeurosurgeryAssociatesOfLubbockLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNeurosurgeryAssociatesOfLubbockLlp{baseClient}, updatedSourceCred, err
+	return SourceClientNeurosurgeryAssociatesOfLubbockLlp{baseClient}, err
 }

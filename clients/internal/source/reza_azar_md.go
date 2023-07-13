@@ -19,8 +19,8 @@ type SourceClientRezaAzarMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/830bc60d-46ac-4243-84ae-d0eff19be222/metadata
-func GetSourceClientRezaAzarMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRezaAzarMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRezaAzarMd{baseClient}, updatedSourceCred, err
+	return SourceClientRezaAzarMd{baseClient}, err
 }

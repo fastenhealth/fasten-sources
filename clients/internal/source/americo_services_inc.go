@@ -19,8 +19,8 @@ type SourceClientAmericoServicesInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/8dc8f3b9-781b-44a1-8832-9b919d42e2ad/metadata
-func GetSourceClientAmericoServicesInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAmericoServicesInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAmericoServicesInc{baseClient}, updatedSourceCred, err
+	return SourceClientAmericoServicesInc{baseClient}, err
 }

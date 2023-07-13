@@ -19,8 +19,8 @@ type SourceClientLcmcHealth struct {
 }
 
 // https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientLcmcHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLcmcHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLcmcHealth{baseClient}, updatedSourceCred, err
+	return SourceClientLcmcHealth{baseClient}, err
 }

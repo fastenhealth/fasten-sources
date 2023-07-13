@@ -19,8 +19,8 @@ type SourceClientInterventionalCardiology struct {
 }
 
 // https://fhirwestus2.allscripts.pro/fhirroute/fhir/70435/metadata
-func GetSourceClientInterventionalCardiology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInterventionalCardiology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInterventionalCardiology{baseClient}, updatedSourceCred, err
+	return SourceClientInterventionalCardiology{baseClient}, err
 }

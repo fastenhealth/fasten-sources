@@ -19,8 +19,8 @@ type SourceClientSynergyInfectiousDiseasePhysiciansPllc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/32a5489d-5ae9-4aba-af06-1ba218313982/metadata
-func GetSourceClientSynergyInfectiousDiseasePhysiciansPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSynergyInfectiousDiseasePhysiciansPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSynergyInfectiousDiseasePhysiciansPllc{baseClient}, updatedSourceCred, err
+	return SourceClientSynergyInfectiousDiseasePhysiciansPllc{baseClient}, err
 }

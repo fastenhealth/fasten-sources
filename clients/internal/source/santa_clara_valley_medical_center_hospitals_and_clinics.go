@@ -19,8 +19,8 @@ type SourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics struct {
 }
 
 // https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4/metadata
-func GetSourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics{baseClient}, updatedSourceCred, err
+	return SourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics{baseClient}, err
 }

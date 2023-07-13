@@ -19,8 +19,8 @@ type SourceClientAmericanCentury struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/dc9cc670-c6ff-4240-acb5-59e5ad786041/metadata
-func GetSourceClientAmericanCentury(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAmericanCentury(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAmericanCentury{baseClient}, updatedSourceCred, err
+	return SourceClientAmericanCentury{baseClient}, err
 }

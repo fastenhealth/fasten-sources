@@ -19,8 +19,8 @@ type SourceClientTheNewYorkGracieSquareHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c182c2dc-a99c-421c-b6e6-89a9ec41cd39/metadata
-func GetSourceClientTheNewYorkGracieSquareHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheNewYorkGracieSquareHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheNewYorkGracieSquareHospital{baseClient}, updatedSourceCred, err
+	return SourceClientTheNewYorkGracieSquareHospital{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMarylandLiveCasino struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ce7022a6-97a9-4e1d-a690-ced5152ae1da/metadata
-func GetSourceClientMarylandLiveCasino(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMarylandLiveCasino(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMarylandLiveCasino{baseClient}, updatedSourceCred, err
+	return SourceClientMarylandLiveCasino{baseClient}, err
 }

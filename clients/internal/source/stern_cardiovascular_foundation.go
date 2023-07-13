@@ -19,8 +19,8 @@ type SourceClientSternCardiovascularFoundation struct {
 }
 
 // https://fhir.sterncardio.com/FHIR/metadata
-func GetSourceClientSternCardiovascularFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSternCardiovascularFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSternCardiovascularFoundation{baseClient}, updatedSourceCred, err
+	return SourceClientSternCardiovascularFoundation{baseClient}, err
 }

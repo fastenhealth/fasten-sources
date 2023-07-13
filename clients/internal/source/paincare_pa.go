@@ -19,8 +19,8 @@ type SourceClientPaincarePa struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10066099/metadata
-func GetSourceClientPaincarePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPaincarePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPaincarePa{baseClient}, updatedSourceCred, err
+	return SourceClientPaincarePa{baseClient}, err
 }

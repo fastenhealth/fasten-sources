@@ -19,8 +19,8 @@ type SourceClientAltamed struct {
 }
 
 // https://epicproxy.et1123.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientAltamed(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAltamed(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAltamed{baseClient}, updatedSourceCred, err
+	return SourceClientAltamed{baseClient}, err
 }

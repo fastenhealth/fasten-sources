@@ -27,12 +27,12 @@ so we need to swap the code for the access_token on the server
 */
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
-func GetSourceClientAllscripts(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAllscripts(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return SourceClientAllscripts{baseClient}, updatedSourceCred, err
+	return SourceClientAllscripts{baseClient}, err
 }
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html

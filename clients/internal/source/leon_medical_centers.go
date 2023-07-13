@@ -19,8 +19,8 @@ type SourceClientLeonMedicalCenters struct {
 }
 
 // https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceClientLeonMedicalCenters(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLeonMedicalCenters(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLeonMedicalCenters{baseClient}, updatedSourceCred, err
+	return SourceClientLeonMedicalCenters{baseClient}, err
 }

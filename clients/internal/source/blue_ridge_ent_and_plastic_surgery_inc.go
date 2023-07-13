@@ -19,8 +19,8 @@ type SourceClientBlueRidgeEntAndPlasticSurgeryInc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041765/metadata
-func GetSourceClientBlueRidgeEntAndPlasticSurgeryInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBlueRidgeEntAndPlasticSurgeryInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlueRidgeEntAndPlasticSurgeryInc{baseClient}, updatedSourceCred, err
+	return SourceClientBlueRidgeEntAndPlasticSurgeryInc{baseClient}, err
 }

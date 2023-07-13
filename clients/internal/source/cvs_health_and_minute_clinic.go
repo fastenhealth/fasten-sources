@@ -19,8 +19,8 @@ type SourceClientCvsHealthAndMinuteClinic struct {
 }
 
 // https://retailepicfhir.cvshealth.com/FhirProxy/api/fhir/R4/metadata
-func GetSourceClientCvsHealthAndMinuteClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCvsHealthAndMinuteClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCvsHealthAndMinuteClinic{baseClient}, updatedSourceCred, err
+	return SourceClientCvsHealthAndMinuteClinic{baseClient}, err
 }

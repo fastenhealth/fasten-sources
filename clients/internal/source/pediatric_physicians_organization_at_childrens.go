@@ -19,8 +19,8 @@ type SourceClientPediatricPhysiciansOrganizationAtChildrens struct {
 }
 
 // https://fhir.chppoc.org/Fhir-External/api/FHIR/R4/metadata
-func GetSourceClientPediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPediatricPhysiciansOrganizationAtChildrens{baseClient}, updatedSourceCred, err
+	return SourceClientPediatricPhysiciansOrganizationAtChildrens{baseClient}, err
 }

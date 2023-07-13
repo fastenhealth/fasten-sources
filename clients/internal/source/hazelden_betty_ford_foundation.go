@@ -19,8 +19,8 @@ type SourceClientHazeldenBettyFordFoundation struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/e54ca37d-332e-47f6-85c8-4b653eedbcbc/metadata
-func GetSourceClientHazeldenBettyFordFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHazeldenBettyFordFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHazeldenBettyFordFoundation{baseClient}, updatedSourceCred, err
+	return SourceClientHazeldenBettyFordFoundation{baseClient}, err
 }

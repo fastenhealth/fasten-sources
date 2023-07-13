@@ -19,8 +19,8 @@ type SourceClientPostAcuteRecoveryInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1c45401e-7295-4e0a-b527-889e5b1286bc/metadata
-func GetSourceClientPostAcuteRecoveryInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPostAcuteRecoveryInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPostAcuteRecoveryInc{baseClient}, updatedSourceCred, err
+	return SourceClientPostAcuteRecoveryInc{baseClient}, err
 }

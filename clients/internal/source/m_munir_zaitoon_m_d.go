@@ -19,8 +19,8 @@ type SourceClientMMunirZaitoonMD struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/803d7d4c-e9ff-4575-b218-a37e8af02d5f/metadata
-func GetSourceClientMMunirZaitoonMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMMunirZaitoonMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMMunirZaitoonMD{baseClient}, updatedSourceCred, err
+	return SourceClientMMunirZaitoonMD{baseClient}, err
 }

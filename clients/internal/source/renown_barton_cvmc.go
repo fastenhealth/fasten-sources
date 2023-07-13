@@ -19,8 +19,8 @@ type SourceClientRenownBartonCvmc struct {
 }
 
 // https://fhir.renown.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientRenownBartonCvmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRenownBartonCvmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRenownBartonCvmc{baseClient}, updatedSourceCred, err
+	return SourceClientRenownBartonCvmc{baseClient}, err
 }

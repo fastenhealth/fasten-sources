@@ -19,8 +19,8 @@ type SourceClientInternalMedicineAndPediatricsOfCullmanPC struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/93522848-eb1f-4ed3-b857-907cddfe003b/metadata
-func GetSourceClientInternalMedicineAndPediatricsOfCullmanPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInternalMedicineAndPediatricsOfCullmanPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInternalMedicineAndPediatricsOfCullmanPC{baseClient}, updatedSourceCred, err
+	return SourceClientInternalMedicineAndPediatricsOfCullmanPC{baseClient}, err
 }

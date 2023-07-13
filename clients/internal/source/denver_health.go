@@ -19,8 +19,8 @@ type SourceClientDenverHealth struct {
 }
 
 // https://webservices.dhha.org/PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceClientDenverHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDenverHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDenverHealth{baseClient}, updatedSourceCred, err
+	return SourceClientDenverHealth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientTheFedeliGroup struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ebaa7f8d-2913-4d38-b066-a51feb0dbcd3/metadata
-func GetSourceClientTheFedeliGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheFedeliGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheFedeliGroup{baseClient}, updatedSourceCred, err
+	return SourceClientTheFedeliGroup{baseClient}, err
 }

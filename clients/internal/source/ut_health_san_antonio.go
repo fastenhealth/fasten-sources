@@ -19,8 +19,8 @@ type SourceClientUtHealthSanAntonio struct {
 }
 
 // https://api.utmsa.com/fhir/api/FHIR/R4/metadata
-func GetSourceClientUtHealthSanAntonio(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUtHealthSanAntonio(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUtHealthSanAntonio{baseClient}, updatedSourceCred, err
+	return SourceClientUtHealthSanAntonio{baseClient}, err
 }

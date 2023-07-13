@@ -19,8 +19,8 @@ type SourceClientYumaDistrictHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c3e623e4-47c2-48c0-8c45-866563c97ee6/metadata
-func GetSourceClientYumaDistrictHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientYumaDistrictHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientYumaDistrictHospital{baseClient}, updatedSourceCred, err
+	return SourceClientYumaDistrictHospital{baseClient}, err
 }

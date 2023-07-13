@@ -19,8 +19,8 @@ type SourceClientMasonicareCorporation struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0902817a-ed68-43fa-954a-bea5acd79d50/metadata
-func GetSourceClientMasonicareCorporation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMasonicareCorporation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMasonicareCorporation{baseClient}, updatedSourceCred, err
+	return SourceClientMasonicareCorporation{baseClient}, err
 }

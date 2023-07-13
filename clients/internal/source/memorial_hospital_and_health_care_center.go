@@ -19,8 +19,8 @@ type SourceClientMemorialHospitalAndHealthCareCenter struct {
 }
 
 // https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4/metadata
-func GetSourceClientMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMemorialHospitalAndHealthCareCenter{baseClient}, updatedSourceCred, err
+	return SourceClientMemorialHospitalAndHealthCareCenter{baseClient}, err
 }

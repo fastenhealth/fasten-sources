@@ -19,8 +19,8 @@ type SourceClientFranciscanAlliance struct {
 }
 
 // https://ema.franciscanalliance.org/FHIR_PROXY/api/FHIR/R4/metadata
-func GetSourceClientFranciscanAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFranciscanAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFranciscanAlliance{baseClient}, updatedSourceCred, err
+	return SourceClientFranciscanAlliance{baseClient}, err
 }

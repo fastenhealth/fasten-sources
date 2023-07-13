@@ -19,8 +19,8 @@ type SourceClientAtlanticHealth struct {
 }
 
 // https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4/metadata
-func GetSourceClientAtlanticHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAtlanticHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAtlanticHealth{baseClient}, updatedSourceCred, err
+	return SourceClientAtlanticHealth{baseClient}, err
 }

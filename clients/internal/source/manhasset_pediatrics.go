@@ -19,8 +19,8 @@ type SourceClientManhassetPediatrics struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/72205/metadata
-func GetSourceClientManhassetPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientManhassetPediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientManhassetPediatrics{baseClient}, updatedSourceCred, err
+	return SourceClientManhassetPediatrics{baseClient}, err
 }

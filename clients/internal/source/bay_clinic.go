@@ -19,8 +19,8 @@ type SourceClientBayClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/bea62b1d-5b0c-4c1a-bdbd-eaa129312421/metadata
-func GetSourceClientBayClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBayClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBayClinic{baseClient}, updatedSourceCred, err
+	return SourceClientBayClinic{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientDartmouthHitchcock struct {
 }
 
 // https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientDartmouthHitchcock(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDartmouthHitchcock(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDartmouthHitchcock{baseClient}, updatedSourceCred, err
+	return SourceClientDartmouthHitchcock{baseClient}, err
 }

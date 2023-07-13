@@ -19,8 +19,8 @@ type SourceClientPaulGrecoMDConciergeMedicalServicesPL struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/dca1cfb3-683c-4835-9b66-95a129c0bbc2/metadata
-func GetSourceClientPaulGrecoMDConciergeMedicalServicesPL(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPaulGrecoMDConciergeMedicalServicesPL(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPaulGrecoMDConciergeMedicalServicesPL{baseClient}, updatedSourceCred, err
+	return SourceClientPaulGrecoMDConciergeMedicalServicesPL{baseClient}, err
 }

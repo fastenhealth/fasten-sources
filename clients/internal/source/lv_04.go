@@ -19,8 +19,8 @@ type SourceClientLv04 struct {
 }
 
 // https://scmprodweb.lv0.hos.allscriptscloud.com/R4/open-Prod/metadata
-func GetSourceClientLv04(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLv04(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLv04{baseClient}, updatedSourceCred, err
+	return SourceClientLv04{baseClient}, err
 }

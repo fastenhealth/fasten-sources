@@ -19,8 +19,8 @@ type SourceClientBahaAbuEshehMd struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10033421/metadata
-func GetSourceClientBahaAbuEshehMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBahaAbuEshehMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBahaAbuEshehMd{baseClient}, updatedSourceCred, err
+	return SourceClientBahaAbuEshehMd{baseClient}, err
 }

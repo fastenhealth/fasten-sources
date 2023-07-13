@@ -19,8 +19,8 @@ type SourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDi
 }
 
 // https://fhir-myrecord.cerner.com/r4/3886e5cc-74f6-4658-9302-8c8ffe285776/metadata
-func GetSourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict{baseClient}, updatedSourceCred, err
+	return SourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict{baseClient}, err
 }

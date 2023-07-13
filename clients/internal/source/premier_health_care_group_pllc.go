@@ -19,8 +19,8 @@ type SourceClientPremierHealthCareGroupPllc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/57555142-fd4d-44f9-b414-6223f59f4079/metadata
-func GetSourceClientPremierHealthCareGroupPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPremierHealthCareGroupPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPremierHealthCareGroupPllc{baseClient}, updatedSourceCred, err
+	return SourceClientPremierHealthCareGroupPllc{baseClient}, err
 }

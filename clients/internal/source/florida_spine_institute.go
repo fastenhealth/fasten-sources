@@ -19,8 +19,8 @@ type SourceClientFloridaSpineInstitute struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038935/metadata
-func GetSourceClientFloridaSpineInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFloridaSpineInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFloridaSpineInstitute{baseClient}, updatedSourceCred, err
+	return SourceClientFloridaSpineInstitute{baseClient}, err
 }

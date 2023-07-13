@@ -19,8 +19,8 @@ type SourceClientCommunityHealthNetwork struct {
 }
 
 // https://esp.ecommunity.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCommunityHealthNetwork{baseClient}, updatedSourceCred, err
+	return SourceClientCommunityHealthNetwork{baseClient}, err
 }

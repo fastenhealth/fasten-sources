@@ -19,8 +19,8 @@ type SourceClientAlexiusMBishopMDPSC struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/vvWOESzbUe72lEl5ItnHhnlfe3uimw2P/metadata
-func GetSourceClientAlexiusMBishopMDPSC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlexiusMBishopMDPSC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlexiusMBishopMDPSC{baseClient}, updatedSourceCred, err
+	return SourceClientAlexiusMBishopMDPSC{baseClient}, err
 }

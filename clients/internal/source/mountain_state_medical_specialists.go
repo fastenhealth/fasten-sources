@@ -19,8 +19,8 @@ type SourceClientMountainStateMedicalSpecialists struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10037988/metadata
-func GetSourceClientMountainStateMedicalSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMountainStateMedicalSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMountainStateMedicalSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientMountainStateMedicalSpecialists{baseClient}, err
 }

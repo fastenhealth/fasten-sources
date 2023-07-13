@@ -19,8 +19,8 @@ type SourceClientSpringfieldClinic struct {
 }
 
 // https://fhirweb.emrspi.org/FHIR/metadata
-func GetSourceClientSpringfieldClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSpringfieldClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSpringfieldClinic{baseClient}, updatedSourceCred, err
+	return SourceClientSpringfieldClinic{baseClient}, err
 }

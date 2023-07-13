@@ -19,8 +19,8 @@ type SourceClientSummitOrthopedicsLtd struct {
 }
 
 // https://so-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientSummitOrthopedicsLtd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSummitOrthopedicsLtd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSummitOrthopedicsLtd{baseClient}, updatedSourceCred, err
+	return SourceClientSummitOrthopedicsLtd{baseClient}, err
 }

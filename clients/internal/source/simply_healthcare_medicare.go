@@ -19,8 +19,8 @@ type SourceClientSimplyHealthcareMedicare struct {
 
 // https://patient360c.simplyhealthcareplans.com/P360Member/api/fhir-r4/metadata
 // https://patient360c.simplyhealthcareplans.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientSimplyHealthcareMedicare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSimplyHealthcareMedicare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSimplyHealthcareMedicare{baseClient}, updatedSourceCred, err
+	return SourceClientSimplyHealthcareMedicare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientTexasTechHealthSciencesCenterPermianBasin struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/811b53d6-0f4b-471a-8da0-071261666340/metadata
-func GetSourceClientTexasTechHealthSciencesCenterPermianBasin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTexasTechHealthSciencesCenterPermianBasin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTexasTechHealthSciencesCenterPermianBasin{baseClient}, updatedSourceCred, err
+	return SourceClientTexasTechHealthSciencesCenterPermianBasin{baseClient}, err
 }

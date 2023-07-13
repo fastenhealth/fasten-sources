@@ -19,8 +19,8 @@ type SourceClientRenukaHBhattMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/K_rHMsTqy-Am8Dey1SUdp1prEQEbuv9T/metadata
-func GetSourceClientRenukaHBhattMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRenukaHBhattMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRenukaHBhattMd{baseClient}, updatedSourceCred, err
+	return SourceClientRenukaHBhattMd{baseClient}, err
 }

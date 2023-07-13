@@ -19,8 +19,8 @@ type SourceClientPatrickJClaussDpm struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/Vc_QWiREZa95EPT5Nx8RKuWcE-Mc1NaL/metadata
-func GetSourceClientPatrickJClaussDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPatrickJClaussDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPatrickJClaussDpm{baseClient}, updatedSourceCred, err
+	return SourceClientPatrickJClaussDpm{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientClintonWomensHealthcare struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10061847/metadata
-func GetSourceClientClintonWomensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClintonWomensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClintonWomensHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientClintonWomensHealthcare{baseClient}, err
 }

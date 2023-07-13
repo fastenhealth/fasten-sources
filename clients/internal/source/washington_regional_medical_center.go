@@ -19,8 +19,8 @@ type SourceClientWashingtonRegionalMedicalCenter struct {
 }
 
 // https://wrm-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientWashingtonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWashingtonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWashingtonRegionalMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientWashingtonRegionalMedicalCenter{baseClient}, err
 }

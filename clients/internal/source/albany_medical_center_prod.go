@@ -19,8 +19,8 @@ type SourceClientAlbanyMedicalCenterProd struct {
 }
 
 // https://ahsfhirprod.amc.edu/FHIR/metadata
-func GetSourceClientAlbanyMedicalCenterProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlbanyMedicalCenterProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlbanyMedicalCenterProd{baseClient}, updatedSourceCred, err
+	return SourceClientAlbanyMedicalCenterProd{baseClient}, err
 }

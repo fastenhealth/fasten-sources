@@ -19,8 +19,8 @@ type SourceClientExecutiveHealthOfCoralGables struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3ed38101-a312-4a4c-8cad-0627a5c63d9e/metadata
-func GetSourceClientExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientExecutiveHealthOfCoralGables(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientExecutiveHealthOfCoralGables{baseClient}, updatedSourceCred, err
+	return SourceClientExecutiveHealthOfCoralGables{baseClient}, err
 }

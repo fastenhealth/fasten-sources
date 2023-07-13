@@ -19,8 +19,8 @@ type SourceClientAutumnRoadFamilyPractice struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10029758/metadata
-func GetSourceClientAutumnRoadFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAutumnRoadFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAutumnRoadFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientAutumnRoadFamilyPractice{baseClient}, err
 }

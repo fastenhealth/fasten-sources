@@ -19,8 +19,8 @@ type SourceClientDewittFootAndAnkle struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/812af0f8-01eb-42d0-baac-37b7b0787a99/metadata
-func GetSourceClientDewittFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDewittFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDewittFootAndAnkle{baseClient}, updatedSourceCred, err
+	return SourceClientDewittFootAndAnkle{baseClient}, err
 }

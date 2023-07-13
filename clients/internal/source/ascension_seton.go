@@ -19,8 +19,8 @@ type SourceClientAscensionSeton struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4ff3b259-e48d-4066-8b35-a6a051f2802a/metadata
-func GetSourceClientAscensionSeton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAscensionSeton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAscensionSeton{baseClient}, updatedSourceCred, err
+	return SourceClientAscensionSeton{baseClient}, err
 }

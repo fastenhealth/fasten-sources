@@ -19,8 +19,8 @@ type SourceClientSurgicalAssociatesOfWarnerRobinsPC struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10048106/metadata
-func GetSourceClientSurgicalAssociatesOfWarnerRobinsPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSurgicalAssociatesOfWarnerRobinsPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSurgicalAssociatesOfWarnerRobinsPC{baseClient}, updatedSourceCred, err
+	return SourceClientSurgicalAssociatesOfWarnerRobinsPC{baseClient}, err
 }

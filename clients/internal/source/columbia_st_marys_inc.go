@@ -19,8 +19,8 @@ type SourceClientColumbiaStMarysInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/idzZ7Xu4K4e6cf6O6PqH5zcqaSD8_vYU/metadata
-func GetSourceClientColumbiaStMarysInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientColumbiaStMarysInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientColumbiaStMarysInc{baseClient}, updatedSourceCred, err
+	return SourceClientColumbiaStMarysInc{baseClient}, err
 }

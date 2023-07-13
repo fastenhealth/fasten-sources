@@ -19,8 +19,8 @@ type SourceClientChestnutHillPodiatry struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/78452970-88d1-4fec-b2cf-4da4ec4eae0d/metadata
-func GetSourceClientChestnutHillPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChestnutHillPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChestnutHillPodiatry{baseClient}, updatedSourceCred, err
+	return SourceClientChestnutHillPodiatry{baseClient}, err
 }

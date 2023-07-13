@@ -19,8 +19,8 @@ type SourceClientBoulderCityHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/fab57722-243a-4069-b32a-bcc74c7779f7/metadata
-func GetSourceClientBoulderCityHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBoulderCityHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBoulderCityHospital{baseClient}, updatedSourceCred, err
+	return SourceClientBoulderCityHospital{baseClient}, err
 }

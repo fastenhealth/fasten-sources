@@ -21,10 +21,10 @@ type SourceClientMeditech struct {
 // https://greenfield-apis.meditech.com/v1/uscore/R4/.well-known/smart-configuration
 // https://greenfield-apis.meditech.com/v1/uscore/R4/metadata
 // https://fhir.meditech.com/explorer/authorization
-func GetSourceClientMeditech(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMeditech(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return SourceClientMeditech{baseClient}, updatedSourceCred, err
+	return SourceClientMeditech{baseClient}, err
 }

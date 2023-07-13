@@ -19,8 +19,8 @@ type SourceClientStoneMountainFamilyPractice struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10039009/metadata
-func GetSourceClientStoneMountainFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStoneMountainFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStoneMountainFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientStoneMountainFamilyPractice{baseClient}, err
 }

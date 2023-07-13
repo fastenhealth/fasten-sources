@@ -19,8 +19,8 @@ type SourceClientParkviewHealth struct {
 }
 
 // https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4/metadata
-func GetSourceClientParkviewHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientParkviewHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientParkviewHealth{baseClient}, updatedSourceCred, err
+	return SourceClientParkviewHealth{baseClient}, err
 }

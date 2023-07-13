@@ -19,8 +19,8 @@ type SourceClientBlueCrossAndBlueShieldOfVermont1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d03e2bb3-d17a-409b-bb16-d2cf8d81bb7f/metadata
-func GetSourceClientBlueCrossAndBlueShieldOfVermont1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBlueCrossAndBlueShieldOfVermont1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlueCrossAndBlueShieldOfVermont1{baseClient}, updatedSourceCred, err
+	return SourceClientBlueCrossAndBlueShieldOfVermont1{baseClient}, err
 }

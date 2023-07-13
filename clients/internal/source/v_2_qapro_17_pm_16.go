@@ -19,8 +19,8 @@ type SourceClientV2Qapro17Pm16 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/CustProProdV2qapro17-pm16/metadata
-func GetSourceClientV2Qapro17Pm16(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientV2Qapro17Pm16(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientV2Qapro17Pm16{baseClient}, updatedSourceCred, err
+	return SourceClientV2Qapro17Pm16{baseClient}, err
 }

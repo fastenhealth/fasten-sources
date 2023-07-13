@@ -19,8 +19,8 @@ type SourceClientTheHypertensionClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4ea8f953-b718-4128-8919-0106a77acc02/metadata
-func GetSourceClientTheHypertensionClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheHypertensionClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheHypertensionClinic{baseClient}, updatedSourceCred, err
+	return SourceClientTheHypertensionClinic{baseClient}, err
 }

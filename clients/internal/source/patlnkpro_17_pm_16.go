@@ -19,8 +19,8 @@ type SourceClientPatlnkpro17Pm16 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/custproprodsandboxpatlnkpro17pm16/metadata
-func GetSourceClientPatlnkpro17Pm16(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPatlnkpro17Pm16(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPatlnkpro17Pm16{baseClient}, updatedSourceCred, err
+	return SourceClientPatlnkpro17Pm16{baseClient}, err
 }

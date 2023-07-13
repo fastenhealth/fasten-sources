@@ -19,8 +19,8 @@ type SourceClientMichelCSamsonMDFACSPllc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1f7b6536-c76b-4398-ab49-8978aae098e4/metadata
-func GetSourceClientMichelCSamsonMDFACSPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMichelCSamsonMDFACSPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMichelCSamsonMDFACSPllc{baseClient}, updatedSourceCred, err
+	return SourceClientMichelCSamsonMDFACSPllc{baseClient}, err
 }

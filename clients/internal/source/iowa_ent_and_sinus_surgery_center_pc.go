@@ -19,8 +19,8 @@ type SourceClientIowaEntAndSinusSurgeryCenterPc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/0001607/metadata
-func GetSourceClientIowaEntAndSinusSurgeryCenterPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientIowaEntAndSinusSurgeryCenterPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIowaEntAndSinusSurgeryCenterPc{baseClient}, updatedSourceCred, err
+	return SourceClientIowaEntAndSinusSurgeryCenterPc{baseClient}, err
 }

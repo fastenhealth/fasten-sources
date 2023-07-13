@@ -19,8 +19,8 @@ type SourceClientSharadSoniMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/77378/metadata
-func GetSourceClientSharadSoniMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSharadSoniMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSharadSoniMd{baseClient}, updatedSourceCred, err
+	return SourceClientSharadSoniMd{baseClient}, err
 }

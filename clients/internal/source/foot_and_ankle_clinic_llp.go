@@ -19,8 +19,8 @@ type SourceClientFootAndAnkleClinicLlp struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/gOP4994uTxKCP3l4vJ7Jqo6k1NZgHGsz/metadata
-func GetSourceClientFootAndAnkleClinicLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFootAndAnkleClinicLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFootAndAnkleClinicLlp{baseClient}, updatedSourceCred, err
+	return SourceClientFootAndAnkleClinicLlp{baseClient}, err
 }

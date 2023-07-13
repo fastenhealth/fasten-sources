@@ -19,8 +19,8 @@ type SourceClientMethodistHealthSystem struct {
 }
 
 // https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientMethodistHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMethodistHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMethodistHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientMethodistHealthSystem{baseClient}, err
 }

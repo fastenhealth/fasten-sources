@@ -19,8 +19,8 @@ type SourceClient1960FamilyPracticePa struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10061291/metadata
-func GetSourceClient1960FamilyPracticePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClient1960FamilyPracticePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClient1960FamilyPracticePa{baseClient}, updatedSourceCred, err
+	return SourceClient1960FamilyPracticePa{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientRehabJvLlcDBAShelteringArmsInstitute struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/74ae929c-3b50-4f7a-9a1c-18042b69a652/metadata
-func GetSourceClientRehabJvLlcDBAShelteringArmsInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRehabJvLlcDBAShelteringArmsInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRehabJvLlcDBAShelteringArmsInstitute{baseClient}, updatedSourceCred, err
+	return SourceClientRehabJvLlcDBAShelteringArmsInstitute{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientWeslacoMedicalClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/TsPhzaqUt_a0RHCDBKHbD1NfbKTYyx5W/metadata
-func GetSourceClientWeslacoMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWeslacoMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWeslacoMedicalClinic{baseClient}, updatedSourceCred, err
+	return SourceClientWeslacoMedicalClinic{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientEmoryHealthcare struct {
 }
 
 // https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4/metadata
-func GetSourceClientEmoryHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEmoryHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEmoryHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientEmoryHealthcare{baseClient}, err
 }

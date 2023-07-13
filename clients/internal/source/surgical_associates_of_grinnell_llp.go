@@ -19,8 +19,8 @@ type SourceClientSurgicalAssociatesOfGrinnellLlp struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10034377/metadata
-func GetSourceClientSurgicalAssociatesOfGrinnellLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSurgicalAssociatesOfGrinnellLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSurgicalAssociatesOfGrinnellLlp{baseClient}, updatedSourceCred, err
+	return SourceClientSurgicalAssociatesOfGrinnellLlp{baseClient}, err
 }

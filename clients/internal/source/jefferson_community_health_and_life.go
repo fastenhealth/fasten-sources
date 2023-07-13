@@ -19,8 +19,8 @@ type SourceClientJeffersonCommunityHealthAndLife struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2b9c31ea-6ddc-4b55-946f-2c60cc32be99/metadata
-func GetSourceClientJeffersonCommunityHealthAndLife(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJeffersonCommunityHealthAndLife(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJeffersonCommunityHealthAndLife{baseClient}, updatedSourceCred, err
+	return SourceClientJeffersonCommunityHealthAndLife{baseClient}, err
 }

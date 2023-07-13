@@ -19,8 +19,8 @@ type SourceClientNoxubeeMedicalComplex struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/71747401-1366-4bfa-a42b-aee2082f7da8/metadata
-func GetSourceClientNoxubeeMedicalComplex(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNoxubeeMedicalComplex(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNoxubeeMedicalComplex{baseClient}, updatedSourceCred, err
+	return SourceClientNoxubeeMedicalComplex{baseClient}, err
 }

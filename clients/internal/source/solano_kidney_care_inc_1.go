@@ -19,8 +19,8 @@ type SourceClientSolanoKidneyCareInc1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/mpHeoGaxK5S85g1wJYZSJQd5Cv8j4Vx4/metadata
-func GetSourceClientSolanoKidneyCareInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSolanoKidneyCareInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSolanoKidneyCareInc1{baseClient}, updatedSourceCred, err
+	return SourceClientSolanoKidneyCareInc1{baseClient}, err
 }

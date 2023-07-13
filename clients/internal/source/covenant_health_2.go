@@ -19,8 +19,8 @@ type SourceClientCovenantHealth2 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9d9ce2ac-65e8-4488-a0f0-ba102e060a58/metadata
-func GetSourceClientCovenantHealth2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCovenantHealth2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCovenantHealth2{baseClient}, updatedSourceCred, err
+	return SourceClientCovenantHealth2{baseClient}, err
 }

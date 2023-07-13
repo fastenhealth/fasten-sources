@@ -19,8 +19,8 @@ type SourceClientAdvantagecarePhysicians struct {
 }
 
 // https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4/metadata
-func GetSourceClientAdvantagecarePhysicians(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdvantagecarePhysicians(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdvantagecarePhysicians{baseClient}, updatedSourceCred, err
+	return SourceClientAdvantagecarePhysicians{baseClient}, err
 }

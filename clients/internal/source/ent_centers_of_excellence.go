@@ -19,8 +19,8 @@ type SourceClientEntCentersOfExcellence struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10211805/metadata
-func GetSourceClientEntCentersOfExcellence(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEntCentersOfExcellence(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEntCentersOfExcellence{baseClient}, updatedSourceCred, err
+	return SourceClientEntCentersOfExcellence{baseClient}, err
 }

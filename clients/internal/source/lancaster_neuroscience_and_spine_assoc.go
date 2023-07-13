@@ -19,8 +19,8 @@ type SourceClientLancasterNeuroscienceAndSpineAssoc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c4b34e26-8030-4b52-8729-562ad273a809/metadata
-func GetSourceClientLancasterNeuroscienceAndSpineAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLancasterNeuroscienceAndSpineAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLancasterNeuroscienceAndSpineAssoc{baseClient}, updatedSourceCred, err
+	return SourceClientLancasterNeuroscienceAndSpineAssoc{baseClient}, err
 }

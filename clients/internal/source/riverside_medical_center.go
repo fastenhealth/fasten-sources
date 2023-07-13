@@ -19,8 +19,8 @@ type SourceClientRiversideMedicalCenter struct {
 }
 
 // https://rpprod.riversidehealthcare.net/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceClientRiversideMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRiversideMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRiversideMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientRiversideMedicalCenter{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientCoulterClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/7c8c7300-43e9-473e-badd-c134996bff81/metadata
-func GetSourceClientCoulterClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCoulterClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCoulterClinic{baseClient}, updatedSourceCred, err
+	return SourceClientCoulterClinic{baseClient}, err
 }

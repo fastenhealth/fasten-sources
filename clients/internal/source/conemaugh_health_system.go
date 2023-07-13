@@ -19,8 +19,8 @@ type SourceClientConemaughHealthSystem struct {
 }
 
 // https://fhir.conemaugh.org/arr-fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientConemaughHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientConemaughHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientConemaughHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientConemaughHealthSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientAbsenteeShawneeTribalHealthSystem struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10030634/metadata
-func GetSourceClientAbsenteeShawneeTribalHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAbsenteeShawneeTribalHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAbsenteeShawneeTribalHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientAbsenteeShawneeTribalHealthSystem{baseClient}, err
 }

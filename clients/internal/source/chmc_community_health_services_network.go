@@ -19,8 +19,8 @@ type SourceClientChmcCommunityHealthServicesNetwork struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/FmRItZc30RH60LjxwsIxQM4HGo6XcQXK/metadata
-func GetSourceClientChmcCommunityHealthServicesNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChmcCommunityHealthServicesNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChmcCommunityHealthServicesNetwork{baseClient}, updatedSourceCred, err
+	return SourceClientChmcCommunityHealthServicesNetwork{baseClient}, err
 }

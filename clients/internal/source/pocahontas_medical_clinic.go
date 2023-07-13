@@ -19,8 +19,8 @@ type SourceClientPocahontasMedicalClinic struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10083519/metadata
-func GetSourceClientPocahontasMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPocahontasMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPocahontasMedicalClinic{baseClient}, updatedSourceCred, err
+	return SourceClientPocahontasMedicalClinic{baseClient}, err
 }

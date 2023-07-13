@@ -19,8 +19,8 @@ type SourceClientMargaretKSparksMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/clhlA0bqg5cDxXfkVWMqfwW0AvYi1zf5/metadata
-func GetSourceClientMargaretKSparksMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMargaretKSparksMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMargaretKSparksMd{baseClient}, updatedSourceCred, err
+	return SourceClientMargaretKSparksMd{baseClient}, err
 }

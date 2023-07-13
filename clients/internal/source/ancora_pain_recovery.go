@@ -19,8 +19,8 @@ type SourceClientAncoraPainRecovery struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10037257/metadata
-func GetSourceClientAncoraPainRecovery(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAncoraPainRecovery(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAncoraPainRecovery{baseClient}, updatedSourceCred, err
+	return SourceClientAncoraPainRecovery{baseClient}, err
 }

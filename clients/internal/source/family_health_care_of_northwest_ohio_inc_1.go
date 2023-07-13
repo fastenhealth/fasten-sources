@@ -19,8 +19,8 @@ type SourceClientFamilyHealthCareOfNorthwestOhioInc1 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10007750/metadata
-func GetSourceClientFamilyHealthCareOfNorthwestOhioInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFamilyHealthCareOfNorthwestOhioInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFamilyHealthCareOfNorthwestOhioInc1{baseClient}, updatedSourceCred, err
+	return SourceClientFamilyHealthCareOfNorthwestOhioInc1{baseClient}, err
 }

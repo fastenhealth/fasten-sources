@@ -19,8 +19,8 @@ type SourceClientTriangleCommunityPhysiciansPa struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/0006721/metadata
-func GetSourceClientTriangleCommunityPhysiciansPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTriangleCommunityPhysiciansPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTriangleCommunityPhysiciansPa{baseClient}, updatedSourceCred, err
+	return SourceClientTriangleCommunityPhysiciansPa{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientAscensionProvidence struct {
 }
 
 // https://stofo.providence-waco.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientAscensionProvidence(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAscensionProvidence(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAscensionProvidence{baseClient}, updatedSourceCred, err
+	return SourceClientAscensionProvidence{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientUsWellness struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/045860c8-9feb-4ffe-98ee-d4c565e9bc9c/metadata
-func GetSourceClientUsWellness(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUsWellness(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUsWellness{baseClient}, updatedSourceCred, err
+	return SourceClientUsWellness{baseClient}, err
 }

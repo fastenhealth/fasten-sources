@@ -19,8 +19,8 @@ type SourceClientCaprockCardiovascularCenterLlp struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10085740/metadata
-func GetSourceClientCaprockCardiovascularCenterLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCaprockCardiovascularCenterLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCaprockCardiovascularCenterLlp{baseClient}, updatedSourceCred, err
+	return SourceClientCaprockCardiovascularCenterLlp{baseClient}, err
 }

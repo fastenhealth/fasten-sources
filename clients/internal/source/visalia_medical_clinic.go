@@ -19,8 +19,8 @@ type SourceClientVisaliaMedicalClinic struct {
 }
 
 // https://vmcpfhirweb1.vmchealth.com/FHIR/metadata
-func GetSourceClientVisaliaMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVisaliaMedicalClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVisaliaMedicalClinic{baseClient}, updatedSourceCred, err
+	return SourceClientVisaliaMedicalClinic{baseClient}, err
 }

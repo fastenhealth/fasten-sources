@@ -19,8 +19,8 @@ type SourceClientKaiserPermanenteHawaiiMauiHealthSystem struct {
 }
 
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/130/api/FHIR/R4/metadata
-func GetSourceClientKaiserPermanenteHawaiiMauiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKaiserPermanenteHawaiiMauiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaiserPermanenteHawaiiMauiHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientKaiserPermanenteHawaiiMauiHealthSystem{baseClient}, err
 }

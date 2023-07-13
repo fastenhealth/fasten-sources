@@ -19,8 +19,8 @@ type SourceClientNchHealthcareSystem struct {
 }
 
 // https://epicproxy.et1233.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientNchHealthcareSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNchHealthcareSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNchHealthcareSystem{baseClient}, updatedSourceCred, err
+	return SourceClientNchHealthcareSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientNeuromicrospine struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10067615/metadata
-func GetSourceClientNeuromicrospine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNeuromicrospine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNeuromicrospine{baseClient}, updatedSourceCred, err
+	return SourceClientNeuromicrospine{baseClient}, err
 }

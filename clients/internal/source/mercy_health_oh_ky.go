@@ -19,8 +19,8 @@ type SourceClientMercyHealthOhKy struct {
 }
 
 // https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4/metadata
-func GetSourceClientMercyHealthOhKy(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMercyHealthOhKy(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMercyHealthOhKy{baseClient}, updatedSourceCred, err
+	return SourceClientMercyHealthOhKy{baseClient}, err
 }

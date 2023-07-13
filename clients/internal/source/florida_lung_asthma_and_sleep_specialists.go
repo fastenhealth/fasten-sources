@@ -19,8 +19,8 @@ type SourceClientFloridaLungAsthmaAndSleepSpecialists struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/eaf57860-1900-4ff0-9131-a4f1d6dfb991/metadata
-func GetSourceClientFloridaLungAsthmaAndSleepSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFloridaLungAsthmaAndSleepSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFloridaLungAsthmaAndSleepSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientFloridaLungAsthmaAndSleepSpecialists{baseClient}, err
 }

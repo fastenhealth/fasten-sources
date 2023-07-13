@@ -19,8 +19,8 @@ type SourceClientCompleteCardiologyPC struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/5ae19d71-7c48-44aa-b10b-af198fa0cb1a/metadata
-func GetSourceClientCompleteCardiologyPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCompleteCardiologyPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCompleteCardiologyPC{baseClient}, updatedSourceCred, err
+	return SourceClientCompleteCardiologyPC{baseClient}, err
 }

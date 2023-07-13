@@ -19,8 +19,8 @@ type SourceClientGetWellStayWellMedicalCorp struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/75477/metadata
-func GetSourceClientGetWellStayWellMedicalCorp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGetWellStayWellMedicalCorp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGetWellStayWellMedicalCorp{baseClient}, updatedSourceCred, err
+	return SourceClientGetWellStayWellMedicalCorp{baseClient}, err
 }

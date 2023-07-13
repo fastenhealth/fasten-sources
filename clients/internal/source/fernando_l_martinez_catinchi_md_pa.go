@@ -19,8 +19,8 @@ type SourceClientFernandoLMartinezCatinchiMdPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4e9afe93-70c0-4e43-adb4-49ec1d261955/metadata
-func GetSourceClientFernandoLMartinezCatinchiMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFernandoLMartinezCatinchiMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFernandoLMartinezCatinchiMdPa{baseClient}, updatedSourceCred, err
+	return SourceClientFernandoLMartinezCatinchiMdPa{baseClient}, err
 }

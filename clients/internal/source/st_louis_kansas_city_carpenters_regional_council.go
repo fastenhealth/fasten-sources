@@ -19,8 +19,8 @@ type SourceClientStLouisKansasCityCarpentersRegionalCouncil struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/96697297-dedb-4b9a-a814-def7ebf7578f/metadata
-func GetSourceClientStLouisKansasCityCarpentersRegionalCouncil(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStLouisKansasCityCarpentersRegionalCouncil(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStLouisKansasCityCarpentersRegionalCouncil{baseClient}, updatedSourceCred, err
+	return SourceClientStLouisKansasCityCarpentersRegionalCouncil{baseClient}, err
 }

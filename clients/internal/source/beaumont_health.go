@@ -19,8 +19,8 @@ type SourceClientBeaumontHealth struct {
 }
 
 // https://moc.beaumont.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientBeaumontHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBeaumontHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBeaumontHealth{baseClient}, updatedSourceCred, err
+	return SourceClientBeaumontHealth{baseClient}, err
 }

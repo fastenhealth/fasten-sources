@@ -19,8 +19,8 @@ type SourceClientChiSaintJosephHealth struct {
 }
 
 // https://rpsouth.catholichealth.net/fhir/FHIRKY/api/FHIR/R4/metadata
-func GetSourceClientChiSaintJosephHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChiSaintJosephHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChiSaintJosephHealth{baseClient}, updatedSourceCred, err
+	return SourceClientChiSaintJosephHealth{baseClient}, err
 }

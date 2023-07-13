@@ -19,8 +19,8 @@ type SourceClientSouthernMarylandElectricCoopInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ffda347f-dd5c-4ddb-8491-9dc707da579f/metadata
-func GetSourceClientSouthernMarylandElectricCoopInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthernMarylandElectricCoopInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthernMarylandElectricCoopInc{baseClient}, updatedSourceCred, err
+	return SourceClientSouthernMarylandElectricCoopInc{baseClient}, err
 }

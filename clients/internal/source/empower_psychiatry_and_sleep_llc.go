@@ -19,8 +19,8 @@ type SourceClientEmpowerPsychiatryAndSleepLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/67e5ec72-de88-4fc7-ba34-a88699b7a637/metadata
-func GetSourceClientEmpowerPsychiatryAndSleepLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEmpowerPsychiatryAndSleepLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEmpowerPsychiatryAndSleepLlc{baseClient}, updatedSourceCred, err
+	return SourceClientEmpowerPsychiatryAndSleepLlc{baseClient}, err
 }

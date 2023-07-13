@@ -19,8 +19,8 @@ type SourceClientValleyChildrensHealthcare struct {
 }
 
 // https://ic.valleychildrens.org/fhir/api/FHIR/R4/metadata
-func GetSourceClientValleyChildrensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientValleyChildrensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientValleyChildrensHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientValleyChildrensHealthcare{baseClient}, err
 }

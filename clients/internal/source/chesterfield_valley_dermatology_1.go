@@ -19,8 +19,8 @@ type SourceClientChesterfieldValleyDermatology1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9a2b715b-8521-452b-a2c9-b5b9d28fc8e0/metadata
-func GetSourceClientChesterfieldValleyDermatology1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChesterfieldValleyDermatology1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChesterfieldValleyDermatology1{baseClient}, updatedSourceCred, err
+	return SourceClientChesterfieldValleyDermatology1{baseClient}, err
 }

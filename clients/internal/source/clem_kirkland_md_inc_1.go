@@ -19,8 +19,8 @@ type SourceClientClemKirklandMdInc1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d0508ba4-12ca-4d49-861f-67d2a6a27066/metadata
-func GetSourceClientClemKirklandMdInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClemKirklandMdInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClemKirklandMdInc1{baseClient}, updatedSourceCred, err
+	return SourceClientClemKirklandMdInc1{baseClient}, err
 }

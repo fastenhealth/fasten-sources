@@ -19,8 +19,8 @@ type SourceClientCaliforniaHealthcareMedBill struct {
 }
 
 // https://chmbfhir.chmbinc.com/FHIR/metadata
-func GetSourceClientCaliforniaHealthcareMedBill(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCaliforniaHealthcareMedBill(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCaliforniaHealthcareMedBill{baseClient}, updatedSourceCred, err
+	return SourceClientCaliforniaHealthcareMedBill{baseClient}, err
 }

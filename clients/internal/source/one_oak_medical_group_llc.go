@@ -19,8 +19,8 @@ type SourceClientOneOakMedicalGroupLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/8a279096-6ad2-4c68-ac31-bf88e291604e/metadata
-func GetSourceClientOneOakMedicalGroupLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOneOakMedicalGroupLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOneOakMedicalGroupLlc{baseClient}, updatedSourceCred, err
+	return SourceClientOneOakMedicalGroupLlc{baseClient}, err
 }

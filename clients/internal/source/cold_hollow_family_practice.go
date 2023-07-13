@@ -19,8 +19,8 @@ type SourceClientColdHollowFamilyPractice struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038788/metadata
-func GetSourceClientColdHollowFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientColdHollowFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientColdHollowFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientColdHollowFamilyPractice{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPncFinancialServicesGroup struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/50cd0cd2-ca52-4b72-b171-92a8aa1b1cda/metadata
-func GetSourceClientPncFinancialServicesGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPncFinancialServicesGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPncFinancialServicesGroup{baseClient}, updatedSourceCred, err
+	return SourceClientPncFinancialServicesGroup{baseClient}, err
 }

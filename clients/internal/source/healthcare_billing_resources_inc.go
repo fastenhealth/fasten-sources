@@ -19,8 +19,8 @@ type SourceClientHealthcareBillingResourcesInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/e332b5e9-9142-4f95-ba9c-3c9a4e0ab274/metadata
-func GetSourceClientHealthcareBillingResourcesInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHealthcareBillingResourcesInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHealthcareBillingResourcesInc{baseClient}, updatedSourceCred, err
+	return SourceClientHealthcareBillingResourcesInc{baseClient}, err
 }

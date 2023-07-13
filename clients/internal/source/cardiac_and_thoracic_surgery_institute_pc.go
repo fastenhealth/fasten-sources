@@ -19,8 +19,8 @@ type SourceClientCardiacAndThoracicSurgeryInstitutePc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10031911/metadata
-func GetSourceClientCardiacAndThoracicSurgeryInstitutePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCardiacAndThoracicSurgeryInstitutePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCardiacAndThoracicSurgeryInstitutePc{baseClient}, updatedSourceCred, err
+	return SourceClientCardiacAndThoracicSurgeryInstitutePc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMedicalUniversityOfSouthCarolina struct {
 }
 
 // https://fhirprod.musc.edu/fhirprod/api/FHIR/R4/metadata
-func GetSourceClientMedicalUniversityOfSouthCarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMedicalUniversityOfSouthCarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMedicalUniversityOfSouthCarolina{baseClient}, updatedSourceCred, err
+	return SourceClientMedicalUniversityOfSouthCarolina{baseClient}, err
 }

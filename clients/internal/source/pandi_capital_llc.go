@@ -19,8 +19,8 @@ type SourceClientPandiCapitalLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/62f77950-855b-4619-afdc-c0f78ebee30a/metadata
-func GetSourceClientPandiCapitalLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPandiCapitalLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPandiCapitalLlc{baseClient}, updatedSourceCred, err
+	return SourceClientPandiCapitalLlc{baseClient}, err
 }

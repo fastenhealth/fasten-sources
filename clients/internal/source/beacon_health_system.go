@@ -19,8 +19,8 @@ type SourceClientBeaconHealthSystem struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/28FMw_aQtzSqkrYbQSc2Fss9Rc_nhEOH/metadata
-func GetSourceClientBeaconHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBeaconHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBeaconHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientBeaconHealthSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientClevelandHeadAndNeck struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/-OZ6w8MCeQFycM1MwlWQ0yaxWv8UTkHm/metadata
-func GetSourceClientClevelandHeadAndNeck(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClevelandHeadAndNeck(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClevelandHeadAndNeck{baseClient}, updatedSourceCred, err
+	return SourceClientClevelandHeadAndNeck{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientRadyChildrens struct {
 }
 
 // https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4/metadata
-func GetSourceClientRadyChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRadyChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRadyChildrens{baseClient}, updatedSourceCred, err
+	return SourceClientRadyChildrens{baseClient}, err
 }

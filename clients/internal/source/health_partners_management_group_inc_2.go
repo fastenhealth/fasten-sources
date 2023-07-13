@@ -19,8 +19,8 @@ type SourceClientHealthPartnersManagementGroupInc2 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/EB87749h5gFXR747moCjBvZnLkChVxMK/metadata
-func GetSourceClientHealthPartnersManagementGroupInc2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHealthPartnersManagementGroupInc2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHealthPartnersManagementGroupInc2{baseClient}, updatedSourceCred, err
+	return SourceClientHealthPartnersManagementGroupInc2{baseClient}, err
 }

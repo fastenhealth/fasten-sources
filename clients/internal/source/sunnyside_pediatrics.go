@@ -19,8 +19,8 @@ type SourceClientSunnysidePediatrics struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/TGXWVOelATtk6ci_q_H9utj9QjU3VuOR/metadata
-func GetSourceClientSunnysidePediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSunnysidePediatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSunnysidePediatrics{baseClient}, updatedSourceCred, err
+	return SourceClientSunnysidePediatrics{baseClient}, err
 }

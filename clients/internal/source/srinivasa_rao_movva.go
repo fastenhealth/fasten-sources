@@ -19,8 +19,8 @@ type SourceClientSrinivasaRaoMovva struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0a308bb2-a313-4473-991c-9bf6e3578c55/metadata
-func GetSourceClientSrinivasaRaoMovva(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSrinivasaRaoMovva(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSrinivasaRaoMovva{baseClient}, updatedSourceCred, err
+	return SourceClientSrinivasaRaoMovva{baseClient}, err
 }

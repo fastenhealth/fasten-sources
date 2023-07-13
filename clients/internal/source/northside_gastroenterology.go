@@ -19,8 +19,8 @@ type SourceClientNorthsideGastroenterology struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045838/metadata
-func GetSourceClientNorthsideGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthsideGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthsideGastroenterology{baseClient}, updatedSourceCred, err
+	return SourceClientNorthsideGastroenterology{baseClient}, err
 }

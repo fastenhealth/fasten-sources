@@ -19,8 +19,8 @@ type SourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0cc3b3ab-d799-4361-a504-c3a04a8db950/metadata
-func GetSourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties{baseClient}, updatedSourceCred, err
+	return SourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties{baseClient}, err
 }

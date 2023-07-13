@@ -19,8 +19,8 @@ type SourceClientObGynAssociatesOfWacoDrRisterDrKoeritz struct {
 }
 
 // https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4/metadata
-func GetSourceClientObGynAssociatesOfWacoDrRisterDrKoeritz(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientObGynAssociatesOfWacoDrRisterDrKoeritz(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientObGynAssociatesOfWacoDrRisterDrKoeritz{baseClient}, updatedSourceCred, err
+	return SourceClientObGynAssociatesOfWacoDrRisterDrKoeritz{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientColinHamblin struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10119762/metadata
-func GetSourceClientColinHamblin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientColinHamblin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientColinHamblin{baseClient}, updatedSourceCred, err
+	return SourceClientColinHamblin{baseClient}, err
 }

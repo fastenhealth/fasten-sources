@@ -19,8 +19,8 @@ type SourceClientPulmonaryAssociatesOfEastTennessee struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10027742/metadata
-func GetSourceClientPulmonaryAssociatesOfEastTennessee(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPulmonaryAssociatesOfEastTennessee(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPulmonaryAssociatesOfEastTennessee{baseClient}, updatedSourceCred, err
+	return SourceClientPulmonaryAssociatesOfEastTennessee{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientNevadaOrthopedicAndSpine struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044387/metadata
-func GetSourceClientNevadaOrthopedicAndSpine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNevadaOrthopedicAndSpine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNevadaOrthopedicAndSpine{baseClient}, updatedSourceCred, err
+	return SourceClientNevadaOrthopedicAndSpine{baseClient}, err
 }

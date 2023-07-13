@@ -19,8 +19,8 @@ type SourceClientNovatoAdvancedFootAndAnkle struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/58af3cfb-25bc-40a1-b39f-a39b55dc2d85/metadata
-func GetSourceClientNovatoAdvancedFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNovatoAdvancedFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNovatoAdvancedFootAndAnkle{baseClient}, updatedSourceCred, err
+	return SourceClientNovatoAdvancedFootAndAnkle{baseClient}, err
 }

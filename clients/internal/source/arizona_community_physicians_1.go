@@ -19,8 +19,8 @@ type SourceClientArizonaCommunityPhysicians1 struct {
 }
 
 // https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4/metadata
-func GetSourceClientArizonaCommunityPhysicians1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientArizonaCommunityPhysicians1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientArizonaCommunityPhysicians1{baseClient}, updatedSourceCred, err
+	return SourceClientArizonaCommunityPhysicians1{baseClient}, err
 }

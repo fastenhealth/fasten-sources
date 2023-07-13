@@ -19,8 +19,8 @@ type SourceClientOlsonMemorialClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c5259d19-f4df-485f-85ba-303153b1ff25/metadata
-func GetSourceClientOlsonMemorialClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOlsonMemorialClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOlsonMemorialClinic{baseClient}, updatedSourceCred, err
+	return SourceClientOlsonMemorialClinic{baseClient}, err
 }

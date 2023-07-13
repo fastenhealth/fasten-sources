@@ -19,8 +19,8 @@ type SourceClientPiedmontCardiovascularPa struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10065476/metadata
-func GetSourceClientPiedmontCardiovascularPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPiedmontCardiovascularPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPiedmontCardiovascularPa{baseClient}, updatedSourceCred, err
+	return SourceClientPiedmontCardiovascularPa{baseClient}, err
 }

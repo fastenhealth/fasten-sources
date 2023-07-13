@@ -19,8 +19,8 @@ type SourceClientLakeHeartSpecialists struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038757/metadata
-func GetSourceClientLakeHeartSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLakeHeartSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLakeHeartSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientLakeHeartSpecialists{baseClient}, err
 }

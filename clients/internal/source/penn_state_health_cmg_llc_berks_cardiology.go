@@ -19,8 +19,8 @@ type SourceClientPennStateHealthCmgLlcBerksCardiology struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10031887/metadata
-func GetSourceClientPennStateHealthCmgLlcBerksCardiology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPennStateHealthCmgLlcBerksCardiology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPennStateHealthCmgLlcBerksCardiology{baseClient}, updatedSourceCred, err
+	return SourceClientPennStateHealthCmgLlcBerksCardiology{baseClient}, err
 }

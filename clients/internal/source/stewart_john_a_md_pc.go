@@ -19,8 +19,8 @@ type SourceClientStewartJohnAMdPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/22Uc-fJDB9OVJIDI_oIBMMN7nEcPcLZt/metadata
-func GetSourceClientStewartJohnAMdPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStewartJohnAMdPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStewartJohnAMdPc{baseClient}, updatedSourceCred, err
+	return SourceClientStewartJohnAMdPc{baseClient}, err
 }

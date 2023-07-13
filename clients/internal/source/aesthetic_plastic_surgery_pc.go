@@ -19,8 +19,8 @@ type SourceClientAestheticPlasticSurgeryPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/26b29267-7a91-4754-a0ab-557e7e4d37f2/metadata
-func GetSourceClientAestheticPlasticSurgeryPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAestheticPlasticSurgeryPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAestheticPlasticSurgeryPc{baseClient}, updatedSourceCred, err
+	return SourceClientAestheticPlasticSurgeryPc{baseClient}, err
 }

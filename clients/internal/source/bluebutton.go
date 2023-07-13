@@ -23,10 +23,10 @@ type SourceClientBluebutton struct {
 https://groups.google.com/g/Developer-group-for-cms-blue-button-api/c/mVNFJI4dxbs
 https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHloM/m/jQHZVNznBAAJ?utm_medium=email&utm_source=footer
 */
-func GetSourceClientBluebutton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBluebutton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBluebutton{baseClient}, updatedSourceCred, err
+	return SourceClientBluebutton{baseClient}, err
 }
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html

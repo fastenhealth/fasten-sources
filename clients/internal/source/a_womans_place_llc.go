@@ -19,8 +19,8 @@ type SourceClientAWomansPlaceLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/sqiH60CNKO9o0PByEO9XAxX0dZX5s5b2/metadata
-func GetSourceClientAWomansPlaceLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAWomansPlaceLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAWomansPlaceLlc{baseClient}, updatedSourceCred, err
+	return SourceClientAWomansPlaceLlc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientGeisingerHealthPlan2 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/bcdc74b0-4e5b-45db-9272-627ece27743d/metadata
-func GetSourceClientGeisingerHealthPlan2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGeisingerHealthPlan2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGeisingerHealthPlan2{baseClient}, updatedSourceCred, err
+	return SourceClientGeisingerHealthPlan2{baseClient}, err
 }

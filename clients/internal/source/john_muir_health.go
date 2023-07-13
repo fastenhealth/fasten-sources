@@ -19,8 +19,8 @@ type SourceClientJohnMuirHealth struct {
 }
 
 // https://fhir.johnmuirhealth.com/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientJohnMuirHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJohnMuirHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJohnMuirHealth{baseClient}, updatedSourceCred, err
+	return SourceClientJohnMuirHealth{baseClient}, err
 }

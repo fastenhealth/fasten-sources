@@ -19,8 +19,8 @@ type SourceClientTexasChildrens struct {
 }
 
 // https://mobileapps.texaschildrens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientTexasChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTexasChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTexasChildrens{baseClient}, updatedSourceCred, err
+	return SourceClientTexasChildrens{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPrairieRidgeIntegratedBehavioralHealthcare struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/41ecb586-5808-40cb-b092-b484028fd321/metadata
-func GetSourceClientPrairieRidgeIntegratedBehavioralHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPrairieRidgeIntegratedBehavioralHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPrairieRidgeIntegratedBehavioralHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientPrairieRidgeIntegratedBehavioralHealthcare{baseClient}, err
 }

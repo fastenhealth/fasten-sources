@@ -19,8 +19,8 @@ type SourceClientGardenStateBariatrics struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/dc524d3a-122f-4bf8-8bb3-afd287ec7c5e/metadata
-func GetSourceClientGardenStateBariatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGardenStateBariatrics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGardenStateBariatrics{baseClient}, updatedSourceCred, err
+	return SourceClientGardenStateBariatrics{baseClient}, err
 }

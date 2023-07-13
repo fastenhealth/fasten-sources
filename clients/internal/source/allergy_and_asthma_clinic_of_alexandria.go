@@ -19,8 +19,8 @@ type SourceClientAllergyAndAsthmaClinicOfAlexandria struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/27425bf5-b70f-4e57-a4e7-5af1c20e4949/metadata
-func GetSourceClientAllergyAndAsthmaClinicOfAlexandria(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAllergyAndAsthmaClinicOfAlexandria(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAllergyAndAsthmaClinicOfAlexandria{baseClient}, updatedSourceCred, err
+	return SourceClientAllergyAndAsthmaClinicOfAlexandria{baseClient}, err
 }

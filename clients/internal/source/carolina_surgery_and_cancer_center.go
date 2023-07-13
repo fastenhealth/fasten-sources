@@ -19,8 +19,8 @@ type SourceClientCarolinaSurgeryAndCancerCenter struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10024377/metadata
-func GetSourceClientCarolinaSurgeryAndCancerCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCarolinaSurgeryAndCancerCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCarolinaSurgeryAndCancerCenter{baseClient}, updatedSourceCred, err
+	return SourceClientCarolinaSurgeryAndCancerCenter{baseClient}, err
 }

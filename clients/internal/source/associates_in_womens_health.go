@@ -19,8 +19,8 @@ type SourceClientAssociatesInWomensHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0xaf05FmjZ-fj0mKwlDaatWN5u2rBjbF/metadata
-func GetSourceClientAssociatesInWomensHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAssociatesInWomensHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAssociatesInWomensHealth{baseClient}, updatedSourceCred, err
+	return SourceClientAssociatesInWomensHealth{baseClient}, err
 }

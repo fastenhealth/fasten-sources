@@ -19,8 +19,8 @@ type SourceClientPaloVerdeHospital struct {
 }
 
 // https://fhirprod.paloverdehospital.org/FHIR/metadata
-func GetSourceClientPaloVerdeHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPaloVerdeHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPaloVerdeHospital{baseClient}, updatedSourceCred, err
+	return SourceClientPaloVerdeHospital{baseClient}, err
 }

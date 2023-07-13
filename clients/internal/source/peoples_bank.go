@@ -19,8 +19,8 @@ type SourceClientPeoplesBank struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0c998443-0f2a-46b6-b9e7-8ed07cb41745/metadata
-func GetSourceClientPeoplesBank(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPeoplesBank(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPeoplesBank{baseClient}, updatedSourceCred, err
+	return SourceClientPeoplesBank{baseClient}, err
 }

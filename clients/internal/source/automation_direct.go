@@ -19,8 +19,8 @@ type SourceClientAutomationDirect struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/744c96da-65d7-4e37-a00c-996f4b604c11/metadata
-func GetSourceClientAutomationDirect(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAutomationDirect(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAutomationDirect{baseClient}, updatedSourceCred, err
+	return SourceClientAutomationDirect{baseClient}, err
 }

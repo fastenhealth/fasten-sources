@@ -19,8 +19,8 @@ type SourceClientFranciscanMissionariesOfOurLadyHealthSystemInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/726640b7-830f-40c7-af81-b5d8ed422594/metadata
-func GetSourceClientFranciscanMissionariesOfOurLadyHealthSystemInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFranciscanMissionariesOfOurLadyHealthSystemInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFranciscanMissionariesOfOurLadyHealthSystemInc{baseClient}, updatedSourceCred, err
+	return SourceClientFranciscanMissionariesOfOurLadyHealthSystemInc{baseClient}, err
 }

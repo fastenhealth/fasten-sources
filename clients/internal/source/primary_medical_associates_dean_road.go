@@ -19,8 +19,8 @@ type SourceClientPrimaryMedicalAssociatesDeanRoad struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a4d64c85-d772-4db2-836a-d77a8ccf1f72/metadata
-func GetSourceClientPrimaryMedicalAssociatesDeanRoad(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPrimaryMedicalAssociatesDeanRoad(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPrimaryMedicalAssociatesDeanRoad{baseClient}, updatedSourceCred, err
+	return SourceClientPrimaryMedicalAssociatesDeanRoad{baseClient}, err
 }

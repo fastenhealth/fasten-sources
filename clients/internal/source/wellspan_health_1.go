@@ -19,8 +19,8 @@ type SourceClientWellspanHealth1 struct {
 }
 
 // https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4/metadata
-func GetSourceClientWellspanHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWellspanHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWellspanHealth1{baseClient}, updatedSourceCred, err
+	return SourceClientWellspanHealth1{baseClient}, err
 }

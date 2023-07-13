@@ -19,8 +19,8 @@ type SourceClientNewJerseyUrology struct {
 }
 
 // https://epicproxy.et1153.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientNewJerseyUrology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNewJerseyUrology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNewJerseyUrology{baseClient}, updatedSourceCred, err
+	return SourceClientNewJerseyUrology{baseClient}, err
 }

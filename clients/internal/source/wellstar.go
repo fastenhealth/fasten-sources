@@ -19,8 +19,8 @@ type SourceClientWellstar struct {
 }
 
 // https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientWellstar(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWellstar(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWellstar{baseClient}, updatedSourceCred, err
+	return SourceClientWellstar{baseClient}, err
 }

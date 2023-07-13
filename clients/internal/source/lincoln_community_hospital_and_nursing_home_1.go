@@ -19,8 +19,8 @@ type SourceClientLincolnCommunityHospitalAndNursingHome1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/612049ca-ad54-424a-803a-7ad03f0a9824/metadata
-func GetSourceClientLincolnCommunityHospitalAndNursingHome1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLincolnCommunityHospitalAndNursingHome1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLincolnCommunityHospitalAndNursingHome1{baseClient}, updatedSourceCred, err
+	return SourceClientLincolnCommunityHospitalAndNursingHome1{baseClient}, err
 }

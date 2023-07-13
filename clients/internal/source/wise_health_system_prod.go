@@ -19,8 +19,8 @@ type SourceClientWiseHealthSystemProd struct {
 }
 
 // https://fhir.we0.hos.allscriptscloud.com/R4/fhir-PROD/metadata
-func GetSourceClientWiseHealthSystemProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWiseHealthSystemProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWiseHealthSystemProd{baseClient}, updatedSourceCred, err
+	return SourceClientWiseHealthSystemProd{baseClient}, err
 }

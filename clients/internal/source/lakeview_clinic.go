@@ -19,8 +19,8 @@ type SourceClientLakeviewClinic struct {
 }
 
 // https://lk-fhir.allscriptscloud.com/fhir/metadata
-func GetSourceClientLakeviewClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLakeviewClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLakeviewClinic{baseClient}, updatedSourceCred, err
+	return SourceClientLakeviewClinic{baseClient}, err
 }

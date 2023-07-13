@@ -19,8 +19,8 @@ type SourceClientInterventionalPainSpecialist struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035791/metadata
-func GetSourceClientInterventionalPainSpecialist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInterventionalPainSpecialist(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInterventionalPainSpecialist{baseClient}, updatedSourceCred, err
+	return SourceClientInterventionalPainSpecialist{baseClient}, err
 }

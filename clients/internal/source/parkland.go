@@ -19,8 +19,8 @@ type SourceClientParkland struct {
 }
 
 // https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientParkland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientParkland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientParkland{baseClient}, updatedSourceCred, err
+	return SourceClientParkland{baseClient}, err
 }

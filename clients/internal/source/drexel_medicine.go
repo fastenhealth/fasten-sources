@@ -19,8 +19,8 @@ type SourceClientDrexelMedicine struct {
 }
 
 // https://epicproxy.et4001.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientDrexelMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrexelMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrexelMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientDrexelMedicine{baseClient}, err
 }

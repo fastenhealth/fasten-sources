@@ -19,8 +19,8 @@ type SourceClientEinsteinHealthcareNetwork struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/CZXZx6LxE-L3UYv_vYuZuKXOvALyMhgz/metadata
-func GetSourceClientEinsteinHealthcareNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEinsteinHealthcareNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEinsteinHealthcareNetwork{baseClient}, updatedSourceCred, err
+	return SourceClientEinsteinHealthcareNetwork{baseClient}, err
 }

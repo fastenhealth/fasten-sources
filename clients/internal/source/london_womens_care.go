@@ -19,8 +19,8 @@ type SourceClientLondonWomensCare struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10026647/metadata
-func GetSourceClientLondonWomensCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLondonWomensCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLondonWomensCare{baseClient}, updatedSourceCred, err
+	return SourceClientLondonWomensCare{baseClient}, err
 }

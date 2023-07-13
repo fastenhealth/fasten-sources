@@ -19,8 +19,8 @@ type SourceClientPhilipGachassinMdApmc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9529c62f-bc91-44f2-abdb-c398d2e65a54/metadata
-func GetSourceClientPhilipGachassinMdApmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPhilipGachassinMdApmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPhilipGachassinMdApmc{baseClient}, updatedSourceCred, err
+	return SourceClientPhilipGachassinMdApmc{baseClient}, err
 }

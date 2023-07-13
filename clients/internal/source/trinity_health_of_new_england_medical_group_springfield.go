@@ -19,8 +19,8 @@ type SourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield struct {
 }
 
 // https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4/metadata
-func GetSourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield{baseClient}, updatedSourceCred, err
+	return SourceClientTrinityHealthOfNewEnglandMedicalGroupSpringfield{baseClient}, err
 }

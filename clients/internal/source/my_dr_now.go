@@ -19,8 +19,8 @@ type SourceClientMyDrNow struct {
 }
 
 // https://epicproxy.et4001.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientMyDrNow(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMyDrNow(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMyDrNow{baseClient}, updatedSourceCred, err
+	return SourceClientMyDrNow{baseClient}, err
 }

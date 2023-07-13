@@ -19,8 +19,8 @@ type SourceClientIntermountainHealthcare struct {
 }
 
 // https://sclprdproxy.sclhs.net/FHIRPRD-2017/api/FHIR/R4/metadata
-func GetSourceClientIntermountainHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientIntermountainHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIntermountainHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientIntermountainHealthcare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientArizonaAssociatedSurgeonsPllc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10046027/metadata
-func GetSourceClientArizonaAssociatedSurgeonsPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientArizonaAssociatedSurgeonsPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientArizonaAssociatedSurgeonsPllc{baseClient}, updatedSourceCred, err
+	return SourceClientArizonaAssociatedSurgeonsPllc{baseClient}, err
 }

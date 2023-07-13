@@ -19,8 +19,8 @@ type SourceClientOrthoSpecialtiesOfSpartanburgLlc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10011894/metadata
-func GetSourceClientOrthoSpecialtiesOfSpartanburgLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOrthoSpecialtiesOfSpartanburgLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOrthoSpecialtiesOfSpartanburgLlc{baseClient}, updatedSourceCred, err
+	return SourceClientOrthoSpecialtiesOfSpartanburgLlc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientHeartAndVascularSpecialistsOfSouthTexas struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0aa75aff-7eca-4255-be9e-a914bffb6f20/metadata
-func GetSourceClientHeartAndVascularSpecialistsOfSouthTexas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHeartAndVascularSpecialistsOfSouthTexas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHeartAndVascularSpecialistsOfSouthTexas{baseClient}, updatedSourceCred, err
+	return SourceClientHeartAndVascularSpecialistsOfSouthTexas{baseClient}, err
 }

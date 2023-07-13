@@ -19,8 +19,8 @@ type SourceClientVascularAndVeinInstituteOfTheSouth struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10357844/metadata
-func GetSourceClientVascularAndVeinInstituteOfTheSouth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVascularAndVeinInstituteOfTheSouth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVascularAndVeinInstituteOfTheSouth{baseClient}, updatedSourceCred, err
+	return SourceClientVascularAndVeinInstituteOfTheSouth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientAlamogordoSurgicalAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/y_qNY-1ZzxXP2_hwrXWMZHwsbM4NqTvA/metadata
-func GetSourceClientAlamogordoSurgicalAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlamogordoSurgicalAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlamogordoSurgicalAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientAlamogordoSurgicalAssociates{baseClient}, err
 }

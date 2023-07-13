@@ -19,8 +19,8 @@ type SourceClientGeisingerSystemServices1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/7ab3d0ab-808d-451f-b0e3-d59dda3f72e5/metadata
-func GetSourceClientGeisingerSystemServices1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGeisingerSystemServices1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGeisingerSystemServices1{baseClient}, updatedSourceCred, err
+	return SourceClientGeisingerSystemServices1{baseClient}, err
 }

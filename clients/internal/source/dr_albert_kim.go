@@ -19,8 +19,8 @@ type SourceClientDrAlbertKim struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/61683/metadata
-func GetSourceClientDrAlbertKim(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrAlbertKim(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrAlbertKim{baseClient}, updatedSourceCred, err
+	return SourceClientDrAlbertKim{baseClient}, err
 }

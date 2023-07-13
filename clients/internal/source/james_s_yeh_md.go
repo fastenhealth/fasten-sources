@@ -19,8 +19,8 @@ type SourceClientJamesSYehMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10062220/metadata
-func GetSourceClientJamesSYehMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJamesSYehMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJamesSYehMd{baseClient}, updatedSourceCred, err
+	return SourceClientJamesSYehMd{baseClient}, err
 }

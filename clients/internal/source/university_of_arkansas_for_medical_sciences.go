@@ -19,8 +19,8 @@ type SourceClientUniversityOfArkansasForMedicalSciences struct {
 }
 
 // https://ucsoap.uams.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityOfArkansasForMedicalSciences(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityOfArkansasForMedicalSciences{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityOfArkansasForMedicalSciences{baseClient}, err
 }

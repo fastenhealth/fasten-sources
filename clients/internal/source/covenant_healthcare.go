@@ -19,8 +19,8 @@ type SourceClientCovenantHealthcare struct {
 }
 
 // https://epichaiku.chs-mi.com/FHIRPROXY/api/FHIR/R4/metadata
-func GetSourceClientCovenantHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCovenantHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCovenantHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientCovenantHealthcare{baseClient}, err
 }

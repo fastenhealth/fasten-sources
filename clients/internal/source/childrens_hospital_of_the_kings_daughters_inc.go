@@ -19,8 +19,8 @@ type SourceClientChildrensHospitalOfTheKingsDaughtersInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/237789e0-8b40-4355-aefd-25694ca16391/metadata
-func GetSourceClientChildrensHospitalOfTheKingsDaughtersInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChildrensHospitalOfTheKingsDaughtersInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChildrensHospitalOfTheKingsDaughtersInc{baseClient}, updatedSourceCred, err
+	return SourceClientChildrensHospitalOfTheKingsDaughtersInc{baseClient}, err
 }

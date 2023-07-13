@@ -19,8 +19,8 @@ type SourceClientMENDPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/22d22c3c-8384-4172-b58d-229dd78c4154/metadata
-func GetSourceClientMENDPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMENDPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMENDPa{baseClient}, updatedSourceCred, err
+	return SourceClientMENDPa{baseClient}, err
 }

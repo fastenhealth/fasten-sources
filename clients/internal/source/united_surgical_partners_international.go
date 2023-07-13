@@ -19,8 +19,8 @@ type SourceClientUnitedSurgicalPartnersInternational struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ed29dd2e-7f6b-4b48-93ba-6ba78c79cd2d/metadata
-func GetSourceClientUnitedSurgicalPartnersInternational(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUnitedSurgicalPartnersInternational(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUnitedSurgicalPartnersInternational{baseClient}, updatedSourceCred, err
+	return SourceClientUnitedSurgicalPartnersInternational{baseClient}, err
 }

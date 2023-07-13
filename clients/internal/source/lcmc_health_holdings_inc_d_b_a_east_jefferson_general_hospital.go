@@ -19,8 +19,8 @@ type SourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/86c11601-5c46-46d5-a746-706bd2e9f00b/metadata
-func GetSourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital{baseClient}, updatedSourceCred, err
+	return SourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital{baseClient}, err
 }

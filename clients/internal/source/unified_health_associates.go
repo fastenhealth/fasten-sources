@@ -19,8 +19,8 @@ type SourceClientUnifiedHealthAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/adcf8c94-9b00-4842-a377-0e772d7d3145/metadata
-func GetSourceClientUnifiedHealthAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUnifiedHealthAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUnifiedHealthAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientUnifiedHealthAssociates{baseClient}, err
 }

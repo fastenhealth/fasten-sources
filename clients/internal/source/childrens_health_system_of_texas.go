@@ -19,8 +19,8 @@ type SourceClientChildrensHealthSystemOfTexas struct {
 }
 
 // https://fhir.childrens.com/prd/api/FHIR/R4/metadata
-func GetSourceClientChildrensHealthSystemOfTexas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChildrensHealthSystemOfTexas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChildrensHealthSystemOfTexas{baseClient}, updatedSourceCred, err
+	return SourceClientChildrensHealthSystemOfTexas{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPrecisionSurgicalSpecialistsOfLowell struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/248c4eac-ef54-410c-af1d-d3a135ccb339/metadata
-func GetSourceClientPrecisionSurgicalSpecialistsOfLowell(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPrecisionSurgicalSpecialistsOfLowell(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPrecisionSurgicalSpecialistsOfLowell{baseClient}, updatedSourceCred, err
+	return SourceClientPrecisionSurgicalSpecialistsOfLowell{baseClient}, err
 }

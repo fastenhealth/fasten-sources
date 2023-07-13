@@ -19,8 +19,8 @@ type SourceClientDrRalphRaperMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10120853/metadata
-func GetSourceClientDrRalphRaperMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrRalphRaperMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrRalphRaperMd{baseClient}, updatedSourceCred, err
+	return SourceClientDrRalphRaperMd{baseClient}, err
 }

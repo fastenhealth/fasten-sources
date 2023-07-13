@@ -19,8 +19,8 @@ type SourceClientGeneralSurgeonsOfWesternColorado struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10029243/metadata
-func GetSourceClientGeneralSurgeonsOfWesternColorado(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGeneralSurgeonsOfWesternColorado(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGeneralSurgeonsOfWesternColorado{baseClient}, updatedSourceCred, err
+	return SourceClientGeneralSurgeonsOfWesternColorado{baseClient}, err
 }

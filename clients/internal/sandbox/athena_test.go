@@ -28,7 +28,7 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://api.preview.platform.athenahealth.com/fhir/r4")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, _, err := GetSourceClientAthena(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetSourceClientAthena(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

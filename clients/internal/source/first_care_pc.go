@@ -19,8 +19,8 @@ type SourceClientFirstCarePc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73563/metadata
-func GetSourceClientFirstCarePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFirstCarePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFirstCarePc{baseClient}, updatedSourceCred, err
+	return SourceClientFirstCarePc{baseClient}, err
 }

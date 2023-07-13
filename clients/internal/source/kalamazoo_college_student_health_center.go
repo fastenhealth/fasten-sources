@@ -19,8 +19,8 @@ type SourceClientKalamazooCollegeStudentHealthCenter struct {
 }
 
 // https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientKalamazooCollegeStudentHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKalamazooCollegeStudentHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKalamazooCollegeStudentHealthCenter{baseClient}, updatedSourceCred, err
+	return SourceClientKalamazooCollegeStudentHealthCenter{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientUhsAmbulatoryEast struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6d80f5c7-212b-4be1-9709-7bad9391b694/metadata
-func GetSourceClientUhsAmbulatoryEast(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUhsAmbulatoryEast(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUhsAmbulatoryEast{baseClient}, updatedSourceCred, err
+	return SourceClientUhsAmbulatoryEast{baseClient}, err
 }

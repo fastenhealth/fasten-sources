@@ -19,8 +19,8 @@ type SourceClientMarietaGutting struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10005533/metadata
-func GetSourceClientMarietaGutting(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMarietaGutting(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMarietaGutting{baseClient}, updatedSourceCred, err
+	return SourceClientMarietaGutting{baseClient}, err
 }

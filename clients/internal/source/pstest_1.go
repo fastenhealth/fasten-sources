@@ -19,8 +19,8 @@ type SourceClientPstest1 struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/PSTest1/metadata
-func GetSourceClientPstest1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPstest1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPstest1{baseClient}, updatedSourceCred, err
+	return SourceClientPstest1{baseClient}, err
 }

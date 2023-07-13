@@ -19,8 +19,8 @@ type SourceClientElPasoEarNoseThroatAssoc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73919/metadata
-func GetSourceClientElPasoEarNoseThroatAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientElPasoEarNoseThroatAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientElPasoEarNoseThroatAssoc{baseClient}, updatedSourceCred, err
+	return SourceClientElPasoEarNoseThroatAssoc{baseClient}, err
 }

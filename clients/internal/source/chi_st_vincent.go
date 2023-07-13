@@ -19,8 +19,8 @@ type SourceClientChiStVincent struct {
 }
 
 // https://epic-fhir.mercy.net/PRDFHIRSGF/CHI/api/FHIR/R4/metadata
-func GetSourceClientChiStVincent(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChiStVincent(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChiStVincent{baseClient}, updatedSourceCred, err
+	return SourceClientChiStVincent{baseClient}, err
 }

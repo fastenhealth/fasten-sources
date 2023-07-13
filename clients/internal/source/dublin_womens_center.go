@@ -19,8 +19,8 @@ type SourceClientDublinWomensCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/qJCdeykC_0FoLWOQ15eYFbhjDQNwFiDg/metadata
-func GetSourceClientDublinWomensCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDublinWomensCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDublinWomensCenter{baseClient}, updatedSourceCred, err
+	return SourceClientDublinWomensCenter{baseClient}, err
 }

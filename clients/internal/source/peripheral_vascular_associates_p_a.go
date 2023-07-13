@@ -19,8 +19,8 @@ type SourceClientPeripheralVascularAssociatesPA struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10036856/metadata
-func GetSourceClientPeripheralVascularAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPeripheralVascularAssociatesPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPeripheralVascularAssociatesPA{baseClient}, updatedSourceCred, err
+	return SourceClientPeripheralVascularAssociatesPA{baseClient}, err
 }

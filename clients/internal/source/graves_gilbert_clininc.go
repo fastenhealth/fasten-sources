@@ -19,8 +19,8 @@ type SourceClientGravesGilbertClininc struct {
 }
 
 // https://fhir.ggclinic.com/FHIR/metadata
-func GetSourceClientGravesGilbertClininc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGravesGilbertClininc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGravesGilbertClininc{baseClient}, updatedSourceCred, err
+	return SourceClientGravesGilbertClininc{baseClient}, err
 }

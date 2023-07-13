@@ -19,8 +19,8 @@ type SourceClientSchreiberHornadayCostel struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/72452/metadata
-func GetSourceClientSchreiberHornadayCostel(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSchreiberHornadayCostel(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSchreiberHornadayCostel{baseClient}, updatedSourceCred, err
+	return SourceClientSchreiberHornadayCostel{baseClient}, err
 }

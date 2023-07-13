@@ -19,8 +19,8 @@ type SourceClientMainehealth struct {
 }
 
 // https://fhir.mainehealth.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceClientMainehealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMainehealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMainehealth{baseClient}, updatedSourceCred, err
+	return SourceClientMainehealth{baseClient}, err
 }

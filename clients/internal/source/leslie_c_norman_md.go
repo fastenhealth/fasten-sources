@@ -19,8 +19,8 @@ type SourceClientLeslieCNormanMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/cf64663f-bdef-4b1d-a35b-95627bc92438/metadata
-func GetSourceClientLeslieCNormanMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLeslieCNormanMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLeslieCNormanMd{baseClient}, updatedSourceCred, err
+	return SourceClientLeslieCNormanMd{baseClient}, err
 }

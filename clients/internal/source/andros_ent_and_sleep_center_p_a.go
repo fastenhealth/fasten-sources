@@ -19,8 +19,8 @@ type SourceClientAndrosEntAndSleepCenterPA struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/8eec72c0-b1a5-472c-aba8-b566cb8522fc/metadata
-func GetSourceClientAndrosEntAndSleepCenterPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAndrosEntAndSleepCenterPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAndrosEntAndSleepCenterPA{baseClient}, updatedSourceCred, err
+	return SourceClientAndrosEntAndSleepCenterPA{baseClient}, err
 }

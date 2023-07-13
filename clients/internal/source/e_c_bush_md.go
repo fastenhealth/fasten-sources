@@ -19,8 +19,8 @@ type SourceClientECBushMd struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10037377/metadata
-func GetSourceClientECBushMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientECBushMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientECBushMd{baseClient}, updatedSourceCred, err
+	return SourceClientECBushMd{baseClient}, err
 }

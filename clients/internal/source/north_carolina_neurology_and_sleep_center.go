@@ -19,8 +19,8 @@ type SourceClientNorthCarolinaNeurologyAndSleepCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9866d918-4ba0-4040-b294-ab19b8bedf0b/metadata
-func GetSourceClientNorthCarolinaNeurologyAndSleepCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthCarolinaNeurologyAndSleepCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthCarolinaNeurologyAndSleepCenter{baseClient}, updatedSourceCred, err
+	return SourceClientNorthCarolinaNeurologyAndSleepCenter{baseClient}, err
 }

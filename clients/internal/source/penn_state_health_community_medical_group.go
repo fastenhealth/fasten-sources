@@ -19,8 +19,8 @@ type SourceClientPennStateHealthCommunityMedicalGroup struct {
 }
 
 // https://pmg-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientPennStateHealthCommunityMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPennStateHealthCommunityMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPennStateHealthCommunityMedicalGroup{baseClient}, updatedSourceCred, err
+	return SourceClientPennStateHealthCommunityMedicalGroup{baseClient}, err
 }

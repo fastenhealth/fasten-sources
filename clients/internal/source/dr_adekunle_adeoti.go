@@ -19,8 +19,8 @@ type SourceClientDrAdekunleAdeoti struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/acfb0414-085a-4a86-bff7-56c553089272/metadata
-func GetSourceClientDrAdekunleAdeoti(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrAdekunleAdeoti(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrAdekunleAdeoti{baseClient}, updatedSourceCred, err
+	return SourceClientDrAdekunleAdeoti{baseClient}, err
 }

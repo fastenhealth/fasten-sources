@@ -19,8 +19,8 @@ type SourceClientAlanLKalischerMD struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/559fe11a-8e88-4e27-80a3-8c19d661fd5c/metadata
-func GetSourceClientAlanLKalischerMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlanLKalischerMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlanLKalischerMD{baseClient}, updatedSourceCred, err
+	return SourceClientAlanLKalischerMD{baseClient}, err
 }

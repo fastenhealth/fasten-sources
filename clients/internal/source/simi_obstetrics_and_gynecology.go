@@ -19,8 +19,8 @@ type SourceClientSimiObstetricsAndGynecology struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/143008dd-7360-4d80-a1fc-642bb0952a26/metadata
-func GetSourceClientSimiObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSimiObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSimiObstetricsAndGynecology{baseClient}, updatedSourceCred, err
+	return SourceClientSimiObstetricsAndGynecology{baseClient}, err
 }

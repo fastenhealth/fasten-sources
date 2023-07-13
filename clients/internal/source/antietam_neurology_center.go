@@ -19,8 +19,8 @@ type SourceClientAntietamNeurologyCenter struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10024679/metadata
-func GetSourceClientAntietamNeurologyCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAntietamNeurologyCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAntietamNeurologyCenter{baseClient}, updatedSourceCred, err
+	return SourceClientAntietamNeurologyCenter{baseClient}, err
 }

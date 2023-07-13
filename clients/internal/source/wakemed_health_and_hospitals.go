@@ -19,8 +19,8 @@ type SourceClientWakemedHealthAndHospitals struct {
 }
 
 // https://epic-soap.wakemed.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWakemedHealthAndHospitals{baseClient}, updatedSourceCred, err
+	return SourceClientWakemedHealthAndHospitals{baseClient}, err
 }

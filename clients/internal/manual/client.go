@@ -27,6 +27,10 @@ type ManualClient struct {
 	SourceCredential models.SourceCredential
 }
 
+func (m ManualClient) GetSourceCredential() models.SourceCredential {
+	return m.SourceCredential
+}
+
 func (m ManualClient) GetResourceBundle(relativeResourcePath string) (interface{}, error) {
 	//TODO implement me
 	panic("implement me")
@@ -80,7 +84,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
 		}
-		client, _, err := base.GetSourceClientFHIR430(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
+		client, err := base.GetSourceClientFHIR430(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
 		}
@@ -102,7 +106,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
-		client, _, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
+		client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 		}
@@ -156,13 +160,13 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVer
 	}
 }
 
-func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	return &ManualClient{
 		FastenEnv:        env,
 		Context:          ctx,
 		Logger:           globalLogger,
 		SourceCredential: sourceCreds,
-	}, nil, nil
+	}, nil
 }
 
 //TODO: find a better, more generic way to do this.

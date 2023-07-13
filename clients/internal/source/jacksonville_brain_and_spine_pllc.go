@@ -19,8 +19,8 @@ type SourceClientJacksonvilleBrainAndSpinePllc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10125738/metadata
-func GetSourceClientJacksonvilleBrainAndSpinePllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJacksonvilleBrainAndSpinePllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJacksonvilleBrainAndSpinePllc{baseClient}, updatedSourceCred, err
+	return SourceClientJacksonvilleBrainAndSpinePllc{baseClient}, err
 }

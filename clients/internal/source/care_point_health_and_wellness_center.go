@@ -19,8 +19,8 @@ type SourceClientCarePointHealthAndWellnessCenter struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10112684/metadata
-func GetSourceClientCarePointHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCarePointHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCarePointHealthAndWellnessCenter{baseClient}, updatedSourceCred, err
+	return SourceClientCarePointHealthAndWellnessCenter{baseClient}, err
 }

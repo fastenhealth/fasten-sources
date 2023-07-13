@@ -19,8 +19,8 @@ type SourceClientCentralUtahClinicDbaRevereHealth struct {
 }
 
 // https://FHIR.reverehealth.com/FHIR/metadata
-func GetSourceClientCentralUtahClinicDbaRevereHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCentralUtahClinicDbaRevereHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCentralUtahClinicDbaRevereHealth{baseClient}, updatedSourceCred, err
+	return SourceClientCentralUtahClinicDbaRevereHealth{baseClient}, err
 }

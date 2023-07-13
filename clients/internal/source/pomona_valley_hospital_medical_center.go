@@ -19,8 +19,8 @@ type SourceClientPomonaValleyHospitalMedicalCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/52bd19c6-70df-487b-85b8-29be7abf17a1/metadata
-func GetSourceClientPomonaValleyHospitalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPomonaValleyHospitalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPomonaValleyHospitalMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientPomonaValleyHospitalMedicalCenter{baseClient}, err
 }

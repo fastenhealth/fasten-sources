@@ -19,8 +19,8 @@ type SourceClientRioGrandeHeartSpecialists struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/pfPtWFyx8DThC8Zai2vpgBwaBZV28KWi/metadata
-func GetSourceClientRioGrandeHeartSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRioGrandeHeartSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRioGrandeHeartSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientRioGrandeHeartSpecialists{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientDekalbRegionalHealthcare struct {
 }
 
 // https://fhirprod.dekalbmedicalportal.org/FHIR/metadata
-func GetSourceClientDekalbRegionalHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDekalbRegionalHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDekalbRegionalHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientDekalbRegionalHealthcare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPremierSuburbanMedicalGroup struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/53113a2f-ce08-426c-a627-1d944f724a9e/metadata
-func GetSourceClientPremierSuburbanMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPremierSuburbanMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPremierSuburbanMedicalGroup{baseClient}, updatedSourceCred, err
+	return SourceClientPremierSuburbanMedicalGroup{baseClient}, err
 }

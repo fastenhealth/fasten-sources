@@ -19,8 +19,8 @@ type SourceClientP193Unity3Prod struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/custproprodP193Unity3/metadata
-func GetSourceClientP193Unity3Prod(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientP193Unity3Prod(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientP193Unity3Prod{baseClient}, updatedSourceCred, err
+	return SourceClientP193Unity3Prod{baseClient}, err
 }

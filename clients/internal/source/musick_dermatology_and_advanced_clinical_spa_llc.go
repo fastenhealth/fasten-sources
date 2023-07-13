@@ -19,8 +19,8 @@ type SourceClientMusickDermatologyAndAdvancedClinicalSpaLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/GRzkF6yCy_Pe-6F3SJzcXkCEiy_u6zZe/metadata
-func GetSourceClientMusickDermatologyAndAdvancedClinicalSpaLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMusickDermatologyAndAdvancedClinicalSpaLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMusickDermatologyAndAdvancedClinicalSpaLlc{baseClient}, updatedSourceCred, err
+	return SourceClientMusickDermatologyAndAdvancedClinicalSpaLlc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientRocklandThoracicAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/K7r0JqNzwCCreORLHDZNhTb7SEfo_ZjL/metadata
-func GetSourceClientRocklandThoracicAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRocklandThoracicAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRocklandThoracicAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientRocklandThoracicAssociates{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientJewellCountyHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2daa157e-8b5f-4b5c-b571-5b57834b9765/metadata
-func GetSourceClientJewellCountyHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJewellCountyHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJewellCountyHospital{baseClient}, updatedSourceCred, err
+	return SourceClientJewellCountyHospital{baseClient}, err
 }

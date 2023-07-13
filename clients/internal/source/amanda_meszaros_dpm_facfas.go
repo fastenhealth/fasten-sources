@@ -19,8 +19,8 @@ type SourceClientAmandaMeszarosDpmFacfas struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/kM_99Orj1Rg3wRNHtR8VeEA5tc_onQVr/metadata
-func GetSourceClientAmandaMeszarosDpmFacfas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAmandaMeszarosDpmFacfas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAmandaMeszarosDpmFacfas{baseClient}, updatedSourceCred, err
+	return SourceClientAmandaMeszarosDpmFacfas{baseClient}, err
 }

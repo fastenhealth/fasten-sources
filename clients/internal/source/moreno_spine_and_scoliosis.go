@@ -19,8 +19,8 @@ type SourceClientMorenoSpineAndScoliosis struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/0011276/metadata
-func GetSourceClientMorenoSpineAndScoliosis(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMorenoSpineAndScoliosis(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMorenoSpineAndScoliosis{baseClient}, updatedSourceCred, err
+	return SourceClientMorenoSpineAndScoliosis{baseClient}, err
 }

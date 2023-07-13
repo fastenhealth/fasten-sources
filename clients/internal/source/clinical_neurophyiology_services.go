@@ -19,8 +19,8 @@ type SourceClientClinicalNeurophyiologyServices struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10021156/metadata
-func GetSourceClientClinicalNeurophyiologyServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClinicalNeurophyiologyServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClinicalNeurophyiologyServices{baseClient}, updatedSourceCred, err
+	return SourceClientClinicalNeurophyiologyServices{baseClient}, err
 }

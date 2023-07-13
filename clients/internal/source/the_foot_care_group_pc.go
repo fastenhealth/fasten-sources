@@ -19,8 +19,8 @@ type SourceClientTheFootCareGroupPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2c834eee-5231-4dd1-ba8d-28931b99c0cc/metadata
-func GetSourceClientTheFootCareGroupPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheFootCareGroupPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheFootCareGroupPc{baseClient}, updatedSourceCred, err
+	return SourceClientTheFootCareGroupPc{baseClient}, err
 }

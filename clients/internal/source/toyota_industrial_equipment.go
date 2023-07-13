@@ -19,8 +19,8 @@ type SourceClientToyotaIndustrialEquipment struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/256e21d7-83b6-43a8-a945-8a46e496b3df/metadata
-func GetSourceClientToyotaIndustrialEquipment(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientToyotaIndustrialEquipment(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientToyotaIndustrialEquipment{baseClient}, updatedSourceCred, err
+	return SourceClientToyotaIndustrialEquipment{baseClient}, err
 }

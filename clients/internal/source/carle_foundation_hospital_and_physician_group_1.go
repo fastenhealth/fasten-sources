@@ -19,8 +19,8 @@ type SourceClientCarleFoundationHospitalAndPhysicianGroup1 struct {
 }
 
 // https://epicproxy.et0316.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientCarleFoundationHospitalAndPhysicianGroup1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCarleFoundationHospitalAndPhysicianGroup1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCarleFoundationHospitalAndPhysicianGroup1{baseClient}, updatedSourceCred, err
+	return SourceClientCarleFoundationHospitalAndPhysicianGroup1{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientEastAlabamaWomensClinic struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/983f199c-2839-4196-aa31-106975d1480c/metadata
-func GetSourceClientEastAlabamaWomensClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEastAlabamaWomensClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEastAlabamaWomensClinic{baseClient}, updatedSourceCred, err
+	return SourceClientEastAlabamaWomensClinic{baseClient}, err
 }

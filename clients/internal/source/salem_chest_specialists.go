@@ -19,8 +19,8 @@ type SourceClientSalemChestSpecialists struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10058810/metadata
-func GetSourceClientSalemChestSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSalemChestSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSalemChestSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientSalemChestSpecialists{baseClient}, err
 }

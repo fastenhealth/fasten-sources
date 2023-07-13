@@ -19,8 +19,8 @@ type SourceClientTheChristHospital struct {
 }
 
 // https://soapproxyprod.thechristhospital.com/fhir/api/FHIR/R4/metadata
-func GetSourceClientTheChristHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheChristHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheChristHospital{baseClient}, updatedSourceCred, err
+	return SourceClientTheChristHospital{baseClient}, err
 }

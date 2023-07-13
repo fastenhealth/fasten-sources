@@ -19,8 +19,8 @@ type SourceClientGoldsboroPodiatry struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1ee7fa8c-2604-4e16-b1f2-79febf0fab94/metadata
-func GetSourceClientGoldsboroPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGoldsboroPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGoldsboroPodiatry{baseClient}, updatedSourceCred, err
+	return SourceClientGoldsboroPodiatry{baseClient}, err
 }

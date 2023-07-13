@@ -19,8 +19,8 @@ type SourceClientPami1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a2TfVcNaJGlijn6zzBhUnZFJmQJWpoQ7/metadata
-func GetSourceClientPami1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPami1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPami1{baseClient}, updatedSourceCred, err
+	return SourceClientPami1{baseClient}, err
 }

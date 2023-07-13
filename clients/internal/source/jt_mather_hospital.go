@@ -19,8 +19,8 @@ type SourceClientJtMatherHospital struct {
 }
 
 // https://fhirprod.matherhospital.org/FHIR/metadata
-func GetSourceClientJtMatherHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJtMatherHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJtMatherHospital{baseClient}, updatedSourceCred, err
+	return SourceClientJtMatherHospital{baseClient}, err
 }

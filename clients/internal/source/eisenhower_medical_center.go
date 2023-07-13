@@ -19,8 +19,8 @@ type SourceClientEisenhowerMedicalCenter struct {
 }
 
 // https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4/metadata
-func GetSourceClientEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEisenhowerMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientEisenhowerMedicalCenter{baseClient}, err
 }

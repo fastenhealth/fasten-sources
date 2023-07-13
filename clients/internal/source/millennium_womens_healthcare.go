@@ -19,8 +19,8 @@ type SourceClientMillenniumWomensHealthcare struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73952/metadata
-func GetSourceClientMillenniumWomensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMillenniumWomensHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMillenniumWomensHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientMillenniumWomensHealthcare{baseClient}, err
 }

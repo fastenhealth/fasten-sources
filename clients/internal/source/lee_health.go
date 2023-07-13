@@ -19,8 +19,8 @@ type SourceClientLeeHealth struct {
 }
 
 // https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4/metadata
-func GetSourceClientLeeHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLeeHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLeeHealth{baseClient}, updatedSourceCred, err
+	return SourceClientLeeHealth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientKetteringHealthNetwork struct {
 }
 
 // https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4/metadata
-func GetSourceClientKetteringHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKetteringHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKetteringHealthNetwork{baseClient}, updatedSourceCred, err
+	return SourceClientKetteringHealthNetwork{baseClient}, err
 }

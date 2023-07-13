@@ -19,8 +19,8 @@ type SourceClientCure4TheKidsFoundation struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045331/metadata
-func GetSourceClientCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCure4TheKidsFoundation{baseClient}, updatedSourceCred, err
+	return SourceClientCure4TheKidsFoundation{baseClient}, err
 }

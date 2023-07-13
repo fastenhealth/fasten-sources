@@ -19,8 +19,8 @@ type SourceClientMilfordFamilyPractice struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/cb26dc6a-db71-4f37-8be5-40b61109757b/metadata
-func GetSourceClientMilfordFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMilfordFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMilfordFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientMilfordFamilyPractice{baseClient}, err
 }

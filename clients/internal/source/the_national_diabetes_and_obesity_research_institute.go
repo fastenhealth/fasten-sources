@@ -19,8 +19,8 @@ type SourceClientTheNationalDiabetesAndObesityResearchInstitute struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/5253c5ce-87ba-4ca8-80b4-c943a8098fc6/metadata
-func GetSourceClientTheNationalDiabetesAndObesityResearchInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheNationalDiabetesAndObesityResearchInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheNationalDiabetesAndObesityResearchInstitute{baseClient}, updatedSourceCred, err
+	return SourceClientTheNationalDiabetesAndObesityResearchInstitute{baseClient}, err
 }

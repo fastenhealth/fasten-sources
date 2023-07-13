@@ -19,8 +19,8 @@ type SourceClientEntHeadAndNeckSurgeryPc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044291/metadata
-func GetSourceClientEntHeadAndNeckSurgeryPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEntHeadAndNeckSurgeryPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEntHeadAndNeckSurgeryPc{baseClient}, updatedSourceCred, err
+	return SourceClientEntHeadAndNeckSurgeryPc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientYakimaValleyFarmWorkersClinic struct {
 }
 
 // https://epicproxy.et0943.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientYakimaValleyFarmWorkersClinic{baseClient}, updatedSourceCred, err
+	return SourceClientYakimaValleyFarmWorkersClinic{baseClient}, err
 }

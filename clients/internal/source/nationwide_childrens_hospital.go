@@ -19,8 +19,8 @@ type SourceClientNationwideChildrensHospital struct {
 }
 
 // https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientNationwideChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNationwideChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNationwideChildrensHospital{baseClient}, updatedSourceCred, err
+	return SourceClientNationwideChildrensHospital{baseClient}, err
 }

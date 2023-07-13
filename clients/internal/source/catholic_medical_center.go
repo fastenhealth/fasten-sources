@@ -19,8 +19,8 @@ type SourceClientCatholicMedicalCenter struct {
 }
 
 // https://sunexch.cmc-nh.org/FHIR/metadata
-func GetSourceClientCatholicMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCatholicMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCatholicMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientCatholicMedicalCenter{baseClient}, err
 }

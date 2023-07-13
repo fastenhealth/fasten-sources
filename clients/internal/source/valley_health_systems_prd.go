@@ -19,8 +19,8 @@ type SourceClientValleyHealthSystemsPrd struct {
 }
 
 // https://api.valleyhealth.org/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientValleyHealthSystemsPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientValleyHealthSystemsPrd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientValleyHealthSystemsPrd{baseClient}, updatedSourceCred, err
+	return SourceClientValleyHealthSystemsPrd{baseClient}, err
 }

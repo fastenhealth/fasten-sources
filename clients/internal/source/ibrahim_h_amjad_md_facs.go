@@ -19,8 +19,8 @@ type SourceClientIbrahimHAmjadMdFacs struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c_GakPKBwGEp9LXRCx-dgLzSCTzRDPZ4/metadata
-func GetSourceClientIbrahimHAmjadMdFacs(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientIbrahimHAmjadMdFacs(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIbrahimHAmjadMdFacs{baseClient}, updatedSourceCred, err
+	return SourceClientIbrahimHAmjadMdFacs{baseClient}, err
 }

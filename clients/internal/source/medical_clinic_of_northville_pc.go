@@ -19,8 +19,8 @@ type SourceClientMedicalClinicOfNorthvillePc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3bd112f2-a293-4bc2-86f3-8aca32fd3911/metadata
-func GetSourceClientMedicalClinicOfNorthvillePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMedicalClinicOfNorthvillePc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMedicalClinicOfNorthvillePc{baseClient}, updatedSourceCred, err
+	return SourceClientMedicalClinicOfNorthvillePc{baseClient}, err
 }

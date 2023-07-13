@@ -19,8 +19,8 @@ type SourceClientNachiketPatelMdpa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/b2cf1c2c-a7b5-473b-8c37-e405a6e7bbb7/metadata
-func GetSourceClientNachiketPatelMdpa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNachiketPatelMdpa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNachiketPatelMdpa{baseClient}, updatedSourceCred, err
+	return SourceClientNachiketPatelMdpa{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientStonyBrookBusinessVenturesLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/624a554a-fb79-4703-86d3-5d635620055e/metadata
-func GetSourceClientStonyBrookBusinessVenturesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStonyBrookBusinessVenturesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStonyBrookBusinessVenturesLlc{baseClient}, updatedSourceCred, err
+	return SourceClientStonyBrookBusinessVenturesLlc{baseClient}, err
 }

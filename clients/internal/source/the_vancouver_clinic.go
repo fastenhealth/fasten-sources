@@ -19,8 +19,8 @@ type SourceClientTheVancouverClinic struct {
 }
 
 // https://soapprod.tvc.org/ARR-FHIR/api/FHIR/R4/metadata
-func GetSourceClientTheVancouverClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheVancouverClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheVancouverClinic{baseClient}, updatedSourceCred, err
+	return SourceClientTheVancouverClinic{baseClient}, err
 }

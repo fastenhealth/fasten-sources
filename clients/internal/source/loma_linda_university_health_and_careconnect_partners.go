@@ -19,8 +19,8 @@ type SourceClientLomaLindaUniversityHealthAndCareconnectPartners struct {
 }
 
 // https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLomaLindaUniversityHealthAndCareconnectPartners{baseClient}, updatedSourceCred, err
+	return SourceClientLomaLindaUniversityHealthAndCareconnectPartners{baseClient}, err
 }

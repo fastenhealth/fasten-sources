@@ -19,8 +19,8 @@ type SourceClientHenryMayoMso struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c65052a3-5b56-4bc7-9da4-b721aa72fb0c/metadata
-func GetSourceClientHenryMayoMso(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHenryMayoMso(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHenryMayoMso{baseClient}, updatedSourceCred, err
+	return SourceClientHenryMayoMso{baseClient}, err
 }

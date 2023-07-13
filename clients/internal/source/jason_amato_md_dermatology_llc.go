@@ -19,8 +19,8 @@ type SourceClientJasonAmatoMdDermatologyLlc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/hHhBZnqD5ZnFB3frpd36dudKBHu6EKvB/metadata
-func GetSourceClientJasonAmatoMdDermatologyLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJasonAmatoMdDermatologyLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJasonAmatoMdDermatologyLlc{baseClient}, updatedSourceCred, err
+	return SourceClientJasonAmatoMdDermatologyLlc{baseClient}, err
 }

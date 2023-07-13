@@ -18,7 +18,7 @@ import (
 	"net/http"
 )
 
-func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
+func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	switch sourceType {
 	case pkg.SourceTypeManual:
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)
@@ -14498,6 +14498,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 	case pkg.SourceTypeLogica:
 		return sandbox.GetSourceClientLogica(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	default:
-		return nil, nil, fmt.Errorf("could not find source type")
+		return nil, fmt.Errorf("could not find source type")
 	}
 }

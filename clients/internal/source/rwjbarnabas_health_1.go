@@ -19,8 +19,8 @@ type SourceClientRwjbarnabasHealth1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3c2e5608-7636-4d74-9aae-b044a991c609/metadata
-func GetSourceClientRwjbarnabasHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRwjbarnabasHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRwjbarnabasHealth1{baseClient}, updatedSourceCred, err
+	return SourceClientRwjbarnabasHealth1{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientSummaHealth struct {
 }
 
 // https://epicproxy.et1289.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientSummaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSummaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSummaHealth{baseClient}, updatedSourceCred, err
+	return SourceClientSummaHealth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientJaimeECamposMdPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/177ce732-146d-43d6-b1f2-f27ab10b5dfe/metadata
-func GetSourceClientJaimeECamposMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJaimeECamposMdPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJaimeECamposMdPa{baseClient}, updatedSourceCred, err
+	return SourceClientJaimeECamposMdPa{baseClient}, err
 }

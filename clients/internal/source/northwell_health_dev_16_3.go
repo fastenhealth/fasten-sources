@@ -19,8 +19,8 @@ type SourceClientNorthwellHealthDev163 struct {
 }
 
 // https://fhir01.northwell.edu/FHIR/metadata
-func GetSourceClientNorthwellHealthDev163(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthwellHealthDev163(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthwellHealthDev163{baseClient}, updatedSourceCred, err
+	return SourceClientNorthwellHealthDev163{baseClient}, err
 }

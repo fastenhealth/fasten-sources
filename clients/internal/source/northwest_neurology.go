@@ -19,8 +19,8 @@ type SourceClientNorthwestNeurology struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10034359/metadata
-func GetSourceClientNorthwestNeurology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNorthwestNeurology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNorthwestNeurology{baseClient}, updatedSourceCred, err
+	return SourceClientNorthwestNeurology{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPublixLakeland struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d9a6224a-6280-41a9-8e61-5e638aebc69b/metadata
-func GetSourceClientPublixLakeland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPublixLakeland(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPublixLakeland{baseClient}, updatedSourceCred, err
+	return SourceClientPublixLakeland{baseClient}, err
 }

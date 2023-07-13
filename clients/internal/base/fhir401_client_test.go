@@ -27,7 +27,7 @@ func TestNewFHIR401Client(t *testing.T) {
 	})
 
 	//test
-	client, _, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
 
 	//assert
 	require.NoError(t, err)
@@ -46,7 +46,7 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, _, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")

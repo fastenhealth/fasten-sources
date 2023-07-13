@@ -19,8 +19,8 @@ type SourceClientAmadorHormillaMD struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/qSQQl2ShxAvRHD2W70uxQVtT7BNMIXXO/metadata
-func GetSourceClientAmadorHormillaMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAmadorHormillaMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAmadorHormillaMD{baseClient}, updatedSourceCred, err
+	return SourceClientAmadorHormillaMD{baseClient}, err
 }

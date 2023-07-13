@@ -19,8 +19,8 @@ type SourceClientAssociatedNephrologyConsultants struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3y297hHso-SAgtaVMIScpv67gSH7SYy3/metadata
-func GetSourceClientAssociatedNephrologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAssociatedNephrologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAssociatedNephrologyConsultants{baseClient}, updatedSourceCred, err
+	return SourceClientAssociatedNephrologyConsultants{baseClient}, err
 }

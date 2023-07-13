@@ -19,8 +19,8 @@ type SourceClientOrthopedicAndSportsMedicineOfSaintJoseph struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a75267f5-7095-45ca-bda5-935aade48fcf/metadata
-func GetSourceClientOrthopedicAndSportsMedicineOfSaintJoseph(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOrthopedicAndSportsMedicineOfSaintJoseph(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOrthopedicAndSportsMedicineOfSaintJoseph{baseClient}, updatedSourceCred, err
+	return SourceClientOrthopedicAndSportsMedicineOfSaintJoseph{baseClient}, err
 }

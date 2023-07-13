@@ -19,8 +19,8 @@ type SourceClientJacksonAndLayne struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/8fd847b5-a8e2-410c-bf48-a2596fa87f4a/metadata
-func GetSourceClientJacksonAndLayne(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJacksonAndLayne(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJacksonAndLayne{baseClient}, updatedSourceCred, err
+	return SourceClientJacksonAndLayne{baseClient}, err
 }

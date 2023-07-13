@@ -19,8 +19,8 @@ type SourceClientSouthTexasEyeConsultantsPllc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0XIxA_oQdKCrS6EXD4HwEbWYtSdW2v-2/metadata
-func GetSourceClientSouthTexasEyeConsultantsPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthTexasEyeConsultantsPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthTexasEyeConsultantsPllc{baseClient}, updatedSourceCred, err
+	return SourceClientSouthTexasEyeConsultantsPllc{baseClient}, err
 }

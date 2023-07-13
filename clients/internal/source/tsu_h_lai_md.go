@@ -19,8 +19,8 @@ type SourceClientTsuHLaiMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73712/metadata
-func GetSourceClientTsuHLaiMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTsuHLaiMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTsuHLaiMd{baseClient}, updatedSourceCred, err
+	return SourceClientTsuHLaiMd{baseClient}, err
 }

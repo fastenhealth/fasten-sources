@@ -19,8 +19,8 @@ type SourceClientDrChadSmokerMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/zf0glaGG5hLhMMZqeh2-kRj3FD2n6MNs/metadata
-func GetSourceClientDrChadSmokerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrChadSmokerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrChadSmokerMd{baseClient}, updatedSourceCred, err
+	return SourceClientDrChadSmokerMd{baseClient}, err
 }

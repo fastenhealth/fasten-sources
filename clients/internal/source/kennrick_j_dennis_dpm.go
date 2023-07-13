@@ -19,8 +19,8 @@ type SourceClientKennrickJDennisDpm struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/Jq1h-Z1Yyu4OyupN7ciHN171trNUbJQP/metadata
-func GetSourceClientKennrickJDennisDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKennrickJDennisDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKennrickJDennisDpm{baseClient}, updatedSourceCred, err
+	return SourceClientKennrickJDennisDpm{baseClient}, err
 }

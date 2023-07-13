@@ -19,8 +19,8 @@ type SourceClientPensacolaFootAndAnkleCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/nf8U42ELfecnNzeE3KFMRXwJoUOMBep7/metadata
-func GetSourceClientPensacolaFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPensacolaFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPensacolaFootAndAnkleCenter{baseClient}, updatedSourceCred, err
+	return SourceClientPensacolaFootAndAnkleCenter{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientValleySurgicalClinics struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10051613/metadata
-func GetSourceClientValleySurgicalClinics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientValleySurgicalClinics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientValleySurgicalClinics{baseClient}, updatedSourceCred, err
+	return SourceClientValleySurgicalClinics{baseClient}, err
 }

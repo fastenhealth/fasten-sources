@@ -19,8 +19,8 @@ type SourceClientCarolinaFamilyMedicineOfSumterAnAffiliate struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10067147/metadata
-func GetSourceClientCarolinaFamilyMedicineOfSumterAnAffiliate(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCarolinaFamilyMedicineOfSumterAnAffiliate(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCarolinaFamilyMedicineOfSumterAnAffiliate{baseClient}, updatedSourceCred, err
+	return SourceClientCarolinaFamilyMedicineOfSumterAnAffiliate{baseClient}, err
 }

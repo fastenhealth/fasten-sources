@@ -19,8 +19,8 @@ type SourceClientPrimaryCarePartnersOfOhio struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10150786/metadata
-func GetSourceClientPrimaryCarePartnersOfOhio(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPrimaryCarePartnersOfOhio(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPrimaryCarePartnersOfOhio{baseClient}, updatedSourceCred, err
+	return SourceClientPrimaryCarePartnersOfOhio{baseClient}, err
 }

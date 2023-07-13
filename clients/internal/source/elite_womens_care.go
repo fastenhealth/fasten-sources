@@ -19,8 +19,8 @@ type SourceClientEliteWomensCare struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/77689/metadata
-func GetSourceClientEliteWomensCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEliteWomensCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEliteWomensCare{baseClient}, updatedSourceCred, err
+	return SourceClientEliteWomensCare{baseClient}, err
 }

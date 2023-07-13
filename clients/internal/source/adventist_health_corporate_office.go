@@ -19,8 +19,8 @@ type SourceClientAdventistHealthCorporateOffice struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/29a5ccea-f4ab-4447-a191-56b20695970f/metadata
-func GetSourceClientAdventistHealthCorporateOffice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdventistHealthCorporateOffice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdventistHealthCorporateOffice{baseClient}, updatedSourceCred, err
+	return SourceClientAdventistHealthCorporateOffice{baseClient}, err
 }

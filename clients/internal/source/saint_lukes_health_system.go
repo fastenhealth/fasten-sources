@@ -19,8 +19,8 @@ type SourceClientSaintLukesHealthSystem struct {
 }
 
 // https://epicmobile.corp.saint-lukes.org/FHIRPROXY/api/FHIR/R4/metadata
-func GetSourceClientSaintLukesHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSaintLukesHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSaintLukesHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientSaintLukesHealthSystem{baseClient}, err
 }

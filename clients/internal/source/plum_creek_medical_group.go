@@ -19,8 +19,8 @@ type SourceClientPlumCreekMedicalGroup struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10029540/metadata
-func GetSourceClientPlumCreekMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPlumCreekMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPlumCreekMedicalGroup{baseClient}, updatedSourceCred, err
+	return SourceClientPlumCreekMedicalGroup{baseClient}, err
 }

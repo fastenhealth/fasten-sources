@@ -19,8 +19,8 @@ type SourceClientSparrowHealthSystem struct {
 }
 
 // https://haiku.sparrow.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientSparrowHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSparrowHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSparrowHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientSparrowHealthSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientPhysicianInHomeServices struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1489851f-6448-4afb-9a0e-12d9d94aa987/metadata
-func GetSourceClientPhysicianInHomeServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPhysicianInHomeServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPhysicianInHomeServices{baseClient}, updatedSourceCred, err
+	return SourceClientPhysicianInHomeServices{baseClient}, err
 }

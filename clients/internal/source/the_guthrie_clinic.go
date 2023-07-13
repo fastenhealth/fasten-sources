@@ -19,8 +19,8 @@ type SourceClientTheGuthrieClinic struct {
 }
 
 // https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceClientTheGuthrieClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheGuthrieClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheGuthrieClinic{baseClient}, updatedSourceCred, err
+	return SourceClientTheGuthrieClinic{baseClient}, err
 }

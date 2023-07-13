@@ -19,8 +19,8 @@ type SourceClientCenterForPreventionAndTreatmentOfInfections struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035252/metadata
-func GetSourceClientCenterForPreventionAndTreatmentOfInfections(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCenterForPreventionAndTreatmentOfInfections(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCenterForPreventionAndTreatmentOfInfections{baseClient}, updatedSourceCred, err
+	return SourceClientCenterForPreventionAndTreatmentOfInfections{baseClient}, err
 }

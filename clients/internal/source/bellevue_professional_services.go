@@ -19,8 +19,8 @@ type SourceClientBellevueProfessionalServices struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10040398/metadata
-func GetSourceClientBellevueProfessionalServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBellevueProfessionalServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBellevueProfessionalServices{baseClient}, updatedSourceCred, err
+	return SourceClientBellevueProfessionalServices{baseClient}, err
 }

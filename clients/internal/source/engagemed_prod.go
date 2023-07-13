@@ -19,8 +19,8 @@ type SourceClientEngagemedProd struct {
 }
 
 // https://eng-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientEngagemedProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEngagemedProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEngagemedProd{baseClient}, updatedSourceCred, err
+	return SourceClientEngagemedProd{baseClient}, err
 }

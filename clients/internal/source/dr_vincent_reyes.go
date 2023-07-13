@@ -19,8 +19,8 @@ type SourceClientDrVincentReyes struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3496639b-bf45-42dc-8e9b-e1a123f14b1a/metadata
-func GetSourceClientDrVincentReyes(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrVincentReyes(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrVincentReyes{baseClient}, updatedSourceCred, err
+	return SourceClientDrVincentReyes{baseClient}, err
 }

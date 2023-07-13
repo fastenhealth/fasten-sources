@@ -19,8 +19,8 @@ type SourceClientEndeavorHealthServices struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f691d777-e7de-4ba5-bbc2-a5052e2f6912/metadata
-func GetSourceClientEndeavorHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEndeavorHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEndeavorHealthServices{baseClient}, updatedSourceCred, err
+	return SourceClientEndeavorHealthServices{baseClient}, err
 }

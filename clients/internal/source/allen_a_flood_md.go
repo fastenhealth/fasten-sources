@@ -19,8 +19,8 @@ type SourceClientAllenAFloodMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2b2a3443-b072-4bef-8852-df9682c77c5c/metadata
-func GetSourceClientAllenAFloodMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAllenAFloodMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAllenAFloodMd{baseClient}, updatedSourceCred, err
+	return SourceClientAllenAFloodMd{baseClient}, err
 }

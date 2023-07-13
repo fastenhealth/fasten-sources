@@ -19,8 +19,8 @@ type SourceClientAtmYousufMdPhysicianPc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/77839/metadata
-func GetSourceClientAtmYousufMdPhysicianPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAtmYousufMdPhysicianPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAtmYousufMdPhysicianPc{baseClient}, updatedSourceCred, err
+	return SourceClientAtmYousufMdPhysicianPc{baseClient}, err
 }

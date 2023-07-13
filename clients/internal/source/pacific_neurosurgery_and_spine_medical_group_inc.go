@@ -19,8 +19,8 @@ type SourceClientPacificNeurosurgeryAndSpineMedicalGroupInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ae3cc072-efac-4b88-a7b6-55306d11cb60/metadata
-func GetSourceClientPacificNeurosurgeryAndSpineMedicalGroupInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPacificNeurosurgeryAndSpineMedicalGroupInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPacificNeurosurgeryAndSpineMedicalGroupInc{baseClient}, updatedSourceCred, err
+	return SourceClientPacificNeurosurgeryAndSpineMedicalGroupInc{baseClient}, err
 }

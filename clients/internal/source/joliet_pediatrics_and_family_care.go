@@ -19,8 +19,8 @@ type SourceClientJolietPediatricsAndFamilyCare struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/ab7c4f67-c555-4831-81ae-f83069aface0/metadata
-func GetSourceClientJolietPediatricsAndFamilyCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJolietPediatricsAndFamilyCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJolietPediatricsAndFamilyCare{baseClient}, updatedSourceCred, err
+	return SourceClientJolietPediatricsAndFamilyCare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientDubuqueOrthopaedicSurgeonsPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/82ffc56e-a8c8-428a-a28b-8c9d0bafcb76/metadata
-func GetSourceClientDubuqueOrthopaedicSurgeonsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDubuqueOrthopaedicSurgeonsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDubuqueOrthopaedicSurgeonsPc{baseClient}, updatedSourceCred, err
+	return SourceClientDubuqueOrthopaedicSurgeonsPc{baseClient}, err
 }

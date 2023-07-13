@@ -19,8 +19,8 @@ type SourceClientMontgomeryRheumatology1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/UHCaxLDJ6puwMRdSj30hJ8Nw05sTySuR/metadata
-func GetSourceClientMontgomeryRheumatology1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMontgomeryRheumatology1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMontgomeryRheumatology1{baseClient}, updatedSourceCred, err
+	return SourceClientMontgomeryRheumatology1{baseClient}, err
 }

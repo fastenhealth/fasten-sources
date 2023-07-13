@@ -19,8 +19,8 @@ type SourceClientShannonHealth struct {
 }
 
 // https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4/metadata
-func GetSourceClientShannonHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientShannonHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientShannonHealth{baseClient}, updatedSourceCred, err
+	return SourceClientShannonHealth{baseClient}, err
 }

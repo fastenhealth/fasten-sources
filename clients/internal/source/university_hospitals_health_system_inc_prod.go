@@ -19,8 +19,8 @@ type SourceClientUniversityHospitalsHealthSystemIncProd struct {
 }
 
 // https://fhir.uhhospitals.org/FHIR/metadata
-func GetSourceClientUniversityHospitalsHealthSystemIncProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityHospitalsHealthSystemIncProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityHospitalsHealthSystemIncProd{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityHospitalsHealthSystemIncProd{baseClient}, err
 }

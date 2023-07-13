@@ -19,8 +19,8 @@ type SourceClientBoilingSpringsPediatricAndFamilyMedicine struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10064048/metadata
-func GetSourceClientBoilingSpringsPediatricAndFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBoilingSpringsPediatricAndFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBoilingSpringsPediatricAndFamilyMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientBoilingSpringsPediatricAndFamilyMedicine{baseClient}, err
 }

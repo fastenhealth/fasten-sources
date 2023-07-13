@@ -19,8 +19,8 @@ type SourceClientSandhillMedicalFoundation struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045207/metadata
-func GetSourceClientSandhillMedicalFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSandhillMedicalFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSandhillMedicalFoundation{baseClient}, updatedSourceCred, err
+	return SourceClientSandhillMedicalFoundation{baseClient}, err
 }

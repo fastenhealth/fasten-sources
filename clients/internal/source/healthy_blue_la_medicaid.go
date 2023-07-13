@@ -19,8 +19,8 @@ type SourceClientHealthyBlueLaMedicaid struct {
 
 // https://patient360.healthybluela.com/P360Member/api/fhir-r4/metadata
 // https://patient360.healthybluela.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientHealthyBlueLaMedicaid(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHealthyBlueLaMedicaid(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHealthyBlueLaMedicaid{baseClient}, updatedSourceCred, err
+	return SourceClientHealthyBlueLaMedicaid{baseClient}, err
 }

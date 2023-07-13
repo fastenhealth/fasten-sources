@@ -19,8 +19,8 @@ type SourceClientLakeWashingtonCenterForCardiovascularDiseasePllc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/8717a3df-3396-4fec-bfa3-724001fec2f0/metadata
-func GetSourceClientLakeWashingtonCenterForCardiovascularDiseasePllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLakeWashingtonCenterForCardiovascularDiseasePllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLakeWashingtonCenterForCardiovascularDiseasePllc{baseClient}, updatedSourceCred, err
+	return SourceClientLakeWashingtonCenterForCardiovascularDiseasePllc{baseClient}, err
 }

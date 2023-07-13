@@ -19,8 +19,8 @@ type SourceClientMedicalEducationAssistanceCoporation struct {
 }
 
 // https://mea-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientMedicalEducationAssistanceCoporation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMedicalEducationAssistanceCoporation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMedicalEducationAssistanceCoporation{baseClient}, updatedSourceCred, err
+	return SourceClientMedicalEducationAssistanceCoporation{baseClient}, err
 }

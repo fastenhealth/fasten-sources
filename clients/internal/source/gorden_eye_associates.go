@@ -19,8 +19,8 @@ type SourceClientGordenEyeAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c89a8990-f5f5-41f9-aa34-cb295fe689fb/metadata
-func GetSourceClientGordenEyeAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGordenEyeAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGordenEyeAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientGordenEyeAssociates{baseClient}, err
 }

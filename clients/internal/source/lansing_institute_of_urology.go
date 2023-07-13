@@ -19,8 +19,8 @@ type SourceClientLansingInstituteOfUrology struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10388851/metadata
-func GetSourceClientLansingInstituteOfUrology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLansingInstituteOfUrology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLansingInstituteOfUrology{baseClient}, updatedSourceCred, err
+	return SourceClientLansingInstituteOfUrology{baseClient}, err
 }

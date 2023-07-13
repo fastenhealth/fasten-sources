@@ -19,8 +19,8 @@ type SourceClientArrowheadRegionalMedicalCenter struct {
 }
 
 // https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4/metadata
-func GetSourceClientArrowheadRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientArrowheadRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientArrowheadRegionalMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientArrowheadRegionalMedicalCenter{baseClient}, err
 }

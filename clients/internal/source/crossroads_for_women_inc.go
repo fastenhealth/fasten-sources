@@ -19,8 +19,8 @@ type SourceClientCrossroadsForWomenInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a349a661-1153-4053-a40b-30cb284c6ffc/metadata
-func GetSourceClientCrossroadsForWomenInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCrossroadsForWomenInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCrossroadsForWomenInc{baseClient}, updatedSourceCred, err
+	return SourceClientCrossroadsForWomenInc{baseClient}, err
 }

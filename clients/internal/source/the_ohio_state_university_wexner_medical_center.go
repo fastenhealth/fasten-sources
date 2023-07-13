@@ -19,8 +19,8 @@ type SourceClientTheOhioStateUniversityWexnerMedicalCenter struct {
 }
 
 // https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheOhioStateUniversityWexnerMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientTheOhioStateUniversityWexnerMedicalCenter{baseClient}, err
 }

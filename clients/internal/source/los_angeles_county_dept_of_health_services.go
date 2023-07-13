@@ -19,8 +19,8 @@ type SourceClientLosAngelesCountyDeptOfHealthServices struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/208486af-ceea-4a7d-b4d7-95c884a327df/metadata
-func GetSourceClientLosAngelesCountyDeptOfHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLosAngelesCountyDeptOfHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLosAngelesCountyDeptOfHealthServices{baseClient}, updatedSourceCred, err
+	return SourceClientLosAngelesCountyDeptOfHealthServices{baseClient}, err
 }

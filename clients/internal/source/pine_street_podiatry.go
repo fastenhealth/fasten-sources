@@ -19,8 +19,8 @@ type SourceClientPineStreetPodiatry struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/oftb6hxIHnNtZxMiREGYvNaJbaPmNQ7p/metadata
-func GetSourceClientPineStreetPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPineStreetPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPineStreetPodiatry{baseClient}, updatedSourceCred, err
+	return SourceClientPineStreetPodiatry{baseClient}, err
 }

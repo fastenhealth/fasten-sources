@@ -19,8 +19,8 @@ type SourceClientPalmBeachSpineAndDiagnosticInstitute struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/-_YkIsNEMVntfXGwmctxxUqaWU95Xx7D/metadata
-func GetSourceClientPalmBeachSpineAndDiagnosticInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPalmBeachSpineAndDiagnosticInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPalmBeachSpineAndDiagnosticInstitute{baseClient}, updatedSourceCred, err
+	return SourceClientPalmBeachSpineAndDiagnosticInstitute{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientInternalMedicineSpecialistsOfAtlantaPC struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10030720/metadata
-func GetSourceClientInternalMedicineSpecialistsOfAtlantaPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientInternalMedicineSpecialistsOfAtlantaPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientInternalMedicineSpecialistsOfAtlantaPC{baseClient}, updatedSourceCred, err
+	return SourceClientInternalMedicineSpecialistsOfAtlantaPC{baseClient}, err
 }

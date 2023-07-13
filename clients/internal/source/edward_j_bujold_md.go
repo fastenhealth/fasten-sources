@@ -19,8 +19,8 @@ type SourceClientEdwardJBujoldMd struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10054814/metadata
-func GetSourceClientEdwardJBujoldMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEdwardJBujoldMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEdwardJBujoldMd{baseClient}, updatedSourceCred, err
+	return SourceClientEdwardJBujoldMd{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1c0a08f9-9cc4-4641-ba0f-c38d264c2529/metadata
-func GetSourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage{baseClient}, updatedSourceCred, err
+	return SourceClientTheStevenACohenMilitaryFamilyClinicAtVeteransVillage{baseClient}, err
 }

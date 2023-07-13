@@ -19,8 +19,8 @@ type SourceClientPalomarHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6f73eb02-7a46-4cae-8907-0208d6de890c/metadata
-func GetSourceClientPalomarHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPalomarHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPalomarHealth{baseClient}, updatedSourceCred, err
+	return SourceClientPalomarHealth{baseClient}, err
 }

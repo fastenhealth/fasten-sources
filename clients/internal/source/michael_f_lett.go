@@ -19,8 +19,8 @@ type SourceClientMichaelFLett struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/K50zk9n5d0FtfHiP6kL9kMMGuWk1O10F/metadata
-func GetSourceClientMichaelFLett(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMichaelFLett(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMichaelFLett{baseClient}, updatedSourceCred, err
+	return SourceClientMichaelFLett{baseClient}, err
 }

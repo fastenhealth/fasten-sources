@@ -19,8 +19,8 @@ type SourceClientUabHuntsvilleRegionalCampus struct {
 }
 
 // https://twfhir.uasomh.uab.edu/FHIR/metadata
-func GetSourceClientUabHuntsvilleRegionalCampus(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUabHuntsvilleRegionalCampus(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUabHuntsvilleRegionalCampus{baseClient}, updatedSourceCred, err
+	return SourceClientUabHuntsvilleRegionalCampus{baseClient}, err
 }

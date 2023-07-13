@@ -19,8 +19,8 @@ type SourceClientDelawareOtolaryngologyConsultantsLlc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/59416/metadata
-func GetSourceClientDelawareOtolaryngologyConsultantsLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDelawareOtolaryngologyConsultantsLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDelawareOtolaryngologyConsultantsLlc{baseClient}, updatedSourceCred, err
+	return SourceClientDelawareOtolaryngologyConsultantsLlc{baseClient}, err
 }

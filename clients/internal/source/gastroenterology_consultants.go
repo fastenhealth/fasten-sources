@@ -19,8 +19,8 @@ type SourceClientGastroenterologyConsultants struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10050114/metadata
-func GetSourceClientGastroenterologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGastroenterologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGastroenterologyConsultants{baseClient}, updatedSourceCred, err
+	return SourceClientGastroenterologyConsultants{baseClient}, err
 }

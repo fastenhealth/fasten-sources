@@ -19,8 +19,8 @@ type SourceClientGavyMdCsp struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/07816ee1-ddda-45ce-ac7b-e8d3ee5f4c74/metadata
-func GetSourceClientGavyMdCsp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGavyMdCsp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGavyMdCsp{baseClient}, updatedSourceCred, err
+	return SourceClientGavyMdCsp{baseClient}, err
 }

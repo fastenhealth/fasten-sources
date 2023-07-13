@@ -19,8 +19,8 @@ type SourceClientEverettJMasonIiiDpm struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/AcoGxeqgq_UrHoDpyzXXx7HW8reQGSlo/metadata
-func GetSourceClientEverettJMasonIiiDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEverettJMasonIiiDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEverettJMasonIiiDpm{baseClient}, updatedSourceCred, err
+	return SourceClientEverettJMasonIiiDpm{baseClient}, err
 }

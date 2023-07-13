@@ -19,8 +19,8 @@ type SourceClientGenesisHealthcareSystem struct {
 }
 
 // https://fhir.genesishcs.org/api/FHIR/R4/metadata
-func GetSourceClientGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGenesisHealthcareSystem{baseClient}, updatedSourceCred, err
+	return SourceClientGenesisHealthcareSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientNovantHealth struct {
 }
 
 // https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientNovantHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNovantHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNovantHealth{baseClient}, updatedSourceCred, err
+	return SourceClientNovantHealth{baseClient}, err
 }

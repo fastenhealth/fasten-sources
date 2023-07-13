@@ -19,8 +19,8 @@ type SourceClientWalnutLakeObGyn struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/26519c41-5760-4666-aec7-131cba00ac7b/metadata
-func GetSourceClientWalnutLakeObGyn(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientWalnutLakeObGyn(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWalnutLakeObGyn{baseClient}, updatedSourceCred, err
+	return SourceClientWalnutLakeObGyn{baseClient}, err
 }

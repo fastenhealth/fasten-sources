@@ -19,8 +19,8 @@ type SourceClientHealthsmartCareManagementSolutionsLp struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4d80b0f4-782a-460f-b364-49ec173d8d2f/metadata
-func GetSourceClientHealthsmartCareManagementSolutionsLp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHealthsmartCareManagementSolutionsLp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHealthsmartCareManagementSolutionsLp{baseClient}, updatedSourceCred, err
+	return SourceClientHealthsmartCareManagementSolutionsLp{baseClient}, err
 }

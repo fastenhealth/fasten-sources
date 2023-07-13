@@ -19,8 +19,8 @@ type SourceClientBaptistHealthArkansas struct {
 }
 
 // https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4/metadata
-func GetSourceClientBaptistHealthArkansas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBaptistHealthArkansas(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBaptistHealthArkansas{baseClient}, updatedSourceCred, err
+	return SourceClientBaptistHealthArkansas{baseClient}, err
 }

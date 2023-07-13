@@ -19,8 +19,8 @@ type SourceClientDrDouglasWAnkromInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/EO2VAgfvoIIvIA-oWm0Wf7dEvMQxV36p/metadata
-func GetSourceClientDrDouglasWAnkromInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrDouglasWAnkromInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrDouglasWAnkromInc{baseClient}, updatedSourceCred, err
+	return SourceClientDrDouglasWAnkromInc{baseClient}, err
 }

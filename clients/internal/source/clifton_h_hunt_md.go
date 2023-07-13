@@ -19,8 +19,8 @@ type SourceClientCliftonHHuntMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/uLr5PM8gMPeZJe56FDmfjobJ6FGjEMEk/metadata
-func GetSourceClientCliftonHHuntMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCliftonHHuntMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCliftonHHuntMd{baseClient}, updatedSourceCred, err
+	return SourceClientCliftonHHuntMd{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientProRobinset1 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/QA333/metadata
-func GetSourceClientProRobinset1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientProRobinset1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientProRobinset1{baseClient}, updatedSourceCred, err
+	return SourceClientProRobinset1{baseClient}, err
 }

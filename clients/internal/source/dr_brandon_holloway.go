@@ -19,8 +19,8 @@ type SourceClientDrBrandonHolloway struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6215f07a-9916-4137-9055-84bc5a503a57/metadata
-func GetSourceClientDrBrandonHolloway(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDrBrandonHolloway(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDrBrandonHolloway{baseClient}, updatedSourceCred, err
+	return SourceClientDrBrandonHolloway{baseClient}, err
 }

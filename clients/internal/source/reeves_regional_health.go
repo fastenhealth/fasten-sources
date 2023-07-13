@@ -19,8 +19,8 @@ type SourceClientReevesRegionalHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a7e8884c-0f8a-4040-a7e2-b8409572d6c9/metadata
-func GetSourceClientReevesRegionalHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientReevesRegionalHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientReevesRegionalHealth{baseClient}, updatedSourceCred, err
+	return SourceClientReevesRegionalHealth{baseClient}, err
 }

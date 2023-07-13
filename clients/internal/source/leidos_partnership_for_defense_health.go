@@ -19,8 +19,8 @@ type SourceClientLeidosPartnershipForDefenseHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/00224df3-b096-4cdb-852c-cbc83c0d3b06/metadata
-func GetSourceClientLeidosPartnershipForDefenseHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLeidosPartnershipForDefenseHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLeidosPartnershipForDefenseHealth{baseClient}, updatedSourceCred, err
+	return SourceClientLeidosPartnershipForDefenseHealth{baseClient}, err
 }

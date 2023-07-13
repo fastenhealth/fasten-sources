@@ -19,8 +19,8 @@ type SourceClientSparrowHealthSystem1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/96bf28ff-9478-4d5b-b771-10fa60d84e3e/metadata
-func GetSourceClientSparrowHealthSystem1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSparrowHealthSystem1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSparrowHealthSystem1{baseClient}, updatedSourceCred, err
+	return SourceClientSparrowHealthSystem1{baseClient}, err
 }

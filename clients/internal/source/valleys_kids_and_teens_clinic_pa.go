@@ -19,8 +19,8 @@ type SourceClientValleysKidsAndTeensClinicPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/NJKfTJEh1zcbACZlgIDQXFg1pMIt6s2k/metadata
-func GetSourceClientValleysKidsAndTeensClinicPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientValleysKidsAndTeensClinicPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientValleysKidsAndTeensClinicPa{baseClient}, updatedSourceCred, err
+	return SourceClientValleysKidsAndTeensClinicPa{baseClient}, err
 }

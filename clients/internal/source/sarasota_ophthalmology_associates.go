@@ -19,8 +19,8 @@ type SourceClientSarasotaOphthalmologyAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/49a6ba80-e0c3-453e-bbda-1f8cafc45f2c/metadata
-func GetSourceClientSarasotaOphthalmologyAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSarasotaOphthalmologyAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSarasotaOphthalmologyAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientSarasotaOphthalmologyAssociates{baseClient}, err
 }

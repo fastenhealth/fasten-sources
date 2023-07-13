@@ -19,8 +19,8 @@ type SourceClientSamaraServicesLlc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73737/metadata
-func GetSourceClientSamaraServicesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSamaraServicesLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSamaraServicesLlc{baseClient}, updatedSourceCred, err
+	return SourceClientSamaraServicesLlc{baseClient}, err
 }

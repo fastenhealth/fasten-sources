@@ -19,8 +19,8 @@ type SourceClientPrimeHealthcare struct {
 }
 
 // https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4/metadata
-func GetSourceClientPrimeHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPrimeHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPrimeHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientPrimeHealthcare{baseClient}, err
 }

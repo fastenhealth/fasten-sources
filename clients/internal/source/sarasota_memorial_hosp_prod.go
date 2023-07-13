@@ -19,8 +19,8 @@ type SourceClientSarasotaMemorialHospProd struct {
 }
 
 // https://mobilitymd.smh.com/FHIR/metadata
-func GetSourceClientSarasotaMemorialHospProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSarasotaMemorialHospProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSarasotaMemorialHospProd{baseClient}, updatedSourceCred, err
+	return SourceClientSarasotaMemorialHospProd{baseClient}, err
 }

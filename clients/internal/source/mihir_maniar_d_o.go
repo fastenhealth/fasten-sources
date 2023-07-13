@@ -19,8 +19,8 @@ type SourceClientMihirManiarDO struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/fc6e71f0-1feb-4aa5-8d40-7fb856d0d2f6/metadata
-func GetSourceClientMihirManiarDO(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMihirManiarDO(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMihirManiarDO{baseClient}, updatedSourceCred, err
+	return SourceClientMihirManiarDO{baseClient}, err
 }

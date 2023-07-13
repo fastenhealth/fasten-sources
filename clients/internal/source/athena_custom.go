@@ -20,8 +20,8 @@ type SourceClientAthenaCustom struct {
 
 // https://api.platform.athenahealth.com/fhir/r4/.well-known/smart-configuration
 // athena prod
-func GetSourceClientAthenaCustom(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := sandbox.GetSourceClientAthena(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAthenaCustom(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := sandbox.GetSourceClientAthena(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAthenaCustom{baseClient}, updatedSourceCred, err
+	return SourceClientAthenaCustom{baseClient}, err
 }

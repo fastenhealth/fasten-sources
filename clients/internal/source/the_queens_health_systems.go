@@ -19,8 +19,8 @@ type SourceClientTheQueensHealthSystems struct {
 }
 
 // https://mobileapps.queens.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientTheQueensHealthSystems(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheQueensHealthSystems(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheQueensHealthSystems{baseClient}, updatedSourceCred, err
+	return SourceClientTheQueensHealthSystems{baseClient}, err
 }

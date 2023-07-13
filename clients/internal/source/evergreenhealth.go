@@ -19,8 +19,8 @@ type SourceClientEvergreenhealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2f5abe1a-075b-4780-9a6d-abc160cae936/metadata
-func GetSourceClientEvergreenhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEvergreenhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEvergreenhealth{baseClient}, updatedSourceCred, err
+	return SourceClientEvergreenhealth{baseClient}, err
 }

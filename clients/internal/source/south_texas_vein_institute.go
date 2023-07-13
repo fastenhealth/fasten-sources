@@ -19,8 +19,8 @@ type SourceClientSouthTexasVeinInstitute struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/bFcH_rBwE4Vfh-4wWuSmUApKrNa0MEtt/metadata
-func GetSourceClientSouthTexasVeinInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthTexasVeinInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthTexasVeinInstitute{baseClient}, updatedSourceCred, err
+	return SourceClientSouthTexasVeinInstitute{baseClient}, err
 }

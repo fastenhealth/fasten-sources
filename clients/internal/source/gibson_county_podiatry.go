@@ -19,8 +19,8 @@ type SourceClientGibsonCountyPodiatry struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2bc71e38-c7fb-4443-b9ec-1941e90edee2/metadata
-func GetSourceClientGibsonCountyPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGibsonCountyPodiatry(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGibsonCountyPodiatry{baseClient}, updatedSourceCred, err
+	return SourceClientGibsonCountyPodiatry{baseClient}, err
 }

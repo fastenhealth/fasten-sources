@@ -19,8 +19,8 @@ type SourceClientTannerHealthSystem struct {
 }
 
 // https://epicproxy.et1098.epichosted.com/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientTannerHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTannerHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTannerHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientTannerHealthSystem{baseClient}, err
 }

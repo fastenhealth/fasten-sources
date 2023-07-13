@@ -19,8 +19,8 @@ type SourceClientDoverCardiologyCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/31d30d44-6840-4141-93e1-b13c2f0041c7/metadata
-func GetSourceClientDoverCardiologyCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDoverCardiologyCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDoverCardiologyCenter{baseClient}, updatedSourceCred, err
+	return SourceClientDoverCardiologyCenter{baseClient}, err
 }

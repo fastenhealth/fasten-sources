@@ -19,8 +19,8 @@ type SourceClientJoanneFoodimMdLlc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/76499/metadata
-func GetSourceClientJoanneFoodimMdLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJoanneFoodimMdLlc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJoanneFoodimMdLlc{baseClient}, updatedSourceCred, err
+	return SourceClientJoanneFoodimMdLlc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientChiMemorial struct {
 }
 
 // https://rpsouth.catholichealth.net/fhir/FHIRMCT/api/FHIR/R4/metadata
-func GetSourceClientChiMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientChiMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChiMemorial{baseClient}, updatedSourceCred, err
+	return SourceClientChiMemorial{baseClient}, err
 }

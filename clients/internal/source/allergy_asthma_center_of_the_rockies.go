@@ -19,8 +19,8 @@ type SourceClientAllergyAsthmaCenterOfTheRockies struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/1700138A/metadata
-func GetSourceClientAllergyAsthmaCenterOfTheRockies(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAllergyAsthmaCenterOfTheRockies(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAllergyAsthmaCenterOfTheRockies{baseClient}, updatedSourceCred, err
+	return SourceClientAllergyAsthmaCenterOfTheRockies{baseClient}, err
 }

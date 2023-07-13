@@ -19,8 +19,8 @@ type SourceClientEastBostonNeighborhoodHealthCenter struct {
 }
 
 // https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEastBostonNeighborhoodHealthCenter{baseClient}, updatedSourceCred, err
+	return SourceClientEastBostonNeighborhoodHealthCenter{baseClient}, err
 }

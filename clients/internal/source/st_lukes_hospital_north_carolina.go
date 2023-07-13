@@ -19,8 +19,8 @@ type SourceClientStLukesHospitalNorthCarolina struct {
 }
 
 // https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4/metadata
-func GetSourceClientStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientStLukesHospitalNorthCarolina{baseClient}, updatedSourceCred, err
+	return SourceClientStLukesHospitalNorthCarolina{baseClient}, err
 }

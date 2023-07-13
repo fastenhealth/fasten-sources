@@ -19,8 +19,8 @@ type SourceClientFootAndAnkleAssociatesOfMainePa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/2ccb01ad-4a64-4074-9560-d61ce84ce4ce/metadata
-func GetSourceClientFootAndAnkleAssociatesOfMainePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFootAndAnkleAssociatesOfMainePa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFootAndAnkleAssociatesOfMainePa{baseClient}, updatedSourceCred, err
+	return SourceClientFootAndAnkleAssociatesOfMainePa{baseClient}, err
 }

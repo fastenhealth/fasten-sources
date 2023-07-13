@@ -19,8 +19,8 @@ type SourceClientRidgeFamilyPractice struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/HYem62jAGgg_5fV9EEjMvZqF_I7hxCPq/metadata
-func GetSourceClientRidgeFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRidgeFamilyPractice(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRidgeFamilyPractice{baseClient}, updatedSourceCred, err
+	return SourceClientRidgeFamilyPractice{baseClient}, err
 }

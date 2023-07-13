@@ -20,10 +20,10 @@ type SourceClientKaiser struct {
 
 // https://kpx-service-bus.kp.org/service/cdo/siae/healthplankpxv1rc/metadata
 // https://developer.kp.org/#/apis
-func GetSourceClientKaiser(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKaiser(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaiser{baseClient}, updatedSourceCred, err
+	return SourceClientKaiser{baseClient}, err
 }
 
 // Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html

@@ -19,8 +19,8 @@ type SourceClientDelawareFootAndAnkleGroup1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f6b3438e-050c-4890-a29f-e0ac33bb956c/metadata
-func GetSourceClientDelawareFootAndAnkleGroup1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDelawareFootAndAnkleGroup1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDelawareFootAndAnkleGroup1{baseClient}, updatedSourceCred, err
+	return SourceClientDelawareFootAndAnkleGroup1{baseClient}, err
 }

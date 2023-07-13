@@ -19,8 +19,8 @@ type SourceClientBorgessHealthAlliance struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/l0sV4kAP8XYUeDPWgsblj-f2yztSg0Ya/metadata
-func GetSourceClientBorgessHealthAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBorgessHealthAlliance(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBorgessHealthAlliance{baseClient}, updatedSourceCred, err
+	return SourceClientBorgessHealthAlliance{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientNeoshoMemorialRegionalMedicalCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a9daee2a-e42f-4702-9c42-486fbda403f6/metadata
-func GetSourceClientNeoshoMemorialRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNeoshoMemorialRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNeoshoMemorialRegionalMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientNeoshoMemorialRegionalMedicalCenter{baseClient}, err
 }

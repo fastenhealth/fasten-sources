@@ -19,8 +19,8 @@ type SourceClientErieCountyMedicalCenterCorporationProd struct {
 }
 
 // https://myhealth.ecmc.edu//FHIR/metadata
-func GetSourceClientErieCountyMedicalCenterCorporationProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientErieCountyMedicalCenterCorporationProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientErieCountyMedicalCenterCorporationProd{baseClient}, updatedSourceCred, err
+	return SourceClientErieCountyMedicalCenterCorporationProd{baseClient}, err
 }

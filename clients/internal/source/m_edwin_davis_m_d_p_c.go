@@ -19,8 +19,8 @@ type SourceClientMEdwinDavisMDPC struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3b1ec0f9-269d-4e41-99b2-594fce574943/metadata
-func GetSourceClientMEdwinDavisMDPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMEdwinDavisMDPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMEdwinDavisMDPC{baseClient}, updatedSourceCred, err
+	return SourceClientMEdwinDavisMDPC{baseClient}, err
 }

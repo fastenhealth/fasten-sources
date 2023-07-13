@@ -19,8 +19,8 @@ type SourceClientValleyVascularAssociates struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/299f89be-f85c-4368-87fb-a971e7696d7c/metadata
-func GetSourceClientValleyVascularAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientValleyVascularAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientValleyVascularAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientValleyVascularAssociates{baseClient}, err
 }

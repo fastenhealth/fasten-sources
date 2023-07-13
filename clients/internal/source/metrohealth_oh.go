@@ -19,8 +19,8 @@ type SourceClientMetrohealthOh struct {
 }
 
 // https://fhir.metrohealth.org/fhir_prd/api/FHIR/R4/metadata
-func GetSourceClientMetrohealthOh(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMetrohealthOh(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMetrohealthOh{baseClient}, updatedSourceCred, err
+	return SourceClientMetrohealthOh{baseClient}, err
 }

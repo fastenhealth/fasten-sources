@@ -19,8 +19,8 @@ type SourceClientSleepMedicineInstituteOfTexasPa struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063011/metadata
-func GetSourceClientSleepMedicineInstituteOfTexasPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSleepMedicineInstituteOfTexasPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSleepMedicineInstituteOfTexasPa{baseClient}, updatedSourceCred, err
+	return SourceClientSleepMedicineInstituteOfTexasPa{baseClient}, err
 }

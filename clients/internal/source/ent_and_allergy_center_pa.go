@@ -19,8 +19,8 @@ type SourceClientEntAndAllergyCenterPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/bde9959c-b44e-4698-a1d4-e1ee4cc98a86/metadata
-func GetSourceClientEntAndAllergyCenterPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEntAndAllergyCenterPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEntAndAllergyCenterPa{baseClient}, updatedSourceCred, err
+	return SourceClientEntAndAllergyCenterPa{baseClient}, err
 }

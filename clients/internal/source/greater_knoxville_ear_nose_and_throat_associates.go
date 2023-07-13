@@ -19,8 +19,8 @@ type SourceClientGreaterKnoxvilleEarNoseAndThroatAssociates struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10028052/metadata
-func GetSourceClientGreaterKnoxvilleEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGreaterKnoxvilleEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGreaterKnoxvilleEarNoseAndThroatAssociates{baseClient}, updatedSourceCred, err
+	return SourceClientGreaterKnoxvilleEarNoseAndThroatAssociates{baseClient}, err
 }

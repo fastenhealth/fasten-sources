@@ -19,8 +19,8 @@ type SourceClientSanGorgonioMemorialHospital1 struct {
 }
 
 // https://scmprodweb.sng.hos.allscriptscloud.com/fhir/metadata
-func GetSourceClientSanGorgonioMemorialHospital1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSanGorgonioMemorialHospital1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSanGorgonioMemorialHospital1{baseClient}, updatedSourceCred, err
+	return SourceClientSanGorgonioMemorialHospital1{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientKaiserPermanenteMarylandVirginiaWashingtonDC struct {
 }
 
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/170/api/FHIR/R4/metadata
-func GetSourceClientKaiserPermanenteMarylandVirginiaWashingtonDC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKaiserPermanenteMarylandVirginiaWashingtonDC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaiserPermanenteMarylandVirginiaWashingtonDC{baseClient}, updatedSourceCred, err
+	return SourceClientKaiserPermanenteMarylandVirginiaWashingtonDC{baseClient}, err
 }

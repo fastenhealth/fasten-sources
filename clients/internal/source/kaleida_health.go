@@ -19,8 +19,8 @@ type SourceClientKaleidaHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/977e949f-0f0b-4a36-bf59-4f0819b90ab8/metadata
-func GetSourceClientKaleidaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKaleidaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaleidaHealth{baseClient}, updatedSourceCred, err
+	return SourceClientKaleidaHealth{baseClient}, err
 }

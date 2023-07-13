@@ -19,8 +19,8 @@ type SourceClientNortonHealthcare struct {
 }
 
 // https://epicsoap.nortonhealthcare.org/FHIRPRD/api/FHIR/R4/metadata
-func GetSourceClientNortonHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNortonHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNortonHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientNortonHealthcare{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientHorizonHealthServices struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/78f4cdd4-55a7-4d47-b25a-4d044d550506/metadata
-func GetSourceClientHorizonHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHorizonHealthServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHorizonHealthServices{baseClient}, updatedSourceCred, err
+	return SourceClientHorizonHealthServices{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientHancockCountyHealthSystem struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/0187d1c0-26b8-42cb-81e4-84d2429978e8/metadata
-func GetSourceClientHancockCountyHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHancockCountyHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHancockCountyHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientHancockCountyHealthSystem{baseClient}, err
 }

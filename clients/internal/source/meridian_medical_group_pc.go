@@ -19,8 +19,8 @@ type SourceClientMeridianMedicalGroupPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/73bc01f5-9bdd-4e4b-ba52-efb00b8cec28/metadata
-func GetSourceClientMeridianMedicalGroupPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMeridianMedicalGroupPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMeridianMedicalGroupPc{baseClient}, updatedSourceCred, err
+	return SourceClientMeridianMedicalGroupPc{baseClient}, err
 }

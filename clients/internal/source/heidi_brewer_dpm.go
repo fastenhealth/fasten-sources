@@ -19,8 +19,8 @@ type SourceClientHeidiBrewerDpm struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/45fd479e-4bcb-44bd-af7f-1d81650d7682/metadata
-func GetSourceClientHeidiBrewerDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHeidiBrewerDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHeidiBrewerDpm{baseClient}, updatedSourceCred, err
+	return SourceClientHeidiBrewerDpm{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientRushUniversityMedicalCenter struct {
 }
 
 // https://epicproxy.rush.edu/fhir-prd/api/FHIR/R4/metadata
-func GetSourceClientRushUniversityMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRushUniversityMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRushUniversityMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientRushUniversityMedicalCenter{baseClient}, err
 }

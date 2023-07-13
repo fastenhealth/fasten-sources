@@ -19,8 +19,8 @@ type SourceClientHattiesburgClinicAndForrestGeneralHospital struct {
 }
 
 // https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4/metadata
-func GetSourceClientHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHattiesburgClinicAndForrestGeneralHospital{baseClient}, updatedSourceCred, err
+	return SourceClientHattiesburgClinicAndForrestGeneralHospital{baseClient}, err
 }

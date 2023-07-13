@@ -19,8 +19,8 @@ type SourceClientBronsonCenterForColonAndRectalDiseases struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/42a3d9ff-99a4-4b24-abac-302ddbbc709f/metadata
-func GetSourceClientBronsonCenterForColonAndRectalDiseases(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBronsonCenterForColonAndRectalDiseases(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBronsonCenterForColonAndRectalDiseases{baseClient}, updatedSourceCred, err
+	return SourceClientBronsonCenterForColonAndRectalDiseases{baseClient}, err
 }

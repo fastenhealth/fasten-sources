@@ -19,8 +19,8 @@ type SourceClientSpectrumHealth struct {
 }
 
 // https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4/metadata
-func GetSourceClientSpectrumHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSpectrumHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSpectrumHealth{baseClient}, updatedSourceCred, err
+	return SourceClientSpectrumHealth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientAshDermatologyAndSkinCancerCenterPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/z9G2keqlZ_fphrvhMqvIpl_AN3LTEkDQ/metadata
-func GetSourceClientAshDermatologyAndSkinCancerCenterPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAshDermatologyAndSkinCancerCenterPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAshDermatologyAndSkinCancerCenterPa{baseClient}, updatedSourceCred, err
+	return SourceClientAshDermatologyAndSkinCancerCenterPa{baseClient}, err
 }

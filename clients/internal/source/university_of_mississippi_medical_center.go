@@ -19,8 +19,8 @@ type SourceClientUniversityOfMississippiMedicalCenter struct {
 }
 
 // https://soapproxy.umc.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfMississippiMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityOfMississippiMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityOfMississippiMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityOfMississippiMedicalCenter{baseClient}, err
 }

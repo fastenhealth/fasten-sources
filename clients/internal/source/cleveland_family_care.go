@@ -19,8 +19,8 @@ type SourceClientClevelandFamilyCare struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/237d7594-4541-4b90-ad67-9467f72ad1ef/metadata
-func GetSourceClientClevelandFamilyCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientClevelandFamilyCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClevelandFamilyCare{baseClient}, updatedSourceCred, err
+	return SourceClientClevelandFamilyCare{baseClient}, err
 }

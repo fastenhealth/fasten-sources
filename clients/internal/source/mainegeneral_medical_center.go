@@ -19,8 +19,8 @@ type SourceClientMainegeneralMedicalCenter struct {
 }
 
 // https://ma-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientMainegeneralMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMainegeneralMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMainegeneralMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientMainegeneralMedicalCenter{baseClient}, err
 }

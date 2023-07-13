@@ -19,8 +19,8 @@ type SourceClientKishwarShareefMdPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f16ab50d-5d7f-40fe-8c31-87d7133c9e42/metadata
-func GetSourceClientKishwarShareefMdPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKishwarShareefMdPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKishwarShareefMdPc{baseClient}, updatedSourceCred, err
+	return SourceClientKishwarShareefMdPc{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMonongaliaCountyGeneralHospitalCompany struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/41e7ed61-011a-4b3f-8e27-7aa832467b04/metadata
-func GetSourceClientMonongaliaCountyGeneralHospitalCompany(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMonongaliaCountyGeneralHospitalCompany(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMonongaliaCountyGeneralHospitalCompany{baseClient}, updatedSourceCred, err
+	return SourceClientMonongaliaCountyGeneralHospitalCompany{baseClient}, err
 }

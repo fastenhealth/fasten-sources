@@ -19,8 +19,8 @@ type SourceClientIowaFootCareCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4pSnl_JZLf4SWeoz2R9X-DNm9Ix_iwaz/metadata
-func GetSourceClientIowaFootCareCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientIowaFootCareCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIowaFootCareCenter{baseClient}, updatedSourceCred, err
+	return SourceClientIowaFootCareCenter{baseClient}, err
 }

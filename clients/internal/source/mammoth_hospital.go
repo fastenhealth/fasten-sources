@@ -19,8 +19,8 @@ type SourceClientMammothHospital struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/89b7757a-432f-4f56-8638-86920235f2d0/metadata
-func GetSourceClientMammothHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMammothHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMammothHospital{baseClient}, updatedSourceCred, err
+	return SourceClientMammothHospital{baseClient}, err
 }

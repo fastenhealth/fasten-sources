@@ -19,8 +19,8 @@ type SourceClientLavacaMedicalCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/91d3bb95-7713-4c15-beda-b8a73ec1b5e6/metadata
-func GetSourceClientLavacaMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLavacaMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLavacaMedicalCenter{baseClient}, updatedSourceCred, err
+	return SourceClientLavacaMedicalCenter{baseClient}, err
 }

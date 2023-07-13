@@ -19,8 +19,8 @@ type SourceClientBlackwellFamilyMedicine struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/azPSNzaLoV4tjEfJb9ta5IiEqpVSA9V1/metadata
-func GetSourceClientBlackwellFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBlackwellFamilyMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlackwellFamilyMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientBlackwellFamilyMedicine{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientKingsViewDelNorte struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/c6359e1c-cb28-41a4-8d79-4332ce30e322/metadata
-func GetSourceClientKingsViewDelNorte(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKingsViewDelNorte(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKingsViewDelNorte{baseClient}, updatedSourceCred, err
+	return SourceClientKingsViewDelNorte{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientAdvocateAuroraHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/Hhyp0HLTvlWluJy7STHeGfBt6VssX-DH/metadata
-func GetSourceClientAdvocateAuroraHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdvocateAuroraHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdvocateAuroraHealth{baseClient}, updatedSourceCred, err
+	return SourceClientAdvocateAuroraHealth{baseClient}, err
 }

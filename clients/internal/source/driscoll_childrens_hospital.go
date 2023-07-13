@@ -19,8 +19,8 @@ type SourceClientDriscollChildrensHospital struct {
 }
 
 // https://fhir.dchstx.org/FHIR-External/api/FHIR/R4/metadata
-func GetSourceClientDriscollChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDriscollChildrensHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDriscollChildrensHospital{baseClient}, updatedSourceCred, err
+	return SourceClientDriscollChildrensHospital{baseClient}, err
 }

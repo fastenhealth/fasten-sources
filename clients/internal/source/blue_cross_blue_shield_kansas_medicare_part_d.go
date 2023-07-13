@@ -19,8 +19,8 @@ type SourceClientBlueCrossBlueShieldKansasMedicarePartD struct {
 
 // https://patient360ks.bcbsdirect.com/P360Member/api/fhir-r4/metadata
 // https://patient360ks.bcbsdirect.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientBlueCrossBlueShieldKansasMedicarePartD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBlueCrossBlueShieldKansasMedicarePartD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlueCrossBlueShieldKansasMedicarePartD{baseClient}, updatedSourceCred, err
+	return SourceClientBlueCrossBlueShieldKansasMedicarePartD{baseClient}, err
 }

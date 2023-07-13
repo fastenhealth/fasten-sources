@@ -19,8 +19,8 @@ type SourceClientUnitypointHealth struct {
 }
 
 // https://epicfhir.unitypoint.org/ProdFHIR/api/FHIR/R4/metadata
-func GetSourceClientUnitypointHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUnitypointHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUnitypointHealth{baseClient}, updatedSourceCred, err
+	return SourceClientUnitypointHealth{baseClient}, err
 }

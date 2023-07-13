@@ -19,8 +19,8 @@ type SourceClientHighmarkWesternNewYork struct {
 
 // https://patient360.mybcbswny.com/P360Member/api/fhir-r4/metadata
 // https://patient360.mybcbswny.com/P360Member/fhir/documentation?prefix=fhir-r4
-func GetSourceClientHighmarkWesternNewYork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHighmarkWesternNewYork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHighmarkWesternNewYork{baseClient}, updatedSourceCred, err
+	return SourceClientHighmarkWesternNewYork{baseClient}, err
 }

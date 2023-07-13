@@ -19,8 +19,8 @@ type SourceClientJacquelineBracyMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/75686/metadata
-func GetSourceClientJacquelineBracyMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJacquelineBracyMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJacquelineBracyMd{baseClient}, updatedSourceCred, err
+	return SourceClientJacquelineBracyMd{baseClient}, err
 }

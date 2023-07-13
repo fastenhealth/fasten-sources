@@ -19,8 +19,8 @@ type SourceClientAssociatedPodiatristsLlp struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/81ed713e-778e-4b5c-9b69-03c747a235d6/metadata
-func GetSourceClientAssociatedPodiatristsLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAssociatedPodiatristsLlp(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAssociatedPodiatristsLlp{baseClient}, updatedSourceCred, err
+	return SourceClientAssociatedPodiatristsLlp{baseClient}, err
 }

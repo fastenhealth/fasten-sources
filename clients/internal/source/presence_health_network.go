@@ -19,8 +19,8 @@ type SourceClientPresenceHealthNetwork struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/69184/metadata
-func GetSourceClientPresenceHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPresenceHealthNetwork(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPresenceHealthNetwork{baseClient}, updatedSourceCred, err
+	return SourceClientPresenceHealthNetwork{baseClient}, err
 }

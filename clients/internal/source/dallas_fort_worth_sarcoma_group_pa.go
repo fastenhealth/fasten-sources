@@ -19,8 +19,8 @@ type SourceClientDallasFortWorthSarcomaGroupPa struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10063631/metadata
-func GetSourceClientDallasFortWorthSarcomaGroupPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientDallasFortWorthSarcomaGroupPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDallasFortWorthSarcomaGroupPa{baseClient}, updatedSourceCred, err
+	return SourceClientDallasFortWorthSarcomaGroupPa{baseClient}, err
 }

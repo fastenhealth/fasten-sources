@@ -19,8 +19,8 @@ type SourceClientCullmanMedicalAndPediatricAssocPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/10SsEyRV6mB-ixPURUQbSLUZ7vtegZBi/metadata
-func GetSourceClientCullmanMedicalAndPediatricAssocPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCullmanMedicalAndPediatricAssocPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCullmanMedicalAndPediatricAssocPc{baseClient}, updatedSourceCred, err
+	return SourceClientCullmanMedicalAndPediatricAssocPc{baseClient}, err
 }

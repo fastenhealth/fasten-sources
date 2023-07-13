@@ -19,8 +19,8 @@ type SourceClientPradipMVyasMd struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/4272/metadata
-func GetSourceClientPradipMVyasMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPradipMVyasMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPradipMVyasMd{baseClient}, updatedSourceCred, err
+	return SourceClientPradipMVyasMd{baseClient}, err
 }

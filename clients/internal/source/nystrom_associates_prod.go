@@ -19,8 +19,8 @@ type SourceClientNystromAssociatesProd struct {
 }
 
 // https://nyt-fhir.allscriptscloud.com/FHIR/metadata
-func GetSourceClientNystromAssociatesProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNystromAssociatesProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNystromAssociatesProd{baseClient}, updatedSourceCred, err
+	return SourceClientNystromAssociatesProd{baseClient}, err
 }

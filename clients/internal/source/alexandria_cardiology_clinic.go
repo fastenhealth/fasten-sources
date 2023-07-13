@@ -19,8 +19,8 @@ type SourceClientAlexandriaCardiologyClinic struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10006428/metadata
-func GetSourceClientAlexandriaCardiologyClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlexandriaCardiologyClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlexandriaCardiologyClinic{baseClient}, updatedSourceCred, err
+	return SourceClientAlexandriaCardiologyClinic{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientCoxhealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a1b70c2c-780f-4d21-a690-3d71302d3d4f/metadata
-func GetSourceClientCoxhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCoxhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCoxhealth{baseClient}, updatedSourceCred, err
+	return SourceClientCoxhealth{baseClient}, err
 }

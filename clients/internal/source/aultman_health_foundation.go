@@ -19,8 +19,8 @@ type SourceClientAultmanHealthFoundation struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/mP6IHJrv4n0_mPZFBm5GcbTX3TNMQJqa/metadata
-func GetSourceClientAultmanHealthFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAultmanHealthFoundation(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAultmanHealthFoundation{baseClient}, updatedSourceCred, err
+	return SourceClientAultmanHealthFoundation{baseClient}, err
 }

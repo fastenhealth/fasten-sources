@@ -19,8 +19,8 @@ type SourceClientFacvConsultantsPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/4b3fb786-b574-41dd-9f14-c2679485ee61/metadata
-func GetSourceClientFacvConsultantsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFacvConsultantsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFacvConsultantsPc{baseClient}, updatedSourceCred, err
+	return SourceClientFacvConsultantsPc{baseClient}, err
 }

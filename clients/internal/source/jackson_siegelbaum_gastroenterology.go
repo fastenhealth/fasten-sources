@@ -19,8 +19,8 @@ type SourceClientJacksonSiegelbaumGastroenterology struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/d3bf785e-3489-4660-82e7-681c3c1a77cd/metadata
-func GetSourceClientJacksonSiegelbaumGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJacksonSiegelbaumGastroenterology(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJacksonSiegelbaumGastroenterology{baseClient}, updatedSourceCred, err
+	return SourceClientJacksonSiegelbaumGastroenterology{baseClient}, err
 }

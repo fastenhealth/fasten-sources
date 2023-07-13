@@ -17,4 +17,6 @@ type SourceClient interface {
 	//Manual client ONLY functions
 	SyncAllBundle(db DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (UpsertSummary, error)
 	ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error)
+
+	GetSourceCredential() SourceCredential
 }

@@ -19,8 +19,8 @@ type SourceClientPeakViewInternalMedicine struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/73016/metadata
-func GetSourceClientPeakViewInternalMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPeakViewInternalMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPeakViewInternalMedicine{baseClient}, updatedSourceCred, err
+	return SourceClientPeakViewInternalMedicine{baseClient}, err
 }

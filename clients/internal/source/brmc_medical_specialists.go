@@ -19,8 +19,8 @@ type SourceClientBrmcMedicalSpecialists struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/802a71be-a559-4f91-97b8-8d4875271bca/metadata
-func GetSourceClientBrmcMedicalSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBrmcMedicalSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBrmcMedicalSpecialists{baseClient}, updatedSourceCred, err
+	return SourceClientBrmcMedicalSpecialists{baseClient}, err
 }

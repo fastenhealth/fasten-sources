@@ -19,8 +19,8 @@ type SourceClientPiedmontHealthcare1 struct {
 }
 
 // https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4/metadata
-func GetSourceClientPiedmontHealthcare1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPiedmontHealthcare1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPiedmontHealthcare1{baseClient}, updatedSourceCred, err
+	return SourceClientPiedmontHealthcare1{baseClient}, err
 }

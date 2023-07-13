@@ -19,8 +19,8 @@ type SourceClientNortheastGeorgiaHealthSystem struct {
 }
 
 // https://wpprod.nghs.com/fhir/api/FHIR/R4/metadata
-func GetSourceClientNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNortheastGeorgiaHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientNortheastGeorgiaHealthSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientJamesRMilneDoPa struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/56a037e8-3411-4ae3-badc-5241023ea3af/metadata
-func GetSourceClientJamesRMilneDoPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientJamesRMilneDoPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientJamesRMilneDoPa{baseClient}, updatedSourceCred, err
+	return SourceClientJamesRMilneDoPa{baseClient}, err
 }

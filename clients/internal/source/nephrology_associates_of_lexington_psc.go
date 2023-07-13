@@ -19,8 +19,8 @@ type SourceClientNephrologyAssociatesOfLexingtonPsc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10005590/metadata
-func GetSourceClientNephrologyAssociatesOfLexingtonPsc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientNephrologyAssociatesOfLexingtonPsc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNephrologyAssociatesOfLexingtonPsc{baseClient}, updatedSourceCred, err
+	return SourceClientNephrologyAssociatesOfLexingtonPsc{baseClient}, err
 }

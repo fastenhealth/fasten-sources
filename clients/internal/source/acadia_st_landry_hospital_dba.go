@@ -19,8 +19,8 @@ type SourceClientAcadiaStLandryHospitalDba struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/85N4jhvrbTGKz1yWzGdSlNin40OBTFWJ/metadata
-func GetSourceClientAcadiaStLandryHospitalDba(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAcadiaStLandryHospitalDba(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAcadiaStLandryHospitalDba{baseClient}, updatedSourceCred, err
+	return SourceClientAcadiaStLandryHospitalDba{baseClient}, err
 }

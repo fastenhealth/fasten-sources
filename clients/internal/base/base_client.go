@@ -14,6 +14,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -28,6 +29,12 @@ type SourceClientBase struct {
 
 	UsCoreResources []string
 	FhirVersion     string
+
+	//When test mode is enabled, tokens will not be refreshed, and Http client provided will be used (usually go-vcr for playback)
+	testMode bool
+
+	//Mutex to prevent multiple token refreshes from happening at the same time
+	refreshMutex sync.Mutex
 }
 
 func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
@@ -37,68 +44,12 @@ func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.Fh
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, *models.SourceCredential, error) {
-	var httpClient *http.Client
-	var updatedSource *models.SourceCredential
-	if len(testHttpClient) == 0 {
-		//check if we need to refresh the access token
-		//https://github.com/golang/oauth2/issues/84#issuecomment-520099526
-		// https://chromium.googlesource.com/external/github.com/golang/oauth2/+/8f816d62a2652f705144857bbbcc26f2c166af9e/oauth2.go#239
-		conf := &oauth2.Config{
-			ClientID:     sourceCreds.GetClientId(),
-			ClientSecret: "",
-			Endpoint: oauth2.Endpoint{
-				AuthURL:  sourceCreds.GetOauthAuthorizationEndpoint(),
-				TokenURL: sourceCreds.GetOauthTokenEndpoint(),
-			},
-			//RedirectURL:  "",
-			//Scopes:       nil,
-		}
-		token := &oauth2.Token{
-			TokenType:    "Bearer",
-			RefreshToken: sourceCreds.GetRefreshToken(),
-			AccessToken:  sourceCreds.GetAccessToken(),
-			Expiry:       time.Unix(sourceCreds.GetExpiresAt(), 0),
-		}
-		if token.Expiry.Before(time.Now()) { // expired so let's update it
-			log.Println("access token expired, refreshing...")
-			src := conf.TokenSource(ctx, token)
-			newToken, err := src.Token() // this actually goes and renews the tokens
-			if err != nil {
-				return nil, nil, err
-			}
-			if newToken.AccessToken != token.AccessToken {
-				token = newToken
+func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, error) {
 
-				// update the "source" credential with new data (which will need to be sent
-				sourceCreds.RefreshTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
-				updatedSource = &sourceCreds
-				//updatedSource.AccessToken = newToken.AccessToken
-				//updatedSource.ExpiresAt = newToken.Expiry.Unix()
-				//// Don't overwrite `RefreshToken` with an empty value
-				//// if this was a token refreshing request.
-				//if newToken.RefreshToken != "" {
-				//	updatedSource.RefreshToken = newToken.RefreshToken
-				//}
-
-			}
-		}
-
-		// OLD CODE
-		httpClient = oauth2.NewClient(ctx, oauth2.StaticTokenSource(token))
-
-	} else {
-		//Testing mode.
-		httpClient = testHttpClient[0]
-	}
-
-	httpClient.Timeout = 10 * time.Second
-
-	return &SourceClientBase{
+	client := &SourceClientBase{
 		FastenEnv:        env,
 		Context:          ctx,
 		Logger:           globalLogger,
-		OauthClient:      httpClient,
 		SourceCredential: sourceCreds,
 		Headers:          map[string]string{},
 
@@ -130,17 +81,102 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 			// "ServiceRequest",
 			// "Specimen",
 		},
-	}, updatedSource, nil
+	}
+
+	if len(testHttpClient) > 0 {
+		//Testing mode.
+		client.testMode = true
+		client.OauthClient = testHttpClient[0]
+		client.OauthClient.Timeout = 10 * time.Second
+	}
+
+	err := client.RefreshAccessToken()
+	if err != nil {
+		return nil, err
+	}
+
+	return client, nil
 }
 
 func (c *SourceClientBase) GetUsCoreResources() []string {
 	return c.UsCoreResources
 }
 
+func (c *SourceClientBase) GetSourceCredential() models.SourceCredential {
+	return c.SourceCredential
+}
+
+func (c *SourceClientBase) RefreshAccessToken() error {
+	if c.testMode {
+		//if test mode is enabled, we cannot refresh the access token
+		return nil
+	}
+
+	c.refreshMutex.Lock()
+	defer c.refreshMutex.Unlock()
+
+	//check if we need to refresh the access token
+	//https://github.com/golang/oauth2/issues/84#issuecomment-520099526
+	// https://chromium.googlesource.com/external/github.com/golang/oauth2/+/8f816d62a2652f705144857bbbcc26f2c166af9e/oauth2.go#239
+	conf := &oauth2.Config{
+		ClientID:     c.SourceCredential.GetClientId(),
+		ClientSecret: "",
+		Endpoint: oauth2.Endpoint{
+			AuthURL:  c.SourceCredential.GetOauthAuthorizationEndpoint(),
+			TokenURL: c.SourceCredential.GetOauthTokenEndpoint(),
+		},
+		//RedirectURL:  "",
+		//Scopes:       nil,
+	}
+
+	token := &oauth2.Token{
+		TokenType:    "Bearer",
+		RefreshToken: c.SourceCredential.GetRefreshToken(),
+		AccessToken:  c.SourceCredential.GetAccessToken(),
+		Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
+	}
+
+	if token.Expiry.Before(time.Now().Add(5 * time.Second)) { // expired (or will expire in 5 seconds) so let's update it
+		log.Println("access token expired, refreshing...")
+
+		src := conf.TokenSource(c.Context, token)
+		newToken, err := src.Token() // this actually goes and renews the tokens
+		if err != nil {
+			return err
+		}
+		log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
+		if newToken.AccessToken != token.AccessToken {
+			token = newToken
+
+			// update the "source" credential with new data (which will need to be sent
+			c.SourceCredential.RefreshTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
+			//updatedSource.AccessToken = newToken.AccessToken
+			//updatedSource.ExpiresAt = newToken.Expiry.Unix()
+			//// Don't overwrite `RefreshToken` with an empty value
+			//// if this was a token refreshing request.
+			//if newToken.RefreshToken != "" {
+			//	updatedSource.RefreshToken = newToken.RefreshToken
+			//}
+
+		}
+	}
+
+	c.OauthClient = oauth2.NewClient(c.Context, oauth2.StaticTokenSource(token))
+	c.OauthClient.Timeout = 10 * time.Second
+
+	return nil
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HttpClient
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) error {
+	//check if we need to refresh the access token
+	err := c.RefreshAccessToken()
+	if err != nil {
+		return err
+	}
+
 	resourceUrl, err := url.Parse(resourceSubpathOrNext)
 	if err != nil {
 		return err

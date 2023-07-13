@@ -19,8 +19,8 @@ type SourceClientTulaneDoctorsConnectedCare struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/aE6oKaDmDLfrLKjprLJ-m3sxRFENsPKE/metadata
-func GetSourceClientTulaneDoctorsConnectedCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTulaneDoctorsConnectedCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTulaneDoctorsConnectedCare{baseClient}, updatedSourceCred, err
+	return SourceClientTulaneDoctorsConnectedCare{baseClient}, err
 }

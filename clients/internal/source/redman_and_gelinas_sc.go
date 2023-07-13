@@ -19,8 +19,8 @@ type SourceClientRedmanAndGelinasSc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6f707b55-bbd5-4cb5-883c-4e7d55beafef/metadata
-func GetSourceClientRedmanAndGelinasSc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientRedmanAndGelinasSc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRedmanAndGelinasSc{baseClient}, updatedSourceCred, err
+	return SourceClientRedmanAndGelinasSc{baseClient}, err
 }

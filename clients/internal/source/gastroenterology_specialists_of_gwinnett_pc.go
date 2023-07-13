@@ -19,8 +19,8 @@ type SourceClientGastroenterologySpecialistsOfGwinnettPc struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10022398/metadata
-func GetSourceClientGastroenterologySpecialistsOfGwinnettPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientGastroenterologySpecialistsOfGwinnettPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGastroenterologySpecialistsOfGwinnettPc{baseClient}, updatedSourceCred, err
+	return SourceClientGastroenterologySpecialistsOfGwinnettPc{baseClient}, err
 }

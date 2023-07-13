@@ -19,8 +19,8 @@ type SourceClientEnkeiAmericaInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/44bf4972-5022-440e-b215-ce65b0183980/metadata
-func GetSourceClientEnkeiAmericaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEnkeiAmericaInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEnkeiAmericaInc{baseClient}, updatedSourceCred, err
+	return SourceClientEnkeiAmericaInc{baseClient}, err
 }

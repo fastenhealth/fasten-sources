@@ -19,8 +19,8 @@ type SourceClientSouthernIowaOrthopedics struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/89ded511-67c4-400b-8714-ed51dd046b01/metadata
-func GetSourceClientSouthernIowaOrthopedics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthernIowaOrthopedics(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthernIowaOrthopedics{baseClient}, updatedSourceCred, err
+	return SourceClientSouthernIowaOrthopedics{baseClient}, err
 }

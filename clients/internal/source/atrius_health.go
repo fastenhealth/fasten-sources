@@ -19,8 +19,8 @@ type SourceClientAtriusHealth struct {
 }
 
 // https://iatrius.atriushealth.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientAtriusHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAtriusHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAtriusHealth{baseClient}, updatedSourceCred, err
+	return SourceClientAtriusHealth{baseClient}, err
 }

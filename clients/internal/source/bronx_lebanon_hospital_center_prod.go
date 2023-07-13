@@ -19,8 +19,8 @@ type SourceClientBronxLebanonHospitalCenterProd struct {
 }
 
 // https://fhirprod.bronxleb.org/FHIR/metadata
-func GetSourceClientBronxLebanonHospitalCenterProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBronxLebanonHospitalCenterProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBronxLebanonHospitalCenterProd{baseClient}, updatedSourceCred, err
+	return SourceClientBronxLebanonHospitalCenterProd{baseClient}, err
 }

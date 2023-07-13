@@ -19,8 +19,8 @@ type SourceClientAppalachianRegional struct {
 }
 
 // https://fhirprod.apprhs.org/FHIR/metadata
-func GetSourceClientAppalachianRegional(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAppalachianRegional(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAppalachianRegional{baseClient}, updatedSourceCred, err
+	return SourceClientAppalachianRegional{baseClient}, err
 }

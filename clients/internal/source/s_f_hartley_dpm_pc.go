@@ -19,8 +19,8 @@ type SourceClientSFHartleyDpmPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/Z-NGhaoKbaEuTYlFPEiqS3Vb3zxVYtv3/metadata
-func GetSourceClientSFHartleyDpmPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSFHartleyDpmPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSFHartleyDpmPc{baseClient}, updatedSourceCred, err
+	return SourceClientSFHartleyDpmPc{baseClient}, err
 }

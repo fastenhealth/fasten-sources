@@ -19,8 +19,8 @@ type SourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f2aa0e6f-59f8-4af5-916b-5f2f9445c1cb/metadata
-func GetSourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth{baseClient}, updatedSourceCred, err
+	return SourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMontefioreNewRochelleHospital struct {
 }
 
 // https://fhirprod.montefiore.org/FHIR/metadata
-func GetSourceClientMontefioreNewRochelleHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMontefioreNewRochelleHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMontefioreNewRochelleHospital{baseClient}, updatedSourceCred, err
+	return SourceClientMontefioreNewRochelleHospital{baseClient}, err
 }

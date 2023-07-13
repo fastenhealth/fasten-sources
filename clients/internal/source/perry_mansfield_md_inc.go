@@ -19,8 +19,8 @@ type SourceClientPerryMansfieldMdInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9c14889b-5c15-4fbc-9176-47ac68d769a1/metadata
-func GetSourceClientPerryMansfieldMdInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPerryMansfieldMdInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPerryMansfieldMdInc{baseClient}, updatedSourceCred, err
+	return SourceClientPerryMansfieldMdInc{baseClient}, err
 }

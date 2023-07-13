@@ -19,8 +19,8 @@ type SourceClientAlabamaMedicineAndRheumatologyLlc1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/f70aea94-18f8-4ff4-abb1-7186fe733a24/metadata
-func GetSourceClientAlabamaMedicineAndRheumatologyLlc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlabamaMedicineAndRheumatologyLlc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlabamaMedicineAndRheumatologyLlc1{baseClient}, updatedSourceCred, err
+	return SourceClientAlabamaMedicineAndRheumatologyLlc1{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientTrinityHealth1 struct {
 }
 
 // https://epic-ext.trinity-health.org/FHIR/api/FHIR/R4/metadata
-func GetSourceClientTrinityHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTrinityHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTrinityHealth1{baseClient}, updatedSourceCred, err
+	return SourceClientTrinityHealth1{baseClient}, err
 }

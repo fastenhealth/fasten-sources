@@ -19,8 +19,8 @@ type SourceClientColumbusRegionalHealthcareSystem1 struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/969307fb-b249-4208-b0b4-56a6e3889e8c/metadata
-func GetSourceClientColumbusRegionalHealthcareSystem1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientColumbusRegionalHealthcareSystem1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientColumbusRegionalHealthcareSystem1{baseClient}, updatedSourceCred, err
+	return SourceClientColumbusRegionalHealthcareSystem1{baseClient}, err
 }

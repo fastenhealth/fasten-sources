@@ -19,8 +19,8 @@ type SourceClientEskenaziHealth struct {
 }
 
 // https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4/metadata
-func GetSourceClientEskenaziHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientEskenaziHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEskenaziHealth{baseClient}, updatedSourceCred, err
+	return SourceClientEskenaziHealth{baseClient}, err
 }

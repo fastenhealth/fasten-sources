@@ -19,8 +19,8 @@ type SourceClientIndianapolisGastroenterologyInc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/1d5dc169-f536-4ee1-9c67-c93c23521729/metadata
-func GetSourceClientIndianapolisGastroenterologyInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientIndianapolisGastroenterologyInc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIndianapolisGastroenterologyInc{baseClient}, updatedSourceCred, err
+	return SourceClientIndianapolisGastroenterologyInc{baseClient}, err
 }

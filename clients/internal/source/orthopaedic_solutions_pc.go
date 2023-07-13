@@ -19,8 +19,8 @@ type SourceClientOrthopaedicSolutionsPc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10063219/metadata
-func GetSourceClientOrthopaedicSolutionsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOrthopaedicSolutionsPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOrthopaedicSolutionsPc{baseClient}, updatedSourceCred, err
+	return SourceClientOrthopaedicSolutionsPc{baseClient}, err
 }

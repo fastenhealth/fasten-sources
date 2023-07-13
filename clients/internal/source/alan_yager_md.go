@@ -19,8 +19,8 @@ type SourceClientAlanYagerMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9f256476-d263-4340-85b9-e872137a0274/metadata
-func GetSourceClientAlanYagerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAlanYagerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAlanYagerMd{baseClient}, updatedSourceCred, err
+	return SourceClientAlanYagerMd{baseClient}, err
 }

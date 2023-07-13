@@ -19,8 +19,8 @@ type SourceClientHendersonvilleObGynAssoc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/0009615/metadata
-func GetSourceClientHendersonvilleObGynAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHendersonvilleObGynAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHendersonvilleObGynAssoc{baseClient}, updatedSourceCred, err
+	return SourceClientHendersonvilleObGynAssoc{baseClient}, err
 }

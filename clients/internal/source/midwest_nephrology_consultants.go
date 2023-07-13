@@ -19,8 +19,8 @@ type SourceClientMidwestNephrologyConsultants struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10027823/metadata
-func GetSourceClientMidwestNephrologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMidwestNephrologyConsultants(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMidwestNephrologyConsultants{baseClient}, updatedSourceCred, err
+	return SourceClientMidwestNephrologyConsultants{baseClient}, err
 }

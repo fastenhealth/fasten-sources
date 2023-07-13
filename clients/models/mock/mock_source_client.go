@@ -9,6 +9,7 @@ import (
 	reflect "reflect"
 
 	models "github.com/fastenhealth/fasten-sources/clients/models"
+	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	gomock "github.com/golang/mock/gomock"
 )
 
@@ -36,11 +37,11 @@ func (m *MockSourceClient) EXPECT() *MockSourceClientMockRecorder {
 }
 
 // ExtractPatientId mocks base method.
-func (m *MockSourceClient) ExtractPatientId(bundleFile *os.File) (string, string, error) {
+func (m *MockSourceClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExtractPatientId", bundleFile)
 	ret0, _ := ret[0].(string)
-	ret1, _ := ret[1].(string)
+	ret1, _ := ret[1].(pkg.FhirVersion)
 	ret2, _ := ret[2].(error)
 	return ret0, ret1, ret2
 }
@@ -80,6 +81,20 @@ func (mr *MockSourceClientMockRecorder) GetResourceBundle(relativeResourcePath i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceBundle", reflect.TypeOf((*MockSourceClient)(nil).GetResourceBundle), relativeResourcePath)
 }
 
+// GetSourceCredential mocks base method.
+func (m *MockSourceClient) GetSourceCredential() models.SourceCredential {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSourceCredential")
+	ret0, _ := ret[0].(models.SourceCredential)
+	return ret0
+}
+
+// GetSourceCredential indicates an expected call of GetSourceCredential.
+func (mr *MockSourceClientMockRecorder) GetSourceCredential() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceCredential", reflect.TypeOf((*MockSourceClient)(nil).GetSourceCredential))
+}
+
 // GetUsCoreResources mocks base method.
 func (m *MockSourceClient) GetUsCoreResources() []string {
 	m.ctrl.T.Helper()
@@ -110,18 +125,18 @@ func (mr *MockSourceClientMockRecorder) SyncAll(db interface{}) *gomock.Call {
 }
 
 // SyncAllBundle mocks base method.
-func (m *MockSourceClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType string) (models.UpsertSummary, error) {
+func (m *MockSourceClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SyncAllBundle", db, bundleFile, bundleType)
+	ret := m.ctrl.Call(m, "SyncAllBundle", db, bundleFile, bundleFhirVersion)
 	ret0, _ := ret[0].(models.UpsertSummary)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // SyncAllBundle indicates an expected call of SyncAllBundle.
-func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile, bundleType interface{}) *gomock.Call {
+func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile, bundleFhirVersion interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllBundle), db, bundleFile, bundleType)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncAllBundle", reflect.TypeOf((*MockSourceClient)(nil).SyncAllBundle), db, bundleFile, bundleFhirVersion)
 }
 
 // SyncAllByPatientEverythingBundle mocks base method.

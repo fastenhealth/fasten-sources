@@ -19,8 +19,8 @@ type SourceClientHcaprod36 struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/HCAPROD_36/metadata
-func GetSourceClientHcaprod36(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHcaprod36(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHcaprod36{baseClient}, updatedSourceCred, err
+	return SourceClientHcaprod36{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientVeronicaKacmarFedorchakDpm struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/34c7ad52-72ac-4308-ba34-6fd734dc9209/metadata
-func GetSourceClientVeronicaKacmarFedorchakDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientVeronicaKacmarFedorchakDpm(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVeronicaKacmarFedorchakDpm{baseClient}, updatedSourceCred, err
+	return SourceClientVeronicaKacmarFedorchakDpm{baseClient}, err
 }

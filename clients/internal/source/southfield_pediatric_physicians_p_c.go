@@ -19,8 +19,8 @@ type SourceClientSouthfieldPediatricPhysiciansPC struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10043636/metadata
-func GetSourceClientSouthfieldPediatricPhysiciansPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientSouthfieldPediatricPhysiciansPC(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSouthfieldPediatricPhysiciansPC{baseClient}, updatedSourceCred, err
+	return SourceClientSouthfieldPediatricPhysiciansPC{baseClient}, err
 }

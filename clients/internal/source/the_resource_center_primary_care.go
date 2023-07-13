@@ -19,8 +19,8 @@ type SourceClientTheResourceCenterPrimaryCare struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10059285/metadata
-func GetSourceClientTheResourceCenterPrimaryCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientTheResourceCenterPrimaryCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTheResourceCenterPrimaryCare{baseClient}, updatedSourceCred, err
+	return SourceClientTheResourceCenterPrimaryCare{baseClient}, err
 }

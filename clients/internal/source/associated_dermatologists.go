@@ -19,8 +19,8 @@ type SourceClientAssociatedDermatologists struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/70378/metadata
-func GetSourceClientAssociatedDermatologists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAssociatedDermatologists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAssociatedDermatologists{baseClient}, updatedSourceCred, err
+	return SourceClientAssociatedDermatologists{baseClient}, err
 }

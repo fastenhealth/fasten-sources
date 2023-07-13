@@ -19,8 +19,8 @@ type SourceClientThinkWholePersonHealthcare struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10070043/metadata
-func GetSourceClientThinkWholePersonHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientThinkWholePersonHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientThinkWholePersonHealthcare{baseClient}, updatedSourceCred, err
+	return SourceClientThinkWholePersonHealthcare{baseClient}, err
 }

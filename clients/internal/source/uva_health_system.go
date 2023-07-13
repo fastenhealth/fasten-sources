@@ -19,8 +19,8 @@ type SourceClientUvaHealthSystem struct {
 }
 
 // https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4/metadata
-func GetSourceClientUvaHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUvaHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUvaHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientUvaHealthSystem{baseClient}, err
 }

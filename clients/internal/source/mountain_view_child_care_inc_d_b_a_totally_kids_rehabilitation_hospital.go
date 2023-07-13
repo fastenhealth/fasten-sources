@@ -19,8 +19,8 @@ type SourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital st
 }
 
 // https://fhir-myrecord.cerner.com/r4/1fec57aa-48c4-4598-a98f-f72022b4a4cc/metadata
-func GetSourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital{baseClient}, updatedSourceCred, err
+	return SourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital{baseClient}, err
 }

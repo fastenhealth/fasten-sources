@@ -19,8 +19,8 @@ type SourceClientCityOfVirginiaBeach struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/9229a1fd-2cd1-41dc-9da8-258046291286/metadata
-func GetSourceClientCityOfVirginiaBeach(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCityOfVirginiaBeach(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCityOfVirginiaBeach{baseClient}, updatedSourceCred, err
+	return SourceClientCityOfVirginiaBeach{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientMedsouthAssociatesPc struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/3iBzJkAlx2Dh_gbW0DPrMPITOG-k7xrK/metadata
-func GetSourceClientMedsouthAssociatesPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMedsouthAssociatesPc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMedsouthAssociatesPc{baseClient}, updatedSourceCred, err
+	return SourceClientMedsouthAssociatesPc{baseClient}, err
 }

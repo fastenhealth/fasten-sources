@@ -19,8 +19,8 @@ type SourceClientAdventhealth struct {
 }
 
 // https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4/metadata
-func GetSourceClientAdventhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientAdventhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAdventhealth{baseClient}, updatedSourceCred, err
+	return SourceClientAdventhealth{baseClient}, err
 }

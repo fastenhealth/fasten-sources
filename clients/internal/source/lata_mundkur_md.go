@@ -19,8 +19,8 @@ type SourceClientLataMundkurMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/812e0a2c-a2ee-43b3-baef-01bf949ae18f/metadata
-func GetSourceClientLataMundkurMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientLataMundkurMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLataMundkurMd{baseClient}, updatedSourceCred, err
+	return SourceClientLataMundkurMd{baseClient}, err
 }

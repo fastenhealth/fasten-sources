@@ -19,8 +19,8 @@ type SourceClientOzarkSurgicalAssoc struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/75329/metadata
-func GetSourceClientOzarkSurgicalAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientOzarkSurgicalAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOzarkSurgicalAssoc{baseClient}, updatedSourceCred, err
+	return SourceClientOzarkSurgicalAssoc{baseClient}, err
 }

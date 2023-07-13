@@ -19,8 +19,8 @@ type SourceClientPeakVisionEyeCenter struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/fa0f517f-db34-4a7a-98d2-758b513b2168/metadata
-func GetSourceClientPeakVisionEyeCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientPeakVisionEyeCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPeakVisionEyeCenter{baseClient}, updatedSourceCred, err
+	return SourceClientPeakVisionEyeCenter{baseClient}, err
 }

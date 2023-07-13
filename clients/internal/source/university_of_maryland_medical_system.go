@@ -19,8 +19,8 @@ type SourceClientUniversityOfMarylandMedicalSystem struct {
 }
 
 // https://fhir.umm.edu/fhir/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfMarylandMedicalSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityOfMarylandMedicalSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityOfMarylandMedicalSystem{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityOfMarylandMedicalSystem{baseClient}, err
 }

@@ -19,8 +19,8 @@ type SourceClientKathrynAmacherDO struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/10521376-f6e6-41c2-a307-0de4e8ac5c2b/metadata
-func GetSourceClientKathrynAmacherDO(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKathrynAmacherDO(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKathrynAmacherDO{baseClient}, updatedSourceCred, err
+	return SourceClientKathrynAmacherDO{baseClient}, err
 }

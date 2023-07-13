@@ -19,8 +19,8 @@ type SourceClientUniversityOfToledo struct {
 }
 
 // https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4/metadata
-func GetSourceClientUniversityOfToledo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientUniversityOfToledo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUniversityOfToledo{baseClient}, updatedSourceCred, err
+	return SourceClientUniversityOfToledo{baseClient}, err
 }

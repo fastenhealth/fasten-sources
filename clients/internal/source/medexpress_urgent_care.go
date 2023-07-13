@@ -19,8 +19,8 @@ type SourceClientMedexpressUrgentCare struct {
 }
 
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/1700033/metadata
-func GetSourceClientMedexpressUrgentCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMedexpressUrgentCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMedexpressUrgentCare{baseClient}, updatedSourceCred, err
+	return SourceClientMedexpressUrgentCare{baseClient}, err
 }

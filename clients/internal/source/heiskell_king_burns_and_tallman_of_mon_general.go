@@ -19,8 +19,8 @@ type SourceClientHeiskellKingBurnsAndTallmanOfMonGeneral struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10014926/metadata
-func GetSourceClientHeiskellKingBurnsAndTallmanOfMonGeneral(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHeiskellKingBurnsAndTallmanOfMonGeneral(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHeiskellKingBurnsAndTallmanOfMonGeneral{baseClient}, updatedSourceCred, err
+	return SourceClientHeiskellKingBurnsAndTallmanOfMonGeneral{baseClient}, err
 }

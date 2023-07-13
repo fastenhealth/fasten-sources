@@ -19,8 +19,8 @@ type SourceClientHawaiiHealthSystemsCorpKauaiRegion struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/cf1fd70b-ce58-46c2-8a48-b5fabf717168/metadata
-func GetSourceClientHawaiiHealthSystemsCorpKauaiRegion(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientHawaiiHealthSystemsCorpKauaiRegion(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHawaiiHealthSystemsCorpKauaiRegion{baseClient}, updatedSourceCred, err
+	return SourceClientHawaiiHealthSystemsCorpKauaiRegion{baseClient}, err
 }

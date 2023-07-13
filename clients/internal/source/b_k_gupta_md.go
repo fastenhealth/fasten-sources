@@ -19,8 +19,8 @@ type SourceClientBKGuptaMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/a0e6d050-95dc-4004-8859-fe5d0d9bed79/metadata
-func GetSourceClientBKGuptaMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBKGuptaMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBKGuptaMd{baseClient}, updatedSourceCred, err
+	return SourceClientBKGuptaMd{baseClient}, err
 }

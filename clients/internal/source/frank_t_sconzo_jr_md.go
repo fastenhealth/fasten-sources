@@ -19,8 +19,8 @@ type SourceClientFrankTSconzoJrMd struct {
 }
 
 // https://fhir-myrecord.cerner.com/r4/6fv5XYYikzOt7jgMZ3lQWfDk05MTT0pK/metadata
-func GetSourceClientFrankTSconzoJrMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFrankTSconzoJrMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFrankTSconzoJrMd{baseClient}, updatedSourceCred, err
+	return SourceClientFrankTSconzoJrMd{baseClient}, err
 }

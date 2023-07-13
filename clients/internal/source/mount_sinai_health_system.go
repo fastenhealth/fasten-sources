@@ -19,8 +19,8 @@ type SourceClientMountSinaiHealthSystem struct {
 }
 
 // https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4/metadata
-func GetSourceClientMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMountSinaiHealthSystem{baseClient}, updatedSourceCred, err
+	return SourceClientMountSinaiHealthSystem{baseClient}, err
 }

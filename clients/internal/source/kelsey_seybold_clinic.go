@@ -19,8 +19,8 @@ type SourceClientKelseySeyboldClinic struct {
 }
 
 // https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4/metadata
-func GetSourceClientKelseySeyboldClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientKelseySeyboldClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKelseySeyboldClinic{baseClient}, updatedSourceCred, err
+	return SourceClientKelseySeyboldClinic{baseClient}, err
 }

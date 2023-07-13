@@ -19,8 +19,8 @@ type SourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10084853/metadata
-func GetSourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter{baseClient}, updatedSourceCred, err
+	return SourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter{baseClient}, err
 }

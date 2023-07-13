@@ -19,8 +19,8 @@ type SourceClientCoastalNeurologyPA struct {
 }
 
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10055953/metadata
-func GetSourceClientCoastalNeurologyPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, *models.SourceCredential, error) {
-	baseClient, updatedSourceCred, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientCoastalNeurologyPA(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCoastalNeurologyPA{baseClient}, updatedSourceCred, err
+	return SourceClientCoastalNeurologyPA{baseClient}, err
 }
