@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-type SourceClientAthena struct {
+type sourceClientAthena struct {
 	models.SourceClient
 }
 
@@ -28,12 +28,12 @@ Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com /
 func GetSourceClientAthena(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAthena{baseClient}, err
+	return sourceClientAthena{baseClient}, err
 }
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c SourceClientAthena) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c sourceClientAthena) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }

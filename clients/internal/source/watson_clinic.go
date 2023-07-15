@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientWatsonClinic struct {
-	models.SourceClient
-}
-
 // https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientWatsonClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWatsonClinic{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

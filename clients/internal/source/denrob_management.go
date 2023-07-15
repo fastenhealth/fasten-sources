@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientDenrobManagement struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/f573647b-ac45-4ec3-b169-ec716b91cb79/metadata
 func GetSourceClientDenrobManagement(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDenrobManagement{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPro171Sandbox struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/CustPRO171FMHSand/metadata
 func GetSourceClientPro171Sandbox(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPro171Sandbox{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientChesapeakeRegionalMedicalCenter struct {
-	models.SourceClient
-}
-
 // https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4/metadata
 func GetSourceClientChesapeakeRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChesapeakeRegionalMedicalCenter{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

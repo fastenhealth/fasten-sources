@@ -13,14 +13,12 @@ import (
 	"net/http"
 )
 
-type SourceClientSummitCommunityCare struct {
-	models.SourceClient
-}
-
 // https://patient360.summitcommunitycare.com/P360Member/api/fhir-r4/metadata
 // https://patient360.summitcommunitycare.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientSummitCommunityCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSummitCommunityCare{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

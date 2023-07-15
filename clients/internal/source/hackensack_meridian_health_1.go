@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientHackensackMeridianHealth1 struct {
-	models.SourceClient
-}
-
 // https://mepic.hmhn.org/fhir/api/FHIR/R4/metadata
 func GetSourceClientHackensackMeridianHealth1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHackensackMeridianHealth1{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

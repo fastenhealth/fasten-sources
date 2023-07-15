@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientBrankoBanar struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10033008/metadata
 func GetSourceClientBrankoBanar(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBrankoBanar{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

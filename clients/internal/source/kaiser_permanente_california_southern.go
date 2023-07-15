@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientKaiserPermanenteCaliforniaSouthern struct {
-	models.SourceClient
-}
-
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/api/FHIR/R4/metadata
 func GetSourceClientKaiserPermanenteCaliforniaSouthern(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaiserPermanenteCaliforniaSouthern{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

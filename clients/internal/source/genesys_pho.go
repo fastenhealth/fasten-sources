@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientGenesysPho struct {
-	models.SourceClient
-}
-
 // https://apps.genesyspho.com/FHIR/metadata
 func GetSourceClientGenesysPho(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGenesysPho{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

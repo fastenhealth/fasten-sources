@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-type SourceClientAetna struct {
+type sourceClientAetna struct {
 	models.SourceClient
 }
 
@@ -24,11 +24,11 @@ type SourceClientAetna struct {
 func GetSourceClientAetna(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAetna{baseClient}, err
+	return sourceClientAetna{baseClient}, err
 }
 
 // Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html
-func (c SourceClientAetna) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c sourceClientAetna) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	bundle, err := c.GetResourceBundle("Patient")
 	if err != nil {
 		return models.UpsertSummary{UpdatedResources: []string{}}, err

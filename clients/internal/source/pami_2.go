@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPami2 struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/d13cd954-ca68-4a08-a95d-1ae54e7487f0/metadata
 func GetSourceClientPami2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPami2{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

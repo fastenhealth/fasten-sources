@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientWiseHealthSystemProd struct {
-	models.SourceClient
-}
-
 // https://fhir.we0.hos.allscriptscloud.com/R4/fhir-PROD/metadata
 func GetSourceClientWiseHealthSystemProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWiseHealthSystemProd{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

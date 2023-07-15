@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientRenownBartonCvmc struct {
-	models.SourceClient
-}
-
 // https://fhir.renown.org/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientRenownBartonCvmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRenownBartonCvmc{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

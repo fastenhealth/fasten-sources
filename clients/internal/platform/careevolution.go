@@ -14,10 +14,6 @@ import (
 	"net/http"
 )
 
-type SourceClientCareevolution struct {
-	models.SourceClient
-}
-
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/.well-known/smart-configuration
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/metadata
 // https://fhir.careevolution.com/TestPatientAccounts.html
@@ -26,5 +22,7 @@ func GetSourceClientCareevolution(env pkg.FastenLighthouseEnvType, ctx context.C
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return SourceClientCareevolution{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

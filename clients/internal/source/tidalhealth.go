@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientTidalhealth struct {
-	models.SourceClient
-}
-
 // https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientTidalhealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTidalhealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

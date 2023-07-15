@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPv04 struct {
-	models.SourceClient
-}
-
 // https://scmprodweb.pv0.hos.allscriptscloud.com/R2/fhir/metadata
 func GetSourceClientPv04(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPv04{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

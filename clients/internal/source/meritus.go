@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMeritus struct {
-	models.SourceClient
-}
-
 // https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4/metadata
 func GetSourceClientMeritus(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMeritus{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -165,6 +165,15 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 		pendingLookupResourceReferences := lo.PickBy[string, bool](lookupResourceReferences, func(resourceId string, isCompleted bool) bool { return !isCompleted })
 		pendingResourceReferences := lo.Keys(pendingLookupResourceReferences)
 
+		//convert absolute urls to relative urls if possible
+		for i, _ := range pendingResourceReferences {
+			pendingResourceId := pendingResourceReferences[i]
+			//convert absolute urls to relative url if possible
+			if strings.HasPrefix(pendingResourceId, c.SourceCredential.GetApiEndpointBaseUrl()) {
+				pendingResourceReferences[i] = strings.TrimPrefix(strings.TrimPrefix(pendingResourceId, c.SourceCredential.GetApiEndpointBaseUrl()), "/")
+			}
+		}
+
 		c.Logger.Infof("Start processing Extracted Resource Identifiers: %d (%d loops completed)", len(pendingResourceReferences), extractionLoopCount)
 		if len(pendingResourceReferences) == 0 {
 			break
@@ -180,13 +189,16 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 		summary.TotalResources += len(pendingResourceReferences)
 		for _, pendingResourceId := range pendingResourceReferences {
 			var resourceRaw map[string]interface{}
+
 			err := c.GetRequest(pendingResourceId, &resourceRaw)
 			if err != nil {
 				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
+				c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceId, err)
 				continue
 			}
 			resourceRawJson, err := json.Marshal(resourceRaw)
 			if err != nil {
+				c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceId, err)
 				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
 				continue
 			}
@@ -342,6 +354,9 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	referencedResourcesLookup[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
+	if err != nil {
+		return err
+	}
 	SourceClientFHIR401ExtractResourceMetadata(resourceObj, &resource, internalFragmentReferenceLookup)
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)

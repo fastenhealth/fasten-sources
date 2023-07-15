@@ -13,14 +13,12 @@ import (
 	"net/http"
 )
 
-type SourceClientBlueCrossBlueShieldKansasMedicarePartD struct {
-	models.SourceClient
-}
-
 // https://patient360ks.bcbsdirect.com/P360Member/api/fhir-r4/metadata
 // https://patient360ks.bcbsdirect.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientBlueCrossBlueShieldKansasMedicarePartD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBlueCrossBlueShieldKansasMedicarePartD{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

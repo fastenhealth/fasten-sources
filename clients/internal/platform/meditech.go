@@ -14,10 +14,6 @@ import (
 	"net/http"
 )
 
-type SourceClientMeditech struct {
-	models.SourceClient
-}
-
 // https://greenfield-apis.meditech.com/v1/uscore/R4/.well-known/smart-configuration
 // https://greenfield-apis.meditech.com/v1/uscore/R4/metadata
 // https://fhir.meditech.com/explorer/authorization
@@ -26,5 +22,7 @@ func GetSourceClientMeditech(env pkg.FastenLighthouseEnvType, ctx context.Contex
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return SourceClientMeditech{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

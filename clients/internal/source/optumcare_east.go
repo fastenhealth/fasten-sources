@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientOptumcareEast struct {
-	models.SourceClient
-}
-
 // https://epicarr.optum.com/FHIR/api/FHIR/R4/metadata
 func GetSourceClientOptumcareEast(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOptumcareEast{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

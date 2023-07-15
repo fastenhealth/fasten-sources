@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientEngineeredFloors struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/a81eaf84-1569-4eed-953e-1a3a88244dfa/metadata
 func GetSourceClientEngineeredFloors(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEngineeredFloors{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

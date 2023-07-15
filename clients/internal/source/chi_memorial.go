@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientChiMemorial struct {
-	models.SourceClient
-}
-
 // https://rpsouth.catholichealth.net/fhir/FHIRMCT/api/FHIR/R4/metadata
 func GetSourceClientChiMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientChiMemorial{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

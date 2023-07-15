@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientFirepointProdCustomerZh170100D1 struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/CustProPRODZH170100D1/metadata
 func GetSourceClientFirepointProdCustomerZh170100D1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFirepointProdCustomerZh170100D1{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientRadyChildrens struct {
-	models.SourceClient
-}
-
 // https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4/metadata
 func GetSourceClientRadyChildrens(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRadyChildrens{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

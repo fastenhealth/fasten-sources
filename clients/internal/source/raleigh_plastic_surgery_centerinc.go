@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientRaleighPlasticSurgeryCenterinc struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10021427/metadata
 func GetSourceClientRaleighPlasticSurgeryCenterinc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientRaleighPlasticSurgeryCenterinc{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

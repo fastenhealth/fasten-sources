@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientBellevueHeartGroup struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/8e5952e2-57ae-4f09-837e-37dc76b6aa95/metadata
 func GetSourceClientBellevueHeartGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBellevueHeartGroup{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

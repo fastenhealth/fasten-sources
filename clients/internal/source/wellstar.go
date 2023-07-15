@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientWellstar struct {
-	models.SourceClient
-}
-
 // https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4/metadata
 func GetSourceClientWellstar(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWellstar{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,14 +14,12 @@ import (
 	"net/http"
 )
 
-type SourceClientAthenaCustom struct {
-	models.SourceClient
-}
-
 // https://api.platform.athenahealth.com/fhir/r4/.well-known/smart-configuration
 // athena prod
 func GetSourceClientAthenaCustom(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := sandbox.GetSourceClientAthena(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAthenaCustom{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

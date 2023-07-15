@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMonumentHealth struct {
-	models.SourceClient
-}
-
 // https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4/metadata
 func GetSourceClientMonumentHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMonumentHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

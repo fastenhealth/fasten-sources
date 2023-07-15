@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-type SourceClientKaiser struct {
+type sourceClientKaiser struct {
 	models.SourceClient
 }
 
@@ -23,11 +23,11 @@ type SourceClientKaiser struct {
 func GetSourceClientKaiser(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKaiser{baseClient}, err
+	return sourceClientKaiser{baseClient}, err
 }
 
 // Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html
-func (c SourceClientKaiser) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c sourceClientKaiser) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	bundle, err := c.GetResourceBundle("ExplanationOfBenefit?_includes=*")
 	if err != nil {
 		return models.UpsertSummary{UpdatedResources: []string{}}, err

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientBonSecoursHealthSystem struct {
-	models.SourceClient
-}
-
 // https://haiku.bshsi.org/fhir/BSHSI_OAUTH/api/FHIR/R4/metadata
 func GetSourceClientBonSecoursHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBonSecoursHealthSystem{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientProReplicaproduction struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/PRO-ReplicaProduction/metadata
 func GetSourceClientProReplicaproduction(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientProReplicaproduction{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

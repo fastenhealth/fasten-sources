@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientNovantHealth struct {
-	models.SourceClient
-}
-
 // https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4/metadata
 func GetSourceClientNovantHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNovantHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientSalineMemorial struct {
-	models.SourceClient
-}
-
 // https://fhirprod.salinememorial.org/FHIR/metadata
 func GetSourceClientSalineMemorial(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSalineMemorial{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

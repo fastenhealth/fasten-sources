@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientSanGorgonioMemorialHospital2 struct {
-	models.SourceClient
-}
-
 // https://scmprodweb.sng.hos.allscriptscloud.com/open/metadata
 func GetSourceClientSanGorgonioMemorialHospital2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSanGorgonioMemorialHospital2{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

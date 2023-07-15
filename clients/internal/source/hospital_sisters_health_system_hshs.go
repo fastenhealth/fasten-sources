@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientHospitalSistersHealthSystemHshs struct {
-	models.SourceClient
-}
-
 // https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4/metadata
 func GetSourceClientHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHospitalSistersHealthSystemHshs{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

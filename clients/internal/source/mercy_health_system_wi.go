@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMercyHealthSystemWi struct {
-	models.SourceClient
-}
-
 // https://epicproxy.mhsjvl.org/FHIRproxy/api/FHIR/R4/metadata
 func GetSourceClientMercyHealthSystemWi(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMercyHealthSystemWi{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPawsatMaedaMdsPa struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/102796/metadata
 func GetSourceClientPawsatMaedaMdsPa(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPawsatMaedaMdsPa{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

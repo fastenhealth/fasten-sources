@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientTerryBallDo struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/77956/metadata
 func GetSourceClientTerryBallDo(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientTerryBallDo{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

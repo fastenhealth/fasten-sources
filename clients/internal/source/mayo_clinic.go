@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMayoClinic struct {
-	models.SourceClient
-}
-
 // https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4/metadata
 func GetSourceClientMayoClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMayoClinic{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientClayPlatteFamilyMedicineClinic struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/032e9fee-d494-4ca3-97ce-b40c8d2eecf6/metadata
 func GetSourceClientClayPlatteFamilyMedicineClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientClayPlatteFamilyMedicineClinic{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

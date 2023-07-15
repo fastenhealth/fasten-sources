@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPracticeAdvantageInc1 struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/f8fed8da-ed23-478c-8bc7-11f2c364d32c/metadata
 func GetSourceClientPracticeAdvantageInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPracticeAdvantageInc1{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

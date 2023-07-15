@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientScrippsHealth struct {
-	models.SourceClient
-}
-
 // https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4/metadata
 func GetSourceClientScrippsHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientScrippsHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

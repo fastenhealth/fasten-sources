@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMississippiArthritisClinicPllc struct {
-	models.SourceClient
-}
-
 // https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
 func GetSourceClientMississippiArthritisClinicPllc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMississippiArthritisClinicPllc{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

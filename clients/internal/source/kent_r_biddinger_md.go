@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientKentRBiddingerMd struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/76423/metadata
 func GetSourceClientKentRBiddingerMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientKentRBiddingerMd{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

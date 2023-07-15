@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientWakemedHealthAndHospitals struct {
-	models.SourceClient
-}
-
 // https://epic-soap.wakemed.org/FHIR/api/FHIR/R4/metadata
 func GetSourceClientWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWakemedHealthAndHospitals{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientUcDavis struct {
-	models.SourceClient
-}
-
 // https://emrrp.ucdmc.ucdavis.edu/FHIR/api/FHIR/R4/metadata
 func GetSourceClientUcDavis(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUcDavis{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientYvelPMoreauMD struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/e1cd2646-a978-48a1-b1dd-27086f7bcfa4/metadata
 func GetSourceClientYvelPMoreauMD(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientYvelPMoreauMD{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

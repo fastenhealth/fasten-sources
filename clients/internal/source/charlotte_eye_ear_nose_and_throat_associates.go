@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientCharlotteEyeEarNoseAndThroatAssociates struct {
-	models.SourceClient
-}
-
 // https://fhirprd.ceenta.com/proxy/api/FHIR/R4/metadata
 func GetSourceClientCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCharlotteEyeEarNoseAndThroatAssociates{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

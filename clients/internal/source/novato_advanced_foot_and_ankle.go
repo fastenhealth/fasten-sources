@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientNovatoAdvancedFootAndAnkle struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/58af3cfb-25bc-40a1-b39f-a39b55dc2d85/metadata
 func GetSourceClientNovatoAdvancedFootAndAnkle(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNovatoAdvancedFootAndAnkle{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

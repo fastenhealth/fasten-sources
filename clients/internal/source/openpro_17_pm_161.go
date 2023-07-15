@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientOpenpro17Pm161 struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/CustProQAopenpro17-pm16/metadata
 func GetSourceClientOpenpro17Pm161(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOpenpro17Pm161{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

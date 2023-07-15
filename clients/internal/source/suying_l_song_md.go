@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientSuyingLSongMd struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/76802/metadata
 func GetSourceClientSuyingLSongMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSuyingLSongMd{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

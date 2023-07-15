@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-type SourceClientEpic struct {
+type sourceClientEpic struct {
 	models.SourceClient
 }
 
@@ -26,12 +26,12 @@ func GetSourceClientEpic(env pkg.FastenLighthouseEnvType, ctx context.Context, g
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return SourceClientEpic{baseClient}, err
+	return sourceClientEpic{baseClient}, err
 }
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c SourceClientEpic) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c sourceClientEpic) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{"Account", "Appointment", "Consent", "FamilyMemberHistory", "InsurancePlan", "MedicationRequest", "NutritionOrder", "Person", "Provenance", "Questionnaire", "QuestionnaireResponse", "RelatedPerson", "Schedule", "ServiceRequest", "Slot"}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }

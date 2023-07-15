@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientGeisinger struct {
-	models.SourceClient
-}
-
 // https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4/metadata
 func GetSourceClientGeisinger(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGeisinger{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

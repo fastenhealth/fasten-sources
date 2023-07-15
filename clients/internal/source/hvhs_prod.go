@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientHvhsProd struct {
-	models.SourceClient
-}
-
 // https://Fhirtw.hvhs.org/FHIR/metadata
 func GetSourceClientHvhsProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientHvhsProd{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

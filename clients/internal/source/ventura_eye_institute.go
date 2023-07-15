@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientVenturaEyeInstitute struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/b210b38c-c8df-4e23-a364-b958c576d48b/metadata
 func GetSourceClientVenturaEyeInstitute(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVenturaEyeInstitute{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

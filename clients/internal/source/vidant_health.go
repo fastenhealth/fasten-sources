@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientVidantHealth struct {
-	models.SourceClient
-}
-
 // https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4/metadata
 func GetSourceClientVidantHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientVidantHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

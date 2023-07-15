@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientOchin struct {
-	models.SourceClient
-}
-
 // https://webprd.ochin.org/prd-fhir/api/FHIR/R4/metadata
 func GetSourceClientOchin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOchin{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientNchieTestDb3 struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/75876B/metadata
 func GetSourceClientNchieTestDb3(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientNchieTestDb3{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

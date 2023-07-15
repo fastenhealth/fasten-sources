@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientSpineCenter struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10089319/metadata
 func GetSourceClientSpineCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSpineCenter{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

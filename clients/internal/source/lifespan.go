@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientLifespan struct {
-	models.SourceClient
-}
-
 // https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4/metadata
 func GetSourceClientLifespan(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientLifespan{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

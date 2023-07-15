@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientFasttrackImmediateCare struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/58454b2e-331d-455c-9a19-f10338217401/metadata
 func GetSourceClientFasttrackImmediateCare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientFasttrackImmediateCare{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

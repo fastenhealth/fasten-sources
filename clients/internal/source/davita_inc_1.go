@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientDavitaInc1 struct {
-	models.SourceClient
-}
-
 // https://fhir-myrecord.cerner.com/r4/ef305183-7191-4c91-b4e4-93d680f39bae/metadata
 func GetSourceClientDavitaInc1(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientDavitaInc1{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMountSinaiHealthSystem struct {
-	models.SourceClient
-}
-
 // https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMountSinaiHealthSystem{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientCenturaHealth struct {
-	models.SourceClient
-}
-
 // https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4/metadata
 func GetSourceClientCenturaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientCenturaHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

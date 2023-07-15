@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientPatlnkpro17Pm16 struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/custproprodsandboxpatlnkpro17pm16/metadata
 func GetSourceClientPatlnkpro17Pm16(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientPatlnkpro17Pm16{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

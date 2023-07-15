@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientAtlanticGeneral struct {
-	models.SourceClient
-}
-
 // https://fhirprod.atlanticgeneral.org/FHIR/metadata
 func GetSourceClientAtlanticGeneral(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAtlanticGeneral{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

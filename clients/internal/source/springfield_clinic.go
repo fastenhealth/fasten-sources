@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientSpringfieldClinic struct {
-	models.SourceClient
-}
-
 // https://fhirweb.emrspi.org/FHIR/metadata
 func GetSourceClientSpringfieldClinic(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientSpringfieldClinic{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

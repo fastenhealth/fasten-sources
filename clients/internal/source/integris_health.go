@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientIntegrisHealth struct {
-	models.SourceClient
-}
-
 // https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4/metadata
 func GetSourceClientIntegrisHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientIntegrisHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMankatoClinicProd struct {
-	models.SourceClient
-}
-
 // https://MCFHIR.mankatoclinic.com/FHIR/metadata
 func GetSourceClientMankatoClinicProd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMankatoClinicProd{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

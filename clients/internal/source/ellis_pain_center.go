@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientEllisPainCenter struct {
-	models.SourceClient
-}
-
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/68522/metadata
 func GetSourceClientEllisPainCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientEllisPainCenter{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -3,6 +3,7 @@ package base
 import (
 	"context"
 	"encoding/json"
+	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
@@ -35,7 +36,7 @@ func TestNewFHIR401Client(t *testing.T) {
 	require.Equal(t, client.SourceCredential.GetRefreshToken(), "test-refresh-token")
 }
 
-func TestFHIR401Client_ProcessBundle(t *testing.T) {
+func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	t.Parallel()
 	//setup
 	mockCtrl := gomock.NewController(t)
@@ -62,5 +63,80 @@ func TestFHIR401Client_ProcessBundle(t *testing.T) {
 	//assert
 	require.NoError(t, err)
 	require.Equal(t, 11, len(wrappedResourceModels))
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
+	t.Parallel()
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	//sc.EXPECT().GetAccessToken().Return("test-access-token")
+	//sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	require.NoError(t, err)
+
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
+	require.NoError(t, err)
+	var bundle fhir401.Bundle
+	err = json.Unmarshal(jsonBytes, &bundle)
+	require.NoError(t, err)
+
+	// test
+	wrappedResourceModels, _, err := client.ProcessBundle(bundle)
+	//log.Printf("%v", wrappedResourceModels)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 10, len(wrappedResourceModels))
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+func TestFhir401Client_ProcessResource(t *testing.T) {
+	t.Parallel()
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	require.NoError(t, err)
+	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
+
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/cerner_document_reference_206130480.json")
+	require.NoError(t, err)
+	referencedResourcesLookup := map[string]bool{}
+	internalFragmentReferenceLookup := map[string]string{}
+	summary := models.UpsertSummary{}
+
+	rawResource := models.RawResourceFhir{
+		SourceResourceID:   "206130480",
+		SourceResourceType: "DocumentReference",
+		ResourceRaw:        jsonBytes,
+	}
+
+	// test
+	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 8, len(referencedResourcesLookup))
+	require.Equal(t, map[string]bool{
+		"DiagnosticReport/206130480":  false,
+		"DocumentReference/206130480": true,
+		"Encounter/97953480":          false,
+		"Organization/675844":         false,
+		"Patient/12724067":            false,
+		"Practitioner/12742069":       false,
+		"https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206130480": false,
+		"https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-206130480":  false,
+	}, referencedResourcesLookup)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }

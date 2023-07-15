@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientAscensionProvidence struct {
-	models.SourceClient
-}
-
 // https://stofo.providence-waco.org/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceClientAscensionProvidence(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAscensionProvidence{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

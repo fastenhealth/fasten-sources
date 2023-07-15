@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientMassGeneralBrigham struct {
-	models.SourceClient
-}
-
 // https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4/metadata
 func GetSourceClientMassGeneralBrigham(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientMassGeneralBrigham{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

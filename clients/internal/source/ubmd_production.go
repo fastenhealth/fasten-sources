@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientUbmdProduction struct {
-	models.SourceClient
-}
-
 // https://fhirubmd.med.buffalo.edu/FHIR/metadata
 func GetSourceClientUbmdProduction(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUbmdProduction{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

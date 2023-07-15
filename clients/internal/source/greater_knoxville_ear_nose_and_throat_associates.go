@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientGreaterKnoxvilleEarNoseAndThroatAssociates struct {
-	models.SourceClient
-}
-
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10028052/metadata
 func GetSourceClientGreaterKnoxvilleEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientGreaterKnoxvilleEarNoseAndThroatAssociates{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

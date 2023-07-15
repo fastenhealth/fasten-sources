@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientAscensionHealth struct {
-	models.SourceClient
-}
-
 // https://fhirtw.genesys.org/FHIR/metadata
 func GetSourceClientAscensionHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAscensionHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientOhiohealth struct {
-	models.SourceClient
-}
-
 // https://ccpintconfg.ohiohealth.com/Interconnect-PRD-MUAPI/api/FHIR/R4/metadata
 func GetSourceClientOhiohealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientOhiohealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

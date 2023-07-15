@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientUnitypointHealth struct {
-	models.SourceClient
-}
-
 // https://epicfhir.unitypoint.org/ProdFHIR/api/FHIR/R4/metadata
 func GetSourceClientUnitypointHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientUnitypointHealth{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

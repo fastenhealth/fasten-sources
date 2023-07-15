@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientBaycareClinicMybaycare struct {
-	models.SourceClient
-}
-
 // https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4/metadata
 func GetSourceClientBaycareClinicMybaycare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientBaycareClinicMybaycare{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

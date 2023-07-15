@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientAuroraHealthCareMyaurora struct {
-	models.SourceClient
-}
-
 // https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4/metadata
 func GetSourceClientAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientAuroraHealthCareMyaurora{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }

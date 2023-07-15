@@ -1,0 +1,1123 @@
+{
+  "resourceType": "Bundle",
+  "id": "b62cafd5-8037-40b8-b2a4-eb56455aa3d1",
+  "type": "searchset",
+  "link": [{
+    "relation": "self",
+    "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference?patient=12724067"
+  }, {
+    "relation": "next",
+    "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference?patient=12724067\u0026-pageContext=eJxljckKwjAURf_lrRPomA7gRnHhTvADyjMvtdSQlAw4lP671VXB5b2cw5lB2mgCtGnCgFSPUa9jBhmdtw5aOJzfw5SdLvvHaO8iunE87oDBgL4z6rmywUXFYMKb6qQ14fdBIcuKklJwVQvkRZ6nHIlqXvVX0cimSZAyWBj4sHrUTcPLk5XbsIlabzM9av_X-ULL8gHSakH9\u0026-pageDirection=NEXT"
+  }],
+  "entry": [{
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/206130480",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "206130480",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-05-12T21:20:53.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: 05/12/2023 - Current\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: May 12, 2023  9:20 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: May 12, 2029  9:20 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-206130480-2023051221205300"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-05-12T21:20:53Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-206130480",
+          "title": "05/12/2023 - Current",
+          "creation": "2023-05-12T21:20:51.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206130480",
+          "title": "05/12/2023 - Current",
+          "creation": "2023-05-12T21:20:51.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-05-12T21:20:51Z",
+          "end": "2029-05-12T21:20:51Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/206130480"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/203508258",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "203508258",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-01-20T21:42:51.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Abdominal\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jan 20, 2023  9:42 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jan 20, 2029  9:42 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Amended\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-203508258-2023012021364200"
+      }],
+      "status": "current",
+      "docStatus": "amended",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-01-20T21:36:42Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-203508258",
+          "title": "Abdominal",
+          "creation": "2023-01-20T21:42:49.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-203508258",
+          "title": "Abdominal",
+          "creation": "2023-01-20T21:42:49.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-01-20T21:42:49Z",
+          "end": "2029-01-20T21:42:49Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/203508258"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/203508262",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "203508262",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2023-01-20T21:41:33.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Thoracic Pain\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jan 20, 2023  9:41 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jan 20, 2029  9:41 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Amended\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-203508262-2023012021384100"
+      }],
+      "status": "current",
+      "docStatus": "amended",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-01-20T21:38:41Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-203508262",
+          "title": "Thoracic Pain",
+          "creation": "2023-01-20T21:41:30.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-203508262",
+          "title": "Thoracic Pain",
+          "creation": "2023-01-20T21:41:30.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-01-20T21:41:30Z",
+          "end": "2029-01-20T21:41:30Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/203508262"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/203508166",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "203508166",
+      "meta": {
+        "versionId": "6",
+        "lastUpdated": "2023-01-20T21:40:36.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Thoracic\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jan 20, 2023  9:40 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jan 20, 2029  9:40 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Amended\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-203508166-2023012017245600"
+      }],
+      "status": "current",
+      "docStatus": "amended",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-01-20T17:24:56Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-203508166",
+          "title": "Thoracic",
+          "creation": "2023-01-20T21:40:33.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-203508166",
+          "title": "Thoracic",
+          "creation": "2023-01-20T21:40:33.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-01-20T21:40:33Z",
+          "end": "2029-01-20T21:40:33Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/203508166"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/203507726",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "203507726",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-01-19T19:30:07.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Thoracic\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jan 19, 2023  7:30 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jan 19, 2029  7:30 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-203507726-2023011919300700"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-01-19T19:30:07Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-203507726",
+          "title": "Thoracic",
+          "creation": "2023-01-19T19:30:06.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-203507726",
+          "title": "Thoracic",
+          "creation": "2023-01-19T19:30:06.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-01-19T19:30:06Z",
+          "end": "2029-01-19T19:30:06Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/203507726"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/203507083",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "203507083",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-01-18T23:32:58.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Thoracic\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jan 18, 2023 11:32 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jan 18, 2029 11:32 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Portal, Portal\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-203507083-2023011823325800"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-01-18T23:32:58Z",
+      "author": [{
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12742069",
+        "display": "Portal, Portal"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-203507083",
+          "title": "Thoracic",
+          "creation": "2023-01-18T23:32:56.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-203507083",
+          "title": "Thoracic",
+          "creation": "2023-01-18T23:32:56.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97953480"
+        }],
+        "period": {
+          "start": "2023-01-18T23:32:56Z",
+          "end": "2029-01-18T23:32:56Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/203507083"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/206184201",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "206184201",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-06-29T09:30:51.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Ortus Message\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jun 29, 2023  9:29 A.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jun 29, 2023  9:29 A.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Dupuie, Brandon\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-206184201-2023062909305100"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-06-29T09:30:51Z",
+      "author": [{
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/R-206184201",
+          "title": "Ortus Message",
+          "creation": "2023-06-29T09:29:40.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206184201",
+          "title": "Ortus Message",
+          "creation": "2023-06-29T09:29:40.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97964348"
+        }],
+        "period": {
+          "start": "2023-06-29T09:29:40Z",
+          "end": "2023-06-29T09:29:40Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/206184201"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/206184197",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "206184197",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-06-29T09:28:57.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Ortus Message\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jun 29, 2023  9:27 A.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jun 29, 2023  9:27 A.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Dupuie, Brandon\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-206184197-2023062909285700"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-06-29T09:28:57Z",
+      "author": [{
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/R-206184197",
+          "title": "Ortus Message",
+          "creation": "2023-06-29T09:27:37.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206184197",
+          "title": "Ortus Message",
+          "creation": "2023-06-29T09:27:37.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97959225"
+        }],
+        "period": {
+          "start": "2023-06-29T09:27:37Z",
+          "end": "2023-06-29T09:27:37Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/206184197"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/206172416",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "206172416",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-06-22T23:33:12.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Ortus Message\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jun 22, 2023 11:22 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jun 22, 2023 11:22 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Dupuie, Brandon\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-206172416-2023062223331200"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-06-22T23:33:12Z",
+      "author": [{
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/R-206172416",
+          "title": "Ortus Message",
+          "creation": "2023-06-22T23:22:41.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206172416",
+          "title": "Ortus Message",
+          "creation": "2023-06-22T23:22:41.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97964348"
+        }],
+        "period": {
+          "start": "2023-06-22T23:22:41Z",
+          "end": "2023-06-22T23:22:41Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/206172416"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/DocumentReference/206172412",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "206172412",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-06-22T23:33:07.000Z"
+      },
+      "text": {
+        "status": "generated",
+        "div": "\u003Cdiv xmlns=\"http://www.w3.org/1999/xhtml\"\u003E\u003Cp\u003E\u003Cb\u003EDocument Reference\u003C/b\u003E\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EPatient Name\u003C/b\u003E: xWave III, Joe Smarty\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Type\u003C/b\u003E: Admission Note Physician\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Title\u003C/b\u003E: Ortus Message\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService Start Date\u003C/b\u003E: Jun 22, 2023 11:22 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EService End Date\u003C/b\u003E: Jun 22, 2023 11:22 P.M. UTC\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EDocument Status\u003C/b\u003E: Final\u003C/p\u003E\u003Cp\u003E\u003Cb\u003EVerifying Provider\u003C/b\u003E: Dupuie, Brandon\u003C/p\u003E\u003C/div\u003E"
+      },
+      "identifier": [{
+        "system": "https://fhir.cerner.com/ceuuid",
+        "value": "CE87caf4b7-9397-4667-9897-702218017c9e-206172412-2023062223330800"
+      }],
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [{
+          "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/72",
+          "code": "2820507",
+          "display": "Admission Note Physician",
+          "userSelected": true
+        }, {
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }],
+        "text": "Admission Note Physician"
+      },
+      "category": [{
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "83805-2",
+          "userSelected": false
+        }]
+      }, {
+        "coding": [{
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note",
+          "userSelected": false
+        }],
+        "text": "Clinical Note"
+      }, {
+        "coding": [{
+          "system": "http://loinc.org",
+          "code": "67852-4",
+          "userSelected": false
+        }]
+      }],
+      "subject": {
+        "reference": "Patient/12724067",
+        "display": "xWave III, Joe Smarty"
+      },
+      "date": "2023-06-22T23:33:07Z",
+      "author": [{
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      }],
+      "authenticator": {
+        "reference": "Practitioner/12761867",
+        "display": "Dupuie, Brandon"
+      },
+      "custodian": {
+        "reference": "Organization/675844",
+        "display": "Model Hospital"
+      },
+      "content": [{
+        "attachment": {
+          "contentType": "application/pdf",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/R-206172412",
+          "title": "Ortus Message",
+          "creation": "2023-06-22T23:22:41.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }, {
+        "attachment": {
+          "contentType": "application/xml",
+          "url": "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206172412",
+          "title": "Ortus Message",
+          "creation": "2023-06-22T23:22:41.000Z"
+        },
+        "format": {
+          "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+          "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+          "display": "mimeType Sufficient"
+        }
+      }],
+      "context": {
+        "encounter": [{
+          "reference": "Encounter/97959225"
+        }],
+        "period": {
+          "start": "2023-06-22T23:22:41Z",
+          "end": "2023-06-22T23:22:41Z"
+        },
+        "related": [{
+          "reference": "DiagnosticReport/206172412"
+        }]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }]
+}

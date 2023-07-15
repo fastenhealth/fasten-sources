@@ -14,13 +14,11 @@ import (
 	"net/http"
 )
 
-type SourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter struct {
-	models.SourceClient
-}
-
 // https://haiku.wacofhc.org/FHIR/api/FHIR/R4/metadata
 func GetSourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 
-	return SourceClientWacoFamilyMedicineHeartOfTexasCommunityHealthCenter{baseClient}, err
+	return struct {
+		models.SourceClient
+	}{baseClient}, err
 }
