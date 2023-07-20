@@ -160,6 +160,34 @@ func (mr *MockSourceCredentialMockRecorder) GetSourceType() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceType", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceType))
 }
 
+// IsDynamicClient mocks base method.
+func (m *MockSourceCredential) IsDynamicClient() bool {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "IsDynamicClient")
+	ret0, _ := ret[0].(bool)
+	return ret0
+}
+
+// IsDynamicClient indicates an expected call of IsDynamicClient.
+func (mr *MockSourceCredentialMockRecorder) IsDynamicClient() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsDynamicClient", reflect.TypeOf((*MockSourceCredential)(nil).IsDynamicClient))
+}
+
+// RefreshDynamicClientAccessToken mocks base method.
+func (m *MockSourceCredential) RefreshDynamicClientAccessToken() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RefreshDynamicClientAccessToken")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// RefreshDynamicClientAccessToken indicates an expected call of RefreshDynamicClientAccessToken.
+func (mr *MockSourceCredentialMockRecorder) RefreshDynamicClientAccessToken() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RefreshDynamicClientAccessToken", reflect.TypeOf((*MockSourceCredential)(nil).RefreshDynamicClientAccessToken))
+}
+
 // SetTokens mocks base method.
 func (m *MockSourceCredential) SetTokens(accessToken, refreshTokens string, expiresAt int64) {
 	m.ctrl.T.Helper()

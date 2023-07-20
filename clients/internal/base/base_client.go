@@ -3,6 +3,7 @@ package base
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -137,27 +138,48 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 	}
 
 	if token.Expiry.Before(time.Now().Add(5 * time.Second)) { // expired (or will expire in 5 seconds) so let's update it
-		log.Println("access token expired, refreshing...")
+		c.Logger.Info("access token expired, must refresh")
 
-		src := conf.TokenSource(c.Context, token)
-		newToken, err := src.Token() // this actually goes and renews the tokens
-		if err != nil {
-			return err
-		}
-		log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
-		if newToken.AccessToken != token.AccessToken {
-			token = newToken
+		if c.SourceCredential.IsDynamicClient() {
+			c.Logger.Info("refreshing dynamic client...")
+			err := c.SourceCredential.RefreshDynamicClientAccessToken()
+			if err != nil {
+				return err
+			}
 
-			// update the "source" credential with new data (which will need to be sent
-			c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
-			//updatedSource.AccessToken = newToken.AccessToken
-			//updatedSource.ExpiresAt = newToken.Expiry.Unix()
-			//// Don't overwrite `RefreshToken` with an empty value
-			//// if this was a token refreshing request.
-			//if newToken.RefreshToken != "" {
-			//	updatedSource.RefreshToken = newToken.RefreshToken
-			//}
+			//update the token with newly refreshed data
+			token = &oauth2.Token{
+				TokenType:    "Bearer",
+				RefreshToken: c.SourceCredential.GetRefreshToken(),
+				AccessToken:  c.SourceCredential.GetAccessToken(),
+				Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
+			}
+		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
+			c.Logger.Info("using refresh token to generate access token...")
 
+			src := conf.TokenSource(c.Context, token)
+			newToken, err := src.Token() // this actually goes and renews the tokens
+			if err != nil {
+				return err
+			}
+			log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
+			if newToken.AccessToken != token.AccessToken {
+				token = newToken
+
+				// update the "source" credential with new data (which will need to be sent
+				c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
+				//updatedSource.AccessToken = newToken.AccessToken
+				//updatedSource.ExpiresAt = newToken.Expiry.Unix()
+				//// Don't overwrite `RefreshToken` with an empty value
+				//// if this was a token refreshing request.
+				//if newToken.RefreshToken != "" {
+				//	updatedSource.RefreshToken = newToken.RefreshToken
+				//}
+
+			}
+		} else {
+			c.Logger.Error("no refresh token available, and not dynamic client. User must re-authenticate")
+			return errors.New("no refresh token available, and not dynamic client. User must re-authenticate")
 		}
 	}
 

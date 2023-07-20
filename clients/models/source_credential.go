@@ -16,4 +16,6 @@ type SourceCredential interface {
 	GetExpiresAt() int64
 
 	SetTokens(accessToken string, refreshTokens string, expiresAt int64)
+	IsDynamicClient() bool
+	RefreshDynamicClientAccessToken() error
 }
