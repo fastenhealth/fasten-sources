@@ -16,6 +16,7 @@ func GetSourceTahoeForestHealthSystem(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRAOK2/TAO/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir.mercy.net/PRDFHIRAOK2/TAO/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRAOK2/TAO/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir.mercy.net/PRDFHIRAOK2/TAO/api/FHIR/R4"
 

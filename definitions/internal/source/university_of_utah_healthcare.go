@@ -16,6 +16,7 @@ func GetSourceUniversityOfUtahHealthcare(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxyprd.med.utah.edu/FHIRMyChart/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxyprd.med.utah.edu/FHIRMyChart/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webproxyprd.med.utah.edu/FHIRMyChart/oauth2/register"
 
 	sourceDef.Audience = "https://webproxyprd.med.utah.edu/FHIRMyChart/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceMassGeneralBrigham(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://ws-interconnect-fhir.partners.org/Interconnect-FHIR-MU-PRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceMainehealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mainehealth.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mainehealth.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.mainehealth.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.mainehealth.org/FHIRPRD/api/FHIR/R4"
 

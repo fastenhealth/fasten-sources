@@ -16,6 +16,7 @@ func GetSourceYumaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://yrmccare1.yumaregional.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://yrmccare1.yumaregional.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://yrmccare1.yumaregional.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://yrmccare1.yumaregional.org/FHIR/api/FHIR/R4"
 

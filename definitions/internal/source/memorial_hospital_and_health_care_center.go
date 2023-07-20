@@ -16,6 +16,7 @@ func GetSourceMemorialHospitalAndHealthCareCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprd.mhhcc.org/OAuth2/oauth2/register"
 
 	sourceDef.Audience = "https://arrprd.mhhcc.org/OAuth2/api/FHIR/R4"
 

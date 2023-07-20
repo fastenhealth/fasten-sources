@@ -16,6 +16,7 @@ func GetSourceTheUniversityOfVermontHealthNetwork(env pkg.FastenLighthouseEnvTyp
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.uvmhealth.org/FHIR-ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.uvmhealth.org/FHIR-ARR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.uvmhealth.org/FHIR-ARR/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.uvmhealth.org/FHIR-ARR/api/FHIR/R4"
 

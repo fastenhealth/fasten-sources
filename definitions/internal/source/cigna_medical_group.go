@@ -16,6 +16,7 @@ func GetSourceCignaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.healthcare.cigna.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.healthcare.cigna.com/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr.healthcare.cigna.com/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr.healthcare.cigna.com/FHIR-PRD/api/FHIR/R4"
 

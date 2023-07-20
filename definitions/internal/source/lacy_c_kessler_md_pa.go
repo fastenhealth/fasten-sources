@@ -16,6 +16,7 @@ func GetSourceLacyCKesslerMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/CONNECT/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rxproxy.sw.org/FHIR-PRD/CONNECT/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/CONNECT/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/CONNECT/api/FHIR/R4"
 

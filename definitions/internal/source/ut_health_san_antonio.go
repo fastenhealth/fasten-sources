@@ -16,6 +16,7 @@ func GetSourceUtHealthSanAntonio(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0582.epichosted.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0582.epichosted.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et0582.epichosted.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://api.utmsa.com/fhir/api/FHIR/R4"
 

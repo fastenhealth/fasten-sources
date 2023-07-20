@@ -16,6 +16,7 @@ func GetSourceBellinHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr.thedacare.org/FHIR/BLN/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr.thedacare.org/FHIR/BLN/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arr.thedacare.org/FHIR/BLN/oauth2/register"
 
 	sourceDef.Audience = "https://arr.thedacare.org/FHIR/BLN/api/FHIR/R4"
 

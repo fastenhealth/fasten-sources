@@ -16,6 +16,7 @@ func GetSourceDenverHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webservices.dhha.org/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webservices.dhha.org/PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webservices.dhha.org/PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://webservices.dhha.org/PRD-FHIR/api/FHIR/R4"
 

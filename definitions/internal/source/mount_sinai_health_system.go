@@ -16,6 +16,7 @@ func GetSourceMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoapproxyprd.mountsinai.org/FHIR-PRD/api/FHIR/R4"
 

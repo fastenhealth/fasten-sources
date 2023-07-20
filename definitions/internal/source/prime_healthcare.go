@@ -16,6 +16,7 @@ func GetSourcePrimeHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://phsfhir.primehealthcare.com/PHS-PRD-FHIR/api/FHIR/R4"
 

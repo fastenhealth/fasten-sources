@@ -16,6 +16,7 @@ func GetSourceThedacare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arr.thedacare.org/FHIR/TC/oauth2/register"
 
 	sourceDef.Audience = "https://arr.thedacare.org/FHIR/TC/api/FHIR/R4"
 

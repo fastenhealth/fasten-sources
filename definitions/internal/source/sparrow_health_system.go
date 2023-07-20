@@ -16,6 +16,7 @@ func GetSourceSparrowHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.sparrow.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.sparrow.org/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.sparrow.org/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.sparrow.org/fhir-prd/api/FHIR/R4"
 

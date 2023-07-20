@@ -16,6 +16,7 @@ func GetSourceUwHealthAndAffiliatesWisconsin(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.hosp.wisc.edu/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.hosp.wisc.edu/FhirProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.hosp.wisc.edu/FhirProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.hosp.wisc.edu/FhirProxy/api/FHIR/R4"
 

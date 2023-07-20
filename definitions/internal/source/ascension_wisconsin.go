@@ -16,6 +16,7 @@ func GetSourceAscensionWisconsin(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprescribe.wfhc.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribe.wfhc.org/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprescribe.wfhc.org/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://eprescribe.wfhc.org/FHIRproxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceQuadmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicicfore.quadmedical.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicicfore.quadmedical.com/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicicfore.quadmedical.com/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicicfore.quadmedical.com/fhirprd/api/FHIR/R4"
 

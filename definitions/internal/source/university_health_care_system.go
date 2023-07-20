@@ -16,6 +16,7 @@ func GetSourceUniversityHealthCareSystem(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.uhcs.org/IC-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.uhcs.org/IC-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soap.uhcs.org/IC-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://soap.uhcs.org/IC-FHIR/api/FHIR/R4"
 

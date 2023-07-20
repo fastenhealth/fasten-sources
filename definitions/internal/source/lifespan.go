@@ -16,6 +16,7 @@ func GetSourceLifespan(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://lsepprdsoap.lifespan.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://lsepprdsoap.lifespan.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://lsepprdsoap.lifespan.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://lsepprdsoap.lifespan.org/fhirproxy/api/FHIR/R4"
 

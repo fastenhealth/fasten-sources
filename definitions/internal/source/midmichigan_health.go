@@ -16,6 +16,7 @@ func GetSourceMidmichiganHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprod.midmichigan.net/ProdFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://arrprod.midmichigan.net/ProdFHIR/api/FHIR/R4"
 

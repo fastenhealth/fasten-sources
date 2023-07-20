@@ -16,6 +16,7 @@ func GetSourceTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLig
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rmgpxy.riverbendmedical.com/fhir_proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rmgpxy.riverbendmedical.com/fhir_proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rmgpxy.riverbendmedical.com/fhir_proxy/oauth2/register"
 
 	sourceDef.Audience = "https://rmgpxy.riverbendmedical.com/fhir_proxy/api/FHIR/R4"
 

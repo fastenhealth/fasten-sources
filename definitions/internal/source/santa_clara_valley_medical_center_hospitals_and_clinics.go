@@ -16,6 +16,7 @@ func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLig
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://scvhhsfhir.sccgov.org/interconnect-oauth2/oauth2/register"
 
 	sourceDef.Audience = "https://scvhhsfhir.sccgov.org/interconnect-fhir/api/FHIR/R4"
 

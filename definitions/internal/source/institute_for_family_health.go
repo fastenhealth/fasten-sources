@@ -16,6 +16,7 @@ func GetSourceInstituteForFamilyHealth(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.institute.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.institute.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.institute.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.institute.org/fhir/api/FHIR/R4"
 

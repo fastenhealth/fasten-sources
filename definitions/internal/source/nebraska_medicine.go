@@ -16,6 +16,7 @@ func GetSourceNebraskaMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://ocsoapprd.nebraskamed.com/FHIR-PRD/api/FHIR/R4"
 

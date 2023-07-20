@@ -16,6 +16,7 @@ func GetSourceNovantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.mynovant.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.mynovant.org/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webproxy.mynovant.org/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://webproxy.mynovant.org/fhir-prd/api/FHIR/R4"
 

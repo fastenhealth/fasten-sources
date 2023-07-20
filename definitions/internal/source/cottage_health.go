@@ -16,6 +16,7 @@ func GetSourceCottageHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eparp.sbch.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eparp.sbch.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eparp.sbch.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://eparp.sbch.org/FHIR/api/FHIR/R4"
 

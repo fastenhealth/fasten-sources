@@ -16,6 +16,7 @@ func GetSourceNortonHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.nortonhealthcare.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.nortonhealthcare.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.nortonhealthcare.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.nortonhealthcare.org/FHIRPRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceBozemanHealthPrd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://revproxy.bh.bozemanhealth.org/Interconnect-OAuth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://revproxy.bh.bozemanhealth.org/Interconnect-OAuth2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://revproxy.bh.bozemanhealth.org/Interconnect-OAuth2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://revproxy.bh.bozemanhealth.org/Interconnect-Oauth2-PRD/api/FHIR/R4"
 

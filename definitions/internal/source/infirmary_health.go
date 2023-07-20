@@ -16,6 +16,7 @@ func GetSourceInfirmaryHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://ssproxyprod.infirmaryhealth.org/epicFHIR/api/FHIR/R4"
 

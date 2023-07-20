@@ -16,6 +16,7 @@ func GetSourceVirginiaHospitalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://common.virginiahospitalcenter.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://common.virginiahospitalcenter.com/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://common.virginiahospitalcenter.com/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://common.virginiahospitalcenter.com/FHIRPRD/api/FHIR/R4"
 

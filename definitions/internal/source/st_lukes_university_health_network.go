@@ -16,6 +16,7 @@ func GetSourceStLukesUniversityHealthNetwork(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.slhn.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.slhn.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.slhn.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.slhn.org/fhir/api/FHIR/R4"
 

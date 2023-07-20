@@ -16,6 +16,7 @@ func GetSourceMonumentHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ehrmobile.monument.health/interconnect-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ehrmobile.monument.health/interconnect-prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ehrmobile.monument.health/interconnect-prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://ehrmobile.monument.health/interconnect-prd-fhir/api/FHIR/R4"
 

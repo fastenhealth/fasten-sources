@@ -16,6 +16,7 @@ func GetSourceOptumcareEast(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.optum.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.optum.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr.optum.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr.optum.com/FHIR/api/FHIR/R4"
 

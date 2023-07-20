@@ -16,6 +16,7 @@ func GetSourceBostonMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://emerge-soap1.bmc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emerge-soap1.bmc.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://emerge-soap1.bmc.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://emerge-soap1.bmc.org/FHIR-PRD/api/FHIR/R4"
 

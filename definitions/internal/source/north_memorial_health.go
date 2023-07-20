@@ -16,6 +16,7 @@ func GetSourceNorthMemorialHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://minerva.northmemorial.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://minerva.northmemorial.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://minerva.northmemorial.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://minerva.northmemorial.com/fhir/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceChiStVincent(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSGF/CHI/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSGF/CHI/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSGF/CHI/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir.mercy.net/PRDFHIRSGF/CHI/api/FHIR/R4"
 

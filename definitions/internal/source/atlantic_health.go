@@ -16,6 +16,7 @@ func GetSourceAtlanticHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxy.atlantichealth.org/FHIRPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxy.atlantichealth.org/FHIRPrd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapproxy.atlantichealth.org/FHIRPrd/oauth2/register"
 
 	sourceDef.Audience = "https://soapproxy.atlantichealth.org/FHIRPrd/api/FHIR/R4"
 

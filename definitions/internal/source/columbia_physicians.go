@@ -16,6 +16,7 @@ func GetSourceColumbiaPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy-pub.et1089.epichosted.com/FHIRProxy/api/FHIR/R4"
 

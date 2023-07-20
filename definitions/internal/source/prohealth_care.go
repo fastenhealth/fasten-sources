@@ -16,6 +16,7 @@ func GetSourceProhealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.phci.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.phci.org/Interconnect-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soap.phci.org/Interconnect-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://soap.phci.org/Interconnect-FHIR/api/FHIR/R4"
 

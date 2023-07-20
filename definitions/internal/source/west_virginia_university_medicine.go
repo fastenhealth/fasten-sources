@@ -16,6 +16,7 @@ func GetSourceWestVirginiaUniversityMedicine(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://apps.mywvuchart.com/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://apps.mywvuchart.com/fhirproxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceLakelandHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.lakelandregional.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.lakelandregional.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.lakelandregional.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.lakelandregional.org/fhirproxy/api/FHIR/R4"
 

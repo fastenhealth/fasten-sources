@@ -16,6 +16,7 @@ func GetSourceLeonMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://prodinterconnect.leonmedicalcenters.com/FHIR-PRD/api/FHIR/R4"
 

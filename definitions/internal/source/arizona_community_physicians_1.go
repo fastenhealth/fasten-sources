@@ -16,6 +16,7 @@ func GetSourceArizonaCommunityPhysicians1(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.azacp.com/interconnect-oauth2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.azacp.com/interconnect-oauth2-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconnect.azacp.com/interconnect-oauth2-prd/oauth2/register"
 
 	sourceDef.Audience = "https://interconnect.azacp.com/interconnect-oauth2-prd/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceAspirus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://erx.aspirus.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://erx.aspirus.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://erx.aspirus.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://erx.aspirus.org/FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceChiStAlexiusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rp.chihealth.com/fhir/FHIRSTA/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rp.chihealth.com/fhir/FHIRSTA/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rp.chihealth.com/fhir/FHIRSTA/oauth2/register"
 
 	sourceDef.Audience = "https://rp.chihealth.com/fhir/FHIRSTA/api/FHIR/R4"
 

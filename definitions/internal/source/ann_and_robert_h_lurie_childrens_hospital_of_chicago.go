@@ -16,6 +16,7 @@ func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenLightho
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.luriechildrens.org/Interconnect-FHIRPRD/api/FHIR/R4"
 

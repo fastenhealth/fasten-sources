@@ -16,6 +16,7 @@ func GetSourceConemaughHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.conemaugh.org/arr-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.conemaugh.org/arr-fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.conemaugh.org/arr-fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.conemaugh.org/arr-fhir-prd/api/FHIR/R4"
 

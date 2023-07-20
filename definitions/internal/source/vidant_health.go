@@ -16,6 +16,7 @@ func GetSourceVidantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://prd-proxy.vidanthealth.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://prd-proxy.vidanthealth.com/FHIR/api/FHIR/R4"
 

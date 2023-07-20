@@ -16,6 +16,7 @@ func GetSourceRushUniversityMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.rush.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.rush.edu/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.rush.edu/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.rush.edu/fhir-prd/api/FHIR/R4"
 

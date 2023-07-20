@@ -16,6 +16,7 @@ func GetSourceMercyHealthServicesMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconnect.mdmercy.com/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://surescripts.mdmercy.com/fhir-prd/api/FHIR/R4"
 

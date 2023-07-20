@@ -16,6 +16,7 @@ func GetSourceBaptistHealthArkansas(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://api.baptist-health.org/Interconnect-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://api.baptist-health.org/Interconnect-FHIR/api/FHIR/R4"
 

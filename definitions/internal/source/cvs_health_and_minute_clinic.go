@@ -16,6 +16,7 @@ func GetSourceCvsHealthAndMinuteClinic(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://retailepicfhir.cvshealth.com/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://retailepicfhir.cvshealth.com/FhirProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://retailepicfhir.cvshealth.com/FhirProxy/oauth2/register"
 
 	sourceDef.Audience = "https://retailepicfhir.cvshealth.com/FhirProxy/api/fhir/R4"
 

@@ -16,6 +16,7 @@ func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceStJudeChildrensResearchHospital(env pkg.FastenLighthouseEnvType, c
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rp.stjude.org/oauth2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rp.stjude.org/oauth2-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rp.stjude.org/oauth2-prd/oauth2/register"
 
 	sourceDef.Audience = "https://rp.stjude.org/oauth2-prd/api/FHIR/R4"
 

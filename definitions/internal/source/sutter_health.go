@@ -16,6 +16,7 @@ func GetSourceSutterHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/register"
 
 	sourceDef.Audience = "https://apiservices.sutterhealth.org/ifs/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.emc.org/EMC_FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.emc.org/EMC_FHIR_PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr.emc.org/EMC_FHIR_PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4"
 

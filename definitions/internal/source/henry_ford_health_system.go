@@ -16,6 +16,7 @@ func GetSourceHenryFordHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.hfhs.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.hfhs.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.hfhs.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.hfhs.org/FHIRProxy/api/FHIR/R4"
 

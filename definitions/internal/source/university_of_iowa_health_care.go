@@ -16,6 +16,7 @@ func GetSourceUniversityOfIowaHealthCare(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://myepicapps.uihealthcare.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://myepicapps.uihealthcare.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://myepicapps.uihealthcare.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://myepicapps.uihealthcare.org/FHIRProxy/api/FHIR/R4"
 

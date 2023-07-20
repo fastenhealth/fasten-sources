@@ -16,6 +16,7 @@ func GetSourceSaintLukesHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.corp.saint-lukes.org/FHIRPROXY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.corp.saint-lukes.org/FHIRPROXY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.corp.saint-lukes.org/FHIRPROXY/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.corp.saint-lukes.org/FHIRPROXY/api/FHIR/R4"
 

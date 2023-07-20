@@ -16,6 +16,7 @@ func GetSourceProvidenceHealthAndServicesOregonCalifornia(env pkg.FastenLighthou
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haikuor.providence.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haikuor.providence.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haikuor.providence.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://haikuor.providence.org/fhirproxy/api/FHIR/R4"
 

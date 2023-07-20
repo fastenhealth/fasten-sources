@@ -16,6 +16,7 @@ func GetSourceNyuLangoneMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.nyumc.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.nyumc.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicfhir.nyumc.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicfhir.nyumc.org/FHIRPRD/api/FHIR/R4"
 

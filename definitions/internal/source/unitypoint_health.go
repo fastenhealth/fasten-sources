@@ -16,6 +16,7 @@ func GetSourceUnitypointHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.unitypoint.org/ProdFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.unitypoint.org/ProdFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicfhir.unitypoint.org/ProdFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicfhir.unitypoint.org/ProdFHIR/api/FHIR/R4"
 

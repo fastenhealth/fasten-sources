@@ -16,6 +16,7 @@ func GetSourceGeorgeWashingtonUniversityMedicalFacultyAssociates(env pkg.FastenL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1222.epichosted.com/FHIRPROXY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1222.epichosted.com/FHIRPROXY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1222.epichosted.com/FHIRPROXY/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1222.epichosted.com/FHIRProxy/api/FHIR/R4"
 

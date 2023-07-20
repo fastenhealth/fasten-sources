@@ -16,6 +16,7 @@ func GetSourceRwjbarnabasHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1157.epichosted.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1157.epichosted.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1157.epichosted.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1157.epichosted.com/FHIRProxy/api/FHIR/R4"
 

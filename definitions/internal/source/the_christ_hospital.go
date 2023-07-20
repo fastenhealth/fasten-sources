@@ -16,6 +16,7 @@ func GetSourceTheChristHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxyprod.thechristhospital.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxyprod.thechristhospital.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapproxyprod.thechristhospital.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://soapproxyprod.thechristhospital.com/fhir/api/FHIR/R4"
 

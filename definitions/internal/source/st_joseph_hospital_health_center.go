@@ -16,6 +16,7 @@ func GetSourceStJosephHospitalHealthCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobileproxy.sjhsyr.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileproxy.sjhsyr.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mobileproxy.sjhsyr.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://mobileproxy.sjhsyr.org/FHIR/api/FHIR/R4"
 

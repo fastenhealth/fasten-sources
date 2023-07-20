@@ -16,6 +16,7 @@ func GetSourceGoldenValleyHealthCenters(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ep-rps.gvhc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ep-rps.gvhc.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ep-rps.gvhc.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://ep-rps.gvhc.org/FHIR-PRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceElCaminoHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rwebproxy.elcaminohospital.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rwebproxy.elcaminohospital.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rwebproxy.elcaminohospital.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://rwebproxy.elcaminohospital.org/FHIR/api/FHIR/R4"
 

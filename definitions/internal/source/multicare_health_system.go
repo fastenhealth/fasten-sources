@@ -16,6 +16,7 @@ func GetSourceMulticareHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.multicare.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.multicare.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapprod.multicare.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://soapprod.multicare.org/FHIRProxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceEssentiaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://m.essentiahealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://m.essentiahealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://m.essentiahealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://m.essentiahealth.org/FHIR/api/FHIR/R4"
 

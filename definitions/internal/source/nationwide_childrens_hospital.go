@@ -16,6 +16,7 @@ func GetSourceNationwideChildrensHospital(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://hkc.nationwidechildrens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hkc.nationwidechildrens.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://hkc.nationwidechildrens.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://hkc.nationwidechildrens.org/FHIR/api/FHIR/R4"
 

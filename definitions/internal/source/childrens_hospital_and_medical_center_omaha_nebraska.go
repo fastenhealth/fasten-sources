@@ -16,6 +16,7 @@ func GetSourceChildrensHospitalAndMedicalCenterOmahaNebraska(env pkg.FastenLight
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://EPROXY1.chsomaha.org/FHIRPROXY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EPROXY1.chsomaha.org/FHIRPROXY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://EPROXY1.chsomaha.org/FHIRPROXY/oauth2/register"
 
 	sourceDef.Audience = "https://EPROXY1.chsomaha.org/FHIRPROXY/api/FHIR/R4"
 

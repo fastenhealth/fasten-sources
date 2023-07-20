@@ -16,6 +16,7 @@ func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthous
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.hattiesburgclinic.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.hattiesburgclinic.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapprod.hattiesburgclinic.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://soapprod.hattiesburgclinic.com/FHIR/api/FHIR/R4"
 

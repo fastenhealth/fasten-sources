@@ -16,6 +16,7 @@ func GetSourceHennepinHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://hie.hcmed.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hie.hcmed.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://hie.hcmed.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://hie.hcmed.org/FHIR/api/FHIR/R4"
 

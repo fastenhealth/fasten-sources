@@ -16,6 +16,7 @@ func GetSourceHendricksRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/HRH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/HRH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/HRH/oauth2/register"
 
 	sourceDef.Audience = "https://sehproxy.stelizabeth.com/arr-fhir/HRH/api/FHIR/R4"
 

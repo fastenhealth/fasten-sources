@@ -16,6 +16,7 @@ func GetSourceCentracareHealthAndAffiliates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.centracare.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.centracare.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.centracare.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.centracare.com/fhir/api/FHIR/R4"
 

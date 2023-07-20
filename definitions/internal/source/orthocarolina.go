@@ -16,6 +16,7 @@ func GetSourceOrthocarolina(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epwebapps.orthocarolina.com/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://epwebapps.orthocarolina.com/fhir-prd/api/FHIR/R4"
 

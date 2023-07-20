@@ -16,6 +16,7 @@ func GetSourceAccessCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprescribing.accesscommunityhealth.net/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://eprescribing.accesscommunityhealth.net/FHIR/api/FHIR/R4"
 

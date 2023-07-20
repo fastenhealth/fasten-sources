@@ -16,6 +16,7 @@ func GetSourceKetteringHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://KHNARR.KETTHEALTH.COM/FHIR-PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://KHNARR.KETTHEALTH.COM/FHIR-PROD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://KHNARR.KETTHEALTH.COM/FHIR-PROD/oauth2/register"
 
 	sourceDef.Audience = "https://khnarr.ketthealth.com/FHIR-PROD/api/FHIR/R4"
 

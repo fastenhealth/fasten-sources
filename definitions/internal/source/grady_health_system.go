@@ -16,6 +16,7 @@ func GetSourceGradyHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://surescripts.gmh.edu/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://surescripts.gmh.edu/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://surescripts.gmh.edu/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://surescripts.gmh.edu/FHIR/api/FHIR/R4"
 

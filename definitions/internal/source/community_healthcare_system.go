@@ -16,6 +16,7 @@ func GetSourceCommunityHealthcareSystem(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.comhs.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.comhs.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webproxy.comhs.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://webproxy.comhs.org/FHIR/api/FHIR/R4"
 

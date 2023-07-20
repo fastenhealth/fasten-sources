@@ -16,6 +16,7 @@ func GetSourceWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-soap.wakemed.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-soap.wakemed.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-soap.wakemed.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epic-soap.wakemed.org/FHIR/api/FHIR/R4"
 

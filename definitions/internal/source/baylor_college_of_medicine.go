@@ -16,6 +16,7 @@ func GetSourceBaylorCollegeOfMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.clinical.bcm.edu/Stage1Fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.clinical.bcm.edu/Stage1Fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.clinical.bcm.edu/Stage1Fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4"
 

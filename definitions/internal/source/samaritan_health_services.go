@@ -16,6 +16,7 @@ func GetSourceSamaritanHealthServices(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.samhealth.org/fhir-arr/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.samhealth.org/fhir-arr/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.samhealth.org/fhir-arr/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.samhealth.org/fhir-arr/api/FHIR/R4"
 

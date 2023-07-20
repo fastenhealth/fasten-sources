@@ -16,6 +16,7 @@ func GetSourceHoustonMethodist(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epiclbsprxyprodpass.houstonmethodist.org/PRD-FHIR/api/FHIR/R4"
 

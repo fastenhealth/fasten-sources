@@ -16,6 +16,7 @@ func GetSourceMayoClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://pep.api.mayo.edu/epicoauth2/vexternal/oauth2/register"
 
 	sourceDef.Audience = "https://pep.api.mayo.edu/epicfhiroauth/vexternal/api/FHIR/R4"
 

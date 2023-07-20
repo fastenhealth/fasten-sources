@@ -16,6 +16,7 @@ func GetSourceUniversityOfMississippiMedicalCenter(env pkg.FastenLighthouseEnvTy
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxy.umc.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxy.umc.edu/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapproxy.umc.edu/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://soapproxy.umc.edu/FHIRProxy/api/FHIR/R4"
 

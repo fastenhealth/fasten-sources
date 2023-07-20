@@ -16,6 +16,7 @@ func GetSourceValleyHealthSystemsPrd(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://api.valleyhealth.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.valleyhealth.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://api.valleyhealth.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://api.valleyhealth.org/fhirproxy/api/FHIR/R4"
 

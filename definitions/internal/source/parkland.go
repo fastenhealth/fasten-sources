@@ -16,6 +16,7 @@ func GetSourceParkland(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://pmh-vmhaiku-01.pmh.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://pmh-vmhaiku-01.pmh.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://pmh-vmhaiku-01.pmh.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://pmh-vmhaiku-01.pmh.org/FHIR/api/FHIR/R4"
 

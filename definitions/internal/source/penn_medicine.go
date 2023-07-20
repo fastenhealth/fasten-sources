@@ -16,6 +16,7 @@ func GetSourcePennMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssproxy.pennhealth.com/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssproxy.pennhealth.com/PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ssproxy.pennhealth.com/PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://ssproxy.pennhealth.com/PRD-FHIR/api/FHIR/R4"
 

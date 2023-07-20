@@ -16,6 +16,7 @@ func GetSourcePineRestChristianMentalHealthServices(env pkg.FastenLighthouseEnvT
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wecare.pinerest.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wecare.pinerest.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://wecare.pinerest.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://wecare.pinerest.org/fhirproxy/api/FHIR/R4"
 

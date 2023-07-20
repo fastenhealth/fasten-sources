@@ -16,6 +16,7 @@ func GetSourceCambridgeHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.challiance.org/Interconnect-OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.challiance.org/Interconnect-OAuth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.challiance.org/Interconnect-OAuth2/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.challiance.org/Interconnect-oauth2/api/FHIR/R4"
 

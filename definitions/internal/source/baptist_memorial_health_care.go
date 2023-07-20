@@ -16,6 +16,7 @@ func GetSourceBaptistMemorialHealthCare(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rxedi.bmhcc.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rxedi.bmhcc.org/prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rxedi.bmhcc.org/prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://rxedi.bmhcc.org/prd-fhir/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceKingsDaughtersMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.kdmc.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.kdmc.net/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprd.kdmc.net/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://arrprd.kdmc.net/fhir/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceBuffaloMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.buffalomedicalgroup.com/fhir-arr/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.buffalomedicalgroup.com/fhir-arr/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.buffalomedicalgroup.com/fhir-arr/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.buffalomedicalgroup.com/fhir-arr/api/FHIR/R4"
 

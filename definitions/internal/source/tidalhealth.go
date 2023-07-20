@@ -16,6 +16,7 @@ func GetSourceTidalhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eweb.tidalhealth.org/Oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eweb.tidalhealth.org/Oauth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eweb.tidalhealth.org/Oauth2/oauth2/register"
 
 	sourceDef.Audience = "https://eweb.peninsula.org/FHIRProxy/api/FHIR/R4"
 

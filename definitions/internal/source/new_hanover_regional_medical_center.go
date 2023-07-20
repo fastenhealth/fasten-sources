@@ -16,6 +16,7 @@ func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.nhrmc.org/OAuth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.nhrmc.org/OAuth2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.nhrmc.org/OAuth2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.nhrmc.org/OAuth2-PRD/api/FHIR/R4"
 

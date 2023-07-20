@@ -16,6 +16,7 @@ func GetSourceStormontVailHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.stormontvail.org/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.stormontvail.org/FHIRproxy/api/FHIR/R4"
 

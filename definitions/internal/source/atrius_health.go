@@ -16,6 +16,7 @@ func GetSourceAtriusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://iatrius.atriushealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://iatrius.atriushealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://iatrius.atriushealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://iatrius.atriushealth.org/FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourcePeacehealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxy.peacehealth.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxy.peacehealth.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapproxy.peacehealth.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://soapproxy.peacehealth.org/FHIRProxy/api/FHIR/R4"
 

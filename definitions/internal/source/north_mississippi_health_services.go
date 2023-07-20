@@ -16,6 +16,7 @@ func GetSourceNorthMississippiHealthServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eiclbext.nmhs.net/interconnect-generaloauth2services-prd/oauth2/register"
 
 	sourceDef.Audience = "https://eiclbext.nmhs.net/interconnect-fhir-prd/api/FHIR/R4"
 

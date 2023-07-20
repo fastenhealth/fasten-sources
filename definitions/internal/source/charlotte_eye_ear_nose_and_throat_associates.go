@@ -16,6 +16,7 @@ func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnv
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.ceenta.com/proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.ceenta.com/proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhirprd.ceenta.com/proxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhirprd.ceenta.com/proxy/api/FHIR/R4"
 

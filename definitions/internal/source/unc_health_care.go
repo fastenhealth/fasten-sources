@@ -16,6 +16,7 @@ func GetSourceUncHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfe.unch.unc.edu/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfe.unch.unc.edu/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicfe.unch.unc.edu/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicfe.unch.unc.edu/FHIR/api/FHIR/R4"
 

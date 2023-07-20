@@ -16,6 +16,7 @@ func GetSourceHcaCentralAndWestTexas(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/oauth2/register"
 
 	sourceDef.Audience = "https://stdavidsfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 

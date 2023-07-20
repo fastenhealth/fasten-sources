@@ -16,6 +16,7 @@ func GetSourceNortheastGeorgiaHealthSystem(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.nghs.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.nghs.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://wpprod.nghs.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://wpprod.nghs.com/fhir/api/FHIR/R4"
 

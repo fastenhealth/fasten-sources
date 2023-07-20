@@ -16,6 +16,7 @@ func GetSourceAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/oauth2/register"
 
 	sourceDef.Audience = "https://EpicFHIR.aurora.org/FHIR/MYAURORA/api/FHIR/R4"
 

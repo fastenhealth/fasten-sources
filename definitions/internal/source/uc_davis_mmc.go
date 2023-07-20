@@ -16,6 +16,7 @@ func GetSourceUcDavisMmc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/oauth2/register"
 
 	sourceDef.Audience = "https://emrrp.ucdmc.ucdavis.edu/FHIR/MMC/api/FHIR/R4"
 

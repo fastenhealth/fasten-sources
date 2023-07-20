@@ -16,6 +16,7 @@ func GetSourceDriscollChildrensHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.dchstx.org/FHIR-External/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.dchstx.org/FHIR-External/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.dchstx.org/FHIR-External/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.dchstx.org/FHIR-External/api/FHIR/R4"
 

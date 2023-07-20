@@ -16,6 +16,7 @@ func GetSourceArdent(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4"
 

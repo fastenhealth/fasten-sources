@@ -16,6 +16,7 @@ func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.harrishealth.org/fhir/api/FHIR/R4"
 

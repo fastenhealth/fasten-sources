@@ -16,6 +16,7 @@ func GetSourceOchin(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webprd.ochin.org/prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://webprd.ochin.org/prd-fhir/api/FHIR/R4"
 

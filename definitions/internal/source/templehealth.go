@@ -16,6 +16,7 @@ func GetSourceTemplehealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicaccess.templehealth.org/FhirProxyPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicaccess.templehealth.org/FhirProxyPrd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicaccess.templehealth.org/FhirProxyPrd/oauth2/register"
 
 	sourceDef.Audience = "https://epicaccess.templehealth.org/FhirProxyPrd/api/FHIR/R4"
 

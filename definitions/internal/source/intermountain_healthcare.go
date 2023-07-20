@@ -16,6 +16,7 @@ func GetSourceIntermountainHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/oauth2/register"
 
 	sourceDef.Audience = "https://sclprdproxy.sclhs.net/FHIRPRD-2017/api/FHIR/R4"
 

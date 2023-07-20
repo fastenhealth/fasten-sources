@@ -16,6 +16,7 @@ func GetSourceUniversityOfRochesterMedicalCenterPrd(env pkg.FastenLighthouseEnvT
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ercd-sproxy.urmc.rochester.edu/mips/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ercd-sproxy.urmc.rochester.edu/mips/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ercd-sproxy.urmc.rochester.edu/mips/oauth2/register"
 
 	sourceDef.Audience = "https://ercd-sproxy.urmc.rochester.edu/MIPS/api/FHIR/R4"
 

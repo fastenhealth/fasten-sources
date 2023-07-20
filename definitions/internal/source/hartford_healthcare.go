@@ -16,6 +16,7 @@ func GetSourceHartfordHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://EpicProxy.hhchealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicProxy.hhchealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://EpicProxy.hhchealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.hhchealth.org/FHIR/api/FHIR/R4"
 

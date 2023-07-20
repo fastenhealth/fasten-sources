@@ -16,6 +16,7 @@ func GetSourceSalemHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prd.salemhealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prd.salemhealth.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://prd.salemhealth.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://prd.salemhealth.org/fhir/api/FHIR/R4"
 

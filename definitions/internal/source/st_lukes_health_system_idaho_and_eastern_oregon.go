@@ -16,6 +16,7 @@ func GetSourceStLukesHealthSystemIdahoAndEasternOregon(env pkg.FastenLighthouseE
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epincoming.slhs.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epincoming.slhs.org/Interconnect-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epincoming.slhs.org/Interconnect-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epmobile.slhs.org/Interconnect-FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceStElizabethHealthcare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/SEH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/SEH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sehproxy.stelizabeth.com/arr-fhir/SEH/oauth2/register"
 
 	sourceDef.Audience = "https://sehproxy.stelizabeth.com/arr-fhir/SEH/api/FHIR/R4"
 

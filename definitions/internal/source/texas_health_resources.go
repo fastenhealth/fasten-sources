@@ -16,6 +16,7 @@ func GetSourceTexasHealthResources(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epproxy.texashealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epproxy.texashealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epproxy.texashealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epproxy.texashealth.org/FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceCarleFoundationHospitalAndPhysicianGroup(env pkg.FastenLighthouseE
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.carle.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.carle.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.carle.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.carle.com/FHIR/api/FHIR/R4"
 

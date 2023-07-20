@@ -16,6 +16,7 @@ func GetSourceMartinHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prodrx919.martinhealth.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prodrx919.martinhealth.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://prodrx919.martinhealth.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://prodrx919.martinhealth.org/FHIR-PRD/api/FHIR/R4"
 

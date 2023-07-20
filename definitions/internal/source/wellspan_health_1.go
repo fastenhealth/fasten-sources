@@ -16,6 +16,7 @@ func GetSourceWellspanHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.wellspan.org/interconnect-prd-oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.wellspan.org/interconnect-prd-oauth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconnect.wellspan.org/interconnect-prd-oauth2/oauth2/register"
 
 	sourceDef.Audience = "https://interconnect.wellspan.org/interconnect-prd-fhir/api/FHIR/R4"
 

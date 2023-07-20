@@ -16,6 +16,7 @@ func GetSourceUwMedicineWashington(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.epic.medical.washington.edu/FHIR-Proxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceMountAuburnHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mah.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mah.org/prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.mah.org/prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.mah.org/prd-fhir/api/FHIR/R4"
 

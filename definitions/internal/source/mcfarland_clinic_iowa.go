@@ -16,6 +16,7 @@ func GetSourceMcfarlandClinicIowa(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://emrproxy.mcfarlandclinic.com/FHIRProxy/api/FHIR/R4"
 

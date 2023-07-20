@@ -16,6 +16,7 @@ func GetSourceWalmart(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicinterconnect.walmarthealth.com/Interconnect-OAuth2-PRD/api/FHIR/R4"
 

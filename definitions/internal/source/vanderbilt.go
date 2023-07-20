@@ -16,6 +16,7 @@ func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arr01.service.vumc.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://arr01.service.vumc.org/FHIR-PRD/api/FHIR/R4"
 

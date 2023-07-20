@@ -16,6 +16,7 @@ func GetSourceScrippsHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.scrippshealth.org/ARR-PRD-FHIR/api/FHIR/R4"
 

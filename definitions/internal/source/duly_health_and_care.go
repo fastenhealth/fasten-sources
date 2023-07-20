@@ -16,6 +16,7 @@ func GetSourceDulyHealthAndCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1296.epichosted.com/APIProxyPRD/api/FHIR/R4"
 

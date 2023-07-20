@@ -16,6 +16,7 @@ func GetSourceUcHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-soap.uchealth.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-soap.uchealth.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-soap.uchealth.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epic-soap.uchealth.com/FHIRProxy/api/FHIR/R4"
 

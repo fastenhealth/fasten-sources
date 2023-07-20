@@ -16,6 +16,7 @@ func GetSourceFamilyHealthCenterMichigan(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://hygieia.bronsonhg.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hygieia.bronsonhg.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://hygieia.bronsonhg.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://hygieia.bronsonhg.org/FHIRProxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceCommunityMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoapprd.communitymedical.org/arr_fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoapprd.communitymedical.org/arr_fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoapprd.communitymedical.org/arr_fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoapprd.communitymedical.org/arr_fhir/api/FHIR/R4"
 

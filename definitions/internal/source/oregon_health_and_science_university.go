@@ -16,6 +16,7 @@ func GetSourceOregonHealthAndScienceUniversity(env pkg.FastenLighthouseEnvType, 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.ohsu.edu/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.ohsu.edu/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.ohsu.edu/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.ohsu.edu/FHIRPRD/api/FHIR/R4"
 

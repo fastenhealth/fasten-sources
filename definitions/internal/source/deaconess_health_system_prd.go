@@ -16,6 +16,7 @@ func GetSourceDeaconessHealthSystemPrd(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprp.deaconess.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprp.deaconess.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprp.deaconess.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://eprp.deaconess.com/FHIR/api/FHIR/R4"
 

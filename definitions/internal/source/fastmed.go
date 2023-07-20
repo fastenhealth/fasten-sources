@@ -16,6 +16,7 @@ func GetSourceFastmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://external.fastmed.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://external.fastmed.com/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://external.fastmed.com/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://external.fastmed.com/FHIRproxy/api/FHIR/R4"
 

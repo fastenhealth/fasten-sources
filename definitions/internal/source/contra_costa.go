@@ -16,6 +16,7 @@ func GetSourceContraCosta(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://icproxy.mycclink.org/proxy-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://icproxy.mycclink.org/proxy-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://icproxy.mycclink.org/proxy-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://icproxy.mycclink.org/proxy-FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceLancasterGeneralHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.lghealth.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.lghealth.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.lghealth.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.lghealth.org/FHIRProxy/api/FHIR/R4"
 

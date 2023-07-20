@@ -16,6 +16,7 @@ func GetSourceMedisysHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprescribe-p.medisys.org/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribe-p.medisys.org/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprescribe-p.medisys.org/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://eprescribe-p.medisys.org/fhir-prd/api/FHIR/R4"
 

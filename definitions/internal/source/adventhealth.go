@@ -16,6 +16,7 @@ func GetSourceAdventhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobile.adventhealth.com/oauth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobile.adventhealth.com/oauth2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mobile.adventhealth.com/oauth2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://mobile.adventhealth.com/oauth2-PRD/api/FHIR/R4"
 

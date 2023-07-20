@@ -16,6 +16,7 @@ func GetSourceTexasChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobileapps.texaschildrens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileapps.texaschildrens.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mobileapps.texaschildrens.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://mobileapps.texaschildrens.org/FHIR/api/FHIR/R4"
 

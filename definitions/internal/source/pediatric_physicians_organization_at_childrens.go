@@ -16,6 +16,7 @@ func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthous
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.chppoc.org/Fhir-External/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.chppoc.org/Fhir-External/api/FHIR/R4"
 

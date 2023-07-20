@@ -16,6 +16,7 @@ func GetSourceCedarsSinaiHealthSystem(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://cslinkmobile.csmc.edu/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://cslinkmobile.csmc.edu/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://cslinkmobile.csmc.edu/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://cslinkmobile.csmc.edu/fhirproxy/api/FHIR/R4"
 

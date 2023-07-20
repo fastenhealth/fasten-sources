@@ -16,6 +16,7 @@ func GetSourceSentaraHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.sentara.com/ARR-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.sentara.com/ARR-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicfhir.sentara.com/ARR-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicfhir.sentara.com/ARR-FHIR-PRD/api/FHIR/R4"
 

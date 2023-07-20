@@ -16,6 +16,7 @@ func GetSourceChristusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://proxy.christushealth.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://proxy.christushealth.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://proxy.christushealth.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://proxy.christushealth.org/FHIRPRD/api/FHIR/R4"
 

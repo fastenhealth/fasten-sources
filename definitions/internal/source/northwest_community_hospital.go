@@ -16,6 +16,7 @@ func GetSourceNorthwestCommunityHospital(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicprdproxy.nch.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdproxy.nch.org/prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicprdproxy.nch.org/prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicprdproxy.nch.org/prd-fhir/api/FHIR/R4"
 

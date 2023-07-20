@@ -16,6 +16,7 @@ func GetSourceSunyUpstateMedicalUniversity(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicedge.upstate.edu/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicedge.upstate.edu/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicedge.upstate.edu/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicedge.upstate.edu/fhir/api/FHIR/R4"
 

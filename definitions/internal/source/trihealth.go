@@ -16,6 +16,7 @@ func GetSourceTrihealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicscripts.trihealth.com/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicscripts.trihealth.com/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicscripts.trihealth.com/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicscripts.trihealth.com/fhirproxy/api/FHIR/R4"
 

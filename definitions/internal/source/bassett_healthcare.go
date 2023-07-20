@@ -16,6 +16,7 @@ func GetSourceBassettHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.bassett.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.bassett.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soap.bassett.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://soap.bassett.org/FHIR/api/FHIR/R4"
 

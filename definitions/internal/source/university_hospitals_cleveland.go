@@ -16,6 +16,7 @@ func GetSourceUniversityHospitalsCleveland(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://uhhsportal.uhhospitals.org/oauth2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://uhhsportal.uhhospitals.org/oauth2-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://uhhsportal.uhhospitals.org/oauth2-prd/oauth2/register"
 
 	sourceDef.Audience = "https://uhhsportal.uhhospitals.org/oauth2-prd/api/FHIR/R4"
 

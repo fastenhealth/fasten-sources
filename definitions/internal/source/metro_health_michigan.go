@@ -16,6 +16,7 @@ func GetSourceMetroHealthMichigan(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.metrohealth.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.metrohealth.net/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprd.metrohealth.net/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://arrprd.metrohealth.net/fhir/api/FHIR/R4"
 

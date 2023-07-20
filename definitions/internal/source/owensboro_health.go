@@ -16,6 +16,7 @@ func GetSourceOwensboroHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.omhs.org/rp-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.omhs.org/rp-prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.omhs.org/rp-prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.omhs.org/rp-prd-fhir/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceTheEverettClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.myeverettclinic.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.myeverettclinic.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.myeverettclinic.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.myeverettclinic.com/fhir/api/FHIR/R4"
 

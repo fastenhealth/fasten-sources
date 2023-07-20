@@ -16,6 +16,7 @@ func GetSourceUmcSouthernNevada(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1023.epichosted.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1023.epichosted.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1023.epichosted.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1023.epichosted.com/FHIRProxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceFirsthealthOfTheCarolinas(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicrp.firsthealth.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicrp.firsthealth.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicrp.firsthealth.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicrp.firsthealth.org/FHIR-PRD/api/FHIR/R4"
 

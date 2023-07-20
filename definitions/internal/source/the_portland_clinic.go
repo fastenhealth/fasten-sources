@@ -16,6 +16,7 @@ func GetSourceThePortlandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://tpc-shield.tpcllp.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://tpc-shield.tpcllp.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://tpc-shield.tpcllp.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env pkg.FastenLighthous
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mdanderson.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mdanderson.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.mdanderson.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.mdanderson.org/FHIR/api/FHIR/R4"
 

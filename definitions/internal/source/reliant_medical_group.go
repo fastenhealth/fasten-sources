@@ -16,6 +16,7 @@ func GetSourceReliantMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://fhirprd.reliantmedicalgroup.org/FHIRPRD/api/FHIR/R4"
 

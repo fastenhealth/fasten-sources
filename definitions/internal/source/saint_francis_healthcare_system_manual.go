@@ -16,6 +16,7 @@ func GetSourceSaintFrancisHealthcareSystemManual(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://reverseproxy.sfmc.net/fhirproxyprd/oauth2/register"
 
 	sourceDef.Audience = "https://reverseproxy.sfmc.net/fhirproxyprd/api/FHIR/R4"
 

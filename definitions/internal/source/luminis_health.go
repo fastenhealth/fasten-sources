@@ -16,6 +16,7 @@ func GetSourceLuminisHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.aahs.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.aahs.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr.aahs.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr.aahs.org/FHIR/api/FHIR/R4"
 

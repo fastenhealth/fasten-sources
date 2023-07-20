@@ -16,6 +16,7 @@ func GetSourceWashingtonHospitalHealthcareSystem(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://psacesoap.whhs.com/interconnect-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://psacesoap.whhs.com/interconnect-fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://psacesoap.whhs.com/interconnect-fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://psacesoap.whhs.com/interconnect-fhir-prd/api/FHIR/R4"
 

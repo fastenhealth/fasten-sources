@@ -16,6 +16,7 @@ func GetSourceAllinaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.allina.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.allina.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webproxy.allina.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://webproxy.allina.com/FHIR/api/FHIR/R4"
 

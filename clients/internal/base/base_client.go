@@ -149,7 +149,7 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 			token = newToken
 
 			// update the "source" credential with new data (which will need to be sent
-			c.SourceCredential.RefreshTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
+			c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
 			//updatedSource.AccessToken = newToken.AccessToken
 			//updatedSource.ExpiresAt = newToken.Expiry.Unix()
 			//// Don't overwrite `RefreshToken` with an empty value

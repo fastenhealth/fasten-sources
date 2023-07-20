@@ -16,6 +16,7 @@ func GetSourceWatsonClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-arr.watsonclinicad.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-arr.watsonclinicad.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-arr.watsonclinicad.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epic-arr.watsonclinicad.com/FHIRProxy/api/FHIR/R4"
 

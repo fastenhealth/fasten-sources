@@ -16,6 +16,7 @@ func GetSourceTrinityHealthOfNewEngland(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicprdext.stfranciscare.org/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdext.stfranciscare.org/FhirProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicprdext.stfranciscare.org/FhirProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicprdext.stfranciscare.org/FhirProxy/api/FHIR/R4"
 

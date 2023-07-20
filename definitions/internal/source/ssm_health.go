@@ -16,6 +16,7 @@ func GetSourceSsmHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.ssmhc.com/Fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.ssmhc.com/Fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.ssmhc.com/Fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.ssmhc.com/Fhir/api/FHIR/R4"
 

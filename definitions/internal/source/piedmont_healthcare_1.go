@@ -16,6 +16,7 @@ func GetSourcePiedmontHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webproxy.piedmont.org/ARR-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webproxy.piedmont.org/ARR-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webproxy.piedmont.org/ARR-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://webproxy.piedmont.org/ARR-FHIR/api/FHIR/R4"
 

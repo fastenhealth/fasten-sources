@@ -16,6 +16,7 @@ func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType, c
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://scripts.prevea.com/FHIR-ARR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://scripts.prevea.com/FHIR-ARR-PRD/api/FHIR/R4"
 

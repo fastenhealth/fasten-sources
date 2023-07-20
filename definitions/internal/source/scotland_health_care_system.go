@@ -16,6 +16,7 @@ func GetSourceScotlandHealthCareSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/SCOT/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/SCOT/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/SCOT/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/SCOT/api/FHIR/R4"
 

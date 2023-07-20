@@ -16,6 +16,7 @@ func GetSourceGeisinger(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://geisapi.geisinger.edu/FHIR_PROD/oauth2/register"
 
 	sourceDef.Audience = "https://geisapi.geisinger.edu/FHIR_PROD/api/FHIR/R4"
 

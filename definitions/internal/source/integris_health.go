@@ -16,6 +16,7 @@ func GetSourceIntegrisHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.Integrisok.com/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.Integrisok.com/Interconnect-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://FHIR.Integrisok.com/Interconnect-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://FHIR.Integrisok.com/Interconnect-FHIR/api/FHIR/R4"
 

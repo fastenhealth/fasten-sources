@@ -16,6 +16,7 @@ func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://webservices.hawaiipacifichealth.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://webservices.hawaiipacifichealth.org/fhir/api/FHIR/R4"
 

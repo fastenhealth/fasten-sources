@@ -16,6 +16,7 @@ func GetSourceTuftsMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://intconfg-p.well-net.org/PRD-OAUTH2/oauth2/register"
 
 	sourceDef.Audience = "https://intconfg-p.well-net.org/PRD-OAUTH2/api/FHIR/R4"
 

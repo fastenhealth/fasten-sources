@@ -16,6 +16,7 @@ func GetSourceChiSaintJosephHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRKY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRKY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRKY/oauth2/register"
 
 	sourceDef.Audience = "https://rpsouth.catholichealth.net/fhir/FHIRKY/api/FHIR/R4"
 

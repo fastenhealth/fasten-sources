@@ -16,6 +16,7 @@ func GetSourceUclaMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprox.mednet.ucla.edu/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprox.mednet.ucla.edu/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprox.mednet.ucla.edu/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://arrprox.mednet.ucla.edu/FHIRPRD/api/FHIR/R4"
 

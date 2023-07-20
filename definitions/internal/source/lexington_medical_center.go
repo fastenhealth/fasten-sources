@@ -16,6 +16,7 @@ func GetSourceLexingtonMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://lmcrcs.lexmed.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://lmcrcs.lexmed.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://lmcrcs.lexmed.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://lmcrcs.lexmed.com/FHIR/api/FHIR/R4"
 

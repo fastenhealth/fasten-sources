@@ -17,6 +17,7 @@ func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soap.wellmont.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://soap.wellmont.org/FHIRPRD/api/FHIR/R4"
 

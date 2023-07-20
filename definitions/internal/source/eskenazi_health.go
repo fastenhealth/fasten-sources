@@ -16,6 +16,7 @@ func GetSourceEskenaziHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://proxy.eskenazihealth.edu/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://proxy.eskenazihealth.edu/FHIR-Proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://proxy.eskenazihealth.edu/FHIR-Proxy/oauth2/register"
 
 	sourceDef.Audience = "https://proxy.eskenazihealth.edu/FHIR-Proxy/api/FHIR/R4"
 

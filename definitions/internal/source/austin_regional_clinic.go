@@ -16,6 +16,7 @@ func GetSourceAustinRegionalClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobileprod.arcmd.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileprod.arcmd.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mobileprod.arcmd.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://mobileprod.arcmd.com/FHIR/api/FHIR/R4"
 

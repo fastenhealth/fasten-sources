@@ -16,6 +16,7 @@ func GetSourceUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenLighthouseEn
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir-prd.upmc.com/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir-prd.upmc.com/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-fhir-prd.upmc.com/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4"
 

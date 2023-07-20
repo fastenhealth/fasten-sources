@@ -16,6 +16,7 @@ func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicedi.leememorial.org/FHIR-prd/oauth2/register"
 
 	sourceDef.Audience = "https://epicedi.leememorial.org/FHIR-prd/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceAdventistHealthWest(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicescribe1.ah.org/ARR-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicescribe1.ah.org/ARR-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicescribe1.ah.org/ARR-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicescribe1.ah.org/ARR-FHIR-PRD/api/FHIR/R4"
 

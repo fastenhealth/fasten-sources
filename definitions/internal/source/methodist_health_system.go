@@ -16,6 +16,7 @@ func GetSourceMethodistHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epcapp.mhd.com/arr-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epcapp.mhd.com/arr-prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epcapp.mhd.com/arr-prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epcapp.mhd.com/arr-prd-fhir/api/FHIR/R4"
 

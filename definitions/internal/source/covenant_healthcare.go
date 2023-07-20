@@ -16,6 +16,7 @@ func GetSourceCovenantHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epichaiku.chs-mi.com/FHIRPROXY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epichaiku.chs-mi.com/FHIRPROXY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epichaiku.chs-mi.com/FHIRPROXY/oauth2/register"
 
 	sourceDef.Audience = "https://epichaiku.chs-mi.com/FHIRPROXY/api/FHIR/R4"
 

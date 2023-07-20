@@ -16,6 +16,7 @@ func GetSourcePromedicaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.promedica.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.promedica.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.promedica.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.promedica.org/FHIR/api/FHIR/R4"
 

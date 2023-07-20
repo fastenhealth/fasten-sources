@@ -16,6 +16,7 @@ func GetSourceKaiserPermanenteCaliforniaSouthern(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/212/api/FHIR/R4"
 

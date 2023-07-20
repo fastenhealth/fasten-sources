@@ -16,6 +16,7 @@ func GetSourceSaintFrancisHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprdsoap000.saintfrancis.Com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprdsoap000.saintfrancis.Com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprdsoap000.saintfrancis.Com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://eprdsoap000.saintfrancis.com/FHIRProxy/api/FHIR/R4"
 

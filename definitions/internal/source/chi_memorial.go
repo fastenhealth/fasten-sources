@@ -16,6 +16,7 @@ func GetSourceChiMemorial(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRMCT/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRMCT/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rpsouth.catholichealth.net/fhir/FHIRMCT/oauth2/register"
 
 	sourceDef.Audience = "https://rpsouth.catholichealth.net/fhir/FHIRMCT/api/FHIR/R4"
 

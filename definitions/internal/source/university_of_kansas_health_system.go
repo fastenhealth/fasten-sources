@@ -16,6 +16,7 @@ func GetSourceUniversityOfKansasHealthSystem(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.kansashealthsystem.com/interconnect-PRD_FHIR/api/FHIR/R4"
 

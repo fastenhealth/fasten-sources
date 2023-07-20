@@ -16,6 +16,7 @@ func GetSourceDaytonChildrensHospital(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://appprd.childrensdayton.org/interconnect-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://appprd.childrensdayton.org/interconnect-prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://appprd.childrensdayton.org/interconnect-prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://appprd.childrensdayton.org/interconnect-prd-fhir/api/FHIR/R4"
 

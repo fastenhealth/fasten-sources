@@ -16,6 +16,7 @@ func GetSourceHcaMountain(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/register"
 
 	sourceDef.Audience = "https://mountainstarhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 

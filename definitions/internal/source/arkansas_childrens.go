@@ -16,6 +16,7 @@ func GetSourceArkansasChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.archildrens.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.archildrens.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.archildrens.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.archildrens.org/fhir/api/FHIR/R4"
 

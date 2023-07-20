@@ -16,6 +16,7 @@ func GetSourceLoyolaMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rxhub.luhs.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rxhub.luhs.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rxhub.luhs.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://rxhub.luhs.org/fhir/api/FHIR/R4"
 

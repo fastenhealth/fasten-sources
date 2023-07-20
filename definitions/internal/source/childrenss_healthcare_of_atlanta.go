@@ -16,6 +16,7 @@ func GetSourceChildrenssHealthcareOfAtlanta(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://wpprod.choa.org/FHIR_PRD/oauth2/register"
 
 	sourceDef.Audience = "https://wpprod.choa.org/FHIR_PRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceUpmcCentralPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/oauth2/register"
 
 	sourceDef.Audience = "https://Epic-Arr.pinnaclehealth.org/PRD-FHIR-ARR/api/FHIR/R4"
 

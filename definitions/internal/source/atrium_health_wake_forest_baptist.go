@@ -17,6 +17,7 @@ func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://w1soap.wakehealth.edu/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://w1soap.wakehealth.edu/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://w1soap.wakehealth.edu/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4"
 

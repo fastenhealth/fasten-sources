@@ -16,6 +16,7 @@ func GetSourceValleywiseHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://esoap.mihs.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://esoap.mihs.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://esoap.mihs.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://esoap.mihs.org/FHIR/api/FHIR/R4"
 

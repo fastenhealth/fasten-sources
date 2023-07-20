@@ -16,6 +16,7 @@ func GetSourceMohawkValleyHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.mvhealthsystem.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.mvhealthsystem.org/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.mvhealthsystem.org/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.mvhealthsystem.org/FHIRproxy/api/FHIR/R4"
 

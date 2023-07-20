@@ -16,6 +16,7 @@ func GetSourceGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenLighthou
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://linkpoint.ghcscw.com/Interconnect-PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://linkpoint.ghcscw.com/Interconnect-PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://linkpoint.ghcscw.com/Interconnect-PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://linkpoint.ghcscw.com/Interconnect-prd-fhir/api/FHIR/R4"
 

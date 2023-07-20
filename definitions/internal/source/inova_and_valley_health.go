@@ -16,6 +16,7 @@ func GetSourceInovaAndValleyHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicrpprd.inova.org/fhirrp/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicrpprd.inova.org/fhirrp/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicrpprd.inova.org/fhirrp/oauth2/register"
 
 	sourceDef.Audience = "https://epicrpprd.inova.org/fhirrp/api/FHIR/R4"
 

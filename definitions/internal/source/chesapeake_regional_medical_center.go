@@ -16,6 +16,7 @@ func GetSourceChesapeakeRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/CRMC_OAUTH/api/FHIR/R4"
 

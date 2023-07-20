@@ -16,6 +16,7 @@ func GetSourceOhiohealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ccpintconfg.ohiohealth.com/Interconnect-PRD-MUAPI/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ccpintconfg.ohiohealth.com/Interconnect-PRD-MUAPI/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ccpintconfg.ohiohealth.com/Interconnect-PRD-MUAPI/oauth2/register"
 
 	sourceDef.Audience = "https://ccpintconfg.ohiohealth.com/Interconnect-PRD-MUAPI/api/FHIR/R4"
 

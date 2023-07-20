@@ -16,6 +16,7 @@ func GetSourceBoulderCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://prevprox.bch.org/FHIRproxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://prevprox.bch.org/FHIRproxyPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://prevprox.bch.org/FHIRproxyPRD/oauth2/register"
 
 	sourceDef.Audience = "https://prevprox.bch.org/FHIRproxyPRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceRochesterRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr.rochesterregional.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr.rochesterregional.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr.rochesterregional.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr.rochesterregional.org/FHIR/api/FHIR/R4"
 

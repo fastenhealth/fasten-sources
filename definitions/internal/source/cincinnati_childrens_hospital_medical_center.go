@@ -16,6 +16,7 @@ func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenLighthouseE
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://boomer.cchmc.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://boomer.cchmc.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://boomer.cchmc.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://boomer.cchmc.org/fhir/api/fhir/R4"
 

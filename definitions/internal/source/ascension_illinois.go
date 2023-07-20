@@ -16,6 +16,7 @@ func GetSourceAscensionIllinois(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.presencehealth.org/fhirPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.presencehealth.org/fhirPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.presencehealth.org/fhirPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.presencehealth.org/fhirPRD/api/FHIR/R4"
 

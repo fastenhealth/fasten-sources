@@ -16,6 +16,7 @@ func GetSourceGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.genesishcs.org/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.genesishcs.org/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.genesishcs.org/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.genesishcs.org/api/FHIR/R4"
 

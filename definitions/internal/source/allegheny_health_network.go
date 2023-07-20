@@ -16,6 +16,7 @@ func GetSourceAlleghenyHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicprisfd.ahn.org/PRD-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprisfd.ahn.org/PRD-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicprisfd.ahn.org/PRD-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicprisfd.ahn.org/PRD-FHIR/api/FHIR/R4"
 

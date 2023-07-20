@@ -16,6 +16,7 @@ func GetSourceAltamed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1123.epichosted.com/APIProxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1123.epichosted.com/APIProxyPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1123.epichosted.com/APIProxyPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1123.epichosted.com/FHIRProxy/api/FHIR/R4"
 

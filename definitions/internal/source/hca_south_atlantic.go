@@ -16,6 +16,7 @@ func GetSourceHcaSouthAtlantic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/oauth2/register"
 
 	sourceDef.Audience = "https://memorialhealthfhirprd.app.medcity.net/fhir-proxy/api/FHIR/R4"
 

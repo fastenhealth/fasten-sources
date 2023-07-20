@@ -16,6 +16,7 @@ func GetSourceDukeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://health-apis.duke.edu/Interconnect-OAUTH2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://health-apis.duke.edu/Interconnect-OAUTH2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://health-apis.duke.edu/Interconnect-OAUTH2/oauth2/register"
 
 	sourceDef.Audience = "https://health-apis.duke.edu/FHIR/patient/R4"
 

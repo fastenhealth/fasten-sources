@@ -16,6 +16,7 @@ func GetSourceUvaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4"
 

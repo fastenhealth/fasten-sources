@@ -16,6 +16,7 @@ func GetSourceParkviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicprod-mobile.parkview.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprod-mobile.parkview.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicprod-mobile.parkview.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicprod-mobile.parkview.com/FHIR/api/FHIR/R4"
 

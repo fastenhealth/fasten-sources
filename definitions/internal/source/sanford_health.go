@@ -16,6 +16,7 @@ func GetSourceSanfordHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eprescribe.sanfordhealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eprescribe.sanfordhealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eprescribe.sanfordhealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://eprescribe.sanfordhealth.org/FHIR/api/FHIR/R4"
 

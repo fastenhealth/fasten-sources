@@ -16,6 +16,7 @@ func GetSourceJeffersonHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.jefferson.edu/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.jefferson.edu/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.jefferson.edu/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4"
 

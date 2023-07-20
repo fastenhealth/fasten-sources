@@ -16,6 +16,7 @@ func GetSourceKelseySeyboldClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssrx.ksnet.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssrx.ksnet.com/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ssrx.ksnet.com/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://ssrx.ksnet.com/FhirProxy/api/FHIR/R4"
 

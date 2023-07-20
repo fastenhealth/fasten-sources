@@ -16,6 +16,7 @@ func GetSourceChiHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rp.chihealth.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rp.chihealth.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rp.chihealth.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://rp.chihealth.com/fhir/api/FHIR/R4"
 

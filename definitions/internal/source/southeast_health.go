@@ -16,6 +16,7 @@ func GetSourceSoutheastHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arrprd.southeasthealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arrprd.southeasthealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arrprd.southeasthealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://arrprd.southeasthealth.org/FHIR/api/FHIR/R4"
 

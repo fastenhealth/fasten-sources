@@ -16,6 +16,7 @@ func GetSourceBaycareClinicMybaycare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/oauth2/register"
 
 	sourceDef.Audience = "https://EpicFHIR.aurora.org/FHIR/MYBAYCARE/api/FHIR/R4"
 

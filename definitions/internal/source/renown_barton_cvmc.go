@@ -16,6 +16,7 @@ func GetSourceRenownBartonCvmc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.renown.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.renown.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.renown.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.renown.org/FHIRProxy/api/FHIR/R4"
 

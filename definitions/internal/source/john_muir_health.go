@@ -16,6 +16,7 @@ func GetSourceJohnMuirHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.johnmuirhealth.com/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.johnmuirhealth.com/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.johnmuirhealth.com/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.johnmuirhealth.com/fhir-prd/api/FHIR/R4"
 

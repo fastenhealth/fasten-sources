@@ -16,6 +16,7 @@ func GetSourceTheQueensHealthSystems(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mobileapps.queens.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mobileapps.queens.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mobileapps.queens.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://mobileapps.queens.org/FHIR/api/FHIR/R4"
 

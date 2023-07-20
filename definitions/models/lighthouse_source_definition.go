@@ -23,6 +23,7 @@ type LighthouseSourceDefinition struct {
 	AuthorizationEndpoint string `json:"authorization_endpoint"`
 	TokenEndpoint         string `json:"token_endpoint"`
 	IntrospectionEndpoint string `json:"introspection_endpoint"`
+	RegistrationEndpoint  string `json:"registration_endpoint"` //optional - required when Dynamic Client Registration mode is set
 
 	Scopes                        []string `json:"scopes_supported"`
 	Issuer                        string   `json:"issuer"`
@@ -38,9 +39,10 @@ type LighthouseSourceDefinition struct {
 	ClientId           string `json:"client_id"`
 	RedirectUri        string `json:"redirect_uri"` //lighthouse url the provider will redirect to (registered with App)
 
-	Confidential      bool   `json:"confidential"`        //if enabled, requires client_secret to authenticate with provider (PKCE)
-	CORSRelayRequired bool   `json:"cors_relay_required"` //if true, requires CORS proxy/relay, as provider does not return proper response to CORS preflight
-	SecretKeyPrefix   string `json:"-"`                   //the secret key prefix to use, if empty (default) will use the sourceType value
+	Confidential                  bool   `json:"confidential"`                     //if enabled, requires client_secret to authenticate with provider (PKCE)
+	DynamicClientRegistrationMode string `json:"dynamic_client_registration_mode"` //if enabled, will dynamically register client with provider (https://oauth.net/2/dynamic-client-registration/)
+	CORSRelayRequired             bool   `json:"cors_relay_required"`              //if true, requires CORS proxy/relay, as provider does not return proper response to CORS preflight
+	SecretKeyPrefix               string `json:"-"`                                //the secret key prefix to use, if empty (default) will use the sourceType value
 
 	//Display information
 	PlatformType pkg.SourceType      `json:"platform_type"`

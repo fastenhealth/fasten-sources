@@ -16,6 +16,7 @@ func GetSourceCookChildrensHealthCareSystem(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://cookicfg.cookchildrens.org/CookFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://cookicfg.cookchildrens.org/CookFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://cookicfg.cookchildrens.org/CookFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://cookicfg.cookchildrens.org/CookFHIR/api/FHIR/R4"
 

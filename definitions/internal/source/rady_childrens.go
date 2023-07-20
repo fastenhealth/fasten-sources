@@ -16,6 +16,7 @@ func GetSourceRadyChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epcppxl1.rchsd.org/fhirprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epcppxl1.rchsd.org/fhirprd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epcppxl1.rchsd.org/fhirprd/oauth2/register"
 
 	sourceDef.Audience = "https://epcppxl1.rchsd.org/fhirprd/api/FHIR/R4"
 

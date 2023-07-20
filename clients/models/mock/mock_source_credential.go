@@ -160,14 +160,14 @@ func (mr *MockSourceCredentialMockRecorder) GetSourceType() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceType", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceType))
 }
 
-// RefreshTokens mocks base method.
-func (m *MockSourceCredential) RefreshTokens(accessToken, refreshTokens string, expiresAt int64) {
+// SetTokens mocks base method.
+func (m *MockSourceCredential) SetTokens(accessToken, refreshTokens string, expiresAt int64) {
 	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "RefreshTokens", accessToken, refreshTokens, expiresAt)
+	m.ctrl.Call(m, "SetTokens", accessToken, refreshTokens, expiresAt)
 }
 
-// RefreshTokens indicates an expected call of RefreshTokens.
-func (mr *MockSourceCredentialMockRecorder) RefreshTokens(accessToken, refreshTokens, expiresAt interface{}) *gomock.Call {
+// SetTokens indicates an expected call of SetTokens.
+func (mr *MockSourceCredentialMockRecorder) SetTokens(accessToken, refreshTokens, expiresAt interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RefreshTokens", reflect.TypeOf((*MockSourceCredential)(nil).RefreshTokens), accessToken, refreshTokens, expiresAt)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetTokens", reflect.TypeOf((*MockSourceCredential)(nil).SetTokens), accessToken, refreshTokens, expiresAt)
 }

@@ -16,6 +16,7 @@ func GetSourceRiversideMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://SF1.rmcps.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://sf1.rmcps.com/FHIRProxy/api/FHIR/R4"
 

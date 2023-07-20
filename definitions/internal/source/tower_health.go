@@ -16,6 +16,7 @@ func GetSourceTowerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.readinghospital.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.readinghospital.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.readinghospital.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.readinghospital.org/FHIR-PRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceTmcHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.tmcaz.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.tmcaz.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.tmcaz.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.tmcaz.com/FHIRProxy/api/FHIR/R4"
 

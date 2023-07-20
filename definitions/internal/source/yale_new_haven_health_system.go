@@ -16,6 +16,7 @@ func GetSourceYaleNewHavenHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://patientfhirapis.ynhh.org/PFF/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://patientfhirapis.ynhh.org/PFF/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://patientfhirapis.ynhh.org/PFF/oauth2/register"
 
 	sourceDef.Audience = "https://patientfhirapis.ynhh.org/pff/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceUnitedHealthServicesNewYorkNyuhs(env pkg.FastenLighthouseEnvType, 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1127.epichosted.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1127.epichosted.com/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1127.epichosted.com/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1127.epichosted.com/FHIRproxy/api/FHIR/R4"
 

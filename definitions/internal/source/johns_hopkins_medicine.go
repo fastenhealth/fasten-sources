@@ -16,6 +16,7 @@ func GetSourceJohnsHopkinsMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicmobile.johnshopkins.edu/FHIR_PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicmobile.johnshopkins.edu/FHIR_PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicmobile.johnshopkins.edu/FHIR_PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicmobile.johnshopkins.edu/FHIR_PRD/api/FHIR/R4"
 

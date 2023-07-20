@@ -16,6 +16,7 @@ func GetSourceBayhealthMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epproxy.bayhealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epproxy.bayhealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epproxy.bayhealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epproxy.bayhealth.org/FHIR/api/FHIR/R4"
 

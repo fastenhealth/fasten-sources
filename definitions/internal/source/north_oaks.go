@@ -16,6 +16,7 @@ func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapproxyprd.northoaks.org/NOHSFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://soapproxyprd.northoaks.org/nohsfhir/api/FHIR/R4"
 

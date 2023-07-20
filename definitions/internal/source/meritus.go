@@ -16,6 +16,7 @@ func GetSourceMeritus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://meritus-rev-prd.meritushealth.com/FHIRPRD/api/FHIR/R4"
 

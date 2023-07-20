@@ -16,6 +16,7 @@ func GetSourceFroedtertHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicservicegw.froedtert.com/FHIRproxyPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicserviceGW.froedtert.com/FHIRProxyPRD/api/FHIR/R4"
 

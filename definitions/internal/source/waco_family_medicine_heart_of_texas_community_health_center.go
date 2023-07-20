@@ -16,6 +16,7 @@ func GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.Fasten
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.wacofhc.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.wacofhc.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.wacofhc.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.wacofhc.org/FHIR/api/FHIR/R4"
 

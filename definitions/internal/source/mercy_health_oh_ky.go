@@ -16,6 +16,7 @@ func GetSourceMercyHealthOhKy(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://carepath.health-partners.org/Proxy-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://carepath.health-partners.org/Proxy-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://carepath.health-partners.org/Proxy-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://chperx.health-partners.org/Proxy-FHIR/api/FHIR/R4"
 

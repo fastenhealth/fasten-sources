@@ -16,6 +16,7 @@ func GetSourceLegacyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://LHSPDXFHIRPRD.LHS.ORG/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://lhspdxfhirprd.lhs.org/FHIR/api/FHIR/R4"
 

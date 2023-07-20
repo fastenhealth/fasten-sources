@@ -16,6 +16,7 @@ func GetSourceAltruHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.altru.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.altru.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.altru.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.altru.org/fhir/api/FHIR/R4"
 

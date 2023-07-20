@@ -16,6 +16,7 @@ func GetSourceGundersenHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://scproxy.gundersenhealth.org/FHIRARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://scproxy.gundersenhealth.org/FHIRARR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://scproxy.gundersenhealth.org/FHIRARR/oauth2/register"
 
 	sourceDef.Audience = "https://scproxy.gundersenhealth.org/FHIRARR/api/FHIR/R4"
 

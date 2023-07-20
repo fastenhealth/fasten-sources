@@ -16,6 +16,7 @@ func GetSourceUniversityHospitalNewJersey(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarrprod.uhnj.org/FHIR-Proxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicarrprod.uhnj.org/FHIR-Proxy/api/FHIR/R4"
 

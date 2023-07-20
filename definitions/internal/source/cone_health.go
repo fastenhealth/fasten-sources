@@ -16,6 +16,7 @@ func GetSourceConeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epsoap.conehealth.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epsoap.conehealth.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epsoap.conehealth.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epsoap.conehealth.com/FHIRProxy/api/FHIR/R4"
 

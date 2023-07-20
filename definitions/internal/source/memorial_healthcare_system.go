@@ -16,6 +16,7 @@ func GetSourceMemorialHealthcareSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mhssp.mhs.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mhssp.mhs.net/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mhssp.mhs.net/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://mhssp.mhs.net/fhir/api/FHIR/R4"
 

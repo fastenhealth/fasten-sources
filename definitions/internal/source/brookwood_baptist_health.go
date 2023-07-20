@@ -16,6 +16,7 @@ func GetSourceBrookwoodBaptistHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.bhsala.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.bhsala.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.bhsala.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.bhsala.com/FHIRProxy/api/FHIR/R4"
 

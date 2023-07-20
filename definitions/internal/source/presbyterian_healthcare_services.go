@@ -16,6 +16,7 @@ func GetSourcePresbyterianHealthcareServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicfhir.phs.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicfhir.phs.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicfhir.phs.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicFHIR.phs.org/FHIR/api/FHIR/R4"
 

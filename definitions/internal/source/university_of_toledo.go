@@ -16,6 +16,7 @@ func GetSourceUniversityOfToledo(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://icon.utoledo.edu/ic-oa2-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://icon.utoledo.edu/ic-oa2-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://icon.utoledo.edu/ic-oa2-prd/oauth2/register"
 
 	sourceDef.Audience = "https://icon.utoledo.edu/ic-oa2-prd/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceClevelandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://api.ccf.org/mu/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.ccf.org/mu/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://api.ccf.org/mu/oauth2/register"
 
 	sourceDef.Audience = "https://api.ccf.org/mu/api/FHIR/R4"
 

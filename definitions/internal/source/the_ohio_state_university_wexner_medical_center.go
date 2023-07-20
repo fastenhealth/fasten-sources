@@ -16,6 +16,7 @@ func GetSourceTheOhioStateUniversityWexnerMedicalCenter(env pkg.FastenLighthouse
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ihismufhir.osumc.edu/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://ihismufhir.osumc.edu/fhir-prd/api/FHIR/R4"
 

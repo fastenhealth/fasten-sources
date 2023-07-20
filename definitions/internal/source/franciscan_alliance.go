@@ -16,6 +16,7 @@ func GetSourceFranciscanAlliance(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ema.franciscanalliance.org/FHIR_PROXY/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ema.franciscanalliance.org/FHIR_PROXY/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ema.franciscanalliance.org/FHIR_PROXY/oauth2/register"
 
 	sourceDef.Audience = "https://ema.franciscanalliance.org/FHIR_PROXY/api/FHIR/R4"
 

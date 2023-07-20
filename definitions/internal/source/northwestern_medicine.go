@@ -16,6 +16,7 @@ func GetSourceNorthwesternMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://nmepicproxy.nm.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://nmepicproxy.nm.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://nmepicproxy.nm.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://nmepicproxy.nm.org/FHIR-PRD/api/FHIR/R4"
 

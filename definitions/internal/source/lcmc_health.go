@@ -16,6 +16,7 @@ func GetSourceLcmcHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.lcmchealth.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.lcmchealth.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconnect.lcmchealth.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://interconnect.lcmchealth.org/FHIR/api/FHIR/R4"
 

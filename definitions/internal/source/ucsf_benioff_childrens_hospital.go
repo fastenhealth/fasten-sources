@@ -16,6 +16,7 @@ func GetSourceUcsfBenioffChildrensHospital(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://unified-api.ucsf.edu/clinical/apex/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://unified-api.ucsf.edu/clinical/apex/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://unified-api.ucsf.edu/clinical/apex/oauth2/register"
 
 	sourceDef.Audience = "https://unified-api.ucsf.edu/clinical/apex/api/FHIR/R4"
 

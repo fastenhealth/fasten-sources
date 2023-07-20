@@ -16,6 +16,7 @@ func GetSourceEdwardElmhurstHealthcare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/oauth2/register"
 
 	sourceDef.Audience = "https://fhirprd.edward.org/fhirprd/EEHOAUTH/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceEmoryHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicrp-prd.eushc.org/OAUTH2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicrp-prd.eushc.org/OAUTH2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicrp-prd.eushc.org/OAUTH2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4"
 

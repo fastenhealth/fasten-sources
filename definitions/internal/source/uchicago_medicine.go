@@ -16,6 +16,7 @@ func GetSourceUchicagoMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/oauth2/register"
 
 	sourceDef.Audience = "https://interconapps.uchospitals.edu/PRD-FHIR-Proxy/api/FHIR/R4"
 

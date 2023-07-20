@@ -16,6 +16,7 @@ func GetSourceHurleyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.hurleymc.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.hurleymc.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.hurleymc.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.hurleymc.com/fhir/api/FHIR/R4"
 

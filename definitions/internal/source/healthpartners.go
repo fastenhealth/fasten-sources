@@ -16,6 +16,7 @@ func GetSourceHealthpartners(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://proxy.healthpartners.com/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://proxy.healthpartners.com/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://proxy.healthpartners.com/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://proxy.healthpartners.com/FHIRProxy/api/FHIR/R4"
 

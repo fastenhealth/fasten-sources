@@ -16,6 +16,7 @@ func GetSourceShannonHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicrpx.shannonhealth.org/FHIR_ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicrpx.shannonhealth.org/FHIR_ARR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicrpx.shannonhealth.org/FHIR_ARR/oauth2/register"
 
 	sourceDef.Audience = "https://epicrpx.shannonhealth.org/FHIR_ARR/api/FHIR/R4"
 

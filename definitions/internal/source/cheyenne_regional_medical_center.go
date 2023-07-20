@@ -16,6 +16,7 @@ func GetSourceCheyenneRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soap.crmcwy.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soap.crmcwy.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soap.crmcwy.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://soap.crmcwy.org/fhirproxy/api/FHIR/R4"
 

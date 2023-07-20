@@ -16,6 +16,7 @@ func GetSourceMethodistHospitalsPrd(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mychart.methodisthospitals.org/FHIR-ARR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mychart.methodisthospitals.org/FHIR-ARR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mychart.methodisthospitals.org/FHIR-ARR/oauth2/register"
 
 	sourceDef.Audience = "https://mychart.methodisthospitals.org/FHIR-ARR/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceCareNewEngland(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://cnesp001.carene.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://cnesp001.carene.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://cnesp001.carene.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://cnesp001.carene.org/FHIR/api/FHIR/R4"
 

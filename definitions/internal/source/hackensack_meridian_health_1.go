@@ -16,6 +16,7 @@ func GetSourceHackensackMeridianHealth1(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://mepic.hmhn.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://mepic.hmhn.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://mepic.hmhn.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://mepic.hmhn.org/fhir/api/FHIR/R4"
 

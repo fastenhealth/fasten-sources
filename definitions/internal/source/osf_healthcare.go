@@ -16,6 +16,7 @@ func GetSourceOsfHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ssproxy.osfhealthcare.org/fhir-proxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ssproxy.osfhealthcare.org/fhir-proxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ssproxy.osfhealthcare.org/fhir-proxy/oauth2/register"
 
 	sourceDef.Audience = "https://ssproxy.osfhealthcare.org/fhir-proxy/api/FHIR/R4"
 

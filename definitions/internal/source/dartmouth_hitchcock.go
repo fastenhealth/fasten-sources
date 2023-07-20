@@ -16,6 +16,7 @@ func GetSourceDartmouthHitchcock(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://edhwebportal.hitchcock.org/FHIRProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://edhwebportal.hitchcock.org/FHIRProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://edhwebportal.hitchcock.org/FHIRProxy/oauth2/register"
 
 	sourceDef.Audience = "https://edhwebportal.hitchcock.org/FHIRProxy/api/FHIR/R4"
 

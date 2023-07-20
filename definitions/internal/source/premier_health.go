@@ -16,6 +16,7 @@ func GetSourcePremierHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rx.premierhealthpartners.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://rx.premierhealthpartners.org/fhir/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceArrowheadRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1152.epichosted.com/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1152.epichosted.com/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1152.epichosted.com/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1152.epichosted.com/fhirproxy/api/FHIR/R4"
 

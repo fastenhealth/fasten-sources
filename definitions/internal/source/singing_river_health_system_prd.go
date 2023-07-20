@@ -16,6 +16,7 @@ func GetSourceSingingRiverHealthSystemPrd(env pkg.FastenLighthouseEnvType, clien
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://arr.mysrhs.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://arr.mysrhs.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://arr.mysrhs.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://arr.mysrhs.com/FHIR/api/FHIR/R4"
 

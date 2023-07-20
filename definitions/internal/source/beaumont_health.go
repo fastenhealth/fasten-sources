@@ -16,6 +16,7 @@ func GetSourceBeaumontHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://moc.beaumont.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://moc.beaumont.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://moc.beaumont.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://moc.beaumont.org/FHIR/api/FHIR/R4"
 

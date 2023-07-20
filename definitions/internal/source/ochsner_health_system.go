@@ -16,6 +16,7 @@ func GetSourceOchsnerHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://myc.ochsner.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://myc.ochsner.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://myc.ochsner.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://myc.ochsner.org/FHIR/api/FHIR/R4"
 

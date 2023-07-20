@@ -16,6 +16,7 @@ func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType, clie
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et0905.epichosted.com/FHIRProxy/STLU/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et0905.epichosted.com/FHIRproxy/STLU/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://ep-rpfg.rivhs.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceKootenaiHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapprod.multicare.org/FHIRProxy/KH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapprod.multicare.org/FHIRProxy/KH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapprod.multicare.org/FHIRProxy/KH/oauth2/register"
 
 	sourceDef.Audience = "https://soapprod.multicare.org/FHIRProxy/KH/api/FHIR/R4"
 

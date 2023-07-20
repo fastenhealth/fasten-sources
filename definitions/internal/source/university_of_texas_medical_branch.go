@@ -16,6 +16,7 @@ func GetSourceUniversityOfTexasMedicalBranch(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-arr.utmb.edu/fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-arr.utmb.edu/fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-arr.utmb.edu/fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://epic-arr.utmb.edu/fhir-prd/api/FHIR/R4"
 

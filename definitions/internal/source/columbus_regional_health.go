@@ -16,6 +16,7 @@ func GetSourceColumbusRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicprdproxy.crh.org/FHIRPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicprdproxy.crh.org/FHIRPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicprdproxy.crh.org/FHIRPRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicprdproxy.crh.org/FHIRPRD/api/FHIR/R4"
 

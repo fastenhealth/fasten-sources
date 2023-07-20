@@ -16,6 +16,7 @@ func GetSourceBonSecoursHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.bshsi.org/fhir/BSHSI_OAUTH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.bshsi.org/fhir/BSHSI_OAUTH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.bshsi.org/fhir/BSHSI_OAUTH/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.bshsi.org/fhir/BSHSI_OAUTH/api/FHIR/R4"
 

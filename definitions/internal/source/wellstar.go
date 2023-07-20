@@ -16,6 +16,7 @@ func GetSourceWellstar(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.wellstar.org/fhirproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.wellstar.org/fhirproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.wellstar.org/fhirproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.wellstar.org/fhirproxy/api/FHIR/R4"
 

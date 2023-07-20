@@ -16,6 +16,7 @@ func GetSourceVirginiaMasonFranciscanHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rp.catholichealth.net/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rp.catholichealth.net/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rp.catholichealth.net/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://rp.catholichealth.net/fhir/api/FHIR/R4"
 

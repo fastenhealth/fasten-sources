@@ -16,6 +16,7 @@ func GetSourceSansumClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://wavesurescripts.sansumclinic.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://wavesurescripts.sansumclinic.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://wavesurescripts.sansumclinic.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://wavesurescripts.sansumclinic.org/FHIR/api/FHIR/R4"
 

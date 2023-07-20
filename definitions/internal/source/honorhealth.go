@@ -16,6 +16,7 @@ func GetSourceHonorhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://interconnect.honorhealth.com/Interconnect-FHIR-PRD/api/FHIR/R4"
 

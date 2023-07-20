@@ -16,6 +16,7 @@ func GetSourceBethIsraelLaheyHealth(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.laheyhealth.org/proxy-prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.laheyhealth.org/proxy-prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.laheyhealth.org/proxy-prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.laheyhealth.org/proxy-prd-fhir/api/FHIR/R4"
 

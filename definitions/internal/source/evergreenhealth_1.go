@@ -16,6 +16,7 @@ func GetSourceEvergreenhealth1(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1270.epichosted.com/apiproxyprd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1270.epichosted.com/apiproxyprd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1270.epichosted.com/apiproxyprd/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1270.epichosted.com/apiproxyprd/api/FHIR/R4"
 

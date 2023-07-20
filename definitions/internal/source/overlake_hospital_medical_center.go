@@ -16,6 +16,7 @@ func GetSourceOverlakeHospitalMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sfd.overlakehospital.org/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sfd.overlakehospital.org/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sfd.overlakehospital.org/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://sfd.overlakehospital.org/FHIRproxy/api/FHIR/R4"
 

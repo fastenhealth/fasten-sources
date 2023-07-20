@@ -16,6 +16,7 @@ func GetSourceCaromontHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://spp.caromonthealth.org/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://spp.caromonthealth.org/FhirProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://spp.caromonthealth.org/FhirProxy/oauth2/register"
 
 	sourceDef.Audience = "https://spp.caromonthealth.org/FhirProxy/api/FHIR/R4"
 

@@ -16,6 +16,7 @@ func GetSourceLehighValleyHealthNetwork(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://proxy.lvh.com/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://proxy.lvh.com/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://proxy.lvh.com/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://proxy.lvh.com/FHIR/api/FHIR/R4"
 

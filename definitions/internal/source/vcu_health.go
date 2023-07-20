@@ -16,6 +16,7 @@ func GetSourceVcuHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et1200.epichosted.com/oauth2-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et1200.epichosted.com/oauth2-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et1200.epichosted.com/oauth2-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et1200.epichosted.com/OAuth2-PRD/api/FHIR/R4"
 

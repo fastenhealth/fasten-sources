@@ -16,6 +16,7 @@ func GetSourceCityOfHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://epic-rproxyprod.coh.org/Interconnect-FHIR-PRD/api/FHIR/R4"
 

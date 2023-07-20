@@ -16,6 +16,7 @@ func GetSourceMontefioreMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://soapepic.montefiore.org/FhirProxyPrd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://soapepic.montefiore.org/FhirProxyPrd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://soapepic.montefiore.org/FhirProxyPrd/oauth2/register"
 
 	sourceDef.Audience = "https://soapepic.montefiore.org/FhirProxyPrd/api/FHIR/R4"
 

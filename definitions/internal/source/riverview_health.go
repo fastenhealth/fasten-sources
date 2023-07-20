@@ -16,6 +16,7 @@ func GetSourceRiverviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/api/FHIR/R4"
 

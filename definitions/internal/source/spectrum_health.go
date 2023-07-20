@@ -16,6 +16,7 @@ func GetSourceSpectrumHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicarr02.spectrumhealth.org/EpicFHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicarr02.spectrumhealth.org/EpicFHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicarr02.spectrumhealth.org/EpicFHIR/oauth2/register"
 
 	sourceDef.Audience = "https://epicarr02.spectrumhealth.org/EpicFHIR/api/FHIR/R4"
 

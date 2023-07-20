@@ -16,6 +16,7 @@ func GetSourceCenturaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-p-foreground.centura.org/prd-fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-p-foreground.centura.org/prd-fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epic-p-foreground.centura.org/prd-fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epic-p-mobile.centura.org/prd-fhir/api/FHIR/R4"
 

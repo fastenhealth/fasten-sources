@@ -16,6 +16,7 @@ func GetSourceAdvantagecarePhysicians(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epwebapps.acpny.com/FHIRproxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epwebapps.acpny.com/FHIRproxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epwebapps.acpny.com/FHIRproxy/oauth2/register"
 
 	sourceDef.Audience = "https://epwebapps.acpny.com/FHIRproxy/api/FHIR/R4"
 

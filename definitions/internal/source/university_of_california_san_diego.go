@@ -16,6 +16,7 @@ func GetSourceUniversityOfCaliforniaSanDiego(env pkg.FastenLighthouseEnvType, cl
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.et0502.epichosted.com/FhirProxy/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.et0502.epichosted.com/FhirProxy/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.et0502.epichosted.com/FhirProxy/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.et0502.epichosted.com/FHIRProxy/api/FHIR/R4"
 

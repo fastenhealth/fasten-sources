@@ -16,6 +16,7 @@ func GetSourceTheGuthrieClinic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.guthrie.org/FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.guthrie.org/FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.guthrie.org/FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.guthrie.org/FHIR-PRD/api/FHIR/R4"
 

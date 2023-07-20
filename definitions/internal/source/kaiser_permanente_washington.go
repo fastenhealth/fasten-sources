@@ -16,6 +16,7 @@ func GetSourceKaiserPermanenteWashington(env pkg.FastenLighthouseEnvType, client
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.kp.org/Interconnect-FHIR-PRD/api/FHIR/R4"
 

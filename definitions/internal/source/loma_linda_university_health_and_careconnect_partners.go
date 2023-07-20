@@ -16,6 +16,7 @@ func GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenLigh
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.lluh.org/interconnect-fhir-prd/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.lluh.org/interconnect-fhir-prd/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://fhir.lluh.org/interconnect-fhir-prd/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.lluh.org/interconnect-fhir-prd/api/FHIR/R4"
 

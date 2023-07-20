@@ -16,6 +16,7 @@ func GetSourceNemours(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://iconnect.nemours.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://iconnect.nemours.org/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://iconnect.nemours.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://iconnect.nemours.org/fhir/api/FHIR/R4"
 

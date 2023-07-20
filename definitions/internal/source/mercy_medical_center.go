@@ -16,6 +16,7 @@ func GetSourceMercyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://eproxy.mercycare.org/oauth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://eproxy.mercycare.org/oauth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://eproxy.mercycare.org/oauth2/oauth2/register"
 
 	sourceDef.Audience = "https://eproxy.mercycare.org/oauth2/api/FHIR/R4"
 

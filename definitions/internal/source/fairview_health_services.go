@@ -16,6 +16,7 @@ func GetSourceFairviewHealthServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sfd.fairview.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sfd.fairview.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sfd.fairview.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://sfd.fairview.org/FHIR/api/FHIR/R4"
 

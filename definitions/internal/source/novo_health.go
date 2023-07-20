@@ -16,6 +16,7 @@ func GetSourceNovoHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rproxy.novohtg.com/OAUTHPRD/oauth2/register"
 
 	sourceDef.Audience = "https://rproxy.novohtg.com/OAUTHPRD/api/FHIR/R4"
 

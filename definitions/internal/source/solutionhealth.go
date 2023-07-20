@@ -16,6 +16,7 @@ func GetSourceSolutionhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxyprd.solutionhealth.org/FHIR_PROD/api/FHIR/R4"
 

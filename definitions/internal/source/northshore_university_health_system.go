@@ -16,6 +16,7 @@ func GetSourceNorthshoreUniversityHealthSystem(env pkg.FastenLighthouseEnvType, 
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku.northshore.org/Interconnect-FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku.northshore.org/Interconnect-FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku.northshore.org/Interconnect-FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://haiku.northshore.org/Interconnect-FHIR/api/FHIR/R4"
 

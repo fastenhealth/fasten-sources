@@ -16,6 +16,7 @@ func GetSourceBaylorScottAndWhite(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/api/FHIR/R4"
 

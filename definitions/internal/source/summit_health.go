@@ -16,6 +16,7 @@ func GetSourceSummitHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicsoap.bmctotalcare.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicsoap.bmctotalcare.com/fhir/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicsoap.bmctotalcare.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicsoap.bmctotalcare.com/fhir/api/FHIR/R4"
 

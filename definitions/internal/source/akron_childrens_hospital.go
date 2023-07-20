@@ -16,6 +16,7 @@ func GetSourceAkronChildrensHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/oauth2/register"
 
 	sourceDef.Audience = "https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/R4"
 

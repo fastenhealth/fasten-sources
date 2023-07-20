@@ -18,6 +18,7 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.AuthorizationEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/token"
 	sourceDef.IntrospectionEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/introspect"
+	sourceDef.RegistrationEndpoint = "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/register"
 
 	sourceDef.Issuer = "https://fhir.epic.com"
 	sourceDef.Scopes = []string{"fhirUser", "openid", "profile"}
@@ -33,6 +34,7 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.DynamicClientRegistrationMode = "user-authenticated"
 
 	sourceDef.Display = "Epic (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeEpic

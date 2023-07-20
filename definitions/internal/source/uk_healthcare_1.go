@@ -16,6 +16,7 @@ func GetSourceUkHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/oauth2/register"
 
 	sourceDef.Audience = "https://ukepicproxy.mc.uky.edu/Interconnect-PRD-OAuth2/api/FHIR/R4"
 

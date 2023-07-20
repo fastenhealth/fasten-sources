@@ -16,6 +16,7 @@ func GetSourceStanfordHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://sfd.stanfordmed.org/FHIR/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://sfd.stanfordmed.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://sfd.stanfordmed.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://sfd.stanfordmed.org/FHIR/api/FHIR/R4"
 
