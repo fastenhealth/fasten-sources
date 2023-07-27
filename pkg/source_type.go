@@ -10,12 +10,13 @@ type SourceType string
 const (
 	SourceTypeManual SourceType = "manual"
 	// platform
-	SourceTypeAllscripts    SourceType = "allscripts"
-	SourceTypeCareevolution SourceType = "careevolution"
-	SourceTypeCerner        SourceType = "cerner"
-	SourceTypeEpic          SourceType = "epic"
-	SourceTypeMeditech      SourceType = "meditech"
-	SourceTypeNextgen       SourceType = "nextgen"
+	SourceTypeAllscripts     SourceType = "allscripts"
+	SourceTypeCareevolution  SourceType = "careevolution"
+	SourceTypeCerner         SourceType = "cerner"
+	SourceTypeEclinicalworks SourceType = "eclinicalworks"
+	SourceTypeEpic           SourceType = "epic"
+	SourceTypeMeditech       SourceType = "meditech"
+	SourceTypeNextgen        SourceType = "nextgen"
 	// source
 	SourceType10066006                                                                       SourceType = "10066006"
 	SourceType12ThStClinic                                                                   SourceType = "12th-st-clinic"
