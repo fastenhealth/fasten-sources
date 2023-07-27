@@ -144,6 +144,7 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 			c.Logger.Info("refreshing dynamic client...")
 			err := c.SourceCredential.RefreshDynamicClientAccessToken()
 			if err != nil {
+				c.Logger.Error("error refreshing dynamic client: ", err)
 				return err
 			}
 

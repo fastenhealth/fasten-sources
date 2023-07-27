@@ -53,23 +53,33 @@
 <script type="module">
     import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
 
-    function requestSourceList(){
+    function requestSourceList(filter){
         var sourceList = $('ul.source-list')
         sourceList.html("")
 
         var lighthouseEndpoint = $('input[name="mode"]:checked').val()
         localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
 
-        $.get(  lighthouseEndpoint + 'list', function( data ) {
-            console.log(data.data)
-            for(const sourceType in data.data){
+        if(filter.searchAfter){
+            filter.searchAfter = filter.searchAfter.split(',')
+        } else {
+            filter.searchAfter = []
+        }
+
+        $.post(  lighthouseEndpoint + 'search', JSON.stringify(filter), function( response ) {
+            console.log(response.data)
+            for(const source of response.data.hits.hits){
                 var li = $('<li/>')
                     .appendTo(sourceList);
                 var sourceLink = $('<a/>')
-                    .text(sourceType)
+                    .text(source._source.display)
                     .addClass("cursor-pointer")
                     .on('click', function() {
-                        generateSourceAuthorizeUrl(sourceType, data.data[sourceType])
+                        //get the full source information and generate the authorization url
+                        $.get(  lighthouseEndpoint + 'connect/' + source._id, function( response ) {
+                            console.log(response.data)
+                            generateSourceAuthorizeUrl(source._id, response.data)
+                        });
                     })
                     .appendTo(li);
             }
@@ -134,12 +144,19 @@
         window.location.href = redirectUrlParts.toString();
     }
 
+    function newMedicalSourcesFilter(){
+        let filter = {}
+        filter.fields = ["*"];
+
+        return filter
+    }
+
 
     $(function() {
-        requestSourceList()
+        requestSourceList(newMedicalSourcesFilter())
 
         $('input[name="mode"]').change(function() {
-            requestSourceList()
+            requestSourceList(newMedicalSourcesFilter())
         });
 
     });
