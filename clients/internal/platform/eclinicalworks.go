@@ -17,9 +17,9 @@ import (
 /*
 https://fhir.eclinicalworks.com/ecwopendev/
 */
-// https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD/.well-known/smart-configuration
-// https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD/metadata
-// https://connect4.healow.com/apps/jsp/dev/r4/fhirClinicalDocumentation.jsp
+// https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD/.well-known/smart-configuration
+// https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD/metadata
+// https://fhir.eclinicalworks.com/ecwopendev/documentation
 func GetSourceClientEclinicalworks(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// API requires the following headers for every request

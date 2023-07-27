@@ -13,23 +13,23 @@ import (
 /*
 https://fhir.eclinicalworks.com/ecwopendev/
 */
-// https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD/.well-known/smart-configuration
-// https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD/metadata
-// https://connect4.healow.com/apps/jsp/dev/r4/fhirClinicalDocumentation.jsp
+// https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD/.well-known/smart-configuration
+// https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD/metadata
+// https://fhir.eclinicalworks.com/ecwopendev/documentation
 func GetSourceEclinicalworks(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Issuer = "https://authorization.cerner.com"
-	sourceDef.Scopes = []string{"fhirUser", "offline_access", "openid", "patient/*.*"}
+	sourceDef.Issuer = "https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD"
+	sourceDef.Scopes = []string{"fhirUser", "offline_access", "openid", "patient/Patient.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
-	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD"
+	sourceDef.ResponseModesSupported = []string{"query"}
+	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD"
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/BJFCBD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeEclinicalworks]; clientIdOk {
 		sourceDef.ClientId = clientId
