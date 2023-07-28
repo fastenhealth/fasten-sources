@@ -19,6 +19,7 @@ type sourceClientAllscripts struct {
 }
 
 /*
+https://developer.allscripts.com/content/fhir/content/PRO201_Sandbox/index.html
 https://allscripts.vanillacommunities.com/search?query=sandbox&scope=site&source=community
 https://open.allscripts.com/fhirendpoints
 

@@ -14,6 +14,10 @@ import (
 	"net/http"
 )
 
+type sourceClientEclinicalworks struct {
+	models.SourceClient
+}
+
 /*
 https://fhir.eclinicalworks.com/ecwopendev/
 */
@@ -25,7 +29,12 @@ func GetSourceClientEclinicalworks(env pkg.FastenLighthouseEnvType, ctx context.
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 
-	return struct {
-		models.SourceClient
-	}{baseClient}, err
+	return sourceClientEclinicalworks{baseClient}, err
+}
+
+// Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
+// Manually processing individual resources
+func (c sourceClientEclinicalworks) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+	supportedResources := append(c.GetUsCoreResources(), []string{}...)
+	return c.SyncAllByResourceName(db, supportedResources)
 }

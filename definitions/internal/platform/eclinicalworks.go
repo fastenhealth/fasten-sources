@@ -22,7 +22,7 @@ func GetSourceEclinicalworks(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
 	sourceDef.Issuer = "https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD"
-	sourceDef.Scopes = []string{"fhirUser", "offline_access", "openid", "patient/Patient.read"}
+	sourceDef.Scopes = []string{"fhirUser", "offline_access", "openid", "patient/AllergyIntolerance.read", "patient/AllergyIntolerance.search", "patient/Binary.read", "patient/CarePlan.read", "patient/CarePlan.search", "patient/CareTeam.read", "patient/CareTeam.search", "patient/Condition.read", "patient/Condition.search", "patient/Device.read", "patient/Device.search", "patient/DiagnosticReport.read", "patient/DiagnosticReport.search", "patient/DocumentReference.read", "patient/DocumentReference.search", "patient/Encounter.read", "patient/Encounter.search", "patient/Goal.read", "patient/Goal.search", "patient/Immunization.read", "patient/Immunization.search", "patient/Location.read", "patient/Medication.read", "patient/MedicationAdministration.read", "patient/MedicationAdministration.search", "patient/MedicationRequest.read", "patient/MedicationRequest.search", "patient/Observation.read", "patient/Observation.search", "patient/Organization.read", "patient/Organization.search", "patient/Patient.read", "patient/Patient.read", "patient/Patient.search", "patient/Practitioner.read", "patient/Practitioner.search", "patient/PractitionerRole.read", "patient/PractitionerRole.search", "patient/Procedure.read", "patient/Procedure.search", "patient/Provenance.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"query"}
@@ -40,7 +40,7 @@ func GetSourceEclinicalworks(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "eClinicalWorks - Healow (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeEclinicalworks
 	sourceDef.SourceType = pkg.SourceTypeEclinicalworks
-	sourceDef.PatientAccessUrl = "https://fhir.eclinicalworks.com/ecwopendev/"
+	sourceDef.PatientAccessUrl = "https://www.eclinicalworks.com"
 
 	return sourceDef, nil
 }

@@ -16,7 +16,10 @@ import (
 
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/.well-known/smart-configuration
 // https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/metadata
-// https://fhir.careevolution.com/TestPatientAccounts.html
+/*
+https://fhir.careevolution.com/TestPatientAccounts.html
+https://fhir.docs.careevolution.com/overview/tutorials/
+*/
 func GetSourceClientCareevolution(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// API requires the following headers for every request

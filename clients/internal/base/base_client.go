@@ -70,7 +70,7 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 			"Immunization",
 			//"Location",
 			//"Medication",
-			//"MedicationRequest",
+			"MedicationRequest",
 			"Observation",
 			//"Organization",
 			//"Patient",
@@ -232,8 +232,8 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
 		b, _ := io.ReadAll(resp.Body)
 		bodyContent := string(b)
-		if len(bodyContent) > 100 {
-			bodyContent = bodyContent[:100]
+		if len(bodyContent) > 300 {
+			bodyContent = bodyContent[:300]
 		}
 		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
