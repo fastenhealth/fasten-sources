@@ -12,6 +12,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"os"
 	"strings"
@@ -221,12 +222,17 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		req.Header.Add(key, val)
 	}
 
-	//resp, err := c.OauthClient.Get(url)
+	if dumpReq, dumpReqErr := httputil.DumpRequest(req, true); dumpReqErr == nil {
+		c.Logger.Debug("Request: ", string(dumpReq))
+	}
 	resp, err := c.OauthClient.Do(req)
-
 	if err != nil {
+		if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
+			c.Logger.Debug("Response: ", string(dumpResp))
+		}
 		return err
 	}
+
 	defer resp.Body.Close()
 
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
@@ -234,6 +240,9 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		bodyContent := string(b)
 		if len(bodyContent) > 300 {
 			bodyContent = bodyContent[:300]
+		}
+		if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
+			c.Logger.Debug("Response: ", string(dumpResp))
 		}
 		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
