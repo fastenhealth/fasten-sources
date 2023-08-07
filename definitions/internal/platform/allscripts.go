@@ -18,22 +18,22 @@ https://open.allscripts.com/fhirendpoints
 Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
 so we need to swap the code for the access_token on the server
 */
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
 func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/0cd760ae-6ec5-4137-bf26-4269636b94ef/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/ea08d4a6-6eab-4cd2-a956-d28f9ef9809e/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/ea08d4a6-6eab-4cd2-a956-d28f9ef9809e/connect/token"
 
 	sourceDef.Issuer = "https://open.allscripts.com"
 	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/*.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV"
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/CustProProdSand201SMART"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAllscripts]; clientIdOk {
 		sourceDef.ClientId = clientId
