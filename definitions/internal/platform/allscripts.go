@@ -18,22 +18,22 @@ https://open.allscripts.com/fhirendpoints
 Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
 so we need to swap the code for the access_token on the server
 */
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV/metadata
+// https://tw181unityfhir.open.allscripts.com/R4/open-veradigmtwr4/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
 func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/ea08d4a6-6eab-4cd2-a956-d28f9ef9809e/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/ea08d4a6-6eab-4cd2-a956-d28f9ef9809e/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/986f907f-b56c-4ff2-a12d-6c30d20180b2/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/986f907f-b56c-4ff2-a12d-6c30d20180b2/connect/token"
 
 	sourceDef.Issuer = "https://open.allscripts.com"
-	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/*.read"}
+	sourceDef.Scopes = []string{"fhirUser", "launch/patient", "offline_access", "openid", "patient/*.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV"
+	sourceDef.Audience = "https://tw181unityfhir.open.allscripts.com/R4/open-veradigmtwr4"
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV"
+	sourceDef.ApiEndpointBaseUrl = "https://tw181unityfhir.open.allscripts.com/R4/open-veradigmtwr4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAllscripts]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -45,7 +45,7 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.PlatformType = pkg.SourceTypeAllscripts
 	sourceDef.SourceType = pkg.SourceTypeAllscripts
 	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.PatientAccessUrl = "https://open.allscripts.com"
+	sourceDef.PatientAccessUrl = "https://www.allscripts.com"
 
 	return sourceDef, nil
 }

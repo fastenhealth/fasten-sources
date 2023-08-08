@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/fa0f517f-db34-4a7a-98d2-758b513b2168/metadata
 func GetSourceClientPeakVisionEyeCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

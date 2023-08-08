@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/82b0ad09-dd0a-4a8a-9439-0c935213f8f1/metadata
 func GetSourceClientCoastalPulmonary(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

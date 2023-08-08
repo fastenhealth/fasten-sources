@@ -17,6 +17,9 @@ import (
 // https://epicarr.emc.org/EMC_FHIR_PRD/api/FHIR/R4/metadata
 func GetSourceClientEisenhowerMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

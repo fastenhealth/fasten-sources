@@ -17,6 +17,9 @@ import (
 // https://epicrp-prd.eushc.org/OAUTH2-PRD/api/FHIR/R4/metadata
 func GetSourceClientEmoryHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

@@ -17,6 +17,9 @@ import (
 // https://fhir.clinical.bcm.edu/stage1fhir/api/FHIR/R4/metadata
 func GetSourceClientBaylorCollegeOfMedicine(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

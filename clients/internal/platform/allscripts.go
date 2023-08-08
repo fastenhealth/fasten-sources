@@ -26,12 +26,15 @@ https://open.allscripts.com/fhirendpoints
 Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
 so we need to swap the code for the access_token on the server
 */
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/PEHRsandDEV/metadata
+// https://tw181unityfhir.open.allscripts.com/R4/open-veradigmtwr4/metadata
 // https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
 func GetSourceClientAllscripts(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 	// API requires the following headers for every request
-	baseClient.Headers["Accept"] = "application/json+fhir"
+	baseClient.Headers["Accept"] = "application/fhir+json"
 
 	return sourceClientAllscripts{baseClient}, err
 }

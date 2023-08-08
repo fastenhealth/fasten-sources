@@ -27,6 +27,9 @@ Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com /
 */
 func GetSourceClientAthena(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return sourceClientAthena{baseClient}, err
 }

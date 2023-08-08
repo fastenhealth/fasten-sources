@@ -22,6 +22,9 @@ type sourceClientKaiser struct {
 // https://developer.kp.org/#/apis
 func GetSourceClientKaiser(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return sourceClientKaiser{baseClient}, err
 }

@@ -23,6 +23,9 @@ type sourceClientAetna struct {
 // https://developerportal.aetna.com/Aetna_TestMember_Data_V6.xls
 func GetSourceClientAetna(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return sourceClientAetna{baseClient}, err
 }

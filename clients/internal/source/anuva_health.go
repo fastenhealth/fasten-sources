@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/d9d6c818-9b40-4c9f-8171-72c8c7a8d62d/metadata
 func GetSourceClientAnuvaHealth(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

@@ -186,7 +186,7 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 	}
 
 	c.OauthClient = oauth2.NewClient(c.Context, oauth2.StaticTokenSource(token))
-	c.OauthClient.Timeout = 10 * time.Second
+	c.OauthClient.Timeout = 30 * time.Second
 
 	return nil
 }
@@ -222,14 +222,10 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		req.Header.Add(key, val)
 	}
 
-	if dumpReq, dumpReqErr := httputil.DumpRequest(req, true); dumpReqErr == nil {
-		c.Logger.Debug("Request: ", string(dumpReq))
-	}
+	c.LoggerDebugRequest(req)
 	resp, err := c.OauthClient.Do(req)
 	if err != nil {
-		if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
-			c.Logger.Debug("Response: ", string(dumpResp))
-		}
+		c.LoggerDebugResponse(resp)
 		return err
 	}
 
@@ -241,9 +237,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		if len(bodyContent) > 300 {
 			bodyContent = bodyContent[:300]
 		}
-		if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
-			c.Logger.Debug("Response: ", string(dumpResp))
-		}
+		c.LoggerDebugResponse(resp)
 		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
 
@@ -262,4 +256,22 @@ func ParseBundle(r io.Reader, decodeModelPtr interface{}) error {
 		return err
 	}
 	return err
+}
+
+func (c *SourceClientBase) LoggerDebugRequest(req *http.Request) {
+	if req == nil {
+		return
+	}
+	if dumpReq, dumpReqErr := httputil.DumpRequest(req, true); dumpReqErr == nil {
+		c.Logger.Debug("Request: ", string(dumpReq))
+	}
+}
+
+func (c *SourceClientBase) LoggerDebugResponse(resp *http.Response) {
+	if resp == nil {
+		return
+	}
+	if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
+		c.Logger.Debug("Response: ", string(dumpResp))
+	}
 }

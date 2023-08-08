@@ -17,6 +17,9 @@ import (
 // https://patient360.healthybluene.com/P360Member/fhir/documentation?prefix=fhir-r4
 func GetSourceClientHealthyBlueNe(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

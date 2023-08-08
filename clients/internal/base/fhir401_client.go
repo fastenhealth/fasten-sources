@@ -20,6 +20,9 @@ type SourceClientFHIR401 struct {
 
 func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR401, error) {
 	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 	baseClient.FhirVersion = "4.0.1"
 	return &SourceClientFHIR401{
 		SourceClientBase: baseClient,

@@ -22,6 +22,9 @@ https://fhir.docs.careevolution.com/overview/tutorials/
 */
 func GetSourceClientCareevolution(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 	// API requires the following headers for every request
 	baseClient.Headers["Accept"] = "application/json+fhir"
 

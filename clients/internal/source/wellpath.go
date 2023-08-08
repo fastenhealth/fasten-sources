@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/ca02c823-7600-4deb-87ac-1a00a1f8f2a3/metadata
 func GetSourceClientWellpath(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

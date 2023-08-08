@@ -17,6 +17,9 @@ import (
 // https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/10215801/metadata
 func GetSourceClientChmbNeurologyClinicOfMarin(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

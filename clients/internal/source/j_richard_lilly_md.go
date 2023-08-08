@@ -17,6 +17,9 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10040104/metadata
 func GetSourceClientJRichardLillyMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

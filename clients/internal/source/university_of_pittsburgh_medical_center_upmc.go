@@ -17,6 +17,9 @@ import (
 // https://epic-fhir-prd.upmc.com/FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceClientUniversityOfPittsburghMedicalCenterUpmc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/c3d6a188-86bd-4e90-a26d-5bfd89cb9cd7/metadata
 func GetSourceClientAllergyAndAsthmaAssoc(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

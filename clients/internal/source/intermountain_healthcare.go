@@ -17,6 +17,9 @@ import (
 // https://sclprdproxy.sclhs.net/FHIRPRD-2017/api/FHIR/R4/metadata
 func GetSourceClientIntermountainHealthcare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientEpic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient

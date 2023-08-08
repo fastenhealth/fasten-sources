@@ -27,8 +27,11 @@ http://fhir.cerner.com/millennium/r4/#authorization
 // https://docs.google.com/document/d/10RnVyF1etl_17pyCyK96tyhUWRbrTyEcqpwzW-Z-Ybs/edit
 func GetSourceClientCerner(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 	// API requires the following headers for every request
-	baseClient.Headers["Accept"] = "application/json+fhir"
+	baseClient.Headers["Accept"] = "application/fhir+json"
 
 	return sourceClientCerner{baseClient}, err
 }

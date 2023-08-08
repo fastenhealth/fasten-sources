@@ -25,6 +25,9 @@ https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHlo
 */
 func GetSourceClientBluebutton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return sourceClientBluebutton{baseClient}, err
 }

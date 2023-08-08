@@ -17,6 +17,9 @@ import (
 // https://fhir-myrecord.cerner.com/r4/a7648da4-0a39-4d97-8a2b-f767764345ee/metadata
 func GetSourceClientJeffreyLMarksMd(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
 
 	return struct {
 		models.SourceClient
