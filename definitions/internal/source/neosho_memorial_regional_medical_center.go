@@ -29,9 +29,9 @@ func GetSourceNeoshoMemorialRegionalMedicalCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Neosho Memorial Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNeoshoMemorialRegionalMedicalCenter
-	sourceDef.Category = []string{"261QR1300X", "251B00000X", "275N00000X", "261QP2300X", "282NC0060X", "261QM2500X", "332BX2000X", "332B00000X", "364SE0003X", "364SF0001X", "208600000X", "207X00000X"}
+	sourceDef.Category = []string{"207X00000X", "208600000X", "251B00000X", "261QM2500X", "261QP2300X", "261QR1300X", "275N00000X", "282NC0060X", "332B00000X", "332BX2000X", "364SE0003X", "364SF0001X"}
 	sourceDef.Aliases = []string{"HOME CARE PRODUCTS OF NEOSHO MEMORIAL", "NEW HORIZONS COUNSELING", "NMRMC ERIE FAMILY CARE CLINIC", "NMRMC FAMILY MEDICINE", "NMRMC ORTHOPEDIC CLINIC", "NMRMC SURGERY CLINIC", "NMRMC SWINGBED", "NMRMC WOMEN'S HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497121735", "1750485082", "1912014473", "1679902126", "1073566949", "1023251469", "1497869374", "1730557166", "1275179434", "1619261211"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023251469", "1073566949", "1275179434", "1497121735", "1497869374", "1619261211", "1679902126", "1730557166", "1750485082", "1912014473"}}
 	sourceDef.BrandLogo = "neosho-memorial-regional-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.nmrmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

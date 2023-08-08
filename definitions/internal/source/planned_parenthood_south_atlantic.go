@@ -28,9 +28,9 @@ func GetSourcePlannedParenthoodSouthAtlantic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Planned Parenthood South Atlantic"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodSouthAtlantic
-	sourceDef.Category = []string{"261QF0050X", "261QA0005X", "332900000X"}
+	sourceDef.Category = []string{"261QA0005X", "261QF0050X", "332900000X"}
 	sourceDef.Aliases = []string{"PLANNED PARENTHOOD HEALTH SYSTEMS", "PLANNED PARENTHOOD HEALTH SYSTEMS, INC", "PLANNED PARENTHOOD OF ORANGE & DURHAM COUNTIES", "PLANNED PARENTHOOD SOUTH ATLANTIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801932199", "1124165451", "1013021377", "1487790762", "1194861492", "1811033210", "1861538175", "1689711632", "1639501166", "1134214968"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013021377", "1124165451", "1134214968", "1194861492", "1487790762", "1639501166", "1689711632", "1801932199", "1811033210", "1861538175"}}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-south-atlantic/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

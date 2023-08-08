@@ -29,9 +29,9 @@ func GetSourceSouthGeorgiaMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "South Georgia Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthGeorgiaMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "261QM0850X", "261QM0855X", "261QU0200X", "341600000X", "261QR0400X", "273Y00000X", "333600000X"}
+	sourceDef.Category = []string{"261QM0850X", "261QM0855X", "261QR0400X", "261QU0200X", "273Y00000X", "282N00000X", "333600000X", "341600000X"}
 	sourceDef.Aliases = []string{"SOUTH GEORGIA MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891045191", "1306896253", "1467404046", "1649641721", "1386626570", "1831171867"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306896253", "1386626570", "1467404046", "1649641721", "1831171867", "1891045191"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

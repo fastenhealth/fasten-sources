@@ -29,9 +29,9 @@ func GetSourceChristianaCareHealthServicesInc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Christiana Care Health Services, Inc."
 	sourceDef.SourceType = pkg.SourceTypeChristianaCareHealthServicesInc
-	sourceDef.Category = []string{"207V00000X", "207P00000X", "2085R0202X", "282N00000X", "103T00000X", "133N00000X", "101YM0800X", "1041C0700X", "1041S0200X", "207Q00000X", "208000000X", "363L00000X", "363LS0200X", "261QS1000X", "261QE0700X"}
+	sourceDef.Category = []string{"101YM0800X", "103T00000X", "1041C0700X", "1041S0200X", "133N00000X", "207P00000X", "207Q00000X", "207V00000X", "208000000X", "2085R0202X", "261QE0700X", "261QS1000X", "282N00000X", "363L00000X", "363LS0200X"}
 	sourceDef.Aliases = []string{"CCHS RADIOLOGY", "CCHS WELLNESS CENTER", "CHRISTIANA CARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093905903", "1134194038", "1982842266", "1891983797", "1780956433", "1487682407"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093905903", "1134194038", "1487682407", "1780956433", "1891983797", "1982842266"}}
 	sourceDef.BrandLogo = "christiana-care-health-services-inc.svg"
 	sourceDef.PatientAccessUrl = "https://christianacare.org/us/en"
 	sourceDef.SecretKeyPrefix = "cerner"

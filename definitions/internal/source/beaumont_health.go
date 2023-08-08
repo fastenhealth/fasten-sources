@@ -29,8 +29,8 @@ func GetSourceBeaumontHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Beaumont Health"
 	sourceDef.SourceType = pkg.SourceTypeBeaumontHealth
-	sourceDef.Category = []string{"261Q00000X", "283X00000X", "282N00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497290456", "1275035271", "1174904601"}}
+	sourceDef.Category = []string{"261Q00000X", "282N00000X", "283X00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174904601", "1275035271", "1497290456"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -30,7 +30,7 @@ func GetSourceValleyCommunityHealthcare(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeValleyCommunityHealthcare
 	sourceDef.Category = []string{"171M00000X", "251V00000X"}
 	sourceDef.Aliases = []string{"VALLEY COMMUNITY CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932501996", "1588740989"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588740989", "1932501996"}}
 	sourceDef.BrandLogo = "valley-community-healthcare.jpeg"
 	sourceDef.PatientAccessUrl = "https://valleycommunityhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

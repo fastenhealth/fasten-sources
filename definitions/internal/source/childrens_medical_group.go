@@ -11,29 +11,28 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044381/metadata
+// https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
 func GetSourceChildrensMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10044381/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10044381/connect/token"
+	sourceDef, err := platform.GetSourceNextgen(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044381"
+	sourceDef.Audience = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044381"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeChildrensMedicalGroup]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "CHILDREN'S MEDICAL GROUP"
+	sourceDef.Display = "Children's Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeChildrensMedicalGroup
-	sourceDef.Category = []string{"101YM0800X", "101YP2500X", "103TC2200X", "104100000X", "1041C0700X", "106H00000X", "2084P0800X", "2084P0804X", "208000000X", "2080A0000X"}
+	sourceDef.Category = []string{"101YM0800X", "101YP2500X", "103TC2200X", "104100000X", "1041C0700X", "106H00000X", "208000000X", "2080A0000X", "2084P0800X", "2084P0804X"}
 	sourceDef.Aliases = []string{"CEDARBURG PEDIATRICS", "GOOD HOPE PEDIATRICS", "NEXT DOOR PEDIATRICS", "NORTH SHORE PEDIATRICS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174999163", "1295951051", "1114192499", "1801061064", "1326213562", "1255506598", "1922273184", "1275708539", "1659546877", "1831502327"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114192499", "1174999163", "1255506598", "1275708539", "1295951051", "1326213562", "1659546877", "1801061064", "1831502327", "1922273184"}}
 	sourceDef.PatientAccessUrl = "https://www.childrensmedgroup.com/"
-	sourceDef.SecretKeyPrefix = "allscripts"
+	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
 }

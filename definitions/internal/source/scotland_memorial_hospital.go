@@ -29,9 +29,9 @@ func GetSourceScotlandMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Scotland Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeScotlandMemorialHospital
-	sourceDef.Category = []string{"332B00000X", "207Q00000X", "261QR1300X"}
+	sourceDef.Category = []string{"207Q00000X", "261QR1300X", "332B00000X"}
 	sourceDef.Aliases = []string{"SCOTLAND FAMILY PRACTICE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700937711", "1932301769", "1265426191"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265426191", "1700937711", "1932301769"}}
 	sourceDef.BrandLogo = "scotland-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/scotlandhealthcare/"
 	sourceDef.SecretKeyPrefix = "cerner"

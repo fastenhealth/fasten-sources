@@ -29,9 +29,9 @@ func GetSourceBillingsClinic5(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Billings Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBillingsClinic5
-	sourceDef.Category = []string{"1041C0700X", "207R00000X", "363A00000X", "207Q00000X", "225X00000X", "2085R0202X", "2085R0001X", "207ZP0102X", "101YM0800X", "103T00000X", "2084P0800X", "261Q00000X", "363L00000X", "235Z00000X"}
+	sourceDef.Category = []string{"101YM0800X", "103T00000X", "1041C0700X", "207Q00000X", "207R00000X", "207ZP0102X", "2084P0800X", "2085R0001X", "2085R0202X", "225X00000X", "235Z00000X", "261Q00000X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"ASPEN MEADOWS OCCUPATIONAL THERAPY", "BILLINGS CLINIC BEHAVIORAL HEALTH", "BILLINGS CLINIC HEIGHTS", "BILLINGS CLINIC LCSW", "BILLINGS CLINIC NURSE PRACTITIONERS", "BILLINGS CLINIC PATHOLOGY", "BILLINGS CLINIC RADIOLOGY", "BILLINGS CLINIC SPEECH THERAPY", "BILLINGS CLINIC ST JOHNS EMPLOYEE CLINIC", "PLENTYWOOD CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811449564", "1033164447", "1508070970", "1427262880", "1063619187", "1013101229", "1386977106", "1255649372", "1073065728", "1467904110"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013101229", "1033164447", "1063619187", "1073065728", "1255649372", "1386977106", "1427262880", "1467904110", "1508070970", "1811449564"}}
 	sourceDef.PatientAccessUrl = "https://www.billingsclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

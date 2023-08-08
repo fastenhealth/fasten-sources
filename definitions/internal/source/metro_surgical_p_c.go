@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10054341/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10054341/metadata
 func GetSourceMetroSurgicalPC(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10054341/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10054341/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/33ad1fdd-34d2-407c-9e7d-fd29f66b5779/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/33ad1fdd-34d2-407c-9e7d-fd29f66b5779/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10054341"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10054341"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10054341"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10054341"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMetroSurgicalPC]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,7 +28,6 @@ func GetSourceMetroSurgicalPC(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "METRO SURGICAL, P.C."
 	sourceDef.SourceType = pkg.SourceTypeMetroSurgicalPC
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

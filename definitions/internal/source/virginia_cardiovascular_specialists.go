@@ -28,7 +28,7 @@ func GetSourceVirginiaCardiovascularSpecialists(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Virginia Cardiovascular Specialists"
 	sourceDef.SourceType = pkg.SourceTypeVirginiaCardiovascularSpecialists
-	sourceDef.Category = []string{"261QA1903X", "207RC0000X"}
+	sourceDef.Category = []string{"207RC0000X", "261QA1903X"}
 	sourceDef.Aliases = []string{"VCS HEART AND VASCULAR CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124777321", "1215958657"}}
 	sourceDef.BrandLogo = "virginia-cardiovascular-specialists.jpg"

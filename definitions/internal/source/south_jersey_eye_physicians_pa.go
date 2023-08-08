@@ -28,8 +28,8 @@ func GetSourceSouthJerseyEyePhysiciansPa(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "South Jersey Eye Physicians PA"
 	sourceDef.SourceType = pkg.SourceTypeSouthJerseyEyePhysiciansPa
-	sourceDef.Category = []string{"152W00000X", "207W00000X", "332H00000X", "332B00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215978408", "1629287032", "1386256352"}}
+	sourceDef.Category = []string{"152W00000X", "207W00000X", "332B00000X", "332H00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215978408", "1386256352", "1629287032"}}
 	sourceDef.BrandLogo = "south-jersey-eye-physicians-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://sjeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

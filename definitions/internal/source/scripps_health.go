@@ -29,9 +29,9 @@ func GetSourceScrippsHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Scripps Health"
 	sourceDef.SourceType = pkg.SourceTypeScrippsHealth
-	sourceDef.Category = []string{"261QM1300X", "133NN1002X", "2083X0100X", "291U00000X", "3336S0011X", "333600000X", "282N00000X"}
+	sourceDef.Category = []string{"133NN1002X", "2083X0100X", "261QM1300X", "282N00000X", "291U00000X", "333600000X", "3336S0011X"}
 	sourceDef.Aliases = []string{"JEFFERSON MEDICAL LAB", "SCRIPPS CLINIC", "SCRIPPS HEALTH PHARMACY", "SCRIPPS HEALTH SPECIALTY PHARMACY", "SCRIPPS MEMORIAL HOSPITAL ENCINITAS", "SCRIPPS MEMORIAL HOSPITAL LA JOLLA"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902881063", "1689907909", "1386968188", "1861018574", "1922611920", "1609195122", "1609532027", "1700829199", "1275899072", "1841277704"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275899072", "1386968188", "1609195122", "1609532027", "1689907909", "1700829199", "1841277704", "1861018574", "1902881063", "1922611920"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

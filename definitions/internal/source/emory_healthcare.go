@@ -29,8 +29,8 @@ func GetSourceEmoryHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Emory Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeEmoryHealthcare
-	sourceDef.Category = []string{"282NC0060X", "282N00000X", "313M00000X", "261QM2500X", "1041C0700X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659674992", "1235339227", "1578834008", "1740689496", "1972792885", "1417157405", "1336345982", "1801834908", "1598964082", "1154643336"}}
+	sourceDef.Category = []string{"1041C0700X", "261QM2500X", "282N00000X", "282NC0060X", "313M00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154643336", "1235339227", "1336345982", "1417157405", "1578834008", "1598964082", "1659674992", "1740689496", "1801834908", "1972792885"}}
 	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/index.html"
 	sourceDef.SecretKeyPrefix = "epic"
 

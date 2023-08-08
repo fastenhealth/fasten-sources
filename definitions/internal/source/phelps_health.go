@@ -29,9 +29,9 @@ func GetSourcePhelpsHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Phelps Health"
 	sourceDef.SourceType = pkg.SourceTypePhelpsHealth
-	sourceDef.Category = []string{"314000000X", "341600000X", "273Y00000X", "282N00000X"}
+	sourceDef.Category = []string{"273Y00000X", "282N00000X", "314000000X", "341600000X"}
 	sourceDef.Aliases = []string{"PHELPS HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578559076", "1528123528", "1346287455", "1891766051"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346287455", "1528123528", "1578559076", "1891766051"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,9 +29,9 @@ func GetSourceRockCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Rock County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRockCountyHospital
-	sourceDef.Category = []string{"3336L0003X", "3336C0003X", "291U00000X", "251E00000X", "261QR1300X", "282NC0060X", "313M00000X"}
+	sourceDef.Category = []string{"251E00000X", "261QR1300X", "282NC0060X", "291U00000X", "313M00000X", "3336C0003X", "3336L0003X"}
 	sourceDef.Aliases = []string{"ROCK COUNTY CLINIC", "ROCK COUNTY HOSPITAL HOME HEALTH", "ROCK COUNTY HOSPITAL LONG TERM CARE", "ROCK COUNTY HOSPITAL REFERENCE LAB"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326392960", "1447874581", "1437705332", "1770589764", "1497824171", "1114922259", "1710982194"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114922259", "1326392960", "1437705332", "1447874581", "1497824171", "1710982194", "1770589764"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

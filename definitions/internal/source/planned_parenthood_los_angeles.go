@@ -30,7 +30,7 @@ func GetSourcePlannedParenthoodLosAngeles(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodLosAngeles
 	sourceDef.Category = []string{"261QC1500X", "261QF0050X"}
 	sourceDef.Aliases = []string{"PLANNED PARENTHOOD LOS ANGELES INGLEWOOD CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669561890", "1609510395"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609510395", "1669561890"}}
 	sourceDef.BrandLogo = "planned-parenthood-los-angeles.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-los-angeles/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,7 @@ func GetSourceOhioEarInstituteLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ohio Ear Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeOhioEarInstituteLlc
-	sourceDef.Category = []string{"261QA1903X", "207YX0901X"}
+	sourceDef.Category = []string{"207YX0901X", "261QA1903X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720157381"}}
 	sourceDef.BrandLogo = "ohio-ear-institute-llc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.ohioear.com/"

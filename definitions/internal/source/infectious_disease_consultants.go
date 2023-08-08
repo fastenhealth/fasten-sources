@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10086572/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10086572/metadata
 func GetSourceInfectiousDiseaseConsultants(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10086572/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10086572/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/8ada1e26-136d-4a58-ad48-7404a87df386/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/8ada1e26-136d-4a58-ad48-7404a87df386/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10086572"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10086572"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10086572"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10086572"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeInfectiousDiseaseConsultants]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -29,8 +29,7 @@ func GetSourceInfectiousDiseaseConsultants(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Infectious Disease Consultants"
 	sourceDef.SourceType = pkg.SourceTypeInfectiousDiseaseConsultants
 	sourceDef.Category = []string{"174400000X", "207RI0200X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972580884", "1558417394", "1710078951", "1790844884", "1700819562"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558417394", "1700819562", "1710078951", "1790844884", "1972580884"}}
 	sourceDef.PatientAccessUrl = "http://www.idcdenver.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

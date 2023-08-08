@@ -28,7 +28,7 @@ func GetSourceAssociatedEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Associated Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedEndoscopy
-	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Category = []string{"261QA1903X", "261QE0800X"}
 	sourceDef.Aliases = []string{"ASSOCIATED ENDOSCOPY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174859516"}}
 	sourceDef.SecretKeyPrefix = "nextgen"

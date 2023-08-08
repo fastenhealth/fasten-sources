@@ -30,7 +30,7 @@ func GetSourceClecoPrimaryCareNetwork(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeClecoPrimaryCareNetwork
 	sourceDef.Category = []string{"207Q00000X", "261QR1300X"}
 	sourceDef.Aliases = []string{"CLECO MEDICAL CENTER", "CLECO PRIMARY CARE NETWORK", "KINGS MOUNTAIN MEDICAL CENTER", "UPPER CLEVELAND MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295715647", "1093795155", "1659351724", "1528046513", "1669443487"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093795155", "1295715647", "1528046513", "1659351724", "1669443487"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

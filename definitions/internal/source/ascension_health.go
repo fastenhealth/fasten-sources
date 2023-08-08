@@ -11,29 +11,29 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhirtw.genesys.org/FHIR/metadata
+// https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47/metadata
 func GetSourceAscensionHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhirtw.genesys.org/authorization/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhirtw.genesys.org/authorization/connect/token"
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/094be162-7d96-49dc-86a2-73b309e5fa47/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/094be162-7d96-49dc-86a2-73b309e5fa47/protocols/oauth2/profiles/smart-v1/token"
+	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://fhirtw.genesys.org/FHIR"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhirtw.genesys.org/FHIR"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/094be162-7d96-49dc-86a2-73b309e5fa47"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAscensionHealth]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
-	sourceDef.Display = "Ascension health"
+	sourceDef.Display = "Ascension Health"
 	sourceDef.SourceType = pkg.SourceTypeAscensionHealth
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841543071"}}
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "ascension-health.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
-	sourceDef.SecretKeyPrefix = "allscripts"
+	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err
 }

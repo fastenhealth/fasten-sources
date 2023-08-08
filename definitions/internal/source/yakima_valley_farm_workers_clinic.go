@@ -29,9 +29,9 @@ func GetSourceYakimaValleyFarmWorkersClinic(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Yakima Valley Farm Workers Clinic"
 	sourceDef.SourceType = pkg.SourceTypeYakimaValleyFarmWorkersClinic
-	sourceDef.Category = []string{"261QF0400X", "3336C0003X", "261QD0000X"}
-	sourceDef.Aliases = []string{"COMMUNITY DENTAL CENTER", "FAMILY DENTAL CENTER", "LANCASTER FAMILY HEALTH CENTER AT LANCASTER", "SALUD MEDICAL CENTER", "UNIFY COMMUNITY HEALTH", "UNIFY FAMILY DENTAL", "YAKIMA VALLEY FARMWORKERS DENTAL CLINIC AT THE YV TECH CAMPUS", "UNIFY COMMUNITY HEALTH ON MISSION", "FAMILY MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972556496", "1831285162", "1740376078", "1023147220", "1992834196", "1114344611", "1285068502", "1467868851", "1467995852", "1710462304"}}
+	sourceDef.Category = []string{"261QD0000X", "261QF0400X", "3336C0003X"}
+	sourceDef.Aliases = []string{"COMMUNITY DENTAL CENTER", "FAMILY DENTAL CENTER", "FAMILY MEDICAL CENTER", "LANCASTER FAMILY HEALTH CENTER AT LANCASTER", "SALUD MEDICAL CENTER", "UNIFY COMMUNITY HEALTH", "UNIFY COMMUNITY HEALTH ON MISSION", "UNIFY FAMILY DENTAL", "YAKIMA VALLEY FARMWORKERS DENTAL CLINIC AT THE YV TECH CAMPUS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023147220", "1114344611", "1285068502", "1467868851", "1467995852", "1710462304", "1740376078", "1831285162", "1972556496", "1992834196"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

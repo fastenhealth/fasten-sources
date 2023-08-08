@@ -29,9 +29,9 @@ func GetSourceEllsworthCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Ellsworth County Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEllsworthCountyMedicalCenter
-	sourceDef.Category = []string{"282NC0060X", "275N00000X", "207Q00000X", "208VP0014X"}
+	sourceDef.Category = []string{"207Q00000X", "208VP0014X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"ECMC RURAL HEALTH CLINIC ELLSWORTH", "ECMC RURAL HEALTH CLINIC-LUCAS", "ECMC- RURAL HEALTH CLINIC WILSON", "ECMC-RURAL HEALTH CLINIC HOLYROOD"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083614028", "1063479145", "1215937263", "1457998593", "1689674657", "1215937289", "1972504546"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063479145", "1083614028", "1215937263", "1215937289", "1457998593", "1689674657", "1972504546"}}
 	sourceDef.PatientAccessUrl = "https://www.ewmed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

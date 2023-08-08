@@ -30,7 +30,7 @@ func GetSourcePuebloCommunityHealthCenterInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePuebloCommunityHealthCenterInc
 	sourceDef.Category = []string{"261QF0400X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"CENTRAL HIGH SCHOOL SBWC", "PUEBLO COMMUNITY COLLEGE HEALTH CLINIC", "PUEBLO COMMUNITY HEALTH CENTER", "PUEBLO COMMUNITY HEALTH CENTER PARK HILL", "WALSENBURG CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952071219", "1801818398", "1700139813", "1447900717", "1790730737", "1316466816", "1790966174"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316466816", "1447900717", "1700139813", "1790730737", "1790966174", "1801818398", "1952071219"}}
 	sourceDef.PatientAccessUrl = "https://www.pueblochc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

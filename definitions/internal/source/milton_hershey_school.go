@@ -29,7 +29,7 @@ func GetSourceMiltonHersheySchool(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Milton Hershey School"
 	sourceDef.SourceType = pkg.SourceTypeMiltonHersheySchool
-	sourceDef.Category = []string{"364SS0200X", "261QS1000X"}
+	sourceDef.Category = []string{"261QS1000X", "364SS0200X"}
 	sourceDef.Aliases = []string{"MILTON HERSHEY SCHOOL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255049243"}}
 	sourceDef.PatientAccessUrl = "https://www.mhskids.org"

@@ -28,7 +28,7 @@ func GetSourcePrecisionSpineCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Precision Spine Care"
 	sourceDef.SourceType = pkg.SourceTypePrecisionSpineCare
-	sourceDef.Category = []string{"207LP2900X", "208VP0014X", "208VP0000X", "363A00000X", "363L00000X", "207T00000X"}
+	sourceDef.Category = []string{"207LP2900X", "207T00000X", "208VP0000X", "208VP0014X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"PRECISION SPINE CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144694902", "1720513328", "1982717955"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PrecisionSpineCare/"

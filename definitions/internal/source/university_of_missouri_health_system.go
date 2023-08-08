@@ -29,7 +29,7 @@ func GetSourceUniversityOfMissouriHealthSystem(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "University of Missouri Health System"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMissouriHealthSystem
-	sourceDef.Category = []string{"282N00000X", "174400000X"}
+	sourceDef.Category = []string{"174400000X", "282N00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285920504", "1952443624"}}
 	sourceDef.PatientAccessUrl = "https://www.muhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

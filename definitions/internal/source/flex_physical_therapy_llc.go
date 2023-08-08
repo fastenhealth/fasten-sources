@@ -28,8 +28,8 @@ func GetSourceFlexPhysicalTherapyLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Flex Physical Therapy LLC"
 	sourceDef.SourceType = pkg.SourceTypeFlexPhysicalTherapyLlc
-	sourceDef.Category = []string{"225100000X", "174400000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568531556", "1518283050"}}
+	sourceDef.Category = []string{"174400000X", "225100000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518283050", "1568531556"}}
 	sourceDef.PatientAccessUrl = "https://www.flexptny.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,9 +28,9 @@ func GetSourceRockingHorseCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Rocking Horse Center"
 	sourceDef.SourceType = pkg.SourceTypeRockingHorseCenter
-	sourceDef.Category = []string{"261QR0405X", "261QF0400X", "261QM0801X", "1223G0001X", "261QD0000X", "261QS0112X", "261QM1300X", "261QP2300X", "261Q00000X", "333600000X", "3336C0002X"}
+	sourceDef.Category = []string{"1223G0001X", "261Q00000X", "261QD0000X", "261QF0400X", "261QM0801X", "261QM1300X", "261QP2300X", "261QR0405X", "261QS0112X", "333600000X", "3336C0002X"}
 	sourceDef.Aliases = []string{"ROCKING HORSE CENTER", "ROCKING HORSE CENTER - SBHC SPRINGFIELD CITY", "ROCKING HORSE CENTER PHARMACY", "ROCKING HORSE COMMUNITY HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235378290", "1275865693", "1700116407", "1770282642", "1407355852", "1992850648", "1093952350", "1326449000", "1477102002", "1083932305"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083932305", "1093952350", "1235378290", "1275865693", "1326449000", "1407355852", "1477102002", "1700116407", "1770282642", "1992850648"}}
 	sourceDef.PatientAccessUrl = "https://www.rockinghorsecenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

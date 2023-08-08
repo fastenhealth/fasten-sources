@@ -14,7 +14,8 @@ import (
 	"net/http"
 )
 
-// https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74003/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003/.well-known/smart-configuration
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003/metadata
 func GetSourceClientFrontRangeSurgicalServices(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {

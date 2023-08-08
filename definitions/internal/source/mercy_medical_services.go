@@ -28,9 +28,9 @@ func GetSourceMercyMedicalServices(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Mercy Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeMercyMedicalServices
-	sourceDef.Category = []string{"207R00000X", "363AM0700X", "363LF0000X", "207Q00000X", "363L00000X", "261QR1300X", "363LP0808X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "261QR1300X", "363AM0700X", "363L00000X", "363LF0000X", "363LP0808X"}
 	sourceDef.Aliases = []string{"MERCY INTERNAL MEDICINE", "MERCYONE AKRON FAMILY MEDICINE", "MERCYONE INTERNAL MEDICINE CLINIC", "MERCYONE KINGSLEY FAMILY MEDICINE", "MERCYONE PONCA FAMILY MEDICINE", "MERCYONE SOUTH SIOUX FAMILY MEDICINE", "PONCA MERCY MEDICAL CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215978929", "1043251754", "1790723633", "1083652218", "1093966244", "1255479143", "1710925813", "1902840671", "1720026461", "1831139328"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043251754", "1083652218", "1093966244", "1215978929", "1255479143", "1710925813", "1720026461", "1790723633", "1831139328", "1902840671"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceMarbleValleyHealthworksLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Marble Valley Healthworks, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMarbleValleyHealthworksLlc
-	sourceDef.Category = []string{"207R00000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801394895"}}
 	sourceDef.PatientAccessUrl = "https://scoombsmd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

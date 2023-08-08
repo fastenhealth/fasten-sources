@@ -29,9 +29,9 @@ func GetSourceAdventhealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "AdventHealth"
 	sourceDef.SourceType = pkg.SourceTypeAdventhealth1
-	sourceDef.Category = []string{"261QP2000X", "2084P0800X", "261QM0801X", "261QM0850X", "282N00000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "2084P0800X", "261QM0801X", "261QM0850X", "261QP2000X", "282N00000X"}
 	sourceDef.Aliases = []string{"ADVENTHEALTH", "ADVENTHEALTH HENDERSONVILLE", "ADVENTHEALTH MEDICAL GROUP", "ADVENTHEALTH MEDICAL GROUP FAMILY MEDICINE AT ETOWAH", "ADVENTHEALTH MEDICAL GROUP URGENT AND FAMILY CARE AT TRYON"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447965132", "1720292261", "1477995124"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447965132", "1477995124", "1720292261"}}
 	sourceDef.BrandLogo = "adventhealth.png"
 	sourceDef.PatientAccessUrl = "https://www.adventhealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"

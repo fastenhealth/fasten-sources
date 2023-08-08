@@ -28,9 +28,9 @@ func GetSourceRetinaSpecialtyInstitute(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Retina Specialty Institute"
 	sourceDef.SourceType = pkg.SourceTypeRetinaSpecialtyInstitute
-	sourceDef.Category = []string{"207WX0107X", "207W00000X"}
+	sourceDef.Category = []string{"207W00000X", "207WX0107X"}
 	sourceDef.Aliases = []string{"RETINA SPECIALTY INSTITUTE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982271193", "1225750441", "1588386700", "1871160085", "1376110585", "1881261089", "1760059976", "1104493311"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104493311", "1225750441", "1376110585", "1588386700", "1760059976", "1871160085", "1881261089", "1982271193"}}
 	sourceDef.BrandLogo = "retina-specialty-institute.svg"
 	sourceDef.PatientAccessUrl = "https://www.retinaspecialty.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

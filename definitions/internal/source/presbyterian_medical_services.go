@@ -28,9 +28,9 @@ func GetSourcePresbyterianMedicalServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Presbyterian Medical Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianMedicalServices
-	sourceDef.Category = []string{"261QM0801X", "261QS1000X", "261QF0400X", "251S00000X", "332900000X", "261QD0000X", "333600000X", "3336C0002X", "251C00000X"}
+	sourceDef.Category = []string{"251C00000X", "251S00000X", "261QD0000X", "261QF0400X", "261QM0801X", "261QS1000X", "332900000X", "333600000X", "3336C0002X"}
 	sourceDef.Aliases = []string{"CARLSBAD SCHOOL BASED HEALTH", "COUNSELOR NAVAJO CLINIC", "FARMINGTON COMMUNITY HEALTH CENTER", "PMS-SOCORRO MENTAL HEALTH", "PROJECT SHIELD", "QUESTA HEALTH CENTER", "SANTA FE COMMUNITY GUIDANCE CENTER", "VEGUITA FAMILY HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760805303", "1023186434", "1306175922", "1093127045", "1487119608", "1124134028", "1396824223", "1588731582", "1952474744", "1972712875"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023186434", "1093127045", "1124134028", "1306175922", "1396824223", "1487119608", "1588731582", "1760805303", "1952474744", "1972712875"}}
 	sourceDef.PatientAccessUrl = "https://www.pmsnm.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

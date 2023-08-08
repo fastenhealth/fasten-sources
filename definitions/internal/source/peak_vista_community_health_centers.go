@@ -28,9 +28,9 @@ func GetSourcePeakVistaCommunityHealthCenters(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Peak Vista Community Health Centers"
 	sourceDef.SourceType = pkg.SourceTypePeakVistaCommunityHealthCenters
-	sourceDef.Category = []string{"261QF0400X", "261QD0000X"}
+	sourceDef.Category = []string{"261QD0000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"CONVENIENT CARE CENTER AND PEDIATRIC HEALTH CENTER AT ACADEMY", "DENTAL HEALTH CENTER", "DOWNTOWN HEALTH CENTER", "FAMILY HEALTH CENTER AT MITCHELL HIGH SCHOOL", "HEALTH CENTER AT JET WING", "HEALTH CENTER AT UNION", "HEALTH CENTER AT WAHSATCH", "HEATH CENTER AT ACADEMY SUITE 3500", "LOGAN HEALTH CENTER AT MYRON STRATTON", "PEDIATRIC HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033412796", "1972245959", "1639714041", "1437622206", "1497787535", "1962740381", "1124321880", "1396048054", "1689977365", "1841593225"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033412796", "1124321880", "1396048054", "1437622206", "1497787535", "1639714041", "1689977365", "1841593225", "1962740381", "1972245959"}}
 	sourceDef.PatientAccessUrl = "https://www.peakvista.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

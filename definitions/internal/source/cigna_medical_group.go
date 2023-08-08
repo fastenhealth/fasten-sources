@@ -29,7 +29,7 @@ func GetSourceCignaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Cigna Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCignaMedicalGroup
-	sourceDef.Category = []string{"363L00000X", "261QM1300X"}
+	sourceDef.Category = []string{"261QM1300X", "363L00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003270596", "1023113271"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

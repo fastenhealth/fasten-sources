@@ -28,9 +28,9 @@ func GetSourceHonorCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Honor Community Health"
 	sourceDef.SourceType = pkg.SourceTypeHonorCommunityHealth
-	sourceDef.Category = []string{"261QD0000X", "261QF0400X", "261QM0855X", "103TC2200X", "207QA0000X"}
+	sourceDef.Category = []string{"103TC2200X", "207QA0000X", "261QD0000X", "261QF0400X", "261QM0855X"}
 	sourceDef.Aliases = []string{"HEALTHY SMILES MOBILE UNIT", "HONOR COMMUNITY HEALTH", "TEEN HEALTH CENTER", "WHITMAN EMPOWERMENT ZONE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194376566", "1720614530", "1003206038"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003206038", "1194376566", "1720614530"}}
 	sourceDef.BrandLogo = "honor-community-health.jpg"
 	sourceDef.PatientAccessUrl = "https://honorcommunityhealth.org/health-centers/family-medicine-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,7 +29,7 @@ func GetSourceMineralCommunityHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mineral Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMineralCommunityHospital
-	sourceDef.Category = []string{"282NR1301X", "275N00000X", "282NC0060X"}
+	sourceDef.Category = []string{"275N00000X", "282NC0060X", "282NR1301X"}
 	sourceDef.Aliases = []string{"MINERAL COMMUNITY HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093809196", "1720136088", "1902990005"}}
 	sourceDef.PatientAccessUrl = "https://mineralcommunityhospital.com/"

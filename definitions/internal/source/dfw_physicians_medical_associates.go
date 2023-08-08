@@ -28,8 +28,8 @@ func GetSourceDfwPhysiciansMedicalAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "DFW Physicians Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeDfwPhysiciansMedicalAssociates
-	sourceDef.Category = []string{"363LP2300X", "103TC2200X", "207Q00000X", "207RC0000X", "207RI0011X", "207RP1001X", "2080C0008X", "2084A0401X", "2084P0804X", "2084P0805X", "363L00000X", "207R00000X"}
-	sourceDef.Aliases = []string{"DFWPMA FCVC", "FRISCO CARDIAC AND VASCULAR CARE", "DFWPMA"}
+	sourceDef.Category = []string{"103TC2200X", "207Q00000X", "207R00000X", "207RC0000X", "207RI0011X", "207RP1001X", "2080C0008X", "2084A0401X", "2084P0804X", "2084P0805X", "363L00000X", "363LP2300X"}
+	sourceDef.Aliases = []string{"DFWPMA", "DFWPMA FCVC", "FRISCO CARDIAC AND VASCULAR CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376014076"}}
 	sourceDef.BrandLogo = "dfw-physicians-medical-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://pay.instamed.com/Form/PaymentPortal/Default?id=DFWPHYS"

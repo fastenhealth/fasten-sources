@@ -29,7 +29,7 @@ func GetSourceYumaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Yuma Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeYumaRegionalMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "207X00000X", "207R00000X"}
+	sourceDef.Category = []string{"207R00000X", "207X00000X", "282N00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194706655", "1598993420"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

@@ -29,9 +29,9 @@ func GetSourceMolinaHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Molina Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeMolinaHealthcare
-	sourceDef.Category = []string{"302F00000X", "251X00000X"}
+	sourceDef.Category = []string{"251X00000X", "302F00000X"}
 	sourceDef.Aliases = []string{"MOLINA HEALTHCARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699207522", "1508341777"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508341777", "1699207522"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

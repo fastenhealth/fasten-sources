@@ -29,9 +29,9 @@ func GetSourceAnmedHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "AnMed Health"
 	sourceDef.SourceType = pkg.SourceTypeAnmedHealth
-	sourceDef.Category = []string{"207R00000X", "208000000X", "225100000X", "3336H0001X", "261QI0500X", "208100000X", "207RC0000X", "207V00000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RC0000X", "207V00000X", "208000000X", "208100000X", "225100000X", "261QI0500X", "3336H0001X"}
 	sourceDef.Aliases = []string{"ANMED CLEMSON", "ANMED INFUSION CENTER", "ANMED INTERNAL MEDICINE - BUFORD", "ANMED OBGYN - ANDERSON", "ANMED OCCUPATIONAL MEDICINE", "ANMED PRIMARY CARE - HONEA PATH", "ANMED PRIMARY CARE-FAMILY MEDICINE RESIDENCY", "ANMED THERAPY - HARTWELL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609163302", "1992130611", "1114365251", "1689124901", "1760903777", "1851701866", "1972544799", "1629025010", "1891726402", "1003841461"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003841461", "1114365251", "1609163302", "1629025010", "1689124901", "1760903777", "1851701866", "1891726402", "1972544799", "1992130611"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,9 +29,9 @@ func GetSourceTampaGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Tampa General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTampaGeneralHospital
-	sourceDef.Category = []string{"282N00000X", "261QE0002X", "261QE0700X", "261QM1300X", "261QP2300X", "273R00000X", "273Y00000X", "3416A0800X", "332B00000X"}
+	sourceDef.Category = []string{"261QE0002X", "261QE0700X", "261QM1300X", "261QP2300X", "273R00000X", "273Y00000X", "282N00000X", "332B00000X", "3416A0800X"}
 	sourceDef.Aliases = []string{"TAMPA GENERAL HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609271667", "1235196510", "1720115223", "1124558929"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124558929", "1235196510", "1609271667", "1720115223"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

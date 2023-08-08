@@ -29,7 +29,7 @@ func GetSourceRenaissanceMedicalFoundation(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Renaissance Medical Foundation"
 	sourceDef.SourceType = pkg.SourceTypeRenaissanceMedicalFoundation
-	sourceDef.Category = []string{"363LW0102X", "261Q00000X"}
+	sourceDef.Category = []string{"261Q00000X", "363LW0102X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457770687", "1467633867"}}
 	sourceDef.PatientAccessUrl = "http://notfound.com"
 	sourceDef.SecretKeyPrefix = "cerner"

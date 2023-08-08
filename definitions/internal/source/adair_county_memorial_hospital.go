@@ -29,9 +29,9 @@ func GetSourceAdairCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Adair County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAdairCountyMemorialHospital
-	sourceDef.Category = []string{"207P00000X", "282NC0060X", "363LF0000X", "251K00000X", "261QR1300X", "275N00000X"}
+	sourceDef.Category = []string{"207P00000X", "251K00000X", "261QR1300X", "275N00000X", "282NC0060X", "363LF0000X"}
 	sourceDef.Aliases = []string{"ADAIR COUNTY HEALTH SYSTEM", "ADAIR COUNTY HOME CARE", "ADAIR COUNTY MEDICAL CLINIC (GREENFIELD)", "ADAIR COUNTY MEDICAL CLINIC STUART", "ADAIR COUNTY MEMORIAL HOSPITAL ER GROUP"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366531345", "1780667519", "1902943384", "1285614818", "1932440146", "1760436257", "1720191059", "1992843353", "1710926506", "1457398414"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285614818", "1366531345", "1457398414", "1710926506", "1720191059", "1760436257", "1780667519", "1902943384", "1932440146", "1992843353"}}
 	sourceDef.BrandLogo = "adair-county-memorial-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.achsiowa.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -30,7 +30,7 @@ func GetSourceGreneVisionGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeGreneVisionGroup
 	sourceDef.Category = []string{"152W00000X"}
 	sourceDef.Aliases = []string{"GRENE VISION GROUP"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659031029", "1306506779", "1508526971", "1699435065", "1578223046", "1184384554", "1972263440", "1164182630", "1790445161", "1164166849"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164166849", "1164182630", "1184384554", "1306506779", "1508526971", "1578223046", "1659031029", "1699435065", "1790445161", "1972263440"}}
 	sourceDef.PatientAccessUrl = "https://www.grenevisiongroup.com/locations/wichita-webb-road"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

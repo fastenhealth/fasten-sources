@@ -28,7 +28,7 @@ func GetSourceIntermountainMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Intermountain Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeIntermountainMedicalCenter
-	sourceDef.Category = []string{"273Y00000X", "3416A0800X", "282N00000X"}
+	sourceDef.Category = []string{"273Y00000X", "282N00000X", "3416A0800X"}
 	sourceDef.Aliases = []string{"INTERMOUNTAIN MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043220650"}}
 	sourceDef.PatientAccessUrl = "https://intermountainhealthcare.org/"

@@ -29,9 +29,9 @@ func GetSourceCaribouMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Caribou Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCaribouMedicalCenter
-	sourceDef.Category = []string{"101YM0800X", "261QM1300X", "282NC0060X", "3336I0012X", "207ZP0102X", "367500000X", "207PE0004X", "261Q00000X"}
+	sourceDef.Category = []string{"101YM0800X", "207PE0004X", "207ZP0102X", "261Q00000X", "261QM1300X", "282NC0060X", "3336I0012X", "367500000X"}
 	sourceDef.Aliases = []string{"CARIBOU MEDICAL CENTER", "CARIBOU MEDICAL CENTER PHARMACY", "CARIBOU MEDICAL CENTER PROFESSIONAL", "CARIBOU MEDICAL CLINIC", "CMC SPECIALTY CLINIC", "GRACE CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902330830", "1801086012", "1942970272", "1184752347", "1669533154", "1841485778", "1285970582"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184752347", "1285970582", "1669533154", "1801086012", "1841485778", "1902330830", "1942970272"}}
 	sourceDef.PatientAccessUrl = "https://cariboumc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

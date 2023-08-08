@@ -28,8 +28,8 @@ func GetSourceWhitesideCountyCommunityHealthClinic(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Whiteside County Community Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeWhitesideCountyCommunityHealthClinic
-	sourceDef.Category = []string{"261QF0400X", "103TC0700X", "1041C0700X", "1223G0001X", "207R00000X", "251B00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568193134", "1093389322", "1821744194", "1528008034", "1053945287", "1396379418", "1477278125", "1689157885"}}
+	sourceDef.Category = []string{"103TC0700X", "1041C0700X", "1223G0001X", "207R00000X", "251B00000X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053945287", "1093389322", "1396379418", "1477278125", "1528008034", "1568193134", "1689157885", "1821744194"}}
 	sourceDef.PatientAccessUrl = "https://www.whitesidehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

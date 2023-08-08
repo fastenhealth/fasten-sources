@@ -38,12 +38,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 	case pkg.SourceTypeNextgen:
 		return platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// source
-	case pkg.SourceType10066006:
-		return source.GetSourceClient10066006(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceType12ThStClinic:
-		return source.GetSourceClient12ThStClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceType1960FamilyPracticePa:
-		return source.GetSourceClient1960FamilyPracticePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceType360CareOfAlabama:
 		return source.GetSourceClient360CareOfAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceType360CareOfDelaware:
@@ -88,14 +82,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClient7SpringsOrthopedicsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceType9ThStreetClinic:
 		return source.GetSourceClient9ThStreetClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAKaganOrthopedicsSportsMedicine:
-		return source.GetSourceClientAKaganOrthopedicsSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeANewLeafInc:
 		return source.GetSourceClientANewLeafInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAOneMedicalGroupInc:
 		return source.GetSourceClientAOneMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeASquaredPrimaryCarePllc:
-		return source.GetSourceClientASquaredPrimaryCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAStepAheadFootAndAnkleCenter:
 		return source.GetSourceClientAStepAheadFootAndAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAWomansPlaceLlc:
@@ -118,8 +108,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAbcPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbcUrgentCare:
 		return source.GetSourceClientAbcUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAbdulSThannounMd:
-		return source.GetSourceClientAbdulSThannounMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbdurRaufMd:
 		return source.GetSourceClientAbdurRaufMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbidHussainMdPc:
@@ -130,26 +118,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAbileneBoneAndJoint(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbileneDermatologyAndSkinSurgeryCenter:
 		return source.GetSourceClientAbileneDermatologyAndSkinSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAbileneDiagnosticClinic:
-		return source.GetSourceClientAbileneDiagnosticClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbileneEndoscopyCenter:
 		return source.GetSourceClientAbileneEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAbrahamMedicalClinic:
-		return source.GetSourceClientAbrahamMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbramsEyeInstitute:
 		return source.GetSourceClientAbramsEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAbramsEyecareAssociates:
 		return source.GetSourceClientAbramsEyecareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAbsenteeShawneeTribalHealthSystem:
-		return source.GetSourceClientAbsenteeShawneeTribalHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAcadiaStLandryHospitalDba:
 		return source.GetSourceClientAcadiaStLandryHospitalDba(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAccelwellInc:
 		return source.GetSourceClientAccelwellInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAccentFamilyHealthcare:
-		return source.GetSourceClientAccentFamilyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAccentPhysicianSpecialists:
-		return source.GetSourceClientAccentPhysicianSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAccessCarePhysiciansOfUnion:
 		return source.GetSourceClientAccessCarePhysiciansOfUnion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAccessCarePhysiciansOfWestchester:
@@ -174,8 +152,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAccuvisionEyeMdCaregroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAcdp:
 		return source.GetSourceClientAcdp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAceCardiovascularAssociatesLlc:
-		return source.GetSourceClientAceCardiovascularAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAcendaInc:
 		return source.GetSourceClientAcendaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAchieveConcierge:
@@ -184,8 +160,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientActionOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeActivateHealthcare:
 		return source.GetSourceClientActivateHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAcuteCareConsultants:
-		return source.GetSourceClientAcuteCareConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdagioHealthDirectlyAdministeredSite:
 		return source.GetSourceClientAdagioHealthDirectlyAdministeredSite(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdairCountyMemorialHospital:
@@ -194,10 +168,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdamsCountyHealthCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdelanteHealthcare:
 		return source.GetSourceClientAdelanteHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdenaFayetteMedicalCenter:
-		return source.GetSourceClientAdenaFayetteMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdolfoCFernandezobregonMd:
-		return source.GetSourceClientAdolfoCFernandezobregonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdultAndChildMentalHealth:
 		return source.GetSourceClientAdultAndChildMentalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo:
@@ -206,8 +176,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdultAndPediatricUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdultInternalMedicine:
 		return source.GetSourceClientAdultInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdultMedicineSpecialistsOfEasley1:
-		return source.GetSourceClientAdultMedicineSpecialistsOfEasley1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedAccessMedicalCarePllc:
 		return source.GetSourceClientAdvancedAccessMedicalCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedAddictionServicesLtd:
@@ -216,8 +184,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdvancedAmbulatoryAnesthesiologist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedAnesthesiaAssociatesLlc:
 		return source.GetSourceClientAdvancedAnesthesiaAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedCardioAndVeinCare:
-		return source.GetSourceClientAdvancedCardioAndVeinCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedCarePodiatryLlc:
 		return source.GetSourceClientAdvancedCarePodiatryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedDermasurgeryAssociates:
@@ -248,14 +214,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdvancedHeartVascularInsOfHunterdon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedImagingAtBridgewater:
 		return source.GetSourceClientAdvancedImagingAtBridgewater(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedNeurology:
-		return source.GetSourceClientAdvancedNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedObstetricsAndGynecologyLlc:
 		return source.GetSourceClientAdvancedObstetricsAndGynecologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedPainDiagnosticAndSolutionsInc:
 		return source.GetSourceClientAdvancedPainDiagnosticAndSolutionsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedPainManagementCenter:
-		return source.GetSourceClientAdvancedPainManagementCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedPainManagementSpecialists:
 		return source.GetSourceClientAdvancedPainManagementSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedPainManagement:
@@ -264,22 +226,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdvancedPediatricCareLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedPulmonaryCriticalCare:
 		return source.GetSourceClientAdvancedPulmonaryCriticalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedRheumatologyPc1:
-		return source.GetSourceClientAdvancedRheumatologyPc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeAdvancedRheumatologyPc:
+		return source.GetSourceClientAdvancedRheumatologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedSkinAndMohsSurgeryCenterSc:
 		return source.GetSourceClientAdvancedSkinAndMohsSurgeryCenterSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedSpecialtyCarePC:
 		return source.GetSourceClientAdvancedSpecialtyCarePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedSpineCare:
 		return source.GetSourceClientAdvancedSpineCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedSurgicalAssociatesLlc:
-		return source.GetSourceClientAdvancedSurgicalAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedUrologicSurgeons:
-		return source.GetSourceClientAdvancedUrologicSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedUrologyAssoc:
-		return source.GetSourceClientAdvancedUrologyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdvancedUrology:
-		return source.GetSourceClientAdvancedUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvancedVascularAndVeinAssociates:
 		return source.GetSourceClientAdvancedVascularAndVeinAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvantageHealthConvenientCare:
@@ -314,8 +268,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdventistHealthRevenueCycleIntentRci(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdventistHealthTulare:
 		return source.GetSourceClientAdventistHealthTulare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAdventistHealthWest:
-		return source.GetSourceClientAdventistHealthWest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdventistHealthcare:
 		return source.GetSourceClientAdventistHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAdvocateAuroraHealth:
@@ -324,8 +276,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAdvocateShermanHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAestheticPlasticSurgeryPc:
 		return source.GetSourceClientAestheticPlasticSurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAffiliatedDermatology:
-		return source.GetSourceClientAffiliatedDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAffiliatedEndoscopyCentersLlc:
 		return source.GetSourceClientAffiliatedEndoscopyCentersLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAffiliatedEndoscopyServicesOfClifton:
@@ -340,10 +290,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAffiniaHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAffordableHealthInc:
 		return source.GetSourceClientAffordableHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAfterHoursPediatricsInc:
-		return source.GetSourceClientAfterHoursPediatricsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAghaArthritisAssocPa:
-		return source.GetSourceClientAghaArthritisAssocPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAgnesianHealthCare:
 		return source.GetSourceClientAgnesianHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAicaClinicsMacon:
@@ -354,8 +300,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAijazHashmiMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAirportEndoscopyCenter:
 		return source.GetSourceClientAirportEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAirportFamilyPhysicians:
-		return source.GetSourceClientAirportFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAkronAmbulatoryFootSurgeons:
 		return source.GetSourceClientAkronAmbulatoryFootSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAkronChildrensHospital:
@@ -366,14 +310,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAlaEImamMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlabamaFootCare:
 		return source.GetSourceClientAlabamaFootCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlabamaMedicalGroupPC:
-		return source.GetSourceClientAlabamaMedicalGroupPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlabamaMedicineAndRheumatologyLlc:
 		return source.GetSourceClientAlabamaMedicineAndRheumatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlabamaMedicineAndRheumatologyLlc1:
 		return source.GetSourceClientAlabamaMedicineAndRheumatologyLlc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlabamaNeurologyAndSleepMedicine:
-		return source.GetSourceClientAlabamaNeurologyAndSleepMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlamedaHealthSystem:
 		return source.GetSourceClientAlamedaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlamoCityEyePhysicians:
@@ -384,8 +324,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAlamoPsychiatricCarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlamogordoSurgicalAssociates:
 		return source.GetSourceClientAlamogordoSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlanJAppley:
-		return source.GetSourceClientAlanJAppley(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlanLKalischerMD:
 		return source.GetSourceClientAlanLKalischerMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlanNiliDoInc:
@@ -400,10 +338,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAlbanyEntAndAllergyServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlbanyKetamineMedicalInfusions:
 		return source.GetSourceClientAlbanyKetamineMedicalInfusions(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlbanyMedicalCenterProd:
-		return source.GetSourceClientAlbanyMedicalCenterProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlbanyMedicalCenter:
-		return source.GetSourceClientAlbanyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlbanySurgicalPc:
 		return source.GetSourceClientAlbanySurgicalPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlbertManlapitMd:
@@ -416,12 +350,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAlbuquerqueCenterForRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlconaHealthCenter:
 		return source.GetSourceClientAlconaHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAldoAParodiMdPa:
-		return source.GetSourceClientAldoAParodiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlecsandraRobertsMdInc:
 		return source.GetSourceClientAlecsandraRobertsMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAledoFamilyMedicine:
-		return source.GetSourceClientAledoFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlexDenesMd:
 		return source.GetSourceClientAlexDenesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlexDeyanMd:
@@ -430,10 +360,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAlexanderLChengMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlexandraChrysanthisMdInc:
 		return source.GetSourceClientAlexandraChrysanthisMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlexandriaCardiologyClinic:
-		return source.GetSourceClientAlexandriaCardiologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlexandriaPrimaryCare:
-		return source.GetSourceClientAlexandriaPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlexiusMBishopMDPSC:
 		return source.GetSourceClientAlexiusMBishopMDPSC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlfieriCardiologyPa:
@@ -448,10 +374,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAliciaPCuentoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAliciaSurgeryCenter:
 		return source.GetSourceClientAliciaSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlignmentHealthcareProdPatientAccessApps:
-		return source.GetSourceClientAlignmentHealthcareProdPatientAccessApps(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAlignmentHealthcare:
-		return source.GetSourceClientAlignmentHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlisoViejoFamilyMedicine:
 		return source.GetSourceClientAlisoViejoFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllCareHealthCenter:
@@ -476,40 +398,26 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAllenDBrandonPhd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllenLFeinFamilyMedicine:
 		return source.GetSourceClientAllenLFeinFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllenOrthopedics:
-		return source.GetSourceClientAllenOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllentownFamilyFootCare:
 		return source.GetSourceClientAllentownFamilyFootCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndAsthmaAssoc:
 		return source.GetSourceClientAllergyAndAsthmaAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAndAsthmaCenterOfTheRockies:
-		return source.GetSourceClientAllergyAndAsthmaCenterOfTheRockies(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndAsthmaClinicOfAlexandria:
 		return source.GetSourceClientAllergyAndAsthmaClinicOfAlexandria(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndAsthmaClinicOfAlexandria1:
 		return source.GetSourceClientAllergyAndAsthmaClinicOfAlexandria1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAndAsthmaSpecialistsOfNorthFloridaPa:
-		return source.GetSourceClientAllergyAndAsthmaSpecialistsOfNorthFloridaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndAsthmaSpecialistsPc:
 		return source.GetSourceClientAllergyAndAsthmaSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndAsthma:
 		return source.GetSourceClientAllergyAndAsthma(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAndImmunology:
 		return source.GetSourceClientAllergyAndImmunology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAssocOfNh:
-		return source.GetSourceClientAllergyAssocOfNh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAssociatesOfLaCrosseLtd:
 		return source.GetSourceClientAllergyAssociatesOfLaCrosseLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAsthmaAndImmunologyCtrOfAk:
-		return source.GetSourceClientAllergyAsthmaAndImmunologyCtrOfAk(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAsthmaAndSinusCareCenters:
 		return source.GetSourceClientAllergyAsthmaAndSinusCareCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergyAsthmaAndSinusCenterOfNj:
 		return source.GetSourceClientAllergyAsthmaAndSinusCenterOfNj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAsthmaCenterOfTheRockies:
-		return source.GetSourceClientAllergyAsthmaCenterOfTheRockies(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllergyAsthmaSinusCenter:
-		return source.GetSourceClientAllergyAsthmaSinusCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergycareOfChattanoogaPllc:
 		return source.GetSourceClientAllergycareOfChattanoogaPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllergycareOfCoolSpringsPllc:
@@ -522,8 +430,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAllervieHealthVirginia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllianceFamilyHealthCenter:
 		return source.GetSourceClientAllianceFamilyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllianceObstetricsAndGynecologyPlc:
-		return source.GetSourceClientAllianceObstetricsAndGynecologyPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlliedNds:
 		return source.GetSourceClientAlliedNds(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllinaHealthSystem:
@@ -532,8 +438,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAllinaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllinaTcsc:
 		return source.GetSourceClientAllinaTcsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAllscriptsAdpOpenTouchworksSandbox:
-		return source.GetSourceClientAllscriptsAdpOpenTouchworksSandbox(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlmHopewellCenter:
 		return source.GetSourceClientAlmHopewellCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAlonsoMedicalGroup:
@@ -560,8 +464,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAmarilloBoneAndJointClinicLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAmarilloCataractAndEyeSurgCtr:
 		return source.GetSourceClientAmarilloCataractAndEyeSurgCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAmarilloFamilyPhysicians:
-		return source.GetSourceClientAmarilloFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAmarilloPainAssociatesPllc:
 		return source.GetSourceClientAmarilloPainAssociatesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAmarilloPediatricClinicPllc:
@@ -708,8 +610,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAnaysSantanaIzquierdoMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAncillaryDept:
 		return source.GetSourceClientAncillaryDept(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAncoraPainRecovery:
-		return source.GetSourceClientAncoraPainRecovery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndersenEyeAssociatesPlc:
 		return source.GetSourceClientAndersenEyeAssociatesPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndersonDermatologyAndSkinSurgery:
@@ -728,16 +628,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAndersonSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndreaRobersonDoInc:
 		return source.GetSourceClientAndreaRobersonDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAndrewKimMd:
-		return source.GetSourceClientAndrewKimMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndrewLiaoMd:
 		return source.GetSourceClientAndrewLiaoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndrewRNolanMdLlc:
 		return source.GetSourceClientAndrewRNolanMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndrewRWeymerMdAProfessionalCorp:
 		return source.GetSourceClientAndrewRWeymerMdAProfessionalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAndrewTMarshallMd:
-		return source.GetSourceClientAndrewTMarshallMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAndrosEntAndSleepCenterPA:
 		return source.GetSourceClientAndrosEntAndSleepCenterPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnesthesiaAssociatesOfBryanLlc:
@@ -782,12 +678,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAnneArundelOrthopedicSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnneMarieGracia:
 		return source.GetSourceClientAnneMarieGracia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAnneWhiteMd:
-		return source.GetSourceClientAnneWhiteMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAnnistonCardiology:
-		return source.GetSourceClientAnnistonCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAnnistonMedicalClinicPc:
-		return source.GetSourceClientAnnistonMedicalClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnnistonNeurologyAndHeadache:
 		return source.GetSourceClientAnnistonNeurologyAndHeadache(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnsariPediatrics:
@@ -802,16 +692,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAnthem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthonyBranzMd:
 		return source.GetSourceClientAnthonyBranzMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAnthonyMartinMillsMd:
-		return source.GetSourceClientAnthonyMartinMillsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthonyParksMD:
 		return source.GetSourceClientAnthonyParksMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthonySanDiegoMd:
 		return source.GetSourceClientAnthonySanDiegoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnthonyVasileMd:
 		return source.GetSourceClientAnthonyVasileMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAntietamNeurologyCenter:
-		return source.GetSourceClientAntietamNeurologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAntietamOncologyAndHematologyGroup:
 		return source.GetSourceClientAntietamOncologyAndHematologyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAnuvaHealth:
@@ -828,26 +714,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientApexHealthcareMedicalCntrOncology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeApexHospitalistMedicalGroupInc:
 		return source.GetSourceClientApexHospitalistMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAppalachianRegional:
-		return source.GetSourceClientAppalachianRegional(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAppleMedicalGroupHaun:
 		return source.GetSourceClientAppleMedicalGroupHaun(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAppleMedicalGroup:
 		return source.GetSourceClientAppleMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArManagementServices:
-		return source.GetSourceClientArManagementServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArNeurosurgeryBrainAndSpineClinic:
 		return source.GetSourceClientArNeurosurgeryBrainAndSpineClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAranEyeAssociates:
 		return source.GetSourceClientAranEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArborFamiilyMedicine:
-		return source.GetSourceClientArborFamiilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArcadiaPrimaryCarePhysicians:
 		return source.GetSourceClientArcadiaPrimaryCarePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArchHealthPartners:
 		return source.GetSourceClientArchHealthPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArchanaPatel:
-		return source.GetSourceClientArchanaPatel(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArchboldBrooksPrimaryCare:
 		return source.GetSourceClientArchboldBrooksPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArchboldCenterForWoundManagement:
@@ -876,8 +754,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientArchboldPulmonaryAndCriticalCareSvc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArchboldSpecialtyClinic:
 		return source.GetSourceClientArchboldSpecialtyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArcherFamilyMedicalGroup:
-		return source.GetSourceClientArcherFamilyMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArdent:
 		return source.GetSourceClientArdent(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAriaCommunityHealthCenterKc:
@@ -888,12 +764,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAriaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArizonaArthritisAndRheumatology:
 		return source.GetSourceClientArizonaArthritisAndRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArizonaAssociatedSurgeonsPllc:
-		return source.GetSourceClientArizonaAssociatedSurgeonsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArizonaBrainAndSpineCenter:
-		return source.GetSourceClientArizonaBrainAndSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArizonaCommunityPhysicians1:
-		return source.GetSourceClientArizonaCommunityPhysicians1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeArizonaCommunityPhysicians:
+		return source.GetSourceClientArizonaCommunityPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArizonaCommunitySurgeonsPc:
 		return source.GetSourceClientArizonaCommunitySurgeonsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArizonaDigestiveInstituteLlc:
@@ -924,8 +796,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientArklamissSurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArlingtonPodiatry:
 		return source.GetSourceClientArlingtonPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArrAlinsodMd:
-		return source.GetSourceClientArrAlinsodMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArrowheadPediatricMedicalGroupInc:
 		return source.GetSourceClientArrowheadPediatricMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArrowheadRegionalMedicalCenter:
@@ -988,8 +858,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientArthritisConsultantsOfEasttennesee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArthritisHealthAssociatesPllc:
 		return source.GetSourceClientArthritisHealthAssociatesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeArthritisHealth:
-		return source.GetSourceClientArthritisHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArthritisManagementLlc:
 		return source.GetSourceClientArthritisManagementLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeArthritisNorthwestPllc:
@@ -1030,8 +898,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAscensionBorgessPsychologicalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAscensionHealth:
 		return source.GetSourceClientAscensionHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAscensionHealth1:
-		return source.GetSourceClientAscensionHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAscensionIllinois:
 		return source.GetSourceClientAscensionIllinois(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAscensionProvidenceRochesterHospital:
@@ -1050,10 +916,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAsclepionFamilyMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAshDermatologyAndSkinCancerCenterPa:
 		return source.GetSourceClientAshDermatologyAndSkinCancerCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAshburnSterlingInternalMedicineAndPediatrics:
-		return source.GetSourceClientAshburnSterlingInternalMedicineAndPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAshevilleNeurologySpecialists:
-		return source.GetSourceClientAshevilleNeurologySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAshevillePainReliefCenter:
 		return source.GetSourceClientAshevillePainReliefCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAshevillePodiatryAssociates:
@@ -1064,8 +926,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAshlandMansfieldFootAndAnkleSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAshleyRidgeMedicineLlc:
 		return source.GetSourceClientAshleyRidgeMedicineLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAshutoshSLoheMd:
-		return source.GetSourceClientAshutoshSLoheMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAsianHumanServicesFamilyHealthCtr:
 		return source.GetSourceClientAsianHumanServicesFamilyHealthCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAsianPacificHealthCareVentureInc:
@@ -1074,8 +934,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAsimChohanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAspenFamilyCarePllc:
 		return source.GetSourceClientAspenFamilyCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAspenMedicalCare:
-		return source.GetSourceClientAspenMedicalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAspenSleepCenters:
 		return source.GetSourceClientAspenSleepCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAspenSpeechTherapy:
@@ -1090,12 +948,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAsquamCommunityHealthCollaborativeLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssessmentCenter:
 		return source.GetSourceClientAssessmentCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssocInPhysicalMedicineAndRehab:
-		return source.GetSourceClientAssocInPhysicalMedicineAndRehab(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatedCardiovascularPhysiciansSc:
-		return source.GetSourceClientAssociatedCardiovascularPhysiciansSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatedDermatologists:
-		return source.GetSourceClientAssociatedDermatologists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatedEndoscopy:
 		return source.GetSourceClientAssociatedEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatedEyeCareAsc:
@@ -1104,10 +956,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAssociatedEyeCareOptical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatedEyeCare:
 		return source.GetSourceClientAssociatedEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatedFootAnkleSpecialistOfOhio:
-		return source.GetSourceClientAssociatedFootAnkleSpecialistOfOhio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatedGastroenterologyConsultants:
-		return source.GetSourceClientAssociatedGastroenterologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatedNephrologyConsultants:
 		return source.GetSourceClientAssociatedNephrologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatedOphthalmologists:
@@ -1120,32 +968,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAssociatesAnesthesiaServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesDermatologyCosmeticSurgery:
 		return source.GetSourceClientAssociatesDermatologyCosmeticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesForPsychiatricServices:
-		return source.GetSourceClientAssociatesForPsychiatricServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesForWomensMedicine:
 		return source.GetSourceClientAssociatesForWomensMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInAnesthesia:
 		return source.GetSourceClientAssociatesInAnesthesia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInCentralOhioObGynInc:
 		return source.GetSourceClientAssociatesInCentralOhioObGynInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInDigestiveHealth:
-		return source.GetSourceClientAssociatesInDigestiveHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInGastroenterologyPC:
 		return source.GetSourceClientAssociatesInGastroenterologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInGastroenterology:
-		return source.GetSourceClientAssociatesInGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInGastroenterology1:
-		return source.GetSourceClientAssociatesInGastroenterology1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInNeurologyPc1:
-		return source.GetSourceClientAssociatesInNeurologyPc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInOphthalmologyLtd:
 		return source.GetSourceClientAssociatesInOphthalmologyLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInOrthopaedicsAndSportsMedicine:
-		return source.GetSourceClientAssociatesInOrthopaedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInOtolaryngology:
 		return source.GetSourceClientAssociatesInOtolaryngology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAssociatesInSurgeryPa:
-		return source.GetSourceClientAssociatesInSurgeryPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInWomensHealthPa:
 		return source.GetSourceClientAssociatesInWomensHealthPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAssociatesInWomensHealth:
@@ -1168,8 +1002,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAthenaWomensHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAthensRetinaCenter:
 		return source.GetSourceClientAthensRetinaCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAthensSpineCenter:
-		return source.GetSourceClientAthensSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAthleticoArcIlinoh:
 		return source.GetSourceClientAthleticoArcIlinoh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAthleticoArizona:
@@ -1200,14 +1032,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAtiSmRichburgHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaAsc:
 		return source.GetSourceClientAtlantaAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlantaColonRectalSurgery:
-		return source.GetSourceClientAtlantaColonRectalSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaHeartGroup:
 		return source.GetSourceClientAtlantaHeartGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaInfectiousDiseaseSpecialists:
 		return source.GetSourceClientAtlantaInfectiousDiseaseSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlantaInstituteForEntPc:
-		return source.GetSourceClientAtlantaInstituteForEntPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaMaternalFetalMedicine:
 		return source.GetSourceClientAtlantaMaternalFetalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaNeuromuscularDiagnostics:
@@ -1216,38 +1044,24 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAtlantaRehabilitationPhysiciansPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlantaRophekaMedicalCenter:
 		return source.GetSourceClientAtlantaRophekaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlantaWomensSpecialists:
-		return source.GetSourceClientAtlantaWomensSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticCenterForAesthAndReconSurg:
 		return source.GetSourceClientAtlanticCenterForAesthAndReconSurg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticCoastRheumatologyPC:
 		return source.GetSourceClientAtlanticCoastRheumatologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlanticGeneral:
-		return source.GetSourceClientAtlanticGeneral(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticHealth:
 		return source.GetSourceClientAtlanticHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlanticObgynAssocPc:
-		return source.GetSourceClientAtlanticObgynAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlanticOrthopaedics:
-		return source.GetSourceClientAtlanticOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticPulmonaryAssociatesPa:
 		return source.GetSourceClientAtlanticPulmonaryAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticSkinAndCosmeticSurgeryGroup:
 		return source.GetSourceClientAtlanticSkinAndCosmeticSurgeryGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlanticSurgicalGroup:
-		return source.GetSourceClientAtlanticSurgicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticareHealthSystem:
 		return source.GetSourceClientAtlanticareHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticareHealthSystem1:
 		return source.GetSourceClientAtlanticareHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlanticareHealthSystem2:
 		return source.GetSourceClientAtlanticareHealthSystem2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtlantisOrthopaedics:
-		return source.GetSourceClientAtlantisOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtlasSurgeryCenterOfBuckheadInc:
 		return source.GetSourceClientAtlasSurgeryCenterOfBuckheadInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAtmYousufMdPhysicianPc:
-		return source.GetSourceClientAtmYousufMdPhysicianPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtriumHealthWakeForestBaptist:
 		return source.GetSourceClientAtriumHealthWakeForestBaptist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAtriumHealth:
@@ -1286,16 +1100,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAustinsFirstSteps(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAutomationDirect:
 		return source.GetSourceClientAutomationDirect(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAutumnRoadFamilyPractice:
-		return source.GetSourceClientAutumnRoadFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAvalaHealth:
 		return source.GetSourceClientAvalaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAvenalCommunityHealthCenter:
 		return source.GetSourceClientAvenalCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAveonHealth:
 		return source.GetSourceClientAveonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAvilaHoldingsLlc:
-		return source.GetSourceClientAvilaHoldingsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAvinashGuptaMdPc:
 		return source.GetSourceClientAvinashGuptaMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAvistaWomensCare:
@@ -1306,8 +1116,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientAwaniKumarMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAxisMedicalGroup:
 		return source.GetSourceClientAxisMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAydenMedicalGroup:
-		return source.GetSourceClientAydenMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAzharKhanMdPc:
 		return source.GetSourceClientAzharKhanMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAzpcpCaseManagement:
@@ -1316,24 +1124,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBKGuptaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBabakShabatianMd:
 		return source.GetSourceClientBabakShabatianMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBacHNguyenMd:
-		return source.GetSourceClientBacHNguyenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBacharachInstituteForRehabilitation:
 		return source.GetSourceClientBacharachInstituteForRehabilitation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBaconCountyHospital:
-		return source.GetSourceClientBaconCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBahaAbuEshehMd:
-		return source.GetSourceClientBahaAbuEshehMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBakerAmbulatorySurgeryCenter:
 		return source.GetSourceClientBakerAmbulatorySurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBakerAndGilmourCardiovascularInstitute:
-		return source.GetSourceClientBakerAndGilmourCardiovascularInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBakerEyeInstitute:
 		return source.GetSourceClientBakerEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBakersfieldFamilyMedicalCenter:
 		return source.GetSourceClientBakersfieldFamilyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBalconesPainConsultants:
-		return source.GetSourceClientBalconesPainConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaldwinFamilyHealthCare:
 		return source.GetSourceClientBaldwinFamilyHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBalladHealth:
@@ -1354,8 +1152,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBaptistGiSpecialistsSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthArkansas:
 		return source.GetSourceClientBaptistHealthArkansas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBaptistHealthCare:
-		return source.GetSourceClientBaptistHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthKyAndIn:
 		return source.GetSourceClientBaptistHealthKyAndIn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthMedicalGroupInc:
@@ -1366,8 +1162,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBaptistHealthNortheastFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealthSouthFlorida:
 		return source.GetSourceClientBaptistHealthSouthFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBaptistHealthSystemInc1:
-		return source.GetSourceClientBaptistHealthSystemInc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBaptistHealthSystemInc:
+		return source.GetSourceClientBaptistHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistHealth:
 		return source.GetSourceClientBaptistHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaptistMemorialHealthCare:
@@ -1386,10 +1182,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBarnetDulaneySurgeryCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBarnettNeurosurgeryPc:
 		return source.GetSourceClientBarnettNeurosurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBarringtonFamilyHealthcare:
-		return source.GetSourceClientBarringtonFamilyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBarrosFamilyHealthCarePa:
-		return source.GetSourceClientBarrosFamilyHealthCarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBarryLGellisod:
 		return source.GetSourceClientBarryLGellisod(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBarstowFamilyCare:
@@ -1402,8 +1194,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBaselRefaiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaselRefaiMd1:
 		return source.GetSourceClientBaselRefaiMd1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBasharAlzahabiMd:
-		return source.GetSourceClientBasharAlzahabiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBasics:
 		return source.GetSourceClientBasics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBassettHealthcare:
@@ -1450,20 +1240,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBaylorScottAndWhite(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBayouImagingAndIntervLlc:
 		return source.GetSourceClientBayouImagingAndIntervLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBaysideFamilyAndSportsMedicine:
-		return source.GetSourceClientBaysideFamilyAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBaystateHealthInc:
 		return source.GetSourceClientBaystateHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBayviewSurgeryCenter:
 		return source.GetSourceClientBayviewSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBbpReport:
 		return source.GetSourceClientBbpReport(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBcgMedicalGroup:
-		return source.GetSourceClientBcgMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBchcFamilyPractice:
 		return source.GetSourceClientBchcFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBdhsgallatinFamily:
-		return source.GetSourceClientBdhsgallatinFamily(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeachCitiesDermatology:
 		return source.GetSourceClientBeachCitiesDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeachFamilyDoctors:
@@ -1482,16 +1266,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBeaconMedicalGroup1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeaconOrthopaedicsSurgeryCentersLlc:
 		return source.GetSourceClientBeaconOrthopaedicsSurgeryCentersLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBealsInstitutePc:
-		return source.GetSourceClientBealsInstitutePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeatAidsCoalitionTrust:
 		return source.GetSourceClientBeatAidsCoalitionTrust(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBeaumontBoneAndJoint:
-		return source.GetSourceClientBeaumontBoneAndJoint(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeaumontHealth:
 		return source.GetSourceClientBeaumontHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBedfordSurgical:
-		return source.GetSourceClientBedfordSurgical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeebeHealthcare:
 		return source.GetSourceClientBeebeHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeechArcesParentingCenter:
@@ -1512,22 +1290,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBellevueEarNoseAndThroat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBellevueHeartGroup:
 		return source.GetSourceClientBellevueHeartGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBellevueProfessionalServices:
-		return source.GetSourceClientBellevueProfessionalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBellinHealth:
 		return source.GetSourceClientBellinHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBellinghamAsthmaAllergyAndImmunologyClinicPs:
-		return source.GetSourceClientBellinghamAsthmaAllergyAndImmunologyClinicPs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBellvilleMedicalCenter:
 		return source.GetSourceClientBellvilleMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeloitHealthSystem:
 		return source.GetSourceClientBeloitHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBeloitMedicalCenter:
-		return source.GetSourceClientBeloitMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBelovedCommunityFamilyWellnessCenter:
 		return source.GetSourceClientBelovedCommunityFamilyWellnessCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBenbrookGastroenterology:
-		return source.GetSourceClientBenbrookGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBenefisHospitalPhysicianServices:
 		return source.GetSourceClientBenefisHospitalPhysicianServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBenewahCommunityHospital:
@@ -1540,8 +1310,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBerkelyFamilyMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBermudaHealthcareServices:
 		return source.GetSourceClientBermudaHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBernardOng:
-		return source.GetSourceClientBernardOng(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBernardineACeloniMd:
 		return source.GetSourceClientBernardineACeloniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBerryMilnerAndUhrLlp:
@@ -1554,16 +1322,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBethCMcdougallMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBethIsraelLaheyHealth:
 		return source.GetSourceClientBethIsraelLaheyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBethanyMedicalCenter:
-		return source.GetSourceClientBethanyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBethelFamilyClinic:
 		return source.GetSourceClientBethelFamilyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBethelInternalMedicineAndPediatrics:
 		return source.GetSourceClientBethelInternalMedicineAndPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBethlehemHealthBureau:
 		return source.GetSourceClientBethlehemHealthBureau(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBettySanchezcataneseMd:
-		return source.GetSourceClientBettySanchezcataneseMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBeverlyPediatricMedicalGroup:
 		return source.GetSourceClientBeverlyPediatricMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBhaveshPatel:
@@ -1588,8 +1352,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBillingsClinic5(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBiltmoreFamilyMedicinePllc:
 		return source.GetSourceClientBiltmoreFamilyMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBiltmoreMedicalAssociates:
-		return source.GetSourceClientBiltmoreMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBiomerieuxUS:
 		return source.GetSourceClientBiomerieuxUS(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBiospineLlc:
@@ -1598,8 +1360,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBiospineOrlando(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBirminghamAsc:
 		return source.GetSourceClientBirminghamAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBirminghamGastroenterologyAssociatesPc:
-		return source.GetSourceClientBirminghamGastroenterologyAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBirminghamHeartClinicPc:
 		return source.GetSourceClientBirminghamHeartClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBirminghamVascular:
@@ -1648,10 +1408,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBlueMountainHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBlueRidgeBehavioralHealthcare:
 		return source.GetSourceClientBlueRidgeBehavioralHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBlueRidgeEntAndPlasticSurgeryInc:
-		return source.GetSourceClientBlueRidgeEntAndPlasticSurgeryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBlueRidgeInternalMedicine:
-		return source.GetSourceClientBlueRidgeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBlueRidgeSurgeryCenter:
 		return source.GetSourceClientBlueRidgeSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBlueRxNewYork:
@@ -1670,18 +1426,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBmsAtAbsoluteCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBocaRatonRegionalHospital:
 		return source.GetSourceClientBocaRatonRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBoilingSpringsPediatricAndFamilyMedicine:
-		return source.GetSourceClientBoilingSpringsPediatricAndFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBonSecoursHealthSystem:
 		return source.GetSourceClientBonSecoursHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBondClinicPa:
 		return source.GetSourceClientBondClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBoneAndJointCenter:
-		return source.GetSourceClientBoneAndJointCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBonhamsInsuranceFilingService:
 		return source.GetSourceClientBonhamsInsuranceFilingService(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBonitaCommunityHealthCenter:
-		return source.GetSourceClientBonitaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBooneCountyHealthCenter:
 		return source.GetSourceClientBooneCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBoonslickMedicalGroupInc:
@@ -1718,8 +1468,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBoundaryRegionalCommunityDentalCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBoundaryRegionalCommunityHealthCtr:
 		return source.GetSourceClientBoundaryRegionalCommunityHealthCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBowlingOrthopaedics:
-		return source.GetSourceClientBowlingOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBowmanFamilyMedicalClinicLlc:
 		return source.GetSourceClientBowmanFamilyMedicalClinicLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBoyScoutsOfAmerica:
@@ -1738,8 +1486,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBradleyWilsonDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrandywineFamilyFootCare:
 		return source.GetSourceClientBrandywineFamilyFootCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBrankoBanar:
-		return source.GetSourceClientBrankoBanar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrattleboroMemorialHospital:
 		return source.GetSourceClientBrattleboroMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBravermanEyeCenter:
@@ -1750,14 +1496,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBrazosGiAnesthesiaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrazosGiAnesthesia:
 		return source.GetSourceClientBrazosGiAnesthesia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBreastCareSpecialistsLlc:
-		return source.GetSourceClientBreastCareSpecialistsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBreastSurgery:
 		return source.GetSourceClientBreastSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBreathOfLifeHealthCareLlc:
 		return source.GetSourceClientBreathOfLifeHealthCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBrendaMccain:
-		return source.GetSourceClientBrendaMccain(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrentCNormanMdInc:
 		return source.GetSourceClientBrentCNormanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrentMilletMdLlc:
@@ -1768,12 +1510,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBrentWSherwoodMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrettRHuttonMDPA:
 		return source.GetSourceClientBrettRHuttonMDPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBrevardSkinAndCancerCenter:
-		return source.GetSourceClientBrevardSkinAndCancerCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrianJLipmanMDPc:
 		return source.GetSourceClientBrianJLipmanMDPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBrianLeDoPcDbaLasVegasSpineAndPainCenter:
-		return source.GetSourceClientBrianLeDoPcDbaLasVegasSpineAndPainCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrianPOconnorMd:
 		return source.GetSourceClientBrianPOconnorMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrianWeeksMdInc:
@@ -1800,10 +1538,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBronsonCenterForColonAndRectalDiseases(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBronsonHealthcareGroup:
 		return source.GetSourceClientBronsonHealthcareGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBronxLebanonHospitalCenterProd:
-		return source.GetSourceClientBronxLebanonHospitalCenterProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBronxLebanonHospitalCenter:
-		return source.GetSourceClientBronxLebanonHospitalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrooksMedicalAssociates:
 		return source.GetSourceClientBrooksMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrookwoodBaptistHealth:
@@ -1818,8 +1552,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBrownAndTolandPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrownCountyHospital:
 		return source.GetSourceClientBrownCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBrownFertility:
-		return source.GetSourceClientBrownFertility(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrownRoadFamilyMedicinePllc:
 		return source.GetSourceClientBrownRoadFamilyMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBrownsvilleCommunityHealthClinic:
@@ -1836,24 +1568,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBryceBeseth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBryceBeseth1:
 		return source.GetSourceClientBryceBeseth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBsaAmarilloDiagnosticClinicInc:
-		return source.GetSourceClientBsaAmarilloDiagnosticClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBucklesFamilyHealthCare:
-		return source.GetSourceClientBucklesFamilyHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBucksMontEyeAssociates:
 		return source.GetSourceClientBucksMontEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBuffaloMedicalGroup:
 		return source.GetSourceClientBuffaloMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBundledPaymentsCardiovascular:
 		return source.GetSourceClientBundledPaymentsCardiovascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBurickCtrForHealthwellness:
-		return source.GetSourceClientBurickCtrForHealthwellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeBurgessHealthCenterClinics:
+		return source.GetSourceClientBurgessHealthCenterClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBurnsvilleSurgeryCenter:
 		return source.GetSourceClientBurnsvilleSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBurrellPodiatryClinic:
 		return source.GetSourceClientBurrellPodiatryClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeBurtonCreekMedical:
-		return source.GetSourceClientBurtonCreekMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeButlerCntyCommHealthCareConsortium:
 		return source.GetSourceClientButlerCntyCommHealthCareConsortium(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeButlerCountyHealthCareCenter:
@@ -1862,8 +1588,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientBvchcInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeByrdAndWyandotteEyeClinic:
 		return source.GetSourceClientByrdAndWyandotteEyeClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeByrensLambrixNeidlingerRichardsonMd:
-		return source.GetSourceClientByrensLambrixNeidlingerRichardsonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCBPatelMdPa:
 		return source.GetSourceClientCBPatelMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCKMedicalCorporation:
@@ -1878,8 +1602,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCaaOfColumbianaCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCabellHuntingtonHospitalInc:
 		return source.GetSourceClientCabellHuntingtonHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCaduceusCorporation:
-		return source.GetSourceClientCaduceusCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCairoInternalMedicine:
 		return source.GetSourceClientCairoInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaliforniaCoastPhysicians:
@@ -1890,16 +1612,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCaliforniaEyeInstituteMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaliforniaEyeProfessionals:
 		return source.GetSourceClientCaliforniaEyeProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCaliforniaHealthcareMedBill:
-		return source.GetSourceClientCaliforniaHealthcareMedBill(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaliforniaImagingAndDiagnostics:
 		return source.GetSourceClientCaliforniaImagingAndDiagnostics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaliforniaKidneySpecialists:
 		return source.GetSourceClientCaliforniaKidneySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaliforniaPrimaryHealthCareCorp:
 		return source.GetSourceClientCaliforniaPrimaryHealthCareCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCallahanAndLe:
-		return source.GetSourceClientCallahanAndLe(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCallawayDistrictHospital:
 		return source.GetSourceClientCallawayDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCallenLordeCommunityHealthCenter:
@@ -1924,8 +1642,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCandaceHoweMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCanevaFootAndAnkleClinicLtd:
 		return source.GetSourceClientCanevaFootAndAnkleClinicLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCannonMemorialHospital:
-		return source.GetSourceClientCannonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCanyonViewMedicalGroup:
 		return source.GetSourceClientCanyonViewMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCanyonlandsCommunityHealthCare:
@@ -1938,52 +1654,30 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCapeFearEyeAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapeFearValleyHealth:
 		return source.GetSourceClientCapeFearValleyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapeObstetricsAndGynecologyPc:
-		return source.GetSourceClientCapeObstetricsAndGynecologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapeRegionalMedicalCenter:
-		return source.GetSourceClientCapeRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalFamilyPhysiciansPsc:
 		return source.GetSourceClientCapitalFamilyPhysiciansPsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapitalFamilyPhysicians:
-		return source.GetSourceClientCapitalFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalHealthObh:
 		return source.GetSourceClientCapitalHealthObh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalHealthPlan:
 		return source.GetSourceClientCapitalHealthPlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalHealthSystemInc:
 		return source.GetSourceClientCapitalHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapitalHeartAssociates:
-		return source.GetSourceClientCapitalHeartAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalNeurosurgerySpecialistsLlc:
 		return source.GetSourceClientCapitalNeurosurgerySpecialistsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalRegionHealthcare:
 		return source.GetSourceClientCapitalRegionHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapitalUrologicalAssociates:
-		return source.GetSourceClientCapitalUrologicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitalWomensCare:
 		return source.GetSourceClientCapitalWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitolCityAsc:
 		return source.GetSourceClientCapitolCityAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCapitolCityVascular:
 		return source.GetSourceClientCapitolCityVascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCapitolPediatrics:
-		return source.GetSourceClientCapitolPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCaprockCardiovascularCenterLlp:
-		return source.GetSourceClientCaprockCardiovascularCenterLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiacAndThoracicSurgeryInstitutePc:
-		return source.GetSourceClientCardiacAndThoracicSurgeryInstitutePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiacClinic:
-		return source.GetSourceClientCardiacClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiacEpConsultantsSc:
 		return source.GetSourceClientCardiacEpConsultantsSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiacInstituteOfCentralCalifornia:
 		return source.GetSourceClientCardiacInstituteOfCentralCalifornia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardinalMedicalCenter:
 		return source.GetSourceClientCardinalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardioMedicalConsultants:
-		return source.GetSourceClientCardioMedicalConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiologyAndInternalMedicine:
-		return source.GetSourceClientCardiologyAndInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyAssocAndDiagCtr:
 		return source.GetSourceClientCardiologyAssocAndDiagCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyAssociatesInc:
@@ -1994,28 +1688,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCardiologyAssociatesOfFredericksburg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyAssociatesOfMichiganPc:
 		return source.GetSourceClientCardiologyAssociatesOfMichiganPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiologyAssociatesOfMobile:
-		return source.GetSourceClientCardiologyAssociatesOfMobile(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyAssociatesOfPortHuronPc:
 		return source.GetSourceClientCardiologyAssociatesOfPortHuronPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyAssociates:
 		return source.GetSourceClientCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyCenterOfAmarilloLlp:
 		return source.GetSourceClientCardiologyCenterOfAmarilloLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiologyConsultantsOfMi:
-		return source.GetSourceClientCardiologyConsultantsOfMi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiologyConsultantsOfSouth:
-		return source.GetSourceClientCardiologyConsultantsOfSouth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyConsultantsOfTomsRiverPa:
 		return source.GetSourceClientCardiologyConsultantsOfTomsRiverPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyInc:
 		return source.GetSourceClientCardiologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiologyPartnersLlp:
 		return source.GetSourceClientCardiologyPartnersLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiologyPc:
-		return source.GetSourceClientCardiologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiothoracicAndVascularSurgicalAssociates:
-		return source.GetSourceClientCardiothoracicAndVascularSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiothoracicAssociatesOfHawaii:
 		return source.GetSourceClientCardiothoracicAssociatesOfHawaii(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularAssociatesOfLakeCounty:
@@ -2030,16 +1714,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCardiovascularConsultantsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularConsultantsOfLi:
 		return source.GetSourceClientCardiovascularConsultantsOfLi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiovascularConsultants:
-		return source.GetSourceClientCardiovascularConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCardiovascularConsultantsPc:
+		return source.GetSourceClientCardiovascularConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularHealthLlc:
 		return source.GetSourceClientCardiovascularHealthLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularHospitalsOfAmericaInternational:
 		return source.GetSourceClientCardiovascularHospitalsOfAmericaInternational(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularMedicinePc:
 		return source.GetSourceClientCardiovascularMedicinePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCardiovascularSolutionsOfCentralMs:
-		return source.GetSourceClientCardiovascularSolutionsOfCentralMs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularSpecialistIncPC:
 		return source.GetSourceClientCardiovascularSpecialistIncPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCardiovascularSpecialistsOfFrederick:
@@ -2054,8 +1736,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCareOpticalAndIpas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCareOptical:
 		return source.GetSourceClientCareOptical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarePointHealthAndWellnessCenter:
-		return source.GetSourceClientCarePointHealthAndWellnessCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCareResource:
 		return source.GetSourceClientCareResource(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaremaxMedicalCenters:
@@ -2090,18 +1770,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCarewellHealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaribouMedicalCenter:
 		return source.GetSourceClientCaribouMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCarilionClinic:
+		return source.GetSourceClientCarilionClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaringHandsHealthcareCentersInc:
 		return source.GetSourceClientCaringHandsHealthcareCentersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaritasClinics:
 		return source.GetSourceClientCaritasClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarlVNicholsonOdInc:
 		return source.GetSourceClientCarlVNicholsonOdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup:
-		return source.GetSourceClientCarleFoundationHospitalAndPhysicianGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup1:
 		return source.GetSourceClientCarleFoundationHospitalAndPhysicianGroup1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarlinvilleAreaHospital:
-		return source.GetSourceClientCarlinvilleAreaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolRubin:
 		return source.GetSourceClientCarolRubin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaArthritisAssociatesPa:
@@ -2118,38 +1796,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCarolinaCaring(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaCtrSpecialtySurg:
 		return source.GetSourceClientCarolinaCtrSpecialtySurg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaDermatologyAndEndo:
-		return source.GetSourceClientCarolinaDermatologyAndEndo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaEastFamilyMedicine:
-		return source.GetSourceClientCarolinaEastFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaEntHeadAndNeckSurgeryCenter:
-		return source.GetSourceClientCarolinaEntHeadAndNeckSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaEyeAssociates:
 		return source.GetSourceClientCarolinaEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaFamilyCentre:
-		return source.GetSourceClientCarolinaFamilyCentre(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaFamilyMedicineOfSumterAnAffiliate:
-		return source.GetSourceClientCarolinaFamilyMedicineOfSumterAnAffiliate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaHeadacheInstitute:
-		return source.GetSourceClientCarolinaHeadacheInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaInternalMedicine:
-		return source.GetSourceClientCarolinaInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaNeurosurgeryAndSpineAssociates:
 		return source.GetSourceClientCarolinaNeurosurgeryAndSpineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaOrthopedicsAndSportsMedicine:
 		return source.GetSourceClientCarolinaOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaPediatricGroupPa:
-		return source.GetSourceClientCarolinaPediatricGroupPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaRheumatologyAndNeurologyAssociatessc:
-		return source.GetSourceClientCarolinaRheumatologyAndNeurologyAssociatessc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaSedationServicesLlc:
 		return source.GetSourceClientCarolinaSedationServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaSpecialtyCarePa:
 		return source.GetSourceClientCarolinaSpecialtyCarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaSpineAndNeurosurgery:
-		return source.GetSourceClientCarolinaSpineAndNeurosurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolinaSurgeryAndCancerCenter:
-		return source.GetSourceClientCarolinaSurgeryAndCancerCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaUpstateRheumatology:
 		return source.GetSourceClientCarolinaUpstateRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinaUrologyPartners:
@@ -2160,8 +1816,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCarolinaeastHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolinasCentersForSight:
 		return source.GetSourceClientCarolinasCentersForSight(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarolynJAgrestiMdEarNoseThroatInc:
-		return source.GetSourceClientCarolynJAgrestiMdEarNoseThroatInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarolynKassabianMdInc:
 		return source.GetSourceClientCarolynKassabianMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaromontHealth:
@@ -2170,8 +1824,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCarondeletHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarondeletRheumatology:
 		return source.GetSourceClientCarondeletRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCarrboroFamilyMedicineCenterPa:
-		return source.GetSourceClientCarrboroFamilyMedicineCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarrollArthritisLlc:
 		return source.GetSourceClientCarrollArthritisLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCarrollCountyDigestiveDiseaseCenter:
@@ -2190,8 +1842,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCascadeEarNoseAndThroat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCascadeEndoscopyCenter:
 		return source.GetSourceClientCascadeEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCascadeEyeAndSkinCenter:
-		return source.GetSourceClientCascadeEyeAndSkinCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCascadeIdAndInfusion:
 		return source.GetSourceClientCascadeIdAndInfusion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCascadeInternalMedicine:
@@ -2200,16 +1850,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCaseyCountyFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaseyCountyPrimaryCare:
 		return source.GetSourceClientCaseyCountyPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCasperOrthopaedicAssocPc:
-		return source.GetSourceClientCasperOrthopaedicAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCassCountyHealthClinic:
 		return source.GetSourceClientCassCountyHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCastellanosFamilyPractice:
 		return source.GetSourceClientCastellanosFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCastleFamilyHealthCentersInc:
 		return source.GetSourceClientCastleFamilyHealthCentersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCastleOrthoSports:
-		return source.GetSourceClientCastleOrthoSports(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCastroCountyHospitalDistrict:
 		return source.GetSourceClientCastroCountyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatahoulaParishHospitalDistrictNo2:
@@ -2220,18 +1866,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCatherineChiodoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatholicCharitiesTrenton:
 		return source.GetSourceClientCatholicCharitiesTrenton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCatholicHealthInitiativesEast:
-		return source.GetSourceClientCatholicHealthInitiativesEast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatholicHealthLongIslandNy:
 		return source.GetSourceClientCatholicHealthLongIslandNy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCatholicHealthSystemBuffalo:
 		return source.GetSourceClientCatholicHealthSystemBuffalo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCatholicMedicalCenter:
-		return source.GetSourceClientCatholicMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCathyBerensNp:
 		return source.GetSourceClientCathyBerensNp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCavalryClinic:
-		return source.GetSourceClientCavalryClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCaymanIslandsHealthServicesAuthority:
 		return source.GetSourceClientCaymanIslandsHealthServicesAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCcap:
@@ -2262,8 +1902,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCelebrationMinimallyInvasiveSpineInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenteneCorporation:
 		return source.GetSourceClientCenteneCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterDiseaseAndSurgerySpine:
-		return source.GetSourceClientCenterDiseaseAndSurgerySpine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForAdvanceEyeCare:
 		return source.GetSourceClientCenterForAdvanceEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForAdvancedEyeCare:
@@ -2282,16 +1920,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCenterForDermatologyPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForDigestiveCare:
 		return source.GetSourceClientCenterForDigestiveCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterForDigestiveHealthAndNutrition:
-		return source.GetSourceClientCenterForDigestiveHealthAndNutrition(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForEndocrineHealth:
 		return source.GetSourceClientCenterForEndocrineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForExcellenceInEyeCare:
 		return source.GetSourceClientCenterForExcellenceInEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForEyeSurgery:
 		return source.GetSourceClientCenterForEyeSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterForFootAndAnkleSurgery:
-		return source.GetSourceClientCenterForFootAndAnkleSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForGastrointestinalEndoscopy:
 		return source.GetSourceClientCenterForGastrointestinalEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForHealthcareServices:
@@ -2304,14 +1938,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCenterForManualMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForMaternalFetalCare:
 		return source.GetSourceClientCenterForMaternalFetalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterForNeurosciencesOrthoSpinesd:
-		return source.GetSourceClientCenterForNeurosciencesOrthoSpinesd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForNutritionAndDiabetesMgmt:
 		return source.GetSourceClientCenterForNutritionAndDiabetesMgmt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterForPediatricAndAdolescentMed:
-		return source.GetSourceClientCenterForPediatricAndAdolescentMed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenterForPreventionAndTreatmentOfInfections:
-		return source.GetSourceClientCenterForPreventionAndTreatmentOfInfections(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForPulmonarySleepMedicine:
 		return source.GetSourceClientCenterForPulmonarySleepMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenterForSightPc:
@@ -2322,8 +1950,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCenterForVisualIndependence(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentersForAdvOrthoCalvertDiv41:
 		return source.GetSourceClientCentersForAdvOrthoCalvertDiv41(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentersForAdvancedEntCareSiegelBosworthAndSorensenDivision:
-		return source.GetSourceClientCentersForAdvancedEntCareSiegelBosworthAndSorensenDivision(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentraHealth:
 		return source.GetSourceClientCentraHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentraHealth1:
@@ -2334,8 +1960,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCentralArizonaMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralCaliforniaEndoscopyCenter:
 		return source.GetSourceClientCentralCaliforniaEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralCarolinaFamilyPracti:
-		return source.GetSourceClientCentralCarolinaFamilyPracti(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralCommunityHospital:
 		return source.GetSourceClientCentralCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralDelawareFamilyMedicine:
@@ -2346,8 +1970,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCentralFloridaSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralIndianaOrthopedics:
 		return source.GetSourceClientCentralIndianaOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralJerseyHandSurgery:
-		return source.GetSourceClientCentralJerseyHandSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralJerseyRheumatologyOsteoporosis:
 		return source.GetSourceClientCentralJerseyRheumatologyOsteoporosis(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralJerseySportsMedicineAndOrthopaedicCenter:
@@ -2362,20 +1984,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCentralMississippiHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralNeOrthopedicsAndSportsMedicine:
 		return source.GetSourceClientCentralNeOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralTexasGastroenterology:
-		return source.GetSourceClientCentralTexasGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralUtahClinicDbaRevereHealth:
-		return source.GetSourceClientCentralUtahClinicDbaRevereHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralValleyHealthCare:
 		return source.GetSourceClientCentralValleyHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralValleyMedicalCenter:
 		return source.GetSourceClientCentralValleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentralValleyPhysiatry:
 		return source.GetSourceClientCentralValleyPhysiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralVirginiaOrthopaedicsAndSportsMedicine:
-		return source.GetSourceClientCentralVirginiaOrthopaedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCentralWyomingUrological:
-		return source.GetSourceClientCentralWyomingUrological(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentrastateSpecialists:
 		return source.GetSourceClientCentrastateSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCentroDeSaludFamiliarLaFeInc:
@@ -2384,8 +1998,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCentromed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCenturaHealth:
 		return source.GetSourceClientCenturaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCenturyAirportPediatrics:
-		return source.GetSourceClientCenturyAirportPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCernerGibsonAreaHospital:
 		return source.GetSourceClientCernerGibsonAreaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCernerGibsonCityClinic:
@@ -2408,8 +2020,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChaMedicalAndSurgicalGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChaMedicalAndSurgicalGroupPc1:
 		return source.GetSourceClientChaMedicalAndSurgicalGroupPc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChadbournFamilyPractice:
-		return source.GetSourceClientChadbournFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChadronCommunityHospital:
 		return source.GetSourceClientChadronCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChaffeeFamilyPhysicians:
@@ -2422,8 +2032,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChandrasClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChangingTidesFamilyServices:
 		return source.GetSourceClientChangingTidesFamilyServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChantillyFamilyPracticeCtr:
-		return source.GetSourceClientChantillyFamilyPracticeCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlesBennettMd:
 		return source.GetSourceClientCharlesBennettMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlesDGoodmanMdInc:
@@ -2442,8 +2050,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCharlesMMaplesDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlesMurphyDpm:
 		return source.GetSourceClientCharlesMurphyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCharlesRayMd:
-		return source.GetSourceClientCharlesRayMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlesRiverCommunityHealth:
 		return source.GetSourceClientCharlesRiverCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlesWMoniakMdFacog:
@@ -2452,14 +2058,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCharlestonAreaMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlestonEarNoseThroatAndAllergy:
 		return source.GetSourceClientCharlestonEarNoseThroatAndAllergy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCharlestonNephrologyAssociatesLlc:
-		return source.GetSourceClientCharlestonNephrologyAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlestownRoad:
 		return source.GetSourceClientCharlestownRoad(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates:
 		return source.GetSourceClientCharlotteEyeEarNoseAndThroatAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCharlotteZYangMd:
-		return source.GetSourceClientCharlotteZYangMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChaseCountyCommunityHospital:
 		return source.GetSourceClientChaseCountyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChattanoogaEndoscopyCenter:
@@ -2488,8 +2090,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChesapeakeEarNoseAndThroatPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChesapeakeRegionalMedicalCenter:
 		return source.GetSourceClientChesapeakeRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChesapeakeUrologyAssociates:
-		return source.GetSourceClientChesapeakeUrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChesapeakeWomensCarePA:
 		return source.GetSourceClientChesapeakeWomensCarePA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChesleyLGregoryMdLlc:
@@ -2530,8 +2130,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChiStLukesHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChiStVincent:
 		return source.GetSourceClientChiStVincent(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChiWest:
-		return source.GetSourceClientChiWest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicagoCardiologyInstituteSc:
 		return source.GetSourceClientChicagoCardiologyInstituteSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicagoVascularAsc:
@@ -2540,8 +2138,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChicagoVascularClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicagoWellnessCenterCoalition:
 		return source.GetSourceClientChicagoWellnessCenterCoalition(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChicagoWomensHealthLtd:
-		return source.GetSourceClientChicagoWomensHealthLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicagolandEyeConsultants:
 		return source.GetSourceClientChicagolandEyeConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicagolandRetinalConsultantsLlc:
@@ -2550,18 +2146,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChickahominyFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChicoEyeCenter:
 		return source.GetSourceClientChicoEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChicoImmediateCareInc:
-		return source.GetSourceClientChicoImmediateCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildCardiologyAssociates:
 		return source.GetSourceClientChildCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChildHealthAssociatesPc:
-		return source.GetSourceClientChildHealthAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildMindMedicalPracticePllc:
 		return source.GetSourceClientChildMindMedicalPracticePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildNeurologyConsultantsOfAustin:
 		return source.GetSourceClientChildNeurologyConsultantsOfAustin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChildrenFirstPediatrics:
-		return source.GetSourceClientChildrenFirstPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensCardiologyAssociates:
 		return source.GetSourceClientChildrensCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensDiabetesAndEndocrinology:
@@ -2604,10 +2194,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChildrensLungAsthmaAndSleepSpc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensMedicalGroup:
 		return source.GetSourceClientChildrensMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChildrensMedicalGroup1:
-		return source.GetSourceClientChildrensMedicalGroup1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChildrensMercyPreferredPediatrics:
-		return source.GetSourceClientChildrensMercyPreferredPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensNationalMedicalCenter:
 		return source.GetSourceClientChildrensNationalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChildrensOfAlabama:
@@ -2624,12 +2210,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChinatownServiceCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChineseHospital:
 		return source.GetSourceClientChineseHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChippenhamPediatricAndAdolescentMedicine:
-		return source.GetSourceClientChippenhamPediatricAndAdolescentMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChiricahuaCommunityHealthCentersInc:
 		return source.GetSourceClientChiricahuaCommunityHealthCentersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChmbNeurologyClinicOfMarin:
-		return source.GetSourceClientChmbNeurologyClinicOfMarin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChmcAndersonPrimaryCare:
 		return source.GetSourceClientChmcAndersonPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChmcBusinessDepartment:
@@ -2640,8 +2222,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientChmcCommunityHealthServicesNetwork1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChmcSml:
 		return source.GetSourceClientChmcSml(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeChoicePediatrix:
-		return source.GetSourceClientChoicePediatrix(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChongPingCLuMd:
 		return source.GetSourceClientChongPingCLuMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeChrisMakotoTsuneishiMd:
@@ -2672,14 +2252,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCignaMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCimarronUrology:
 		return source.GetSourceClientCimarronUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCimplifyInc:
-		return source.GetSourceClientCimplifyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCincinnatiAsc:
 		return source.GetSourceClientCincinnatiAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter:
 		return source.GetSourceClientCincinnatiChildrensHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCincinnatiGi:
-		return source.GetSourceClientCincinnatiGi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCincinnatiVascularCare:
 		return source.GetSourceClientCincinnatiVascularCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCioSurgeryCenterLlc:
@@ -2692,8 +2268,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCiscoMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCissnaParkTherapy:
 		return source.GetSourceClientCissnaParkTherapy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCitiMedicalOfCanarsie:
-		return source.GetSourceClientCitiMedicalOfCanarsie(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCitizensOfLakeCountyHealthCareInc:
 		return source.GetSourceClientCitizensOfLakeCountyHealthCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCitizensdx:
@@ -2726,10 +2300,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientClaimsPractice2OfficeAlly(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClaraBartonHospital:
 		return source.GetSourceClientClaraBartonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClarkMemorialHospital:
-		return source.GetSourceClientClarkMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClarkMemorial:
-		return source.GetSourceClientClarkMemorial(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClarksvilleEyeSurgeryCenter:
 		return source.GetSourceClientClarksvilleEyeSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClarksvilleGeneralHospital:
@@ -2742,10 +2312,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientClayEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClayPlatteFamilyMedicineClinic:
 		return source.GetSourceClientClayPlatteFamilyMedicineClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClaytonMedicalAssociates:
-		return source.GetSourceClientClaytonMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClaytonPediatricsCenterPa:
-		return source.GetSourceClientClaytonPediatricsCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClearHealthAlliance:
 		return source.GetSourceClientClearHealthAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClearskyHealth:
@@ -2796,24 +2362,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientClinicalNephrologyAssociatesAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClinicalNephrologyAssociates:
 		return source.GetSourceClientClinicalNephrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClinicalNeurophyiologyServices:
-		return source.GetSourceClientClinicalNeurophyiologyServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClinicalSupportProviders:
 		return source.GetSourceClientClinicalSupportProviders(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClinicasDelCaminoRealIncorporated:
 		return source.GetSourceClientClinicasDelCaminoRealIncorporated(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCliniciansInInfectiousDiesease:
-		return source.GetSourceClientCliniciansInInfectiousDiesease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClinicsForSpeechLanguageAndCommunic:
 		return source.GetSourceClientClinicsForSpeechLanguageAndCommunic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClinicsOfNorthTexasLlp:
-		return source.GetSourceClientClinicsOfNorthTexasLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClinixHealthcare:
-		return source.GetSourceClientClinixHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClintonCountyMedicalCenterPC:
-		return source.GetSourceClientClintonCountyMedicalCenterPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeClintonMedicalClinic:
-		return source.GetSourceClientClintonMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeClintonWomensHealthcare:
 		return source.GetSourceClientClintonWomensHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCmgi:
@@ -2824,10 +2378,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCoalCreekFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastPulmonaryAndInternalMedicineAsso:
 		return source.GetSourceClientCoastPulmonaryAndInternalMedicineAsso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCoastSurgicalGroup:
-		return source.GetSourceClientCoastSurgicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCoastalAllergyAndAsthmaPc:
-		return source.GetSourceClientCoastalAllergyAndAsthmaPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastalEyeGroupPc:
 		return source.GetSourceClientCoastalEyeGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastalFamilyHealthCenter:
@@ -2838,8 +2388,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCoastalMedicalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastalNephrologyPa:
 		return source.GetSourceClientCoastalNephrologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCoastalNeurologyPA:
-		return source.GetSourceClientCoastalNeurologyPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastalOrthopedicsAndSportsMedicine:
 		return source.GetSourceClientCoastalOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoastalOrthopedicsPa:
@@ -2864,20 +2412,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCodacBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCodacMedicalPractice:
 		return source.GetSourceClientCodacMedicalPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCoddingtonMedicalFamilyPractice:
-		return source.GetSourceClientCoddingtonMedicalFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCogdellMemorialHospital:
 		return source.GetSourceClientCogdellMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColavascAsc:
 		return source.GetSourceClientColavascAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColavasc:
 		return source.GetSourceClientColavasc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColdHollowFamilyPractice:
-		return source.GetSourceClientColdHollowFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColemanMedicalAssocPa:
-		return source.GetSourceClientColemanMedicalAssocPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColinHamblin:
-		return source.GetSourceClientColinHamblin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCollaborativeArthritisCareInc:
 		return source.GetSourceClientCollaborativeArthritisCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCollegeMedicalCenter:
@@ -2896,8 +2436,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientColonAndRectalSurgeryAssociates1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColonAndRectalSurgeryInc:
 		return source.GetSourceClientColonAndRectalSurgeryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColonStomachAndLiverCenterllc:
-		return source.GetSourceClientColonStomachAndLiverCenterllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColonialBehavioralHealth:
 		return source.GetSourceClientColonialBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColonialHealthcare:
@@ -2910,18 +2448,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientColoradoEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColoradoHeartAndVascularPc:
 		return source.GetSourceClientColoradoHeartAndVascularPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColoradoMountainMedicalLlc:
-		return source.GetSourceClientColoradoMountainMedicalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColoradoSpringsCardiologistsPc:
 		return source.GetSourceClientColoradoSpringsCardiologistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColoradoUrgentCareLlc:
 		return source.GetSourceClientColoradoUrgentCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColoradoUrology:
-		return source.GetSourceClientColoradoUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColorado:
 		return source.GetSourceClientColorado(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColorectalSpecialists:
-		return source.GetSourceClientColorectalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColorectalSurgicalAndGastroenterologyAssocia:
 		return source.GetSourceClientColorectalSurgicalAndGastroenterologyAssocia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaArthritisCenterPa:
@@ -2932,12 +2464,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientColumbiaEyeSurgeryCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaGastrointestinalEndoscopyCtr:
 		return source.GetSourceClientColumbiaGastrointestinalEndoscopyCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColumbiaMedicalPractice:
-		return source.GetSourceClientColumbiaMedicalPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaMemorialHospital:
 		return source.GetSourceClientColumbiaMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColumbiaNephrologyAssociates:
-		return source.GetSourceClientColumbiaNephrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaPhysicians:
 		return source.GetSourceClientColumbiaPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbiaStMarysInc:
@@ -2952,8 +2480,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientColumbusHerniaInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbusMetropolitanObGynInc:
 		return source.GetSourceClientColumbusMetropolitanObGynInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeColumbusNeighborhoodHealthCenter:
-		return source.GetSourceClientColumbusNeighborhoodHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbusNephrologyInc:
 		return source.GetSourceClientColumbusNephrologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeColumbusPainCenterPC:
@@ -2976,8 +2502,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCommunityAnesthesiaProfessionalsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityBridgesInc:
 		return source.GetSourceClientCommunityBridgesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityFamilyMedicine:
-		return source.GetSourceClientCommunityFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityFirstHealthPlans:
 		return source.GetSourceClientCommunityFirstHealthPlans(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthAndDentalCare:
@@ -2988,8 +2512,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCommunityHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthCenterOfCentralMis:
 		return source.GetSourceClientCommunityHealthCenterOfCentralMis(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityHealthCenter:
-		return source.GetSourceClientCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthCentersOfBurlington:
 		return source.GetSourceClientCommunityHealthCentersOfBurlington(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthCentersOfSeIowa:
@@ -3012,10 +2534,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCommunityHealthNetworkInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthNetwork:
 		return source.GetSourceClientCommunityHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityHealthNorthwestFlorida:
-		return source.GetSourceClientCommunityHealthNorthwestFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityHealthOfCentralWashingtonwa:
-		return source.GetSourceClientCommunityHealthOfCentralWashingtonwa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthOfEastTennessee:
 		return source.GetSourceClientCommunityHealthOfEastTennessee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthPractice:
@@ -3032,12 +2550,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCommunityHealthcareSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityHealthcareSystem:
 		return source.GetSourceClientCommunityHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityMedicalAndDentalCareInc:
-		return source.GetSourceClientCommunityMedicalAndDentalCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityMedicalCenterMissoula:
 		return source.GetSourceClientCommunityMedicalCenterMissoula(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityMedicalCenterOfWestVolusia:
-		return source.GetSourceClientCommunityMedicalCenterOfWestVolusia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityMedicalCentersInc:
 		return source.GetSourceClientCommunityMedicalCentersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityMedicalCenters:
@@ -3048,8 +2562,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCommunityMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityOrthopedicMedicalGrp:
 		return source.GetSourceClientCommunityOrthopedicMedicalGrp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCommunityPracticeResources:
-		return source.GetSourceClientCommunityPracticeResources(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityPracticeServices:
 		return source.GetSourceClientCommunityPracticeServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCommunityPsychiatry:
@@ -3072,8 +2584,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCompleteCareMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCompleteFamilyCare:
 		return source.GetSourceClientCompleteFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCompleteFamilyMedicine:
-		return source.GetSourceClientCompleteFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCompleteMedicalHealthcare:
 		return source.GetSourceClientCompleteMedicalHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCompletecareHealthNetwork:
@@ -3088,14 +2598,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientComprehensiveCounselingCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeComprehensiveCounselingCenter1:
 		return source.GetSourceClientComprehensiveCounselingCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeComprehensiveInternalMedicine:
-		return source.GetSourceClientComprehensiveInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeComprehensiveOrthopaedicsSC:
 		return source.GetSourceClientComprehensiveOrthopaedicsSC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCompsych:
 		return source.GetSourceClientCompsych(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeConcentraHealthServicesInc:
-		return source.GetSourceClientConcentraHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeConceptOccupationalAndHandTherapy:
 		return source.GetSourceClientConceptOccupationalAndHandTherapy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeConciergeMedicalOfNaplesLlc:
@@ -3156,8 +2662,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCorePhysicianServicesOfMa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCorePhysiciansLlc:
 		return source.GetSourceClientCorePhysiciansLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCorinthMedicalSpecialistLlc:
-		return source.GetSourceClientCorinthMedicalSpecialistLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCorneaConsultantsOfTexas:
 		return source.GetSourceClientCorneaConsultantsOfTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCornealAssociates:
@@ -3166,10 +2670,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCornerstoneCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCornerstoneFamilyCare:
 		return source.GetSourceClientCornerstoneFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCornerstoneMedicalCareBrandon:
-		return source.GetSourceClientCornerstoneMedicalCareBrandon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCornerstoneMedicalClinicPllc:
-		return source.GetSourceClientCornerstoneMedicalClinicPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeCornerstoneMedicalCare:
+		return source.GetSourceClientCornerstoneMedicalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCornerstoneOrthopedicsAndSportsMed:
 		return source.GetSourceClientCornerstoneOrthopedicsAndSportsMed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCoronaFamilyCareInc:
@@ -3218,14 +2720,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCpsPsychologyServicesCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCraigASkolnickMDPA:
 		return source.GetSourceClientCraigASkolnickMDPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCraigBHenryPllc:
-		return source.GetSourceClientCraigBHenryPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCraigRJohnsonMdInc:
 		return source.GetSourceClientCraigRJohnsonMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCrawfordMemorialHospital:
 		return source.GetSourceClientCrawfordMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCrcaManagementCoLlc:
-		return source.GetSourceClientCrcaManagementCoLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCreekNationCommunityHospital:
 		return source.GetSourceClientCreekNationCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCreekNationEmployeeHealth:
@@ -3254,18 +2752,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCrossroadsForWomenInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCrossroadsHealth:
 		return source.GetSourceClientCrossroadsHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCrossroadsHealthcareClinic:
-		return source.GetSourceClientCrossroadsHealthcareClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCrownObstetricsAndGynecology:
-		return source.GetSourceClientCrownObstetricsAndGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCrozerHealthAccessNetwork:
 		return source.GetSourceClientCrozerHealthAccessNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCrystalClinicOrthopaedicCenterLlc:
 		return source.GetSourceClientCrystalClinicOrthopaedicCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCrystalCoastFamilyPractice:
-		return source.GetSourceClientCrystalCoastFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCrystalLakeHealthCenter:
-		return source.GetSourceClientCrystalLakeHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCrystalRunHealthcarePhysiciansLlp:
 		return source.GetSourceClientCrystalRunHealthcarePhysiciansLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCsRayhrerMd:
@@ -3278,8 +2768,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCsoOhio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCtDermPc:
 		return source.GetSourceClientCtDermPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCuaOpcoLlc:
-		return source.GetSourceClientCuaOpcoLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCullmanMedicalAndPediatricAssocPc:
 		return source.GetSourceClientCullmanMedicalAndPediatricAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCullmanRegionalMedicalCenter:
@@ -3290,22 +2778,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientCumberlandCountyHospitalSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCumberlandMountainCommunityServicesBoard:
 		return source.GetSourceClientCumberlandMountainCommunityServicesBoard(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCumberlandValleyEntConsultants:
-		return source.GetSourceClientCumberlandValleyEntConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCure4TheKidsFoundation:
 		return source.GetSourceClientCure4TheKidsFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCureCardiovascularConsultantsInc:
 		return source.GetSourceClientCureCardiovascularConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCvEntSurgicalGroup:
-		return source.GetSourceClientCvEntSurgicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCvpPhysicians:
 		return source.GetSourceClientCvpPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCvpSurgeryCenters:
 		return source.GetSourceClientCvpSurgeryCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCvsHealthAndMinuteClinic:
 		return source.GetSourceClientCvsHealthAndMinuteClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeCynthiaLThomasDo:
-		return source.GetSourceClientCynthiaLThomasDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCypressPointeFamilyMedicine:
 		return source.GetSourceClientCypressPointeFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDVPasupuletiMd:
@@ -3318,20 +2800,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDallasAssociatedDermatologists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDallasCenterMedical:
 		return source.GetSourceClientDallasCenterMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDallasCountyFamilyMedicine:
-		return source.GetSourceClientDallasCountyFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDallasFortWorthSarcomaGroupPa:
-		return source.GetSourceClientDallasFortWorthSarcomaGroupPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDallasRenalGroup:
 		return source.GetSourceClientDallasRenalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDanAlexanderMd:
-		return source.GetSourceClientDanAlexanderMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDanBangartDpm:
 		return source.GetSourceClientDanBangartDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDanIGiurgiuMd:
 		return source.GetSourceClientDanIGiurgiuMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDanMcmillen:
-		return source.GetSourceClientDanMcmillen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDanburyEyePhysicians:
 		return source.GetSourceClientDanburyEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDanielGOrrMd:
@@ -3342,24 +2816,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDanielJRyanMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDanielToocheckOd:
 		return source.GetSourceClientDanielToocheckOd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDaniloADonaMD:
-		return source.GetSourceClientDaniloADonaMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDannyRBartelMDPA:
 		return source.GetSourceClientDannyRBartelMDPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDanvilleGastroenterologyCenter:
-		return source.GetSourceClientDanvilleGastroenterologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDanvilleWomensCare:
-		return source.GetSourceClientDanvilleWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDaphneFamilyPractice:
-		return source.GetSourceClientDaphneFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDareFootCareLlc:
 		return source.GetSourceClientDareFootCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDartmouthHitchcock:
-		return source.GetSourceClientDartmouthHitchcock(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDarylMarxMd:
-		return source.GetSourceClientDarylMarxMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDaveWhitney:
-		return source.GetSourceClientDaveWhitney(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavidBStantonMdAndAssocInc:
 		return source.GetSourceClientDavidBStantonMdAndAssocInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavidCMorleyJrMd:
@@ -3378,8 +2838,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDavidHamptonMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavidLCrowderMDInc:
 		return source.GetSourceClientDavidLCrowderMDInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDavidMGodatMd:
-		return source.GetSourceClientDavidMGodatMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavidNRiosMd:
 		return source.GetSourceClientDavidNRiosMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDavidRJensenMdInc:
@@ -3408,8 +2866,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDavitaPhysicianSolutions(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDaymarkRecoveryServices:
 		return source.GetSourceClientDaymarkRecoveryServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDayoNavalgundLl:
-		return source.GetSourceClientDayoNavalgundLl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDaytonChildrensHospital:
 		return source.GetSourceClientDaytonChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDaytonGastroenterology:
@@ -3422,24 +2878,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDaytonRenalPhysiciansInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDaytonSkinCare:
 		return source.GetSourceClientDaytonSkinCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDbwcLlcDbaDaytonaBeachWomensCenter:
-		return source.GetSourceClientDbwcLlcDbaDaytonaBeachWomensCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDchPracticeManagement:
-		return source.GetSourceClientDchPracticeManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeaconessHealthSystemPrd:
 		return source.GetSourceClientDeaconessHealthSystemPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeanBrightDpm:
 		return source.GetSourceClientDeanBrightDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDeanHarMd:
-		return source.GetSourceClientDeanHarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeannaYKhanMd:
 		return source.GetSourceClientDeannaYKhanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeanzaObstetricsAndGynecologyMedGrp:
 		return source.GetSourceClientDeanzaObstetricsAndGynecologyMedGrp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDecaturCountyHospital:
 		return source.GetSourceClientDecaturCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDecaturNeurologicalAssociate:
-		return source.GetSourceClientDecaturNeurologicalAssociate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeenGrossEyeCenters:
 		return source.GetSourceClientDeenGrossEyeCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeerChaseMedicalAssociates:
@@ -3454,28 +2902,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDekalbEyeConsultantsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDekalbHearingServicesLlc:
 		return source.GetSourceClientDekalbHearingServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDekalbRegionalHealthcare:
-		return source.GetSourceClientDekalbRegionalHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelaireChiropracticClinicInc:
 		return source.GetSourceClientDelaireChiropracticClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareCountyMemorialHospitalDbaRegionalMedicalCenter:
 		return source.GetSourceClientDelawareCountyMemorialHospitalDbaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareEyeCareCenter:
 		return source.GetSourceClientDelawareEyeCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelawareFamilyCareAssociates:
-		return source.GetSourceClientDelawareFamilyCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareFamilyMedicine:
 		return source.GetSourceClientDelawareFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareFootAndAnkleGroup:
 		return source.GetSourceClientDelawareFootAndAnkleGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareFootAndAnkleGroup1:
 		return source.GetSourceClientDelawareFootAndAnkleGroup1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelawareHealthNetInc:
-		return source.GetSourceClientDelawareHealthNetInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelawareNeurologyAssociates:
-		return source.GetSourceClientDelawareNeurologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelawareOtolaryngologyConsultantsLlc:
-		return source.GetSourceClientDelawareOtolaryngologyConsultantsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareValleyCommunityHealthInc:
 		return source.GetSourceClientDelawareValleyCommunityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelawareValleyDermatologyGroupLlc:
@@ -3490,28 +2928,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDelawareVisionAssociatesGroupPractic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDellChildrensHealthPlan:
 		return source.GetSourceClientDellChildrensHealthPlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelmarFamilyMedicine:
-		return source.GetSourceClientDelmarFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelmarFamilyMedicine1:
-		return source.GetSourceClientDelmarFamilyMedicine1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDelmarvaSurgeryAssociates:
-		return source.GetSourceClientDelmarvaSurgeryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelrayEyeAssociatesPa:
 		return source.GetSourceClientDelrayEyeAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeltaHealthCenter:
 		return source.GetSourceClientDeltaHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDeltaMedicalClinic:
 		return source.GetSourceClientDeltaMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDeltaObstetricsGynecology:
-		return source.GetSourceClientDeltaObstetricsGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDelvalVisionAssociatesGroupPractice:
 		return source.GetSourceClientDelvalVisionAssociatesGroupPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDenrobManagement:
 		return source.GetSourceClientDenrobManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDenverDigestiveHealthSpecialists:
-		return source.GetSourceClientDenverDigestiveHealthSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDenverEndoDiabetesAndThyroidCenter:
-		return source.GetSourceClientDenverEndoDiabetesAndThyroidCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDenverEyeSurgeons:
 		return source.GetSourceClientDenverEyeSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDenverHealthMedicalPlanInc:
@@ -3546,8 +2972,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDermatologyAssociatesOfUptown(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDermatologyAssociates:
 		return source.GetSourceClientDermatologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDermatologyAssociates1:
-		return source.GetSourceClientDermatologyAssociates1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDermatologyCenterOfLakeOrion:
 		return source.GetSourceClientDermatologyCenterOfLakeOrion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDermatologyConsultantsOfFrisco:
@@ -3558,14 +2982,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDermatologyConsultantsPa1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDermatologyInstitute:
 		return source.GetSourceClientDermatologyInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDermatologyOfNorthAlabama:
-		return source.GetSourceClientDermatologyOfNorthAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDermatologySpecialistsOfOmaha:
-		return source.GetSourceClientDermatologySpecialistsOfOmaha(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDerrickSmithMd:
 		return source.GetSourceClientDerrickSmithMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDerryMedicalCenter:
-		return source.GetSourceClientDerryMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDesertHeartPhysiciansMedicalGroup:
 		return source.GetSourceClientDesertHeartPhysiciansMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDesertHospitalistGroup:
@@ -3604,8 +3022,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDgEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDgMultispecialtyClinic:
 		return source.GetSourceClientDgMultispecialtyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDharmeshSMehtaMd:
-		return source.GetSourceClientDharmeshSMehtaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDiabetesAndEndocrineAssocHunterdon:
 		return source.GetSourceClientDiabetesAndEndocrineAssocHunterdon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDiabetesAndEndocrineCenterOfMs:
@@ -3622,24 +3038,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDianaEHamptonMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDicksonMedicalAssociatesPc:
 		return source.GetSourceClientDicksonMedicalAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDicorletoMdPeter:
-		return source.GetSourceClientDicorletoMdPeter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveAndLiverDiseaseSpecialists:
-		return source.GetSourceClientDigestiveAndLiverDiseaseSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveDiseaseAssociatesLtd:
-		return source.GetSourceClientDigestiveDiseaseAssociatesLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveDiseaseAssociates:
-		return source.GetSourceClientDigestiveDiseaseAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveDiseaseClinic:
-		return source.GetSourceClientDigestiveDiseaseClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveDiseaseConsultants:
 		return source.GetSourceClientDigestiveDiseaseConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveDiseaseConsultants1:
 		return source.GetSourceClientDigestiveDiseaseConsultants1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveDiseaseConsultants2:
 		return source.GetSourceClientDigestiveDiseaseConsultants2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveHealthAssoc:
-		return source.GetSourceClientDigestiveHealthAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveHealthAssociates:
 		return source.GetSourceClientDigestiveHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveHealthCenterOfBedford:
@@ -3656,8 +3060,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDigestiveHealthCtrAtRedbirdSquare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDigestiveHealthCtrOfNRichlandHills:
 		return source.GetSourceClientDigestiveHealthCtrOfNRichlandHills(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDigestiveMedicineAssoc:
-		return source.GetSourceClientDigestiveMedicineAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDignityHealthCareb:
 		return source.GetSourceClientDignityHealthCareb(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDignityHealthMedGrpVenturaCnty:
@@ -3666,8 +3068,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDignityHealthMedicalGroupNorthridgeFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDignityHealthYavapaiRegionalMedicalCenter:
 		return source.GetSourceClientDignityHealthYavapaiRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDillonInternalMedicine:
-		return source.GetSourceClientDillonInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDineshLahotiMd:
 		return source.GetSourceClientDineshLahotiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDiscoverVisionCenters:
@@ -3694,8 +3094,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDohcHomeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDohcPalliativeCare:
 		return source.GetSourceClientDohcPalliativeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDominionMedicalAssoc:
-		return source.GetSourceClientDominionMedicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDonFMillsMd:
 		return source.GetSourceClientDonFMillsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDonJSchmittMd:
@@ -3708,12 +3106,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDonaldRAbrahmMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDonnaLMillerDoPc:
 		return source.GetSourceClientDonnaLMillerDoPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDonniePDunaganMd:
-		return source.GetSourceClientDonniePDunaganMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDothanPediatricClinicPa:
-		return source.GetSourceClientDothanPediatricClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDothanSpecialtyClinic:
-		return source.GetSourceClientDothanSpecialtyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDouglasATaylorMd:
 		return source.GetSourceClientDouglasATaylorMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDouglasAshinskyMd:
@@ -3740,20 +3132,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrAdekunleAdeoti(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrAlbertBoydMd:
 		return source.GetSourceClientDrAlbertBoydMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrAlbertKim:
-		return source.GetSourceClientDrAlbertKim(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrAmyMorris:
 		return source.GetSourceClientDrAmyMorris(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrAnthonyJRizzo:
-		return source.GetSourceClientDrAnthonyJRizzo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrAnuradhaKollipara:
 		return source.GetSourceClientDrAnuradhaKollipara(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrBasimZAbdelkarimMdInc:
 		return source.GetSourceClientDrBasimZAbdelkarimMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrBelenClarkMd:
 		return source.GetSourceClientDrBelenClarkMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrBenMayne:
-		return source.GetSourceClientDrBenMayne(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrBobHealthCentre:
 		return source.GetSourceClientDrBobHealthCentre(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrBoseIndustrialAndFamilyMedicine:
@@ -3772,10 +3158,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrCharlesSchlosser(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrCharlesSchlosser1:
 		return source.GetSourceClientDrCharlesSchlosser1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrChristopherLee:
-		return source.GetSourceClientDrChristopherLee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrDavidLopez:
-		return source.GetSourceClientDrDavidLopez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrDonaldHuang:
 		return source.GetSourceClientDrDonaldHuang(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrDonaldHuang1:
@@ -3788,28 +3170,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrEllbogenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrElviraRives:
 		return source.GetSourceClientDrElviraRives(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrFeiYuMd:
-		return source.GetSourceClientDrFeiYuMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrFranciscoMartinezMdPa:
 		return source.GetSourceClientDrFranciscoMartinezMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrGeraldKFleer:
 		return source.GetSourceClientDrGeraldKFleer(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrGlenEHurst:
 		return source.GetSourceClientDrGlenEHurst(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrGlennChapman:
-		return source.GetSourceClientDrGlennChapman(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrGovindjiFuletra:
-		return source.GetSourceClientDrGovindjiFuletra(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrGregoryCaliDo:
-		return source.GetSourceClientDrGregoryCaliDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrHarleenKaurFamilyPrac:
-		return source.GetSourceClientDrHarleenKaurFamilyPrac(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrHiseyDrHorton:
 		return source.GetSourceClientDrHiseyDrHorton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrHussainAlDarsaniMd:
 		return source.GetSourceClientDrHussainAlDarsaniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrIanMyers:
-		return source.GetSourceClientDrIanMyers(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrIrwinBuchwald:
 		return source.GetSourceClientDrIrwinBuchwald(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrIsraelAlvarez:
@@ -3828,14 +3198,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrJoseFernandez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrJosePenaMd:
 		return source.GetSourceClientDrJosePenaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrJosephLin:
-		return source.GetSourceClientDrJosephLin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrJuanBMartinezJrMd:
 		return source.GetSourceClientDrJuanBMartinezJrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrKellyCoon:
 		return source.GetSourceClientDrKellyCoon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrKennethMartinez:
-		return source.GetSourceClientDrKennethMartinez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrKennethTreadwell:
 		return source.GetSourceClientDrKennethTreadwell(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrKermani:
@@ -3846,8 +3212,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrKouWeiChiu(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrKumar:
 		return source.GetSourceClientDrKumar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrLarryRoberts:
-		return source.GetSourceClientDrLarryRoberts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrLuciaZamorano:
 		return source.GetSourceClientDrLuciaZamorano(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrManuelLovo:
@@ -3858,10 +3222,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrMariaFernandez(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrMarielaUrbinaMd:
 		return source.GetSourceClientDrMarielaUrbinaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrMarkGlassner:
-		return source.GetSourceClientDrMarkGlassner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrMehtaMd:
-		return source.GetSourceClientDrMehtaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrMunifSalek:
 		return source.GetSourceClientDrMunifSalek(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrMyersDrBell:
@@ -3880,30 +3240,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrPadmaGuptaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrPareshNVaru:
 		return source.GetSourceClientDrPareshNVaru(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrPatrickTamim:
-		return source.GetSourceClientDrPatrickTamim(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrPepperSnappleGroupAspers:
 		return source.GetSourceClientDrPepperSnappleGroupAspers(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrPepperSnappleGroupIrving:
 		return source.GetSourceClientDrPepperSnappleGroupIrving(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrPravinPanchal:
-		return source.GetSourceClientDrPravinPanchal(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrRDanielJacob:
 		return source.GetSourceClientDrRDanielJacob(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrRafaelAbreu:
 		return source.GetSourceClientDrRafaelAbreu(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrRalphRaperMd:
-		return source.GetSourceClientDrRalphRaperMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrRevanMaragiri:
-		return source.GetSourceClientDrRevanMaragiri(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrRobertChingDo:
-		return source.GetSourceClientDrRobertChingDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrRodrigoArgenalMd:
 		return source.GetSourceClientDrRodrigoArgenalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrRudolphVela:
-		return source.GetSourceClientDrRudolphVela(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrSanjayPrasad:
-		return source.GetSourceClientDrSanjayPrasad(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrSherwinParikh:
 		return source.GetSourceClientDrSherwinParikh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrSonnyPark:
@@ -3914,8 +3260,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrSuganthiniUmakanthanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrSusanHunterJoernsMd:
 		return source.GetSourceClientDrSusanHunterJoernsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrThomasPVonUnrug:
-		return source.GetSourceClientDrThomasPVonUnrug(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrTilakMallik:
 		return source.GetSourceClientDrTilakMallik(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrTimothyJKilleenMd:
@@ -3932,16 +3276,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrWilliamJHicks1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrWilliamStrazzellaDo:
 		return source.GetSourceClientDrWilliamStrazzellaDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDraTeresitaTBarbadillo:
-		return source.GetSourceClientDraTeresitaTBarbadillo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrewMemorialHealthSystem:
 		return source.GetSourceClientDrewMemorialHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrexelMedicine:
 		return source.GetSourceClientDrexelMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDriscollChildrensHospital:
 		return source.GetSourceClientDriscollChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDrsGehrisJordanDay:
-		return source.GetSourceClientDrsGehrisJordanDay(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrsGirgisAndAssociates:
 		return source.GetSourceClientDrsGirgisAndAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDrsUyemuraAndJengLlc:
@@ -3954,8 +3294,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDrumrightRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDsaDermatology:
 		return source.GetSourceClientDsaDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeDsmSleepSpecialistPlc:
-		return source.GetSourceClientDsmSleepSpecialistPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDublinPhysicalMedicine:
 		return source.GetSourceClientDublinPhysicalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDublinWomensCenter:
@@ -3990,26 +3328,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientDustinHubbardDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeDutchessCountyDepartmentOfBehavioralAndCommunityHealth:
 		return source.GetSourceClientDutchessCountyDepartmentOfBehavioralAndCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeECBushMd:
-		return source.GetSourceClientECBushMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeETxHeartVascularImagOfLufkinPa:
 		return source.GetSourceClientETxHeartVascularImagOfLufkinPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEagleViewCommunityHealthSystem:
 		return source.GetSourceClientEagleViewCommunityHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEanwAsc:
 		return source.GetSourceClientEanwAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEarNoseAndThroatAssocOfFriscoPa:
-		return source.GetSourceClientEarNoseAndThroatAssocOfFriscoPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEarNoseAndThroatPhyAndSurg:
-		return source.GetSourceClientEarNoseAndThroatPhyAndSurg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEarNoseAndThroatSpecsOfNwPa:
-		return source.GetSourceClientEarNoseAndThroatSpecsOfNwPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEarNoseThroatAndAllergyAssociates:
 		return source.GetSourceClientEarNoseThroatAndAllergyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEarNoseThroatAndAllergyCenter:
 		return source.GetSourceClientEarNoseThroatAndAllergyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEarNoseThroatSpecialistOfFlorida:
-		return source.GetSourceClientEarNoseThroatSpecialistOfFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEarlJacobsonDpm:
 		return source.GetSourceClientEarlJacobsonDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastAdamsRuralHealthcare:
@@ -4028,16 +3356,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEastBayEndosurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastBostonNeighborhoodHealthCenter:
 		return source.GetSourceClientEastBostonNeighborhoodHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEastCarolinaInternalMedicine:
-		return source.GetSourceClientEastCarolinaInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastCoastRetinaPa:
 		return source.GetSourceClientEastCoastRetinaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastColumbusSurgeryCenter:
 		return source.GetSourceClientEastColumbusSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastCooperRheumatologyPa:
 		return source.GetSourceClientEastCooperRheumatologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEastGlenPediatrics:
-		return source.GetSourceClientEastGlenPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastJordanFamilyHealthCenter:
 		return source.GetSourceClientEastJordanFamilyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastParisSurgicalCenterLlc:
@@ -4048,16 +3372,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEastTennesseeAllergyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastTennesseeEyeSurgeonsPc:
 		return source.GetSourceClientEastTennesseeEyeSurgeonsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEastTennesseeMedicalAssociatesPC:
-		return source.GetSourceClientEastTennesseeMedicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastValleyCommunityHealthCenter:
 		return source.GetSourceClientEastValleyCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastValleyEndoscopy:
 		return source.GetSourceClientEastValleyEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternConnecticutEndoscopyCenter:
 		return source.GetSourceClientEasternConnecticutEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEasternConnecticutMedicalProfessionals:
-		return source.GetSourceClientEasternConnecticutMedicalProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternMassachusettsSurgeryCenter:
 		return source.GetSourceClientEasternMassachusettsSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternMedicalAssociatesPa:
@@ -4066,16 +3386,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEasternMedicalSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternOhioPulmonaryConsultantsInc:
 		return source.GetSourceClientEasternOhioPulmonaryConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEasternOklahomaEarNoseAndThroat:
-		return source.GetSourceClientEasternOklahomaEarNoseAndThroat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEasternPaGastroenterology:
-		return source.GetSourceClientEasternPaGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternPlumasHealthCare:
 		return source.GetSourceClientEasternPlumasHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEasternShoreEndoscopy:
 		return source.GetSourceClientEasternShoreEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEasternWakeInternalMedicine:
-		return source.GetSourceClientEasternWakeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastlandMemorialHospital:
 		return source.GetSourceClientEastlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEastonAnesthesiaAssociatesLlc:
@@ -4094,8 +3408,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEctorCountyHospitalDistrictMedicalCenterHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEctorCountyHospitalDistrictMedicalCenterHealthSystem1:
 		return source.GetSourceClientEctorCountyHospitalDistrictMedicalCenterHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEdenInternalMedicine:
-		return source.GetSourceClientEdenInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdgarJStanleyMdIncAMedicalCorp:
 		return source.GetSourceClientEdgarJStanleyMdIncAMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdgarSandovalMd:
@@ -4112,14 +3424,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEdmundJLewisAndAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdmundJMaclaughlinMdLlc:
 		return source.GetSourceClientEdmundJMaclaughlinMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEduardoKofmanMd:
-		return source.GetSourceClientEduardoKofmanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardDHutsonJrDpm:
 		return source.GetSourceClientEdwardDHutsonJrDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardElmhurstHealthcare:
 		return source.GetSourceClientEdwardElmhurstHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEdwardJBujoldMd:
-		return source.GetSourceClientEdwardJBujoldMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardLColbyDoInc:
 		return source.GetSourceClientEdwardLColbyDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardLMurrayDpm:
@@ -4128,20 +3436,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEdwardMKennedyCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardTaiChiangDoInc:
 		return source.GetSourceClientEdwardTaiChiangDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEdwardWagnerMd:
-		return source.GetSourceClientEdwardWagnerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEdwardYavitzMd:
 		return source.GetSourceClientEdwardYavitzMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEdwinAlexanderMd:
-		return source.GetSourceClientEdwinAlexanderMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEffinghamHealthSystem:
 		return source.GetSourceClientEffinghamHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEffinghamVascularCenter:
 		return source.GetSourceClientEffinghamVascularCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEfraimDuzmanMdInc:
 		return source.GetSourceClientEfraimDuzmanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEhabSargiousMd:
-		return source.GetSourceClientEhabSargiousMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEinsteinHealthcareNetwork:
 		return source.GetSourceClientEinsteinHealthcareNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEisenhowerMedicalCenter:
@@ -4158,10 +3460,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientElPasoDelCoro(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElPasoDiazLuna:
 		return source.GetSourceClientElPasoDiazLuna(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeElPasoEarNoseThroatAssoc:
-		return source.GetSourceClientElPasoEarNoseThroatAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeElPasoWellnessAndHealthcare:
-		return source.GetSourceClientElPasoWellnessAndHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElRioHealthCenter:
 		return source.GetSourceClientElRioHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElRioHealth:
@@ -4174,12 +3472,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEliteEyecareMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeElitePainAndHealthPc:
 		return source.GetSourceClientElitePainAndHealthPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEliteWomensCare:
-		return source.GetSourceClientEliteWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeElizabethFamilyHealth:
-		return source.GetSourceClientElizabethFamilyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeElkinPediatricAndAdultMedicine:
-		return source.GetSourceClientElkinPediatricAndAdultMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEllenMFieldMd:
 		return source.GetSourceClientEllenMFieldMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEllinwoodDistrictHospitalAndClinic:
@@ -4188,12 +3480,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientElliotLederman(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEllisHospital:
 		return source.GetSourceClientEllisHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEllisPainCenter:
-		return source.GetSourceClientEllisPainCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEllsworthCountyMedicalCenter:
 		return source.GetSourceClientEllsworthCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeElmwoodHealthCenter:
-		return source.GetSourceClientElmwoodHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmanuelDozierMdMph:
 		return source.GetSourceClientEmanuelDozierMdMph(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmergencyDepartment:
@@ -4202,10 +3490,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEmergencySurgicalAssociatesApc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmergencySurgicalServicesOfArizona:
 		return source.GetSourceClientEmergencySurgicalServicesOfArizona(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEmilioDelPrioreMdPc:
-		return source.GetSourceClientEmilioDelPrioreMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEmilyBarnett:
-		return source.GetSourceClientEmilyBarnett(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEminentMedicalCenter:
 		return source.GetSourceClientEminentMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmkeyArthritisAndOsteoporosisClinic:
@@ -4214,8 +3498,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEmmaGoldmanClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmmanuelEmelleMd:
 		return source.GetSourceClientEmmanuelEmelleMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEmmanuelRReyesMd:
-		return source.GetSourceClientEmmanuelRReyesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmoryClinicAtCoke:
 		return source.GetSourceClientEmoryClinicAtCoke(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEmoryHealthcareInc:
@@ -4244,8 +3526,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEndocrineAndThyroid(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEndocrinologyAndMetabolismOfEastAlabamaLlc:
 		return source.GetSourceClientEndocrinologyAndMetabolismOfEastAlabamaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEndomedClinicSc:
-		return source.GetSourceClientEndomedClinicSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEndoscopicAnesthesiaGroupPa:
 		return source.GetSourceClientEndoscopicAnesthesiaGroupPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEndoscopyAssociatesOfValleyForgeLlc:
@@ -4266,8 +3546,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEndoscopyCenterOfTheCentralCoast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEndoscopyCenterOfTheUpstate:
 		return source.GetSourceClientEndoscopyCenterOfTheUpstate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEngagemedProd:
-		return source.GetSourceClientEngagemedProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEngineeredFloors:
 		return source.GetSourceClientEngineeredFloors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEnglewoodHospitalAndMedicalCenter:
@@ -4288,16 +3566,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEntAndAllergyCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEntAssociatesOfMetairie:
 		return source.GetSourceClientEntAssociatesOfMetairie(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEntAssociatesPc:
-		return source.GetSourceClientEntAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEntCentersOfExcellence:
-		return source.GetSourceClientEntCentersOfExcellence(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEntConsultantsAndHearingSvcs:
-		return source.GetSourceClientEntConsultantsAndHearingSvcs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEntHeadAndNeckSurgeryPc:
-		return source.GetSourceClientEntHeadAndNeckSurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEntSpecialist:
-		return source.GetSourceClientEntSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEnterpriseAdmin:
 		return source.GetSourceClientEnterpriseAdmin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEnterpriseMedical:
@@ -4316,8 +3584,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientErdeySearcyEyeGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeErgentCare:
 		return source.GetSourceClientErgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEricCarlsonMD:
-		return source.GetSourceClientEricCarlsonMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEricCwynarDpm:
 		return source.GetSourceClientEricCwynarDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEricEdwardHoltMd:
@@ -4328,12 +3594,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEricFontenotMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEricGrossMd:
 		return source.GetSourceClientEricGrossMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEricHembergMd1:
-		return source.GetSourceClientEricHembergMd1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeErieCountyGeneralHealthDistrict:
 		return source.GetSourceClientErieCountyGeneralHealthDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeErieCountyMedicalCenterCorporationProd:
-		return source.GetSourceClientErieCountyMedicalCenterCorporationProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeErikaLahavMd:
 		return source.GetSourceClientErikaLahavMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeErlangerHealthSystem:
@@ -4366,14 +3628,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEssexSpecializedSurgicalInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEssexWomensHealthCenter:
 		return source.GetSourceClientEssexWomensHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEtransmediadrAsmaArif:
-		return source.GetSourceClientEtransmediadrAsmaArif(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEugenePakMDPA:
 		return source.GetSourceClientEugenePakMDPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEugeneShteermanMd:
 		return source.GetSourceClientEugeneShteermanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEvangelicalCommunity:
-		return source.GetSourceClientEvangelicalCommunity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEverettBoneAndJointPhysicalTherapy:
 		return source.GetSourceClientEverettBoneAndJointPhysicalTherapy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEverettBoneAndJoint:
@@ -4390,24 +3648,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEvergreenhealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEvernorth:
 		return source.GetSourceClientEvernorth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEveryWomanWellness:
-		return source.GetSourceClientEveryWomanWellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeEvms:
-		return source.GetSourceClientEvms(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEvolutionHealth:
 		return source.GetSourceClientEvolutionHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeExcelCarePainManagement:
-		return source.GetSourceClientExcelCarePainManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeExcelEyeCenter:
 		return source.GetSourceClientExcelEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeExcelPhysiciansMedCorp:
 		return source.GetSourceClientExcelPhysiciansMedCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeExcelaHealth:
 		return source.GetSourceClientExcelaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeExcelsiorWomensCare:
-		return source.GetSourceClientExcelsiorWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeExclusivePhysiciansPllc:
-		return source.GetSourceClientExclusivePhysiciansPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeExecutiveHealthOfCoralGables:
 		return source.GetSourceClientExecutiveHealthOfCoralGables(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeExodusRecoveryInc:
@@ -4530,16 +3778,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientEyesthetica(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeEzraMedicalCenter:
 		return source.GetSourceClientEzraMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFGPowderlyMd:
-		return source.GetSourceClientFGPowderlyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFGeofferyConnerMdPc:
-		return source.GetSourceClientFGeofferyConnerMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFaceAndSkinLlc:
-		return source.GetSourceClientFaceAndSkinLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFacvConsultantsPc:
 		return source.GetSourceClientFacvConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFairbanksClinic:
-		return source.GetSourceClientFairbanksClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFairbanksMemorialCardiologyClinicLlc:
 		return source.GetSourceClientFairbanksMemorialCardiologyClinicLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFairbanksMemorialHospital:
@@ -4550,10 +3790,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFairfieldMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFairfieldMemorialHospital:
 		return source.GetSourceClientFairfieldMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFairhopeInternalMedicine:
-		return source.GetSourceClientFairhopeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFairhopeUrologyClinic:
-		return source.GetSourceClientFairhopeUrologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFairviewHealthServices:
 		return source.GetSourceClientFairviewHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFallonHealthWeinbergPace:
@@ -4566,16 +3802,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFamilyCareCenterQuitman(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyCareCenters:
 		return source.GetSourceClientFamilyCareCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyCareGroupOfThomson:
-		return source.GetSourceClientFamilyCareGroupOfThomson(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyCareOfFairview:
-		return source.GetSourceClientFamilyCareOfFairview(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyCareOfFairview1:
-		return source.GetSourceClientFamilyCareOfFairview1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyCarePartners:
 		return source.GetSourceClientFamilyCarePartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyFirstOfJacksonville:
-		return source.GetSourceClientFamilyFirstOfJacksonville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyFootAndAnkleClinicPa:
 		return source.GetSourceClientFamilyFootAndAnkleClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyFootHealthCenterPc:
@@ -4594,12 +3822,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFamilyHealthCareOfHoopeston(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyHealthCareOfMahomet:
 		return source.GetSourceClientFamilyHealthCareOfMahomet(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyHealthCareOfNorthwestOhioInc1:
-		return source.GetSourceClientFamilyHealthCareOfNorthwestOhioInc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyHealthCareOfPostFallsPllc:
 		return source.GetSourceClientFamilyHealthCareOfPostFallsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyHealthCareOfSiouxland:
-		return source.GetSourceClientFamilyHealthCareOfSiouxland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyHealthCareOfWatseka:
 		return source.GetSourceClientFamilyHealthCareOfWatseka(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyHealthCenterMichigan:
@@ -4632,34 +3856,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFamilyHealthcenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyMedAssocOfNorthridgeInc:
 		return source.GetSourceClientFamilyMedAssocOfNorthridgeInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedcentersPa:
-		return source.GetSourceClientFamilyMedcentersPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalAssociatesOfRaleigh:
-		return source.GetSourceClientFamilyMedicalAssociatesOfRaleigh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalCareAssociates:
-		return source.GetSourceClientFamilyMedicalCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalCareOfStAugustine:
-		return source.GetSourceClientFamilyMedicalCareOfStAugustine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalCenterOfArab:
-		return source.GetSourceClientFamilyMedicalCenterOfArab(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalGroupOfTexarkana:
-		return source.GetSourceClientFamilyMedicalGroupOfTexarkana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicalSpecialistsOfFlorida:
-		return source.GetSourceClientFamilyMedicalSpecialistsOfFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicineAssociates:
-		return source.GetSourceClientFamilyMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicineClinicPc:
-		return source.GetSourceClientFamilyMedicineClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyMedicineClinic:
-		return source.GetSourceClientFamilyMedicineClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyMedicineSpecialistsPc:
 		return source.GetSourceClientFamilyMedicineSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyMedicine:
 		return source.GetSourceClientFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPhysiciansGroup:
-		return source.GetSourceClientFamilyPhysiciansGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPhysiciansOfEvans:
-		return source.GetSourceClientFamilyPhysiciansOfEvans(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyPlanningAssociatesMedicalGroup:
 		return source.GetSourceClientFamilyPlanningAssociatesMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyPlanning:
@@ -4668,22 +3868,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFamilyPodiatryGroupOfTampaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyPodiatry:
 		return source.GetSourceClientFamilyPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPracticeAssoc:
-		return source.GetSourceClientFamilyPracticeAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPracticeAssoc1:
-		return source.GetSourceClientFamilyPracticeAssoc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyPracticeAssociatesOfLexington:
 		return source.GetSourceClientFamilyPracticeAssociatesOfLexington(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPracticeAssociates:
-		return source.GetSourceClientFamilyPracticeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFamilyPracticeAssociates2:
-		return source.GetSourceClientFamilyPracticeAssociates2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFamilyPracticeAssociates1:
+		return source.GetSourceClientFamilyPracticeAssociates1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyPracticeOfCentrastate:
 		return source.GetSourceClientFamilyPracticeOfCentrastate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFamilyTreeClinic:
 		return source.GetSourceClientFamilyTreeClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFarhanSiddiqiMdPa:
-		return source.GetSourceClientFarhanSiddiqiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFariborzDavidSateyMdInc:
 		return source.GetSourceClientFariborzDavidSateyMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFastmed:
@@ -4694,8 +3886,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFaulktonAreaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFauquierEntConsultants:
 		return source.GetSourceClientFauquierEntConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFauquierFamilyPractice:
-		return source.GetSourceClientFauquierFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFauquierMedicalAssociates:
 		return source.GetSourceClientFauquierMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFauquierPhysiciansNetwork:
@@ -4704,16 +3894,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFauziaKhanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFayetteCountyMemorialHospital:
 		return source.GetSourceClientFayetteCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFayetteFootAndAnkle:
-		return source.GetSourceClientFayetteFootAndAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFayetteSurgicalAssociates:
-		return source.GetSourceClientFayetteSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFayettevilleMedicalAssociatesPC:
-		return source.GetSourceClientFayettevilleMedicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFayettevilleOtolaryngology:
 		return source.GetSourceClientFayettevilleOtolaryngology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFayettevilleSurgicalAssoc:
-		return source.GetSourceClientFayettevilleSurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFeatherRiverTribalHealth:
 		return source.GetSourceClientFeatherRiverTribalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFelixStanziolaMd:
@@ -4724,34 +3906,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFernandesBanerjeeShenoyKidneyCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFernandoLMartinezCatinchiMdPa:
 		return source.GetSourceClientFernandoLMartinezCatinchiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFerrazMdRicardoJP:
-		return source.GetSourceClientFerrazMdRicardoJP(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFiferAndHeligmanMdPa:
-		return source.GetSourceClientFiferAndHeligmanMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFillmoreCountyHospital:
 		return source.GetSourceClientFillmoreCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirehouseDiabetesAndEndocrineCenter:
 		return source.GetSourceClientFirehouseDiabetesAndEndocrineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirepointProdCustomerA:
-		return source.GetSourceClientFirepointProdCustomerA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirepointProdCustomerB:
-		return source.GetSourceClientFirepointProdCustomerB(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirepointProdCustomerC:
-		return source.GetSourceClientFirepointProdCustomerC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirepointProdCustomerD:
-		return source.GetSourceClientFirepointProdCustomerD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirepointProdCustomerZh170100D1:
-		return source.GetSourceClientFirepointProdCustomerZh170100D1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirstBaptistMedicalCenter:
 		return source.GetSourceClientFirstBaptistMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirstCareClinic:
 		return source.GetSourceClientFirstCareClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirstCarePc:
-		return source.GetSourceClientFirstCarePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirstChoiceCommunityHealthcare:
 		return source.GetSourceClientFirstChoiceCommunityHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFirstCoastHeartAndVascularCenterPa:
-		return source.GetSourceClientFirstCoastHeartAndVascularCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirstCoastInfectiousDisease:
 		return source.GetSourceClientFirstCoastInfectiousDisease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFirstCoastNephrology:
@@ -4778,22 +3942,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFlexPhysicalTherapyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloraPhysiciansPllc:
 		return source.GetSourceClientFloraPhysiciansPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFloridaJointCareInstitute:
-		return source.GetSourceClientFloridaJointCareInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaLungAsthmaAndSleepSpecialists:
 		return source.GetSourceClientFloridaLungAsthmaAndSleepSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaLungAsthmaSleepSpecialistsPa:
 		return source.GetSourceClientFloridaLungAsthmaSleepSpecialistsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaNeurology:
 		return source.GetSourceClientFloridaNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFloridaOtolaryngologyGroup:
-		return source.GetSourceClientFloridaOtolaryngologyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaPerinatalAssociates:
 		return source.GetSourceClientFloridaPerinatalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaRetinaAndVitreousCenterPA:
 		return source.GetSourceClientFloridaRetinaAndVitreousCenterPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFloridaSpineInstitute:
-		return source.GetSourceClientFloridaSpineInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaSpineSpecialistsBoca:
 		return source.GetSourceClientFloridaSpineSpecialistsBoca(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFloridaSpineSpecialists:
@@ -4824,8 +3982,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFootAndAnkleCenterOfSj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFootAndAnkleClinicLlp:
 		return source.GetSourceClientFootAndAnkleClinicLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFootAndAnkleClinicOfTheVirginias:
-		return source.GetSourceClientFootAndAnkleClinicOfTheVirginias(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFootAndAnkleSurgeonsOfOklahoma:
 		return source.GetSourceClientFootAndAnkleSurgeonsOfOklahoma(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFootAndAnkle:
@@ -4850,16 +4006,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFoothillVascularCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFoothillsHealthAndWellnessCenter:
 		return source.GetSourceClientFoothillsHealthAndWellnessCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFoothillsPodiatry:
-		return source.GetSourceClientFoothillsPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeForefrontDermatologySC:
 		return source.GetSourceClientForefrontDermatologySC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeForefrontDermatologyWestPC:
 		return source.GetSourceClientForefrontDermatologyWestPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeForensics:
 		return source.GetSourceClientForensics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeForestHillsDermatologyGroup:
-		return source.GetSourceClientForestHillsDermatologyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeForestHillsPediatrics:
 		return source.GetSourceClientForestHillsPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFortBendRheumatologyAssociatesPllc:
@@ -4878,8 +4030,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFortWorthObh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFortyFortAnesthesiaAssociatesLlc:
 		return source.GetSourceClientFortyFortAnesthesiaAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeForumMedicalCenter:
-		return source.GetSourceClientForumMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFoundationForAdvancedEyeCare:
 		return source.GetSourceClientFoundationForAdvancedEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFourSeasonsCompassionForLife:
@@ -4900,22 +4050,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFranciscanMissionariesOfOurLadyHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem:
 		return source.GetSourceClientFranciscanMissionariesOfOurLadyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFranciscoGilProfessionalMedicalCorp:
-		return source.GetSourceClientFranciscoGilProfessionalMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranckJusteMd:
 		return source.GetSourceClientFranckJusteMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFrankDileoMdPracticeOfOphthalmology:
 		return source.GetSourceClientFrankDileoMdPracticeOfOphthalmology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFrankTSconzoJrMd:
 		return source.GetSourceClientFrankTSconzoJrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFranklinCountyMedicalCenter:
-		return source.GetSourceClientFranklinCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranklinGeneralHospital:
 		return source.GetSourceClientFranklinGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFranklinHospitalHealthcareClinic:
-		return source.GetSourceClientFranklinHospitalHealthcareClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFranklinMedicalCenter:
-		return source.GetSourceClientFranklinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranklinMedicalCenter1:
 		return source.GetSourceClientFranklinMedicalCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFranklinPrimaryHealthCenterInc:
@@ -4962,16 +4104,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFridFamilyPracticeAf(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFridFamilyPracticeGf:
 		return source.GetSourceClientFridFamilyPracticeGf(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFriendsOfFamilyHealthCenter:
-		return source.GetSourceClientFriendsOfFamilyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFriscoCardioAndVascularCare:
 		return source.GetSourceClientFriscoCardioAndVascularCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFritoLayOrlando:
 		return source.GetSourceClientFritoLayOrlando(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFroedtertHealth:
 		return source.GetSourceClientFroedtertHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeFrontRangeOrthopedics:
-		return source.GetSourceClientFrontRangeOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFrontRangeSurgicalAssociates:
 		return source.GetSourceClientFrontRangeSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFrontRangeSurgicalServices:
@@ -5006,8 +4144,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientFvcSouthFloridaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeFvcTampaLlc:
 		return source.GetSourceClientFvcTampaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGAndGHealthcare:
-		return source.GetSourceClientGAndGHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGPerrinUnderwoodMd:
 		return source.GetSourceClientGPerrinUnderwoodMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGScotJohnsonMd:
@@ -5054,8 +4190,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGarlandIsdClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGarnerDermatology:
 		return source.GetSourceClientGarnerDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGarnerInternalMedicine:
-		return source.GetSourceClientGarnerInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGarnetHealth:
 		return source.GetSourceClientGarnetHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGarrisonFamilyPhysiciansPc:
@@ -5070,8 +4204,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGastroDiagCtrOfMplsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroDiagnosticsOfNorthernNj:
 		return source.GetSourceClientGastroDiagnosticsOfNorthernNj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroGroupOfThePalmBeachesLlp:
-		return source.GetSourceClientGastroGroupOfThePalmBeachesLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroIntestinalConsultantsOfManhattanPA:
 		return source.GetSourceClientGastroIntestinalConsultantsOfManhattanPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroPediatricPartners:
@@ -5080,34 +4212,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGastrodiagnosticsAMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroenterologyAndHepatologySpecial:
 		return source.GetSourceClientGastroenterologyAndHepatologySpecial(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyAndHepatology:
-		return source.GetSourceClientGastroenterologyAndHepatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyAssociatesOfCentralVirginia:
-		return source.GetSourceClientGastroenterologyAssociatesOfCentralVirginia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyAssociatesOfGainesvillePC:
-		return source.GetSourceClientGastroenterologyAssociatesOfGainesvillePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyAssociates1:
-		return source.GetSourceClientGastroenterologyAssociates1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeGastroenterologyAssociates:
+		return source.GetSourceClientGastroenterologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroenterologyCenterMs:
 		return source.GetSourceClientGastroenterologyCenterMs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroenterologyCenterOfConnecticut:
 		return source.GetSourceClientGastroenterologyCenterOfConnecticut(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyConsultantsPa:
-		return source.GetSourceClientGastroenterologyConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastroenterologyConsultantsPc:
 		return source.GetSourceClientGastroenterologyConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyConsultants:
-		return source.GetSourceClientGastroenterologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologyGroupNaples:
-		return source.GetSourceClientGastroenterologyGroupNaples(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastroenterologySpecialistsOfGwinnettPc:
-		return source.GetSourceClientGastroenterologySpecialistsOfGwinnettPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastrointestinalEndoscopyCenter:
 		return source.GetSourceClientGastrointestinalEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGastrointestinalSpecialistsInc:
 		return source.GetSourceClientGastrointestinalSpecialistsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGastrointestinalSpecialists:
-		return source.GetSourceClientGastrointestinalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGatewayCardiologyPC:
 		return source.GetSourceClientGatewayCardiologyPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGavyMdCsp:
@@ -5134,30 +4250,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGeminus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital:
 		return source.GetSourceClientGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeneralSurgeonsOfWesternColorado:
-		return source.GetSourceClientGeneralSurgeonsOfWesternColorado(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeneralSurgeryMedicalGroupOfVenturaCounty:
-		return source.GetSourceClientGeneralSurgeryMedicalGroupOfVenturaCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeneralSurgicalAssociatesPC:
 		return source.GetSourceClientGeneralSurgicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeneseeCommunityHealthCenter:
 		return source.GetSourceClientGeneseeCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeneseeFamilyCare:
-		return source.GetSourceClientGeneseeFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGenesisHealthSystem:
 		return source.GetSourceClientGenesisHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGenesisHealthSystem1:
 		return source.GetSourceClientGenesisHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGenesisHealthcarePartners:
-		return source.GetSourceClientGenesisHealthcarePartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGenesisHealthcareSystem:
 		return source.GetSourceClientGenesisHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGenesysFamilyMedicine:
-		return source.GetSourceClientGenesysFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGenesysPho:
-		return source.GetSourceClientGenesysPho(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGenevaMedicalGroup:
-		return source.GetSourceClientGenevaMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGentryHaughtonLlc:
 		return source.GetSourceClientGentryHaughtonLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgeCYuMdInc:
@@ -5172,24 +4274,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGeorgiaCenterForWomen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgiaClinicPc:
 		return source.GetSourceClientGeorgiaClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeorgiaDermatologyCenter:
-		return source.GetSourceClientGeorgiaDermatologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgiaEyeInstituteOfTheSoutheast:
 		return source.GetSourceClientGeorgiaEyeInstituteOfTheSoutheast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgiaEyeInstituteSurgeryCenter:
 		return source.GetSourceClientGeorgiaEyeInstituteSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeorgiaKidneyAssoc:
-		return source.GetSourceClientGeorgiaKidneyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeorgiaKidzPediatrics:
-		return source.GetSourceClientGeorgiaKidzPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgiaUrologyAsc:
 		return source.GetSourceClientGeorgiaUrologyAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeorgiaUrologyPa:
 		return source.GetSourceClientGeorgiaUrologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeraldChampionRegionalMedicalCenter:
 		return source.GetSourceClientGeraldChampionRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGeraldGordonMdFacpLlc:
-		return source.GetSourceClientGeraldGordonMdFacpLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGeraldJAlexanderMd:
 		return source.GetSourceClientGeraldJAlexanderMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGerardoBMartinInc:
@@ -5198,12 +4292,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGerryMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGersteinEyeInstitute:
 		return source.GetSourceClientGersteinEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGesslerClinic:
-		return source.GetSourceClientGesslerClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGetFitGetHealthy:
 		return source.GetSourceClientGetFitGetHealthy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGetWellStayWellMedicalCorp:
-		return source.GetSourceClientGetWellStayWellMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGetwellFamilyMedicine:
 		return source.GetSourceClientGetwellFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGiHealthcareLlc:
@@ -5316,34 +4406,20 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGradyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrandHealthPartners:
 		return source.GetSourceClientGrandHealthPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrandIslandClinicInc:
-		return source.GetSourceClientGrandIslandClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrandJunctionFamilyMedicine:
-		return source.GetSourceClientGrandJunctionFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrandMeridianFootAndAnkle:
 		return source.GetSourceClientGrandMeridianFootAndAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrandTraverseOphthalmologyClinic:
 		return source.GetSourceClientGrandTraverseOphthalmologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrandValleyMedicalSpecialistsPlc:
-		return source.GetSourceClientGrandValleyMedicalSpecialistsPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrandValleyPractices:
-		return source.GetSourceClientGrandValleyPractices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGranitePeaksEndoscopy:
 		return source.GetSourceClientGranitePeaksEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGranitePeaksGastroenterology:
 		return source.GetSourceClientGranitePeaksGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrantBexleyFamilyPractice:
 		return source.GetSourceClientGrantBexleyFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrantMarshall:
-		return source.GetSourceClientGrantMarshall(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrantsPassClinic:
-		return source.GetSourceClientGrantsPassClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrantsvilleMtnLaurel:
 		return source.GetSourceClientGrantsvilleMtnLaurel(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGraphicPackagingInternationalLlc:
 		return source.GetSourceClientGraphicPackagingInternationalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGravesGilbertClininc:
-		return source.GetSourceClientGravesGilbertClininc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGraybillMedicalGroupInc:
 		return source.GetSourceClientGraybillMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGraystoneEyeSurgeryCenter:
@@ -5352,8 +4428,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGraystoneOphthalmologyAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreatLakesCenterOfRheumatology:
 		return source.GetSourceClientGreatLakesCenterOfRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGreatLakesGastroenterologyPllc:
-		return source.GetSourceClientGreatLakesGastroenterologyPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreatLakesOrthopaedicCenter:
 		return source.GetSourceClientGreatLakesOrthopaedicCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreatNeckVascular:
@@ -5364,16 +4438,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGreatRiverHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterBaltimoreMedicalCenter:
 		return source.GetSourceClientGreaterBaltimoreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGreaterBostonGastroenterology:
-		return source.GetSourceClientGreaterBostonGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterFamilyHealth:
 		return source.GetSourceClientGreaterFamilyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGreaterHoustonNeurosurgeryCenter:
-		return source.GetSourceClientGreaterHoustonNeurosurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterHoustonPsychiatricAssociates:
 		return source.GetSourceClientGreaterHoustonPsychiatricAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGreaterKnoxvilleEarNoseAndThroatAssociates:
-		return source.GetSourceClientGreaterKnoxvilleEarNoseAndThroatAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterNashvilleMfm:
 		return source.GetSourceClientGreaterNashvilleMfm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreaterNashvillePerinatology:
@@ -5412,8 +4480,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGreenvilleEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreenvilleEntAndAllergyAssociatesPa:
 		return source.GetSourceClientGreenvilleEntAndAllergyAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGreenvilleFamilyDoctors:
-		return source.GetSourceClientGreenvilleFamilyDoctors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreenvilleRancheria:
 		return source.GetSourceClientGreenvilleRancheria(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGreenvilleSurgicalClinicPa:
@@ -5446,12 +4512,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGrhcAmbulatory(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrhcBehavioralHealth:
 		return source.GetSourceClientGrhcBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGriegoFamilyMedicalCenter:
-		return source.GetSourceClientGriegoFamilyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGriffinAndReedEyeCareAMedicalCorp:
 		return source.GetSourceClientGriffinAndReedEyeCareAMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGrinnellRegionalMedicalCenter:
-		return source.GetSourceClientGrinnellRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGrisellMemorialHospitalDistrict1:
 		return source.GetSourceClientGrisellMemorialHospitalDistrict1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGronholzDoMJill:
@@ -5470,16 +4532,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGuilfordEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGuilhermeRCarvalhoMdInc:
 		return source.GetSourceClientGuilhermeRCarvalhoMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGuillermoGonzalezMd:
-		return source.GetSourceClientGuillermoGonzalezMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGuillermoValenzuelaMdPa:
 		return source.GetSourceClientGuillermoValenzuelaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGulfCoastEndoscopyCenterSouth:
 		return source.GetSourceClientGulfCoastEndoscopyCenterSouth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGulfCoastObHospitalist:
 		return source.GetSourceClientGulfCoastObHospitalist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGulfCoastPhysicanPartners:
-		return source.GetSourceClientGulfCoastPhysicanPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGulfStatesPhysicalMedRehab:
 		return source.GetSourceClientGulfStatesPhysicalMedRehab(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGulfcoastSpineInstitute:
@@ -5494,36 +4552,24 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientGuthMdLeonardD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGwinnettMedicalGroup:
 		return source.GetSourceClientGwinnettMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGwinnettSurgicalAssocPCGa:
-		return source.GetSourceClientGwinnettSurgicalAssocPCGa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGwyneddMercyCollege:
 		return source.GetSourceClientGwyneddMercyCollege(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGynFeministWomensHealthCenter:
 		return source.GetSourceClientGynFeministWomensHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGynFertilitySpecialists:
-		return source.GetSourceClientGynFertilitySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGynOncologySpecialists:
 		return source.GetSourceClientGynOncologySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGynecologicAndReconstructiveSurgery:
 		return source.GetSourceClientGynecologicAndReconstructiveSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeGynecologicOncologyAssociates:
 		return source.GetSourceClientGynecologicOncologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeGynobAssoc:
-		return source.GetSourceClientGynobAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHCharlesHarrisMdPa:
 		return source.GetSourceClientHCharlesHarrisMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHKolliMdMedicalCorpWildomar:
 		return source.GetSourceClientHKolliMdMedicalCorpWildomar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHLeeMoffittCancerCenterAndResearchInstitute:
 		return source.GetSourceClientHLeeMoffittCancerCenterAndResearchInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHabershamObgyn:
-		return source.GetSourceClientHabershamObgyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHackensackDigestiveDiseaseAssociates:
-		return source.GetSourceClientHackensackDigestiveDiseaseAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHackensackMeridianHealth1:
 		return source.GetSourceClientHackensackMeridianHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHackleyCommunityCareCenter:
-		return source.GetSourceClientHackleyCommunityCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHadiaAshrafMd:
 		return source.GetSourceClientHadiaAshrafMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHaleKealaokekoa:
@@ -5532,8 +4578,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHallCanterMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHallandaleOutPatientSurgicalCenter:
 		return source.GetSourceClientHallandaleOutPatientSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHallerHugPoppPc:
-		return source.GetSourceClientHallerHugPoppPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHamiltonCounty:
 		return source.GetSourceClientHamiltonCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHamiltonHealthCareSystem:
@@ -5544,8 +4588,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHamptonCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHamptonFamilyPractice:
 		return source.GetSourceClientHamptonFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHamptonRoadsEntAllergy:
-		return source.GetSourceClientHamptonRoadsEntAllergy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHamptonRoadsGastroenterology:
 		return source.GetSourceClientHamptonRoadsGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHamptonRoadsOrthoSpineAndSportsMed:
@@ -5554,52 +4596,30 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHamptonRoadsOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHancockCountyHealthSystem:
 		return source.GetSourceClientHancockCountyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHancockCountyHealth:
-		return source.GetSourceClientHancockCountyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHandSurgeryAssociatesSc:
-		return source.GetSourceClientHandSurgeryAssociatesSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHaniISalibMd:
 		return source.GetSourceClientHaniISalibMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHannibalRegionalHospital:
-		return source.GetSourceClientHannibalRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHansenFamilyHospital:
 		return source.GetSourceClientHansenFamilyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHansonMedicalGroupInc:
 		return source.GetSourceClientHansonMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHanyKZakiMDInc:
 		return source.GetSourceClientHanyKZakiMDInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHaraldKowaMd:
-		return source.GetSourceClientHaraldKowaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHardinMedicalCenter:
 		return source.GetSourceClientHardinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHardinMedicalCenter1:
-		return source.GetSourceClientHardinMedicalCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarfordEndoscopyCenter:
 		return source.GetSourceClientHarfordEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarmanEyeCenterDominionEyeCenter:
 		return source.GetSourceClientHarmanEyeCenterDominionEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHarneSongWooMdPa:
-		return source.GetSourceClientHarneSongWooMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHarnettHealthSystems:
-		return source.GetSourceClientHarnettHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHaroldGillespieMd:
 		return source.GetSourceClientHaroldGillespieMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHarringtonMemorialHospitalProd:
-		return source.GetSourceClientHarringtonMemorialHospitalProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarrisAndBatraCardiology:
 		return source.GetSourceClientHarrisAndBatraCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarrisHealthSystem:
 		return source.GetSourceClientHarrisHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHarrisburgFamilyMedicalClinic:
-		return source.GetSourceClientHarrisburgFamilyMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHarrisburgMedicalCenter:
-		return source.GetSourceClientHarrisburgMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarrisonCountyHospital:
 		return source.GetSourceClientHarrisonCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHartfordHealthcare:
 		return source.GetSourceClientHartfordHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHartfordNeurologyLlc:
-		return source.GetSourceClientHartfordNeurologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHarvardEyeAssociates:
 		return source.GetSourceClientHarvardEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHaskellMemorialHospital:
@@ -5608,8 +4628,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHassanAKobaissiDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital:
 		return source.GetSourceClientHattiesburgClinicAndForrestGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHavasuRainbowPediatricsPc:
-		return source.GetSourceClientHavasuRainbowPediatricsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHawaiiFootAndAnkleAssociates:
 		return source.GetSourceClientHawaiiFootAndAnkleAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHawaiiHealthSystemsCorpKauaiRegion:
@@ -5622,28 +4640,20 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHaycoLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHaydenLakeFamilyPhysicians:
 		return source.GetSourceClientHaydenLakeFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHaywoodPediatrics:
-		return source.GetSourceClientHaywoodPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHazeldenBettyFordFoundation:
 		return source.GetSourceClientHazeldenBettyFordFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaCentralAndWestTexas:
 		return source.GetSourceClientHcaCentralAndWestTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaFloridaCitrusHospital:
 		return source.GetSourceClientHcaFloridaCitrusHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHcaHealthcare:
+		return source.GetSourceClientHcaHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaMountain:
 		return source.GetSourceClientHcaMountain(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHcaSouthAtlantic:
 		return source.GetSourceClientHcaSouthAtlantic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHcaprod36:
-		return source.GetSourceClientHcaprod36(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHcaprod361:
-		return source.GetSourceClientHcaprod361(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHcpServicesLlc:
-		return source.GetSourceClientHcpServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeadAndNeckAssocOfOrangeCounty:
 		return source.GetSourceClientHeadAndNeckAssocOfOrangeCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeadAndNeckSurgeryOfKansasCity:
-		return source.GetSourceClientHeadAndNeckSurgeryOfKansasCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealdsburgDistrictHospital:
 		return source.GetSourceClientHealdsburgDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthConsultingSystemsInc:
@@ -5678,12 +4688,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHealtheEmployerClinic3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealtheEmployerClinic4:
 		return source.GetSourceClientHealtheEmployerClinic4(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHealthmatics4Azure:
-		return source.GetSourceClientHealthmatics4Azure(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHealthmatics:
-		return source.GetSourceClientHealthmatics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHealthparkPediatrics:
-		return source.GetSourceClientHealthparkPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthpartners:
 		return source.GetSourceClientHealthpartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthpoint:
@@ -5698,8 +4702,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHealthsourceOfOhio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthwiseInc:
 		return source.GetSourceClientHealthwiseInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHealthwiseMedicalAssociatesLlp:
-		return source.GetSourceClientHealthwiseMedicalAssociatesLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthworksCc:
 		return source.GetSourceClientHealthworksCc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHealthyBlueLaMedicaid:
@@ -5730,16 +4732,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHeartCenterOfSouthernMarylandLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeartCenterPc:
 		return source.GetSourceClientHeartCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeartGroupOfTheEasternShore:
-		return source.GetSourceClientHeartGroupOfTheEasternShore(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeartInstituteOfEastTexasPA:
 		return source.GetSourceClientHeartInstituteOfEastTexasPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeartNLakeCardiovascular:
-		return source.GetSourceClientHeartNLakeCardiovascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeartOfIllinoisObGyn:
 		return source.GetSourceClientHeartOfIllinoisObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeartOfOhioInc:
-		return source.GetSourceClientHeartOfOhioInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeartlandHealthCenterInc:
 		return source.GetSourceClientHeartlandHealthCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeartlandPediatrics:
@@ -5758,8 +4754,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHeidiBrewerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeidiMayerOd:
 		return source.GetSourceClientHeidiMayerOd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeiskellKingBurnsAndTallmanOfMonGeneral:
-		return source.GetSourceClientHeiskellKingBurnsAndTallmanOfMonGeneral(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHemantUpadhyayaMd:
 		return source.GetSourceClientHemantUpadhyayaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHematologyOncologyCenter:
@@ -5772,12 +4766,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHemeDiagnosticSpecialistsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHemeltNeurology:
 		return source.GetSourceClientHemeltNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHemostasisAndThrombosisCenterOfNv:
-		return source.GetSourceClientHemostasisAndThrombosisCenterOfNv(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHemphillCountyHospital:
 		return source.GetSourceClientHemphillCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHendersonvilleObGynAssoc:
-		return source.GetSourceClientHendersonvilleObGynAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHendrickClinicBoneAndJoint:
 		return source.GetSourceClientHendrickClinicBoneAndJoint(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHendricksRegionalHealth:
@@ -5802,10 +4792,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHeritageHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeritageMedicalAssociatesPa:
 		return source.GetSourceClientHeritageMedicalAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeritageMedicalAssociates:
-		return source.GetSourceClientHeritageMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHeritageValleyHealthSystem:
-		return source.GetSourceClientHeritageValleyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHeritageVictorValleyMedicalGroup:
 		return source.GetSourceClientHeritageVictorValleyMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHermannAreaDistrictHospital:
@@ -5814,38 +4800,26 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHerrKosticMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHerreraAndObesoMedicalGroup:
 		return source.GetSourceClientHerreraAndObesoMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHgaJcBlairMedicalServicesInc:
-		return source.GetSourceClientHgaJcBlairMedicalServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHhpInternalMedicineAssociates:
 		return source.GetSourceClientHhpInternalMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHickoryAdultMedicineKidneySpecialist:
-		return source.GetSourceClientHickoryAdultMedicineKidneySpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHidenaoKimuraMdLlc:
 		return source.GetSourceClientHidenaoKimuraMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighCountryFamilyCare:
 		return source.GetSourceClientHighCountryFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHighDesertDermatology:
-		return source.GetSourceClientHighDesertDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighDesertHeartVascularInstitute:
 		return source.GetSourceClientHighDesertHeartVascularInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighDesertMedicalGroupOccMed:
 		return source.GetSourceClientHighDesertMedicalGroupOccMed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighDesertMedicalGroup:
 		return source.GetSourceClientHighDesertMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHighDesertNeuroDiag:
-		return source.GetSourceClientHighDesertNeuroDiag(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighlandClinicApmc:
 		return source.GetSourceClientHighlandClinicApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighlandClinicPharmacyLlc:
 		return source.GetSourceClientHighlandClinicPharmacyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHighlandDistrictHospitalProfessionalServiceCorporation:
-		return source.GetSourceClientHighlandDistrictHospitalProfessionalServiceCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighlandMedicalPc:
 		return source.GetSourceClientHighlandMedicalPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHighmarkWesternNewYork:
 		return source.GetSourceClientHighmarkWesternNewYork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHighpointHealthPhysicianPartners:
-		return source.GetSourceClientHighpointHealthPhysicianPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHillCountryMaternalFetalMedicine:
 		return source.GetSourceClientHillCountryMaternalFetalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHillPhysicians:
@@ -5874,24 +4848,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHmgHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHmmReports:
 		return source.GetSourceClientHmmReports(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHoagChristineLeehealeyMd:
-		return source.GetSourceClientHoagChristineLeehealeyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoagClinicGoa:
 		return source.GetSourceClientHoagClinicGoa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoagMemorialHospitalPresbyterian:
 		return source.GetSourceClientHoagMemorialHospitalPresbyterian(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHoldregeMedicalClinicPc:
-		return source.GetSourceClientHoldregeMedicalClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHollandEyeClinicPc:
 		return source.GetSourceClientHollandEyeClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHollandHospital:
 		return source.GetSourceClientHollandHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHollisterIncorporated:
 		return source.GetSourceClientHollisterIncorporated(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHolmesFamilyMedicineInc:
-		return source.GetSourceClientHolmesFamilyMedicineInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHolstonMedicalGroup1:
-		return source.GetSourceClientHolstonMedicalGroup1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeHolstonMedicalGroup:
+		return source.GetSourceClientHolstonMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHolyCrossHealthNetworkPractices:
 		return source.GetSourceClientHolyCrossHealthNetworkPractices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHolyFamilyMemorialInc:
@@ -5918,14 +4886,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHopenAndWolfeMdsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHorizonEyeCare:
 		return source.GetSourceClientHorizonEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHorizonFamilyMedicalPa:
-		return source.GetSourceClientHorizonFamilyMedicalPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHorizonHealthServices:
 		return source.GetSourceClientHorizonHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHorizonHealthcare:
 		return source.GetSourceClientHorizonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHorizonSurgicalSpecialist:
-		return source.GetSourceClientHorizonSurgicalSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHospBasedPocPediatrixMedicalOfTx:
 		return source.GetSourceClientHospBasedPocPediatrixMedicalOfTx(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHospiceOfRockinghamCounty:
@@ -5948,8 +4912,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHoustonEntClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoustonHearingCenter:
 		return source.GetSourceClientHoustonHearingCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHoustonInterventionalCardiologyPA:
-		return source.GetSourceClientHoustonInterventionalCardiologyPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoustonMethodist:
 		return source.GetSourceClientHoustonMethodist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHoustonMultispecialtySurgicalPractice:
@@ -5984,8 +4946,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHumanSkillsAndResources(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHumaneCenterForArthritisAndRheumatism:
 		return source.GetSourceClientHumaneCenterForArthritisAndRheumatism(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHumbertoAGallenoMdInc:
-		return source.GetSourceClientHumbertoAGallenoMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHumboldtGeneralHospital:
 		return source.GetSourceClientHumboldtGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHunterdonAdultHospitalistsService:
@@ -6106,8 +5066,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientHuronValleyPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHutchinsonRegionalMedicalCenter:
 		return source.GetSourceClientHutchinsonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeHvhsProd:
-		return source.GetSourceClientHvhsProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHypertensionNephrologyAssociatesAsc:
 		return source.GetSourceClientHypertensionNephrologyAssociatesAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeHypertensionNephrology:
@@ -6130,12 +5088,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIdCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIdahoArthritisCenter:
 		return source.GetSourceClientIdahoArthritisCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIdahoFootAnkle:
-		return source.GetSourceClientIdahoFootAnkle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIdahoGastroenterologyAssocia:
-		return source.GetSourceClientIdahoGastroenterologyAssocia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIdahoKidneyInstituteLlp:
-		return source.GetSourceClientIdahoKidneyInstituteLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIdentityMedicalGroupInc:
 		return source.GetSourceClientIdentityMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIfasManagementLlc:
@@ -6170,12 +5122,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIndianHealthCouncil(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIndianaFootAndAnkleSpecialist:
 		return source.GetSourceClientIndianaFootAndAnkleSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIndianaInfectiousDiseasePsc:
-		return source.GetSourceClientIndianaInfectiousDiseasePsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIndianaKidneyInstitute:
 		return source.GetSourceClientIndianaKidneyInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIndianaNeuroophthalCtrForBalance:
-		return source.GetSourceClientIndianaNeuroophthalCtrForBalance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIndianaRegionalMedicalCenter:
 		return source.GetSourceClientIndianaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIndianaSpineGroupPC:
@@ -6192,20 +5140,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIndianapolisGastroenterologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIndianapolisLab:
 		return source.GetSourceClientIndianapolisLab(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIndianheadMedicalCenter:
-		return source.GetSourceClientIndianheadMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIndianolaFamilyMedicalGroup:
-		return source.GetSourceClientIndianolaFamilyMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInfantsAndToddlersProgram:
 		return source.GetSourceClientInfantsAndToddlersProgram(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInfectionsLimited:
-		return source.GetSourceClientInfectionsLimited(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInfectiousDiseaseAssoc:
-		return source.GetSourceClientInfectiousDiseaseAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInfectiousDiseaseConsultants:
 		return source.GetSourceClientInfectiousDiseaseConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInfectiousDiseaseSpecialistsOfAtlantaPC:
-		return source.GetSourceClientInfectiousDiseaseSpecialistsOfAtlantaPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInfectiousDiseaseSpecialistsSc:
 		return source.GetSourceClientInfectiousDiseaseSpecialistsSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInfectiousDiseasesAssociatesPc:
@@ -6232,8 +5170,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientInlandValleyRetinaMedicalAssocInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInnercare:
 		return source.GetSourceClientInnercare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInnovativeCommunityHealth:
-		return source.GetSourceClientInnovativeCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInnovativeDermatology:
 		return source.GetSourceClientInnovativeDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInnovativeInfusions:
@@ -6252,8 +5188,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientInspiraHealthNetworkInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInspiraMedicalCenterWoodburyInc:
 		return source.GetSourceClientInspiraMedicalCenterWoodburyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInspireEntAndPulmonology:
-		return source.GetSourceClientInspireEntAndPulmonology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInstituteForFamilyHealth:
 		return source.GetSourceClientInstituteForFamilyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInstituteForNonSurgicalOrthopedics:
@@ -6272,8 +5206,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIntegratedBehavioralHealthSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntegratedFamilyServices:
 		return source.GetSourceClientIntegratedFamilyServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIntegratedMedicalProfessionals:
-		return source.GetSourceClientIntegratedMedicalProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntegrativeArthritisPainConsultants:
 		return source.GetSourceClientIntegrativeArthritisPainConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntegrativeHealth:
@@ -6290,8 +5222,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIntensiveTreatmentSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntensivistGroup:
 		return source.GetSourceClientIntensivistGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInterboroHeartAssociates:
-		return source.GetSourceClientInterboroHeartAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntermountainHealthcareInc:
 		return source.GetSourceClientIntermountainHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIntermountainHealthcare:
@@ -6300,62 +5230,36 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIntermountainMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicineAndPediatricsOfCullmanPC:
 		return source.GetSourceClientInternalMedicineAndPediatricsOfCullmanPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineAndPediatricsWellnessCenter:
-		return source.GetSourceClientInternalMedicineAndPediatricsWellnessCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineAssocOfSouthDallas:
-		return source.GetSourceClientInternalMedicineAssocOfSouthDallas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineAssoc1:
-		return source.GetSourceClientInternalMedicineAssoc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicineAssociatesOfBentonPA:
 		return source.GetSourceClientInternalMedicineAssociatesOfBentonPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicineAssociatesOfRaleigh:
 		return source.GetSourceClientInternalMedicineAssociatesOfRaleigh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicineConsultantsLlc:
 		return source.GetSourceClientInternalMedicineConsultantsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineGeriatrics:
-		return source.GetSourceClientInternalMedicineGeriatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicineLlc:
 		return source.GetSourceClientInternalMedicineLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineOfGriffin:
-		return source.GetSourceClientInternalMedicineOfGriffin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineOfYuma:
-		return source.GetSourceClientInternalMedicineOfYuma(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicinePhysiciansOfNewport:
 		return source.GetSourceClientInternalMedicinePhysiciansOfNewport(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicinePhysiciansPc:
 		return source.GetSourceClientInternalMedicinePhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternalMedicineSpecialistsOfAtlantaPC:
-		return source.GetSourceClientInternalMedicineSpecialistsOfAtlantaPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternalMedicine:
 		return source.GetSourceClientInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInternationalHealingMinistries:
 		return source.GetSourceClientInternationalHealingMinistries(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInternistsAssociated:
-		return source.GetSourceClientInternistsAssociated(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInterventionalCardiologyConsultants:
 		return source.GetSourceClientInterventionalCardiologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInterventionalCardiology:
-		return source.GetSourceClientInterventionalCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInterventionalNephrologyOfKcLlc:
 		return source.GetSourceClientInterventionalNephrologyOfKcLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInterventionalNephrologySpecialists:
 		return source.GetSourceClientInterventionalNephrologySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeInterventionalPainSpecialist:
-		return source.GetSourceClientInterventionalPainSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeInterventionalPainSpecialists:
 		return source.GetSourceClientInterventionalPainSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIowaArthritisAndOsteoporosisCenter:
 		return source.GetSourceClientIowaArthritisAndOsteoporosisCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIowaEntAndSinusSurgeryCenterPc:
-		return source.GetSourceClientIowaEntAndSinusSurgeryCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIowaEyeCenter:
 		return source.GetSourceClientIowaEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIowaFootCareCenter:
 		return source.GetSourceClientIowaFootCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIowaHeadAndNeckPc:
-		return source.GetSourceClientIowaHeadAndNeckPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIowaKidneyPhysiciansPc:
-		return source.GetSourceClientIowaKidneyPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIowaOrtho:
 		return source.GetSourceClientIowaOrtho(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIpnEhrReadOnlyDenverHeart:
@@ -6378,18 +5282,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientIsaacBeshayMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIsabellaCitizensForHealthInc:
 		return source.GetSourceClientIsabellaCitizensForHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIsabellaUrgentCare:
-		return source.GetSourceClientIsabellaUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIslandEyeSurgicenterBusinessOffice:
 		return source.GetSourceClientIslandEyeSurgicenterBusinessOffice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIslandHealthInc:
-		return source.GetSourceClientIslandHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIslandObgyn:
 		return source.GetSourceClientIslandObgyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIslandsCommunityMedicalServices:
 		return source.GetSourceClientIslandsCommunityMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeIsmeldaGarza:
-		return source.GetSourceClientIsmeldaGarza(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIssacHaddadMdInc:
 		return source.GetSourceClientIssacHaddadMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeIvySpringsMedicalCareInc:
@@ -6406,8 +5304,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJEDunnConstructionCo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJEHartleyTurpinMd:
 		return source.GetSourceClientJEHartleyTurpinMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJEricWieczorekMd:
-		return source.GetSourceClientJEricWieczorekMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJFMcguckinMdOfMdPaWaldorf:
 		return source.GetSourceClientJFMcguckinMdOfMdPaWaldorf(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJFernandezAndRMolina:
@@ -6416,16 +5312,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJFernandezAndRMolina1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJRaymondLiMd:
 		return source.GetSourceClientJRaymondLiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJRichardLillyMd:
-		return source.GetSourceClientJRichardLillyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJWalterSledgeMdPllc:
 		return source.GetSourceClientJWalterSledgeMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonAndLayne:
 		return source.GetSourceClientJacksonAndLayne(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonBoneAndJoint:
 		return source.GetSourceClientJacksonBoneAndJoint(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJacksonGastroenterology:
-		return source.GetSourceClientJacksonGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonHealthSystem:
 		return source.GetSourceClientJacksonHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonHospital:
@@ -6440,18 +5332,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJacksonSiegelbaumGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonvilleAsc:
 		return source.GetSourceClientJacksonvilleAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJacksonvilleBrainAndSpinePllc:
-		return source.GetSourceClientJacksonvilleBrainAndSpinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonvilleCenterForEndoscopy:
 		return source.GetSourceClientJacksonvilleCenterForEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonvilleObhPractice:
 		return source.GetSourceClientJacksonvilleObhPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJacksonvilleObh:
 		return source.GetSourceClientJacksonvilleObh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJacquelineBracyMd:
-		return source.GetSourceClientJacquelineBracyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJaePakMd:
-		return source.GetSourceClientJaePakMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJaiHyonRhoMDPhD:
 		return source.GetSourceClientJaiHyonRhoMDPhD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJail:
@@ -6470,26 +5356,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJamesBrungoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesCCrittendenMd:
 		return source.GetSourceClientJamesCCrittendenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJamesClinicInc:
-		return source.GetSourceClientJamesClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesFierroDo:
 		return source.GetSourceClientJamesFierroDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJamesHThomasMd:
-		return source.GetSourceClientJamesHThomasMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesKHesterMdPa:
 		return source.GetSourceClientJamesKHesterMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesMHurstDpm:
 		return source.GetSourceClientJamesMHurstDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJamesMaddoxMd:
-		return source.GetSourceClientJamesMaddoxMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJamesMorganMd:
-		return source.GetSourceClientJamesMorganMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesRMilneDoPa:
 		return source.GetSourceClientJamesRMilneDoPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesRommerMd:
 		return source.GetSourceClientJamesRommerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJamesSYehMd:
-		return source.GetSourceClientJamesSYehMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesSongMdInc:
 		return source.GetSourceClientJamesSongMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJamesTCortInternalMedicine:
@@ -6504,22 +5380,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJasmineLRamosMdFaap(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJasonAmatoMdDermatologyLlc:
 		return source.GetSourceClientJasonAmatoMdDermatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJasonCormierMdApmc:
-		return source.GetSourceClientJasonCormierMdApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJasonDefrancisMdPa:
 		return source.GetSourceClientJasonDefrancisMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJasperMemorialHospital:
 		return source.GetSourceClientJasperMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJatinKPithadiaMdPc:
-		return source.GetSourceClientJatinKPithadiaMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJatinderChopraMd:
 		return source.GetSourceClientJatinderChopraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJavedAhmadAProfessionalMedicalCorp:
 		return source.GetSourceClientJavedAhmadAProfessionalMedicalCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJavedCardiologyCenter:
-		return source.GetSourceClientJavedCardiologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJavierZelayaMdPc:
-		return source.GetSourceClientJavierZelayaMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJaxAnesthesiaProvidersLlc:
 		return source.GetSourceClientJaxAnesthesiaProvidersLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJayALevinMdPc:
@@ -6544,10 +5412,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJeffDavisHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffPanMdPc:
 		return source.GetSourceClientJeffPanMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJeffersAndMannPediatrics:
-		return source.GetSourceClientJeffersAndMannPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJeffersonCityMedicalGroup:
-		return source.GetSourceClientJeffersonCityMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffersonCommunityHealthAndLife:
 		return source.GetSourceClientJeffersonCommunityHealthAndLife(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffersonCountyOrthopaedics:
@@ -6556,12 +5420,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJeffersonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffersonPsychiatricAssociatesLlc:
 		return source.GetSourceClientJeffersonPsychiatricAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJeffersonRegionalMedicalCenter:
-		return source.GetSourceClientJeffersonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffreyAFischerDpm:
 		return source.GetSourceClientJeffreyAFischerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJeffreyCStoneDpm:
-		return source.GetSourceClientJeffreyCStoneDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffreyLMarksMd:
 		return source.GetSourceClientJeffreyLMarksMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJeffreyLubellDpm:
@@ -6598,8 +5458,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJmdFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoLynnPolkMd:
 		return source.GetSourceClientJoLynnPolkMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJoanneFoodimMdLlc:
-		return source.GetSourceClientJoanneFoodimMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoeChungMd:
 		return source.GetSourceClientJoeChungMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoelFrankelMdPa:
@@ -6610,24 +5468,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJoelMCorwinMdAmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoeyBrettMdApmc:
 		return source.GetSourceClientJoeyBrettMdApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJohnASchmidtJrMdLlc:
-		return source.GetSourceClientJohnASchmidtJrMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnASturgesMdPa:
 		return source.GetSourceClientJohnASturgesMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJohnBCriderMd:
-		return source.GetSourceClientJohnBCriderMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnGMillerMd:
 		return source.GetSourceClientJohnGMillerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJohnHumeniukMD:
-		return source.GetSourceClientJohnHumeniukMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnJKaminskiMd:
 		return source.GetSourceClientJohnJKaminskiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnKenyonAmericanEyeInstituteLlc:
 		return source.GetSourceClientJohnKenyonAmericanEyeInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnKnoxVillageOfCentralFloridaInc:
 		return source.GetSourceClientJohnKnoxVillageOfCentralFloridaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJohnMcleodIiiMd:
-		return source.GetSourceClientJohnMcleodIiiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnMuirHealth:
 		return source.GetSourceClientJohnMuirHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnnyArrudaMdInc:
@@ -6640,8 +5490,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJohnsHopkinsAllChildrensHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnsHopkinsMedicine:
 		return source.GetSourceClientJohnsHopkinsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJohnsonCountyHealthcareCenter:
-		return source.GetSourceClientJohnsonCountyHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnsonCountyHospital:
 		return source.GetSourceClientJohnsonCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJohnsonCounty:
@@ -6660,14 +5508,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJonathanHWheelerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJonathanPGaleDoInc:
 		return source.GetSourceClientJonathanPGaleDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJonathanTyeMd:
-		return source.GetSourceClientJonathanTyeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJonathanWarmanMd:
-		return source.GetSourceClientJonathanWarmanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJonesAllergyAndAsthmaCenter:
 		return source.GetSourceClientJonesAllergyAndAsthmaCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJonesvilleHealthCare:
-		return source.GetSourceClientJonesvilleHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoonYKimMdPc:
 		return source.GetSourceClientJoonYKimMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJordanValleyCommunityHealthCenter:
@@ -6690,22 +5532,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJosephLiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJosephMLaviMd:
 		return source.GetSourceClientJosephMLaviMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJosephMomenMd:
-		return source.GetSourceClientJosephMomenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJosephWStrangarityMd:
 		return source.GetSourceClientJosephWStrangarityMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoshuaRCasonLimitedApmc:
 		return source.GetSourceClientJoshuaRCasonLimitedApmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJoshuaZSteinerDoPa:
-		return source.GetSourceClientJoshuaZSteinerDoPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJoslinClinic:
 		return source.GetSourceClientJoslinClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJoyfulLivingLlc:
-		return source.GetSourceClientJoyfulLivingLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJpsHealthNetwork:
 		return source.GetSourceClientJpsHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJtMatherHospital:
-		return source.GetSourceClientJtMatherHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJuanJSalazarMd:
 		return source.GetSourceClientJuanJSalazarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJuanMocegaMd:
@@ -6716,16 +5550,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientJudyHuynhDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJulieCoponDo:
 		return source.GetSourceClientJulieCoponDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJulieKeller:
-		return source.GetSourceClientJulieKeller(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJulieLorberMd:
 		return source.GetSourceClientJulieLorberMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJungmoonMBaeMd:
-		return source.GetSourceClientJungmoonMBaeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJunperHealthInc:
-		return source.GetSourceClientJunperHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeJupiterFamilyMedicine:
-		return source.GetSourceClientJupiterFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJupiterMedicalCenter:
 		return source.GetSourceClientJupiterMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeJwchInstituteInc:
@@ -6784,32 +5610,20 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKansasCityPhysicianPartnersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKansasMedicalCenter:
 		return source.GetSourceClientKansasMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKansasSurgicalConsultants:
-		return source.GetSourceClientKansasSurgicalConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKansasUrgentCare:
 		return source.GetSourceClientKansasUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKanwaljitGillMdInc:
 		return source.GetSourceClientKanwaljitGillMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKariGFranoDo:
-		return source.GetSourceClientKariGFranoDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKarimHealthcare:
 		return source.GetSourceClientKarimHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKaringHeartsCardiology:
 		return source.GetSourceClientKaringHeartsCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKarlKosseMd:
-		return source.GetSourceClientKarlKosseMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKaruMedicalAssoc:
-		return source.GetSourceClientKaruMedicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKassamaliAndAssociates:
 		return source.GetSourceClientKassamaliAndAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKatherineShawBetheaHospital:
 		return source.GetSourceClientKatherineShawBetheaHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKatherineShawBetheaHospital1:
 		return source.GetSourceClientKatherineShawBetheaHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKathleenJDrinanDoLtd:
-		return source.GetSourceClientKathleenJDrinanDoLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKathleenPSoeDo:
-		return source.GetSourceClientKathleenPSoeDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKathleenScarpullaMd:
 		return source.GetSourceClientKathleenScarpullaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKathrynAmacherDO:
@@ -6832,16 +5646,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKearneyCountyHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKeckMedicineOfUsc:
 		return source.GetSourceClientKeckMedicineOfUsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKeithJohnstoneMd:
-		return source.GetSourceClientKeithJohnstoneMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKellerPlasticSurgeryLlc:
 		return source.GetSourceClientKellerPlasticSurgeryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKelseySeyboldClinic:
 		return source.GetSourceClientKelseySeyboldClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKendallEndoscopyAndSurgeryCenter:
 		return source.GetSourceClientKendallEndoscopyAndSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKenlyMedicalAssoc:
-		return source.GetSourceClientKenlyMedicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKennedyKriegerInstitute:
 		return source.GetSourceClientKennedyKriegerInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKennethGLawlorDoPllc:
@@ -6858,10 +5668,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKennrickJDennisDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKennrickJDennisDpm1:
 		return source.GetSourceClientKennrickJDennisDpm1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKentRBiddingerMd:
-		return source.GetSourceClientKentRBiddingerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKentuckianaPulmonaryAssociates:
-		return source.GetSourceClientKentuckianaPulmonaryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKentuckianaRheumatology:
 		return source.GetSourceClientKentuckianaRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKentuckyObhPractice:
@@ -6872,8 +5678,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKetteringHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKevinRHenryDpm:
 		return source.GetSourceClientKevinRHenryDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKevinSLeeMd:
-		return source.GetSourceClientKevinSLeeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKeyClinicsLlc:
 		return source.GetSourceClientKeyClinicsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKeystoneCollege:
@@ -6882,18 +5686,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKhalidBKhanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKidneyAndHypertensionCenter:
 		return source.GetSourceClientKidneyAndHypertensionCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKidneyAndHypertensionConsultantsInc:
-		return source.GetSourceClientKidneyAndHypertensionConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKidsAndTeensPediatricsOfDoverInc:
 		return source.GetSourceClientKidsAndTeensPediatricsOfDoverInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKidsAreGreat:
-		return source.GetSourceClientKidsAreGreat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKidsCarePediatrics:
-		return source.GetSourceClientKidsCarePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKidsFirstPediatricSpecialists:
-		return source.GetSourceClientKidsFirstPediatricSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKidschoicePediatrics:
-		return source.GetSourceClientKidschoicePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKidzMedicalServicesMiami:
 		return source.GetSourceClientKidzMedicalServicesMiami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKingfisherFamilyClinic:
@@ -6912,8 +5706,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKiowaCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKiowaDistrictHospital:
 		return source.GetSourceClientKiowaDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKipLBodiPhysicianFacsPllc:
-		return source.GetSourceClientKipLBodiPhysicianFacsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKirbyEyeCenter:
 		return source.GetSourceClientKirbyEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKiritkumarSShahMd:
@@ -6926,8 +5718,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKissimmeeEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKitsapEyePhysicians:
 		return source.GetSourceClientKitsapEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKitsapMedical:
-		return source.GetSourceClientKitsapMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKittitasValleyHealthcare:
 		return source.GetSourceClientKittitasValleyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKlallamCounselingServices:
@@ -6964,14 +5754,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientKootenaiOutpatientSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKossuthRegionalHealthCenter:
 		return source.GetSourceClientKossuthRegionalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKrablinMedicalClinic:
-		return source.GetSourceClientKrablinMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKrupaShahMd:
 		return source.GetSourceClientKrupaShahMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKuakiniMedicalCenter:
 		return source.GetSourceClientKuakiniMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeKufoyMedicalClinic:
-		return source.GetSourceClientKufoyMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKuneshEyeCenterInc:
 		return source.GetSourceClientKuneshEyeCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeKuneshEyeSurgeryCenter:
@@ -6984,8 +5770,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLaCareHealthPlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaCasa:
 		return source.GetSourceClientLaCasa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLaCuevaFamilyHealthcareInc:
-		return source.GetSourceClientLaCuevaFamilyHealthcareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaFronteraEmpactSpc:
 		return source.GetSourceClientLaFronteraEmpactSpc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaJollaAnesthesiaAssociatesLp:
@@ -7014,8 +5798,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLafayetteGeneralHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLafayette:
 		return source.GetSourceClientLafayette(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLagraizeMedicalLlc:
-		return source.GetSourceClientLagraizeMedicalLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakeCountryOrthopedics:
 		return source.GetSourceClientLakeCountryOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakeCountryPhysicalTherapy:
@@ -7036,8 +5818,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLakeHealthDistrict1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakeHealth:
 		return source.GetSourceClientLakeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLakeHeartSpecialists:
-		return source.GetSourceClientLakeHeartSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakeMurrayEndoscopyCenter:
 		return source.GetSourceClientLakeMurrayEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakeParkRba:
@@ -7072,8 +5852,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLakesidePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakesideSurgeryPA:
 		return source.GetSourceClientLakesideSurgeryPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLakeviewClinic:
-		return source.GetSourceClientLakeviewClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakewoodFamilyMedicine:
 		return source.GetSourceClientLakewoodFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakewoodFootAndAnkleSpecialistsLlc:
@@ -7082,24 +5860,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLakewoodFootAndAnkleSpecialistsLlc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLakewoodPhysicalTherapy:
 		return source.GetSourceClientLakewoodPhysicalTherapy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLakshmaTiyyaguraMd:
-		return source.GetSourceClientLakshmaTiyyaguraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLancasterGeneralHealth:
 		return source.GetSourceClientLancasterGeneralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLancasterNeuroscienceAndSpineAssoc:
 		return source.GetSourceClientLancasterNeuroscienceAndSpineAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLancasterOrthopedicGroup:
-		return source.GetSourceClientLancasterOrthopedicGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLancasterSkinCenterPc:
-		return source.GetSourceClientLancasterSkinCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaneCountyHospital:
 		return source.GetSourceClientLaneCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaneCountyMedicationAssistedTx:
 		return source.GetSourceClientLaneCountyMedicationAssistedTx(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLansingInstituteOfUrology:
-		return source.GetSourceClientLansingInstituteOfUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLansingJacobsAndMishkin:
-		return source.GetSourceClientLansingJacobsAndMishkin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaporteRegionalPhysicianNetwork:
 		return source.GetSourceClientLaporteRegionalPhysicianNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaraMedicalClinic:
@@ -7110,8 +5878,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLarryCHughesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLarryCampoliDpm:
 		return source.GetSourceClientLarryCampoliDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLarryFSmithMdPc:
-		return source.GetSourceClientLarryFSmithMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLasVegasAsc:
 		return source.GetSourceClientLasVegasAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaserAndSkinSurgeryCenterOfNewYork:
@@ -7120,12 +5886,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLaserEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLataMundkurMd:
 		return source.GetSourceClientLataMundkurMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLatouchePediatrics:
-		return source.GetSourceClientLatouchePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLauraMorganMdInc:
-		return source.GetSourceClientLauraMorganMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLaureateMedicalGroup:
-		return source.GetSourceClientLaureateMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaurelCosmeticAndPlasticSurgery:
 		return source.GetSourceClientLaurelCosmeticAndPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLaurelEyeClinic:
@@ -7142,8 +5902,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLavacaMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLawrenceCheungMd:
 		return source.GetSourceClientLawrenceCheungMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLawrenceFamilyPracticeCenterPA:
-		return source.GetSourceClientLawrenceFamilyPracticeCenterPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital:
 		return source.GetSourceClientLcmcHealthHoldingsIncDBAEastJeffersonGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLcmcHealth:
@@ -7186,12 +5944,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLeidosPartnershipForDefenseHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLeisureWorldHccIpa:
 		return source.GetSourceClientLeisureWorldHccIpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLejaMdLorettaA:
-		return source.GetSourceClientLejaMdLorettaA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLelandTGilmoreDpm:
 		return source.GetSourceClientLelandTGilmoreDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLenaweeAdultAndPediatricMedicine:
-		return source.GetSourceClientLenaweeAdultAndPediatricMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLeonMedicalCenters:
 		return source.GetSourceClientLeonMedicalCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLeonardPlasticSurgery:
@@ -7212,8 +5966,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLexingtonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLexingtonRegionalHealthCenter:
 		return source.GetSourceClientLexingtonRegionalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLexingtonSurgeons:
-		return source.GetSourceClientLexingtonSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLhPrimaryCareShoalCreek:
 		return source.GetSourceClientLhPrimaryCareShoalCreek(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLibertyCardiovascularSpecialists:
@@ -7224,12 +5976,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLibertyDaytonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLibertyHospitalPhysicians:
 		return source.GetSourceClientLibertyHospitalPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLibertyHospital:
-		return source.GetSourceClientLibertyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLibertyHouse:
 		return source.GetSourceClientLibertyHouse(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLibertyMedicalCenter:
-		return source.GetSourceClientLibertyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLibertySpineAndPainCenterPc:
 		return source.GetSourceClientLibertySpineAndPainCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLickingMemorialHealthSystems:
@@ -7264,8 +6012,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLincolnCommunityHospitalAndNursingHome1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLindaAlimadadianDo:
 		return source.GetSourceClientLindaAlimadadianDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLionelGatienAndAssociates:
-		return source.GetSourceClientLionelGatienAndAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLisaKFlareyDo:
 		return source.GetSourceClientLisaKFlareyDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLisandroQuinonesMdApc:
@@ -7302,12 +6048,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLomaLindaUniversityMedicalCenterMurrieta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLomibaoRheumatologyAndWellnessCare:
 		return source.GetSourceClientLomibaoRheumatologyAndWellnessCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLompocValley:
-		return source.GetSourceClientLompocValley(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLompocValley1:
-		return source.GetSourceClientLompocValley1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLondonWomensCare:
-		return source.GetSourceClientLondonWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLoneStarCircleOfCare:
 		return source.GetSourceClientLoneStarCircleOfCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLonestarVeinAndVascularSpecialists:
@@ -7318,10 +6058,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLongBeachSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLongBeachVascular:
 		return source.GetSourceClientLongBeachVascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLongIslandBoneAndJoint:
-		return source.GetSourceClientLongIslandBoneAndJoint(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLongIslandNeurosurgical:
-		return source.GetSourceClientLongIslandNeurosurgical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLongIslandSpineSpecialistsPc:
 		return source.GetSourceClientLongIslandSpineSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLongIslandSurgeryPc:
@@ -7330,16 +6066,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLorainCountyHealthAndDentistry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLorenMillerDpm:
 		return source.GetSourceClientLorenMillerDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLoriSpoor:
-		return source.GetSourceClientLoriSpoor(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLosAngelesCountyDeptOfHealthServices:
 		return source.GetSourceClientLosAngelesCountyDeptOfHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLosAngelesJewishHomeForTheAging:
 		return source.GetSourceClientLosAngelesJewishHomeForTheAging(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLosAngelesLgbtCenter:
-		return source.GetSourceClientLosAngelesLgbtCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLosAngelesOrthopaedicCenter:
-		return source.GetSourceClientLosAngelesOrthopaedicCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLosBarriosUnidosCommunityClinicInc:
 		return source.GetSourceClientLosBarriosUnidosCommunityClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLoudonvilleFamilyHealth:
@@ -7348,8 +6078,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLouisAStabileMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLouisJArnoMd:
 		return source.GetSourceClientLouisJArnoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLouisPCoatesLlc:
-		return source.GetSourceClientLouisPCoatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLouisianaEndoscopyCenter:
 		return source.GetSourceClientLouisianaEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLouisianaPainCareLlc:
@@ -7360,8 +6088,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLouisvilleEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLouisvilleEyeAnesthesiaLlc:
 		return source.GetSourceClientLouisvilleEyeAnesthesiaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLouisvillePulmonaryCare:
-		return source.GetSourceClientLouisvillePulmonaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLowellAnesthesiaAssociatesPllc:
 		return source.GetSourceClientLowellAnesthesiaAssociatesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLowellSurgicalAssociates:
@@ -7370,8 +6096,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLowerElwhaHealthDepartment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLowerLightsChristianHealthCnt:
 		return source.GetSourceClientLowerLightsChristianHealthCnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLowerSiouxHealthcareCenter:
-		return source.GetSourceClientLowerSiouxHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLoyolaMedicine:
 		return source.GetSourceClientLoyolaMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLsccGeorgetownWomensCenter:
@@ -7388,28 +6112,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientLuisFAnezMdpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLuisFSotoLlc:
 		return source.GetSourceClientLuisFSotoLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLumbertonChildrensClinicPa:
-		return source.GetSourceClientLumbertonChildrensClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLuminisHealth:
 		return source.GetSourceClientLuminisHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLuncefordFamilyHealthCenter:
 		return source.GetSourceClientLuncefordFamilyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLutherMangobaMd:
 		return source.GetSourceClientLutherMangobaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLv01:
-		return source.GetSourceClientLv01(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLv04:
-		return source.GetSourceClientLv04(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLvcOutpatientSurgeryCenter:
 		return source.GetSourceClientLvcOutpatientSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLvpgMatlv:
 		return source.GetSourceClientLvpgMatlv(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeLydiaAguileraMd:
 		return source.GetSourceClientLydiaAguileraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeLynchburgPulmonaryAssociates:
-		return source.GetSourceClientLynchburgPulmonaryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMAmmarKaterjiMd:
-		return source.GetSourceClientMAmmarKaterjiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMENDPa:
 		return source.GetSourceClientMENDPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMEdwinDavisMDPC:
@@ -7424,8 +6138,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMacarthurPrimaryCare1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMackoolEyeInstitute:
 		return source.GetSourceClientMackoolEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMacombMedicalClinicmi:
-		return source.GetSourceClientMacombMedicalClinicmi(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaconCommunityHospital:
 		return source.GetSourceClientMaconCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMacoupinCountyHealthCenter:
@@ -7436,8 +6148,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMactHealthBoardInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMadeliaCommunityHospitalAndClinicDBAMadeliaHealth:
 		return source.GetSourceClientMadeliaCommunityHospitalAndClinicDBAMadeliaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMadisonCountyMedicalAssociates:
-		return source.GetSourceClientMadisonCountyMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMadisonCountyMemorialHospital:
 		return source.GetSourceClientMadisonCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMadisonHealthplexAndSportPerf:
@@ -7456,14 +6166,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMadisonValleyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaePhysiciansSurgeryCenter:
 		return source.GetSourceClientMaePhysiciansSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMageeGeneralHospital:
-		return source.GetSourceClientMageeGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMagellaMedicalGroupInc:
 		return source.GetSourceClientMagellaMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMagruderHospital:
 		return source.GetSourceClientMagruderHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMahec:
-		return source.GetSourceClientMahec(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaheshMehtaMdPllc:
 		return source.GetSourceClientMaheshMehtaMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMahiraTanovicMd:
@@ -7476,22 +6182,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMahoningValleyAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaiChingChienMd:
 		return source.GetSourceClientMaiChingChienMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMaimonidesProd:
-		return source.GetSourceClientMaimonidesProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainLineHealth:
 		return source.GetSourceClientMainLineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainLineVascularInstituteAsc:
 		return source.GetSourceClientMainLineVascularInstituteAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainLineVascularInstituteObl:
 		return source.GetSourceClientMainLineVascularInstituteObl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMaineGeneral:
-		return source.GetSourceClientMaineGeneral(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMainegeneralMedicalCenter:
-		return source.GetSourceClientMainegeneralMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMainehealth:
 		return source.GetSourceClientMainehealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMaitlandFamilyPractice:
-		return source.GetSourceClientMaitlandFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMakrismdLlc:
 		return source.GetSourceClientMakrismdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaliniChintapalliDoApmc:
@@ -7502,20 +6200,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientManagedServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeManasseHowardMMd:
 		return source.GetSourceClientManasseHowardMMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeManateeInternalMedicine:
-		return source.GetSourceClientManateeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeManhassetPediatrics:
-		return source.GetSourceClientManhassetPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeManikandaRajaMd:
 		return source.GetSourceClientManikandaRajaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeManilaZamanMdInc:
 		return source.GetSourceClientManilaZamanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMankatoClinicProd:
-		return source.GetSourceClientMankatoClinicProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMannEyeInstitute:
 		return source.GetSourceClientMannEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMansardMedical:
-		return source.GetSourceClientMansardMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeManuelArroyoMd:
 		return source.GetSourceClientManuelArroyoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeManyRiversWholeHealth:
@@ -7528,8 +6218,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMarcHensonMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarcJGoldbergMdLlc:
 		return source.GetSourceClientMarcJGoldbergMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarcJanisMd:
-		return source.GetSourceClientMarcJanisMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarcusLeeMD:
 		return source.GetSourceClientMarcusLeeMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMargaretKSparksMd:
@@ -7544,16 +6232,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMariaJamiolkowskiDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMariaSusanABuhayMaglunogMd:
 		return source.GetSourceClientMariaSusanABuhayMaglunogMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMariaelenaGonzalezsozerMd:
-		return source.GetSourceClientMariaelenaGonzalezsozerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarianneTahlMd:
 		return source.GetSourceClientMarianneTahlMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMariasHealthcareServicesInc:
 		return source.GetSourceClientMariasHealthcareServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarieTheresePeanMd:
 		return source.GetSourceClientMarieTheresePeanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarietaGutting:
-		return source.GetSourceClientMarietaGutting(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarimnHealthMedicalCenter:
 		return source.GetSourceClientMarimnHealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarinCommunityClinics:
@@ -7564,8 +6248,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMariposaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarkANewmanMdInc:
 		return source.GetSourceClientMarkANewmanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarkPMillerInc:
-		return source.GetSourceClientMarkPMillerInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarkRamirezMd:
 		return source.GetSourceClientMarkRamirezMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarkSSpringerMdPc:
@@ -7574,10 +6256,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMarletteRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarloweDRossMdFccpInc:
 		return source.GetSourceClientMarloweDRossMdFccpInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarquetteInternalMedicinePediatricAssoc:
-		return source.GetSourceClientMarquetteInternalMedicinePediatricAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarshallRheumatologyClinic:
-		return source.GetSourceClientMarshallRheumatologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarshfieldClinicHealthSystemInc:
 		return source.GetSourceClientMarshfieldClinicHealthSystemInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMartaBlesaMd:
@@ -7590,8 +6268,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMartinLBassettMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMartinLutherKingJrCommunityHospital:
 		return source.GetSourceClientMartinLutherKingJrCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMartinPLanoffMdSc:
-		return source.GetSourceClientMartinPLanoffMdSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMartinSimmons:
 		return source.GetSourceClientMartinSimmons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarvinEGreenbergMdLlc:
@@ -7610,8 +6286,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMaryToftMDAMedicalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaryWashingtonHealthcare:
 		return source.GetSourceClientMaryWashingtonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMaryamRahnemunMd:
-		return source.GetSourceClientMaryamRahnemunMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaryanneFreemanBrndjarDoPc:
 		return source.GetSourceClientMaryanneFreemanBrndjarDoPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarylandEndoscopyAnesthesia:
@@ -7622,12 +6296,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMarylandEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarylandLiveCasino:
 		return source.GetSourceClientMarylandLiveCasino(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarylandNeurologicalCenter:
-		return source.GetSourceClientMarylandNeurologicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMarylandPerinatalAssociates:
 		return source.GetSourceClientMarylandPerinatalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMarylandPodiatryCenter:
-		return source.GetSourceClientMarylandPodiatryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaryville:
 		return source.GetSourceClientMaryville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMaslandAssociatesInc:
@@ -7638,8 +6308,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMasonGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMasonGeneralHospital1:
 		return source.GetSourceClientMasonGeneralHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMasonboroFamilyMedicinePC:
-		return source.GetSourceClientMasonboroFamilyMedicinePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMasonicareCorporation:
 		return source.GetSourceClientMasonicareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMassGeneralBrigham:
@@ -7668,8 +6336,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMathiasPrimaryCareAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMathiesenMemorialHealthClinic:
 		return source.GetSourceClientMathiesenMemorialHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMatthewLiefMd:
-		return source.GetSourceClientMatthewLiefMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMatthewWalkerComprehensiveHealthCtr:
 		return source.GetSourceClientMatthewWalkerComprehensiveHealthCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMauryRegionalHealthcareSystem:
@@ -7678,10 +6344,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMayStreetSurgiCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMayoClinic:
 		return source.GetSourceClientMayoClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMaysvilleInternalMedAndPedAssoc:
-		return source.GetSourceClientMaysvilleInternalMedAndPedAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMazenKhusayemMd:
-		return source.GetSourceClientMazenKhusayemMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMbmcClinics:
 		return source.GetSourceClientMbmcClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMbmcPsychiatrists:
@@ -7690,8 +6352,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMcallenSurgeon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMccannelEyeSurgery:
 		return source.GetSourceClientMccannelEyeSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMccookClinicPc:
-		return source.GetSourceClientMccookClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcdonoughDistrictHospital:
 		return source.GetSourceClientMcdonoughDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcdowMedicalCorporation:
@@ -7702,14 +6362,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMcfarlandHealthcareClinicLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMchcpMissouriConsolidatedHealthCarePlan:
 		return source.GetSourceClientMchcpMissouriConsolidatedHealthCarePlan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMciverUrologicalClinic:
-		return source.GetSourceClientMciverUrologicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMckenzieMedicalCenter:
-		return source.GetSourceClientMckenzieMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMckenzieWilfredMd:
-		return source.GetSourceClientMckenzieWilfredMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMckinneyComprehensiveCare:
-		return source.GetSourceClientMckinneyComprehensiveCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcknightClinic:
 		return source.GetSourceClientMcknightClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcknightEyeCenterPC:
@@ -7718,14 +6370,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMclainMedicalAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMclarenHealthCareCorporation:
 		return source.GetSourceClientMclarenHealthCareCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMcleanDermatology:
-		return source.GetSourceClientMcleanDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcleodHealth:
 		return source.GetSourceClientMcleodHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcleodHealth1:
 		return source.GetSourceClientMcleodHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMcleroyGibbsAndKlein:
-		return source.GetSourceClientMcleroyGibbsAndKlein(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcminnvilleEyeClinic:
 		return source.GetSourceClientMcminnvilleEyeClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMcphersonMedicalAndSurgicalAssociates:
@@ -7734,14 +6382,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMcrDdd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMeadowLaneSurgeryCenter:
 		return source.GetSourceClientMeadowLaneSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMeadowviewEnt:
-		return source.GetSourceClientMeadowviewEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMeadvilleMedicalCenterFamilyPlanning:
 		return source.GetSourceClientMeadvilleMedicalCenterFamilyPlanning(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMecklenburgHealthDepartment:
 		return source.GetSourceClientMecklenburgHealthDepartment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedSpecialistsOfMadisonCo:
-		return source.GetSourceClientMedSpecialistsOfMadisonCo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedac:
 		return source.GetSourceClientMedac(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedallusUrgentCare:
@@ -7806,12 +6450,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMedcorCorporateClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedcorDefaultClinic:
 		return source.GetSourceClientMedcorDefaultClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedexpressUrgentCare:
-		return source.GetSourceClientMedexpressUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedeyeAssociates:
 		return source.GetSourceClientMedeyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedicalAccess:
-		return source.GetSourceClientMedicalAccess(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalAdvancedPainSpecialistsPa:
 		return source.GetSourceClientMedicalAdvancedPainSpecialistsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalAssociatesClinicPc:
@@ -7830,18 +6470,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMedicalCenterPodiatryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalCenterUrologyPa:
 		return source.GetSourceClientMedicalCenterUrologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedicalCentersObGyn:
-		return source.GetSourceClientMedicalCentersObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedicalCentersUrologyClinic:
-		return source.GetSourceClientMedicalCentersUrologyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalClinicOfNorthTexasPllc:
 		return source.GetSourceClientMedicalClinicOfNorthTexasPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalClinicOfNorthvillePc:
 		return source.GetSourceClientMedicalClinicOfNorthvillePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalClinicOfRedBay:
 		return source.GetSourceClientMedicalClinicOfRedBay(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedicalEducationAssistanceCoporation:
-		return source.GetSourceClientMedicalEducationAssistanceCoporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalEyeAssociatesPa:
 		return source.GetSourceClientMedicalEyeAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalGeneticsBchp:
@@ -7856,8 +6490,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMedicalHomePrimaryCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalPlazaEntPhysicians:
 		return source.GetSourceClientMedicalPlazaEntPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMedicalSpecialistsOfJohnsonCity:
-		return source.GetSourceClientMedicalSpecialistsOfJohnsonCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalSurgicalSpecialtyGroup:
 		return source.GetSourceClientMedicalSurgicalSpecialtyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMedicalUniversityOfSouthCarolina:
@@ -7878,16 +6510,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMedstarMedicalGroupSouthernMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMeetingHouseLaneMedicalPracticePc:
 		return source.GetSourceClientMeetingHouseLaneMedicalPracticePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMeghamReed:
-		return source.GetSourceClientMeghamReed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMelanieCFirmanMd:
-		return source.GetSourceClientMelanieCFirmanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMelbourneMaternalFetalMedicine:
 		return source.GetSourceClientMelbourneMaternalFetalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMelindaJHiscockMdPa:
 		return source.GetSourceClientMelindaJHiscockMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMemorialClinicalAssociatesPA:
-		return source.GetSourceClientMemorialClinicalAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialCommunityHealthInc:
 		return source.GetSourceClientMemorialCommunityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHealthSystem:
@@ -7896,8 +6522,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMemorialHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHealthcareSystems:
 		return source.GetSourceClientMemorialHealthcareSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMemorialHealthcare:
-		return source.GetSourceClientMemorialHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHeartInstituteLlc:
 		return source.GetSourceClientMemorialHeartInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHermannHealthSystem:
@@ -7912,8 +6536,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMemorialHospitalOfSweetwaterCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialHospital:
 		return source.GetSourceClientMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMemorialNeurologicalAssociation:
-		return source.GetSourceClientMemorialNeurologicalAssociation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemorialcare:
 		return source.GetSourceClientMemorialcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMemphisPlan:
@@ -7930,18 +6552,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMentalHealthResourcesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMentalIllnessRecoveryCenterInc:
 		return source.GetSourceClientMentalIllnessRecoveryCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMercedHeartAssoc:
-		return source.GetSourceClientMercedHeartAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMercedVeinVascularCenter:
-		return source.GetSourceClientMercedVeinVascularCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercedesMedicalClinic:
 		return source.GetSourceClientMercedesMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyBehavioralCare:
 		return source.GetSourceClientMercyBehavioralCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyClinics:
 		return source.GetSourceClientMercyClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMercyFamilyPractice:
-		return source.GetSourceClientMercyFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyHealthArkansasLouisianaMississippiAndTexas:
 		return source.GetSourceClientMercyHealthArkansasLouisianaMississippiAndTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMercyHealthOhKy:
@@ -7984,8 +6600,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMethodistHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMethodistHealthSystem1:
 		return source.GetSourceClientMethodistHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMethodistHospitalOfSouthernCalifornia:
-		return source.GetSourceClientMethodistHospitalOfSouthernCalifornia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMethodistHospitalsPrd:
 		return source.GetSourceClientMethodistHospitalsPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMethodistLeBonheurHealthcare:
@@ -8068,20 +6682,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMichaelFLett(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichaelFisherDo:
 		return source.GetSourceClientMichaelFisherDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeMichaelGCasagrandeMdPa:
+		return source.GetSourceClientMichaelGCasagrandeMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichaelJEveroskiMDPC:
 		return source.GetSourceClientMichaelJEveroskiMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichaelJLemmersMd:
 		return source.GetSourceClientMichaelJLemmersMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichaelLCarrMd:
-		return source.GetSourceClientMichaelLCarrMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichaelPTesslerMd:
-		return source.GetSourceClientMichaelPTesslerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichaelSCohenMd:
-		return source.GetSourceClientMichaelSCohenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichaelScottLincolnMd:
-		return source.GetSourceClientMichaelScottLincolnMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichaelTJelinek:
-		return source.GetSourceClientMichaelTJelinek(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichelCSamsonMDFACSPllc:
 		return source.GetSourceClientMichelCSamsonMDFACSPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichelleYangMd:
@@ -8090,14 +6696,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMichianaEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichianaHealthInformationNetworkMhin:
 		return source.GetSourceClientMichianaHealthInformationNetworkMhin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichiganGastroenterologyInstitute:
-		return source.GetSourceClientMichiganGastroenterologyInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganHeadAndSpineInstitute:
 		return source.GetSourceClientMichiganHeadAndSpineInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganHealthcareProfessionals:
 		return source.GetSourceClientMichiganHealthcareProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichiganHeartGroupPC:
-		return source.GetSourceClientMichiganHeartGroupPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganInstituteForInterventionalPain:
 		return source.GetSourceClientMichiganInstituteForInterventionalPain(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganInterventionalPainAssociates:
@@ -8108,8 +6710,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMichiganLungAndSleepSpecialistsPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganMedicine:
 		return source.GetSourceClientMichiganMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMichiganNeurosurgicalInstitutePC:
-		return source.GetSourceClientMichiganNeurosurgicalInstitutePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMichiganPhysiciansGroupPc:
 		return source.GetSourceClientMichiganPhysiciansGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiciOfLehighValley:
@@ -8118,20 +6718,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMiciOfMainLine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiciOfPhiladelphia:
 		return source.GetSourceClientMiciOfPhiladelphia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidAmericaHeartAndLungSurgeons:
-		return source.GetSourceClientMidAmericaHeartAndLungSurgeons(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidAmericaInternalMedicine:
 		return source.GetSourceClientMidAmericaInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidAmericaRheumatologyConsultantsPA:
-		return source.GetSourceClientMidAmericaRheumatologyConsultantsPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidAmericaRheumatologyConsultantsPa:
 		return source.GetSourceClientMidAmericaRheumatologyConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidAtlanticEyePhysicians:
 		return source.GetSourceClientMidAtlanticEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidAtlanticFamilyPractice:
-		return source.GetSourceClientMidAtlanticFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidAtlanticNephrologyAssociatesProd:
-		return source.GetSourceClientMidAtlanticNephrologyAssociatesProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidAtlanticRheumatologyLlc:
 		return source.GetSourceClientMidAtlanticRheumatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidCityPediatrics:
@@ -8140,14 +6732,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMidCountyOrthopaedicSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidIowaFertility:
 		return source.GetSourceClientMidIowaFertility(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidMarylandEnt:
-		return source.GetSourceClientMidMarylandEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidMichiganEarNoseThroatPc:
-		return source.GetSourceClientMidMichiganEarNoseThroatPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidNassauMedicalCareForKidzLlc:
 		return source.GetSourceClientMidNassauMedicalCareForKidzLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidOhioValleyMedGroup:
-		return source.GetSourceClientMidOhioValleyMedGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidSouthEndoscopyCenter:
 		return source.GetSourceClientMidSouthEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidSouthHeartCenterPc:
@@ -8156,14 +6742,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMidSouthPulmonaryAndSleepSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidTennesseeBoneAndJointClinic:
 		return source.GetSourceClientMidTennesseeBoneAndJointClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidValleyGastroenterology:
-		return source.GetSourceClientMidValleyGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidValleyHospital:
 		return source.GetSourceClientMidValleyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidatlanticEyeCenter:
 		return source.GetSourceClientMidatlanticEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMiddleTennesseePulmonaryAssocPllc:
-		return source.GetSourceClientMiddleTennesseePulmonaryAssocPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiddlebrookFamilyPhysiciansPa:
 		return source.GetSourceClientMiddlebrookFamilyPhysiciansPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiddlesexHospital:
@@ -8174,24 +6756,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMiddletownValleyFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidjerseyOrthopaedics:
 		return source.GetSourceClientMidjerseyOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidlandFamilyPhysiciansPc:
-		return source.GetSourceClientMidlandFamilyPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidlandMemorialHospital:
 		return source.GetSourceClientMidlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidlandPodiatryAssoc:
-		return source.GetSourceClientMidlandPodiatryAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidlandsClinicPC:
-		return source.GetSourceClientMidlandsClinicPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidlandsFamilyMedicine:
-		return source.GetSourceClientMidlandsFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidmichiganHealth:
 		return source.GetSourceClientMidmichiganHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidtownHealthCenter:
 		return source.GetSourceClientMidtownHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwayClinic:
 		return source.GetSourceClientMidwayClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidwestEntCentre:
-		return source.GetSourceClientMidwestEntCentre(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwestEyeCenterAsc:
 		return source.GetSourceClientMidwestEyeCenterAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwestEyeCenters:
@@ -8208,22 +6780,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMidwestRetinaInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwestSpineAndBrainInstituteLlc:
 		return source.GetSourceClientMidwestSpineAndBrainInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMidwestSurgicalAssoc:
-		return source.GetSourceClientMidwestSurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwestSurgicalHospital:
 		return source.GetSourceClientMidwestSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMidwesternUniversityEyeInstitute:
 		return source.GetSourceClientMidwesternUniversityEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMigqa:
-		return source.GetSourceClientMigqa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMihirManiarDO:
 		return source.GetSourceClientMihirManiarDO(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMihokoMNelsenMd:
 		return source.GetSourceClientMihokoMNelsenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMikaelKHakanssonMd:
 		return source.GetSourceClientMikaelKHakanssonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMikePlante:
-		return source.GetSourceClientMikePlante(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMikeSMcfarlandMdPa:
 		return source.GetSourceClientMikeSMcfarlandMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMikioTachibanaMd:
@@ -8234,16 +6800,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMilfordFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillCreekFamilyClinicInc:
 		return source.GetSourceClientMillCreekFamilyClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMillCreekPediatrics:
-		return source.GetSourceClientMillCreekPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillenniumMedicalBillingAndPhysicianServicesInc:
 		return source.GetSourceClientMillenniumMedicalBillingAndPhysicianServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillenniumMedicalMgmntResources:
 		return source.GetSourceClientMillenniumMedicalMgmntResources(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillenniumPhysiciansAssociation:
 		return source.GetSourceClientMillenniumPhysiciansAssociation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMillenniumWomensHealthcare:
-		return source.GetSourceClientMillenniumWomensHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillerCountyHospital:
 		return source.GetSourceClientMillerCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillerHeightsMedicalAssociates:
@@ -8252,8 +6814,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMillerMdJBayard(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMillerOrthopedicSpecialists:
 		return source.GetSourceClientMillerOrthopedicSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMilltownFamilyPhysicians:
-		return source.GetSourceClientMilltownFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiltonHersheySchool:
 		return source.GetSourceClientMiltonHersheySchool(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMiltonLKolchinsMdInc:
@@ -8354,8 +6914,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMohamedAliMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMohammadIsmailMd:
 		return source.GetSourceClientMohammadIsmailMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMohanDeochandMd:
-		return source.GetSourceClientMohanDeochandMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMohawkValleyHealthSystem:
 		return source.GetSourceClientMohawkValleyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMohinderPAhluwaliaMd:
@@ -8368,8 +6926,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMonHealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMoningerEyeCare:
 		return source.GetSourceClientMoningerEyeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMonmouthOceanPulmonaryMed:
-		return source.GetSourceClientMonmouthOceanPulmonaryMed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMonmouthRetinaConsultants:
 		return source.GetSourceClientMonmouthRetinaConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMonongaliaCountyGeneralHospitalCompany:
@@ -8388,8 +6944,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMontefioreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMontefioreMedicalCenter1:
 		return source.GetSourceClientMontefioreMedicalCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMontefioreNewRochelleHospital:
-		return source.GetSourceClientMontefioreNewRochelleHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMontezumaMedicalClinic:
 		return source.GetSourceClientMontezumaMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMontgomeryAnesthesiaLlc:
@@ -8416,32 +6970,22 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMooreCountyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMoreheadStateUniversity:
 		return source.GetSourceClientMoreheadStateUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMorenoSpineAndScoliosis:
-		return source.GetSourceClientMorenoSpineAndScoliosis(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorganCountyFamilyPractice:
 		return source.GetSourceClientMorganCountyFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorganCountyMedicalCenter:
 		return source.GetSourceClientMorganCountyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMorganFamilyPractice:
-		return source.GetSourceClientMorganFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorganMedicalCenter:
 		return source.GetSourceClientMorganMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorganMedicalCenter1:
 		return source.GetSourceClientMorganMedicalCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMorgantownInternalMedicineGroupInc:
-		return source.GetSourceClientMorgantownInternalMedicineGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorongoMedicalGroupInc:
 		return source.GetSourceClientMorongoMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMorrisAvenueMedicalCenter:
-		return source.GetSourceClientMorrisAvenueMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorrisCountyHospital:
 		return source.GetSourceClientMorrisCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorrisEyeGroupComprehensiveEyecare:
 		return source.GetSourceClientMorrisEyeGroupComprehensiveEyecare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMorristownOphthalmologyAssociatesPa:
 		return source.GetSourceClientMorristownOphthalmologyAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMorrowFamilyMedicine:
-		return source.GetSourceClientMorrowFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMosaicLifeCare:
 		return source.GetSourceClientMosaicLifeCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMosaicLifeCare1:
@@ -8450,8 +6994,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMosaicMentalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMosesMouserAndAssociates:
 		return source.GetSourceClientMosesMouserAndAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMoultrieInternalMedicineAssocPc:
-		return source.GetSourceClientMoultrieInternalMedicineAssocPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMoundviewMemorialHospital:
 		return source.GetSourceClientMoundviewMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountAuburnHospital:
@@ -8466,8 +7008,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMountSinaiHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountSinaiMedicalCenter:
 		return source.GetSourceClientMountSinaiMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountSinaiSchoolOfMedicine:
-		return source.GetSourceClientMountSinaiSchoolOfMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainAreaPediatrics:
 		return source.GetSourceClientMountainAreaPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainComprehensiveHealthCorporatio:
@@ -8478,24 +7018,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMountainGroveHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainLaurelMedicalCenter:
 		return source.GetSourceClientMountainLaurelMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountainMedicalCenterLlc:
-		return source.GetSourceClientMountainMedicalCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountainRheumatology:
-		return source.GetSourceClientMountainRheumatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountainStateMedicalSpecialists:
-		return source.GetSourceClientMountainStateMedicalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainValleyHospiceAndPalliativeCa:
 		return source.GetSourceClientMountainValleyHospiceAndPalliativeCa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainViewChildCareIncDBATotallyKidsRehabilitationHospital:
 		return source.GetSourceClientMountainViewChildCareIncDBATotallyKidsRehabilitationHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountainViewRegionalHospAndClinic:
-		return source.GetSourceClientMountainViewRegionalHospAndClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainWestEndoscopy:
 		return source.GetSourceClientMountainWestEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMountainviewAnesthesiaPc:
 		return source.GetSourceClientMountainviewAnesthesiaPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMountainviewFamilyPractice:
-		return source.GetSourceClientMountainviewFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMoweryClinicLlc:
 		return source.GetSourceClientMoweryClinicLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMsChildrensHeart:
@@ -8510,20 +7040,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMulticareHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMulticareObhSpokane:
 		return source.GetSourceClientMulticareObhSpokane(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMuncieFamilyMedicine:
-		return source.GetSourceClientMuncieFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMuncie:
 		return source.GetSourceClientMuncie(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMunifPediatrics:
-		return source.GetSourceClientMunifPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMunisingMemorialHospital:
 		return source.GetSourceClientMunisingMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMunsonHealthcareCharlevoixHospital:
 		return source.GetSourceClientMunsonHealthcareCharlevoixHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMunsonHealthcare:
 		return source.GetSourceClientMunsonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMurfreesboroMedicalClinic:
-		return source.GetSourceClientMurfreesboroMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMurphySMartinMdPllc:
 		return source.GetSourceClientMurphySMartinMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMurrietaValleyFamilyMedicalGroupInc:
@@ -8536,24 +7060,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientMusculoskeletalInstituteOfLa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMusickDermatologyAndAdvancedClinicalSpaLlc:
 		return source.GetSourceClientMusickDermatologyAndAdvancedClinicalSpaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMuskegonFamilyCare:
-		return source.GetSourceClientMuskegonFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMuskingumPediatrics:
 		return source.GetSourceClientMuskingumPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMyDrNow:
 		return source.GetSourceClientMyDrNow(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMyKidneyCareLlc:
 		return source.GetSourceClientMyKidneyCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMycareHealthCenter:
-		return source.GetSourceClientMycareHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeMyhealthForTeensAndYoungAdults:
 		return source.GetSourceClientMyhealthForTeensAndYoungAdults(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeMylappanSelvarajMd:
-		return source.GetSourceClientMylappanSelvarajMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNachiketPatelMdpa:
 		return source.GetSourceClientNachiketPatelMdpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNaeemAQaziMdPc:
-		return source.GetSourceClientNaeemAQaziMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNamitaMohideenMdInc:
 		return source.GetSourceClientNamitaMohideenMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNaniInternalMed:
@@ -8580,18 +7096,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNassonHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNationalIntegratedHealthAssociates:
 		return source.GetSourceClientNationalIntegratedHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNationalJewishMedAndResearch:
-		return source.GetSourceClientNationalJewishMedAndResearch(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNationalNursingCentersConsortium:
-		return source.GetSourceClientNationalNursingCentersConsortium(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNationalTelehealthMfmPractice:
 		return source.GetSourceClientNationalTelehealthMfmPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNationwideChildrensHospital:
 		return source.GetSourceClientNationwideChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNativeAmericanCommunityHealthCenter:
 		return source.GetSourceClientNativeAmericanCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNaugatuckValleyGastroenterologyConsultants:
-		return source.GetSourceClientNaugatuckValleyGastroenterologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNavicentHealth:
 		return source.GetSourceClientNavicentHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNavicentHealth1:
@@ -8606,10 +7116,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNchHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNchHealthcareSystem1:
 		return source.GetSourceClientNchHealthcareSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNchieTestDb2:
-		return source.GetSourceClientNchieTestDb2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNchieTestDb3:
-		return source.GetSourceClientNchieTestDb3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNcpAlexandriaAsc:
 		return source.GetSourceClientNcpAlexandriaAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNcpAlexandriaCathLab:
@@ -8722,8 +7228,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNeilRNelsonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeilSOzerMdPa:
 		return source.GetSourceClientNeilSOzerMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeilShechtmanMdPa:
-		return source.GetSourceClientNeilShechtmanMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNemahaValleyCommunityHospital:
 		return source.GetSourceClientNemahaValleyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNemours:
@@ -8738,26 +7242,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNephrologyAndHypertensionConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAndHypertensionSpecialist:
 		return source.GetSourceClientNephrologyAndHypertensionSpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNephrologyAssocOfKentucky:
-		return source.GetSourceClientNephrologyAssocOfKentucky(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNephrologyAssocOfNorthernVava:
-		return source.GetSourceClientNephrologyAssocOfNorthernVava(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesInc:
 		return source.GetSourceClientNephrologyAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesMedicalGroup:
 		return source.GetSourceClientNephrologyAssociatesMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNephrologyAssociatesOfDe:
-		return source.GetSourceClientNephrologyAssociatesOfDe(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNephrologyAssociatesOfLexingtonPsc:
-		return source.GetSourceClientNephrologyAssociatesOfLexingtonPsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesOfMichigan:
 		return source.GetSourceClientNephrologyAssociatesOfMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesOfNIllinois:
 		return source.GetSourceClientNephrologyAssociatesOfNIllinois(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesOfNIndiana:
 		return source.GetSourceClientNephrologyAssociatesOfNIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNephrologyAssociatesOfTidewaterLtd:
-		return source.GetSourceClientNephrologyAssociatesOfTidewaterLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesOfUpland:
 		return source.GetSourceClientNephrologyAssociatesOfUpland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNephrologyAssociatesPA:
@@ -8778,14 +7272,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNephrologyVascularAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeshobaCountyGeneralHospital:
 		return source.GetSourceClientNeshobaCountyGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNetworkManagementServices:
-		return source.GetSourceClientNetworkManagementServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeugenesisPlasticSurgery:
-		return source.GetSourceClientNeugenesisPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeuroNetworkPartners:
 		return source.GetSourceClientNeuroNetworkPartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuroScienceAndSpine:
-		return source.GetSourceClientNeuroScienceAndSpine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurocareCenter:
 		return source.GetSourceClientNeurocareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologicAssociatesOfCapeGirardeau:
@@ -8796,14 +7284,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNeurologicalAssociatesOfOceanCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologicalAssociatesOfStPaulNa:
 		return source.GetSourceClientNeurologicalAssociatesOfStPaulNa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurologicalMedicinePA:
-		return source.GetSourceClientNeurologicalMedicinePA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologicalSurgeryAssociatesPc:
 		return source.GetSourceClientNeurologicalSurgeryAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologyAndSleepAssociates:
 		return source.GetSourceClientNeurologyAndSleepAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurologyAssocOfMesillaValley:
-		return source.GetSourceClientNeurologyAssocOfMesillaValley(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologyCenterOfEastAlabama:
 		return source.GetSourceClientNeurologyCenterOfEastAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologyConsultantsOfDallas:
@@ -8812,40 +7296,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNeurologyLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologyOfBethlehemPc:
 		return source.GetSourceClientNeurologyOfBethlehemPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurologySpecialistsPC:
-		return source.GetSourceClientNeurologySpecialistsPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurologySpecialists:
 		return source.GetSourceClientNeurologySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuromicrospine:
-		return source.GetSourceClientNeuromicrospine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuromuscularResearchCenter:
-		return source.GetSourceClientNeuromuscularResearchCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuropsychiatricAssocIncPc:
-		return source.GetSourceClientNeuropsychiatricAssocIncPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeuropsychiatricHospitals:
 		return source.GetSourceClientNeuropsychiatricHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuroscienceAndSpineCenter:
-		return source.GetSourceClientNeuroscienceAndSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurospinalAssociatesPa:
 		return source.GetSourceClientNeurospinalAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurosurgeryAndSpineConsultantsOfEastTenn:
-		return source.GetSourceClientNeurosurgeryAndSpineConsultantsOfEastTenn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurosurgeryAssociatesOfLubbockLlp:
-		return source.GetSourceClientNeurosurgeryAssociatesOfLubbockLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurosurgeryOfNorthIowaPc:
 		return source.GetSourceClientNeurosurgeryOfNorthIowaPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurosurgicalAssoc:
-		return source.GetSourceClientNeurosurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeurosurgicalAssociatesPC:
-		return source.GetSourceClientNeurosurgicalAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNeurosurgicalGroupOfTexasLlp:
 		return source.GetSourceClientNeurosurgicalGroupOfTexasLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNeuseValleyInternalMedicine:
-		return source.GetSourceClientNeuseValleyInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNevadaEyePhysicians:
 		return source.GetSourceClientNevadaEyePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNevadaOrthopedicAndSpine:
-		return source.GetSourceClientNevadaOrthopedicAndSpine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNevadaRegionalMedicalCenter:
 		return source.GetSourceClientNevadaRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNevadaVwh:
@@ -8868,14 +7330,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNewEyes(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewFoundationMedicalGroup:
 		return source.GetSourceClientNewFoundationMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNewGenesisMedicalAssociates:
-		return source.GetSourceClientNewGenesisMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewHanoverRegionalMedicalCenter:
 		return source.GetSourceClientNewHanoverRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewJerseyCardiologyAssociates:
 		return source.GetSourceClientNewJerseyCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNewJerseyOrthopedicInstitute:
-		return source.GetSourceClientNewJerseyOrthopedicInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewJerseyUrology:
 		return source.GetSourceClientNewJerseyUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewJerseyVisionAssociatesPc:
@@ -8896,8 +7354,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNewWestSportsMedicineAndOrthopaedicSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewYorkComprehensiveCarePC:
 		return source.GetSourceClientNewYorkComprehensiveCarePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNewYorkDowntownOrthopaedic:
-		return source.GetSourceClientNewYorkDowntownOrthopaedic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealthBenefitsFund:
 		return source.GetSourceClientNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealthBenefitsFund(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewYorkPhysiciansLlp:
@@ -8912,8 +7368,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNewportBeachMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewportBeachObGyn:
 		return source.GetSourceClientNewportBeachObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNewportChildrensMedAtMission:
-		return source.GetSourceClientNewportChildrensMedAtMission(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewportFamilyMedicine:
 		return source.GetSourceClientNewportFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNewportGastroenterology:
@@ -8974,6 +7428,22 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNjCenterForCorneaAndrefractiveSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNkdhc:
 		return source.GetSourceClientNkdhc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNlhd:
+		return source.GetSourceClientNlhd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNlhd1:
+		return source.GetSourceClientNlhd1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNlhd2:
+		return source.GetSourceClientNlhd2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNlhd3:
+		return source.GetSourceClientNlhd3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNmmc:
+		return source.GetSourceClientNmmc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNmmc1:
+		return source.GetSourceClientNmmc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNmmc2:
+		return source.GetSourceClientNmmc2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNmmc3:
+		return source.GetSourceClientNmmc3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNoColoradoAnesthesiaProfessionals:
 		return source.GetSourceClientNoColoradoAnesthesiaProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNoColoradoHospitalists:
@@ -8988,12 +7458,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthBristolMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthBrowardHospitalDistrict:
 		return source.GetSourceClientNorthBrowardHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeNorthBuncombeFamilyMedicine:
+		return source.GetSourceClientNorthBuncombeFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthCaddoMedicalCenter:
 		return source.GetSourceClientNorthCaddoMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthCaddoMedicalCenter1:
-		return source.GetSourceClientNorthCaddoMedicalCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthCantonMedicalCenterFamilyMedicine:
-		return source.GetSourceClientNorthCantonMedicalCenterFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthCantonPodiatryInc:
 		return source.GetSourceClientNorthCantonPodiatryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthCanyonMedicalCenter:
@@ -9006,16 +7474,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthCentralFamilyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthCentralHealthCare:
 		return source.GetSourceClientNorthCentralHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthCountryFamilyPractice:
-		return source.GetSourceClientNorthCountryFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthCountryHospitalAndHealthCenter:
 		return source.GetSourceClientNorthCountryHospitalAndHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthEastMedicalServices:
 		return source.GetSourceClientNorthEastMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthFloridaPediatricsPa:
 		return source.GetSourceClientNorthFloridaPediatricsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthFultonNeurologyPc:
-		return source.GetSourceClientNorthFultonNeurologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthGeorgiaHealthcareCenter:
 		return source.GetSourceClientNorthGeorgiaHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthGeorgiaRheumatologyGroupPc:
@@ -9030,8 +7494,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthIdahoPainCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthJerseyGastroAndEndoscopyCenter:
 		return source.GetSourceClientNorthJerseyGastroAndEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthJerseyOrthopaedicSpecialistsPa:
-		return source.GetSourceClientNorthJerseyOrthopaedicSpecialistsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthKansasCityHospital:
 		return source.GetSourceClientNorthKansasCityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthMemorialHealth:
@@ -9042,8 +7504,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthMetroSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthMississippiHealthServices:
 		return source.GetSourceClientNorthMississippiHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthMyrtleBeachInternalMedicineInc:
-		return source.GetSourceClientNorthMyrtleBeachInternalMedicineInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthOaksHealthSystem:
 		return source.GetSourceClientNorthOaksHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthOaks:
@@ -9056,8 +7516,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthRiverPrimaryCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthShoreEndoscopyCenter:
 		return source.GetSourceClientNorthShoreEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthShoreGastro:
-		return source.GetSourceClientNorthShoreGastro(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthSuburbanEyeAssociates:
 		return source.GetSourceClientNorthSuburbanEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthSuburbanFamilyHealthcare:
@@ -9066,8 +7524,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthSuburbanNephrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthTexasAreaCommunityHealthCenter:
 		return source.GetSourceClientNorthTexasAreaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthTexasHandCenter:
-		return source.GetSourceClientNorthTexasHandCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthTexasImagingCenter:
 		return source.GetSourceClientNorthTexasImagingCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthTexasNeurologyAlliancePllc:
@@ -9076,20 +7532,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthValleyEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthValleyFamilyMedicine:
 		return source.GetSourceClientNorthValleyFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthValleyGiMedicalGroup:
-		return source.GetSourceClientNorthValleyGiMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthbayHealth:
 		return source.GetSourceClientNorthbayHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthbayHealthcareSystem:
 		return source.GetSourceClientNorthbayHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthcrestPhysicianServices:
-		return source.GetSourceClientNorthcrestPhysicianServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNortheastEarNoseAndThroatPA:
-		return source.GetSourceClientNortheastEarNoseAndThroatPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastEndoscopyCenter:
 		return source.GetSourceClientNortheastEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNortheastFloridaEndocrinologyAndDiabetesAssociates:
-		return source.GetSourceClientNortheastFloridaEndocrinologyAndDiabetesAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastGeorgiaHealthSystem:
 		return source.GetSourceClientNortheastGeorgiaHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastMissouriHealthCouncilInc:
@@ -9098,8 +7546,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNortheastObGynAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastOhioNeighborhoodHealthSvcs:
 		return source.GetSourceClientNortheastOhioNeighborhoodHealthSvcs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNortheastOrthopedicClinicPc:
-		return source.GetSourceClientNortheastOrthopedicClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastPaCommunityHealthcare:
 		return source.GetSourceClientNortheastPaCommunityHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheastTarrantInternalMedAssoc:
@@ -9108,8 +7554,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNortheastValleyHealthCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNortheasternHealthSystem:
 		return source.GetSourceClientNortheasternHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNortheasternNephrologyAssoc:
-		return source.GetSourceClientNortheasternNephrologyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthernArizonaGastroenterology:
 		return source.GetSourceClientNorthernArizonaGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthernArizonaHealthcare:
@@ -9130,8 +7574,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthernLightMayoHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthernMaineMedicalCenter:
 		return source.GetSourceClientNorthernMaineMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthernNevadaAllergyLtd:
-		return source.GetSourceClientNorthernNevadaAllergyLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthernNevadaProfessionalServices:
 		return source.GetSourceClientNorthernNevadaProfessionalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthernNjEyeInstitutePa:
@@ -9140,8 +7582,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthernVaPulmAndCriticalCareAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthfieldSurgicalCenter:
 		return source.GetSourceClientNorthfieldSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthlakeNephrologyInc:
-		return source.GetSourceClientNorthlakeNephrologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthlandFamilyCarePc:
 		return source.GetSourceClientNorthlandFamilyCarePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthlandHealthCareAccess:
@@ -9154,36 +7594,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthshoreUniversityHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthsideCenterForChildDevelopment:
 		return source.GetSourceClientNorthsideCenterForChildDevelopment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthsideEnt:
-		return source.GetSourceClientNorthsideEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthsideGastroenterology:
-		return source.GetSourceClientNorthsideGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthsideHospitalDbaMedicalAssocOfNorthGeorgia:
-		return source.GetSourceClientNorthsideHospitalDbaMedicalAssocOfNorthGeorgia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthsideHospitalDbaPerimeterNorthFamilyMedicine:
-		return source.GetSourceClientNorthsideHospitalDbaPerimeterNorthFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthsideHospital:
 		return source.GetSourceClientNorthsideHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthstarSleepCenter:
 		return source.GetSourceClientNorthstarSleepCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthviewOrthopaedicAssociates:
-		return source.GetSourceClientNorthviewOrthopaedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellCommunity:
-		return source.GetSourceClientNorthwellCommunity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellHealthDev163:
-		return source.GetSourceClientNorthwellHealthDev163(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellHealthDev184:
-		return source.GetSourceClientNorthwellHealthDev184(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellHealthQa:
-		return source.GetSourceClientNorthwellHealthQa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellHealthQa184:
-		return source.GetSourceClientNorthwellHealthQa184(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellHealth:
-		return source.GetSourceClientNorthwellHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwellProd:
-		return source.GetSourceClientNorthwellProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwelllHealthDev184:
-		return source.GetSourceClientNorthwelllHealthDev184(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestCommunityHospital:
 		return source.GetSourceClientNorthwestCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestCongenitalHeartCare:
@@ -9202,12 +7616,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthwestHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestHumanServicesInc:
 		return source.GetSourceClientNorthwestHumanServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwestLouisianaNephrology:
-		return source.GetSourceClientNorthwestLouisianaNephrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestMedicalCenter:
 		return source.GetSourceClientNorthwestMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwestNeurology:
-		return source.GetSourceClientNorthwestNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestNeurospecialistsPllc:
 		return source.GetSourceClientNorthwestNeurospecialistsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestOhioEndoscopyCenter:
@@ -9218,8 +7628,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNorthwestOrthopedicClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestPhysiciansAssociates:
 		return source.GetSourceClientNorthwestPhysiciansAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNorthwestProfessionalObgynLtd:
-		return source.GetSourceClientNorthwestProfessionalObgynLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestRheumatologySpecialistSc:
 		return source.GetSourceClientNorthwestRheumatologySpecialistSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNorthwestSurgicalSpecialists:
@@ -9278,20 +7686,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientNutleyPediatricAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNvision:
 		return source.GetSourceClientNvision(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNwBuffaloCommunityHealthny:
-		return source.GetSourceClientNwBuffaloCommunityHealthny(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNwCenterForCongenitalHeartDisease:
 		return source.GetSourceClientNwCenterForCongenitalHeartDisease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNwComprehensiveWomensHealthcare:
 		return source.GetSourceClientNwComprehensiveWomensHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNwGaDermatologyAndSkinCancerSpec:
-		return source.GetSourceClientNwGaDermatologyAndSkinCancerSpec(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNwSurgicalSpecialistsPc:
 		return source.GetSourceClientNwSurgicalSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNycHealthHospitals:
 		return source.GetSourceClientNycHealthHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeNystromAssociatesProd:
-		return source.GetSourceClientNystromAssociatesProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeNyuLangoneMedicalCenter:
 		return source.GetSourceClientNyuLangoneMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOakHillsFamilyCare:
@@ -9302,8 +7704,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOakTreeSurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOaklandAsc:
 		return source.GetSourceClientOaklandAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOaklandMacombObstetricsAndGynecologyoaklandMacombObstetricsAndGynecology:
-		return source.GetSourceClientOaklandMacombObstetricsAndGynecologyoaklandMacombObstetricsAndGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOaklandMercyPlaceClinic:
 		return source.GetSourceClientOaklandMercyPlaceClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOaklandVascular:
@@ -9324,16 +7724,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientObAndPedSubspecialtyGrpOfKsMoMfm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeObAndPedSubspecialtyGrpOfKsMo:
 		return source.GetSourceClientObAndPedSubspecialtyGrpOfKsMo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeObGynAssocPA:
-		return source.GetSourceClientObGynAssocPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeObGynAssociatesOfDanvilleInc:
-		return source.GetSourceClientObGynAssociatesOfDanvilleInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz:
 		return source.GetSourceClientObGynAssociatesOfWacoDrRisterDrKoeritz(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOb24MedicalGroupInc:
 		return source.GetSourceClientOb24MedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeObgynAssociatesOfHollandPc:
-		return source.GetSourceClientObgynAssociatesOfHollandPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeObgynAssociatesOfSouthernIndiana:
 		return source.GetSourceClientObgynAssociatesOfSouthernIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeObsPayerDefaultPractice:
@@ -9374,8 +7768,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientObstetrixOfTheMountainStates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOcalaAnesthesiaServices:
 		return source.GetSourceClientOcalaAnesthesiaServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOcalaEnt:
-		return source.GetSourceClientOcalaEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOcalaEyePA:
 		return source.GetSourceClientOcalaEyePA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOcalaEyeSurgeryCenter:
@@ -9408,16 +7800,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOdessaMedicalEnterprisesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOdessaMemorialHealthcareCenter:
 		return source.GetSourceClientOdessaMemorialHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOfficeOfJoseAMonteiroMDPC:
-		return source.GetSourceClientOfficeOfJoseAMonteiroMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOga:
 		return source.GetSourceClientOga(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOhioCentralBilling:
 		return source.GetSourceClientOhioCentralBilling(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOhioEarInstituteLlc:
 		return source.GetSourceClientOhioEarInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOhioGastroenterologyAndLiverInstitute:
-		return source.GetSourceClientOhioGastroenterologyAndLiverInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOhioHealth:
 		return source.GetSourceClientOhioHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOhioSpecialtyDepartment:
@@ -9430,16 +7818,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOkanoganCountyPublicHospitalDistrictNo4DBANorthValleyHospitalDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOkcOrthopedicsAndSportsMedicine:
 		return source.GetSourceClientOkcOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOklahomaCenterForOrthopaedics:
-		return source.GetSourceClientOklahomaCenterForOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOklahomaHeartHospital:
 		return source.GetSourceClientOklahomaHeartHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOklahomaSportsScience:
-		return source.GetSourceClientOklahomaSportsScience(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOklahomaSurgicalHospital:
 		return source.GetSourceClientOklahomaSurgicalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOlanskyDermatologyAssociates:
-		return source.GetSourceClientOlanskyDermatologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOlatheMedicalCenter:
 		return source.GetSourceClientOlatheMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOldNaplesConciergeMedicine:
@@ -9466,8 +7848,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOmniEyeSurgeryOfNewYorkPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOmniFamilyHealth:
 		return source.GetSourceClientOmniFamilyHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOmniHealthCareInc:
-		return source.GetSourceClientOmniHealthCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOncologyAndHematology:
 		return source.GetSourceClientOncologyAndHematology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOncologyAssociatesPc:
@@ -9490,18 +7870,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOneworldCommunityHealthCentersInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOnslowMedicalSpecialtiesClinic:
 		return source.GetSourceClientOnslowMedicalSpecialtiesClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOnslowSurgicalClinicPa:
-		return source.GetSourceClientOnslowSurgicalClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOpalMedicalGroupPa:
-		return source.GetSourceClientOpalMedicalGroupPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOpelousasGeneralHospital:
 		return source.GetSourceClientOpelousasGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOpenDoorHealthCentermn:
-		return source.GetSourceClientOpenDoorHealthCentermn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOpenpro17Pm16:
-		return source.GetSourceClientOpenpro17Pm16(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOpenpro17Pm161:
-		return source.GetSourceClientOpenpro17Pm161(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOperatingEngineersLocal101HealthAndWelfareFund:
 		return source.GetSourceClientOperatingEngineersLocal101HealthAndWelfareFund(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOphthalmicAnesthesiaServicesInc:
@@ -9522,10 +7892,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOphthalmologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOphthalmologyConsultantsLtd:
 		return source.GetSourceClientOphthalmologyConsultantsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOpsPediatricsPlc:
-		return source.GetSourceClientOpsPediatricsPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOptimalHealthAssociates:
-		return source.GetSourceClientOptimalHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOptometry:
 		return source.GetSourceClientOptometry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOptum:
@@ -9552,8 +7918,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOrangeCityAnesthesiaServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrangeCountyAsc:
 		return source.GetSourceClientOrangeCountyAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrangeCountyEarNoseAndThroat:
-		return source.GetSourceClientOrangeCountyEarNoseAndThroat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrangeCountyNeurosurgicalAssoc:
 		return source.GetSourceClientOrangeCountyNeurosurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrangeCountyVascular:
@@ -9562,32 +7926,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOregonHealthAndScienceUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOregonRheumatologyClinicsLlc:
 		return source.GetSourceClientOregonRheumatologyClinicsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOregonSurgicalSpecialistsPc:
-		return source.GetSourceClientOregonSurgicalSpecialistsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOregonTrailEyeCenterAndEyeSurgery:
 		return source.GetSourceClientOregonTrailEyeCenterAndEyeSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrionFamilyPhysicians:
-		return source.GetSourceClientOrionFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrlandoAsc:
 		return source.GetSourceClientOrlandoAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrlandoAtTampa:
 		return source.GetSourceClientOrlandoAtTampa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrlandoHealth1:
-		return source.GetSourceClientOrlandoHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeOrlandoHealth:
+		return source.GetSourceClientOrlandoHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrlandoImmunologyCenterPa:
 		return source.GetSourceClientOrlandoImmunologyCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrlandoInternalMedicine:
-		return source.GetSourceClientOrlandoInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrleansMedicalClinic:
-		return source.GetSourceClientOrleansMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthoFloridaLlc:
 		return source.GetSourceClientOrthoFloridaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthoKentucky:
-		return source.GetSourceClientOrthoKentucky(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthoManagementCompany:
-		return source.GetSourceClientOrthoManagementCompany(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthoSpecialtiesOfSpartanburgLlc:
-		return source.GetSourceClientOrthoSpecialtiesOfSpartanburgLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrtho:
 		return source.GetSourceClientOrtho(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthoalaskaLlc:
@@ -9598,28 +7948,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOrthocarolina(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthocenterMedicalGroup:
 		return source.GetSourceClientOrthocenterMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthopaedicAndFractureClinic:
-		return source.GetSourceClientOrthopaedicAndFractureClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicAndSpineCenter:
 		return source.GetSourceClientOrthopaedicAndSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicAndSportsMedicineCenter:
 		return source.GetSourceClientOrthopaedicAndSportsMedicineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicAssocOfMichiganPc:
 		return source.GetSourceClientOrthopaedicAssocOfMichiganPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthopaedicAssociatesOfMarshallCounty:
-		return source.GetSourceClientOrthopaedicAssociatesOfMarshallCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicAssociatesOfSoDe:
 		return source.GetSourceClientOrthopaedicAssociatesOfSoDe(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthopaedicAssociates:
-		return source.GetSourceClientOrthopaedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicInstituteForChildren:
 		return source.GetSourceClientOrthopaedicInstituteForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicInstituteWesternKentucky:
 		return source.GetSourceClientOrthopaedicInstituteWesternKentucky(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthopaedicSolutionsPc:
-		return source.GetSourceClientOrthopaedicSolutionsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOrthopaedicSpecialistsOfConnecticutPc:
-		return source.GetSourceClientOrthopaedicSpecialistsOfConnecticutPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopaedicSpecialtyInstitute:
 		return source.GetSourceClientOrthopaedicSpecialtyInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOrthopedicAndSpineInstituteOfSocal:
@@ -9664,18 +8004,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOsmondGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOsteopathicCardiologyAssociatesLlc:
 		return source.GetSourceClientOsteopathicCardiologyAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOsteopathicPhysiciansOfCharlottesville:
-		return source.GetSourceClientOsteopathicPhysiciansOfCharlottesville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOtakarHubschmannMdPa:
 		return source.GetSourceClientOtakarHubschmannMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOttawaCountyHealthCenter:
 		return source.GetSourceClientOttawaCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOttawaFamilyCareCenter:
 		return source.GetSourceClientOttawaFamilyCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOurFamilyDoctorPllc:
-		return source.GetSourceClientOurFamilyDoctorPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOurFamilyDoctor:
-		return source.GetSourceClientOurFamilyDoctor(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOutlookClinic:
 		return source.GetSourceClientOutlookClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOverlakeHospitalMedicalCenter:
@@ -9688,16 +8022,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientOwensboroMedicalPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOxfordHillsFootAndAnkleCenter:
 		return source.GetSourceClientOxfordHillsFootAndAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOzarkSurgicalAssoc:
-		return source.GetSourceClientOzarkSurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOzarkSurgicalGroup:
-		return source.GetSourceClientOzarkSurgicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeOzarksMedicalCenter:
-		return source.GetSourceClientOzarksMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeOzlemGokerAlpanMdLlc:
 		return source.GetSourceClientOzlemGokerAlpanMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeP193Unity3Prod:
-		return source.GetSourceClientP193Unity3Prod(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePaFootAndAnkleAssociatesLlc:
 		return source.GetSourceClientPaFootAndAnkleAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePaVascularInstitute:
@@ -9734,8 +8060,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPacificPerinatalInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePacificPulmonaryMedicalGroup:
 		return source.GetSourceClientPacificPulmonaryMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePacificRegionalNeurosurgery:
-		return source.GetSourceClientPacificRegionalNeurosurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePacificRidgeMedicalAssociatesInc:
 		return source.GetSourceClientPacificRidgeMedicalAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePacificVascucareAsc:
@@ -9752,8 +8076,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPadmanabhanJayalakshmiMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePagosaSpringsMedicalCenter:
 		return source.GetSourceClientPagosaSpringsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePainCentersOfIowaPC:
-		return source.GetSourceClientPainCentersOfIowaPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePainCentersOfMinnesotaChaskaLlc:
 		return source.GetSourceClientPainCentersOfMinnesotaChaskaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePainCentersOfMinnesotaMankatoLlc:
@@ -9784,14 +8106,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPainCentersOfWisconsinWauwatosaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePainCentersOfWisconsinWestBendLlc:
 		return source.GetSourceClientPainCentersOfWisconsinWestBendLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePainManagementAndInjuryReliefMedicalCenter:
-		return source.GetSourceClientPainManagementAndInjuryReliefMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePainManagementOfNorthIdahoPllc:
 		return source.GetSourceClientPainManagementOfNorthIdahoPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePainSpecialistsOfOrangeCounty:
 		return source.GetSourceClientPainSpecialistsOfOrangeCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePaincarePa:
-		return source.GetSourceClientPaincarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePajaMedicalGroup:
 		return source.GetSourceClientPajaMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePalmBeachPediatricUrology:
@@ -9806,12 +8124,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPalmsMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePaloAltoCountyHealthSystem:
 		return source.GetSourceClientPaloAltoCountyHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePaloVerdeHospital:
-		return source.GetSourceClientPaloVerdeHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePalomarHealth:
 		return source.GetSourceClientPalomarHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePalosHealth:
-		return source.GetSourceClientPalosHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePami:
 		return source.GetSourceClientPami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePami1:
@@ -9832,28 +8146,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPanhandleHealthDistrict(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePanoramaOrthopedicsAndSpineCenterPc:
 		return source.GetSourceClientPanoramaOrthopedicsAndSpineCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParagonSupport:
-		return source.GetSourceClientParagonSupport(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParagonSupport1:
-		return source.GetSourceClientParagonSupport1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParagonSurgicalSpecialists:
-		return source.GetSourceClientParagonSurgicalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParisCardiologyCenter:
 		return source.GetSourceClientParisCardiologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePariserDermatologySpecialistsLtd:
-		return source.GetSourceClientPariserDermatologySpecialistsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParivashMohamadiMd:
 		return source.GetSourceClientParivashMohamadiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePark55Medical:
-		return source.GetSourceClientPark55Medical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParkAvenueAssocInInternalMedicine:
-		return source.GetSourceClientParkAvenueAssocInInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParkAvenueConciergeMedicine:
-		return source.GetSourceClientParkAvenueConciergeMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkCenterForProcedures:
 		return source.GetSourceClientParkCenterForProcedures(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParkDuvalleCommunityHealthCenter:
-		return source.GetSourceClientParkDuvalleCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkHudsonSurgeryCenter:
 		return source.GetSourceClientParkHudsonSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkOphthalmology:
@@ -9864,22 +8162,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientParkland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkviewHealth:
 		return source.GetSourceClientParkviewHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParkviewMedicalClinic:
-		return source.GetSourceClientParkviewMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkwayEndoscopyCenter:
 		return source.GetSourceClientParkwayEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeParkwayNeuroscienceAndSpineInstitute:
-		return source.GetSourceClientParkwayNeuroscienceAndSpineInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeParkwayPsychiatric:
 		return source.GetSourceClientParkwayPsychiatric(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePartnersForWomensHealthPa:
 		return source.GetSourceClientPartnersForWomensHealthPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePartnersInFreedomLlc:
-		return source.GetSourceClientPartnersInFreedomLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePartnersInHealthFamilyMedicine:
 		return source.GetSourceClientPartnersInHealthFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePartnersInNephrologyAndEndocrinology:
-		return source.GetSourceClientPartnersInNephrologyAndEndocrinology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePartnersInPediatrics:
 		return source.GetSourceClientPartnersInPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePartnersInRecovery:
@@ -9890,18 +8180,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPasteurMedicalManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePatelClinic:
 		return source.GetSourceClientPatelClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePatlnkpro17Pm16:
-		return source.GetSourceClientPatlnkpro17Pm16(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePatriciaKorberMdInc:
 		return source.GetSourceClientPatriciaKorberMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePatriciaLJamesMd:
-		return source.GetSourceClientPatriciaLJamesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePatrickJClaussDpm:
 		return source.GetSourceClientPatrickJClaussDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePatrickKarle:
-		return source.GetSourceClientPatrickKarle(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePaulBMurrayMdLlc:
-		return source.GetSourceClientPaulBMurrayMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePaulGrecoMDConciergeMedicalServicesPL:
 		return source.GetSourceClientPaulGrecoMDConciergeMedicalServicesPL(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePaulHCraneMd:
@@ -9922,8 +8204,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPawhuskaHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePawneeCountyMemorialHospital:
 		return source.GetSourceClientPawneeCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePawsatMaedaMdsPa:
-		return source.GetSourceClientPawsatMaedaMdsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePchcEmployeeHealth:
 		return source.GetSourceClientPchcEmployeeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePchsDental:
@@ -9940,8 +8220,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPeachTreeMedicalCtrAffiliateOfSrh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeachtreeNephrologyPc:
 		return source.GetSourceClientPeachtreeNephrologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePeakViewInternalMedicine:
-		return source.GetSourceClientPeakViewInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeakVisionEyeCenter:
 		return source.GetSourceClientPeakVisionEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeakVistaCommunityHealthCenters:
@@ -9956,16 +8234,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPedAndCongenitalCardiAssocOfTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediPartnersTtuhsc:
 		return source.GetSourceClientPediPartnersTtuhsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePediatricAdolescentMedicin:
-		return source.GetSourceClientPediatricAdolescentMedicin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricAffiliatesMedicalGroupInc:
 		return source.GetSourceClientPediatricAffiliatesMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricAlliance:
 		return source.GetSourceClientPediatricAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricAndFetalCardiologyOfMiami:
 		return source.GetSourceClientPediatricAndFetalCardiologyOfMiami(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePediatricAssocOfDavidsonCounty:
-		return source.GetSourceClientPediatricAssocOfDavidsonCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricAssociatesInc:
 		return source.GetSourceClientPediatricAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricCardiologyAssocSanAntonio:
@@ -9976,8 +8250,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPediatricCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricCardiologyOfAustin:
 		return source.GetSourceClientPediatricCardiologyOfAustin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePediatricCardiologyOfLongIsland:
-		return source.GetSourceClientPediatricCardiologyOfLongIsland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricCareOfKy:
 		return source.GetSourceClientPediatricCareOfKy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricDevelopmentalGroupOfFlorida:
@@ -9986,14 +8258,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPediatricEarNoseAndThroatSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricEntInstituteOfSouthTexaspa:
 		return source.GetSourceClientPediatricEntInstituteOfSouthTexaspa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePediatricHealthAssociates:
-		return source.GetSourceClientPediatricHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricHealth:
 		return source.GetSourceClientPediatricHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricHeartCenter:
 		return source.GetSourceClientPediatricHeartCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePediatricImmediateCare:
-		return source.GetSourceClientPediatricImmediateCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricPartnersOfNorthernKentucky:
 		return source.GetSourceClientPediatricPartnersOfNorthernKentucky(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePediatricPhysiciansOfNewark:
@@ -10052,8 +8320,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPedroJCarvajalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePedroPLlanezaMdPa:
 		return source.GetSourceClientPedroPLlanezaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePeggyannNowakMD:
-		return source.GetSourceClientPeggyannNowakMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePelvicFloorCenter:
 		return source.GetSourceClientPelvicFloorCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePendingMaternalFetalAssociatesMid:
@@ -10064,8 +8330,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPendingWhiteOakObh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePendurthiSurgicalAssociates:
 		return source.GetSourceClientPendurthiSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePeninsulaInfomed:
-		return source.GetSourceClientPeninsulaInfomed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeninsulaOrthopedicAssociatesInc:
 		return source.GetSourceClientPeninsulaOrthopedicAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeninsulaVascularCenterPc:
@@ -10076,16 +8340,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPennMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePennStateHealthCarePartners:
 		return source.GetSourceClientPennStateHealthCarePartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePennStateHealthCmgLlcBerksCardiology:
-		return source.GetSourceClientPennStateHealthCmgLlcBerksCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePennStateHealthCommunityMedicalGroup:
-		return source.GetSourceClientPennStateHealthCommunityMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePennStateHealth:
 		return source.GetSourceClientPennStateHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePenndocFootAndAnkleCenterLlc:
 		return source.GetSourceClientPenndocFootAndAnkleCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePennsylvaniaOrthopaedicCenter:
-		return source.GetSourceClientPennsylvaniaOrthopaedicCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePenobscotRespiratoryPa:
 		return source.GetSourceClientPenobscotRespiratoryPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePensacolaAsc:
@@ -10098,18 +8356,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPeoplesBank(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeoplesCommunityClinic:
 		return source.GetSourceClientPeoplesCommunityClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePeoriaEarNoseThroat:
-		return source.GetSourceClientPeoriaEarNoseThroat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePerinatalAssociatesOfSacramento:
 		return source.GetSourceClientPerinatalAssociatesOfSacramento(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePeripheralVascularAssociatesPA:
-		return source.GetSourceClientPeripheralVascularAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeripheralVascularInstituteAsc:
 		return source.GetSourceClientPeripheralVascularInstituteAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePeripheralVascularInstituteObl:
 		return source.GetSourceClientPeripheralVascularInstituteObl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePermianGastroenterology:
-		return source.GetSourceClientPermianGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePermianWomensCenter:
 		return source.GetSourceClientPermianWomensCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePerryCountyFamilyPractice:
@@ -10140,12 +8392,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPetersburgMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePetersonDermatologyPc:
 		return source.GetSourceClientPetersonDermatologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePetoskeyFamilyMedicine:
-		return source.GetSourceClientPetoskeyFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePhUscFamilyMedicineLibertySt:
-		return source.GetSourceClientPhUscFamilyMedicineLibertySt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePhUscMedicalGroupPlasticSurgery:
-		return source.GetSourceClientPhUscMedicalGroupPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhaIrvine:
 		return source.GetSourceClientPhaIrvine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhaPostAcuteCare:
@@ -10176,8 +8422,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPhysicalMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysicalOccupTherapyAtBridgewater:
 		return source.GetSourceClientPhysicalOccupTherapyAtBridgewater(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePhysicalTherapySpecialistsClinicInc:
-		return source.GetSourceClientPhysicalTherapySpecialistsClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysicalTherapySportsInstitute:
 		return source.GetSourceClientPhysicalTherapySportsInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysicianCarePc:
@@ -10192,8 +8436,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPhysicianSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansBuildingGroupLlp:
 		return source.GetSourceClientPhysiciansBuildingGroupLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePhysiciansCareOfVirginia:
-		return source.GetSourceClientPhysiciansCareOfVirginia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansDaySurgeryCenter:
 		return source.GetSourceClientPhysiciansDaySurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansEyeCenterOfOwensboro:
@@ -10202,8 +8444,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPhysiciansEyeSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansHearingServices:
 		return source.GetSourceClientPhysiciansHearingServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePhysiciansPrimaryCareOfSouthwestFlorida:
-		return source.GetSourceClientPhysiciansPrimaryCareOfSouthwestFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansSleepDiagnosticsInc:
 		return source.GetSourceClientPhysiciansSleepDiagnosticsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePhysiciansToChildrenInc:
@@ -10214,26 +8454,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPicoRiveraCommunityMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontAthensRegionalMedicalCenterInc:
 		return source.GetSourceClientPiedmontAthensRegionalMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePiedmontCardiovascularPa:
-		return source.GetSourceClientPiedmontCardiovascularPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePiedmontEnt:
-		return source.GetSourceClientPiedmontEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontEyeAssociates:
 		return source.GetSourceClientPiedmontEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontFamilyPracticePlc:
 		return source.GetSourceClientPiedmontFamilyPracticePlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePiedmontHealthcare1:
-		return source.GetSourceClientPiedmontHealthcare1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypePiedmontHealthcare:
+		return source.GetSourceClientPiedmontHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontNeurosurgeryAndSpinePa:
 		return source.GetSourceClientPiedmontNeurosurgeryAndSpinePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePiedmontPediatricsPLC:
 		return source.GetSourceClientPiedmontPediatricsPLC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePiedmontUrologyAssoc:
-		return source.GetSourceClientPiedmontUrologyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePihHealth:
-		return source.GetSourceClientPihHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePihHealth1:
-		return source.GetSourceClientPihHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePikeCountyFamilyHealthCenter:
 		return source.GetSourceClientPikeCountyFamilyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePikeCountyMemorialHospital:
@@ -10248,38 +8478,22 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPineRestChristianMentalHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePineStreetPodiatry:
 		return source.GetSourceClientPineStreetPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePinehurstMedicalClinicIncProd:
-		return source.GetSourceClientPinehurstMedicalClinicIncProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePinehurstNeurology:
 		return source.GetSourceClientPinehurstNeurology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePinehurstSurgicalClinic:
-		return source.GetSourceClientPinehurstSurgicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePinelandsAssoc:
-		return source.GetSourceClientPinelandsAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePinellasCountyHealthProgram:
 		return source.GetSourceClientPinellasCountyHealthProgram(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePineywoodsClinic:
 		return source.GetSourceClientPineywoodsClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePinnacleHealthcare:
-		return source.GetSourceClientPinnacleHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePinnacleMedicalGroup:
-		return source.GetSourceClientPinnacleMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePioneerHeartInstitute:
 		return source.GetSourceClientPioneerHeartInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePioneerSedationPllc:
 		return source.GetSourceClientPioneerSedationPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePioneerValleySurgical:
-		return source.GetSourceClientPioneerValleySurgical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePioneerValleySurgicenter:
 		return source.GetSourceClientPioneerValleySurgicenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePipelineHealth:
 		return source.GetSourceClientPipelineHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePisTemplate:
 		return source.GetSourceClientPisTemplate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePittsburghChestPhysicians:
-		return source.GetSourceClientPittsburghChestPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePittsburghGastroenterologyAssociates:
-		return source.GetSourceClientPittsburghGastroenterologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePivacAsc:
 		return source.GetSourceClientPivacAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePivac:
@@ -10332,8 +8546,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPlasticSurgeryConsultantsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePlatteCountyHealthDepartmentPlatteCity:
 		return source.GetSourceClientPlatteCountyHealthDepartmentPlatteCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePlumCreekMedicalGroup:
-		return source.GetSourceClientPlumCreekMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePlumasDistrictHospital:
 		return source.GetSourceClientPlumasDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePmaHematolgyOncology:
@@ -10346,8 +8558,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPncFinancialServicesGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePoarchBandOfCreekIndians:
 		return source.GetSourceClientPoarchBandOfCreekIndians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePocahontasMedicalClinic:
-		return source.GetSourceClientPocahontasMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryAssociatesOfErieInc:
 		return source.GetSourceClientPodiatryAssociatesOfErieInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryAssociatesOfLakeCounty:
@@ -10356,24 +8566,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPodiatryAssociatesOfLakeCounty1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryAssociates:
 		return source.GetSourceClientPodiatryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePodiatryCenterOfEasternC:
-		return source.GetSourceClientPodiatryCenterOfEasternC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryCenter:
 		return source.GetSourceClientPodiatryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryCenter1:
 		return source.GetSourceClientPodiatryCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePodiatryFootAndAnkleCarePllc:
 		return source.GetSourceClientPodiatryFootAndAnkleCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePolarisPkwyInternalMedAndPediatrics:
-		return source.GetSourceClientPolarisPkwyInternalMedAndPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePomereneHospital:
-		return source.GetSourceClientPomereneHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePomonaCommunityHealthCenter:
 		return source.GetSourceClientPomonaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePomonaValleyHospitalMedicalCenter:
 		return source.GetSourceClientPomonaValleyHospitalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePompanoBeachCommunityMedicaCenter:
-		return source.GetSourceClientPompanoBeachCommunityMedicaCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePontiacTrailMedicalCenter:
 		return source.GetSourceClientPontiacTrailMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePortGambleSklallamHealthCenter:
@@ -10428,18 +8630,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPracticeResults(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePracticeSupportServices:
 		return source.GetSourceClientPracticeSupportServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePradipMVyasMd:
-		return source.GetSourceClientPradipMVyasMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrairieClinicSc:
 		return source.GetSourceClientPrairieClinicSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrairieFamilyMedicineAndObstetrics:
 		return source.GetSourceClientPrairieFamilyMedicineAndObstetrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrairiePediatrics:
-		return source.GetSourceClientPrairiePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrairieRidgeIntegratedBehavioralHealthcare:
 		return source.GetSourceClientPrairieRidgeIntegratedBehavioralHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePre20FirepointProdCustomerC:
-		return source.GetSourceClientPre20FirepointProdCustomerC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrecisionSpineCare:
 		return source.GetSourceClientPrecisionSpineCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrecisionSurgeryCenter:
@@ -10452,8 +8648,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPreemiePlace(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePreferredFamilyHealthcare:
 		return source.GetSourceClientPreferredFamilyHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePreferredMedicalGroupPc:
-		return source.GetSourceClientPreferredMedicalGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierCardiologyInc:
 		return source.GetSourceClientPremierCardiologyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierCardiovascularCenterPlc:
@@ -10466,70 +8660,44 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPremierFamilyMedicinePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierHealthCareGroupPllc:
 		return source.GetSourceClientPremierHealthCareGroupPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePremierHealthCtrInternalMedicine:
-		return source.GetSourceClientPremierHealthCtrInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierHealth:
 		return source.GetSourceClientPremierHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierMedicalGroupOfCalifornia:
 		return source.GetSourceClientPremierMedicalGroupOfCalifornia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierMedicalGroup:
 		return source.GetSourceClientPremierMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePremierNeurosurgeryAndSpineCenter:
-		return source.GetSourceClientPremierNeurosurgeryAndSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierObGyn:
 		return source.GetSourceClientPremierObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierObstetricsAndGynecology:
 		return source.GetSourceClientPremierObstetricsAndGynecology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePremierOrthopaedics:
-		return source.GetSourceClientPremierOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierPhysiciansMedicalGroup:
 		return source.GetSourceClientPremierPhysiciansMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePremierSuburbanMedicalGroup:
 		return source.GetSourceClientPremierSuburbanMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePremiereCardiology:
-		return source.GetSourceClientPremiereCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresbyterianHealthcareServices:
 		return source.GetSourceClientPresbyterianHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresbyterianHealthcareServices1:
 		return source.GetSourceClientPresbyterianHealthcareServices1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresbyterianHospitalDallas:
 		return source.GetSourceClientPresbyterianHospitalDallas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePresbyterianIntercommunityHospital:
-		return source.GetSourceClientPresbyterianIntercommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresbyterianMedicalServices:
 		return source.GetSourceClientPresbyterianMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePresenceHealthNetwork:
-		return source.GetSourceClientPresenceHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePresidioCountyHealthServices:
 		return source.GetSourceClientPresidioCountyHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrestigeMedicalAssociatesInc:
 		return source.GetSourceClientPrestigeMedicalAssociatesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrestonMedicalAssociates:
-		return source.GetSourceClientPrestonMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimacareMedicalCenters:
 		return source.GetSourceClientPrimacareMedicalCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimariaMedicalClinic:
 		return source.GetSourceClientPrimariaMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCareAtFoxhallLlc:
-		return source.GetSourceClientPrimaryCareAtFoxhallLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCarePartnersOfOhio:
-		return source.GetSourceClientPrimaryCarePartnersOfOhio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCarePartners:
-		return source.GetSourceClientPrimaryCarePartners(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCarePhysiciansOfGainesville:
-		return source.GetSourceClientPrimaryCarePhysiciansOfGainesville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCarePhysicians:
 		return source.GetSourceClientPrimaryCarePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCareProfessionals:
 		return source.GetSourceClientPrimaryCareProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCareSpecialistsInc:
 		return source.GetSourceClientPrimaryCareSpecialistsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCareSpecialistsOfOrlando:
-		return source.GetSourceClientPrimaryCareSpecialistsOfOrlando(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCareSpecialistsPA:
 		return source.GetSourceClientPrimaryCareSpecialistsPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimaryCareSpecialists:
-		return source.GetSourceClientPrimaryCareSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCareWestPc:
 		return source.GetSourceClientPrimaryCareWestPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryCare:
@@ -10538,24 +8706,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPrimaryMedicalAssociatesDeanRoad(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimaryPediatrics:
 		return source.GetSourceClientPrimaryPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimeGardenCityMedicalGroup:
-		return source.GetSourceClientPrimeGardenCityMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimeHealthNetwork:
 		return source.GetSourceClientPrimeHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimeHealthNetworkpa:
-		return source.GetSourceClientPrimeHealthNetworkpa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimeHealthcare:
 		return source.GetSourceClientPrimeHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrime:
 		return source.GetSourceClientPrime(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrimecareOfSoutheasternOhioInc:
 		return source.GetSourceClientPrimecareOfSoutheasternOhioInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrimedicalHealthcare:
-		return source.GetSourceClientPrimedicalHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrincetonMedicalGroupPa:
 		return source.GetSourceClientPrincetonMedicalGroupPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePrincetonOtolaryngologyAssociates:
-		return source.GetSourceClientPrincetonOtolaryngologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePriorityHealthCare:
 		return source.GetSourceClientPriorityHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrismMedicalGroup:
@@ -10568,28 +8728,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPrismaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePrmaPlasticSurgery:
 		return source.GetSourceClientPrmaPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePro201UnityFhirSmartSandbox:
-		return source.GetSourceClientPro201UnityFhirSmartSandbox(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProReplicaproduction:
-		return source.GetSourceClientProReplicaproduction(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProRobinset1:
-		return source.GetSourceClientProRobinset1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePro171Sandbox:
-		return source.GetSourceClientPro171Sandbox(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePro193Production:
-		return source.GetSourceClientPro193Production(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProactionBehavioralHealthAlliance:
 		return source.GetSourceClientProactionBehavioralHealthAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProactiveHeartAndVascularPllc:
 		return source.GetSourceClientProactiveHeartAndVascularPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProctorEntPlc:
-		return source.GetSourceClientProctorEntPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProdr2:
 		return source.GetSourceClientProdr2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProdr21:
-		return source.GetSourceClientProdr21(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProdr4Scm3:
-		return source.GetSourceClientProdr4Scm3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProdr4Scm6:
 		return source.GetSourceClientProdr4Scm6(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProfessionalAnesthesiaServicesPllc:
@@ -10598,10 +8742,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientProfessionalAssociatesInSurgeryLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProfessionalObGynDoctors:
 		return source.GetSourceClientProfessionalObGynDoctors(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProfessionalOrthopedicMedicalAssociat:
-		return source.GetSourceClientProfessionalOrthopedicMedicalAssociat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeProgressiveMedicalCenter:
-		return source.GetSourceClientProgressiveMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeProgressiveCasualtyInsurance:
+		return source.GetSourceClientProgressiveCasualtyInsurance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProgressiveNeurologySleepMedicine:
 		return source.GetSourceClientProgressiveNeurologySleepMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProhealthCare:
@@ -10670,8 +8812,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientProvidenceMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeProvidenceUrgentCare:
 		return source.GetSourceClientProvidenceUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePstest1:
-		return source.GetSourceClientPstest1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePsychiatricCentersAtSanDiego:
 		return source.GetSourceClientPsychiatricCentersAtSanDiego(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePsychiatry:
@@ -10690,52 +8830,24 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientPugetSoundOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePugetSoundSurgicalClinic:
 		return source.GetSourceClientPugetSoundSurgicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryAllergyAndSleep:
-		return source.GetSourceClientPulmonaryAllergyAndSleep(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryAllergyCriticalCareAndSleepAssociates:
 		return source.GetSourceClientPulmonaryAllergyCriticalCareAndSleepAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryAndCriticalCareConsultants:
-		return source.GetSourceClientPulmonaryAndCriticalCareConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryAndCriticalCareSpecialistsOfPrincetonPC:
 		return source.GetSourceClientPulmonaryAndCriticalCareSpecialistsOfPrincetonPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryAndCriticalCareSpecialistsOfPrincetonPC1:
 		return source.GetSourceClientPulmonaryAndCriticalCareSpecialistsOfPrincetonPC1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryAndSleepAssocOfHunterdon:
 		return source.GetSourceClientPulmonaryAndSleepAssocOfHunterdon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryAssocOfStAugustine:
-		return source.GetSourceClientPulmonaryAssocOfStAugustine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryAssociatesOfEastTennessee:
-		return source.GetSourceClientPulmonaryAssociatesOfEastTennessee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryAssociatesOfRichmondva:
-		return source.GetSourceClientPulmonaryAssociatesOfRichmondva(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryCriticalCareSleep:
-		return source.GetSourceClientPulmonaryCriticalCareSleep(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryDiseaseSpecialistsPa:
 		return source.GetSourceClientPulmonaryDiseaseSpecialistsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryHealthPhysiciansPc:
-		return source.GetSourceClientPulmonaryHealthPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryInternistsPa:
-		return source.GetSourceClientPulmonaryInternistsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePulmonaryPhysicians:
-		return source.GetSourceClientPulmonaryPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePulmonaryPracticeAssociates:
 		return source.GetSourceClientPulmonaryPracticeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePutnamCountyHospital:
 		return source.GetSourceClientPutnamCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePuyallupClinicInc:
-		return source.GetSourceClientPuyallupClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePuyallupSurgicalConsultants:
 		return source.GetSourceClientPuyallupSurgicalConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypePuyallupTribalHealthAuthority:
 		return source.GetSourceClientPuyallupTribalHealthAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePv04:
-		return source.GetSourceClientPv04(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypePv05:
-		return source.GetSourceClientPv05(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeQapro17Pm16:
-		return source.GetSourceClientQapro17Pm16(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeQingyanZhuMd:
-		return source.GetSourceClientQingyanZhuMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeQuadmed:
 		return source.GetSourceClientQuadmed(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeQualityOfLifeHealthServicesInc:
@@ -10744,58 +8856,40 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientQuartzHillWalkInMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeQuorumHealthGroupInc:
 		return source.GetSourceClientQuorumHealthGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRSwamiNathanMd:
-		return source.GetSourceClientRSwamiNathanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRadiationOncologyCentersOfNv:
 		return source.GetSourceClientRadiationOncologyCentersOfNv(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRadiologyAssociatesOfSouthFlorida:
 		return source.GetSourceClientRadiologyAssociatesOfSouthFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRadyChildrens:
 		return source.GetSourceClientRadyChildrens(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRafaelEQuinonezMd:
-		return source.GetSourceClientRafaelEQuinonezMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRafaelFRivasChaconMdLlc:
 		return source.GetSourceClientRafaelFRivasChaconMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaficJarrahMd:
 		return source.GetSourceClientRaficJarrahMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRafikRGirgisMD:
 		return source.GetSourceClientRafikRGirgisMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRainbowPediatrics:
-		return source.GetSourceClientRainbowPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRainelleMedicalCenter:
-		return source.GetSourceClientRainelleMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRainierOrthopedicInstitute:
 		return source.GetSourceClientRainierOrthopedicInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRajeshBVrushabMdPllc:
 		return source.GetSourceClientRajeshBVrushabMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaleighAsc:
 		return source.GetSourceClientRaleighAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRaleighDermatology:
-		return source.GetSourceClientRaleighDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRaleighEndocrineAssociates:
-		return source.GetSourceClientRaleighEndocrineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaleighEndoscopyCenter:
 		return source.GetSourceClientRaleighEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRaleighFamilyPractice:
-		return source.GetSourceClientRaleighFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaleighInfectiousDiseasesAssociates:
 		return source.GetSourceClientRaleighInfectiousDiseasesAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaleighMedicalGroup:
 		return source.GetSourceClientRaleighMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaleighPediatricsAssociatesPa:
 		return source.GetSourceClientRaleighPediatricsAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRaleighPlasticSurgeryCenterinc:
-		return source.GetSourceClientRaleighPlasticSurgeryCenterinc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRalphZaghaMdPa:
 		return source.GetSourceClientRalphZaghaMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRamKKamathMdInc:
-		return source.GetSourceClientRamKKamathMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRamRaoMd:
 		return source.GetSourceClientRamRaoMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRamSGargMd:
+		return source.GetSourceClientRamSGargMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRamadasAbboyMd:
 		return source.GetSourceClientRamadasAbboyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRamanSPoolaMdInc:
-		return source.GetSourceClientRamanSPoolaMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRameshNDharawat:
 		return source.GetSourceClientRameshNDharawat(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaminPooyanDoInc:
@@ -10820,8 +8914,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRasoAndCohenGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRatulChatterjeeMd:
 		return source.GetSourceClientRatulChatterjeeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRaveenRAroraMdFacc:
-		return source.GetSourceClientRaveenRAroraMdFacc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaymondDHansenMdPa:
 		return source.GetSourceClientRaymondDHansenMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRaymondJEsparzaMd:
@@ -10882,8 +8974,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRehabilitationHospitalOfIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRehabilitationHospitalOfThePacific:
 		return source.GetSourceClientRehabilitationHospitalOfThePacific(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRehabilitationPhysiciansOfGeorgia:
-		return source.GetSourceClientRehabilitationPhysiciansOfGeorgia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRehabilitation:
 		return source.GetSourceClientRehabilitation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRehobothMckinleyChristianHealthCareServices:
@@ -10904,16 +8994,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRenaissanceMedicalFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenalAssociatesOfLagrange:
 		return source.GetSourceClientRenalAssociatesOfLagrange(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRenalCareConsultantsPc:
-		return source.GetSourceClientRenalCareConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenalConsultantsOfVenturaCountyInc:
 		return source.GetSourceClientRenalConsultantsOfVenturaCountyInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenalHypertensionClinicPc:
 		return source.GetSourceClientRenalHypertensionClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenalMedicalAssociationsLlc:
 		return source.GetSourceClientRenalMedicalAssociationsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRenalPhysicianAssociate:
-		return source.GetSourceClientRenalPhysicianAssociate(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenalusVascularCare:
 		return source.GetSourceClientRenalusVascularCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRenoSparksTribalHealthCenter:
@@ -10926,8 +9012,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientReproductiveCareOfIndiana(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRepublicCountyHospital:
 		return source.GetSourceClientRepublicCountyHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeResearch1:
-		return source.GetSourceClientResearch1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeResearch:
+		return source.GetSourceClientResearch(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRespacare:
 		return source.GetSourceClientRespacare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRespiratoryAndSleepDisordersCtrPllc:
@@ -10982,18 +9068,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientReynoldsAndAnliker(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRezaAzarMd:
 		return source.GetSourceClientRezaAzarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRghClinic:
-		return source.GetSourceClientRghClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRgvVascularCare:
 		return source.GetSourceClientRgvVascularCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRhVillarosaMdInc:
-		return source.GetSourceClientRhVillarosaMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRheumaticDiseaseAssociatesLtd:
 		return source.GetSourceClientRheumaticDiseaseAssociatesLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRheumatologyAndImmunotherapyCenter:
 		return source.GetSourceClientRheumatologyAndImmunotherapyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRheumatologyAndInternalMedicineAssociatesPc:
-		return source.GetSourceClientRheumatologyAndInternalMedicineAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRheumatologyAndOsteoporosisCtrOfMphs:
 		return source.GetSourceClientRheumatologyAndOsteoporosisCtrOfMphs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRheumatologyAssocPc:
@@ -11020,8 +9100,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRheumatologySolutions(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRheumatologyTherapeuticsMedicalCenter:
 		return source.GetSourceClientRheumatologyTherapeuticsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRicardoCabreraMd:
-		return source.GetSourceClientRicardoCabreraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRicardoCigarroaMd:
 		return source.GetSourceClientRicardoCigarroaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiceMedicalCenter:
@@ -11068,14 +9146,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRioGrandeHeartSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRioOrthopedicsAndSportsMedicinePllc:
 		return source.GetSourceClientRioOrthopedicsAndSportsMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRisserOrthopaedicGroup:
-		return source.GetSourceClientRisserOrthopaedicGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRitaTenenbaumMd:
 		return source.GetSourceClientRitaTenenbaumMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiverDriveSurgeryAndLaserCenter:
 		return source.GetSourceClientRiverDriveSurgeryAndLaserCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiverOaksEndoscopy:
 		return source.GetSourceClientRiverOaksEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeRiverbendHealthCarePC:
+		return source.GetSourceClientRiverbendHealthCarePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiversEdgePediatricsInc:
 		return source.GetSourceClientRiversEdgePediatricsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiversideAnesthesiaServices:
@@ -11114,8 +9192,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRiverviewLifelineCenterPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRiverwalkAmbulatorySurgeryCenterLlc:
 		return source.GetSourceClientRiverwalkAmbulatorySurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRiverwalkObGynPllc:
-		return source.GetSourceClientRiverwalkObGynPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRkmPrimaryCare:
 		return source.GetSourceClientRkmPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRmsHealthcareInc:
@@ -11132,16 +9208,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRoanokeValleyCenterForSight(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertCFeldmanMdPa:
 		return source.GetSourceClientRobertCFeldmanMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRobertCaputoDo:
-		return source.GetSourceClientRobertCaputoDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertGDaviesMdPa:
 		return source.GetSourceClientRobertGDaviesMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertHFlanneryDpm:
 		return source.GetSourceClientRobertHFlanneryDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertJBaeMdAMedCorp:
 		return source.GetSourceClientRobertJBaeMdAMedCorp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRobertJohnsonDpm:
-		return source.GetSourceClientRobertJohnsonDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertKBratemanMdPc:
 		return source.GetSourceClientRobertKBratemanMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertKMoffattMd:
@@ -11154,8 +9226,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRobertNCannMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertOFloresMd:
 		return source.GetSourceClientRobertOFloresMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRobertRundorffMd:
-		return source.GetSourceClientRobertRundorffMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertSStipekDpm:
 		return source.GetSourceClientRobertSStipekDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertSussmanDpm:
@@ -11164,14 +9234,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRobertVDimeglioMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRobertVazquezMd:
 		return source.GetSourceClientRobertVazquezMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRobertWoodJohnson:
-		return source.GetSourceClientRobertWoodJohnson(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRobesonPediatrics:
-		return source.GetSourceClientRobesonPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRochesterEndocrinology:
-		return source.GetSourceClientRochesterEndocrinology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRochesterHillsOrthopedicsAndSportsMedicine:
-		return source.GetSourceClientRochesterHillsOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRochesterInternists:
 		return source.GetSourceClientRochesterInternists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRochesterRegionalHealth:
@@ -11200,8 +9262,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRocklandThoracicAssociates2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountEye:
 		return source.GetSourceClientRockyMountEye(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRockyMountUrology:
-		return source.GetSourceClientRockyMountUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainAsc:
 		return source.GetSourceClientRockyMountainAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainEyeCenterInc:
@@ -11210,8 +9270,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRockyMountainFamilyPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainFamilyPhysiciansWest:
 		return source.GetSourceClientRockyMountainFamilyPhysiciansWest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRockyMountainGastroAssoc:
-		return source.GetSourceClientRockyMountainGastroAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainInfectiousDiseasePc:
 		return source.GetSourceClientRockyMountainInfectiousDiseasePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainPediatricCardiology:
@@ -11222,18 +9280,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRockyMountainSpineAndSport(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRockyMountainVascular:
 		return source.GetSourceClientRockyMountainVascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRockyPointMedicalCenter:
-		return source.GetSourceClientRockyPointMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRogerJEpsteinMdLlc:
 		return source.GetSourceClientRogerJEpsteinMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRogersMemorialHospitalInc:
 		return source.GetSourceClientRogersMemorialHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRogueValleyPhysiciansPc:
 		return source.GetSourceClientRogueValleyPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRomeGastroenterologyAssociates:
-		return source.GetSourceClientRomeGastroenterologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRomeOrthopaedicClinic:
-		return source.GetSourceClientRomeOrthopaedicClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRonaldAbramsonMd:
 		return source.GetSourceClientRonaldAbramsonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRonaldTeedMd:
@@ -11244,8 +9296,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRoseHillMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRosemaryBDeslogeMd:
 		return source.GetSourceClientRosemaryBDeslogeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRosenblumPlasticSurgery:
-		return source.GetSourceClientRosenblumPlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRosenfeldVanwirtPc:
 		return source.GetSourceClientRosenfeldVanwirtPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRoshankmathewMdPscAdvancedCardiology:
@@ -11264,16 +9314,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientRushUniversityMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRushvilleFamilyHealthServices:
 		return source.GetSourceClientRushvilleFamilyHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRuslanaKadzeMd:
-		return source.GetSourceClientRuslanaKadzeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRussellvillePediatricAdolescentClinic:
-		return source.GetSourceClientRussellvillePediatricAdolescentClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRussiaville:
 		return source.GetSourceClientRussiaville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRuthAHamadMDApc:
 		return source.GetSourceClientRuthAHamadMDApc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeRuthAnnCooperDpm:
-		return source.GetSourceClientRuthAnnCooperDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRwjbarnabasHealth:
 		return source.GetSourceClientRwjbarnabasHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeRwjbarnabasHealth1:
@@ -11310,8 +9354,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSaddlebackMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSaddlebackRespMedicalGroup:
 		return source.GetSourceClientSaddlebackRespMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSaeedASiddiquiMd:
-		return source.GetSourceClientSaeedASiddiquiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSagePlasticSurgery:
 		return source.GetSourceClientSagePlasticSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSaintBarnabasOutpatientCenters:
@@ -11334,8 +9376,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSakdcSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSaleemHusainMd:
 		return source.GetSourceClientSaleemHusainMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSalemChestSpecialists:
-		return source.GetSourceClientSalemChestSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalemHealth:
 		return source.GetSourceClientSalemHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalemLaserAndSurgeryCenter:
@@ -11358,36 +9398,22 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSalinaSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalinasValleyMemorialHealthcareSystems:
 		return source.GetSourceClientSalinasValleyMemorialHealthcareSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSalineMemorial:
-		return source.GetSourceClientSalineMemorial(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSaludYVida:
-		return source.GetSourceClientSaludYVida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSalineMemorialHospitalSa011:
+		return source.GetSourceClientSalineMemorialHospitalSa011(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSalineMemorialHospitalSa012:
+		return source.GetSourceClientSalineMemorialHospitalSa012(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalusUniversity:
 		return source.GetSourceClientSalusUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSalveoFamilyMedicinePc:
 		return source.GetSourceClientSalveoFamilyMedicinePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSamMessiehMd:
-		return source.GetSourceClientSamMessiehMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSamaHealthcareServices:
-		return source.GetSourceClientSamaHealthcareServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSamaraServicesLlc:
-		return source.GetSourceClientSamaraServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSamaritanHealthServices:
 		return source.GetSourceClientSamaritanHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSameDayMedicalCare:
 		return source.GetSourceClientSameDayMedicalCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSamirFashehMd:
 		return source.GetSourceClientSamirFashehMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSampleClient001:
-		return source.GetSourceClientSampleClient001(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSampleClient002:
-		return source.GetSourceClientSampleClient002(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSampleClient003:
-		return source.GetSourceClientSampleClient003(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSamuelURodgersHealthCenter:
 		return source.GetSourceClientSamuelURodgersHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSamyKMetyasMd:
-		return source.GetSourceClientSamyKMetyasMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanAntonioCareCenter:
 		return source.GetSourceClientSanAntonioCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanAntonioEyeCenterPA:
@@ -11398,8 +9424,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSanAntonioGiAnesthesia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanAntonioKidneyDisease:
 		return source.GetSourceClientSanAntonioKidneyDisease(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSanAntonioKidneyDisease1:
-		return source.GetSourceClientSanAntonioKidneyDisease1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanAntonioMedicalCenter:
 		return source.GetSourceClientSanAntonioMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanAntonioPediatricClinic:
@@ -11426,12 +9450,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSanFranciscoDepartmentOfPublicHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanFranciscoFootAndAnkleCenter:
 		return source.GetSourceClientSanFranciscoFootAndAnkleCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSanGorgonioMemorialHospital1:
-		return source.GetSourceClientSanGorgonioMemorialHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSanGorgonioMemorialHospital2:
-		return source.GetSourceClientSanGorgonioMemorialHospital2(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSanGorgonioMemorialHospital5:
-		return source.GetSourceClientSanGorgonioMemorialHospital5(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanGorgonioMemorialHospital3:
+		return source.GetSourceClientSanGorgonioMemorialHospital3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeSanGorgonioMemorialHospital4:
+		return source.GetSourceClientSanGorgonioMemorialHospital4(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanJoaquinCardiologyMedicalGroupInc:
 		return source.GetSourceClientSanJoaquinCardiologyMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanJoaquinGeneralHospital:
@@ -11440,8 +9462,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSanJuanHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanJuanRegionalMedicalCenter:
 		return source.GetSourceClientSanJuanRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSanLucasPediatric:
-		return source.GetSourceClientSanLucasPediatric(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanLuisObispoCountyMedicalServices:
 		return source.GetSourceClientSanLuisObispoCountyMedicalServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanMarinoPediatricAssociates:
@@ -11450,14 +9470,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSanPedroPediatricMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanYsidroHealthCenter:
 		return source.GetSourceClientSanYsidroHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSandMountainFamilyPractice:
-		return source.GetSourceClientSandMountainFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSandhillMedicalFoundation:
-		return source.GetSourceClientSandhillMedicalFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSandhillsRheumatologyLlc:
 		return source.GetSourceClientSandhillsRheumatologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSandySpringsInternalMedicinePC:
-		return source.GetSourceClientSandySpringsInternalMedicinePC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanfordHealth:
 		return source.GetSourceClientSanfordHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSanjivSharmaMD:
@@ -11468,12 +9482,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSantaClaraValleyMedicalCenterHospitalsAndClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSantaMonicaDermatology:
 		return source.GetSourceClientSantaMonicaDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSantaRosaOrthopaedicsSprt:
-		return source.GetSourceClientSantaRosaOrthopaedicsSprt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSantaYnezTribalHealthClinic:
 		return source.GetSourceClientSantaYnezTribalHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSapc:
-		return source.GetSourceClientSapc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSapphireCommunityHealthInc:
 		return source.GetSourceClientSapphireCommunityHealthInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSarahBushLincolnHealthSystem:
@@ -11486,10 +9496,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSarasotaAnesthesiaServicesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSarasotaArthritisCenter:
 		return source.GetSourceClientSarasotaArthritisCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSarasotaMemorialHospProd:
-		return source.GetSourceClientSarasotaMemorialHospProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSarasotaMemorialHospital:
-		return source.GetSourceClientSarasotaMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSarasotaOphthalmologyAssociates:
 		return source.GetSourceClientSarasotaOphthalmologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSarasotaPhysiciansSurgicalCenter:
@@ -11520,14 +9526,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientScarsManagementServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSchBehavioralHealthServices:
 		return source.GetSourceClientSchBehavioralHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSchProfessionalCorporation:
-		return source.GetSourceClientSchProfessionalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSchcDentalClinic:
 		return source.GetSourceClientSchcDentalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSchoolcraftMemorialHospital:
 		return source.GetSourceClientSchoolcraftMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSchreiberHornadayCostel:
-		return source.GetSourceClientSchreiberHornadayCostel(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSchuylkillEndoscopyCenterAnes:
 		return source.GetSourceClientSchuylkillEndoscopyCenterAnes(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSchuylkillEndoscopyCenter:
@@ -11554,36 +9556,22 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientScottishRiteForChildren(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeScrippsHealth:
 		return source.GetSourceClientScrippsHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeaGirtMedicalAssociates:
-		return source.GetSourceClientSeaGirtMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeaMarCommunityHealth:
-		return source.GetSourceClientSeaMarCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeaMarCommunityHealth1:
-		return source.GetSourceClientSeaMarCommunityHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeaViewPediatricMedicalAssoc:
 		return source.GetSourceClientSeaViewPediatricMedicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeacoastAreaPhysiatry:
-		return source.GetSourceClientSeacoastAreaPhysiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeacoastOrthoAndsportsMedLlc:
 		return source.GetSourceClientSeacoastOrthoAndsportsMedLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeacoastOrthoAssocAndSportsMedLlc:
 		return source.GetSourceClientSeacoastOrthoAssocAndSportsMedLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeacoastOrthopedicAssociates:
 		return source.GetSourceClientSeacoastOrthopedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSealeHarrisClinicPC:
-		return source.GetSourceClientSealeHarrisClinicPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeasideEndoscopyPavilion:
 		return source.GetSourceClientSeasideEndoscopyPavilion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeasideWellnessOfShallotte:
-		return source.GetSourceClientSeasideWellnessOfShallotte(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeasonsCenterForCommunityMentalHealth:
 		return source.GetSourceClientSeasonsCenterForCommunityMentalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeattleChildrensHospital:
 		return source.GetSourceClientSeattleChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeattleChildrensHospital1:
 		return source.GetSourceClientSeattleChildrensHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSeattleIndianHealthBoard:
-		return source.GetSourceClientSeattleIndianHealthBoard(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeattleNeuroAndSpineSurgery:
 		return source.GetSourceClientSeattleNeuroAndSpineSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSeattleObstetricsAndGynecology:
@@ -11640,24 +9628,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSevenStarSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSevenStarUrgentCare:
 		return source.GetSourceClientSevenStarUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShafiKhalidMd:
-		return source.GetSourceClientShafiKhalidMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShahAssociatesMdLlc:
 		return source.GetSourceClientShahAssociatesMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShahinEtebarMd:
 		return source.GetSourceClientShahinEtebarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShahlaMedicalAssociates:
 		return source.GetSourceClientShahlaMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShahriarDadkhahMdSc:
-		return source.GetSourceClientShahriarDadkhahMdSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShannonHealth:
 		return source.GetSourceClientShannonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShapiroStaffordAndYee:
 		return source.GetSourceClientShapiroStaffordAndYee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSharadSoniMd:
-		return source.GetSourceClientSharadSoniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShareOurSelvesMedicalAndDentalClinic:
-		return source.GetSourceClientShareOurSelvesMedicalAndDentalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSharonFosterGardepeMd:
 		return source.GetSourceClientSharonFosterGardepeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSharonRegionalHealthSystem:
@@ -11666,8 +9646,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSharonRegionalHealthSystem1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSharpDermatolpathologyLlc:
 		return source.GetSourceClientSharpDermatolpathologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSharpHealthcareSharpreesstealy:
-		return source.GetSourceClientSharpHealthcareSharpreesstealy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSharpHealthcare:
 		return source.GetSourceClientSharpHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSharpHealthcare1:
@@ -11676,26 +9654,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSharpeMedicalConsulting(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShastaCommunityHealthCenter:
 		return source.GetSourceClientShastaCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShawCenterForWomensHealthPa:
-		return source.GetSourceClientShawCenterForWomensHealthPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShawnaMaroney:
-		return source.GetSourceClientShawnaMaroney(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShawneeChristianHealthcareCenter:
 		return source.GetSourceClientShawneeChristianHealthcareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShawneeMentalHealthCenterInc:
 		return source.GetSourceClientShawneeMentalHealthCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSheboyganMedicalCenter:
 		return source.GetSourceClientSheboyganMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShelbyPrimaryCareLlc:
-		return source.GetSourceClientShelbyPrimaryCareLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShellyNSavantMd:
-		return source.GetSourceClientShellyNSavantMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShenandoahCommunityHealth:
 		return source.GetSourceClientShenandoahCommunityHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShenandoahMedicalCenter:
-		return source.GetSourceClientShenandoahMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShenandoahWomensHealthcare:
-		return source.GetSourceClientShenandoahWomensHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShepardEyeCenterAsc:
 		return source.GetSourceClientShepardEyeCenterAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShepherdEyeCenter:
@@ -11710,10 +9676,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSheridanMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSheridanMemorialHospital1:
 		return source.GetSourceClientSheridanMemorialHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSherryClarke:
-		return source.GetSourceClientSherryClarke(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShingletownMedicalCenter:
-		return source.GetSourceClientShingletownMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShinnecockIndianHealthServices:
 		return source.GetSourceClientShinnecockIndianHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShirleyRyanAbilitylab:
@@ -11726,10 +9688,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientShoreCardiacInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShoreMedicalCenter:
 		return source.GetSourceClientShoreMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShoreOrthopedicsIncDbaTheOrthopedicCenter:
-		return source.GetSourceClientShoreOrthopedicsIncDbaTheOrthopedicCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeShorePrimaryCare:
-		return source.GetSourceClientShorePrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShreveportInternalMedicine:
 		return source.GetSourceClientShreveportInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeShreveportPhysicalTherapy:
@@ -11796,14 +9754,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSinghSurgicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSingingRiverHealthSystemPrd:
 		return source.GetSourceClientSingingRiverHealthSystemPrd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSiouxlandMedicalEducationFoundation:
-		return source.GetSourceClientSiouxlandMedicalEducationFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSiskiyouCommunityHealthCenter:
 		return source.GetSourceClientSiskiyouCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSjMedicalClinic:
 		return source.GetSourceClientSjMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSjscCardiologyLlc:
-		return source.GetSourceClientSjscCardiologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSkagitNorthwestOrthopedics:
 		return source.GetSourceClientSkagitNorthwestOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSkagitNorthwestPtAndOt:
@@ -11822,22 +9776,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSkinscience(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSkylineHospital:
 		return source.GetSourceClientSkylineHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSleepDisordersCtrOfAlabama:
-		return source.GetSourceClientSleepDisordersCtrOfAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSleepLabDepartment:
 		return source.GetSourceClientSleepLabDepartment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSleepMedicineAssociatesLlc:
-		return source.GetSourceClientSleepMedicineAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSleepMedicineInstituteOfTexasPa:
-		return source.GetSourceClientSleepMedicineInstituteOfTexasPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSleepmanatee:
 		return source.GetSourceClientSleepmanatee(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSlocumAsc:
 		return source.GetSourceClientSlocumAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSlocumOrthopedicsPc:
 		return source.GetSourceClientSlocumOrthopedicsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSmaDeerLakesPC:
-		return source.GetSourceClientSmaDeerLakesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSmithCountyMemorialHospital:
 		return source.GetSourceClientSmithCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSmithSurgicalServices:
@@ -11866,18 +9812,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSolanoKidneyCareInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSolanoKidneyCareInc1:
 		return source.GetSourceClientSolanoKidneyCareInc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSolidRockFamilyMedicine:
-		return source.GetSourceClientSolidRockFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSolidaritus:
 		return source.GetSourceClientSolidaritus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSolutionhealth:
 		return source.GetSourceClientSolutionhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSomersetFamilyMedicine:
-		return source.GetSourceClientSomersetFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSomersetPainManagement:
-		return source.GetSourceClientSomersetPainManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSoniaPanjwaniMd:
-		return source.GetSourceClientSoniaPanjwaniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSonomaCountyIndianHealthProject:
 		return source.GetSourceClientSonomaCountyIndianHealthProject(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSonomaValleyCommHealthCenter:
@@ -11886,10 +9824,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSonrisePediatricsAndWellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSoundVascularPs:
 		return source.GetSourceClientSoundVascularPs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSoundviewMedicalAssociates:
-		return source.GetSourceClientSoundviewMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthBaldwinPediatrics:
-		return source.GetSourceClientSouthBaldwinPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthBayFamilyHealthCare:
 		return source.GetSourceClientSouthBayFamilyHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthBendObh:
@@ -11906,16 +9840,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthCoastPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthCountyCommunityHealthCareTeam:
 		return source.GetSourceClientSouthCountyCommunityHealthCareTeam(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthCountyInternalMedicineri:
-		return source.GetSourceClientSouthCountyInternalMedicineri(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthEastEyeLaserAndSurgeryCenter:
 		return source.GetSourceClientSouthEastEyeLaserAndSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthEastEye:
 		return source.GetSourceClientSouthEastEye(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthFlOrthopaedicsAndSportsMedicine:
 		return source.GetSourceClientSouthFlOrthopaedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthFlVascularAssociates:
-		return source.GetSourceClientSouthFlVascularAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthFloridaInterventionalInc:
 		return source.GetSourceClientSouthFloridaInterventionalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthFloridaLaserEyeCenterLlc:
@@ -11934,8 +9864,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthMississippiWoundManagementLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthMountainNephrologyLlc:
 		return source.GetSourceClientSouthMountainNephrologyLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthNassauCommunitiesHospital:
-		return source.GetSourceClientSouthNassauCommunitiesHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthOfMarketHealthCenter:
 		return source.GetSourceClientSouthOfMarketHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthPlainsSurgeryCtr:
@@ -11944,8 +9872,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthShoreHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthShoreNeurologicAssociates:
 		return source.GetSourceClientSouthShoreNeurologicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthShoreWomensHealthPc:
-		return source.GetSourceClientSouthShoreWomensHealthPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthShreveportFamilyMedicine:
 		return source.GetSourceClientSouthShreveportFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthTexasChildrensHealthCenter:
@@ -11958,8 +9884,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthTexasGastroenterologyAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthTexasInfectiousDiseasesConsultantsPa:
 		return source.GetSourceClientSouthTexasInfectiousDiseasesConsultantsPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthTexasKidneySpecialist:
-		return source.GetSourceClientSouthTexasKidneySpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthTexasRuralHealthServicesInc:
 		return source.GetSourceClientSouthTexasRuralHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthTexasVeinInstitute:
@@ -11970,8 +9894,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthamptonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthcoastHealth:
 		return source.GetSourceClientSouthcoastHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthcoastMedicalGroupLlc:
-		return source.GetSourceClientSouthcoastMedicalGroupLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthdalePediatricsAssocLtd:
 		return source.GetSourceClientSouthdalePediatricsAssocLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSoutheastGeorgiaGastroenterology:
@@ -11990,8 +9912,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSoutheastVascularGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSoutheasternHealth:
 		return source.GetSourceClientSoutheasternHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSoutheasternPrimaryCareSpecialists:
-		return source.GetSourceClientSoutheasternPrimaryCareSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernAlabamaSurgeryLlc:
 		return source.GetSourceClientSouthernAlabamaSurgeryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernBoneAndJointSpecialists:
@@ -12002,12 +9922,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthernCaliforniaHeartSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernCaliforniaMedicalCenterInc:
 		return source.GetSourceClientSouthernCaliforniaMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthernCaliforniaNeurologyConsultant:
-		return source.GetSourceClientSouthernCaliforniaNeurologyConsultant(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernCaliforniaPrimaryCareMedGrp:
 		return source.GetSourceClientSouthernCaliforniaPrimaryCareMedGrp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthernDelawareMedicalGroup:
-		return source.GetSourceClientSouthernDelawareMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernIllinoisDermatology:
 		return source.GetSourceClientSouthernIllinoisDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernIllinoisHealthcare:
@@ -12022,10 +9938,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthernIowaOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernMarylandElectricCoopInc:
 		return source.GetSourceClientSouthernMarylandElectricCoopInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthernNhInternalMedicineAssociates:
-		return source.GetSourceClientSouthernNhInternalMedicineAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthernObgynAssoc:
-		return source.GetSourceClientSouthernObgynAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernOrthopaedicsAndSportsMedAsso:
 		return source.GetSourceClientSouthernOrthopaedicsAndSportsMedAsso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernOrthopaedicsAndSportsMedAsso1:
@@ -12034,42 +9946,26 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSouthernSurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthernVitreoretinalAssociatesPl:
 		return source.GetSourceClientSouthernVitreoretinalAssociatesPl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthfieldPediatricPhysiciansPC:
-		return source.GetSourceClientSouthfieldPediatricPhysiciansPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthfieldSurgeryCenterLlc:
 		return source.GetSourceClientSouthfieldSurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthlandGiMedicalCorporation:
 		return source.GetSourceClientSouthlandGiMedicalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthpointeFamilyPhysicians:
-		return source.GetSourceClientSouthpointeFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthportPulmonaryMedicine:
-		return source.GetSourceClientSouthportPulmonaryMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthsideFamilyPractice:
 		return source.GetSourceClientSouthsideFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthsidePediatrics:
-		return source.GetSourceClientSouthsidePediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthviewClinic:
 		return source.GetSourceClientSouthviewClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthviewMedicalGroup:
 		return source.GetSourceClientSouthviewMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestCardiologyMedicalGroupInc:
 		return source.GetSourceClientSouthwestCardiologyMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthwestCenterOfAging:
-		return source.GetSourceClientSouthwestCenterOfAging(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestCommunityHealthCenter:
 		return source.GetSourceClientSouthwestCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestEyeInstitute:
 		return source.GetSourceClientSouthwestEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthwestFamilyMedicine:
-		return source.GetSourceClientSouthwestFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthwestFloridaUrologic:
-		return source.GetSourceClientSouthwestFloridaUrologic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestFootAndAnkleCenterPlc:
 		return source.GetSourceClientSouthwestFootAndAnkleCenterPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestGeneralHealthCenter1:
 		return source.GetSourceClientSouthwestGeneralHealthCenter1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSouthwestGeorgiaNephrologyClinicPC:
-		return source.GetSourceClientSouthwestGeorgiaNephrologyClinicPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestHeartInstituteMedicalGroup:
 		return source.GetSourceClientSouthwestHeartInstituteMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSouthwestMemorialHospital:
@@ -12096,22 +9992,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSpartanburgDermatologyAndSkinSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpartanburgRegionalHealthSystems:
 		return source.GetSourceClientSpartanburgRegionalHealthSystems(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpecialistInHealthcarePa:
-		return source.GetSourceClientSpecialistInHealthcarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialistsInGastroenterology:
 		return source.GetSourceClientSpecialistsInGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialistsInSpineSurgery:
 		return source.GetSourceClientSpecialistsInSpineSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialtyClinicsOfGaOrthopaedics:
 		return source.GetSourceClientSpecialtyClinicsOfGaOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpecialtyClinicsSpineInterventionPC:
-		return source.GetSourceClientSpecialtyClinicsSpineInterventionPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialtyClinics:
 		return source.GetSourceClientSpecialtyClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpecialtyOrthopedicsPc:
-		return source.GetSourceClientSpecialtyOrthopedicsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpecialtyPhysiciansAssoc:
-		return source.GetSourceClientSpecialtyPhysiciansAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialtySurgeryCenterOfSanAntonio:
 		return source.GetSourceClientSpecialtySurgeryCenterOfSanAntonio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpecialtySurgicalCenterLlc:
@@ -12128,26 +10016,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSpectrumHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpectrumHumanServices:
 		return source.GetSourceClientSpectrumHumanServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpectrumMedicalInc:
-		return source.GetSourceClientSpectrumMedicalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpectrumOrthopaedics:
 		return source.GetSourceClientSpectrumOrthopaedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpectrumRadiologySouth:
 		return source.GetSourceClientSpectrumRadiologySouth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpindaleFamilyPractice:
-		return source.GetSourceClientSpindaleFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpineAndScoliosisSpecialists:
 		return source.GetSourceClientSpineAndScoliosisSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpineAndSportsInstitute:
 		return source.GetSourceClientSpineAndSportsInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpineCenter:
-		return source.GetSourceClientSpineCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpineConsultantsLlc:
-		return source.GetSourceClientSpineConsultantsLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpinePainConsultantsOfNy:
-		return source.GetSourceClientSpinePainConsultantsOfNy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpinePhysiciansInstitute:
-		return source.GetSourceClientSpinePhysiciansInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpiritrustLutheranLife:
 		return source.GetSourceClientSpiritrustLutheranLife(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSplinterMedicalGroup:
@@ -12180,16 +10056,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSpringStreetDermatology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpringfieldCardiology:
 		return source.GetSourceClientSpringfieldCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpringfieldClinic:
-		return source.GetSourceClientSpringfieldClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpringfieldOrAnesthesiaAssociatesLlc:
 		return source.GetSourceClientSpringfieldOrAnesthesiaAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSpringfieldPediatricsNj:
 		return source.GetSourceClientSpringfieldPediatricsNj(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpringhillMedicalCenter:
-		return source.GetSourceClientSpringhillMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSpringhillMedicalGroup:
-		return source.GetSourceClientSpringhillMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSquawPeakSurgicalFacility:
 		return source.GetSourceClientSquawPeakSurgicalFacility(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSquirrelHillHealthCenter:
@@ -12202,12 +10072,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStAnthonysPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStAugustineAnesthesiaPartnersLlc:
 		return source.GetSourceClientStAugustineAnesthesiaPartnersLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStAugustineCardiologyAssociates:
-		return source.GetSourceClientStAugustineCardiologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStAugustineEndoscopyCenterLlc:
 		return source.GetSourceClientStAugustineEndoscopyCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStAugustineEnt:
-		return source.GetSourceClientStAugustineEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStAugustineMedicalCenterInc:
 		return source.GetSourceClientStAugustineMedicalCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStCharlesEyeCenterInc:
@@ -12216,8 +10082,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStCharlesHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStCharlesOrthopaedicSurgeryAssocInc:
 		return source.GetSourceClientStCharlesOrthopaedicSurgeryAssocInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStClairHospital:
-		return source.GetSourceClientStClairHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStClairPulmonaryAndCriticalCarePc:
 		return source.GetSourceClientStClairPulmonaryAndCriticalCarePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStClairSpecialtyServices:
@@ -12228,16 +10092,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStDominicJacksonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStElizabethHealthcare:
 		return source.GetSourceClientStElizabethHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStFrancisHealthcare:
-		return source.GetSourceClientStFrancisHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStFrancisMemorialHospital:
 		return source.GetSourceClientStFrancisMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStGeorgeEndoscopyCenter:
 		return source.GetSourceClientStGeorgeEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStGeorgeEndoscopy:
 		return source.GetSourceClientStGeorgeEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStGeorgeMedicalClinic:
-		return source.GetSourceClientStGeorgeMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJamesParishHospital:
 		return source.GetSourceClientStJamesParishHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJohnHealthSystemInc:
@@ -12250,12 +10110,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStJohnProvidenceHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJohnsMedicalCenter:
 		return source.GetSourceClientStJohnsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStJosephHealthSystem:
-		return source.GetSourceClientStJosephHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJosephHospitalHealthCenter:
 		return source.GetSourceClientStJosephHospitalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStJosephsCardiologyGroupLlc:
-		return source.GetSourceClientStJosephsCardiologyGroupLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJosephsEarNoseThroatClinicPllc:
 		return source.GetSourceClientStJosephsEarNoseThroatClinicPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStJosephsRegionalMedicalCenter:
@@ -12266,12 +10122,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStJudeChildrensResearchHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLouisAsc:
 		return source.GetSourceClientStLouisAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStLouisCounty:
-		return source.GetSourceClientStLouisCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLouisKansasCityCarpentersRegionalCouncil:
 		return source.GetSourceClientStLouisKansasCityCarpentersRegionalCouncil(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStLouisNeurologyAssociates:
-		return source.GetSourceClientStLouisNeurologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLouisNorthwest:
 		return source.GetSourceClientStLouisNorthwest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStLukesAtTheVillages:
@@ -12308,8 +10160,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStMarysHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStMarysMedicalCenter:
 		return source.GetSourceClientStMarysMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStMarysOfMichigan:
-		return source.GetSourceClientStMarysOfMichigan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStOfTnDisabilityDeterminationSectio:
 		return source.GetSourceClientStOfTnDisabilityDeterminationSectio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStPaulAllergyAndAsthmaPa:
@@ -12318,16 +10168,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStPaulRamseyCountyPublicHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStThomasMedicalGroupEndoscopy:
 		return source.GetSourceClientStThomasMedicalGroupEndoscopy(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStVincentIndianapolis:
-		return source.GetSourceClientStVincentIndianapolis(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStVincentsEvansville:
-		return source.GetSourceClientStVincentsEvansville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStVincentsHospital:
 		return source.GetSourceClientStVincentsHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStVincentsMedicalCenter:
 		return source.GetSourceClientStVincentsMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStacieLGrossfeldMd:
-		return source.GetSourceClientStacieLGrossfeldMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStacyFrankelMdPa:
 		return source.GetSourceClientStacyFrankelMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStaffordDistrictHospital:
@@ -12336,14 +10180,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStanfordChildrensHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStanfordHealthCare:
 		return source.GetSourceClientStanfordHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStanleyParkFamilyCare:
-		return source.GetSourceClientStanleyParkFamilyCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStanleySShamaDpm:
 		return source.GetSourceClientStanleySShamaDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStanleyWijesekeraMd:
 		return source.GetSourceClientStanleyWijesekeraMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStantonCardiologyCenter:
-		return source.GetSourceClientStantonCardiologyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStarAsc:
 		return source.GetSourceClientStarAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStarCardiologyCarePc:
@@ -12354,8 +10194,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStarVascularAccessCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStarkAmbulatorySurgeryCenterLlc:
 		return source.GetSourceClientStarkAmbulatorySurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStarkCountyWomensClinic:
-		return source.GetSourceClientStarkCountyWomensClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStarkMedicalSpecialties:
 		return source.GetSourceClientStarkMedicalSpecialties(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStatcareOutpatient:
@@ -12378,8 +10216,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStephenCSpainMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStephenDHelper:
 		return source.GetSourceClientStephenDHelper(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStephenGNelsonMDPA:
-		return source.GetSourceClientStephenGNelsonMDPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStephenJRameyMd:
 		return source.GetSourceClientStephenJRameyMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStephenNguyenMd:
@@ -12394,26 +10230,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStephenvilleMedicalAndSurgicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSterlingAreaHealthCenter:
 		return source.GetSourceClientSterlingAreaHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSterlingPhysicians:
-		return source.GetSourceClientSterlingPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSterlingPrimaryCare:
 		return source.GetSourceClientSterlingPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSterlingSpineLlc:
 		return source.GetSourceClientSterlingSpineLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSternCardiovascularFoundation:
-		return source.GetSourceClientSternCardiovascularFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSteveLoveladyMdLlc:
 		return source.GetSourceClientSteveLoveladyMdLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStevePenceMd:
-		return source.GetSourceClientStevePenceMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStevenBRubinsMd:
 		return source.GetSourceClientStevenBRubinsMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStevenCThomasMd:
-		return source.GetSourceClientStevenCThomasMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStevenDelmaestroMD:
 		return source.GetSourceClientStevenDelmaestroMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStevenJayLevineMd:
-		return source.GetSourceClientStevenJayLevineMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStevenWYorkMd:
 		return source.GetSourceClientStevenWYorkMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStevensCountyHospital:
@@ -12436,22 +10262,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStillwaterMedicalCenterPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStillwaterUrologyAssociates:
 		return source.GetSourceClientStillwaterUrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStocktonUrgentCare:
-		return source.GetSourceClientStocktonUrgentCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStoneCountyFamilyMedical:
-		return source.GetSourceClientStoneCountyFamilyMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStoneMountainFamilyPractice:
-		return source.GetSourceClientStoneMountainFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStoneRunFamilyMedicine:
-		return source.GetSourceClientStoneRunFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStonebrookeFamilyPhysicians:
 		return source.GetSourceClientStonebrookeFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStonecrestFamilyMedicine:
 		return source.GetSourceClientStonecrestFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStonewallJacksonMemorialHospital:
 		return source.GetSourceClientStonewallJacksonMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStoneyBatterFamilyMedicine:
-		return source.GetSourceClientStoneyBatterFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStonyBrookBusinessVenturesLlc:
 		return source.GetSourceClientStonyBrookBusinessVenturesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStonyBrookUniversityHospital:
@@ -12462,14 +10278,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientStuartCardiologyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStuartCourtneyDpm:
 		return source.GetSourceClientStuartCourtneyDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeStuartLederMd:
-		return source.GetSourceClientStuartLederMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStuartSKassanMdFacpPc:
 		return source.GetSourceClientStuartSKassanMdFacpPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSturdyMemorialHospital:
 		return source.GetSourceClientSturdyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSturgesClinicInc:
-		return source.GetSourceClientSturgesClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeStvPulmonaryGroupLlc:
 		return source.GetSourceClientStvPulmonaryGroupLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSuAndChangDermatologyAssociatesApmc:
@@ -12492,8 +10304,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSudhaGovindarajanMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummaHealth:
 		return source.GetSourceClientSummaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSummersDoDavidM:
-		return source.GetSourceClientSummersDoDavidM(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitCommunityCare:
 		return source.GetSourceClientSummitCommunityCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitEldercare:
@@ -12502,30 +10312,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSummitEyeCarePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitHealth:
 		return source.GetSourceClientSummitHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSummitMedicalClinic:
-		return source.GetSourceClientSummitMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSummitOrthopedicsLtd:
-		return source.GetSourceClientSummitOrthopedicsLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitOrthopedics:
 		return source.GetSourceClientSummitOrthopedics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSummitSurgeryCenterOfBuckheadLlc:
 		return source.GetSourceClientSummitSurgeryCenterOfBuckheadLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSumnerRegionalMedicalCenter:
 		return source.GetSourceClientSumnerRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSumterInternalMedicine:
-		return source.GetSourceClientSumterInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSumterObGyn:
-		return source.GetSourceClientSumterObGyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSumterSurgicalAnAffiliateOfPalmettoHealth:
-		return source.GetSourceClientSumterSurgicalAnAffiliateOfPalmettoHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSunCoastEndoscopyCenter:
 		return source.GetSourceClientSunCoastEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSuncoastSurgicalAssoc:
-		return source.GetSourceClientSuncoastSurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSundanceMedicalCenter:
 		return source.GetSourceClientSundanceMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSunflowerMedicalGroup:
-		return source.GetSourceClientSunflowerMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSunilaNFusterMdInc:
 		return source.GetSourceClientSunilaNFusterMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSunlifeMedicalGroup:
@@ -12554,8 +10350,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSureshBNeelagaruMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurevisionEyeCentersMidwestLlc:
 		return source.GetSourceClientSurevisionEyeCentersMidwestLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgeonsOfSouthTexas:
-		return source.GetSourceClientSurgeonsOfSouthTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgeryAndEnt:
 		return source.GetSourceClientSurgeryAndEnt(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgeryAssociates:
@@ -12572,18 +10366,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSurgiCtrGrtrMadison(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalArts:
 		return source.GetSourceClientSurgicalArts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalAssocOfNorthAlabama:
-		return source.GetSourceClientSurgicalAssocOfNorthAlabama(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalAssociatesAtRenaissance:
 		return source.GetSourceClientSurgicalAssociatesAtRenaissance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalAssociatesNorthwest:
-		return source.GetSourceClientSurgicalAssociatesNorthwest(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalAssociatesOfAtlantaPC:
 		return source.GetSourceClientSurgicalAssociatesOfAtlantaPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalAssociatesOfGrinnellLlp:
-		return source.GetSourceClientSurgicalAssociatesOfGrinnellLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalAssociatesOfWarnerRobinsPC:
-		return source.GetSourceClientSurgicalAssociatesOfWarnerRobinsPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalCareAssociatesDrClayton:
 		return source.GetSourceClientSurgicalCareAssociatesDrClayton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalCareCenterOfMichigan:
@@ -12596,40 +10382,24 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSurgicalManagementInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalMultispecialtiesMedicalGroup:
 		return source.GetSourceClientSurgicalMultispecialtiesMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalOncologyAndGeneralSurgeryPc:
-		return source.GetSourceClientSurgicalOncologyAndGeneralSurgeryPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalSpecialistsOfBg:
 		return source.GetSourceClientSurgicalSpecialistsOfBg(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalSpecialistsOfCharlottePa:
 		return source.GetSourceClientSurgicalSpecialistsOfCharlottePa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSurgicalSpecialistsOfNorthTexas:
-		return source.GetSourceClientSurgicalSpecialistsOfNorthTexas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalSpecialists:
 		return source.GetSourceClientSurgicalSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicalSpecialtyCenter:
 		return source.GetSourceClientSurgicalSpecialtyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSurgicareAssociates:
 		return source.GetSourceClientSurgicareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSusanMDindotMd:
-		return source.GetSourceClientSusanMDindotMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSusanVegaDo:
-		return source.GetSourceClientSusanVegaDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSutterHealth:
 		return source.GetSourceClientSutterHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSuyingLSongMd:
-		return source.GetSourceClientSuyingLSongMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSuzanneEMartiniMd:
-		return source.GetSourceClientSuzanneEMartiniMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSuzanneHansesDoPllc:
-		return source.GetSourceClientSuzanneHansesDoPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSwCommunityService:
 		return source.GetSourceClientSwCommunityService(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSwamiNathanMdInc:
 		return source.GetSourceClientSwamiNathanMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSwanUrogynecologyPc:
 		return source.GetSourceClientSwanUrogynecologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSwatSurgicalAssociatesLLP:
-		return source.GetSourceClientSwatSurgicalAssociatesLLP(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSweenyCommunityHospital:
 		return source.GetSourceClientSweenyCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSwisherMemorialHospital:
@@ -12638,16 +10408,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSwitchbackMedicalCenterPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSycuanMedicalDentalCenter:
 		return source.GetSourceClientSycuanMedicalDentalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSyedAZaidiMd:
-		return source.GetSourceClientSyedAZaidiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSyedAhmadMd:
-		return source.GetSourceClientSyedAhmadMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSyedMShahMd:
-		return source.GetSourceClientSyedMShahMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSyedVAliMdPc:
 		return source.GetSourceClientSyedVAliMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSyedaAliMd:
-		return source.GetSourceClientSyedaAliMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSylmarMedicalCenter:
 		return source.GetSourceClientSylmarMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSylviaGisiMd:
@@ -12656,8 +10418,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientSynergyHealthGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSynergyInfectiousDiseasePhysiciansPllc:
 		return source.GetSourceClientSynergyInfectiousDiseasePhysiciansPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeSypertInstitute:
-		return source.GetSourceClientSypertInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSyracuseAreaHealth:
 		return source.GetSourceClientSyracuseAreaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeSyracuseCommunityHealthCenterInc:
@@ -12690,10 +10450,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTallahasseeMemorialHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTallahasseePodiatryAssociates:
 		return source.GetSourceClientTallahasseePodiatryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTallahasseePrimaryCareAssociates:
-		return source.GetSourceClientTallahasseePrimaryCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTallahasseeProd:
-		return source.GetSourceClientTallahasseeProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTallgrassOrthopedicAndSportsMedicine:
 		return source.GetSourceClientTallgrassOrthopedicAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTampaAsc:
@@ -12702,8 +10458,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTampaBayEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTampaBayRadiationOncologyAndUrology:
 		return source.GetSourceClientTampaBayRadiationOncologyAndUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTampaBaySurgicalGroupLlp:
-		return source.GetSourceClientTampaBaySurgicalGroupLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTampaEyeClinicAndAssociatesPa:
 		return source.GetSourceClientTampaEyeClinicAndAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTampaGeneralHospital:
@@ -12724,16 +10478,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTanveerAhmadMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTarboroEyeAssociates:
 		return source.GetSourceClientTarboroEyeAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTariqJavedMDPC:
-		return source.GetSourceClientTariqJavedMDPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTayaThayapranMdInc:
 		return source.GetSourceClientTayaThayapranMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTayaniInstitute:
 		return source.GetSourceClientTayaniInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTaylorPediatricsInc:
 		return source.GetSourceClientTaylorPediatricsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTaylorRegionalHospital:
-		return source.GetSourceClientTaylorRegionalHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTaylorsvilleInstacare:
 		return source.GetSourceClientTaylorsvilleInstacare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTeamVisionSurgeryCenter:
@@ -12750,16 +10500,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTennesseeOrthopaedicAlliance(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTennesseeOrthopaedicClinics:
 		return source.GetSourceClientTennesseeOrthopaedicClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTennesseeUrologyAssociates:
-		return source.GetSourceClientTennesseeUrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTeresaHugginsJohnByrnesGarySchwartz:
-		return source.GetSourceClientTeresaHugginsJohnByrnesGarySchwartz(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTeresaMarquezSmithMd:
-		return source.GetSourceClientTeresaMarquezSmithMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTerrosHealth:
 		return source.GetSourceClientTerrosHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTerryBallDo:
-		return source.GetSourceClientTerryBallDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTerryEStangerMdInc:
 		return source.GetSourceClientTerryEStangerMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexanEyePa:
@@ -12800,8 +10542,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTexasSurgicalAssociatesLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexasTechHealthSciencesCenterPermianBasin:
 		return source.GetSourceClientTexasTechHealthSciencesCenterPermianBasin(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTexasTechPhysiciansOfAmarillo:
-		return source.GetSourceClientTexasTechPhysiciansOfAmarillo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexasTechUniversityHealthSciencesCenterAtElPaso:
 		return source.GetSourceClientTexasTechUniversityHealthSciencesCenterAtElPaso(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTexasTraumaAndEmergencyCare:
@@ -12828,8 +10568,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheCenterForReproductiveHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheCenterForRheumatologyLlp:
 		return source.GetSourceClientTheCenterForRheumatologyLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheChildhealthCenterPa:
-		return source.GetSourceClientTheChildhealthCenterPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheChildrensClinic:
+		return source.GetSourceClientTheChildrensClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheChildrensHospitalCorporation:
 		return source.GetSourceClientTheChildrensHospitalCorporation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheChildrensMercyHospital:
@@ -12838,8 +10578,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheChildrensMercyHospital1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheChristHospital:
 		return source.GetSourceClientTheChristHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheClinicForNeurologyPa:
-		return source.GetSourceClientTheClinicForNeurologyPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheColonoscopyCenterInc:
 		return source.GetSourceClientTheColonoscopyCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheCommunityHealthClinic:
@@ -12854,8 +10592,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheEarNoseAndThroatClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheEastAlabamaHealthCareAuthority:
 		return source.GetSourceClientTheEastAlabamaHealthCareAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheEndocrineClinic:
-		return source.GetSourceClientTheEndocrineClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheEndocrineOfficeInc:
 		return source.GetSourceClientTheEndocrineOfficeInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheEndoscopyCenterAtMeridian:
@@ -12912,8 +10648,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheHospitalOfCentralConnecticut(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheHypertensionClinic:
 		return source.GetSourceClientTheHypertensionClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheJohnLawsonSurgicalGroup:
-		return source.GetSourceClientTheJohnLawsonSurgicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheKearneyClinic:
 		return source.GetSourceClientTheKearneyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheLaserCenterOfCoralGablesLlc:
@@ -12924,14 +10658,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheLibertyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheLivingstonSurgeryCenter:
 		return source.GetSourceClientTheLivingstonSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheLungCenterBattleCreek:
-		return source.GetSourceClientTheLungCenterBattleCreek(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheMedicalCenterOfElberton:
-		return source.GetSourceClientTheMedicalCenterOfElberton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheMedicalCenterOfElberton1:
-		return source.GetSourceClientTheMedicalCenterOfElberton1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheMedicalPractice:
-		return source.GetSourceClientTheMedicalPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheMenningerClinic:
 		return source.GetSourceClientTheMenningerClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheMidtownPractice:
@@ -12940,8 +10666,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheMidwestCenterForSight(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheMontgomeryEyeSurgeryCenter:
 		return source.GetSourceClientTheMontgomeryEyeSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheMultipleSclerosisCenterOfAtlanta:
-		return source.GetSourceClientTheMultipleSclerosisCenterOfAtlanta(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheNationalDiabetesAndObesityResearchInstitute:
 		return source.GetSourceClientTheNationalDiabetesAndObesityResearchInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheNationalRetinaInstitute:
@@ -12964,10 +10688,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientThePaxtonClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThePediatricCenterOfFrederick:
 		return source.GetSourceClientThePediatricCenterOfFrederick(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThePediatricCenter:
-		return source.GetSourceClientThePediatricCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThePediatricGroup:
-		return source.GetSourceClientThePediatricGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThePeoriaAzMultiAscLlc:
 		return source.GetSourceClientThePeoriaAzMultiAscLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThePlattsburgClinic:
@@ -12994,22 +10714,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties1:
 		return source.GetSourceClientTheRegionalMedicalCenterOfOrangeburgAndCalhounCounties1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheResourceCenterPrimaryCare:
-		return source.GetSourceClientTheResourceCenterPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheResourceCenter:
 		return source.GetSourceClientTheResourceCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheRetinaGroupInc:
 		return source.GetSourceClientTheRetinaGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheRetinaInstitute:
-		return source.GetSourceClientTheRetinaInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheRutlandHospitalIncDBARutlandRegionalMedicalCenter:
 		return source.GetSourceClientTheRutlandHospitalIncDBARutlandRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheSouthBendClinicLlp:
 		return source.GetSourceClientTheSouthBendClinicLlp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheSouthGeorgiaNeurologicalInstitute:
 		return source.GetSourceClientTheSouthGeorgiaNeurologicalInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheSpineDiagnosticAndPainTreatmentCenter:
-		return source.GetSourceClientTheSpineDiagnosticAndPainTreatmentCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth:
 		return source.GetSourceClientTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners:
@@ -13044,18 +10758,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTheSurgeryCenterOfMelbourne(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheSurgeryCenter:
 		return source.GetSourceClientTheSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston1:
-		return source.GetSourceClientTheUniversityOfTexasHealthScienceCenterAtHouston1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTheUniversityOfTexasHealthScienceCenterAtHouston:
+		return source.GetSourceClientTheUniversityOfTexasHealthScienceCenterAtHouston(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter:
 		return source.GetSourceClientTheUniversityOfTexasMdAndersonCancerCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheUniversityOfVermontHealthNetwork:
 		return source.GetSourceClientTheUniversityOfVermontHealthNetwork(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheUrologicalCenter:
-		return source.GetSourceClientTheUrologicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheVancouverClinic:
 		return source.GetSourceClientTheVancouverClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTheVeinAndVascularInstitute:
-		return source.GetSourceClientTheVeinAndVascularInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital:
 		return source.GetSourceClientTheVillagesTriCountyMedicalCenterIncDBAUfHealthTheVillagesHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheVisionSurgicalCenter:
@@ -13068,12 +10778,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientThedacare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTheodorePWerblinMdPc:
 		return source.GetSourceClientTheodorePWerblinMdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThinkWholePersonHealthcare:
-		return source.GetSourceClientThinkWholePersonHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomasAndThomasMedicalLtd:
-		return source.GetSourceClientThomasAndThomasMedicalLtd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomasEJacksonMd:
-		return source.GetSourceClientThomasEJacksonMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThomasJHaganDpm:
 		return source.GetSourceClientThomasJHaganDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThomasJMelhamMd:
@@ -13082,14 +10786,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientThomasLWatkinsDO(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThomasRichDpm:
 		return source.GetSourceClientThomasRichDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomasTLeeMd:
-		return source.GetSourceClientThomasTLeeMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomasVonDohlenMd:
-		return source.GetSourceClientThomasVonDohlenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomastonMedicalClinicPc:
-		return source.GetSourceClientThomastonMedicalClinicPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeThomasvilleArchdaleTrinityPediatricsPllc:
-		return source.GetSourceClientThomasvilleArchdaleTrinityPediatricsPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThompsonHealthcarePllc:
 		return source.GetSourceClientThompsonHealthcarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeThornvilleFamilyMedicalCenter:
@@ -13108,8 +10804,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTidalhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTidalhealth1:
 		return source.GetSourceClientTidalhealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTidewaterKidneySpecialists:
-		return source.GetSourceClientTidewaterKidneySpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTiffanyDawnWilsonMdInc:
 		return source.GetSourceClientTiffanyDawnWilsonMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTiftRegionalHealthSystemInc:
@@ -13142,20 +10836,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTorranceMemorialMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTotalBodyPainInstituteLlc:
 		return source.GetSourceClientTotalBodyPainInstituteLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTotalHealthMedicalCenter:
-		return source.GetSourceClientTotalHealthMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTotsClinic:
 		return source.GetSourceClientTotsClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTouroUniversityMedicalGroup:
 		return source.GetSourceClientTouroUniversityMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTouroUniversity:
-		return source.GetSourceClientTouroUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTowerHealth:
 		return source.GetSourceClientTowerHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTownCenterFootClinic:
 		return source.GetSourceClientTownCenterFootClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTowsonOrthopaedicAssociates:
-		return source.GetSourceClientTowsonOrthopaedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeToyotaIndustrialEquipment:
 		return source.GetSourceClientToyotaIndustrialEquipment(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTpcaSandbox:
@@ -13176,8 +10864,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTreasureCoastPodiatry(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTregoCountyLemkeMemorialHospital:
 		return source.GetSourceClientTregoCountyLemkeMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTrentonMedicalClinic:
-		return source.GetSourceClientTrentonMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriCenturyEyeCarePc:
 		return source.GetSourceClientTriCenturyEyeCarePc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriCityMedicalCenter:
@@ -13192,8 +10878,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTriCityPulmonaryMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriCountyCommunityActionAgency:
 		return source.GetSourceClientTriCountyCommunityActionAgency(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTriCountyInternalMedicine:
-		return source.GetSourceClientTriCountyInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriCountyMentalHealthServices:
 		return source.GetSourceClientTriCountyMentalHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriCountyPulmonaryAndSleep:
@@ -13210,28 +10894,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTriadNeurosurgicalAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriangleArthritisAndRheumatologyAssc:
 		return source.GetSourceClientTriangleArthritisAndRheumatologyAssc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTriangleCommunityPhysiciansPa:
-		return source.GetSourceClientTriangleCommunityPhysiciansPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTriangleEndoscopyCenter:
 		return source.GetSourceClientTriangleEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTriangleGastroenterology:
-		return source.GetSourceClientTriangleGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTrianglePremierWomensHealthPa:
-		return source.GetSourceClientTrianglePremierWomensHealthPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTrianglePrimaryCareAssoc:
-		return source.GetSourceClientTrianglePrimaryCareAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTriangleSurgicalAssociatesPa:
-		return source.GetSourceClientTriangleSurgicalAssociatesPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTriangleUrologyAssociates:
-		return source.GetSourceClientTriangleUrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTricityCardiologyConsultantsPc:
 		return source.GetSourceClientTricityCardiologyConsultantsPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrihealth:
 		return source.GetSourceClientTrihealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTrinitasHospital:
-		return source.GetSourceClientTrinitasHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTrinityGastroenterology:
-		return source.GetSourceClientTrinityGastroenterology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrinityHealthCenter:
 		return source.GetSourceClientTrinityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTrinityHealthCorporation:
@@ -13256,26 +10924,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTrinityWomensHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTristateCommunityHealthCenter:
 		return source.GetSourceClientTristateCommunityHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTristatePulmonaryMedicine:
-		return source.GetSourceClientTristatePulmonaryMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTristateelktonGeneralSurgery:
-		return source.GetSourceClientTristateelktonGeneralSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTropicalTexasBehavioralHealth:
 		return source.GetSourceClientTropicalTexasBehavioralHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTroyFamilyPracticePllc:
-		return source.GetSourceClientTroyFamilyPracticePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTroyInternalMedicine:
-		return source.GetSourceClientTroyInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTsuHLaiMd:
-		return source.GetSourceClientTsuHLaiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTualityHealthcare:
 		return source.GetSourceClientTualityHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTualityPhysiciansPc:
 		return source.GetSourceClientTualityPhysiciansPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTuckahoeOrthopaedicAssoc:
-		return source.GetSourceClientTuckahoeOrthopaedicAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTuckerPsychiatricClinicInc:
-		return source.GetSourceClientTuckerPsychiatricClinicInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTucsonEyePhysiciansPllc:
 		return source.GetSourceClientTucsonEyePhysiciansPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTucsonPhysicianGroupHoldingsLlc:
@@ -13290,20 +10944,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientTulsaEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTuolumneMeWukIndianHealthCenter:
 		return source.GetSourceClientTuolumneMeWukIndianHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTuomeyPainManagement:
-		return source.GetSourceClientTuomeyPainManagement(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTurningPointCommunityPrograms:
 		return source.GetSourceClientTurningPointCommunityPrograms(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTuscarawasCountyOb:
-		return source.GetSourceClientTuscarawasCountyOb(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeTuscarawasCountyMedical:
+		return source.GetSourceClientTuscarawasCountyMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTwinCitiesAnesthesiaPa:
 		return source.GetSourceClientTwinCitiesAnesthesiaPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTwinCitiesPainClinic:
 		return source.GetSourceClientTwinCitiesPainClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTwinCitiesSurgeryCenter:
 		return source.GetSourceClientTwinCitiesSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeTwinLakesMedicalFoundation:
-		return source.GetSourceClientTwinLakesMedicalFoundation(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTylerHolmesMemorialHospital:
 		return source.GetSourceClientTylerHolmesMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeTylerNephrologyAssociates:
@@ -13316,10 +10966,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUabCallahanEyeHospitalAuthority(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUabHospital:
 		return source.GetSourceClientUabHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUabHuntsvilleRegionalCampus:
-		return source.GetSourceClientUabHuntsvilleRegionalCampus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUbmdProduction:
-		return source.GetSourceClientUbmdProduction(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUbp:
 		return source.GetSourceClientUbp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUcDavisMmc:
@@ -13362,8 +11008,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUiHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUintahBasinMedicalCenter:
 		return source.GetSourceClientUintahBasinMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUkHealthcare1:
-		return source.GetSourceClientUkHealthcare1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeUkHealthcare:
+		return source.GetSourceClientUkHealthcare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUkiahValleyPrimaryCareMedical:
 		return source.GetSourceClientUkiahValleyPrimaryCareMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUltimateAccessPrimaryCare:
@@ -13388,18 +11034,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUnifiedHealthAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnionAsc:
 		return source.GetSourceClientUnionAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUnionBehavioralOffice:
-		return source.GetSourceClientUnionBehavioralOffice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnionBridgeFamilyPractice:
 		return source.GetSourceClientUnionBridgeFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnionGeneralHospitalInc:
 		return source.GetSourceClientUnionGeneralHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnionHospitalInc:
 		return source.GetSourceClientUnionHospitalInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUnionMedicalCenter:
-		return source.GetSourceClientUnionMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUnionPrimaryCare:
-		return source.GetSourceClientUnionPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniontownHospital:
 		return source.GetSourceClientUniontownHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUnitedCerebralPalsyOfNyc:
@@ -13440,8 +11080,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUniversityHospitalNewJersey(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityHospitalsCleveland:
 		return source.GetSourceClientUniversityHospitalsCleveland(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUniversityHospitalsHealthSystemIncProd:
-		return source.GetSourceClientUniversityHospitalsHealthSystemIncProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityHospitalsSamaritanMedicalCenter:
 		return source.GetSourceClientUniversityHospitalsSamaritanMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUniversityMedicalCenterOfElPaso:
@@ -13514,8 +11152,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUnknownPracticeB(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUoflHealth:
 		return source.GetSourceClientUoflHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUpHealthSystemBell:
-		return source.GetSourceClientUpHealthSystemBell(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUplandVascularCenter:
 		return source.GetSourceClientUplandVascularCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUpmcCentralPa:
@@ -13538,24 +11174,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUrologicalAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologyAssociatesOfArchbold:
 		return source.GetSourceClientUrologyAssociatesOfArchbold(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyAssociatesOfCentralCaliforniaLlc:
-		return source.GetSourceClientUrologyAssociatesOfCentralCaliforniaLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyAssociatesOfDenton:
-		return source.GetSourceClientUrologyAssociatesOfDenton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyAssociatesOfNeFlorida:
-		return source.GetSourceClientUrologyAssociatesOfNeFlorida(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyAssociatesOfSoutheasternNc:
-		return source.GetSourceClientUrologyAssociatesOfSoutheasternNc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologyAssociatesOfTheCentralCoast:
 		return source.GetSourceClientUrologyAssociatesOfTheCentralCoast(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyAssociates:
-		return source.GetSourceClientUrologyAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyClinicOfUtahValley:
-		return source.GetSourceClientUrologyClinicOfUtahValley(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyOfStl:
-		return source.GetSourceClientUrologyOfStl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologyOneInc:
-		return source.GetSourceClientUrologyOneInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologyPartnersOfNorthTexasPllc:
 		return source.GetSourceClientUrologyPartnersOfNorthTexasPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologyPc:
@@ -13568,16 +11188,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUrologySpecialistsOfNevada(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologySpecialistsOfOhio:
 		return source.GetSourceClientUrologySpecialistsOfOhio(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUrologySpecialistsOfTheCarolinas:
-		return source.GetSourceClientUrologySpecialistsOfTheCarolinas(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologySpecialistsSurgeryCenterLlc:
 		return source.GetSourceClientUrologySpecialistsSurgeryCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrologySurgicalCenterLlc:
 		return source.GetSourceClientUrologySurgicalCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUrology:
 		return source.GetSourceClientUrology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUropartnersLlc:
-		return source.GetSourceClientUropartnersLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUsCardioGreensburgAccessLlc:
 		return source.GetSourceClientUsCardioGreensburgAccessLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUsCardioGreensburgLlc:
@@ -13590,8 +11206,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUsDermatologyPartners8(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUsDermatologyPartners9:
 		return source.GetSourceClientUsDermatologyPartners9(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeUsOncology:
-		return source.GetSourceClientUsOncology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUsWellness:
 		return source.GetSourceClientUsWellness(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeUsaHealthDermatology:
@@ -13660,10 +11274,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientUwharriePodiatryLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVGeorgeZochowskiDoInc:
 		return source.GetSourceClientVGeorgeZochowskiDoInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVMPadmanabhaMd:
-		return source.GetSourceClientVMPadmanabhaMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeV2Qapro17Pm16:
-		return source.GetSourceClientV2Qapro17Pm16(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVacOfAtlanticCountyObl:
 		return source.GetSourceClientVacOfAtlanticCountyObl(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVacOfAtlanticCounty:
@@ -13706,8 +11316,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVaijayantiKoldhekarMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVailHealth:
 		return source.GetSourceClientVailHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeValdostaFootAnkleClinic:
-		return source.GetSourceClientValdostaFootAnkleClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValenteniaDaughertyAndAlvinRSmithPc:
 		return source.GetSourceClientValenteniaDaughertyAndAlvinRSmithPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValenzuelaMedicalGroupIInc:
@@ -13716,10 +11324,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientValirRehabilitationHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleDelSol:
 		return source.GetSourceClientValleDelSol(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeValleyAreaMedicalPavilion:
-		return source.GetSourceClientValleyAreaMedicalPavilion(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeValleyCardiology:
-		return source.GetSourceClientValleyCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyCardiology1:
 		return source.GetSourceClientValleyCardiology1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyChildrensHealthcare:
@@ -13732,8 +11336,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientValleyEyeSurgicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyForgeSurgical:
 		return source.GetSourceClientValleyForgeSurgical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeValleyGastroenterologyAssoc:
-		return source.GetSourceClientValleyGastroenterologyAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyGastroenterologyConsultantsInc:
 		return source.GetSourceClientValleyGastroenterologyConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyHealthSystemsPrd:
@@ -13760,8 +11362,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientValleyOrthopedicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyPhysiciansMedicalGroupInc:
 		return source.GetSourceClientValleyPhysiciansMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeValleySurgicalClinics:
-		return source.GetSourceClientValleySurgicalClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyVascularAssociates:
 		return source.GetSourceClientValleyVascularAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeValleyWideHealthSystemsInc:
@@ -13792,26 +11392,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVarietyChildrensHospitalDBANicklausChildrensHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascon:
 		return source.GetSourceClientVascon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVascularAndVeinInstituteOfTheSouth:
-		return source.GetSourceClientVascularAndVeinInstituteOfTheSouth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularClinic:
 		return source.GetSourceClientVascularClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularDelCaribeAsc:
 		return source.GetSourceClientVascularDelCaribeAsc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularDelCaribe:
 		return source.GetSourceClientVascularDelCaribe(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVascularMedicineSurgerySpecialist:
-		return source.GetSourceClientVascularMedicineSurgerySpecialist(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularSpecialtyCenter:
 		return source.GetSourceClientVascularSpecialtyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularSurgeryAssociatesLlc:
 		return source.GetSourceClientVascularSurgeryAssociatesLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVascularSurgeryAssociates:
 		return source.GetSourceClientVascularSurgeryAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVascularSurgicalAssoc:
-		return source.GetSourceClientVascularSurgicalAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVascularVeinCenters:
-		return source.GetSourceClientVascularVeinCenters(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVatsalHModyMD:
 		return source.GetSourceClientVatsalHModyMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVccsd:
@@ -13824,8 +11416,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVeniceFamilyClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVenkatesanDVidiMdPllc:
 		return source.GetSourceClientVenkatesanDVidiMdPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVenturaCardiologyConsultants:
-		return source.GetSourceClientVenturaCardiologyConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVenturaCountyPulmonaryMedicalGroup:
 		return source.GetSourceClientVenturaCountyPulmonaryMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVenturaCountyUrologyMedicalGroup:
@@ -13834,10 +11424,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVenturaEyeInstitute(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVeraWholeHealth:
 		return source.GetSourceClientVeraWholeHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVeradigmConnect:
-		return source.GetSourceClientVeradigmConnect(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVeradigmConnect1:
-		return source.GetSourceClientVeradigmConnect1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectScmR4:
+		return source.GetSourceClientVeradigmConnectScmR4(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectScmR41:
+		return source.GetSourceClientVeradigmConnectScmR41(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectScmR42:
+		return source.GetSourceClientVeradigmConnectScmR42(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectScmR43:
+		return source.GetSourceClientVeradigmConnectScmR43(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectTwR4:
+		return source.GetSourceClientVeradigmConnectTwR4(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeVeradigmConnectTwR41:
+		return source.GetSourceClientVeradigmConnectTwR41(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVerdierEyeCenterPlc:
 		return source.GetSourceClientVerdierEyeCenterPlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVeroOrthopaedicsIiPa:
@@ -13854,22 +11452,16 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientViasatInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVibrantHealthFamilyClinics:
 		return source.GetSourceClientVibrantHealthFamilyClinics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVickeryFamilyMedicine:
-		return source.GetSourceClientVickeryFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVickiRaabMD:
 		return source.GetSourceClientVickiRaabMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVicksburgPulmonaryClinic:
 		return source.GetSourceClientVicksburgPulmonaryClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVictorValleyGlobalMedicalCenter:
 		return source.GetSourceClientVictorValleyGlobalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVictoriaAllergyAndAsthmaClinic:
-		return source.GetSourceClientVictoriaAllergyAndAsthmaClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVictoriaEyeCenter:
 		return source.GetSourceClientVictoriaEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVictoriaSurgeryCenter:
 		return source.GetSourceClientVictoriaSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVictoriaUrologicalAssociatesPA:
-		return source.GetSourceClientVictoriaUrologicalAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVictoriaVisionCenter:
 		return source.GetSourceClientVictoriaVisionCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVidaFamilyMedicineLlc:
@@ -13882,22 +11474,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVidantHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeViewmontUrologyClinicPa:
 		return source.GetSourceClientViewmontUrologyClinicPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVillageInternalMedicine:
-		return source.GetSourceClientVillageInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVinayPatelMd:
-		return source.GetSourceClientVinayPatelMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVincentACaldarolaMdFacs:
-		return source.GetSourceClientVincentACaldarolaMdFacs(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVincentChuDo:
 		return source.GetSourceClientVincentChuDo(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVipmd:
 		return source.GetSourceClientVipmd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVirginiaBeachSurgery:
-		return source.GetSourceClientVirginiaBeachSurgery(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginiaCardiovascularSpecialists:
 		return source.GetSourceClientVirginiaCardiovascularSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVirginiaEarNoseAndThroatAssoc:
-		return source.GetSourceClientVirginiaEarNoseAndThroatAssoc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginiaEyeConsultantsInc:
 		return source.GetSourceClientVirginiaEyeConsultantsInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginiaHospitalCenter:
@@ -13912,16 +11494,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVirginiaSurgeryCenterLLC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginiaSurgeryCenter:
 		return source.GetSourceClientVirginiaSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVirginiaSurgicalAssociatesPc:
-		return source.GetSourceClientVirginiaSurgicalAssociatesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirginia:
 		return source.GetSourceClientVirginia(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirtuaHealth:
 		return source.GetSourceClientVirtuaHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVirtualCare:
 		return source.GetSourceClientVirtualCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVisaliaMedicalClinic:
-		return source.GetSourceClientVisaliaMedicalClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVishenRKMd:
 		return source.GetSourceClientVishenRKMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVisionCareCenterDbaEyeQ:
@@ -13970,12 +11548,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientVnacjCommunityHealthCenterInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVohra:
 		return source.GetSourceClientVohra(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVolpicellalevyAndDaposaquinoMds:
-		return source.GetSourceClientVolpicellalevyAndDaposaquinoMds(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVolunteersInMedicine:
 		return source.GetSourceClientVolunteersInMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeVpnGastroAssocPANewarkde:
-		return source.GetSourceClientVpnGastroAssocPANewarkde(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVpsMedicalServicesPc:
 		return source.GetSourceClientVpsMedicalServicesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeVrPhysicianForVeinRestorationNyLlc:
@@ -13994,10 +11568,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWAndrewCiesMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWDavidMelloMD:
 		return source.GetSourceClientWDavidMelloMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWGarrisonStricklandMdPhdPc:
-		return source.GetSourceClientWGarrisonStricklandMdPhdPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWStevenWilsonMD:
-		return source.GetSourceClientWStevenWilsonMD(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWabashGeneralHospital:
 		return source.GetSourceClientWabashGeneralHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWacoCardiologyAssociates:
@@ -14014,8 +11584,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWaianaeCoastCompHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWaimanaloHealthCenter:
 		return source.GetSourceClientWaimanaloHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWakeForestPediatric:
-		return source.GetSourceClientWakeForestPediatric(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWakemedHealthAndHospitals:
 		return source.GetSourceClientWakemedHealthAndHospitals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWaldorfEndoscopyCenter:
@@ -14042,36 +11610,24 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWarrenEKaplanDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWarrenJDegaturJrMdFaafp:
 		return source.GetSourceClientWarrenJDegaturJrMdFaafp(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWarrenMedicalGroup:
-		return source.GetSourceClientWarrenMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWarrenWashingtonAssociationForMh:
 		return source.GetSourceClientWarrenWashingtonAssociationForMh(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWarrentonAndLintonHallPediatrics:
 		return source.GetSourceClientWarrentonAndLintonHallPediatrics(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWasatchPeakFamilyPractice:
-		return source.GetSourceClientWasatchPeakFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonCenterForBleedingDisorders:
 		return source.GetSourceClientWashingtonCenterForBleedingDisorders(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonCountyMemorialHospital:
 		return source.GetSourceClientWashingtonCountyMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonHospitalHealthcareSystem:
 		return source.GetSourceClientWashingtonHospitalHealthcareSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWashingtonHospital:
-		return source.GetSourceClientWashingtonHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonRegionalGenSurgeryClinic:
 		return source.GetSourceClientWashingtonRegionalGenSurgeryClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWashingtonRegionalMedicalCenter:
-		return source.GetSourceClientWashingtonRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashingtonRegionalMedicalSystem:
 		return source.GetSourceClientWashingtonRegionalMedicalSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWashoeTribalHealthCenter:
 		return source.GetSourceClientWashoeTribalHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWatervilleFamilyPractice:
-		return source.GetSourceClientWatervilleFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWatsonClinic:
 		return source.GetSourceClientWatsonClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWattlesParkFamilyPractice:
-		return source.GetSourceClientWattlesParkFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWaukeshaPainCenterLlc:
 		return source.GetSourceClientWaukeshaPainCenterLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWaverleySurgeryCenter:
@@ -14108,8 +11664,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWellspanHealth1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWellstar:
 		return source.GetSourceClientWellstar(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWendoverObgyn:
-		return source.GetSourceClientWendoverObgyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWernerGonzalezMedicalGroup:
 		return source.GetSourceClientWernerGonzalezMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWeslacoMedicalClinic:
@@ -14124,16 +11678,12 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWestBroadwayClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestCentralOhioPodiatryInc:
 		return source.GetSourceClientWestCentralOhioPodiatryInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestChesterGastroIntestinalGroup:
-		return source.GetSourceClientWestChesterGastroIntestinalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestCoastCenterForSurgeries:
 		return source.GetSourceClientWestCoastCenterForSurgeries(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestCoastPulmonaryPhysiciansInc:
 		return source.GetSourceClientWestCoastPulmonaryPhysiciansInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestCoastUrologicAssociates:
 		return source.GetSourceClientWestCoastUrologicAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestCoastVascular:
-		return source.GetSourceClientWestCoastVascular(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestFrontPrimaryCarePllc:
 		return source.GetSourceClientWestFrontPrimaryCarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestGastroenterologyMedicalGroup:
@@ -14142,16 +11692,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWestHavenMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter:
 		return source.GetSourceClientWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestLoopUniversityMedical:
-		return source.GetSourceClientWestLoopUniversityMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestMichiganFamilyMedicine:
 		return source.GetSourceClientWestMichiganFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestPalmdaleHealthCare:
 		return source.GetSourceClientWestPalmdaleHealthCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestPlainsSurgical:
-		return source.GetSourceClientWestPlainsSurgical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestRiverHealthServices:
-		return source.GetSourceClientWestRiverHealthServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestSalemFamilyPractice:
 		return source.GetSourceClientWestSalemFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestTennesseeHealthcare:
@@ -14176,8 +11720,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWesternMissouriMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesternOhPodiatricMedicalCtr:
 		return source.GetSourceClientWesternOhPodiatricMedicalCtr(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWesternOrthopedicsAndSportsMedicine:
-		return source.GetSourceClientWesternOrthopedicsAndSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesternPacificCancerMedicalGroupInc:
 		return source.GetSourceClientWesternPacificCancerMedicalGroupInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesternPrimaryCare:
@@ -14188,12 +11730,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWesternWaynePhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesterville:
 		return source.GetSourceClientWesterville(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestgateFamilyPhysicians:
-		return source.GetSourceClientWestgateFamilyPhysicians(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestglenEndoscopyCenter:
 		return source.GetSourceClientWestglenEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestglenGastrointestinalConsultants:
-		return source.GetSourceClientWestglenGastrointestinalConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWesthamptonPrimaryCareCenter:
 		return source.GetSourceClientWesthamptonPrimaryCareCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestmorelandAndArnoldMdPllc:
@@ -14204,8 +11742,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWestonEyeCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestroadsRheumatologyAssociatesPC:
 		return source.GetSourceClientWestroadsRheumatologyAssociatesPC(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWestshorePrimaryCareAssociates:
-		return source.GetSourceClientWestshorePrimaryCareAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestsideAnesthesiaServices:
 		return source.GetSourceClientWestsideAnesthesiaServices(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWestsideFamilyPractice:
@@ -14216,8 +11752,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWhAmbulatorySurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWhatleyHealthServicesInc:
 		return source.GetSourceClientWhatleyHealthServicesInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWheatRidgeInternalMedicine:
-		return source.GetSourceClientWheatRidgeInternalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWheatlandMemorialHospital:
 		return source.GetSourceClientWheatlandMemorialHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWheelerClinicInc:
@@ -14236,14 +11770,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWhitesideCountyCommunityHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWhitevilleEyeAssociatesPA:
 		return source.GetSourceClientWhitevilleEyeAssociatesPA(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWhitevilleMedicalAssociates:
-		return source.GetSourceClientWhitevilleMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWichitaCountyHealthCenter:
 		return source.GetSourceClientWichitaCountyHealthCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWichitaNephrologyGroup:
 		return source.GetSourceClientWichitaNephrologyGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWiklerFamilyPractice:
-		return source.GetSourceClientWiklerFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilkesRegionalMedicalCenter:
 		return source.GetSourceClientWilkesRegionalMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWillCountyCommunityHealthCenter:
@@ -14256,20 +11786,14 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWillametteFamilyMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWillametteUrologyPc:
 		return source.GetSourceClientWillametteUrologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamBFunkMdPa:
-		return source.GetSourceClientWilliamBFunkMdPa(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamCEvesMDInc:
-		return source.GetSourceClientWilliamCEvesMDInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamDefeoDpm:
 		return source.GetSourceClientWilliamDefeoDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamHCherryMdInc:
 		return source.GetSourceClientWilliamHCherryMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamHansenDpm:
 		return source.GetSourceClientWilliamHansenDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamMcallisterMd:
-		return source.GetSourceClientWilliamMcallisterMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamMoranMd:
-		return source.GetSourceClientWilliamMoranMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWilliamJBergerMd:
+		return source.GetSourceClientWilliamJBergerMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamOfrichterDpm:
 		return source.GetSourceClientWilliamOfrichterDpm(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamRBurdenMdPa:
@@ -14278,16 +11802,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWilliamRWelbornIiiMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamRWelbornIiiMd1:
 		return source.GetSourceClientWilliamRWelbornIiiMd1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamRuleMd:
-		return source.GetSourceClientWilliamRuleMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamSuvalMd:
-		return source.GetSourceClientWilliamSuvalMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamsburgObgyn:
-		return source.GetSourceClientWilliamsburgObgyn(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilliamsburgRegionalHealth:
 		return source.GetSourceClientWilliamsburgRegionalHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilliamsonMedicalGroup:
-		return source.GetSourceClientWilliamsonMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWillowSpringsSurgeryCenter:
 		return source.GetSourceClientWillowSpringsSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWillsEyeOphthalmologyClinicInc:
@@ -14302,16 +11818,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWilmingtonHealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilmingtonMaternalFetalMedicine:
 		return source.GetSourceClientWilmingtonMaternalFetalMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWilsonHealthMedicalGroup:
-		return source.GetSourceClientWilsonHealthMedicalGroup(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWilsonMedicalCenterReeseCampus:
 		return source.GetSourceClientWilsonMedicalCenterReeseCampus(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWinchesterFootAndAnkleAssociatesPllc:
 		return source.GetSourceClientWinchesterFootAndAnkleAssociatesPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWinchesterMedical:
-		return source.GetSourceClientWinchesterMedical(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWinchesterNeurologicalConsultants:
-		return source.GetSourceClientWinchesterNeurologicalConsultants(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWindhamEyeGroupPc:
 		return source.GetSourceClientWindhamEyeGroupPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWinfieldObGyn:
@@ -14328,34 +11838,18 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWisconsinHealthFund(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWisconsinSurgeryCenter:
 		return source.GetSourceClientWisconsinSurgeryCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWiseHealthSystemProd:
-		return source.GetSourceClientWiseHealthSystemProd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWiseHealthSystemProd3:
-		return source.GetSourceClientWiseHealthSystemProd3(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWishekCommunityHospital:
 		return source.GetSourceClientWishekCommunityHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWmgMichaelAvakianAndMarinaManvelyan:
-		return source.GetSourceClientWmgMichaelAvakianAndMarinaManvelyan(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWnj4:
-		return source.GetSourceClientWnj4(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWnj5:
-		return source.GetSourceClientWnj5(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWomanCare:
-		return source.GetSourceClientWomanCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWombkeepersAzObstetricsAndGynecologyPc:
 		return source.GetSourceClientWombkeepersAzObstetricsAndGynecologyPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWomensCare:
 		return source.GetSourceClientWomensCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWomensChoiceOncologyPllc:
 		return source.GetSourceClientWomensChoiceOncologyPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWomensClinicOfForrestCity:
-		return source.GetSourceClientWomensClinicOfForrestCity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWomensHealthCenterOfSouthernOregon:
-		return source.GetSourceClientWomensHealthCenterOfSouthernOregon(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWomensHealthSpecialists:
 		return source.GetSourceClientWomensHealthSpecialists(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWomensHealthcareAssocPllc1:
-		return source.GetSourceClientWomensHealthcareAssocPllc1(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeWomensHealthcareAssocPllc:
+		return source.GetSourceClientWomensHealthcareAssocPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWomensHealthcareOfSuffolk:
 		return source.GetSourceClientWomensHealthcareOfSuffolk(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWomensMedicalCenterOfMeridian:
@@ -14388,18 +11882,10 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientWoodlandsEndoscopyCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWoodlandsFamilyMedicinePllc:
 		return source.GetSourceClientWoodlandsFamilyMedicinePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWoodlandsSportsMedicine:
-		return source.GetSourceClientWoodlandsSportsMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWoodlawnMedicalProfessionals:
-		return source.GetSourceClientWoodlawnMedicalProfessionals(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWoundAndHyperbaricMedicine:
 		return source.GetSourceClientWoundAndHyperbaricMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWrayCommunityDistrictHospital:
 		return source.GetSourceClientWrayCommunityDistrictHospital(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWrightAndAssociatesFamilyHealthcarePllc:
-		return source.GetSourceClientWrightAndAssociatesFamilyHealthcarePllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeWyomingCardiopulmonaryServicesPc:
-		return source.GetSourceClientWyomingCardiopulmonaryServicesPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWyomingMedicalCenter:
 		return source.GetSourceClientWyomingMedicalCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeWyomingUrgentCare:
@@ -14412,28 +11898,20 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientYakimaValleyMemorial(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYaleNewHavenHealthSystem:
 		return source.GetSourceClientYaleNewHavenHealthSystem(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeYampaValleyMedicalAssociates:
-		return source.GetSourceClientYampaValleyMedicalAssociates(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYavapaiCounty:
 		return source.GetSourceClientYavapaiCounty(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeYeagerFamilyMedicine:
-		return source.GetSourceClientYeagerFamilyMedicine(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYeamanSignatureHealthClinic:
 		return source.GetSourceClientYeamanSignatureHealthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYeePlasticSurgeryPllc:
 		return source.GetSourceClientYeePlasticSurgeryPllc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYellowSpringsPrimaryCare:
 		return source.GetSourceClientYellowSpringsPrimaryCare(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeYorkMedicalClinicne:
-		return source.GetSourceClientYorkMedicalClinicne(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYoungstownUniversity:
 		return source.GetSourceClientYoungstownUniversity(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYourNextStepPc:
 		return source.GetSourceClientYourNextStepPc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYouthAndFamilyGuidanceCenter:
 		return source.GetSourceClientYouthAndFamilyGuidanceCenter(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeYouthClinic:
-		return source.GetSourceClientYouthClinic(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYrmcPhysicianPracticeGastro:
 		return source.GetSourceClientYrmcPhysicianPracticeGastro(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeYrmcPhysicianPracticeGastro1:
@@ -14456,8 +11934,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientYvonneMorganMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZafarShaheenMd:
 		return source.GetSourceClientZafarShaheenMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeZakiLababidiMdSc:
-		return source.GetSourceClientZakiLababidiMdSc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZanesvilleFamilyPractice:
 		return source.GetSourceClientZanesvilleFamilyPractice(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZanesvillePediatrics:
@@ -14468,8 +11944,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientZenithAccessLlc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZepickCardiology:
 		return source.GetSourceClientZepickCardiology(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeZevAshMd:
-		return source.GetSourceClientZevAshMd(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZhiwenLuMdInc:
 		return source.GetSourceClientZhiwenLuMdInc(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeZiaShahMd:

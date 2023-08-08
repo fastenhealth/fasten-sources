@@ -29,9 +29,9 @@ func GetSourceSutterHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Sutter Health"
 	sourceDef.SourceType = pkg.SourceTypeSutterHealth
-	sourceDef.Category = []string{"282N00000X", "261QM1300X", "332900000X"}
+	sourceDef.Category = []string{"261QM1300X", "282N00000X", "332900000X"}
 	sourceDef.Aliases = []string{"SUTTER HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265755615", "1902421571", "1750559928", "1346621349", "1881736940"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265755615", "1346621349", "1750559928", "1881736940", "1902421571"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

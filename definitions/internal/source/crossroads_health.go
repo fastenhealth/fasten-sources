@@ -28,9 +28,9 @@ func GetSourceCrossroadsHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Crossroads Health"
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsHealth
-	sourceDef.Category = []string{"3336C0003X", "207Q00000X", "251S00000X", "261QM0850X", "261QM0855X", "101YA0400X"}
+	sourceDef.Category = []string{"101YA0400X", "207Q00000X", "251S00000X", "261QM0850X", "261QM0855X", "3336C0003X"}
 	sourceDef.Aliases = []string{"CROSSROADS LAKE COUNTY ADOLESCENT COUNSELING", "CROSSROADS LAKE COUNTY ADOLESCENT COUNSELING SERVICE", "CROSSROADS LAKE COUNTY ADOLESCENT COUNSELING SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437733169", "1093307654", "1154680627", "1356303911", "1518226075"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093307654", "1154680627", "1356303911", "1437733169", "1518226075"}}
 	sourceDef.PatientAccessUrl = "https://crossroadshealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

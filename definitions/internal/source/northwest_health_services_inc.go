@@ -30,7 +30,7 @@ func GetSourceNorthwestHealthServicesInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeNorthwestHealthServicesInc
 	sourceDef.Category = []string{"261QF0400X", "3336C0003X"}
 	sourceDef.Aliases = []string{"ALBANY ELEMENTARY SCHOOL BASED HEALTH CENTER", "GALLATIN ELEMENTARY SCHOOL BASED HEALTH CENTER", "HAMILTON ELEMENTARY SCHOOL BASED HEALTH CENTER", "HAMILTON R-2 SCHOOL DISTRICT", "MINNIE CLINE ELEMENTARY", "NORTH END FAMILY PHARMACY", "POLO R-VII SCHOOL DISTRICT", "SAVANNAH MIDDLE SCHOOL", "STANBERRY R-II SCHOOL DISTRICT", "WORTH COUNTY R-III SBHC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588120323", "1699247080", "1952909079", "1568928240", "1912505041", "1306302146", "1316403157", "1255898177", "1992270854", "1740740471"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255898177", "1306302146", "1316403157", "1568928240", "1588120323", "1699247080", "1740740471", "1912505041", "1952909079", "1992270854"}}
 	sourceDef.PatientAccessUrl = "https://www.nwhealth-services.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,7 +28,7 @@ func GetSourceBerryMilnerAndUhrLlp(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "BERRY MILNER AND UHR LLP"
 	sourceDef.SourceType = pkg.SourceTypeBerryMilnerAndUhrLlp
-	sourceDef.Category = []string{"332B00000X", "332H00000X", "207W00000X", "305R00000X"}
+	sourceDef.Category = []string{"207W00000X", "305R00000X", "332B00000X", "332H00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043416258", "1487612669"}}
 	sourceDef.PatientAccessUrl = "https://texaseyecarespecialists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

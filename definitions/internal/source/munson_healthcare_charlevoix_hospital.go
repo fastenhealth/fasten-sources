@@ -29,9 +29,9 @@ func GetSourceMunsonHealthcareCharlevoixHospital(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Munson Healthcare Charlevoix Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMunsonHealthcareCharlevoixHospital
-	sourceDef.Category = []string{"208000000X", "208D00000X", "208800000X", "261QR1300X", "333600000X", "3336C0003X", "282NC0060X", "275N00000X", "208M00000X", "207RX0202X", "207P00000X", "367500000X"}
+	sourceDef.Category = []string{"207P00000X", "207RX0202X", "208000000X", "208800000X", "208D00000X", "208M00000X", "261QR1300X", "275N00000X", "282NC0060X", "333600000X", "3336C0003X", "367500000X"}
 	sourceDef.Aliases = []string{"MUNSON HEALTHCARE CHARLEVOIX PRIMARY CARE", "MUNSON HEALTHCARE CHARLEVOIX UROLOGY", "MUNSON HEALTHCARE CHARLEVOIX WOMEN'S HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992074777", "1912384843", "1609477488", "1730722810", "1467498378", "1558904623", "1346260692", "1164508891", "1417033143", "1063598845"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063598845", "1164508891", "1346260692", "1417033143", "1467498378", "1558904623", "1609477488", "1730722810", "1912384843", "1992074777"}}
 	sourceDef.BrandLogo = "munson-healthcare-charlevoix-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.munsonhealthcare.org/charlevoix-hospital/charlevoix-home"
 	sourceDef.SecretKeyPrefix = "cerner"

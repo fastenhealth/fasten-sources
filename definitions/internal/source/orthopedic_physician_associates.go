@@ -28,7 +28,7 @@ func GetSourceOrthopedicPhysicianAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Orthopedic Physician Associates"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicPhysicianAssociates
-	sourceDef.Category = []string{"2080S0010X", "208100000X", "2085R0202X", "2085R0204X", "2471M1202X", "261QM1200X", "261QR0200X", "363AS0400X", "207LP2900X", "207Q00000X", "207XS0117X", "207X00000X"}
+	sourceDef.Category = []string{"207LP2900X", "207Q00000X", "207X00000X", "207XS0117X", "2080S0010X", "208100000X", "2085R0202X", "2085R0204X", "2471M1202X", "261QM1200X", "261QR0200X", "363AS0400X"}
 	sourceDef.Aliases = []string{"ORTHOPEDIC PHYSICIAN ASSOCIATES", "ORTHOPEDIC PHYSICIAN ASSOCIATES MRI"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134514433", "1558300434"}}
 	sourceDef.PatientAccessUrl = "https://www.opaortho.com/"

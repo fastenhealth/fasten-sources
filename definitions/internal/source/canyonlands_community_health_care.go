@@ -28,9 +28,9 @@ func GetSourceCanyonlandsCommunityHealthCare(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Canyonlands Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeCanyonlandsCommunityHealthCare
-	sourceDef.Category = []string{"261QF0400X", "207Q00000X", "207R00000X", "207V00000X", "261QC1500X", "1223G0001X", "363L00000X", "363AM0700X", "363AS0400X"}
+	sourceDef.Category = []string{"1223G0001X", "207Q00000X", "207R00000X", "207V00000X", "261QC1500X", "261QF0400X", "363AM0700X", "363AS0400X", "363L00000X"}
 	sourceDef.Aliases = []string{"LAKE POWELL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134568660", "1144755182", "1619945904", "1780653741", "1861558595", "1568430676", "1669441564", "1417218876", "1609966860", "1154380392"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134568660", "1144755182", "1154380392", "1417218876", "1568430676", "1609966860", "1619945904", "1669441564", "1780653741", "1861558595"}}
 	sourceDef.PatientAccessUrl = "https://canyonlandschc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

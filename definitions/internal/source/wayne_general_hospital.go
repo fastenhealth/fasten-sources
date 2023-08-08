@@ -29,9 +29,9 @@ func GetSourceWayneGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Wayne General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWayneGeneralHospital
-	sourceDef.Category = []string{"253Z00000X", "385H00000X", "251G00000X", "207LP2900X", "275N00000X", "204D00000X", "261Q00000X", "261QR1300X", "251E00000X", "282N00000X"}
+	sourceDef.Category = []string{"204D00000X", "207LP2900X", "251E00000X", "251G00000X", "253Z00000X", "261Q00000X", "261QR1300X", "275N00000X", "282N00000X", "385H00000X"}
 	sourceDef.Aliases = []string{"ARTHUR & WOOD MEDICAL CLINIC A SERVICE OF WAYNE GENERAL HOSPITAL", "ARTHUR E WOOD MEDICAL CLINIC", "DR. W.A. HENDRICKS, GENERAL, ENDOSCOPIC", "WAYNE GENERAL HOME HEALTH", "WAYNE GENERAL HOSPICE", "WAYNE GENERAL SURGERY CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881099752", "1023271723", "1215958780", "1063878676", "1417978982", "1720203367", "1407233612", "1316988025", "1598787160", "1679559983"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023271723", "1063878676", "1215958780", "1316988025", "1407233612", "1417978982", "1598787160", "1679559983", "1720203367", "1881099752"}}
 	sourceDef.BrandLogo = "wayne-general-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.waynegeneralhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

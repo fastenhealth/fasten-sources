@@ -30,7 +30,7 @@ func GetSourceLifespanHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeLifespanHealth
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"LIFESPAN HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508292319", "1881247500", "1013509223", "1982068391"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013509223", "1508292319", "1881247500", "1982068391"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

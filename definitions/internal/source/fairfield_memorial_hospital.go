@@ -29,8 +29,8 @@ func GetSourceFairfieldMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Fairfield Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFairfieldMemorialHospital
-	sourceDef.Category = []string{"275N00000X", "282NC0060X", "332800000X", "261QR1300X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487702973", "1386604726", "1154463115", "1992018691"}}
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "332800000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154463115", "1386604726", "1487702973", "1992018691"}}
 	sourceDef.PatientAccessUrl = "https://www.loopnet.com/Listing/102-Us-321-Byp-Winnsboro-SC/13569058/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

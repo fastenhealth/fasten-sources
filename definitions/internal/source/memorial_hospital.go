@@ -29,9 +29,9 @@ func GetSourceMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHospital
-	sourceDef.Category = []string{"3336C0003X", "3336I0012X", "207PE0004X", "207Q00000X", "208600000X", "333600000X", "363A00000X", "367500000X", "282NC0060X", "363L00000X", "261QR1300X"}
+	sourceDef.Category = []string{"207PE0004X", "207Q00000X", "208600000X", "261QR1300X", "282NC0060X", "333600000X", "3336C0003X", "3336I0012X", "363A00000X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"RANDOLPH HOSPITAL DISTRICT"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023603289", "1851390132", "1790209518", "1629469002", "1225429566"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023603289", "1225429566", "1629469002", "1790209518", "1851390132"}}
 	sourceDef.PatientAccessUrl = "https://www.mhchester.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

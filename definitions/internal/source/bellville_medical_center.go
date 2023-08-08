@@ -29,9 +29,9 @@ func GetSourceBellvilleMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Bellville Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBellvilleMedicalCenter
-	sourceDef.Category = []string{"207Q00000X", "208600000X", "208C00000X", "282N00000X", "207R00000X", "261QR1300X", "207P00000X"}
+	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207R00000X", "208600000X", "208C00000X", "261QR1300X", "282N00000X"}
 	sourceDef.Aliases = []string{"BELLVILLE INTERNAL AND FAMILY MEDICINE CLINIC", "BELLVILLE MEDICAL CENTER", "MID COAST MEDICAL CENTER-BELLVILLE", "MID COAST MEDICAL CLINIC-BELLVILLE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477857332", "1902488240", "1457066151"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457066151", "1477857332", "1902488240"}}
 	sourceDef.PatientAccessUrl = "http://www.bellvillemc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

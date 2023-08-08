@@ -29,9 +29,9 @@ func GetSourceCentralMaineMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Central Maine Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCentralMaineMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "3336S0011X", "333600000X", "3336C0003X", "261QM1300X", "273Y00000X", "261QU0200X"}
+	sourceDef.Category = []string{"261QM1300X", "261QU0200X", "273Y00000X", "282N00000X", "333600000X", "3336C0003X", "3336S0011X"}
 	sourceDef.Aliases = []string{"CMMC SPECIALTY PHARMACY", "MAINE URGENT CARE", "MANCHESTER CARE CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689653487", "1861433765", "1598411175", "1073651576", "1033874458", "1063136786"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033874458", "1063136786", "1073651576", "1598411175", "1689653487", "1861433765"}}
 	sourceDef.PatientAccessUrl = "https://www.cmhc.org/cmmc/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,9 +29,9 @@ func GetSourceFayetteCountyMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Fayette County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFayetteCountyMemorialHospital
-	sourceDef.Category = []string{"341600000X", "207R00000X", "208600000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208600000X", "341600000X"}
 	sourceDef.Aliases = []string{"FAYETTE COUNTY MEMORIAL HOSPITAL MEDICAL AND SURGICAL ASSOCIATES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518119791", "1043380579"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043380579", "1518119791"}}
 	sourceDef.PatientAccessUrl = "https://www.adena.org/locations/detail.dT/adena-fayette-medical-center"
 	sourceDef.SecretKeyPrefix = "cerner"
 

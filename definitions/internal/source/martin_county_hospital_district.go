@@ -29,9 +29,9 @@ func GetSourceMartinCountyHospitalDistrict(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Martin County Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeMartinCountyHospitalDistrict
-	sourceDef.Category = []string{"251G00000X", "251E00000X", "261QR1300X", "341600000X", "282NC0060X"}
-	sourceDef.Aliases = []string{"MARTIN COUNTY EMS", "TRULITE HOME CARE", "TRULITE HOSPICE CARE", "MARTIN COUNTY HOME HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871910075", "1053891523", "1679560866", "1336620442", "1679060909"}}
+	sourceDef.Category = []string{"251E00000X", "251G00000X", "261QR1300X", "282NC0060X", "341600000X"}
+	sourceDef.Aliases = []string{"MARTIN COUNTY EMS", "MARTIN COUNTY HOME HEALTH", "TRULITE HOME CARE", "TRULITE HOSPICE CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053891523", "1336620442", "1679060909", "1679560866", "1871910075"}}
 	sourceDef.PatientAccessUrl = "https://martincountyhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

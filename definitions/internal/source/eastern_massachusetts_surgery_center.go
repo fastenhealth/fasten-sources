@@ -28,7 +28,7 @@ func GetSourceEasternMassachusettsSurgeryCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Eastern Massachusetts Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeEasternMassachusettsSurgeryCenter
-	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Category = []string{"261QA1903X", "261QE0800X"}
 	sourceDef.Aliases = []string{"EASTERN MASSACHUSETTS SURGERY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245436823"}}
 	sourceDef.BrandLogo = "eastern-massachusetts-surgery-center.jpg"

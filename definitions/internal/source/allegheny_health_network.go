@@ -29,8 +29,8 @@ func GetSourceAlleghenyHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Allegheny Health Network"
 	sourceDef.SourceType = pkg.SourceTypeAlleghenyHealthNetwork
-	sourceDef.Category = []string{"208C00000X", "261QP2300X", "363LF0000X", "282N00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003219411", "1649640103", "1245775774", "1962807651"}}
+	sourceDef.Category = []string{"208C00000X", "261QP2300X", "282N00000X", "363LF0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003219411", "1245775774", "1649640103", "1962807651"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

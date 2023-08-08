@@ -29,9 +29,9 @@ func GetSourceSharpHealthcare1(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Sharp HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeSharpHealthcare1
-	sourceDef.Category = []string{"261QC1500X", "261QR0404X", "291U00000X", "333600000X", "3336C0003X", "261QC1800X"}
+	sourceDef.Category = []string{"261QC1500X", "261QC1800X", "261QR0404X", "291U00000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"SHARP HEALTHCARE PROMOTION AND WEIGHT MANAGEMENT", "SHARP REES STEALY CLINICAL LABORATORY - GENESEE", "SHARP REES STEALY LABORATORY - LA MESA", "SHARP REES-STEALY CLINICAL LABORATORY - CHULA VISTA EAST", "SHARP REES-STEALY CLINICAL LABORATORY - FIR STREET", "SHARP REES-STEALY CLINICAL LABORATORY - LA MESA", "SHARP REES-STEALY PHARMACY #3", "SHARP REES-STEALY PHARMACY #7"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902939721", "1285089037", "1730156118", "1740227289", "1326170671", "1275827214", "1326481417", "1770550253", "1528009602", "1275096521"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275096521", "1275827214", "1285089037", "1326170671", "1326481417", "1528009602", "1730156118", "1740227289", "1770550253", "1902939721"}}
 	sourceDef.PatientAccessUrl = "https://www.sharp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

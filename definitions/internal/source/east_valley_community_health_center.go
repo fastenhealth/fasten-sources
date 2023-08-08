@@ -28,9 +28,9 @@ func GetSourceEastValleyCommunityHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "East Valley Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeEastValleyCommunityHealthCenter
-	sourceDef.Category = []string{"171M00000X", "261QF0400X", "261QC1500X"}
+	sourceDef.Category = []string{"171M00000X", "261QC1500X", "261QF0400X"}
 	sourceDef.Aliases = []string{"EAST VALLEY COMMUNITY HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831243625", "1669588893", "1174251516", "1437878097", "1720706815", "1235245457", "1457079543", "1649324443", "1023134582"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023134582", "1174251516", "1235245457", "1437878097", "1457079543", "1649324443", "1669588893", "1720706815", "1831243625"}}
 	sourceDef.BrandLogo = "east-valley-community-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.evchc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

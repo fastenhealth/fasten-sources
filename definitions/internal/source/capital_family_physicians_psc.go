@@ -28,9 +28,9 @@ func GetSourceCapitalFamilyPhysiciansPsc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Capital Family Physicians PSC"
 	sourceDef.SourceType = pkg.SourceTypeCapitalFamilyPhysiciansPsc
-	sourceDef.Category = []string{"363A00000X", "363L00000X", "207Q00000X", "207UN0901X"}
+	sourceDef.Category = []string{"207Q00000X", "207UN0901X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"CAPITAL CARDIOLOGY", "CAPITAL MEDICAL GROUP", "MIDWAY UNIVERSITY STUDENT HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104933126", "1225648819", "1295842219", "1073629416", "1780628974"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073629416", "1104933126", "1225648819", "1295842219", "1780628974"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

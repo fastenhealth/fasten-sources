@@ -29,9 +29,9 @@ func GetSourceAcendaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Acenda, Inc."
 	sourceDef.SourceType = pkg.SourceTypeAcendaInc
-	sourceDef.Category = []string{"251S00000X", "261Q00000X", "101YA0400X", "320800000X", "1041C0700X", "101YM0800X"}
+	sourceDef.Category = []string{"101YA0400X", "101YM0800X", "1041C0700X", "251S00000X", "261Q00000X", "320800000X"}
 	sourceDef.Aliases = []string{"DANELLIE COUNSELING", "ROBINS' NEST INC."}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972046407", "1568717486", "1710304357", "1396338497", "1255938353", "1205488020", "1093367765", "1164074951", "1669024204", "1982752333"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093367765", "1164074951", "1205488020", "1255938353", "1396338497", "1568717486", "1669024204", "1710304357", "1972046407", "1982752333"}}
 	sourceDef.BrandLogo = "acenda-inc.svg"
 	sourceDef.PatientAccessUrl = "https://acendahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

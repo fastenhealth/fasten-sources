@@ -29,8 +29,8 @@ func GetSourceIndianaRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Indiana Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeIndianaRegionalMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "261Q00000X", "282NR1301X", "283X00000X", "273Y00000X", "207L00000X", "367500000X", "261QU0200X", "207R00000X", "261QD0000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598386013", "1508047630", "1659315372", "1356334510", "1518950674", "1265425359", "1942396163", "1366790750", "1770614919", "1952766263"}}
+	sourceDef.Category = []string{"207L00000X", "207R00000X", "261Q00000X", "261QD0000X", "261QU0200X", "273Y00000X", "282N00000X", "282NR1301X", "283X00000X", "367500000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265425359", "1356334510", "1366790750", "1508047630", "1518950674", "1598386013", "1659315372", "1770614919", "1942396163", "1952766263"}}
 	sourceDef.BrandLogo = "indiana-regional-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.irmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

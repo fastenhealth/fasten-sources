@@ -29,7 +29,7 @@ func GetSourceUniversityOfToledo(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "University of Toledo"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfToledo
-	sourceDef.Category = []string{"261QS1000X", "261QM0801X"}
+	sourceDef.Category = []string{"261QM0801X", "261QS1000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063639243", "1811127871"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

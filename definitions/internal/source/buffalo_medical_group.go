@@ -29,9 +29,9 @@ func GetSourceBuffaloMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Buffalo Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBuffaloMedicalGroup
-	sourceDef.Category = []string{"332B00000X", "291U00000X"}
+	sourceDef.Category = []string{"291U00000X", "332B00000X"}
 	sourceDef.Aliases = []string{"PODIATRY AFFILIATES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154794196", "1104281195", "1093964256"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093964256", "1104281195", "1154794196"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

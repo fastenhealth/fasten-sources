@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10039761/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10039761/metadata
 func GetSourceSouthernCaliforniaHeartSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10039761/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10039761/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/2c583fa4-0255-41f1-a2d1-736fd0da1b29/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/2c583fa4-0255-41f1-a2d1-736fd0da1b29/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10039761"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10039761"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10039761"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10039761"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSouthernCaliforniaHeartSpecialists]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,9 +28,8 @@ func GetSourceSouthernCaliforniaHeartSpecialists(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Southern California Heart Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaliforniaHeartSpecialists
-	sourceDef.Category = []string{"207RC0000X", "207R00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821055054", "1225208168", "1396042289"}}
-	sourceDef.Hidden = true
+	sourceDef.Category = []string{"207R00000X", "207RC0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225208168", "1396042289", "1821055054"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

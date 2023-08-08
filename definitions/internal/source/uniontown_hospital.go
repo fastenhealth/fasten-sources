@@ -29,9 +29,9 @@ func GetSourceUniontownHospital(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Uniontown Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUniontownHospital
-	sourceDef.Category = []string{"314000000X", "3336I0012X", "207R00000X", "207P00000X", "273R00000X", "282N00000X", "261Q00000X", "273Y00000X"}
+	sourceDef.Category = []string{"207P00000X", "207R00000X", "261Q00000X", "273R00000X", "273Y00000X", "282N00000X", "314000000X", "3336I0012X"}
 	sourceDef.Aliases = []string{"OUTPATIENT SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558303693", "1801910989", "1245488048", "1982623997", "1962726463", "1861409773", "1225045131", "1558305961", "1871594127"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225045131", "1245488048", "1558303693", "1558305961", "1801910989", "1861409773", "1871594127", "1962726463", "1982623997"}}
 	sourceDef.BrandLogo = "uniontown-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/WVUMedicineUniontownHospital/"
 	sourceDef.SecretKeyPrefix = "cerner"

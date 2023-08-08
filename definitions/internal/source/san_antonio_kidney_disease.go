@@ -11,27 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038025/metadata
+// https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
 func GetSourceSanAntonioKidneyDisease(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10038025/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10038025/connect/token"
+	sourceDef, err := platform.GetSourceNextgen(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.nextgen.com/nge/prod/patient-oauth/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038025"
+	sourceDef.Audience = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10038025"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSanAntonioKidneyDisease]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
 	sourceDef.Display = "San Antonio Kidney Disease"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioKidneyDisease
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "san-antonio-kidney-disease.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sakidney.com/contactus.html"
-	sourceDef.SecretKeyPrefix = "allscripts"
+	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err
 }

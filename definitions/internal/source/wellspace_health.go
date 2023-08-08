@@ -28,9 +28,9 @@ func GetSourceWellspaceHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "WellSpace Health"
 	sourceDef.SourceType = pkg.SourceTypeWellspaceHealth
-	sourceDef.Category = []string{"251S00000X", "261QF0400X", "171M00000X", "171W00000X", "251C00000X", "251X00000X", "261QR0405X", "332U00000X", "3747P1801X", "385H00000X", "261QC1500X", "261QH0100X"}
+	sourceDef.Category = []string{"171M00000X", "171W00000X", "251C00000X", "251S00000X", "251X00000X", "261QC1500X", "261QF0400X", "261QH0100X", "261QR0405X", "332U00000X", "3747P1801X", "385H00000X"}
 	sourceDef.Aliases = []string{"STRATEGIES FOR CHANGE", "WELLSPACE HEALTH FOLSOM COMMUNITY HEALTH CENTER", "WELLSPACE HEALTH NORWOOD COMMUNITY HEALTH CENTER", "WELLSPACE HEALTH STRATEGIES FOR CHANGE", "WELLSPACE HEALTH STRATEGIES FOR CHANGE SOUTH", "WELLSPACE HEALTH STRATEGIES FOR CHANGE-SOUTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124544937", "1033295084", "1265777692", "1679819007", "1558603555", "1700392529", "1215438676", "1932663192", "1114682689", "1225335581"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033295084", "1114682689", "1124544937", "1215438676", "1225335581", "1265777692", "1558603555", "1679819007", "1700392529", "1932663192"}}
 	sourceDef.PatientAccessUrl = "https://www.wellspacehealth.org/location/j-street-community-health-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

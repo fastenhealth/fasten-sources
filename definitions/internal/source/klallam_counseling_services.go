@@ -28,9 +28,9 @@ func GetSourceKlallamCounselingServices(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Klallam Counseling Services"
 	sourceDef.SourceType = pkg.SourceTypeKlallamCounselingServices
-	sourceDef.Category = []string{"261QR0405X", "251B00000X"}
+	sourceDef.Category = []string{"251B00000X", "261QR0405X"}
 	sourceDef.Aliases = []string{"KLALLAM COUNSELING SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841316916", "1578890760"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578890760", "1841316916"}}
 	sourceDef.PatientAccessUrl = "https://www.elwha.org/departments/klallam-counseling-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

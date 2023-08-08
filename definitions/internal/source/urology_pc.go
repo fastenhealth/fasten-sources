@@ -28,7 +28,7 @@ func GetSourceUrologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Urology PC"
 	sourceDef.SourceType = pkg.SourceTypeUrologyPc
-	sourceDef.Category = []string{"332B00000X", "208800000X"}
+	sourceDef.Category = []string{"208800000X", "332B00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356364335"}}
 	sourceDef.PatientAccessUrl = "https://lincolnurologypc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

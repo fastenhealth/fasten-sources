@@ -11,30 +11,30 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041079/metadata
+// https://fhir-myrecord.cerner.com/r4/440a8ebc-db01-474a-8d18-2ca626c92c6c/metadata
 func GetSourceNorthCaddoMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10041079/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10041079/connect/token"
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/440a8ebc-db01-474a-8d18-2ca626c92c6c/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/440a8ebc-db01-474a-8d18-2ca626c92c6c/protocols/oauth2/profiles/smart-v1/token"
+	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041079"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/440a8ebc-db01-474a-8d18-2ca626c92c6c"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041079"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/440a8ebc-db01-474a-8d18-2ca626c92c6c"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeNorthCaddoMedicalCenter]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "North Caddo Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthCaddoMedicalCenter
 	sourceDef.Category = []string{"207P00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"NORTH CADDO MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417124959", "1962679407", "1326016684"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326016684", "1417124959", "1962679407"}}
 	sourceDef.BrandLogo = "north-caddo-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://ncmcla.com/"
-	sourceDef.SecretKeyPrefix = "allscripts"
+	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err
 }

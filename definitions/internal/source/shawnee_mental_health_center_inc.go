@@ -28,9 +28,9 @@ func GetSourceShawneeMentalHealthCenterInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Shawnee Mental Health Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeShawneeMentalHealthCenterInc
-	sourceDef.Category = []string{"261QF0400X", "261Q00000X", "261QR1300X"}
+	sourceDef.Category = []string{"261Q00000X", "261QF0400X", "261QR1300X"}
 	sourceDef.Aliases = []string{"SHAWNEE FAMILY HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336777077", "1184980625", "1497098321"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184980625", "1336777077", "1497098321"}}
 	sourceDef.PatientAccessUrl = "https://shawneefamilyhealthcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

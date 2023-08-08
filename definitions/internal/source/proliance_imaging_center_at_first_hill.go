@@ -28,7 +28,7 @@ func GetSourceProlianceImagingCenterAtFirstHill(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Proliance Imaging Center at First Hill"
 	sourceDef.SourceType = pkg.SourceTypeProlianceImagingCenterAtFirstHill
-	sourceDef.Category = []string{"2085R0202X", "2471S1302X", "261QR0200X", "2085U0001X"}
+	sourceDef.Category = []string{"2085R0202X", "2085U0001X", "2471S1302X", "261QR0200X"}
 	sourceDef.Aliases = []string{"PROLIANCE IMAGING CENTER AT FIRST HILL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790325710"}}
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"

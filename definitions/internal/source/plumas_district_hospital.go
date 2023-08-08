@@ -29,8 +29,8 @@ func GetSourcePlumasDistrictHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Plumas District Hospital"
 	sourceDef.SourceType = pkg.SourceTypePlumasDistrictHospital
-	sourceDef.Category = []string{"275N00000X", "282NC0060X", "3336I0012X", "261QR1300X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043616428", "1871753624", "1043348543", "1326094269"}}
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "3336I0012X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043348543", "1043616428", "1326094269", "1871753624"}}
 	sourceDef.BrandLogo = "plumas-district-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.pdh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

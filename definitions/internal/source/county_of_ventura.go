@@ -29,9 +29,9 @@ func GetSourceCountyOfVentura(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "County of Ventura"
 	sourceDef.SourceType = pkg.SourceTypeCountyOfVentura
-	sourceDef.Category = []string{"261QF0400X", "261QS1000X", "261Q00000X", "261QU0200X", "261QP0905X", "2083P0901X"}
+	sourceDef.Category = []string{"2083P0901X", "261Q00000X", "261QF0400X", "261QP0905X", "261QS1000X", "261QU0200X"}
 	sourceDef.Aliases = []string{"CAMAROSA SPRINGS MEDICAL GROUP", "FILLMORE FAMILY MEDICAL GROUP FQHC", "MAGNOLIA WEST", "MARIPOSA URGENT CARE", "MOORPARK FAMILY MEDICAL GROUP / CSUCI", "NORTH OXNARD PUBLIC HEALTH CLINIC", "PUBLIC HEALTH COMMUNICABLE DISEASE CLINIC", "PUBLIC HEALTH IMMUNIZATION PROGRAM", "PUBLIC HEALTH SPECIALTY CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134360076", "1447659933", "1407244379", "1104203314", "1821527326", "1962931477", "1801325303", "1134658644", "1720447568", "1669738159"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104203314", "1134360076", "1134658644", "1407244379", "1447659933", "1669738159", "1720447568", "1801325303", "1821527326", "1962931477"}}
 	sourceDef.PatientAccessUrl = "https://www.ventura.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

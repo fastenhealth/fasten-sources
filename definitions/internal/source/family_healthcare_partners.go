@@ -28,7 +28,7 @@ func GetSourceFamilyHealthcarePartners(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Family Healthcare Partners"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthcarePartners
-	sourceDef.Category = []string{"251G00000X", "261QU0200X", "261QP2300X"}
+	sourceDef.Category = []string{"251G00000X", "261QP2300X", "261QU0200X"}
 	sourceDef.Aliases = []string{"FAMILY HEALTHCARE PARTNERS, LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023526043"}}
 	sourceDef.BrandLogo = "family-healthcare-partners.jpg"

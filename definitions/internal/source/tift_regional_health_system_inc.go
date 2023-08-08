@@ -29,9 +29,9 @@ func GetSourceTiftRegionalHealthSystemInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Tift Regional Health System, Inc."
 	sourceDef.SourceType = pkg.SourceTypeTiftRegionalHealthSystemInc
-	sourceDef.Category = []string{"251G00000X", "174400000X", "261QR1300X", "261QE0700X"}
+	sourceDef.Category = []string{"174400000X", "251G00000X", "261QE0700X", "261QR1300X"}
 	sourceDef.Aliases = []string{"COOK PRIMARY CARE", "HOSPICE OF TIFT AREA", "SOUTHWELL MEDICAL ADEL PRIMARY CARE", "TIFT REGIONAL DIALYSIS CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902909427", "1871816918", "1831298660"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831298660", "1871816918", "1902909427"}}
 	sourceDef.BrandLogo = "tift-regional-health-system-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://mysouthwell.com"
 	sourceDef.SecretKeyPrefix = "cerner"

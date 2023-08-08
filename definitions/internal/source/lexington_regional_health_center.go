@@ -29,9 +29,9 @@ func GetSourceLexingtonRegionalHealthCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Lexington Regional Health Center"
 	sourceDef.SourceType = pkg.SourceTypeLexingtonRegionalHealthCenter
-	sourceDef.Category = []string{"282NC0060X", "275N00000X", "207Q00000X", "363A00000X", "363L00000X", "261QR1300X", "251G00000X", "251E00000X", "367500000X", "101YM0800X", "133NN1002X", "213ES0103X", "363AM0700X", "207P00000X"}
+	sourceDef.Category = []string{"101YM0800X", "133NN1002X", "207P00000X", "207Q00000X", "213ES0103X", "251E00000X", "251G00000X", "261QR1300X", "275N00000X", "282NC0060X", "363A00000X", "363AM0700X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"FAMILY MEDICINE SPECIALISTS", "LEXINGTON REGIONAL HEALTH CENTER BERTRAND CLINIC", "LEXINGTON REGIONAL HEALTH CENTER MEDICAL CLINIC", "LEXINGTON REGIONAL HEALTH CENTER PCMH", "LEXINGTON REGIONAL HEALTH CENTER PROFESSIONAL SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699732362", "1144888579", "1194782136", "1407211220", "1144742198", "1093212169", "1104228451", "1285690297", "1316016165", "1467417352"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093212169", "1104228451", "1144742198", "1144888579", "1194782136", "1285690297", "1316016165", "1407211220", "1467417352", "1699732362"}}
 	sourceDef.BrandLogo = "lexington-regional-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://lexingtonregional.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,7 +28,7 @@ func GetSourceDelawareValleyDermatologyGroupLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Delaware Valley Dermatology Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyDermatologyGroupLlc
-	sourceDef.Category = []string{"207ND0101X", "207ND0900X", "207NS0135X", "332900000X", "207N00000X"}
+	sourceDef.Category = []string{"207N00000X", "207ND0101X", "207ND0900X", "207NS0135X", "332900000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568602969"}}
 	sourceDef.PatientAccessUrl = "https://www.delawarevlleyderm.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

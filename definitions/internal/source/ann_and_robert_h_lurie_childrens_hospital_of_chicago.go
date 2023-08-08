@@ -29,9 +29,9 @@ func GetSourceAnnAndRobertHLurieChildrensHospitalOfChicago(env pkg.FastenLightho
 
 	sourceDef.Display = "Ann & Robert H. Lurie Children's Hospital of Chicago"
 	sourceDef.SourceType = pkg.SourceTypeAnnAndRobertHLurieChildrensHospitalOfChicago
-	sourceDef.Category = []string{"363L00000X", "261QA1903X", "273R00000X", "283XC2000X", "282NC2000X", "231H00000X"}
+	sourceDef.Category = []string{"231H00000X", "261QA1903X", "273R00000X", "282NC2000X", "283XC2000X", "363L00000X"}
 	sourceDef.Aliases = []string{"LURIE CHILDREN'S SURGERY CENTER IN NORTHBROOK"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609110238", "1235234535", "1063963635", "1013493824"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013493824", "1063963635", "1235234535", "1609110238"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceWestGastroenterologyMedicalGroup(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "West Gastroenterology Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeWestGastroenterologyMedicalGroup
 	sourceDef.Category = []string{"174400000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912136987", "1992935704", "1750418810"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750418810", "1912136987", "1992935704"}}
 	sourceDef.BrandLogo = "west-gastroenterology-medical-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/West-Gastroenterology-Medical-Group/100080877843847/"
 	sourceDef.SecretKeyPrefix = "nextgen"

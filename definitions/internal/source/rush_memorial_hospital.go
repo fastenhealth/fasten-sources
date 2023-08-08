@@ -29,9 +29,9 @@ func GetSourceRushMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Rush Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRushMemorialHospital
-	sourceDef.Category = []string{"314000000X", "275N00000X", "332B00000X", "261QR1300X", "341600000X", "207Q00000X", "208000000X", "207R00000X", "208600000X", "207XS0106X", "363L00000X", "207L00000X", "207P00000X", "207RC0000X", "2085R0202X", "282NC0060X"}
+	sourceDef.Category = []string{"207L00000X", "207P00000X", "207Q00000X", "207R00000X", "207RC0000X", "207XS0106X", "208000000X", "2085R0202X", "208600000X", "261QR1300X", "275N00000X", "282NC0060X", "314000000X", "332B00000X", "341600000X", "363L00000X"}
 	sourceDef.Aliases = []string{"RMH HEALTHCARE ASSOCIATES RURAL HEALTH CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053671255", "1962462796", "1972563716", "1659935781", "1497726020", "1982964433", "1609136159"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053671255", "1497726020", "1609136159", "1659935781", "1962462796", "1972563716", "1982964433"}}
 	sourceDef.PatientAccessUrl = "https://www.rushmemorial.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

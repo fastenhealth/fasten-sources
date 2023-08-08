@@ -28,9 +28,9 @@ func GetSourceAriaCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Aria Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAriaCommunityHealthCenter
-	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Category = []string{"171M00000X", "251X00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"ARIA COMMUNITY HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265051882", "1801347885", "1700391943", "1700448636", "1437607728", "1841856556", "1700393956", "1548726961", "1669019139", "1760013650"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265051882", "1437607728", "1548726961", "1669019139", "1700391943", "1700393956", "1700448636", "1760013650", "1801347885", "1841856556"}}
 	sourceDef.PatientAccessUrl = "https://ariachc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

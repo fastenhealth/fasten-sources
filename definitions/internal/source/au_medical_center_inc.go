@@ -31,7 +31,7 @@ func GetSourceAuMedicalCenterInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeAuMedicalCenterInc
 	sourceDef.Category = []string{"333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"AU MEDICAL CENTER GCC PHARMACY", "AU MEDICAL CENTER MOORE AVENUE CLINIC PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487901476", "1699308114", "1033716915"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033716915", "1487901476", "1699308114"}}
 	sourceDef.PatientAccessUrl = "https://www.augustahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

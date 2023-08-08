@@ -29,9 +29,9 @@ func GetSourceRiverviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Riverview Health"
 	sourceDef.SourceType = pkg.SourceTypeRiverviewHealth
-	sourceDef.Category = []string{"363LF0000X", "261QR1300X", "282N00000X", "333600000X", "3336C0003X", "3336L0003X", "3336I0012X", "273Y00000X"}
+	sourceDef.Category = []string{"261QR1300X", "273Y00000X", "282N00000X", "333600000X", "3336C0003X", "3336I0012X", "3336L0003X", "363LF0000X"}
 	sourceDef.Aliases = []string{"RIVERVIEW HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386309185", "1255688370", "1083763650", "1225275928", "1316945066"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083763650", "1225275928", "1255688370", "1316945066", "1386309185"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

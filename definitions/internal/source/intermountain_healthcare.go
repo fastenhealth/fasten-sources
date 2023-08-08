@@ -29,9 +29,9 @@ func GetSourceIntermountainHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Intermountain Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeIntermountainHealthcare
-	sourceDef.Category = []string{"207Q00000X", "2083X0100X", "363AM0700X", "363LP2300X", "207R00000X", "207RH0003X", "207N00000X", "207RE0101X", "213E00000X", "207RC0000X", "213ES0103X", "208000000X", "2085R0001X", "208M00000X", "247100000X"}
+	sourceDef.Category = []string{"207N00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RH0003X", "208000000X", "2083X0100X", "2085R0001X", "208M00000X", "213E00000X", "213ES0103X", "247100000X", "363AM0700X", "363LP2300X"}
 	sourceDef.Aliases = []string{"HEALTHCARE PARTNERS - E FLAMINGO SPECIALTY", "HEALTHCARE PARTNERS - HIGHWAY 160 SPECIALTY", "HEALTHCARE PARTNERS - W. LAKE MEAD", "HEALTHCARE PARTNERS MEDICAL GROUP", "HEALTHCARE PARTNERS MEDICAL GROUP COATS LTD", "INTERMOUNTAIN HEALTHCARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043537301", "1992717722", "1194153478", "1306274626", "1902883341", "1447694039", "1023335387", "1235116716", "1093032344", "1699092957"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023335387", "1043537301", "1093032344", "1194153478", "1235116716", "1306274626", "1447694039", "1699092957", "1902883341", "1992717722"}}
 	sourceDef.PatientAccessUrl = "https://intermountainnv.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

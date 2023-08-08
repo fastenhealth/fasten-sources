@@ -28,9 +28,9 @@ func GetSourceValleyHealthTeamInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Valley Health Team Inc"
 	sourceDef.SourceType = pkg.SourceTypeValleyHealthTeamInc
-	sourceDef.Category = []string{"261QF0400X", "101Y00000X", "104100000X", "122300000X", "133V00000X", "152W00000X", "207Q00000X", "208000000X", "247100000X", "363A00000X", "333600000X", "3336C0003X"}
+	sourceDef.Category = []string{"101Y00000X", "104100000X", "122300000X", "133V00000X", "152W00000X", "207Q00000X", "208000000X", "247100000X", "261QF0400X", "333600000X", "3336C0003X", "363A00000X"}
 	sourceDef.Aliases = []string{"BISHOP COMMUNITY HEALTH CENTER", "CLOVIS COMMUNITY HEALTH CENTER", "KERMAN DENTAL CENTER", "KERMAN UNIFIED SCHOOL DISTRICT COMMUNITY HEALTH CENTER", "KINGSBURG COMMUNITY HEALTH CENTER", "VHT PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043881881", "1073880126", "1194068379", "1578623963", "1033598412", "1396394839", "1750703237"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033598412", "1043881881", "1073880126", "1194068379", "1396394839", "1578623963", "1750703237"}}
 	sourceDef.BrandLogo = "valley-health-team-inc.jpg"
 	sourceDef.PatientAccessUrl = "http://vht.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,9 +29,9 @@ func GetSourceKiowaDistrictHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Kiowa District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKiowaDistrictHospital
-	sourceDef.Category = []string{"261QR1300X", "282NC0060X", "313M00000X", "275N00000X"}
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "313M00000X"}
 	sourceDef.Aliases = []string{"KIOWA DISTRICT HOSPITAL-CLINIC", "KIOWA HOSPITAL DISTRICT MAN4"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093708596", "1437152766", "1619960101", "1043273378", "1154314656"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043273378", "1093708596", "1154314656", "1437152766", "1619960101"}}
 	sourceDef.BrandLogo = "kiowa-district-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kdhks.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

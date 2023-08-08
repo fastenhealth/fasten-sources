@@ -29,9 +29,9 @@ func GetSourceWalterKnoxMemorialHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Walter Knox Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWalterKnoxMemorialHospital
-	sourceDef.Category = []string{"261QR1300X", "207RR0500X", "208600000X", "213ES0103X", "174400000X", "282NC0060X", "275N00000X", "261QP2300X"}
+	sourceDef.Category = []string{"174400000X", "207RR0500X", "208600000X", "213ES0103X", "261QP2300X", "261QR1300X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"SURGICAL SPECIALTY CLINIC", "SWING BED", "VALOR HEALTH", "VALOR HEALTH - EMMETT MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821091083", "1326206947", "1063419018", "1700909983", "1114374055", "1295193423"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063419018", "1114374055", "1295193423", "1326206947", "1700909983", "1821091083"}}
 	sourceDef.BrandLogo = "walter-knox-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/walter.hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"

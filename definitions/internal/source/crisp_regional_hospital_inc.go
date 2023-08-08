@@ -29,9 +29,9 @@ func GetSourceCrispRegionalHospitalInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Crisp Regional Hospital, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCrispRegionalHospitalInc
-	sourceDef.Category = []string{"207R00000X", "251E00000X", "207RN0300X"}
+	sourceDef.Category = []string{"207R00000X", "207RN0300X", "251E00000X"}
 	sourceDef.Aliases = []string{"CARESOUTH AN AFFILIATE OF CRISP REGIONAL HOSPITAL", "SRILATHA NADIPINENI, MD"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235888959", "1487822912", "1174272892", "1376518118"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174272892", "1235888959", "1376518118", "1487822912"}}
 	sourceDef.PatientAccessUrl = "https://crispregional.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

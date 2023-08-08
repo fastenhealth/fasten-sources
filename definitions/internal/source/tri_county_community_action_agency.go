@@ -28,9 +28,9 @@ func GetSourceTriCountyCommunityActionAgency(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Tri-County Community Action Agency"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyCommunityActionAgency
-	sourceDef.Category = []string{"251S00000X", "261QF0400X", "251K00000X", "251B00000X"}
+	sourceDef.Category = []string{"251B00000X", "251K00000X", "251S00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"TRI-COUNTY HEALTH CENTER", "TRI-TOWN COMMUNITY HEALTH CENTER OF NORTH PROVIDENCE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396780086", "1912328600", "1578147666", "1790219608"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396780086", "1578147666", "1790219608", "1912328600"}}
 	sourceDef.BrandLogo = "tri-county-community-action-agency.svg"
 	sourceDef.PatientAccessUrl = "https://tricountyva.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

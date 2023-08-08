@@ -29,9 +29,9 @@ func GetSourceMunisingMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Munising Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMunisingMemorialHospital
-	sourceDef.Category = []string{"275N00000X", "207Q00000X", "207X00000X", "261QR1300X"}
+	sourceDef.Category = []string{"207Q00000X", "207X00000X", "261QR1300X", "275N00000X"}
 	sourceDef.Aliases = []string{"MUNISING MEMORIAL HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750894648", "1043562762"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043562762", "1750894648"}}
 	sourceDef.PatientAccessUrl = "https://munisingmemorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,8 +29,8 @@ func GetSourceSpectrumHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Spectrum Health"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumHealth
-	sourceDef.Category = []string{"332900000X", "111N00000X", "208D00000X", "282N00000X", "332B00000X", "261QA1903X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033505128", "1134267867", "1356652481", "1811983000", "1205078920"}}
+	sourceDef.Category = []string{"111N00000X", "208D00000X", "261QA1903X", "282N00000X", "332900000X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033505128", "1134267867", "1205078920", "1356652481", "1811983000"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

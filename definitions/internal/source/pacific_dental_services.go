@@ -30,7 +30,7 @@ func GetSourcePacificDentalServices(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Pacific Dental Services"
 	sourceDef.SourceType = pkg.SourceTypePacificDentalServices
 	sourceDef.Category = []string{"122300000X", "1223G0001X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912305236", "1336541101", "1992181911", "1861884140"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336541101", "1861884140", "1912305236", "1992181911"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

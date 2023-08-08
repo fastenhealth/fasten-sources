@@ -29,8 +29,8 @@ func GetSourceJacksonParishHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Jackson Parish Hospital"
 	sourceDef.SourceType = pkg.SourceTypeJacksonParishHospital
-	sourceDef.Category = []string{"261QR1300X", "282NC0060X", "208D00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295965564", "1285834366", "1093793408", "1992845564", "1215113014", "1891835468", "1699930578"}}
+	sourceDef.Category = []string{"208D00000X", "261QR1300X", "282NC0060X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093793408", "1215113014", "1285834366", "1295965564", "1699930578", "1891835468", "1992845564"}}
 	sourceDef.PatientAccessUrl = "Name: Jackson Parish Hospital Address: 165 Beech Springs Rd City: Jonesboro Zip: 71251-2013 State: Louisiana Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 

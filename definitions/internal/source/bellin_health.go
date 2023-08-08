@@ -29,9 +29,9 @@ func GetSourceBellinHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Bellin Health"
 	sourceDef.SourceType = pkg.SourceTypeBellinHealth
-	sourceDef.Category = []string{"133V00000X", "207L00000X", "207R00000X", "207V00000X", "207Y00000X", "208000000X", "2085R0202X", "225100000X", "2251X0800X", "225X00000X", "363A00000X", "363L00000X", "367500000X", "207Q00000X", "207RC0000X", "207RC0001X", "207RE0101X", "207RG0100X", "207VX0201X", "207X00000X"}
+	sourceDef.Category = []string{"133V00000X", "207L00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RC0001X", "207RE0101X", "207RG0100X", "207V00000X", "207VX0201X", "207X00000X", "207Y00000X", "208000000X", "2085R0202X", "225100000X", "2251X0800X", "225X00000X", "363A00000X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"BELLIN HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114579836", "1407033111", "1033172390"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033172390", "1114579836", "1407033111"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

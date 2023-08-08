@@ -29,8 +29,8 @@ func GetSourceMinneolaDistrictHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Minneola District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMinneolaDistrictHospital
-	sourceDef.Category = []string{"275N00000X", "313M00000X", "251E00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568545747", "1023199908", "1447440318"}}
+	sourceDef.Category = []string{"251E00000X", "275N00000X", "313M00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023199908", "1447440318", "1568545747"}}
 	sourceDef.PatientAccessUrl = "https://minneolahealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

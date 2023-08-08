@@ -29,9 +29,9 @@ func GetSourceSummitHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Summit Health"
 	sourceDef.SourceType = pkg.SourceTypeSummitHealth
-	sourceDef.Category = []string{"261QA1903X", "207R00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RH0003X", "207RN0300X", "207ND0101X", "207N00000X", "207RP1001X", "207RR0500X", "332B00000X", "207RX0202X", "207W00000X", "208600000X", "207Q00000X", "261QR0405X", "207UN0903X", "261QU0200X"}
+	sourceDef.Category = []string{"207N00000X", "207ND0101X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RH0003X", "207RN0300X", "207RP1001X", "207RR0500X", "207RX0202X", "207UN0903X", "207W00000X", "208600000X", "261QA1903X", "261QR0405X", "261QU0200X", "332B00000X"}
 	sourceDef.Aliases = []string{"SUMMIT HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881620425", "1699827477", "1790422814", "1801533930", "1790412443", "1134856883", "1053032714", "1083747463"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053032714", "1083747463", "1134856883", "1699827477", "1790412443", "1790422814", "1801533930", "1881620425"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

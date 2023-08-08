@@ -28,9 +28,9 @@ func GetSourceTerrosHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Terros Health"
 	sourceDef.SourceType = pkg.SourceTypeTerrosHealth
-	sourceDef.Category = []string{"261QM0801X", "261QP2300X", "251S00000X", "261QF0400X", "261QR0405X", "261QM0850X", "261QM0855X", "261QR0800X"}
+	sourceDef.Category = []string{"251S00000X", "261QF0400X", "261QM0801X", "261QM0850X", "261QM0855X", "261QP2300X", "261QR0405X", "261QR0800X"}
 	sourceDef.Aliases = []string{"TERROS HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972135390", "1679040067", "1801363114", "1548836729", "1992866834", "1326555376", "1528730546", "1972988657", "1942921580", "1700976222"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326555376", "1528730546", "1548836729", "1679040067", "1700976222", "1801363114", "1942921580", "1972135390", "1972988657", "1992866834"}}
 	sourceDef.BrandLogo = "terros-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.terroshealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

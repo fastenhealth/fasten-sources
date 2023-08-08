@@ -28,7 +28,7 @@ func GetSourceRockyMountainPrimaryCare(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Rocky Mountain Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainPrimaryCare
-	sourceDef.Category = []string{"207R00000X", "208000000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208000000X"}
 	sourceDef.Aliases = []string{"RMPC - WESTMINSTER", "ROCKY MOUNTAIN PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932559986"}}
 	sourceDef.PatientAccessUrl = "https://www.rmch.org/"

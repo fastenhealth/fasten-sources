@@ -28,7 +28,7 @@ func GetSourceKansasCityPhysicianPartnersInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Kansas City Physician Partners Inc"
 	sourceDef.SourceType = pkg.SourceTypeKansasCityPhysicianPartnersInc
-	sourceDef.Category = []string{"207KA0200X", "207R00000X", "207RG0300X", "207RR0500X", "364SA2200X", "363L00000X", "2084N0400X"}
+	sourceDef.Category = []string{"207KA0200X", "207R00000X", "207RG0300X", "207RR0500X", "2084N0400X", "363L00000X", "364SA2200X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831531466"}}
 	sourceDef.BrandLogo = "kansas-city-physician-partners-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kcphysicianpartners.com/"

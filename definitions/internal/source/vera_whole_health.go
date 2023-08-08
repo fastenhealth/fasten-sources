@@ -30,7 +30,7 @@ func GetSourceVeraWholeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeVeraWholeHealth
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"VERA WHOLE HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023668407", "1386387561", "1639812829", "1255857876", "1578930012", "1306508221", "1679235592", "1588326409", "1457865271", "1699166439"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023668407", "1255857876", "1306508221", "1386387561", "1457865271", "1578930012", "1588326409", "1639812829", "1679235592", "1699166439"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/VeraWholeHealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

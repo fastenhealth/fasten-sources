@@ -28,7 +28,7 @@ func GetSourceProlianceRetina(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Proliance Retina"
 	sourceDef.SourceType = pkg.SourceTypeProlianceRetina
-	sourceDef.Category = []string{"207WX0107X", "261QM1300X", "207W00000X"}
+	sourceDef.Category = []string{"207W00000X", "207WX0107X", "261QM1300X"}
 	sourceDef.Aliases = []string{"PROLIANCE RETINA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841568946"}}
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"

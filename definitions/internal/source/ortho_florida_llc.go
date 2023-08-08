@@ -29,7 +29,7 @@ func GetSourceOrthoFloridaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Ortho Florida LLC"
 	sourceDef.SourceType = pkg.SourceTypeOrthoFloridaLlc
 	sourceDef.Category = []string{"207QS0010X", "207X00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689949224", "1649516717", "1730455130"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649516717", "1689949224", "1730455130"}}
 	sourceDef.PatientAccessUrl = "https://www.orthoflorida.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

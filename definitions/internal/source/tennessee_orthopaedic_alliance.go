@@ -30,7 +30,7 @@ func GetSourceTennesseeOrthopaedicAlliance(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeTennesseeOrthopaedicAlliance
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{"TENNESSEE ORTHOPAEDIC ALLIANCE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831183250", "1790234508"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790234508", "1831183250"}}
 	sourceDef.PatientAccessUrl = "https://toa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

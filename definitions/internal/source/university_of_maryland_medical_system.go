@@ -31,7 +31,7 @@ func GetSourceUniversityOfMarylandMedicalSystem(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMarylandMedicalSystem
 	sourceDef.Category = []string{"282N00000X", "390200000X"}
 	sourceDef.Aliases = []string{"UNIVERSITY OF MARYLAND MEDICAL SYSTEM"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336502442", "1063050581", "1447575303", "1376929596"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063050581", "1336502442", "1376929596", "1447575303"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

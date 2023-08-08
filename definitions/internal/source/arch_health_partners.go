@@ -28,9 +28,9 @@ func GetSourceArchHealthPartners(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Arch Health Partners"
 	sourceDef.SourceType = pkg.SourceTypeArchHealthPartners
-	sourceDef.Category = []string{"133V00000X", "133VN1201X", "207RE0101X", "207RP1001X", "207X00000X", "207XS0106X", "207XS0117X", "207XX0004X", "207XX0801X", "207R00000X", "231H00000X", "207Y00000X", "207Q00000X", "207RI0011X", "208D00000X", "207RC0000X", "208600000X"}
+	sourceDef.Category = []string{"133V00000X", "133VN1201X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RI0011X", "207RP1001X", "207X00000X", "207XS0106X", "207XS0117X", "207XX0004X", "207XX0801X", "207Y00000X", "208600000X", "208D00000X", "231H00000X"}
 	sourceDef.Aliases = []string{"ARCH HEALTH MEDICAL GROUP", "PALOMAR HEALTH MEDICAL GROUP"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295329787", "1093006512", "1063954683", "1831203231", "1851641880", "1780222968"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063954683", "1093006512", "1295329787", "1780222968", "1831203231", "1851641880"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

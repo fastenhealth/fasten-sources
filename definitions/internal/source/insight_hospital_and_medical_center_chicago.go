@@ -29,9 +29,9 @@ func GetSourceInsightHospitalAndMedicalCenterChicago(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Insight Hospital & Medical Center Chicago"
 	sourceDef.SourceType = pkg.SourceTypeInsightHospitalAndMedicalCenterChicago
-	sourceDef.Category = []string{"273R00000X", "273Y00000X", "207L00000X", "207Q00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RN0300X", "207V00000X", "101Y00000X", "207K00000X", "176B00000X", "207W00000X", "208000000X", "2084P0800X", "208600000X", "207R00000X", "282N00000X"}
+	sourceDef.Category = []string{"101Y00000X", "176B00000X", "207K00000X", "207L00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RN0300X", "207V00000X", "207W00000X", "208000000X", "2084P0800X", "208600000X", "273R00000X", "273Y00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"INSIGHT HOSPITAL & MEDICAL CENTER CHICAGO"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043297401", "1154308518", "1881261006", "1730166224"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043297401", "1154308518", "1730166224", "1881261006"}}
 	sourceDef.PatientAccessUrl = "https://insightchicago.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

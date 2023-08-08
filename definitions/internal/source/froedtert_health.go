@@ -31,7 +31,7 @@ func GetSourceFroedtertHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeFroedtertHealth
 	sourceDef.Category = []string{"332900000X"}
 	sourceDef.Aliases = []string{"FROEDTERT & MCW COMMUNITY PHYSICIANS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134829054", "1073273215", "1205355500"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073273215", "1134829054", "1205355500"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

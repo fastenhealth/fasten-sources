@@ -28,9 +28,9 @@ func GetSourceSchuylkillEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Schuylkill Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeSchuylkillEndoscopyCenter
-	sourceDef.Category = []string{"261QA1903X", "261QE0800X", "207L00000X"}
+	sourceDef.Category = []string{"207L00000X", "261QA1903X", "261QE0800X"}
 	sourceDef.Aliases = []string{"SCHUYLKILL ENDOSCOPY CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386833044", "1346269784", "1548243256"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346269784", "1386833044", "1548243256"}}
 	sourceDef.BrandLogo = "schuylkill-endoscopy-center.jpg"
 	sourceDef.PatientAccessUrl = "https://schuylkillendoscopy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,9 +29,9 @@ func GetSourceThayerCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Thayer County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeThayerCountyMemorialHospital
-	sourceDef.Category = []string{"282NC0060X", "333600000X", "3336C0003X", "3336L0003X", "261QR1300X", "251E00000X", "207Q00000X", "332B00000X"}
+	sourceDef.Category = []string{"207Q00000X", "251E00000X", "261QR1300X", "282NC0060X", "332B00000X", "333600000X", "3336C0003X", "3336L0003X"}
 	sourceDef.Aliases = []string{"CHESTER MEDICAL CLINIC", "DAVENPORT MEDICAL CLINIC", "DESHLER MEDICAL CLINIC", "HEARTLAND HOME HEALTH", "HEBRON MEDICAL CLINIC", "MILLIGAN MEDICAL CLINIC", "TCHS PHARMACY", "THAYER COUNTY PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093792830", "1992787949", "1972589349", "1174509194", "1659357507", "1063498921", "1992302236", "1326029984", "1558347575", "1407832355"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063498921", "1093792830", "1174509194", "1326029984", "1407832355", "1558347575", "1659357507", "1972589349", "1992302236", "1992787949"}}
 	sourceDef.BrandLogo = "thayer-county-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://thayercountyhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

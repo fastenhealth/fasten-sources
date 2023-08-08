@@ -29,9 +29,9 @@ func GetSourceHealthpartners(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "HealthPartners"
 	sourceDef.SourceType = pkg.SourceTypeHealthpartners
-	sourceDef.Category = []string{"101Y00000X", "111N00000X", "1223E0200X", "1223P0221X", "1223P0300X", "1223P0700X", "1223S0112X", "1223X0400X", "125J00000X", "125K00000X", "125Q00000X", "1223G0001X"}
+	sourceDef.Category = []string{"101Y00000X", "111N00000X", "1223E0200X", "1223G0001X", "1223P0221X", "1223P0300X", "1223P0700X", "1223S0112X", "1223X0400X", "125J00000X", "125K00000X", "125Q00000X"}
 	sourceDef.Aliases = []string{"HEALTHPARTNERS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699838557", "1699272427"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699272427", "1699838557"}}
 	sourceDef.PatientAccessUrl = "https://www.healthpartners.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 

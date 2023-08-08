@@ -29,8 +29,8 @@ func GetSourceProvidenceHealthAndServicesOregon(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Providence Health & Services - Oregon"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceHealthAndServicesOregon
-	sourceDef.Category = []string{"207RH0002X", "363L00000X", "261Q00000X", "261QX0100X", "204E00000X", "207RC0000X", "207VG0400X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861825820", "1235259532", "1245416965", "1114255247", "1447561626", "1801107081", "1407109937", "1790025104", "1083059778", "1639593387"}}
+	sourceDef.Category = []string{"204E00000X", "207RC0000X", "207RH0002X", "207VG0400X", "261Q00000X", "261QX0100X", "363L00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083059778", "1114255247", "1235259532", "1245416965", "1407109937", "1447561626", "1639593387", "1790025104", "1801107081", "1861825820"}}
 	sourceDef.PatientAccessUrl = "https://www.providence.org/locations/or/community-health-division"
 	sourceDef.SecretKeyPrefix = "cerner"
 

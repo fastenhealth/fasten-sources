@@ -29,9 +29,9 @@ func GetSourceSchoolcraftMemorialHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Schoolcraft Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSchoolcraftMemorialHospital
-	sourceDef.Category = []string{"251E00000X", "282NC0060X", "3336I0012X", "275N00000X", "207R00000X", "207Q00000X", "207P00000X", "261QR1300X", "251G00000X"}
+	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207R00000X", "251E00000X", "251G00000X", "261QR1300X", "275N00000X", "282NC0060X", "3336I0012X"}
 	sourceDef.Aliases = []string{"SCHOOLCRAFT MEMORIAL HOMECARE AND HOSPICE", "SCHOOLCRAFT MEMORIAL HOSPITAL RURAL HEATH CLINIC NAUBINWAY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447256276", "1740323336", "1700938370", "1629079389", "1881254605", "1700805157", "1770774747"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447256276", "1629079389", "1700805157", "1700938370", "1740323336", "1770774747", "1881254605"}}
 	sourceDef.PatientAccessUrl = "https://scmh.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

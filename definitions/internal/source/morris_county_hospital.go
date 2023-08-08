@@ -29,9 +29,9 @@ func GetSourceMorrisCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Morris County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMorrisCountyHospital
-	sourceDef.Category = []string{"207Q00000X", "367500000X", "261QR1300X", "207P00000X", "3416L0300X", "275N00000X", "251K00000X"}
+	sourceDef.Category = []string{"207P00000X", "207Q00000X", "251K00000X", "261QR1300X", "275N00000X", "3416L0300X", "367500000X"}
 	sourceDef.Aliases = []string{"MCH CLINIC ALTA VISTA", "MCH CLINIC CHASE COUNTY", "MCH CLINIC WHITE CITY", "MCH MEDICAL CLINIC", "MCH PROFESSIONAL SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295217305", "1083751036", "1982783007", "1801933866", "1306991948", "1134774821", "1255353454", "1396759528", "1689681256", "1649826280"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083751036", "1134774821", "1255353454", "1295217305", "1306991948", "1396759528", "1649826280", "1689681256", "1801933866", "1982783007"}}
 	sourceDef.PatientAccessUrl = "https://mrcohosp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

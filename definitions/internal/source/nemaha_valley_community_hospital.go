@@ -29,9 +29,9 @@ func GetSourceNemahaValleyCommunityHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Nemaha Valley Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNemahaValleyCommunityHospital
-	sourceDef.Category = []string{"207Q00000X", "208600000X", "367500000X", "261Q00000X", "275N00000X", "261QR1300X", "261QP2300X", "332B00000X", "282NC0060X"}
+	sourceDef.Category = []string{"207Q00000X", "208600000X", "261Q00000X", "261QP2300X", "261QR1300X", "275N00000X", "282NC0060X", "332B00000X", "367500000X"}
 	sourceDef.Aliases = []string{"NVCH PROFESSIONAL GROUP", "SENECA FAMILY PRACTICE PA", "SENECA FAMILY PRACTICE RHC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205416815", "1336386564", "1225004914", "1336128644", "1952673618", "1316913023", "1669470712"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205416815", "1225004914", "1316913023", "1336128644", "1336386564", "1669470712", "1952673618"}}
 	sourceDef.PatientAccessUrl = "https://nemvch.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

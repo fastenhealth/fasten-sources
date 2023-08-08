@@ -29,9 +29,9 @@ func GetSourceNeshobaCountyGeneralHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Neshoba County General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNeshobaCountyGeneralHospital
-	sourceDef.Category = []string{"367500000X", "3336L0003X", "3336I0012X", "333600000X", "282N00000X", "207PE0004X", "207QS1201X", "2084N0600X", "246ZE0500X", "363L00000X", "261QR1300X", "2085R0202X", "207Q00000X", "207VF0040X", "2084N0400X", "261Q00000X", "208600000X", "363LF0000X"}
+	sourceDef.Category = []string{"207PE0004X", "207Q00000X", "207QS1201X", "207VF0040X", "2084N0400X", "2084N0600X", "2085R0202X", "208600000X", "246ZE0500X", "261Q00000X", "261QR1300X", "282N00000X", "333600000X", "3336I0012X", "3336L0003X", "363L00000X", "363LF0000X", "367500000X"}
 	sourceDef.Aliases = []string{"NESHOBA CENTRAL CLINIC", "NESHOBA MEDICAL ARTS CLINIC", "NESHOBA URGENT CARE-FAMILY MEDICINE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114057247", "1083659734", "1003946138", "1003834979", "1275621211", "1013382308", "1144665670", "1184132219", "1528295532", "1144775107"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003834979", "1003946138", "1013382308", "1083659734", "1114057247", "1144665670", "1144775107", "1184132219", "1275621211", "1528295532"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

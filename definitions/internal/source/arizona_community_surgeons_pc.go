@@ -28,8 +28,8 @@ func GetSourceArizonaCommunitySurgeonsPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Arizona Community Surgeons PC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaCommunitySurgeonsPc
-	sourceDef.Category = []string{"207X00000X", "207XX0004X", "2086S0122X", "2086S0105X", "2086X0206X", "208G00000X", "208C00000X", "207XS0106X", "207XX0005X", "208600000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689616070", "1003074758"}}
+	sourceDef.Category = []string{"207X00000X", "207XS0106X", "207XX0004X", "207XX0005X", "208600000X", "2086S0105X", "2086S0122X", "2086X0206X", "208C00000X", "208G00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003074758", "1689616070"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

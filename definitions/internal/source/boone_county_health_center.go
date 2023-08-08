@@ -29,9 +29,9 @@ func GetSourceBooneCountyHealthCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Boone County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeBooneCountyHealthCenter
-	sourceDef.Category = []string{"3336I0012X", "261QR1300X", "363A00000X", "363L00000X", "207Q00000X", "282NC0060X", "275N00000X", "101YM0800X", "133V00000X", "363AM0700X", "367500000X", "251E00000X"}
+	sourceDef.Category = []string{"101YM0800X", "133V00000X", "207Q00000X", "251E00000X", "261QR1300X", "275N00000X", "282NC0060X", "3336I0012X", "363A00000X", "363AM0700X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"BOONE COUNTY HEALTH CENTER", "BOONE COUNTY HEALTH CENTER HOME HEALTH", "BOONE COUNTY HEALTH CENTER PCMH", "BOONE COUNTY MEDICAL CLINIC", "BOONE COUNTY PROFESSIONAL SERVICES", "ELGIN VETERANS' MEDICAL CLINIC", "NANCE COUNTY MEDICAL CLINIC", "NEWMAN GROVE MEDICAL CLINIC", "SPALDING MEDICAL CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386833804", "1750778940", "1780106732", "1023043270", "1588698914", "1245699958", "1497789812", "1669407821", "1114952363", "1730113150"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023043270", "1114952363", "1245699958", "1386833804", "1497789812", "1588698914", "1669407821", "1730113150", "1750778940", "1780106732"}}
 	sourceDef.BrandLogo = "boone-county-health-center.svg"
 	sourceDef.PatientAccessUrl = "https://boonecohealth.org"
 	sourceDef.SecretKeyPrefix = "cerner"

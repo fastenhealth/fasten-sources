@@ -28,9 +28,9 @@ func GetSourcePanoramaOrthopedicsAndSpineCenterPc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Panorama Orthopedics And Spine Center PC"
 	sourceDef.SourceType = pkg.SourceTypePanoramaOrthopedicsAndSpineCenterPc
-	sourceDef.Category = []string{"2085R0202X", "363A00000X", "207X00000X", "261QP2000X", "261Q00000X", "332B00000X", "332BC3200X", "261QR0200X"}
+	sourceDef.Category = []string{"207X00000X", "2085R0202X", "261Q00000X", "261QP2000X", "261QR0200X", "332B00000X", "332BC3200X", "363A00000X"}
 	sourceDef.Aliases = []string{"GOLDEN DME", "ROCKY MOUNTAIN SPINE & SPORT"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285236620", "1295787950", "1942808548", "1467052258", "1578236360", "1992399273", "1275135618"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275135618", "1285236620", "1295787950", "1467052258", "1578236360", "1942808548", "1992399273"}}
 	sourceDef.PatientAccessUrl = "https://www.stephenpehlermd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

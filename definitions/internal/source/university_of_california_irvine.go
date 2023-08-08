@@ -29,9 +29,9 @@ func GetSourceUniversityOfCaliforniaIrvine(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "University of California Irvine"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfCaliforniaIrvine
-	sourceDef.Category = []string{"261QI0500X", "333600000X", "3336S0011X", "273R00000X", "3336C0002X", "3336C0003X", "207Q00000X", "273Y00000X", "261QF0400X"}
+	sourceDef.Category = []string{"207Q00000X", "261QF0400X", "261QI0500X", "273R00000X", "273Y00000X", "333600000X", "3336C0002X", "3336C0003X", "3336S0011X"}
 	sourceDef.Aliases = []string{"OUTPATIENT PHARMACY - UC IRVINE HEALTH", "UCI FAMILY HEALTH CENTER - ANAHEIM", "UCI FAMILY HEALTH CENTER - SANTA ANA", "UCI FAMILY HEALTH CENTER PHARMACY", "UCI HEALTH-SUSAN SAMUELI INTEGRATED HEALTH INSTITUTE PHARMACY", "UCI MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417027475", "1104842020", "1154500510", "1124041272", "1376275693", "1518684430", "1548587108", "1235318692", "1598790529", "1851325906"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104842020", "1124041272", "1154500510", "1235318692", "1376275693", "1417027475", "1518684430", "1548587108", "1598790529", "1851325906"}}
 	sourceDef.PatientAccessUrl = "https://www.ucihealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

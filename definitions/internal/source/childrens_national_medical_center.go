@@ -29,8 +29,8 @@ func GetSourceChildrensNationalMedicalCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Children's National Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeChildrensNationalMedicalCenter
-	sourceDef.Category = []string{"283XC2000X", "281PC2000X", "282NC2000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093946170", "1376748632", "1700030640", "1942455407", "1285888222", "1871805168", "1164675773", "1750639050"}}
+	sourceDef.Category = []string{"281PC2000X", "282NC2000X", "283XC2000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093946170", "1164675773", "1285888222", "1376748632", "1700030640", "1750639050", "1871805168", "1942455407"}}
 	sourceDef.BrandLogo = "childrens-national-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://childrensnational.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

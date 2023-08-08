@@ -29,9 +29,9 @@ func GetSourceOsborneCountyMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Osborne County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeOsborneCountyMemorialHospital
-	sourceDef.Category = []string{"275N00000X", "282NC0060X", "261Q00000X", "261QR1300X"}
+	sourceDef.Category = []string{"261Q00000X", "261QR1300X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"GOAD MEDICAL CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366599342", "1932226636", "1194859744", "1487772018", "1639261811", "1326166828", "1710004411", "1437240595"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194859744", "1326166828", "1366599342", "1437240595", "1487772018", "1639261811", "1710004411", "1932226636"}}
 	sourceDef.BrandLogo = "osborne-county-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ocmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

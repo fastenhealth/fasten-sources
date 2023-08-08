@@ -29,7 +29,7 @@ func GetSourceBostonPaincareCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Boston PainCare Center"
 	sourceDef.SourceType = pkg.SourceTypeBostonPaincareCenter
 	sourceDef.Category = []string{"208VP0000X", "291U00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558791475", "1255867487"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255867487", "1558791475"}}
 	sourceDef.PatientAccessUrl = "https://www.bostonpaincare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

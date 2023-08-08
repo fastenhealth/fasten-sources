@@ -29,9 +29,9 @@ func GetSourcePomonaValleyHospitalMedicalCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pomona Valley Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePomonaValleyHospitalMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "224Y00000X"}
+	sourceDef.Category = []string{"224Y00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"POMONA VALLEY HOSPITAL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407813660", "1518067586", "1184243263"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184243263", "1407813660", "1518067586"}}
 	sourceDef.BrandLogo = "pomona-valley-hospital-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pvhmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

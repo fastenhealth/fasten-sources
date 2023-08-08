@@ -28,9 +28,9 @@ func GetSourceKootenaiHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Kootenai Health"
 	sourceDef.SourceType = pkg.SourceTypeKootenaiHealth1
-	sourceDef.Category = []string{"207T00000X", "207X00000X", "207Y00000X", "208000000X", "208600000X", "208800000X", "213E00000X", "363A00000X", "363L00000X", "207P00000X", "101Y00000X", "273R00000X", "207RC0000X", "282N00000X", "2084P0800X", "2085R0202X", "207RH0003X", "332B00000X", "273Y00000X"}
+	sourceDef.Category = []string{"101Y00000X", "207P00000X", "207RC0000X", "207RH0003X", "207T00000X", "207X00000X", "207Y00000X", "208000000X", "2084P0800X", "2085R0202X", "208600000X", "208800000X", "213E00000X", "273R00000X", "273Y00000X", "282N00000X", "332B00000X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"HEART CLINICS OREGON", "KOOTENAI MEDICAL CENTER GROUP", "KOOTENAI MEDICAL CENTER NIBH GROUP", "KOOTENAI PHYSICIANS CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235288655", "1316096738", "1568567360", "1205113784", "1174661151", "1992798409", "1700918851", "1699807743", "1609925023", "1659476455"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174661151", "1205113784", "1235288655", "1316096738", "1568567360", "1609925023", "1659476455", "1699807743", "1700918851", "1992798409"}}
 	sourceDef.BrandLogo = "kootenai-health.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

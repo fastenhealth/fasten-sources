@@ -28,7 +28,7 @@ func GetSourceFloridaVisionInstituteInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Florida Vision Institute Inc"
 	sourceDef.SourceType = pkg.SourceTypeFloridaVisionInstituteInc
-	sourceDef.Category = []string{"152W00000X", "332B00000X", "207W00000X"}
+	sourceDef.Category = []string{"152W00000X", "207W00000X", "332B00000X"}
 	sourceDef.Aliases = []string{"JACK DAUBERT, M.D., P.A."}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083614366"}}
 	sourceDef.BrandLogo = "florida-vision-institute-inc.jpg"

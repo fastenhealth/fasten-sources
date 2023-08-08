@@ -28,9 +28,9 @@ func GetSourceMeridianHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Meridian HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeMeridianHealthcare
-	sourceDef.Category = []string{"101Y00000X", "101YA0400X", "101YP2500X", "104100000X", "1041C0700X", "163WA0400X", "163WP0808X", "164W00000X", "171M00000X", "175T00000X", "405300000X", "261QM0801X", "261QM2800X", "111N00000X", "163W00000X", "171100000X", "207Q00000X", "207R00000X", "207RI0200X", "363A00000X", "363LA2200X", "363LF0000X", "363LG0600X", "363LP0808X", "363LW0102X", "261QP2300X"}
+	sourceDef.Category = []string{"101Y00000X", "101YA0400X", "101YP2500X", "104100000X", "1041C0700X", "111N00000X", "163W00000X", "163WA0400X", "163WP0808X", "164W00000X", "171100000X", "171M00000X", "175T00000X", "207Q00000X", "207R00000X", "207RI0200X", "261QM0801X", "261QM2800X", "261QP2300X", "363A00000X", "363LA2200X", "363LF0000X", "363LG0600X", "363LP0808X", "363LW0102X", "405300000X"}
 	sourceDef.Aliases = []string{"MAHONING COUNTY CHEMICAL DEPENDENCY PROGRAMS, INC.", "MERIDIAN COMMUNITY CARE", "MERIDIAN SERVICES, INC."}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356307235", "1407115298", "1225455082"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225455082", "1356307235", "1407115298"}}
 	sourceDef.PatientAccessUrl = "https://meridianhealthcare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

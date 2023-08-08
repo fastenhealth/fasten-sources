@@ -28,7 +28,7 @@ func GetSourceProlianceEastsideMri(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Proliance Eastside MRI"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideMri
-	sourceDef.Category = []string{"2085R0202X", "2085R0204X", "2471M1202X", "261QR0200X", "261QM1200X"}
+	sourceDef.Category = []string{"2085R0202X", "2085R0204X", "2471M1202X", "261QM1200X", "261QR0200X"}
 	sourceDef.Aliases = []string{"PROLIANCE EASTSIDE MRI"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164461182"}}
 	sourceDef.PatientAccessUrl = "https://www.proortho.com/location/proliance-eastside-mri/"

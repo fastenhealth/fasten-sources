@@ -28,8 +28,8 @@ func GetSourceLorainCountyHealthAndDentistry(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Lorain County Health & Dentistry"
 	sourceDef.SourceType = pkg.SourceTypeLorainCountyHealthAndDentistry
-	sourceDef.Category = []string{"261Q00000X", "207Q00000X", "207QA0505X", "207R00000X", "207V00000X", "208000000X", "363L00000X", "363LP0200X", "363LP2300X", "261QF0400X", "363LA2200X", "363LF0000X", "122300000X", "1223P0221X", "204E00000X", "213E00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609408483", "1720485659", "1023564143", "1528690351", "1649802455", "1538791314", "1215194527", "1821464306", "1336484559", "1346872124"}}
+	sourceDef.Category = []string{"122300000X", "1223P0221X", "204E00000X", "207Q00000X", "207QA0505X", "207R00000X", "207V00000X", "208000000X", "213E00000X", "261Q00000X", "261QF0400X", "363L00000X", "363LA2200X", "363LF0000X", "363LP0200X", "363LP2300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023564143", "1215194527", "1336484559", "1346872124", "1528690351", "1538791314", "1609408483", "1649802455", "1720485659", "1821464306"}}
 	sourceDef.PatientAccessUrl = "https://www.lorainhealth-dentistry.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

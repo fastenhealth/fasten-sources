@@ -29,7 +29,7 @@ func GetSourceMedicalCareOfNyPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Medical Care Of NY PC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCareOfNyPc
 	sourceDef.Category = []string{"208D00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891441226", "1306571070", "1356000913"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306571070", "1356000913", "1891441226"}}
 	sourceDef.BrandLogo = "medical-care-of-ny-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3L55D8AUGNUSJVQTNM5KF3CP3NMYCN?assignment_id=32AT8R96GZ6TVNTE093WG76J436USI&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

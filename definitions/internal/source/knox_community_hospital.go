@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10058176/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10058176/metadata
 func GetSourceKnoxCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10058176/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10058176/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/11200b71-913a-4726-885a-a5e262f10242/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/11200b71-913a-4726-885a-a5e262f10242/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10058176"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10058176"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10058176"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10058176"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeKnoxCommunityHospital]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,10 +28,9 @@ func GetSourceKnoxCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Knox Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeKnoxCommunityHospital
-	sourceDef.Category = []string{"332B00000X", "261Q00000X", "261QU0200X", "332BP3500X", "3336H0001X", "273Y00000X", "207L00000X"}
+	sourceDef.Category = []string{"207L00000X", "261Q00000X", "261QU0200X", "273Y00000X", "332B00000X", "332BP3500X", "3336H0001X"}
 	sourceDef.Aliases = []string{"KCH HOME INFUSION PHARMACY", "KNOX COMMUNITY HOSPITAL CENTER FOR REHABILITATION AND WELLNESS", "PHYSICIAN PRACTICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386003796", "1801045406", "1003065681", "1003115585", "1144746678", "1205351004", "1861097917", "1083236921", "1679626287", "1770009292"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003065681", "1003115585", "1083236921", "1144746678", "1205351004", "1386003796", "1679626287", "1770009292", "1801045406", "1861097917"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

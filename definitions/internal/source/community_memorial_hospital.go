@@ -31,7 +31,7 @@ func GetSourceCommunityMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeCommunityMemorialHospital
 	sourceDef.Category = []string{"261QR1300X", "282NC0060X"}
 	sourceDef.Aliases = []string{"ANTWERP FAMILY HEALTH CENTER", "EDGERTON FAMILY HEALTH CENTER", "HICKSVILLE FAMILY HEALTH CENTER", "MARK, MILFORD, HCKSVILLE JOINT TOWNSHIP HOSPITAL DISTRICT", "MARK, MILFORD, HICKSVILLE JOINT TOWNSHIP HOSPITAL DISTRICT"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730145392", "1780150110", "1164915021", "1043438138", "1891288866", "1336632280"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043438138", "1164915021", "1336632280", "1730145392", "1780150110", "1891288866"}}
 	sourceDef.PatientAccessUrl = "https://communitymemorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

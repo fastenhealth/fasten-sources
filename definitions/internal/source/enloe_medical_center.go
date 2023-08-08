@@ -29,9 +29,9 @@ func GetSourceEnloeMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Enloe Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEnloeMedicalCenter
-	sourceDef.Category = []string{"332B00000X", "261QP2300X", "207Y00000X", "261QR0200X", "261QR0206X", "208600000X", "208100000X", "208C00000X", "207R00000X", "207T00000X", "207RC0000X", "207V00000X"}
+	sourceDef.Category = []string{"207R00000X", "207RC0000X", "207T00000X", "207V00000X", "207Y00000X", "208100000X", "208600000X", "208C00000X", "261QP2300X", "261QR0200X", "261QR0206X", "332B00000X"}
 	sourceDef.Aliases = []string{"ENLOE CARDIOLOGY SERVICES ESPLANADE", "ENLOE MEDICAL CENTER", "ENLOE PRIMARY CARE", "ENLOE TRAUMA & SURGERY CLINIC", "ENLOE WOMEN'S SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275616302", "1740922426", "1265863179", "1477975613", "1972905503", "1992117592", "1649548322", "1336580422", "1932750957", "1023420726"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023420726", "1265863179", "1275616302", "1336580422", "1477975613", "1649548322", "1740922426", "1932750957", "1972905503", "1992117592"}}
 	sourceDef.PatientAccessUrl = "https://www.enloe.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

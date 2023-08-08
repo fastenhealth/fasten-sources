@@ -29,8 +29,8 @@ func GetSourcePresbyterianHealthcareServices1(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Presbyterian Healthcare Services"
 	sourceDef.SourceType = pkg.SourceTypePresbyterianHealthcareServices1
-	sourceDef.Category = []string{"261QE0002X", "3336C0002X", "282N00000X", "207P00000X", "207R00000X", "261QH0100X", "251G00000X", "3416L0300X", "282NR1301X", "282NC0060X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447632617", "1144592866", "1528312717", "1275518151", "1245216688", "1154307593", "1962488304", "1336125764", "1114903374", "1184952368"}}
+	sourceDef.Category = []string{"207P00000X", "207R00000X", "251G00000X", "261QE0002X", "261QH0100X", "282N00000X", "282NC0060X", "282NR1301X", "3336C0002X", "3416L0300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114903374", "1144592866", "1154307593", "1184952368", "1245216688", "1275518151", "1336125764", "1447632617", "1528312717", "1962488304"}}
 	sourceDef.BrandLogo = "presbyterian-healthcare-services.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 

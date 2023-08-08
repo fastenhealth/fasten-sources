@@ -29,9 +29,9 @@ func GetSourceCarrollCountyMemorialHospital1(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Carroll County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCarrollCountyMemorialHospital1
-	sourceDef.Category = []string{"207Q00000X", "261QR1300X", "251E00000X", "275N00000X", "282NC0060X"}
+	sourceDef.Category = []string{"207Q00000X", "251E00000X", "261QR1300X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"CARROLL COUNTY MEMORIAL HOSPITAL", "CARROLL COUNTY MEMORIAL HOSPITAL HOME HEALTH CARE AGENCY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972731529", "1205831013", "1528067113"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205831013", "1528067113", "1972731529"}}
 	sourceDef.PatientAccessUrl = "https://www.carrollcountyhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

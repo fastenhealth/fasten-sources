@@ -30,7 +30,7 @@ func GetSourceUniversityHospitalsCleveland(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "University Hospitals Cleveland"
 	sourceDef.SourceType = pkg.SourceTypeUniversityHospitalsCleveland
 	sourceDef.Category = []string{"282N00000X"}
-	sourceDef.Aliases = []string{"UHCMC ", "UHCMC"}
+	sourceDef.Aliases = []string{"UHCMC", "UHCMC "}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043397292"}}
 	sourceDef.BrandLogo = "university-hospitals-samaritan-medical-center.png"
 	sourceDef.PatientAccessUrl = "https://uhhospitals.org"

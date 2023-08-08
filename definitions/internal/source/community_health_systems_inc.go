@@ -28,8 +28,8 @@ func GetSourceCommunityHealthSystemsInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Community Health Systems Inc"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthSystemsInc
-	sourceDef.Category = []string{"1223G0001X", "1223P0221X", "261QF0400X", "122300000X", "207Q00000X", "207V00000X", "152W00000X", "207R00000X", "2084N0400X", "2084P0800X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700938891", "1669524534", "1982756086"}}
+	sourceDef.Category = []string{"122300000X", "1223G0001X", "1223P0221X", "152W00000X", "207Q00000X", "207R00000X", "207V00000X", "2084N0400X", "2084P0800X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669524534", "1700938891", "1982756086"}}
 	sourceDef.PatientAccessUrl = "https://www.chsica.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

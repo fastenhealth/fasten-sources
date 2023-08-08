@@ -28,7 +28,7 @@ func GetSourceGreenvilleEntAndAllergyAssociatesPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Greenville ENT And Allergy Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeGreenvilleEntAndAllergyAssociatesPa
-	sourceDef.Category = []string{"207YP0228X", "207YX0007X", "207YX0602X", "207Y00000X"}
+	sourceDef.Category = []string{"207Y00000X", "207YP0228X", "207YX0007X", "207YX0602X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649875816"}}
 	sourceDef.PatientAccessUrl = "https://greenvilleent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

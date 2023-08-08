@@ -29,9 +29,9 @@ func GetSourceAlamedaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Alameda Health System"
 	sourceDef.SourceType = pkg.SourceTypeAlamedaHealthSystem
-	sourceDef.Category = []string{"282N00000X", "261Q00000X", "261QF0400X", "171M00000X", "207W00000X", "207X00000X", "310400000X"}
+	sourceDef.Category = []string{"171M00000X", "207W00000X", "207X00000X", "261Q00000X", "261QF0400X", "282N00000X", "310400000X"}
 	sourceDef.Aliases = []string{"ALAMEDA HOSPITAL", "HAYWARD WELLNESS CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831529049", "1083166144", "1689875478", "1306047196", "1023219821", "1396897583", "1205988490", "1033241633", "1235261652", "1124446158"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023219821", "1033241633", "1083166144", "1124446158", "1205988490", "1235261652", "1306047196", "1396897583", "1689875478", "1831529049"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,9 +28,9 @@ func GetSourceIndianaKidneyInstitute(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Indiana Kidney Institute"
 	sourceDef.SourceType = pkg.SourceTypeIndianaKidneyInstitute
-	sourceDef.Category = []string{"261QA1903X", "207RN0300X"}
+	sourceDef.Category = []string{"207RN0300X", "261QA1903X"}
 	sourceDef.Aliases = []string{"INDIANA KIDNEY INSTITUTE", "NEPHROLOGY & INTERNAL MEDICINE INC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548785116", "1013943109"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013943109", "1548785116"}}
 	sourceDef.PatientAccessUrl = "https://www.indianakidney.com/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

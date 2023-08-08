@@ -29,9 +29,9 @@ func GetSourceGenesisHealthcareSystem(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Genesis Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeGenesisHealthcareSystem
-	sourceDef.Category = []string{"146N00000X", "333600000X", "3336C0003X", "261QA1903X", "314000000X", "291U00000X", "208D00000X", "207RH0003X", "251E00000X", "273Y00000X", "335E00000X"}
+	sourceDef.Category = []string{"146N00000X", "207RH0003X", "208D00000X", "251E00000X", "261QA1903X", "273Y00000X", "291U00000X", "314000000X", "333600000X", "3336C0003X", "335E00000X"}
 	sourceDef.Aliases = []string{"GENESIS CENTRAL FILL PHARMACY", "GENESIS HEALTHCARE SYSTEM - REHAB", "GENESIS HOMECARE", "GENESIS OUTPATIENT PHARMACY", "GENESIS SKILLED NURSING", "GENESIS WOMEN'S BOUTIQUE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144495524", "1477150951", "1104150580", "1952399495", "1811141781", "1497005193", "1629154729", "1902843287", "1356427454", "1972640332"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104150580", "1144495524", "1356427454", "1477150951", "1497005193", "1629154729", "1811141781", "1902843287", "1952399495", "1972640332"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

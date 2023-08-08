@@ -29,9 +29,9 @@ func GetSourceMedicineLodgeMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medicine Lodge Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMedicineLodgeMemorialHospital
-	sourceDef.Category = []string{"341600000X", "282NC0060X", "261QC0050X", "261QR1300X", "275N00000X", "367500000X"}
+	sourceDef.Category = []string{"261QC0050X", "261QR1300X", "275N00000X", "282NC0060X", "341600000X", "367500000X"}
 	sourceDef.Aliases = []string{"MEDICINE LODGE MEMORIAL HOSPITAL AMBULANCE SERVICE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609979004", "1407887193", "1902822075", "1083702369", "1285669929", "1114952975", "1831287291"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083702369", "1114952975", "1285669929", "1407887193", "1609979004", "1831287291", "1902822075"}}
 	sourceDef.PatientAccessUrl = "https://www.mlmh.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

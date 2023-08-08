@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10018832/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10018832/metadata
 func GetSourcePutnamCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10018832/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10018832/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fb407c86-5621-4930-99a0-0fdffa321026/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fb407c86-5621-4930-99a0-0fdffa321026/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10018832"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10018832"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10018832"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10018832"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePutnamCountyHospital]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,10 +28,9 @@ func GetSourcePutnamCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Putnam County Hospital"
 	sourceDef.SourceType = pkg.SourceTypePutnamCountyHospital
-	sourceDef.Category = []string{"314000000X", "313M00000X", "261QR1300X", "332B00000X"}
+	sourceDef.Category = []string{"261QR1300X", "313M00000X", "314000000X", "332B00000X"}
 	sourceDef.Aliases = []string{"CENTURY VILLA HEALTH CARE", "ELWOOD HEALTH AND LIVING", "RANDOLPH NURSING HOME", "THE WATERS OF SCOTTSBURG"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972863421", "1114986924", "1699833129", "1932449154", "1164782942", "1295874097", "1518068881", "1578621389", "1376601559", "1841285913"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114986924", "1164782942", "1295874097", "1376601559", "1518068881", "1578621389", "1699833129", "1841285913", "1932449154", "1972863421"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

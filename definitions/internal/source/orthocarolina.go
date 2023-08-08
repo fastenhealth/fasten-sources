@@ -29,8 +29,8 @@ func GetSourceOrthocarolina(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "OrthoCarolina"
 	sourceDef.SourceType = pkg.SourceTypeOrthocarolina
-	sourceDef.Category = []string{"207X00000X", "207XS0106X", "207XS0117X", "207XX0004X", "207XX0005X", "225100000X", "363A00000X", "363AS0400X", "225X00000X", "207XP3100X", "207XS0114X", "207XX0801X", "174400000X", "305R00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245244813", "1710255443", "1588849327", "1790086825", "1255609996", "1902121478", "1831337484", "1528085313", "1063665263"}}
+	sourceDef.Category = []string{"174400000X", "207X00000X", "207XP3100X", "207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "207XX0801X", "225100000X", "225X00000X", "305R00000X", "363A00000X", "363AS0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063665263", "1245244813", "1255609996", "1528085313", "1588849327", "1710255443", "1790086825", "1831337484", "1902121478"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

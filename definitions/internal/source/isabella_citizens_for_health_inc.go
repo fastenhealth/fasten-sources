@@ -28,9 +28,9 @@ func GetSourceIsabellaCitizensForHealthInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Isabella Citizens For Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeIsabellaCitizensForHealthInc
-	sourceDef.Category = []string{"3336C0003X", "261QF0400X"}
+	sourceDef.Category = []string{"261QF0400X", "3336C0003X"}
 	sourceDef.Aliases = []string{"HEALTH PARK PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942842471", "1710688668", "1801597778", "1306504931", "1871251496", "1710688684", "1952069585"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306504931", "1710688668", "1710688684", "1801597778", "1871251496", "1942842471", "1952069585"}}
 	sourceDef.PatientAccessUrl = "http://www.isabellahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

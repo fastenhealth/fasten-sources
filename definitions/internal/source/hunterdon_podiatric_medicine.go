@@ -30,7 +30,7 @@ func GetSourceHunterdonPodiatricMedicine(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeHunterdonPodiatricMedicine
 	sourceDef.Category = []string{"213ES0103X", "332B00000X", "332BC3200X"}
 	sourceDef.Aliases = []string{"HUNTERDON PODIATRIC MEDICINE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033625678", "1497220958", "1831664556", "1669947388"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033625678", "1497220958", "1669947388", "1831664556"}}
 	sourceDef.BrandLogo = "hunterdon-behavioral-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/hunterdon-podiatric-medicine"
 	sourceDef.SecretKeyPrefix = "nextgen"

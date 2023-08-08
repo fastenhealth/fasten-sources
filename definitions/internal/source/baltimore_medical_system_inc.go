@@ -28,9 +28,9 @@ func GetSourceBaltimoreMedicalSystemInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Baltimore Medical System Inc"
 	sourceDef.SourceType = pkg.SourceTypeBaltimoreMedicalSystemInc
-	sourceDef.Category = []string{"261QF0400X", "3336C0002X", "333600000X", "3336C0003X"}
+	sourceDef.Category = []string{"261QF0400X", "333600000X", "3336C0002X", "3336C0003X"}
 	sourceDef.Aliases = []string{"BMS AT ABSOLUTECARE GREENBELT", "FOREST PARK HIGH SCHOOL SCHOOL HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699292110", "1063050169", "1902802705", "1811993611", "1073754461", "1336380724", "1548266547", "1851817431", "1205362837", "1427299817"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063050169", "1073754461", "1205362837", "1336380724", "1427299817", "1548266547", "1699292110", "1811993611", "1851817431", "1902802705"}}
 	sourceDef.PatientAccessUrl = "https://bmsi.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,9 +29,9 @@ func GetSourceHumboldtGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Humboldt General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHumboldtGeneralHospital
-	sourceDef.Category = []string{"282NC0060X", "313M00000X", "314000000X", "3416L0300X", "207R00000X", "208600000X", "367500000X", "207QA0505X", "261QR1300X"}
+	sourceDef.Category = []string{"207QA0505X", "207R00000X", "208600000X", "261QR1300X", "282NC0060X", "313M00000X", "314000000X", "3416L0300X", "367500000X"}
 	sourceDef.Aliases = []string{"HUMBOLDT AMBULANCE", "HUMBOLDT COUNTY HOSPITAL DISTRICT", "HUMBOLDT GENERAL HOSPITAL", "HUMBOLDT GENERAL HOSPITAL GROUP", "HUMBOLDT GENERAL HOSPITAL RURAL HEALTH CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750498010", "1619091246", "1699899229", "1922152784", "1558633933"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558633933", "1619091246", "1699899229", "1750498010", "1922152784"}}
 	sourceDef.BrandLogo = "humboldt-general-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.hghospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,7 +28,7 @@ func GetSourceSaintMoscatiCommunityHealthCare(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Saint Moscati Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeSaintMoscatiCommunityHealthCare
-	sourceDef.Category = []string{"261QP2300X", "261Q00000X"}
+	sourceDef.Category = []string{"261Q00000X", "261QP2300X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326589771"}}
 	sourceDef.BrandLogo = "saint-moscati-community-health-care.jpg"
 	sourceDef.PatientAccessUrl = "https://sanmoscati.org/"

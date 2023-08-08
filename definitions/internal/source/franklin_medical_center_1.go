@@ -29,9 +29,9 @@ func GetSourceFranklinMedicalCenter1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Franklin Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFranklinMedicalCenter1
-	sourceDef.Category = []string{"261QR1300X", "282NR1301X", "207Q00000X", "261QP2300X", "275N00000X"}
+	sourceDef.Category = []string{"207Q00000X", "261QP2300X", "261QR1300X", "275N00000X", "282NR1301X"}
 	sourceDef.Aliases = []string{"CROWVILLE HEALTH CENTER", "FRANKLIN MEDICAL CENTER", "GILBERT HEALTH CENTER", "NEWELLTON RURAL HEALTH CLINIC", "WINNSBORO RURAL HEALTH CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831144054", "1356399539", "1467575670", "1841389251", "1053492579", "1861573388", "1720296775", "1669002002", "1497068951", "1205884723", "1902851124"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053492579", "1205884723", "1356399539", "1467575670", "1497068951", "1669002002", "1720296775", "1831144054", "1841389251", "1861573388", "1902851124"}}
 	sourceDef.BrandLogo = "franklin-medical-center.png"
 	sourceDef.PatientAccessUrl = "https://www.fmc-cares.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

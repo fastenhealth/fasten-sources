@@ -14,9 +14,9 @@ import (
 	"net/http"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10041079/metadata
+// https://fhir-myrecord.cerner.com/r4/440a8ebc-db01-474a-8d18-2ca626c92c6c/metadata
 func GetSourceClientNorthCaddoMedicalCenter(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
-	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, err := platform.GetSourceClientCerner(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {
 		return nil, err
 	}

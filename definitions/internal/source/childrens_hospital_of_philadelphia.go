@@ -29,9 +29,9 @@ func GetSourceChildrensHospitalOfPhiladelphia(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Children's Hospital of Philadelphia"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalOfPhiladelphia
-	sourceDef.Category = []string{"282NC0060X", "208000000X", "261QM2500X"}
+	sourceDef.Category = []string{"208000000X", "261QM2500X", "282NC0060X"}
 	sourceDef.Aliases = []string{"CARE NETWORK DREXEL HILL", "CARE NETWORK POTTSTOWN", "CARE NETWORK ROXBOROUGH", "CARE NETWORK SOUTH PHILADELPHIA", "CARE NETWORK WEST GROVE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952550519", "1841380367", "1346330800", "1629168232", "1730279118", "1952481897", "1235214875", "1952486508", "1720116627", "1134325681"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134325681", "1235214875", "1346330800", "1629168232", "1720116627", "1730279118", "1841380367", "1952481897", "1952486508", "1952550519"}}
 	sourceDef.PatientAccessUrl = "https://www.chop.edu/"
 	sourceDef.SecretKeyPrefix = "epic"
 

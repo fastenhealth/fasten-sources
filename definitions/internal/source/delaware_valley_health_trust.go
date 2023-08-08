@@ -29,7 +29,7 @@ func GetSourceDelawareValleyHealthTrust(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Delaware Valley Health Trust"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyHealthTrust
-	sourceDef.Category = []string{"332900000X", "261Q00000X"}
+	sourceDef.Category = []string{"261Q00000X", "332900000X"}
 	sourceDef.Aliases = []string{"DELAWARE VALLEY HEALTH TRUST"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932723806", "1962028969"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/334ZEL5JYJCWWYBNELMMSHI5BG8SOZ?assignment_id=3C44YUNSIFMA1T20MX9DB2XKUIPDPT&from_queue=true"

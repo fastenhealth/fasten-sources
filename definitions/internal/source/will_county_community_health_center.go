@@ -28,9 +28,9 @@ func GetSourceWillCountyCommunityHealthCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Will County Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWillCountyCommunityHealthCenter
-	sourceDef.Category = []string{"261QF0400X", "251B00000X"}
+	sourceDef.Category = []string{"251B00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"INTERGRATED HEALTH HOME", "WILL COUNTY COMMUNITY HEALTH CENTER BROOKS MIDDLE SCH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902811714", "1942935986", "1649748229"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649748229", "1902811714", "1942935986"}}
 	sourceDef.PatientAccessUrl = "https://willcountyhealth.org/chc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

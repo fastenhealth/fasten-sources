@@ -29,9 +29,9 @@ func GetSourceSyracuseAreaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Syracuse Area Health"
 	sourceDef.SourceType = pkg.SourceTypeSyracuseAreaHealth
-	sourceDef.Category = []string{"261QR1300X", "282NC0060X", "275N00000X", "3336C0003X"}
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "3336C0003X"}
 	sourceDef.Aliases = []string{"SYRACUSE AREA HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699784751", "1497764559", "1013925924", "1730756255"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013925924", "1497764559", "1699784751", "1730756255"}}
 	sourceDef.PatientAccessUrl = "https://www.syracuseareahealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

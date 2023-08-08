@@ -28,9 +28,9 @@ func GetSourceGonzalesHealthcareSystems(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Gonzales Healthcare Systems"
 	sourceDef.SourceType = pkg.SourceTypeGonzalesHealthcareSystems
-	sourceDef.Category = []string{"207Q00000X", "208000000X", "261QR1300X", "251E00000X", "314000000X", "282NR1301X", "282N00000X"}
+	sourceDef.Category = []string{"207Q00000X", "208000000X", "251E00000X", "261QR1300X", "282N00000X", "282NR1301X", "314000000X"}
 	sourceDef.Aliases = []string{"MEMORIAL HOSPITAL", "MEMORIAL HOSPITAL HOME HEALTH", "SIEVERS MEDICAL CLINIC", "SIEVERS MEDICAL CLINIC - SHINER", "SIEVERS MEDICAL CLINIC - WAELDER", "TEXAN NURSING & REHAB OF GONZALES", "THE HEIGHTS OF GONZALES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013916287", "1437158714", "1811999337", "1710318316", "1821551581", "1932108214", "1699013599", "1699768705"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013916287", "1437158714", "1699013599", "1699768705", "1710318316", "1811999337", "1821551581", "1932108214"}}
 	sourceDef.BrandLogo = "gonzales-healthcare-systems.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gonzaleshealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

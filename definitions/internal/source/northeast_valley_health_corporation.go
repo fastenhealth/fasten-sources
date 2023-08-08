@@ -28,9 +28,9 @@ func GetSourceNortheastValleyHealthCorporation(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Northeast Valley Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeNortheastValleyHealthCorporation
-	sourceDef.Category = []string{"171M00000X", "261QF0400X", "261QF0050X", "261QM2500X", "333600000X", "3336C0002X", "3336C0003X"}
+	sourceDef.Category = []string{"171M00000X", "261QF0050X", "261QF0400X", "261QM2500X", "333600000X", "3336C0002X", "3336C0003X"}
 	sourceDef.Aliases = []string{"L.A. MISSION COLLEGE STUDENT HEALTH CENTER", "MACLAY WELLNESS CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053312587", "1154322642", "1841477742", "1346427366", "1558693655", "1396893095", "1154510139", "1114104015", "1881871721", "1013199264"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013199264", "1053312587", "1114104015", "1154322642", "1154510139", "1346427366", "1396893095", "1558693655", "1841477742", "1881871721"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/NEVHC/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

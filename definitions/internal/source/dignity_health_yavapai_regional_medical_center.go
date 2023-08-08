@@ -29,7 +29,7 @@ func GetSourceDignityHealthYavapaiRegionalMedicalCenter(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Dignity Health Yavapai Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDignityHealthYavapaiRegionalMedicalCenter
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902897820 ", " 1073920484 ", " 1255582003 ", " 1083940399"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{" 1073920484 ", " 1083940399", " 1255582003 ", "1902897820 "}}
 	sourceDef.PatientAccessUrl = "https://cernerhealth.com/oauth/authenticate?client_id=8b25b068ecce4289b3041576f122440e&redirect_uri=https://yrmccareconnect.iqhealth.com/login/cerner-health/authenticated&sign_in_only=on"
 	sourceDef.SecretKeyPrefix = "cerner"
 

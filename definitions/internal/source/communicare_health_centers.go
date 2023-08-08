@@ -28,9 +28,9 @@ func GetSourceCommunicareHealthCenters(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Communicare Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeCommunicareHealthCenters
-	sourceDef.Category = []string{"261QM1300X", "261QF0400X"}
+	sourceDef.Category = []string{"261QF0400X", "261QM1300X"}
 	sourceDef.Aliases = []string{"COMMUNICARE HEALTH CENTERS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063067502", "1003228750", "1528608890", "1669115630", "1952690463", "1427357458", "1386882231", "1104207208", "1275284309", "1750701454"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003228750", "1063067502", "1104207208", "1275284309", "1386882231", "1427357458", "1528608890", "1669115630", "1750701454", "1952690463"}}
 	sourceDef.PatientAccessUrl = "https://communicaresa.org/wp-content/uploads/2021/07/CC_Logo_White_2021-e1626108594478.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

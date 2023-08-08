@@ -29,9 +29,9 @@ func GetSourceEllisHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Ellis Hospital"
 	sourceDef.SourceType = pkg.SourceTypeEllisHospital
-	sourceDef.Category = []string{"261QM0801X", "261QM0850X", "282N00000X", "261QP2300X", "261Q00000X", "314000000X", "207Q00000X", "261QU0200X", "207P00000X", "1041C0700X", "207R00000X", "2080N0001X", "2084P0800X", "208600000X", "208M00000X"}
+	sourceDef.Category = []string{"1041C0700X", "207P00000X", "207Q00000X", "207R00000X", "2080N0001X", "2084P0800X", "208600000X", "208M00000X", "261Q00000X", "261QM0801X", "261QM0850X", "261QP2300X", "261QU0200X", "282N00000X", "314000000X"}
 	sourceDef.Aliases = []string{"ELLIS INTERNAL MEDICINE", "ELLIS MEDICINE - DIABETES CARE", "ELLIS PRIMARY CARE PLUS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548763493", "1497949622", "1942745831", "1023598331", "1972077386", "1215928148", "1487644993", "1013497502", "1558547034", "1760614317"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013497502", "1023598331", "1215928148", "1487644993", "1497949622", "1548763493", "1558547034", "1760614317", "1942745831", "1972077386"}}
 	sourceDef.BrandLogo = "ellis-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ellismedicine.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

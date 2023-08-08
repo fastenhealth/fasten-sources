@@ -29,9 +29,9 @@ func GetSourceSelfRegionalHealthcare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Self Regional Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSelfRegionalHealthcare
-	sourceDef.Category = []string{"282N00000X", "251E00000X", "163W00000X", "163WD0400X", "207Q00000X", "333600000X", "3336C0003X", "273R00000X", "261QM1300X"}
+	sourceDef.Category = []string{"163W00000X", "163WD0400X", "207Q00000X", "251E00000X", "261QM1300X", "273R00000X", "282N00000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"HOME HEALTH SERVICES OF SRH", "MONTGOMERY CENTER FOR FAMILY MEDICINE OF SRH", "SELF REGIONAL BEHAVORIAL HEALTH UNIT", "SELF REGIONAL HEALTHCARE OUTPATIENT PHARMACY", "SRH - INPATIENT SERVICES", "SRH - OUTPATIENT SERVICES", "SRH DIABETES EDUCATION"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407887003", "1407860778", "1417582503", "1023046612", "1326067703", "1316135999", "1639193402", "1619240777"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023046612", "1316135999", "1326067703", "1407860778", "1407887003", "1417582503", "1619240777", "1639193402"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

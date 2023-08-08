@@ -28,9 +28,9 @@ func GetSourcePromesaInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "PROMESA INC"
 	sourceDef.SourceType = pkg.SourceTypePromesaInc
-	sourceDef.Category = []string{"261QR0405X", "261QM0801X", "261QM2800X", "261QF0400X", "323P00000X", "324500000X"}
+	sourceDef.Category = []string{"261QF0400X", "261QM0801X", "261QM2800X", "261QR0405X", "323P00000X", "324500000X"}
 	sourceDef.Aliases = []string{"PROMESA INC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942486717", "1598008476", "1508849993", "1407830946", "1386987212", "1407034614", "1295911063"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295911063", "1386987212", "1407034614", "1407830946", "1508849993", "1598008476", "1942486717"}}
 	sourceDef.PatientAccessUrl = "https://acacianetwork.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

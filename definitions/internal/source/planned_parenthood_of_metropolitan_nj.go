@@ -29,7 +29,7 @@ func GetSourcePlannedParenthoodOfMetropolitanNj(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Planned Parenthood of Metropolitan NJ"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfMetropolitanNj
 	sourceDef.Category = []string{"261QA0005X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649243932", "1508839804", "1386617686", "1760455695"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386617686", "1508839804", "1649243932", "1760455695"}}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

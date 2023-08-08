@@ -29,9 +29,9 @@ func GetSourceUniversityHospitalsSamaritanMedicalCenter(env pkg.FastenLighthouse
 
 	sourceDef.Display = "University Hospitals Samaritan Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityHospitalsSamaritanMedicalCenter
-	sourceDef.Category = []string{"333600000X", "251E00000X", "282N00000X", "261QU0200X"}
+	sourceDef.Category = []string{"251E00000X", "261QU0200X", "282N00000X", "333600000X"}
 	sourceDef.Aliases = []string{"UNIVERSITY HOSPITALS SAMARITAN MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073587192", "1417934126", "1902882939", "1720578297"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073587192", "1417934126", "1720578297", "1902882939"}}
 	sourceDef.PatientAccessUrl = "https://www.uhhospitals.org/locations/uh-samaritan-medical-center"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,8 +29,8 @@ func GetSourceUcDavis(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "UC Davis"
 	sourceDef.SourceType = pkg.SourceTypeUcDavis
-	sourceDef.Category = []string{"281P00000X", "282NC0060X", "363LX0001X", "282N00000X", "281PC2000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194089458", "1184608812", "1144432840", "1023093036", "1093860033", "1689659682", "1902881162", "1184609174"}}
+	sourceDef.Category = []string{"281P00000X", "281PC2000X", "282N00000X", "282NC0060X", "363LX0001X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023093036", "1093860033", "1144432840", "1184608812", "1184609174", "1194089458", "1689659682", "1902881162"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

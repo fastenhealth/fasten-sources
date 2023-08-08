@@ -29,9 +29,9 @@ func GetSourceCherokeeNation(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Cherokee Nation"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeNation
-	sourceDef.Category = []string{"261QM1300X", "261QM0850X", "3336C0003X", "3336S0011X", "332800000X", "3416L0300X"}
+	sourceDef.Category = []string{"261QM0850X", "261QM1300X", "332800000X", "3336C0003X", "3336S0011X", "3416L0300X"}
 	sourceDef.Aliases = []string{"COOWEESCOOWEE HEALTH CENTER", "GA DU GI HEALTH CENTER", "HASTINGS EMS", "REDBIRD SMITH HEALTH CENTER", "SAM HIDER HEALTH CENTER", "THREE RIVERS HEALTH CENTER", "VINITA HEALTH CENTER", "W.W. HASTINGS INDIAN HOSPITAL URGENT CARE PHARMACY", "WILMA P. MANKILLER HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780692723", "1093722324", "1356787444", "1659388965", "1992711345", "1871972430", "1841207156", "1558377226", "1346623584", "1942947288"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093722324", "1346623584", "1356787444", "1558377226", "1659388965", "1780692723", "1841207156", "1871972430", "1942947288", "1992711345"}}
 	sourceDef.BrandLogo = "cherokee-nation.svg"
 	sourceDef.PatientAccessUrl = "https://www.cherokee.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

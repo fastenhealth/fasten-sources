@@ -29,8 +29,8 @@ func GetSourceCghMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "CGH Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCghMedicalCenter
-	sourceDef.Category = []string{"332B00000X", "273R00000X", "275N00000X", "282N00000X", "333600000X", "3336C0002X", "341600000X", "251F00000X", "207Q00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386929826", "1902854623", "1720105448", "1811014525", "1750752739", "1629196688", "1902073521", "1447415724", "1184661514", "1548540636"}}
+	sourceDef.Category = []string{"207Q00000X", "251F00000X", "273R00000X", "275N00000X", "282N00000X", "332B00000X", "333600000X", "3336C0002X", "341600000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184661514", "1386929826", "1447415724", "1548540636", "1629196688", "1720105448", "1750752739", "1811014525", "1902073521", "1902854623"}}
 	sourceDef.PatientAccessUrl = "https://www.cghmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

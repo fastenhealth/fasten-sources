@@ -28,7 +28,7 @@ func GetSourceMooreCountyHospitalDistrict(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Moore County Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeMooreCountyHospitalDistrict
-	sourceDef.Category = []string{"261QR1300X", "207Q00000X", "207R00000X", "208000000X", "251E00000X", "251G00000X", "261QA1903X", "275N00000X", "282NR1301X", "313M00000X", "341600000X", "282NC0060X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208000000X", "251E00000X", "251G00000X", "261QA1903X", "261QR1300X", "275N00000X", "282NC0060X", "282NR1301X", "313M00000X", "341600000X"}
 	sourceDef.Aliases = []string{"MEMORIAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336537661", "1700991700"}}
 	sourceDef.PatientAccessUrl = "https://mchd.net/"

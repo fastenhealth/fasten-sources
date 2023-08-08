@@ -30,7 +30,7 @@ func GetSourceTwinCitiesPainClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeTwinCitiesPainClinic
 	sourceDef.Category = []string{"208100000X", "261QP3300X"}
 	sourceDef.Aliases = []string{"TWIN CITIES PAIN CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336655521", "1750797072", "1669167920", "1215003066", "1467157826", "1699199737"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215003066", "1336655521", "1467157826", "1669167920", "1699199737", "1750797072"}}
 	sourceDef.PatientAccessUrl = "https://twincitiespainclinic.com/locations/edina/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

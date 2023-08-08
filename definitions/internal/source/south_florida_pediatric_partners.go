@@ -31,7 +31,7 @@ func GetSourceSouthFloridaPediatricPartners(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeSouthFloridaPediatricPartners
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"SOUTH FLORIDA PEDIATRIC PARTNERS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962783183", "1710268958", "1417238650", "1740433424", "1942582812", "1831470079", "1821379058", "1588946453"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417238650", "1588946453", "1710268958", "1740433424", "1821379058", "1831470079", "1942582812", "1962783183"}}
 	sourceDef.PatientAccessUrl = "https://www.sflpp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

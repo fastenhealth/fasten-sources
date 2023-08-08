@@ -29,9 +29,9 @@ func GetSourceBannerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Banner Health"
 	sourceDef.SourceType = pkg.SourceTypeBannerHealth
-	sourceDef.Category = []string{"282N00000X", "3336C0003X", "2865M2000X", "261QU0200X", "341600000X", "275N00000X", "261QR1300X", "3336C0002X", "332900000X"}
+	sourceDef.Category = []string{"261QR1300X", "261QU0200X", "275N00000X", "282N00000X", "2865M2000X", "332900000X", "3336C0002X", "3336C0003X", "341600000X"}
 	sourceDef.Aliases = []string{"BANNER CASA GRANDE URGENT CARE", "BANNER FAMILY PHARMACY", "BANNER FORT COLLINS MEDICAL CENTER", "BANNER GOOD SAMARITAN OP CLINIC PHARMACY", "BANNER HEALTH CLINIC-32ND ST INTERNAL MEDICINE", "BANNER OCOTILLO MEDICAL CENTER", "BANNER PAYSON MEDICAL CENTER", "BANNER PAYSON MEDICAL CENTER - BANNER HEALTH CLINIC PINE", "USAF"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972139004", "1023327137", "1538402995", "1942613435", "1124532924", "1861077414", "1245940287", "1114301017", "1497848824", "1326476813"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023327137", "1114301017", "1124532924", "1245940287", "1326476813", "1497848824", "1538402995", "1861077414", "1942613435", "1972139004"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3Y3N5A7N5T65SH2K0BZYIZH1X9PYMK?assignment_id=39PAAFCOD0XUN2VTUZIRMY4OE94TVW&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

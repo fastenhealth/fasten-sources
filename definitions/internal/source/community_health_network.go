@@ -31,7 +31,7 @@ func GetSourceCommunityHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthNetwork
 	sourceDef.Category = []string{"207Q00000X", "261Q00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"CENTER GROVE WELLNESS CENTER", "FISHER'S ONSITE PRIMARY CARE CLINIC", "IU HEALTH WORKPLACES SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205204203", "1578829545", "1306147236", "1144675182", "1457743809", "1679012900", "1578129508", "1023600178", "1205238771", "1780025247"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023600178", "1144675182", "1205204203", "1205238771", "1306147236", "1457743809", "1578129508", "1578829545", "1679012900", "1780025247"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

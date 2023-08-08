@@ -29,9 +29,9 @@ func GetSourcePickensCountyMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Pickens County Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePickensCountyMedicalCenter
-	sourceDef.Category = []string{"207Q00000X", "282N00000X", "261QP2300X"}
+	sourceDef.Category = []string{"207Q00000X", "261QP2300X", "282N00000X"}
 	sourceDef.Aliases = []string{"PICKENS COUNTY MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700986791", "1720331481", "1467506469"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467506469", "1700986791", "1720331481"}}
 	sourceDef.BrandLogo = "pickens-county-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "http://www.pcmc.care"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -14,9 +14,9 @@ import (
 	"net/http"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10044381/metadata
+// https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/metadata
 func GetSourceClientChildrensMedicalGroup(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
-	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	baseClient, err := platform.GetSourceClientNextgen(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {
 		return nil, err
 	}

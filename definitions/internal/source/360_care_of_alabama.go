@@ -28,7 +28,7 @@ func GetSource360CareOfAlabama(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "360care Of Alabama"
 	sourceDef.SourceType = pkg.SourceType360CareOfAlabama
-	sourceDef.Category = []string{"101YM0800X", "103T00000X", "104100000X", "1041C0700X", "152W00000X", "213E00000X", "363L00000X", "231H00000X"}
+	sourceDef.Category = []string{"101YM0800X", "103T00000X", "104100000X", "1041C0700X", "152W00000X", "213E00000X", "231H00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"360CARE SERVICES OF AL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710493176"}}
 	sourceDef.BrandLogo = "360care-of-delaware.png"

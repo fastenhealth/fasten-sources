@@ -28,7 +28,7 @@ func GetSourceNewportOrthopedicInstitute(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Newport Orthopedic Institute"
 	sourceDef.SourceType = pkg.SourceTypeNewportOrthopedicInstitute
-	sourceDef.Category = []string{"332B00000X", "207X00000X"}
+	sourceDef.Category = []string{"207X00000X", "332B00000X"}
 	sourceDef.Aliases = []string{"NEWPORT ORTHOPEDIC INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033463583", "1164774600"}}
 	sourceDef.PatientAccessUrl = "https://www.newportortho.com/"

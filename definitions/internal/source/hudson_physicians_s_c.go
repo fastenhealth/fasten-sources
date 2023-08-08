@@ -29,8 +29,8 @@ func GetSourceHudsonPhysiciansSC(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hudson Physicians, S.C."
 	sourceDef.SourceType = pkg.SourceTypeHudsonPhysiciansSC
-	sourceDef.Category = []string{"291U00000X", "261QM1300X", "208600000X", "261Q00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770916827", "1679224273", "1205589892", "1598416133", "1316102734"}}
+	sourceDef.Category = []string{"208600000X", "261Q00000X", "261QM1300X", "291U00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205589892", "1316102734", "1598416133", "1679224273", "1770916827"}}
 	sourceDef.BrandLogo = "hudson-physicians-s-c.jpg"
 	sourceDef.PatientAccessUrl = "https://hudsonphysicians.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

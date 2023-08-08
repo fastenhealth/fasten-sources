@@ -31,7 +31,7 @@ func GetSourceConeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeConeHealth
 	sourceDef.Category = []string{"174H00000X", "261QX0100X", "282N00000X"}
 	sourceDef.Aliases = []string{"CONE HEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326524901", "1144501925", "1467700617", "1194001479"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144501925", "1194001479", "1326524901", "1467700617"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

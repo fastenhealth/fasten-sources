@@ -28,9 +28,9 @@ func GetSourcePriorityHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "PRIORITY HEALTH CARE"
 	sourceDef.SourceType = pkg.SourceTypePriorityHealthCare
-	sourceDef.Category = []string{"251S00000X", "261QR0405X", "261QF0400X", "3336C0002X", "3336S0011X", "251B00000X", "208000000X"}
+	sourceDef.Category = []string{"208000000X", "251B00000X", "251S00000X", "261QF0400X", "261QR0405X", "3336C0002X", "3336S0011X"}
 	sourceDef.Aliases = []string{"GRETNA SITE", "MARRERO SITE", "PRIORITY HEALTH CARE PHARMACY - GRETNA", "PRIORITY HEALTH CARE PHARMACY - MARRERO", "RENEW HOPE CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952886715", "1427419811", "1841522711", "1346725108", "1609136563", "1023571536"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023571536", "1346725108", "1427419811", "1609136563", "1841522711", "1952886715"}}
 	sourceDef.PatientAccessUrl = "https://www.priorityhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

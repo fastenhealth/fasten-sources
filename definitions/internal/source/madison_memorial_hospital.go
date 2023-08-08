@@ -29,9 +29,9 @@ func GetSourceMadisonMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Madison Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMadisonMemorialHospital
-	sourceDef.Category = []string{"332900000X", "261QP2300X"}
+	sourceDef.Category = []string{"261QP2300X", "332900000X"}
 	sourceDef.Aliases = []string{"MADISON CLINIC PHYSICIANS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821342247", "1346643038"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346643038", "1821342247"}}
 	sourceDef.PatientAccessUrl = "https://madisonmemorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

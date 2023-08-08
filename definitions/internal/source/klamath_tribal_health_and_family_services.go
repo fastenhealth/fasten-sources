@@ -28,9 +28,9 @@ func GetSourceKlamathTribalHealthAndFamilyServices(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Klamath Tribal Health & Family Services"
 	sourceDef.SourceType = pkg.SourceTypeKlamathTribalHealthAndFamilyServices
-	sourceDef.Category = []string{"333600000X", "332800000X", "261Q00000X", "332B00000X", "261QF0400X"}
-	sourceDef.Aliases = []string{"KLAMATH TRIBAL HEALTH PHARMACY", "KLAMATH TRIBAL PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639290778", "1588805832", "1629078274"}}
+	sourceDef.Category = []string{"261Q00000X", "261QF0400X", "332800000X", "332B00000X", "333600000X", "3336C0002X"}
+	sourceDef.Aliases = []string{"KLAMATH TRIBAL HEALTH PHARMACY", "KLAMATH TRIBAL PHARMACY", "KLAMATH TRIBAL PHARMACY - CHILOQUIN"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588805832", "1629078274", "1639290778"}}
 	sourceDef.PatientAccessUrl = "https://www.klamathtribalhealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

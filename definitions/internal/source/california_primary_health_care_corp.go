@@ -28,7 +28,7 @@ func GetSourceCaliforniaPrimaryHealthCareCorp(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "California Primary Health Care Corp"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaPrimaryHealthCareCorp
-	sourceDef.Category = []string{"261QP2300X", "207R00000X"}
+	sourceDef.Category = []string{"207R00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"CALIFORNIA PRIMARY HEALTH CARE CORP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154583193"}}
 	sourceDef.SecretKeyPrefix = "nextgen"

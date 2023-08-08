@@ -30,7 +30,7 @@ func GetSourceMountainLaurelMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeMountainLaurelMedicalCenter
 	sourceDef.Category = []string{"207Q00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"MOUNTAIN LAUREL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265906994", "1467427047", "1679269807", "1053727065"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053727065", "1265906994", "1467427047", "1679269807"}}
 	sourceDef.PatientAccessUrl = "https://www.mtnlaurel.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,9 +29,9 @@ func GetSourceWesternMissouriMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Western Missouri Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWesternMissouriMedicalCenter
-	sourceDef.Category = []string{"207R00000X", "207RX0202X", "261QX0200X", "275N00000X", "282N00000X", "207L00000X", "207Q00000X", "261QR1300X", "273R00000X", "208VP0014X", "208800000X", "208VP0000X"}
+	sourceDef.Category = []string{"207L00000X", "207Q00000X", "207R00000X", "207RX0202X", "208800000X", "208VP0000X", "208VP0014X", "261QR1300X", "261QX0200X", "273R00000X", "275N00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"BRIDGES SENIOR BEHAVIORAL HEALTH", "FAMILY PRACTICE OF CENTRAL MISSOURI - WARRENSBURG", "WESTERN MISSOURI ANESTHESIOLOGY", "WESTERN MISSOURI CANCER CENTER", "WESTERN MISSOURI INTERNAL MEDICINE", "WESTERN MISSOURI MEDICAL CENTER CLINICS", "WESTERN MISSOURI SPECIALTY SERVICES - UROLOGY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578876751", "1720409113", "1477128817", "1083601330", "1073500104", "1346790508", "1528516192", "1528497401", "1174105266", "1083296172"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073500104", "1083296172", "1083601330", "1174105266", "1346790508", "1477128817", "1528497401", "1528516192", "1578876751", "1720409113"}}
 	sourceDef.PatientAccessUrl = "https://wmmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

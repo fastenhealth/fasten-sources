@@ -29,9 +29,9 @@ func GetSourceDetroitMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Detroit Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDetroitMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "282NW0100X", "208600000X", "207P00000X", "207R00000X", "284300000X", "390200000X"}
+	sourceDef.Category = []string{"207P00000X", "207R00000X", "208600000X", "282N00000X", "282NW0100X", "284300000X", "390200000X"}
 	sourceDef.Aliases = []string{"TENET HEALTH CARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437349933", "1659511681", "1861621534", "1720229065", "1689815300", "1770853251", "1679732085", "1346508157", "1699327429", "1326268483"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326268483", "1346508157", "1437349933", "1659511681", "1679732085", "1689815300", "1699327429", "1720229065", "1770853251", "1861621534"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

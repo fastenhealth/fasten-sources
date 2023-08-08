@@ -29,7 +29,7 @@ func GetSourceAdventhealthOrlando(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "AdventHealth Orlando"
 	sourceDef.SourceType = pkg.SourceTypeAdventhealthOrlando
-	sourceDef.Category = []string{"261QR0404X", "261QE0700X", "273R00000X", "273Y00000X", "291U00000X", "3416A0800X", "3416L0300X", "282N00000X"}
+	sourceDef.Category = []string{"261QE0700X", "261QR0404X", "273R00000X", "273Y00000X", "282N00000X", "291U00000X", "3416A0800X", "3416L0300X"}
 	sourceDef.Aliases = []string{"ADVENTHEALTH ORLANDO", "FLORIDA HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093466781", "1306938071"}}
 	sourceDef.PatientAccessUrl = "https://www.adventhealth.com"

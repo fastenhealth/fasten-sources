@@ -29,9 +29,9 @@ func GetSourceCallawayDistrictHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Callaway District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCallawayDistrictHospital
-	sourceDef.Category = []string{"282NC0060X", "275N00000X"}
+	sourceDef.Category = []string{"275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"CALLAWAY DISTRICT HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871600981", "1740397850"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740397850", "1871600981"}}
 	sourceDef.BrandLogo = "callaway-district-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.callawayhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

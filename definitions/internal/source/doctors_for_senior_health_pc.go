@@ -29,7 +29,7 @@ func GetSourceDoctorsForSeniorHealthPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Doctors For Senior Health PC"
 	sourceDef.SourceType = pkg.SourceTypeDoctorsForSeniorHealthPc
-	sourceDef.Category = []string{"363A00000X", "207R00000X"}
+	sourceDef.Category = []string{"207R00000X", "363A00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821003294"}}
 	sourceDef.BrandLogo = "doctors-for-senior-health-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://doctorsforhealthpc.com/wp-content/uploads/cropped-DoctorsforHealthPC.png"

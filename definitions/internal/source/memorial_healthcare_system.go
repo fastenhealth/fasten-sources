@@ -29,9 +29,9 @@ func GetSourceMemorialHealthcareSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Memorial Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHealthcareSystem
-	sourceDef.Category = []string{"363LA2200X", "282NC0060X", "261QX0200X", "251B00000X", "282N00000X", "175T00000X"}
+	sourceDef.Category = []string{"175T00000X", "251B00000X", "261QX0200X", "282N00000X", "282NC0060X", "363LA2200X"}
 	sourceDef.Aliases = []string{"MEMORIAL HEALTHCARE SYSTEM"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194794511", "1477670099", "1538424122", "1073885042", "1770809717", "1710574108"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073885042", "1194794511", "1477670099", "1538424122", "1710574108", "1770809717"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,7 +28,7 @@ func GetSourceProlianceSouthSeattleOtolaryngology(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Proliance South Seattle Otolaryngology"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSouthSeattleOtolaryngology
-	sourceDef.Category = []string{"207YX0905X", "231H00000X", "207Y00000X"}
+	sourceDef.Category = []string{"207Y00000X", "207YX0905X", "231H00000X"}
 	sourceDef.Aliases = []string{"PROLIANCE SOUTH SEATTLE OTOLARYNGOLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114108784"}}
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"

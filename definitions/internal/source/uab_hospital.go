@@ -31,7 +31,7 @@ func GetSourceUabHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeUabHospital
 	sourceDef.Category = []string{"282N00000X"}
 	sourceDef.Aliases = []string{"UAB Medicine"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740652346", "1699035675"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699035675", "1740652346"}}
 	sourceDef.BrandLogo = "uab-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.uabmedicine.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

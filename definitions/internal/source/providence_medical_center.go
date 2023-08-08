@@ -29,9 +29,9 @@ func GetSourceProvidenceMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Providence Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceMedicalCenter
-	sourceDef.Category = []string{"251E00000X", "282NC0060X", "275N00000X", "3336C0003X", "251G00000X"}
+	sourceDef.Category = []string{"251E00000X", "251G00000X", "275N00000X", "282NC0060X", "3336C0003X"}
 	sourceDef.Aliases = []string{"PROVIDENCE COMMUNITY PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003971748", "1801867494", "1255470092", "1457819922", "1639218472"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003971748", "1255470092", "1457819922", "1639218472", "1801867494"}}
 	sourceDef.PatientAccessUrl = "https://providencemedical.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

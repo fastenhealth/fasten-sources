@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74125/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74125/metadata
 func GetSourceChristianAndersonMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.prosuite.allscriptscloud.com/fhirroute/authorization/authorize?cust=74125"
-	sourceDef.TokenEndpoint = "https://fhir.prosuite.allscriptscloud.com/fhirroute/authorization/token?cust=74125"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/6ef123ca-6331-4a25-96b8-a4e200f69da3/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/6ef123ca-6331-4a25-96b8-a4e200f69da3/connect/token"
 
-	sourceDef.Audience = "https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74125"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74125"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74125"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74125"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeChristianAndersonMd]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,7 +28,6 @@ func GetSourceChristianAndersonMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Christian Anderson Md"
 	sourceDef.SourceType = pkg.SourceTypeChristianAndersonMd
-	sourceDef.Hidden = true
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

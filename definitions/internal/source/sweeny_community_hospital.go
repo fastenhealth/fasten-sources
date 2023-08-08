@@ -29,7 +29,7 @@ func GetSourceSweenyCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Sweeny Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSweenyCommunityHospital
-	sourceDef.Category = []string{"101YP2500X", "207LP2900X", "207P00000X", "207Q00000X", "207R00000X", "225100000X", "225200000X", "275N00000X", "3416L0300X", "363A00000X", "363L00000X", "282NC0060X"}
+	sourceDef.Category = []string{"101YP2500X", "207LP2900X", "207P00000X", "207Q00000X", "207R00000X", "225100000X", "225200000X", "275N00000X", "282NC0060X", "3416L0300X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"SWEENY COMMUNITY HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023011657"}}
 	sourceDef.BrandLogo = "sweeny-community-hospital.jpeg"

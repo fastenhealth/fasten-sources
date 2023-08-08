@@ -29,9 +29,9 @@ func GetSourceHendricksRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Hendricks Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeHendricksRegionalHealth
-	sourceDef.Category = []string{"367A00000X", "363LW0102X", "363LF0000X", "363L00000X", "207Q00000X", "207P00000X", "282N00000X"}
+	sourceDef.Category = []string{"207P00000X", "207Q00000X", "282N00000X", "363L00000X", "363LF0000X", "363LW0102X", "367A00000X"}
 	sourceDef.Aliases = []string{"HENDRICKS REGIONAL HEALTH EMERGENCY ASSOCIATES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073645081", "1073639936", "1033827001", "1760526834"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033827001", "1073639936", "1073645081", "1760526834"}}
 	sourceDef.PatientAccessUrl = "https://www.hendricks.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

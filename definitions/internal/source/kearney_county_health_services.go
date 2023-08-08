@@ -29,9 +29,9 @@ func GetSourceKearneyCountyHealthServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Kearney County Health Services"
 	sourceDef.SourceType = pkg.SourceTypeKearneyCountyHealthServices
-	sourceDef.Category = []string{"282NC0060X", "275N00000X"}
+	sourceDef.Category = []string{"275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"KEARNEY COUNTY HEALTH SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992846588", "1477585958"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477585958", "1992846588"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

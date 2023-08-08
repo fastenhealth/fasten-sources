@@ -29,9 +29,9 @@ func GetSourceMedicalUniversityOfSouthCarolina(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Medical University of South Carolina"
 	sourceDef.SourceType = pkg.SourceTypeMedicalUniversityOfSouthCarolina
-	sourceDef.Category = []string{"282N00000X", "261QM2500X", "282NC0060X", "282NC2000X", "261QP2000X", "291U00000X"}
+	sourceDef.Category = []string{"261QM2500X", "261QP2000X", "282N00000X", "282NC0060X", "282NC2000X", "291U00000X"}
 	sourceDef.Aliases = []string{"MUSC PATHOLOGY OUTREACH SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568526796", "1275840423", "1295161420", "1780714907", "1508052283", "1285818104", "1659560670", "1538452313", "1437636057", "1194924589"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194924589", "1275840423", "1285818104", "1295161420", "1437636057", "1508052283", "1538452313", "1568526796", "1659560670", "1780714907"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

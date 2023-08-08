@@ -31,7 +31,7 @@ func GetSourceJpsHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeJpsHealthNetwork
 	sourceDef.Category = []string{"261QA1903X", "273R00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"JPS HEALTH NETWORK"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992753222", "1538193073"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538193073", "1992753222"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

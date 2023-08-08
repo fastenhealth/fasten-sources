@@ -29,9 +29,9 @@ func GetSourceMissouriDeltaMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Missouri Delta Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMissouriDeltaMedicalCenter
-	sourceDef.Category = []string{"261QM1300X", "261QR1300X", "3336C0003X", "363LW0102X", "207V00000X", "273Y00000X", "363A00000X", "363L00000X", "207P00000X", "207Q00000X", "207RC0000X", "207R00000X", "207RE0101X", "207RH0003X", "332B00000X", "273R00000X"}
+	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RH0003X", "207V00000X", "261QM1300X", "261QR1300X", "273R00000X", "273Y00000X", "332B00000X", "3336C0003X", "363A00000X", "363L00000X", "363LW0102X"}
 	sourceDef.Aliases = []string{"MISSOURI DELTA PRIMARY CARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821462284", "1043628704", "1457436040", "1942370648", "1013236421", "1710037361", "1184709776", "1134430176", "1215240965", "1164592861"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013236421", "1043628704", "1134430176", "1164592861", "1184709776", "1215240965", "1457436040", "1710037361", "1821462284", "1942370648"}}
 	sourceDef.BrandLogo = "missouri-delta-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.missouridelta.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

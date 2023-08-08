@@ -29,9 +29,9 @@ func GetSourcePrismaHealthMidlands(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Prisma Health-Midlands"
 	sourceDef.SourceType = pkg.SourceTypePrismaHealthMidlands
-	sourceDef.Category = []string{"251V00000X", "261QM1300X", "261QI0500X", "282N00000X", "273Y00000X", "251G00000X"}
+	sourceDef.Category = []string{"251G00000X", "251V00000X", "261QI0500X", "261QM1300X", "273Y00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"PHARMACY-EHNANCED MEDICAID", "PHARMACY-ENHANCED MEDICAID", "PRISMA HEALTH BAPTIST PARKRIDGE HOSPITAL", "PRISMA HEALTH CANCER INST-RICHLAND", "PRISMA HEALTH DIABETES EDUCATION", "PRISMA HEALTH DIABETES PREVENTION PROGRAM", "PRISMA HEALTH HOSPICE MIDLANDS", "PRISMA HEALTH ORTHOPEDIC REHABILITATION SPECIALISTS", "PRISMA HEALTH OUTPATIENT PEDIATRIC PULMONOLOGY", "PRISMA HEALTH PRIVATE SERVICES", "PRISMA HEALTH RICHLAND HOSPTIAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114031564", "1174604201", "1942369624", "1811237985", "1205337045", "1033889795", "1154373843", "1902274095", "1740398080", "1508554452"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033889795", "1114031564", "1154373843", "1174604201", "1205337045", "1508554452", "1740398080", "1811237985", "1902274095", "1942369624"}}
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.prisma_health-midlands.dd1f9bc0a480d8970803ddeb7c07c3e1.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

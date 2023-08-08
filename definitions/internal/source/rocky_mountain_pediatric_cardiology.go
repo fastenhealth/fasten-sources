@@ -30,7 +30,7 @@ func GetSourceRockyMountainPediatricCardiology(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainPediatricCardiology
 	sourceDef.Category = []string{"2080P0202X"}
 	sourceDef.Aliases = []string{"ROCKY MOUNTAIN PEDIATRIC CARDIOLOGY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053935270", "1043834096"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043834096", "1053935270"}}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/cardiologyrockymountains?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

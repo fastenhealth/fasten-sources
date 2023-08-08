@@ -28,7 +28,7 @@ func GetSourceStvPulmonaryGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "STV Pulmonary Group LLC"
 	sourceDef.SourceType = pkg.SourceTypeStvPulmonaryGroupLlc
-	sourceDef.Category = []string{"207RC0200X", "207RS0012X", "207RP1001X"}
+	sourceDef.Category = []string{"207RC0200X", "207RP1001X", "207RS0012X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548797566"}}
 	sourceDef.PatientAccessUrl = "https://www.bhampulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

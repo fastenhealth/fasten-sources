@@ -29,9 +29,9 @@ func GetSourceBoulderCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Boulder Community Health"
 	sourceDef.SourceType = pkg.SourceTypeBoulderCommunityHealth
-	sourceDef.Category = []string{"261QP2300X", "2085R0202X", "282N00000X", "261Q00000X", "261QM2500X"}
+	sourceDef.Category = []string{"2085R0202X", "261Q00000X", "261QM2500X", "261QP2300X", "282N00000X"}
 	sourceDef.Aliases = []string{"BOULDER COMMUNITY HOSPITAL", "BOULDER HEART (BOULDER CAMPUS)", "BOULDER HEART LONGMONT", "BOULDER HEART OF ERIE", "BOULDER VALLEY PULMONOLOGY AT ERIE", "BOULDER VALLEY SURGICAL ASSOCIATES OF B.C.H.", "COMMUNITY MEDICAL ASSOC OF B.C.H.", "COMMUNITY MEDICAL ASSOC OF BCH", "COMMUNITY MEDICAL ASSOCIATES OF BCH", "FOOTHILLS NEONATAL PRACTICE", "GUNBARREL FAMILY MEDICINE", "INTERNAL MEDICINE ASSOCIATES LAFAYETTE", "SPRUCE STREET INTERNAL MEDICINE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740837137", "1487803383", "1649879214", "1285233882", "1558965939", "1598313553", "1225687965", "1124674932", "1942856745", "1073160420"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073160420", "1124674932", "1225687965", "1285233882", "1487803383", "1558965939", "1598313553", "1649879214", "1740837137", "1942856745"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

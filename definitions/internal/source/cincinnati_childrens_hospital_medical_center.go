@@ -29,9 +29,9 @@ func GetSourceCincinnatiChildrensHospitalMedicalCenter(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Cincinnati Children's Hospital Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiChildrensHospitalMedicalCenter
-	sourceDef.Category = []string{"390200000X", "101Y00000X", "103G00000X", "103T00000X", "152WP0200X", "207LP3000X", "363A00000X", "363L00000X", "364S00000X", "208000000X"}
+	sourceDef.Category = []string{"101Y00000X", "103G00000X", "103T00000X", "152WP0200X", "207LP3000X", "208000000X", "363A00000X", "363L00000X", "364S00000X", "390200000X"}
 	sourceDef.Aliases = []string{"CINCINNATI CHILDREN'S HOSPITAL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669195418", "1609915784"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609915784", "1669195418"}}
 	sourceDef.PatientAccessUrl = "https://www.cincinnatichildrens.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

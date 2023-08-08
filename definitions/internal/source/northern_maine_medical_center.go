@@ -29,9 +29,9 @@ func GetSourceNorthernMaineMedicalCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Northern Maine Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthernMaineMedicalCenter
-	sourceDef.Category = []string{"313M00000X", "314000000X", "208D00000X", "207R00000X", "282N00000X", "332B00000X", "275N00000X", "103TP0814X", "273R00000X", "3336C0003X", "207Q00000X"}
+	sourceDef.Category = []string{"103TP0814X", "207Q00000X", "207R00000X", "208D00000X", "273R00000X", "275N00000X", "282N00000X", "313M00000X", "314000000X", "332B00000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"BEHAVIORAL HEALTH SERVICES", "FOREST HILL", "NMMC MEDICAL OFFICE BUILDING", "NORTHERN MAINE MEDICAL CENTER PHARMACY", "VALLEY MEDICAL ASSOCIATION"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174519490", "1962481077", "1568465144", "1790830503", "1891184172", "1053345546", "1801872759", "1851942429", "1750443842", "1922087246"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053345546", "1174519490", "1568465144", "1750443842", "1790830503", "1801872759", "1851942429", "1891184172", "1922087246", "1962481077"}}
 	sourceDef.PatientAccessUrl = "https://www.nmmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

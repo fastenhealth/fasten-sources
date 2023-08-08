@@ -29,8 +29,8 @@ func GetSourceWayneStateUniversity(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Wayne State University"
 	sourceDef.SourceType = pkg.SourceTypeWayneStateUniversity
-	sourceDef.Category = []string{"282N00000X", "261QM0850X", "103T00000X", "122300000X", "207N00000X", "174400000X", "207P00000X", "207L00000X", "207Q00000X", "207W00000X", "207Y00000X", "207ZP0102X", "208000000X", "2084P0800X", "2085R0001X", "208600000X", "207R00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356506356", "1316481195", "1285129221"}}
+	sourceDef.Category = []string{"103T00000X", "122300000X", "174400000X", "207L00000X", "207N00000X", "207P00000X", "207Q00000X", "207R00000X", "207W00000X", "207Y00000X", "207ZP0102X", "208000000X", "2084P0800X", "2085R0001X", "208600000X", "261QM0850X", "282N00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285129221", "1316481195", "1356506356"}}
 	sourceDef.BrandLogo = "wayne-state-university.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.med.wayne.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"

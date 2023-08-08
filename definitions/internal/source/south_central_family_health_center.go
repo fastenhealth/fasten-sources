@@ -30,7 +30,7 @@ func GetSourceSouthCentralFamilyHealthCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSouthCentralFamilyHealthCenter
 	sourceDef.Category = []string{"261QF0400X", "333600000X", "3336C0002X"}
 	sourceDef.Aliases = []string{"CUDAHY FAMILY HEALTH CENTER", "MONTEBELLO FAMILY HEALTH CENTER", "SCFHC - MOBILE UNIT", "SCFHC - SANTA FE", "SCFHC - VISION CARE CENTER", "SOUTH CENTRAL FAMILY DENTAL & MEDICAL", "WELLNESS CENTER AT ELIZABETH LEARNING CENTER", "WELLNESS CENTER AT JEFFERSON HIGH SCHOOL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669799896", "1992398903", "1851982797", "1851847982", "1578089447", "1982063939", "1356897243", "1487218970", "1588908305", "1093308009"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093308009", "1356897243", "1487218970", "1578089447", "1588908305", "1669799896", "1851847982", "1851982797", "1982063939", "1992398903"}}
 	sourceDef.PatientAccessUrl = "https://www.scfhc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

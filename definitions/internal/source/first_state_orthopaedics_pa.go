@@ -28,9 +28,9 @@ func GetSourceFirstStateOrthopaedicsPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "First State Orthopaedics PA"
 	sourceDef.SourceType = pkg.SourceTypeFirstStateOrthopaedicsPa
-	sourceDef.Category = []string{"207X00000X", "174400000X", "207L00000X", "207LP2900X", "207QS0010X", "207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "207XX0801X", "208100000X", "208VP0014X", "213E00000X", "213ES0103X", "363A00000X"}
+	sourceDef.Category = []string{"174400000X", "207L00000X", "207LP2900X", "207QS0010X", "207X00000X", "207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "207XX0801X", "208100000X", "208VP0014X", "213E00000X", "213ES0103X", "363A00000X"}
 	sourceDef.Aliases = []string{"ORTHOPAEDIC ASSOCIATES OF SOUTHERN DELAWARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548691710", "1336356328", "1346220266", "1902970916", "1235203258", "1033488069", "1548330228", "1386945442", "1043918824", "1720718083"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033488069", "1043918824", "1235203258", "1336356328", "1346220266", "1386945442", "1548330228", "1548691710", "1720718083", "1902970916"}}
 	sourceDef.PatientAccessUrl = "https://www.firststateortho.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

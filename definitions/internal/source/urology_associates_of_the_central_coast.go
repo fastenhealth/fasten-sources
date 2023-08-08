@@ -31,7 +31,7 @@ func GetSourceUrologyAssociatesOfTheCentralCoast(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeUrologyAssociatesOfTheCentralCoast
 	sourceDef.Category = []string{"208800000X", "332900000X"}
 	sourceDef.Aliases = []string{"UROLOGY ASSOCIATES OF SAN LUIS OBISPO, A MEDICAL GROUP, INC."}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881785764", "1194101899"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194101899", "1881785764"}}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/urology-associates-of-the-central-coast"
 	sourceDef.SecretKeyPrefix = "cerner"
 

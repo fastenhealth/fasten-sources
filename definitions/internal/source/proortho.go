@@ -28,7 +28,7 @@ func GetSourceProortho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "ProOrtho"
 	sourceDef.SourceType = pkg.SourceTypeProortho
-	sourceDef.Category = []string{"207XX0005X", "207XS0114X", "207XX0004X", "261QM1300X", "363AS0400X", "332B00000X"}
+	sourceDef.Category = []string{"207XS0114X", "207XX0004X", "207XX0005X", "261QM1300X", "332B00000X", "363AS0400X"}
 	sourceDef.Aliases = []string{"PROORTHO"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205307253"}}
 	sourceDef.PatientAccessUrl = "https://www.proortho.com/locations-contact/"

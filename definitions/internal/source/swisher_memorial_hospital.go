@@ -29,9 +29,9 @@ func GetSourceSwisherMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Swisher Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSwisherMemorialHospital
-	sourceDef.Category = []string{"3416L0300X", "282NC0060X", "251E00000X", "207PE0004X", "282N00000X"}
+	sourceDef.Category = []string{"207PE0004X", "251E00000X", "282N00000X", "282NC0060X", "3416L0300X"}
 	sourceDef.Aliases = []string{"SWISHER MEMORIAL HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871704155", "1518253194", "1811954159", "1922277177", "1104889542", "1831180447"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104889542", "1518253194", "1811954159", "1831180447", "1871704155", "1922277177"}}
 	sourceDef.PatientAccessUrl = "https://www.swisherhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

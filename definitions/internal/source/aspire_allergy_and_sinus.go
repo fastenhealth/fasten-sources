@@ -30,7 +30,7 @@ func GetSourceAspireAllergyAndSinus(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeAspireAllergyAndSinus
 	sourceDef.Category = []string{"207KA0200X"}
 	sourceDef.Aliases = []string{"ASPIRE ALLERGY & SINUS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073120945", "1497362362", "1881201754", "1669089538"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073120945", "1497362362", "1669089538", "1881201754"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3M47JKRKDAYOO8QA0RUNUQWDEU8685?assignment_id=3S4AW7T80PF7AC491UFDRHUU7CML4A&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

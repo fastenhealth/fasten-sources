@@ -29,9 +29,9 @@ func GetSourceMonongaliaCountyGeneralHospitalCompany(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Monongalia County General Hospital Company"
 	sourceDef.SourceType = pkg.SourceTypeMonongaliaCountyGeneralHospitalCompany
-	sourceDef.Category = []string{"207R00000X", "207V00000X", "207ZP0102X", "2084N0400X", "208600000X", "208G00000X", "363A00000X", "363L00000X", "207P00000X", "3336C0003X", "275N00000X", "207Q00000X", "207VG0400X", "261Q00000X", "207RC0000X", "174400000X", "261QA1903X", "291U00000X", "3336I0012X", "282N00000X"}
+	sourceDef.Category = []string{"174400000X", "207P00000X", "207Q00000X", "207R00000X", "207RC0000X", "207V00000X", "207VG0400X", "207ZP0102X", "2084N0400X", "208600000X", "208G00000X", "261Q00000X", "261QA1903X", "275N00000X", "282N00000X", "291U00000X", "3336C0003X", "3336I0012X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"MON HEALTH MEDICAL CENTER", "MON HEALTH PHARMACY", "SWING BED"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477890440", "1962065086", "1215680947", "1750785366", "1811391972", "1538592043", "1447673223", "1659489631"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215680947", "1447673223", "1477890440", "1538592043", "1659489631", "1750785366", "1811391972", "1962065086"}}
 	sourceDef.PatientAccessUrl = "https://www.monhealth.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

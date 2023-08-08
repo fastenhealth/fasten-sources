@@ -28,7 +28,7 @@ func GetSourceDesertOasisHealthcare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Desert Oasis Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeDesertOasisHealthcare
-	sourceDef.Category = []string{"261QU0200X", "207RG0300X"}
+	sourceDef.Category = []string{"207RG0300X", "261QU0200X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578964375", "1639407208"}}
 	sourceDef.BrandLogo = "desert-oasis-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/"

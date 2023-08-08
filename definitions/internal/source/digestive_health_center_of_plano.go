@@ -28,7 +28,7 @@ func GetSourceDigestiveHealthCenterOfPlano(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Digestive Health Center Of Plano"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthCenterOfPlano
-	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Category = []string{"261QA1903X", "261QE0800X"}
 	sourceDef.Aliases = []string{"DIGESTIVE HEALTH CENTER OF PLANO", "PARK VENTURA ENDOSCOPY CENTER, LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497724942"}}
 	sourceDef.PatientAccessUrl = "https://www.dhcoftx.com/"

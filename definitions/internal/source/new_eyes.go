@@ -30,7 +30,7 @@ func GetSourceNewEyes(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeNewEyes
 	sourceDef.Category = []string{"152W00000X", "207W00000X", "207WX0009X", "207WX0107X", "207WX0108X", "207WX0200X"}
 	sourceDef.Aliases = []string{"NEVADA EYE PHYSICIANS", "NEW EYES", "RETINA CONSULTANTS OF NEVADA", "SHEPHERD EYE CENTER", "SIERRA NEVADA EYE CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487604054", "1801055975", "1053359489", "1093387532", "1902478449"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053359489", "1093387532", "1487604054", "1801055975", "1902478449"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

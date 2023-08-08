@@ -29,9 +29,9 @@ func GetSourceStanfordHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Stanford Health Care"
 	sourceDef.SourceType = pkg.SourceTypeStanfordHealthCare
-	sourceDef.Category = []string{"207N00000X", "207P00000X", "207R00000X", "207L00000X", "207T00000X", "207V00000X", "207ZP0102X", "208000000X", "2084N0400X", "2085R0202X", "208600000X", "208800000X", "208D00000X", "208G00000X", "282N00000X", "333600000X", "3336C0003X", "2085R0001X", "283Q00000X"}
+	sourceDef.Category = []string{"207L00000X", "207N00000X", "207P00000X", "207R00000X", "207T00000X", "207V00000X", "207ZP0102X", "208000000X", "2084N0400X", "2085R0001X", "2085R0202X", "208600000X", "208800000X", "208D00000X", "208G00000X", "282N00000X", "283Q00000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"STANFORD HEALTH CARE PHARMACY", "STANFORD HOSPITAL AND CLINICS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437292927", "1053835595", "1467990465", "1275076325", "1124561758", "1871543215", "1285177337", "1053844647", "1265581086"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053835595", "1053844647", "1124561758", "1265581086", "1275076325", "1285177337", "1437292927", "1467990465", "1871543215"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

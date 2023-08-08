@@ -28,7 +28,7 @@ func GetSourceLibertyCardiovascularSpecialists(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Liberty Cardiovascular Specialists"
 	sourceDef.SourceType = pkg.SourceTypeLibertyCardiovascularSpecialists
-	sourceDef.Category = []string{"208G00000X", "207RC0000X"}
+	sourceDef.Category = []string{"207RC0000X", "208G00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013146448"}}
 	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/locations/liberty-cardiovascular-specialists/"
 	sourceDef.SecretKeyPrefix = "nextgen"

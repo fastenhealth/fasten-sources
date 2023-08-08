@@ -29,9 +29,9 @@ func GetSourceDecaturCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Decatur County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDecaturCountyHospital
-	sourceDef.Category = []string{"208600000X", "363A00000X", "363L00000X", "367500000X", "207P00000X", "207RX0202X", "282NC0060X", "275N00000X", "341600000X"}
+	sourceDef.Category = []string{"207P00000X", "207RX0202X", "208600000X", "275N00000X", "282NC0060X", "341600000X", "363A00000X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"DECATUR COUNTY HOSPITAL PROFESSIONAL FEES", "DECATUR COUNTY HOSPITAL- AMBULANCE", "DECATUR COUNTY HOSPITAL- ER GROUP"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336356906", "1144209255", "1366525891", "1043427610"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043427610", "1144209255", "1336356906", "1366525891"}}
 	sourceDef.PatientAccessUrl = "https://www.decaturcountyhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

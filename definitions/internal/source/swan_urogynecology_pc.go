@@ -29,7 +29,7 @@ func GetSourceSwanUrogynecologyPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Swan Urogynecology PC"
 	sourceDef.SourceType = pkg.SourceTypeSwanUrogynecologyPc
 	sourceDef.Category = []string{"261QM2500X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225300908", "1134491814", "1093086399", "1598037277"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093086399", "1134491814", "1225300908", "1598037277"}}
 	sourceDef.PatientAccessUrl = "https://www.swanurogyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -30,7 +30,7 @@ func GetSourceErieCountyGeneralHealthDistrict(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeErieCountyGeneralHealthDistrict
 	sourceDef.Category = []string{"261QF0400X", "276400000X"}
 	sourceDef.Aliases = []string{"ERIE COUNTY GENERAL HEALTH DISTRICT"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528520608", "1639783996", "1407480593", "1760960843", "1376177303", "1598331951", "1205398658"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205398658", "1376177303", "1407480593", "1528520608", "1598331951", "1639783996", "1760960843"}}
 	sourceDef.PatientAccessUrl = "https://eriecohealthohio.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

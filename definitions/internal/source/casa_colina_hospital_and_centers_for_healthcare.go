@@ -30,7 +30,7 @@ func GetSourceCasaColinaHospitalAndCentersForHealthcare(env pkg.FastenLighthouse
 	sourceDef.Display = "Casa Colina Hospital and Centers for Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeCasaColinaHospitalAndCentersForHealthcare
 	sourceDef.Category = []string{"282N00000X", "283X00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952777245", "1518327733", "1821075870"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518327733", "1821075870", "1952777245"}}
 	sourceDef.PatientAccessUrl = "https://www.casacolina.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

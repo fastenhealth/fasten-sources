@@ -28,7 +28,7 @@ func GetSourceEyePhysiciansOfSussexCounty(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Eye Physicians Of Sussex County"
 	sourceDef.SourceType = pkg.SourceTypeEyePhysiciansOfSussexCounty
-	sourceDef.Category = []string{"261QA1903X", "207W00000X"}
+	sourceDef.Category = []string{"207W00000X", "261QA1903X"}
 	sourceDef.Aliases = []string{"EYE PHYSICIANS OF SUSSEX COUNTY SURGICAL SUITE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801993217", "1861429672"}}
 	sourceDef.PatientAccessUrl = "https://www.eyephysiciansofsussexcounty.com/"

@@ -29,8 +29,8 @@ func GetSourceTheResourceCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "The Resource Center"
 	sourceDef.SourceType = pkg.SourceTypeTheResourceCenter
-	sourceDef.Category = []string{"261QM0801X", "251C00000X", "225B00000X", "261QC1500X", "261QR0401X", "261QD0000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700940384", "1598931560", "1659434835", "1396808911", "1295924280", "1003979345", "1982766051", "1013079326", "1598931453", "1912060252"}}
+	sourceDef.Category = []string{"225B00000X", "251C00000X", "261QC1500X", "261QD0000X", "261QM0801X", "261QR0401X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003979345", "1013079326", "1295924280", "1396808911", "1598931453", "1598931560", "1659434835", "1700940384", "1912060252", "1982766051"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

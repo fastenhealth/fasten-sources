@@ -28,9 +28,9 @@ func GetSourceOmniFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Omni Family Health"
 	sourceDef.SourceType = pkg.SourceTypeOmniFamilyHealth
-	sourceDef.Category = []string{"3336C0003X", "261QF0400X", "291U00000X", "261QC1500X"}
+	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "291U00000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"NATIONAL HEALTH SERVICES", "NATIONAL HEALTH SERVICES, INC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992425482", "1467153130", "1598474629", "1619481348", "1235702663", "1558903898", "1396201570", "1134340250", "1194944223", "1568682086"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134340250", "1194944223", "1235702663", "1396201570", "1467153130", "1558903898", "1568682086", "1598474629", "1619481348", "1992425482"}}
 	sourceDef.PatientAccessUrl = "https://omnifamilyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

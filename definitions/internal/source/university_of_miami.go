@@ -29,8 +29,8 @@ func GetSourceUniversityOfMiami(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "University of Miami"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMiami
-	sourceDef.Category = []string{"208D00000X", "261QM2500X", "225100000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134402696", "1841508355", "1730422080"}}
+	sourceDef.Category = []string{"208D00000X", "225100000X", "261QM2500X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134402696", "1730422080", "1841508355"}}
 	sourceDef.PatientAccessUrl = "https://welcome.miami.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

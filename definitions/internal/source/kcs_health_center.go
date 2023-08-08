@@ -28,9 +28,9 @@ func GetSourceKcsHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "KCS Health Center"
 	sourceDef.SourceType = pkg.SourceTypeKcsHealthCenter
-	sourceDef.Category = []string{"261QF0400X", "251S00000X", "251V00000X", "251K00000X"}
+	sourceDef.Category = []string{"251K00000X", "251S00000X", "251V00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"KCS HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588252027", "1225125693", "1821689324", "1538670328", "1831600634", "1861525602"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225125693", "1538670328", "1588252027", "1821689324", "1831600634", "1861525602"}}
 	sourceDef.PatientAccessUrl = "https://www.kcsinc.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

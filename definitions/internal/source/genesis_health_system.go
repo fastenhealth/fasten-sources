@@ -29,9 +29,9 @@ func GetSourceGenesisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Genesis Health System"
 	sourceDef.SourceType = pkg.SourceTypeGenesisHealthSystem
-	sourceDef.Category = []string{"208G00000X", "2080N0001X", "341600000X", "261QM0801X", "207Q00000X", "103T00000X", "103TH0004X", "207P00000X", "207R00000X", "207RH0003X", "207RI0200X", "207RP1001X", "207T00000X", "208100000X", "208600000X", "273R00000X", "261QE0700X"}
+	sourceDef.Category = []string{"103T00000X", "103TH0004X", "207P00000X", "207Q00000X", "207R00000X", "207RH0003X", "207RI0200X", "207RP1001X", "207T00000X", "2080N0001X", "208100000X", "208600000X", "208G00000X", "261QE0700X", "261QM0801X", "273R00000X", "341600000X"}
 	sourceDef.Aliases = []string{"GENESIS PSYCHOLOGY ASSOCIATES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679525562", "1912958729", "1457596199", "1932757333", "1528177672", "1427485697", "1528616901", "1285673459", "1922048594", "1922050814"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285673459", "1427485697", "1457596199", "1528177672", "1528616901", "1679525562", "1912958729", "1922048594", "1922050814", "1932757333"}}
 	sourceDef.PatientAccessUrl = "http://www.genesishealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

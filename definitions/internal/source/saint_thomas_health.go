@@ -31,7 +31,7 @@ func GetSourceSaintThomasHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeSaintThomasHealth
 	sourceDef.Category = []string{"3336C0003X", "341600000X"}
 	sourceDef.Aliases = []string{"ASCENSION RX 1200"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861806911", "1508117722"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508117722", "1861806911"}}
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/locations/tennessee/tnnas/nashville-ascension-saint-thomas-hospital"
 	sourceDef.SecretKeyPrefix = "cerner"
 

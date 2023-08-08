@@ -11,15 +11,16 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74003/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003/.well-known/smart-configuration
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003/metadata
 func GetSourceFrontRangeSurgicalServices(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.prosuite.allscriptscloud.com/fhirroute/authorization/authorize?cust=74003"
-	sourceDef.TokenEndpoint = "https://fhir.prosuite.allscriptscloud.com/fhirroute/authorization/token?cust=74003"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/58e45ea9-9af6-47c6-949e-a35700b1be57/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/58e45ea9-9af6-47c6-949e-a35700b1be57/connect/token"
 
-	sourceDef.Audience = "https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74003"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.prosuite.allscriptscloud.com/fhirroute/fhir/74003"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/74003"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeFrontRangeSurgicalServices]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,7 +29,6 @@ func GetSourceFrontRangeSurgicalServices(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Front Range Surgical Services"
 	sourceDef.SourceType = pkg.SourceTypeFrontRangeSurgicalServices
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://frsspc.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

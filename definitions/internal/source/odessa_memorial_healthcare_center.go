@@ -31,7 +31,7 @@ func GetSourceOdessaMemorialHealthcareCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOdessaMemorialHealthcareCenter
 	sourceDef.Category = []string{"282NC0060X", "314000000X", "341600000X"}
 	sourceDef.Aliases = []string{"ODESSA MEMORIAL HEALTHCARE CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073524690", "1477666311", "1245343193", "1639283971"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073524690", "1245343193", "1477666311", "1639283971"}}
 	sourceDef.PatientAccessUrl = "https://www.omhc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,9 +29,9 @@ func GetSourceTualityHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Tuality Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeTualityHealthcare
-	sourceDef.Category = []string{"283Q00000X", "282N00000X", "163WH0200X", "251E00000X", "273R00000X", "261Q00000X", "261QU0200X"}
+	sourceDef.Category = []string{"163WH0200X", "251E00000X", "261Q00000X", "261QU0200X", "273R00000X", "282N00000X", "283Q00000X"}
 	sourceDef.Aliases = []string{"HILLSBORO MEDICAL CENTER", "HILLSBORO MEDICAL CENTER HOME HEALTH", "TUALITY ALOHA URGENT CARE", "TUALITY PHYSICAL MEDICINE & ELECTRODIAGNOSTIC CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275591984", "1265511588", "1073817714", "1881990257", "1790053700", "1952607970", "1023130978", "1174602494", "1336228659", "1356647168"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023130978", "1073817714", "1174602494", "1265511588", "1275591984", "1336228659", "1356647168", "1790053700", "1881990257", "1952607970"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Tuality/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

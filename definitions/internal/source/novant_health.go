@@ -29,9 +29,9 @@ func GetSourceNovantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Novant Health"
 	sourceDef.SourceType = pkg.SourceTypeNovantHealth
-	sourceDef.Category = []string{"283X00000X", "282N00000X", "363LP2300X"}
+	sourceDef.Category = []string{"282N00000X", "283X00000X", "363LP2300X"}
 	sourceDef.Aliases = []string{"NOVANT HEALTH MEDICAL GROUP", "NOVANT HEALTH URGENT CARE & OCCUPATIONAL MEDICINE- KERNERSVILLE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598717001", "1275023384"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275023384", "1598717001"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

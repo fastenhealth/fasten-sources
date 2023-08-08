@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045331/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10045331/metadata
 func GetSourceCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10045331/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10045331/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/9ad156c0-1b86-47b6-9e3d-4d1dbbe4c9df/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/9ad156c0-1b86-47b6-9e3d-4d1dbbe4c9df/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045331"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10045331"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10045331"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10045331"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCure4TheKidsFoundation]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,10 +28,9 @@ func GetSourceCure4TheKidsFoundation(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cure 4 The Kids Foundation"
 	sourceDef.SourceType = pkg.SourceTypeCure4TheKidsFoundation
-	sourceDef.Category = []string{"174400000X", "2080P0207X", "2080P0216X", "2251P0200X", "103TC0700X", "207SG0201X", "207XP3100X"}
+	sourceDef.Category = []string{"103TC0700X", "174400000X", "207SG0201X", "207XP3100X", "2080P0207X", "2080P0216X", "2251P0200X"}
 	sourceDef.Aliases = []string{"CURE 4 THE KIDS FOUNDATION"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033820980", "1013292689"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013292689", "1033820980"}}
 	sourceDef.PatientAccessUrl = "https://cure4thekids.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

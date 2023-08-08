@@ -29,9 +29,9 @@ func GetSourcePawneeCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Pawnee County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypePawneeCountyMemorialHospital
-	sourceDef.Category = []string{"261QR1300X", "341600000X", "275N00000X", "282NC0060X"}
+	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X", "341600000X"}
 	sourceDef.Aliases = []string{"PAWNEE COUNTY RURAL HEALTH CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851345573", "1730448606", "1013969252", "1992759781"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013969252", "1730448606", "1851345573", "1992759781"}}
 	sourceDef.PatientAccessUrl = "https://pawneehospital.socs.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

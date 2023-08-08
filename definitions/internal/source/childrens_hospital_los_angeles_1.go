@@ -29,9 +29,9 @@ func GetSourceChildrensHospitalLosAngeles1(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Children's Hospital Los Angeles"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalLosAngeles1
-	sourceDef.Category = []string{"333600000X", "3336I0012X", "3336S0011X", "251B00000X", "390200000X", "281PC2000X", "106H00000X", "332900000X", "261QM2500X", "282NC2000X", "261QE0700X", "261QM0855X", "283XC2000X"}
+	sourceDef.Category = []string{"106H00000X", "251B00000X", "261QE0700X", "261QM0855X", "261QM2500X", "281PC2000X", "282NC2000X", "283XC2000X", "332900000X", "333600000X", "3336I0012X", "3336S0011X", "390200000X"}
 	sourceDef.Aliases = []string{"CHILDRENS HOSPITAL LOS ANGELES SPECIALTY PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659552636", "1992820997", "1972628568", "1366527954", "1255455242", "1821344227", "1003102781", "1164682035", "1770607095", "1093920993"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003102781", "1093920993", "1164682035", "1255455242", "1366527954", "1659552636", "1770607095", "1821344227", "1972628568", "1992820997"}}
 	sourceDef.PatientAccessUrl = "https://www.chla.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

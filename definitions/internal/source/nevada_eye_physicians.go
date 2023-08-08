@@ -28,9 +28,9 @@ func GetSourceNevadaEyePhysicians(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Nevada Eye Physicians"
 	sourceDef.SourceType = pkg.SourceTypeNevadaEyePhysicians
-	sourceDef.Category = []string{"152W00000X", "207W00000X", "332B00000X", "207WX0009X", "207WX0107X", "207WX0108X", "207WX0200X"}
+	sourceDef.Category = []string{"152W00000X", "207W00000X", "207WX0009X", "207WX0107X", "207WX0108X", "207WX0200X", "332B00000X"}
 	sourceDef.Aliases = []string{"NEVADA EYE PHYSICIANS", "NEW EYES", "RETINA CONSULTANTS OF NEVADA", "SHEPHERD EYE CENTER", "SIERRA NEVADA EYE CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487604054", "1497939102", "1518141969", "1083961262", "1902153174", "1053359489", "1912574898", "1568032522"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053359489", "1083961262", "1487604054", "1497939102", "1518141969", "1568032522", "1902153174", "1912574898"}}
 	sourceDef.PatientAccessUrl = "https://nevadaeyephysicians.com/locations/henderson/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

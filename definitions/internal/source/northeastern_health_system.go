@@ -29,9 +29,9 @@ func GetSourceNortheasternHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Northeastern Health System"
 	sourceDef.SourceType = pkg.SourceTypeNortheasternHealthSystem
-	sourceDef.Category = []string{"273R00000X", "3416L0300X", "261QR1300X", "101YA0400X", "207P00000X", "332B00000X", "282N00000X", "275N00000X", "273Y00000X"}
+	sourceDef.Category = []string{"101YA0400X", "207P00000X", "261QR1300X", "273R00000X", "273Y00000X", "275N00000X", "282N00000X", "332B00000X", "3416L0300X"}
 	sourceDef.Aliases = []string{"FORT GIBSON MEDICAL CLINIC", "NORTHEASTERN HEALTH SYSTEM SWINGBED", "TAHLEQUAH MEDICAL GROUP PRIMARY CARE", "URGENT CARE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619031465", "1871717819", "1013458652", "1689338519", "1003865999", "1306387949", "1104567791", "1366983850", "1457574170", "1528122371"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003865999", "1013458652", "1104567791", "1306387949", "1366983850", "1457574170", "1528122371", "1619031465", "1689338519", "1871717819"}}
 	sourceDef.BrandLogo = "northeastern-health-system.jpg"
 	sourceDef.PatientAccessUrl = "https://www.alwaysnhs.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

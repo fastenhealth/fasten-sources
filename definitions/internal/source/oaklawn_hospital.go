@@ -29,7 +29,7 @@ func GetSourceOaklawnHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Oaklawn Hospital"
 	sourceDef.SourceType = pkg.SourceTypeOaklawnHospital
-	sourceDef.Category = []string{"3336I0012X", "273R00000X"}
+	sourceDef.Category = []string{"273R00000X", "3336I0012X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093041345", "1285918094"}}
 	sourceDef.PatientAccessUrl = "https://oaklawnhospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

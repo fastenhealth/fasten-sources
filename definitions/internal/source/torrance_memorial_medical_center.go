@@ -29,9 +29,9 @@ func GetSourceTorranceMemorialMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Torrance Memorial Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeTorranceMemorialMedicalCenter
-	sourceDef.Category = []string{"282N00000X", "207P00000X", "207U00000X", "207ZP0105X", "207RI0011X", "207RM1200X", "207RP1001X", "208600000X", "2085R0202X", "133V00000X", "332BC3200X", "332BP3500X", "332BX2000X", "332B00000X", "251G00000X", "314000000X", "251E00000X"}
+	sourceDef.Category = []string{"133V00000X", "207P00000X", "207RI0011X", "207RM1200X", "207RP1001X", "207U00000X", "207ZP0105X", "2085R0202X", "208600000X", "251E00000X", "251G00000X", "282N00000X", "314000000X", "332B00000X", "332BC3200X", "332BP3500X", "332BX2000X"}
 	sourceDef.Aliases = []string{"TORRANCE MEMORIAL HOME HEALTH", "TORRANCE MEMORIAL HOSPICE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467459776", "1477502797", "1871156661", "1508927195", "1952480170", "1740268713", "1710989330"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467459776", "1477502797", "1508927195", "1710989330", "1740268713", "1871156661", "1952480170"}}
 	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

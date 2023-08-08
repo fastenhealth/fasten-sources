@@ -29,7 +29,7 @@ func GetSourceDrumrightRegionalHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Drumright Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeDrumrightRegionalHospital
-	sourceDef.Category = []string{"282NC0060X", "275N00000X", "207Q00000X", "261QE0002X"}
+	sourceDef.Category = []string{"207Q00000X", "261QE0002X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"DRUMRIGHT REGIONAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194353870", "1396988903", "1528696705", "1669000857"}}
 	sourceDef.BrandLogo = "drumright-regional-hospital.jpg"

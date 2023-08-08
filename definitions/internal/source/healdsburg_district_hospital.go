@@ -29,9 +29,9 @@ func GetSourceHealdsburgDistrictHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Healdsburg District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHealdsburgDistrictHospital
-	sourceDef.Category = []string{"314000000X", "282NC0060X", "275N00000X"}
+	sourceDef.Category = []string{"275N00000X", "282NC0060X", "314000000X"}
 	sourceDef.Aliases = []string{"HEALDSBURG DISTRICT HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952487159", "1194824573", "1043308539"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043308539", "1194824573", "1952487159"}}
 	sourceDef.BrandLogo = "healdsburg-district-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://healdsburgdistricthospital.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

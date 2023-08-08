@@ -29,8 +29,8 @@ func GetSourceGoldenValleyHealthCenters(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Golden Valley Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeGoldenValleyHealthCenters
-	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207V00000X", "208000000X", "363AM0700X", "363LF0000X", "1223G0001X", "1041C0700X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972716579", "1942413786", "1053524793", "1225241482", "1649483306", "1033322672", "1124231865", "1497969166", "1306050075", "1629298401"}}
+	sourceDef.Category = []string{"1041C0700X", "1223G0001X", "207Q00000X", "207R00000X", "207V00000X", "208000000X", "363AM0700X", "363LF0000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033322672", "1053524793", "1124231865", "1225241482", "1306050075", "1497969166", "1629298401", "1649483306", "1942413786", "1972716579"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

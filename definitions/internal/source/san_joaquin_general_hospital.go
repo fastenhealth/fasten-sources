@@ -31,7 +31,7 @@ func GetSourceSanJoaquinGeneralHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeSanJoaquinGeneralHospital
 	sourceDef.Category = []string{"282N00000X"}
 	sourceDef.Aliases = []string{"SAN JOAQUIN GENERAL HOSPITAL"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760555940", "1952476525", "1295807071", "1114048006", "1992870430", "1194844613", "1275605180", "1326110297", "1619182318", "1801830583"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114048006", "1194844613", "1275605180", "1295807071", "1326110297", "1619182318", "1760555940", "1801830583", "1952476525", "1992870430"}}
 	sourceDef.PatientAccessUrl = "https://www.sanjoaquingeneral.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

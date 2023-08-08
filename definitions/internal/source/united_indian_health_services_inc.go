@@ -28,7 +28,7 @@ func GetSourceUnitedIndianHealthServicesInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "United Indian Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeUnitedIndianHealthServicesInc
-	sourceDef.Category = []string{"208000000X", "208600000X", "213E00000X", "207VX0000X"}
+	sourceDef.Category = []string{"207VX0000X", "208000000X", "208600000X", "213E00000X"}
 	sourceDef.Aliases = []string{"UIHS PROVIDER GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396493391"}}
 	sourceDef.PatientAccessUrl = "https://unitedindianhealthservices.org/"

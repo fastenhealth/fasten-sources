@@ -29,7 +29,7 @@ func GetSourceHoagMemorialHospitalPresbyterian(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Hoag Memorial Hospital Presbyterian"
 	sourceDef.SourceType = pkg.SourceTypeHoagMemorialHospitalPresbyterian
-	sourceDef.Category = []string{"282N00000X", "273Y00000X"}
+	sourceDef.Category = []string{"273Y00000X", "282N00000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518951300", "1750875670"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

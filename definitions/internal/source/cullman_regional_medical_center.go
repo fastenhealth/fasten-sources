@@ -29,9 +29,9 @@ func GetSourceCullmanRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Cullman Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCullmanRegionalMedicalCenter
-	sourceDef.Category = []string{"282NR1301X", "261QP2300X"}
+	sourceDef.Category = []string{"261QP2300X", "282NR1301X"}
 	sourceDef.Aliases = []string{"CULLMAN REGIONAL MEDICAL CENTER OUTPATIENT PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417306663", "1215103783", "1316112568"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215103783", "1316112568", "1417306663"}}
 	sourceDef.PatientAccessUrl = "https://cullmanregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

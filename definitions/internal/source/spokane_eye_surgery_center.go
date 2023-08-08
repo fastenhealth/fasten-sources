@@ -28,7 +28,7 @@ func GetSourceSpokaneEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Spokane Eye Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSpokaneEyeSurgeryCenter
-	sourceDef.Category = []string{"261QS0132X", "261QA1903X"}
+	sourceDef.Category = []string{"261QA1903X", "261QS0132X"}
 	sourceDef.Aliases = []string{"SPOKANE EYE SURGERY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831165331"}}
 	sourceDef.BrandLogo = "spokane-eye-surgery-center.svg"

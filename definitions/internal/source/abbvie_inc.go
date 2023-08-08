@@ -29,9 +29,9 @@ func GetSourceAbbvieInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "AbbVie Inc."
 	sourceDef.SourceType = pkg.SourceTypeAbbvieInc
-	sourceDef.Category = []string{"3336M0002X", "332B00000X", "333600000X", "3336C0003X", "3336H0001X", "3336S0011X"}
+	sourceDef.Category = []string{"332B00000X", "333600000X", "3336C0003X", "3336H0001X", "3336M0002X", "3336S0011X"}
 	sourceDef.Aliases = []string{"PHARMACY SOLUTIONS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851787741", "1326042870"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326042870", "1851787741"}}
 	sourceDef.PatientAccessUrl = "https://www.abbvie.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,8 +29,8 @@ func GetSourceGradyHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Grady Health System"
 	sourceDef.SourceType = pkg.SourceTypeGradyHealthSystem
-	sourceDef.Category = []string{"261QU0200X", "282NC0060X", "282N00000X", "261Q00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699737445", "1013211564", "1295015279", "1366400723", "1356594188"}}
+	sourceDef.Category = []string{"261Q00000X", "261QU0200X", "282N00000X", "282NC0060X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013211564", "1295015279", "1356594188", "1366400723", "1699737445"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

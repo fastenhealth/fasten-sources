@@ -28,9 +28,9 @@ func GetSourceCollomAndCarneyClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Collom and Carney Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCollomAndCarneyClinic
-	sourceDef.Category = []string{"207RP1001X", "261QP1100X", "207X00000X", "207Q00000X"}
-	sourceDef.Aliases = []string{"COLLOM AND CARNEY CLINIC COLLEGE DRIVE", "COLLOM AND CARNEY CLINIC ORTHOPEDICS", "COLLOM AND CARNEY CLINIC PULMONOLOGY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083696801", "1346222171", "1285061648"}}
+	sourceDef.Category = []string{"207Q00000X", "207RP1001X", "207X00000X", "261QP1100X"}
+	sourceDef.Aliases = []string{"COLLOM AND CARNEY CLINIC", "COLLOM AND CARNEY CLINIC COLLEGE DRIVE", "COLLOM AND CARNEY CLINIC ORTHOPEDICS", "COLLOM AND CARNEY CLINIC PULMONOLOGY"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083696801", "1285061648", "1346222171"}}
 	sourceDef.BrandLogo = "collom-and-carney-clinic.svg"
 	sourceDef.PatientAccessUrl = "https://www.cccahealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,7 @@ func GetSourceSouthernIndianHealthCouncilInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Southern Indian Health Council Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIndianHealthCouncilInc
-	sourceDef.Category = []string{"333600000X", "3336C0003X", "332800000X", "251S00000X", "261Q00000X", "261QH0100X"}
+	sourceDef.Category = []string{"251S00000X", "261Q00000X", "261QH0100X", "332800000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"SIHC BEHAVIORAL HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235280223", "1295491736", "1346247947", "1922090885"}}
 	sourceDef.PatientAccessUrl = "https://sihc.org/"

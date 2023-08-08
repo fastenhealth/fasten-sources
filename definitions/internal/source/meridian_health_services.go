@@ -30,7 +30,7 @@ func GetSourceMeridianHealthServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeMeridianHealthServices
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"MERIDIAN HEALTH SERVICES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629773627", "1669934345", "1144895855", "1568944080", "1023603024", "1023626744", "1174218101", "1831816040", "1851011332", "1568192458"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023603024", "1023626744", "1144895855", "1174218101", "1568192458", "1568944080", "1629773627", "1669934345", "1831816040", "1851011332"}}
 	sourceDef.PatientAccessUrl = "https://www.meridianhs.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

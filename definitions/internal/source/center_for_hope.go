@@ -28,7 +28,7 @@ func GetSourceCenterForHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Center For Hope"
 	sourceDef.SourceType = pkg.SourceTypeCenterForHope
-	sourceDef.Category = []string{"251B00000X", "261Q00000X", "251S00000X"}
+	sourceDef.Category = []string{"251B00000X", "251S00000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"CENTER FOR HOPE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639356918"}}
 	sourceDef.SecretKeyPrefix = "nextgen"

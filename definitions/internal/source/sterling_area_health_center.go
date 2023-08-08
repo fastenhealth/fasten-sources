@@ -28,8 +28,8 @@ func GetSourceSterlingAreaHealthCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Sterling Area Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSterlingAreaHealthCenter
-	sourceDef.Category = []string{"261QF0400X", "101YA0400X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477538239", "1992879308", "1609585991"}}
+	sourceDef.Category = []string{"101YA0400X", "261QF0400X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477538239", "1609585991", "1992879308"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Sterling-Area-Health-Center-569747820203309/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

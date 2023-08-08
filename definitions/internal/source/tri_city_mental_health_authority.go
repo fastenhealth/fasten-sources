@@ -31,7 +31,7 @@ func GetSourceTriCityMentalHealthAuthority(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeTriCityMentalHealthAuthority
 	sourceDef.Category = []string{"251S00000X", "261QM0801X"}
 	sourceDef.Aliases = []string{"TRI CITY MENTAL HEALTH AUTHORITY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962053611", "1518287028", "1013540707", "1598398166", "1568095131", "1093366650", "1992356646"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013540707", "1093366650", "1518287028", "1568095131", "1598398166", "1962053611", "1992356646"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/TriCityMHS/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

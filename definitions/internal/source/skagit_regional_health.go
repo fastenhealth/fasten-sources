@@ -29,9 +29,9 @@ func GetSourceSkagitRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Skagit Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeSkagitRegionalHealth
-	sourceDef.Category = []string{"2080A0000X", "208000000X", "261QP2300X", "207XX0005X", "213ES0103X", "207X00000X", "207Q00000X", "261QR1300X", "367A00000X", "207V00000X", "261QU0200X", "208D00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207V00000X", "207X00000X", "207XX0005X", "208000000X", "2080A0000X", "208D00000X", "213ES0103X", "261QP2300X", "261QR1300X", "261QU0200X", "367A00000X"}
 	sourceDef.Aliases = []string{"SKAGIT REGIONAL CLINICS", "SKAGIT REGIONAL HEALTH", "SKAGIT REGIONAL HEALTH - ARLINGTON PEDIATRICS", "SKAGIT REGIONAL HEALTH - ARLINGTON WOMEN'S HEALTH", "SKAGIT REGIONAL HEALTH - DARRINGTON FAMILY MEDICINE", "SKAGIT REGIONAL HEALTH - DARRINGTON RHC", "SKAGIT REGIONAL HEALTH - GRANITE FALLS FAMILY MEDICINE", "SKAGIT REGIONAL HEALTH ARLINGTON ORTHOPEDICS AND SPORTS MEDICINE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043241540", "1033164470", "1295774016", "1013064575", "1073554903", "1023332749"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013064575", "1023332749", "1033164470", "1043241540", "1073554903", "1295774016"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -30,7 +30,7 @@ func GetSourceEagleViewCommunityHealthSystem(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeEagleViewCommunityHealthSystem
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"EAGLE VIEW COMMUNITY HEALTH SYSTEM"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265185870", "1508434234", "1144987975", "1083372999", "1548314834"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083372999", "1144987975", "1265185870", "1508434234", "1548314834"}}
 	sourceDef.PatientAccessUrl = "https://www.eagleviewhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

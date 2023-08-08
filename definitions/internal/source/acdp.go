@@ -28,9 +28,9 @@ func GetSourceAcdp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "ACDP"
 	sourceDef.SourceType = pkg.SourceTypeAcdp
-	sourceDef.Category = []string{"261QM0801X", "251S00000X"}
+	sourceDef.Category = []string{"251S00000X", "261QM0801X"}
 	sourceDef.Aliases = []string{"ACDP"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629149125", "1396997201"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396997201", "1629149125"}}
 	sourceDef.BrandLogo = "acdp.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3INZSNUD9DNNNMOZF68F0S1GFMDD9T?assignment_id=3GNCZX450WKC3MZO2NIBL1PE4WJAP8&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

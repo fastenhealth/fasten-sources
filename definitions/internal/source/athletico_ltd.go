@@ -30,7 +30,7 @@ func GetSourceAthleticoLtd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeAthleticoLtd
 	sourceDef.Category = []string{"225100000X", "225X00000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"ATHLETICO PHYSICAL THERAPY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396212593", "1700269826", "1467835579", "1104209212", "1992188007", "1396105581", "1205289519", "1558873844", "1316472285", "1881129757"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104209212", "1205289519", "1316472285", "1396105581", "1396212593", "1467835579", "1558873844", "1700269826", "1881129757", "1992188007"}}
 	sourceDef.BrandLogo = "athletico-south-central.jpg"
 	sourceDef.PatientAccessUrl = "https://www.athletico.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

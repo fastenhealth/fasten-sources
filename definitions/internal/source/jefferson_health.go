@@ -29,7 +29,7 @@ func GetSourceJeffersonHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jefferson Health"
 	sourceDef.SourceType = pkg.SourceTypeJeffersonHealth
-	sourceDef.Category = []string{"207V00000X", "2084N0400X", "2086S0129X", "208D00000X", "208G00000X", "208M00000X", "207R00000X", "207RE0101X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RE0101X", "207V00000X", "2084N0400X", "2086S0129X", "208D00000X", "208G00000X", "208M00000X"}
 	sourceDef.Aliases = []string{"JEFFERSON HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952726796"}}
 	sourceDef.SecretKeyPrefix = "epic"

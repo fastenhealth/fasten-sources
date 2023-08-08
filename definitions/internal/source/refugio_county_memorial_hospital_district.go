@@ -29,9 +29,9 @@ func GetSourceRefugioCountyMemorialHospitalDistrict(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Refugio County Memorial Hospital District"
 	sourceDef.SourceType = pkg.SourceTypeRefugioCountyMemorialHospitalDistrict
-	sourceDef.Category = []string{"282NC0060X", "261QC0050X", "261QR1300X", "207P00000X"}
+	sourceDef.Category = []string{"207P00000X", "261QC0050X", "261QR1300X", "282NC0060X"}
 	sourceDef.Aliases = []string{"REFUGIO RURAL HEALTH CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942240189", "1215983598", "1821178336"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215983598", "1821178336", "1942240189"}}
 	sourceDef.PatientAccessUrl = "https://refugiohospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

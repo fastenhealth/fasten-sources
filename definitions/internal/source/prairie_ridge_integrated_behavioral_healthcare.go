@@ -31,7 +31,7 @@ func GetSourcePrairieRidgeIntegratedBehavioralHealthcare(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypePrairieRidgeIntegratedBehavioralHealthcare
 	sourceDef.Category = []string{"101YA0400X", "103TA0400X", "261QM0801X", "324500000X"}
 	sourceDef.Aliases = []string{"PRAIRIE RIDGE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952443632", "1316454424"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316454424", "1952443632"}}
 	sourceDef.BrandLogo = "prairie-ridge-integrated-behavioral-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://prairieridge.net/"
 	sourceDef.SecretKeyPrefix = "cerner"

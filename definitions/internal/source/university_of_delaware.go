@@ -28,9 +28,9 @@ func GetSourceUniversityOfDelaware(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "University Of Delaware"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfDelaware
-	sourceDef.Category = []string{"261Q00000X", "261QR0400X", "363L00000X", "3416L0300X", "231H00000X", "235Z00000X", "103TM1800X", "103TR0400X", "225CX0006X", "253Z00000X", "251C00000X"}
+	sourceDef.Category = []string{"103TM1800X", "103TR0400X", "225CX0006X", "231H00000X", "235Z00000X", "251C00000X", "253Z00000X", "261Q00000X", "261QR0400X", "3416L0300X", "363L00000X"}
 	sourceDef.Aliases = []string{"UD CENTER FOR DISABILITIES STUDIES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679614390", "1831698075", "1467850032", "1841708179", "1841527132"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467850032", "1679614390", "1831698075", "1841527132", "1841708179"}}
 	sourceDef.PatientAccessUrl = "https://www.udel.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

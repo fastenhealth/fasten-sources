@@ -30,7 +30,7 @@ func GetSourcePetersburgMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Petersburg Medical Center"
 	sourceDef.SourceType = pkg.SourceTypePetersburgMedicalCenter
 	sourceDef.Category = []string{"163W00000X", "207Q00000X", "313M00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609936111", "1972666345", "1639237159"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609936111", "1639237159", "1972666345"}}
 	sourceDef.BrandLogo = "petersburg-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pmcak.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

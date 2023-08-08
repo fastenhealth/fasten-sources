@@ -11,26 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324/metadata
+// https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391/metadata
 func GetSourceHardinMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10063324/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10063324/connect/token"
+	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/0276a61d-cfb3-486e-9665-b29201df0391/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
+	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/0276a61d-cfb3-486e-9665-b29201df0391/protocols/oauth2/profiles/smart-v1/token"
+	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324"
+	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10063324"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/0276a61d-cfb3-486e-9665-b29201df0391"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHardinMedicalCenter]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAllscripts))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
 	sourceDef.Display = "Hardin Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHardinMedicalCenter
-	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "http://www.hardinmedicalcenter.org/"
-	sourceDef.SecretKeyPrefix = "allscripts"
+	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err
 }

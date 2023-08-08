@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035042/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10035042/metadata
 func GetSourceSouthernIndianaCommunityHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10035042/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10035042/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fc860ef8-3636-4c19-81d7-e52ca182ce31/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fc860ef8-3636-4c19-81d7-e52ca182ce31/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035042"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10035042"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10035042"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10035042"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSouthernIndianaCommunityHealthCare]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -29,8 +29,7 @@ func GetSourceSouthernIndianaCommunityHealthCare(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Southern Indiana Community Health Care"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIndianaCommunityHealthCare
 	sourceDef.Category = []string{"261QR1300X", "363LF0000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083863567", "1841692035", "1174772651"}}
-	sourceDef.Hidden = true
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083863567", "1174772651", "1841692035"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

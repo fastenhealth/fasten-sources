@@ -28,7 +28,7 @@ func GetSourcePuyallupTribalHealthAuthority(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Puyallup Tribal Health Authority"
 	sourceDef.SourceType = pkg.SourceTypePuyallupTribalHealthAuthority
-	sourceDef.Category = []string{"261QP1100X", "261QP2000X", "261QR0200X", "291U00000X", "261QH0100X", "261QD0000X", "261QP2300X", "261QM0855X", "261QM0850X", "332800000X", "324500000X", "261QR0405X"}
+	sourceDef.Category = []string{"261QD0000X", "261QH0100X", "261QM0850X", "261QM0855X", "261QP1100X", "261QP2000X", "261QP2300X", "261QR0200X", "261QR0405X", "291U00000X", "324500000X", "332800000X"}
 	sourceDef.Aliases = []string{"KWAWACHEE COUNSELING CENTER", "PTHA-PHARMACY", "PUYALLUP TRIBAL HEALTH AUTHORITY", "TAKOPID HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063455665", "1255378782", "1659406171", "1689709172"}}
 	sourceDef.BrandLogo = "puyallup-tribal-health-authority.jpg"

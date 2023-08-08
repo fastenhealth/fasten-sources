@@ -28,9 +28,9 @@ func GetSourceHopeOrthopedicsOfOregon(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Hope Orthopedics Of Oregon"
 	sourceDef.SourceType = pkg.SourceTypeHopeOrthopedicsOfOregon
-	sourceDef.Category = []string{"207XS0114X", "207X00000X", "363AS0400X", "207T00000X", "225100000X", "225XH1200X", "332B00000X", "363A00000X", "207XX0004X", "207XX0005X", "207XX0801X", "225000000X", "207XS0106X"}
+	sourceDef.Category = []string{"207T00000X", "207X00000X", "207XS0106X", "207XS0114X", "207XX0004X", "207XX0005X", "207XX0801X", "225000000X", "225100000X", "225XH1200X", "332B00000X", "363A00000X", "363AS0400X"}
 	sourceDef.Aliases = []string{"HOPE ORTHOPEDICS OF OREGON"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942926258", "1013437862", "1134145360", "1134874001"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013437862", "1134145360", "1134874001", "1942926258"}}
 	sourceDef.PatientAccessUrl = "https://hopeorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

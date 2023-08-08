@@ -30,7 +30,7 @@ func GetSourceInfinityHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeInfinityHealth
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"BEHAVIORAL HEALTH CENTERS OF SO IA - CENTERVILLE"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447741483", "1366949877", "1790364875", "1396384657", "1770521981", "1699334805", "1124525647", "1710102132", "1669697074", "1013103456"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013103456", "1124525647", "1366949877", "1396384657", "1447741483", "1669697074", "1699334805", "1710102132", "1770521981", "1790364875"}}
 	sourceDef.PatientAccessUrl = "https://weareinfinityhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

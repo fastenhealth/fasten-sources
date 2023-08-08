@@ -29,8 +29,8 @@ func GetSourceFillmoreCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Fillmore County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFillmoreCountyHospital
-	sourceDef.Category = []string{"251S00000X", "273R00000X", "282NC0060X", "2084P0800X", "2085R0202X", "363A00000X", "363AS0400X", "363L00000X", "363LP0808X", "207X00000X", "275N00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033632732", "1457745119", "1689769382", "1508956467", "1689756561"}}
+	sourceDef.Category = []string{"207X00000X", "2084P0800X", "2085R0202X", "251S00000X", "273R00000X", "275N00000X", "282NC0060X", "363A00000X", "363AS0400X", "363L00000X", "363LP0808X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033632732", "1457745119", "1508956467", "1689756561", "1689769382"}}
 	sourceDef.BrandLogo = "fillmore-county-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.myfch.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

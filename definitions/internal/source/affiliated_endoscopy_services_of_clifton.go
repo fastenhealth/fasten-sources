@@ -28,7 +28,7 @@ func GetSourceAffiliatedEndoscopyServicesOfClifton(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Affiliated Endoscopy Services Of Clifton"
 	sourceDef.SourceType = pkg.SourceTypeAffiliatedEndoscopyServicesOfClifton
-	sourceDef.Category = []string{"261QE0800X", "261QA1903X"}
+	sourceDef.Category = []string{"261QA1903X", "261QE0800X"}
 	sourceDef.Aliases = []string{"AFFILIATED ENDOSCOPY SERVICES OF CLIFTON"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609803204"}}
 	sourceDef.BrandLogo = "affiliated-endoscopy-services-of-clifton.jpg"

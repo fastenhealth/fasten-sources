@@ -28,9 +28,9 @@ func GetSourceCompletecareHealthNetwork(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "CompleteCare Health Network"
 	sourceDef.SourceType = pkg.SourceTypeCompletecareHealthNetwork
-	sourceDef.Category = []string{"261QF0400X", "101YM0800X", "1223G0001X", "152W00000X", "164W00000X", "176B00000X", "207Q00000X", "207RI0200X", "207V00000X", "208000000X", "213E00000X", "207R00000X", "207VE0102X", "207VX0000X", "261QD0000X", "208D00000X"}
+	sourceDef.Category = []string{"101YM0800X", "1223G0001X", "152W00000X", "164W00000X", "176B00000X", "207Q00000X", "207R00000X", "207RI0200X", "207V00000X", "207VE0102X", "207VX0000X", "208000000X", "208D00000X", "213E00000X", "261QD0000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"COMPLETECARE HEALTH NETWORK"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316307432", "1689785610", "1154592459", "1063715332", "1346342441", "1700816816", "1417309527", "1215242516", "1720198740", "1730527805"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063715332", "1154592459", "1215242516", "1316307432", "1346342441", "1417309527", "1689785610", "1700816816", "1720198740", "1730527805"}}
 	sourceDef.PatientAccessUrl = "https://completecarenj.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

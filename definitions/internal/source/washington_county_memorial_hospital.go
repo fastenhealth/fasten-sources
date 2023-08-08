@@ -28,9 +28,9 @@ func GetSourceWashingtonCountyMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Washington County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonCountyMemorialHospital
-	sourceDef.Category = []string{"275N00000X", "207Q00000X", "363LF0000X", "261QR1300X", "261QM1300X", "282NC0060X"}
+	sourceDef.Category = []string{"207Q00000X", "261QM1300X", "261QR1300X", "275N00000X", "282NC0060X", "363LF0000X"}
 	sourceDef.Aliases = []string{"AUSTIN PLAZA PRIMARY CARE CLINIC", "BELGRADE RURAL HEALTH CLINIC", "HEALTH WAY PRIMARY CARE CLINIC", "POTOSI RURAL HEALTH CLINIC", "WCMH URGENT CARE CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821140724", "1104933837", "1598737827", "1568692788", "1891149415", "1194838821", "1871102137", "1366713034", "1174726251", "1205064532"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104933837", "1174726251", "1194838821", "1205064532", "1366713034", "1568692788", "1598737827", "1821140724", "1871102137", "1891149415"}}
 	sourceDef.BrandLogo = "washington-county-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://wcmhosp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

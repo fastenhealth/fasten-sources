@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10039761/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10039761/metadata
 func GetSourceClientSouthernCaliforniaHeartSpecialists(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {

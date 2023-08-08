@@ -29,7 +29,7 @@ func GetSourceMoreheadStateUniversity(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Morehead State University"
 	sourceDef.SourceType = pkg.SourceTypeMoreheadStateUniversity
-	sourceDef.Category = []string{"103T00000X", "207Q00000X", "363L00000X", "363LF0000X", "1223G0001X", "1041C0700X", "101YP2500X"}
+	sourceDef.Category = []string{"101YP2500X", "103T00000X", "1041C0700X", "1223G0001X", "207Q00000X", "363L00000X", "363LF0000X"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689954232"}}
 	sourceDef.PatientAccessUrl = "https://moreheadstate.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10021952/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10021952/metadata
 func GetSourceCatawbaPediatricAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10021952/connect/authorize"
-	sourceDef.TokenEndpoint = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/authorization/10021952/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/c8f31b8f-af09-47ce-a1ee-e693557e5c03/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/c8f31b8f-af09-47ce-a1ee-e693557e5c03/connect/token"
 
-	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10021952"
+	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10021952"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/10021952"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10021952"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCatawbaPediatricAssociates]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,7 +28,6 @@ func GetSourceCatawbaPediatricAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Catawba Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeCatawbaPediatricAssociates
-	sourceDef.Hidden = true
 	sourceDef.BrandLogo = "catawba-pediatric-associates.webp"
 	sourceDef.PatientAccessUrl = "https://www.catawbapediatrics.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"

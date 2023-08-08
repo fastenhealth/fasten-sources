@@ -30,7 +30,7 @@ func GetSourceArkansasValleySurgeryCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeArkansasValleySurgeryCenter
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"ARKANSAS VALLEY SURGERY CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750517561", "1255495990"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255495990", "1750517561"}}
 	sourceDef.PatientAccessUrl = "http://ww1.arkansassurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

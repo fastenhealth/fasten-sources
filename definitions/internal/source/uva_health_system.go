@@ -14,9 +14,9 @@ import (
 // https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4/metadata
 func GetSourceUvaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/oauth2/register"
+	sourceDef.AuthorizationEndpoint = "https://hscsesoap.hscs.virginia.edu/oauth2/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://hscsesoap.hscs.virginia.edu/oauth2/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://hscsesoap.hscs.virginia.edu/oauth2/oauth2/register"
 
 	sourceDef.Audience = "https://hscsesoap.hscs.virginia.edu/FHIRProxy/api/FHIR/R4"
 

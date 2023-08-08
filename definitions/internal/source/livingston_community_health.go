@@ -30,7 +30,7 @@ func GetSourceLivingstonCommunityHealth(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeLivingstonCommunityHealth
 	sourceDef.Category = []string{"261QF0400X", "3336C0003X"}
 	sourceDef.Aliases = []string{"LCH PHARMACY", "LIVINGSTON COMMUNITY HEALTH HMO", "LIVINGSTON COMMUNITY HEALTH TMO", "LIVINGSTON HEALTH CAMPUS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023650066", "1730530254", "1245721539", "1427110329", "1124300207", "1073175675", "1508408550", "1295184117", "1487012779", "1528433588"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023650066", "1073175675", "1124300207", "1245721539", "1295184117", "1427110329", "1487012779", "1508408550", "1528433588", "1730530254"}}
 	sourceDef.PatientAccessUrl = "https://www.visitlch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

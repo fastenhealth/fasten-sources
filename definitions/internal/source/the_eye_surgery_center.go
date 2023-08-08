@@ -30,7 +30,7 @@ func GetSourceTheEyeSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTheEyeSurgeryCenter
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"THE EYE SURGERY CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396983847", "1265405203"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265405203", "1396983847"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

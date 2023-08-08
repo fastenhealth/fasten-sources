@@ -29,9 +29,9 @@ func GetSourceAbbevilleGeneralHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Abbeville General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAbbevilleGeneralHospital
-	sourceDef.Category = []string{"261Q00000X", "261QU0200X", "282NR1301X", "273R00000X", "275N00000X", "261QR1300X", "367500000X", "207L00000X"}
+	sourceDef.Category = []string{"207L00000X", "261Q00000X", "261QR1300X", "261QU0200X", "273R00000X", "275N00000X", "282NR1301X", "367500000X"}
 	sourceDef.Aliases = []string{"ABBEVILLE GENERAL HOSPITAL CLINIC", "ABBEVILLE GENERAL HOSPITAL HB", "ABBEVILLE URGENT CARE", "ERATH/DELCAMBRE COMMUITY CARE CLINIC", "MAURICE COMMUNITY CARE CLINIC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285779363", "1619458247", "1255300414", "1619936580", "1659330512", "1700129749", "1780616094", "1447301437", "1790744506"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255300414", "1285779363", "1447301437", "1619458247", "1619936580", "1659330512", "1700129749", "1780616094", "1790744506"}}
 	sourceDef.PatientAccessUrl = "https://www.abbevillegeneral.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

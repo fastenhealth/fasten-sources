@@ -29,9 +29,9 @@ func GetSourceAshlandHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ashland Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAshlandHealthCenter
-	sourceDef.Category = []string{"282N00000X", "275N00000X"}
+	sourceDef.Category = []string{"275N00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"ASHLAND HEALTH CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760415731", "1568557262"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568557262", "1760415731"}}
 	sourceDef.PatientAccessUrl = "https://ashlandhealthcenter.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

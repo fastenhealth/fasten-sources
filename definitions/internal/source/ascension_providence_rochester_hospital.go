@@ -29,9 +29,9 @@ func GetSourceAscensionProvidenceRochesterHospital(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Ascension Providence Rochester Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAscensionProvidenceRochesterHospital
-	sourceDef.Category = []string{"363L00000X", "367500000X", "251J00000X", "208D00000X", "273Y00000X", "282N00000X", "273R00000X", "2084N0400X"}
+	sourceDef.Category = []string{"2084N0400X", "208D00000X", "251J00000X", "273R00000X", "273Y00000X", "282N00000X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"CRITTENTON HOSPITAL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427171511", "1235252321", "1457704850", "1750435962", "1437176203", "1376697581", "1366565442"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235252321", "1366565442", "1376697581", "1427171511", "1437176203", "1457704850", "1750435962"}}
 	sourceDef.BrandLogo = "ascension-providence-rochester-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

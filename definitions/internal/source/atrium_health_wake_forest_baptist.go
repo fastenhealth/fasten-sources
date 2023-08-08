@@ -11,7 +11,6 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/.well-known/smart-configuration
 // https://w1soap.wakehealth.edu/fhirproxy/api/FHIR/R4/metadata
 func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)

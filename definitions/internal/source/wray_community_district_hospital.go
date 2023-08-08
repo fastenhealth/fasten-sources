@@ -29,9 +29,9 @@ func GetSourceWrayCommunityDistrictHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Wray Community District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWrayCommunityDistrictHospital
-	sourceDef.Category = []string{"208D00000X", "282NC0060X", "225100000X", "275N00000X"}
+	sourceDef.Category = []string{"208D00000X", "225100000X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"THE WRAY CLINIC", "WRAY COMMUNITY DISTRICT HOSPITAL", "WRAY PHYSICAL THERAPY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477587202", "1083640239", "1912486820", "1831312925"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083640239", "1477587202", "1831312925", "1912486820"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

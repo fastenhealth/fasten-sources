@@ -29,9 +29,9 @@ func GetSourcePalomarHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Palomar Health"
 	sourceDef.SourceType = pkg.SourceTypePalomarHealth
-	sourceDef.Category = []string{"273R00000X", "282N00000X", "291U00000X", "251E00000X", "3336I0012X", "332BP3500X", "332BN1400X", "314000000X", "283Q00000X", "261QU0200X", "273Y00000X"}
+	sourceDef.Category = []string{"251E00000X", "261QU0200X", "273R00000X", "273Y00000X", "282N00000X", "283Q00000X", "291U00000X", "314000000X", "332BN1400X", "332BP3500X", "3336I0012X"}
 	sourceDef.Aliases = []string{"CRISIS STABILIZATION UNIT", "PALOMAR HEALTH ACUTE REHABILITATION", "PALOMAR HEALTH CENTER FOR BEHAVIORAL HEALTH - PMC ESCONDIDO", "PALOMAR HEALTH EXPRESSCARE", "PALOMAR HEALTH HOME HEALTH SERVICES", "PALOMAR HEALTH LABORATORY SERVICES - PMC DOWNTOWN ESCONDIDO", "PALOMAR HEALTH LABORATORY SERVICES - PMC ESCONDIDO", "PALOMAR HEALTH PHARMACY SERVICES - PMC DOWNTOWN ESCONDIDO", "PALOMAR MEDICAL CENTER POWAY", "THE VILLAS AT POWAY", "VILLA POMERADO"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376513754", "1639427677", "1063482412", "1205806676", "1285752063", "1639427685", "1619947090", "1700239779", "1093268369", "1588634034"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063482412", "1093268369", "1205806676", "1285752063", "1376513754", "1588634034", "1619947090", "1639427677", "1639427685", "1700239779"}}
 	sourceDef.BrandLogo = "palomar-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.palomarhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

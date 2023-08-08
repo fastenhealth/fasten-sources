@@ -29,9 +29,9 @@ func GetSourceTrinityHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Trinity Health"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealth1
-	sourceDef.Category = []string{"261QA1903X", "261QR0200X", "332H00000X", "335V00000X", "332B00000X", "291U00000X"}
+	sourceDef.Category = []string{"261QA1903X", "261QR0200X", "291U00000X", "332B00000X", "332H00000X", "335V00000X"}
 	sourceDef.Aliases = []string{"TCC WESTERN DAKOTA SURGERY (ASC)", "TCC-WESTERN DAKOTA LAB", "TCC-WESTERN DAKOTA X-RAY", "TRINITY COMMUNITY CLINIC WESTERN DAKOTA LAB", "TRINITY PORTABLE X-RAY", "VISION GALLERIA", "VISION GALLERIA (MINOT)", "VISION GALLERIA - WESTERN DAKOTA", "WESTERN DAKOTA SURGERY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730233677", "1962738542", "1245285816", "1679619548", "1841526332", "1629636204", "1013180405", "1811030752", "1982770996", "1316273998", "1538214689", "1902949845"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013180405", "1245285816", "1316273998", "1538214689", "1629636204", "1679619548", "1730233677", "1811030752", "1841526332", "1902949845", "1962738542", "1982770996"}}
 	sourceDef.BrandLogo = "trinity-health.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

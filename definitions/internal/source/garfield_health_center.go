@@ -28,8 +28,8 @@ func GetSourceGarfieldHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Garfield Health Center"
 	sourceDef.SourceType = pkg.SourceTypeGarfieldHealthCenter
-	sourceDef.Category = []string{"171M00000X", "208D00000X", "261QF0400X", "261QD0000X", "261QP2300X", "207Q00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548643000", "1437703329", "1275187460", "1194398354", "1760480610"}}
+	sourceDef.Category = []string{"171M00000X", "207Q00000X", "208D00000X", "261QD0000X", "261QF0400X", "261QP2300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194398354", "1275187460", "1437703329", "1548643000", "1760480610"}}
 	sourceDef.PatientAccessUrl = "https://www.garfieldhealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

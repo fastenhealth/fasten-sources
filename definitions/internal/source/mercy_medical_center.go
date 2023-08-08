@@ -29,9 +29,9 @@ func GetSourceMercyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mercy Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMercyMedicalCenter
-	sourceDef.Category = []string{"261Q00000X", "291U00000X", "261QE0700X", "282N00000X", "207ZP0102X", "314000000X", "261QC0050X", "207Q00000X", "207R00000X", "103T00000X", "1041C0700X", "2084P0800X", "332BX2000X", "332B00000X"}
+	sourceDef.Category = []string{"103T00000X", "1041C0700X", "207Q00000X", "207R00000X", "207ZP0102X", "2084P0800X", "261Q00000X", "261QC0050X", "261QE0700X", "282N00000X", "291U00000X", "314000000X", "332B00000X", "332BX2000X"}
 	sourceDef.Aliases = []string{"CHI ST ALEXIUS HEALTH WILLISTON", "MERCY MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609872357", "1326282807", "1194155549", "1366433195", "1750336277", "1265472526", "1760549000", "1801928593", "1871725358", "1386720589"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194155549", "1265472526", "1326282807", "1366433195", "1386720589", "1609872357", "1750336277", "1760549000", "1801928593", "1871725358"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

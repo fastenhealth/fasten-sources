@@ -29,9 +29,9 @@ func GetSourceElCaminoHospital(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "El Camino Hospital"
 	sourceDef.SourceType = pkg.SourceTypeElCaminoHospital
-	sourceDef.Category = []string{"261QE0700X", "273Y00000X", "251S00000X", "282N00000X", "333600000X", "3336C0003X", "273R00000X"}
+	sourceDef.Category = []string{"251S00000X", "261QE0700X", "273R00000X", "273Y00000X", "282N00000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"EL CAMINO HEALTH", "EL CAMINO HOSPITAL OUTPATIENT PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669539334", "1679899256", "1154816601", "1306344510", "1619034105", "1861972390", "1851458434", "1093712374", "1417199340", "1457594087"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093712374", "1154816601", "1306344510", "1417199340", "1457594087", "1619034105", "1669539334", "1679899256", "1851458434", "1861972390"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

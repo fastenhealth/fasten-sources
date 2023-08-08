@@ -28,7 +28,7 @@ func GetSourceVascon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "VASCON"
 	sourceDef.SourceType = pkg.SourceTypeVascon
-	sourceDef.Category = []string{"2085R0204X", "2086S0129X", "207RN0300X"}
+	sourceDef.Category = []string{"207RN0300X", "2085R0204X", "2086S0129X"}
 	sourceDef.Aliases = []string{"VASCON"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306430947"}}
 	sourceDef.PatientAccessUrl = "https://zaubee.com/biz/vascon-vascular-access-center-vou0pmne"

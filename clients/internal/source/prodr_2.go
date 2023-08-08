@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/fhir/ProdR2CDH/metadata
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/ProdR2CDH/metadata
 func GetSourceClientProdr2(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := platform.GetSourceClientAllscripts(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {

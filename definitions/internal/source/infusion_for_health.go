@@ -28,7 +28,7 @@ func GetSourceInfusionForHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Infusion For Health"
 	sourceDef.SourceType = pkg.SourceTypeInfusionForHealth
-	sourceDef.Category = []string{"363L00000X", "261QI0500X"}
+	sourceDef.Category = []string{"261QI0500X", "363L00000X"}
 	sourceDef.Aliases = []string{"INFUSION FOR HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508262213"}}
 	sourceDef.BrandLogo = "infusion-for-health.webp"

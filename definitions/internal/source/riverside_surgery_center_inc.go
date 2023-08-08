@@ -28,9 +28,9 @@ func GetSourceRiversideSurgeryCenterInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Riverside Surgery Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiversideSurgeryCenterInc
-	sourceDef.Category = []string{"282N00000X", "302R00000X", "282NW0100X"}
+	sourceDef.Category = []string{"282N00000X", "282NW0100X", "302R00000X"}
 	sourceDef.Aliases = []string{"RIVERSIDE REGIONAL MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366547747", "1265744460", "1356543995", "1700088721", "1841424744", "1861779852"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265744460", "1356543995", "1366547747", "1700088721", "1841424744", "1861779852"}}
 	sourceDef.BrandLogo = "riverside-surgery-center-inc.ashx"
 	sourceDef.PatientAccessUrl = "https://www.riversideonline.com/locations/surgery/doctors-surgery-center"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,7 +28,7 @@ func GetSourceArthritisAssociatesPllc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Arthritis Associates PLLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAssociatesPllc
-	sourceDef.Category = []string{"3336C0003X", "207RR0500X"}
+	sourceDef.Category = []string{"207RR0500X", "3336C0003X"}
 	sourceDef.Aliases = []string{"ARTHRITIS ASSOCIATES PLLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225325566", "1982647962"}}
 	sourceDef.BrandLogo = "arthritis-associates-pllc.svg"

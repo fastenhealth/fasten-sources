@@ -28,9 +28,9 @@ func GetSourceAbramsEyecareAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Abrams EyeCare Associates"
 	sourceDef.SourceType = pkg.SourceTypeAbramsEyecareAssociates
-	sourceDef.Category = []string{"332B00000X", "332H00000X", "207W00000X"}
+	sourceDef.Category = []string{"207W00000X", "332B00000X", "332H00000X"}
 	sourceDef.Aliases = []string{"ABRAMS EYECARE ASSOCIATES"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912011388", "1285741397", "1902910359", "1336257542"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285741397", "1336257542", "1902910359", "1912011388"}}
 	sourceDef.PatientAccessUrl = "https://abramseyecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

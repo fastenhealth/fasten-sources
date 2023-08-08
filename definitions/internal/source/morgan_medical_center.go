@@ -29,9 +29,9 @@ func GetSourceMorganMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Morgan Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMorganMedicalCenter
-	sourceDef.Category = []string{"3336C0003X", "282NC0060X"}
+	sourceDef.Category = []string{"282NC0060X", "3336C0003X"}
 	sourceDef.Aliases = []string{"MORGAN MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487219192", "1205843174"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205843174", "1487219192"}}
 	sourceDef.BrandLogo = "morgan-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://morganmedical.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

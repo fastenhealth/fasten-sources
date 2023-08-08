@@ -28,9 +28,9 @@ func GetSourcePlannedParenthoodKeystone(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Planned Parenthood Keystone"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodKeystone
-	sourceDef.Category = []string{"261Q00000X", "261QA0005X", "261QF0050X", "207VG0400X", "251K00000X"}
+	sourceDef.Category = []string{"207VG0400X", "251K00000X", "261Q00000X", "261QA0005X", "261QF0050X"}
 	sourceDef.Aliases = []string{"BENSALEM MEDICAL CENTER", "HARRISBURG MEDICAL CENTER", "LANCASTER MEDICAL CENTER", "PLANNED PARENTHOOD KEYSTONE", "READING MEDICAL CENTER", "YORK MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083866263", "1568639029", "1699814103", "1881184760", "1093975823", "1659531804", "1487655981", "1851464317"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083866263", "1093975823", "1487655981", "1568639029", "1659531804", "1699814103", "1851464317", "1881184760"}}
 	sourceDef.BrandLogo = "planned-parenthood-keystone.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-keystone?utm_campaign=keystone-affiliate&utm_medium=organic&utm_source=local-listing"
 	sourceDef.SecretKeyPrefix = "nextgen"

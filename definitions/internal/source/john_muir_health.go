@@ -29,9 +29,9 @@ func GetSourceJohnMuirHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "John Muir Health"
 	sourceDef.SourceType = pkg.SourceTypeJohnMuirHealth
-	sourceDef.Category = []string{"282N00000X", "3336C0003X", "333600000X", "363A00000X", "363L00000X", "207X00000X", "204E00000X", "207RG0100X", "207RP1001X", "207W00000X", "207Y00000X", "2084N0400X", "208600000X", "2086S0122X", "2086S0129X", "208800000X", "207RC0000X", "273Y00000X", "291U00000X"}
+	sourceDef.Category = []string{"204E00000X", "207RC0000X", "207RG0100X", "207RP1001X", "207W00000X", "207X00000X", "207Y00000X", "2084N0400X", "208600000X", "2086S0122X", "2086S0129X", "208800000X", "273Y00000X", "282N00000X", "291U00000X", "333600000X", "3336C0003X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"JOHN MUIR HEALTH, WALNUT CREEK MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740215219", "1619049491", "1336416569", "1801163035", "1174890305", "1275753493", "1447269303", "1699099937", "1760602726", "1164799391"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164799391", "1174890305", "1275753493", "1336416569", "1447269303", "1619049491", "1699099937", "1740215219", "1760602726", "1801163035"}}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

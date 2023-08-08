@@ -29,9 +29,9 @@ func GetSourceKernCountyHospitalAuthority(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Kern County Hospital Authority"
 	sourceDef.SourceType = pkg.SourceTypeKernCountyHospitalAuthority
-	sourceDef.Category = []string{"208D00000X", "282N00000X", "385H00000X", "333600000X"}
+	sourceDef.Category = []string{"208D00000X", "282N00000X", "333600000X", "385H00000X"}
 	sourceDef.Aliases = []string{"KERN MEDICAL", "KERN MEDICAL CENTER"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629784087", "1699282285", "1336668284", "1770124976", "1376960005", "1093243255", "1427176569", "1699859223", "1164974739", "1538611967"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093243255", "1164974739", "1336668284", "1376960005", "1427176569", "1538611967", "1629784087", "1699282285", "1699859223", "1770124976"}}
 	sourceDef.PatientAccessUrl = "https://www.kernmedical.com/locations/hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

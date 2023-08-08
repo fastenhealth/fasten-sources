@@ -28,8 +28,8 @@ func GetSourceWisconsinHealthFund(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "WISCONSIN HEALTH FUND"
 	sourceDef.SourceType = pkg.SourceTypeWisconsinHealthFund
-	sourceDef.Category = []string{"261QD0000X", "183500000X", "261QM1300X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598951246", "1093875569", "1497768659"}}
+	sourceDef.Category = []string{"183500000X", "261QD0000X", "261QM1300X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093875569", "1497768659", "1598951246"}}
 	sourceDef.PatientAccessUrl = "https://www.whfund.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

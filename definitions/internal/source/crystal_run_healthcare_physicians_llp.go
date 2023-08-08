@@ -28,8 +28,8 @@ func GetSourceCrystalRunHealthcarePhysiciansLlp(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Crystal Run Healthcare Physicians LLP"
 	sourceDef.SourceType = pkg.SourceTypeCrystalRunHealthcarePhysiciansLlp
-	sourceDef.Category = []string{"332B00000X", "291U00000X", "261QX0200X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760931844", "1093932477", "1225255615", "1609388289", "1649766510", "1801362801", "1922316827", "1023326642", "1053780403", "1558857425"}}
+	sourceDef.Category = []string{"261QX0200X", "291U00000X", "332B00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023326642", "1053780403", "1093932477", "1225255615", "1558857425", "1609388289", "1649766510", "1760931844", "1801362801", "1922316827"}}
 	sourceDef.BrandLogo = "crystal-run-healthcare-physicians-llp.jpg"
 	sourceDef.PatientAccessUrl = "https://www.crystalrunhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,7 +29,7 @@ func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Harris Health System"
 	sourceDef.SourceType = pkg.SourceTypeHarrisHealthSystem
-	sourceDef.Category = []string{"1223S0112X", "1223G0001X"}
+	sourceDef.Category = []string{"1223G0001X", "1223S0112X"}
 	sourceDef.Aliases = []string{"HARRIS HEALTH SYSTEM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538833231"}}
 	sourceDef.BrandLogo = "harris-health-system.jpg"

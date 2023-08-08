@@ -28,9 +28,9 @@ func GetSourceCompassCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Compass Community Health"
 	sourceDef.SourceType = pkg.SourceTypeCompassCommunityHealth
-	sourceDef.Category = []string{"261QH0700X", "261QM1300X", "261QP2300X", "251S00000X", "261QF0400X", "3336C0003X", "363L00000X", "207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "251S00000X", "261QF0400X", "261QH0700X", "261QM1300X", "261QP2300X", "3336C0003X", "363L00000X"}
 	sourceDef.Aliases = []string{"COMPASS PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174047658", "1154845352", "1902298466", "1588916126"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154845352", "1174047658", "1588916126", "1902298466"}}
 	sourceDef.BrandLogo = "compass-community-health.jpg"
 	sourceDef.PatientAccessUrl = "https://compassch.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,8 +29,8 @@ func GetSourceGeisingerHealthPlan(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Geisinger Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeGeisingerHealthPlan
-	sourceDef.Category = []string{"302R00000X", "305S00000X", "305R00000X"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790280725", "1760930606"}}
+	sourceDef.Category = []string{"302R00000X", "305R00000X", "305S00000X"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760930606", "1790280725"}}
 	sourceDef.BrandLogo = "geisinger-health-plan.svg"
 	sourceDef.PatientAccessUrl = "https://www.geisinger.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
