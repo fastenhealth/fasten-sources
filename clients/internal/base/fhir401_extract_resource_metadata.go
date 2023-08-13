@@ -964,6 +964,10 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Recorded != nil {
 			sortDate = sourceResourceTyped.Recorded
+		} else if len(sourceResourceTyped.OccurrenceDateTime) > 0 {
+			sortDate = &sourceResourceTyped.OccurrenceDateTime
+		} else if len(sourceResourceTyped.OccurrenceString) > 0 {
+			sortDate = &sourceResourceTyped.OccurrenceString
 		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
 			sortDate = sourceResourceTyped.Meta.LastUpdated
 		}
