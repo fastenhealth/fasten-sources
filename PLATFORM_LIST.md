@@ -61,6 +61,7 @@ This list of platforms is sourced from various locations, including:
 | [Magilenenterprises](https://www.qsmartcare.com/api-documentation.html)                                                                                                            |                                       |                                    |                                                       |                                                                                    |
 | [Patient First](https://www.patientfirst.com/applicationaccessapi)                                                                                                                 |  |                                    |                                                       |                                                                                    |
 | [United HealthCare](https://www.uhc.com/legal/interoperability-apis)                                                                                                       |  |                                    |                                                       | 4 FHIR (UnitedHealthcare, Sierra Health and Life, Rocky Mountain, People's Health) |
+| [PatientFusion](https://help.patientfusion.com/s/article/How-can-I-link-my-health-information-from-Patient-Fusion-to-other-applications) | | | | |
 
 # Research
 
