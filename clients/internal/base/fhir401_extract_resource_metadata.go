@@ -71,6 +71,14 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Title != nil {
 			sortTitle = sourceResourceTyped.Title
+		} else if len(sourceResourceTyped.Activity) > 0 &&
+			sourceResourceTyped.Activity[0].Detail != nil &&
+			sourceResourceTyped.Activity[0].Detail.Code != nil {
+			if sourceResourceTyped.Activity[0].Detail.Code.Text != nil {
+				sortTitle = sourceResourceTyped.Activity[0].Detail.Code.Text
+			} else if sourceResourceTyped.Activity[0].Detail.Code.Coding != nil && len(sourceResourceTyped.Activity[0].Detail.Code.Coding) > 0 && sourceResourceTyped.Activity[0].Detail.Code.Coding[0].Display != nil {
+				sortTitle = sourceResourceTyped.Activity[0].Detail.Code.Coding[0].Display
+			}
 		} else if len(sourceResourceTyped.Addresses) > 0 && sourceResourceTyped.Addresses[0].Display != nil {
 			sortTitle = sourceResourceTyped.Addresses[0].Display
 		}
@@ -1135,6 +1143,10 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if len(sourceResourceTyped.Identifier) > 0 && sourceResourceTyped.Identifier[0].Value != nil {
 			sortTitle = sourceResourceTyped.Identifier[0].Value
+		} else if sourceResourceTyped.MedicationCodeableConcept.Text != nil {
+			sortTitle = sourceResourceTyped.MedicationCodeableConcept.Text
+		} else if len(sourceResourceTyped.MedicationCodeableConcept.Coding) > 0 && sourceResourceTyped.MedicationCodeableConcept.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.MedicationCodeableConcept.Coding[0].Display
 		}
 
 		if sourceResourceTyped.AuthoredOn != nil {
