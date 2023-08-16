@@ -1797,11 +1797,9 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 	if sortTitle != nil {
 		resource.SortTitle = sortTitle
 	}
-	if sortDate != nil {
-		sortDateTime, err := time.Parse(time.RFC3339, *sortDate)
-		if err == nil {
-			resource.SortDate = &sortDateTime
-		}
+	sortDateTime := parseDateTimeWithFallback(sortDate)
+	if sortDateTime != nil {
+		resource.SortDate = sortDateTime
 	}
 
 }
@@ -1856,4 +1854,26 @@ func removeDuplicateStr(strSlice []string) []string {
 		}
 	}
 	return list
+}
+
+//attempt to parse datetime with RFC3339,
+// if that fails, attempt to parse without seconds
+// if that fails, attempt to parse without time
+func parseDateTimeWithFallback(dateTime *string) *time.Time {
+	if dateTime == nil {
+		return nil
+	}
+	var parsedDateTime time.Time
+	var err error
+	parsedDateTime, err = time.Parse(time.RFC3339, *dateTime)
+	if err != nil {
+		parsedDateTime, err = time.Parse("2006-01-02T15:04", *dateTime)
+		if err != nil {
+			parsedDateTime, err = time.Parse("2006-01-02", *dateTime)
+			if err != nil {
+				return nil
+			}
+		}
+	}
+	return &parsedDateTime
 }
