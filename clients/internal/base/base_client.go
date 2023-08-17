@@ -240,6 +240,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		c.LoggerDebugResponse(resp)
 		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
+	c.LoggerDebugResponse(resp)
 
 	err = ParseBundle(resp.Body, decodeModelPtr)
 	return err

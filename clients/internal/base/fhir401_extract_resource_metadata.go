@@ -71,7 +71,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		if sourceResourceTyped.Title != nil {
 			sortTitle = sourceResourceTyped.Title
-		} else if len(sourceResourceTyped.Activity) > 0 &&
+		} else if sourceResourceTyped.Activity != nil && len(sourceResourceTyped.Activity) > 0 &&
 			sourceResourceTyped.Activity[0].Detail != nil &&
 			sourceResourceTyped.Activity[0].Detail.Code != nil {
 			if sourceResourceTyped.Activity[0].Detail.Code.Text != nil {
@@ -634,6 +634,10 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Type[0].Text
 		} else if len(sourceResourceTyped.Type) > 0 && len(sourceResourceTyped.Type[0].Coding) > 0 && sourceResourceTyped.Type[0].Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.Type[0].Coding[0].Display
+		} else if sourceResourceTyped.ServiceType.Text != nil {
+			sortTitle = sourceResourceTyped.ServiceType.Text
+		} else if sourceResourceTyped.ServiceType.Coding != nil && len(sourceResourceTyped.ServiceType.Coding) > 0 && sourceResourceTyped.ServiceType.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.ServiceType.Coding[0].Display
 		}
 
 		if sourceResourceTyped.Period != nil && sourceResourceTyped.Period.Start != nil {
