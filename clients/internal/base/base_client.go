@@ -13,6 +13,7 @@ import (
 	"golang.org/x/oauth2"
 	"io"
 	"log"
+	"mime"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
@@ -248,7 +249,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		return "", fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
 	contentTypeHeader := resp.Header.Get("Content-Type")
-	if !slices.Contains([]string{"application/json", "application/fhir+json", "application/json+fhir", ""}, contentTypeHeader) {
+	if !isContentTypeJsonAnalog(contentTypeHeader) {
 		c.LoggerDebugResponse(resp, false)
 		c.Logger.Warnf("response content type is not JSON: `%s`. This should only happen for Binary resource types", resp.Header.Get("Content-Type"))
 
@@ -307,4 +308,15 @@ func (c *SourceClientBase) LoggerDebugResponse(resp *http.Response, dumpBody boo
 	if dumpResp, dumpRespErr := httputil.DumpResponse(resp, dumpBody); dumpRespErr == nil {
 		c.Logger.Debug("Response: ", string(dumpResp))
 	}
+}
+
+func isContentTypeJsonAnalog(contentType string) bool {
+	if contentType == "" {
+		return false
+	}
+	mediatype, _, err := mime.ParseMediaType(contentType)
+	if err != nil {
+		return false
+	}
+	return slices.Contains([]string{"application/json", "application/fhir+json", "application/json+fhir"}, mediatype)
 }

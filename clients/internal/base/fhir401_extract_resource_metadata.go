@@ -634,9 +634,9 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			sortTitle = sourceResourceTyped.Type[0].Text
 		} else if len(sourceResourceTyped.Type) > 0 && len(sourceResourceTyped.Type[0].Coding) > 0 && sourceResourceTyped.Type[0].Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.Type[0].Coding[0].Display
-		} else if sourceResourceTyped.ServiceType.Text != nil {
+		} else if sourceResourceTyped.ServiceType != nil && sourceResourceTyped.ServiceType.Text != nil {
 			sortTitle = sourceResourceTyped.ServiceType.Text
-		} else if sourceResourceTyped.ServiceType.Coding != nil && len(sourceResourceTyped.ServiceType.Coding) > 0 && sourceResourceTyped.ServiceType.Coding[0].Display != nil {
+		} else if sourceResourceTyped.ServiceType != nil && sourceResourceTyped.ServiceType.Coding != nil && len(sourceResourceTyped.ServiceType.Coding) > 0 && sourceResourceTyped.ServiceType.Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.ServiceType.Coding[0].Display
 		}
 
