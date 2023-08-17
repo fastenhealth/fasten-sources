@@ -1406,6 +1406,40 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 
+	case fhir401.NutritionOrder:
+		if sourceResourceTyped.FoodPreferenceModifier != nil && len(sourceResourceTyped.FoodPreferenceModifier) > 0 {
+			sortTitle = sourceResourceTyped.FoodPreferenceModifier[0].Text
+		}
+		sortDate = &sourceResourceTyped.DateTime
+
+		// encounter can contain Encounter
+		if sourceResourceTyped.Encounter != nil && sourceResourceTyped.Encounter.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Encounter.Reference)
+		}
+
+		//orderer can contain Practitioner | PractitionerRole | Organization | Device | Patient | RelatedPerson
+		if sourceResourceTyped.Orderer != nil && sourceResourceTyped.Orderer.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Orderer.Reference)
+		}
+
+		//allergyIntolerance can contain AllergyIntolerance
+		if sourceResourceTyped.AllergyIntolerance != nil {
+			for _, r := range sourceResourceTyped.AllergyIntolerance {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// note can contain Annotation
+		if sourceResourceTyped.Note != nil {
+			for _, r := range sourceResourceTyped.Note {
+				if r.AuthorReference != nil {
+					referencedResources = append(referencedResources, *r.AuthorReference.Reference)
+				}
+			}
+		}
+
 	case fhir401.Observation:
 
 		if sourceResourceTyped.Code.Text != nil {
