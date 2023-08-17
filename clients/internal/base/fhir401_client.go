@@ -2,6 +2,7 @@ package base
 
 import (
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
@@ -190,33 +191,50 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 
 		//process pending resources
 		summary.TotalResources += len(pendingResourceReferences)
-		for _, pendingResourceId := range pendingResourceReferences {
+		for _, pendingResourceIdOrUri := range pendingResourceReferences {
 			var resourceRaw map[string]interface{}
 
-			err := c.GetRequest(pendingResourceId, &resourceRaw)
+			resourceSourceUri, err := c.GetRequest(pendingResourceIdOrUri, &resourceRaw)
 			if err != nil {
-				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
-				c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceId, err)
+				lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
+				c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceIdOrUri, err)
 				continue
 			}
 			resourceRawJson, err := json.Marshal(resourceRaw)
 			if err != nil {
-				c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceId, err)
-				lookupResourceReferences[pendingResourceId] = true //skip this failing resource
+				c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceIdOrUri, err)
+				lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
 				continue
 			}
-			pendingResourceIdParts := strings.SplitN(pendingResourceId, "/", 2)
+
+			pendingResourceIdParts := []string{}
+			if strings.HasPrefix(pendingResourceIdOrUri, "http://") || strings.HasPrefix(pendingResourceIdOrUri, "https://") {
+				//this resource is an absolute url, and is most likely a Binary resource. Lets confirm, and throw an error if not.
+				if pendingResourceType, ok := resourceRaw["resourceType"].(string); !ok || pendingResourceType != "Binary" {
+					c.Logger.Errorf("[ERROR THIS SHOULD NOT HAPPEN] skipping absolute resource (%s), resource is not a Binary resource: %v", pendingResourceIdOrUri, err)
+					lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
+					continue
+				} else {
+					//this is a binary resource, but it does not have an "id", so we need to generate one. (lookup will happen using sourceUri anyways)
+					//TODO: if we use content addressable storage, we can use the hash of the resource as the id, however we can only store one SourceURI at a time, which could cause issues
+					// so we'll generate a base64 encoded version of the sourceUri as the id
+					pendingResourceIdParts = []string{pendingResourceType, base64.StdEncoding.EncodeToString([]byte(resourceSourceUri))}
+				}
+			} else {
+				pendingResourceIdParts = strings.SplitN(pendingResourceIdOrUri, "/", 2)
+			}
 
 			pendingRawResource := models.RawResourceFhir{
 				SourceResourceType: pendingResourceIdParts[0],
 				SourceResourceID:   pendingResourceIdParts[1],
 				ResourceRaw:        resourceRawJson,
+				SourceUri:          resourceSourceUri,
 			}
 
 			//process resource will store the resource in the database, and potentially extract new resources we need to process.
 			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, summary)
 			if err != nil {
-				syncErrors[pendingResourceId] = err
+				syncErrors[pendingResourceIdOrUri] = err
 				continue
 			}
 		}
@@ -232,7 +250,7 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
 	bundle := fhir401.Bundle{}
-	err := c.GetRequest(relativeResourcePath, &bundle)
+	_, err := c.GetRequest(relativeResourcePath, &bundle)
 	if err != nil {
 		return bundle, err
 	}
@@ -252,7 +270,7 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 	for len(next) > 0 && next != self && next != prev {
 		c.Logger.Debugf("Paginated request => %s", next)
 		nextBundle := fhir401.Bundle{}
-		err := c.GetRequest(next, &nextBundle)
+		_, err := c.GetRequest(next, &nextBundle)
 		if err != nil {
 			return bundle, nil //ignore failures when paginating?
 		}
@@ -300,7 +318,7 @@ func (c *SourceClientFHIR401) GetPatientBundle(patientId string) (fhir401.Bundle
 func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, error) {
 
 	patient := fhir401.Patient{}
-	err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
+	_, err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
 	return patient, err
 }
 
@@ -355,6 +373,10 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 //- extract all external references from the resource payload (adding the the lookup table)
 func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup map[string]bool, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) error {
 	referencedResourcesLookup[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
+	if len(resource.SourceUri) > 0 {
+		//this is a reference to an external resource, we should mark that url as seen
+		referencedResourcesLookup[resource.SourceUri] = true
+	}
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
 	if err != nil {

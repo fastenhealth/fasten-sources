@@ -2,12 +2,14 @@ package base
 
 import (
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
+	"golang.org/x/exp/slices"
 	"golang.org/x/oauth2"
 	"io"
 	"log"
@@ -194,27 +196,32 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HttpClient
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) error {
+
+//GetRequest makes a GET request to the specified resource subpath or a fully qualified url
+//it will then decodes the response into the specified model (which should be a pointer to map[string]interface{})
+//
+//This function make the assumption that FHIR endpoint responses are always JSON
+func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) (string, error) {
 	//check if we need to refresh the access token
 	err := c.RefreshAccessToken()
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	resourceUrl, err := url.Parse(resourceSubpathOrNext)
 	if err != nil {
-		return err
+		return "", err
 	}
 	if !resourceUrl.IsAbs() {
 		resourceUrl, err = url.Parse(fmt.Sprintf("%s/%s", strings.TrimRight(c.SourceCredential.GetApiEndpointBaseUrl(), "/"), strings.TrimLeft(resourceSubpathOrNext, "/")))
 	}
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	req, err := http.NewRequest(http.MethodGet, resourceUrl.String(), nil)
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	for key, val := range c.Headers {
@@ -225,8 +232,8 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	c.LoggerDebugRequest(req)
 	resp, err := c.OauthClient.Do(req)
 	if err != nil {
-		c.LoggerDebugResponse(resp)
-		return err
+		c.LoggerDebugResponse(resp, true)
+		return "", err
 	}
 
 	defer resp.Body.Close()
@@ -237,19 +244,44 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		if len(bodyContent) > 300 {
 			bodyContent = bodyContent[:300]
 		}
-		c.LoggerDebugResponse(resp)
-		return fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
+		c.LoggerDebugResponse(resp, true)
+		return "", fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
-	c.LoggerDebugResponse(resp)
+	contentTypeHeader := resp.Header.Get("Content-Type")
+	if !slices.Contains([]string{"application/json", "application/fhir+json", "application/json+fhir", ""}, contentTypeHeader) {
+		c.LoggerDebugResponse(resp, false)
+		c.Logger.Warnf("response content type is not JSON: `%s`. This should only happen for Binary resource types", resp.Header.Get("Content-Type"))
 
-	err = ParseBundle(resp.Body, decodeModelPtr)
-	return err
+		b, err := io.ReadAll(resp.Body)
+		if err != nil {
+			return "", fmt.Errorf("an error occurred while reading non-JSON response body: %s", err)
+		}
+		binaryResourceJsonBytes, err := json.Marshal(map[string]interface{}{
+			"resourceType": "Binary",
+			"contentType":  contentTypeHeader,
+			"data":         base64.StdEncoding.EncodeToString(b),
+		})
+		if err != nil {
+			return "", fmt.Errorf("an error occurred while reading non-JSON response body: %s", err)
+		}
+
+		err = json.Unmarshal(binaryResourceJsonBytes, decodeModelPtr)
+		if err != nil {
+			return "", fmt.Errorf("an error occurred while creating Binary response body: %s", err)
+		}
+
+	} else {
+		//this is JSON, unmarshal the model, and store it.
+		err = UnmarshalJson(resp.Body, decodeModelPtr)
+	}
+
+	return resourceUrl.String(), err
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Helper Functions
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func ParseBundle(r io.Reader, decodeModelPtr interface{}) error {
+func UnmarshalJson(r io.Reader, decodeModelPtr interface{}) error {
 	decoder := json.NewDecoder(r)
 	//decoder.DisallowUnknownFields() //make sure we throw an error if unknown fields are present.
 	err := decoder.Decode(decodeModelPtr)
@@ -268,11 +300,11 @@ func (c *SourceClientBase) LoggerDebugRequest(req *http.Request) {
 	}
 }
 
-func (c *SourceClientBase) LoggerDebugResponse(resp *http.Response) {
+func (c *SourceClientBase) LoggerDebugResponse(resp *http.Response, dumpBody bool) {
 	if resp == nil {
 		return
 	}
-	if dumpResp, dumpRespErr := httputil.DumpResponse(resp, true); dumpRespErr == nil {
+	if dumpResp, dumpRespErr := httputil.DumpResponse(resp, dumpBody); dumpRespErr == nil {
 		c.Logger.Debug("Response: ", string(dumpResp))
 	}
 }

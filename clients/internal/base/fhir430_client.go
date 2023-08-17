@@ -34,14 +34,14 @@ func (c *SourceClientFHIR430) GetPatientEverything(patientId string) (*fhir430.B
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
 	bundle := fhir430.Bundle{}
-	err := c.GetRequest(fmt.Sprintf("Patient/%s/$everything", patientId), &bundle)
+	_, err := c.GetRequest(fmt.Sprintf("Patient/%s/$everything", patientId), &bundle)
 	return &bundle, err
 }
 
 func (c *SourceClientFHIR430) GetPatient(patientId string) (*fhir430.Patient, error) {
 
 	patient := fhir430.Patient{}
-	err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
+	_, err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
 	return &patient, err
 }
 

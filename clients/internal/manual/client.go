@@ -51,7 +51,7 @@ func (m ManualClient) SyncAllByResourceName(db models.DatabaseRepository, resour
 	panic("implement me")
 }
 
-func (m ManualClient) GetRequest(resourceSubpath string, decodeModelPtr interface{}) error {
+func (m ManualClient) GetRequest(resourceSubpath string, decodeModelPtr interface{}) (string, error) {
 	panic("implement me")
 }
 
@@ -80,7 +80,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	switch bundleType {
 	case pkg.FhirVersion430:
 		bundle430Data := fhir430.Bundle{}
-		err := base.ParseBundle(bundleFile, &bundle430Data)
+		err := base.UnmarshalJson(bundleFile, &bundle430Data)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
 		}
@@ -102,7 +102,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		//}
 	case pkg.FhirVersion401:
 		bundle401Data := fhir401.Bundle{}
-		err := base.ParseBundle(bundleFile, &bundle401Data)
+		err := base.UnmarshalJson(bundleFile, &bundle401Data)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
@@ -174,7 +174,7 @@ func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context,
 func parse401Bundle(bundleFile *os.File) ([]string, error) {
 	bundle401Data := fhir401.Bundle{}
 	//try parsing the bundle as a 401 bundle
-	if err := base.ParseBundle(bundleFile, &bundle401Data); err == nil {
+	if err := base.UnmarshalJson(bundleFile, &bundle401Data); err == nil {
 		patientIds := lo.FilterMap[fhir401.BundleEntry, string](bundle401Data.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (string, bool) {
 			parsedResource, err := fhir401utils.MapToResource(bundleEntry.Resource, false)
 			if err != nil {
@@ -199,7 +199,7 @@ func parse401Bundle(bundleFile *os.File) ([]string, error) {
 func parse430Bundle(bundleFile *os.File) ([]string, error) {
 	bundle430Data := fhir430.Bundle{}
 	//try parsing the bundle as a 430 bundle
-	if err := base.ParseBundle(bundleFile, &bundle430Data); err == nil {
+	if err := base.UnmarshalJson(bundleFile, &bundle430Data); err == nil {
 		patientIds := lo.FilterMap[fhir430.BundleEntry, string](bundle430Data.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (string, bool) {
 			parsedResource, err := fhir430utils.MapToResource(bundleEntry.Resource, false)
 			if err != nil {
