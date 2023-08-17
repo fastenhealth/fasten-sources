@@ -927,6 +927,39 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 
 		break
+	case fhir401.FamilyMemberHistory:
+		if sourceResourceTyped.Name != nil {
+			sortTitle = sourceResourceTyped.Name
+		} else if sourceResourceTyped.Relationship.Text != nil {
+			sortTitle = sourceResourceTyped.Relationship.Text
+		} else if sourceResourceTyped.Relationship.Coding != nil && len(sourceResourceTyped.Relationship.Coding) > 0 && sourceResourceTyped.Relationship.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.Relationship.Coding[0].Display
+		}
+
+		if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		if sourceResourceTyped.ReasonReference != nil {
+			for _, r := range sourceResourceTyped.ReasonReference {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		if sourceResourceTyped.Condition != nil && len(sourceResourceTyped.Condition) > 0 {
+			for _, r := range sourceResourceTyped.Condition {
+				if r.Note != nil && len(r.Note) > 0 {
+					for _, n := range r.Note {
+						if n.AuthorReference != nil {
+							referencedResources = append(referencedResources, *n.AuthorReference.Reference)
+						}
+					}
+				}
+			}
+		}
+
 	case fhir401.Goal:
 
 		if len(sourceResourceTyped.Note) > 0 {
@@ -1251,6 +1284,128 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 			}
 		}
 		break
+	case fhir401.MedicationDispense:
+		if sourceResourceTyped.MedicationCodeableConcept.Text != nil {
+			sortTitle = sourceResourceTyped.MedicationCodeableConcept.Text
+		} else if len(sourceResourceTyped.MedicationCodeableConcept.Coding) > 0 && sourceResourceTyped.MedicationCodeableConcept.Coding[0].Display != nil {
+			sortTitle = sourceResourceTyped.MedicationCodeableConcept.Coding[0].Display
+		} else if sourceResourceTyped.MedicationReference.Display != nil {
+			sortTitle = sourceResourceTyped.MedicationReference.Display
+		}
+
+		if sourceResourceTyped.WhenPrepared != nil {
+			sortDate = sourceResourceTyped.WhenPrepared
+		} else if sourceResourceTyped.WhenHandedOver != nil {
+			sortDate = sourceResourceTyped.WhenHandedOver
+		} else if sourceResourceTyped.Meta != nil && sourceResourceTyped.Meta.LastUpdated != nil {
+			sortDate = sourceResourceTyped.Meta.LastUpdated
+		}
+
+		// partOf can contain Procedure
+		if sourceResourceTyped.PartOf != nil && len(sourceResourceTyped.PartOf) > 0 {
+			for _, r := range sourceResourceTyped.PartOf {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// statusReasonReference can contain DetectedIssue
+		if sourceResourceTyped.StatusReasonReference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.StatusReasonReference.Reference)
+		}
+
+		// medicationReference can contain Medication
+		if sourceResourceTyped.MedicationReference.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.MedicationReference.Reference)
+		}
+
+		// context can contain Encounter
+		if sourceResourceTyped.Context != nil && sourceResourceTyped.Context.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Context.Reference)
+		}
+
+		// supportingInformation can contain Resource
+		if sourceResourceTyped.SupportingInformation != nil {
+			for _, r := range sourceResourceTyped.SupportingInformation {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// performer can contain Practitioner | PractitionerRole | Organization | Patient | Device | RelatedPerson)
+		if sourceResourceTyped.Performer != nil {
+			for _, r := range sourceResourceTyped.Performer {
+				if r.Actor.Reference != nil {
+					referencedResources = append(referencedResources, *r.Actor.Reference)
+				}
+			}
+		}
+		// location can contain Location
+		if sourceResourceTyped.Location != nil && sourceResourceTyped.Location.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Location.Reference)
+		}
+
+		// authorizingPrescription can contain MedicationRequest
+		if sourceResourceTyped.AuthorizingPrescription != nil {
+			for _, r := range sourceResourceTyped.AuthorizingPrescription {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// destination can contain Location
+		if sourceResourceTyped.Destination != nil && sourceResourceTyped.Destination.Reference != nil {
+			referencedResources = append(referencedResources, *sourceResourceTyped.Destination.Reference)
+		}
+
+		// receiver can contain Patient | Practitioner | PractitionerRole | RelatedPerson | Organization
+		if sourceResourceTyped.Receiver != nil {
+			for _, r := range sourceResourceTyped.Receiver {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// note can contain Annotation
+		if sourceResourceTyped.Note != nil {
+			for _, r := range sourceResourceTyped.Note {
+				if r.AuthorReference != nil {
+					referencedResources = append(referencedResources, *r.AuthorReference.Reference)
+				}
+			}
+		}
+
+		// responsibleParty can contain Practitioner | PractitionerRole | Organization
+		if sourceResourceTyped.Substitution != nil && sourceResourceTyped.Substitution.ResponsibleParty != nil {
+			for _, r := range sourceResourceTyped.Substitution.ResponsibleParty {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// detectedIssue can contain DetectedIssue
+		if sourceResourceTyped.DetectedIssue != nil {
+			for _, r := range sourceResourceTyped.DetectedIssue {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
+		// eventHistory can contain Provenance
+		if sourceResourceTyped.EventHistory != nil {
+			for _, r := range sourceResourceTyped.EventHistory {
+				if r.Reference != nil {
+					referencedResources = append(referencedResources, *r.Reference)
+				}
+			}
+		}
+
 	case fhir401.Observation:
 
 		if sourceResourceTyped.Code.Text != nil {
