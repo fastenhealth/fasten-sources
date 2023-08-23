@@ -28,6 +28,8 @@ func GetSourceArthritisAndRheumatologyConsultants(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Arthritis and Rheumatology Consultants"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndRheumatologyConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "arthritis-and-rheumatology-consultants.jpg"
 	sourceDef.PatientAccessUrl = "https://www.rheummds.com/our-covid-19-response/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceUtahGastroenterology(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Utah Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeUtahGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.utahgastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

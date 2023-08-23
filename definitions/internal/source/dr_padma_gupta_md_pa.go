@@ -29,6 +29,8 @@ func GetSourceDrPadmaGuptaMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dr. Padma Gupta, MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeDrPadmaGuptaMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/padma-gupta-90b725c4-8315-49f5-a3eb-10e54f2b743d-overview"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -30,6 +30,7 @@ func GetSourceWalmart(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "Walmart"
 	sourceDef.SourceType = pkg.SourceTypeWalmart
 	sourceDef.Category = []string{"183500000X", "251K00000X", "251S00000X", "333600000X", "3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235685918", "1336282821", "1366895104", "1437606167", "1477097954", "1497201420", "1598166001", "1669871869", "1679914261", "1982645495"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

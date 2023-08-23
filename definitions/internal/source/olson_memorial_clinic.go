@@ -29,6 +29,8 @@ func GetSourceOlsonMemorialClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Olson Memorial Clinic"
 	sourceDef.SourceType = pkg.SourceTypeOlsonMemorialClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.olsonmemorialclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

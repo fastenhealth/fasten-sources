@@ -28,6 +28,7 @@ func GetSourceAscendantOrthopedicAllianceLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Ascendant Orthopedic Alliance LLC"
 	sourceDef.SourceType = pkg.SourceTypeAscendantOrthopedicAllianceLlc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"South Bend Orthopaedics"}
 	sourceDef.BrandLogo = "ascendant-orthopedic-alliance-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sbortho.com/"

@@ -29,6 +29,8 @@ func GetSourceWestTennesseeHealthcare1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "West Tennessee Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeWestTennesseeHealthcare1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "west-tennessee-healthcare.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 

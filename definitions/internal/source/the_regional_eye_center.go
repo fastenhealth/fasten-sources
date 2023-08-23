@@ -28,6 +28,8 @@ func GetSourceTheRegionalEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "The Regional Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeTheRegionalEyeCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-regional-eye-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.regionaleye.com/?y_source=1_MTA5NTAyMzItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"

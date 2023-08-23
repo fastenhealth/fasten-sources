@@ -28,6 +28,8 @@ func GetSourceHoagPaulRosenbuilt(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "HOAG Paul Rosenbuilt"
 	sourceDef.SourceType = pkg.SourceTypeHoagPaulRosenbuilt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

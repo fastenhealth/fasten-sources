@@ -28,6 +28,8 @@ func GetSourceGreenvilleEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Greenville Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeGreenvilleEndoscopyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://gastroassociates.com/locations/greenville-halton-rd/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

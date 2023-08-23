@@ -28,6 +28,8 @@ func GetSourceAccessCenterOfIndiana(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Access Center Of Indiana"
 	sourceDef.SourceType = pkg.SourceTypeAccessCenterOfIndiana
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.achn.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

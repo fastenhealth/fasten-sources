@@ -29,6 +29,8 @@ func GetSourceStJamesParishHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "St. James Parish Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStJamesParishHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sjph.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceStPaulRamseyCountyPublicHealth(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "St Paul Ramsey County Public Health"
 	sourceDef.SourceType = pkg.SourceTypeStPaulRamseyCountyPublicHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/StPaulRamseyCountyPublicHealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

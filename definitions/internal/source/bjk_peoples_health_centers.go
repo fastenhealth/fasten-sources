@@ -28,6 +28,8 @@ func GetSourceBjkPeoplesHealthCenters(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "BJK People's Health Centers"
 	sourceDef.SourceType = pkg.SourceTypeBjkPeoplesHealthCenters
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://stlouisihn.org/provider/betty-jean-kerr-peoples-health-centers-north/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceByrdAndWyandotteEyeClinic(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Byrd And Wyandotte Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeByrdAndWyandotteEyeClinic
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083894349"}}
 	sourceDef.PatientAccessUrl = "https://www.byrdeyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

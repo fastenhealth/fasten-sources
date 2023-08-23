@@ -28,6 +28,8 @@ func GetSourceFoggRemingtonEyecare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Fogg Remington EyeCare"
 	sourceDef.SourceType = pkg.SourceTypeFoggRemingtonEyecare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "fogg-remington-eyecare.svg"
 	sourceDef.PatientAccessUrl = "https://www.foggremington.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceWillsMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Wills Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWillsMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

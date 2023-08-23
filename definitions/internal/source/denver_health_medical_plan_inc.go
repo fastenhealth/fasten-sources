@@ -29,6 +29,8 @@ func GetSourceDenverHealthMedicalPlanInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Denver Health Medical Plan, Inc"
 	sourceDef.SourceType = pkg.SourceTypeDenverHealthMedicalPlanInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.denverhealthmedicalplan.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceExcelCarePainManagement(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Excel Care Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeExcelCarePainManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceOchsnerHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Ochsner Health System"
 	sourceDef.SourceType = pkg.SourceTypeOchsnerHealthSystem
 	sourceDef.Category = []string{"284300000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770021859"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

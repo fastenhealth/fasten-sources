@@ -29,6 +29,8 @@ func GetSourceCompleteCardiologyPC(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Complete Cardiology, P.C."
 	sourceDef.SourceType = pkg.SourceTypeCompleteCardiologyPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ccatlanta.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

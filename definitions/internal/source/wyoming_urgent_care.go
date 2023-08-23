@@ -28,6 +28,8 @@ func GetSourceWyomingUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Wyoming Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeWyomingUrgentCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

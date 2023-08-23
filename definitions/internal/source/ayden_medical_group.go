@@ -28,6 +28,8 @@ func GetSourceAydenMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Ayden Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAydenMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

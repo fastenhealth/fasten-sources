@@ -28,6 +28,8 @@ func GetSourceAthleticoExcelNebraska(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Athletico Excel Nebraska"
 	sourceDef.SourceType = pkg.SourceTypeAthleticoExcelNebraska
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "athletico-excel-nebraska.svg"
 	sourceDef.PatientAccessUrl = "https://www.athletico.com/excel-partner/"
 	sourceDef.SecretKeyPrefix = "nextgen"

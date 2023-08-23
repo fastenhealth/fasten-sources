@@ -29,6 +29,8 @@ func GetSourceAdvancedCardioAndVeinCare(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Advanced Cardio and Vein Care"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedCardioAndVeinCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

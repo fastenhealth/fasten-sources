@@ -28,6 +28,8 @@ func GetSourceSonomaValleyCommHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Sonoma Valley Comm Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSonomaValleyCommHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Sonoma Valley Comm Health Center Address: 19270 Sonoma Highway 12 City: Sonoma Zip: 954765414 State: California Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

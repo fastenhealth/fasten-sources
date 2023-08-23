@@ -28,6 +28,8 @@ func GetSourceIslandObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Island OBGYN"
 	sourceDef.SourceType = pkg.SourceTypeIslandObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://squarecarehealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

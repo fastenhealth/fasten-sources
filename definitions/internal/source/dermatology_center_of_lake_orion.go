@@ -28,6 +28,8 @@ func GetSourceDermatologyCenterOfLakeOrion(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Dermatology Center Of Lake Orion"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyCenterOfLakeOrion
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/pages/category/dermatologist/Dermatology-Center-of-Lake-Orion-1723939634516048/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

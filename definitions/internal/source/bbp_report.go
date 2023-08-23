@@ -28,6 +28,8 @@ func GetSourceBbpReport(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "BBP Report"
 	sourceDef.SourceType = pkg.SourceTypeBbpReport
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

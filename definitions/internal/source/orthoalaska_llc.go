@@ -28,6 +28,8 @@ func GetSourceOrthoalaskaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "OrthoAlaska LLC"
 	sourceDef.SourceType = pkg.SourceTypeOrthoalaskaLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

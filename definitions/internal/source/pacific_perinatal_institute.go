@@ -28,6 +28,8 @@ func GetSourcePacificPerinatalInstitute(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Pacific Perinatal Institute"
 	sourceDef.SourceType = pkg.SourceTypePacificPerinatalInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

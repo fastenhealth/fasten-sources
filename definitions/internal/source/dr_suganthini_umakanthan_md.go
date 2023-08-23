@@ -29,6 +29,8 @@ func GetSourceDrSuganthiniUmakanthanMd(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Dr. Suganthini Umakanthan, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrSuganthiniUmakanthanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/newark-beth-israel-medical-center/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

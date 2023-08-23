@@ -29,6 +29,8 @@ func GetSourceFitzgibbonHospital(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Fitzgibbon Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFitzgibbonHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "fitzgibbon-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fitzgibbon.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

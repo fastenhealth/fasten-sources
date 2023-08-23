@@ -28,6 +28,8 @@ func GetSourceSurgicalSpecialistsOfCharlottePa(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Surgical Specialists Of Charlotte PA"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalSpecialistsOfCharlottePa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Surgical Specialists Of Charlotte PA Address: 7300 Carmel Executive Park Drive City: Charlotte Zip: 282261336 State: North Carolina Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

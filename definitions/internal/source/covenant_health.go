@@ -29,6 +29,8 @@ func GetSourceCovenantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Covenant Health"
 	sourceDef.SourceType = pkg.SourceTypeCovenantHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://covenanthealth.net/"
 	sourceDef.SecretKeyPrefix = "epic"
 

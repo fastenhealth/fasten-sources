@@ -29,6 +29,8 @@ func GetSourceRepublicCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Republic County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRepublicCountyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "republic-county-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/Republic-County-Hospital/100063812342943/"
 	sourceDef.SecretKeyPrefix = "cerner"

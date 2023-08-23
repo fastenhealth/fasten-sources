@@ -29,6 +29,8 @@ func GetSourceHirenPatelMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Hiren Patel, MD"
 	sourceDef.SourceType = pkg.SourceTypeHirenPatelMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.eastalabamahealth.org/find-a-doctor/hiren-k-patel-md-family-medicine"
 	sourceDef.SecretKeyPrefix = "cerner"
 

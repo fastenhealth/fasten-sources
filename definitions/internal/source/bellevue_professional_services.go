@@ -28,6 +28,8 @@ func GetSourceBellevueProfessionalServices(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Bellevue Professional Services"
 	sourceDef.SourceType = pkg.SourceTypeBellevueProfessionalServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

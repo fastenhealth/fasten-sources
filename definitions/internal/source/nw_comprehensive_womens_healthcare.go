@@ -28,6 +28,8 @@ func GetSourceNwComprehensiveWomensHealthcare(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "NW Comprehensive Womens Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeNwComprehensiveWomensHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

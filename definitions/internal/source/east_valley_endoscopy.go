@@ -29,6 +29,7 @@ func GetSourceEastValleyEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "East Valley Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeEastValleyEndoscopy
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164414447"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

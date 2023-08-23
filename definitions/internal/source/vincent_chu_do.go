@@ -28,6 +28,8 @@ func GetSourceVincentChuDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Vincent Chu DO"
 	sourceDef.SourceType = pkg.SourceTypeVincentChuDo
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/locations-nav/providers/oh/vincent-chu-do/1366481822.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

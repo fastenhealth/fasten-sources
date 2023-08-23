@@ -29,6 +29,8 @@ func GetSourceJoelLGellenDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Joel L. Gellen, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJoelLGellenDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

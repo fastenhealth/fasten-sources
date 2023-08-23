@@ -29,6 +29,8 @@ func GetSourceMethodistHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Methodist Health System"
 	sourceDef.SourceType = pkg.SourceTypeMethodistHealthSystem1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "methodist-health-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 

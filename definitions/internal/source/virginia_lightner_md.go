@@ -29,6 +29,8 @@ func GetSourceVirginiaLightnerMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Virginia Lightner, MD"
 	sourceDef.SourceType = pkg.SourceTypeVirginiaLightnerMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "virginia-lightner-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.dukehealth.org/find-doctors-physicians/virginia-lightner-md-phd"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourcePremierEndoscopyLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Premier Endoscopy LLC"
 	sourceDef.SourceType = pkg.SourceTypePremierEndoscopyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://premierendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

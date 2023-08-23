@@ -28,6 +28,8 @@ func GetSourceTristateCommunityHealthCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tristate Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeTristateCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/tristatechcmemphistn/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

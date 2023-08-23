@@ -29,6 +29,8 @@ func GetSourceParkAvenueAssocInInternalMedicine(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Park Avenue Assoc in Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeParkAvenueAssocInInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

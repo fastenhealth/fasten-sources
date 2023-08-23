@@ -29,6 +29,8 @@ func GetSourcePenndocFootAndAnkleCenterLlc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Penndoc Foot & Ankle Center LLC"
 	sourceDef.SourceType = pkg.SourceTypePenndocFootAndAnkleCenterLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://penndoc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

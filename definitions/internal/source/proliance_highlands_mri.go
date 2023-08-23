@@ -28,6 +28,8 @@ func GetSourceProlianceHighlandsMri(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Proliance Highlands MRI"
 	sourceDef.SourceType = pkg.SourceTypeProlianceHighlandsMri
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.posm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

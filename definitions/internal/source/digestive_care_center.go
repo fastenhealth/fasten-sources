@@ -28,6 +28,8 @@ func GetSourceDigestiveCareCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Digestive Care Center"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

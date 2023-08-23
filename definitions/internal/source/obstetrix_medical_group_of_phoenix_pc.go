@@ -28,6 +28,8 @@ func GetSourceObstetrixMedicalGroupOfPhoenixPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Obstetrix Medical Group Of Phoenix PC"
 	sourceDef.SourceType = pkg.SourceTypeObstetrixMedicalGroupOfPhoenixPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/obstetrix-medical-group-of-phoenix-pc-D8BD4BB9-C02B-4ECE-A20B-914E3C4D8C08"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

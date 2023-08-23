@@ -29,6 +29,8 @@ func GetSourceBryanNeffDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Bryan Neff, DPM"
 	sourceDef.SourceType = pkg.SourceTypeBryanNeffDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wellness.com/dir/1913908/podiatrist/pa/coudersport/bryan-neff-dpm"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceDeltaClinicsPlcDbaHeartAndVascular(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Delta Clinics PLC dba Heart And Vascular"
 	sourceDef.SourceType = pkg.SourceTypeDeltaClinicsPlcDbaHeartAndVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

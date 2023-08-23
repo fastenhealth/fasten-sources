@@ -29,6 +29,8 @@ func GetSourceAtlanticareHealthSystem(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "AtlantiCare Health System"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticareHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/33IXYHIZCIFHF8H0QS4KWNBN9S4E2V?assignment_id=3RXPCZQMQ38AWLTP3LZVGRIJZBQ1G7&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

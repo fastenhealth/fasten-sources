@@ -28,6 +28,8 @@ func GetSourceMuncie(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Muncie"
 	sourceDef.SourceType = pkg.SourceTypeMuncie
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/content/ahni/en.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

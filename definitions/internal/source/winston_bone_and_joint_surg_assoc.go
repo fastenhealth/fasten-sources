@@ -28,6 +28,8 @@ func GetSourceWinstonBoneAndJointSurgAssoc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Winston Bone And Joint Surg Assoc"
 	sourceDef.SourceType = pkg.SourceTypeWinstonBoneAndJointSurgAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wbjsurgical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

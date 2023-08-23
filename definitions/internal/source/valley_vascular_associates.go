@@ -29,6 +29,8 @@ func GetSourceValleyVascularAssociates(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Valley Vascular Associates"
 	sourceDef.SourceType = pkg.SourceTypeValleyVascularAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.vvahealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

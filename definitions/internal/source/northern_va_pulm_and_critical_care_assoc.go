@@ -28,6 +28,8 @@ func GetSourceNorthernVaPulmAndCriticalCareAssoc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Northern VA Pulm & Critical Care Assoc."
 	sourceDef.SourceType = pkg.SourceTypeNorthernVaPulmAndCriticalCareAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "northern-va-pulm-and-critical-care-assoc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nvpcca.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

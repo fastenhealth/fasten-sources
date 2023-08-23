@@ -28,6 +28,8 @@ func GetSourceWillametteFamilyMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Willamette Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWillametteFamilyMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "willamette-family-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/wfmchealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"

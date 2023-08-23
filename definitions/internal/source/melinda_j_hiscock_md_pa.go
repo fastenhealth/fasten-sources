@@ -29,6 +29,7 @@ func GetSourceMelindaJHiscockMdPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Melinda J Hiscock MD PA"
 	sourceDef.SourceType = pkg.SourceTypeMelindaJHiscockMdPa
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528126935"}}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

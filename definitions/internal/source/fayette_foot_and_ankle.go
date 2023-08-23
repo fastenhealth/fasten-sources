@@ -29,6 +29,8 @@ func GetSourceFayetteFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Fayette Foot And Ankle"
 	sourceDef.SourceType = pkg.SourceTypeFayetteFootAndAnkle
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceBrentStreetFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Brent Street Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeBrentStreetFamilyPractice
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063565604"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

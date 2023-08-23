@@ -30,6 +30,7 @@ func GetSourceMentalHealthResourcesInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Mental Health Resources, Inc."
 	sourceDef.SourceType = pkg.SourceTypeMentalHealthResourcesInc
 	sourceDef.Category = []string{"101YM0800X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124530407", "1811049653"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/mhrnewmexico/"
 	sourceDef.SecretKeyPrefix = "cerner"

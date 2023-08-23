@@ -29,6 +29,8 @@ func GetSourceKennrickJDennisDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Kennrick J. Dennis, DPM"
 	sourceDef.SourceType = pkg.SourceTypeKennrickJDennisDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kdfoot.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

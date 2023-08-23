@@ -29,6 +29,8 @@ func GetSourceCityWideMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "City Wide Medical"
 	sourceDef.SourceType = pkg.SourceTypeCityWideMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

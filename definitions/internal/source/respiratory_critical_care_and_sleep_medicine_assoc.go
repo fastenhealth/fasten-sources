@@ -28,6 +28,8 @@ func GetSourceRespiratoryCriticalCareAndSleepMedicineAssoc(env pkg.FastenLightho
 
 	sourceDef.Display = "Respiratory Critical Care and Sleep Medicine Assoc"
 	sourceDef.SourceType = pkg.SourceTypeRespiratoryCriticalCareAndSleepMedicineAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

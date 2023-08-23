@@ -28,6 +28,8 @@ func GetSourceSouthFloridaInterventionalInc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "South Florida Interventional Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthFloridaInterventionalInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "south-florida-interventional-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.southfloridasportsmedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

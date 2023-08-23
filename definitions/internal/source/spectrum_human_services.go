@@ -29,6 +29,8 @@ func GetSourceSpectrumHumanServices(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Spectrum Human Services"
 	sourceDef.SourceType = pkg.SourceTypeSpectrumHumanServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://shswny.org/locations/administration-office"
 	sourceDef.SecretKeyPrefix = "cerner"
 

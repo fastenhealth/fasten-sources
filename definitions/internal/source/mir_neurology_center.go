@@ -29,6 +29,8 @@ func GetSourceMirNeurologyCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mir Neurology Center"
 	sourceDef.SourceType = pkg.SourceTypeMirNeurologyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

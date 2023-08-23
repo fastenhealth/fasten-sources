@@ -29,6 +29,8 @@ func GetSourceAdvancedSkinAndMohsSurgeryCenterSc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Advanced Skin and Mohs Surgery Center, SC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedSkinAndMohsSurgeryCenterSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.asmsc.doctor"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -30,6 +30,7 @@ func GetSourceFootAndAnkleCenterOfSj(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Foot & Ankle Center of SJ"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkleCenterOfSj
 	sourceDef.Category = []string{"213E00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770116816", "1942834973"}}
 	sourceDef.BrandLogo = "foot-and-ankle-center-of-sj.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/foot-and-ankle-center-of-sj"

@@ -29,6 +29,8 @@ func GetSourceProhealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "ProHealth Care"
 	sourceDef.SourceType = pkg.SourceTypeProhealthCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

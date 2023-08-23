@@ -30,6 +30,7 @@ func GetSourceStCharlesHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "St. Charles Health System"
 	sourceDef.SourceType = pkg.SourceTypeStCharlesHealthSystem
 	sourceDef.Category = []string{"282NC0060X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548563216"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

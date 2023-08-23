@@ -29,6 +29,7 @@ func GetSourceRiversEdgePediatricsInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Rivers Edge Pediatrics Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiversEdgePediatricsInc
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639236102"}}
 	sourceDef.PatientAccessUrl = "https://www.copcp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

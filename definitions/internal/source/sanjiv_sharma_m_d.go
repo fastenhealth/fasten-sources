@@ -29,6 +29,8 @@ func GetSourceSanjivSharmaMD(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Sanjiv Sharma, M.D"
 	sourceDef.SourceType = pkg.SourceTypeSanjivSharmaMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.northwell.edu/find-care/find-a-doctor/pediatrics/dr-sanjiv-sharma-md-11310719"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -30,6 +30,7 @@ func GetSourcePrimaryCareSpecialists(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Primary Care Specialists"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCareSpecialists
 	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033389564", "1760551832"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

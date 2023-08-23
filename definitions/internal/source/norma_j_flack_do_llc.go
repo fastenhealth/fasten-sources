@@ -28,6 +28,8 @@ func GetSourceNormaJFlackDoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Norma J Flack DO LLC"
 	sourceDef.SourceType = pkg.SourceTypeNormaJFlackDoLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/norma-flack-1b73c153-25b1-4542-bab4-ecf3541e95c1-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

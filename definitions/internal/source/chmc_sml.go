@@ -28,6 +28,8 @@ func GetSourceChmcSml(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "CHMC SML"
 	sourceDef.SourceType = pkg.SourceTypeChmcSml
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

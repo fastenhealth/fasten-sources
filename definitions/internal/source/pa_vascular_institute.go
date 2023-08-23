@@ -28,6 +28,8 @@ func GetSourcePaVascularInstitute(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "PA Vascular Institute"
 	sourceDef.SourceType = pkg.SourceTypePaVascularInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/PAVascular/photos/?locale=zh_CN"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

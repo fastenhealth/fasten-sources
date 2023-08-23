@@ -28,6 +28,8 @@ func GetSourceMidtownHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Midtown Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMidtownHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "midtown-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://midtownhealthne.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

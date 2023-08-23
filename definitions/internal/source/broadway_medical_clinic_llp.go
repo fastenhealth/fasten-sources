@@ -29,6 +29,7 @@ func GetSourceBroadwayMedicalClinicLlp(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Broadway Medical Clinic LLP"
 	sourceDef.SourceType = pkg.SourceTypeBroadwayMedicalClinicLlp
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720082316"}}
 	sourceDef.BrandLogo = "broadway-medical-clinic-llp.svg"
 	sourceDef.PatientAccessUrl = "https://broadwaymedicalclinic.com/"

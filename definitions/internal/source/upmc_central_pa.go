@@ -29,6 +29,8 @@ func GetSourceUpmcCentralPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "UPMC Central PA"
 	sourceDef.SourceType = pkg.SourceTypeUpmcCentralPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.upmc.com/campaigns/southcentral-pa"
 	sourceDef.SecretKeyPrefix = "epic"
 

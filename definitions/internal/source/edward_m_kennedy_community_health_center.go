@@ -29,6 +29,7 @@ func GetSourceEdwardMKennedyCommunityHealthCenter(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Edward M Kennedy Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeEdwardMKennedyCommunityHealthCenter
 	sourceDef.Category = []string{"163W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487082228", "1962868109"}}
 	sourceDef.PatientAccessUrl = "https://www.kennedychc.org/hero"
 	sourceDef.SecretKeyPrefix = "nextgen"

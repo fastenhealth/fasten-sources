@@ -29,6 +29,8 @@ func GetSourceMedicalSurgicalSpecialtyGroup(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medical Surgical Specialty Group"
 	sourceDef.SourceType = pkg.SourceTypeMedicalSurgicalSpecialtyGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

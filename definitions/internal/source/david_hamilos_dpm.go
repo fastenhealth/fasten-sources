@@ -29,6 +29,8 @@ func GetSourceDavidHamilosDpm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "David Hamilos, DPM"
 	sourceDef.SourceType = pkg.SourceTypeDavidHamilosDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "david-hamilos-dpm.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-david-hamilos-xvdpr"
 	sourceDef.SecretKeyPrefix = "cerner"

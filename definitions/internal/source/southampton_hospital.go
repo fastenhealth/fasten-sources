@@ -29,6 +29,7 @@ func GetSourceSouthamptonHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Southampton Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSouthamptonHospital
 	sourceDef.Category = []string{"273Y00000X", "282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063551331", "1326325259", "1962770602"}}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/stonybrooksouthamptonhospital/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceMedisysHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "MediSys Health Network"
 	sourceDef.SourceType = pkg.SourceTypeMedisysHealthNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

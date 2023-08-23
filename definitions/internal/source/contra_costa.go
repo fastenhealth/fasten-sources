@@ -29,6 +29,8 @@ func GetSourceContraCosta(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Contra Costa"
 	sourceDef.SourceType = pkg.SourceTypeContraCosta
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

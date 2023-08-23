@@ -28,6 +28,8 @@ func GetSourceHealthyBrainNetwork(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Healthy Brain Network"
 	sourceDef.SourceType = pkg.SourceTypeHealthyBrainNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthybrainnetwork.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

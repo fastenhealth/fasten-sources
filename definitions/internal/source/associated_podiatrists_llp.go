@@ -30,6 +30,7 @@ func GetSourceAssociatedPodiatristsLlp(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Associated Podiatrists, LLP"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedPodiatristsLlp
 	sourceDef.Category = []string{"213E00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083713465", "1518185511"}}
 	sourceDef.PatientAccessUrl = "https://madisonpodiatrists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceUkiahValleyPrimaryCareMedical(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Ukiah Valley Primary Care Medical"
 	sourceDef.SourceType = pkg.SourceTypeUkiahValleyPrimaryCareMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/adventist-health-ukiah-valley-71948af8-f126-e311-a62b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

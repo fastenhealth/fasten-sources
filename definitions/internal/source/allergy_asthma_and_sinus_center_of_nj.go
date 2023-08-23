@@ -28,6 +28,8 @@ func GetSourceAllergyAsthmaAndSinusCenterOfNj(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Allergy Asthma And Sinus Center Of NJ"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAsthmaAndSinusCenterOfNj
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "allergy-asthma-and-sinus-center-of-nj.jpg"
 	sourceDef.PatientAccessUrl = "https://www.allergyasc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

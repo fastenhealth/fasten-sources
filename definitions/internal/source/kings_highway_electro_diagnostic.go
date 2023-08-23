@@ -29,6 +29,8 @@ func GetSourceKingsHighwayElectroDiagnostic(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Kings Highway Electro Diagnostic"
 	sourceDef.SourceType = pkg.SourceTypeKingsHighwayElectroDiagnostic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth(env pk
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Alaska Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAlaskaBehavioralHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://alaskabehavioralhealth.org/what-we-do/adult-services/the-steven-a-cohen-military-family-clinic-at-alaska-behavioral-health/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

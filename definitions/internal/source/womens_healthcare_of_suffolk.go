@@ -29,6 +29,8 @@ func GetSourceWomensHealthcareOfSuffolk(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Womens Healthcare of Suffolk"
 	sourceDef.SourceType = pkg.SourceTypeWomensHealthcareOfSuffolk
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.northwell.edu/doctors-offices/northwell-health-physician-partners-obstetrics-and-gynecology-at-islandia-2"
 	sourceDef.SecretKeyPrefix = "cerner"
 

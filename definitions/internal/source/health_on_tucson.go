@@ -28,6 +28,8 @@ func GetSourceHealthOnTucson(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Health On Tucson"
 	sourceDef.SourceType = pkg.SourceTypeHealthOnTucson
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthontucson.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

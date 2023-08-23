@@ -28,6 +28,8 @@ func GetSourceSurgiCtrGrtrMadison(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Surgi Ctr Grtr Madison"
 	sourceDef.SourceType = pkg.SourceTypeSurgiCtrGrtrMadison
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.newchoicehealth.com/f/1720017973/surgi-center-of-greater-madison"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

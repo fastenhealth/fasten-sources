@@ -28,6 +28,8 @@ func GetSourceDsmSleepSpecialistPlc1(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "DSM Sleep Specialist PLC"
 	sourceDef.SourceType = pkg.SourceTypeDsmSleepSpecialistPlc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

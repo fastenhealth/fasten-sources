@@ -29,6 +29,7 @@ func GetSourceKishorVachhaniMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Kishor Vachhani MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeKishorVachhaniMdInc
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760074124"}}
 	sourceDef.BrandLogo = "kishor-vachhani-md-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/kishor-vachhani/"

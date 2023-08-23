@@ -29,6 +29,8 @@ func GetSourceDewittFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dewitt Foot & Ankle"
 	sourceDef.SourceType = pkg.SourceTypeDewittFootAndAnkle
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/in/matthew-dewitt-dpm-facfas-4310948"
 	sourceDef.SecretKeyPrefix = "cerner"
 

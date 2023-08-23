@@ -29,6 +29,8 @@ func GetSourceOldNaplesConciergeMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Old Naples Concierge Medicine"
 	sourceDef.SourceType = pkg.SourceTypeOldNaplesConciergeMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://diamondcovemd.com/?gclid=Cj0KCQiAx6ugBhCcARIsAGNmMbi2w2K3y-SiUPt2uJPZ9O8VgMwZ_aLuxdMSTPZ8Nln8NFu4aPkvbNYaAqjkEALw_wcB"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceNovoHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "NOVO Health"
 	sourceDef.SourceType = pkg.SourceTypeNovoHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

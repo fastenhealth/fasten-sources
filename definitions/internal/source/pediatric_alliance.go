@@ -28,6 +28,8 @@ func GetSourcePediatricAlliance(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Pediatric Alliance"
 	sourceDef.SourceType = pkg.SourceTypePediatricAlliance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatricalliancetexas.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

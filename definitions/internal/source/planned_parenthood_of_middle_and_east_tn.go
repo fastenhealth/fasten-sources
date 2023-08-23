@@ -28,6 +28,8 @@ func GetSourcePlannedParenthoodOfMiddleAndEastTn(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Planned Parenthood of Middle and East TN"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfMiddleAndEastTn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.guidestar.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceThomasJMelhamMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Thomas J. Melham, MD"
 	sourceDef.SourceType = pkg.SourceTypeThomasJMelhamMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "thomas-j-melham-md.svg"
 	sourceDef.PatientAccessUrl = "https://iuhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

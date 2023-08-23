@@ -29,6 +29,8 @@ func GetSourceParkviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Parkview Health"
 	sourceDef.SourceType = pkg.SourceTypeParkviewHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

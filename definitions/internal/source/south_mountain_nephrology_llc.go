@@ -30,6 +30,7 @@ func GetSourceSouthMountainNephrologyLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "South Mountain Nephrology, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthMountainNephrologyLlc
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851403927"}}
 	sourceDef.BrandLogo = "south-mountain-nephrology-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/South-Mountain-Nephrology-LLC-526431570765323/"

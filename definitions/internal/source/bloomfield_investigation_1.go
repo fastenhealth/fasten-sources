@@ -29,6 +29,8 @@ func GetSourceBloomfieldInvestigation1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Bloomfield Investigation"
 	sourceDef.SourceType = pkg.SourceTypeBloomfieldInvestigation1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceTheRadiologyGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "The Radiology Group"
 	sourceDef.SourceType = pkg.SourceTypeTheRadiologyGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.theradiologygroup.org/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceVcuHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "VCU Health"
 	sourceDef.SourceType = pkg.SourceTypeVcuHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

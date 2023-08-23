@@ -29,6 +29,8 @@ func GetSourceChildrensDiabetesAndEndocrinology(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Children's Diabetes and Endocrinology"
 	sourceDef.SourceType = pkg.SourceTypeChildrensDiabetesAndEndocrinology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://childrensendocrinologylouisville.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

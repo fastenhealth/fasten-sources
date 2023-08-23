@@ -29,6 +29,8 @@ func GetSourceAssociatesInOtolaryngology(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Associates in Otolaryngology"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInOtolaryngology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.aonj.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

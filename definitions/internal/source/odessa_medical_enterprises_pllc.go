@@ -29,6 +29,8 @@ func GetSourceOdessaMedicalEnterprisesPllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Odessa Medical Enterprises, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOdessaMedicalEnterprisesPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "odessa-medical-enterprises-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.odessamd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

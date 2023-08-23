@@ -28,6 +28,8 @@ func GetSourceLeeIKleinMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Lee I Klein MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeLeeIKleinMdLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/lee-klein-229120"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

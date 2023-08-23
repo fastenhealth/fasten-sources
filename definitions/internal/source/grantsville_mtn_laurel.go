@@ -28,6 +28,8 @@ func GetSourceGrantsvilleMtnLaurel(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Grantsville - Mtn Laurel"
 	sourceDef.SourceType = pkg.SourceTypeGrantsvilleMtnLaurel
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mtnlaurel.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

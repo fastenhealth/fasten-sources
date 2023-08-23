@@ -30,6 +30,7 @@ func GetSourceBlackRiverMemorialHospitalInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Black River Memorial Hospital Inc."
 	sourceDef.SourceType = pkg.SourceTypeBlackRiverMemorialHospitalInc
 	sourceDef.Category = []string{"275N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003914011"}}
 	sourceDef.PatientAccessUrl = "https://www.brmh.net/"
 	sourceDef.SecretKeyPrefix = "cerner"

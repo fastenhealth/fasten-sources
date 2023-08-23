@@ -28,6 +28,8 @@ func GetSourceArthritisManagementLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Arthritis Management LLC."
 	sourceDef.SourceType = pkg.SourceTypeArthritisManagementLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "arthritis-management-llc.webp"
 	sourceDef.PatientAccessUrl = "https://milehighptnj.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

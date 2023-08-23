@@ -29,6 +29,8 @@ func GetSourceViasatInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Viasat, Inc."
 	sourceDef.SourceType = pkg.SourceTypeViasatInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Viasat/events/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

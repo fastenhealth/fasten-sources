@@ -29,6 +29,8 @@ func GetSourceGroupHealthCooperativeSouthCentralWisconsin(env pkg.FastenLighthou
 
 	sourceDef.Display = "Group Health Cooperative - South Central Wisconsin"
 	sourceDef.SourceType = pkg.SourceTypeGroupHealthCooperativeSouthCentralWisconsin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

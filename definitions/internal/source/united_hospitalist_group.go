@@ -29,6 +29,8 @@ func GetSourceUnitedHospitalistGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "United Hospitalist Group"
 	sourceDef.SourceType = pkg.SourceTypeUnitedHospitalistGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/california/rancho-cucamonga/united-hospitalist-inc-5092814038.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceCpsPsychologyServicesCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "CPS Psychology Services Center"
 	sourceDef.SourceType = pkg.SourceTypeCpsPsychologyServicesCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "cps-psychology-services-center.jpg"
 	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

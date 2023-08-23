@@ -28,6 +28,8 @@ func GetSourcePhoebeCorpAndCommunityBasedServices(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Phoebe Corp & Community Based Services"
 	sourceDef.SourceType = pkg.SourceTypePhoebeCorpAndCommunityBasedServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.phoebehealth.com/locations/location-detail/phoebe-corporate-health"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

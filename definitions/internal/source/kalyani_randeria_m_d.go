@@ -28,6 +28,8 @@ func GetSourceKalyaniRanderiaMD(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Kalyani Randeria M D"
 	sourceDef.SourceType = pkg.SourceTypeKalyaniRanderiaMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/randeria-kalyani-md-montebello"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceWestmorelandDermatology(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Westmoreland Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeWestmorelandDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "westmoreland-dermatology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/westmorelandderm/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceHarrisAndBatraCardiology(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Harris And Batra Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeHarrisAndBatraCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "harris-and-batra-cardiology.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/harrisbatra-cardiology-9ca7683a-d6cc-4c92-a956-7aec2dbd24e6"
 	sourceDef.SecretKeyPrefix = "nextgen"

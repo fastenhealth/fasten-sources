@@ -28,6 +28,8 @@ func GetSourceCsRayhrerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "CS Rayhrer MD"
 	sourceDef.SourceType = pkg.SourceTypeCsRayhrerMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "cs-rayhrer-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/constanze-rayhrer-md"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceAllervieHealthAlabama(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "AllerVie Health Alabama"
 	sourceDef.SourceType = pkg.SourceTypeAllervieHealthAlabama
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "allervie-health-alabama.svg"
 	sourceDef.PatientAccessUrl = "https://www.allervie.com/locations/homewood/"
 	sourceDef.SecretKeyPrefix = "nextgen"

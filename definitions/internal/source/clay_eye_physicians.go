@@ -28,6 +28,8 @@ func GetSourceClayEyePhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Clay Eye Physicians"
 	sourceDef.SourceType = pkg.SourceTypeClayEyePhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

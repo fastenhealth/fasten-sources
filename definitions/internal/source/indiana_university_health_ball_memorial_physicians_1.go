@@ -29,6 +29,8 @@ func GetSourceIndianaUniversityHealthBallMemorialPhysicians1(env pkg.FastenLight
 
 	sourceDef.Display = "Indiana University Health Ball Memorial Physicians"
 	sourceDef.SourceType = pkg.SourceTypeIndianaUniversityHealthBallMemorialPhysicians1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "indiana-university-health-ball-memorial-physicians.svg"
 	sourceDef.PatientAccessUrl = "https://iuhealth.org/find-medical-services/primary-care?campaignid=15656460902&adgroupid=132022719032&keyword=physicians&device=c&gclid=EAIaIQobChMIh4viz9nQ_QIVDYTICh0i7QUyEAAYASAAEgIJiPD_BwE"
 	sourceDef.SecretKeyPrefix = "cerner"

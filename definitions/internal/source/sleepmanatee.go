@@ -28,6 +28,8 @@ func GetSourceSleepmanatee(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "SleepManatee"
 	sourceDef.SourceType = pkg.SourceTypeSleepmanatee
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "sleepmanatee.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sleepmanatee.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

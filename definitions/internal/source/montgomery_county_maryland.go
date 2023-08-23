@@ -28,6 +28,8 @@ func GetSourceMontgomeryCountyMaryland(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Montgomery County Maryland"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryCountyMaryland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.montgomerycountymd.gov/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

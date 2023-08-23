@@ -29,6 +29,8 @@ func GetSourceRadyChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Rady Children's"
 	sourceDef.SourceType = pkg.SourceTypeRadyChildrens
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

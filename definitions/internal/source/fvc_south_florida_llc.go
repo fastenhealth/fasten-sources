@@ -28,6 +28,8 @@ func GetSourceFvcSouthFloridaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "FVC South Florida LLC"
 	sourceDef.SourceType = pkg.SourceTypeFvcSouthFloridaLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.freseniuskidneycare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

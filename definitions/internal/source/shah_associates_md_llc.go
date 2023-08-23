@@ -29,6 +29,7 @@ func GetSourceShahAssociatesMdLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Shah Associates MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeShahAssociatesMdLlc
 	sourceDef.Category = []string{"207N00000X", "207Q00000X", "207R00000X", "207RA0000X", "207RC0000X", "207RE0101X", "207RG0100X", "207V00000X", "208000000X", "208600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013115666", "1023215951", "1194923011", "1215114749", "1396943247", "1407054349", "1629275557", "1902004773", "1912002452", "1922206846"}}
 	sourceDef.PatientAccessUrl = "https://www.medstarhealth.org/locations/physical-therapy-hollywood"
 	sourceDef.SecretKeyPrefix = "nextgen"

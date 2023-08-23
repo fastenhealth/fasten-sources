@@ -28,6 +28,8 @@ func GetSourceUtahNeurologicalClinicInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Utah Neurological Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeUtahNeurologicalClinicInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://utahneurologicalclinic.com/contact/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

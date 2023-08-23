@@ -29,6 +29,8 @@ func GetSourceTheMedicalPractice(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeTheMedicalPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

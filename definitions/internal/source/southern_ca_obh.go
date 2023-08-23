@@ -28,6 +28,8 @@ func GetSourceSouthernCaObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Southern CA OBH"
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fountainvalleyhospital.com/home"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

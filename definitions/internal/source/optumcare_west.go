@@ -29,6 +29,8 @@ func GetSourceOptumcareWest(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "OptumCare West"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareWest
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

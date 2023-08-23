@@ -29,6 +29,8 @@ func GetSourceJeffersonPsychiatricAssociatesLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Jefferson Psychiatric Associates, LLC"
 	sourceDef.SourceType = pkg.SourceTypeJeffersonPsychiatricAssociatesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "jefferson-psychiatric-associates-llc.svg"
 	sourceDef.PatientAccessUrl = "https://www.jeffersonhealth.org/content/dam/health2021/jefferson-logo.svg"
 	sourceDef.SecretKeyPrefix = "cerner"

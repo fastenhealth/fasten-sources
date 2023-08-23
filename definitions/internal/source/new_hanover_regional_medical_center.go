@@ -30,6 +30,7 @@ func GetSourceNewHanoverRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "New Hanover Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNewHanoverRegionalMedicalCenter
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207V00000X", "208600000X", "208G00000X", "282N00000X", "291U00000X", "363L00000X", "367500000X", "367A00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013355247", "1073917647", "1336512615", "1548216880", "1679977235", "1700280377", "1740684307", "1750407656", "1912301573", "1952705519"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

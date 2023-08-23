@@ -29,6 +29,8 @@ func GetSourceSouthTexasChildrensHealthCenter1(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "South Texas Children's Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasChildrensHealthCenter1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "south-texas-childrens-health-center.png"
 	sourceDef.PatientAccessUrl = "http://www.southtexaschildrenshealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceEverettJMasonIiiDpm(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Everett J. Mason, III, DPM"
 	sourceDef.SourceType = pkg.SourceTypeEverettJMasonIiiDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctors.piedmont.org/provider/Everett+J+Mason%2C+III/389141"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceBiltmoreFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Biltmore Family Medicine, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeBiltmoreFamilyMedicinePllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

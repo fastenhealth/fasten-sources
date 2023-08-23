@@ -29,6 +29,8 @@ func GetSourceBarnegatMedicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Barnegat Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeBarnegatMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

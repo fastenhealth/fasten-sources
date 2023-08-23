@@ -29,6 +29,8 @@ func GetSourceCapitalRegionHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Capital Region Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeCapitalRegionHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners(env pkg.
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic at Aspire Health Partners"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtAspireHealthPartners
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://aspirehealthpartners.com/cohen-clinic-tampa-fl/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

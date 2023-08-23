@@ -30,6 +30,7 @@ func GetSourceNeuroNetworkPartners(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Neuro Network Partners"
 	sourceDef.SourceType = pkg.SourceTypeNeuroNetworkPartners
 	sourceDef.Category = []string{"2084N0402X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013123231"}}
 	sourceDef.BrandLogo = "neuro-network-partners.jpg"
 	sourceDef.PatientAccessUrl = "http://www.nnpmd.com/"

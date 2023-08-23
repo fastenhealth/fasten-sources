@@ -19,6 +19,7 @@ type sourceClientEclinicalworks struct {
 }
 
 /*
+https://connect4.healow.com/apps/jsp/dev/signIn.jsp
 https://fhir.eclinicalworks.com/ecwopendev/
 */
 // https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD/.well-known/smart-configuration

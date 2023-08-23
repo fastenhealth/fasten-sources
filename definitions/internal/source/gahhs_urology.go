@@ -28,6 +28,8 @@ func GetSourceGahhsUrology(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "GAHHS Urology"
 	sourceDef.SourceType = pkg.SourceTypeGahhsUrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gahhs-urology.jpg"
 	sourceDef.PatientAccessUrl = "http://www.gibsonhospital.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

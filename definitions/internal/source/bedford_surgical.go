@@ -28,6 +28,8 @@ func GetSourceBedfordSurgical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Bedford Surgical"
 	sourceDef.SourceType = pkg.SourceTypeBedfordSurgical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

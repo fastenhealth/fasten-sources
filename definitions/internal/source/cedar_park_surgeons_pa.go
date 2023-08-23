@@ -28,6 +28,8 @@ func GetSourceCedarParkSurgeonsPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Cedar Park Surgeons, PA"
 	sourceDef.SourceType = pkg.SourceTypeCedarParkSurgeonsPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cpsurgeons.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

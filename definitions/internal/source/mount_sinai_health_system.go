@@ -29,6 +29,8 @@ func GetSourceMountSinaiHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Mount Sinai Health System"
 	sourceDef.SourceType = pkg.SourceTypeMountSinaiHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

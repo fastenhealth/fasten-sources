@@ -28,6 +28,8 @@ func GetSourceGronholzDoMJill(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Gronholz DO M Jill"
 	sourceDef.SourceType = pkg.SourceTypeGronholzDoMJill
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vitals.com/doctors/Dr_Jill_Gronholz-Dero.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

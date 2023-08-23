@@ -28,6 +28,8 @@ func GetSourceSleepLabDepartment(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Sleep Lab Department"
 	sourceDef.SourceType = pkg.SourceTypeSleepLabDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.med.unc.edu"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

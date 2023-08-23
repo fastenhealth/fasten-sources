@@ -28,6 +28,8 @@ func GetSourceVrfLaserVisionCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "VRF Laser Vision Center"
 	sourceDef.SourceType = pkg.SourceTypeVrfLaserVisionCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.eyespecialtygroup.com/locations/memphis-ridge-lake-blvd/?y_source=1_MTMxMDkwMDctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

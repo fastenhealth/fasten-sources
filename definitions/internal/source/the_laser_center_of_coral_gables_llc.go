@@ -28,6 +28,8 @@ func GetSourceTheLaserCenterOfCoralGablesLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "The Laser Center Of Coral Gables LLC"
 	sourceDef.SourceType = pkg.SourceTypeTheLaserCenterOfCoralGablesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.tlccoralgables.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

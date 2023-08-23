@@ -29,6 +29,8 @@ func GetSourceTheChildrensHospitalCorporation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "The Children's Hospital Corporation"
 	sourceDef.SourceType = pkg.SourceTypeTheChildrensHospitalCorporation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: The Children's Hospital Corporation Address: 300 Longwood Ave City: Boston Zip: 02115-5724 State: Massachusetts Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 

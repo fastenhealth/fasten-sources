@@ -28,6 +28,8 @@ func GetSourceLaCasa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "La Casa"
 	sourceDef.SourceType = pkg.SourceTypeLaCasa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

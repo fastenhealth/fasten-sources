@@ -28,6 +28,8 @@ func GetSourceMidwestSpineAndBrainInstituteLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Midwest Spine & Brain Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeMidwestSpineAndBrainInstituteLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://midwestspine.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

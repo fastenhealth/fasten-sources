@@ -29,6 +29,8 @@ func GetSourceJeffreyLubellDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jeffrey Lubell, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJeffreyLubellDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.uhhospitals.org/doctors/Lubell-Jeffrey-1063401727"
 	sourceDef.SecretKeyPrefix = "cerner"
 

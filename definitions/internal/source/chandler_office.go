@@ -28,6 +28,8 @@ func GetSourceChandlerOffice(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Chandler Office"
 	sourceDef.SourceType = pkg.SourceTypeChandlerOffice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

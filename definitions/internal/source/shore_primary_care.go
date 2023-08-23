@@ -28,6 +28,8 @@ func GetSourceShorePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Shore Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeShorePrimaryCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

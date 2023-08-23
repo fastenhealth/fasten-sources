@@ -29,6 +29,7 @@ func GetSourceDumrongTangchitnobMdInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Dumrong Tangchitnob Md Inc"
 	sourceDef.SourceType = pkg.SourceTypeDumrongTangchitnobMdInc
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295834695"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

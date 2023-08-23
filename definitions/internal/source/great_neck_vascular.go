@@ -28,6 +28,8 @@ func GetSourceGreatNeckVascular(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Great Neck Vascular"
 	sourceDef.SourceType = pkg.SourceTypeGreatNeckVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://aaavascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

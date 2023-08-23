@@ -29,6 +29,8 @@ func GetSourcePracticeAdvantageInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Practice Advantage, Inc"
 	sourceDef.SourceType = pkg.SourceTypePracticeAdvantageInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://practiceadvantage.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

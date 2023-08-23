@@ -28,6 +28,8 @@ func GetSourceAdvancedUrologicSurgeons(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Advanced Urologic Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedUrologicSurgeons
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

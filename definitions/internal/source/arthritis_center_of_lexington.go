@@ -30,6 +30,7 @@ func GetSourceArthritisCenterOfLexington(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Arthritis Center Of Lexington"
 	sourceDef.SourceType = pkg.SourceTypeArthritisCenterOfLexington
 	sourceDef.Category = []string{"207RR0500X", "363L00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043243942"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

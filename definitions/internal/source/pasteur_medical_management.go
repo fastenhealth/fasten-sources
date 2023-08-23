@@ -28,6 +28,8 @@ func GetSourcePasteurMedicalManagement(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Pasteur Medical Management"
 	sourceDef.SourceType = pkg.SourceTypePasteurMedicalManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.visualvisitor.com/companies/2664565/pasteur-medical-center-inc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

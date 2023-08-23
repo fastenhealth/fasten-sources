@@ -28,6 +28,8 @@ func GetSourceOrthopedicAndSportsMedicineCtr(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Orthopedic And Sports Medicine Ctr"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicAndSportsMedicineCtr
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.osmc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

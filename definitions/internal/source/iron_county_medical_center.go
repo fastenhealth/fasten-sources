@@ -29,6 +29,8 @@ func GetSourceIronCountyMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Iron County Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeIronCountyMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "iron-county-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://icmedcenter.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

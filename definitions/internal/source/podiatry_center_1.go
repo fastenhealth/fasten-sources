@@ -29,6 +29,8 @@ func GetSourcePodiatryCenter1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Podiatry Center"
 	sourceDef.SourceType = pkg.SourceTypePodiatryCenter1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "podiatry-center.png"
 	sourceDef.PatientAccessUrl = "https://podiatrycenternj.com"
 	sourceDef.SecretKeyPrefix = "cerner"

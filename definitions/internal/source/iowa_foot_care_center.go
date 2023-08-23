@@ -29,6 +29,8 @@ func GetSourceIowaFootCareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Iowa Foot Care Center"
 	sourceDef.SourceType = pkg.SourceTypeIowaFootCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "iowa-foot-care-center.jpg"
 	sourceDef.PatientAccessUrl = "http://iowafootcare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

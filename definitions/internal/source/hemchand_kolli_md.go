@@ -28,6 +28,8 @@ func GetSourceHemchandKolliMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Hemchand Kolli MD"
 	sourceDef.SourceType = pkg.SourceTypeHemchandKolliMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://drkolli.health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

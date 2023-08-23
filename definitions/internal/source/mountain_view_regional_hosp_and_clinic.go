@@ -28,6 +28,8 @@ func GetSourceMountainViewRegionalHospAndClinic(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Mountain View Regional Hosp and Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMountainViewRegionalHospAndClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceVenkatesanDVidiMdPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Venkatesan D VIDI MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeVenkatesanDVidiMdPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mid-citiescardiaccarecenter.com/venkatesan.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

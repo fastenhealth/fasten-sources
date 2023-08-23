@@ -28,6 +28,8 @@ func GetSourceProliancePacificRimOrthopaedicSurg(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Proliance Pacific Rim Orthopaedic Surg"
 	sourceDef.SourceType = pkg.SourceTypeProliancePacificRimOrthopaedicSurg
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "proliance-pacific-rim-orthopaedic-surg.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pacificrimorthopedic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

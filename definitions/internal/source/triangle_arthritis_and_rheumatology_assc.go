@@ -28,6 +28,8 @@ func GetSourceTriangleArthritisAndRheumatologyAssc(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Triangle Arthritis And Rheumatology Assc"
 	sourceDef.SourceType = pkg.SourceTypeTriangleArthritisAndRheumatologyAssc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.trianglearthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

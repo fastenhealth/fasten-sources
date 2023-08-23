@@ -29,6 +29,8 @@ func GetSourceSicherFootCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Sicher Foot Center"
 	sourceDef.SourceType = pkg.SourceTypeSicherFootCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sicherfootcenter.com/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

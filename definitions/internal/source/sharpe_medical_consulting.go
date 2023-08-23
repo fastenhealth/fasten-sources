@@ -29,6 +29,8 @@ func GetSourceSharpeMedicalConsulting(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Sharpe Medical Consulting"
 	sourceDef.SourceType = pkg.SourceTypeSharpeMedicalConsulting
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sharpemed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

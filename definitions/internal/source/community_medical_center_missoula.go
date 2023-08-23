@@ -29,6 +29,8 @@ func GetSourceCommunityMedicalCenterMissoula(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Community Medical Center-Missoula"
 	sourceDef.SourceType = pkg.SourceTypeCommunityMedicalCenterMissoula
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://communitymed.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

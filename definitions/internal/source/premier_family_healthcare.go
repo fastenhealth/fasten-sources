@@ -28,6 +28,8 @@ func GetSourcePremierFamilyHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Premier Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePremierFamilyHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "premier-family-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/premierfamilycare/"
 	sourceDef.SecretKeyPrefix = "nextgen"

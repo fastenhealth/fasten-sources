@@ -30,6 +30,7 @@ func GetSourceNorthsideCenterForChildDevelopment(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Northside Center for Child Development"
 	sourceDef.SourceType = pkg.SourceTypeNorthsideCenterForChildDevelopment
 	sourceDef.Category = []string{"251B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669842845"}}
 	sourceDef.PatientAccessUrl = "https://www.northsidecenter.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

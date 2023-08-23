@@ -29,6 +29,8 @@ func GetSourceLaCareHealthPlan(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "LA Care Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeLaCareHealthPlan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.lacare.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

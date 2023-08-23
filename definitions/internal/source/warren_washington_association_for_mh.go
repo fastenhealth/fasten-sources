@@ -29,6 +29,8 @@ func GetSourceWarrenWashingtonAssociationForMh(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Warren Washington Association for MH"
 	sourceDef.SourceType = pkg.SourceTypeWarrenWashingtonAssociationForMh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "warren-washington-association-for-mh.jpg"
 	sourceDef.PatientAccessUrl = "https://www.wwamh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

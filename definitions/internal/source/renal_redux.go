@@ -28,6 +28,8 @@ func GetSourceRenalRedux(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Renal Redux"
 	sourceDef.SourceType = pkg.SourceTypeRenalRedux
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

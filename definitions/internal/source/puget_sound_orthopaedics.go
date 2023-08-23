@@ -28,6 +28,8 @@ func GetSourcePugetSoundOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Puget Sound Orthopaedics"
 	sourceDef.SourceType = pkg.SourceTypePugetSoundOrthopaedics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pugetsoundorthopaedics.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

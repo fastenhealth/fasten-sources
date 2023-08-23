@@ -28,6 +28,8 @@ func GetSourceUsaPainClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "USA Pain Clinic"
 	sourceDef.SourceType = pkg.SourceTypeUsaPainClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

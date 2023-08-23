@@ -28,6 +28,8 @@ func GetSourceCherokeeImagingCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cherokee Imaging Center"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeImagingCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

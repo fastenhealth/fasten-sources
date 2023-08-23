@@ -28,6 +28,8 @@ func GetSourceVacOfTrenton(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "VAC Of Trenton"
 	sourceDef.SourceType = pkg.SourceTypeVacOfTrenton
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

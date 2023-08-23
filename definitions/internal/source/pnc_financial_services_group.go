@@ -29,6 +29,8 @@ func GetSourcePncFinancialServicesGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "PNC Financial Services Group"
 	sourceDef.SourceType = pkg.SourceTypePncFinancialServicesGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/pncbank/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

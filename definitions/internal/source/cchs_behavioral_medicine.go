@@ -28,6 +28,8 @@ func GetSourceCchsBehavioralMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "CCHS Behavioral Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCchsBehavioralMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

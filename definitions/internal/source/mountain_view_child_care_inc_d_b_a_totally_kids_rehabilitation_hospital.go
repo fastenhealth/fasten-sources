@@ -29,6 +29,8 @@ func GetSourceMountainViewChildCareIncDBATotallyKidsRehabilitationHospital(env p
 
 	sourceDef.Display = "Mountain View Child Care, Inc. d/b/a Totally Kids Rehabilitation Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMountainViewChildCareIncDBATotallyKidsRehabilitationHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://totallykids.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

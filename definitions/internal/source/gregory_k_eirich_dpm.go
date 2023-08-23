@@ -29,6 +29,8 @@ func GetSourceGregoryKEirichDpm(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gregory K. Eirich, DPM"
 	sourceDef.SourceType = pkg.SourceTypeGregoryKEirichDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gregory-k-eirich-dpm.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-gregory-eirich-2cwmk"
 	sourceDef.SecretKeyPrefix = "cerner"

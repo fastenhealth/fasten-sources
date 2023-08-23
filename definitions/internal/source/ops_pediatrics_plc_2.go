@@ -29,6 +29,7 @@ func GetSourceOpsPediatricsPlc2(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "OPS PEDIATRICS PLC"
 	sourceDef.SourceType = pkg.SourceTypeOpsPediatricsPlc2
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124123203"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

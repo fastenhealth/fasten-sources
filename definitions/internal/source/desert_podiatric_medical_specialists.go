@@ -28,6 +28,8 @@ func GetSourceDesertPodiatricMedicalSpecialists(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Desert Podiatric Medical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeDesertPodiatricMedicalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mytucsonpodiatrist.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

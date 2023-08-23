@@ -29,6 +29,8 @@ func GetSourceMethodistHospitalsPrd(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Methodist Hospitals - PRD"
 	sourceDef.SourceType = pkg.SourceTypeMethodistHospitalsPrd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceLosBarriosUnidosCommunityClinicInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Los Barrios Unidos Community Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeLosBarriosUnidosCommunityClinicInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://losbarriosunidos.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

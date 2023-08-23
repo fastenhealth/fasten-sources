@@ -28,6 +28,8 @@ func GetSourceTheCenterForRheumatologyLlp(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "The Center For Rheumatology LLP"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForRheumatologyLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.joint-docs.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

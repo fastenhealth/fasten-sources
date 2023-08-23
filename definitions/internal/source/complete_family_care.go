@@ -28,6 +28,8 @@ func GetSourceCompleteFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Complete Family Care"
 	sourceDef.SourceType = pkg.SourceTypeCompleteFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "complete-family-care.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/co-colorado/northglenn/complete-family-care-x8h98ha"
 	sourceDef.SecretKeyPrefix = "nextgen"

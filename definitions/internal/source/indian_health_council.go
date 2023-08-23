@@ -28,6 +28,8 @@ func GetSourceIndianHealthCouncil(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Indian Health Council"
 	sourceDef.SourceType = pkg.SourceTypeIndianHealthCouncil
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "indian-health-council.jpg"
 	sourceDef.PatientAccessUrl = "https://www.indianhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

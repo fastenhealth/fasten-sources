@@ -28,6 +28,8 @@ func GetSourceVitalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Vital Health"
 	sourceDef.SourceType = pkg.SourceTypeVitalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "vital-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/VitalHealthSA/"
 	sourceDef.SecretKeyPrefix = "nextgen"

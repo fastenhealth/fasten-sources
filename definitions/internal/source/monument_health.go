@@ -29,6 +29,8 @@ func GetSourceMonumentHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Monument Health"
 	sourceDef.SourceType = pkg.SourceTypeMonumentHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

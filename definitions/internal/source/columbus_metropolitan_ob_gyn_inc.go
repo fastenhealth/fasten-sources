@@ -28,6 +28,8 @@ func GetSourceColumbusMetropolitanObGynInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Columbus Metropolitan OB/GYN Inc"
 	sourceDef.SourceType = pkg.SourceTypeColumbusMetropolitanObGynInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://columbusmetroobgyn.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

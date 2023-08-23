@@ -29,6 +29,7 @@ func GetSourceAdultAndChildMentalHealth(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Adult And Child Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeAdultAndChildMentalHealth
 	sourceDef.Category = []string{"101YM0800X", "1041C0700X", "251S00000X", "261QF0400X", "261QM1300X", "261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083949200", "1154368512", "1538514344"}}
 	sourceDef.PatientAccessUrl = "https://adultandchild.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

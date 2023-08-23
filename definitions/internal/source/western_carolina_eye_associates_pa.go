@@ -28,6 +28,8 @@ func GetSourceWesternCarolinaEyeAssociatesPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Western Carolina Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeWesternCarolinaEyeAssociatesPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://wceapa.com/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

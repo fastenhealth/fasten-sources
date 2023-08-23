@@ -28,6 +28,8 @@ func GetSourceMarvinEGreenbergMdLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Marvin E Greenberg MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeMarvinEGreenbergMdLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "marvin-e-greenberg-md-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/marvingreenbergmd/"
 	sourceDef.SecretKeyPrefix = "nextgen"

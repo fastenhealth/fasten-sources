@@ -29,6 +29,8 @@ func GetSourceValdostaFootAnkleClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Valdosta Foot  Ankle Clinic"
 	sourceDef.SourceType = pkg.SourceTypeValdostaFootAnkleClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceBaconCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Bacon County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBaconCountyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

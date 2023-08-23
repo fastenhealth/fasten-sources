@@ -28,6 +28,8 @@ func GetSourceNorthwestNeurospecialistsPllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Northwest NeuroSpecialists PLLC"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestNeurospecialistsPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nwneuro.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

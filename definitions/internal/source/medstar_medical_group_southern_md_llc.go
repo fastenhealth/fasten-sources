@@ -28,6 +28,8 @@ func GetSourceMedstarMedicalGroupSouthernMdLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "MedStar Medical Group-Southern MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeMedstarMedicalGroupSouthernMdLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "medstar-medical-group-southern-md-llc.jpg"
 	sourceDef.PatientAccessUrl = "http://shah-associates.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

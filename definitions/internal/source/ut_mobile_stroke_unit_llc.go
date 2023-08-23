@@ -29,6 +29,7 @@ func GetSourceUtMobileStrokeUnitLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "UT Mobile Stroke Unit LLC"
 	sourceDef.SourceType = pkg.SourceTypeUtMobileStrokeUnitLlc
 	sourceDef.Category = []string{"3416L0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346791589"}}
 	sourceDef.PatientAccessUrl = "https://npino.com/ambulance-service/1346791589-ut-mobile-stroke-unit-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"

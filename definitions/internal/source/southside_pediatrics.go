@@ -29,6 +29,7 @@ func GetSourceSouthsidePediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Southside Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeSouthsidePediatrics
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659580215"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,7 @@ func GetSourceDaymarkRecoveryServices(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Daymark Recovery Services"
 	sourceDef.SourceType = pkg.SourceTypeDaymarkRecoveryServices
 	sourceDef.Category = []string{"251J00000X", "251S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629400056", "1639620511", "1982063384"}}
 	sourceDef.PatientAccessUrl = "https://www.daymarkrecovery.org/index.php"
 	sourceDef.SecretKeyPrefix = "nextgen"

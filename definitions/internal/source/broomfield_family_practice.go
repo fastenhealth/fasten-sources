@@ -28,6 +28,8 @@ func GetSourceBroomfieldFamilyPractice(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Broomfield Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeBroomfieldFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://broomfieldfp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceRetinaCenterOfTexas(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Retina Center Of Texas"
 	sourceDef.SourceType = pkg.SourceTypeRetinaCenterOfTexas
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "retina-center-of-texas.svg"
 	sourceDef.PatientAccessUrl = "https://www.retinacentertx.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

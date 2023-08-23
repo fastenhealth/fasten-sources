@@ -28,6 +28,8 @@ func GetSourceHighlandClinicPharmacyLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Highland Clinic Pharmacy LLC"
 	sourceDef.SourceType = pkg.SourceTypeHighlandClinicPharmacyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.highlandclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

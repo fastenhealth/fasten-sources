@@ -28,6 +28,8 @@ func GetSourceConnecticutEyeSurgeryCenterSouth(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Connecticut Eye Surgery Center South"
 	sourceDef.SourceType = pkg.SourceTypeConnecticutEyeSurgeryCenterSouth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

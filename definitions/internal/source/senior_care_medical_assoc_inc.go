@@ -28,6 +28,8 @@ func GetSourceSeniorCareMedicalAssocInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Senior Care Medical Assoc Inc"
 	sourceDef.SourceType = pkg.SourceTypeSeniorCareMedicalAssocInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "senior-care-medical-assoc-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://seniorcaremed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

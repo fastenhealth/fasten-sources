@@ -29,6 +29,7 @@ func GetSourceSwamiNathanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Swami Nathan MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeSwamiNathanMdInc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780724658"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/md-maryland/frederick/swami-nathan-md-inc-xbjv3t"
 	sourceDef.SecretKeyPrefix = "nextgen"

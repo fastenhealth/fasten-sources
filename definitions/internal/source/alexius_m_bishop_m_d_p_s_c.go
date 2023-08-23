@@ -29,6 +29,8 @@ func GetSourceAlexiusMBishopMDPSC(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Alexius M. Bishop, M.D., P.S.C."
 	sourceDef.SourceType = pkg.SourceTypeAlexiusMBishopMDPSC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ambishoppeds.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

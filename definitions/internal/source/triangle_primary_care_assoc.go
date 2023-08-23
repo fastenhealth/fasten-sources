@@ -28,6 +28,8 @@ func GetSourceTrianglePrimaryCareAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Triangle Primary Care Assoc"
 	sourceDef.SourceType = pkg.SourceTypeTrianglePrimaryCareAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

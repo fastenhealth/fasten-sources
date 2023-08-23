@@ -28,6 +28,8 @@ func GetSourceSouthFlOrthopaedicsAndSportsMedicine(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "South Fl Orthopaedics & Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSouthFlOrthopaedicsAndSportsMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://southflaortho.com/?utm_source=GMBSocialClimb&utm_medium=SouthFloridaOrthopaedicsandSportsMedicine"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

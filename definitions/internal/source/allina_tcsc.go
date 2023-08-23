@@ -28,6 +28,7 @@ func GetSourceAllinaTcsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Allina/TCSC"
 	sourceDef.SourceType = pkg.SourceTypeAllinaTcsc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Twin Cities Spine Center"}
 	sourceDef.BrandLogo = "allina-tcsc.svg"
 	sourceDef.PatientAccessUrl = "https://www.tcspine.com/"

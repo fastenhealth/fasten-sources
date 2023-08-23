@@ -28,6 +28,8 @@ func GetSourceNevadaVwh(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Nevada VWH"
 	sourceDef.SourceType = pkg.SourceTypeNevadaVwh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "nevada-vwh.svg"
 	sourceDef.PatientAccessUrl = "https://patients.verawholehealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceBrianJLipmanMDPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Brian J. Lipman M.D PC"
 	sourceDef.SourceType = pkg.SourceTypeBrianJLipmanMDPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

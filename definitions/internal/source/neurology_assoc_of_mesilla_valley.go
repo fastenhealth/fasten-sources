@@ -28,6 +28,8 @@ func GetSourceNeurologyAssocOfMesillaValley(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Neurology Assoc Of Mesilla Valley"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyAssocOfMesillaValley
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceQuorumHealthGroupInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Quorum Health Group, Inc."
 	sourceDef.SourceType = pkg.SourceTypeQuorumHealthGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://quorumhealth.com/?utm_campaign=website-link&utm_medium=organic&utm_source=local-listing"
 	sourceDef.SecretKeyPrefix = "cerner"
 

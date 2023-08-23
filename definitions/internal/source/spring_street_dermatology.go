@@ -28,6 +28,8 @@ func GetSourceSpringStreetDermatology(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Spring Street Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeSpringStreetDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "spring-street-dermatology.svg"
 	sourceDef.PatientAccessUrl = "https://springstderm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceHallCanterMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Hall Canter MD"
 	sourceDef.SourceType = pkg.SourceTypeHallCanterMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hall-canter-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/hall-canter-md"
 	sourceDef.SecretKeyPrefix = "nextgen"

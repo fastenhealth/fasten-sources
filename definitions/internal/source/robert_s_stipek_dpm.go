@@ -29,6 +29,8 @@ func GetSourceRobertSStipekDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Robert S. Stipek, DPM"
 	sourceDef.SourceType = pkg.SourceTypeRobertSStipekDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://physicians.lahey.org/details/1472/robert-stipek-podiatry-burlington"
 	sourceDef.SecretKeyPrefix = "cerner"
 

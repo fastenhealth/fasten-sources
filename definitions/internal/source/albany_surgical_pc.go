@@ -30,6 +30,7 @@ func GetSourceAlbanySurgicalPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Albany Surgical, PC"
 	sourceDef.SourceType = pkg.SourceTypeAlbanySurgicalPc
 	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023005675"}}
 	sourceDef.PatientAccessUrl = "https://albanysurgical.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceMiamiAssociatesInPediatricSurgeryPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Miami Associates in Pediatric Surgery, PA"
 	sourceDef.SourceType = pkg.SourceTypeMiamiAssociatesInPediatricSurgeryPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://pedisurgery.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

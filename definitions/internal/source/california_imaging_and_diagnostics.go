@@ -28,6 +28,8 @@ func GetSourceCaliforniaImagingAndDiagnostics(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "California Imaging and Diagnostics"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaImagingAndDiagnostics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cidrad.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

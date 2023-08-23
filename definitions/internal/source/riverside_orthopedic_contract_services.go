@@ -28,6 +28,8 @@ func GetSourceRiversideOrthopedicContractServices(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Riverside Orthopedic Contract Services"
 	sourceDef.SourceType = pkg.SourceTypeRiversideOrthopedicContractServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.riversidehealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

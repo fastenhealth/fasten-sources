@@ -28,6 +28,8 @@ func GetSourceNewportBeachObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Newport Beach OB/Gyn"
 	sourceDef.SourceType = pkg.SourceTypeNewportBeachObGyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "newport-beach-ob-gyn.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nb-obgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

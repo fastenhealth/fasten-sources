@@ -28,6 +28,8 @@ func GetSourceSouthsideHematologyOncologyAssoc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Southside Hematology  Oncology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeSouthsideHematologyOncologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

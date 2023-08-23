@@ -29,6 +29,8 @@ func GetSourceLomaLindaUniversityHealthAndCareconnectPartners(env pkg.FastenLigh
 
 	sourceDef.Display = "Loma Linda University Health and CareConnect Partners"
 	sourceDef.SourceType = pkg.SourceTypeLomaLindaUniversityHealthAndCareconnectPartners
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

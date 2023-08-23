@@ -29,6 +29,8 @@ func GetSourceLuisFAnezMdpa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Luis  F. Anez MDPA"
 	sourceDef.SourceType = pkg.SourceTypeLuisFAnezMdpa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.baptistjax.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

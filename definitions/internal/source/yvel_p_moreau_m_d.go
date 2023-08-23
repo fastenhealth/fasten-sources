@@ -29,6 +29,8 @@ func GetSourceYvelPMoreauMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Yvel P. Moreau M.D"
 	sourceDef.SourceType = pkg.SourceTypeYvelPMoreauMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

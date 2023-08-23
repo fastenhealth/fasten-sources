@@ -30,6 +30,7 @@ func GetSourceUniversityOfLouisvillePhysicians(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "University of Louisville Physicians"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfLouisvillePhysicians
 	sourceDef.Category = []string{"207K00000X", "208000000X", "2080C0008X", "2080P0203X", "2080P0210X", "2080S0012X", "2086S0127X", "282NC0060X", "363L00000X", "363LF0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073879797", "1164788899", "1255697983", "1386011054", "1386076172", "1639435670", "1639435688", "1700156353", "1932564226", "1982960605"}}
 	sourceDef.PatientAccessUrl = "https://uoflhealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"

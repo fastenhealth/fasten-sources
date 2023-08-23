@@ -28,6 +28,8 @@ func GetSourceMiamiAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Miami ASC"
 	sourceDef.SourceType = pkg.SourceTypeMiamiAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.southmiamiasc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

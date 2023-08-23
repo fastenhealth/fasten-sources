@@ -28,6 +28,8 @@ func GetSourcePark55Medical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Park 55 Medical"
 	sourceDef.SourceType = pkg.SourceTypePark55Medical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

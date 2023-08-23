@@ -28,6 +28,8 @@ func GetSourceRanchoOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Rancho Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeRanchoOrthopedics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://permanentlyclosed.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

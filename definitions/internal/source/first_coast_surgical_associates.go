@@ -29,6 +29,8 @@ func GetSourceFirstCoastSurgicalAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "First Coast Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeFirstCoastSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3CO05SML882ZS2JRXBK6C6HRRB9R0K?assignment_id=3NJM2BJS4A30W1WMM1E2RWF29I9PC1&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

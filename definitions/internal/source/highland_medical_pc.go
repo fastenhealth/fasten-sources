@@ -28,6 +28,8 @@ func GetSourceHighlandMedicalPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Highland Medical PC"
 	sourceDef.SourceType = pkg.SourceTypeHighlandMedicalPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.highlandmedicalpc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

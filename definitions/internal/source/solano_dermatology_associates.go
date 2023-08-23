@@ -29,6 +29,7 @@ func GetSourceSolanoDermatologyAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Solano Dermatology Associates"
 	sourceDef.SourceType = pkg.SourceTypeSolanoDermatologyAssociates
 	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639491103"}}
 	sourceDef.PatientAccessUrl = "https://www.solanodermatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

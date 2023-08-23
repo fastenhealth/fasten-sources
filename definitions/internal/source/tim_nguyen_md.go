@@ -28,6 +28,8 @@ func GetSourceTimNguyenMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Tim Nguyen MD"
 	sourceDef.SourceType = pkg.SourceTypeTimNguyenMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://suncitymedicalpartners.com/physicians/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

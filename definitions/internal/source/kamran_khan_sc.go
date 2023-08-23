@@ -29,6 +29,8 @@ func GetSourceKamranKhanSc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Kamran Khan SC"
 	sourceDef.SourceType = pkg.SourceTypeKamranKhanSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mkkneuro.com/appointments-neurosurgeon-new-lenox-il.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceMedcorAtShieldsBagAndPrinting(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Medcor At Shields Bag And Printing"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtShieldsBagAndPrinting
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.shieldsbag.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

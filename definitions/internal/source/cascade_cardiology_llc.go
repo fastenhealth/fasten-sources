@@ -29,6 +29,7 @@ func GetSourceCascadeCardiologyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Cascade Cardiology LLC"
 	sourceDef.SourceType = pkg.SourceTypeCascadeCardiologyLlc
 	sourceDef.Category = []string{"207R00000X", "207RC0000X", "207RC0001X", "207RI0011X", "363A00000X", "363L00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447202668", "1548545817", "1639454903"}}
 	sourceDef.PatientAccessUrl = "https://cascadecardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

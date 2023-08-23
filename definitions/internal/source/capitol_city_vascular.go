@@ -28,6 +28,8 @@ func GetSourceCapitolCityVascular(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Capitol City Vascular"
 	sourceDef.SourceType = pkg.SourceTypeCapitolCityVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceIglesiasMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Iglesias Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeIglesiasMedicalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.yellowpages.com/pharr-tx/mip/iglesias-medical-clinic-4544990"
 	sourceDef.SecretKeyPrefix = "cerner"
 

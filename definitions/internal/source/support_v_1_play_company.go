@@ -28,6 +28,8 @@ func GetSourceSupportV1PlayCompany(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Support V1 Play Company"
 	sourceDef.SourceType = pkg.SourceTypeSupportV1PlayCompany
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

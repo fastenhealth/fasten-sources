@@ -28,6 +28,8 @@ func GetSourceLiliaZamoraMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Lilia Zamora M D"
 	sourceDef.SourceType = pkg.SourceTypeLiliaZamoraMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.optum.com/care/providers/ca/montebello/lilia-v.-zamora-md.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

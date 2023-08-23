@@ -28,6 +28,8 @@ func GetSourcePromiseHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Promise Healthcare"
 	sourceDef.SourceType = pkg.SourceTypePromiseHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "promise-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/PromiseHealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"

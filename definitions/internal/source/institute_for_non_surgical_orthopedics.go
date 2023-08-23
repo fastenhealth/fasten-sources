@@ -28,6 +28,8 @@ func GetSourceInstituteForNonSurgicalOrthopedics(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Institute for Non Surgical Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeInstituteForNonSurgicalOrthopedics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "institute-for-non-surgical-orthopedics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ommdoc.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"

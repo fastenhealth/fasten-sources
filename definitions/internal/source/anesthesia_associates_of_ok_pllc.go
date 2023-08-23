@@ -28,6 +28,8 @@ func GetSourceAnesthesiaAssociatesOfOkPllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Anesthesia Associates Of OK PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaAssociatesOfOkPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/33NKDW9FGAF3JQ0JIQJIWP5G1PRXCV?assignment_id=3DHE4R9OCA8HL6BLMPZ9LASORH4G23&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

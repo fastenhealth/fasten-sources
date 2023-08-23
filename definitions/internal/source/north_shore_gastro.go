@@ -28,6 +28,8 @@ func GetSourceNorthShoreGastro(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "North Shore Gastro"
 	sourceDef.SourceType = pkg.SourceTypeNorthShoreGastro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

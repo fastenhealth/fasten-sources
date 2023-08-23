@@ -28,6 +28,8 @@ func GetSourceMountCarmelMedicalAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Mount Carmel Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeMountCarmelMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/mount-carmel-medical-associates-4ef658cf-2a81-4ff2-9bc3-90edb01014e4"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

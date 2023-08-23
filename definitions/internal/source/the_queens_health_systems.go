@@ -29,6 +29,8 @@ func GetSourceTheQueensHealthSystems(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "The Queen's Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeTheQueensHealthSystems
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

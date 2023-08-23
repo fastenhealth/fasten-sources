@@ -29,6 +29,8 @@ func GetSourceOrthopedicsOfSouthernIn(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Orthopedics of Southern IN"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicsOfSouthernIn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "orthopedics-of-southern-in.svg"
 	sourceDef.PatientAccessUrl = "https://www.southerninortho.com/l"
 	sourceDef.SecretKeyPrefix = "cerner"

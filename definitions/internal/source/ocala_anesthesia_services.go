@@ -28,6 +28,8 @@ func GetSourceOcalaAnesthesiaServices(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Ocala Anesthesia Services"
 	sourceDef.SourceType = pkg.SourceTypeOcalaAnesthesiaServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://surgerycenterofocala.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

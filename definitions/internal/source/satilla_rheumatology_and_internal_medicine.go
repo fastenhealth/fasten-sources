@@ -28,6 +28,8 @@ func GetSourceSatillaRheumatologyAndInternalMedicine(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Satilla Rheumatology & Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeSatillaRheumatologyAndInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ga-georgia/waycross/satilla-rheumatology-internal-medicine-xbdybg1b"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

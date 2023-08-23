@@ -28,6 +28,8 @@ func GetSourceDrsUyemuraAndJengLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Drs Uyemura & Jeng LLC"
 	sourceDef.SourceType = pkg.SourceTypeDrsUyemuraAndJengLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://opencorporates.com/companies/us_co/20031201636"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceTheHealthcareConnection(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "The HealthCare Connection"
 	sourceDef.SourceType = pkg.SourceTypeTheHealthcareConnection
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare-connection.org/locations/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

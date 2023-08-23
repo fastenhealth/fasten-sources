@@ -28,6 +28,8 @@ func GetSourceProvidenceAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Providence ASC"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/providence-access-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

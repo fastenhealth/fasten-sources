@@ -28,6 +28,8 @@ func GetSourceHqaArlington(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "HQA Arlington"
 	sourceDef.SourceType = pkg.SourceTypeHqaArlington
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

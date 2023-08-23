@@ -29,6 +29,7 @@ func GetSourceFaceAndSkinLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Face and Skin LLC"
 	sourceDef.SourceType = pkg.SourceTypeFaceAndSkinLlc
 	sourceDef.Category = []string{"207Y00000X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366796583", "1942524780"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceMunifPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Munif Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeMunifPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

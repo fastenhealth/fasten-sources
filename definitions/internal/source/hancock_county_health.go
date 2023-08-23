@@ -28,6 +28,8 @@ func GetSourceHancockCountyHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hancock County Health"
 	sourceDef.SourceType = pkg.SourceTypeHancockCountyHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mercyonenorthiowaaffiliates.org/hchs/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

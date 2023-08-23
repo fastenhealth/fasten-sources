@@ -29,6 +29,8 @@ func GetSourcePublixDeerfieldBeach(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Publix - Deerfield Beach"
 	sourceDef.SourceType = pkg.SourceTypePublixDeerfieldBeach
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://corporate.publix.com/careers/support-areas/distribution"
 	sourceDef.SecretKeyPrefix = "cerner"
 

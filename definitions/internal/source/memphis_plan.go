@@ -28,6 +28,8 @@ func GetSourceMemphisPlan(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Memphis Plan"
 	sourceDef.SourceType = pkg.SourceTypeMemphisPlan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://churchhealth.org/memphis-plan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

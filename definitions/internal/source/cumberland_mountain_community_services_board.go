@@ -29,6 +29,8 @@ func GetSourceCumberlandMountainCommunityServicesBoard(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Cumberland Mountain Community Services Board"
 	sourceDef.SourceType = pkg.SourceTypeCumberlandMountainCommunityServicesBoard
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "cumberland-mountain-community-services-board.jpg"
 	sourceDef.PatientAccessUrl = "https://www.cmcsb.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

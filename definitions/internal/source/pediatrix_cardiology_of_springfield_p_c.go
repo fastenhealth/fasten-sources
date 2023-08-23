@@ -28,6 +28,8 @@ func GetSourcePediatrixCardiologyOfSpringfieldPC(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Pediatrix Cardiology Of Springfield P.C"
 	sourceDef.SourceType = pkg.SourceTypePediatrixCardiologyOfSpringfieldPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pediatrix-cardiology-of-springfield-p-c.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/cardiologyspringfield"
 	sourceDef.SecretKeyPrefix = "nextgen"

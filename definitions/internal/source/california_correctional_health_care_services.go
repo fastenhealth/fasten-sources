@@ -30,6 +30,7 @@ func GetSourceCaliforniaCorrectionalHealthCareServices(env pkg.FastenLighthouseE
 	sourceDef.Display = "California Correctional Health Care Services"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaCorrectionalHealthCareServices
 	sourceDef.Category = []string{"261QP2400X", "276400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396169405", "1548607393"}}
 	sourceDef.PatientAccessUrl = "https://cchcs.ca.gov/"
 	sourceDef.SecretKeyPrefix = "cerner"

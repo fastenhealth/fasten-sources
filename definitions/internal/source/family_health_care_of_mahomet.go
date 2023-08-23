@@ -28,6 +28,8 @@ func GetSourceFamilyHealthCareOfMahomet(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Family Health Care Of Mahomet"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCareOfMahomet
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "family-health-care-of-mahomet.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/locations/profile/gibson-health-of-mahomet"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceNewtonBCoutinhoMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Newton B Coutinho MD"
 	sourceDef.SourceType = pkg.SourceTypeNewtonBCoutinhoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/newton-coutinho-342699"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

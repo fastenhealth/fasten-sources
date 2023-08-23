@@ -29,6 +29,7 @@ func GetSourceWestCoastUrologicAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "West Coast Urologic Associates"
 	sourceDef.SourceType = pkg.SourceTypeWestCoastUrologicAssociates
 	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427187418"}}
 	sourceDef.PatientAccessUrl = "https://www.westcoastneurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

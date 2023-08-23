@@ -28,6 +28,8 @@ func GetSourceMsuLongestStudentHealthCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "MSU Longest Student Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMsuLongestStudentHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcenter.msstate.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

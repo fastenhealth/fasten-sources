@@ -28,6 +28,8 @@ func GetSourceMedcorAtRoyalCaribbean(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Medcor At Royal Caribbean"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtRoyalCaribbean
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://medcor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

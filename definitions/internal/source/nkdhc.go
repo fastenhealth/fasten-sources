@@ -28,6 +28,8 @@ func GetSourceNkdhc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "NKDHC"
 	sourceDef.SourceType = pkg.SourceTypeNkdhc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "nkdhc.jpg"
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/Nevada-Kidney-Disease-Hypertension-Centers-531690500612074/"
 	sourceDef.SecretKeyPrefix = "nextgen"

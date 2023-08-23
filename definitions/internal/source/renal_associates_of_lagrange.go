@@ -29,6 +29,8 @@ func GetSourceRenalAssociatesOfLagrange(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Renal Associates of LaGrange"
 	sourceDef.SourceType = pkg.SourceTypeRenalAssociatesOfLagrange
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://renalassociatesllc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

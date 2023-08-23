@@ -28,6 +28,8 @@ func GetSourceTaylorsvilleInstacare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Taylorsville Instacare"
 	sourceDef.SourceType = pkg.SourceTypeTaylorsvilleInstacare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://intermountainhealthcare.org/locations/location-details/taylorsville-clinic/taylorsville-instacare/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

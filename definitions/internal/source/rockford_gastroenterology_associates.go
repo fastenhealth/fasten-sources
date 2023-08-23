@@ -28,6 +28,8 @@ func GetSourceRockfordGastroenterologyAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Rockford Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeRockfordGastroenterologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

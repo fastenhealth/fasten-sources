@@ -28,6 +28,8 @@ func GetSourceTheGlenEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "The Glen Endoscopy Center"
 	sourceDef.SourceType = pkg.SourceTypeTheGlenEndoscopyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-glen-endoscopy-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://glenendo.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

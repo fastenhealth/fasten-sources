@@ -28,6 +28,8 @@ func GetSourceInghamNephrologyHypertensionPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Ingham Nephrology  Hypertension PC"
 	sourceDef.SourceType = pkg.SourceTypeInghamNephrologyHypertensionPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

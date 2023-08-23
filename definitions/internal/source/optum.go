@@ -28,6 +28,8 @@ func GetSourceOptum(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "Optum"
 	sourceDef.SourceType = pkg.SourceTypeOptum
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "optum.svg"
 	sourceDef.PatientAccessUrl = "https://www.optum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

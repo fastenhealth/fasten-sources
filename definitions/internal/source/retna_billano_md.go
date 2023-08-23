@@ -29,6 +29,8 @@ func GetSourceRetnaBillanoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Retna Billano, MD"
 	sourceDef.SourceType = pkg.SourceTypeRetnaBillanoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-retna-billano-x4ww7"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceSpecialtyPhysiciansAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Specialty Physicians Assoc"
 	sourceDef.SourceType = pkg.SourceTypeSpecialtyPhysiciansAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

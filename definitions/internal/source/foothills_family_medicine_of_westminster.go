@@ -29,6 +29,8 @@ func GetSourceFoothillsFamilyMedicineOfWestminster(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Foothills Family Medicine Of Westminster"
 	sourceDef.SourceType = pkg.SourceTypeFoothillsFamilyMedicineOfWestminster
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

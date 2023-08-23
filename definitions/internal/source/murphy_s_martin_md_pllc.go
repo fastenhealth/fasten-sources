@@ -28,6 +28,8 @@ func GetSourceMurphySMartinMdPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Murphy S Martin MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMurphySMartinMdPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/murphy-s-martin-md-pllc-f731cfc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

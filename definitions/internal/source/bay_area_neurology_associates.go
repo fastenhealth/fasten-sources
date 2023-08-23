@@ -29,6 +29,8 @@ func GetSourceBayAreaNeurologyAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Bay Area Neurology Associates"
 	sourceDef.SourceType = pkg.SourceTypeBayAreaNeurologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "bay-area-neurology-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3FBEFUUYSX227WJPXPE1QH284I8A6D?assignment_id=35GCEFQ6IJL6X529GH13PRDM8LXZ3L&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourceWardGBeckerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Ward G Becker MD"
 	sourceDef.SourceType = pkg.SourceTypeWardGBeckerMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/ward-becker-345097"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

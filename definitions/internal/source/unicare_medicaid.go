@@ -27,6 +27,8 @@ func GetSourceUnicareMedicaid(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Unicare Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeUnicareMedicaid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mss.unicare.com/west-virginia/home.html"
 	sourceDef.SecretKeyPrefix = "anthem"
 

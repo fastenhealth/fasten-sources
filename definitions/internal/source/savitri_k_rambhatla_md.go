@@ -28,6 +28,8 @@ func GetSourceSavitriKRambhatlaMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Savitri K Rambhatla MD"
 	sourceDef.SourceType = pkg.SourceTypeSavitriKRambhatlaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://beverly.org/physician-directory/name/savitri-rambhatla/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

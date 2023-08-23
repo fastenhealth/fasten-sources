@@ -28,6 +28,8 @@ func GetSourceFortWayneVascularCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Fort Wayne Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeFortWayneVascularCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nephdocs.com/vascular-access.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

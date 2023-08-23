@@ -29,6 +29,7 @@ func GetSourceSanMarinoPediatricAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "San Marino Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeSanMarinoPediatricAssociates
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528494325"}}
 	sourceDef.PatientAccessUrl = "https://www.sanmarinopeds.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

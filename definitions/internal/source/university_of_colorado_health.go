@@ -29,6 +29,8 @@ func GetSourceUniversityOfColoradoHealth(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "University of Colorado Health"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfColoradoHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "university-of-colorado-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.uchealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"

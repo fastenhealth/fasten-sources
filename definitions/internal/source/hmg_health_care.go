@@ -29,6 +29,7 @@ func GetSourceHmgHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "HMG Health Care"
 	sourceDef.SourceType = pkg.SourceTypeHmgHealthCare
 	sourceDef.Category = []string{"207Q00000X", "208D00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194217588"}}
 	sourceDef.PatientAccessUrl = "https://hmghealth.com/en/home/"
 	sourceDef.SecretKeyPrefix = "nextgen"

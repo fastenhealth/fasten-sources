@@ -29,6 +29,8 @@ func GetSourceRyanWhiteClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Ryan White Clinic"
 	sourceDef.SourceType = pkg.SourceTypeRyanWhiteClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ryanhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

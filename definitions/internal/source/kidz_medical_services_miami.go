@@ -29,6 +29,8 @@ func GetSourceKidzMedicalServicesMiami(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Kidz Medical Services - Miami"
 	sourceDef.SourceType = pkg.SourceTypeKidzMedicalServicesMiami
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kidzmedical.com/locations/sunset-drive-south-miami-fl/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

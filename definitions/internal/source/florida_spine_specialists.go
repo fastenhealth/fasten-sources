@@ -29,6 +29,7 @@ func GetSourceFloridaSpineSpecialists(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Florida Spine Specialists"
 	sourceDef.SourceType = pkg.SourceTypeFloridaSpineSpecialists
 	sourceDef.Category = []string{"207XS0117X", "208VP0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700110483"}}
 	sourceDef.PatientAccessUrl = "https://floridaspineandsportsspecialists.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

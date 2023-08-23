@@ -28,6 +28,8 @@ func GetSourceEastonCardiovascularAssociatesPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Easton Cardiovascular Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeEastonCardiovascularAssociatesPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/Easton-Cardiovascular-Associates-2250516401883823/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

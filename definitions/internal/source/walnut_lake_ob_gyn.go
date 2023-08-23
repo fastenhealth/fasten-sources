@@ -29,6 +29,8 @@ func GetSourceWalnutLakeObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Walnut Lake Ob/Gyn"
 	sourceDef.SourceType = pkg.SourceTypeWalnutLakeObGyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://walnutlakeobgyn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

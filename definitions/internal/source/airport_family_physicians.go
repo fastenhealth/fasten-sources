@@ -28,6 +28,8 @@ func GetSourceAirportFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Airport Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeAirportFamilyPhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

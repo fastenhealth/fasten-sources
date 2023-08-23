@@ -28,6 +28,8 @@ func GetSourceGapho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "GAPHO"
 	sourceDef.SourceType = pkg.SourceTypeGapho
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gapho.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"

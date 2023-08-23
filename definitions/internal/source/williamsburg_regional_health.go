@@ -28,6 +28,8 @@ func GetSourceWilliamsburgRegionalHealth(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Williamsburg Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeWilliamsburgRegionalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wmbgrh.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

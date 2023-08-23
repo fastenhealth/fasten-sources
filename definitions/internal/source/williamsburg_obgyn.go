@@ -28,6 +28,8 @@ func GetSourceWilliamsburgObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Williamsburg ObGyn"
 	sourceDef.SourceType = pkg.SourceTypeWilliamsburgObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceGratiotIsabellaNephrology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Gratiot Isabella Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeGratiotIsabellaNephrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

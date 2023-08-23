@@ -29,6 +29,8 @@ func GetSourceSantaClaraValleyMedicalCenterHospitalsAndClinics(env pkg.FastenLig
 
 	sourceDef.Display = "Santa Clara Valley Medical Center Hospitals and Clinics"
 	sourceDef.SourceType = pkg.SourceTypeSantaClaraValleyMedicalCenterHospitalsAndClinics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

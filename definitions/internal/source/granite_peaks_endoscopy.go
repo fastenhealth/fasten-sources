@@ -28,6 +28,8 @@ func GetSourceGranitePeaksEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Granite Peaks Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeGranitePeaksEndoscopy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.granitepeaksgi.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

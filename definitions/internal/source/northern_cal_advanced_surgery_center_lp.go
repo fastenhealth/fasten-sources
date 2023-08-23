@@ -28,6 +28,8 @@ func GetSourceNorthernCalAdvancedSurgeryCenterLp(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Northern Cal Advanced Surgery Center LP"
 	sourceDef.SourceType = pkg.SourceTypeNorthernCalAdvancedSurgeryCenterLp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "northern-cal-advanced-surgery-center-lp.svg"
 	sourceDef.PatientAccessUrl = "https://www.norcalasc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

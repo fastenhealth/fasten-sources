@@ -28,6 +28,8 @@ func GetSourceAdagioHealthDirectlyAdministeredSite(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Adagio Health Directly Administered Site"
 	sourceDef.SourceType = pkg.SourceTypeAdagioHealthDirectlyAdministeredSite
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.adagiohealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

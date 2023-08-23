@@ -28,6 +28,8 @@ func GetSourceCardiologyConsultantsOfTomsRiverPa(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Cardiology Consultants Of Toms River PA"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyConsultantsOfTomsRiverPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

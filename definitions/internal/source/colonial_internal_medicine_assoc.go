@@ -29,6 +29,8 @@ func GetSourceColonialInternalMedicineAssoc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Colonial Internal Medicine Assoc"
 	sourceDef.SourceType = pkg.SourceTypeColonialInternalMedicineAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

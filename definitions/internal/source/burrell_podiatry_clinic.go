@@ -29,6 +29,8 @@ func GetSourceBurrellPodiatryClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Burrell Podiatry Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBurrellPodiatryClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

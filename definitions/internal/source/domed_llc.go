@@ -28,6 +28,8 @@ func GetSourceDomedLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Domed Llc"
 	sourceDef.SourceType = pkg.SourceTypeDomedLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

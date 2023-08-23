@@ -28,6 +28,8 @@ func GetSourceElPasoDelCoro(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "El Paso Del Coro"
 	sourceDef.SourceType = pkg.SourceTypeElPasoDelCoro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://laspalmasdelsolhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

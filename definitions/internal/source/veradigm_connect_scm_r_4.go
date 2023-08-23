@@ -28,6 +28,8 @@ func GetSourceVeradigmConnectScmR4(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Veradigm Connect SCM R4"
 	sourceDef.SourceType = pkg.SourceTypeVeradigmConnectScmR4
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

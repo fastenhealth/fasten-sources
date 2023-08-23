@@ -29,6 +29,8 @@ func GetSourceCompsych(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "ComPsych"
 	sourceDef.SourceType = pkg.SourceTypeCompsych
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.compsych.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

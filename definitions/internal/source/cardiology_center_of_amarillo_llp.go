@@ -28,6 +28,8 @@ func GetSourceCardiologyCenterOfAmarilloLlp(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Cardiology Center Of Amarillo LLP"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyCenterOfAmarilloLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ccallp.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

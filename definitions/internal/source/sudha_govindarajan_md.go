@@ -28,6 +28,8 @@ func GetSourceSudhaGovindarajanMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Sudha Govindarajan MD"
 	sourceDef.SourceType = pkg.SourceTypeSudhaGovindarajanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=AwrKAXNaxwxkABMjsS_nHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1678587867/RO=10/RU=https%3a%2f%2fdoctor.webmd.com%2fdoctor%2fsudha-govindarajan-a738d035-ce97-405f-9447-4a972ed30291-overview/RK=2/RS=AkfYGVAXcAdW6WyTLeQcsffLEyg-"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

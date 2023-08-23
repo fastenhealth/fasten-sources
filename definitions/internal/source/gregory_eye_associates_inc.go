@@ -28,6 +28,8 @@ func GetSourceGregoryEyeAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Gregory Eye Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeGregoryEyeAssociatesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gregory-eye-associates-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gregoryeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceSynergyHealthGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Synergy Health Group"
 	sourceDef.SourceType = pkg.SourceTypeSynergyHealthGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "synergy-health-group.svg"
 	sourceDef.PatientAccessUrl = "https://www.synergylifecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

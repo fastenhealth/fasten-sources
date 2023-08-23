@@ -29,6 +29,8 @@ func GetSourceSpringEntLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Spring ENT, LLC"
 	sourceDef.SourceType = pkg.SourceTypeSpringEntLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://spring-ent.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

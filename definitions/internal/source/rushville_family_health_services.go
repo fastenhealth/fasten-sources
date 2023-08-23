@@ -28,6 +28,8 @@ func GetSourceRushvilleFamilyHealthServices(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Rushville Family Health Services"
 	sourceDef.SourceType = pkg.SourceTypeRushvilleFamilyHealthServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.meridianhs.org/provider/rachel-tran-lapre/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceJayGLevineDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Jay G. Levine, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJayGLevineDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.jayglevinedpm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

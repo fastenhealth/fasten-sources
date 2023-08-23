@@ -28,6 +28,8 @@ func GetSourceIslandDermatology(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Island Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeIslandDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

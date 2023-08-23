@@ -29,6 +29,8 @@ func GetSourceNewYorkPresbyterianHudsonValleyHospital(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "New York Presbyterian/Hudson Valley Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNewYorkPresbyterianHudsonValleyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "new-york-presbyterian-hudson-valley-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nyp.org/hudsonvalley"
 	sourceDef.SecretKeyPrefix = "cerner"

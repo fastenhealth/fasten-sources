@@ -28,6 +28,8 @@ func GetSourceCrestviewAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Crestview ASC"
 	sourceDef.SourceType = pkg.SourceTypeCrestviewAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "crestview-asc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-surgery-center-renalus-crestview/"
 	sourceDef.SecretKeyPrefix = "nextgen"

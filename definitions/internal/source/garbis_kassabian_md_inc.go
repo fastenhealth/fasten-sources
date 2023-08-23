@@ -28,6 +28,8 @@ func GetSourceGarbisKassabianMdInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Garbis Kassabian MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeGarbisKassabianMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-garbis-kassabian-ygkyl"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

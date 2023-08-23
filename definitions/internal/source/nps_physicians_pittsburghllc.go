@@ -28,6 +28,8 @@ func GetSourceNpsPhysiciansPittsburghllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "NPS Physicians PittsburghLLC"
 	sourceDef.SourceType = pkg.SourceTypeNpsPhysiciansPittsburghllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

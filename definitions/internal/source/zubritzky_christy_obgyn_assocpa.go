@@ -29,6 +29,8 @@ func GetSourceZubritzkyChristyObgynAssocpa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Zubritzky  Christy ObGyn AssocPA"
 	sourceDef.SourceType = pkg.SourceTypeZubritzkyChristyObgynAssocpa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

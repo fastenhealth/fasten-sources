@@ -29,6 +29,8 @@ func GetSourceTidalhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "TidalHealth"
 	sourceDef.SourceType = pkg.SourceTypeTidalhealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

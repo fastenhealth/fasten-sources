@@ -28,6 +28,8 @@ func GetSourceCvpPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "CVP Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCvpPhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "cvp-physicians.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/cvp-physicians"
 	sourceDef.SecretKeyPrefix = "nextgen"

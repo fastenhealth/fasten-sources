@@ -28,6 +28,8 @@ func GetSourceArthritisAndRheumatologyOfGaPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Arthritis And Rheumatology Of GA PC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndRheumatologyOfGaPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://argmd.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

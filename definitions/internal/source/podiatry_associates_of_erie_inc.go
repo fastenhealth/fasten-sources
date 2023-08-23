@@ -29,6 +29,8 @@ func GetSourcePodiatryAssociatesOfErieInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Podiatry Associates of Erie, Inc."
 	sourceDef.SourceType = pkg.SourceTypePodiatryAssociatesOfErieInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.eriefootdoctors.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

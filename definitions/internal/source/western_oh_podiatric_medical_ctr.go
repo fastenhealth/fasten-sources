@@ -29,6 +29,8 @@ func GetSourceWesternOhPodiatricMedicalCtr(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Western Oh Podiatric Medical Ctr"
 	sourceDef.SourceType = pkg.SourceTypeWesternOhPodiatricMedicalCtr
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/westernohio/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

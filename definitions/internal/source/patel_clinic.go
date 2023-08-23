@@ -28,6 +28,8 @@ func GetSourcePatelClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Patel Clinic"
 	sourceDef.SourceType = pkg.SourceTypePatelClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://researchdirectory.uc.edu/p/patel2s8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

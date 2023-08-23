@@ -28,6 +28,8 @@ func GetSourceNcpMidCitiesAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "NCP Mid Cities ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpMidCitiesAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mid-citiescardiaccarecenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

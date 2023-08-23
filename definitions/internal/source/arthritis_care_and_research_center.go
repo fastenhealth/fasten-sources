@@ -29,6 +29,7 @@ func GetSourceArthritisCareAndResearchCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Arthritis Care And Research Center"
 	sourceDef.SourceType = pkg.SourceTypeArthritisCareAndResearchCenter
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306162490"}}
 	sourceDef.BrandLogo = "arthritis-care-and-research-center.jpg"
 	sourceDef.PatientAccessUrl = "https://acrmed.com/"

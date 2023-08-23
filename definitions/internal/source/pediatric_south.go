@@ -28,6 +28,8 @@ func GetSourcePediatricSouth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Pediatric South"
 	sourceDef.SourceType = pkg.SourceTypePediatricSouth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

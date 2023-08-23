@@ -29,6 +29,8 @@ func GetSourceAssociatedSkinCareSpecialists(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Associated Skin Care Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedSkinCareSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "associated-skin-care-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://www.associatedskincare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorial
 
 	sourceDef.Display = "General John J. Pershing Memorial Hospital Association DBA Pershing Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGeneralJohnJPershingMemorialHospitalAssociationDbaPershingMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://phsmo.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

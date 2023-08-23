@@ -28,6 +28,8 @@ func GetSourcePainCentersOfWisconsinGreenBayLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pain Centers Of Wisconsin Green Bay LLC"
 	sourceDef.SourceType = pkg.SourceTypePainCentersOfWisconsinGreenBayLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Pain Centers Of Wisconsin Green Bay LLC Address: 2595 Development Dr Suite 150 City: Green Bay Zip: 543114267 State: Wisconsin Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

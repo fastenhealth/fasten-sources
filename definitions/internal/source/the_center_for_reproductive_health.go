@@ -30,6 +30,7 @@ func GetSourceTheCenterForReproductiveHealth(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "The Center For Reproductive Health"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForReproductiveHealth
 	sourceDef.Category = []string{"261QA0006X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619385135"}}
 	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=AwrKAXPyxQxk2aQjegHnHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1678587507/RO=10/RU=https%3a%2f%2fwww.indiascienceandtechnology.gov.in%2forganisations%2fministry-and-departments%2findian-council-medical-research-icmr%2fnational-institute-research-reproductive-health-nirrh-mumbai/RK=2/RS=hJf7EvxqV4BpR1iipeIv151fWhI-"
 	sourceDef.SecretKeyPrefix = "cerner"

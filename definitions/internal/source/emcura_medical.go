@@ -28,6 +28,8 @@ func GetSourceEmcuraMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Emcura Medical"
 	sourceDef.SourceType = pkg.SourceTypeEmcuraMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

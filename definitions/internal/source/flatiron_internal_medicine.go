@@ -28,6 +28,8 @@ func GetSourceFlatironInternalMedicine(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Flatiron Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeFlatironInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.flatironinternalmed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

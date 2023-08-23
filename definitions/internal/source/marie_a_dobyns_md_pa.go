@@ -30,6 +30,7 @@ func GetSourceMarieADobynsMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Marie A Dobyns MD PA"
 	sourceDef.SourceType = pkg.SourceTypeMarieADobynsMdPa
 	sourceDef.Category = []string{"207RG0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588725279"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

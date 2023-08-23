@@ -29,6 +29,7 @@ func GetSourceChristopherEvanLeeMdInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Christopher Evan Lee MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeChristopherEvanLeeMdInc
 	sourceDef.Category = []string{"207R00000X", "207RG0100X", "207ZP0102X", "261QM1300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023249430"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

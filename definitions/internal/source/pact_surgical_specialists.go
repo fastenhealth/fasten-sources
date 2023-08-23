@@ -28,6 +28,8 @@ func GetSourcePactSurgicalSpecialists(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "PACT Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypePactSurgicalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://physiciansallianceofconnecticut.com/practice/pact-surgical-specialists/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

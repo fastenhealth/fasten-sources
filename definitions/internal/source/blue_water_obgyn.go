@@ -28,6 +28,8 @@ func GetSourceBlueWaterObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Blue Water ObGyn"
 	sourceDef.SourceType = pkg.SourceTypeBlueWaterObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

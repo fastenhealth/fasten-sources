@@ -29,6 +29,8 @@ func GetSourceMichelleYangMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Michelle Yang MD"
 	sourceDef.SourceType = pkg.SourceTypeMichelleYangMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://physicians.umassmemorial.org/details/4339/michelle-yang-pathology-clinton-leominster-marlborough-worcester"
 	sourceDef.SecretKeyPrefix = "cerner"
 

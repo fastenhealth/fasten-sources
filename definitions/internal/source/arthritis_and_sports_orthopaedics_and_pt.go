@@ -28,6 +28,8 @@ func GetSourceArthritisAndSportsOrthopaedicsAndPt(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Arthritis & Sports Orthopaedics & PT"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndSportsOrthopaedicsAndPt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "arthritis-and-sports-orthopaedics-and-pt.jpg"
 	sourceDef.PatientAccessUrl = "https://www.arthritisandsports.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

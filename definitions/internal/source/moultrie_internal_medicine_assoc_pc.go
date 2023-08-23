@@ -29,6 +29,8 @@ func GetSourceMoultrieInternalMedicineAssocPc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Moultrie Internal Medicine Assoc Pc"
 	sourceDef.SourceType = pkg.SourceTypeMoultrieInternalMedicineAssocPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

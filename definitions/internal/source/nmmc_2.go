@@ -28,6 +28,8 @@ func GetSourceNmmc2(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "NMMC"
 	sourceDef.SourceType = pkg.SourceTypeNmmc2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

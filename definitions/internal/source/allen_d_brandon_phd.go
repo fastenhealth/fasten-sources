@@ -28,6 +28,8 @@ func GetSourceAllenDBrandonPhd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Allen D Brandon PHD"
 	sourceDef.SourceType = pkg.SourceTypeAllenDBrandonPhd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vitals.com/doctors/Dr_Allen_Brandon.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

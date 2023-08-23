@@ -29,6 +29,8 @@ func GetSourceCaritasClinics(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Caritas Clinics"
 	sourceDef.SourceType = pkg.SourceTypeCaritasClinics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.caritasclinics.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

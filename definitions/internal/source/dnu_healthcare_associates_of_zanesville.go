@@ -28,6 +28,8 @@ func GetSourceDnuHealthcareAssociatesOfZanesville(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "DNU Healthcare Associates of Zanesville"
 	sourceDef.SourceType = pkg.SourceTypeDnuHealthcareAssociatesOfZanesville
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dnu-healthcare-associates-of-zanesville.svg"
 	sourceDef.PatientAccessUrl = "https://www.genesishcs.org/find-locations/genesis-primary-care-zanesville-2?y_source=1_MjQxNTA4MzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"

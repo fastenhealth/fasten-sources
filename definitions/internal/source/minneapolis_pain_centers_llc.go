@@ -28,6 +28,8 @@ func GetSourceMinneapolisPainCentersLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Minneapolis Pain Centers LLC"
 	sourceDef.SourceType = pkg.SourceTypeMinneapolisPainCentersLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "minneapolis-pain-centers-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.nuraclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,7 @@ func GetSourceRajeshBVrushabMdPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Rajesh B Vrushab MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeRajeshBVrushabMdPllc
 	sourceDef.Category = []string{"207RC0001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871866111"}}
 	sourceDef.PatientAccessUrl = "https://mid-citiescardiaccarecenter.com/rajesh.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

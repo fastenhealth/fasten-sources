@@ -29,6 +29,8 @@ func GetSourceLogansportMemorialHospital(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Logansport Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeLogansportMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "logansport-memorial-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.logansportmemorial.org"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceVidantHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Vidant Health"
 	sourceDef.SourceType = pkg.SourceTypeVidantHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

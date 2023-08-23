@@ -28,6 +28,8 @@ func GetSourceRehabilitation(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Rehabilitation"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nsuhealth.nova.edu/schedule-appointment/locations-directions.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

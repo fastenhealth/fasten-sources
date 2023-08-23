@@ -29,7 +29,7 @@ func GetSourceTurningPointCommunityPrograms(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Turning Point Community Programs"
 	sourceDef.SourceType = pkg.SourceTypeTurningPointCommunityPrograms
 	sourceDef.Category = []string{"251B00000X", "251S00000X", "261Q00000X", "261QM0801X", "261QM0850X", "320800000X"}
-	sourceDef.Aliases = []string{"CORE ROSIN", "CRISIS RESIDENTIAL PROGRAM III", "RST MADISON"}
+	sourceDef.Aliases = []string{"CORE MADISON", "CORE ROSIN", "CRISIS RESIDENTIAL PROGRAM III", "RST MADISON"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023757291", "1306922349", "1336694314", "1346646395", "1346658499", "1417580093", "1467742395", "1861570236", "1881026821", "1962896639"}}
 	sourceDef.PatientAccessUrl = "https://www.tpcp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

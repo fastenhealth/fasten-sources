@@ -28,6 +28,8 @@ func GetSourceRiversideEyecareProfessionals(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Riverside EyeCare Professionals"
 	sourceDef.SourceType = pkg.SourceTypeRiversideEyecareProfessionals
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.recp-eyemd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

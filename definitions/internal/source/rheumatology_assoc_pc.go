@@ -28,6 +28,8 @@ func GetSourceRheumatologyAssocPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Rheumatology Assoc PC"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAssocPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://rheumatologyassociates.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

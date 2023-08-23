@@ -29,6 +29,8 @@ func GetSourceIndependenceParkMedicalServs(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Independence Park Medical Servs."
 	sourceDef.SourceType = pkg.SourceTypeIndependenceParkMedicalServs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ipmsak.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

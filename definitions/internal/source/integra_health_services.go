@@ -28,6 +28,8 @@ func GetSourceIntegraHealthServices(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Integra Health Services"
 	sourceDef.SourceType = pkg.SourceTypeIntegraHealthServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

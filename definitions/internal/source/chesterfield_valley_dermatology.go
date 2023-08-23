@@ -29,6 +29,8 @@ func GetSourceChesterfieldValleyDermatology(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Chesterfield Valley Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeChesterfieldValleyDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceFusionWomensHealthAndWellnessPllc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Fusion Women's Health And Wellness PLLC"
 	sourceDef.SourceType = pkg.SourceTypeFusionWomensHealthAndWellnessPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "fusion-womens-health-and-wellness-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://news.cision.com/fusion-women-s-health---wellness"
 	sourceDef.SecretKeyPrefix = "nextgen"

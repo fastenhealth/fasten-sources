@@ -29,6 +29,7 @@ func GetSourceAllYourFamilyNeedsPrimaryCare(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "All Your Family Needs Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeAllYourFamilyNeedsPrimaryCare
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629429899"}}
 	sourceDef.PatientAccessUrl = "https://allyourfamilyneedsprimarycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

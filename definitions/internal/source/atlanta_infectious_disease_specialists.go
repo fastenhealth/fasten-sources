@@ -29,6 +29,8 @@ func GetSourceAtlantaInfectiousDiseaseSpecialists(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Atlanta Infectious Disease Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaInfectiousDiseaseSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.atlidspec.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

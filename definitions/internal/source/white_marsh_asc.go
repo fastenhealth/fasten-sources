@@ -28,6 +28,8 @@ func GetSourceWhiteMarshAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "White Marsh ASC"
 	sourceDef.SourceType = pkg.SourceTypeWhiteMarshAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hopkinsmedicine.org/patient_care/locations/location-results/johns-hopkins-health-care-surgery-center-white-marsh"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

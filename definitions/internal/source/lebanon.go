@@ -28,6 +28,8 @@ func GetSourceLebanon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Lebanon"
 	sourceDef.SourceType = pkg.SourceTypeLebanon
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.pcmc.care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

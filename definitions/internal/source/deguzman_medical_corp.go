@@ -28,6 +28,8 @@ func GetSourceDeguzmanMedicalCorp(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "DeGuzman Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeDeguzmanMedicalCorp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://drdeguzman.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

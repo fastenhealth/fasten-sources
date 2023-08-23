@@ -28,6 +28,8 @@ func GetSourceTriCountyPulmonaryAndSleep(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Tri-County Pulmonary And Sleep"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyPulmonaryAndSleep
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "tri-county-pulmonary-and-sleep.svg"
 	sourceDef.PatientAccessUrl = "https://tcpsclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

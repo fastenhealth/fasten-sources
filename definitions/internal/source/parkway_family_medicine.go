@@ -29,6 +29,7 @@ func GetSourceParkwayFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Parkway Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeParkwayFamilyMedicine
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528291341"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

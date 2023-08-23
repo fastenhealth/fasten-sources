@@ -29,6 +29,8 @@ func GetSourceHLYoonMdpc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "H L Yoon Mdpc"
 	sourceDef.SourceType = pkg.SourceTypeHLYoonMdpc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

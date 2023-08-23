@@ -28,6 +28,8 @@ func GetSourceColonAndRectalSurgeryInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Colon and Rectal Surgery Inc."
 	sourceDef.SourceType = pkg.SourceTypeColonAndRectalSurgeryInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "colon-and-rectal-surgery-inc.svg"
 	sourceDef.PatientAccessUrl = "https://bestcare.org/locations/methodist-physicians-clinic-colon-and-rectal-surgery"
 	sourceDef.SecretKeyPrefix = "nextgen"

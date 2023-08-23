@@ -29,6 +29,8 @@ func GetSourcePaFootAndAnkleAssociatesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "PA Foot & Ankle Associates, LLC"
 	sourceDef.SourceType = pkg.SourceTypePaFootAndAnkleAssociatesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pafootdoctors.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

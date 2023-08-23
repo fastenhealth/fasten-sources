@@ -28,6 +28,8 @@ func GetSourceSatyaDandamudiMdFacp(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Satya Dandamudi MD FACP"
 	sourceDef.SourceType = pkg.SourceTypeSatyaDandamudiMdFacp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sharecare.com/doctor/dr-satya-n-dandamudi"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

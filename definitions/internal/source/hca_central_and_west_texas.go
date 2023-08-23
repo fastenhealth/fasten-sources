@@ -29,6 +29,8 @@ func GetSourceHcaCentralAndWestTexas(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "HCA Central and West Texas"
 	sourceDef.SourceType = pkg.SourceTypeHcaCentralAndWestTexas
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hca-mountain.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

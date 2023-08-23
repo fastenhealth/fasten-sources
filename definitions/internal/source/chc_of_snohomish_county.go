@@ -28,6 +28,7 @@ func GetSourceChcOfSnohomishCounty(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "CHC of Snohomish County"
 	sourceDef.SourceType = pkg.SourceTypeChcOfSnohomishCounty
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Community Health Center of Snohomish County"}
 	sourceDef.PatientAccessUrl = "https://www.chcsno.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

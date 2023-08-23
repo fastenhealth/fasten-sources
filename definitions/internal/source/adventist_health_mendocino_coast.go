@@ -29,6 +29,7 @@ func GetSourceAdventistHealthMendocinoCoast(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Adventist Health Mendocino Coast"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthMendocinoCoast
 	sourceDef.Category = []string{"251E00000X", "261QR1300X", "282NC0060X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124220249", "1538113725", "1710932157"}}
 	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

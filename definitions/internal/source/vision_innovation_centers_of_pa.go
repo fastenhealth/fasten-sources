@@ -28,6 +28,8 @@ func GetSourceVisionInnovationCentersOfPa(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Vision Innovation Centers Of PA"
 	sourceDef.SourceType = pkg.SourceTypeVisionInnovationCentersOfPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.visioninnovation-partners.com/locations"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

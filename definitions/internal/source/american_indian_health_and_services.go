@@ -29,6 +29,7 @@ func GetSourceAmericanIndianHealthAndServices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "American Indian Health And Services"
 	sourceDef.SourceType = pkg.SourceTypeAmericanIndianHealthAndServices
 	sourceDef.Category = []string{"305S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053509208"}}
 	sourceDef.BrandLogo = "american-indian-health-and-services.svg"
 	sourceDef.PatientAccessUrl = "https://www.aihscorp.org/"

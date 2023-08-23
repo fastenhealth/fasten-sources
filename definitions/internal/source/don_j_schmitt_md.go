@@ -29,6 +29,7 @@ func GetSourceDonJSchmittMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Don J Schmitt MD"
 	sourceDef.SourceType = pkg.SourceTypeDonJSchmittMd
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477976009"}}
 	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"

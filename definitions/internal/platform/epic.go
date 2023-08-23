@@ -40,6 +40,7 @@ func GetSourceEpic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.PlatformType = pkg.SourceTypeEpic
 	sourceDef.SourceType = pkg.SourceTypeEpic
 	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "www.epic.com"
 
 	return sourceDef, nil

@@ -29,6 +29,7 @@ func GetSourceSalemPainAndSpineSpecialistsPc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Salem Pain and Spine Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeSalemPainAndSpineSpecialistsPc
 	sourceDef.Category = []string{"204D00000X", "208100000X", "2081P2900X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124316567"}}
 	sourceDef.BrandLogo = "salem-pain-and-spine-specialists-pc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.salempainandspine.org/"

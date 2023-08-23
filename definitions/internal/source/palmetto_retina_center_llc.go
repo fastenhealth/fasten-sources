@@ -29,6 +29,7 @@ func GetSourcePalmettoRetinaCenterLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Palmetto Retina Center LLC"
 	sourceDef.SourceType = pkg.SourceTypePalmettoRetinaCenterLlc
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255322806"}}
 	sourceDef.BrandLogo = "palmetto-retina-center-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.palmettoretina.com/"

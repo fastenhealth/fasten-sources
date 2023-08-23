@@ -28,6 +28,8 @@ func GetSourceJRaymondLiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "J Raymond Li MD"
 	sourceDef.SourceType = pkg.SourceTypeJRaymondLiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/juijung-li/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

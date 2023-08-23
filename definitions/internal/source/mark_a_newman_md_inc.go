@@ -28,6 +28,8 @@ func GetSourceMarkANewmanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Mark A. Newman MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeMarkANewmanMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.marknewmanmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

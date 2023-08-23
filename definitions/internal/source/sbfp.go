@@ -28,6 +28,8 @@ func GetSourceSbfp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "SBFP"
 	sourceDef.SourceType = pkg.SourceTypeSbfp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.seabreezefamily.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

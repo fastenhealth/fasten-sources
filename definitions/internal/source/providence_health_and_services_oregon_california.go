@@ -29,6 +29,8 @@ func GetSourceProvidenceHealthAndServicesOregonCalifornia(env pkg.FastenLighthou
 
 	sourceDef.Display = "Providence Health & Services - Oregon/California"
 	sourceDef.SourceType = pkg.SourceTypeProvidenceHealthAndServicesOregonCalifornia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

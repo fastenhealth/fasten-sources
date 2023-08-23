@@ -29,6 +29,8 @@ func GetSourceDearbornObgynAssocpc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Dearborn ObGyn AssocPC"
 	sourceDef.SourceType = pkg.SourceTypeDearbornObgynAssocpc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

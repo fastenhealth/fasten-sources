@@ -28,6 +28,8 @@ func GetSourceDavidNRiosMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "David N Rios MD"
 	sourceDef.SourceType = pkg.SourceTypeDavidNRiosMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "david-n-rios-md.jpg"
 	sourceDef.PatientAccessUrl = "https://saddlebackmedicalgroup.com/david-rios-md/?utm_source=GMBSocialClimb&utm_medium=DavidNRiosMd"
 	sourceDef.SecretKeyPrefix = "nextgen"

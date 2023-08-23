@@ -30,6 +30,7 @@ func GetSourceNewYorkPresbyterian(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "New York-Presbyterian"
 	sourceDef.SourceType = pkg.SourceTypeNewYorkPresbyterian
 	sourceDef.Category = []string{"281P00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487857744"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

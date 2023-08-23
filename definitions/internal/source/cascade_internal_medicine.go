@@ -29,6 +29,8 @@ func GetSourceCascadeInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Cascade Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCascadeInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "cascade-internal-medicine.gif"
 	sourceDef.PatientAccessUrl = "https://www.cascadeinternalmedicine.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

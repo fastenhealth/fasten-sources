@@ -28,6 +28,8 @@ func GetSourceHra3(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "HRA3"
 	sourceDef.SourceType = pkg.SourceTypeHra3
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.unitedstateszipcodes.org/37921/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

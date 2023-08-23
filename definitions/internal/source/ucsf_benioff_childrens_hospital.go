@@ -30,6 +30,7 @@ func GetSourceUcsfBenioffChildrensHospital(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "UCSF Benioff Children's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeUcsfBenioffChildrensHospital
 	sourceDef.Category = []string{"282NC2000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164977237"}}
 	sourceDef.PatientAccessUrl = "https://www.ucsfbenioffchildrens.org/"
 	sourceDef.SecretKeyPrefix = "epic"

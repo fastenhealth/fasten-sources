@@ -28,6 +28,8 @@ func GetSourceBaltimoreVascularCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Baltimore Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeBaltimoreVascularCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3KG2UQJ0NWL21XWYL2X4IS3Z3QIQN9?assignment_id=3MAOD8E5747OWEV4XIXX1KVH52RNXT&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

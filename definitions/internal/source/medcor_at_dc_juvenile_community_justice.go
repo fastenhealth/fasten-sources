@@ -28,6 +28,8 @@ func GetSourceMedcorAtDcJuvenileCommunityJustice(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Medcor At DC Juvenile Community Justice"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtDcJuvenileCommunityJustice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.deschutes.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

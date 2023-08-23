@@ -29,6 +29,8 @@ func GetSourceWombkeepersAzObstetricsAndGynecologyPc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Wombkeepers AZ Obstetrics and Gynecology, PC"
 	sourceDef.SourceType = pkg.SourceTypeWombkeepersAzObstetricsAndGynecologyPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wombkeepers.com/scottsdale.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

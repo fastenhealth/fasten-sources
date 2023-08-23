@@ -28,6 +28,8 @@ func GetSourceKingMaceykoDermatologyAssociates(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "King Maceyko Dermatology Associates"
 	sourceDef.SourceType = pkg.SourceTypeKingMaceykoDermatologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

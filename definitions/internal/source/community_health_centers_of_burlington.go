@@ -28,6 +28,8 @@ func GetSourceCommunityHealthCentersOfBurlington(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Community Health Centers Of Burlington"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthCentersOfBurlington
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.chcb.org/locations/riverside/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

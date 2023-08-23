@@ -29,6 +29,8 @@ func GetSourceBonhamsInsuranceFilingService(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Bonham's Insurance Filing Service"
 	sourceDef.SourceType = pkg.SourceTypeBonhamsInsuranceFilingService
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

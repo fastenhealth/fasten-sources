@@ -28,6 +28,8 @@ func GetSourcePrincetonMedicalGroupPa(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Princeton Medical Group PA"
 	sourceDef.SourceType = pkg.SourceTypePrincetonMedicalGroupPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.princetonmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

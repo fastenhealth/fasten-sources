@@ -28,6 +28,8 @@ func GetSourceOaklandVascular(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Oakland Vascular"
 	sourceDef.SourceType = pkg.SourceTypeOaklandVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sutterhealth.org/find-location/facility/south-pavilion-3012-summit-street-entrance"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

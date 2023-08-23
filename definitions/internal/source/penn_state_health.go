@@ -29,6 +29,8 @@ func GetSourcePennStateHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Penn State Health"
 	sourceDef.SourceType = pkg.SourceTypePennStateHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pennstatehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

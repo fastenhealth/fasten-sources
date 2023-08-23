@@ -28,6 +28,8 @@ func GetSourceSpineAndSportsInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Spine And Sports Institute"
 	sourceDef.SourceType = pkg.SourceTypeSpineAndSportsInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "spine-and-sports-institute.jpg"
 	sourceDef.PatientAccessUrl = "https://www.providence.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

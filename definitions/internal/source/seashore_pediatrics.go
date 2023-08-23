@@ -29,6 +29,7 @@ func GetSourceSeashorePediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Seashore Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeSeashorePediatrics
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265458251"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

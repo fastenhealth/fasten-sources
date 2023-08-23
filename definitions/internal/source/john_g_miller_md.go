@@ -29,6 +29,7 @@ func GetSourceJohnGMillerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "John G Miller MD"
 	sourceDef.SourceType = pkg.SourceTypeJohnGMillerMd
 	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215948948"}}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/john-miller-497492"
 	sourceDef.SecretKeyPrefix = "nextgen"

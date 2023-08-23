@@ -29,6 +29,8 @@ func GetSourceDrGlenEHurst(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Dr. Glen E. Hurst"
 	sourceDef.SourceType = pkg.SourceTypeDrGlenEHurst
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-glen-e-hurst.jpg"
 	sourceDef.PatientAccessUrl = "https://www.chihealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

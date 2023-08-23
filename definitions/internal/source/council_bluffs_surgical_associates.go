@@ -29,6 +29,8 @@ func GetSourceCouncilBluffsSurgicalAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Council Bluffs Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeCouncilBluffsSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "council-bluffs-surgical-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://www.grapehospital.com/staff/bio.php?doc_id=70315"
 	sourceDef.SecretKeyPrefix = "cerner"

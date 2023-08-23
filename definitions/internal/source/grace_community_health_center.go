@@ -28,6 +28,8 @@ func GetSourceGraceCommunityHealthCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Grace Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeGraceCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://gracehealthky.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceCorrectvisionLaserInstituteLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "CorrectVision Laser Institute LLC"
 	sourceDef.SourceType = pkg.SourceTypeCorrectvisionLaserInstituteLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "correctvision-laser-institute-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.correctvision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceMchcpMissouriConsolidatedHealthCarePlan(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "MCHCP Missouri Consolidated Health Care Plan"
 	sourceDef.SourceType = pkg.SourceTypeMchcpMissouriConsolidatedHealthCarePlan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://missourigreendoctor.com/?gclid=Cj0KCQiAx6ugBhCcARIsAGNmMbiveXecAfXJ4luH0eK_7OtC0CXoklndAnxjPQxnHG-VkUVmLl_8KgUaAjymEALw_wcB"
 	sourceDef.SecretKeyPrefix = "cerner"
 

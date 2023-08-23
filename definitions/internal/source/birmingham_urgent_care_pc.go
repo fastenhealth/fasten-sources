@@ -30,6 +30,7 @@ func GetSourceBirminghamUrgentCarePc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Birmingham Urgent Care Pc"
 	sourceDef.SourceType = pkg.SourceTypeBirminghamUrgentCarePc
 	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427125756"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

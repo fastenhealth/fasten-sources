@@ -28,6 +28,8 @@ func GetSourceProactiveCarePartners(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Proactive Care Partners"
 	sourceDef.SourceType = pkg.SourceTypeProactiveCarePartners
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHoustonInterventionalCardiologyPa(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Houston Interventional Cardiology PA"
 	sourceDef.SourceType = pkg.SourceTypeHoustonInterventionalCardiologyPa
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033251988"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

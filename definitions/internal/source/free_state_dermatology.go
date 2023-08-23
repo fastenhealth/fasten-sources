@@ -29,6 +29,8 @@ func GetSourceFreeStateDermatology(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Free State Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeFreeStateDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "free-state-dermatology.jpg"
 	sourceDef.PatientAccessUrl = "http://www.freestatedermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

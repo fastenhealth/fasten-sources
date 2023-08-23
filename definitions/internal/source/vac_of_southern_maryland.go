@@ -28,6 +28,8 @@ func GetSourceVacOfSouthernMaryland(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "VAC Of Southern Maryland"
 	sourceDef.SourceType = pkg.SourceTypeVacOfSouthernMaryland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/maryland/brandywine/vascular-access-center-of-southern-maryland-llc-3173845542.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceGreaterHoustonNeurosurgeryCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Greater Houston Neurosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeGreaterHoustonNeurosurgeryCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ghnc.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

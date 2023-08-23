@@ -29,6 +29,8 @@ func GetSourceIredellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Iredell Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeIredellMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "iredell-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/iredell-health-system"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,7 @@ func GetSourceMillCreekFamilyClinicInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Mill Creek Family Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeMillCreekFamilyClinicInc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114299153"}}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3SA4EMRVK8ZEGP3CKJGH7BHCQTN0P3?assignment_id=379J5II412DP2E12Q0RQ036LQLZLE9&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

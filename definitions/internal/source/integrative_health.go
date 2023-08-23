@@ -28,6 +28,8 @@ func GetSourceIntegrativeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Integrative Health"
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "integrative-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/IntegrativeHealthWellnessClinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"

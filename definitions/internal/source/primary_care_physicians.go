@@ -29,6 +29,8 @@ func GetSourcePrimaryCarePhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Primary Care Physicians"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCarePhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.primary-care-physicians.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceMedicalCenterEndoscopyGroup(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Medical Center Endoscopy Group"
 	sourceDef.SourceType = pkg.SourceTypeMedicalCenterEndoscopyGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vanderbilthealth.com/clinic/center-interventional-endoscopy"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

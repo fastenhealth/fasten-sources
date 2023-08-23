@@ -29,6 +29,8 @@ func GetSourceFrontRangeSurgicalServices(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Front Range Surgical Services"
 	sourceDef.SourceType = pkg.SourceTypeFrontRangeSurgicalServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://frsspc.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

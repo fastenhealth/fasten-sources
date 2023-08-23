@@ -29,6 +29,8 @@ func GetSourceMemorialcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "MemorialCare"
 	sourceDef.SourceType = pkg.SourceTypeMemorialcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceAlbanyKetamineMedicalInfusions(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Albany Ketamine Medical Infusions"
 	sourceDef.SourceType = pkg.SourceTypeAlbanyKetamineMedicalInfusions
 	sourceDef.Category = []string{"261QI0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861065856"}}
 	sourceDef.PatientAccessUrl = "https://albanyketamine.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

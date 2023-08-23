@@ -28,6 +28,8 @@ func GetSourceStephenJRameyMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Stephen J Ramey MD"
 	sourceDef.SourceType = pkg.SourceTypeStephenJRameyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "stephen-j-ramey-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.georgiacancerinfo.org/cancer-doctors/stephen-ramey/1412"
 	sourceDef.SecretKeyPrefix = "nextgen"

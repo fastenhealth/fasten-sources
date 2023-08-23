@@ -28,6 +28,8 @@ func GetSourceBluemontNephrologyAssoc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "BLUEMONT NEPHROLOGY ASSOC"
 	sourceDef.SourceType = pkg.SourceTypeBluemontNephrologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bluemontkidney.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

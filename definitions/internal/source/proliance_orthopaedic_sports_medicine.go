@@ -28,6 +28,8 @@ func GetSourceProlianceOrthopaedicSportsMedicine(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Proliance Orthopaedic Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeProlianceOrthopaedicSportsMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "proliance-orthopaedic-sports-medicine.svg"
 	sourceDef.PatientAccessUrl = "https://www.posm.com/contact/issaquah/"
 	sourceDef.SecretKeyPrefix = "nextgen"

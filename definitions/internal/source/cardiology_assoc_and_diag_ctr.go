@@ -28,6 +28,8 @@ func GetSourceCardiologyAssocAndDiagCtr(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Cardiology Assoc And Diag Ctr"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyAssocAndDiagCtr
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCapeFearEyeAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Cape Fear Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeCapeFearEyeAssociatesPa
 	sourceDef.Category = []string{"152W00000X", "152WP0200X", "207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962456343"}}
 	sourceDef.PatientAccessUrl = "https://www.capefeareye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

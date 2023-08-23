@@ -28,6 +28,8 @@ func GetSourceCornerstoneOrthopedicsAndSportsMed(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Cornerstone Orthopedics & Sports Med"
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneOrthopedicsAndSportsMed
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cornerstoneorthopedics.com/locations/superior-office/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceFridFamilyPracticeAf(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Frid Family Practice AF"
 	sourceDef.SourceType = pkg.SourceTypeFridFamilyPracticeAf
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/germaine-frid/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

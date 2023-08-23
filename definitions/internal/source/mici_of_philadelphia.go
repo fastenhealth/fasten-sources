@@ -28,6 +28,8 @@ func GetSourceMiciOfPhiladelphia(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "MICI of Philadelphia"
 	sourceDef.SourceType = pkg.SourceTypeMiciOfPhiladelphia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

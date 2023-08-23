@@ -28,6 +28,8 @@ func GetSourceKennethKWogensenMdInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Kenneth K Wogensen MD INC"
 	sourceDef.SourceType = pkg.SourceTypeKennethKWogensenMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wogensenneurology.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

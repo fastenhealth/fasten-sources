@@ -29,6 +29,8 @@ func GetSourceTJRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "T.J. Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeTJRegionalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.tjregionalhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

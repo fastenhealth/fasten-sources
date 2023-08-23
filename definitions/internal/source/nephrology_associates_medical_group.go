@@ -29,6 +29,7 @@ func GetSourceNephrologyAssociatesMedicalGroup(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "Nephrology Associates Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesMedicalGroup
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083705941"}}
 	sourceDef.BrandLogo = "nephrology-associates-medical-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.namg.net/locations/riverside/"

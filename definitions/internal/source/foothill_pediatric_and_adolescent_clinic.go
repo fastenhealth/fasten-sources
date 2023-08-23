@@ -29,6 +29,7 @@ func GetSourceFoothillPediatricAndAdolescentClinic(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Foothill Pediatric & Adolescent Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFoothillPediatricAndAdolescentClinic
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952499378"}}
 	sourceDef.PatientAccessUrl = "https://www.foothillpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

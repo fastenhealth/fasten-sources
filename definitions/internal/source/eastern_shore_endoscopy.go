@@ -28,6 +28,8 @@ func GetSourceEasternShoreEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Eastern Shore Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeEasternShoreEndoscopy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

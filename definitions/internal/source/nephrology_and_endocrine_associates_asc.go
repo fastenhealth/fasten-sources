@@ -28,6 +28,8 @@ func GetSourceNephrologyAndEndocrineAssociatesAsc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Nephrology And Endocrine Associates ASC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAndEndocrineAssociatesAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ksosn.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

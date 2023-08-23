@@ -29,6 +29,8 @@ func GetSourcePremierSuburbanMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Premier Suburban Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePremierSuburbanMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "premier-suburban-medical-group.svg"
 	sourceDef.PatientAccessUrl = "https://www.premiersuburban.com/premier-suburban-medical-group/"
 	sourceDef.SecretKeyPrefix = "cerner"

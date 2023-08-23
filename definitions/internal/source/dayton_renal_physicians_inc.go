@@ -28,6 +28,8 @@ func GetSourceDaytonRenalPhysiciansInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Dayton Renal Physicians Inc"
 	sourceDef.SourceType = pkg.SourceTypeDaytonRenalPhysiciansInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.renalphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceJewishFamilyServicesOfAtlanticAndCapeMayCounties(env pkg.FastenLig
 
 	sourceDef.Display = "Jewish Family Services of Atlantic and Cape May Counties"
 	sourceDef.SourceType = pkg.SourceTypeJewishFamilyServicesOfAtlanticAndCapeMayCounties
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "jewish-family-services-of-atlantic-and-cape-may-counties.svg"
 	sourceDef.PatientAccessUrl = "https://www.jfsatlantic.org/assets/img/logo-jfs.svg"
 	sourceDef.SecretKeyPrefix = "cerner"

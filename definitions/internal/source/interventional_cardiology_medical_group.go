@@ -28,6 +28,8 @@ func GetSourceInterventionalCardiologyMedicalGroup(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Interventional Cardiology Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeInterventionalCardiologyMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

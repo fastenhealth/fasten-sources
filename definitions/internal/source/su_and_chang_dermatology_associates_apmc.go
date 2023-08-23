@@ -30,6 +30,7 @@ func GetSourceSuAndChangDermatologyAssociatesApmc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Su and Chang Dermatology Associates, APMC"
 	sourceDef.SourceType = pkg.SourceTypeSuAndChangDermatologyAssociatesApmc
 	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932547882"}}
 	sourceDef.PatientAccessUrl = "https://verdugodermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

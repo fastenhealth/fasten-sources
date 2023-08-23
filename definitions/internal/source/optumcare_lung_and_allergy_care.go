@@ -28,6 +28,8 @@ func GetSourceOptumcareLungAndAllergyCare(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "OptumCare Lung And Allergy Care"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareLungAndAllergyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "optumcare-lung-and-allergy-care.jpg"
 	sourceDef.PatientAccessUrl = "https://www.optum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

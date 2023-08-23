@@ -28,6 +28,8 @@ func GetSourceBundledPaymentsCardiovascular(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Bundled Payments Cardiovascular"
 	sourceDef.SourceType = pkg.SourceTypeBundledPaymentsCardiovascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

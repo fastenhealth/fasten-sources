@@ -28,6 +28,8 @@ func GetSourceAnatomicPathologyLab(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Anatomic Pathology Lab"
 	sourceDef.SourceType = pkg.SourceTypeAnatomicPathologyLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.testing.com/articles/anatomic-pathology/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

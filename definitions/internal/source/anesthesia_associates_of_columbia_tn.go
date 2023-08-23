@@ -28,6 +28,8 @@ func GetSourceAnesthesiaAssociatesOfColumbiaTn(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Anesthesia Associates Of Columbia TN"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaAssociatesOfColumbiaTn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "anesthesia-associates-of-columbia-tn.jpg"
 	sourceDef.PatientAccessUrl = "https://healthprovidersdata.com/hipaa/codes/NPI-1871979781-anesthesia-associates-of-columbia-tn-llc"
 	sourceDef.SecretKeyPrefix = "nextgen"

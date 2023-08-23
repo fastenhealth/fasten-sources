@@ -29,6 +29,8 @@ func GetSourcePioneerValleySurgical(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Pioneer Valley Surgical"
 	sourceDef.SourceType = pkg.SourceTypePioneerValleySurgical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

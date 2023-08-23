@@ -28,6 +28,8 @@ func GetSourceAmbulatoryBehavioralHealth(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Ambulatory Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeAmbulatoryBehavioralHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ambulatory-behavioral-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.sstar.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceTandigmPhysicianServicesLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Tandigm Physician Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeTandigmPhysicianServicesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

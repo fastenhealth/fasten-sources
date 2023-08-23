@@ -28,6 +28,8 @@ func GetSourceForefrontManagementLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Forefront Management LLC"
 	sourceDef.SourceType = pkg.SourceTypeForefrontManagementLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

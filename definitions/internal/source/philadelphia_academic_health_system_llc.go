@@ -29,6 +29,8 @@ func GetSourcePhiladelphiaAcademicHealthSystemLlc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Philadelphia Academic Health System, LLC"
 	sourceDef.SourceType = pkg.SourceTypePhiladelphiaAcademicHealthSystemLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://na.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

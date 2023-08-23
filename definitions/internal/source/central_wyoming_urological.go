@@ -28,6 +28,8 @@ func GetSourceCentralWyomingUrological(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Central Wyoming Urological"
 	sourceDef.SourceType = pkg.SourceTypeCentralWyomingUrological
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "central-wyoming-urological.jpg"
 	sourceDef.PatientAccessUrl = "https://wyomingurology.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"

@@ -28,6 +28,8 @@ func GetSourceDenverNephrologistsPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Denver Nephrologists PC"
 	sourceDef.SourceType = pkg.SourceTypeDenverNephrologistsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cokidneycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

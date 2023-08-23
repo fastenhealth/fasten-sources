@@ -29,6 +29,8 @@ func GetSourceCareNewEnglandHealthSystem(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Care New England Health System"
 	sourceDef.SourceType = pkg.SourceTypeCareNewEnglandHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.carenewengland.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

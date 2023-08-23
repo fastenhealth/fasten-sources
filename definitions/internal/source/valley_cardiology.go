@@ -29,6 +29,7 @@ func GetSourceValleyCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Valley Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeValleyCardiology
 	sourceDef.Category = []string{"261QM2500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033363254"}}
 	sourceDef.PatientAccessUrl = "http://siliconvalleycardiology.com"
 	sourceDef.SecretKeyPrefix = "allscripts"

@@ -28,6 +28,8 @@ func GetSourceFamilyMedsurgClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Family MedSurg Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedsurgClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

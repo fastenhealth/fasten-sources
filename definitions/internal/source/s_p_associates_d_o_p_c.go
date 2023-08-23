@@ -29,6 +29,8 @@ func GetSourceSPAssociatesDOPC(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "S.P. Associates D.O., P.C."
 	sourceDef.SourceType = pkg.SourceTypeSPAssociatesDOPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "s-p-associates-d-o-p-c.jpg"
 	sourceDef.PatientAccessUrl = "https://www.spassociates.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

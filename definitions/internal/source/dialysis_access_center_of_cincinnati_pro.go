@@ -28,6 +28,8 @@ func GetSourceDialysisAccessCenterOfCincinnatiPro(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Dialysis Access Center Of Cincinnati Pro"
 	sourceDef.SourceType = pkg.SourceTypeDialysisAccessCenterOfCincinnatiPro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceHcaSouthAtlantic(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "HCA South Atlantic"
 	sourceDef.SourceType = pkg.SourceTypeHcaSouthAtlantic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

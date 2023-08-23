@@ -28,6 +28,8 @@ func GetSourceGreaterPittsburghSurgeryAccessLlc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Greater Pittsburgh Surgery Access LLC"
 	sourceDef.SourceType = pkg.SourceTypeGreaterPittsburghSurgeryAccessLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "greater-pittsburgh-surgery-access-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://carelistings.com/surgical-centers/jefferson-hills-pa/greater-pittsburgh-surgery-llc/619b16f04ddd7966636c147d"
 	sourceDef.SecretKeyPrefix = "nextgen"

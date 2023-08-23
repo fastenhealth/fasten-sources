@@ -28,6 +28,8 @@ func GetSourceRuralHealthCareIncDbaAzaHealth(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Rural Health Care Inc DBA Aza Health"
 	sourceDef.SourceType = pkg.SourceTypeRuralHealthCareIncDbaAzaHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://azahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

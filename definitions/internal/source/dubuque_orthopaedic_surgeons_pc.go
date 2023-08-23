@@ -29,6 +29,8 @@ func GetSourceDubuqueOrthopaedicSurgeonsPc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Dubuque Orthopaedic Surgeons, PC"
 	sourceDef.SourceType = pkg.SourceTypeDubuqueOrthopaedicSurgeonsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://dbqbonedoctors.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

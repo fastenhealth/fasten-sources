@@ -30,6 +30,7 @@ func GetSourceWhitevilleMedicalAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Whiteville Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeWhitevilleMedicalAssociates
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902963937"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

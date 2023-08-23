@@ -29,6 +29,8 @@ func GetSourceWestMichiganFamilyMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "West Michigan Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWestMichiganFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.westmichiganfamilymedicine.com/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

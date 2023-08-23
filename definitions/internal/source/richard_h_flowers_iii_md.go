@@ -28,6 +28,8 @@ func GetSourceRichardHFlowersIiiMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Richard H Flowers III MD"
 	sourceDef.SourceType = pkg.SourceTypeRichardHFlowersIiiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.stdom.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

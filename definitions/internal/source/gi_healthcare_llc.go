@@ -28,6 +28,8 @@ func GetSourceGiHealthcareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "GI Healthcare LLC"
 	sourceDef.SourceType = pkg.SourceTypeGiHealthcareLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gi-healthcare-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://gastrohealth.com/locations/west-palm-beach"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceCincinnatiCenterForPaindoj(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Cincinnati Center For PainDOJ"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiCenterForPaindoj
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

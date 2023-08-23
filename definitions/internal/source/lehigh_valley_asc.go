@@ -28,6 +28,8 @@ func GetSourceLehighValleyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Lehigh Valley ASC"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

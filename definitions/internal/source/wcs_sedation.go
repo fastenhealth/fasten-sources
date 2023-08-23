@@ -28,6 +28,8 @@ func GetSourceWcsSedation(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "WCS Sedation"
 	sourceDef.SourceType = pkg.SourceTypeWcsSedation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

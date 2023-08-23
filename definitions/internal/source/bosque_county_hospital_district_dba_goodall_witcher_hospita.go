@@ -29,6 +29,8 @@ func GetSourceBosqueCountyHospitalDistrictDbaGoodallWitcherHospita(env pkg.Faste
 
 	sourceDef.Display = "Bosque County Hospital District DBA Goodall-Witcher Hospita"
 	sourceDef.SourceType = pkg.SourceTypeBosqueCountyHospitalDistrictDbaGoodallWitcherHospita
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

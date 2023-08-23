@@ -29,6 +29,8 @@ func GetSourceEdgarSandovalMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Edgar Sandoval, MD"
 	sourceDef.SourceType = pkg.SourceTypeEdgarSandovalMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "edgar-sandoval-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.msmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

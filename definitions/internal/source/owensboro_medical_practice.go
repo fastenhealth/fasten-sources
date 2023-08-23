@@ -29,6 +29,7 @@ func GetSourceOwensboroMedicalPractice(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Owensboro Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeOwensboroMedicalPractice
 	sourceDef.Category = []string{"363LG0600X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336514264"}}
 	sourceDef.PatientAccessUrl = "https://owensboromedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

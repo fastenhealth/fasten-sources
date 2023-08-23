@@ -29,6 +29,8 @@ func GetSourceStateOfDelawareHealthAndSocialServices(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "State of Delaware Health and Social Services"
 	sourceDef.SourceType = pkg.SourceTypeStateOfDelawareHealthAndSocialServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://dhss.delaware.gov/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

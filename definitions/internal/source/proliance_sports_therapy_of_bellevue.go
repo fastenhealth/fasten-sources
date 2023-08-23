@@ -28,6 +28,8 @@ func GetSourceProlianceSportsTherapyOfBellevue(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Proliance Sports Therapy Of Bellevue"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSportsTherapyOfBellevue
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://proliancesportstherapy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

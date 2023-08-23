@@ -28,6 +28,8 @@ func GetSourceVicksburgPulmonaryClinic(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Vicksburg Pulmonary Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVicksburgPulmonaryClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://vicksburg-pulmonary.business.site/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

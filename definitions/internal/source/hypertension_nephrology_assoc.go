@@ -29,6 +29,8 @@ func GetSourceHypertensionNephrologyAssoc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hypertension Nephrology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeHypertensionNephrologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceTheLaserClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "The Laser Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheLaserClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-laser-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/TheLaserClinicLebanon/photos/"
 	sourceDef.SecretKeyPrefix = "nextgen"

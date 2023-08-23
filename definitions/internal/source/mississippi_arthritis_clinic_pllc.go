@@ -29,6 +29,7 @@ func GetSourceMississippiArthritisClinicPllc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Mississippi Arthritis Clinic PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMississippiArthritisClinicPllc
 	sourceDef.Category = []string{"207RR0500X", "332900000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275713471"}}
 	sourceDef.PatientAccessUrl = "https://mississippiarthritisclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

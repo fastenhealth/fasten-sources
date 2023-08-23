@@ -29,6 +29,7 @@ func GetSourceHunterdonEndosurgeryCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Hunterdon Endosurgery Center"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonEndosurgeryCenter
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417919879"}}
 	sourceDef.BrandLogo = "hunterdon-behavioral-health.svg"
 	sourceDef.PatientAccessUrl = "https://hunterdongastro.com/"

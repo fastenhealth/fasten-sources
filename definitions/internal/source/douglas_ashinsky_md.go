@@ -29,6 +29,8 @@ func GetSourceDouglasAshinskyMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Douglas Ashinsky, MD"
 	sourceDef.SourceType = pkg.SourceTypeDouglasAshinskyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "douglas-ashinsky-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/doctors/douglas-ashinsky-md-facp/"
 	sourceDef.SecretKeyPrefix = "cerner"

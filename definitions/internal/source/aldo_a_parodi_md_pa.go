@@ -29,6 +29,7 @@ func GetSourceAldoAParodiMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Aldo A Parodi Md Pa"
 	sourceDef.SourceType = pkg.SourceTypeAldoAParodiMdPa
 	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811299647"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

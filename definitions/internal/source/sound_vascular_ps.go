@@ -28,6 +28,8 @@ func GetSourceSoundVascularPs(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Sound Vascular PS"
 	sourceDef.SourceType = pkg.SourceTypeSoundVascularPs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.soundvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

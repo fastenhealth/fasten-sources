@@ -28,6 +28,8 @@ func GetSourceArthritisConsultantsNorthCountyApc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Arthritis Consultants North County APC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisConsultantsNorthCountyApc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://arthritisconsultants.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

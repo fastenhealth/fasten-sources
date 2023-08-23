@@ -29,6 +29,7 @@ func GetSourceTerryEStangerMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Terry E Stanger MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeTerryEStangerMdInc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023397411"}}
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/terry-e-stanger-md-tarzana"
 	sourceDef.SecretKeyPrefix = "nextgen"

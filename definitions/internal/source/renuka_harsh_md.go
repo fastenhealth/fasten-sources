@@ -29,6 +29,8 @@ func GetSourceRenukaHarshMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Renuka Harsh Md"
 	sourceDef.SourceType = pkg.SourceTypeRenukaHarshMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

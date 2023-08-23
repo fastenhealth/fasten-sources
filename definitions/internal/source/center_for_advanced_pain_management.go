@@ -28,6 +28,8 @@ func GetSourceCenterForAdvancedPainManagement(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Center For Advanced Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeCenterForAdvancedPainManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.capmr.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

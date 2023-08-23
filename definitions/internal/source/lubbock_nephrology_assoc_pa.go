@@ -28,6 +28,8 @@ func GetSourceLubbockNephrologyAssocPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Lubbock Nephrology Assoc Pa"
 	sourceDef.SourceType = pkg.SourceTypeLubbockNephrologyAssocPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

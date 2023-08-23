@@ -28,6 +28,8 @@ func GetSourceMercySpecialtyClinicClinton(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Mercy Specialty Clinic - Clinton"
 	sourceDef.SourceType = pkg.SourceTypeMercySpecialtyClinicClinton
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mercyone.org/clinton/location/mercyone-clinton-specialty-care"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

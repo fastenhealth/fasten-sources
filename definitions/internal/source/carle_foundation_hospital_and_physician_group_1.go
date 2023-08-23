@@ -29,6 +29,8 @@ func GetSourceCarleFoundationHospitalAndPhysicianGroup1(env pkg.FastenLighthouse
 
 	sourceDef.Display = "Carle Foundation Hospital & Physician Group"
 	sourceDef.SourceType = pkg.SourceTypeCarleFoundationHospitalAndPhysicianGroup1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "carle-foundation-hospital-and-physician-group.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

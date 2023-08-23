@@ -28,6 +28,8 @@ func GetSourceGibbon(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Gibbon"
 	sourceDef.SourceType = pkg.SourceTypeGibbon
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.postfallsop.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

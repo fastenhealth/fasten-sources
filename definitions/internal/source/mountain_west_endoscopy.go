@@ -28,6 +28,8 @@ func GetSourceMountainWestEndoscopy(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Mountain West Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeMountainWestEndoscopy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://geo-blocked-site.azurewebsites.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

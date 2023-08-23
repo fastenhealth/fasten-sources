@@ -29,6 +29,8 @@ func GetSourceHospitalSistersHealthSystemHshs(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Hospital Sisters Health System (HSHS)"
 	sourceDef.SourceType = pkg.SourceTypeHospitalSistersHealthSystemHshs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

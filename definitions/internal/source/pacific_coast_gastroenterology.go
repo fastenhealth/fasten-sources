@@ -28,6 +28,8 @@ func GetSourcePacificCoastGastroenterology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Pacific Coast Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypePacificCoastGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/irvine/pacific-coast-gastroenterology-xb7llc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

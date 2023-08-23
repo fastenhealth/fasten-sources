@@ -28,6 +28,8 @@ func GetSourceBluegrassEarNoseAndThroatClinic(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Bluegrass Ear Nose And Throat Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBluegrassEarNoseAndThroatClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "bluegrass-ear-nose-and-throat-clinic.gif"
 	sourceDef.PatientAccessUrl = "https://bluegrassentclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

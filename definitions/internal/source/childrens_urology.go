@@ -29,6 +29,8 @@ func GetSourceChildrensUrology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Children's Urology"
 	sourceDef.SourceType = pkg.SourceTypeChildrensUrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

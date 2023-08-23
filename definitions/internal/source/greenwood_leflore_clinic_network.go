@@ -28,6 +28,8 @@ func GetSourceGreenwoodLefloreClinicNetwork(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Greenwood Leflore Clinic Network"
 	sourceDef.SourceType = pkg.SourceTypeGreenwoodLefloreClinicNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourcePracticeResults(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Practice Results"
 	sourceDef.SourceType = pkg.SourceTypePracticeResults
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

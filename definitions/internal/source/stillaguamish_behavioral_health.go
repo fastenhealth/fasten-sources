@@ -29,6 +29,7 @@ func GetSourceStillaguamishBehavioralHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Stillaguamish Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeStillaguamishBehavioralHealth
 	sourceDef.Category = []string{"251S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235362724"}}
 	sourceDef.PatientAccessUrl = "Name: Stillaguamish Behavioral Health Address: 5700 172nd St NE City: Arlington Zip: 98223 State: Washington Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"

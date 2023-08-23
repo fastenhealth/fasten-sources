@@ -29,6 +29,7 @@ func GetSourceUabCallahanEyeHospitalAuthority(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "UAB Callahan Eye Hospital Authority"
 	sourceDef.SourceType = pkg.SourceTypeUabCallahanEyeHospitalAuthority
 	sourceDef.Category = []string{"207W00000X", "282N00000X", "367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023358850", "1427398254", "1578809430"}}
 	sourceDef.PatientAccessUrl = "https://uabcallahaneye.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

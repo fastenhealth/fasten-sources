@@ -30,6 +30,7 @@ func GetSourceStateOfNewMexico(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "State of New Mexico"
 	sourceDef.SourceType = pkg.SourceTypeStateOfNewMexico
 	sourceDef.Category = []string{"251B00000X", "251K00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134257249", "1457539322", "1508914896", "1578609459", "1972784544"}}
 	sourceDef.PatientAccessUrl = "https://www.generalservices.state.nm.us/divisions/"
 	sourceDef.SecretKeyPrefix = "cerner"

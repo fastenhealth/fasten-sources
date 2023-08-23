@@ -29,6 +29,8 @@ func GetSourceMosaicMentalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mosaic Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeMosaicMentalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mosaicmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceOsteopathicPhysiciansOfTulsa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Osteopathic Physicians Of Tulsa"
 	sourceDef.SourceType = pkg.SourceTypeOsteopathicPhysiciansOfTulsa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

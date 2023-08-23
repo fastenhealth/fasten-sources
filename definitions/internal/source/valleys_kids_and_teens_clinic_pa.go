@@ -29,6 +29,8 @@ func GetSourceValleysKidsAndTeensClinicPa(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Valley's Kids and Teens Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeValleysKidsAndTeensClinicPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

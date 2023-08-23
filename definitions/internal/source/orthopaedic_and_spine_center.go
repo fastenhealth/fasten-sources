@@ -28,6 +28,8 @@ func GetSourceOrthopaedicAndSpineCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Orthopaedic And Spine Center"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicAndSpineCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.osc-ortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

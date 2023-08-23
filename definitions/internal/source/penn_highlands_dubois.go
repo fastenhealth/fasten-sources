@@ -29,6 +29,8 @@ func GetSourcePennHighlandsDubois(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Penn Highlands - Dubois"
 	sourceDef.SourceType = pkg.SourceTypePennHighlandsDubois
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "penn-highlands-dubois.svg"
 	sourceDef.PatientAccessUrl = "https://www.phhealthcare.org/location/hospitals/penn-highlands-dubois-3"
 	sourceDef.SecretKeyPrefix = "cerner"

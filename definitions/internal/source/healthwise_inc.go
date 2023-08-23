@@ -29,6 +29,8 @@ func GetSourceHealthwiseInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Healthwise Inc."
 	sourceDef.SourceType = pkg.SourceTypeHealthwiseInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "healthwise-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.healthwise.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,7 @@ func GetSourceChandrasClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Chandras Clinic PC"
 	sourceDef.SourceType = pkg.SourceTypeChandrasClinicPc
 	sourceDef.Category = []string{"2084P0800X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366625881"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

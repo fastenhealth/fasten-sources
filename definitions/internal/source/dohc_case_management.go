@@ -28,6 +28,8 @@ func GetSourceDohcCaseManagement(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "DOHC Case Management"
 	sourceDef.SourceType = pkg.SourceTypeDohcCaseManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dohc-case-management.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/locations/profile/?id=40"
 	sourceDef.SecretKeyPrefix = "nextgen"

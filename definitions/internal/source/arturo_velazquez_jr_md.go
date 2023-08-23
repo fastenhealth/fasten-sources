@@ -28,6 +28,8 @@ func GetSourceArturoVelazquezJrMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Arturo Velazquez Jr MD"
 	sourceDef.SourceType = pkg.SourceTypeArturoVelazquezJrMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "arturo-velazquez-jr-md.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

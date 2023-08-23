@@ -28,6 +28,8 @@ func GetSourceSignatureDermatologyAndAesthetics(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Signature Dermatology and Aesthetics"
 	sourceDef.SourceType = pkg.SourceTypeSignatureDermatologyAndAesthetics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "signature-dermatology-and-aesthetics.svg"
 	sourceDef.PatientAccessUrl = "https://signaturederm.com/locations/tenneyson-pkwy-plano/"
 	sourceDef.SecretKeyPrefix = "nextgen"

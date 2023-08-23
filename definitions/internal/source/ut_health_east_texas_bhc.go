@@ -28,6 +28,8 @@ func GetSourceUtHealthEastTexasBhc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "UT Health East Texas BHC"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthEastTexasBhc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourcePioneerSedationPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Pioneer Sedation PLLC"
 	sourceDef.SourceType = pkg.SourceTypePioneerSedationPllc
 	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154886810"}}
 	sourceDef.PatientAccessUrl = "https://opencorporates.com/companies/us_tn/001009359"
 	sourceDef.SecretKeyPrefix = "nextgen"

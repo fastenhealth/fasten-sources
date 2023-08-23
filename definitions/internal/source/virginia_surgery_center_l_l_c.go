@@ -28,6 +28,8 @@ func GetSourceVirginiaSurgeryCenterLLC(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Virginia Surgery Center L.L.C."
 	sourceDef.SourceType = pkg.SourceTypeVirginiaSurgeryCenterLLC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vhi.org/Virginia%20Surgery%20Center,%20LLC.html?tab=&?=h7532/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

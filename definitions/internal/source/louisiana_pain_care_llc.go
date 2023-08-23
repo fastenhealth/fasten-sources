@@ -28,6 +28,8 @@ func GetSourceLouisianaPainCareLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Louisiana Pain Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeLouisianaPainCareLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.lapaincare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

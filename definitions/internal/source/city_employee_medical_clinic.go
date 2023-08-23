@@ -28,6 +28,8 @@ func GetSourceCityEmployeeMedicalClinic(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "City Employee Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCityEmployeeMedicalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

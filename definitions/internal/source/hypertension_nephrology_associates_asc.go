@@ -28,6 +28,8 @@ func GetSourceHypertensionNephrologyAssociatesAsc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Hypertension Nephrology Associates ASC"
 	sourceDef.SourceType = pkg.SourceTypeHypertensionNephrologyAssociatesAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hypertensionnephrologyassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceMetrolinaNeurologicalAssociates(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Metrolina Neurological Associates"
 	sourceDef.SourceType = pkg.SourceTypeMetrolinaNeurologicalAssociates
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124007778", "1417137787"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

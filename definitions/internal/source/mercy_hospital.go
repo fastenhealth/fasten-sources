@@ -29,6 +29,8 @@ func GetSourceMercyHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Mercy Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMercyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mercyh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

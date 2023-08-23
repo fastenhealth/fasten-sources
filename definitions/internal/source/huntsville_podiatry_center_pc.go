@@ -29,6 +29,8 @@ func GetSourceHuntsvillePodiatryCenterPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Huntsville Podiatry Center, PC"
 	sourceDef.SourceType = pkg.SourceTypeHuntsvillePodiatryCenterPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.huntsvillepodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

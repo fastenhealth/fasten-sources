@@ -29,6 +29,8 @@ func GetSourceGundersenHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Gundersen Health System"
 	sourceDef.SourceType = pkg.SourceTypeGundersenHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

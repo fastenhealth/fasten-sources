@@ -28,6 +28,8 @@ func GetSourceStarTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "STAR Therapy"
 	sourceDef.SourceType = pkg.SourceTypeStarTherapy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://orthopedic.io/physio-clinic/star-sports-therapy-and-athletic-rehabilitation-kent-wa/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

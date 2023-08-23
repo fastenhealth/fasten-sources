@@ -29,6 +29,8 @@ func GetSourceCardiovascularHospitalsOfAmericaInternational(env pkg.FastenLighth
 
 	sourceDef.Display = "Cardiovascular Hospitals of America, International"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularHospitalsOfAmericaInternational
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

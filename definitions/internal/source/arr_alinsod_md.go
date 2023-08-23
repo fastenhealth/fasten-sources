@@ -28,6 +28,8 @@ func GetSourceArrAlinsodMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Arr Alinsod Md"
 	sourceDef.SourceType = pkg.SourceTypeArrAlinsodMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

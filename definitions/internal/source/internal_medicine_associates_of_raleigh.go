@@ -28,6 +28,8 @@ func GetSourceInternalMedicineAssociatesOfRaleigh(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Internal Medicine Associates Of Raleigh"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAssociatesOfRaleigh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.imaraleigh.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceMedcorAtRivianAutomotives(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Medcor At Rivian Automotives"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtRivianAutomotives
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "medcor-at-rivian-automotives.jpg"
 	sourceDef.PatientAccessUrl = "https://medcor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

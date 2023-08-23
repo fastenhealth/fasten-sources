@@ -28,6 +28,8 @@ func GetSourceCommunityFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Community Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCommunityFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

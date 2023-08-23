@@ -28,6 +28,8 @@ func GetSourceTexasOculoplasticConsultants(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Texas Oculoplastic Consultants"
 	sourceDef.SourceType = pkg.SourceTypeTexasOculoplasticConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://toceyeandface.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

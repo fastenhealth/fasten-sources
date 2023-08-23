@@ -29,6 +29,7 @@ func GetSourceCornerstoneHealthCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Cornerstone Health Care"
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneHealthCare
 	sourceDef.Category = []string{"207Q00000X", "208800000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235474701", "1548521537", "1588009609", "1750726873"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

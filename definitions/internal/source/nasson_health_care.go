@@ -28,6 +28,8 @@ func GetSourceNassonHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Nasson Health Care"
 	sourceDef.SourceType = pkg.SourceTypeNassonHealthCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nassonhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

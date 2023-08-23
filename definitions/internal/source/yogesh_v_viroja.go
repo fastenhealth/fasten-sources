@@ -28,6 +28,8 @@ func GetSourceYogeshVViroja(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Yogesh V Viroja"
 	sourceDef.SourceType = pkg.SourceTypeYogeshVViroja
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

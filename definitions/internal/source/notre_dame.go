@@ -28,6 +28,8 @@ func GetSourceNotreDame(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Notre Dame"
 	sourceDef.SourceType = pkg.SourceTypeNotreDame
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=AwrhbaTHRQtkkOMLH5EPxQt.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1678489160/RO=10/RU=http%3a%2f%2fwww.mhri.org%2f/RK=2/RS=arRnMcU.ESp1uHdkC2ZYpM.x7qw-"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

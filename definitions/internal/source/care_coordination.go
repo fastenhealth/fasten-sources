@@ -28,6 +28,8 @@ func GetSourceCareCoordination(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Care Coordination"
 	sourceDef.SourceType = pkg.SourceTypeCareCoordination
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

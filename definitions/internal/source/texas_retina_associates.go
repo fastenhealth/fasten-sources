@@ -29,6 +29,7 @@ func GetSourceTexasRetinaAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Texas Retina Associates"
 	sourceDef.SourceType = pkg.SourceTypeTexasRetinaAssociates
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093750853", "1417999855", "1467461202", "1629010376", "1821007675", "1851300792"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

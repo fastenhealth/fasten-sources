@@ -30,6 +30,7 @@ func GetSourceUnionGeneralHospitalInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Union General Hospital Inc"
 	sourceDef.SourceType = pkg.SourceTypeUnionGeneralHospitalInc
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235408253"}}
 	sourceDef.BrandLogo = "union-general-hospital-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.uniongeneralhealthsystem.com/"

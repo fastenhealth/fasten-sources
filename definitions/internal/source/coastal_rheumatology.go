@@ -28,6 +28,8 @@ func GetSourceCoastalRheumatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Coastal Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeCoastalRheumatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "coastal-rheumatology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.coastalrheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

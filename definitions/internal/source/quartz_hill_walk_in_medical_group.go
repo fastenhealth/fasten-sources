@@ -28,6 +28,8 @@ func GetSourceQuartzHillWalkInMedicalGroup(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Quartz Hill Walk-In Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeQuartzHillWalkInMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.firstvalleymedicalgroup.com/location/ca/quartz-hill"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

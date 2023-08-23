@@ -28,6 +28,8 @@ func GetSourceNortheastTarrantInternalMedAssoc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Northeast Tarrant Internal Med Assoc"
 	sourceDef.SourceType = pkg.SourceTypeNortheastTarrantInternalMedAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.netima.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

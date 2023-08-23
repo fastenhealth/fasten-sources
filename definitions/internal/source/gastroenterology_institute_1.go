@@ -29,6 +29,8 @@ func GetSourceGastroenterologyInstitute1(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gastroenterology Institute"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyInstitute1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

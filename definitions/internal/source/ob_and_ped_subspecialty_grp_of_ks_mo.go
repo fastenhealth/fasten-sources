@@ -28,6 +28,8 @@ func GetSourceObAndPedSubspecialtyGrpOfKsMo(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "OB and Ped Subspecialty Grp of KS/MO"
 	sourceDef.SourceType = pkg.SourceTypeObAndPedSubspecialtyGrpOfKsMo
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kcuc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

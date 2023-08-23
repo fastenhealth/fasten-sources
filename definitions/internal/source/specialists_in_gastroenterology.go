@@ -28,6 +28,8 @@ func GetSourceSpecialistsInGastroenterology(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Specialists In Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeSpecialistsInGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.gidoctor.net/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceBehzadOurmazdiMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Behzad Ourmazdi MD  Inc."
 	sourceDef.SourceType = pkg.SourceTypeBehzadOurmazdiMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

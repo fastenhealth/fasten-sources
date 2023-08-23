@@ -29,6 +29,8 @@ func GetSourceStevenDelmaestroMD(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Steven DelMaestro, M.D."
 	sourceDef.SourceType = pkg.SourceTypeStevenDelmaestroMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/doctors/steven-r-delmaestro-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

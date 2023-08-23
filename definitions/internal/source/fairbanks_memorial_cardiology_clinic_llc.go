@@ -28,6 +28,8 @@ func GetSourceFairbanksMemorialCardiologyClinicLlc(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Fairbanks Memorial Cardiology Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeFairbanksMemorialCardiologyClinicLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.foundationhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

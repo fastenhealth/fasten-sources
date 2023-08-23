@@ -29,6 +29,7 @@ func GetSourceMiramarLynnMedicalGroupInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Miramar Lynn Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeMiramarLynnMedicalGroupInc
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043631419"}}
 	sourceDef.PatientAccessUrl = "https://www.miramareye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

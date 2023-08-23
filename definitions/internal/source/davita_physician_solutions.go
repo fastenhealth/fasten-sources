@@ -29,6 +29,8 @@ func GetSourceDavitaPhysicianSolutions(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "DaVita Physician Solutions"
 	sourceDef.SourceType = pkg.SourceTypeDavitaPhysicianSolutions
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "davita-physician-solutions.jpg"
 	sourceDef.SecretKeyPrefix = "epic"
 

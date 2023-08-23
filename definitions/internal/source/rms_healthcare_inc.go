@@ -29,6 +29,8 @@ func GetSourceRmsHealthcareInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "RMS Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeRmsHealthcareInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "rms-healthcare-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://rmsresults.com"
 	sourceDef.SecretKeyPrefix = "cerner"

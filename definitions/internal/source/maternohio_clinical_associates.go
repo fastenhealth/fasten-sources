@@ -28,6 +28,8 @@ func GetSourceMaternohioClinicalAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "MaternOhio Clinical Associates"
 	sourceDef.SourceType = pkg.SourceTypeMaternohioClinicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

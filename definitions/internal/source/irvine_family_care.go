@@ -28,6 +28,8 @@ func GetSourceIrvineFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Irvine Family Care"
 	sourceDef.SourceType = pkg.SourceTypeIrvineFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "irvine-family-care.svg"
 	sourceDef.PatientAccessUrl = "https://irvinefamilycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

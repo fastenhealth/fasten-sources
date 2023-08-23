@@ -28,6 +28,8 @@ func GetSourceTriangleGastroenterology(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Triangle Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeTriangleGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

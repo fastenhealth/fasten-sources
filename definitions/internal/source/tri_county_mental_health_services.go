@@ -30,6 +30,7 @@ func GetSourceTriCountyMentalHealthServices(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Tri-County Mental Health Services"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyMentalHealthServices
 	sourceDef.Category = []string{"101YM0800X", "251B00000X", "251C00000X", "261QM0850X", "320800000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013243211", "1215979158", "1386970580", "1669708863", "1689921629"}}
 	sourceDef.BrandLogo = "tri-county-mental-health-services.jpg"
 	sourceDef.PatientAccessUrl = "https://www.tcmhs.org/contact"

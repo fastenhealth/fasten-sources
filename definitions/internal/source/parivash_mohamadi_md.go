@@ -28,6 +28,8 @@ func GetSourceParivashMohamadiMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Parivash Mohamadi MD"
 	sourceDef.SourceType = pkg.SourceTypeParivashMohamadiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/parivash-mohamadi/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

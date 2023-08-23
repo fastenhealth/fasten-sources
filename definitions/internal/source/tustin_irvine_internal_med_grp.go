@@ -28,6 +28,8 @@ func GetSourceTustinIrvineInternalMedGrp(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Tustin Irvine Internal Med Grp"
 	sourceDef.SourceType = pkg.SourceTypeTustinIrvineInternalMedGrp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

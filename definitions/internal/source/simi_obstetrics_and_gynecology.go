@@ -29,6 +29,8 @@ func GetSourceSimiObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Simi Obstetrics and Gynecology"
 	sourceDef.SourceType = pkg.SourceTypeSimiObstetricsAndGynecology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "simi-obstetrics-and-gynecology.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.simiobgyn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

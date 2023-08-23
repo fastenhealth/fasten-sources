@@ -29,6 +29,8 @@ func GetSourcePaloAltoCountyHealthSystem(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Palo Alto County Health System"
 	sourceDef.SourceType = pkg.SourceTypePaloAltoCountyHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "palo-alto-county-health-system.svg"
 	sourceDef.PatientAccessUrl = "https://pachs.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

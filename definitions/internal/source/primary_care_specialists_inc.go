@@ -29,6 +29,8 @@ func GetSourcePrimaryCareSpecialistsInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Primary Care Specialists, Inc."
 	sourceDef.SourceType = pkg.SourceTypePrimaryCareSpecialistsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Primary Care Specialists, Inc. Address: 3109 Walnut Grove Rd City: Memphis Zip: 38111-3509 State: Tennessee Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 

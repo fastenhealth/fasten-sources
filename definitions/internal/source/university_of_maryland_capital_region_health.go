@@ -29,6 +29,8 @@ func GetSourceUniversityOfMarylandCapitalRegionHealth(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "University of Maryland Capital Region Health"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfMarylandCapitalRegionHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "university-of-maryland-capital-region-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/UMDMedCenter/"
 	sourceDef.SecretKeyPrefix = "cerner"

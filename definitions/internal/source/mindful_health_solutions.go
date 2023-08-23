@@ -28,6 +28,8 @@ func GetSourceMindfulHealthSolutions(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Mindful Health Solutions"
 	sourceDef.SourceType = pkg.SourceTypeMindfulHealthSolutions
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mindfulhealthsolutions.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

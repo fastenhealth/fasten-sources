@@ -28,6 +28,8 @@ func GetSourceSouthTexasKidneySpecialist(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "South Texas Kidney Specialist"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasKidneySpecialist
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

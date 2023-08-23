@@ -28,6 +28,8 @@ func GetSourceNorthwestFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Northwest Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.northwestfamilymed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

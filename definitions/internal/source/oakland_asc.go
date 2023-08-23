@@ -28,6 +28,8 @@ func GetSourceOaklandAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Oakland ASC"
 	sourceDef.SourceType = pkg.SourceTypeOaklandAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://oakland.edu/asc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

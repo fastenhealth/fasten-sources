@@ -28,6 +28,8 @@ func GetSourcePacificNorthwestRetina(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Pacific Northwest Retina"
 	sourceDef.SourceType = pkg.SourceTypePacificNorthwestRetina
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pacific-northwest-retina.svg"
 	sourceDef.PatientAccessUrl = "https://www.pnwretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

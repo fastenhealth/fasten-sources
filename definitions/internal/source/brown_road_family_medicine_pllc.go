@@ -28,6 +28,8 @@ func GetSourceBrownRoadFamilyMedicinePllc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Brown Road Family Medicine PLLC"
 	sourceDef.SourceType = pkg.SourceTypeBrownRoadFamilyMedicinePllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://brownroadfm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

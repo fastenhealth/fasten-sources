@@ -29,6 +29,8 @@ func GetSourceMcfarlandClinicIowa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "McFarland Clinic (Iowa)"
 	sourceDef.SourceType = pkg.SourceTypeMcfarlandClinicIowa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceSouthZanesvilleFamilyMedicalCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "South Zanesville Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthZanesvilleFamilyMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "south-zanesville-family-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.genesishcs.org/find-locations/south-zanesville-family-medical-center"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceMinnesotaLungCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Minnesota Lung Center"
 	sourceDef.SourceType = pkg.SourceTypeMinnesotaLungCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://minnlung.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

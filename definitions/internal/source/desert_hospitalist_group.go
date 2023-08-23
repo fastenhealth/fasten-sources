@@ -28,6 +28,8 @@ func GetSourceDesertHospitalistGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Desert Hospitalist Group"
 	sourceDef.SourceType = pkg.SourceTypeDesertHospitalistGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

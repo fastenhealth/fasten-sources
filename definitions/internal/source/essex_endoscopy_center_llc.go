@@ -29,6 +29,7 @@ func GetSourceEssexEndoscopyCenterLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Essex Endoscopy Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeEssexEndoscopyCenterLlc
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891701611"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

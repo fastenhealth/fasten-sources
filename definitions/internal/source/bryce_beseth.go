@@ -29,6 +29,8 @@ func GetSourceBryceBeseth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Bryce Beseth"
 	sourceDef.SourceType = pkg.SourceTypeBryceBeseth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

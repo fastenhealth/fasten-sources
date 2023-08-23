@@ -28,6 +28,8 @@ func GetSourceShahinEtebarMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Shahin Etebar MD"
 	sourceDef.SourceType = pkg.SourceTypeShahinEtebarMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

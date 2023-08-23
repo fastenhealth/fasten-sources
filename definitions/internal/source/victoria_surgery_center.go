@@ -29,6 +29,7 @@ func GetSourceVictoriaSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Victoria Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeVictoriaSurgeryCenter
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164480992"}}
 	sourceDef.PatientAccessUrl = "https://www.txindependencehealthplan.com/facilities/victoria-surgery-center-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourcePpmd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "PPMD"
 	sourceDef.SourceType = pkg.SourceTypePpmd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/health-center/maryland/baltimore/21201/baltimore-city-health-center-3292-90620?utm_campaign=baltimore-city-health-center&utm_medium=organic&utm_source=local-listing"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

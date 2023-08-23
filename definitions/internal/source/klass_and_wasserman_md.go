@@ -29,6 +29,8 @@ func GetSourceKlassAndWassermanMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Klass & Wasserman, MD"
 	sourceDef.SourceType = pkg.SourceTypeKlassAndWassermanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor"
 	sourceDef.SecretKeyPrefix = "cerner"
 

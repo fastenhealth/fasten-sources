@@ -30,6 +30,7 @@ func GetSourceUltimateAccessPrimaryCare(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Ultimate Access Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeUltimateAccessPrimaryCare
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073021689"}}
 	sourceDef.PatientAccessUrl = "https://www.ultimateaccesspc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

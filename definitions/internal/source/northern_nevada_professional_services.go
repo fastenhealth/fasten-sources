@@ -28,6 +28,8 @@ func GetSourceNorthernNevadaProfessionalServices(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Northern Nevada Professional Services"
 	sourceDef.SourceType = pkg.SourceTypeNorthernNevadaProfessionalServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

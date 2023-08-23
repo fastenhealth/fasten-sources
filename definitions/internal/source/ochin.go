@@ -29,6 +29,8 @@ func GetSourceOchin(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "OCHIN"
 	sourceDef.SourceType = pkg.SourceTypeOchin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

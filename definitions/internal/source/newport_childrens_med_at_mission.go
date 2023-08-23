@@ -29,6 +29,8 @@ func GetSourceNewportChildrensMedAtMission(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Newport Childrens Med at Mission"
 	sourceDef.SourceType = pkg.SourceTypeNewportChildrensMedAtMission
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

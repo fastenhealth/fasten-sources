@@ -29,6 +29,8 @@ func GetSourceScottishRiteForChildren(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Scottish Rite for Children"
 	sourceDef.SourceType = pkg.SourceTypeScottishRiteForChildren
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

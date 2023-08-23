@@ -29,6 +29,8 @@ func GetSourceHoagHeadNeckMedical(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Hoag Head Neck Medical"
 	sourceDef.SourceType = pkg.SourceTypeHoagHeadNeckMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

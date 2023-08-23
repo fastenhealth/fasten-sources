@@ -29,6 +29,7 @@ func GetSourceHeartmastersMedicalAssociatesPc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Heartmasters Medical Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeHeartmastersMedicalAssociatesPc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992860308"}}
 	sourceDef.PatientAccessUrl = "https://www.heartmastermedicalassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

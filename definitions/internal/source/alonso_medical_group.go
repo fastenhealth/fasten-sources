@@ -28,6 +28,8 @@ func GetSourceAlonsoMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Alonso Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAlonsoMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://publichealth.lacounty.gov/cms/chdp.htm"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

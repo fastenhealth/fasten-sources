@@ -29,6 +29,8 @@ func GetSourceNeuromuscularResearchCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Neuromuscular Research Center"
 	sourceDef.SourceType = pkg.SourceTypeNeuromuscularResearchCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

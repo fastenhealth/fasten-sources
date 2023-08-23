@@ -28,6 +28,8 @@ func GetSourceAmsurgMarinAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "AMSURG Marin Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgMarinAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "amsurg-willoughby-anesthesia-llc.png"
 	sourceDef.PatientAccessUrl = "https://www.amsurg.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

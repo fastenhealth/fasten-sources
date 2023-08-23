@@ -28,6 +28,8 @@ func GetSourcePainManagementCenterOfHouston(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pain Management Center Of Houston"
 	sourceDef.SourceType = pkg.SourceTypePainManagementCenterOfHouston
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

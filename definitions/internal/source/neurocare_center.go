@@ -28,6 +28,8 @@ func GetSourceNeurocareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "NeuroCare Center"
 	sourceDef.SourceType = pkg.SourceTypeNeurocareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.neurocarecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

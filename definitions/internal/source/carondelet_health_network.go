@@ -30,6 +30,7 @@ func GetSourceCarondeletHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Carondelet Health Network"
 	sourceDef.SourceType = pkg.SourceTypeCarondeletHealthNetwork
 	sourceDef.Category = []string{"261QR0206X", "273R00000X", "282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093884090", "1285719385", "1417290958", "1578648614", "1649355702", "1689759722", "1700961869", "1750788667", "1891870994", "1942385190"}}
 	sourceDef.BrandLogo = "carondelet-health-network.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.carondelet.org/home"

@@ -28,6 +28,8 @@ func GetSourceHuronGastroenterology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Huron Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeHuronGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hurongastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

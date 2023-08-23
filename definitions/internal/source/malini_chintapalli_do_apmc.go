@@ -28,6 +28,8 @@ func GetSourceMaliniChintapalliDoApmc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Malini Chintapalli DO APMC"
 	sourceDef.SourceType = pkg.SourceTypeMaliniChintapalliDoApmc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://NA.COM"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

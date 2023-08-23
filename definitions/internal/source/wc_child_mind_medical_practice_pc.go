@@ -28,6 +28,8 @@ func GetSourceWcChildMindMedicalPracticePc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "WC Child Mind Medical Practice PC"
 	sourceDef.SourceType = pkg.SourceTypeWcChildMindMedicalPracticePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "wc-child-mind-medical-practice-pc.svg"
 	sourceDef.PatientAccessUrl = "https://childmind.org/about-us/our-offices/"
 	sourceDef.SecretKeyPrefix = "nextgen"

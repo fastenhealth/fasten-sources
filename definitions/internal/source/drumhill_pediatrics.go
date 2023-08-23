@@ -30,6 +30,7 @@ func GetSourceDrumhillPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "DrumHill Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeDrumhillPediatrics
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255379475"}}
 	sourceDef.BrandLogo = "drumhill-pediatrics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.drumhillpediatrics.com/"

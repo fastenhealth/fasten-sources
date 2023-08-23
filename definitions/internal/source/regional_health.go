@@ -28,6 +28,8 @@ func GetSourceRegionalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Regional Health"
 	sourceDef.SourceType = pkg.SourceTypeRegionalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rhs.care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

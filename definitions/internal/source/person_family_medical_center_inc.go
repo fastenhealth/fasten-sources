@@ -28,6 +28,8 @@ func GetSourcePersonFamilyMedicalCenterInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Person Family Medical Center Inc"
 	sourceDef.SourceType = pkg.SourceTypePersonFamilyMedicalCenterInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "person-family-medical-center-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.personfamilymedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

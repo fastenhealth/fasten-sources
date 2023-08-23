@@ -28,6 +28,8 @@ func GetSourceVGeorgeZochowskiDoInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "V George Zochowski DO Inc"
 	sourceDef.SourceType = pkg.SourceTypeVGeorgeZochowskiDoInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ohiohealth.com/find-a-doctor/profile/1912909268/V-G-Zochowski-DO"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

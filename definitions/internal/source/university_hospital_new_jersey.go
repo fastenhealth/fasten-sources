@@ -29,6 +29,8 @@ func GetSourceUniversityHospitalNewJersey(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "University Hospital (New Jersey)"
 	sourceDef.SourceType = pkg.SourceTypeUniversityHospitalNewJersey
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

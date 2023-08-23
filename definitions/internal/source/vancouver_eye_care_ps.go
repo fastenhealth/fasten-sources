@@ -29,6 +29,7 @@ func GetSourceVancouverEyeCarePs(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Vancouver Eye Care PS"
 	sourceDef.SourceType = pkg.SourceTypeVancouverEyeCarePs
 	sourceDef.Category = []string{"207W00000X", "261QA1903X", "332H00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356375042", "1669427043"}}
 	sourceDef.BrandLogo = "vancouver-eye-care-ps.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.vancouvereyecare.com/"

@@ -29,6 +29,8 @@ func GetSourceAnuvaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Anuva Health"
 	sourceDef.SourceType = pkg.SourceTypeAnuvaHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://anuvahealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

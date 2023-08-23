@@ -28,6 +28,8 @@ func GetSourcePaulShipkinMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Paul  Shipkin MD PC"
 	sourceDef.SourceType = pkg.SourceTypePaulShipkinMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pennmedicine.org/providers/profile/paul-shipkin"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

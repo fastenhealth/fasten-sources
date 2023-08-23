@@ -29,6 +29,8 @@ func GetSourceInfectPreventionTreatment(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Infect Prevention  Treatment"
 	sourceDef.SourceType = pkg.SourceTypeInfectPreventionTreatment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

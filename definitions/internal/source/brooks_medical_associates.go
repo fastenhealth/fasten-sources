@@ -28,6 +28,8 @@ func GetSourceBrooksMedicalAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Brooks Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeBrooksMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

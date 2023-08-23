@@ -28,6 +28,8 @@ func GetSourceNextcareNebraska(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NextCare Nebraska"
 	sourceDef.SourceType = pkg.SourceTypeNextcareNebraska
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://m.scottsdalechamber.chambermaster.com/Mobile/Directory/memberdetails/nextcare-urgent-care-oak"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

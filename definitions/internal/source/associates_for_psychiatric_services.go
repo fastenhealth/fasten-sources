@@ -29,6 +29,8 @@ func GetSourceAssociatesForPsychiatricServices(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Associates for Psychiatric Services"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesForPsychiatricServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

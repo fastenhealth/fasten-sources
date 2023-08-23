@@ -29,6 +29,8 @@ func GetSourceGavyMdCsp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Gavy MD CSP"
 	sourceDef.SourceType = pkg.SourceTypeGavyMdCsp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://zip.postcodebase.com/zipcode"
 	sourceDef.SecretKeyPrefix = "cerner"
 

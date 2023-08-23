@@ -29,6 +29,7 @@ func GetSourceCentralIndianaOrthopedics(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Central Indiana Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeCentralIndianaOrthopedics
 	sourceDef.Category = []string{"207QS0010X", "207RS0010X", "207T00000X", "207X00000X", "207XS0106X", "207XS0114X", "207XS0117X", "207XX0004X", "207XX0005X", "208100000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609981711"}}
 	sourceDef.PatientAccessUrl = "https://ciocenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

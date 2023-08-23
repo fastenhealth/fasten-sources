@@ -28,6 +28,8 @@ func GetSourceSterlingPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Sterling Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeSterlingPrimaryCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://physiciansallianceofconnecticut.com/provider/helen-ede-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

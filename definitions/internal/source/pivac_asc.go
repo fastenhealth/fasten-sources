@@ -28,6 +28,8 @@ func GetSourcePivacAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "PIVAC ASC"
 	sourceDef.SourceType = pkg.SourceTypePivacAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/pacific-interventional-vascular-access-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

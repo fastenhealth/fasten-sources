@@ -29,6 +29,8 @@ func GetSourceClevelandFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Cleveland Family Care"
 	sourceDef.SourceType = pkg.SourceTypeClevelandFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

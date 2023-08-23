@@ -28,6 +28,8 @@ func GetSourceCitiMedicalOfCanarsie(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Citi Medical Of Canarsie"
 	sourceDef.SourceType = pkg.SourceTypeCitiMedicalOfCanarsie
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

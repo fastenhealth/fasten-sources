@@ -29,6 +29,8 @@ func GetSourceDrSonnyPark(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Dr. Sonny Park"
 	sourceDef.SourceType = pkg.SourceTypeDrSonnyPark
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-sonny-park.jpg"
 	sourceDef.PatientAccessUrl = "https://www.columbiamemorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

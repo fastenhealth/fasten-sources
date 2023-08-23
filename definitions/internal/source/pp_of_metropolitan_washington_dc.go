@@ -28,6 +28,8 @@ func GetSourcePpOfMetropolitanWashingtonDc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "PP of Metropolitan Washington DC"
 	sourceDef.SourceType = pkg.SourceTypePpOfMetropolitanWashingtonDc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pp-of-metropolitan-washington-dc.svg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

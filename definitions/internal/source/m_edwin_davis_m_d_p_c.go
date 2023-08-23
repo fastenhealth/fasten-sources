@@ -29,6 +29,8 @@ func GetSourceMEdwinDavisMDPC(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "M. Edwin Davis, M.D., P.C."
 	sourceDef.SourceType = pkg.SourceTypeMEdwinDavisMDPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://providers.emoryhealthcare.org/provider/M.+Edwin+Davis/780553"
 	sourceDef.SecretKeyPrefix = "cerner"
 

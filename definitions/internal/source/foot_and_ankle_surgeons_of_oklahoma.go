@@ -28,6 +28,8 @@ func GetSourceFootAndAnkleSurgeonsOfOklahoma(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Foot & Ankle Surgeons Of Oklahoma"
 	sourceDef.SourceType = pkg.SourceTypeFootAndAnkleSurgeonsOfOklahoma
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "foot-and-ankle-surgeons-of-oklahoma.jpg"
 	sourceDef.PatientAccessUrl = "https://footandankleok.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,7 @@ func GetSourceCommunityHealthDevelopmentInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Community Health Development Inc."
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthDevelopmentInc
 	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134102403"}}
 	sourceDef.BrandLogo = "community-health-development-inc.svg"
 	sourceDef.PatientAccessUrl = "https://chdi4health.org/"

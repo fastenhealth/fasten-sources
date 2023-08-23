@@ -28,6 +28,8 @@ func GetSourceVidaNueva(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Vida Nueva"
 	sourceDef.SourceType = pkg.SourceTypeVidaNueva
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.vidanueva.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

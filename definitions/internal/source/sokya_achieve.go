@@ -28,6 +28,8 @@ func GetSourceSokyaAchieve(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Sokya/Achieve"
 	sourceDef.SourceType = pkg.SourceTypeSokyaAchieve
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceHealthPartnersManagementGroupInc1(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Health Partners Management Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeHealthPartnersManagementGroupInc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "health-partners-management-group-inc.jpeg"
 	sourceDef.PatientAccessUrl = "https://hpmg.net"
 	sourceDef.SecretKeyPrefix = "cerner"

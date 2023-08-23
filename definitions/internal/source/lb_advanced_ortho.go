@@ -29,6 +29,8 @@ func GetSourceLbAdvancedOrtho(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "LB ADVANCED ORTHO"
 	sourceDef.SourceType = pkg.SourceTypeLbAdvancedOrtho
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

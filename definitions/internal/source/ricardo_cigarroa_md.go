@@ -29,6 +29,8 @@ func GetSourceRicardoCigarroaMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Ricardo Cigarroa, MD"
 	sourceDef.SourceType = pkg.SourceTypeRicardoCigarroaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://radaris.com/p/Ricardo/Cigarroa/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

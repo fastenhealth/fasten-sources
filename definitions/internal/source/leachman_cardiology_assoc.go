@@ -28,6 +28,8 @@ func GetSourceLeachmanCardiologyAssoc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Leachman Cardiology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeLeachmanCardiologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

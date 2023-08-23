@@ -29,6 +29,8 @@ func GetSourcePulmonaryAllergyCriticalCareAndSleepAssociates(env pkg.FastenLight
 
 	sourceDef.Display = "Pulmonary, Allergy, Critical Care and Sleep Associates"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryAllergyCriticalCareAndSleepAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://michiganlungs.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

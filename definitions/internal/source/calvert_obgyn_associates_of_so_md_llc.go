@@ -28,6 +28,8 @@ func GetSourceCalvertObgynAssociatesOfSoMdLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Calvert OBGYN Associates Of So MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeCalvertObgynAssociatesOfSoMdLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

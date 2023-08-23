@@ -29,6 +29,7 @@ func GetSourceEssentialMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Essential Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEssentialMedicalClinic
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730698937"}}
 	sourceDef.PatientAccessUrl = "https://essentialmedicalclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

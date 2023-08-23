@@ -29,6 +29,8 @@ func GetSourceKalamazooCollegeStudentHealthCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Kalamazoo College Student Health Center"
 	sourceDef.SourceType = pkg.SourceTypeKalamazooCollegeStudentHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

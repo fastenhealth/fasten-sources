@@ -30,6 +30,7 @@ func GetSourceMyKidneyCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "My Kidney Care, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMyKidneyCareLlc
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235611484"}}
 	sourceDef.PatientAccessUrl = "https://www.mykidneycarellc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

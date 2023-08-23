@@ -28,6 +28,8 @@ func GetSourceRamSGargMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Ram S Garg Md"
 	sourceDef.SourceType = pkg.SourceTypeRamSGargMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

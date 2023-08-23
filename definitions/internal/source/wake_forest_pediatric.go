@@ -28,6 +28,8 @@ func GetSourceWakeForestPediatric(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Wake Forest Pediatric"
 	sourceDef.SourceType = pkg.SourceTypeWakeForestPediatric
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

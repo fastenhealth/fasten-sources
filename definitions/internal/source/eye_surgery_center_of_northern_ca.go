@@ -28,6 +28,8 @@ func GetSourceEyeSurgeryCenterOfNorthernCa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Eye Surgery Center Of Northern CA"
 	sourceDef.SourceType = pkg.SourceTypeEyeSurgeryCenterOfNorthernCa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nvisioncenters.com/locations/sacramento/the-eye-surgery-center-of-northern-california/?utm_source=organic&utm_medium=gmb"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

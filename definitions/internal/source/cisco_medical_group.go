@@ -28,6 +28,8 @@ func GetSourceCiscoMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Cisco Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCiscoMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

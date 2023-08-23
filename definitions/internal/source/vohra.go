@@ -28,6 +28,8 @@ func GetSourceVohra(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "Vohra"
 	sourceDef.SourceType = pkg.SourceTypeVohra
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://vohrawoundcare.com/contact-us/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

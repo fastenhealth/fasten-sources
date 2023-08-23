@@ -29,6 +29,7 @@ func GetSourceLmgFamilyPracticePc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "LMG Family Practice PC"
 	sourceDef.SourceType = pkg.SourceTypeLmgFamilyPracticePc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114971553"}}
 	sourceDef.PatientAccessUrl = "https://lmgfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

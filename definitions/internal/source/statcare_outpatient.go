@@ -29,6 +29,8 @@ func GetSourceStatcareOutpatient(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "StatCare Outpatient"
 	sourceDef.SourceType = pkg.SourceTypeStatcareOutpatient
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://statcaremed.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

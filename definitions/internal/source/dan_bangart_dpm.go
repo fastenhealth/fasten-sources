@@ -29,6 +29,8 @@ func GetSourceDanBangartDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Dan Bangart, DPM"
 	sourceDef.SourceType = pkg.SourceTypeDanBangartDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://peoriafootandanklespecialists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

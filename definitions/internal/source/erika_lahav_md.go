@@ -29,6 +29,7 @@ func GetSourceErikaLahavMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Erika Lahav MD"
 	sourceDef.SourceType = pkg.SourceTypeErikaLahavMd
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780630079"}}
 	sourceDef.PatientAccessUrl = "https://www.sharecare.com/doctor/dr-erika-lahav-lqesvit071"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceSchBehavioralHealthServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "SCH Behavioral Health Services"
 	sourceDef.SourceType = pkg.SourceTypeSchBehavioralHealthServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.dhcs.ca.gov"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

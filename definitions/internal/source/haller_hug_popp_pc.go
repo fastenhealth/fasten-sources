@@ -28,6 +28,8 @@ func GetSourceHallerHugPoppPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Haller, Hug, Popp, PC"
 	sourceDef.SourceType = pkg.SourceTypeHallerHugPoppPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

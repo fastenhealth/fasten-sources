@@ -29,6 +29,8 @@ func GetSourceRezaAzarMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Reza Azar, MD"
 	sourceDef.SourceType = pkg.SourceTypeRezaAzarMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/reza-azar-93076f0c-89d7-4153-aa8f-62359376348b-overview"
 	sourceDef.SecretKeyPrefix = "cerner"
 

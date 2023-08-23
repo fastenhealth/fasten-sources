@@ -30,6 +30,7 @@ func GetSourceMitchellCountyHospitalHealthSystems(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Mitchell County Hospital Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeMitchellCountyHospitalHealthSystems
 	sourceDef.Category = []string{"251G00000X", "273R00000X", "275N00000X", "282NC0060X", "311ZA0620X", "3336I0012X", "3336L0003X", "367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053415273", "1215066360", "1245369511", "1396843116", "1396883054", "1427151992", "1578651030"}}
 	sourceDef.PatientAccessUrl = "https://www.mchks.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

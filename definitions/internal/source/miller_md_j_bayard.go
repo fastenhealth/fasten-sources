@@ -28,6 +28,8 @@ func GetSourceMillerMdJBayard(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Miller MD J Bayard"
 	sourceDef.SourceType = pkg.SourceTypeMillerMdJBayard
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "miller-md-j-bayard.jpg"
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

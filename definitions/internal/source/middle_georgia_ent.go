@@ -29,6 +29,8 @@ func GetSourceMiddleGeorgiaEnt(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Middle Georgia Ent"
 	sourceDef.SourceType = pkg.SourceTypeMiddleGeorgiaEnt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceCapitalHealthPlan(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Capital Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeCapitalHealthPlan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://capitalhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

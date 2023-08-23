@@ -29,6 +29,7 @@ func GetSourceSouthTexasRuralHealthServicesInc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Display = "South Texas Rural Health Services Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasRuralHealthServicesInc
 	sourceDef.Category = []string{"261QF0400X", "261QM1300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477885481", "1952337263"}}
 	sourceDef.PatientAccessUrl = "https://southtexasruralhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

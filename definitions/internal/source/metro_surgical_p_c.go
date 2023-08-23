@@ -28,6 +28,8 @@ func GetSourceMetroSurgicalPC(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "METRO SURGICAL, P.C."
 	sourceDef.SourceType = pkg.SourceTypeMetroSurgicalPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

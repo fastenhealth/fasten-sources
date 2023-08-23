@@ -28,6 +28,8 @@ func GetSourceIowaKidneyPhysiciansPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Iowa Kidney Physicians PC"
 	sourceDef.SourceType = pkg.SourceTypeIowaKidneyPhysiciansPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "iowa-kidney-physicians-pc.webp"
 	sourceDef.PatientAccessUrl = "https://www.iowakidney.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"

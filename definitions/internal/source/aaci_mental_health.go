@@ -28,6 +28,8 @@ func GetSourceAaciMentalHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "AACI Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeAaciMentalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://aaci.org/behavioral-health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

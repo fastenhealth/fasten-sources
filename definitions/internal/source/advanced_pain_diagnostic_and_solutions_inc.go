@@ -28,6 +28,8 @@ func GetSourceAdvancedPainDiagnosticAndSolutionsInc(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Advanced Pain Diagnostic & SolutionS Inc"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainDiagnosticAndSolutionsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://apdss.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

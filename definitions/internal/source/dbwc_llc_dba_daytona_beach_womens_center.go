@@ -29,6 +29,8 @@ func GetSourceDbwcLlcDbaDaytonaBeachWomensCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "DBWC LLC dba Daytona Beach WomenS Center"
 	sourceDef.SourceType = pkg.SourceTypeDbwcLlcDbaDaytonaBeachWomensCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceRockyMountainVascular(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Rocky Mountain Vascular"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/colorado/rocky-mountain-vascular-care-373956193"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

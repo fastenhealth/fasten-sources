@@ -28,6 +28,8 @@ func GetSourceSudanMedicalClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Sudan Medical Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeSudanMedicalClinicLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sudanmed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

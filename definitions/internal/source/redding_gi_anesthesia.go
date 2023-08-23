@@ -28,6 +28,8 @@ func GetSourceReddingGiAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Redding GI Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeReddingGiAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

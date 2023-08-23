@@ -29,6 +29,7 @@ func GetSourceFrischerMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Frischer Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeFrischerMedicalGroup
 	sourceDef.Category = []string{"207RG0100X", "332900000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104867753", "1679713168"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

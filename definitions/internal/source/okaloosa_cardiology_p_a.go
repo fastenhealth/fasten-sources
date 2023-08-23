@@ -29,6 +29,7 @@ func GetSourceOkaloosaCardiologyPA(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Okaloosa Cardiology P A"
 	sourceDef.SourceType = pkg.SourceTypeOkaloosaCardiologyPA
 	sourceDef.Category = []string{"207RC0000X", "2086S0129X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144270240"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

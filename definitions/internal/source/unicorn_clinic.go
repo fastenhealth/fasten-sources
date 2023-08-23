@@ -28,6 +28,8 @@ func GetSourceUnicornClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Unicorn Clinic"
 	sourceDef.SourceType = pkg.SourceTypeUnicornClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

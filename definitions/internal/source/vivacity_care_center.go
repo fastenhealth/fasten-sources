@@ -28,6 +28,8 @@ func GetSourceVivacityCareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Vivacity Care Center"
 	sourceDef.SourceType = pkg.SourceTypeVivacityCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://kinwellhealth.com/vivacity/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

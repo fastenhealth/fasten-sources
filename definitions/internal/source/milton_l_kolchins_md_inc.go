@@ -28,6 +28,8 @@ func GetSourceMiltonLKolchinsMdInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Milton L Kolchins MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeMiltonLKolchinsMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://locator.lacounty.gov/health/Location/3180849/kolchins-milton-l-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

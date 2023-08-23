@@ -29,6 +29,7 @@ func GetSourceHumanSkillsAndResources(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Human Skills And Resources"
 	sourceDef.SourceType = pkg.SourceTypeHumanSkillsAndResources
 	sourceDef.Category = []string{"261QM0801X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316359821"}}
 	sourceDef.PatientAccessUrl = "https://www.humanskills.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

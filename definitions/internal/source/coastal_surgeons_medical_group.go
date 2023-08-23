@@ -29,6 +29,7 @@ func GetSourceCoastalSurgeonsMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Coastal Surgeons Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCoastalSurgeonsMedicalGroup
 	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174561062"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

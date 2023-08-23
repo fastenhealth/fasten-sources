@@ -28,6 +28,8 @@ func GetSourceTakleEyeGroupLocustgrove(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Takle Eye Group-LocustGrove"
 	sourceDef.SourceType = pkg.SourceTypeTakleEyeGroupLocustgrove
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.takleeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

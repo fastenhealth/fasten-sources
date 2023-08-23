@@ -29,6 +29,8 @@ func GetSourceDigestiveDiseaseConsultants(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Digestive Disease Consultants"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveDiseaseConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://daytongastro.mygportal.com/PP6-0-0/Account/LogOn"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceCoastalPulmonary(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Coastal Pulmonary"
 	sourceDef.SourceType = pkg.SourceTypeCoastalPulmonary
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

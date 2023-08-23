@@ -28,6 +28,8 @@ func GetSource9ThStreetClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "9th Street Clinic"
 	sourceDef.SourceType = pkg.SourceType9ThStreetClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nyp.org/medicalgroups/brooklyn/locations/park-slope/502a-9th-street"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

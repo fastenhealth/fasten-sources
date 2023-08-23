@@ -29,6 +29,8 @@ func GetSourceNwGaDermatologyAndSkinCancerSpec(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "NW GA Dermatology and Skin Cancer Spec"
 	sourceDef.SourceType = pkg.SourceTypeNwGaDermatologyAndSkinCancerSpec
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

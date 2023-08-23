@@ -28,6 +28,8 @@ func GetSourceAllSaintsFamilyCareCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "All Saints Family Care Center"
 	sourceDef.SourceType = pkg.SourceTypeAllSaintsFamilyCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "all-saints-family-care-center.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/Locations/Wisconsin/WIWHE/Milwaukee-Ascension-All-Saints-Family-Health-Center?utm_campaign=gmb&utm_medium=organic&utm_source=local"
 	sourceDef.SecretKeyPrefix = "nextgen"

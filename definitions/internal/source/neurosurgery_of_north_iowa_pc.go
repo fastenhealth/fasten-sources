@@ -28,6 +28,8 @@ func GetSourceNeurosurgeryOfNorthIowaPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Neurosurgery Of North Iowa PC"
 	sourceDef.SourceType = pkg.SourceTypeNeurosurgeryOfNorthIowaPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "neurosurgery-of-north-iowa-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://neuroiowa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

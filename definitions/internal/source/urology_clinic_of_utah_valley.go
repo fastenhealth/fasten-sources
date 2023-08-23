@@ -29,6 +29,7 @@ func GetSourceUrologyClinicOfUtahValley(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Urology Clinic Of Utah Valley"
 	sourceDef.SourceType = pkg.SourceTypeUrologyClinicOfUtahValley
 	sourceDef.Category = []string{"208800000X", "2088P0231X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811056260"}}
 	sourceDef.PatientAccessUrl = "https://intermountainhealthcare.org/locations/utah-valley-clinic/medical-services/utah-valley-urology-clinic/"
 	sourceDef.SecretKeyPrefix = "allscripts"

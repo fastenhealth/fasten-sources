@@ -28,6 +28,8 @@ func GetSourceCascadeIdAndInfusion(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Cascade ID and Infusion"
 	sourceDef.SourceType = pkg.SourceTypeCascadeIdAndInfusion
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

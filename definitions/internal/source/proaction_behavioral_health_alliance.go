@@ -28,6 +28,8 @@ func GetSourceProactionBehavioralHealthAlliance(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Proaction Behavioral Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeProactionBehavioralHealthAlliance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bloomberg.com/profile/company/6741380Z:US"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

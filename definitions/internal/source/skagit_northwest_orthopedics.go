@@ -28,6 +28,8 @@ func GetSourceSkagitNorthwestOrthopedics(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Skagit Northwest Orthopedics"
 	sourceDef.SourceType = pkg.SourceTypeSkagitNorthwestOrthopedics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

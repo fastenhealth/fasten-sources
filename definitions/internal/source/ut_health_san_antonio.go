@@ -29,6 +29,8 @@ func GetSourceUtHealthSanAntonio(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "UT Health San Antonio"
 	sourceDef.SourceType = pkg.SourceTypeUtHealthSanAntonio
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://uthscsa.edu/"
 	sourceDef.SecretKeyPrefix = "epic"
 

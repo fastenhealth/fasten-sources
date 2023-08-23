@@ -29,6 +29,8 @@ func GetSourceComprehensiveCounselingCenter1(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Comprehensive Counseling Center"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCounselingCenter1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "comprehensive-counseling-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/mi-michigan/warren/comprehensive-counseling-center-x9v8dc"
 	sourceDef.SecretKeyPrefix = "cerner"

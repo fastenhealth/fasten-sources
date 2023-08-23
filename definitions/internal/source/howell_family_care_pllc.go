@@ -29,6 +29,7 @@ func GetSourceHowellFamilyCarePllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Howell Family Care Pllc"
 	sourceDef.SourceType = pkg.SourceTypeHowellFamilyCarePllc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427139161"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

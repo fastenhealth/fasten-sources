@@ -29,6 +29,8 @@ func GetSourceFloridaLungAsthmaAndSleepSpecialists(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Florida Lung, Asthma & Sleep Specialists"
 	sourceDef.SourceType = pkg.SourceTypeFloridaLungAsthmaAndSleepSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://floridalungdoctors.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

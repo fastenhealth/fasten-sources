@@ -29,6 +29,8 @@ func GetSourceByrensLambrixNeidlingerRichardsonMd(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Byrens Lambrix Neidlinger Richardson Md"
 	sourceDef.SourceType = pkg.SourceTypeByrensLambrixNeidlingerRichardsonMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

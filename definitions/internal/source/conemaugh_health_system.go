@@ -29,6 +29,8 @@ func GetSourceConemaughHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Conemaugh Health System"
 	sourceDef.SourceType = pkg.SourceTypeConemaughHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

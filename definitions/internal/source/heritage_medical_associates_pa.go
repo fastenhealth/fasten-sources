@@ -29,6 +29,8 @@ func GetSourceHeritageMedicalAssociatesPa(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Heritage Medical Associates, PA"
 	sourceDef.SourceType = pkg.SourceTypeHeritageMedicalAssociatesPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.heritagemedical.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

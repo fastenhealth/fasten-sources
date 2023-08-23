@@ -28,6 +28,8 @@ func GetSourcePinelandsAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Pinelands Assoc"
 	sourceDef.SourceType = pkg.SourceTypePinelandsAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

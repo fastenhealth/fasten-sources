@@ -28,6 +28,8 @@ func GetSourceStoneRunFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Stone Run Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeStoneRunFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

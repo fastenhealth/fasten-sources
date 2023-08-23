@@ -28,6 +28,8 @@ func GetSourcePremierCardiovascularCenterPlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Premier Cardiovascular Center PLC"
 	sourceDef.SourceType = pkg.SourceTypePremierCardiovascularCenterPlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

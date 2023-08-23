@@ -28,6 +28,8 @@ func GetSourceNewOrleansCboAnesthesia(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "New Orleans CBO Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeNewOrleansCboAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.amsurg.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

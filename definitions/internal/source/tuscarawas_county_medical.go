@@ -29,6 +29,8 @@ func GetSourceTuscarawasCountyMedical(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Tuscarawas County Medical"
 	sourceDef.SourceType = pkg.SourceTypeTuscarawasCountyMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

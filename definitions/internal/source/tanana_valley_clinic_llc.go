@@ -29,6 +29,7 @@ func GetSourceTananaValleyClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Tanana Valley Clinic LLC"
 	sourceDef.SourceType = pkg.SourceTypeTananaValleyClinicLlc
 	sourceDef.Category = []string{"261QM1300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063980118", "1073081287", "1073081485", "1245708668", "1922559558"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

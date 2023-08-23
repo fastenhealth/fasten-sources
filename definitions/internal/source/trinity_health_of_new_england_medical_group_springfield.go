@@ -29,6 +29,8 @@ func GetSourceTrinityHealthOfNewEnglandMedicalGroupSpringfield(env pkg.FastenLig
 
 	sourceDef.Display = "Trinity Health of New England Medical Group Springfield"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealthOfNewEnglandMedicalGroupSpringfield
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

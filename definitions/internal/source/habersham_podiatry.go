@@ -29,6 +29,7 @@ func GetSourceHabershamPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Habersham Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeHabershamPodiatry
 	sourceDef.Category = []string{"213E00000X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093993735"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,8 @@ func GetSourceTimothyCookConvenientMedCareCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Timothy Cook - Convenient Med Care Center"
 	sourceDef.SourceType = pkg.SourceTypeTimothyCookConvenientMedCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/timothy-cook-20b38122-6326-4a8c-ae89-d5d8ccb7f40d-overview"
 	sourceDef.SecretKeyPrefix = "cerner"
 

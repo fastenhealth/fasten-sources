@@ -28,6 +28,8 @@ func GetSourceStLukesAtTheVillages(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "St. Lukes At The Villages"
 	sourceDef.SourceType = pkg.SourceTypeStLukesAtTheVillages
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.stlukesatthevillages.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

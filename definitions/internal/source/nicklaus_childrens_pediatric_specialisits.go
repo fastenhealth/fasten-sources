@@ -29,6 +29,8 @@ func GetSourceNicklausChildrensPediatricSpecialisits(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "NICKLAUS CHILDREN'S PEDIATRIC SPECIALISITS"
 	sourceDef.SourceType = pkg.SourceTypeNicklausChildrensPediatricSpecialisits
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/locations/pediatric-primary-care-centers/flamingo-park-plaza"
 	sourceDef.SecretKeyPrefix = "cerner"
 

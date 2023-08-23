@@ -28,6 +28,8 @@ func GetSourceNshCipsG(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "NSH CIPS G"
 	sourceDef.SourceType = pkg.SourceTypeNshCipsG
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

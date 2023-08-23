@@ -28,6 +28,8 @@ func GetSourceKayLowneyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Kay Lowney MD"
 	sourceDef.SourceType = pkg.SourceTypeKayLowneyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/locations-nav/providers/in/kay-lowney-md/1740276161.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

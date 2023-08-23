@@ -28,6 +28,8 @@ func GetSourceChicoOtolaryntology(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Chico Otolaryntology"
 	sourceDef.SourceType = pkg.SourceTypeChicoOtolaryntology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

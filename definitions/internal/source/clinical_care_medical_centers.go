@@ -28,6 +28,8 @@ func GetSourceClinicalCareMedicalCenters(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Clinical Care Medical Centers"
 	sourceDef.SourceType = pkg.SourceTypeClinicalCareMedicalCenters
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://clinicalcaremc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

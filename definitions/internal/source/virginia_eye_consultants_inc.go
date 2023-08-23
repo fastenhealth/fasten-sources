@@ -28,6 +28,8 @@ func GetSourceVirginiaEyeConsultantsInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Virginia Eye Consultants Inc."
 	sourceDef.SourceType = pkg.SourceTypeVirginiaEyeConsultantsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "virginia-eye-consultants-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.virginiaeyeconsultants.com/?utm_source=gmb&utm_medium=yext"
 	sourceDef.SecretKeyPrefix = "nextgen"

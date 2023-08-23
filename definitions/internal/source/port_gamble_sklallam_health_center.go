@@ -28,6 +28,8 @@ func GetSourcePortGambleSklallamHealthCenter(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Port Gamble SKlallam Health Center"
 	sourceDef.SourceType = pkg.SourceTypePortGambleSklallamHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://pgst.nsn.us/health-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

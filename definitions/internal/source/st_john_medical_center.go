@@ -30,6 +30,7 @@ func GetSourceStJohnMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "St. John Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeStJohnMedicalCenter
 	sourceDef.Category = []string{"282N00000X", "314000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154416188", "1598057044"}}
 	sourceDef.BrandLogo = "st-john-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.stjohnhealthsystem.com/medical-center"

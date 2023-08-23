@@ -29,6 +29,8 @@ func GetSourceTheGenesisCompanyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "The Genesis Company LLC"
 	sourceDef.SourceType = pkg.SourceTypeTheGenesisCompanyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

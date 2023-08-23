@@ -28,6 +28,8 @@ func GetSourceKokomoObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Kokomo OB GYN"
 	sourceDef.SourceType = pkg.SourceTypeKokomoObGyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.medicinenet.com/womens_health/kokomo-in_city.htm"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

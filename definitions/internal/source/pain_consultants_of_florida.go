@@ -29,6 +29,7 @@ func GetSourcePainConsultantsOfFlorida(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Pain Consultants of Florida"
 	sourceDef.SourceType = pkg.SourceTypePainConsultantsOfFlorida
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619163060"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

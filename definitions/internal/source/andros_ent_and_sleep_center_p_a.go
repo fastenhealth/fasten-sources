@@ -29,6 +29,8 @@ func GetSourceAndrosEntAndSleepCenterPA(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Andros ENT & Sleep Center, P.A."
 	sourceDef.SourceType = pkg.SourceTypeAndrosEntAndSleepCenterPA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.androsent-sleep.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

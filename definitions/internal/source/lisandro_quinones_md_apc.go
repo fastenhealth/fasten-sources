@@ -28,6 +28,8 @@ func GetSourceLisandroQuinonesMdApc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Lisandro Quinones MD APC"
 	sourceDef.SourceType = pkg.SourceTypeLisandroQuinonesMdApc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

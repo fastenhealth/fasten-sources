@@ -28,6 +28,8 @@ func GetSourceSkinAndWellnessCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Skin and Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeSkinAndWellnessCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

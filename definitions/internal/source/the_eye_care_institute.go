@@ -28,6 +28,8 @@ func GetSourceTheEyeCareInstitute(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "The Eye Care Institute"
 	sourceDef.SourceType = pkg.SourceTypeTheEyeCareInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nsuhealth.nova.edu/services/eye-care-institute/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

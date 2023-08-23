@@ -28,6 +28,8 @@ func GetSourceSouthwestCenterOfAging(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Southwest Center Of Aging"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestCenterOfAging
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceDupageEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "DuPage Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeDupageEyeCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.dupageeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

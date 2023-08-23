@@ -30,6 +30,7 @@ func GetSourceRehabilitationHospitalOfIndiana(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Rehabilitation Hospital of Indiana"
 	sourceDef.SourceType = pkg.SourceTypeRehabilitationHospitalOfIndiana
 	sourceDef.Category = []string{"283X00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801260765"}}
 	sourceDef.PatientAccessUrl = "https://www.rhirehab.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

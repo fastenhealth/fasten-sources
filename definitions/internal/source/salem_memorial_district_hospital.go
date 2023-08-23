@@ -29,6 +29,8 @@ func GetSourceSalemMemorialDistrictHospital(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Salem Memorial District Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSalemMemorialDistrictHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.smdh.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

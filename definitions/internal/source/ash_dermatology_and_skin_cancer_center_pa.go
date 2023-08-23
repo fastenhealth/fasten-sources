@@ -30,6 +30,7 @@ func GetSourceAshDermatologyAndSkinCancerCenterPa(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "Ash Dermatology & Skin Cancer Center, PA"
 	sourceDef.SourceType = pkg.SourceTypeAshDermatologyAndSkinCancerCenterPa
 	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982877221"}}
 	sourceDef.PatientAccessUrl = "https://ashdermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

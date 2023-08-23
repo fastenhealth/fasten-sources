@@ -28,6 +28,8 @@ func GetSourceHeadAndNeckAssocOfOrangeCounty(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Head And Neck Assoc Of Orange County"
 	sourceDef.SourceType = pkg.SourceTypeHeadAndNeckAssocOfOrangeCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.hnaoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

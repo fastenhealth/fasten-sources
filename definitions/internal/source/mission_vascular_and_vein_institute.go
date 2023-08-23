@@ -29,6 +29,8 @@ func GetSourceMissionVascularAndVeinInstitute(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Mission Vascular and Vein Institute"
 	sourceDef.SourceType = pkg.SourceTypeMissionVascularAndVeinInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.missionvascularinstitute.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

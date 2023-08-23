@@ -29,6 +29,8 @@ func GetSourceNebraskaCardiacCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Nebraska Cardiac Care"
 	sourceDef.SourceType = pkg.SourceTypeNebraskaCardiacCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/nebraska-cardiac-care-pc-104b4aaa-1918-4f93-b09a-302f7b5051f4"
 	sourceDef.SecretKeyPrefix = "cerner"
 

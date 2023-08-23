@@ -28,6 +28,8 @@ func GetSourceLifeUniversityClinics(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "LIFE University Clinics"
 	sourceDef.SourceType = pkg.SourceTypeLifeUniversityClinics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.life.edu/campus-life-pages/health-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

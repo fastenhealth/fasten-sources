@@ -28,6 +28,8 @@ func GetSourceNorthviewOrthopaedicAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Northview Orthopaedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeNorthviewOrthopaedicAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

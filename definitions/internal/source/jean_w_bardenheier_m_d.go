@@ -28,6 +28,8 @@ func GetSourceJeanWBardenheierMD(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Jean W Bardenheier M D"
 	sourceDef.SourceType = pkg.SourceTypeJeanWBardenheierMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/azusa/jean-w-bardenheier-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

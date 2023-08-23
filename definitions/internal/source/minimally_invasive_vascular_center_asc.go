@@ -28,6 +28,8 @@ func GetSourceMinimallyInvasiveVascularCenterAsc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Minimally Invasive Vascular Center ASC"
 	sourceDef.SourceType = pkg.SourceTypeMinimallyInvasiveVascularCenterAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.minimallyinvasivevascularcenters.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

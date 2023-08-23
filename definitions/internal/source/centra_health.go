@@ -30,6 +30,7 @@ func GetSourceCentraHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Centra Health"
 	sourceDef.SourceType = pkg.SourceTypeCentraHealth
 	sourceDef.Category = []string{"320700000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093147795"}}
 	sourceDef.BrandLogo = "centra-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.centrahealth.com/"

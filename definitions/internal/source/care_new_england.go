@@ -29,6 +29,8 @@ func GetSourceCareNewEngland(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Care New England"
 	sourceDef.SourceType = pkg.SourceTypeCareNewEngland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceValleyWideHealthSystemsInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Valley Wide Health Systems Inc"
 	sourceDef.SourceType = pkg.SourceTypeValleyWideHealthSystemsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://valley-widehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -30,6 +30,7 @@ func GetSourceColumbusRegionalHealthcareSystem1(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Columbus Regional Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeColumbusRegionalHealthcareSystem1
 	sourceDef.Category = []string{"282N00000X", "333600000X", "3336C0003X", "3336S0011X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275079451", "1376537555"}}
 	sourceDef.BrandLogo = "columbus-regional-health.png"
 	sourceDef.PatientAccessUrl = "https://www.crh.org/"

@@ -30,6 +30,7 @@ func GetSourceDublinWomensCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Dublin Womens Center"
 	sourceDef.SourceType = pkg.SourceTypeDublinWomensCenter
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508124249"}}
 	sourceDef.BrandLogo = "dublin-womens-center.jpg"
 	sourceDef.PatientAccessUrl = "https://notfound.com"

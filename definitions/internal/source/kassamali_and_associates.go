@@ -28,6 +28,8 @@ func GetSourceKassamaliAndAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Kassamali And Associates"
 	sourceDef.SourceType = pkg.SourceTypeKassamaliAndAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/hemet"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

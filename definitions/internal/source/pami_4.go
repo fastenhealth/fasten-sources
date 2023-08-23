@@ -29,6 +29,8 @@ func GetSourcePami4(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "PAMI"
 	sourceDef.SourceType = pkg.SourceTypePami4
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pami.jpg"
 	sourceDef.PatientAccessUrl = "http://www.epami.net/"
 	sourceDef.SecretKeyPrefix = "cerner"

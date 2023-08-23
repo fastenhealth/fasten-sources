@@ -28,6 +28,8 @@ func GetSourceStAugustineCardiologyAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "St Augustine Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeStAugustineCardiologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

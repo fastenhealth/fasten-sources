@@ -29,6 +29,8 @@ func GetSourceJosephFRobertsMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "JOSEPH F. ROBERTS MD"
 	sourceDef.SourceType = pkg.SourceTypeJosephFRobertsMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "joseph-f-roberts-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.rumcsi.org/doctors/roberts-joseph-md/"
 	sourceDef.SecretKeyPrefix = "cerner"

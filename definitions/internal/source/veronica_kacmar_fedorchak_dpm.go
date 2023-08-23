@@ -29,6 +29,8 @@ func GetSourceVeronicaKacmarFedorchakDpm(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Veronica Kacmar-Fedorchak, DPM"
 	sourceDef.SourceType = pkg.SourceTypeVeronicaKacmarFedorchakDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://drfedorchak.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

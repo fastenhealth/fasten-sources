@@ -30,6 +30,7 @@ func GetSourceErlangerHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Erlanger Health System"
 	sourceDef.SourceType = pkg.SourceTypeErlangerHealthSystem
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710330485"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

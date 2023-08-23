@@ -28,6 +28,8 @@ func GetSourceDrRiadKhouryPremierPainManagement(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Dr Riad Khoury Premier Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeDrRiadKhouryPremierPainManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

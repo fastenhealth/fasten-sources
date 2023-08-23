@@ -29,6 +29,8 @@ func GetSourceAbigailFamilyMedicineLLC(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Abigail Family Medicine L.L.C."
 	sourceDef.SourceType = pkg.SourceTypeAbigailFamilyMedicineLLC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3SCKNODZ1ADSVFRJP3OYI1M4Y0R7NT?assignment_id=3YGXWBAF7EEE78A3OHMEOY47D3AC4N&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

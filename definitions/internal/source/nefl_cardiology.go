@@ -28,6 +28,8 @@ func GetSourceNeflCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "NEFL Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeNeflCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://northeast-florida-cardiovascular-center.business.site/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

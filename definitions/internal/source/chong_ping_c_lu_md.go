@@ -28,6 +28,8 @@ func GetSourceChongPingCLuMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Chong Ping C Lu MD"
 	sourceDef.SourceType = pkg.SourceTypeChongPingCLuMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

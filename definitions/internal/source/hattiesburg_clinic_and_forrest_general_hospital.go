@@ -29,6 +29,8 @@ func GetSourceHattiesburgClinicAndForrestGeneralHospital(env pkg.FastenLighthous
 
 	sourceDef.Display = "Hattiesburg Clinic and Forrest General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeHattiesburgClinicAndForrestGeneralHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

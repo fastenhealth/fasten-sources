@@ -29,6 +29,8 @@ func GetSourceBlanchardValleyHealthSystem(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Blanchard Valley Health System"
 	sourceDef.SourceType = pkg.SourceTypeBlanchardValleyHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bvhealthsystem.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

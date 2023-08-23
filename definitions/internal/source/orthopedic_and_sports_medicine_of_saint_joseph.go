@@ -29,6 +29,8 @@ func GetSourceOrthopedicAndSportsMedicineOfSaintJoseph(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Orthopedic & Sports Medicine of Saint Joseph"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicAndSportsMedicineOfSaintJoseph
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.osmcortho.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

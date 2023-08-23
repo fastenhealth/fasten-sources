@@ -29,6 +29,8 @@ func GetSourceEncompassHealthCorporation(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Encompass Health Corporation"
 	sourceDef.SourceType = pkg.SourceTypeEncompassHealthCorporation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://encompasshealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

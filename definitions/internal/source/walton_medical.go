@@ -28,6 +28,8 @@ func GetSourceWaltonMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Walton Medical"
 	sourceDef.SourceType = pkg.SourceTypeWaltonMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

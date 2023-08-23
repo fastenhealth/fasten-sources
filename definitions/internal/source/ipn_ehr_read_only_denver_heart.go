@@ -28,6 +28,8 @@ func GetSourceIpnEhrReadOnlyDenverHeart(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "IPN EHR Read Only Denver Heart"
 	sourceDef.SourceType = pkg.SourceTypeIpnEhrReadOnlyDenverHeart
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://geo-blocked-site.azurewebsites.net"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

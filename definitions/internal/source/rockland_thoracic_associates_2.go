@@ -29,6 +29,8 @@ func GetSourceRocklandThoracicAssociates2(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Rockland Thoracic Associates"
 	sourceDef.SourceType = pkg.SourceTypeRocklandThoracicAssociates2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "rockland-thoracic-associates.png"
 	sourceDef.PatientAccessUrl = "https://www.rocklandthoracicandvascular.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

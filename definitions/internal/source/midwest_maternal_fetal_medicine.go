@@ -28,6 +28,8 @@ func GetSourceMidwestMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Midwest Maternal Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMidwestMaternalFetalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/midwest-maternal-fetal-medical-a56a48d9-669b-4ff1-a7e1-50de57ce492b"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

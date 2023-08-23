@@ -28,6 +28,8 @@ func GetSourceOceanRheumatologyPA(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ocean Rheumatology P.A."
 	sourceDef.SourceType = pkg.SourceTypeOceanRheumatologyPA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.oceanrheumatologynj.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

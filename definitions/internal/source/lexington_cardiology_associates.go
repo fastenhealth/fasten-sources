@@ -30,6 +30,7 @@ func GetSourceLexingtonCardiologyAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Lexington Cardiology Associates"
 	sourceDef.SourceType = pkg.SourceTypeLexingtonCardiologyAssociates
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821054099"}}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/mwlite/company/lexington-cardiology-associates-llc"
 	sourceDef.SecretKeyPrefix = "cerner"

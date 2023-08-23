@@ -29,6 +29,8 @@ func GetSourceEyeVisionInternational(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Eye Vision International"
 	sourceDef.SourceType = pkg.SourceTypeEyeVisionInternational
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/pr-puerto-rico/san-juan/eyevision-international-x8dpq5"
 	sourceDef.SecretKeyPrefix = "cerner"
 

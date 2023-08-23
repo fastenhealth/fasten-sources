@@ -28,6 +28,8 @@ func GetSourceMichiganKidneyConsultants(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Michigan Kidney Consultants"
 	sourceDef.SourceType = pkg.SourceTypeMichiganKidneyConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.michigankidney.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

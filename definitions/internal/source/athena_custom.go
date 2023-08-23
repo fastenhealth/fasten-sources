@@ -28,6 +28,8 @@ func GetSourceAthenaCustom(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Athena Custom"
 	sourceDef.SourceType = pkg.SourceTypeAthenaCustom
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.Hidden = true
 	sourceDef.PatientAccessUrl = "https://www.athenahealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"

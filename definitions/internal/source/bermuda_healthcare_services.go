@@ -29,6 +29,8 @@ func GetSourceBermudaHealthcareServices(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Bermuda HealthCare Services"
 	sourceDef.SourceType = pkg.SourceTypeBermudaHealthcareServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bhcs.bm/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

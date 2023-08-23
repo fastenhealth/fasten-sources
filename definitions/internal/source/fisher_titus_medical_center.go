@@ -30,6 +30,7 @@ func GetSourceFisherTitusMedicalCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Fisher-Titus Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFisherTitusMedicalCenter
 	sourceDef.Category = []string{"251E00000X", "282N00000X", "314000000X", "333600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255359568", "1780602193", "1952513814", "1992738959"}}
 	sourceDef.BrandLogo = "fisher-titus-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fishertitus.org/imgs/FT-logo.svg"

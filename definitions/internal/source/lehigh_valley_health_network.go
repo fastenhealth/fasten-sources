@@ -30,6 +30,7 @@ func GetSourceLehighValleyHealthNetwork(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Lehigh Valley Health Network"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyHealthNetwork
 	sourceDef.Category = []string{"282N00000X", "363A00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134594427", "1437598141", "1598216582", "1740651165"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

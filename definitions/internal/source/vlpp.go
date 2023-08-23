@@ -28,6 +28,8 @@ func GetSourceVlpp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "VLPP"
 	sourceDef.SourceType = pkg.SourceTypeVlpp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-virginia-league/contact-us-2"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

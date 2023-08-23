@@ -29,6 +29,7 @@ func GetSourceBiospineOrlando(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "BioSpine Orlando"
 	sourceDef.SourceType = pkg.SourceTypeBiospineOrlando
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841755436"}}
 	sourceDef.BrandLogo = "biospine-orlando.svg"
 	sourceDef.PatientAccessUrl = "https://www.biospine.com/"

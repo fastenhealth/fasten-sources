@@ -28,6 +28,8 @@ func GetSourceEasternCarolinaEnt(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Eastern Carolina ENT"
 	sourceDef.SourceType = pkg.SourceTypeEasternCarolinaEnt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceLeonBaginskiMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Leon Baginski MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeLeonBaginskiMdInc
 	sourceDef.Category = []string{"207VG0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518457704"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceWesternPsychologicalAndCounselingSvc(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Western Psychological And Counseling Svc"
 	sourceDef.SourceType = pkg.SourceTypeWesternPsychologicalAndCounselingSvc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

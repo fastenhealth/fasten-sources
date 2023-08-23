@@ -28,6 +28,8 @@ func GetSourceBmsAtAbsoluteCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "BMS At Absolute Care"
 	sourceDef.SourceType = pkg.SourceTypeBmsAtAbsoluteCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.absolutecare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

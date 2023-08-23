@@ -37,6 +37,7 @@ func GetSourceLogica(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.PlatformType = pkg.SourceTypeLogica
 	sourceDef.SourceType = pkg.SourceTypeLogica
 	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.logica.com"
 
 	return sourceDef, nil

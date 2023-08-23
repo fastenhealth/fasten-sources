@@ -29,6 +29,7 @@ func GetSourceLongIslandSpineSpecialistsPc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Long Island Spine Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeLongIslandSpineSpecialistsPc
 	sourceDef.Category = []string{"207XS0117X", "208100000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083937981", "1245251198"}}
 	sourceDef.PatientAccessUrl = "https://www.lispine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

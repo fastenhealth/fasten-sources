@@ -29,6 +29,8 @@ func GetSourceAvonMedicalProfessionalsLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Avon Medical Professionals LLC"
 	sourceDef.SourceType = pkg.SourceTypeAvonMedicalProfessionalsLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

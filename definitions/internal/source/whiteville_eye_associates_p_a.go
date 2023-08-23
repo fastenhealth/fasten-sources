@@ -29,6 +29,8 @@ func GetSourceWhitevilleEyeAssociatesPA(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Whiteville Eye Associates, P.A."
 	sourceDef.SourceType = pkg.SourceTypeWhitevilleEyeAssociatesPA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://whitevilleeye.com/contact-us.php"
 	sourceDef.SecretKeyPrefix = "cerner"
 

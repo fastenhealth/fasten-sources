@@ -28,6 +28,8 @@ func GetSourceNeuropsychiatricAssocIncPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Neuropsychiatric Assoc Inc Pc"
 	sourceDef.SourceType = pkg.SourceTypeNeuropsychiatricAssocIncPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

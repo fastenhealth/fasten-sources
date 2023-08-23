@@ -29,6 +29,8 @@ func GetSourceBjcAndWashingtonUniversity(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "BJC & Washington University"
 	sourceDef.SourceType = pkg.SourceTypeBjcAndWashingtonUniversity
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

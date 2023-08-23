@@ -29,6 +29,8 @@ func GetSourceDanielJRyanMDPC(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Daniel J. Ryan M.D., P.C."
 	sourceDef.SourceType = pkg.SourceTypeDanielJRyanMDPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/daniel-j-ryan-md"
 	sourceDef.SecretKeyPrefix = "cerner"
 

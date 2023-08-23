@@ -29,6 +29,8 @@ func GetSourceUiHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "UI Health"
 	sourceDef.SourceType = pkg.SourceTypeUiHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

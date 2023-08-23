@@ -29,6 +29,7 @@ func GetSourceFresnoAmericanIndianHealthProject(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Fresno American Indian Health Project"
 	sourceDef.SourceType = pkg.SourceTypeFresnoAmericanIndianHealthProject
 	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427317981"}}
 	sourceDef.BrandLogo = "fresno-american-indian-health-project.jpg"
 	sourceDef.PatientAccessUrl = "https://www.faihp.org/"

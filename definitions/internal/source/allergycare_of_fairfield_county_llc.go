@@ -28,6 +28,8 @@ func GetSourceAllergycareOfFairfieldCountyLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Allergycare Of Fairfield County LLC"
 	sourceDef.SourceType = pkg.SourceTypeAllergycareOfFairfieldCountyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.allergyandasthmacare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

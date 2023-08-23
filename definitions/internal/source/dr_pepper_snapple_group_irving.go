@@ -29,6 +29,8 @@ func GetSourceDrPepperSnappleGroupIrving(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Dr Pepper Snapple Group - Irving"
 	sourceDef.SourceType = pkg.SourceTypeDrPepperSnappleGroupIrving
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.keurigdrpepper.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

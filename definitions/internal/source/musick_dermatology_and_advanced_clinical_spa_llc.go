@@ -30,6 +30,7 @@ func GetSourceMusickDermatologyAndAdvancedClinicalSpaLlc(env pkg.FastenLighthous
 	sourceDef.Display = "Musick Dermatology & Advanced Clinical Spa, LLC"
 	sourceDef.SourceType = pkg.SourceTypeMusickDermatologyAndAdvancedClinicalSpaLlc
 	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922260587"}}
 	sourceDef.PatientAccessUrl = "https://www.musickdermatology.com"
 	sourceDef.SecretKeyPrefix = "cerner"

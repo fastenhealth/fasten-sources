@@ -30,6 +30,7 @@ func GetSourceRobertLMckowenMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Robert L McKowen MD"
 	sourceDef.SourceType = pkg.SourceTypeRobertLMckowenMd
 	sourceDef.Category = []string{"208G00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568660173"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

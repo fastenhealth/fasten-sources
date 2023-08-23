@@ -28,6 +28,8 @@ func GetSourceWalkerSurgicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Walker Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeWalkerSurgicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.walkersurgicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

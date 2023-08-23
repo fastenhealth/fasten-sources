@@ -29,6 +29,8 @@ func GetSourceBeauregardSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Beauregard Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeBeauregardSurgeryCenterLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

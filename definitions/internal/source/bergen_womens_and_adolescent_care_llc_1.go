@@ -29,6 +29,8 @@ func GetSourceBergenWomensAndAdolescentCareLlc1(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Bergen Womens and Adolescent Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeBergenWomensAndAdolescentCareLlc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

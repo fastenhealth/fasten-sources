@@ -28,6 +28,8 @@ func GetSourcePendingMaternalFetalAssociatesMid(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pending Maternal Fetal Associates Mid"
 	sourceDef.SourceType = pkg.SourceTypePendingMaternalFetalAssociatesMid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pending-maternal-fetal-associates-mid.jpg"
 	sourceDef.PatientAccessUrl = "https://mfama.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

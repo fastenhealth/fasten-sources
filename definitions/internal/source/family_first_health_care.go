@@ -29,6 +29,7 @@ func GetSourceFamilyFirstHealthCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Family First Health Care"
 	sourceDef.SourceType = pkg.SourceTypeFamilyFirstHealthCare
 	sourceDef.Category = []string{"207Q00000X", "253Z00000X", "363LF0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316031271", "1396136016", "1639357312"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

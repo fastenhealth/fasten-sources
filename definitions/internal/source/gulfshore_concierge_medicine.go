@@ -29,6 +29,8 @@ func GetSourceGulfshoreConciergeMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gulfshore Concierge Medicine"
 	sourceDef.SourceType = pkg.SourceTypeGulfshoreConciergeMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.gulfshoreconciergemedicine.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

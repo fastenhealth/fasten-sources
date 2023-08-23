@@ -28,6 +28,8 @@ func GetSourceDrHiseyDrHorton(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Dr Hisey  Dr Horton"
 	sourceDef.SourceType = pkg.SourceTypeDrHiseyDrHorton
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mercy.net/practice/meinders-neuroscience-institute/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

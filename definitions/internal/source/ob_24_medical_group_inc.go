@@ -28,6 +28,8 @@ func GetSourceOb24MedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "OB24 Medical Group Inc."
 	sourceDef.SourceType = pkg.SourceTypeOb24MedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/camarillo/ob-24-medical-group-x8h8sk0a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

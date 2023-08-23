@@ -28,6 +28,8 @@ func GetSourceIndianaNeuroophthalCtrForBalance(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Indiana NeuroOphthal  Ctr For Balance"
 	sourceDef.SourceType = pkg.SourceTypeIndianaNeuroophthalCtrForBalance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMahmoodTahirMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Mahmood Tahir MD"
 	sourceDef.SourceType = pkg.SourceTypeMahmoodTahirMd
 	sourceDef.Category = []string{"2086S0129X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033190335"}}
 	sourceDef.PatientAccessUrl = "https://care.everydayhealth.com/providers/843117/dr-mahmood-tahir-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceCommunityFirstHealthPlans(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Community First Health Plans"
 	sourceDef.SourceType = pkg.SourceTypeCommunityFirstHealthPlans
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://communityfirsthealthplans.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

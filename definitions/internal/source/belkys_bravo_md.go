@@ -29,6 +29,8 @@ func GetSourceBelkysBravoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Belkys Bravo, MD"
 	sourceDef.SourceType = pkg.SourceTypeBelkysBravoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

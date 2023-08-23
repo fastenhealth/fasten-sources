@@ -28,6 +28,8 @@ func GetSourceDalyShawJointVenture(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Daly Shaw Joint Venture"
 	sourceDef.SourceType = pkg.SourceTypeDalyShawJointVenture
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

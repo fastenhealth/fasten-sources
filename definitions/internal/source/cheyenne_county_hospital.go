@@ -29,6 +29,8 @@ func GetSourceCheyenneCountyHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cheyenne County Hospital"
 	sourceDef.SourceType = pkg.SourceTypeCheyenneCountyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cheyennecountyhospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

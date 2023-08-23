@@ -29,6 +29,8 @@ func GetSourceKaiserPermanenteHawaiiMauiHealthSystem(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Kaiser Permanente Hawaii / Maui Health System"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteHawaiiMauiHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

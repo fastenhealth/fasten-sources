@@ -29,6 +29,7 @@ func GetSourceHinsdaleEyeCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Hinsdale Eye Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeHinsdaleEyeCenterLlc
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992176580"}}
 	sourceDef.PatientAccessUrl = "https://www.hinsdaleeyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

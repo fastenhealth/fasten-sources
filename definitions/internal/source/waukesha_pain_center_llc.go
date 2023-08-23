@@ -29,6 +29,7 @@ func GetSourceWaukeshaPainCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Waukesha Pain Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeWaukeshaPainCenterLlc
 	sourceDef.Category = []string{"261QA1903X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295073435", "1487217303"}}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

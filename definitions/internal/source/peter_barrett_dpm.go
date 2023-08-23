@@ -29,6 +29,8 @@ func GetSourcePeterBarrettDpm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Peter Barrett, DPM"
 	sourceDef.SourceType = pkg.SourceTypePeterBarrettDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "peter-barrett-dpm.jpg"
 	sourceDef.PatientAccessUrl = "https://towerhealth.org/providers/j-peter-barrett-dpm"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourceChandlerOfficeAgaveSurgicalAssoc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Chandler Office Agave Surgical Assoc."
 	sourceDef.SourceType = pkg.SourceTypeChandlerOfficeAgaveSurgicalAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.agavesurgical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

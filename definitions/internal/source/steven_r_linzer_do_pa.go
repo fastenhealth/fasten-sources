@@ -28,6 +28,8 @@ func GetSourceStevenRLinzerDoPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Steven R Linzer Do Pa"
 	sourceDef.SourceType = pkg.SourceTypeStevenRLinzerDoPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

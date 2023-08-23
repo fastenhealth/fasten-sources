@@ -28,6 +28,8 @@ func GetSourceRidgecrestVillage(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "RIDGECREST VILLAGE"
 	sourceDef.SourceType = pkg.SourceTypeRidgecrestVillage
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ridgecrestvillage.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

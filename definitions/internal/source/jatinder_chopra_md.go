@@ -28,6 +28,8 @@ func GetSourceJatinderChopraMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jatinder Chopra MD"
 	sourceDef.SourceType = pkg.SourceTypeJatinderChopraMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceJacksonvilleAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jacksonville ASC"
 	sourceDef.SourceType = pkg.SourceTypeJacksonvilleAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/azura-vascular-care-jacksonville"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

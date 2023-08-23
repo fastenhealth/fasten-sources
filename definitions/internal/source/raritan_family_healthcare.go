@@ -29,6 +29,8 @@ func GetSourceRaritanFamilyHealthcare(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Raritan Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeRaritanFamilyHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "raritan-family-healthcare.jpg"
 	sourceDef.PatientAccessUrl = "https://www.raritanfamily.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "cerner"

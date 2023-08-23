@@ -29,6 +29,8 @@ func GetSourceCabellHuntingtonHospitalInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Cabell Huntington Hospital, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCabellHuntingtonHospitalInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cabellhuntington.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

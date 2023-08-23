@@ -29,6 +29,8 @@ func GetSourceVcuHealthSystemAuthority(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "VCU Health System Authority"
 	sourceDef.SourceType = pkg.SourceTypeVcuHealthSystemAuthority
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vcuhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

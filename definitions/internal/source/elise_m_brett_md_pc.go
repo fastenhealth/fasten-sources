@@ -28,6 +28,8 @@ func GetSourceEliseMBrettMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Elise M Brett, MD PC"
 	sourceDef.SourceType = pkg.SourceTypeEliseMBrettMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

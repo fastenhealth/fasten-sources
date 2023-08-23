@@ -30,6 +30,7 @@ func GetSourceSepulvedaAndAssociatesPc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Sepulveda & Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeSepulvedaAndAssociatesPc
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891992194"}}
 	sourceDef.PatientAccessUrl = "https://www.sepulvedamd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

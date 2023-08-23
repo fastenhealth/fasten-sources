@@ -29,6 +29,8 @@ func GetSourceEarNoseAndThroatSpecialist(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Ear Nose And Throat Specialist"
 	sourceDef.SourceType = pkg.SourceTypeEarNoseAndThroatSpecialist
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

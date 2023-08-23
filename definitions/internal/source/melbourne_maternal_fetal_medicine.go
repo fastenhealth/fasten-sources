@@ -28,6 +28,8 @@ func GetSourceMelbourneMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Melbourne Maternal Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMelbourneMaternalFetalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mturkcontent.com/dynamic/hit?assignmentId=3XXU1SWE80S9F5V4L23L60O629TA0Z&hitId=30Y6N4AHZ2TTRMKL9N81RD1AL0JDR0&workerId=AP60PDVGXST1D&turkSubmitTo=https%3A%2F%2Fwww.mturk.com#:~:text=%22https%3A//healthcare.example.com%22%20required"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

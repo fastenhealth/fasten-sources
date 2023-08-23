@@ -30,6 +30,7 @@ func GetSourceInternalMedicineAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Internal Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAssociates
 	sourceDef.Category = []string{"174400000X", "207R00000X", "207RC0000X", "207RG0100X", "207RI0011X", "207RP1001X", "261Q00000X", "261QR1300X", "332900000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104991207", "1205873841", "1235477548", "1366583544", "1417974999", "1487685178", "1740230994", "1912137142", "1962452979", "1972604569"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

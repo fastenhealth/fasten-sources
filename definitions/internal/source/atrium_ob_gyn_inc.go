@@ -28,6 +28,8 @@ func GetSourceAtriumObGynInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Atrium OB GYN INC"
 	sourceDef.SourceType = pkg.SourceTypeAtriumObGynInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.atriumobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

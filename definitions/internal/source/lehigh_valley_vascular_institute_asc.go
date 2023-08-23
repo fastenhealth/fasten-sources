@@ -28,6 +28,8 @@ func GetSourceLehighValleyVascularInstituteAsc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Lehigh Valley Vascular Institute (ASC)"
 	sourceDef.SourceType = pkg.SourceTypeLehighValleyVascularInstituteAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

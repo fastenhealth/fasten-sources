@@ -29,6 +29,8 @@ func GetSourceEndocrineAndMetabolicDisorders(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Endocrine and Metabolic Disorders"
 	sourceDef.SourceType = pkg.SourceTypeEndocrineAndMetabolicDisorders
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

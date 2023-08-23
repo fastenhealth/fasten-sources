@@ -30,6 +30,7 @@ func GetSourceFredoniaRegionalHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Fredonia Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeFredoniaRegionalHospital
 	sourceDef.Category = []string{"207P00000X", "273R00000X", "275N00000X", "282NC0060X", "341600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285634006", "1376656611", "1467565705", "1548270796"}}
 	sourceDef.BrandLogo = "fredonia-regional-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://frh1.org/"

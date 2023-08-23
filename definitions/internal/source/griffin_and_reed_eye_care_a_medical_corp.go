@@ -29,6 +29,8 @@ func GetSourceGriffinAndReedEyeCareAMedicalCorp(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Griffin & Reed Eye Care, A Medical Corp"
 	sourceDef.SourceType = pkg.SourceTypeGriffinAndReedEyeCareAMedicalCorp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.lasikworld.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

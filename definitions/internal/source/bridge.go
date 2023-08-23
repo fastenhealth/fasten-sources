@@ -28,6 +28,8 @@ func GetSourceBridge(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "BRIDGE"
 	sourceDef.SourceType = pkg.SourceTypeBridge
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

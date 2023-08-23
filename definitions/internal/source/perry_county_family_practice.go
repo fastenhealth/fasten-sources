@@ -28,6 +28,8 @@ func GetSourcePerryCountyFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Perry County Family Practice"
 	sourceDef.SourceType = pkg.SourceTypePerryCountyFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "perry-county-family-practice.svg"
 	sourceDef.PatientAccessUrl = "https://www.genesishcs.org/find-locations/perry-county-family-practice"
 	sourceDef.SecretKeyPrefix = "nextgen"

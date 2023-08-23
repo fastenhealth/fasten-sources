@@ -28,6 +28,7 @@ func GetSourceCioSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "CIO Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeCioSurgeryCenterLlc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Central Indiana Orthopedics Surgery Center"}
 	sourceDef.PatientAccessUrl = "https://ciocenter.com/services/outpatient-surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"

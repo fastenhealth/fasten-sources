@@ -29,6 +29,8 @@ func GetSourceGastroPediatricPartners(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Gastro Pediatric Partners"
 	sourceDef.SourceType = pkg.SourceTypeGastroPediatricPartners
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/find-a-physician/physician-details/en/1215994447/oscar-loret-de-mola-gastroenterology"
 	sourceDef.SecretKeyPrefix = "cerner"
 

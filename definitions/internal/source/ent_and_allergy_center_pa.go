@@ -29,6 +29,8 @@ func GetSourceEntAndAllergyCenterPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "ENT and Allergy Center PA"
 	sourceDef.SourceType = pkg.SourceTypeEntAndAllergyCenterPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/375VSR8FW96WUNPH15XYI5KD9IRZRJ?assignment_id=3QXNC7EIPWSVAMLZTWPLA5DMVPQ09K&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

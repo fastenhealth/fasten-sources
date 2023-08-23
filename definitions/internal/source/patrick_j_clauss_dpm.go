@@ -29,6 +29,8 @@ func GetSourcePatrickJClaussDpm(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Patrick J. Clauss, DPM"
 	sourceDef.SourceType = pkg.SourceTypePatrickJClaussDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/patrick-j-clauss-dpm-5d8ae6c7-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

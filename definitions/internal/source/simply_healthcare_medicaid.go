@@ -27,6 +27,8 @@ func GetSourceSimplyHealthcareMedicaid(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Simply Healthcare Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeSimplyHealthcareMedicaid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

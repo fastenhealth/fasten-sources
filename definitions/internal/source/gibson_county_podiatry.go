@@ -29,6 +29,8 @@ func GetSourceGibsonCountyPodiatry(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Gibson County Podiatry"
 	sourceDef.SourceType = pkg.SourceTypeGibsonCountyPodiatry
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gibson-county-podiatry.gif"
 	sourceDef.PatientAccessUrl = "http://gibsoncountypodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

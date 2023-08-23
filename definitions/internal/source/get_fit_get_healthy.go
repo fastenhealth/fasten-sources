@@ -28,6 +28,8 @@ func GetSourceGetFitGetHealthy(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Get Fit Get Healthy"
 	sourceDef.SourceType = pkg.SourceTypeGetFitGetHealthy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "get-fit-get-healthy.jpg"
 	sourceDef.PatientAccessUrl = "https://goshenhealth.com/about-us/business-health-advantage"
 	sourceDef.SecretKeyPrefix = "nextgen"

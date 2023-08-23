@@ -28,6 +28,8 @@ func GetSourceUnknownPracticeB(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Unknown Practice B"
 	sourceDef.SourceType = pkg.SourceTypeUnknownPracticeB
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pbmchealth.org/contact"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

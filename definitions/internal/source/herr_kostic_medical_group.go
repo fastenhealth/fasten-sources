@@ -28,6 +28,8 @@ func GetSourceHerrKosticMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Herr Kostic Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeHerrKosticMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "herr-kostic-medical-group.svg"
 	sourceDef.PatientAccessUrl = "https://www.mydohc.com/find-a-doctor/profile/biljana-kostic/"
 	sourceDef.SecretKeyPrefix = "nextgen"

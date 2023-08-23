@@ -28,6 +28,8 @@ func GetSourceNorthGeorgiaRheumatologyGroupPc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "North Georgia Rheumatology Group PC"
 	sourceDef.SourceType = pkg.SourceTypeNorthGeorgiaRheumatologyGroupPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

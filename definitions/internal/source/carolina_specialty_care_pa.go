@@ -28,6 +28,8 @@ func GetSourceCarolinaSpecialtyCarePa(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Carolina Specialty Care PA"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaSpecialtyCarePa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://carolinaspecialtycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

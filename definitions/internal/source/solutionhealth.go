@@ -29,6 +29,8 @@ func GetSourceSolutionhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "SolutionHealth"
 	sourceDef.SourceType = pkg.SourceTypeSolutionhealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

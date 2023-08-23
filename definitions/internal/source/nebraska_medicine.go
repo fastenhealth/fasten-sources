@@ -29,6 +29,8 @@ func GetSourceNebraskaMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Nebraska Medicine"
 	sourceDef.SourceType = pkg.SourceTypeNebraskaMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.onechartpatient.com/mychart/Authentication/Login?"
 	sourceDef.SecretKeyPrefix = "epic"
 

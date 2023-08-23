@@ -29,6 +29,8 @@ func GetSourceKaiserPermanenteColorado(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Kaiser Permanente - Colorado"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteColorado
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

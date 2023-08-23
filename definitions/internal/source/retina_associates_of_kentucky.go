@@ -28,6 +28,8 @@ func GetSourceRetinaAssociatesOfKentucky(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Retina Associates Of Kentucky"
 	sourceDef.SourceType = pkg.SourceTypeRetinaAssociatesOfKentucky
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "retina-associates-of-kentucky.jpg"
 	sourceDef.PatientAccessUrl = "https://www.retinaky.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

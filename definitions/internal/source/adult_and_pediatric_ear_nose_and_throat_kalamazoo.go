@@ -29,6 +29,8 @@ func GetSourceAdultAndPediatricEarNoseAndThroatKalamazoo(env pkg.FastenLighthous
 
 	sourceDef.Display = "Adult & Pediatric Ear, Nose & Throat – Kalamazoo"
 	sourceDef.SourceType = pkg.SourceTypeAdultAndPediatricEarNoseAndThroatKalamazoo
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

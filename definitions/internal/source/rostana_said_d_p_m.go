@@ -29,6 +29,8 @@ func GetSourceRostanaSaidDPM(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Rostana Said, D.P.M."
 	sourceDef.SourceType = pkg.SourceTypeRostanaSaidDPM
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-rostana-said-37hcd"
 	sourceDef.SecretKeyPrefix = "cerner"
 

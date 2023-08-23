@@ -30,6 +30,7 @@ func GetSourceJacksonHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Jackson Health System"
 	sourceDef.SourceType = pkg.SourceTypeJacksonHealthSystem
 	sourceDef.Category = []string{"261Q00000X", "282N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265579320", "1376681239", "1639338221", "1639477789", "1922267517"}}
 	sourceDef.BrandLogo = "jackson-health-system.svg"
 	sourceDef.PatientAccessUrl = "https://jacksonhealth.org"

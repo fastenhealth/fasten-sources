@@ -28,6 +28,8 @@ func GetSourceMidwestEyeCenterAsc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Midwest Eye Center ASC"
 	sourceDef.SourceType = pkg.SourceTypeMidwestEyeCenterAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://midwesteyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

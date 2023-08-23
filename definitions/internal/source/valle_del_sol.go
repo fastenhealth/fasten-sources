@@ -28,6 +28,8 @@ func GetSourceValleDelSol(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Valle Del Sol"
 	sourceDef.SourceType = pkg.SourceTypeValleDelSol
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.valledelsol.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

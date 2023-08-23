@@ -29,6 +29,8 @@ func GetSourceLakesidePainCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Lakeside Pain Center"
 	sourceDef.SourceType = pkg.SourceTypeLakesidePainCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "lakeside-pain-center.jpg"
 	sourceDef.PatientAccessUrl = "http://www.lakesidepaincenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

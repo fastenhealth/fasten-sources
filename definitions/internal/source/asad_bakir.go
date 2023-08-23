@@ -28,6 +28,8 @@ func GetSourceAsadBakir(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Asad Bakir"
 	sourceDef.SourceType = pkg.SourceTypeAsadBakir
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nephdocs.com/doctor/81/asad-bakir-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceMiddleTennesseePulmonaryAssocPllc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Middle Tennessee Pulmonary Assoc PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMiddleTennesseePulmonaryAssocPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceKidsAreGreat(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Kids Are Great"
 	sourceDef.SourceType = pkg.SourceTypeKidsAreGreat
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

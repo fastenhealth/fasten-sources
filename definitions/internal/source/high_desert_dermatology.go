@@ -28,6 +28,8 @@ func GetSourceHighDesertDermatology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "High Desert Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeHighDesertDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://highdesertdermreno.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -29,6 +29,8 @@ func GetSourceRasoAndCohenGastroenterology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Raso and Cohen Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeRasoAndCohenGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://rasocohengastroenterology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceGPerrinUnderwoodMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "G. Perrin Underwood, MD"
 	sourceDef.SourceType = pkg.SourceTypeGPerrinUnderwoodMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/g-perrin-underwood-1173238"
 	sourceDef.SecretKeyPrefix = "cerner"
 

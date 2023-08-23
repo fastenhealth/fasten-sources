@@ -28,6 +28,8 @@ func GetSourceNcpForthWorthAsc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NCP Forth Worth ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpForthWorthAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://fortworthheart.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

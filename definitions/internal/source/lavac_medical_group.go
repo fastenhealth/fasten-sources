@@ -28,6 +28,8 @@ func GetSourceLavacMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "LAVAC Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeLavacMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

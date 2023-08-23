@@ -29,6 +29,8 @@ func GetSourceValleyHealthSystemsPrd(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Valley Health Systems - PRD"
 	sourceDef.SourceType = pkg.SourceTypeValleyHealthSystemsPrd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

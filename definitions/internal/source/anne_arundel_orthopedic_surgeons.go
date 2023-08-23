@@ -28,6 +28,8 @@ func GetSourceAnneArundelOrthopedicSurgeons(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Anne Arundel Orthopedic Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeAnneArundelOrthopedicSurgeons
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://aaos.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

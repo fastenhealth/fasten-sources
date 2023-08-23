@@ -29,6 +29,8 @@ func GetSourceCharlotteEyeEarNoseAndThroatAssociates(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Charlotte Eye Ear Nose & Throat Associates"
 	sourceDef.SourceType = pkg.SourceTypeCharlotteEyeEarNoseAndThroatAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

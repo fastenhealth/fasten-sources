@@ -29,6 +29,8 @@ func GetSourceNovatoAdvancedFootAndAnkle(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Novato Advanced Foot & Ankle"
 	sourceDef.SourceType = pkg.SourceTypeNovatoAdvancedFootAndAnkle
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://novatoadvancedfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

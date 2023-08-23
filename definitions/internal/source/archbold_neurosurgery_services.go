@@ -28,6 +28,8 @@ func GetSourceArchboldNeurosurgeryServices(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Archbold Neurosurgery Services"
 	sourceDef.SourceType = pkg.SourceTypeArchboldNeurosurgeryServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://archbold.org/neurosurgery-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

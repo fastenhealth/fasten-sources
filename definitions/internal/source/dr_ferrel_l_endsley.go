@@ -28,6 +28,8 @@ func GetSourceDrFerrelLEndsley(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dr Ferrel L Endsley"
 	sourceDef.SourceType = pkg.SourceTypeDrFerrelLEndsley
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceStephenVileMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Stephen Vile, M. D."
 	sourceDef.SourceType = pkg.SourceTypeStephenVileMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.amitahealth.org/provider/dr-stephen-vile-md-ophthalmology"
 	sourceDef.SecretKeyPrefix = "cerner"
 

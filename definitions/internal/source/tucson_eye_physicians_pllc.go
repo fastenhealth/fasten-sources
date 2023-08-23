@@ -29,6 +29,7 @@ func GetSourceTucsonEyePhysiciansPllc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Tucson Eye Physicians PLLC"
 	sourceDef.SourceType = pkg.SourceTypeTucsonEyePhysiciansPllc
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164542734"}}
 	sourceDef.PatientAccessUrl = "https://www.tucsonvision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceMbmcClinics(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "MBMC Clinics"
 	sourceDef.SourceType = pkg.SourceTypeMbmcClinics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.milebluff.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

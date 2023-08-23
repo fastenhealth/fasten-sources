@@ -28,6 +28,8 @@ func GetSourceHullEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Hull Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeHullEyeCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/lancaster/hull-eye-center-oornsn9"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

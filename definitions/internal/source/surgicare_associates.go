@@ -28,6 +28,8 @@ func GetSourceSurgicareAssociates(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Surgicare Associates"
 	sourceDef.SourceType = pkg.SourceTypeSurgicareAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com/surgery-center/1750694832-surgicare-associates%2C-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

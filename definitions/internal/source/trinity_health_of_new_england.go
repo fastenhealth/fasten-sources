@@ -29,6 +29,8 @@ func GetSourceTrinityHealthOfNewEngland(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Trinity Health of New England"
 	sourceDef.SourceType = pkg.SourceTypeTrinityHealthOfNewEngland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

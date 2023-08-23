@@ -29,6 +29,8 @@ func GetSourceKathrynTBallardMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Kathryn T. Ballard MD"
 	sourceDef.SourceType = pkg.SourceTypeKathrynTBallardMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://na"
 	sourceDef.SecretKeyPrefix = "cerner"
 

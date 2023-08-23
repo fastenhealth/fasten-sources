@@ -30,6 +30,7 @@ func GetSourceKufoyMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Kufoy Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeKufoyMedicalClinic
 	sourceDef.Category = []string{"207R00000X", "261QS1200X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306086616", "1417118084"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

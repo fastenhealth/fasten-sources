@@ -29,6 +29,8 @@ func GetSourcePersonalizedPrimaryCareAtlanta(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Personalized Primary Care Atlanta"
 	sourceDef.SourceType = pkg.SourceTypePersonalizedPrimaryCareAtlanta
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "personalized-primary-care-atlanta.jpg"
 	sourceDef.PatientAccessUrl = "http://www.ppcatl.com/contact-us.php"
 	sourceDef.SecretKeyPrefix = "cerner"

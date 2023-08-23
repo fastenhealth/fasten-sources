@@ -28,6 +28,8 @@ func GetSourceDaytonGastroenterology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Dayton Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeDaytonGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dayton-gastroenterology.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3MG8450X317UWBFSIQU1WI5J6IPUPY?assignment_id=39N5ACM9HSKYY3PJAH4BP6EU3X59P3&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

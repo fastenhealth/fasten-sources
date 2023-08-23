@@ -28,6 +28,8 @@ func GetSourceMarcCommunityResources(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Marc Community Resources"
 	sourceDef.SourceType = pkg.SourceTypeMarcCommunityResources
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "marc-community-resources.jpg"
 	sourceDef.PatientAccessUrl = "https://www.marccommunityresources.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

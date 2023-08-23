@@ -28,6 +28,8 @@ func GetSourceKogerDermatologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Koger Dermatology Pc"
 	sourceDef.SourceType = pkg.SourceTypeKogerDermatologyPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

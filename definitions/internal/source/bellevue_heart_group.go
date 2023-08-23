@@ -29,6 +29,8 @@ func GetSourceBellevueHeartGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Bellevue Heart Group"
 	sourceDef.SourceType = pkg.SourceTypeBellevueHeartGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

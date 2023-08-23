@@ -28,6 +28,8 @@ func GetSourceRosemaryBDeslogeMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Rosemary B Desloge MD"
 	sourceDef.SourceType = pkg.SourceTypeRosemaryBDeslogeMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rosemarydesloge.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

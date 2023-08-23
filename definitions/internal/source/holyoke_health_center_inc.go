@@ -29,6 +29,7 @@ func GetSourceHolyokeHealthCenterInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Holyoke Health Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeHolyokeHealthCenterInc
 	sourceDef.Category = []string{"3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477519684"}}
 	sourceDef.PatientAccessUrl = "http://www.hhcinc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

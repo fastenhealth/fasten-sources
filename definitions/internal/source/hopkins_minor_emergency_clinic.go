@@ -29,6 +29,8 @@ func GetSourceHopkinsMinorEmergencyClinic(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hopkins Minor Emergency Clinic"
 	sourceDef.SourceType = pkg.SourceTypeHopkinsMinorEmergencyClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

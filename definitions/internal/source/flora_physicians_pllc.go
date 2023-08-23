@@ -28,6 +28,8 @@ func GetSourceFloraPhysiciansPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Flora Physicians PLLC"
 	sourceDef.SourceType = pkg.SourceTypeFloraPhysiciansPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npidb.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

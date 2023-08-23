@@ -29,6 +29,8 @@ func GetSourceAlabamaFootCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Alabama Foot Care"
 	sourceDef.SourceType = pkg.SourceTypeAlabamaFootCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3OZ4VAIBFACYNF1US3ZMV8LQBYSVJ4?assignment_id=386PBUZZXTUXDUNU412HXJJDP9BLJ0&from_queue=true"
 	sourceDef.SecretKeyPrefix = "cerner"
 

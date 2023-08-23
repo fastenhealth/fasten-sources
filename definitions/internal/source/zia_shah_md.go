@@ -29,6 +29,8 @@ func GetSourceZiaShahMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Zia Shah MD"
 	sourceDef.SourceType = pkg.SourceTypeZiaShahMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

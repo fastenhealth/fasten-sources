@@ -29,6 +29,8 @@ func GetSourceMassGeneralBrigham(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Mass General Brigham"
 	sourceDef.SourceType = pkg.SourceTypeMassGeneralBrigham
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

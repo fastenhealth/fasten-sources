@@ -28,6 +28,8 @@ func GetSourceGreaterNashvillePerinatology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Greater Nashville Perinatology"
 	sourceDef.SourceType = pkg.SourceTypeGreaterNashvillePerinatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://opennpi.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

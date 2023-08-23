@@ -29,6 +29,8 @@ func GetSourceLakeCountyBehavioralHealth(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Lake County Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeLakeCountyBehavioralHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

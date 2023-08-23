@@ -27,6 +27,8 @@ func GetSourceDellChildrensHealthPlan(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Dell Children's Health Plan"
 	sourceDef.SourceType = pkg.SourceTypeDellChildrensHealthPlan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dell-childrens-health-plan.svg"
 	sourceDef.PatientAccessUrl = "https://dellchildrenshealthplan.com/"
 	sourceDef.SecretKeyPrefix = "anthem"

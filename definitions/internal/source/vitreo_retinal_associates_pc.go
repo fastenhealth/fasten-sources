@@ -28,6 +28,8 @@ func GetSourceVitreoRetinalAssociatesPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Vitreo Retinal Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeVitreoRetinalAssociatesPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vrapc.com/locations/grand-rapids/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

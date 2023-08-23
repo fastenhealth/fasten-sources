@@ -28,6 +28,8 @@ func GetSourceDacCorpusChristi(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "DAC Corpus Christi"
 	sourceDef.SourceType = pkg.SourceTypeDacCorpusChristi
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/dialysis-access-center-corpus-christi/?utm_source=local&utm_medium=organic&utm_campaign=gmb-center-listing&utm_content=website&y_source=1_MzI4MzA2Ni03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

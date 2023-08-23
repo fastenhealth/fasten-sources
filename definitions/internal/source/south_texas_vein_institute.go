@@ -29,6 +29,8 @@ func GetSourceSouthTexasVeinInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "South Texas Vein Institute"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasVeinInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tx-texas/edinburg/south-texas-vein-institute-xy7lx9"
 	sourceDef.SecretKeyPrefix = "cerner"
 

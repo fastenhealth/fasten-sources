@@ -29,6 +29,8 @@ func GetSourceWindingCrossUrgentCareOfFrederick(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Winding Cross Urgent Care Of Frederick"
 	sourceDef.SourceType = pkg.SourceTypeWindingCrossUrgentCareOfFrederick
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceGaminiHethumuniMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gamini Hethumuni MD"
 	sourceDef.SourceType = pkg.SourceTypeGaminiHethumuniMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.optum.com/care/providers/ca/san-gabriel/gamini-hethumuni-md.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

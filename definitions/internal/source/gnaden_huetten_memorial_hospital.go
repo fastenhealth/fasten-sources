@@ -30,6 +30,7 @@ func GetSourceGnadenHuettenMemorialHospital(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Gnaden Huetten Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGnadenHuettenMemorialHospital
 	sourceDef.Category = []string{"261QA0005X", "273R00000X", "282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013101658", "1043455967", "1104010743", "1184899841", "1740474386", "1811162043", "1831383470"}}
 	sourceDef.BrandLogo = "gnaden-huetten-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.blmtn.org/"

@@ -29,6 +29,7 @@ func GetSourceColumbiaEyeSurgeryCenterInc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Columbia Eye Surgery Center Inc"
 	sourceDef.SourceType = pkg.SourceTypeColumbiaEyeSurgeryCenterInc
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720175573"}}
 	sourceDef.BrandLogo = "columbia-eye-surgery-center-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/ColumbiaEyeClinic/about/"

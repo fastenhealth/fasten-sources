@@ -28,6 +28,8 @@ func GetSourceChaffeeFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Chaffee Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeChaffeeFamilyPhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

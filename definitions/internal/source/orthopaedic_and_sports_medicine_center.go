@@ -28,6 +28,8 @@ func GetSourceOrthopaedicAndSportsMedicineCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Orthopaedic and Sports Medicine Center"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicAndSportsMedicineCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/osmcooctherapy/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

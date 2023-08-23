@@ -29,6 +29,8 @@ func GetSourceMartinLutherKingJrCommunityHospital(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Martin Luther King, Jr. Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMartinLutherKingJrCommunityHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mlkch.org/home"
 	sourceDef.SecretKeyPrefix = "cerner"
 

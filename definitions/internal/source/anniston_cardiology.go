@@ -28,6 +28,8 @@ func GetSourceAnnistonCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Anniston Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeAnnistonCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

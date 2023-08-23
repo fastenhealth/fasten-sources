@@ -28,6 +28,8 @@ func GetSourceThambimuttuJeyaranjanMd(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Thambimuttu Jeyaranjan MD"
 	sourceDef.SourceType = pkg.SourceTypeThambimuttuJeyaranjanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.garfieldmedicalcenter.com/Find-a-Doctor/J/Thambimuttu-Jeyaranjan-M-D-.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceDrexelMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Drexel Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDrexelMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

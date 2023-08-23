@@ -29,6 +29,8 @@ func GetSourceNaplesPremierConciergePL(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Naples Premier Concierge, P.L."
 	sourceDef.SourceType = pkg.SourceTypeNaplesPremierConciergePL
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.naplespremierconcierge.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

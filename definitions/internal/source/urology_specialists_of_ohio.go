@@ -28,6 +28,8 @@ func GetSourceUrologySpecialistsOfOhio(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Urology Specialists Of Ohio"
 	sourceDef.SourceType = pkg.SourceTypeUrologySpecialistsOfOhio
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://urologyspecialistsofohio.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

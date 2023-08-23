@@ -28,6 +28,8 @@ func GetSourceCheyenneEyeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Cheyenne Eye Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCheyenneEyeClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cheyenneeyeclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

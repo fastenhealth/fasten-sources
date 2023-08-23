@@ -28,6 +28,8 @@ func GetSourceMetroAnesthesiaAndPainManagementLlp(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Metro Anesthesia & Pain Management LLP"
 	sourceDef.SourceType = pkg.SourceTypeMetroAnesthesiaAndPainManagementLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.metropainmanagement.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

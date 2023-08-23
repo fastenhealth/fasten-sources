@@ -28,6 +28,8 @@ func GetSourceWestFrontPrimaryCarePllc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "West Front Primary Care PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWestFrontPrimaryCarePllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://westfrontprimarycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

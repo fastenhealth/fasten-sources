@@ -28,6 +28,8 @@ func GetSourceDavidBStantonMdAndAssocInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "David B Stanton MD And Assoc Inc"
 	sourceDef.SourceType = pkg.SourceTypeDavidBStantonMdAndAssocInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://unitedmd.com/our-providers/david-stanton-md-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

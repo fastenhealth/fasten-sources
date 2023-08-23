@@ -27,6 +27,8 @@ func GetSourceAnthemMedicaid(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Anthem Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeAnthemMedicaid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "anthem.png"
 	sourceDef.SecretKeyPrefix = "anthem"
 

@@ -29,6 +29,8 @@ func GetSourceLeeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Lee Health"
 	sourceDef.SourceType = pkg.SourceTypeLeeHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCardiothoracicAssociatesOfHawaii(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Cardiothoracic Associates of Hawaii"
 	sourceDef.SourceType = pkg.SourceTypeCardiothoracicAssociatesOfHawaii
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDrJosePenaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Dr. Jose Pena MD"
 	sourceDef.SourceType = pkg.SourceTypeDrJosePenaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-jose-pena-md.jpg"
 	sourceDef.PatientAccessUrl = "https://doctors.southtexashealthsystemmcallen.com/provider/Jose+Pena/1878175"
 	sourceDef.SecretKeyPrefix = "cerner"

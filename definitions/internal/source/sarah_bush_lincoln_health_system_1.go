@@ -29,6 +29,8 @@ func GetSourceSarahBushLincolnHealthSystem1(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Sarah Bush Lincoln Health System"
 	sourceDef.SourceType = pkg.SourceTypeSarahBushLincolnHealthSystem1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "sarah-bush-lincoln-health-system.png"
 	sourceDef.PatientAccessUrl = "https://www.palmettosurgerycenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

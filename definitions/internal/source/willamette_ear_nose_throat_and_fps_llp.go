@@ -28,6 +28,8 @@ func GetSourceWillametteEarNoseThroatAndFpsLlp(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Willamette Ear Nose Throat and FPS LLP"
 	sourceDef.SourceType = pkg.SourceTypeWillametteEarNoseThroatAndFpsLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://entsalem.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

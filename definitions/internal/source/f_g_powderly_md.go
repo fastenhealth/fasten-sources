@@ -28,6 +28,8 @@ func GetSourceFGPowderlyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "F G Powderly Md"
 	sourceDef.SourceType = pkg.SourceTypeFGPowderlyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

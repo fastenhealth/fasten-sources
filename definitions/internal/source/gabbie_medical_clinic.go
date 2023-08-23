@@ -29,6 +29,8 @@ func GetSourceGabbieMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Gabbie Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeGabbieMedicalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/gabbie-medical-clinic-8c6c8fc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

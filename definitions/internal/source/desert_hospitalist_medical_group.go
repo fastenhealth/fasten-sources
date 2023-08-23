@@ -28,6 +28,8 @@ func GetSourceDesertHospitalistMedicalGroup(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Desert Hospitalist Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeDesertHospitalistMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/arizona/phoenix/desert-hospitalists-pc-8729071899.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

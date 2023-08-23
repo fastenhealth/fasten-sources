@@ -29,6 +29,8 @@ func GetSourceHutchinsonRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Hutchinson Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeHutchinsonRegionalMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hutchinson-regional-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.hutchregional.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

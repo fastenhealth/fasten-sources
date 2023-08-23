@@ -29,6 +29,7 @@ func GetSourceHandSurgeryAssociatesSc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Hand Surgery Associates SC"
 	sourceDef.SourceType = pkg.SourceTypeHandSurgeryAssociatesSc
 	sourceDef.Category = []string{"174400000X", "207XS0106X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215167184", "1568508083"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

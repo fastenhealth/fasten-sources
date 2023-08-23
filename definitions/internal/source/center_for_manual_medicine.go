@@ -29,6 +29,8 @@ func GetSourceCenterForManualMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Center for Manual Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCenterForManualMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ctrmm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

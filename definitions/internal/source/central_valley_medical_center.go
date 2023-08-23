@@ -30,6 +30,7 @@ func GetSourceCentralValleyMedicalCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Central Valley Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCentralValleyMedicalCenter
 	sourceDef.Category = []string{"207Q00000X", "251E00000X", "251G00000X", "275N00000X", "282NC0060X", "332BX2000X", "3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104978790", "1568486918", "1851416838", "1881658110", "1902825854", "1952452658", "1992724975"}}
 	sourceDef.PatientAccessUrl = "https://www.centralvalleymedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

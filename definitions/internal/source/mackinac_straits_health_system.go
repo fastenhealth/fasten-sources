@@ -29,6 +29,7 @@ func GetSourceMackinacStraitsHealthSystem(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Mackinac Straits Health System"
 	sourceDef.SourceType = pkg.SourceTypeMackinacStraitsHealthSystem
 	sourceDef.Category = []string{"282NC0060X", "3336C0003X", "3336I0012X", "3336L0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649210394"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

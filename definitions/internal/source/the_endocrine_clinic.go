@@ -28,6 +28,8 @@ func GetSourceTheEndocrineClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Endocrine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTheEndocrineClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

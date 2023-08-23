@@ -29,6 +29,8 @@ func GetSourceOrthopedicAndSportsMedicineSpecialistsOfGreenBaySc(env pkg.FastenL
 
 	sourceDef.Display = "Orthopedic and Sports Medicine Specialists of Green Bay, SC"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicAndSportsMedicineSpecialistsOfGreenBaySc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://osmsgb.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

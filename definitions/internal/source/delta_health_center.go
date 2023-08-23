@@ -29,6 +29,7 @@ func GetSourceDeltaHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Delta Health Center"
 	sourceDef.SourceType = pkg.SourceTypeDeltaHealthCenter
 	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104848787", "1144398710", "1396767125", "1487723227", "1497769236", "1669691861", "1700923836", "1760404511", "1871652024"}}
 	sourceDef.PatientAccessUrl = "https://deltahealthcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

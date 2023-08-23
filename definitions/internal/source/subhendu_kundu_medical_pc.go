@@ -29,6 +29,7 @@ func GetSourceSubhenduKunduMedicalPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Subhendu Kundu Medical PC"
 	sourceDef.SourceType = pkg.SourceTypeSubhenduKunduMedicalPc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861860439"}}
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1861860439-subhendu-kundu-medical-pc/"
 	sourceDef.SecretKeyPrefix = "nextgen"

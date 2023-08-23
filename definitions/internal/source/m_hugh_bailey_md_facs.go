@@ -28,6 +28,8 @@ func GetSourceMHughBaileyMdFacs(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "M. Hugh Bailey MD FACS"
 	sourceDef.SourceType = pkg.SourceTypeMHughBaileyMdFacs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cosmetic-surgeon.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceStOfTnDisabilityDeterminationSectio(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "ST OF TN Disability Determination Sectio"
 	sourceDef.SourceType = pkg.SourceTypeStOfTnDisabilityDeterminationSectio
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

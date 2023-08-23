@@ -29,6 +29,8 @@ func GetSourceChestertownCardiology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Chestertown Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeChestertownCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.chestertowncardiology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

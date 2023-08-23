@@ -29,6 +29,8 @@ func GetSourceNewCoastCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "New Coast Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeNewCoastCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/coast-cardiology-center-d44cbcd2-7ca5-4ac1-97a1-e68cfb22ff70"
 	sourceDef.SecretKeyPrefix = "cerner"
 

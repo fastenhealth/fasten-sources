@@ -28,6 +28,8 @@ func GetSourceGwinnettMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Gwinnett Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeGwinnettMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

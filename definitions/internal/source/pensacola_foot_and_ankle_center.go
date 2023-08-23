@@ -29,6 +29,8 @@ func GetSourcePensacolaFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pensacola Foot & Ankle Center"
 	sourceDef.SourceType = pkg.SourceTypePensacolaFootAndAnkleCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pensacola-foot-and-ankle-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.penfootank.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

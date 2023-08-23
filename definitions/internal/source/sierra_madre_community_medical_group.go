@@ -28,6 +28,8 @@ func GetSourceSierraMadreCommunityMedicalGroup(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Sierra Madre Community Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSierraMadreCommunityMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sierramadremedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

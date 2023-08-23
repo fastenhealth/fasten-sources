@@ -28,6 +28,8 @@ func GetSourceMountWashingtonFamilyPractice(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mount Washington Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMountWashingtonFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

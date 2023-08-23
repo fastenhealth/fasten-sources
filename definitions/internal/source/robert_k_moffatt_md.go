@@ -28,6 +28,8 @@ func GetSourceRobertKMoffattMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Robert K Moffatt MD"
 	sourceDef.SourceType = pkg.SourceTypeRobertKMoffattMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "robert-k-moffatt-md.svg"
 	sourceDef.PatientAccessUrl = "https://www.rkmaesthetics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

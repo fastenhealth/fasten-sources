@@ -28,6 +28,8 @@ func GetSourceMednaxPediatricDevelopmentalServices(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Mednax Pediatric Developmental Services"
 	sourceDef.SourceType = pkg.SourceTypeMednaxPediatricDevelopmentalServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "htpps://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

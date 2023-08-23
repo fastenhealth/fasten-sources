@@ -29,6 +29,8 @@ func GetSourceDrDouglasWAnkromInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dr. Douglas W Ankrom, Inc"
 	sourceDef.SourceType = pkg.SourceTypeDrDouglasWAnkromInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/sonora/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

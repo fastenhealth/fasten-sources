@@ -28,6 +28,8 @@ func GetSourceDermatologyAssociatesOfGeorgia(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Dermatology Associates Of Georgia"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfGeorgia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://dermga.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

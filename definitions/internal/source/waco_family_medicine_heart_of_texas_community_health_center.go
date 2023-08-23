@@ -29,6 +29,8 @@ func GetSourceWacoFamilyMedicineHeartOfTexasCommunityHealthCenter(env pkg.Fasten
 
 	sourceDef.Display = "Waco Family Medicine (Heart of Texas Community Health Center)"
 	sourceDef.SourceType = pkg.SourceTypeWacoFamilyMedicineHeartOfTexasCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

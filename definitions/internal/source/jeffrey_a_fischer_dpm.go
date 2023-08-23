@@ -29,6 +29,8 @@ func GetSourceJeffreyAFischerDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Jeffrey A. Fischer, DPM"
 	sourceDef.SourceType = pkg.SourceTypeJeffreyAFischerDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fischerpodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceNorthTexasHandCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "North Texas Hand Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthTexasHandCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

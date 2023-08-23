@@ -29,6 +29,8 @@ func GetSourceAssociatedOphthalmologists(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Associated Ophthalmologists"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedOphthalmologists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

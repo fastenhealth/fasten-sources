@@ -28,6 +28,8 @@ func GetSourceSaintYoustinaCommunityClinic(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Saint Youstina Community Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSaintYoustinaCommunityClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.styoustina.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

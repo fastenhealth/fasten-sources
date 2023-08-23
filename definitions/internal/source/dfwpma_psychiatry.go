@@ -28,6 +28,8 @@ func GetSourceDfwpmaPsychiatry(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "DFWPMA Psychiatry"
 	sourceDef.SourceType = pkg.SourceTypeDfwpmaPsychiatry
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://dfwpma.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

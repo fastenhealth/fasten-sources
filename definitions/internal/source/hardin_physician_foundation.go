@@ -28,6 +28,8 @@ func GetSourceHardinPhysicianFoundation(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hardin Physician Foundation"
 	sourceDef.SourceType = pkg.SourceTypeHardinPhysicianFoundation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

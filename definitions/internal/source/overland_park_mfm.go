@@ -28,6 +28,8 @@ func GetSourceOverlandParkMfm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Overland Park MFM"
 	sourceDef.SourceType = pkg.SourceTypeOverlandParkMfm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "overland-park-mfm.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/OPRMC/photos/"
 	sourceDef.SecretKeyPrefix = "nextgen"

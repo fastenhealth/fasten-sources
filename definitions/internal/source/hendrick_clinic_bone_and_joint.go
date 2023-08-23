@@ -28,6 +28,8 @@ func GetSourceHendrickClinicBoneAndJoint(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Hendrick Clinic Bone & Joint"
 	sourceDef.SourceType = pkg.SourceTypeHendrickClinicBoneAndJoint
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hendrickhealth.org/hendrick-clinic/bone-and-joint/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceStClairVascular(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "St Clair Vascular"
 	sourceDef.SourceType = pkg.SourceTypeStClairVascular
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

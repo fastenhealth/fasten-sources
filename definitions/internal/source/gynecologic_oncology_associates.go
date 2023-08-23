@@ -28,6 +28,8 @@ func GetSourceGynecologicOncologyAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Gynecologic Oncology Associates"
 	sourceDef.SourceType = pkg.SourceTypeGynecologicOncologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

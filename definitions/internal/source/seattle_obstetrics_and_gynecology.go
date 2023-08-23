@@ -28,6 +28,8 @@ func GetSourceSeattleObstetricsAndGynecology(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Seattle Obstetrics and Gynecology"
 	sourceDef.SourceType = pkg.SourceTypeSeattleObstetricsAndGynecology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "seattle-obstetrics-and-gynecology.jpg"
 	sourceDef.PatientAccessUrl = "https://www.seaobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceAndrewRNolanMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Andrew R Nolan MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeAndrewRNolanMdLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://eyefl.com/our_doctors/andrew-r-nolan-m-d/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

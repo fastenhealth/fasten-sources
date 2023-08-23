@@ -28,6 +28,8 @@ func GetSourceCenterForEndocrineHealth(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Center For Endocrine Health"
 	sourceDef.SourceType = pkg.SourceTypeCenterForEndocrineHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "center-for-endocrine-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/center-endocrine-health"
 	sourceDef.SecretKeyPrefix = "nextgen"

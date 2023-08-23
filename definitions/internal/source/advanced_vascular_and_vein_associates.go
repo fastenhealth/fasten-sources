@@ -28,6 +28,8 @@ func GetSourceAdvancedVascularAndVeinAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Advanced Vascular And Vein Associates"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedVascularAndVeinAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://avvams.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

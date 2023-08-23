@@ -28,6 +28,8 @@ func GetSourceOptumcareOrthopaedicsAndSpine(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "OptumCare Orthopaedics And Spine"
 	sourceDef.SourceType = pkg.SourceTypeOptumcareOrthopaedicsAndSpine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "optumcare-orthopaedics-and-spine.svg"
 	sourceDef.PatientAccessUrl = "https://www.oc-orthopaedic.com/locations"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceHhpInternalMedicineAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "HHP Internal Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypeHhpInternalMedicineAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mosaicmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

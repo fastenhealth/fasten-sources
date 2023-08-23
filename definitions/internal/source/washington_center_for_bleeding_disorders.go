@@ -28,6 +28,8 @@ func GetSourceWashingtonCenterForBleedingDisorders(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Washington Center For Bleeding Disorders"
 	sourceDef.SourceType = pkg.SourceTypeWashingtonCenterForBleedingDisorders
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wacbd.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceVwhRcm(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "VWH RCM"
 	sourceDef.SourceType = pkg.SourceTypeVwhRcm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wearespin.com/location/seattle/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

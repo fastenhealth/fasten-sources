@@ -28,6 +28,8 @@ func GetSourceOneDaySurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "One Day Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeOneDaySurgeryCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

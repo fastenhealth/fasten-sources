@@ -29,6 +29,8 @@ func GetSourceDavidHWarnerDpm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "David H. Warner, DPM"
 	sourceDef.SourceType = pkg.SourceTypeDavidHWarnerDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "david-h-warner-dpm.jpg"
 	sourceDef.PatientAccessUrl = "https://www.drdavidwarner.com"
 	sourceDef.SecretKeyPrefix = "cerner"

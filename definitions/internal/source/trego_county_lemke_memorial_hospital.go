@@ -29,6 +29,8 @@ func GetSourceTregoCountyLemkeMemorialHospital(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Trego County-Lemke Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeTregoCountyLemkeMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://tclmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

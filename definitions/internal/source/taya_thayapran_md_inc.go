@@ -28,6 +28,8 @@ func GetSourceTayaThayapranMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Taya Thayapran MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeTayaThayapranMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.thayapran_taya_md_facc.873b45002d5068f0a62d73947e9975b6.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

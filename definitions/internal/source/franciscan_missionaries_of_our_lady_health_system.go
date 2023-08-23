@@ -29,6 +29,8 @@ func GetSourceFranciscanMissionariesOfOurLadyHealthSystem(env pkg.FastenLighthou
 
 	sourceDef.Display = "Franciscan Missionaries of Our Lady Health System"
 	sourceDef.SourceType = pkg.SourceTypeFranciscanMissionariesOfOurLadyHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

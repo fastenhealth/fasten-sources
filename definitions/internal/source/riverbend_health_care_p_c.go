@@ -28,6 +28,8 @@ func GetSourceRiverbendHealthCarePC(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Riverbend Health Care, P. C."
 	sourceDef.SourceType = pkg.SourceTypeRiverbendHealthCarePC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

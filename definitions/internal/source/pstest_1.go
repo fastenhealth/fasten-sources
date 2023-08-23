@@ -28,6 +28,8 @@ func GetSourcePstest1(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "PSTest1"
 	sourceDef.SourceType = pkg.SourceTypePstest1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

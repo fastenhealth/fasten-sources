@@ -28,6 +28,8 @@ func GetSourceNwCenterForCongenitalHeartDisease(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "NW Center For Congenital Heart Disease"
 	sourceDef.SourceType = pkg.SourceTypeNwCenterForCongenitalHeartDisease
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "nw-center-for-congenital-heart-disease.svg"
 	sourceDef.PatientAccessUrl = "https://www.providence.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

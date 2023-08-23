@@ -29,6 +29,7 @@ func GetSourceMathiesenMemorialHealthClinic(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Mathiesen Memorial Health Clinic"
 	sourceDef.SourceType = pkg.SourceTypeMathiesenMemorialHealthClinic
 	sourceDef.Category = []string{"261QF0400X", "261QM1300X", "261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255595484"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceOhioCentralBilling(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Ohio Central Billing"
 	sourceDef.SourceType = pkg.SourceTypeOhioCentralBilling
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

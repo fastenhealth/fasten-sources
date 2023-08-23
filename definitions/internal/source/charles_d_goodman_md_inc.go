@@ -28,6 +28,8 @@ func GetSourceCharlesDGoodmanMdInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Charles D Goodman MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeCharlesDGoodmanMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

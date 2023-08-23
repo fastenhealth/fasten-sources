@@ -28,6 +28,8 @@ func GetSourceProgressiveNeurologySleepMedicine(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "PROGRESSIVE NEUROLOGY SLEEP MEDICINE"
 	sourceDef.SourceType = pkg.SourceTypeProgressiveNeurologySleepMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "progressive-neurology-sleep-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://www.progressiveneuroandsleep.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceFelixStanziolaMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Felix Stanziola, MD"
 	sourceDef.SourceType = pkg.SourceTypeFelixStanziolaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "felix-stanziola-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hcafloridahealthcare.com/?sc_lang=en-US"
 	sourceDef.SecretKeyPrefix = "cerner"

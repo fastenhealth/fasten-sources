@@ -28,6 +28,8 @@ func GetSourceThreeRiversCommunityHealthGroup(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Three Rivers Community Health Group"
 	sourceDef.SourceType = pkg.SourceTypeThreeRiversCommunityHealthGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.3riverscommunityhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

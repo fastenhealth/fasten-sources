@@ -28,6 +28,8 @@ func GetSourceCarolinaHeadacheInstitute(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Carolina Headache Institute"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaHeadacheInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.chi09.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

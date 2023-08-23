@@ -28,6 +28,8 @@ func GetSourceMendocinoCoastClinics(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Mendocino Coast Clinics"
 	sourceDef.SourceType = pkg.SourceTypeMendocinoCoastClinics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mendocinocoastclinics.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

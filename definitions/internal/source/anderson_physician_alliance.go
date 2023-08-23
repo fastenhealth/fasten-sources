@@ -28,6 +28,8 @@ func GetSourceAndersonPhysicianAlliance(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Anderson Physician Alliance"
 	sourceDef.SourceType = pkg.SourceTypeAndersonPhysicianAlliance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/meridian-1/anderson-physician-alliance-rhu-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

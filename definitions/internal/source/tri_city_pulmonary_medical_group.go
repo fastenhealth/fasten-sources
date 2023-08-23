@@ -30,6 +30,7 @@ func GetSourceTriCityPulmonaryMedicalGroup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Tri City Pulmonary Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeTriCityPulmonaryMedicalGroup
 	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053406876"}}
 	sourceDef.PatientAccessUrl = "https://www.tricitymed.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

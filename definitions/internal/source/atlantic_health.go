@@ -30,6 +30,7 @@ func GetSourceAtlanticHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Atlantic Health"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticHealth
 	sourceDef.Category = []string{"261QP2300X", "282N00000X", "282NC2000X", "333600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023347978", "1598157174", "1710311303", "1801104500", "1861643660", "1912221524"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

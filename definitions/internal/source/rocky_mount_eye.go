@@ -28,6 +28,8 @@ func GetSourceRockyMountEye(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Rocky Mount Eye"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountEye
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/RockyMountainEyeMontana/posts/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

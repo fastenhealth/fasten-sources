@@ -28,6 +28,8 @@ func GetSourceBirminghamHeartClinicPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Birmingham Heart Clinic PC"
 	sourceDef.SourceType = pkg.SourceTypeBirminghamHeartClinicPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.birminghamheart.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

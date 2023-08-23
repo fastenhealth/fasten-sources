@@ -28,6 +28,8 @@ func GetSourceMfi(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 
 	sourceDef.Display = "MFI"
 	sourceDef.SourceType = pkg.SourceTypeMfi
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mfirecovery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceUnionBridgeFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Union Bridge Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeUnionBridgeFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/ubdentistry/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

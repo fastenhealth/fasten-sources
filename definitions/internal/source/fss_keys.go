@@ -28,6 +28,8 @@ func GetSourceFssKeys(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "FSS KEYS"
 	sourceDef.SourceType = pkg.SourceTypeFssKeys
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/key-west/florida-keys-medical-associates/#gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

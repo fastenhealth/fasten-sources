@@ -28,6 +28,8 @@ func GetSourceHaleKealaokekoa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Hale Kealaokekoa"
 	sourceDef.SourceType = pkg.SourceTypeHaleKealaokekoa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hale-kealaokekoa.jpg"
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

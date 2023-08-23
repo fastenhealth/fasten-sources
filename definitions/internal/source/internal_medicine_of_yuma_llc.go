@@ -29,6 +29,7 @@ func GetSourceInternalMedicineOfYumaLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Internal Medicine Of Yuma LLC"
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineOfYumaLlc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831370576"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

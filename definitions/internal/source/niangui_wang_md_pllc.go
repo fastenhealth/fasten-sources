@@ -29,6 +29,7 @@ func GetSourceNianguiWangMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Niangui Wang MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeNianguiWangMdPllc
 	sourceDef.Category = []string{"2084N0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922513175"}}
 	sourceDef.PatientAccessUrl = "https://www.na.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

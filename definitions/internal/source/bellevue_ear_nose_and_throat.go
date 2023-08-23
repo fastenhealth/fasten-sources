@@ -28,6 +28,8 @@ func GetSourceBellevueEarNoseAndThroat(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Bellevue Ear Nose And Throat"
 	sourceDef.SourceType = pkg.SourceTypeBellevueEarNoseAndThroat
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceKennethGLawlorDoPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Kenneth G Lawlor DO PLLC"
 	sourceDef.SourceType = pkg.SourceTypeKennethGLawlorDoPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/kenneth-lawlor-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

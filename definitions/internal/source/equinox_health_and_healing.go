@@ -28,6 +28,8 @@ func GetSourceEquinoxHealthAndHealing(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Equinox Health & Healing"
 	sourceDef.SourceType = pkg.SourceTypeEquinoxHealthAndHealing
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "equinox-health-and-healing.aspx"
 	sourceDef.PatientAccessUrl = "https://www.exeterhospital.com/Home"
 	sourceDef.SecretKeyPrefix = "nextgen"

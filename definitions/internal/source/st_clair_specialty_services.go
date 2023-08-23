@@ -28,6 +28,8 @@ func GetSourceStClairSpecialtyServices(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "ST. CLAIR SPECIALTY SERVICES"
 	sourceDef.SourceType = pkg.SourceTypeStClairSpecialtyServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

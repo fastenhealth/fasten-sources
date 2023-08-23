@@ -29,6 +29,8 @@ func GetSourceHeidelbergDermatology(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Heidelberg Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeHeidelbergDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://heidelbergdermatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

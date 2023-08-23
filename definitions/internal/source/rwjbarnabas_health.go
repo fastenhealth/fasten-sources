@@ -29,6 +29,8 @@ func GetSourceRwjbarnabasHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "RWJBarnabas Health"
 	sourceDef.SourceType = pkg.SourceTypeRwjbarnabasHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

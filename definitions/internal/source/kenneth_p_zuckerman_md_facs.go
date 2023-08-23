@@ -28,6 +28,8 @@ func GetSourceKennethPZuckermanMdFacs(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Kenneth P. Zuckerman MD FACS"
 	sourceDef.SourceType = pkg.SourceTypeKennethPZuckermanMdFacs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "kenneth-p-zuckerman-md-facs.jpg"
 	sourceDef.PatientAccessUrl = "https://www.castleconnolly.com/top-doctors/kenneth-p-zuckerman-otolaryngology-85cc018782"
 	sourceDef.SecretKeyPrefix = "nextgen"

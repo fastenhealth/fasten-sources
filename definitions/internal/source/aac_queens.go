@@ -28,6 +28,8 @@ func GetSourceAacQueens(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "AAC Queens"
 	sourceDef.SourceType = pkg.SourceTypeAacQueens
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

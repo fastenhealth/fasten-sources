@@ -28,6 +28,8 @@ func GetSourceGerardoBMartinInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gerardo B Martin Inc"
 	sourceDef.SourceType = pkg.SourceTypeGerardoBMartinInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1679836464-dr-gerardo-b.-martin,-inc-a-professional-corporation/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

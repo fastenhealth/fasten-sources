@@ -28,6 +28,8 @@ func GetSourceWadahAtassiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Wadah Atassi MD"
 	sourceDef.SourceType = pkg.SourceTypeWadahAtassiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.araneye.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

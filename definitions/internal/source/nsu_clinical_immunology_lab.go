@@ -28,6 +28,8 @@ func GetSourceNsuClinicalImmunologyLab(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "NSU Clinical Immunology Lab"
 	sourceDef.SourceType = pkg.SourceTypeNsuClinicalImmunologyLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1477958247"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

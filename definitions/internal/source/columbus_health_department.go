@@ -28,6 +28,8 @@ func GetSourceColumbusHealthDepartment(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Columbus Health Department"
 	sourceDef.SourceType = pkg.SourceTypeColumbusHealthDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "columbus-health-department.jpg"
 	sourceDef.PatientAccessUrl = "https://www.columbus.gov/publichealth/"
 	sourceDef.SecretKeyPrefix = "nextgen"

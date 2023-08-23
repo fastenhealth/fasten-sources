@@ -28,6 +28,8 @@ func GetSourceEdmundJLewisAndAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Edmund J Lewis & Associates"
 	sourceDef.SourceType = pkg.SourceTypeEdmundJLewisAndAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rush.edu/locations/edmund-j-lewis-associates-sc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

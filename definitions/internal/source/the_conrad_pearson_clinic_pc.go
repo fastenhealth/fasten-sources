@@ -28,6 +28,8 @@ func GetSourceTheConradPearsonClinicPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "THE CONRAD PEARSON CLINIC PC"
 	sourceDef.SourceType = pkg.SourceTypeTheConradPearsonClinicPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.conradpearson.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

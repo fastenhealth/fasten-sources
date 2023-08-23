@@ -29,6 +29,8 @@ func GetSourceSteenersonRonaldLeifMdPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Steenerson, Ronald Leif, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeSteenersonRonaldLeifMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://vestibularatlanta.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

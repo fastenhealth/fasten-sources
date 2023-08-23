@@ -28,6 +28,8 @@ func GetSourceShenandoahCommunityHealth(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Shenandoah Community Health"
 	sourceDef.SourceType = pkg.SourceTypeShenandoahCommunityHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.shencommhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

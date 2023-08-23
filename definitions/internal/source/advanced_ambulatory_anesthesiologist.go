@@ -28,6 +28,8 @@ func GetSourceAdvancedAmbulatoryAnesthesiologist(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Advanced Ambulatory Anesthesiologist"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedAmbulatoryAnesthesiologist
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceRiversideHealthSystemNewportNewsVa(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Riverside Health System (Newport News, VA)"
 	sourceDef.SourceType = pkg.SourceTypeRiversideHealthSystemNewportNewsVa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

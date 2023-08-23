@@ -29,6 +29,8 @@ func GetSourceAlamoPsychiatricCarePa(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Alamo Psychiatric Care PA"
 	sourceDef.SourceType = pkg.SourceTypeAlamoPsychiatricCarePa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tx-texas/san-antonio/alamo-psychiatric-care-pa-xy878n"
 	sourceDef.SecretKeyPrefix = "cerner"
 

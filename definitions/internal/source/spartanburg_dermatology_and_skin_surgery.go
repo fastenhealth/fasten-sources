@@ -28,6 +28,8 @@ func GetSourceSpartanburgDermatologyAndSkinSurgery(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Spartanburg Dermatology And Skin Surgery"
 	sourceDef.SourceType = pkg.SourceTypeSpartanburgDermatologyAndSkinSurgery
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.spartanburgderm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

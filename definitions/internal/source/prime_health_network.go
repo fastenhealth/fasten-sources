@@ -28,6 +28,8 @@ func GetSourcePrimeHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Prime Health Network"
 	sourceDef.SourceType = pkg.SourceTypePrimeHealthNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.manta.com/c/mm5msll/prime-health-network"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

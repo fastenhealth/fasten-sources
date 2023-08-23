@@ -28,6 +28,8 @@ func GetSourceRockyMountainFamilyPhysiciansPc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Rocky Mountain Family Physicians PC"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountainFamilyPhysiciansPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rmfamilyphys.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

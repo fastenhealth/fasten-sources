@@ -29,6 +29,8 @@ func GetSourceHodgesFamilyPracticeInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Hodges Family Practice Inc"
 	sourceDef.SourceType = pkg.SourceTypeHodgesFamilyPracticeInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

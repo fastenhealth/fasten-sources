@@ -29,6 +29,7 @@ func GetSourceWmcPhysicianPracticesLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "WMC Physician Practices LLC"
 	sourceDef.SourceType = pkg.SourceTypeWmcPhysicianPracticesLlc
 	sourceDef.Category = []string{"174400000X", "207R00000X", "207RC0000X", "207T00000X", "207VG0400X", "207X00000X", "208000000X", "208600000X", "208800000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003299652", "1083096580", "1093162463", "1104280213", "1386026888", "1518303288", "1710360367", "1841672334", "1932563046", "1982086476"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

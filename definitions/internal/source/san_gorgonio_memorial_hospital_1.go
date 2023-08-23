@@ -29,6 +29,7 @@ func GetSourceSanGorgonioMemorialHospital1(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "San Gorgonio Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSanGorgonioMemorialHospital1
 	sourceDef.Category = []string{"282N00000X", "314000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003939711", "1568469997"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

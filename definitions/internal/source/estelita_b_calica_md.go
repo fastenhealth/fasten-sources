@@ -29,6 +29,8 @@ func GetSourceEstelitaBCalicaMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Estelita B Calica Md"
 	sourceDef.SourceType = pkg.SourceTypeEstelitaBCalicaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

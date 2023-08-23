@@ -29,6 +29,7 @@ func GetSourceWheelerClinicInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Wheeler Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeWheelerClinicInc
 	sourceDef.Category = []string{"261QF0400X", "261QH0100X", "261QM0801X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265098180", "1396750840", "1871108076"}}
 	sourceDef.PatientAccessUrl = "https://www.wheelerclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

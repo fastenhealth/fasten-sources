@@ -29,6 +29,8 @@ func GetSourceHennepinHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hennepin Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeHennepinHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hennepinhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

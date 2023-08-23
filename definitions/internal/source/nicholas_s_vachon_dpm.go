@@ -29,6 +29,8 @@ func GetSourceNicholasSVachonDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Nicholas S. Vachon, DPM"
 	sourceDef.SourceType = pkg.SourceTypeNicholasSVachonDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-nicholas-vachon-y4nds"
 	sourceDef.SecretKeyPrefix = "cerner"
 

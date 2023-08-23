@@ -28,6 +28,8 @@ func GetSourceZuhairOYahyaMdFacpFace(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Zuhair O Yahya MD FACP FACE"
 	sourceDef.SourceType = pkg.SourceTypeZuhairOYahyaMdFacpFace
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

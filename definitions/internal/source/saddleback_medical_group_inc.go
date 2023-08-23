@@ -29,6 +29,7 @@ func GetSourceSaddlebackMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Saddleback Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSaddlebackMedicalGroupInc
 	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386605822"}}
 	sourceDef.PatientAccessUrl = "https://saddlebackmedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

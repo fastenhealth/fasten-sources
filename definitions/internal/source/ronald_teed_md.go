@@ -29,6 +29,8 @@ func GetSourceRonaldTeedMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Ronald Teed, MD"
 	sourceDef.SourceType = pkg.SourceTypeRonaldTeedMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.childrenseyespecialistsllc.com/dr_ronald_teed.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

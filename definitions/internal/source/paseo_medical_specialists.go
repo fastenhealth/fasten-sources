@@ -28,6 +28,8 @@ func GetSourcePaseoMedicalSpecialists(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Paseo Medical Specialists"
 	sourceDef.SourceType = pkg.SourceTypePaseoMedicalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "paseo-medical-specialists.jpg"
 	sourceDef.PatientAccessUrl = "https://azspa.com/member-directory/wpbdp_category/paseo-medical-specialists-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"

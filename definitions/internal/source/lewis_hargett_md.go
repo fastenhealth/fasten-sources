@@ -29,6 +29,8 @@ func GetSourceLewisHargettMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Lewis Hargett, MD"
 	sourceDef.SourceType = pkg.SourceTypeLewisHargettMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "lewis-hargett-md.svg"
 	sourceDef.PatientAccessUrl = "https://www.baptisthealth.com/providers/lewis-hargett-md-physical-medicine-rehabilitation"
 	sourceDef.SecretKeyPrefix = "cerner"

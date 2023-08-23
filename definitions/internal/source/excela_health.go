@@ -30,6 +30,7 @@ func GetSourceExcelaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Excela Health"
 	sourceDef.SourceType = pkg.SourceTypeExcelaHealth
 	sourceDef.Category = []string{"283X00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053667907"}}
 	sourceDef.BrandLogo = "excela-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.excelahealth.org/"

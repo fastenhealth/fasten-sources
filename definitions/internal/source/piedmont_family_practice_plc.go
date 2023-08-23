@@ -29,6 +29,7 @@ func GetSourcePiedmontFamilyPracticePlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "PIEDMONT FAMILY PRACTICE PLC"
 	sourceDef.SourceType = pkg.SourceTypePiedmontFamilyPracticePlc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811107097"}}
 	sourceDef.PatientAccessUrl = "https://www.piedmontdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

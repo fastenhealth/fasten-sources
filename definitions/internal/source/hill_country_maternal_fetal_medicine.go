@@ -28,6 +28,8 @@ func GetSourceHillCountryMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Hill Country Maternal Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeHillCountryMaternalFetalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hill-country-maternal-fetal-medicine.svg"
 	sourceDef.PatientAccessUrl = "https://www.hillcountrymemorial.org/office/north-austin-maternal-fetal-medicine/"
 	sourceDef.SecretKeyPrefix = "nextgen"

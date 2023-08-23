@@ -28,6 +28,8 @@ func GetSourceClinicasDelCaminoRealIncorporated(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Clinicas Del Camino Real Incorporated"
 	sourceDef.SourceType = pkg.SourceTypeClinicasDelCaminoRealIncorporated
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "clinicas-del-camino-real-incorporated.svg"
 	sourceDef.PatientAccessUrl = "https://clinicas.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

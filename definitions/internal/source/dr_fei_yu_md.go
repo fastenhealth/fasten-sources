@@ -28,6 +28,8 @@ func GetSourceDrFeiYuMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Dr Fei Yu Md"
 	sourceDef.SourceType = pkg.SourceTypeDrFeiYuMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

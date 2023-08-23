@@ -29,6 +29,7 @@ func GetSourceReliantMedicalGroup1(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Reliant Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeReliantMedicalGroup1
 	sourceDef.Category = []string{"152W00000X", "225400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114270857", "1134337116", "1326391962", "1609129253", "1831442581", "1871846428", "1982957031"}}
 	sourceDef.BrandLogo = "reliant-medical-group.png"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceGreaterSalemFamilyFootcareAssociates(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Greater Salem Family Footcare Associates"
 	sourceDef.SourceType = pkg.SourceTypeGreaterSalemFamilyFootcareAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.greatersalemfamilyfootcare.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

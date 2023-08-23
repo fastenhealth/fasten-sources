@@ -29,6 +29,8 @@ func GetSourceLakeWalesFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Lake Wales Foot & Ankle"
 	sourceDef.SourceType = pkg.SourceTypeLakeWalesFootAndAnkle
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.lwfaac.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

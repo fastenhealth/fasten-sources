@@ -28,6 +28,8 @@ func GetSourceCaseyCountyFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Casey County Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeCaseyCountyFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

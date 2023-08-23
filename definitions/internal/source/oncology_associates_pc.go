@@ -30,6 +30,7 @@ func GetSourceOncologyAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Oncology Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeOncologyAssociatesPc
 	sourceDef.Category = []string{"207RH0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902841760"}}
 	sourceDef.BrandLogo = "oncology-associates-pc.svg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/"

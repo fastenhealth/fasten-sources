@@ -28,6 +28,8 @@ func GetSourceGastroenterologyAndHepatologySpecial(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Gastroenterology And Hepatology Special"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyAndHepatologySpecial
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ghscanton.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

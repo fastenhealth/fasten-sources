@@ -28,6 +28,8 @@ func GetSourceAssocInPhysicalMedicineAndRehab(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Assoc in Physical Medicine and Rehab"
 	sourceDef.SourceType = pkg.SourceTypeAssocInPhysicalMedicineAndRehab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

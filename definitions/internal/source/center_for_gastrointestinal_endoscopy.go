@@ -28,6 +28,8 @@ func GetSourceCenterForGastrointestinalEndoscopy(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Center For Gastrointestinal Endoscopy"
 	sourceDef.SourceType = pkg.SourceTypeCenterForGastrointestinalEndoscopy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

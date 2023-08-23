@@ -28,6 +28,8 @@ func GetSourceMountSinaiNjhRespiratoryInstitute(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Mount Sinai NJH Respiratory Institute"
 	sourceDef.SourceType = pkg.SourceTypeMountSinaiNjhRespiratoryInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

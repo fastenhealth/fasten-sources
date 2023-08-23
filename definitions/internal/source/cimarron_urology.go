@@ -28,6 +28,8 @@ func GetSourceCimarronUrology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Cimarron Urology"
 	sourceDef.SourceType = pkg.SourceTypeCimarronUrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.stillwater-medical.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

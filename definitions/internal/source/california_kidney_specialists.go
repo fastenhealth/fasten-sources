@@ -30,6 +30,7 @@ func GetSourceCaliforniaKidneySpecialists(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "California Kidney Specialists"
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaKidneySpecialists
 	sourceDef.Category = []string{"207R00000X", "207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760497457"}}
 	sourceDef.PatientAccessUrl = "https://californiakidneyspecialists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

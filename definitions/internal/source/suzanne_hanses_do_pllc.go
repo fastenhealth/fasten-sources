@@ -29,6 +29,7 @@ func GetSourceSuzanneHansesDoPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Suzanne Hanses DO PLLC"
 	sourceDef.SourceType = pkg.SourceTypeSuzanneHansesDoPllc
 	sourceDef.Category = []string{"208600000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891095006"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

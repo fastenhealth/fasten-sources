@@ -28,6 +28,8 @@ func GetSourceCodacMedicalPractice(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "CODAC Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeCodacMedicalPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://codacinc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

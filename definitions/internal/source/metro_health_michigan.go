@@ -29,6 +29,8 @@ func GetSourceMetroHealthMichigan(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Metro Health - Michigan"
 	sourceDef.SourceType = pkg.SourceTypeMetroHealthMichigan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

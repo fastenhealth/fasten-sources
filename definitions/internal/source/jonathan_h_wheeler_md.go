@@ -28,6 +28,8 @@ func GetSourceJonathanHWheelerMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Jonathan H Wheeler MD"
 	sourceDef.SourceType = pkg.SourceTypeJonathanHWheelerMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.zoominfo.com/c/jonathan-wheeler-md-facog/1279358936"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

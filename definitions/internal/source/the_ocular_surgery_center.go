@@ -28,6 +28,8 @@ func GetSourceTheOcularSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "The Ocular Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeTheOcularSurgeryCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-ocular-surgery-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.bogotalaser.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

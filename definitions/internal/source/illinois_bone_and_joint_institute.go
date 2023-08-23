@@ -29,6 +29,8 @@ func GetSourceIllinoisBoneAndJointInstitute(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Illinois Bone & Joint Institute"
 	sourceDef.SourceType = pkg.SourceTypeIllinoisBoneAndJointInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

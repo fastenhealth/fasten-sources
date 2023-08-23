@@ -28,6 +28,8 @@ func GetSourceTerryBallDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Terry Ball DO"
 	sourceDef.SourceType = pkg.SourceTypeTerryBallDo
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

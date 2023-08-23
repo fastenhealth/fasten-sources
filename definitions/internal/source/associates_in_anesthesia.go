@@ -29,6 +29,8 @@ func GetSourceAssociatesInAnesthesia(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Associates In Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.aiamd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

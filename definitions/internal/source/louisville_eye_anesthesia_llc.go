@@ -29,6 +29,7 @@ func GetSourceLouisvilleEyeAnesthesiaLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Louisville Eye Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypeLouisvilleEyeAnesthesiaLlc
 	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932642469"}}
 	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/physician_assistants/nurse-anesthetist-certified-registered_367500000x/1932642469.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceBacharachInstituteForRehabilitation(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Bacharach Institute for Rehabilitation"
 	sourceDef.SourceType = pkg.SourceTypeBacharachInstituteForRehabilitation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bacharach.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

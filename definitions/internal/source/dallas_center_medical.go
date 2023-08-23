@@ -29,6 +29,8 @@ func GetSourceDallasCenterMedical(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dallas Center Medical"
 	sourceDef.SourceType = pkg.SourceTypeDallasCenterMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.dallascenter.com/business-directory/dallas-center-medical-associates"
 	sourceDef.SecretKeyPrefix = "cerner"
 

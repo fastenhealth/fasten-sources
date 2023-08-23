@@ -29,6 +29,8 @@ func GetSourceSaleemHusainMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Saleem Husain, MD"
 	sourceDef.SourceType = pkg.SourceTypeSaleemHusainMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "saleem-husain-md.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/saleem-husain-b0fc3666-c215-4b7e-8e13-03a804870d6f-overview"
 	sourceDef.SecretKeyPrefix = "cerner"

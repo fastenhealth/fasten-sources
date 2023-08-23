@@ -28,6 +28,8 @@ func GetSourceIdentityMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Identity Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeIdentityMedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://identitymso.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

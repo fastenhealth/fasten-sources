@@ -28,6 +28,8 @@ func GetSourceAlexandraChrysanthisMdInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Alexandra Chrysanthis MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeAlexandraChrysanthisMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "alexandra-chrysanthis-md-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-alexandra-chrysanthis-xs2jc"
 	sourceDef.SecretKeyPrefix = "nextgen"

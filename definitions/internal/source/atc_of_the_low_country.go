@@ -28,6 +28,8 @@ func GetSourceAtcOfTheLowCountry(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "ATC Of The Low Country"
 	sourceDef.SourceType = pkg.SourceTypeAtcOfTheLowCountry
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "atc-of-the-low-country.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3Z3R5YC0QGK35LB94I8MFS5DL6VTFJ?assignment_id=33FOTY3KE0IXF9DK1Z3CQ0X41J0C1A&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"

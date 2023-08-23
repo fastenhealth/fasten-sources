@@ -28,6 +28,8 @@ func GetSourceArticularisHealthcareGroupIncPraal(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Articularis Healthcare Group Inc. PRAAL"
 	sourceDef.SourceType = pkg.SourceTypeArticularisHealthcareGroupIncPraal
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://articularishealthcare.com/practices/premier-rheumatology-of-alabama/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

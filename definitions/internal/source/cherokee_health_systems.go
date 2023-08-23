@@ -29,6 +29,7 @@ func GetSourceCherokeeHealthSystems(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Cherokee Health Systems"
 	sourceDef.SourceType = pkg.SourceTypeCherokeeHealthSystems
 	sourceDef.Category = []string{"103T00000X", "104100000X", "122300000X", "207Q00000X", "207R00000X", "207V00000X", "208000000X", "2084P0800X", "261QC1500X", "261QF0400X", "261QM1300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124418819", "1134128820", "1205073319", "1477835601", "1497992309", "1548883812", "1598902603", "1871730903", "1912285057", "1932586203"}}
 	sourceDef.PatientAccessUrl = "https://www.cherokeehealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

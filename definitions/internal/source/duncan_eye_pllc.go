@@ -29,6 +29,7 @@ func GetSourceDuncanEyePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Duncan Eye PLLC"
 	sourceDef.SourceType = pkg.SourceTypeDuncanEyePllc
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609185891"}}
 	sourceDef.BrandLogo = "duncan-eye-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT50AuUzaOw46eA4TupGEj-1cQN_MJqvkWmiQ&usqp=CAU"

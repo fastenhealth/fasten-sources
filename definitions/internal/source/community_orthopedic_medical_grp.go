@@ -28,6 +28,8 @@ func GetSourceCommunityOrthopedicMedicalGrp(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Community Orthopedic Medical Grp"
 	sourceDef.SourceType = pkg.SourceTypeCommunityOrthopedicMedicalGrp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.comg.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

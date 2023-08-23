@@ -28,6 +28,8 @@ func GetSourceChristusHighlandPhysiciansGroup(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Christus Highland Physicians Group"
 	sourceDef.SourceType = pkg.SourceTypeChristusHighlandPhysiciansGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "christus-highland-physicians-group.ashx"
 	sourceDef.PatientAccessUrl = "https://www.christushealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

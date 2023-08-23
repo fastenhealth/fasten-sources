@@ -28,6 +28,8 @@ func GetSourceCliniciansInInfectiousDiesease(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Clinicians in Infectious Diesease"
 	sourceDef.SourceType = pkg.SourceTypeCliniciansInInfectiousDiesease
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtCenterstone(env pkg.FastenLig
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Centerstone"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtCenterstone
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-steven-a-cohen-military-family-clinic-at-centerstone.jpeg"
 	sourceDef.PatientAccessUrl = "https://centerstone.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

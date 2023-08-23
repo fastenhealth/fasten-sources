@@ -28,6 +28,8 @@ func GetSourceNsipa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "NSIPA"
 	sourceDef.SourceType = pkg.SourceTypeNsipa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nephrologyipa.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

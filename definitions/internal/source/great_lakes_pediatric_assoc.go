@@ -29,6 +29,8 @@ func GetSourceGreatLakesPediatricAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Great Lakes Pediatric Assoc"
 	sourceDef.SourceType = pkg.SourceTypeGreatLakesPediatricAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceEastBankGastroenterology(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "East Bank Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeEastBankGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ochsner.org/doctors/daniel-l-raines"
 	sourceDef.SecretKeyPrefix = "cerner"
 

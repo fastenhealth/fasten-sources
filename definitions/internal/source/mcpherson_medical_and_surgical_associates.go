@@ -29,6 +29,8 @@ func GetSourceMcphersonMedicalAndSurgicalAssociates(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "McPherson Medical and Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeMcphersonMedicalAndSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vitals.com/practice/mcpherson-medicalsurgical-associates-f2f255c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

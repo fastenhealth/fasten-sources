@@ -29,6 +29,8 @@ func GetSourceOrthopedicsUnlimitedLlc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Orthopedics Unlimited, LLC"
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicsUnlimitedLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.gamedaydoc.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

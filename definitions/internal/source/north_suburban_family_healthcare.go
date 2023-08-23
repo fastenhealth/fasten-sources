@@ -28,6 +28,8 @@ func GetSourceNorthSuburbanFamilyHealthcare(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "North Suburban Family Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeNorthSuburbanFamilyHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/il-illinois/vernon-hills/north-suburban-family-hlthcare-x87hml"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

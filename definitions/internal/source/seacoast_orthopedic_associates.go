@@ -28,6 +28,8 @@ func GetSourceSeacoastOrthopedicAssociates(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Seacoast Orthopedic Associates"
 	sourceDef.SourceType = pkg.SourceTypeSeacoastOrthopedicAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.seacoastorthopedics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

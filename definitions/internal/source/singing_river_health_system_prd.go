@@ -29,6 +29,8 @@ func GetSourceSingingRiverHealthSystemPrd(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Singing River Health System - PRD"
 	sourceDef.SourceType = pkg.SourceTypeSingingRiverHealthSystemPrd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceWoodCountyHealthDepartment(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Wood County Health Department"
 	sourceDef.SourceType = pkg.SourceTypeWoodCountyHealthDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://woodcountyhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

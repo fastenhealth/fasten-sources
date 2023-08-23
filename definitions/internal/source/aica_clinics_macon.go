@@ -28,6 +28,8 @@ func GetSourceAicaClinicsMacon(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "AICA Clinics Macon"
 	sourceDef.SourceType = pkg.SourceTypeAicaClinicsMacon
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "aica-orthopedics-p-c.png"
 	sourceDef.PatientAccessUrl = "https://aica.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

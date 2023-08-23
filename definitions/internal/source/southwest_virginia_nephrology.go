@@ -28,6 +28,8 @@ func GetSourceSouthwestVirginiaNephrology(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Southwest Virginia Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestVirginiaNephrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.carilionclinic.org/locations/southwest-virginia-nephrology-medicine-pc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

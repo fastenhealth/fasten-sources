@@ -29,6 +29,8 @@ func GetSourceKaweahHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Kaweah Health"
 	sourceDef.SourceType = pkg.SourceTypeKaweahHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kaweahhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceBuenaventuraIPelinaMdPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Buenaventura I Pelina Md Pc"
 	sourceDef.SourceType = pkg.SourceTypeBuenaventuraIPelinaMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

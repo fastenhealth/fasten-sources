@@ -29,6 +29,8 @@ func GetSourceValenteniaDaughertyAndAlvinRSmithPc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Valentenia Daugherty and Alvin R. Smith, PC"
 	sourceDef.SourceType = pkg.SourceTypeValenteniaDaughertyAndAlvinRSmithPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

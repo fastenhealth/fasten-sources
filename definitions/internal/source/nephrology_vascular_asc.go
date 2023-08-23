@@ -28,6 +28,8 @@ func GetSourceNephrologyVascularAsc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Nephrology Vascular ASC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyVascularAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://na"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

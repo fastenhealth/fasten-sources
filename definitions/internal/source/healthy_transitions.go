@@ -28,6 +28,8 @@ func GetSourceHealthyTransitions(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Healthy Transitions"
 	sourceDef.SourceType = pkg.SourceTypeHealthyTransitions
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "healthy-transitions.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/HealthyTransitionsClallam/"
 	sourceDef.SecretKeyPrefix = "nextgen"

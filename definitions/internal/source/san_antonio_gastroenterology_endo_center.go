@@ -28,6 +28,8 @@ func GetSourceSanAntonioGastroenterologyEndoCenter(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "San Antonio Gastroenterology Endo Center"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioGastroenterologyEndoCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sagastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

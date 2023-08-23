@@ -28,6 +28,8 @@ func GetSourceConfidentialVisitsWcchc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Confidential Visits WCCHC"
 	sourceDef.SourceType = pkg.SourceTypeConfidentialVisitsWcchc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wcchc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

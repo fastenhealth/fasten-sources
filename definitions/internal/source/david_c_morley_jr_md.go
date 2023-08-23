@@ -29,6 +29,8 @@ func GetSourceDavidCMorleyJrMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "David C Morley Jr, MD"
 	sourceDef.SourceType = pkg.SourceTypeDavidCMorleyJrMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "david-c-morley-jr-md.jpg"
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/david-morley-215265"
 	sourceDef.SecretKeyPrefix = "cerner"

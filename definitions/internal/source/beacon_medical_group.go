@@ -30,6 +30,7 @@ func GetSourceBeaconMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Beacon Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBeaconMedicalGroup
 	sourceDef.Category = []string{"208800000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689627812"}}
 	sourceDef.SecretKeyPrefix = "cerner"
 

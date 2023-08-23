@@ -28,6 +28,8 @@ func GetSourceHabershamObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Habersham OBGYN"
 	sourceDef.SourceType = pkg.SourceTypeHabershamObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.habobgyn.net/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

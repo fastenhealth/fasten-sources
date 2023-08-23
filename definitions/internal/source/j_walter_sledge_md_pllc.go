@@ -28,6 +28,8 @@ func GetSourceJWalterSledgeMdPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "J. Walter Sledge MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeJWalterSledgeMdPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tn-tennessee/chattanooga/j-walter-sledge-md-xbjv8v"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

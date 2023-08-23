@@ -29,6 +29,8 @@ func GetSourceCentracareHealthAndAffiliates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "CentraCare Health and Affiliates"
 	sourceDef.SourceType = pkg.SourceTypeCentracareHealthAndAffiliates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

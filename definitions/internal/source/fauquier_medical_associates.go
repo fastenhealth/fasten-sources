@@ -29,6 +29,7 @@ func GetSourceFauquierMedicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "FAUQUIER MEDICAL ASSOCIATES"
 	sourceDef.SourceType = pkg.SourceTypeFauquierMedicalAssociates
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376601567"}}
 	sourceDef.PatientAccessUrl = "https://www.fauquierhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

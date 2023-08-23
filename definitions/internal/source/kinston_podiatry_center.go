@@ -29,6 +29,7 @@ func GetSourceKinstonPodiatryCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Kinston Podiatry Center"
 	sourceDef.SourceType = pkg.SourceTypeKinstonPodiatryCenter
 	sourceDef.Category = []string{"213ES0103X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457432973"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

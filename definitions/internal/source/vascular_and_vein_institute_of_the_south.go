@@ -28,6 +28,8 @@ func GetSourceVascularAndVeinInstituteOfTheSouth(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Vascular and Vein Institute of the South"
 	sourceDef.SourceType = pkg.SourceTypeVascularAndVeinInstituteOfTheSouth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

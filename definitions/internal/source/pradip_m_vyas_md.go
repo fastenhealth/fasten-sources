@@ -28,6 +28,8 @@ func GetSourcePradipMVyasMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Pradip M Vyas Md"
 	sourceDef.SourceType = pkg.SourceTypePradipMVyasMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

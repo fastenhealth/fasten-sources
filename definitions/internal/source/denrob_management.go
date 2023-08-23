@@ -29,6 +29,8 @@ func GetSourceDenrobManagement(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Denrob Management"
 	sourceDef.SourceType = pkg.SourceTypeDenrobManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://denrobmanagement.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

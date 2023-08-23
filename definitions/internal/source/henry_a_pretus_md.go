@@ -29,6 +29,8 @@ func GetSourceHenryAPretusMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Henry A. Pretus, MD"
 	sourceDef.SourceType = pkg.SourceTypeHenryAPretusMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "henry-a-pretus-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.lcmchealth.org/find-a-provider/henry-a-pretus-md/"
 	sourceDef.SecretKeyPrefix = "cerner"

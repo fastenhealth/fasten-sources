@@ -30,6 +30,7 @@ func GetSourceDrewMemorialHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Drew Memorial Health System"
 	sourceDef.SourceType = pkg.SourceTypeDrewMemorialHealthSystem
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487909701"}}
 	sourceDef.PatientAccessUrl = "https://www.drewmemorial.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

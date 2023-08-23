@@ -28,6 +28,8 @@ func GetSourceLmgFamilyPracticePcChiro(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "LMG Family Practice PC Chiro"
 	sourceDef.SourceType = pkg.SourceTypeLmgFamilyPracticePcChiro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lmgfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

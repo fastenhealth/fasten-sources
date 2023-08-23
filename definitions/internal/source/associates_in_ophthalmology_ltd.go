@@ -29,6 +29,7 @@ func GetSourceAssociatesInOphthalmologyLtd(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Associates In Ophthalmology Ltd"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInOphthalmologyLtd
 	sourceDef.Category = []string{"207RC0000X", "207W00000X", "363L00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639175045"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

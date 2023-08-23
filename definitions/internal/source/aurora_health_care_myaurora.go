@@ -29,6 +29,8 @@ func GetSourceAuroraHealthCareMyaurora(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Aurora Health Care - myAurora"
 	sourceDef.SourceType = pkg.SourceTypeAuroraHealthCareMyaurora
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCommonspiritHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "CommonSpirit Health"
 	sourceDef.SourceType = pkg.SourceTypeCommonspiritHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "commonspirit-health.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.commonspirit.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

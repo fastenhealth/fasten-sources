@@ -29,6 +29,7 @@ func GetSourceMcdowMedicalCorporation(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "McDow Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMcdowMedicalCorporation
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093725491"}}
 	sourceDef.PatientAccessUrl = "https://www.mcdowmedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

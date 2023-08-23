@@ -28,6 +28,8 @@ func GetSourceAudiology(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Audiology"
 	sourceDef.SourceType = pkg.SourceTypeAudiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.audiology.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

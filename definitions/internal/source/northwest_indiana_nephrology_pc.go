@@ -29,6 +29,7 @@ func GetSourceNorthwestIndianaNephrologyPc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Northwest Indiana Nephrology PC"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestIndianaNephrologyPc
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285991885"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

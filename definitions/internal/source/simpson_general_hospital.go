@@ -29,6 +29,8 @@ func GetSourceSimpsonGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Simpson General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeSimpsonGeneralHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

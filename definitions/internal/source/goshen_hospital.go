@@ -28,6 +28,8 @@ func GetSourceGoshenHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Goshen Hospital"
 	sourceDef.SourceType = pkg.SourceTypeGoshenHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "goshen-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://goshenhealth.com/care-services/cancer-care"
 	sourceDef.SecretKeyPrefix = "nextgen"

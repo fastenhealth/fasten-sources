@@ -28,6 +28,8 @@ func GetSourceCarolynJAgrestiMdEarNoseThroatInc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Carolyn J Agresti MD Ear Nose Throat Inc"
 	sourceDef.SourceType = pkg.SourceTypeCarolynJAgrestiMdEarNoseThroatInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

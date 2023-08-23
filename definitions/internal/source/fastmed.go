@@ -30,6 +30,7 @@ func GetSourceFastmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "FastMed"
 	sourceDef.SourceType = pkg.SourceTypeFastmed
 	sourceDef.Category = []string{"363A00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093104838"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

@@ -28,6 +28,8 @@ func GetSourceDavoodiFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Davoodi Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDavoodiFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

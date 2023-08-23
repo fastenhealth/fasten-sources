@@ -29,6 +29,8 @@ func GetSourceCoastalNephrologyPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Coastal Nephrology, PA"
 	sourceDef.SourceType = pkg.SourceTypeCoastalNephrologyPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.omsclinic.net/KidneyClinic.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

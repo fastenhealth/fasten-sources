@@ -28,6 +28,8 @@ func GetSourceProlianceSurgicalSpecialistsEdmonds(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Proliance Surgical Specialists Edmonds"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSurgicalSpecialistsEdmonds
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://proliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

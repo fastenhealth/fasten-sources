@@ -29,6 +29,8 @@ func GetSourceMeritus(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Meritus"
 	sourceDef.SourceType = pkg.SourceTypeMeritus
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDavidLCrowderMDInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "David L. Crowder, M.D., Inc"
 	sourceDef.SourceType = pkg.SourceTypeDavidLCrowderMDInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cullmanregional.com/doctor/david-crowder/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceMhpInternalMedicineAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "MHP Internal Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypeMhpInternalMedicineAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.n/a.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

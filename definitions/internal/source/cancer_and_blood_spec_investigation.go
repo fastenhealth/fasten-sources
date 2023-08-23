@@ -28,6 +28,8 @@ func GetSourceCancerAndBloodSpecInvestigation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Cancer And Blood Spec Investigation"
 	sourceDef.SourceType = pkg.SourceTypeCancerAndBloodSpecInvestigation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

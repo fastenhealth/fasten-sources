@@ -29,6 +29,7 @@ func GetSourceValleyForgeSurgical(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Valley Forge Surgical"
 	sourceDef.SourceType = pkg.SourceTypeValleyForgeSurgical
 	sourceDef.Category = []string{"208600000X", "2086S0129X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881807337"}}
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/valley-forge-surgical-associates-phoenixville"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceCornealAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Corneal Associates"
 	sourceDef.SourceType = pkg.SourceTypeCornealAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cornealdoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceAngelaWLiaoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Angela W Liao MD"
 	sourceDef.SourceType = pkg.SourceTypeAngelaWLiaoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.optum.com ›"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

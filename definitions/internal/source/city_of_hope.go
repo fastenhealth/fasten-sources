@@ -30,6 +30,7 @@ func GetSourceCityOfHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Display = "City of Hope"
 	sourceDef.SourceType = pkg.SourceTypeCityOfHope
 	sourceDef.Category = []string{"284300000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053437871", "1467672329", "1568867240", "1851416374"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

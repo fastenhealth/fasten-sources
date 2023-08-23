@@ -28,6 +28,8 @@ func GetSourceMasterPractice(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Master Practice"
 	sourceDef.SourceType = pkg.SourceTypeMasterPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

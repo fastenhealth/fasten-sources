@@ -29,6 +29,8 @@ func GetSourceOrionFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Orion Family Physicians"
 	sourceDef.SourceType = pkg.SourceTypeOrionFamilyPhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

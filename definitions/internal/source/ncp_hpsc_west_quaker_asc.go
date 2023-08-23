@@ -28,6 +28,8 @@ func GetSourceNcpHpscWestQuakerAsc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "NCP HPSC West Quaker ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpHpscWestQuakerAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://chpsurgery.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

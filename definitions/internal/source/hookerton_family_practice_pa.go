@@ -28,6 +28,8 @@ func GetSourceHookertonFamilyPracticePa(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hookerton Family Practice Pa"
 	sourceDef.SourceType = pkg.SourceTypeHookertonFamilyPracticePa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

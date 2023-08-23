@@ -29,6 +29,8 @@ func GetSourceYrmcPhysicianPracticeGastro(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "YRMC Physician Practice - Gastro"
 	sourceDef.SourceType = pkg.SourceTypeYrmcPhysicianPracticeGastro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceComprehensiveCareCenterOfIrvine(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Comprehensive Care Center of Irvine"
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveCareCenterOfIrvine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://comprehensivecare-irvine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

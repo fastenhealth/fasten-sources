@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtMetrocare(env pkg.FastenLight
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Metrocare"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtMetrocare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.metrocareservices.org/mfc/?utm_source=GMB&utm_medium=organic&utm_campaign=MFC"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceEnterpriseAdmin(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Enterprise Admin"
 	sourceDef.SourceType = pkg.SourceTypeEnterpriseAdmin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

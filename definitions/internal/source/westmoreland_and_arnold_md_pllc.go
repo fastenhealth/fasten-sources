@@ -29,6 +29,8 @@ func GetSourceWestmorelandAndArnoldMdPllc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Westmoreland & Arnold, MD, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeWestmorelandAndArnoldMdPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.superdoctors.com/texas/hospital-clinic/Westmoreland-and-Arnold-MD-PLLC/a8165ed0-a979-440b-b79e-8db061907c92.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

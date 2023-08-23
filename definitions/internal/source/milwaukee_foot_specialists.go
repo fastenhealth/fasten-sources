@@ -29,6 +29,8 @@ func GetSourceMilwaukeeFootSpecialists(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Milwaukee Foot Specialists"
 	sourceDef.SourceType = pkg.SourceTypeMilwaukeeFootSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "milwaukee-foot-specialists.jpeg"
 	sourceDef.PatientAccessUrl = "https://milwaukeefootspecialists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

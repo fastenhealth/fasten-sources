@@ -29,6 +29,8 @@ func GetSourceEricFontenotMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Eric Fontenot, MD"
 	sourceDef.SourceType = pkg.SourceTypeEricFontenotMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eric-fontenot-md.jpg"
 	sourceDef.PatientAccessUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBC3NE4nMIRejVX3qTLbZcPZogjr8pZ-csZw&usqp=CAU"
 	sourceDef.SecretKeyPrefix = "cerner"

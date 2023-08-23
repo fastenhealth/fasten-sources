@@ -29,6 +29,7 @@ func GetSourceCarrollArthritisLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Carroll Arthritis LLC"
 	sourceDef.SourceType = pkg.SourceTypeCarrollArthritisLlc
 	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871140830"}}
 	sourceDef.PatientAccessUrl = "https://www.carrollarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceSalemRehabAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Salem Rehab Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeSalemRehabAssociatesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sradoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

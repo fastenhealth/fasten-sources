@@ -30,6 +30,7 @@ func GetSourcePromedicaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "ProMedica Health System"
 	sourceDef.SourceType = pkg.SourceTypePromedicaHealthSystem
 	sourceDef.Category = []string{"363AM0700X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285172163"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

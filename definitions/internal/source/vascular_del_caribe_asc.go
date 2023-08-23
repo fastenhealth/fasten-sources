@@ -28,6 +28,8 @@ func GetSourceVascularDelCaribeAsc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Vascular Del Caribe ASC"
 	sourceDef.SourceType = pkg.SourceTypeVascularDelCaribeAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/puerto-rico/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceAchieveConcierge(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Achieve Concierge"
 	sourceDef.SourceType = pkg.SourceTypeAchieveConcierge
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

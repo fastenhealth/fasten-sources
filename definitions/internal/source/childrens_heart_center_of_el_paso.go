@@ -28,6 +28,8 @@ func GetSourceChildrensHeartCenterOfElPaso(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Childrens Heart Center Of El Paso"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHeartCenterOfElPaso
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

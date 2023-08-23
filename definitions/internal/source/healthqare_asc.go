@@ -28,6 +28,8 @@ func GetSourceHealthqareAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "HealthQare ASC"
 	sourceDef.SourceType = pkg.SourceTypeHealthqareAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/healthqare-associates/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

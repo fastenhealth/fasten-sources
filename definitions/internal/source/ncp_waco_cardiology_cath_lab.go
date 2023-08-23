@@ -28,6 +28,8 @@ func GetSourceNcpWacoCardiologyCathLab(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "NCP Waco Cardiology Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpWacoCardiologyCathLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

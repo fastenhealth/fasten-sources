@@ -29,6 +29,7 @@ func GetSourceArizonaGastroenterologyLtd(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Arizona Gastroenterology Ltd"
 	sourceDef.SourceType = pkg.SourceTypeArizonaGastroenterologyLtd
 	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043297690"}}
 	sourceDef.PatientAccessUrl = "https://azgastroenterology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

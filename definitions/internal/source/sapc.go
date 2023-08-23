@@ -29,6 +29,8 @@ func GetSourceSapc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "SAPC"
 	sourceDef.SourceType = pkg.SourceTypeSapc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

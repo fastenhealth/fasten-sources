@@ -28,6 +28,8 @@ func GetSourceBlueSkyVisionEyeCarePC(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Blue Sky Vision Eye Care P.C."
 	sourceDef.SourceType = pkg.SourceTypeBlueSkyVisionEyeCarePC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

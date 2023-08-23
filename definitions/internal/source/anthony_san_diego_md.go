@@ -28,6 +28,8 @@ func GetSourceAnthonySanDiegoMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Anthony San Diego MD"
 	sourceDef.SourceType = pkg.SourceTypeAnthonySanDiegoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "anthony-san-diego-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gibsonhospital.org/find-a-provider/profile/anthony-san-diego-md"
 	sourceDef.SecretKeyPrefix = "nextgen"

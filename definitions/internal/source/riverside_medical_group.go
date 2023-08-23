@@ -29,6 +29,8 @@ func GetSourceRiversideMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Riverside Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeRiversideMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.riversidemed.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,7 @@ func GetSourcePhysiciansBuildingGroupLlp(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Physicians Building Group LLP"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansBuildingGroupLlp
 	sourceDef.Category = []string{"207R00000X", "207RE0101X", "207RR0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801800149"}}
 	sourceDef.PatientAccessUrl = "https://physiciansbuilding.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

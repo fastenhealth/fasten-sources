@@ -28,6 +28,8 @@ func GetSourceEyecare2020(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "EyeCare 20 20"
 	sourceDef.SourceType = pkg.SourceTypeEyecare2020
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eyecare-20-20.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ocli.net/locations/eye-care-in-east-hanover-eyecare-20-20/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceWaltonKJoynerJrMdPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Walton K. Joyner, Jr.,MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeWaltonKJoynerJrMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-walton-joyner-xdffd"
 	sourceDef.SecretKeyPrefix = "cerner"
 

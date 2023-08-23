@@ -28,6 +28,8 @@ func GetSourceEyeoneAndRetinacareOfVirginia(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "EyeOne And RetinaCare Of Virginia"
 	sourceDef.SourceType = pkg.SourceTypeEyeoneAndRetinacareOfVirginia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eyeone-and-retinacare-of-virginia.jpg"
 	sourceDef.PatientAccessUrl = "https://eyeoneva.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

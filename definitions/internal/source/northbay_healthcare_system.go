@@ -29,6 +29,8 @@ func GetSourceNorthbayHealthcareSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "NorthBay Healthcare System"
 	sourceDef.SourceType = pkg.SourceTypeNorthbayHealthcareSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "northbay-healthcare-system.svg"
 	sourceDef.PatientAccessUrl = "https://www.northbay.org/index.cfm"
 	sourceDef.SecretKeyPrefix = "cerner"

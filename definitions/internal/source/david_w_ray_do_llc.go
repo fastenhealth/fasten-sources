@@ -28,6 +28,8 @@ func GetSourceDavidWRayDoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "David W. Ray DO LLC"
 	sourceDef.SourceType = pkg.SourceTypeDavidWRayDoLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "david-w-ray-do-llc.svg"
 	sourceDef.PatientAccessUrl = "https://www.myupdox.com/portal/david-w-ray-do-llc/html/index.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceRichardsMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Richards Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeRichardsMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahd.com/free_profile.php?hcfa_id=a790b3b0d010d499a0255cc681573129&ek=318a20d2a6134fb7eaa7731713c31f24"
 	sourceDef.SecretKeyPrefix = "cerner"
 

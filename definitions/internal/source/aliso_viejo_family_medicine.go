@@ -28,6 +28,8 @@ func GetSourceAlisoViejoFamilyMedicine(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Aliso Viejo Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeAlisoViejoFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.memorialcare.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

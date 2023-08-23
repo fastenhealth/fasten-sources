@@ -28,6 +28,8 @@ func GetSourceTexasHealthFtWorthObh(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Texas Health Ft Worth OBH"
 	sourceDef.SourceType = pkg.SourceTypeTexasHealthFtWorthObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.texashealth.org/Locations/texas-health-fort-worth"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

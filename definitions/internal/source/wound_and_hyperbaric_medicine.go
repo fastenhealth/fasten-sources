@@ -28,6 +28,8 @@ func GetSourceWoundAndHyperbaricMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Wound and Hyperbaric Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWoundAndHyperbaricMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

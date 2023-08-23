@@ -28,6 +28,8 @@ func GetSourceFusionMedspaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Fusion MedSpa LLC"
 	sourceDef.SourceType = pkg.SourceTypeFusionMedspaLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fusionhealthyaging.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

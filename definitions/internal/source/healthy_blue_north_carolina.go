@@ -27,6 +27,8 @@ func GetSourceHealthyBlueNorthCarolina(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Healthy Blue North Carolina"
 	sourceDef.SourceType = pkg.SourceTypeHealthyBlueNorthCarolina
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthybluenc.com"
 	sourceDef.SecretKeyPrefix = "anthem"
 

@@ -28,6 +28,8 @@ func GetSourceMontgomeryVascularCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Montgomery Vascular Care"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryVascularCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/montgomery-vascular-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

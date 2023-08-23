@@ -28,6 +28,8 @@ func GetSourceCBPatelMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "C B Patel MD PA"
 	sourceDef.SourceType = pkg.SourceTypeCBPatelMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

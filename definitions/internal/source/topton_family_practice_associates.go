@@ -29,6 +29,7 @@ func GetSourceToptonFamilyPracticeAssociates(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Topton Family Practice Associates"
 	sourceDef.SourceType = pkg.SourceTypeToptonFamilyPracticeAssociates
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356428775"}}
 	sourceDef.PatientAccessUrl = "https://www.toptonfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

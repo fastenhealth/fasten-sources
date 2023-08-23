@@ -28,6 +28,8 @@ func GetSourceEdenInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Eden Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeEdenInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eden-internal-medicine.webp"
 	sourceDef.PatientAccessUrl = "https://www.edeninternalmedicine.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"

@@ -28,6 +28,8 @@ func GetSourceHmMedicalIncAProfessionalMedicalC(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "HM Medical Inc A Professional Medical C"
 	sourceDef.SourceType = pkg.SourceTypeHmMedicalIncAProfessionalMedicalC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://hmmedicalobgyn.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

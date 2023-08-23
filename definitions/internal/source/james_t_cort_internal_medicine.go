@@ -29,6 +29,8 @@ func GetSourceJamesTCortInternalMedicine(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "James T. Cort Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeJamesTCortInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/doctors/james-t-cort-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

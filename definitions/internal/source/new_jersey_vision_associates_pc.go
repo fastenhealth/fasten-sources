@@ -29,6 +29,7 @@ func GetSourceNewJerseyVisionAssociatesPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "New Jersey Vision Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeNewJerseyVisionAssociatesPc
 	sourceDef.Category = []string{"207W00000X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518698901", "1659370575"}}
 	sourceDef.PatientAccessUrl = "https://www.njvision.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

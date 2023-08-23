@@ -29,6 +29,8 @@ func GetSourcePediatricPulmonologyOfCentralGeorgiaLlc(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "Pediatric Pulmonology of Central Georgia, LLC"
 	sourceDef.SourceType = pkg.SourceTypePediatricPulmonologyOfCentralGeorgiaLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pediatric-pulmonology-of-central-georgia-llc.svg"
 	sourceDef.PatientAccessUrl = "https://childrenshospitalnh.org/services-centers/pulmonology/"
 	sourceDef.SecretKeyPrefix = "cerner"

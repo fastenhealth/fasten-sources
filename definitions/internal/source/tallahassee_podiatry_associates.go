@@ -29,6 +29,8 @@ func GetSourceTallahasseePodiatryAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Tallahassee Podiatry Associates"
 	sourceDef.SourceType = pkg.SourceTypeTallahasseePodiatryAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://tlhpodiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

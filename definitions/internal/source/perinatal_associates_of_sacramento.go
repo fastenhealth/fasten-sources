@@ -28,6 +28,8 @@ func GetSourcePerinatalAssociatesOfSacramento(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Perinatal Associates of Sacramento"
 	sourceDef.SourceType = pkg.SourceTypePerinatalAssociatesOfSacramento
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

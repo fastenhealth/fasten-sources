@@ -28,6 +28,8 @@ func GetSourceMemorialHealthcareSystems(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Memorial Healthcare Systems"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHealthcareSystems
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

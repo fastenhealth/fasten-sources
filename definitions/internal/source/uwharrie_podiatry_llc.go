@@ -29,6 +29,8 @@ func GetSourceUwharriePodiatryLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Uwharrie Podiatry LLC"
 	sourceDef.SourceType = pkg.SourceTypeUwharriePodiatryLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/people/Uwharrie-Podiatry-LLC/100067209215040/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

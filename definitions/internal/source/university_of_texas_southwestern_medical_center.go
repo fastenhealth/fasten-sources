@@ -30,6 +30,7 @@ func GetSourceUniversityOfTexasSouthwesternMedicalCenter(env pkg.FastenLighthous
 	sourceDef.Display = "University of Texas Southwestern Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTexasSouthwesternMedicalCenter
 	sourceDef.Category = []string{"286500000X", "367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164591822", "1992032619"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

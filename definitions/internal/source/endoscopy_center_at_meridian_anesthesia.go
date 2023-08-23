@@ -28,6 +28,8 @@ func GetSourceEndoscopyCenterAtMeridianAnesthesia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Endoscopy Center At Meridian Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopyCenterAtMeridianAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

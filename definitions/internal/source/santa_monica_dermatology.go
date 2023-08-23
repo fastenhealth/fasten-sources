@@ -29,6 +29,8 @@ func GetSourceSantaMonicaDermatology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Santa Monica Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeSantaMonicaDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.santamonicadermatologygroup.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceSampleClient002(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Sample Client 002"
 	sourceDef.SourceType = pkg.SourceTypeSampleClient002
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

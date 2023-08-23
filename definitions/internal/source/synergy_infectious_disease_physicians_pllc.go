@@ -29,6 +29,8 @@ func GetSourceSynergyInfectiousDiseasePhysiciansPllc(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "Synergy Infectious Disease Physicians, Pllc"
 	sourceDef.SourceType = pkg.SourceTypeSynergyInfectiousDiseasePhysiciansPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/az-arizona/chandler/synergy-infectious-disease-physicians-x846pc"
 	sourceDef.SecretKeyPrefix = "cerner"
 

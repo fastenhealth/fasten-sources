@@ -28,6 +28,8 @@ func GetSourceMyrnaCDeAsisMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Myrna C De Asis Md"
 	sourceDef.SourceType = pkg.SourceTypeMyrnaCDeAsisMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

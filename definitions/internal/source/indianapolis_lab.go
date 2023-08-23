@@ -28,6 +28,8 @@ func GetSourceIndianapolisLab(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Indianapolis Lab"
 	sourceDef.SourceType = pkg.SourceTypeIndianapolisLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pacelabs.com/company/lab-results/in-indianapolis-laboratory/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

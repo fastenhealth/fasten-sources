@@ -29,6 +29,8 @@ func GetSourceNephrologyCenterSouthwestMichigan(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Nephrology Center - Southwest Michigan"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyCenterSouthwestMichigan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceAdvancedGastroenterologyAndNutrition(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Advanced Gastroenterology And Nutrition"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedGastroenterologyAndNutrition
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

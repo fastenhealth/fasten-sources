@@ -28,6 +28,8 @@ func GetSourceMariaJamiolkowskiDoInc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Maria Jamiolkowski DO Inc."
 	sourceDef.SourceType = pkg.SourceTypeMariaJamiolkowskiDoInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/maria-jamiolkowski-ac2c53f0-4b4f-4ddc-90da-48196a5b9c5a-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

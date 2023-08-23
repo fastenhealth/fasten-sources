@@ -29,6 +29,8 @@ func GetSourceValirRehabilitationHospital(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Valir Rehabilitation Hospital"
 	sourceDef.SourceType = pkg.SourceTypeValirRehabilitationHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.valir.com/locations/rehabilitation-hospital/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceSummaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Summa Health"
 	sourceDef.SourceType = pkg.SourceTypeSummaHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

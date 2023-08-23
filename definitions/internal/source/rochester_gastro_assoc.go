@@ -29,6 +29,8 @@ func GetSourceRochesterGastroAssoc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Rochester Gastro Assoc"
 	sourceDef.SourceType = pkg.SourceTypeRochesterGastroAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

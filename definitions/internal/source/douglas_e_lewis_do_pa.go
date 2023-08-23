@@ -29,6 +29,7 @@ func GetSourceDouglasELewisDoPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Douglas E Lewis DO PA"
 	sourceDef.SourceType = pkg.SourceTypeDouglasELewisDoPa
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396803706"}}
 	sourceDef.PatientAccessUrl = "https://bsahs.org/virtualcare"
 	sourceDef.SecretKeyPrefix = "nextgen"

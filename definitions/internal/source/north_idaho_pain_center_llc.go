@@ -29,6 +29,7 @@ func GetSourceNorthIdahoPainCenterLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "North Idaho Pain Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeNorthIdahoPainCenterLlc
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104896422"}}
 	sourceDef.BrandLogo = "north-idaho-pain-center-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.cdapain.com/"

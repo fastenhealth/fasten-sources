@@ -28,6 +28,8 @@ func GetSourcePalliativeCarecenterHospiceCatawbaVl(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Palliative Carecenter Hospice Catawba VL"
 	sourceDef.SourceType = pkg.SourceTypePalliativeCarecenterHospiceCatawbaVl
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

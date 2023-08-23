@@ -28,6 +28,8 @@ func GetSourceMinorAndJamesSurgicalSpecialists(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Minor And James Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeMinorAndJamesSurgicalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://seattledoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

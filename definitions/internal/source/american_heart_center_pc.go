@@ -30,6 +30,7 @@ func GetSourceAmericanHeartCenterPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "American Heart Center Pc"
 	sourceDef.SourceType = pkg.SourceTypeAmericanHeartCenterPc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508913898"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

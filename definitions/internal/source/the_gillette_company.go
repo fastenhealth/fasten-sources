@@ -29,6 +29,8 @@ func GetSourceTheGilletteCompany(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "The Gillette Company"
 	sourceDef.SourceType = pkg.SourceTypeTheGilletteCompany
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://us.pg.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,7 @@ func GetSourceKaringHeartsCardiology(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Karing Hearts Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeKaringHeartsCardiology
 	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750733457"}}
 	sourceDef.BrandLogo = "karing-hearts-cardiology.jpg"
 	sourceDef.PatientAccessUrl = "https://karingheartscardiology.com/"

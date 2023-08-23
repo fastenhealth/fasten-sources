@@ -28,6 +28,8 @@ func GetSourceEasternOhioPulmonaryConsultantsInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Eastern Ohio Pulmonary Consultants Inc"
 	sourceDef.SourceType = pkg.SourceTypeEasternOhioPulmonaryConsultantsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nomshealthcare.com/physicians-services/pulmonology/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

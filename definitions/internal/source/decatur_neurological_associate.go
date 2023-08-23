@@ -28,6 +28,8 @@ func GetSourceDecaturNeurologicalAssociate(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Decatur Neurological Associate"
 	sourceDef.SourceType = pkg.SourceTypeDecaturNeurologicalAssociate
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

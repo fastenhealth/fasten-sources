@@ -28,6 +28,8 @@ func GetSourceChildrensEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Childrens Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeChildrensEyeCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

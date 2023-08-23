@@ -28,6 +28,8 @@ func GetSourceTriValleyOncologyHematologyAssociate(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Tri-Valley Oncology Hematology Associate"
 	sourceDef.SourceType = pkg.SourceTypeTriValleyOncologyHematologyAssociate
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.trivalleymedicalgroup.com/specialty-network/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

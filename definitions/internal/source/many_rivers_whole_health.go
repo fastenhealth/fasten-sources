@@ -29,6 +29,8 @@ func GetSourceManyRiversWholeHealth(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Many Rivers Whole Health"
 	sourceDef.SourceType = pkg.SourceTypeManyRiversWholeHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "many-rivers-whole-health.jpeg"
 	sourceDef.PatientAccessUrl = "https://manyriverswholehealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

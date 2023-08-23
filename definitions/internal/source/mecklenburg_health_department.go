@@ -29,6 +29,8 @@ func GetSourceMecklenburgHealthDepartment(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Mecklenburg Health Department"
 	sourceDef.SourceType = pkg.SourceTypeMecklenburgHealthDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/profile.php?id=147448061979552"
 	sourceDef.SecretKeyPrefix = "cerner"
 

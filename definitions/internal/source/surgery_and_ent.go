@@ -28,6 +28,8 @@ func GetSourceSurgeryAndEnt(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Surgery and ENT"
 	sourceDef.SourceType = pkg.SourceTypeSurgeryAndEnt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

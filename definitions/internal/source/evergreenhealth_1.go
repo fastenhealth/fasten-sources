@@ -30,6 +30,7 @@ func GetSourceEvergreenhealth1(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "EvergreenHealth"
 	sourceDef.SourceType = pkg.SourceTypeEvergreenhealth1
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164876322"}}
 	sourceDef.BrandLogo = "evergreenhealth.svg"
 	sourceDef.PatientAccessUrl = "https://www.evergreenhealth.com/"

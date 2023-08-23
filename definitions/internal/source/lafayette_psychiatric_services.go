@@ -30,6 +30,7 @@ func GetSourceLafayettePsychiatricServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Lafayette Psychiatric Services"
 	sourceDef.SourceType = pkg.SourceTypeLafayettePsychiatricServices
 	sourceDef.Category = []string{"101YM0800X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427182815"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

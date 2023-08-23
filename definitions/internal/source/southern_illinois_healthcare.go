@@ -30,6 +30,7 @@ func GetSourceSouthernIllinoisHealthcare(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Southern Illinois Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSouthernIllinoisHealthcare
 	sourceDef.Category = []string{"225100000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528126257"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

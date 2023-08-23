@@ -29,6 +29,7 @@ func GetSourceCardiovascularConsultantsPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Cardiovascular Consultants PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularConsultantsPc
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053368233", "1538106711"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

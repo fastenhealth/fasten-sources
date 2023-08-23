@@ -29,6 +29,8 @@ func GetSourceSkinSurgeryCenterOfMissouri(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Skin Surgery Center of Missouri"
 	sourceDef.SourceType = pkg.SourceTypeSkinSurgeryCenterOfMissouri
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Skin Surgery Center of Missouri Address: 6704 Keaton Corporate Parkway City: O'Fallon Zip: 63368-8680 State: Missouri Country: USA"
 	sourceDef.SecretKeyPrefix = "cerner"
 

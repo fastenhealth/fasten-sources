@@ -28,6 +28,8 @@ func GetSourceMcrDdd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "MCR DDD"
 	sourceDef.SourceType = pkg.SourceTypeMcrDdd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://copahealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

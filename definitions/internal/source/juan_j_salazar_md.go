@@ -29,6 +29,8 @@ func GetSourceJuanJSalazarMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Juan J Salazar MD"
 	sourceDef.SourceType = pkg.SourceTypeJuanJSalazarMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "juan-j-salazar-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/juan-salazar-md"
 	sourceDef.SecretKeyPrefix = "cerner"

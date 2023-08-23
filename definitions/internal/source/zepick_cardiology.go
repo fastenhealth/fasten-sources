@@ -28,6 +28,8 @@ func GetSourceZepickCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Zepick Cardiology"
 	sourceDef.SourceType = pkg.SourceTypeZepickCardiology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

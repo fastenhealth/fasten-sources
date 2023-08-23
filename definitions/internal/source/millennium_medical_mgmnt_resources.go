@@ -29,6 +29,8 @@ func GetSourceMillenniumMedicalMgmntResources(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Millennium Medical Mgmnt Resources"
 	sourceDef.SourceType = pkg.SourceTypeMillenniumMedicalMgmntResources
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://mmmr.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceCoastalOrthopedicsAndSportsMedicine(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Coastal Orthopedics And Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCoastalOrthopedicsAndSportsMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.coastal-orthopaedic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

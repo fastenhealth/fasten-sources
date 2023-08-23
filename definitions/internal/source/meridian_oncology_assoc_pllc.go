@@ -28,6 +28,8 @@ func GetSourceMeridianOncologyAssocPllc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Meridian Oncology Assoc PLLC"
 	sourceDef.SourceType = pkg.SourceTypeMeridianOncologyAssocPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "meridian-oncology-assoc-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3538U0YQ2SRY64DFP32VXF1FRZK3FY?assignment_id=3C44YUNSIFMA1T20MX9DB2XKVJZDP6&from_queue=true="
 	sourceDef.SecretKeyPrefix = "nextgen"

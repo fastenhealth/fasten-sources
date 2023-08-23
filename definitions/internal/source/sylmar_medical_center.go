@@ -28,6 +28,8 @@ func GetSourceSylmarMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Sylmar Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSylmarMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sylmarmed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

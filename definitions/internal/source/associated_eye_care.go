@@ -28,6 +28,8 @@ func GetSourceAssociatedEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Associated Eye Care"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedEyeCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.associatedeyecare.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

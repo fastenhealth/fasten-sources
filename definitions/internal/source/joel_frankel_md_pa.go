@@ -30,6 +30,7 @@ func GetSourceJoelFrankelMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Joel Frankel MD PA"
 	sourceDef.SourceType = pkg.SourceTypeJoelFrankelMdPa
 	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174024798"}}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"

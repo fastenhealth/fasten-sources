@@ -28,6 +28,8 @@ func GetSourceSpineInstituteOfTheCarolinas(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Spine Institute of the Carolinas"
 	sourceDef.SourceType = pkg.SourceTypeSpineInstituteOfTheCarolinas
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

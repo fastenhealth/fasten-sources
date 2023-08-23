@@ -29,6 +29,8 @@ func GetSourceVailHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Vail Health"
 	sourceDef.SourceType = pkg.SourceTypeVailHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vailhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

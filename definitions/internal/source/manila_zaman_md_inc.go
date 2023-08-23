@@ -29,6 +29,8 @@ func GetSourceManilaZamanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Manila Zaman, MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeManilaZamanMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://advancedcardiovascularservices.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

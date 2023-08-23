@@ -28,6 +28,7 @@ func GetSourceBvchcInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "BVCHC Inc."
 	sourceDef.SourceType = pkg.SourceTypeBvchcInc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Blackstone Valley Community Health Care"}
 	sourceDef.BrandLogo = "bvchc-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.bvchc.org/"

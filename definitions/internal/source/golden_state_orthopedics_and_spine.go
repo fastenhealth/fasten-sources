@@ -28,6 +28,8 @@ func GetSourceGoldenStateOrthopedicsAndSpine(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Golden State Orthopedics And Spine"
 	sourceDef.SourceType = pkg.SourceTypeGoldenStateOrthopedicsAndSpine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.goldenstateortho.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

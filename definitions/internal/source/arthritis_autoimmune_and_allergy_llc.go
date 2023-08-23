@@ -28,6 +28,8 @@ func GetSourceArthritisAutoimmuneAndAllergyLlc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Arthritis Autoimmune And Allergy LLC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAutoimmuneAndAllergyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://arthritisallergy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

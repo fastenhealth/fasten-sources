@@ -30,6 +30,7 @@ func GetSourceUclaMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "UCLA Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUclaMedicalCenter
 	sourceDef.Category = []string{"261Q00000X", "281P00000X", "282N00000X", "282NC0060X", "390200000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083949382", "1205959426", "1215193883", "1306104344", "1558662999", "1588805279", "1598069163", "1609117837", "1982048005"}}
 	sourceDef.PatientAccessUrl = "https://www.uclahealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"

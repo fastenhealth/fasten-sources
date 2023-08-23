@@ -28,6 +28,8 @@ func GetSourceLoganLaboratories(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Logan Laboratories"
 	sourceDef.SourceType = pkg.SourceTypeLoganLaboratories
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourcePediatricPhysiciansOrganizationAtChildrens(env pkg.FastenLighthous
 
 	sourceDef.Display = "Pediatric Physicians Organization at Children's"
 	sourceDef.SourceType = pkg.SourceTypePediatricPhysiciansOrganizationAtChildrens
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

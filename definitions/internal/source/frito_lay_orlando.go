@@ -29,6 +29,8 @@ func GetSourceFritoLayOrlando(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Frito Lay - Orlando"
 	sourceDef.SourceType = pkg.SourceTypeFritoLayOrlando
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fritolay.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

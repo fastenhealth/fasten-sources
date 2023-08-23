@@ -29,6 +29,7 @@ func GetSourceMichiganHealthcareProfessionals(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Michigan Healthcare Professionals"
 	sourceDef.SourceType = pkg.SourceTypeMichiganHealthcareProfessionals
 	sourceDef.Category = []string{"261QS1200X", "261QU0200X", "332B00000X", "332S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093107682", "1497178867", "1720369358", "1821464348"}}
 	sourceDef.PatientAccessUrl = "https://mhpdoctor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

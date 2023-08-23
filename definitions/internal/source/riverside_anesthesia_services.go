@@ -28,6 +28,8 @@ func GetSourceRiversideAnesthesiaServices(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Riverside Anesthesia Services"
 	sourceDef.SourceType = pkg.SourceTypeRiversideAnesthesiaServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/florida/riverside-anesthesia-services-llc-430370584"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

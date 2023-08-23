@@ -28,6 +28,8 @@ func GetSourceOrthoallianceOfOhio(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "OrthoAlliance of Ohio"
 	sourceDef.SourceType = pkg.SourceTypeOrthoallianceOfOhio
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.beaconortho.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

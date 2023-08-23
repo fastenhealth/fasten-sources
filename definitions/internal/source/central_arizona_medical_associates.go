@@ -28,6 +28,8 @@ func GetSourceCentralArizonaMedicalAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Central Arizona Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeCentralArizonaMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://camadocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

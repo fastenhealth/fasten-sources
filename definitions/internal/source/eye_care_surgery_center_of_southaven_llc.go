@@ -28,6 +28,8 @@ func GetSourceEyeCareSurgeryCenterOfSouthavenLlc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Eye Care Surgery Center Of Southaven LLC"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareSurgeryCenterOfSouthavenLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.eyespecialtygroup.com/pay-online/southaven/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceTmcHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "TMC HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeTmcHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

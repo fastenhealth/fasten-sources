@@ -28,6 +28,8 @@ func GetSourceGastroenterologyAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.insitedigestive.com/locations/pasadena-raymond-office/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

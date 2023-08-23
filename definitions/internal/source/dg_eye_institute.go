@@ -28,6 +28,8 @@ func GetSourceDgEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "DG Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeDgEyeInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mwuclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

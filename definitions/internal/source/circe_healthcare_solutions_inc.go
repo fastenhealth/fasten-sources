@@ -28,6 +28,8 @@ func GetSourceCirceHealthcareSolutionsInc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Circe Healthcare Solutions Inc"
 	sourceDef.SourceType = pkg.SourceTypeCirceHealthcareSolutionsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://circecares.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

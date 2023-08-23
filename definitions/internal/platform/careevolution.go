@@ -41,6 +41,7 @@ func GetSourceCareevolution(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.PlatformType = pkg.SourceTypeCareevolution
 	sourceDef.SourceType = pkg.SourceTypeCareevolution
 	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "www.careevolution.com"
 
 	return sourceDef, nil

@@ -28,6 +28,8 @@ func GetSourceVenturaCountyUrologyMedicalGroup(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Ventura County Urology Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeVenturaCountyUrologyMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.yelp.com/biz/ventura-county-urology-medical-group-ventura-3"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

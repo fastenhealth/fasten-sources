@@ -29,6 +29,8 @@ func GetSourceDermatologyAssociatesOfNorthwest(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Dermatology Associates of Northwest"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfNorthwest
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://pinnacleskin.com/dermatology-associates-of-northwest-indiana/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

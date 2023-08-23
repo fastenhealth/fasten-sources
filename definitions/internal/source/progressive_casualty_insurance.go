@@ -28,6 +28,8 @@ func GetSourceProgressiveCasualtyInsurance(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Progressive Casualty Insurance"
 	sourceDef.SourceType = pkg.SourceTypeProgressiveCasualtyInsurance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

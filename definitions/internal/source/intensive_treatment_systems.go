@@ -28,6 +28,8 @@ func GetSourceIntensiveTreatmentSystems(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Intensive Treatment Systems"
 	sourceDef.SourceType = pkg.SourceTypeIntensiveTreatmentSystems
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://itsofaz.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

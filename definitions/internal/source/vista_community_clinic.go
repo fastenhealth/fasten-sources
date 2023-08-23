@@ -29,6 +29,7 @@ func GetSourceVistaCommunityClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Vista Community Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVistaCommunityClinic
 	sourceDef.Category = []string{"251B00000X", "261QF0400X", "332900000X", "333600000X", "3336C0002X", "3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295822658", "1376746271", "1437245412", "1467990614", "1497203541", "1598124083", "1619107240", "1649662719", "1932562964", "1982822318"}}
 	sourceDef.PatientAccessUrl = "http://www.vistacommunityclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

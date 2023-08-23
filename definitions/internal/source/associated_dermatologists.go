@@ -28,6 +28,8 @@ func GetSourceAssociatedDermatologists(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Associated Dermatologists"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedDermatologists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

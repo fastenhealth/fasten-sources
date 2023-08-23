@@ -28,6 +28,8 @@ func GetSourceAliciaPCuentoMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Alicia P Cuento MD"
 	sourceDef.SourceType = pkg.SourceTypeAliciaPCuentoMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.optum.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

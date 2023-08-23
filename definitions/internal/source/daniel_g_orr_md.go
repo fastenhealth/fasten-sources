@@ -28,6 +28,8 @@ func GetSourceDanielGOrrMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Daniel G Orr MD"
 	sourceDef.SourceType = pkg.SourceTypeDanielGOrrMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "daniel-g-orr-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mainlinehealth.org/find-a-doctor/daniel-g-orr"
 	sourceDef.SecretKeyPrefix = "nextgen"

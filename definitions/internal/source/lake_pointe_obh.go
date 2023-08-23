@@ -28,6 +28,8 @@ func GetSourceLakePointeObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Lake Pointe OBH"
 	sourceDef.SourceType = pkg.SourceTypeLakePointeObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "lake-pointe-obh.svg"
 	sourceDef.PatientAccessUrl = "https://www.bswhealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

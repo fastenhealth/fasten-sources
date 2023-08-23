@@ -28,6 +28,8 @@ func GetSourceEyeCareAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Eye Care Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareAssociatesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eye-care-associates-inc.webp"
 	sourceDef.PatientAccessUrl = "https://www.eyecareassociates.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

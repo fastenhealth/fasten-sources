@@ -28,6 +28,8 @@ func GetSourceRheumatologyAndOsteoporosisCtrOfMphs(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Rheumatology & Osteoporosis Ctr of Mphs"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAndOsteoporosisCtrOfMphs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rocm.md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

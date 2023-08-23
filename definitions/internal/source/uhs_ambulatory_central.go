@@ -29,6 +29,8 @@ func GetSourceUhsAmbulatoryCentral(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "UHS_Ambulatory_Central"
 	sourceDef.SourceType = pkg.SourceTypeUhsAmbulatoryCentral
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

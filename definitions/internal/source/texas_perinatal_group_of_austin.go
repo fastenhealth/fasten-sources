@@ -28,6 +28,8 @@ func GetSourceTexasPerinatalGroupOfAustin(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Texas Perinatal Group Of Austin"
 	sourceDef.SourceType = pkg.SourceTypeTexasPerinatalGroupOfAustin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

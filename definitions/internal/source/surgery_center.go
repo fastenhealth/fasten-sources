@@ -28,6 +28,8 @@ func GetSourceSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSurgeryCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "surgery-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/tosurgerycenter/"
 	sourceDef.SecretKeyPrefix = "nextgen"

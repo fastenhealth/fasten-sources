@@ -28,6 +28,8 @@ func GetSourceStAugustineEndoscopyCenterLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "St. Augustine Endoscopy Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeStAugustineEndoscopyCenterLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://staugustineendoscopycenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

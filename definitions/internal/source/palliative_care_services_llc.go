@@ -28,6 +28,8 @@ func GetSourcePalliativeCareServicesLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Palliative Care Services Llc"
 	sourceDef.SourceType = pkg.SourceTypePalliativeCareServicesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

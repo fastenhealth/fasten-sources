@@ -28,6 +28,8 @@ func GetSourceSohaDolatabadiMD(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Soha Dolatabadi M.D."
 	sourceDef.SourceType = pkg.SourceTypeSohaDolatabadiMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://losangelesrheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceKGregTomassianMD(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "K Greg Tomassian M D"
 	sourceDef.SourceType = pkg.SourceTypeKGregTomassianMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

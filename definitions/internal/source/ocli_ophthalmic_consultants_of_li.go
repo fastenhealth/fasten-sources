@@ -28,6 +28,8 @@ func GetSourceOcliOphthalmicConsultantsOfLi(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "OCLI-Ophthalmic Consultants Of LI"
 	sourceDef.SourceType = pkg.SourceTypeOcliOphthalmicConsultantsOfLi
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ocli-ophthalmic-consultants-of-li.svg"
 	sourceDef.PatientAccessUrl = "https://www.ocli.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

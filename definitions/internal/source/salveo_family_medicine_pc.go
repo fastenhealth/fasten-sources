@@ -29,6 +29,7 @@ func GetSourceSalveoFamilyMedicinePc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Salveo Family Medicine PC"
 	sourceDef.SourceType = pkg.SourceTypeSalveoFamilyMedicinePc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548379522"}}
 	sourceDef.PatientAccessUrl = "http://www.salveoclinic.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

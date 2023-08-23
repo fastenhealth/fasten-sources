@@ -29,6 +29,8 @@ func GetSourceRaleighPlasticSurgeryCenterinc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Raleigh Plastic Surgery CenterInc"
 	sourceDef.SourceType = pkg.SourceTypeRaleighPlasticSurgeryCenterinc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceNuraSurgicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Nura Surgical Center"
 	sourceDef.SourceType = pkg.SourceTypeNuraSurgicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "nura-surgical-center.svg"
 	sourceDef.PatientAccessUrl = "https://www.nuraclinics.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

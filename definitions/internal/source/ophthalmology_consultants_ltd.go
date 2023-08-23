@@ -28,6 +28,8 @@ func GetSourceOphthalmologyConsultantsLtd(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Ophthalmology Consultants Ltd"
 	sourceDef.SourceType = pkg.SourceTypeOphthalmologyConsultantsLtd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ophthalmology-consultants-ltd.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/OpthalmologyConsultants/"
 	sourceDef.SecretKeyPrefix = "nextgen"

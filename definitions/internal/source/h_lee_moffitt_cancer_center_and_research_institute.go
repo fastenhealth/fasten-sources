@@ -30,6 +30,7 @@ func GetSourceHLeeMoffittCancerCenterAndResearchInstitute(env pkg.FastenLighthou
 	sourceDef.Display = "H. Lee Moffitt Cancer Center & Research Institute"
 	sourceDef.SourceType = pkg.SourceTypeHLeeMoffittCancerCenterAndResearchInstitute
 	sourceDef.Category = []string{"284300000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083010839"}}
 	sourceDef.BrandLogo = "h-lee-moffitt-cancer-center-and-research-institute.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/MoffittCancerCenter/"

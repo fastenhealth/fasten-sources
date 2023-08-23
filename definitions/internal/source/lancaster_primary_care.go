@@ -28,6 +28,8 @@ func GetSourceLancasterPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Lancaster Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeLancasterPrimaryCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

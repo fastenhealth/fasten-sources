@@ -29,6 +29,8 @@ func GetSourceTannerHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Tanner Health System"
 	sourceDef.SourceType = pkg.SourceTypeTannerHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

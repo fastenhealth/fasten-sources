@@ -29,6 +29,8 @@ func GetSourceKitsapEyePhysicians(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kitsap Eye Physicians"
 	sourceDef.SourceType = pkg.SourceTypeKitsapEyePhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kitsapeye.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

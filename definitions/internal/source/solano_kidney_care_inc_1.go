@@ -29,6 +29,8 @@ func GetSourceSolanoKidneyCareInc1(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Solano Kidney Care, Inc"
 	sourceDef.SourceType = pkg.SourceTypeSolanoKidneyCareInc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/vacaville/solano-kidney-care-x82vp2b"
 	sourceDef.SecretKeyPrefix = "cerner"
 

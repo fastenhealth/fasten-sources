@@ -28,6 +28,8 @@ func GetSourceEricCwynarDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Eric Cwynar DPM"
 	sourceDef.SourceType = pkg.SourceTypeEricCwynarDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mychart.ohiohealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

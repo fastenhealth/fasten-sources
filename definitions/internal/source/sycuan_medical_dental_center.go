@@ -28,6 +28,8 @@ func GetSourceSycuanMedicalDentalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Sycuan Medical Dental Center"
 	sourceDef.SourceType = pkg.SourceTypeSycuanMedicalDentalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.sycuanmedicaldentalcenter.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

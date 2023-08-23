@@ -30,6 +30,7 @@ func GetSourceBayClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "Bay Clinic"
 	sourceDef.SourceType = pkg.SourceTypeBayClinic
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538174958"}}
 	sourceDef.PatientAccessUrl = "https://bayclinic.net/"
 	sourceDef.SecretKeyPrefix = "cerner"

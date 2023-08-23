@@ -28,6 +28,8 @@ func GetSourceSouthwestPulmonaryAssociatesLlp(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Southwest Pulmonary Associates LLP"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestPulmonaryAssociatesLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "southwest-pulmonary-associates-llp.jpeg"
 	sourceDef.PatientAccessUrl = "https://swpulmonary.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

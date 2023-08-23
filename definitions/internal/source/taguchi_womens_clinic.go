@@ -28,6 +28,8 @@ func GetSourceTaguchiWomensClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Taguchi Womens Clinic"
 	sourceDef.SourceType = pkg.SourceTypeTaguchiWomensClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.taguchiwomensclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

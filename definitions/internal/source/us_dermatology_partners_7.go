@@ -28,6 +28,8 @@ func GetSourceUsDermatologyPartners7(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "US Dermatology Partners 7"
 	sourceDef.SourceType = pkg.SourceTypeUsDermatologyPartners7
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: US Dermatology Partners 7 Address: 10313 Georgia Ave City: Silver Spring Zip: 209025006 State: Maryland Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

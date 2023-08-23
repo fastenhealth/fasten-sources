@@ -28,6 +28,8 @@ func GetSourceAtlanticCenterForAesthAndReconSurg(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Atlantic Center For Aesth And Recon Surg"
 	sourceDef.SourceType = pkg.SourceTypeAtlanticCenterForAesthAndReconSurg
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.atlanticcentersurgery.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

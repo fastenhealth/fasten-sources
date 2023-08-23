@@ -29,6 +29,7 @@ func GetSourceAvistaWomensCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Avista Womens Care"
 	sourceDef.SourceType = pkg.SourceTypeAvistaWomensCare
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992064315"}}
 	sourceDef.PatientAccessUrl = "https://www.avistawomenscare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

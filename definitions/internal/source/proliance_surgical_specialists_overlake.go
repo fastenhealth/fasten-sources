@@ -28,6 +28,8 @@ func GetSourceProlianceSurgicalSpecialistsOverlake(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Proliance Surgical Specialists Overlake"
 	sourceDef.SourceType = pkg.SourceTypeProlianceSurgicalSpecialistsOverlake
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "proliance-surgical-specialists-overlake.jpg"
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/company/proliance-eastside-surgical-specialists"
 	sourceDef.SecretKeyPrefix = "nextgen"

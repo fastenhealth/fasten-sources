@@ -28,6 +28,8 @@ func GetSourceCommunityBridgesInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Community Bridges Inc"
 	sourceDef.SourceType = pkg.SourceTypeCommunityBridgesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://communitybridgesaz.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

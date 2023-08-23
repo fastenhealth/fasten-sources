@@ -29,6 +29,8 @@ func GetSourceAgnesianHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Agnesian Health Care"
 	sourceDef.SourceType = pkg.SourceTypeAgnesianHealthCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ssmhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

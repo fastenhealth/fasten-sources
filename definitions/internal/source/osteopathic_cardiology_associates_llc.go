@@ -28,6 +28,8 @@ func GetSourceOsteopathicCardiologyAssociatesLlc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Osteopathic Cardiology Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeOsteopathicCardiologyAssociatesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

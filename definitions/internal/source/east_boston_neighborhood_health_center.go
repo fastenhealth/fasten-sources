@@ -30,6 +30,7 @@ func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "East Boston Neighborhood Health Center"
 	sourceDef.SourceType = pkg.SourceTypeEastBostonNeighborhoodHealthCenter
 	sourceDef.Category = []string{"261QM0801X", "332B00000X", "333600000X", "3336C0002X", "3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174701213", "1255949327", "1487806725", "1821204306"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

@@ -28,6 +28,8 @@ func GetSourceColoradoSpringsCardiologistsPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Colorado Springs Cardiologists PC"
 	sourceDef.SourceType = pkg.SourceTypeColoradoSpringsCardiologistsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "colorado-springs-cardiologists-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/ColoradoSpringsCardiologyColoradoSpringsCO/"
 	sourceDef.SecretKeyPrefix = "nextgen"

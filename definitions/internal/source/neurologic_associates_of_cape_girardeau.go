@@ -28,6 +28,8 @@ func GetSourceNeurologicAssociatesOfCapeGirardeau(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Neurologic Associates Of Cape Girardeau"
 	sourceDef.SourceType = pkg.SourceTypeNeurologicAssociatesOfCapeGirardeau
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://capeneurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

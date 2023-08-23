@@ -28,6 +28,8 @@ func GetSourceZevAshMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Zev Ash Md"
 	sourceDef.SourceType = pkg.SourceTypeZevAshMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

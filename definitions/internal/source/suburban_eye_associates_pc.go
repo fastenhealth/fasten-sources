@@ -28,6 +28,8 @@ func GetSourceSuburbanEyeAssociatesPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Suburban Eye Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeSuburbanEyeAssociatesPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fixcataract.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

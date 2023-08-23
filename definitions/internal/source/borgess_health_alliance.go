@@ -29,6 +29,8 @@ func GetSourceBorgessHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Borgess Health Alliance"
 	sourceDef.SourceType = pkg.SourceTypeBorgessHealthAlliance
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

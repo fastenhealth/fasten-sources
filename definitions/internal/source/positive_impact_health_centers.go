@@ -29,6 +29,8 @@ func GetSourcePositiveImpactHealthCenters(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Positive Impact Health Centers"
 	sourceDef.SourceType = pkg.SourceTypePositiveImpactHealthCenters
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.positiveimpacthealthcenters.org"
 	sourceDef.SecretKeyPrefix = "cerner"
 

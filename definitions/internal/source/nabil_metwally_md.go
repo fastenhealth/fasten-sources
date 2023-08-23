@@ -29,6 +29,8 @@ func GetSourceNabilMetwallyMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Nabil Metwally Md"
 	sourceDef.SourceType = pkg.SourceTypeNabilMetwallyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceConnecticut(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Connecticut"
 	sourceDef.SourceType = pkg.SourceTypeConnecticut
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.zillow.com/homedetails/444-Foxon-Rd-East-Haven-CT-06513/241336748_zpid/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

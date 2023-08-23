@@ -28,6 +28,8 @@ func GetSourceNorthGeorgiaHealthcareCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "North Georgia HealthCare Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthGeorgiaHealthcareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nghcc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

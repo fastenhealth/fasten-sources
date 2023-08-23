@@ -29,6 +29,8 @@ func GetSourceRheumatologyAndImmunotherapyCenter(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Rheumatology and Immunotherapy Center"
 	sourceDef.SourceType = pkg.SourceTypeRheumatologyAndImmunotherapyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://care.aurorahealthcare.org/doctors/alvin-f-wells-franklin-rheumatology-2"
 	sourceDef.SecretKeyPrefix = "cerner"
 

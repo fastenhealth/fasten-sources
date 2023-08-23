@@ -29,6 +29,7 @@ func GetSourceIntegratedFamilyServices(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Integrated Family Services"
 	sourceDef.SourceType = pkg.SourceTypeIntegratedFamilyServices
 	sourceDef.Category = []string{"251S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487094124"}}
 	sourceDef.BrandLogo = "integrated-family-services.jpg"
 	sourceDef.PatientAccessUrl = "http://www.integratedfamilyservices.net/wp-content/uploads/2023/02/IFS_HorzLogo-900px.png"

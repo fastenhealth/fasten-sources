@@ -29,6 +29,8 @@ func GetSourceNicholasSGuittariMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Nicholas S. Guittari, MD"
 	sourceDef.SourceType = pkg.SourceTypeNicholasSGuittariMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://clustrmaps.com/person/Guittari-8mp89g"
 	sourceDef.SecretKeyPrefix = "cerner"
 

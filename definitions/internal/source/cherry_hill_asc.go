@@ -28,6 +28,8 @@ func GetSourceCherryHillAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cherry Hill ASC"
 	sourceDef.SourceType = pkg.SourceTypeCherryHillAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://cherryhillsurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

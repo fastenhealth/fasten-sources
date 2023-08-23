@@ -28,6 +28,8 @@ func GetSourceSheboyganMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Sheboygan Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeSheboyganMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://care.aurorahealthcare.org/locations/aurora-health-center-2414-kohler-memorial-dr"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

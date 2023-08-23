@@ -29,6 +29,8 @@ func GetSourceOlatheMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Olathe Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeOlatheMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.clayplattefamily.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

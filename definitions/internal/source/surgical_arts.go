@@ -29,6 +29,8 @@ func GetSourceSurgicalArts(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Surgical Arts"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalArts
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "surgical-arts.jpg"
 	sourceDef.PatientAccessUrl = "https://cullmanregionalmedicalgroup.com/location/surgical-arts/"
 	sourceDef.SecretKeyPrefix = "cerner"

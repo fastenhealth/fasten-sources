@@ -29,6 +29,8 @@ func GetSourceMedicalClinicOfNorthvillePc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Medical Clinic of Northville PC"
 	sourceDef.SourceType = pkg.SourceTypeMedicalClinicOfNorthvillePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.northvillemedicalclinic.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

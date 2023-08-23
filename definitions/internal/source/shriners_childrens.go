@@ -29,6 +29,8 @@ func GetSourceShrinersChildrens(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Shriners Children’s"
 	sourceDef.SourceType = pkg.SourceTypeShrinersChildrens
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

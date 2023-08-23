@@ -29,6 +29,8 @@ func GetSourceFortMyersPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Fort Myers Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeFortMyersPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

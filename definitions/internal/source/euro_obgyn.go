@@ -29,6 +29,8 @@ func GetSourceEuroObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Euro Obgyn"
 	sourceDef.SourceType = pkg.SourceTypeEuroObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

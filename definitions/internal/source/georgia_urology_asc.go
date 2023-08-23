@@ -28,6 +28,8 @@ func GetSourceGeorgiaUrologyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Georgia Urology ASC"
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaUrologyAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.gaurology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

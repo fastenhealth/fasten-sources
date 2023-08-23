@@ -28,6 +28,8 @@ func GetSourceInSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "IN Specialists"
 	sourceDef.SourceType = pkg.SourceTypeInSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

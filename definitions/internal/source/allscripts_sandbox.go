@@ -28,6 +28,8 @@ func GetSourceAllscriptsSandbox(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Allscripts Sandbox"
 	sourceDef.SourceType = pkg.SourceTypeAllscriptsSandbox
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

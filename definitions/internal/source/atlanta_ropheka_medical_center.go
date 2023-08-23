@@ -29,6 +29,8 @@ func GetSourceAtlantaRophekaMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Atlanta Ropheka Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeAtlantaRophekaMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/index.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

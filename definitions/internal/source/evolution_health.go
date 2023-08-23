@@ -30,6 +30,7 @@ func GetSourceEvolutionHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Evolution Health"
 	sourceDef.SourceType = pkg.SourceTypeEvolutionHealth
 	sourceDef.Category = []string{"208D00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932577590"}}
 	sourceDef.PatientAccessUrl = "https://www.linkedin.com/mwlite/company/evolution-health"
 	sourceDef.SecretKeyPrefix = "cerner"

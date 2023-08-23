@@ -29,6 +29,8 @@ func GetSourceBlackwellFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Blackwell Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeBlackwellFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

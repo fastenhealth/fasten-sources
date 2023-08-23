@@ -29,6 +29,8 @@ func GetSourceFloralParkArthritisPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Floral Park Arthritis Pc"
 	sourceDef.SourceType = pkg.SourceTypeFloralParkArthritisPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

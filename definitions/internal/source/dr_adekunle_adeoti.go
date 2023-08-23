@@ -29,6 +29,8 @@ func GetSourceDrAdekunleAdeoti(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dr. Adekunle Adeoti"
 	sourceDef.SourceType = pkg.SourceTypeDrAdekunleAdeoti
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/nj-new-jersey/east-orange/adekunle-g-adeoti-md-x84gv7"
 	sourceDef.SecretKeyPrefix = "cerner"
 

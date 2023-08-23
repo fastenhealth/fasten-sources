@@ -28,6 +28,8 @@ func GetSourceManagedServices(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Managed Services"
 	sourceDef.SourceType = pkg.SourceTypeManagedServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "managed-services.jpg"
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.sai_global_compliance_inc.897ffaa9485fa750d2d3fa6d9e2740df.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

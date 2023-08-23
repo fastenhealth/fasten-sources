@@ -28,6 +28,8 @@ func GetSourceConnecticutImageGuidedSurgery(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "CONNECTICUT IMAGE GUIDED SURGERY"
 	sourceDef.SourceType = pkg.SourceTypeConnecticutImageGuidedSurgery
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/connecticut-access-carect-image-guided-surgery/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

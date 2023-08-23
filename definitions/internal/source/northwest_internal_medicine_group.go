@@ -29,6 +29,8 @@ func GetSourceNorthwestInternalMedicineGroup(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Northwest Internal Medicine Group"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestInternalMedicineGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

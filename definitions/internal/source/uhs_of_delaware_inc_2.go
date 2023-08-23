@@ -29,6 +29,8 @@ func GetSourceUhsOfDelawareInc2(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "UHS of Delaware, Inc"
 	sourceDef.SourceType = pkg.SourceTypeUhsOfDelawareInc2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "uhs-of-delaware-inc.png"
 	sourceDef.PatientAccessUrl = "https://uhs.com/about-uhs/corporate-information/"
 	sourceDef.SecretKeyPrefix = "cerner"

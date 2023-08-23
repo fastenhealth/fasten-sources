@@ -29,6 +29,7 @@ func GetSourceArizonaEndoscopyCenterSedationPlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Arizona Endoscopy Center Sedation PLC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaEndoscopyCenterSedationPlc
 	sourceDef.Category = []string{"207L00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427325356"}}
 	sourceDef.BrandLogo = "arizona-endoscopy-center-sedation-plc.jpg"
 	sourceDef.PatientAccessUrl = "https://arizonadigestivehealth.com/arizona-endoscopy-center"

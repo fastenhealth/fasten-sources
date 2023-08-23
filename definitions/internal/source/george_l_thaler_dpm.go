@@ -29,6 +29,8 @@ func GetSourceGeorgeLThalerDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "George L. Thaler, DPM"
 	sourceDef.SourceType = pkg.SourceTypeGeorgeLThalerDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "george-l-thaler-dpm.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-george-thaler-2ffxj"
 	sourceDef.SecretKeyPrefix = "cerner"

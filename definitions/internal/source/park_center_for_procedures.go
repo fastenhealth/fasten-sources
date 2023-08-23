@@ -28,6 +28,8 @@ func GetSourceParkCenterForProcedures(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Park Center For Procedures"
 	sourceDef.SourceType = pkg.SourceTypeParkCenterForProcedures
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "park-center-for-procedures.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pcpasc.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

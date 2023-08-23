@@ -30,6 +30,7 @@ func GetSourceLaurelObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "Laurel OB/GYN"
 	sourceDef.SourceType = pkg.SourceTypeLaurelObGyn
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841691268"}}
 	sourceDef.PatientAccessUrl = "https://laurelobgyn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

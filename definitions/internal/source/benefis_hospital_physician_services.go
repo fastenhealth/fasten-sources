@@ -28,6 +28,8 @@ func GetSourceBenefisHospitalPhysicianServices(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Benefis Hospital Physician Services"
 	sourceDef.SourceType = pkg.SourceTypeBenefisHospitalPhysicianServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "benefis-hospital-physician-services.svg"
 	sourceDef.PatientAccessUrl = "https://www.benefis.org"
 	sourceDef.SecretKeyPrefix = "nextgen"

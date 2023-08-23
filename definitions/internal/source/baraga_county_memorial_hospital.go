@@ -30,6 +30,7 @@ func GetSourceBaragaCountyMemorialHospital(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Baraga County Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBaragaCountyMemorialHospital
 	sourceDef.Category = []string{"101YA0400X", "1041C0700X", "207P00000X", "207Q00000X", "207QA0401X", "207R00000X", "207ZP0102X", "208000000X", "251E00000X", "251G00000X", "261QR1300X", "275N00000X", "282NC0060X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457459059", "1487758595", "1508960600", "1558479824", "1700980968", "1770687931", "1841394046", "1841555430", "1851409643", "1932218807"}}
 	sourceDef.PatientAccessUrl = "https://bcmh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,7 @@ func GetSourceSiskiyouCommunityHealthCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Siskiyou Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSiskiyouCommunityHealthCenter
 	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417326562"}}
 	sourceDef.PatientAccessUrl = "https://siskiyouhealthcenter.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

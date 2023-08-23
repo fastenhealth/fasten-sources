@@ -28,6 +28,8 @@ func GetSourceAlfredCBurrisMDPC(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Alfred C. Burris M.D. P.C."
 	sourceDef.SourceType = pkg.SourceTypeAlfredCBurrisMDPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/dc-district-of-columbia/washington/alfred-c-burris-md-pc-xb4846"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

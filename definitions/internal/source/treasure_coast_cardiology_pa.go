@@ -29,6 +29,7 @@ func GetSourceTreasureCoastCardiologyPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Treasure Coast Cardiology PA"
 	sourceDef.SourceType = pkg.SourceTypeTreasureCoastCardiologyPa
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720108210"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

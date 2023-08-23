@@ -29,6 +29,7 @@ func GetSourceDoverCardiologyCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Dover Cardiology Center"
 	sourceDef.SourceType = pkg.SourceTypeDoverCardiologyCenter
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{" DOVE CREEK INTEGRATED HEALTHCARE", "AXIS HEALTH SYSTEM "}
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/doctors/hani-r-douedi-md/"
 	sourceDef.SecretKeyPrefix = "cerner"

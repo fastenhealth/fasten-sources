@@ -28,6 +28,8 @@ func GetSourceCharlesWMoniakMdFacog(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Charles W Moniak MD FACOG"
 	sourceDef.SourceType = pkg.SourceTypeCharlesWMoniakMdFacog
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceAssociatesInWomensHealth(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Associates In Women's Health"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInWomensHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://myawh.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

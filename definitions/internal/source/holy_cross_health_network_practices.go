@@ -28,6 +28,8 @@ func GetSourceHolyCrossHealthNetworkPractices(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Holy Cross Health Network Practices"
 	sourceDef.SourceType = pkg.SourceTypeHolyCrossHealthNetworkPractices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/HolyCrossHealthCenterSilverSpring/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

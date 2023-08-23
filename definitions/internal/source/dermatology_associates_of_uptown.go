@@ -28,6 +28,8 @@ func GetSourceDermatologyAssociatesOfUptown(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Dermatology Associates Of Uptown"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyAssociatesOfUptown
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dermatology-associates-of-uptown.jpg"
 	sourceDef.PatientAccessUrl = "https://dallasdermatology.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

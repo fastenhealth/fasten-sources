@@ -28,6 +28,8 @@ func GetSourceWeatherfordTClaytonMdInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Weatherford T Clayton MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeWeatherfordTClaytonMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/weatherford-clayton-caa24b12-6803-423e-9155-136ada606db6-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

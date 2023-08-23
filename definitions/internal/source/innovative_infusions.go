@@ -28,6 +28,8 @@ func GetSourceInnovativeInfusions(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Innovative Infusions"
 	sourceDef.SourceType = pkg.SourceTypeInnovativeInfusions
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

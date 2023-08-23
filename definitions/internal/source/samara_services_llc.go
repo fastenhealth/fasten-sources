@@ -29,6 +29,7 @@ func GetSourceSamaraServicesLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Samara Services Llc"
 	sourceDef.SourceType = pkg.SourceTypeSamaraServicesLlc
 	sourceDef.Category = []string{"207R00000X", "332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083874481"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

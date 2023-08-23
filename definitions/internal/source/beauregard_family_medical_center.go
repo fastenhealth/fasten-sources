@@ -28,6 +28,8 @@ func GetSourceBeauregardFamilyMedicalCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Beauregard Family Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBeauregardFamilyMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

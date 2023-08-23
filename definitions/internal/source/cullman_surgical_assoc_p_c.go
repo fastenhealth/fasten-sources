@@ -29,6 +29,8 @@ func GetSourceCullmanSurgicalAssocPC(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Cullman Surgical Assoc., P. C."
 	sourceDef.SourceType = pkg.SourceTypeCullmanSurgicalAssocPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/cullman/cullman-surgical-associates-pc/#gsc.tab=0"
 	sourceDef.SecretKeyPrefix = "cerner"
 

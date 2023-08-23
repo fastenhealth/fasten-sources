@@ -29,6 +29,8 @@ func GetSourceJamesCCrittendenMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "James C. Crittenden, MD"
 	sourceDef.SourceType = pkg.SourceTypeJamesCCrittendenMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wearememorial.com/team/james-c-crittenden-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

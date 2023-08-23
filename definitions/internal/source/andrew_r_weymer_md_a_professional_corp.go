@@ -28,6 +28,8 @@ func GetSourceAndrewRWeymerMdAProfessionalCorp(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Andrew R Weymer MD A Professional Corp"
 	sourceDef.SourceType = pkg.SourceTypeAndrewRWeymerMdAProfessionalCorp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.md.com/doctor/andrew-weymer-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

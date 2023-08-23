@@ -28,6 +28,8 @@ func GetSourceGoodShepherdRehabilitationNetwork(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Good Shepherd Rehabilitation Network"
 	sourceDef.SourceType = pkg.SourceTypeGoodShepherdRehabilitationNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "good-shepherd-rehabilitation-network.jpg"
 	sourceDef.PatientAccessUrl = "https://fundraise.givesmart.com/e/QOxsEg?vid=xmmev&utm_term=&utm_campaign=Competitor&utm_source=adwords&utm_medium=ppc&hsa_acc=6704888554&hsa_cam=19683538238&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=EAIaIQobChMIpLO1zMfQ_QIVZyWtBh3OkQInEAAYAyAAEgJ70_D_BwE"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourcePanhandleEyeGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Panhandle Eye Group"
 	sourceDef.SourceType = pkg.SourceTypePanhandleEyeGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "panhandle-eye-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.paneye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,7 @@ func GetSourceDrsGirgisAndAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Drs Girgis & Associates"
 	sourceDef.SourceType = pkg.SourceTypeDrsGirgisAndAssociates
 	sourceDef.Category = []string{"207Y00000X", "207YS0012X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013946201"}}
 	sourceDef.PatientAccessUrl = "https://www.girgisent.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

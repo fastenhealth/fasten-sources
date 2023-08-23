@@ -28,6 +28,8 @@ func GetSourceJointAndMuscleMedicalCarePc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Joint And Muscle Medical Care PC"
 	sourceDef.SourceType = pkg.SourceTypeJointAndMuscleMedicalCarePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://jmmcri.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

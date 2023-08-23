@@ -28,6 +28,8 @@ func GetSourceAriaCommunityHealthCenterKc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Aria Community Health Center KC"
 	sourceDef.SourceType = pkg.SourceTypeAriaCommunityHealthCenterKc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "aria-community-health-center-kc.jpg"
 	sourceDef.PatientAccessUrl = "https://ariachc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceStephenvilleMedicalAndSurgicalClinic(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Stephenville Medical And Surgical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeStephenvilleMedicalAndSurgicalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "stephenville-medical-and-surgical-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.smsc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

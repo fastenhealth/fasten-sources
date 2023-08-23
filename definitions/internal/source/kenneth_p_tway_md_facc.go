@@ -29,6 +29,8 @@ func GetSourceKennethPTwayMdFacc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Kenneth P. Tway, MD FACC"
 	sourceDef.SourceType = pkg.SourceTypeKennethPTwayMdFacc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "kenneth-p-tway-md-facc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.kennethtwaymd.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

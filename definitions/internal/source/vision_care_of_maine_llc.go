@@ -29,6 +29,7 @@ func GetSourceVisionCareOfMaineLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Vision Care Of Maine LLC"
 	sourceDef.SourceType = pkg.SourceTypeVisionCareOfMaineLlc
 	sourceDef.Category = []string{"152W00000X", "207W00000X", "261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225137847", "1275629081"}}
 	sourceDef.BrandLogo = "vision-care-of-maine-llc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.visioncareofmaine.com/locations/bangor/"

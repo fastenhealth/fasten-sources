@@ -29,6 +29,7 @@ func GetSource7SpringsOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "7 Springs Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceType7SpringsOrthopedicsPc
 	sourceDef.Category = []string{"207XX0005X", "261QU0200X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659750834"}}
 	sourceDef.PatientAccessUrl = "https://www.sportorthourgentcare.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

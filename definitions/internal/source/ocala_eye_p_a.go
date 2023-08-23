@@ -28,6 +28,8 @@ func GetSourceOcalaEyePA(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Ocala Eye P.A."
 	sourceDef.SourceType = pkg.SourceTypeOcalaEyePA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ocalaeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

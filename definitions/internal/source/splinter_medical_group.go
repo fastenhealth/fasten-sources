@@ -28,6 +28,8 @@ func GetSourceSplinterMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Splinter Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeSplinterMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/splinter-medical-group-3bc6a3c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceConfidentialServices(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Confidential Services"
 	sourceDef.SourceType = pkg.SourceTypeConfidentialServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.csish.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

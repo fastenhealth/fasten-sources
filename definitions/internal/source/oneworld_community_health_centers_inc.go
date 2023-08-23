@@ -29,6 +29,7 @@ func GetSourceOneworldCommunityHealthCentersInc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "OneWorld Community Health Centers Inc"
 	sourceDef.SourceType = pkg.SourceTypeOneworldCommunityHealthCentersInc
 	sourceDef.Category = []string{"261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144491564", "1891359485"}}
 	sourceDef.PatientAccessUrl = "https://www.oneworldomaha.org/contact-2/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceCentralJerseySportsMedicineAndOrthopaedicCenter(env pkg.FastenLigh
 
 	sourceDef.Display = "Central Jersey Sports Medicine and Orthopaedic Center"
 	sourceDef.SourceType = pkg.SourceTypeCentralJerseySportsMedicineAndOrthopaedicCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "central-jersey-sports-medicine-and-orthopaedic-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.cjsoc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceHawaiiPacificHealthPrd(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Hawaii Pacific Health - PRD"
 	sourceDef.SourceType = pkg.SourceTypeHawaiiPacificHealthPrd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hawaiipacifichealth.org/"
 	sourceDef.SecretKeyPrefix = "epic"
 

@@ -28,6 +28,8 @@ func GetSourceEverettBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Everett Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeEverettBoneAndJoint
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ebjproliancesurgeons.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

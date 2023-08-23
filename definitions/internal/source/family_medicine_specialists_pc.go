@@ -28,6 +28,8 @@ func GetSourceFamilyMedicineSpecialistsPc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Family Medicine Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicineSpecialistsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "family-medicine-specialists-pc.jpg"
 	sourceDef.PatientAccessUrl = "http://fmscr.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

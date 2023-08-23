@@ -28,6 +28,8 @@ func GetSourceRespiratoryAndSleepDisordersCtrPllc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Respiratory And Sleep Disorders Ctr PLLC"
 	sourceDef.SourceType = pkg.SourceTypeRespiratoryAndSleepDisordersCtrPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://respiratory-and-sleep-disorders-center.business.site/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceBerkelyFamilyMedicineAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Berkely Family Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypeBerkelyFamilyMedicineAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

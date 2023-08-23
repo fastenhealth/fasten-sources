@@ -30,6 +30,7 @@ func GetSourceDelawareOtolaryngologyConsultantsLlc(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "Delaware Otolaryngology Consultants LLC"
 	sourceDef.SourceType = pkg.SourceTypeDelawareOtolaryngologyConsultantsLlc
 	sourceDef.Category = []string{"207Y00000X", "207YS0123X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326481177"}}
 	sourceDef.PatientAccessUrl = "https://delawareoto.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"

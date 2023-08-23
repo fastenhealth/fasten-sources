@@ -28,6 +28,8 @@ func GetSourcePulmonaryDiseaseSpecialistsPa(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pulmonary Disease Specialists PA"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryDiseaseSpecialistsPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pds-cfsc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

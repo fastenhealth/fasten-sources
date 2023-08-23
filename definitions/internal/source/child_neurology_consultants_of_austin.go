@@ -28,6 +28,8 @@ func GetSourceChildNeurologyConsultantsOfAustin(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Child Neurology Consultants Of Austin"
 	sourceDef.SourceType = pkg.SourceTypeChildNeurologyConsultantsOfAustin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "child-neurology-consultants-of-austin.webp"
 	sourceDef.PatientAccessUrl = "https://www.childneurotx.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

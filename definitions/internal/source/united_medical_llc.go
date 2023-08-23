@@ -29,6 +29,8 @@ func GetSourceUnitedMedicalLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "United Medical LLC"
 	sourceDef.SourceType = pkg.SourceTypeUnitedMedicalLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.umusa.net/contactus.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

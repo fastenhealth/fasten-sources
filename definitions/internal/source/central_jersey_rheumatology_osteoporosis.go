@@ -28,6 +28,8 @@ func GetSourceCentralJerseyRheumatologyOsteoporosis(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Central Jersey Rheumatology Osteoporosis"
 	sourceDef.SourceType = pkg.SourceTypeCentralJerseyRheumatologyOsteoporosis
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

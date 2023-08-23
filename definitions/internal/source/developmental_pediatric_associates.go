@@ -28,6 +28,8 @@ func GetSourceDevelopmentalPediatricAssociates(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Developmental Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeDevelopmentalPediatricAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/child-development-center/developmental-pediatric-associates"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

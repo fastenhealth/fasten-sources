@@ -29,6 +29,8 @@ func GetSourceAspenValleyHospital(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Aspen Valley Hospital"
 	sourceDef.SourceType = pkg.SourceTypeAspenValleyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

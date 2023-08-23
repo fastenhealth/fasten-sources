@@ -28,6 +28,8 @@ func GetSourceAnesthesiaAssociatesOfOcalaLlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Anesthesia Associates Of Ocala LLC"
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaAssociatesOfOcalaLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

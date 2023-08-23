@@ -29,6 +29,8 @@ func GetSourceWarrenJDegaturJrMdFaafp(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Warren J. Degatur Jr. MD, FAAFP"
 	sourceDef.SourceType = pkg.SourceTypeWarrenJDegaturJrMdFaafp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "warren-j-degatur-jr-md-faafp.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/Warren-J-Degatur-Jr-MD-1152501468117567/"
 	sourceDef.SecretKeyPrefix = "cerner"

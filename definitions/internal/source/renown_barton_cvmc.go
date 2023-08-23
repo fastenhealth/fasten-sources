@@ -29,6 +29,8 @@ func GetSourceRenownBartonCvmc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Renown, Barton, CVMC"
 	sourceDef.SourceType = pkg.SourceTypeRenownBartonCvmc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

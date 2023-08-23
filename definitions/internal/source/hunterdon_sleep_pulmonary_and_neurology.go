@@ -28,6 +28,8 @@ func GetSourceHunterdonSleepPulmonaryAndNeurology(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Hunterdon Sleep Pulmonary And Neurology"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonSleepPulmonaryAndNeurology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hunterdonpulmonaryandsleep.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

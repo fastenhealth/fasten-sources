@@ -28,6 +28,8 @@ func GetSourceTriCountyVascularCarePro(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Tri County Vascular Care Pro"
 	sourceDef.SourceType = pkg.SourceTypeTriCountyVascularCarePro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://tricountyvascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

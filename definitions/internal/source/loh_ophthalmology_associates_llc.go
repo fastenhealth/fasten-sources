@@ -28,6 +28,8 @@ func GetSourceLohOphthalmologyAssociatesLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Loh Ophthalmology Associates LLC"
 	sourceDef.SourceType = pkg.SourceTypeLohOphthalmologyAssociatesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "loh-ophthalmology-associates-llc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.jenniferlohmd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

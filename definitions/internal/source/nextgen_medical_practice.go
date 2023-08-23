@@ -28,6 +28,8 @@ func GetSourceNextgenMedicalPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "NextGen Medical Practice"
 	sourceDef.SourceType = pkg.SourceTypeNextgenMedicalPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "nextgen-medical-practice.svg"
 	sourceDef.PatientAccessUrl = "https://www.nextgen.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceSinghSurgicalAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Singh Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeSinghSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "singh-surgical-associates.svg"
 	sourceDef.PatientAccessUrl = "https://caromonthealth.org/locations/caromont-surgical-associates/"
 	sourceDef.SecretKeyPrefix = "cerner"

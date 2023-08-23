@@ -29,6 +29,7 @@ func GetSourceVaccoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "VACCO LLC"
 	sourceDef.SourceType = pkg.SourceTypeVaccoLlc
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578088787"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/vacco-ambulatory-surgery-center-2232041e-6203-4a21-b873-d35988d6fec7"
 	sourceDef.SecretKeyPrefix = "nextgen"

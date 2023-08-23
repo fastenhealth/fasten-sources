@@ -29,6 +29,7 @@ func GetSourceWisconsinHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Wisconsin Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWisconsinHealthCenter
 	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972995975"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/wisconsin-health-center-llc-146217ae-5ea5-421b-80c0-96d0900473f7"
 	sourceDef.SecretKeyPrefix = "nextgen"

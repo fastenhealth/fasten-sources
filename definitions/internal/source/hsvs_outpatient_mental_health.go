@@ -28,6 +28,8 @@ func GetSourceHsvsOutpatientMentalHealth(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "HSVS Outpatient Mental Health"
 	sourceDef.SourceType = pkg.SourceTypeHsvsOutpatientMentalHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hsvs-outpatient-mental-health.jpeg"
 	sourceDef.PatientAccessUrl = "https://hsvsnyc.org/who-we-are/our-divisions/integrated-health-services/"
 	sourceDef.SecretKeyPrefix = "nextgen"

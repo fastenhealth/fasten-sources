@@ -29,6 +29,8 @@ func GetSourceStJudeChildrensResearchHospitalInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "St. Jude Children's Research Hospital, Inc."
 	sourceDef.SourceType = pkg.SourceTypeStJudeChildrensResearchHospitalInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "st-jude-childrens-research-hospital-inc.jpeg"
 	sourceDef.PatientAccessUrl = "https://www.stjude.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

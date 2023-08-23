@@ -28,6 +28,8 @@ func GetSourceFourCornersObgynLlp(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Four Corners ObGyn Llp"
 	sourceDef.SourceType = pkg.SourceTypeFourCornersObgynLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

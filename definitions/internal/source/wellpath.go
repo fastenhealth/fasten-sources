@@ -29,6 +29,8 @@ func GetSourceWellpath(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "WellPath"
 	sourceDef.SourceType = pkg.SourceTypeWellpath
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wellpathcare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

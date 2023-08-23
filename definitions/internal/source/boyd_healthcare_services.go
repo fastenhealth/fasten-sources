@@ -28,6 +28,8 @@ func GetSourceBoydHealthcareServices(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Boyd Healthcare Services"
 	sourceDef.SourceType = pkg.SourceTypeBoydHealthcareServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.boydhcs.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

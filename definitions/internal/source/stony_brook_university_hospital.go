@@ -30,6 +30,7 @@ func GetSourceStonyBrookUniversityHospital(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Stony Brook University Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStonyBrookUniversityHospital
 	sourceDef.Category = []string{"2084N0400X", "282NC0060X", "282NC2000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124224118", "1215181680", "1548517410"}}
 	sourceDef.PatientAccessUrl = "https://www.stonybrookmedicine.edu/"
 	sourceDef.SecretKeyPrefix = "cerner"

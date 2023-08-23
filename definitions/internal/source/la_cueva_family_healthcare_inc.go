@@ -29,6 +29,7 @@ func GetSourceLaCuevaFamilyHealthcareInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "La Cueva Family Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeLaCuevaFamilyHealthcareInc
 	sourceDef.Category = []string{"363LF0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972836419"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

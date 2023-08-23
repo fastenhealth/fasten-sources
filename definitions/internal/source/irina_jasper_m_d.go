@@ -28,6 +28,8 @@ func GetSourceIrinaJasperMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Irina Jasper M D"
 	sourceDef.SourceType = pkg.SourceTypeIrinaJasperMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.doctorjasper.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

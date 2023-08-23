@@ -28,6 +28,8 @@ func GetSourceHunterdonHematologyOncology(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hunterdon Hematology Oncology"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonHematologyOncology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hhocancer.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

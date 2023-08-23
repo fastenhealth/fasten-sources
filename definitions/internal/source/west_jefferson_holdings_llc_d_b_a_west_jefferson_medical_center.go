@@ -29,6 +29,8 @@ func GetSourceWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter(env pkg.Fast
 
 	sourceDef.Display = "West Jefferson Holdings, LLC d/b/a West Jefferson Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWestJeffersonHoldingsLlcDBAWestJeffersonMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/westjeffersonmedicalcenter/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -30,6 +30,7 @@ func GetSourceValleyHeartConsultants(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Valley Heart Consultants"
 	sourceDef.SourceType = pkg.SourceTypeValleyHeartConsultants
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831242015"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/tx-texas/mcallen/valley-heart-consultants-xbly7n"
 	sourceDef.SecretKeyPrefix = "cerner"

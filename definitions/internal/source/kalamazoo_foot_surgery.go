@@ -29,6 +29,8 @@ func GetSourceKalamazooFootSurgery(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Kalamazoo Foot Surgery"
 	sourceDef.SourceType = pkg.SourceTypeKalamazooFootSurgery
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

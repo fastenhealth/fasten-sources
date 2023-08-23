@@ -28,6 +28,8 @@ func GetSourceEyeCarePhysiciansAndSurgeons(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Eye Care Physicians and Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeEyeCarePhysiciansAndSurgeons
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eye-care-physicians-and-surgeons.jpg"
 	sourceDef.PatientAccessUrl = "https://salemeyecare.com/pages/home"
 	sourceDef.SecretKeyPrefix = "nextgen"

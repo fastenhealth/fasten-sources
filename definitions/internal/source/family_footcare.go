@@ -29,6 +29,8 @@ func GetSourceFamilyFootcare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Family Footcare"
 	sourceDef.SourceType = pkg.SourceTypeFamilyFootcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.familyfootcaretn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

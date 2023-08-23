@@ -29,6 +29,8 @@ func GetSourceKeckMedicineOfUsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Keck Medicine of USC"
 	sourceDef.SourceType = pkg.SourceTypeKeckMedicineOfUsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.keckmedicine.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

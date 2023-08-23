@@ -29,6 +29,7 @@ func GetSourceGuillermoValenzuelaMdPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Guillermo Valenzuela MD PA"
 	sourceDef.SourceType = pkg.SourceTypeGuillermoValenzuelaMdPa
 	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740549260"}}
 	sourceDef.PatientAccessUrl = "https://www.valenzuelarheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

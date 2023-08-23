@@ -29,6 +29,8 @@ func GetSourceRBauerVaughtersIiiMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "R Bauer Vaughters III MD"
 	sourceDef.SourceType = pkg.SourceTypeRBauerVaughtersIiiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

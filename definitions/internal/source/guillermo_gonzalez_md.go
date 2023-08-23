@@ -28,6 +28,8 @@ func GetSourceGuillermoGonzalezMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Guillermo Gonzalez Md"
 	sourceDef.SourceType = pkg.SourceTypeGuillermoGonzalezMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://westcountyradiology.com"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

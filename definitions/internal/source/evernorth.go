@@ -29,6 +29,8 @@ func GetSourceEvernorth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Evernorth"
 	sourceDef.SourceType = pkg.SourceTypeEvernorth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.evernorth.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 

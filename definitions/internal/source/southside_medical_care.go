@@ -29,6 +29,7 @@ func GetSourceSouthsideMedicalCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Southside Medical Care"
 	sourceDef.SourceType = pkg.SourceTypeSouthsideMedicalCare
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376752311"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

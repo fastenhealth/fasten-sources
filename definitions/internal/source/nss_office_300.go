@@ -28,6 +28,8 @@ func GetSourceNssOffice300(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Nss Office 300"
 	sourceDef.SourceType = pkg.SourceTypeNssOffice300
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.neurosurg.org/contact-us-neurosurgeon-oklahoma-city-ok/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceFrederickHealthDentalClinic(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Frederick Health Dental Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFrederickHealthDentalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "frederick-health-dental-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/services/dental-clinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"

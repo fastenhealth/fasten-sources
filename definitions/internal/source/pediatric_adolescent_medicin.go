@@ -28,6 +28,8 @@ func GetSourcePediatricAdolescentMedicin(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Pediatric  Adolescent Medicin"
 	sourceDef.SourceType = pkg.SourceTypePediatricAdolescentMedicin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

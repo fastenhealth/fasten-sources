@@ -28,6 +28,8 @@ func GetSourceUtahInterventional(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Utah Interventional"
 	sourceDef.SourceType = pkg.SourceTypeUtahInterventional
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "utah-interventional.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.utah.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"

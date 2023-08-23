@@ -29,6 +29,7 @@ func GetSourceJamesKHesterMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "James K Hester MD PA"
 	sourceDef.SourceType = pkg.SourceTypeJamesKHesterMdPa
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841359932"}}
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1841359932-james-k-hester-md-pa/"
 	sourceDef.SecretKeyPrefix = "nextgen"

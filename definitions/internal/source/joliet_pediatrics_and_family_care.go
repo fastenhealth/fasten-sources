@@ -29,6 +29,8 @@ func GetSourceJolietPediatricsAndFamilyCare(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Joliet Pediatrics and Family Care"
 	sourceDef.SourceType = pkg.SourceTypeJolietPediatricsAndFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-jo-polk-2c6g7"
 	sourceDef.SecretKeyPrefix = "cerner"
 

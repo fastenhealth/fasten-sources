@@ -28,6 +28,8 @@ func GetSourceSouthOfMarketHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "South Of Market Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSouthOfMarketHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://smhcsf.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

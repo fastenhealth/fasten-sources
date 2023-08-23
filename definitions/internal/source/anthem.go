@@ -29,6 +29,8 @@ func GetSourceAnthem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Anthem"
 	sourceDef.SourceType = pkg.SourceTypeAnthem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "anthem"
 
 	return sourceDef, err

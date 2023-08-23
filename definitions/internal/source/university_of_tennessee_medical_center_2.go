@@ -29,6 +29,8 @@ func GetSourceUniversityOfTennesseeMedicalCenter2(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "University of Tennessee Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfTennesseeMedicalCenter2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.utmedicalcenter.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

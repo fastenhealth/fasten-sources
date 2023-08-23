@@ -29,6 +29,8 @@ func GetSourceMentalIllnessRecoveryCenterInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Mental Illness Recovery Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeMentalIllnessRecoveryCenterInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "mental-illness-recovery-center-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.mirci.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

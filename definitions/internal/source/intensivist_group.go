@@ -28,6 +28,8 @@ func GetSourceIntensivistGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Intensivist Group"
 	sourceDef.SourceType = pkg.SourceTypeIntensivistGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

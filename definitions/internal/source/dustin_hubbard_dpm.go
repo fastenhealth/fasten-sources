@@ -29,6 +29,8 @@ func GetSourceDustinHubbardDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dustin Hubbard, DPM"
 	sourceDef.SourceType = pkg.SourceTypeDustinHubbardDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

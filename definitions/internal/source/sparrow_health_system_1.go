@@ -30,6 +30,7 @@ func GetSourceSparrowHealthSystem1(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Sparrow Health System"
 	sourceDef.SourceType = pkg.SourceTypeSparrowHealthSystem1
 	sourceDef.Category = []string{"2084N0400X", "261QP2000X", "261QX0100X", "282NC0060X", "367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114428893", "1225394133", "1568876910", "1588920771", "1780829036", "1801971643"}}
 	sourceDef.BrandLogo = "sparrow-health-system.png"
 	sourceDef.SecretKeyPrefix = "cerner"

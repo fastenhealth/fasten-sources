@@ -29,6 +29,8 @@ func GetSourceTahoeForestHealthSystem(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Tahoe Forest Health System"
 	sourceDef.SourceType = pkg.SourceTypeTahoeForestHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

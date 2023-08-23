@@ -29,6 +29,7 @@ func GetSourceStarCardiologyCarePc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Star Cardiology Care PC"
 	sourceDef.SourceType = pkg.SourceTypeStarCardiologyCarePc
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376023689"}}
 	sourceDef.PatientAccessUrl = "https://www.starcardiologycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

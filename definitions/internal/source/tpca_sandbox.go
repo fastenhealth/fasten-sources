@@ -28,6 +28,8 @@ func GetSourceTpcaSandbox(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "TPCA Sandbox"
 	sourceDef.SourceType = pkg.SourceTypeTpcaSandbox
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.legacyhealth.org/providers/roger-epstein"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

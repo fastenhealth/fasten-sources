@@ -29,6 +29,8 @@ func GetSourceMichiganNeurosurgicalInstitutePC(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Michigan Neurosurgical Institute P C"
 	sourceDef.SourceType = pkg.SourceTypeMichiganNeurosurgicalInstitutePC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

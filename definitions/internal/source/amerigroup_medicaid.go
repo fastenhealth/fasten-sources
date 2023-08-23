@@ -27,6 +27,8 @@ func GetSourceAmerigroupMedicaid(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Amerigroup Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeAmerigroupMedicaid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "amerigroup.png"
 	sourceDef.SecretKeyPrefix = "anthem"
 

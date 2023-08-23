@@ -29,6 +29,8 @@ func GetSourceNorthApolloHealthCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "North Apollo Health Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthApolloHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

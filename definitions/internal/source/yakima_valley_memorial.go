@@ -29,6 +29,8 @@ func GetSourceYakimaValleyMemorial(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Yakima Valley Memorial"
 	sourceDef.SourceType = pkg.SourceTypeYakimaValleyMemorial
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

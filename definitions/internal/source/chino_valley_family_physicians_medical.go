@@ -29,6 +29,8 @@ func GetSourceChinoValleyFamilyPhysiciansMedical(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Chino Valley Family Physicians Medical"
 	sourceDef.SourceType = pkg.SourceTypeChinoValleyFamilyPhysiciansMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

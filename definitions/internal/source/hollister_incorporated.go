@@ -29,6 +29,8 @@ func GetSourceHollisterIncorporated(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Hollister Incorporated"
 	sourceDef.SourceType = pkg.SourceTypeHollisterIncorporated
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hollister-incorporated.jpg"
 	sourceDef.PatientAccessUrl = "https://www.glmvchamber.org/list/member/hollister-incorporated-libertyville-1204"
 	sourceDef.SecretKeyPrefix = "cerner"

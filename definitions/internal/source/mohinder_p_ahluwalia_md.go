@@ -28,6 +28,8 @@ func GetSourceMohinderPAhluwaliaMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Mohinder P. Ahluwalia MD"
 	sourceDef.SourceType = pkg.SourceTypeMohinderPAhluwaliaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "mohinder-p-ahluwalia-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.psjhmedgroups.org/Find-a-Doctor/A/Mohinder-Paul-Singh-Ahluwalia-MD.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceDanburyEyePhysicians(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Danbury Eye Physicians"
 	sourceDef.SourceType = pkg.SourceTypeDanburyEyePhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.danburyeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

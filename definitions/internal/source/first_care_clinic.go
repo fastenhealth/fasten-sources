@@ -28,6 +28,8 @@ func GetSourceFirstCareClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "First Care Clinic"
 	sourceDef.SourceType = pkg.SourceTypeFirstCareClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "first-care-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://firstcareclinics.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

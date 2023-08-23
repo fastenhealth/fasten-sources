@@ -28,6 +28,8 @@ func GetSourceNephrologyAndEndocrineAssociates(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Nephrology and Endocrine Associates"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAndEndocrineAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.dnb.com/business-directory/company-profiles.nephrology__endocrine_associates_inc.d7d7d2ad409df051098fbab96f10d533.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

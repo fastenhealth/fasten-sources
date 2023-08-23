@@ -28,6 +28,8 @@ func GetSourceWinchesterUrology(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Winchester Urology"
 	sourceDef.SourceType = pkg.SourceTypeWinchesterUrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

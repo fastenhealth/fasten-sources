@@ -30,6 +30,7 @@ func GetSourceIntegrisHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Integris Health"
 	sourceDef.SourceType = pkg.SourceTypeIntegrisHealth1
 	sourceDef.Category = []string{"261QR0401X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083065452"}}
 	sourceDef.BrandLogo = "integris-health.png"
 	sourceDef.PatientAccessUrl = "https://integrisok.com/"

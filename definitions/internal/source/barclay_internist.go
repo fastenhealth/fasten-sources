@@ -29,6 +29,8 @@ func GetSourceBarclayInternist(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Barclay Internist"
 	sourceDef.SourceType = pkg.SourceTypeBarclayInternist
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://barclayinternists.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

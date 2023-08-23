@@ -28,6 +28,8 @@ func GetSourceCaprockCardiovascularCenterLlp(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Caprock Cardiovascular Center LLP"
 	sourceDef.SourceType = pkg.SourceTypeCaprockCardiovascularCenterLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://caprockcardio.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceOliverStreetDermatologyAscLlc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Oliver Street Dermatology ASC LLC"
 	sourceDef.SourceType = pkg.SourceTypeOliverStreetDermatologyAscLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

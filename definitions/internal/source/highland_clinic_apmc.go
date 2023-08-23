@@ -28,6 +28,8 @@ func GetSourceHighlandClinicApmc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Highland Clinic APMC"
 	sourceDef.SourceType = pkg.SourceTypeHighlandClinicApmc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "highland-clinic-pharmacy-llc.png"
 	sourceDef.PatientAccessUrl = "https://www.highlandclinic.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceBlueMountainHealthSystem(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Blue Mountain Health System"
 	sourceDef.SourceType = pkg.SourceTypeBlueMountainHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

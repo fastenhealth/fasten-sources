@@ -28,6 +28,8 @@ func GetSourceNativeAmericanCommunityHealthCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Native American Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeNativeAmericanCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nativehealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

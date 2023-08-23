@@ -28,6 +28,8 @@ func GetSourceNewFoundationMedicalGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "New Foundation Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeNewFoundationMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nfmginc.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

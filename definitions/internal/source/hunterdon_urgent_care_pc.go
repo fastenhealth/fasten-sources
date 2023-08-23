@@ -29,6 +29,7 @@ func GetSourceHunterdonUrgentCarePc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Hunterdon Urgent Care PC"
 	sourceDef.SourceType = pkg.SourceTypeHunterdonUrgentCarePc
 	sourceDef.Category = []string{"261QU0200X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154791796", "1578910428"}}
 	sourceDef.BrandLogo = "hunterdon-behavioral-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/services/emergency-care/urgent-care"

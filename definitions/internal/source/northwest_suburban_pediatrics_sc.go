@@ -29,6 +29,8 @@ func GetSourceNorthwestSuburbanPediatricsSc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Northwest Suburban Pediatrics SC"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestSuburbanPediatricsSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

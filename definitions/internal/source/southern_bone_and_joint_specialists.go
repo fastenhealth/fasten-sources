@@ -28,6 +28,8 @@ func GetSourceSouthernBoneAndJointSpecialists(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Southern Bone And Joint Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSouthernBoneAndJointSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/Southern-Bone-and-Joint-Specialists-PA-434861635219/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

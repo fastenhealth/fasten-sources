@@ -28,6 +28,8 @@ func GetSourceSlocumAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Slocum ASC"
 	sourceDef.SourceType = pkg.SourceTypeSlocumAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.slocumcenter.com/services/slocum-surgery-center"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

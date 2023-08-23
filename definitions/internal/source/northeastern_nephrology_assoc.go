@@ -28,6 +28,8 @@ func GetSourceNortheasternNephrologyAssoc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Northeastern Nephrology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeNortheasternNephrologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

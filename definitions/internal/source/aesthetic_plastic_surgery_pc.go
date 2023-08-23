@@ -29,6 +29,7 @@ func GetSourceAestheticPlasticSurgeryPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Aesthetic Plastic Surgery, PC"
 	sourceDef.SourceType = pkg.SourceTypeAestheticPlasticSurgeryPc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"NYBRA Plastic Surgery"}
 	sourceDef.BrandLogo = "aesthetic-plastic-surgery-pc.svg"
 	sourceDef.PatientAccessUrl = "https://www.springer.com/journal/266"

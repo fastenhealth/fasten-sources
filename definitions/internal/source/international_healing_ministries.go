@@ -29,6 +29,7 @@ func GetSourceInternationalHealingMinistries(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "International Healing Ministries"
 	sourceDef.SourceType = pkg.SourceTypeInternationalHealingMinistries
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144272279"}}
 	sourceDef.PatientAccessUrl = "https://deonhockeyonline.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

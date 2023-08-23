@@ -30,6 +30,7 @@ func GetSourceEinsteinHealthcareNetwork(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Einstein Healthcare Network"
 	sourceDef.SourceType = pkg.SourceTypeEinsteinHealthcareNetwork
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174962740", "1366813719"}}
 	sourceDef.PatientAccessUrl = "https://www.einstein.edu/einstein-medical-center-philadelphia"
 	sourceDef.SecretKeyPrefix = "cerner"

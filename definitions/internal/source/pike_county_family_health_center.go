@@ -28,6 +28,8 @@ func GetSourcePikeCountyFamilyHealthCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Pike County Family Health Center"
 	sourceDef.SourceType = pkg.SourceTypePikeCountyFamilyHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

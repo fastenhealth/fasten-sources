@@ -28,6 +28,8 @@ func GetSourceBchcFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "BCHC Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeBchcFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

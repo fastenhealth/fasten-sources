@@ -28,6 +28,8 @@ func GetSourceCenterForInfections(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "CENTER FOR INFECTIONS"
 	sourceDef.SourceType = pkg.SourceTypeCenterForInfections
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

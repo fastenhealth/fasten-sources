@@ -28,6 +28,8 @@ func GetSourceHoagClinicGoa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Hoag Clinic GOA"
 	sourceDef.SourceType = pkg.SourceTypeHoagClinicGoa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hoag-memorial-hospital-presbyterian.png"
 	sourceDef.PatientAccessUrl = "https://gynoncology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

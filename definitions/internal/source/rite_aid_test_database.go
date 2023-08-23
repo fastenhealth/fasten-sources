@@ -29,6 +29,8 @@ func GetSourceRiteAidTestDatabase(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Rite Aid Test Database"
 	sourceDef.SourceType = pkg.SourceTypeRiteAidTestDatabase
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

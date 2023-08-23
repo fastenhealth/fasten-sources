@@ -28,6 +28,8 @@ func GetSourceMissouriVeinCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Missouri Vein Care"
 	sourceDef.SourceType = pkg.SourceTypeMissouriVeinCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

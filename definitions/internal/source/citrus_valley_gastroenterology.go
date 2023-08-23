@@ -28,6 +28,8 @@ func GetSourceCitrusValleyGastroenterology(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Citrus Valley Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeCitrusValleyGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.cvgastro.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

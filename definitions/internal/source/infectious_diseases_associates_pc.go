@@ -29,6 +29,8 @@ func GetSourceInfectiousDiseasesAssociatesPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Infectious Diseases Associates, PC"
 	sourceDef.SourceType = pkg.SourceTypeInfectiousDiseasesAssociatesPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.idmidwest.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

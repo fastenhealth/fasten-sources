@@ -28,6 +28,8 @@ func GetSourceNeurologySpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Neurology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeNeurologySpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceLakeCountyHealthDepartmentChc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Lake County Health Department/CHC"
 	sourceDef.SourceType = pkg.SourceTypeLakeCountyHealthDepartmentChc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.lakecountyil.gov/148/Health-Department-Community-Health-Cente"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

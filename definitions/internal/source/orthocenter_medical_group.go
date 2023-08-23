@@ -28,6 +28,8 @@ func GetSourceOrthocenterMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Orthocenter Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeOrthocenterMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vitals.com/practice/orthocentermedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

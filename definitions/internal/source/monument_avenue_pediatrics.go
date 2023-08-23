@@ -30,6 +30,7 @@ func GetSourceMonumentAvenuePediatrics(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Monument Avenue Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeMonumentAvenuePediatrics
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831286996"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

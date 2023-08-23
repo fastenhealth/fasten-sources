@@ -29,6 +29,7 @@ func GetSourceNeuromicrospine(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "NeuroMicroSpine"
 	sourceDef.SourceType = pkg.SourceTypeNeuromicrospine
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194143685"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

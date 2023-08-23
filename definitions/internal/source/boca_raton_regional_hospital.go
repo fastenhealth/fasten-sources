@@ -30,6 +30,7 @@ func GetSourceBocaRatonRegionalHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Boca Raton Regional Hospital"
 	sourceDef.SourceType = pkg.SourceTypeBocaRatonRegionalHospital
 	sourceDef.Category = []string{"207RH0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477709244"}}
 	sourceDef.PatientAccessUrl = "https://www.brrh.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

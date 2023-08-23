@@ -28,6 +28,8 @@ func GetSourceSalemSleepMedicinePc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Salem Sleep Medicine PC"
 	sourceDef.SourceType = pkg.SourceTypeSalemSleepMedicinePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.salemsleepmedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

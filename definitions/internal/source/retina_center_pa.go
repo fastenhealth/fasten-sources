@@ -29,6 +29,8 @@ func GetSourceRetinaCenterPa(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Retina Center, PA"
 	sourceDef.SourceType = pkg.SourceTypeRetinaCenterPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/retina-center-of-minnesota-fbb81dc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

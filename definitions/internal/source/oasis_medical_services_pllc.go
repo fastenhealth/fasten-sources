@@ -29,6 +29,7 @@ func GetSourceOasisMedicalServicesPllc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Oasis Medical Services PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOasisMedicalServicesPllc
 	sourceDef.Category = []string{"207XS0117X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164013744"}}
 	sourceDef.BrandLogo = "oasis-medical-services-pllc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"

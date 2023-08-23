@@ -29,6 +29,8 @@ func GetSourceEyeCareOfSanDiego(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Eye Care of San Diego"
 	sourceDef.SourceType = pkg.SourceTypeEyeCareOfSanDiego
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

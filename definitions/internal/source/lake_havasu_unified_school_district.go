@@ -29,6 +29,8 @@ func GetSourceLakeHavasuUnifiedSchoolDistrict(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Lake Havasu Unified School District"
 	sourceDef.SourceType = pkg.SourceTypeLakeHavasuUnifiedSchoolDistrict
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.havasu.k12.az.us/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceBirminghamAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Birmingham ASC"
 	sourceDef.SourceType = pkg.SourceTypeBirminghamAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

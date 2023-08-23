@@ -28,6 +28,8 @@ func GetSourceFqhcOfLaneCounty(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "FQHC of Lane County"
 	sourceDef.SourceType = pkg.SourceTypeFqhcOfLaneCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.lanecounty.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

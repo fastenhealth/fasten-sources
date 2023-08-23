@@ -29,6 +29,8 @@ func GetSourceHackensackMeridianHealth1(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Hackensack Meridian Health"
 	sourceDef.SourceType = pkg.SourceTypeHackensackMeridianHealth1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hackensack-meridian-health.png"
 	sourceDef.SecretKeyPrefix = "epic"
 

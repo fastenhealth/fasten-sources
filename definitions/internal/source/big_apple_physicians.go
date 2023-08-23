@@ -28,6 +28,8 @@ func GetSourceBigApplePhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Big Apple Physicians"
 	sourceDef.SourceType = pkg.SourceTypeBigApplePhysicians
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

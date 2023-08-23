@@ -28,6 +28,8 @@ func GetSourceMinnesotaEndoscopyCenterLlc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Minnesota Endoscopy Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeMinnesotaEndoscopyCenterLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceMedstarHealthHostedEnvironment(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "MedStar Health Hosted Environment"
 	sourceDef.SourceType = pkg.SourceTypeMedstarHealthHostedEnvironment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "medstar-health-hosted-environment.svg"
 	sourceDef.PatientAccessUrl = "https://www.medstarhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

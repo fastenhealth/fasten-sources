@@ -28,6 +28,8 @@ func GetSourceFamilyPlanning(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Family Planning"
 	sourceDef.SourceType = pkg.SourceTypeFamilyPlanning
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "family-planning.jpg"
 	sourceDef.PatientAccessUrl = "https://hesperian.org/books-and-resources/our-mobile-applications/family-planning/?gclid=EAIaIQobChMI7teos8jQ_QIVWwutBh1M-g5KEAAYASAAEgL64PD_BwE"
 	sourceDef.SecretKeyPrefix = "nextgen"

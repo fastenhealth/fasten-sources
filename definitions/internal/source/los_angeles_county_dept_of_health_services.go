@@ -29,6 +29,8 @@ func GetSourceLosAngelesCountyDeptOfHealthServices(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Los Angeles County - Dept. of Health Services"
 	sourceDef.SourceType = pkg.SourceTypeLosAngelesCountyDeptOfHealthServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "los-angeles-county-dept-of-health-services.svg"
 	sourceDef.PatientAccessUrl = "https://dhs.lacounty.gov/"
 	sourceDef.SecretKeyPrefix = "cerner"

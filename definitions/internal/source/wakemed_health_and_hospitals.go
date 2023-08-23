@@ -29,6 +29,8 @@ func GetSourceWakemedHealthAndHospitals(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "WakeMed Health and Hospitals"
 	sourceDef.SourceType = pkg.SourceTypeWakemedHealthAndHospitals
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

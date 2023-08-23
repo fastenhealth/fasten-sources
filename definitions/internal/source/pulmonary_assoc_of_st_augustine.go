@@ -29,6 +29,8 @@ func GetSourcePulmonaryAssocOfStAugustine(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pulmonary Assoc Of St Augustine"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryAssocOfStAugustine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

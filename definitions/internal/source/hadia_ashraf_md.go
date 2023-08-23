@@ -28,6 +28,8 @@ func GetSourceHadiaAshrafMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Hadia Ashraf MD"
 	sourceDef.SourceType = pkg.SourceTypeHadiaAshrafMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://drashraf.health/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceSpokanePsychologyAndNeuropsychology(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Spokane Psychology And Neuropsychology"
 	sourceDef.SourceType = pkg.SourceTypeSpokanePsychologyAndNeuropsychology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.spokanepsychologyandneuropsychology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

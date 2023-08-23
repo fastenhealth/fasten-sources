@@ -29,6 +29,8 @@ func GetSourceCarenetMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Carenet Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeCarenetMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

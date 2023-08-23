@@ -28,6 +28,8 @@ func GetSourceCPSammaroneJrDOInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "C.P. Sammarone Jr. D.O. Inc."
 	sourceDef.SourceType = pkg.SourceTypeCPSammaroneJrDOInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

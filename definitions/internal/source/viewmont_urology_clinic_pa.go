@@ -28,6 +28,8 @@ func GetSourceViewmontUrologyClinicPa(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Viewmont Urology Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeViewmontUrologyClinicPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "viewmont-urology-clinic-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/viewmonturology/"
 	sourceDef.SecretKeyPrefix = "nextgen"

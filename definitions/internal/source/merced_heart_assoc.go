@@ -29,6 +29,8 @@ func GetSourceMercedHeartAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Merced Heart Assoc"
 	sourceDef.SourceType = pkg.SourceTypeMercedHeartAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

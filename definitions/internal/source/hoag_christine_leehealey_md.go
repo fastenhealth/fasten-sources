@@ -28,6 +28,8 @@ func GetSourceHoagChristineLeehealeyMd(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Hoag Christine Leehealey Md"
 	sourceDef.SourceType = pkg.SourceTypeHoagChristineLeehealeyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hoag-memorial-hospital-presbyterian.png"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

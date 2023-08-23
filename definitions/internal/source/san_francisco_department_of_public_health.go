@@ -30,6 +30,7 @@ func GetSourceSanFranciscoDepartmentOfPublicHealth(env pkg.FastenLighthouseEnvTy
 	sourceDef.Display = "San Francisco Department of Public Health"
 	sourceDef.SourceType = pkg.SourceTypeSanFranciscoDepartmentOfPublicHealth
 	sourceDef.Category = []string{"101YM0800X", "1041C0700X", "174400000X", "261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013076843", "1023171097", "1437571528", "1720443369"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

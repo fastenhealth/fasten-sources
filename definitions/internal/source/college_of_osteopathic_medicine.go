@@ -28,6 +28,8 @@ func GetSourceCollegeOfOsteopathicMedicine(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "College of Osteopathic Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCollegeOfOsteopathicMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

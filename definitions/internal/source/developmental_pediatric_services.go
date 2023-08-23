@@ -28,6 +28,8 @@ func GetSourceDevelopmentalPediatricServices(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Developmental Pediatric Services"
 	sourceDef.SourceType = pkg.SourceTypeDevelopmentalPediatricServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "developmental-pediatric-services.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

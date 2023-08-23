@@ -28,6 +28,8 @@ func GetSourceFvcBeverly(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "FVC Beverly"
 	sourceDef.SourceType = pkg.SourceTypeFvcBeverly
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "fvc-beverly.svg"
 	sourceDef.PatientAccessUrl = "https://www.northshorephysicians.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

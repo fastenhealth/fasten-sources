@@ -28,6 +28,8 @@ func GetSourceCedarSurgical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cedar Surgical"
 	sourceDef.SourceType = pkg.SourceTypeCedarSurgical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cedars-sinai.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

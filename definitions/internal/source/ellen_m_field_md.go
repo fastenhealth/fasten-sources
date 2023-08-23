@@ -28,6 +28,8 @@ func GetSourceEllenMFieldMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Ellen M Field MD"
 	sourceDef.SourceType = pkg.SourceTypeEllenMFieldMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ellen-m-field-md.jpg"
 	sourceDef.PatientAccessUrl = "https://findadoctor.slhn.org/details/1227"
 	sourceDef.SecretKeyPrefix = "nextgen"

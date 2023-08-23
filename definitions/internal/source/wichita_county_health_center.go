@@ -30,6 +30,7 @@ func GetSourceWichitaCountyHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Wichita County Health Center"
 	sourceDef.SourceType = pkg.SourceTypeWichitaCountyHealthCenter
 	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282N00000X", "282NC0060X", "313M00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184615338", "1316937428", "1497746820", "1629069844", "1740271295"}}
 	sourceDef.PatientAccessUrl = "https://www.wichitacountyhealthcenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

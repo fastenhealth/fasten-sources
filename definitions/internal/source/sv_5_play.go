@@ -28,6 +28,8 @@ func GetSourceSv5Play(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "SV5Play"
 	sourceDef.SourceType = pkg.SourceTypeSv5Play
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

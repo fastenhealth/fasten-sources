@@ -28,6 +28,8 @@ func GetSourceLoudonvilleFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Loudonville Family Health"
 	sourceDef.SourceType = pkg.SourceTypeLoudonvilleFamilyHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/?o=AHN:NPS:OC_9.1_2020:YEXT:OC:GEN:2046CAD3:n_a:n_a:n_a:n_a:n_a"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

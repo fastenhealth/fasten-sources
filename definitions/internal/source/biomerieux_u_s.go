@@ -29,6 +29,8 @@ func GetSourceBiomerieuxUS(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "BioMerieux- U.S."
 	sourceDef.SourceType = pkg.SourceTypeBiomerieuxUS
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.biomerieux-usa.com/durham-nc"
 	sourceDef.SecretKeyPrefix = "cerner"
 

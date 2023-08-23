@@ -30,6 +30,7 @@ func GetSourceHumaneCenterForArthritisAndRheumatism(env pkg.FastenLighthouseEnvT
 	sourceDef.Display = "Humane Center for Arthritis and Rheumatism"
 	sourceDef.SourceType = pkg.SourceTypeHumaneCenterForArthritisAndRheumatism
 	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982009551"}}
 	sourceDef.PatientAccessUrl = "http://www.humanecenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

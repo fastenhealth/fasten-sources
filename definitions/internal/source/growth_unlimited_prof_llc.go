@@ -28,6 +28,8 @@ func GetSourceGrowthUnlimitedProfLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Growth Unlimited Prof LLC"
 	sourceDef.SourceType = pkg.SourceTypeGrowthUnlimitedProfLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1194055186"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

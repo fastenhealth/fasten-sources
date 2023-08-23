@@ -28,6 +28,8 @@ func GetSourceSchuylkillEndoscopyCenterAnes(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Schuylkill Endoscopy Center Anes"
 	sourceDef.SourceType = pkg.SourceTypeSchuylkillEndoscopyCenterAnes
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

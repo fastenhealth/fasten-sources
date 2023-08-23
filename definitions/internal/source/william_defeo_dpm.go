@@ -29,6 +29,8 @@ func GetSourceWilliamDefeoDpm(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "William Defeo, DPM"
 	sourceDef.SourceType = pkg.SourceTypeWilliamDefeoDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

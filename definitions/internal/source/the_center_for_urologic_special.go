@@ -29,6 +29,8 @@ func GetSourceTheCenterForUrologicSpecial(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "The Center For Urologic Special"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForUrologicSpecial
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

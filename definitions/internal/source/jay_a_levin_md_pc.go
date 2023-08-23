@@ -29,6 +29,8 @@ func GetSourceJayALevinMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Jay A. Levin, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeJayALevinMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://atlantaskinandaesthetics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

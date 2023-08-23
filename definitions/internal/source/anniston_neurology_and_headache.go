@@ -29,6 +29,8 @@ func GetSourceAnnistonNeurologyAndHeadache(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Anniston Neurology & Headache"
 	sourceDef.SourceType = pkg.SourceTypeAnnistonNeurologyAndHeadache
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/anniston/anniston-neurology-x3srmj"
 	sourceDef.SecretKeyPrefix = "cerner"
 

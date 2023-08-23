@@ -29,6 +29,7 @@ func GetSourceCarolinaKidneyAssociates(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Carolina Kidney Associates"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaKidneyAssociates
 	sourceDef.Category = []string{"207RN0300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053367086"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

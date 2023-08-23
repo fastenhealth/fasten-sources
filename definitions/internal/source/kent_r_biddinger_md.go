@@ -28,6 +28,8 @@ func GetSourceKentRBiddingerMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Kent R Biddinger MD"
 	sourceDef.SourceType = pkg.SourceTypeKentRBiddingerMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

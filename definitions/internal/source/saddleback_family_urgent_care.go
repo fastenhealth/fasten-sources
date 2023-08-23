@@ -28,6 +28,8 @@ func GetSourceSaddlebackFamilyUrgentCare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Saddleback Family Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeSaddlebackFamilyUrgentCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "saddleback-family-urgent-care.svg"
 	sourceDef.PatientAccessUrl = "https://saddlebackurgentcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

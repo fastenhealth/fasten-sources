@@ -28,6 +28,8 @@ func GetSourceAccessMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Access Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeAccessMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "access-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://nextcare.com/brand/access-medical-care/"
 	sourceDef.SecretKeyPrefix = "nextgen"

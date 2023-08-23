@@ -29,6 +29,7 @@ func GetSourceGreenvilleRancheria(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Greenville Rancheria"
 	sourceDef.SourceType = pkg.SourceTypeGreenvilleRancheria
 	sourceDef.Category = []string{"122300000X", "1223G0001X", "261QC1500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164780573", "1194340794", "1326031881", "1568455053"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

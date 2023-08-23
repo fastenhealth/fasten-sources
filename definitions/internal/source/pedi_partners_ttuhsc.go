@@ -28,6 +28,8 @@ func GetSourcePediPartnersTtuhsc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Pedi Partners TTUHSC"
 	sourceDef.SourceType = pkg.SourceTypePediPartnersTtuhsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.texastechphysicians.com/amarillo/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

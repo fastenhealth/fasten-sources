@@ -28,6 +28,8 @@ func GetSourceBorlandGroover(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Borland Groover"
 	sourceDef.SourceType = pkg.SourceTypeBorlandGroover
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "borland-groover.svg"
 	sourceDef.PatientAccessUrl = "https://borlandgroover.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

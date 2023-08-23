@@ -28,6 +28,8 @@ func GetSourcePremierHealthCtrInternalMedicine(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Premier Health Ctr  Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypePremierHealthCtrInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceTampaEyeClinicAndAssociatesPa(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Tampa Eye Clinic And Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeTampaEyeClinicAndAssociatesPa
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013937861"}}
 	sourceDef.PatientAccessUrl = "https://www.tampaeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

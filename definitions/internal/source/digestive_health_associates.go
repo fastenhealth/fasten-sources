@@ -29,6 +29,7 @@ func GetSourceDigestiveHealthAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Digestive Health Associates"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthAssociates
 	sourceDef.Category = []string{"207RG0100X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225104011"}}
 	sourceDef.PatientAccessUrl = "https://www.medfusion.net/digestivehealthassociates-26842/portal/#/user/login"
 	sourceDef.SecretKeyPrefix = "nextgen"

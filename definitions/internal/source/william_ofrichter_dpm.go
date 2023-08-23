@@ -29,6 +29,8 @@ func GetSourceWilliamOfrichterDpm(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "William Ofrichter, DPM"
 	sourceDef.SourceType = pkg.SourceTypeWilliamOfrichterDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-william-ofrichter-2kmwb"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceNorthwestRheumatologySpecialistSc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Northwest Rheumatology Specialist SC"
 	sourceDef.SourceType = pkg.SourceTypeNorthwestRheumatologySpecialistSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nwrheum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

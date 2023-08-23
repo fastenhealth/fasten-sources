@@ -29,6 +29,7 @@ func GetSourceHealthpoint(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Display = "HealthPoint"
 	sourceDef.SourceType = pkg.SourceTypeHealthpoint
 	sourceDef.Category = []string{"1223G0001X", "261QF0400X", "3336C0002X", "3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104819788", "1124482310", "1174888119", "1255795373", "1477807261", "1730172420", "1780026880", "1811239544", "1922351527", "1972845691"}}
 	sourceDef.BrandLogo = "healthpoint.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthpointchc.org/"

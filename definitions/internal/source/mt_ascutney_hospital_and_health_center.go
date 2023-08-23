@@ -29,6 +29,8 @@ func GetSourceMtAscutneyHospitalAndHealthCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Mt. Ascutney Hospital & Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMtAscutneyHospitalAndHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "mt-ascutney-hospital-and-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mtascutneyhospital.org/health-services/primary-care-provider-practice"
 	sourceDef.SecretKeyPrefix = "cerner"

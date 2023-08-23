@@ -29,6 +29,8 @@ func GetSourceTheStevenACohenMilitaryFamilyClinicAtEasterseals(env pkg.FastenLig
 
 	sourceDef.Display = "The Steven A. Cohen Military Family Clinic At Easterseals"
 	sourceDef.SourceType = pkg.SourceTypeTheStevenACohenMilitaryFamilyClinicAtEasterseals
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.easterseals.com/DCMDVA/programs-and-services/cvn-home.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

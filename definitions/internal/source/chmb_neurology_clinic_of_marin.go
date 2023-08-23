@@ -29,6 +29,8 @@ func GetSourceChmbNeurologyClinicOfMarin(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "CHMB Neurology Clinic of Marin"
 	sourceDef.SourceType = pkg.SourceTypeChmbNeurologyClinicOfMarin
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.neurologymarin.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

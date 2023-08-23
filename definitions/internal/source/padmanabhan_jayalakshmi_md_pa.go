@@ -29,6 +29,8 @@ func GetSourcePadmanabhanJayalakshmiMdPa(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Padmanabhan, Jayalakshmi MD, PA"
 	sourceDef.SourceType = pkg.SourceTypePadmanabhanJayalakshmiMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-jayalakshmi-padmanabhan-22gbk"
 	sourceDef.SecretKeyPrefix = "cerner"
 

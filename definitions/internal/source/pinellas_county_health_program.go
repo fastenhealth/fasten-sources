@@ -28,6 +28,8 @@ func GetSourcePinellasCountyHealthProgram(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Pinellas County Health Program"
 	sourceDef.SourceType = pkg.SourceTypePinellasCountyHealthProgram
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://pinellas.gov/programs/health-care-for-the-homeless-program/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

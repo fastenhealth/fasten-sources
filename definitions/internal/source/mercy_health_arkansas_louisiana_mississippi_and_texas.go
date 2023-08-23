@@ -29,6 +29,8 @@ func GetSourceMercyHealthArkansasLouisianaMississippiAndTexas(env pkg.FastenLigh
 
 	sourceDef.Display = "Mercy Health (Arkansas, Louisiana, Mississippi and Texas)"
 	sourceDef.SourceType = pkg.SourceTypeMercyHealthArkansasLouisianaMississippiAndTexas
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

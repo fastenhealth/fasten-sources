@@ -28,6 +28,8 @@ func GetSourceNoColoradoHospitalists(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "No Colorado Hospitalists"
 	sourceDef.SourceType = pkg.SourceTypeNoColoradoHospitalists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "no-colorado-hospitalists.svg"
 	sourceDef.PatientAccessUrl = "https://www.northerncoloradohospitalists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

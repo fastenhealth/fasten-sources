@@ -28,6 +28,8 @@ func GetSourceFoothillsHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Foothills Health And Wellness Center"
 	sourceDef.SourceType = pkg.SourceTypeFoothillsHealthAndWellnessCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/foothills-health-and-wellness-center-6dc02dd2-865d-e511-a966-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

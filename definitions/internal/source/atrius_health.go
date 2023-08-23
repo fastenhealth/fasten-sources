@@ -29,6 +29,8 @@ func GetSourceAtriusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Atrius Health"
 	sourceDef.SourceType = pkg.SourceTypeAtriusHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

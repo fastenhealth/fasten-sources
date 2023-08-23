@@ -28,6 +28,8 @@ func GetSourceMyKidsDoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "My Kids Doc"
 	sourceDef.SourceType = pkg.SourceTypeMyKidsDoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

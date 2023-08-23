@@ -30,6 +30,7 @@ func GetSourceSansumClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Sansum Clinic"
 	sourceDef.SourceType = pkg.SourceTypeSansumClinic
 	sourceDef.Category = []string{"261QA1903X", "261QM1300X", "291U00000X", "332B00000X", "333600000X", "3336C0003X", "3336C0004X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144648015", "1154354504", "1376645788", "1376655290", "1518983782", "1649296807", "1932121514"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

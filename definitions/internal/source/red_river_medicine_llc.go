@@ -28,6 +28,8 @@ func GetSourceRedRiverMedicineLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Red River Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeRedRiverMedicineLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

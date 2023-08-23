@@ -29,6 +29,7 @@ func GetSourceChildrenFirstPediatrics(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Children First Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeChildrenFirstPediatrics
 	sourceDef.Category = []string{"1041C0700X", "208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144739178", "1831131556"}}
 	sourceDef.PatientAccessUrl = "https://pediatrichealthnetwork.org"
 	sourceDef.SecretKeyPrefix = "allscripts"

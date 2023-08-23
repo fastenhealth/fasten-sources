@@ -30,6 +30,7 @@ func GetSourceNeurologyLlp(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Display = "Neurology LLP"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyLlp
 	sourceDef.Category = []string{"2084N0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275580094"}}
 	sourceDef.BrandLogo = "neurology-llp.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"

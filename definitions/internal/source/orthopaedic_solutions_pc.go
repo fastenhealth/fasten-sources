@@ -28,6 +28,8 @@ func GetSourceOrthopaedicSolutionsPc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Orthopaedic Solutions PC"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicSolutionsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

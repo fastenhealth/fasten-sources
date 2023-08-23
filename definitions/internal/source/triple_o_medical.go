@@ -28,6 +28,8 @@ func GetSourceTripleOMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Triple O Medical"
 	sourceDef.SourceType = pkg.SourceTypeTripleOMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

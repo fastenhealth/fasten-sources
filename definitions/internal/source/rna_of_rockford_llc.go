@@ -28,6 +28,8 @@ func GetSourceRnaOfRockfordLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "RNA of Rockford LLC"
 	sourceDef.SourceType = pkg.SourceTypeRnaOfRockfordLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rockfordnephrology.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

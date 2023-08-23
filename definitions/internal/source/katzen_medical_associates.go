@@ -28,6 +28,8 @@ func GetSourceKatzenMedicalAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Katzen Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeKatzenMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.katzeneye.com/wp-content/themes/glacial/images/katzen_logo.png"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

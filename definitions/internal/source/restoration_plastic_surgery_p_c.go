@@ -28,6 +28,8 @@ func GetSourceRestorationPlasticSurgeryPC(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Restoration Plastic Surgery P.C."
 	sourceDef.SourceType = pkg.SourceTypeRestorationPlasticSurgeryPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.restorationplasticsurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

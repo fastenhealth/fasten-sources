@@ -28,6 +28,8 @@ func GetSourceMulticareObhSpokane(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Multicare OBH Spokane"
 	sourceDef.SourceType = pkg.SourceTypeMulticareObhSpokane
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.multicare.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

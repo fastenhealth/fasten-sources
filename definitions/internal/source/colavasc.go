@@ -28,6 +28,8 @@ func GetSourceColavasc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Colavasc"
 	sourceDef.SourceType = pkg.SourceTypeColavasc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

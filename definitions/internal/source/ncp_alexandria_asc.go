@@ -28,6 +28,8 @@ func GetSourceNcpAlexandriaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NCP Alexandria ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpAlexandriaAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://r.search.yahoo.com/_ylt=Awrhew9gRQtkGloMgQ8PxQt.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1678489057/RO=10/RU=https%3a%2f%2fwww.fairfieldfamilyclinic.org%2f/RK=2/RS=zZmtLxWU2cPrkxU.6W9MAdrTlnI-"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

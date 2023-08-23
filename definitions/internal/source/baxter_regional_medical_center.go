@@ -30,6 +30,7 @@ func GetSourceBaxterRegionalMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Baxter Regional Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBaxterRegionalMedicalCenter
 	sourceDef.Category = []string{"3336I0012X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164770293"}}
 	sourceDef.PatientAccessUrl = "https://www.baxterregional.org/locations/baxter-regional-medical-center/"
 	sourceDef.SecretKeyPrefix = "cerner"

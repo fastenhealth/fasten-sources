@@ -29,6 +29,8 @@ func GetSourceLongIslandSurgeryPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Long Island Surgery, PC"
 	sourceDef.SourceType = pkg.SourceTypeLongIslandSurgeryPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://longislandsurgery.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

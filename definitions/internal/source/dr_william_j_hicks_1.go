@@ -29,6 +29,8 @@ func GetSourceDrWilliamJHicks1(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Dr. William J Hicks"
 	sourceDef.SourceType = pkg.SourceTypeDrWilliamJHicks1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-william-j-hicks.png"
 	sourceDef.PatientAccessUrl = "https://www.huntsvillehospital.org/component/physicianfinder/?view=profile&id=C3S90RJOLI"
 	sourceDef.SecretKeyPrefix = "cerner"

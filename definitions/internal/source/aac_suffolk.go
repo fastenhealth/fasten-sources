@@ -28,6 +28,8 @@ func GetSourceAacSuffolk(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "AAC Suffolk"
 	sourceDef.SourceType = pkg.SourceTypeAacSuffolk
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/american-access-care-suffolk-county/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

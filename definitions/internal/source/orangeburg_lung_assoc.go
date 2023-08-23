@@ -28,6 +28,8 @@ func GetSourceOrangeburgLungAssoc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Orangeburg Lung Assoc"
 	sourceDef.SourceType = pkg.SourceTypeOrangeburgLungAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

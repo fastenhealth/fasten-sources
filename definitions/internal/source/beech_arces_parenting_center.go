@@ -28,6 +28,8 @@ func GetSourceBeechArcesParentingCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Beech Arces Parenting Center"
 	sourceDef.SourceType = pkg.SourceTypeBeechArcesParentingCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceFdlDermatology(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "FDL Dermatology"
 	sourceDef.SourceType = pkg.SourceTypeFdlDermatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

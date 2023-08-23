@@ -28,6 +28,8 @@ func GetSourceRegionalCardiacArrhythmia(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Regional Cardiac Arrhythmia"
 	sourceDef.SourceType = pkg.SourceTypeRegionalCardiacArrhythmia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

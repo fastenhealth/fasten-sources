@@ -29,6 +29,7 @@ func GetSourceRoanokeHeartInstitutePlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Roanoke Heart Institute PLC"
 	sourceDef.SourceType = pkg.SourceTypeRoanokeHeartInstitutePlc
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629119656"}}
 	sourceDef.PatientAccessUrl = "https://roanoke-heart.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

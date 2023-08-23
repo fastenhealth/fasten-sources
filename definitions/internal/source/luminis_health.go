@@ -29,6 +29,8 @@ func GetSourceLuminisHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Luminis Health"
 	sourceDef.SourceType = pkg.SourceTypeLuminisHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

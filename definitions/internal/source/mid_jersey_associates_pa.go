@@ -28,6 +28,8 @@ func GetSourceMidJerseyAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Mid Jersey Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeMidJerseyAssociatesPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

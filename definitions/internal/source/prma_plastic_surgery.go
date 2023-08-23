@@ -28,6 +28,8 @@ func GetSourcePrmaPlasticSurgery(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "PRMA Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypePrmaPlasticSurgery
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://prma-enhance.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

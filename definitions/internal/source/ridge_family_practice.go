@@ -29,6 +29,8 @@ func GetSourceRidgeFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ridge Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeRidgeFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ridge-family-practice.jpg"
 	sourceDef.PatientAccessUrl = "https://www.ridgefamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

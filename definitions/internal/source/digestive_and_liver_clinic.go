@@ -29,6 +29,8 @@ func GetSourceDigestiveAndLiverClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Digestive And Liver Clinic"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveAndLiverClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

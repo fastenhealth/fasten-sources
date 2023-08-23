@@ -29,6 +29,8 @@ func GetSourceParkland(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Parkland"
 	sourceDef.SourceType = pkg.SourceTypeParkland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

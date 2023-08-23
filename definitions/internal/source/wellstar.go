@@ -30,6 +30,7 @@ func GetSourceWellstar(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "WellStar"
 	sourceDef.SourceType = pkg.SourceTypeWellstar
 	sourceDef.Category = []string{"231H00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275834616"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

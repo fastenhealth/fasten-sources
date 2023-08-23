@@ -28,6 +28,8 @@ func GetSourcePlannedParenthoodOfWesternPa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Planned Parenthood of Western PA"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfWesternPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/health-center/pennsylvania/pittsburgh/15222/pittsburgh-family-planning-health-center-3358-91470"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

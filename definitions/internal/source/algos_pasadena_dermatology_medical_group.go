@@ -28,6 +28,8 @@ func GetSourceAlgosPasadenaDermatologyMedicalGroup(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Algos Pasadena Dermatology Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAlgosPasadenaDermatologyMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/335HHSX8DQ2G2S6IDIW7D9Z4YZLDHJ?assignment_id=3F6HPJW4JRXDIS1L1U3R7DECL5TW2H&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

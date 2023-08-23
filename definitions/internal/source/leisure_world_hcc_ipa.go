@@ -28,6 +28,8 @@ func GetSourceLeisureWorldHccIpa(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Leisure World HCC IPA"
 	sourceDef.SourceType = pkg.SourceTypeLeisureWorldHccIpa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

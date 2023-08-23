@@ -28,6 +28,8 @@ func GetSourceJosephJPachorekMdFacp(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Joseph J Pachorek MD FACP"
 	sourceDef.SourceType = pkg.SourceTypeJosephJPachorekMdFacp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "joseph-j-pachorek-md-facp.svg"
 	sourceDef.PatientAccessUrl = "https://www.huntingtonhealth.org/physicians/joseph-j-pachorek-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"

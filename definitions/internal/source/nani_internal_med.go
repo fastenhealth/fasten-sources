@@ -28,6 +28,8 @@ func GetSourceNaniInternalMed(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "NANI Internal Med"
 	sourceDef.SourceType = pkg.SourceTypeNaniInternalMed
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/illinois/countryside/nani-internal-med-llc-6901141498.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

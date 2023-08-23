@@ -29,6 +29,8 @@ func GetSourceWatsonClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Watson Clinic"
 	sourceDef.SourceType = pkg.SourceTypeWatsonClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

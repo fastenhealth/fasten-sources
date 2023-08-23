@@ -28,6 +28,8 @@ func GetSourceBravermanEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Braverman Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeBravermanEyeCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bravermaneyecenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

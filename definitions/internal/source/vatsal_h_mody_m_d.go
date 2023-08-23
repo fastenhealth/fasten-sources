@@ -29,6 +29,8 @@ func GetSourceVatsalHModyMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Vatsal H. Mody, M.D"
 	sourceDef.SourceType = pkg.SourceTypeVatsalHModyMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/vatsal-mody-64715"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceUrologicPhysiciansPa(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Urologic Physicians, PA"
 	sourceDef.SourceType = pkg.SourceTypeUrologicPhysiciansPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.urologicphysicians.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

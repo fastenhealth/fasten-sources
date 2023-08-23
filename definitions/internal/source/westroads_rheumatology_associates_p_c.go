@@ -28,6 +28,8 @@ func GetSourceWestroadsRheumatologyAssociatesPC(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Westroads Rheumatology Associates P.C."
 	sourceDef.SourceType = pkg.SourceTypeWestroadsRheumatologyAssociatesPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wrawcr.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

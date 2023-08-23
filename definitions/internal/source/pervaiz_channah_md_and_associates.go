@@ -28,6 +28,8 @@ func GetSourcePervaizChannahMdAndAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Pervaiz Channah MD And Associates"
 	sourceDef.SourceType = pkg.SourceTypePervaizChannahMdAndAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.valleyphysiciansnetwork.com/en/locations-nav/providers/ca/pervaiz-channah-md/1164592614.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

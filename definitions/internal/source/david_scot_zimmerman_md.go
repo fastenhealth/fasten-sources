@@ -28,6 +28,8 @@ func GetSourceDavidScotZimmermanMd(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "David Scot Zimmerman MD"
 	sourceDef.SourceType = pkg.SourceTypeDavidScotZimmermanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://weence.com/medical/doctors/chicago/david-zimmerman-md/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

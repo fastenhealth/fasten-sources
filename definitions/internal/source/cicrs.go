@@ -28,6 +28,8 @@ func GetSourceCicrs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "CICRS"
 	sourceDef.SourceType = pkg.SourceTypeCicrs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceIsaacBeshayMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Isaac Beshay MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeIsaacBeshayMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://familydoctorsonline.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

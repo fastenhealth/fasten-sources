@@ -28,6 +28,8 @@ func GetSourceDelawareValleyNephrologyAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Delaware Valley Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypeDelawareValleyNephrologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://delawarevalleynephrology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

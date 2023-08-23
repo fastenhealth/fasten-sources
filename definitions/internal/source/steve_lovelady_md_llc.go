@@ -30,6 +30,7 @@ func GetSourceSteveLoveladyMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Steve Lovelady MD LLC"
 	sourceDef.SourceType = pkg.SourceTypeSteveLoveladyMdLlc
 	sourceDef.Category = []string{"207QA0505X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013465988"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/steve-r-lovelady-md-llc-a55292ef-9c83-4dc8-a2e3-c16e2b188ca2"
 	sourceDef.SecretKeyPrefix = "cerner"

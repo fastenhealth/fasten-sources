@@ -28,6 +28,8 @@ func GetSourceMedicalAndSurgicalClinicOfMagee1(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Medical and Surgical Clinic of Magee"
 	sourceDef.SourceType = pkg.SourceTypeMedicalAndSurgicalClinicOfMagee1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

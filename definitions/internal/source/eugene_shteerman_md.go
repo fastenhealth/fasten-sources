@@ -29,6 +29,8 @@ func GetSourceEugeneShteermanMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Eugene Shteerman, MD"
 	sourceDef.SourceType = pkg.SourceTypeEugeneShteermanMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "eugene-shteerman-md.jpg"
 	sourceDef.PatientAccessUrl = "https://profiles.mountsinai.org/eugene-shteerman"
 	sourceDef.SecretKeyPrefix = "cerner"

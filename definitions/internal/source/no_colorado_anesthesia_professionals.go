@@ -28,6 +28,8 @@ func GetSourceNoColoradoAnesthesiaProfessionals(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "No Colorado Anesthesia Professionals"
 	sourceDef.SourceType = pkg.SourceTypeNoColoradoAnesthesiaProfessionals
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ncaphealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

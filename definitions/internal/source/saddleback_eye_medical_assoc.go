@@ -28,6 +28,8 @@ func GetSourceSaddlebackEyeMedicalAssoc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Saddleback Eye Medical Assoc"
 	sourceDef.SourceType = pkg.SourceTypeSaddlebackEyeMedicalAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://saddlebackvision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

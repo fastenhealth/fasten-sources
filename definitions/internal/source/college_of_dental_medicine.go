@@ -28,6 +28,8 @@ func GetSourceCollegeOfDentalMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "College Of Dental Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCollegeOfDentalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

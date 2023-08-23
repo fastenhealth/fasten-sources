@@ -28,6 +28,8 @@ func GetSourceGeneseeFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Genesee Family Care"
 	sourceDef.SourceType = pkg.SourceTypeGeneseeFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

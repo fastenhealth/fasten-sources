@@ -29,6 +29,7 @@ func GetSourceYvonneMorganMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Yvonne Morgan MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeYvonneMorganMdInc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346572229", "1811159502"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

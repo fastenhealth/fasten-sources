@@ -29,6 +29,8 @@ func GetSourceGraceObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Grace OB/GYN"
 	sourceDef.SourceType = pkg.SourceTypeGraceObGyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.graceobgyn.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

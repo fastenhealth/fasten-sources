@@ -28,6 +28,8 @@ func GetSourceCommunityHealthServiceAgency(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Community Health Service Agency"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthServiceAgency
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://carevide.org/chsa-announces-company-name-change/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

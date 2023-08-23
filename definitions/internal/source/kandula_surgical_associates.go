@@ -28,6 +28,8 @@ func GetSourceKandulaSurgicalAssociates(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Kandula Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeKandulaSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Kandula Surgical Associates Address: 2649 Schoenersville Road City: Bethlehem Zip: 180177326 State: Pennsylvania Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

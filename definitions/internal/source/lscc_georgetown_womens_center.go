@@ -28,6 +28,8 @@ func GetSourceLsccGeorgetownWomensCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "LSCC Georgetown Womens Center"
 	sourceDef.SourceType = pkg.SourceTypeLsccGeorgetownWomensCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "lscc-georgetown-womens-center.svg"
 	sourceDef.PatientAccessUrl = "https://lonestarcares.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

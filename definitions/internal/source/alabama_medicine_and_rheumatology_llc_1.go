@@ -30,6 +30,7 @@ func GetSourceAlabamaMedicineAndRheumatologyLlc1(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Alabama Medicine and Rheumatology, LLC"
 	sourceDef.SourceType = pkg.SourceTypeAlabamaMedicineAndRheumatologyLlc1
 	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871817072"}}
 	sourceDef.PatientAccessUrl = "http://almedicineandrheumatology.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

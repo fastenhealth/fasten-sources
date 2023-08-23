@@ -29,6 +29,8 @@ func GetSourceBurlingtoncountyorthopaedicspecialists(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "BurlingtonCountyOrthopaedicSpecialists"
 	sourceDef.SourceType = pkg.SourceTypeBurlingtoncountyorthopaedicspecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

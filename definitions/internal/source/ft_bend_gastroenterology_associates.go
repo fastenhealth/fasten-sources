@@ -28,6 +28,8 @@ func GetSourceFtBendGastroenterologyAssociates(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Ft Bend Gastroenterology Associates"
 	sourceDef.SourceType = pkg.SourceTypeFtBendGastroenterologyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ft-bend-gastroenterology-associates.gif"
 	sourceDef.PatientAccessUrl = "http://www.drstanleystein.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

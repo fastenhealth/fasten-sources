@@ -30,6 +30,7 @@ func GetSourceFaulktonAreaMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Faulkton Area Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFaulktonAreaMedicalCenter
 	sourceDef.Category = []string{"252Y00000X", "261QC0050X", "261QR1300X", "275N00000X", "282N00000X", "282NC0060X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003526294", "1053450791", "1245212877", "1306828934", "1720493075"}}
 	sourceDef.BrandLogo = "faulkton-area-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://faulktonmedical.org/"

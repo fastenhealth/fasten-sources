@@ -28,6 +28,8 @@ func GetSourcePrismMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Prism Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePrismMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

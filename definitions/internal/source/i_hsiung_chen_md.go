@@ -28,6 +28,8 @@ func GetSourceIHsiungChenMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "I Hsiung Chen MD"
 	sourceDef.SourceType = pkg.SourceTypeIHsiungChenMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/i-hsiung-chen-517706"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

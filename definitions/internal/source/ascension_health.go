@@ -30,6 +30,7 @@ func GetSourceAscensionHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Ascension Health"
 	sourceDef.SourceType = pkg.SourceTypeAscensionHealth
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841543071"}}
 	sourceDef.BrandLogo = "ascension-health.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"

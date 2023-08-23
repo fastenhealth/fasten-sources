@@ -29,6 +29,8 @@ func GetSourceClearskyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "ClearSky Health"
 	sourceDef.SourceType = pkg.SourceTypeClearskyHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://clearskyhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

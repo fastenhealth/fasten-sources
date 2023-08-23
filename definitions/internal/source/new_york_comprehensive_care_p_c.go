@@ -29,6 +29,8 @@ func GetSourceNewYorkComprehensiveCarePC(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "New York Comprehensive Care P.C."
 	sourceDef.SourceType = pkg.SourceTypeNewYorkComprehensiveCarePC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "new-york-comprehensive-care-p-c.jpg"
 	sourceDef.PatientAccessUrl = "https://newyorkcmc.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

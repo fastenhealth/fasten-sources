@@ -29,6 +29,8 @@ func GetSourcePrecisionSurgicalSpecialistsOfLowell(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Precision Surgical Specialists of Lowell"
 	sourceDef.SourceType = pkg.SourceTypePrecisionSurgicalSpecialistsOfLowell
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.sslsurgical.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

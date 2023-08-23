@@ -28,6 +28,8 @@ func GetSourceDelvalVisionAssociatesGroupPractice(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "DelVal Vision Associates Group Practice"
 	sourceDef.SourceType = pkg.SourceTypeDelvalVisionAssociatesGroupPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.medfusion.net/delvalvisionassociatesgrouppractice-27721/portal/#/user/login"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

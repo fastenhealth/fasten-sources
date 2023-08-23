@@ -28,6 +28,8 @@ func GetSourceKathleenScarpullaMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Kathleen Scarpulla MD"
 	sourceDef.SourceType = pkg.SourceTypeKathleenScarpullaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://care.advocatehealth.com/doctors/kathleen-scarpulla-chicago-ophthalmology-3"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

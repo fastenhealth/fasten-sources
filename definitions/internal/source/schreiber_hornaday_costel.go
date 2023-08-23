@@ -28,6 +28,8 @@ func GetSourceSchreiberHornadayCostel(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Schreiber Hornaday Costel"
 	sourceDef.SourceType = pkg.SourceTypeSchreiberHornadayCostel
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceLivingstonVitreoRetinalAssociates(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Livingston Vitreo Retinal Associates"
 	sourceDef.SourceType = pkg.SourceTypeLivingstonVitreoRetinalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "livingston-vitreo-retinal-associates.svg"
 	sourceDef.PatientAccessUrl = "https://www.rvc-nj.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

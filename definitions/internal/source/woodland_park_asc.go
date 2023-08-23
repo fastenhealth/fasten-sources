@@ -28,6 +28,8 @@ func GetSourceWoodlandParkAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Woodland Park ASC"
 	sourceDef.SourceType = pkg.SourceTypeWoodlandParkAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

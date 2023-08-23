@@ -29,6 +29,7 @@ func GetSourceHeartCenterPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Heart Center PC"
 	sourceDef.SourceType = pkg.SourceTypeHeartCenterPc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134279607"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

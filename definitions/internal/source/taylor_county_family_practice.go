@@ -28,6 +28,8 @@ func GetSourceTaylorCountyFamilyPractice(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Taylor County Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeTaylorCountyFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

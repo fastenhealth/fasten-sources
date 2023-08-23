@@ -28,6 +28,8 @@ func GetSourceDefaultPractice2(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Default Practice 2"
 	sourceDef.SourceType = pkg.SourceTypeDefaultPractice2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

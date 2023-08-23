@@ -28,6 +28,8 @@ func GetSourcePacificRidgeMedicalAssociatesInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Pacific Ridge Medical Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypePacificRidgeMedicalAssociatesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.linkassociatesinc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

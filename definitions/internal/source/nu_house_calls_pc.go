@@ -29,6 +29,7 @@ func GetSourceNuHouseCallsPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "NU House Calls PC"
 	sourceDef.SourceType = pkg.SourceTypeNuHouseCallsPc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245489053"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

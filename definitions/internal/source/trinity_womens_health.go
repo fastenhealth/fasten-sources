@@ -28,6 +28,8 @@ func GetSourceTrinityWomensHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Trinity Womens Health"
 	sourceDef.SourceType = pkg.SourceTypeTrinityWomensHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "trinity-womens-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.trinitywomenshealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

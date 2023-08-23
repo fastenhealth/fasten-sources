@@ -28,6 +28,8 @@ func GetSourceLisaKFlareyDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Lisa K Flarey DO"
 	sourceDef.SourceType = pkg.SourceTypeLisaKFlareyDo
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.genesishcs.org/find-doctors/flarey-lisa-k"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceNewBirthCompanyKansasCity(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "New Birth Company: Kansas City"
 	sourceDef.SourceType = pkg.SourceTypeNewBirthCompanyKansasCity
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://newbirthcompany.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

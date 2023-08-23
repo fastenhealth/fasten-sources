@@ -28,6 +28,8 @@ func GetSourceMasonHLongMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Mason H Long MD"
 	sourceDef.SourceType = pkg.SourceTypeMasonHLongMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

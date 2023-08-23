@@ -29,6 +29,8 @@ func GetSourceMedicalAssociatesOfCentralVirginia(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Medical Associates Of Central Virginia"
 	sourceDef.SourceType = pkg.SourceTypeMedicalAssociatesOfCentralVirginia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

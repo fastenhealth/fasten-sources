@@ -29,6 +29,7 @@ func GetSourceMedicalEyeAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Medical Eye Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeMedicalEyeAssociatesPa
 	sourceDef.Category = []string{"207W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922094895"}}
 	sourceDef.PatientAccessUrl = "https://www.medicaleyenc.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

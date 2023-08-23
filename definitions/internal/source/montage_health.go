@@ -29,6 +29,8 @@ func GetSourceMontageHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Montage Health"
 	sourceDef.SourceType = pkg.SourceTypeMontageHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

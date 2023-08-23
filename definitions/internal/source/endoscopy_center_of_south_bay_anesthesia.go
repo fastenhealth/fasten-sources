@@ -28,6 +28,8 @@ func GetSourceEndoscopyCenterOfSouthBayAnesthesia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Endoscopy Center Of South Bay Anesthesia"
 	sourceDef.SourceType = pkg.SourceTypeEndoscopyCenterOfSouthBayAnesthesia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://notfound.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

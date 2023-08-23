@@ -28,6 +28,8 @@ func GetSourceMaryToftMDAMedicalCorporation(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mary Toft M.D. A Medical Corporation"
 	sourceDef.SourceType = pkg.SourceTypeMaryToftMDAMedicalCorporation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceCardiovascularConsultantsOfLi(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Cardiovascular Consultants Of LI"
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularConsultantsOfLi
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003988254"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

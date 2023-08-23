@@ -28,6 +28,8 @@ func GetSourceAmericanAccessCarePhysiciansNy(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "American Access Care Physicians Ny"
 	sourceDef.SourceType = pkg.SourceTypeAmericanAccessCarePhysiciansNy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/american-access-care-manhattan/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

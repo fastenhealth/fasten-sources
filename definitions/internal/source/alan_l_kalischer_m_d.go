@@ -29,6 +29,8 @@ func GetSourceAlanLKalischerMD(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Alan L. Kalischer, M.D."
 	sourceDef.SourceType = pkg.SourceTypeAlanLKalischerMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-alan-kalischer-x2cbl"
 	sourceDef.SecretKeyPrefix = "cerner"
 

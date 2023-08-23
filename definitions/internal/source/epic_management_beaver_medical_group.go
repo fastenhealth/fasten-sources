@@ -29,6 +29,8 @@ func GetSourceEpicManagementBeaverMedicalGroup(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "EPIC Management (Beaver Medical Group)"
 	sourceDef.SourceType = pkg.SourceTypeEpicManagementBeaverMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

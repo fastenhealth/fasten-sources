@@ -28,6 +28,8 @@ func GetSourceHeritageInternalMedicinePllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Heritage Internal Medicine Pllc"
 	sourceDef.SourceType = pkg.SourceTypeHeritageInternalMedicinePllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

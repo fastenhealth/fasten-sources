@@ -28,6 +28,8 @@ func GetSourceSierraNevadaAsc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Sierra Nevada ASC"
 	sourceDef.SourceType = pkg.SourceTypeSierraNevadaAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

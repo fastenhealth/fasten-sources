@@ -28,6 +28,8 @@ func GetSourceGreenfield(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Greenfield"
 	sourceDef.SourceType = pkg.SourceTypeGreenfield
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/locations-nav/locations/in/american-health-network-300-e-boyd-ave-ste-110-greenfield-in-46140/9f69ff54-827e-406a-82cc-5d5cadabed45.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

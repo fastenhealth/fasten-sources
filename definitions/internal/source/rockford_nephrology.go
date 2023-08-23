@@ -28,6 +28,8 @@ func GetSourceRockfordNephrology(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Rockford Nephrology"
 	sourceDef.SourceType = pkg.SourceTypeRockfordNephrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rockfordnephrology.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceNebraskaFootAndAnklePc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Nebraska Foot and Ankle PC"
 	sourceDef.SourceType = pkg.SourceTypeNebraskaFootAndAnklePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nfaortho.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

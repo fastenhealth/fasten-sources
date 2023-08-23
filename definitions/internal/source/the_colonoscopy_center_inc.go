@@ -28,6 +28,8 @@ func GetSourceTheColonoscopyCenterInc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "The Colonoscopy Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeTheColonoscopyCenterInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://bestcare.org/specialties/colon-and-rectal-surgery"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

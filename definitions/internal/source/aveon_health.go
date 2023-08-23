@@ -29,6 +29,8 @@ func GetSourceAveonHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Aveon Health"
 	sourceDef.SourceType = pkg.SourceTypeAveonHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "aveon-health.jpg"
 	sourceDef.PatientAccessUrl = "http://aveonhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

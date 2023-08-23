@@ -28,6 +28,8 @@ func GetSourceGreneLaser(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Grene Laser"
 	sourceDef.SourceType = pkg.SourceTypeGreneLaser
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "grene-laser.jpg"
 	sourceDef.PatientAccessUrl = "https://www.grenelaser.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

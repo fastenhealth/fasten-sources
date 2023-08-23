@@ -28,6 +28,8 @@ func GetSourceProsportsImagingNw(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "ProSports Imaging NW"
 	sourceDef.SourceType = pkg.SourceTypeProsportsImagingNw
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/prosports-imaging-nw-mri-dcacc008-2140-47b9-b259-d4f7944ef170"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

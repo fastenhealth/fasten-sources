@@ -28,6 +28,8 @@ func GetSourceDeltaObstetricsGynecology(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Delta Obstetrics Gynecology"
 	sourceDef.SourceType = pkg.SourceTypeDeltaObstetricsGynecology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

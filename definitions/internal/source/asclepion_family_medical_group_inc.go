@@ -28,6 +28,8 @@ func GetSourceAsclepionFamilyMedicalGroupInc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Asclepion Family Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeAsclepionFamilyMedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npino.com/primary-clinic/1790869113-asclepion-family-medical-group-inc./"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

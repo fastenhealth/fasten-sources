@@ -28,6 +28,8 @@ func GetSourceRichardShubinMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Richard Shubin MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeRichardShubinMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/richard-shubin-02dfc040-8c28-416e-b08d-5d82e22954aa-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

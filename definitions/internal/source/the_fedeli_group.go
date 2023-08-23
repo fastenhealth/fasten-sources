@@ -29,6 +29,8 @@ func GetSourceTheFedeliGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "The Fedeli Group"
 	sourceDef.SourceType = pkg.SourceTypeTheFedeliGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-fedeli-group.jpg"
 	sourceDef.PatientAccessUrl = "https://www.thefedeligroup.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

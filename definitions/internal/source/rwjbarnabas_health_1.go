@@ -29,6 +29,8 @@ func GetSourceRwjbarnabasHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "RWJBarnabas Health"
 	sourceDef.SourceType = pkg.SourceTypeRwjbarnabasHealth1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "rwjbarnabas-health.png"
 	sourceDef.SecretKeyPrefix = "cerner"
 

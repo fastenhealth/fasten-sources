@@ -28,6 +28,8 @@ func GetSourceNlhd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "nlhd"
 	sourceDef.SourceType = pkg.SourceTypeNlhd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

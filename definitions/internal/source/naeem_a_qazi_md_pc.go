@@ -29,6 +29,7 @@ func GetSourceNaeemAQaziMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Naeem A Qazi Md Pc"
 	sourceDef.SourceType = pkg.SourceTypeNaeemAQaziMdPc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467533323"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

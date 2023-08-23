@@ -28,6 +28,8 @@ func GetSourceHKolliMdMedicalCorpWildomar(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "H Kolli MD Medical Corp-Wildomar"
 	sourceDef.SourceType = pkg.SourceTypeHKolliMdMedicalCorpWildomar
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "h-kolli-md-medical-corp-wildomar.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/h-kolli-md-medical-corporation-4da87bc8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "nextgen"

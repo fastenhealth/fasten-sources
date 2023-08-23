@@ -29,6 +29,8 @@ func GetSourceOrthovirginia(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "OrthoVirginia"
 	sourceDef.SourceType = pkg.SourceTypeOrthovirginia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

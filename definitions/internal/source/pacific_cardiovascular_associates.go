@@ -28,6 +28,8 @@ func GetSourcePacificCardiovascularAssociates(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Pacific Cardiovascular Associates"
 	sourceDef.SourceType = pkg.SourceTypePacificCardiovascularAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pacific-cardiovascular-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://pcacardiology.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,7 @@ func GetSourceAdvancedRehabilitationMedicineLlc(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "ADVANCED REHABILITATION MEDICINE LLC"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedRehabilitationMedicineLlc
 	sourceDef.Category = []string{"208100000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134511587"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

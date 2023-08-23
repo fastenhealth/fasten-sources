@@ -29,6 +29,7 @@ func GetSourcePulmonaryPhysicians(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Pulmonary Physicians"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryPhysicians
 	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134227499"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

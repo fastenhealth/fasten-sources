@@ -30,6 +30,7 @@ func GetSourceCoulterClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Coulter Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCoulterClinic
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609058254", "1700179504"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/sc-south-carolina/orangeburg/coulter-clinic-x7n9sb"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourcePremierHealthCareGroupPllc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Premier Health Care Group, PLLC"
 	sourceDef.SourceType = pkg.SourceTypePremierHealthCareGroupPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/texas/pasadena/premier-healthcare-group-pllc-1557318680.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

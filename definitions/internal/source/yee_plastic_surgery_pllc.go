@@ -28,6 +28,8 @@ func GetSourceYeePlasticSurgeryPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Yee Plastic Surgery PLLC"
 	sourceDef.SourceType = pkg.SourceTypeYeePlasticSurgeryPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://yeeplasticsurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

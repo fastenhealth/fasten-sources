@@ -28,6 +28,8 @@ func GetSourcePedAndCongenitalCardiAssocOfTexas(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Ped And Congenital Cardi Assoc Of Texas"
 	sourceDef.SourceType = pkg.SourceTypePedAndCongenitalCardiAssocOfTexas
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/find-care/practices/cardiologyaustin?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

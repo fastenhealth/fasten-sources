@@ -29,6 +29,8 @@ func GetSourceEveryWomanWellness(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Every Woman Wellness"
 	sourceDef.SourceType = pkg.SourceTypeEveryWomanWellness
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.everywomanwellness.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

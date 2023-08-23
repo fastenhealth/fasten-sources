@@ -29,6 +29,8 @@ func GetSourceHawaiiHealthSystemsCorpKauaiRegion(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Hawaii Health Systems Corp.-Kauai Region"
 	sourceDef.SourceType = pkg.SourceTypeHawaiiHealthSystemsCorpKauaiRegion
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://kauai.hhsc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

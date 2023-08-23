@@ -29,6 +29,8 @@ func GetSourceFamilyHealthCenterMichigan(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Family Health Center (Michigan)"
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCenterMichigan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fhckzoo.com/"
 	sourceDef.SecretKeyPrefix = "epic"
 

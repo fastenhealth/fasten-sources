@@ -28,6 +28,8 @@ func GetSourceValueBasedPayments(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Value Based Payments"
 	sourceDef.SourceType = pkg.SourceTypeValueBasedPayments
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.floridablue.com/providers/programs/value-based-alternative-payment-programs"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

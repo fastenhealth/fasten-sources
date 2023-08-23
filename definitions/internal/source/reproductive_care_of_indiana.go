@@ -30,6 +30,7 @@ func GetSourceReproductiveCareOfIndiana(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Reproductive Care of Indiana"
 	sourceDef.SourceType = pkg.SourceTypeReproductiveCareOfIndiana
 	sourceDef.Category = []string{"207VE0102X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265682413"}}
 	sourceDef.PatientAccessUrl = "https://www.reprocareindiana.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

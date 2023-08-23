@@ -28,6 +28,8 @@ func GetSourceCalvertInternalMedicineGroup(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Calvert Internal Medicine Group"
 	sourceDef.SourceType = pkg.SourceTypeCalvertInternalMedicineGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://calvertmedicine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceEdwardLMurrayDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Edward L. Murray, DPM"
 	sourceDef.SourceType = pkg.SourceTypeEdwardLMurrayDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-edward-murray-2qp2m"
 	sourceDef.SecretKeyPrefix = "cerner"
 

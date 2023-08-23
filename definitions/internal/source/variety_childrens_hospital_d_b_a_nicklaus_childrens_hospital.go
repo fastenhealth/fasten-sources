@@ -29,6 +29,8 @@ func GetSourceVarietyChildrensHospitalDBANicklausChildrensHospital(env pkg.Faste
 
 	sourceDef.Display = "Variety Children’s Hospital d/b/a Nicklaus Children’s Hospital"
 	sourceDef.SourceType = pkg.SourceTypeVarietyChildrensHospitalDBANicklausChildrensHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/home"
 	sourceDef.SecretKeyPrefix = "cerner"
 

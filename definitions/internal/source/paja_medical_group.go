@@ -29,6 +29,7 @@ func GetSourcePajaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Paja Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePajaMedicalGroup
 	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184061533"}}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

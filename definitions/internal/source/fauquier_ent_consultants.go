@@ -28,6 +28,8 @@ func GetSourceFauquierEntConsultants(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "FAUQUIER ENT CONSULTANTS"
 	sourceDef.SourceType = pkg.SourceTypeFauquierEntConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fauquierent.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

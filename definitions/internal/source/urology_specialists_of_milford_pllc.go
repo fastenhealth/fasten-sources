@@ -28,6 +28,8 @@ func GetSourceUrologySpecialistsOfMilfordPllc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Urology Specialists of Milford PLLC"
 	sourceDef.SourceType = pkg.SourceTypeUrologySpecialistsOfMilfordPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

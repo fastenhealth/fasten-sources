@@ -28,6 +28,8 @@ func GetSourceSpineOrthopaedicSurgeryCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Spine  Orthopaedic Surgery Center"
 	sourceDef.SourceType = pkg.SourceTypeSpineOrthopaedicSurgeryCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

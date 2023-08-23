@@ -28,6 +28,8 @@ func GetSourceStatpayIncmaryland(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "STATpay IncMaryland"
 	sourceDef.SourceType = pkg.SourceTypeStatpayIncmaryland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

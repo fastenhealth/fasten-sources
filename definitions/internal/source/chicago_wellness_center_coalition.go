@@ -29,6 +29,8 @@ func GetSourceChicagoWellnessCenterCoalition(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Chicago Wellness Center Coalition"
 	sourceDef.SourceType = pkg.SourceTypeChicagoWellnessCenterCoalition
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

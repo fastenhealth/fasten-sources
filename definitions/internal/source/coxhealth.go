@@ -30,6 +30,7 @@ func GetSourceCoxhealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "CoxHealth"
 	sourceDef.SourceType = pkg.SourceTypeCoxhealth
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194750232"}}
 	sourceDef.PatientAccessUrl = "https://www.coxhealth.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceChaMedicalAndSurgicalGroupPc1(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "CHA Medical and Surgical Group, PC."
 	sourceDef.SourceType = pkg.SourceTypeChaMedicalAndSurgicalGroupPc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

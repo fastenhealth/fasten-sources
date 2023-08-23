@@ -29,6 +29,8 @@ func GetSourceLabcorpEmployerServicesInc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Labcorp Employer Services, Inc"
 	sourceDef.SourceType = pkg.SourceTypeLabcorpEmployerServicesInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.topionetworks.com/companies/labcorp-employer-services-602f75c578e00252963a89a3"
 	sourceDef.SecretKeyPrefix = "cerner"
 

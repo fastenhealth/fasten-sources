@@ -28,6 +28,8 @@ func GetSourceEntAndAllergyAssociatesLlp(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "ENT And Allergy Associates LLP"
 	sourceDef.SourceType = pkg.SourceTypeEntAndAllergyAssociatesLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

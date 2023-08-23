@@ -30,6 +30,7 @@ func GetSourceMontefioreMedicalCenter1(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Montefiore Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeMontefioreMedicalCenter1
 	sourceDef.Category = []string{"122300000X", "1223E0200X", "1223P0221X", "1223S0112X", "261QM1300X", "261QP2300X", "282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194981084", "1255565925", "1255568838", "1275710519", "1326232042", "1487848156", "1659537538", "1740446624", "1750528188", "1790974897", "1982860953"}}
 	sourceDef.BrandLogo = "montefiore-medical-center.png"
 	sourceDef.SecretKeyPrefix = "cerner"

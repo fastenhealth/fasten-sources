@@ -29,6 +29,8 @@ func GetSourceProfessionalObGynDoctors(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Professional OB/GYN Doctors"
 	sourceDef.SourceType = pkg.SourceTypeProfessionalObGynDoctors
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://zaubee.com/biz/professional-obgyn-6rfvu0ys"
 	sourceDef.SecretKeyPrefix = "cerner"
 

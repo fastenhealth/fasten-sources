@@ -29,6 +29,8 @@ func GetSourceNewyorkPresbyterianBrooklynMethodistHospital(env pkg.FastenLightho
 
 	sourceDef.Display = "NewYork-Presbyterian Brooklyn Methodist Hospital"
 	sourceDef.SourceType = pkg.SourceTypeNewyorkPresbyterianBrooklynMethodistHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "newyork-presbyterian-brooklyn-methodist-hospital.svg"
 	sourceDef.PatientAccessUrl = "https://www.nyp.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

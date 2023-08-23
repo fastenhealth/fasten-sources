@@ -28,6 +28,8 @@ func GetSourceArNeurosurgeryBrainAndSpineClinic(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "AR Neurosurgery Brain & Spine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeArNeurosurgeryBrainAndSpineClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://phppd.providence.org/Intel/Facility/View/560707995603626?GoBackFromSearch=False&GoToSearch=False&HealthPlanBaseID=0&HealthPlanID=261100&MemberSearch=False&Page=435&ProvSwedishPHS=False&SearchGroup=Intel&ShowAll=False&Sort=NameAZ&Type=Facility&ProviderSERPIndex=7&OrderedHPProvIDString=560707994912856%2C560707994927557%2C560707994897766%2C560707994968301%2C560707994872128%2C560707994905607%2C560707994892495%2C560707995603626%2C560707994906628%2C560707994868455"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

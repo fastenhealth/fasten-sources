@@ -29,6 +29,8 @@ func GetSourceAssociatedFootAnkleSpecialistOfOhio(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Associated Foot Ankle Specialist of Ohio"
 	sourceDef.SourceType = pkg.SourceTypeAssociatedFootAnkleSpecialistOfOhio
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

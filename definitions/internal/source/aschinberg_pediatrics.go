@@ -29,6 +29,8 @@ func GetSourceAschinbergPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "ASCHINBERG PEDIATRICS"
 	sourceDef.SourceType = pkg.SourceTypeAschinbergPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

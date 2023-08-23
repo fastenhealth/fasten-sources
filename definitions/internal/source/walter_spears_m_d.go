@@ -28,6 +28,8 @@ func GetSourceWalterSpearsMD(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Walter Spears M D"
 	sourceDef.SourceType = pkg.SourceTypeWalterSpearsMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/walter-spears-51ca7621-ea78-4ed3-9a52-5fa14e192737-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

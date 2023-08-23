@@ -29,6 +29,7 @@ func GetSourceTejasHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Tejas Health Care"
 	sourceDef.SourceType = pkg.SourceTypeTejasHealthCare
 	sourceDef.Category = []string{"207Q00000X", "261QF0400X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073779500", "1215326491"}}
 	sourceDef.BrandLogo = "tejas-health-care.jpg"
 	sourceDef.PatientAccessUrl = "https://tejashealthcare.org/"

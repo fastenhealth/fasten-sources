@@ -29,6 +29,8 @@ func GetSourceAdventistHealthcare(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Adventist HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "adventist-health-west.png"
 	sourceDef.PatientAccessUrl = "https://www.adventisthealthcare.com"
 	sourceDef.SecretKeyPrefix = "cerner"

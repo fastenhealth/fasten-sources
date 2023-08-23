@@ -29,6 +29,8 @@ func GetSourceClevelandHeadAndNeck(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Cleveland Head & Neck"
 	sourceDef.SourceType = pkg.SourceTypeClevelandHeadAndNeck
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

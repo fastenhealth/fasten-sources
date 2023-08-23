@@ -29,6 +29,8 @@ func GetSourceTheUniversityOfTexasMdAndersonCancerCenter(env pkg.FastenLighthous
 
 	sourceDef.Display = "The University of Texas MD Anderson Cancer Center"
 	sourceDef.SourceType = pkg.SourceTypeTheUniversityOfTexasMdAndersonCancerCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCarewellHealthMedicalCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "CareWell Health Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeCarewellHealthMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://carewellhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

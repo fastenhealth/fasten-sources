@@ -28,6 +28,8 @@ func GetSourceCcpn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "CCPN"
 	sourceDef.SourceType = pkg.SourceTypeCcpn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

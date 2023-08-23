@@ -29,6 +29,8 @@ func GetSourceHuronFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Huron Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeHuronFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

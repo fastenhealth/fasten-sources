@@ -28,6 +28,8 @@ func GetSourceNaniLab(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "NANI Lab"
 	sourceDef.SourceType = pkg.SourceTypeNaniLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://opennpi.com/provider/1811472186"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceHospitalDist6OfHarperCounty(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Hospital Dist #6 of Harper County"
 	sourceDef.SourceType = pkg.SourceTypeHospitalDist6OfHarperCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hospital-dist-6-of-harper-county.svg"
 	sourceDef.PatientAccessUrl = "https://pattersonhc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

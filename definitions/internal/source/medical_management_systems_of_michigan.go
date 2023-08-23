@@ -28,6 +28,8 @@ func GetSourceMedicalManagementSystemsOfMichigan(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Medical Management Systems Of Michigan"
 	sourceDef.SourceType = pkg.SourceTypeMedicalManagementSystemsOfMichigan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

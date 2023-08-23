@@ -29,6 +29,8 @@ func GetSourceArdent(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Ardent"
 	sourceDef.SourceType = pkg.SourceTypeArdent
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

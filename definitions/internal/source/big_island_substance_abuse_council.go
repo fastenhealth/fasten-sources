@@ -28,6 +28,8 @@ func GetSourceBigIslandSubstanceAbuseCouncil(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Big Island Substance Abuse Council"
 	sourceDef.SourceType = pkg.SourceTypeBigIslandSubstanceAbuseCouncil
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://bisac.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

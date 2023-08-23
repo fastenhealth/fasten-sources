@@ -28,6 +28,8 @@ func GetSourceCaremore(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "CareMore"
 	sourceDef.SourceType = pkg.SourceTypeCaremore
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "caremore.svg"
 	sourceDef.PatientAccessUrl = "https://www.caremore.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

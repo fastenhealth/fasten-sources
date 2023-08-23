@@ -28,6 +28,8 @@ func GetSourceArrowheadPediatricMedicalGroupInc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Arrowhead Pediatric Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeArrowheadPediatricMedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.arrowheadregional.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

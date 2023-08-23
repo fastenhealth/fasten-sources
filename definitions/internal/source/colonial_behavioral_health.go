@@ -30,6 +30,7 @@ func GetSourceColonialBehavioralHealth(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Colonial Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeColonialBehavioralHealth
 	sourceDef.Category = []string{"251S00000X", "302R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760565915", "1841556776"}}
 	sourceDef.PatientAccessUrl = "https://www.colonialbh.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

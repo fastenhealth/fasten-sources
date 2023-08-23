@@ -28,6 +28,8 @@ func GetSourceHemeDiagnosticSpecialistsPllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Heme Diagnostic Specialists PLLC"
 	sourceDef.SourceType = pkg.SourceTypeHemeDiagnosticSpecialistsPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://opennpi.com/provider/1629528989"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

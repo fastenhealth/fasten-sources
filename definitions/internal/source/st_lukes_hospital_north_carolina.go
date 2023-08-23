@@ -29,6 +29,8 @@ func GetSourceStLukesHospitalNorthCarolina(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "St. Luke's Hospital (North Carolina)"
 	sourceDef.SourceType = pkg.SourceTypeStLukesHospitalNorthCarolina
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

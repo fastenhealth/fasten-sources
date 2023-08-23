@@ -28,6 +28,8 @@ func GetSourceTheNationalRetinaInstitute(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "The National Retina Institute"
 	sourceDef.SourceType = pkg.SourceTypeTheNationalRetinaInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nationalretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

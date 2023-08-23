@@ -29,6 +29,7 @@ func GetSourceRogueValleyPhysiciansPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Rogue Valley Physicians PC"
 	sourceDef.SourceType = pkg.SourceTypeRogueValleyPhysiciansPc
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207VG0400X", "208000000X", "261QP2300X", "363LF0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114190121"}}
 	sourceDef.PatientAccessUrl = "https://www.roguevalleyphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

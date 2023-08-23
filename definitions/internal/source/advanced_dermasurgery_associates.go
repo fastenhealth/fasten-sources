@@ -28,6 +28,8 @@ func GetSourceAdvancedDermasurgeryAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Advanced Dermasurgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedDermasurgeryAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "advanced-dermasurgery-associates.svg"
 	sourceDef.PatientAccessUrl = "https://drposten.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

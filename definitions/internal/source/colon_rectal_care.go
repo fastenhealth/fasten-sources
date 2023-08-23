@@ -29,6 +29,8 @@ func GetSourceColonRectalCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Colon Rectal Care"
 	sourceDef.SourceType = pkg.SourceTypeColonRectalCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

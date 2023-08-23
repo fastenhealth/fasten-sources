@@ -27,6 +27,8 @@ func GetSourceEmpireBlueMedicaid(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Empire Blue Medicaid"
 	sourceDef.SourceType = pkg.SourceTypeEmpireBlueMedicaid
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "empire-blue-medicaid.jpg"
 	sourceDef.PatientAccessUrl = "https://www.empireblue.com/"
 	sourceDef.SecretKeyPrefix = "anthem"

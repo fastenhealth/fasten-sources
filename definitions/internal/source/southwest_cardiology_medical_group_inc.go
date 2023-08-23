@@ -28,6 +28,8 @@ func GetSourceSouthwestCardiologyMedicalGroupInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Southwest Cardiology Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestCardiologyMedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/allopathic_osteopathic_physicians/interventional-cardiology_207ri0011x/1245802420.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

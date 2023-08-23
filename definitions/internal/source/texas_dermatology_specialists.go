@@ -28,6 +28,8 @@ func GetSourceTexasDermatologySpecialists(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Texas Dermatology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeTexasDermatologySpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://texasdermatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

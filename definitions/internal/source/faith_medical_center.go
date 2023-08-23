@@ -29,6 +29,8 @@ func GetSourceFaithMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Faith Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFaithMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceNcpNorthPhoenixAsc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "NCP North Phoenix ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpNorthPhoenixAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/arizona/business-phoenix/ncp-merchant-services-380561337"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

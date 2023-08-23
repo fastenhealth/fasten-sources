@@ -29,6 +29,8 @@ func GetSourceDrSusanHunterJoernsMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Dr. Susan Hunter-Joerns, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrSusanHunterJoernsMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-susan-hunter-joerns-md.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/susan-hunter-joerns-1001d5f6-1d2b-44eb-9924-82a288b302a8-overview"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourcePermianWomensCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Permian Women's Center"
 	sourceDef.SourceType = pkg.SourceTypePermianWomensCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.permianwomenscenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

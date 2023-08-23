@@ -30,6 +30,7 @@ func GetSourceAdvancedPainAndSpine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Advanced Pain and Spine"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainAndSpine
 	sourceDef.Category = []string{"261QP3300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770915522"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

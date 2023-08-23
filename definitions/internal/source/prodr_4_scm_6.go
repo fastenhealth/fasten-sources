@@ -28,6 +28,8 @@ func GetSourceProdr4Scm6(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "ProdR4SCM"
 	sourceDef.SourceType = pkg.SourceTypeProdr4Scm6
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

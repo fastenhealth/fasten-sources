@@ -28,6 +28,8 @@ func GetSourceVolunteersInMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Volunteers In Medicine"
 	sourceDef.SourceType = pkg.SourceTypeVolunteersInMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nafcclinics.org/get-involved/start-a-clinic/volunteers-in-medicine/#pa"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

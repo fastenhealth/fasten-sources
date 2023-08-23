@@ -29,6 +29,7 @@ func GetSourceAmsurgWilloughbyAnesthesiaLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "AmSurg Willoughby Anesthesia LLC"
 	sourceDef.SourceType = pkg.SourceTypeAmsurgWilloughbyAnesthesiaLlc
 	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548508872"}}
 	sourceDef.PatientAccessUrl = "https://www.amsurg.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

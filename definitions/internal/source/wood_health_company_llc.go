@@ -29,6 +29,7 @@ func GetSourceWoodHealthCompanyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Wood Health Company LLC"
 	sourceDef.SourceType = pkg.SourceTypeWoodHealthCompanyLlc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598776916"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

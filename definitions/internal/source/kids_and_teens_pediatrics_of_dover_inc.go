@@ -29,6 +29,8 @@ func GetSourceKidsAndTeensPediatricsOfDoverInc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Kids and Teens Pediatrics of Dover, Inc."
 	sourceDef.SourceType = pkg.SourceTypeKidsAndTeensPediatricsOfDoverInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kidsandteenspeds.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceSurgicalAssocOfAlbanyPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Surgical Assoc Of Albany PC"
 	sourceDef.SourceType = pkg.SourceTypeSurgicalAssocOfAlbanyPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceHarvardEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Harvard Eye Associates"
 	sourceDef.SourceType = pkg.SourceTypeHarvardEyeAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "harvard-eye-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://harvardeye.com/eye-care/laguna-hills/?y_source=1_MTUxNDg2NDgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"

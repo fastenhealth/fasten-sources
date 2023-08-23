@@ -28,6 +28,8 @@ func GetSourceAlexDenesMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Alex Denes MD"
 	sourceDef.SourceType = pkg.SourceTypeAlexDenesMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "alex-denes-md.jpg"
 	sourceDef.PatientAccessUrl = "https://physicians.wustl.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"

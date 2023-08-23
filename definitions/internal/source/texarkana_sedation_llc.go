@@ -29,6 +29,7 @@ func GetSourceTexarkanaSedationLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Texarkana Sedation LLC"
 	sourceDef.SourceType = pkg.SourceTypeTexarkanaSedationLlc
 	sourceDef.Category = []string{"367500000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467009621"}}
 	sourceDef.PatientAccessUrl = "https://npiprofile.com/npi/1467009621"
 	sourceDef.SecretKeyPrefix = "nextgen"

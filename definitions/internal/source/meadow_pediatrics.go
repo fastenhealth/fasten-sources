@@ -28,6 +28,8 @@ func GetSourceMeadowPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Meadow Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeMeadowPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

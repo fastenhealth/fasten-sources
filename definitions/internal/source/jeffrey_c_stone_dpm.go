@@ -29,6 +29,8 @@ func GetSourceJeffreyCStoneDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Jeffrey C Stone Dpm"
 	sourceDef.SourceType = pkg.SourceTypeJeffreyCStoneDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

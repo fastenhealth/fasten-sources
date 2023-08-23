@@ -29,6 +29,7 @@ func GetSourceChccMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "CHCC Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeChccMedicalGroup
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Community Health Centers of Central Wyoming"}
 	sourceDef.PatientAccessUrl = "https://www.chccw.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceSurgeryPartnersNashville(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Surgery Partners - Nashville"
 	sourceDef.SourceType = pkg.SourceTypeSurgeryPartnersNashville
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "surgery-partners-nashville.jpg"
 	sourceDef.PatientAccessUrl = "https://surgerypartners.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

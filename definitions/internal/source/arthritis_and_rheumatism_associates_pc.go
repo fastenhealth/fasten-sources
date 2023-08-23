@@ -29,6 +29,7 @@ func GetSourceArthritisAndRheumatismAssociatesPc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Arthritis And Rheumatism Associates PC"
 	sourceDef.SourceType = pkg.SourceTypeArthritisAndRheumatismAssociatesPc
 	sourceDef.Category = []string{"207RR0500X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447259866"}}
 	sourceDef.PatientAccessUrl = "https://arapc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

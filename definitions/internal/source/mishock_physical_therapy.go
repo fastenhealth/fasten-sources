@@ -28,6 +28,8 @@ func GetSourceMishockPhysicalTherapy(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Mishock Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeMishockPhysicalTherapy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://mishockpt.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

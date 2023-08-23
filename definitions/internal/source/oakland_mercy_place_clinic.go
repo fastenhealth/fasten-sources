@@ -29,6 +29,8 @@ func GetSourceOaklandMercyPlaceClinic(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Oakland Mercy Place Clinic"
 	sourceDef.SourceType = pkg.SourceTypeOaklandMercyPlaceClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/mi-michigan/pontiac/mercy-place-clinic-x283ck"
 	sourceDef.SecretKeyPrefix = "cerner"
 

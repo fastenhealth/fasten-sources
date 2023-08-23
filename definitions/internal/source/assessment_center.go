@@ -28,6 +28,8 @@ func GetSourceAssessmentCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Assessment Center"
 	sourceDef.SourceType = pkg.SourceTypeAssessmentCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "assessment-center.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

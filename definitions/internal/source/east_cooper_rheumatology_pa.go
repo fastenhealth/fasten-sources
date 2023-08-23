@@ -28,6 +28,8 @@ func GetSourceEastCooperRheumatologyPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "East Cooper Rheumatology PA"
 	sourceDef.SourceType = pkg.SourceTypeEastCooperRheumatologyPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://harper-frank-e-md.edan.io/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

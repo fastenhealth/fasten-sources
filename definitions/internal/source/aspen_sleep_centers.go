@@ -28,6 +28,8 @@ func GetSourceAspenSleepCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Aspen Sleep Centers"
 	sourceDef.SourceType = pkg.SourceTypeAspenSleepCenters
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.aspensleepsolutions.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

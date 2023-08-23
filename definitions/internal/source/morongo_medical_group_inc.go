@@ -29,6 +29,7 @@ func GetSourceMorongoMedicalGroupInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Morongo Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeMorongoMedicalGroupInc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972644516"}}
 	sourceDef.PatientAccessUrl = "https://www.salhotramd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

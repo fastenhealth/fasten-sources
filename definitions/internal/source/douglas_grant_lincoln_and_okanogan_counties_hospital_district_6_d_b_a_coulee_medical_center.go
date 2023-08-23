@@ -29,6 +29,8 @@ func GetSourceDouglasGrantLincolnAndOkanoganCountiesHospitalDistrict6DBACouleeMe
 
 	sourceDef.Display = "Douglas, Grant, Lincoln & Okanogan Counties Hospital District #6 d/b/a Coulee Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeDouglasGrantLincolnAndOkanoganCountiesHospitalDistrict6DBACouleeMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "douglas-grant-lincoln-and-okanogan-counties-hospital-district-6-d-b-a-coulee-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://cmccares.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

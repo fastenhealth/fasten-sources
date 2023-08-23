@@ -28,6 +28,8 @@ func GetSourceValleyKidneySpecialistsPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Valley Kidney Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeValleyKidneySpecialistsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "valley-kidney-specialists-pc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.valleykidney.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

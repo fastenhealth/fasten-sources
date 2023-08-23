@@ -28,6 +28,8 @@ func GetSourceBoulderMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Boulder Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeBoulderMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

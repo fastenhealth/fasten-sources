@@ -29,6 +29,8 @@ func GetSourcePediatrixMedicalGroupOfFlInc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Pediatrix Medical Group of FL, Inc"
 	sourceDef.SourceType = pkg.SourceTypePediatrixMedicalGroupOfFlInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/contact-us"
 	sourceDef.SecretKeyPrefix = "cerner"
 

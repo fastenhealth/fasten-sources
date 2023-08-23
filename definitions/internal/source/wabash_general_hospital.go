@@ -28,6 +28,8 @@ func GetSourceWabashGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Wabash General Hospital"
 	sourceDef.SourceType = pkg.SourceTypeWabashGeneralHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.wabashgeneral.com/locations/wabash-general-hospital/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

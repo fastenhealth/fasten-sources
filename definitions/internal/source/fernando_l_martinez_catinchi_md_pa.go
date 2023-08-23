@@ -29,6 +29,8 @@ func GetSourceFernandoLMartinezCatinchiMdPa(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Fernando L Martinez-Catinchi MD PA"
 	sourceDef.SourceType = pkg.SourceTypeFernandoLMartinezCatinchiMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

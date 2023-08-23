@@ -30,6 +30,7 @@ func GetSourceNiagaraFallsMemorialMedicalCenter(env pkg.FastenLighthouseEnvType,
 	sourceDef.Display = "Niagara Falls Memorial Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeNiagaraFallsMemorialMedicalCenter
 	sourceDef.Category = []string{"122300000X", "207RI0200X", "207V00000X", "208600000X", "208M00000X", "251300000X", "251B00000X", "261QX0200X", "273R00000X", "282N00000X", "283Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144842816", "1285717298", "1336517960", "1376629485", "1396295002", "1982659256"}}
 	sourceDef.PatientAccessUrl = "https://nfmmc.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

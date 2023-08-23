@@ -29,6 +29,8 @@ func GetSourceTimothyJGrahamDPM(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Timothy J. Graham, D.P.M."
 	sourceDef.SourceType = pkg.SourceTypeTimothyJGrahamDPM
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/drtimothygraham/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

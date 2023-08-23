@@ -28,6 +28,8 @@ func GetSourcePulmonaryAllergyAndSleep(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Pulmonary Allergy and Sleep"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryAllergyAndSleep
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

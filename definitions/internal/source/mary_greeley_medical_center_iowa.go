@@ -29,6 +29,8 @@ func GetSourceMaryGreeleyMedicalCenterIowa(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Mary Greeley Medical Center (Iowa)"
 	sourceDef.SourceType = pkg.SourceTypeMaryGreeleyMedicalCenterIowa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

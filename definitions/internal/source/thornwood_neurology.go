@@ -29,6 +29,7 @@ func GetSourceThornwoodNeurology(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Thornwood Neurology"
 	sourceDef.SourceType = pkg.SourceTypeThornwoodNeurology
 	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366787251"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

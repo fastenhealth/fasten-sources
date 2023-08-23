@@ -28,6 +28,8 @@ func GetSourceHuntingdonGastroenterologyAssoc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Huntingdon Gastroenterology Assoc"
 	sourceDef.SourceType = pkg.SourceTypeHuntingdonGastroenterologyAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

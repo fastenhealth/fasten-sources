@@ -29,6 +29,7 @@ func GetSourceGersteinEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Gerstein Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeGersteinEyeInstitute
 	sourceDef.Category = []string{"207W00000X", "332H00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578772349", "1720283195"}}
 	sourceDef.PatientAccessUrl = "https://www.gersteineye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

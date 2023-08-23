@@ -28,6 +28,8 @@ func GetSourceTuscarawasCountyOb(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Tuscarawas County OB"
 	sourceDef.SourceType = pkg.SourceTypeTuscarawasCountyOb
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

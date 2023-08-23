@@ -28,6 +28,8 @@ func GetSourceMichiganLungAndSleepSpecialistsPlc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Michigan Lung And Sleep Specialists  PLC"
 	sourceDef.SourceType = pkg.SourceTypeMichiganLungAndSleepSpecialistsPlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/doctor/mark-villeneuve-ed88e75a-348b-4729-a802-f1f3bd0d504d-overview"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

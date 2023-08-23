@@ -28,6 +28,8 @@ func GetSourceMahoningValleyAsc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Mahoning Valley ASC"
 	sourceDef.SourceType = pkg.SourceTypeMahoningValleyAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://housernewman.com/surgery-center/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceNewportIrvineSurgicalSpecialists(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Newport Irvine Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeNewportIrvineSurgicalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://newportirvinesurgicalspecialists.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

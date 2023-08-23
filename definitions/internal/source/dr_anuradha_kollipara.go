@@ -29,6 +29,8 @@ func GetSourceDrAnuradhaKollipara(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dr Anuradha Kollipara"
 	sourceDef.SourceType = pkg.SourceTypeDrAnuradhaKollipara
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

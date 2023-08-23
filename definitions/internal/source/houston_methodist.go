@@ -30,6 +30,7 @@ func GetSourceHoustonMethodist(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Houston Methodist"
 	sourceDef.SourceType = pkg.SourceTypeHoustonMethodist
 	sourceDef.Category = []string{"363L00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992178693"}}
 	sourceDef.PatientAccessUrl = "https://www.houstonmethodist.org/"
 	sourceDef.SecretKeyPrefix = "epic"

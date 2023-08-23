@@ -29,6 +29,8 @@ func GetSourceBelladonnaMedicalPC(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Belladonna Medical, P.C."
 	sourceDef.SourceType = pkg.SourceTypeBelladonnaMedicalPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

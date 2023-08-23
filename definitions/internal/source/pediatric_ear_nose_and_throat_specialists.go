@@ -28,6 +28,8 @@ func GetSourcePediatricEarNoseAndThroatSpecialists(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Pediatric Ear Nose & Throat Specialists"
 	sourceDef.SourceType = pkg.SourceTypePediatricEarNoseAndThroatSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

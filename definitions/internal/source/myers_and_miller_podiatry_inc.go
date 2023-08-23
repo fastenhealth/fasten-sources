@@ -29,6 +29,8 @@ func GetSourceMyersAndMillerPodiatryInc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Myers and Miller Podiatry Inc"
 	sourceDef.SourceType = pkg.SourceTypeMyersAndMillerPodiatryInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

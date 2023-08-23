@@ -29,6 +29,7 @@ func GetSourceBakerEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Baker Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeBakerEyeInstitute
 	sourceDef.Category = []string{"261Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891786612", "1982888996"}}
 	sourceDef.PatientAccessUrl = "https://bakereyeinstitutedavidlittletonbakermd.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

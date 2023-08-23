@@ -28,6 +28,8 @@ func GetSourceEndomedClinicSc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "EndoMed Clinic SC"
 	sourceDef.SourceType = pkg.SourceTypeEndomedClinicSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

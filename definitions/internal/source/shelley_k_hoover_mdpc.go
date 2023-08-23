@@ -28,6 +28,8 @@ func GetSourceShelleyKHooverMdpc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Shelley K Hoover MDPC"
 	sourceDef.SourceType = pkg.SourceTypeShelleyKHooverMdpc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

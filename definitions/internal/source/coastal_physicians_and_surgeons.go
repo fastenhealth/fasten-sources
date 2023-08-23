@@ -28,6 +28,8 @@ func GetSourceCoastalPhysiciansAndSurgeons(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Coastal Physicians and Surgeons"
 	sourceDef.SourceType = pkg.SourceTypeCoastalPhysiciansAndSurgeons
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

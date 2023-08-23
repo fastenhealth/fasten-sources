@@ -28,6 +28,8 @@ func GetSourceAthenaWomensHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Athena Womens Health"
 	sourceDef.SourceType = pkg.SourceTypeAthenaWomensHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceScottJenkinsMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Scott Jenkins MD"
 	sourceDef.SourceType = pkg.SourceTypeScottJenkinsMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

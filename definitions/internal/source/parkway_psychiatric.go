@@ -28,6 +28,8 @@ func GetSourceParkwayPsychiatric(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Parkway Psychiatric"
 	sourceDef.SourceType = pkg.SourceTypeParkwayPsychiatric
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "parkway-psychiatric.jpg"
 	sourceDef.PatientAccessUrl = "https://blountmemorial.org/index.php"
 	sourceDef.SecretKeyPrefix = "nextgen"

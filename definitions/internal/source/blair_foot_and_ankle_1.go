@@ -29,6 +29,8 @@ func GetSourceBlairFootAndAnkle1(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Blair Foot & Ankle"
 	sourceDef.SourceType = pkg.SourceTypeBlairFootAndAnkle1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.blairfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

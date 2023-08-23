@@ -28,6 +28,8 @@ func GetSourceCardiacInstituteOfCentralCalifornia(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Cardiac Institute Of Central California"
 	sourceDef.SourceType = pkg.SourceTypeCardiacInstituteOfCentralCalifornia
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.ciocc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

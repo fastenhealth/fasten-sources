@@ -28,6 +28,8 @@ func GetSourceLasVegasAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Las Vegas ASC"
 	sourceDef.SourceType = pkg.SourceTypeLasVegasAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lvdaysurgery.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

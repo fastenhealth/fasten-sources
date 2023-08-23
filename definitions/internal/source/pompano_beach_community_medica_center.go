@@ -28,6 +28,8 @@ func GetSourcePompanoBeachCommunityMedicaCenter(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pompano Beach Community Medica Center"
 	sourceDef.SourceType = pkg.SourceTypePompanoBeachCommunityMedicaCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCircleHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Circle Health, Inc."
 	sourceDef.SourceType = pkg.SourceTypeCircleHealthInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.circle-health.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceNsuHealthNeuroscienceInstitute(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "NSU Health Neuroscience Institute"
 	sourceDef.SourceType = pkg.SourceTypeNsuHealthNeuroscienceInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.topnpi.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

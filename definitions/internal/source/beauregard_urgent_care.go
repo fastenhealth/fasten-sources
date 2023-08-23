@@ -29,6 +29,8 @@ func GetSourceBeauregardUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Beauregard Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeBeauregardUrgentCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

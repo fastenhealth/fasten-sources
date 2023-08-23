@@ -29,6 +29,8 @@ func GetSourceStPaulAllergyAndAsthmaPa(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "St. Paul Allergy & Asthma, PA"
 	sourceDef.SourceType = pkg.SourceTypeStPaulAllergyAndAsthmaPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://stpaulallergy.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

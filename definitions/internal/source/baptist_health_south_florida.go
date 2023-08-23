@@ -29,6 +29,8 @@ func GetSourceBaptistHealthSouthFlorida(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Baptist Health South Florida"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthSouthFlorida
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.superdoctors.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

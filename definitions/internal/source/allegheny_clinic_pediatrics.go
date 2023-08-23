@@ -29,6 +29,7 @@ func GetSourceAlleghenyClinicPediatrics(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Allegheny Clinic Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeAlleghenyClinicPediatrics
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881060648"}}
 	sourceDef.BrandLogo = "allegheny-health-network.png"
 	sourceDef.PatientAccessUrl = "https://www.ahn.org/location-search/allegheny-clinic-pediatrics-369.html"

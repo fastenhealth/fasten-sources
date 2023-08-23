@@ -29,6 +29,8 @@ func GetSourceMountPleasantInternalMedicine(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mount Pleasant Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeMountPleasantInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "mount-pleasant-internal-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/sc-south-carolina/mount-pleasant/mdvip-mount-pleasant-south-carolina-x9sncm1"
 	sourceDef.SecretKeyPrefix = "cerner"

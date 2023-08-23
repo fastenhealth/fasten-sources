@@ -29,6 +29,8 @@ func GetSourceVolpicellalevyAndDaposaquinoMds(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "VolpicellaLevy And DaposAquino Mds"
 	sourceDef.SourceType = pkg.SourceTypeVolpicellalevyAndDaposaquinoMds
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

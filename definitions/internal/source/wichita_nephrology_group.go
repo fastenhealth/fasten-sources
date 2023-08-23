@@ -28,6 +28,8 @@ func GetSourceWichitaNephrologyGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Wichita Nephrology Group"
 	sourceDef.SourceType = pkg.SourceTypeWichitaNephrologyGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://wichitanephrology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

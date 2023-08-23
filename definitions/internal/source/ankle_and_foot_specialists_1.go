@@ -29,6 +29,8 @@ func GetSourceAnkleAndFootSpecialists1(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Ankle & Foot Specialists"
 	sourceDef.SourceType = pkg.SourceTypeAnkleAndFootSpecialists1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ga-georgia/douglasville/ankle-foot-specialists-xbl9knhttps://www.healthgrades.com/group-directory/ga-georgia/douglasville/ankle-foot-specialists-xbl9kn"
 	sourceDef.SecretKeyPrefix = "cerner"
 

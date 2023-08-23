@@ -28,6 +28,8 @@ func GetSourceMactHealthBoardInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "MACT Health Board Inc"
 	sourceDef.SourceType = pkg.SourceTypeMactHealthBoardInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

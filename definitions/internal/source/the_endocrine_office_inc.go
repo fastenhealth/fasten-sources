@@ -28,6 +28,8 @@ func GetSourceTheEndocrineOfficeInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "The Endocrine Office Inc"
 	sourceDef.SourceType = pkg.SourceTypeTheEndocrineOfficeInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "the-endocrine-office-inc.svg"
 	sourceDef.PatientAccessUrl = "https://www.lvhn.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceGeorgeWashingtonUniversityMedicalFacultyAssociates(env pkg.FastenL
 
 	sourceDef.Display = "George Washington University Medical Faculty Associates"
 	sourceDef.SourceType = pkg.SourceTypeGeorgeWashingtonUniversityMedicalFacultyAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

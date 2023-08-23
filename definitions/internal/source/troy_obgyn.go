@@ -28,6 +28,8 @@ func GetSourceTroyObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Troy ObGyn"
 	sourceDef.SourceType = pkg.SourceTypeTroyObgyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

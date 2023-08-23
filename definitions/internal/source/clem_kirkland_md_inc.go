@@ -29,6 +29,8 @@ func GetSourceClemKirklandMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Clem Kirkland MD Inc."
 	sourceDef.SourceType = pkg.SourceTypeClemKirklandMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

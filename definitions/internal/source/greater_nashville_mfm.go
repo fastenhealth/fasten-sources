@@ -28,6 +28,8 @@ func GetSourceGreaterNashvilleMfm(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Greater Nashville MFM"
 	sourceDef.SourceType = pkg.SourceTypeGreaterNashvilleMfm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.vitals.com/practice/greater-nashville-mfm-da4e35fa-7e90-4d68-814d-13fb56217dcd"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceJamesRMilneDoPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "James R. Milne, DO, PA"
 	sourceDef.SourceType = pkg.SourceTypeJamesRMilneDoPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "james-r-milne-do-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://www.yellowpages.com/oakland-park-fl/mip/dr-james-r-milne-do-496131229"
 	sourceDef.SecretKeyPrefix = "cerner"

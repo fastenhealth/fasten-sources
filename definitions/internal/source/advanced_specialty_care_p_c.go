@@ -28,6 +28,8 @@ func GetSourceAdvancedSpecialtyCarePC(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Advanced Specialty Care P.C."
 	sourceDef.SourceType = pkg.SourceTypeAdvancedSpecialtyCarePC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ascdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

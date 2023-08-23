@@ -29,6 +29,7 @@ func GetSourceNeurospinalAssociatesPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Neurospinal Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeNeurospinalAssociatesPa
 	sourceDef.Category = []string{"207T00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427135714"}}
 	sourceDef.PatientAccessUrl = "https://nsadoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

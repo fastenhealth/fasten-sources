@@ -28,6 +28,8 @@ func GetSourceBarryLGellisod(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "BARRY L. GELLISOD"
 	sourceDef.SourceType = pkg.SourceTypeBarryLGellisod
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "barry-l-gellisod.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceAdvancedPainManagement(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Advanced Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainManagement
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225284409", "1972759470"}}
 	sourceDef.PatientAccessUrl = "https://apmhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

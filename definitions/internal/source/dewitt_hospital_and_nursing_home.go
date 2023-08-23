@@ -29,6 +29,8 @@ func GetSourceDewittHospitalAndNursingHome(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Dewitt Hospital and Nursing Home"
 	sourceDef.SourceType = pkg.SourceTypeDewittHospitalAndNursingHome
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dewitt-hospital-and-nursing-home.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/dewitthnh/"
 	sourceDef.SecretKeyPrefix = "cerner"

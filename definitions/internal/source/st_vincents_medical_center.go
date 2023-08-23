@@ -29,6 +29,8 @@ func GetSourceStVincentsMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "St. Vincent's Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeStVincentsMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "st-vincents-medical-center.svg"
 	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

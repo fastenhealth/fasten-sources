@@ -28,6 +28,8 @@ func GetSourceMedicalAdvancedPainSpecialistsPa(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Medical Advanced Pain Specialists PA"
 	sourceDef.SourceType = pkg.SourceTypeMedicalAdvancedPainSpecialistsPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/medical-advanced-pain-specialists-d089854e-a16b-41b0-8e9c-bd22f06a79d8"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

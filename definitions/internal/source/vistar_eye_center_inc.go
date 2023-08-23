@@ -28,6 +28,8 @@ func GetSourceVistarEyeCenterInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Vistar Eye Center Inc."
 	sourceDef.SourceType = pkg.SourceTypeVistarEyeCenterInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceDrCharlesSchlosser1(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dr. Charles Schlosser"
 	sourceDef.SourceType = pkg.SourceTypeDrCharlesSchlosser1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "dr-charles-schlosser.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/DrCharlesSchlosser/"
 	sourceDef.SecretKeyPrefix = "cerner"

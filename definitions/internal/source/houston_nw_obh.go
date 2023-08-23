@@ -28,6 +28,8 @@ func GetSourceHoustonNwObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Houston NW OBH"
 	sourceDef.SourceType = pkg.SourceTypeHoustonNwObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hcahoustonhealthcare.com/locations/northwest/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -30,6 +30,7 @@ func GetSourceCareDimensionsInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Care Dimensions Inc"
 	sourceDef.SourceType = pkg.SourceTypeCareDimensionsInc
 	sourceDef.Category = []string{"251B00000X", "251S00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023783511", "1740748615"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

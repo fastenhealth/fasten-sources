@@ -28,6 +28,8 @@ func GetSourceEyeAssociatesOfNewMexicoOptical(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Eye Associates Of New Mexico Optical"
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesOfNewMexicoOptical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

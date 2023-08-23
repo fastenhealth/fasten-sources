@@ -28,6 +28,8 @@ func GetSourceNcpSugarlandCathLab(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "NCP Sugarland Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpSugarlandCathLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com/us/texas/cardiac-cath-lab-sugarland-lp-286187154"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

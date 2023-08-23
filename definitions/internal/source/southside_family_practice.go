@@ -29,6 +29,8 @@ func GetSourceSouthsideFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "SouthSide Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeSouthsideFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.doverdocs.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

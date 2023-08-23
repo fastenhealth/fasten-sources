@@ -28,6 +28,8 @@ func GetSourcePulmonaryAndSleepAssocOfHunterdon(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Pulmonary And Sleep Assoc Of Hunterdon"
 	sourceDef.SourceType = pkg.SourceTypePulmonaryAndSleepAssocOfHunterdon
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hunterdonpulmonaryandsleep.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

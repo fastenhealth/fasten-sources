@@ -29,6 +29,8 @@ func GetSourceJohnsHopkinsAllChildrensHospitalInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Johns Hopkins All Childrens Hospital, Inc."
 	sourceDef.SourceType = pkg.SourceTypeJohnsHopkinsAllChildrensHospitalInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hopkinsallchildrens.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

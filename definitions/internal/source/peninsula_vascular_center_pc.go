@@ -28,6 +28,8 @@ func GetSourcePeninsulaVascularCenterPc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Peninsula Vascular Center PC"
 	sourceDef.SourceType = pkg.SourceTypePeninsulaVascularCenterPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://peninsulavascularcenter.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

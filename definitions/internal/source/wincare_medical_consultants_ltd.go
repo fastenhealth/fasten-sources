@@ -28,6 +28,8 @@ func GetSourceWincareMedicalConsultantsLtd(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "WinCare Medical Consultants Ltd"
 	sourceDef.SourceType = pkg.SourceTypeWincareMedicalConsultantsLtd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

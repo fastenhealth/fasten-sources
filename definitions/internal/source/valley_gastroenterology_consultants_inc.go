@@ -28,6 +28,8 @@ func GetSourceValleyGastroenterologyConsultantsInc(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Valley Gastroenterology Consultants Inc"
 	sourceDef.SourceType = pkg.SourceTypeValleyGastroenterologyConsultantsInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

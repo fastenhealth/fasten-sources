@@ -28,6 +28,8 @@ func GetSourceInFocusOphthalmicPlasticSurgery(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "In Focus Ophthalmic Plastic Surgery"
 	sourceDef.SourceType = pkg.SourceTypeInFocusOphthalmicPlasticSurgery
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.infocusops.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

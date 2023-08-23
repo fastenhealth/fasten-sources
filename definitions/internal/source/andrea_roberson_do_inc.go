@@ -28,6 +28,8 @@ func GetSourceAndreaRobersonDoInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Andrea Roberson DO Inc"
 	sourceDef.SourceType = pkg.SourceTypeAndreaRobersonDoInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/337F8MIINCASRWHTMZOT4D6HZ5Q04R?assignment_id=317HQ483ILPR6J69YWXWYA82HPNINO&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

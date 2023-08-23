@@ -30,6 +30,7 @@ func GetSourceSsmHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "SSM Health"
 	sourceDef.SourceType = pkg.SourceTypeSsmHealth
 	sourceDef.Category = []string{"261QU0200X", "282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306206347", "1487012845"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

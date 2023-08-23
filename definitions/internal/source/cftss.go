@@ -28,6 +28,8 @@ func GetSourceCftss(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "CFTSS"
 	sourceDef.SourceType = pkg.SourceTypeCftss
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

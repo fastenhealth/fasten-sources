@@ -29,6 +29,7 @@ func GetSourceCedarRiverClinics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Cedar River Clinics"
 	sourceDef.SourceType = pkg.SourceTypeCedarRiverClinics
 	sourceDef.Category = []string{"261QF0050X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578708921"}}
 	sourceDef.BrandLogo = "cedar-river-clinics.webp"
 	sourceDef.PatientAccessUrl = "https://cedarriverclinics.org/"

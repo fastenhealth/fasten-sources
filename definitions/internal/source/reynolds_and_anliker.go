@@ -28,6 +28,8 @@ func GetSourceReynoldsAndAnliker(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Reynolds And Anliker"
 	sourceDef.SourceType = pkg.SourceTypeReynoldsAndAnliker
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.reynoldsandanliker.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

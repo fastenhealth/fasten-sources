@@ -28,6 +28,8 @@ func GetSourceEricEnriquezMdFamilyPractice(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Eric Enriquez MD Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeEricEnriquezMdFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.torrancememorial.org/find-a-doctor/profile/eric-enriquez/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceBrowardFamilyMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Broward Family Medical Group Llc"
 	sourceDef.SourceType = pkg.SourceTypeBrowardFamilyMedicalGroupLlc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992984652"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

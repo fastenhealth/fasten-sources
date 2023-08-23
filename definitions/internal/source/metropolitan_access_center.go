@@ -28,6 +28,8 @@ func GetSourceMetropolitanAccessCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Metropolitan Access Center"
 	sourceDef.SourceType = pkg.SourceTypeMetropolitanAccessCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

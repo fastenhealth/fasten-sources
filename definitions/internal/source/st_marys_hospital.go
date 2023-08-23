@@ -29,6 +29,8 @@ func GetSourceStMarysHospital(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "St. Mary's Hospital"
 	sourceDef.SourceType = pkg.SourceTypeStMarysHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "st-marys-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://m.facebook.com/medstarstmarys/posts/"
 	sourceDef.SecretKeyPrefix = "cerner"

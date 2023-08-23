@@ -28,6 +28,8 @@ func GetSourcePace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 
 	sourceDef.Display = "PACE"
 	sourceDef.SourceType = pkg.SourceTypePace
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://elementcare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

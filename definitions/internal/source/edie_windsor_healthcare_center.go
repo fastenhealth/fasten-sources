@@ -28,6 +28,8 @@ func GetSourceEdieWindsorHealthcareCenter(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Edie Windsor Healthcare Center"
 	sourceDef.SourceType = pkg.SourceTypeEdieWindsorHealthcareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://southampton.stonybrookmedicine.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

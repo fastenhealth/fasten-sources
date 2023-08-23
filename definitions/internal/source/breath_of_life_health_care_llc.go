@@ -28,6 +28,8 @@ func GetSourceBreathOfLifeHealthCareLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Breath Of Life Health Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeBreathOfLifeHealthCareLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

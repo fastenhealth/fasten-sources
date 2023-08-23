@@ -29,6 +29,8 @@ func GetSourceAltais(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Altais"
 	sourceDef.SourceType = pkg.SourceTypeAltais
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

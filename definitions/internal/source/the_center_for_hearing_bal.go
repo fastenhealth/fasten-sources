@@ -28,6 +28,8 @@ func GetSourceTheCenterForHearingBal(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "The Center For Hearing  Bal"
 	sourceDef.SourceType = pkg.SourceTypeTheCenterForHearingBal
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

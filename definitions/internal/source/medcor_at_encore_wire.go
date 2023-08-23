@@ -28,6 +28,8 @@ func GetSourceMedcorAtEncoreWire(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Medcor At Encore Wire"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtEncoreWire
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "medcor-at-encore-wire.svg"
 	sourceDef.PatientAccessUrl = "https://www.encorewire.com/contact.html"
 	sourceDef.SecretKeyPrefix = "nextgen"

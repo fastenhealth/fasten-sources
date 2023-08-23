@@ -29,6 +29,7 @@ func GetSourceClinicSofiaObgynPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Clinic Sofia OBGYN PA"
 	sourceDef.SourceType = pkg.SourceTypeClinicSofiaObgynPa
 	sourceDef.Category = []string{"207V00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245218825"}}
 	sourceDef.PatientAccessUrl = "https://clinicsofia.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

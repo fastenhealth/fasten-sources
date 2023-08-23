@@ -28,6 +28,8 @@ func GetSourceSouthernSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Southern Surgery Center LLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthernSurgeryCenterLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "southern-surgery-center-llc.jpeg"
 	sourceDef.PatientAccessUrl = "https://southernboneandjoint.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

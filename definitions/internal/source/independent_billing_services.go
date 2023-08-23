@@ -28,6 +28,8 @@ func GetSourceIndependentBillingServices(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Independent Billing Services"
 	sourceDef.SourceType = pkg.SourceTypeIndependentBillingServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.coronishealth.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

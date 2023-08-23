@@ -28,6 +28,8 @@ func GetSourceCincinnatiAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Cincinnati ASC"
 	sourceDef.SourceType = pkg.SourceTypeCincinnatiAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cincinnatichildrens.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

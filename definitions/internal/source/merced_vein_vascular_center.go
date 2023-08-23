@@ -28,6 +28,8 @@ func GetSourceMercedVeinVascularCenter(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Merced Vein  Vascular Center"
 	sourceDef.SourceType = pkg.SourceTypeMercedVeinVascularCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

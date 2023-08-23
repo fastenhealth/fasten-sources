@@ -28,6 +28,8 @@ func GetSourceCallahanAndLe(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Callahan and Le"
 	sourceDef.SourceType = pkg.SourceTypeCallahanAndLe
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

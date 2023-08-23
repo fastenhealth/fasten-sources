@@ -29,6 +29,8 @@ func GetSourceMahiraTanovicMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Mahira Tanovic MD"
 	sourceDef.SourceType = pkg.SourceTypeMahiraTanovicMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://radaris.com/Mahira-Tanovic/1294351940"
 	sourceDef.SecretKeyPrefix = "cerner"
 

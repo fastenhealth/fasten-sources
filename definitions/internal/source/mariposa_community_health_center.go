@@ -28,6 +28,8 @@ func GetSourceMariposaCommunityHealthCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Mariposa Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeMariposaCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mariposachc.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceLhPrimaryCareShoalCreek(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "LH Primary Care Shoal Creek"
 	sourceDef.SourceType = pkg.SourceTypeLhPrimaryCareShoalCreek
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.libertyhospital.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

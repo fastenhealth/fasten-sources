@@ -29,6 +29,8 @@ func GetSourceWyomingMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Wyoming Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeWyomingMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

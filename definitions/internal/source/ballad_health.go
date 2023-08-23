@@ -29,6 +29,8 @@ func GetSourceBalladHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Ballad Health"
 	sourceDef.SourceType = pkg.SourceTypeBalladHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

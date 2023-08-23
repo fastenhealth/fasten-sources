@@ -28,6 +28,8 @@ func GetSourceSylviaGisiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Sylvia Gisi MD"
 	sourceDef.SourceType = pkg.SourceTypeSylviaGisiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.temeculafamilydoctor.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourcePpgtSurgicalHealthServices(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "PPGT Surgical Health Services"
 	sourceDef.SourceType = pkg.SourceTypePpgtSurgicalHealthServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ppgt-surgical-health-services.jpg"
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-greater-texas/contact-us"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceIdahoArthritisCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Idaho Arthritis Center"
 	sourceDef.SourceType = pkg.SourceTypeIdahoArthritisCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://idahoarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

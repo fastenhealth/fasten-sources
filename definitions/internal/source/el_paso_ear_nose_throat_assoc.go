@@ -28,6 +28,8 @@ func GetSourceElPasoEarNoseThroatAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "El Paso Ear Nose  Throat Assoc"
 	sourceDef.SourceType = pkg.SourceTypeElPasoEarNoseThroatAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

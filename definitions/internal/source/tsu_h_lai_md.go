@@ -28,6 +28,8 @@ func GetSourceTsuHLaiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "Tsu H Lai Md"
 	sourceDef.SourceType = pkg.SourceTypeTsuHLaiMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceSemlerDermatologyInc(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Semler Dermatology, Inc."
 	sourceDef.SourceType = pkg.SourceTypeSemlerDermatologyInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "semler-dermatology-inc.jpeg"
 	sourceDef.PatientAccessUrl = "https://semlerderm.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

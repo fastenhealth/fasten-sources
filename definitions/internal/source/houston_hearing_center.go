@@ -28,6 +28,8 @@ func GetSourceHoustonHearingCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Houston Hearing Center"
 	sourceDef.SourceType = pkg.SourceTypeHoustonHearingCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.biselhearingaids.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

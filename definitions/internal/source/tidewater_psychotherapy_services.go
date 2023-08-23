@@ -29,6 +29,7 @@ func GetSourceTidewaterPsychotherapyServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Tidewater Psychotherapy Services"
 	sourceDef.SourceType = pkg.SourceTypeTidewaterPsychotherapyServices
 	sourceDef.Category = []string{"101YA0400X", "104100000X", "2084P0800X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164536496", "1700830742"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

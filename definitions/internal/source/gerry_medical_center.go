@@ -28,6 +28,8 @@ func GetSourceGerryMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Gerry Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeGerryMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/gerry-medical-clinic-524e3667-c275-45e5-82d3-42e7f027857e"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourcePactMultispecialty(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "PACT Multispecialty"
 	sourceDef.SourceType = pkg.SourceTypePactMultispecialty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://physiciansallianceofconnecticut.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

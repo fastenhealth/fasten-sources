@@ -29,6 +29,8 @@ func GetSourceJupiterMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Jupiter Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeJupiterMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.jupitermed.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

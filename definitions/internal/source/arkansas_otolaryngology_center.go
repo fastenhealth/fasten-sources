@@ -28,6 +28,8 @@ func GetSourceArkansasOtolaryngologyCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Arkansas Otolaryngology Center"
 	sourceDef.SourceType = pkg.SourceTypeArkansasOtolaryngologyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.araoc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

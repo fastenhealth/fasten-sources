@@ -28,6 +28,8 @@ func GetSourceVitalSightAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Vital Sight ASC"
 	sourceDef.SourceType = pkg.SourceTypeVitalSightAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

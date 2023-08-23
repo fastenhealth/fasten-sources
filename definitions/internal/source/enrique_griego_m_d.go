@@ -29,6 +29,8 @@ func GetSourceEnriqueGriegoMD(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Enrique Griego, M.D."
 	sourceDef.SourceType = pkg.SourceTypeEnriqueGriegoMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "enrique-griego-m-d.jpg"
 	sourceDef.PatientAccessUrl = "https://doctors.southtexashealthsystem.com/provider/Enrique+Griego/2228447"
 	sourceDef.SecretKeyPrefix = "cerner"

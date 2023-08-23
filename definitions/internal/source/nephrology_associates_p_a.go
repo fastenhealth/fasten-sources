@@ -28,6 +28,8 @@ func GetSourceNephrologyAssociatesPA(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Nephrology Associates P A"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesPA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.arnapa.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

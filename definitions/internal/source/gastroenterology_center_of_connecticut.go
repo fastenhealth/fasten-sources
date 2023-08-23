@@ -28,6 +28,8 @@ func GetSourceGastroenterologyCenterOfConnecticut(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Gastroenterology Center Of Connecticut"
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyCenterOfConnecticut
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3VP28W7DV0HZRXK8AAX41G6U6UHFZ5?assignment_id=351SEKWQSEE4GQ5NUHHLUY3PPDBMD3&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

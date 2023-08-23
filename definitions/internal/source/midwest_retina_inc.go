@@ -28,6 +28,8 @@ func GetSourceMidwestRetinaInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Midwest Retina Inc"
 	sourceDef.SourceType = pkg.SourceTypeMidwestRetinaInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.midwestretina.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

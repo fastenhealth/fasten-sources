@@ -28,6 +28,8 @@ func GetSourceDentonOncologyCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Denton Oncology Center"
 	sourceDef.SourceType = pkg.SourceTypeDentonOncologyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

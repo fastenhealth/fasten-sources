@@ -29,6 +29,7 @@ func GetSourceSlocumOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Slocum Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceTypeSlocumOrthopedicsPc
 	sourceDef.Category = []string{"207X00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033236435", "1033236880"}}
 	sourceDef.BrandLogo = "slocum-orthopedics-pc.svg"
 	sourceDef.PatientAccessUrl = "https://www.slocumcenter.com/"

@@ -29,6 +29,7 @@ func GetSourcePrimaryCarePartnersOfOhio(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Primary Care Partners of Ohio"
 	sourceDef.SourceType = pkg.SourceTypePrimaryCarePartnersOfOhio
 	sourceDef.Category = []string{"207QG0300X", "208D00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255832275"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

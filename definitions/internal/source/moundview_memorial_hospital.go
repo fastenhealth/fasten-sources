@@ -29,6 +29,8 @@ func GetSourceMoundviewMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Moundview Memorial Hospital"
 	sourceDef.SourceType = pkg.SourceTypeMoundviewMemorialHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "moundview-memorial-hospital.jpg"
 	sourceDef.PatientAccessUrl = "https://www.gundersenhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

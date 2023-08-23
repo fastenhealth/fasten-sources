@@ -28,6 +28,8 @@ func GetSourceRichardsAndRichardsonPc(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Richards And Richardson Pc"
 	sourceDef.SourceType = pkg.SourceTypeRichardsAndRichardsonPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

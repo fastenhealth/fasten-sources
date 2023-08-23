@@ -28,6 +28,8 @@ func GetSourceLomibaoRheumatologyAndWellnessCare(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Lomibao Rheumatology And Wellness Care"
 	sourceDef.SourceType = pkg.SourceTypeLomibaoRheumatologyAndWellnessCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lomibaorheumatology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

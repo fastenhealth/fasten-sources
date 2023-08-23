@@ -28,6 +28,8 @@ func GetSourceAbileneBoneAndJoint(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Abilene Bone And Joint"
 	sourceDef.SourceType = pkg.SourceTypeAbileneBoneAndJoint
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hendrickhealth.org/hendrick-clinic/bone-and-joint/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

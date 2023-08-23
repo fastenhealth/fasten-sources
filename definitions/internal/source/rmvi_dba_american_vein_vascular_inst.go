@@ -28,6 +28,8 @@ func GetSourceRmviDbaAmericanVeinVascularInst(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "RMVI dba American Vein Vascular Inst"
 	sourceDef.SourceType = pkg.SourceTypeRmviDbaAmericanVeinVascularInst
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "rmvi-dba-american-vein-vascular-inst.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/AmVeinSPueblo/"
 	sourceDef.SecretKeyPrefix = "nextgen"

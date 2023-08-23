@@ -27,6 +27,7 @@ func GetSourceBlueCrossBlueShieldKansasCity(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Blue Cross Blue Shield Kansas City"
 	sourceDef.SourceType = pkg.SourceTypeBlueCrossBlueShieldKansasCity
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"BlueKC"}
 	sourceDef.BrandLogo = "blue-cross-blue-shield-kansas-city.svg"
 	sourceDef.PatientAccessUrl = "https://www.bluekc.com/"

@@ -29,6 +29,8 @@ func GetSourceSouthfieldInternists(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Southfield Internists"
 	sourceDef.SourceType = pkg.SourceTypeSouthfieldInternists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

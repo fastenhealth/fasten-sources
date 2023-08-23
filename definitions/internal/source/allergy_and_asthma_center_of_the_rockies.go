@@ -29,6 +29,8 @@ func GetSourceAllergyAndAsthmaCenterOfTheRockies(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Allergy and Asthma Center Of The Rockies"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAndAsthmaCenterOfTheRockies
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://northerncoloradoallergist.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

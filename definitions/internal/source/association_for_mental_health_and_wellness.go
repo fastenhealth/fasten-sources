@@ -29,6 +29,8 @@ func GetSourceAssociationForMentalHealthAndWellness(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Association for Mental Health and Wellness"
 	sourceDef.SourceType = pkg.SourceTypeAssociationForMentalHealthAndWellness
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://mhaw.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceMillenniumPhysiciansAssociation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Millennium Physicians Association"
 	sourceDef.SourceType = pkg.SourceTypeMillenniumPhysiciansAssociation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://millenniumphysicians.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

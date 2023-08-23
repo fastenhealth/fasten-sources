@@ -28,6 +28,8 @@ func GetSourceANewLeafInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "A New Leaf Inc"
 	sourceDef.SourceType = pkg.SourceTypeANewLeafInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.anewleaf.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

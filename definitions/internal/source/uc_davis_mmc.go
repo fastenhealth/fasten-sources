@@ -29,6 +29,8 @@ func GetSourceUcDavisMmc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "UC Davis - MMC"
 	sourceDef.SourceType = pkg.SourceTypeUcDavisMmc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

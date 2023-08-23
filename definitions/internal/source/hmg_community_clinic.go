@@ -28,6 +28,8 @@ func GetSourceHmgCommunityClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "HMG Community Clinic"
 	sourceDef.SourceType = pkg.SourceTypeHmgCommunityClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://hmghealth.com/en/home/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

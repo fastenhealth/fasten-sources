@@ -29,6 +29,7 @@ func GetSourceUsborneFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Usborne Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeUsborneFamilyMedicine
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568743169"}}
 	sourceDef.PatientAccessUrl = "https://www.usbornefamilymedicine.com/?utm_source=gmb_auth"
 	sourceDef.SecretKeyPrefix = "nextgen"

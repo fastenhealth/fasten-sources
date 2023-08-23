@@ -28,6 +28,8 @@ func GetSourceCitizensOfLakeCountyHealthCareInc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Citizens Of Lake County Health Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeCitizensOfLakeCountyHealthCareInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "citizens-of-lake-county-health-care-inc.webp"
 	sourceDef.PatientAccessUrl = "https://www.clchc.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

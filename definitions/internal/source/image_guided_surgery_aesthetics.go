@@ -28,6 +28,8 @@ func GetSourceImageGuidedSurgeryAesthetics(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Image Guided Surgery Aesthetics"
 	sourceDef.SourceType = pkg.SourceTypeImageGuidedSurgeryAesthetics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.azuravascularcare.com/center/image-guided-surgery-aesthetics/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

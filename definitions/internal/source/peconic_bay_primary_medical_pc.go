@@ -28,6 +28,8 @@ func GetSourcePeconicBayPrimaryMedicalPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Peconic Bay Primary Medical PC"
 	sourceDef.SourceType = pkg.SourceTypePeconicBayPrimaryMedicalPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://about.usps.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

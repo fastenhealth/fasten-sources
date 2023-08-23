@@ -28,6 +28,8 @@ func GetSourceHealthSolutionsMedical(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Health Solutions Medical"
 	sourceDef.SourceType = pkg.SourceTypeHealthSolutionsMedical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "health-solutions-medical.jpg"
 	sourceDef.PatientAccessUrl = "https://www.health.solutions"
 	sourceDef.SecretKeyPrefix = "nextgen"

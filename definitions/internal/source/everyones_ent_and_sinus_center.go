@@ -29,6 +29,8 @@ func GetSourceEveryonesEntAndSinusCenter(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Everyones Ent and Sinus Center"
 	sourceDef.SourceType = pkg.SourceTypeEveryonesEntAndSinusCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

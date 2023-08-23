@@ -28,6 +28,8 @@ func GetSourceVictoriaAllergyAndAsthmaClinic(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Victoria Allergy And Asthma Clinic"
 	sourceDef.SourceType = pkg.SourceTypeVictoriaAllergyAndAsthmaClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

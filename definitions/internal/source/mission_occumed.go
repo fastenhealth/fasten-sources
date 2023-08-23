@@ -29,6 +29,8 @@ func GetSourceMissionOccumed(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Mission Occumed"
 	sourceDef.SourceType = pkg.SourceTypeMissionOccumed
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://missionhealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

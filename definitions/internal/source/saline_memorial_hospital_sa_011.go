@@ -28,6 +28,8 @@ func GetSourceSalineMemorialHospitalSa011(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Saline Memorial Hospital - SA01"
 	sourceDef.SourceType = pkg.SourceTypeSalineMemorialHospitalSa011
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

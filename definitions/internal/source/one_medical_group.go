@@ -28,6 +28,8 @@ func GetSourceOneMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "One Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeOneMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.onemedical.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceCommunityHealthServices(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Community Health Services"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthServices
 	sourceDef.Category = []string{"122300000X", "124Q00000X", "261Q00000X", "261QF0400X", "261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063865814", "1679011803", "1740489434", "1770783326"}}
 	sourceDef.PatientAccessUrl = "https://nl-nl.facebook.com/CHSHartford/"
 	sourceDef.SecretKeyPrefix = "nextgen"

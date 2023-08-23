@@ -29,6 +29,8 @@ func GetSourceNephrologyGroupOfNortheastFlorida(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Nephrology Group of Northeast Florida"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyGroupOfNortheastFlorida
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://nephrologygroupnefl.net/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

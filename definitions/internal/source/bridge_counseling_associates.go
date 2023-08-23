@@ -29,6 +29,8 @@ func GetSourceBridgeCounselingAssociates(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Bridge Counseling Associates"
 	sourceDef.SourceType = pkg.SourceTypeBridgeCounselingAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://bridgecounseling.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

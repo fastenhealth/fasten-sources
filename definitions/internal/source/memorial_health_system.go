@@ -29,6 +29,8 @@ func GetSourceMemorialHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Memorial Health System"
 	sourceDef.SourceType = pkg.SourceTypeMemorialHealthSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "memorial-health-system.jpg"
 	sourceDef.PatientAccessUrl = "https://memorial.health/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -29,6 +29,8 @@ func GetSourceTriCityPrimaryCareMedicalGroupInc(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Tri-City Primary Care Medical Group, Inc."
 	sourceDef.SourceType = pkg.SourceTypeTriCityPrimaryCareMedicalGroupInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.tricityprimarycare.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceGardenStateBariatrics(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Garden State Bariatrics"
 	sourceDef.SourceType = pkg.SourceTypeGardenStateBariatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "garden-state-bariatrics.jpg"
 	sourceDef.PatientAccessUrl = "https://www.weightlosssurgerynewjersey.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

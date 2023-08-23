@@ -28,6 +28,8 @@ func GetSourceTallgrassOrthopedicAndSportsMedicine(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Tallgrass Orthopedic And Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeTallgrassOrthopedicAndSportsMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

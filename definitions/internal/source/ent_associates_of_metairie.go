@@ -29,6 +29,8 @@ func GetSourceEntAssociatesOfMetairie(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "ENT Associates of Metairie"
 	sourceDef.SourceType = pkg.SourceTypeEntAssociatesOfMetairie
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://entofmetairie.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

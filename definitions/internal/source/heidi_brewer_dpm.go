@@ -29,6 +29,8 @@ func GetSourceHeidiBrewerDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Heidi Brewer, DPM"
 	sourceDef.SourceType = pkg.SourceTypeHeidiBrewerDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mainefootandankle.com/about-us/about-us.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

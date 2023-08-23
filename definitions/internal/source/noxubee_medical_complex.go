@@ -29,6 +29,8 @@ func GetSourceNoxubeeMedicalComplex(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Noxubee Medical Complex"
 	sourceDef.SourceType = pkg.SourceTypeNoxubeeMedicalComplex
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceMaslandAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Masland Associates Inc"
 	sourceDef.SourceType = pkg.SourceTypeMaslandAssociatesInc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639190978"}}
 	sourceDef.BrandLogo = "masland-associates-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/maslandassociatesinc/"

@@ -30,6 +30,7 @@ func GetSourceAlbuquerqueCenterForRheumatologyPC(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Albuquerque Center for Rheumatology, P.C"
 	sourceDef.SourceType = pkg.SourceTypeAlbuquerqueCenterForRheumatologyPC
 	sourceDef.Category = []string{"208100000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639145808"}}
 	sourceDef.BrandLogo = "albuquerque-center-for-rheumatology.png"
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/"

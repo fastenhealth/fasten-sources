@@ -28,6 +28,8 @@ func GetSourceDigestiveDiseaseSpecialists(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Digestive Disease Specialists"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveDiseaseSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

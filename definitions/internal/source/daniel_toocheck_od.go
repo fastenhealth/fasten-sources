@@ -29,6 +29,8 @@ func GetSourceDanielToocheckOd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Daniel Toocheck OD"
 	sourceDef.SourceType = pkg.SourceTypeDanielToocheckOd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "daniel-toocheck-od.jpg"
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourceSoaringHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Soaring Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeSoaringHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bizapedia.com/tx/soaring-healthcare-pllc.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

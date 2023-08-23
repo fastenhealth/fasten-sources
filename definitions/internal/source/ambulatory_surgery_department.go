@@ -28,6 +28,8 @@ func GetSourceAmbulatorySurgeryDepartment(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Ambulatory Surgery Department"
 	sourceDef.SourceType = pkg.SourceTypeAmbulatorySurgeryDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ahni.com/content/ahni/en.html"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

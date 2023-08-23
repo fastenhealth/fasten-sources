@@ -29,6 +29,8 @@ func GetSourceNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealth
 
 	sourceDef.Display = "New York Hotel Trades Council and Hotel Association of New York City, Inc. Health Benefits Fund"
 	sourceDef.SourceType = pkg.SourceTypeNewYorkHotelTradesCouncilAndHotelAssociationOfNewYorkCityIncHealthBenefitsFund
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hotelfunds.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

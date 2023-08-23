@@ -28,6 +28,8 @@ func GetSourceMountainValleyHospiceAndPalliativeCa(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Mountain Valley Hospice & Palliative Ca"
 	sourceDef.SourceType = pkg.SourceTypeMountainValleyHospiceAndPalliativeCa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.mtnvalleyhospice.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

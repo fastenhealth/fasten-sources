@@ -29,6 +29,8 @@ func GetSourceLomaLindaUniversityMedicalCenterMurrieta(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Loma Linda University Medical Center - Murrieta"
 	sourceDef.SourceType = pkg.SourceTypeLomaLindaUniversityMedicalCenterMurrieta
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

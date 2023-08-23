@@ -28,6 +28,8 @@ func GetSourceGreenCountyPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Green County Primary Care"
 	sourceDef.SourceType = pkg.SourceTypeGreenCountyPrimaryCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.janetoddhospital.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

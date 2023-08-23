@@ -29,6 +29,7 @@ func GetSourceSabatesEyeCenters(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Display = "Sabates Eye Centers"
 	sourceDef.SourceType = pkg.SourceTypeSabatesEyeCenters
 	sourceDef.Category = []string{"332B00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356569552", "1932311545"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -28,6 +28,8 @@ func GetSourceDerrickSmithMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Derrick Smith MD"
 	sourceDef.SourceType = pkg.SourceTypeDerrickSmithMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "derrick-smith-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.inlandvalleymedcenter.com/?utm_source=Google-Business-Yext&utm_medium=organic"
 	sourceDef.SecretKeyPrefix = "nextgen"

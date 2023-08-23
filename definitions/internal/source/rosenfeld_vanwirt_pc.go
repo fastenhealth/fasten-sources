@@ -29,6 +29,7 @@ func GetSourceRosenfeldVanwirtPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Rosenfeld VanWirt PC"
 	sourceDef.SourceType = pkg.SourceTypeRosenfeldVanwirtPc
 	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629402680"}}
 	sourceDef.PatientAccessUrl = "https://www.lvhn.org/locations/rosenfeld-van-wirt-pc/services"
 	sourceDef.SecretKeyPrefix = "nextgen"

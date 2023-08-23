@@ -28,6 +28,8 @@ func GetSourcePresenceHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Presence Health Network"
 	sourceDef.SourceType = pkg.SourceTypePresenceHealthNetwork
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

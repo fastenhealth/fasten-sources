@@ -29,6 +29,8 @@ func GetSourcePodiatryAssociatesOfLakeCounty(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Podiatry Associates of Lake County"
 	sourceDef.SourceType = pkg.SourceTypePodiatryAssociatesOfLakeCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.podiatrylake.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

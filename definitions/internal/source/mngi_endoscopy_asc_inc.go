@@ -29,6 +29,7 @@ func GetSourceMngiEndoscopyAscInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "MNGI Endoscopy ASC Inc"
 	sourceDef.SourceType = pkg.SourceTypeMngiEndoscopyAscInc
 	sourceDef.Category = []string{"261QA1903X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669496345"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

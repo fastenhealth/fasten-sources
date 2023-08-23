@@ -28,6 +28,8 @@ func GetSourceFloridaLungAsthmaSleepSpecialistsPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Florida Lung Asthma Sleep Specialists PA"
 	sourceDef.SourceType = pkg.SourceTypeFloridaLungAsthmaSleepSpecialistsPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://floridalungdoctors.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

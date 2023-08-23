@@ -28,6 +28,8 @@ func GetSourceMdElectrodiagnosisInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Md Electrodiagnosis Inc"
 	sourceDef.SourceType = pkg.SourceTypeMdElectrodiagnosisInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

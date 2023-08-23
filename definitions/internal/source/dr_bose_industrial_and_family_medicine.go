@@ -29,6 +29,8 @@ func GetSourceDrBoseIndustrialAndFamilyMedicine(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Dr. Bose Industrial & Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDrBoseIndustrialAndFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthcare4ppl.com/medical-group/texas/mcallen/dr-bose-industrial-and-family-medicine-pllc-7810076528.html"
 	sourceDef.SecretKeyPrefix = "cerner"
 

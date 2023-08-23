@@ -28,6 +28,8 @@ func GetSourceAllergyAssociatesOfLaCrosseLtd(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Allergy Associates Of La Crosse LTD"
 	sourceDef.SourceType = pkg.SourceTypeAllergyAssociatesOfLaCrosseLtd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.lacrosseallergy.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

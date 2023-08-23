@@ -28,6 +28,8 @@ func GetSourceActivateHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Activate Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeActivateHealthcare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.eversidehealth.com/unions/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

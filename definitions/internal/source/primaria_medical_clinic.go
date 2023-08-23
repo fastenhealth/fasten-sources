@@ -29,6 +29,7 @@ func GetSourcePrimariaMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Primaria Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypePrimariaMedicalClinic
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306070826"}}
 	sourceDef.PatientAccessUrl = "https://www.primariamed.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

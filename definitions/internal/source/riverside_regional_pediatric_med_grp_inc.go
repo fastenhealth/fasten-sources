@@ -28,6 +28,8 @@ func GetSourceRiversideRegionalPediatricMedGrpInc(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Riverside Regional Pediatric Med Grp Inc"
 	sourceDef.SourceType = pkg.SourceTypeRiversideRegionalPediatricMedGrpInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "htpps://na.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

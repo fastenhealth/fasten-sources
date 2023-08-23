@@ -29,6 +29,7 @@ func GetSourceJamesClinicInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "James Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeJamesClinicInc
 	sourceDef.Category = []string{"261QP2300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841635950"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

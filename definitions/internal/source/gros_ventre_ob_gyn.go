@@ -29,6 +29,8 @@ func GetSourceGrosVentreObGyn(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Gros Ventre OB/GYN"
 	sourceDef.SourceType = pkg.SourceTypeGrosVentreObGyn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://gvog.net/contact-us-2/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

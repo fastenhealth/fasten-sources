@@ -29,6 +29,8 @@ func GetSourceAdvocateAuroraHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Advocate Aurora Health"
 	sourceDef.SourceType = pkg.SourceTypeAdvocateAuroraHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.advocateaurorahealth.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourcePretermCleveland(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Preterm Cleveland"
 	sourceDef.SourceType = pkg.SourceTypePretermCleveland
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

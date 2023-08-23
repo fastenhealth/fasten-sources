@@ -28,6 +28,8 @@ func GetSourceLakeCumberlandRheumatology(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Lake Cumberland Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeLakeCumberlandRheumatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://insidelcr.com/?utm_source=GMBSocialClimb&utm_medium=LCRheumatology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

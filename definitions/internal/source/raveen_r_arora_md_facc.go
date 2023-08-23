@@ -28,6 +28,8 @@ func GetSourceRaveenRAroraMdFacc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Raveen R Arora Md Facc"
 	sourceDef.SourceType = pkg.SourceTypeRaveenRAroraMdFacc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourcePhysiciansSystemsServInc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Physicians Systems  Serv Inc"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansSystemsServInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

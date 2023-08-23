@@ -28,6 +28,8 @@ func GetSourceDublinPhysicalMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Dublin Physical Medicine"
 	sourceDef.SourceType = pkg.SourceTypeDublinPhysicalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceYouthAndFamilyGuidanceCenter(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Youth & Family Guidance Center"
 	sourceDef.SourceType = pkg.SourceTypeYouthAndFamilyGuidanceCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

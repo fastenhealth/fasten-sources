@@ -29,6 +29,8 @@ func GetSourceCanovaInternalMedicineClinic(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Canova Internal Medicine Clinic"
 	sourceDef.SourceType = pkg.SourceTypeCanovaInternalMedicineClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

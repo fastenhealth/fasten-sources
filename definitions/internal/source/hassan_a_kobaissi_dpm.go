@@ -28,6 +28,8 @@ func GetSourceHassanAKobaissiDpm(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hassan A. Kobaissi DPM"
 	sourceDef.SourceType = pkg.SourceTypeHassanAKobaissiDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hassan-a-kobaissi-dpm.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

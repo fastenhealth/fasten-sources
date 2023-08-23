@@ -28,6 +28,8 @@ func GetSourceNcpPortArthurAsc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "NCP Port Arthur ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpPortArthurAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

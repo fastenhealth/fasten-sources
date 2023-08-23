@@ -29,6 +29,8 @@ func GetSourceEmoryHealthcareInc1(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Emory Healthcare Inc"
 	sourceDef.SourceType = pkg.SourceTypeEmoryHealthcareInc1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "emory-healthcare.png"
 	sourceDef.PatientAccessUrl = "https://www.emoryhealthcare.org/index.html"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourceSouthEastEye(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "South East Eye"
 	sourceDef.SourceType = pkg.SourceTypeSouthEastEye
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "south-east-eye.jpeg"
 	sourceDef.PatientAccessUrl = "http://www.southeast-eye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -29,6 +29,8 @@ func GetSourceHeartlandPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Heartland Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeHeartlandPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ia-iowa/council-bluffs/heartland-pediatrics-pc-x88qw6a"
 	sourceDef.SecretKeyPrefix = "cerner"
 

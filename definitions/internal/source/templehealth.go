@@ -29,6 +29,8 @@ func GetSourceTemplehealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "TempleHealth"
 	sourceDef.SourceType = pkg.SourceTypeTemplehealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

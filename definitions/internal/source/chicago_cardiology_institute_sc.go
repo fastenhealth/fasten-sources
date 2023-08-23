@@ -28,6 +28,8 @@ func GetSourceChicagoCardiologyInstituteSc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Chicago Cardiology Institute SC"
 	sourceDef.SourceType = pkg.SourceTypeChicagoCardiologyInstituteSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "chicago-cardiology-institute-sc.svg"
 	sourceDef.PatientAccessUrl = "https://chicagocardiology.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

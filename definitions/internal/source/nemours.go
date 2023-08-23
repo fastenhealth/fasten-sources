@@ -29,6 +29,8 @@ func GetSourceNemours(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Nemours"
 	sourceDef.SourceType = pkg.SourceTypeNemours
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

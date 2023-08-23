@@ -28,6 +28,8 @@ func GetSourceHopeMedicoesUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Hope Medicoes Urgent Care"
 	sourceDef.SourceType = pkg.SourceTypeHopeMedicoesUrgentCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

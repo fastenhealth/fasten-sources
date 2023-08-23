@@ -28,6 +28,8 @@ func GetSourceInpatientServices(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Inpatient Services"
 	sourceDef.SourceType = pkg.SourceTypeInpatientServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "inpatient-services.jpg"
 	sourceDef.PatientAccessUrl = "https://www.sstar.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

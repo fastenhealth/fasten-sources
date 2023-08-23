@@ -28,6 +28,8 @@ func GetSourceFaithPediatricAndAdolescent(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Faith Pediatric And Adolescent"
 	sourceDef.SourceType = pkg.SourceTypeFaithPediatricAndAdolescent
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

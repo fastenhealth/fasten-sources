@@ -29,6 +29,8 @@ func GetSourceSierraWomensHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Sierra Womens Health"
 	sourceDef.SourceType = pkg.SourceTypeSierraWomensHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

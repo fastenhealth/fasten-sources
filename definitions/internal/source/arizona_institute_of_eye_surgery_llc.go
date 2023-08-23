@@ -28,6 +28,8 @@ func GetSourceArizonaInstituteOfEyeSurgeryLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Arizona Institute Of Eye Surgery LLC"
 	sourceDef.SourceType = pkg.SourceTypeArizonaInstituteOfEyeSurgeryLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://carelistings.com/surgical-centers/prescott-az/arizona-institute-of-eye-surgery-llc/5ace87be93efd2372f974f74"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

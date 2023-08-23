@@ -28,6 +28,8 @@ func GetSourceNcpKingwoodAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "NCP Kingwood ASC"
 	sourceDef.SourceType = pkg.SourceTypeNcpKingwoodAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

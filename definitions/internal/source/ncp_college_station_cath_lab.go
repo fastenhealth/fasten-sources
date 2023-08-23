@@ -28,6 +28,8 @@ func GetSourceNcpCollegeStationCathLab(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "NCP College Station Cath Lab"
 	sourceDef.SourceType = pkg.SourceTypeNcpCollegeStationCathLab
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://bcshvc.com/contact.php"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

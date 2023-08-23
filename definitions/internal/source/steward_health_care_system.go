@@ -29,6 +29,8 @@ func GetSourceStewardHealthCareSystem(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Steward Health Care System"
 	sourceDef.SourceType = pkg.SourceTypeStewardHealthCareSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "steward-health-care-system.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/StewardHealth/"
 	sourceDef.SecretKeyPrefix = "cerner"

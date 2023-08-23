@@ -28,6 +28,8 @@ func GetSourceDevonDermatologyServicesPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Devon Dermatology Services PC"
 	sourceDef.SourceType = pkg.SourceTypeDevonDermatologyServicesPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://opennpi.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -37,6 +37,7 @@ func GetSourceKaiser(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.PlatformType = pkg.SourceTypeKaiser
 	sourceDef.SourceType = pkg.SourceTypeKaiser
 	sourceDef.Category = []string{"Insurance"}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.kaiser.com"
 
 	return sourceDef, nil

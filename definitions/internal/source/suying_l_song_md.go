@@ -29,6 +29,8 @@ func GetSourceSuyingLSongMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Suying L Song Md"
 	sourceDef.SourceType = pkg.SourceTypeSuyingLSongMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceCharlesMurphyDpm(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Charles Murphy, DPM"
 	sourceDef.SourceType = pkg.SourceTypeCharlesMurphyDpm
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

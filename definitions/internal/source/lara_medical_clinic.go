@@ -28,6 +28,8 @@ func GetSourceLaraMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Lara Medical Clinic"
 	sourceDef.SourceType = pkg.SourceTypeLaraMedicalClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.No Website"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,7 @@ func GetSourceOsteopathicPhysiciansOfCharlottesville(env pkg.FastenLighthouseEnv
 	sourceDef.Display = "Osteopathic Physicians Of Charlottesville"
 	sourceDef.SourceType = pkg.SourceTypeOsteopathicPhysiciansOfCharlottesville
 	sourceDef.Category = []string{"208VP0014X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497765226"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

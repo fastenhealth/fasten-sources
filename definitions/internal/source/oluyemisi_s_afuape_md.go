@@ -28,6 +28,8 @@ func GetSourceOluyemisiSAfuapeMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Oluyemisi S Afuape MD"
 	sourceDef.SourceType = pkg.SourceTypeOluyemisiSAfuapeMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.huntingtonhealth.org/physicians/oluyemisi-s-afuape-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

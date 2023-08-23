@@ -29,6 +29,7 @@ func GetSourceSonomaCountyIndianHealthProject(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Sonoma County Indian Health Project"
 	sourceDef.SourceType = pkg.SourceTypeSonomaCountyIndianHealthProject
 	sourceDef.Category = []string{"261QH0100X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114209673"}}
 	sourceDef.PatientAccessUrl = "https://www.scihp.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

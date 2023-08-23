@@ -29,6 +29,8 @@ func GetSourceCoastalThoracicSurgical(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Coastal Thoracic Surgical"
 	sourceDef.SourceType = pkg.SourceTypeCoastalThoracicSurgical
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

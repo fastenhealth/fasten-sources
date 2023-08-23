@@ -28,6 +28,8 @@ func GetSourceIslandHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Island Health Inc"
 	sourceDef.SourceType = pkg.SourceTypeIslandHealthInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

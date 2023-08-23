@@ -28,6 +28,8 @@ func GetSourceAnkleFootCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Ankle  Foot Center"
 	sourceDef.SourceType = pkg.SourceTypeAnkleFootCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

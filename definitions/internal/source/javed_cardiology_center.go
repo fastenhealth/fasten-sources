@@ -28,6 +28,8 @@ func GetSourceJavedCardiologyCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Javed Cardiology Center"
 	sourceDef.SourceType = pkg.SourceTypeJavedCardiologyCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

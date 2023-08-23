@@ -28,6 +28,8 @@ func GetSourceBunSiuCoMdSc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Bun Siu Co MD SC"
 	sourceDef.SourceType = pkg.SourceTypeBunSiuCoMdSc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

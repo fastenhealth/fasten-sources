@@ -28,6 +28,8 @@ func GetSourceVeradigmConnectTwR4(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Veradigm Connect TW R4"
 	sourceDef.SourceType = pkg.SourceTypeVeradigmConnectTwR4
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

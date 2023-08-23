@@ -29,6 +29,7 @@ func GetSourceTheodorePWerblinMdPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Display = "Theodore P Werblin MD PC"
 	sourceDef.SourceType = pkg.SourceTypeTheodorePWerblinMdPc
 	sourceDef.Category = []string{"207W00000X", "261QS0132X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609061399"}}
 	sourceDef.PatientAccessUrl = "https://healthcare.example.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

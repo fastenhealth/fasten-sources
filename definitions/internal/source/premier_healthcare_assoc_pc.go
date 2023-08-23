@@ -29,6 +29,8 @@ func GetSourcePremierHealthcareAssocPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Premier Healthcare Assoc Pc"
 	sourceDef.SourceType = pkg.SourceTypePremierHealthcareAssocPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

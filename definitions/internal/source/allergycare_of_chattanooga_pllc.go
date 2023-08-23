@@ -28,6 +28,8 @@ func GetSourceAllergycareOfChattanoogaPllc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Allergycare Of Chattanooga PLLC"
 	sourceDef.SourceType = pkg.SourceTypeAllergycareOfChattanoogaPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.chattanoogaallergyclinic.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

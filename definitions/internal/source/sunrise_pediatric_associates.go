@@ -29,6 +29,7 @@ func GetSourceSunrisePediatricAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "Sunrise Pediatric Associates"
 	sourceDef.SourceType = pkg.SourceTypeSunrisePediatricAssociates
 	sourceDef.Category = []string{"208000000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417907429"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -30,6 +30,7 @@ func GetSourceSelectMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Display = "Select Medical"
 	sourceDef.SourceType = pkg.SourceTypeSelectMedical
 	sourceDef.Category = []string{"261QP2000X", "3104A0630X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497293146", "1578504361", "1629434675", "1710119235", "1760652697", "1912379959", "1932654647"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

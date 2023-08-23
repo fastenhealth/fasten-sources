@@ -28,6 +28,8 @@ func GetSourceCapitalHealthObh(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Capital Health OBH"
 	sourceDef.SourceType = pkg.SourceTypeCapitalHealthObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "capital-health-obh.svg"
 	sourceDef.PatientAccessUrl = "https://www.capitalhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

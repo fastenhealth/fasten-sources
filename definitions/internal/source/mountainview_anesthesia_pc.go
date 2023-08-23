@@ -28,6 +28,8 @@ func GetSourceMountainviewAnesthesiaPc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Mountainview Anesthesia PC"
 	sourceDef.SourceType = pkg.SourceTypeMountainviewAnesthesiaPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nowebsite.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

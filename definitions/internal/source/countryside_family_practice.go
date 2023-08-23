@@ -28,6 +28,8 @@ func GetSourceCountrysideFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "COUNTRYSIDE FAMILY PRACTICE"
 	sourceDef.SourceType = pkg.SourceTypeCountrysideFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cfpdocs.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

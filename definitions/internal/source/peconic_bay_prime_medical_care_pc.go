@@ -28,6 +28,8 @@ func GetSourcePeconicBayPrimeMedicalCarePc(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Peconic Bay Prime Medical Care PC"
 	sourceDef.SourceType = pkg.SourceTypePeconicBayPrimeMedicalCarePc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://worker.mturk.com/projects/3CTCX9NXCJJWWANBW47QJI84M2SJLA/tasks/3L55D8AUGNUSJVQTNM5KF3CP3NMYCN?assignment_id=32AT8R96GZ6TVNTE093WG76J436USI&from_queue=true"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

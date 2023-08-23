@@ -28,6 +28,8 @@ func GetSourceVaijayantiKoldhekarMd(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Vaijayanti Koldhekar MD"
 	sourceDef.SourceType = pkg.SourceTypeVaijayantiKoldhekarMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://locator.lacounty.gov/health"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

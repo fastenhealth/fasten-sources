@@ -28,6 +28,8 @@ func GetSourceCoastalAlbemarleOrthopaedicsPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Coastal Albemarle Orthopaedics Pa"
 	sourceDef.SourceType = pkg.SourceTypeCoastalAlbemarleOrthopaedicsPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

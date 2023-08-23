@@ -28,6 +28,8 @@ func GetSourceIowaEntAndSinusSurgeryCenterPc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Iowa Ent and Sinus Surgery Center PC"
 	sourceDef.SourceType = pkg.SourceTypeIowaEntAndSinusSurgeryCenterPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.iowaentcenter.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

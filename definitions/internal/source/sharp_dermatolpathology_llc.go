@@ -28,6 +28,8 @@ func GetSourceSharpDermatolpathologyLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Sharp Dermatolpathology LLC"
 	sourceDef.SourceType = pkg.SourceTypeSharpDermatolpathologyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/laboratories/clinical-medical-laboratory_291u00000x/1457676058.aspx"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

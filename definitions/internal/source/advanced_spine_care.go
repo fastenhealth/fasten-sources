@@ -28,6 +28,8 @@ func GetSourceAdvancedSpineCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Advanced Spine Care"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedSpineCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.advancedspinecareny.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

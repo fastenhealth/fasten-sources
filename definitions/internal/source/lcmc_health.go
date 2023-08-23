@@ -29,6 +29,8 @@ func GetSourceLcmcHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "LCMC Health"
 	sourceDef.SourceType = pkg.SourceTypeLcmcHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

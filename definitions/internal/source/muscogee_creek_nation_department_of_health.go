@@ -29,6 +29,8 @@ func GetSourceMuscogeeCreekNationDepartmentOfHealth(env pkg.FastenLighthouseEnvT
 
 	sourceDef.Display = "Muscogee - Creek Nation Department of Health"
 	sourceDef.SourceType = pkg.SourceTypeMuscogeeCreekNationDepartmentOfHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

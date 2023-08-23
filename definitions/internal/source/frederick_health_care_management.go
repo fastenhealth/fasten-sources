@@ -28,6 +28,8 @@ func GetSourceFrederickHealthCareManagement(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Frederick Health Care Management"
 	sourceDef.SourceType = pkg.SourceTypeFrederickHealthCareManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.frederickhealth.org/medical-group/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

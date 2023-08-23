@@ -28,6 +28,8 @@ func GetSourceNewportGastroenterology(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Newport Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeNewportGastroenterology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://taggs.hhs.gov/Detail/RecipDetail?arg_EntityId=LUyYsTzclxQl6g6nlyAkzw%3D%3D"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceUrosurgeryInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "UroSurgery Inc"
 	sourceDef.SourceType = pkg.SourceTypeUrosurgeryInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

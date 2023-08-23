@@ -29,6 +29,8 @@ func GetSourceTowerHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Tower Health"
 	sourceDef.SourceType = pkg.SourceTypeTowerHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

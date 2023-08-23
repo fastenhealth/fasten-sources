@@ -28,6 +28,8 @@ func GetSourceRamadasAbboyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Ramadas Abboy MD"
 	sourceDef.SourceType = pkg.SourceTypeRamadasAbboyMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ramadas-abboy-md.jpg"
 	sourceDef.PatientAccessUrl = "https://www.yellowpages.com/los-angeles-ca/mip/ramadas-abboy-md-3404620"
 	sourceDef.SecretKeyPrefix = "nextgen"

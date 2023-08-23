@@ -28,6 +28,8 @@ func GetSourceHoughPediatricsLlp(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hough Pediatrics LLP"
 	sourceDef.SourceType = pkg.SourceTypeHoughPediatricsLlp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-mary-hough-xvcv7"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

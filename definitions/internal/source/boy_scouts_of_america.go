@@ -29,6 +29,8 @@ func GetSourceBoyScoutsOfAmerica(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Boy Scouts of America"
 	sourceDef.SourceType = pkg.SourceTypeBoyScoutsOfAmerica
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "boy-scouts-of-america.svg"
 	sourceDef.PatientAccessUrl = "https://www.scouting.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

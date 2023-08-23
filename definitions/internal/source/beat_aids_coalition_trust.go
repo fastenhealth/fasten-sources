@@ -29,6 +29,7 @@ func GetSourceBeatAidsCoalitionTrust(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "BEAT AIDS Coalition Trust"
 	sourceDef.SourceType = pkg.SourceTypeBeatAidsCoalitionTrust
 	sourceDef.Category = []string{"101Y00000X", "101YA0400X", "101YM0800X", "171M00000X", "172A00000X", "172V00000X", "174H00000X", "251B00000X", "251S00000X", "261Q00000X", "291U00000X", "343900000X", "344600000X", "347C00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144767393", "1427346584"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

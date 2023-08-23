@@ -29,6 +29,8 @@ func GetSourceFirstBaptistMedicalCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "First Baptist Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeFirstBaptistMedicalCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "first-baptist-medical-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fbmcdallas.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

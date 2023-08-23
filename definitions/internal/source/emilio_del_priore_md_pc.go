@@ -29,6 +29,8 @@ func GetSourceEmilioDelPrioreMdPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Emilio Del Priore Md Pc"
 	sourceDef.SourceType = pkg.SourceTypeEmilioDelPrioreMdPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

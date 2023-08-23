@@ -28,6 +28,8 @@ func GetSourceEverettBoneAndJointPhysicalTherapy(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Everett Bone And Joint Physical Therapy"
 	sourceDef.SourceType = pkg.SourceTypeEverettBoneAndJointPhysicalTherapy
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ebjproliancesurgeons.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

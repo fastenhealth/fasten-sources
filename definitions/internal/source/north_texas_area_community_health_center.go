@@ -28,6 +28,8 @@ func GetSourceNorthTexasAreaCommunityHealthCenter(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "North Texas Area Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeNorthTexasAreaCommunityHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://ntachc.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

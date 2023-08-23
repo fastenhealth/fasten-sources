@@ -28,6 +28,8 @@ func GetSourceAmaliaArmentaMdApc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Amalia Armenta MD APC"
 	sourceDef.SourceType = pkg.SourceTypeAmaliaArmentaMdApc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-amalia-armenta-y8bsq"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

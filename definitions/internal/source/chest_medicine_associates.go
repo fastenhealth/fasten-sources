@@ -28,6 +28,8 @@ func GetSourceChestMedicineAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Chest Medicine Associates"
 	sourceDef.SourceType = pkg.SourceTypeChestMedicineAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "chest-medicine-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://cmamaine.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

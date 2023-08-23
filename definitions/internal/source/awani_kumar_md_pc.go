@@ -30,6 +30,7 @@ func GetSourceAwaniKumarMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Display = "Awani Kumar, MD, PC"
 	sourceDef.SourceType = pkg.SourceTypeAwaniKumarMdPc
 	sourceDef.Category = []string{"207RP1001X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811175755"}}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

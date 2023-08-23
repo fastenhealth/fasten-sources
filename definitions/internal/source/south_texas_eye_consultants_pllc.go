@@ -30,6 +30,7 @@ func GetSourceSouthTexasEyeConsultantsPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "South Texas Eye Consultants, PLLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthTexasEyeConsultantsPllc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396819769"}}
 	sourceDef.PatientAccessUrl = "https://www.southtexaseye.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

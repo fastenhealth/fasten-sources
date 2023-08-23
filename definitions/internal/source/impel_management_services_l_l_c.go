@@ -28,6 +28,8 @@ func GetSourceImpelManagementServicesLLC(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Impel Management Services L.L.C."
 	sourceDef.SourceType = pkg.SourceTypeImpelManagementServicesLLC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

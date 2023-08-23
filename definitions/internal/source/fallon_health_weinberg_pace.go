@@ -28,6 +28,8 @@ func GetSourceFallonHealthWeinbergPace(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Fallon Health Weinberg-PACE"
 	sourceDef.SourceType = pkg.SourceTypeFallonHealthWeinbergPace
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.fallonweinberg.org/Plans/PACE"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

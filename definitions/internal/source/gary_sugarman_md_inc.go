@@ -28,6 +28,8 @@ func GetSourceGarySugarmanMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Gary Sugarman MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeGarySugarmanMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "gary-sugarman-md-inc.jpg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

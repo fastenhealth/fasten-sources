@@ -29,6 +29,7 @@ func GetSourceCenterForVisualIndependence(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Center For Visual Independence"
 	sourceDef.SourceType = pkg.SourceTypeCenterForVisualIndependence
 	sourceDef.Category = []string{"152W00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568498046"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 

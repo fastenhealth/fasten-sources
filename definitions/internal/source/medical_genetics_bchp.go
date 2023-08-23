@@ -28,6 +28,8 @@ func GetSourceMedicalGeneticsBchp(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Medical Genetics BCHP"
 	sourceDef.SourceType = pkg.SourceTypeMedicalGeneticsBchp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.childrenshospital.org/bchp/specialty/pediatric-cardiology"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

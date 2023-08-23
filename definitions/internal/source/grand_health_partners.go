@@ -28,6 +28,8 @@ func GetSourceGrandHealthPartners(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Grand Health Partners"
 	sourceDef.SourceType = pkg.SourceTypeGrandHealthPartners
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://grandhealthpartners.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

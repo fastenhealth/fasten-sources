@@ -28,6 +28,8 @@ func GetSourceEastsideMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Eastside Maternal-Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeEastsideMaternalFetalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.pediatrix.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

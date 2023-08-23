@@ -28,6 +28,8 @@ func GetSourceJonasAndZiskind(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Jonas And Ziskind"
 	sourceDef.SourceType = pkg.SourceTypeJonasAndZiskind
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://zaubee.com/biz/larry-jonas-md-87s1turg"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

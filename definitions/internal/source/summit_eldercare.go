@@ -28,6 +28,8 @@ func GetSourceSummitEldercare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "Summit ElderCare"
 	sourceDef.SourceType = pkg.SourceTypeSummitEldercare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.summiteldercare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

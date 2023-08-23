@@ -28,6 +28,8 @@ func GetSourceMidIowaFertility(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Mid Iowa Fertility"
 	sourceDef.SourceType = pkg.SourceTypeMidIowaFertility
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

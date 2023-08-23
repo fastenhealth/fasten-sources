@@ -28,6 +28,8 @@ func GetSourceHematologyOncologySpecialists(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Hematology Oncology Specialists"
 	sourceDef.SourceType = pkg.SourceTypeHematologyOncologySpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/ca-california/los-angeles/hematology-oncology-specialists-xb2g7k0c"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

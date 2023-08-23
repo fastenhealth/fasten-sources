@@ -28,6 +28,8 @@ func GetSourceSanAntonioCareCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "San Antonio Care Center"
 	sourceDef.SourceType = pkg.SourceTypeSanAntonioCareCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sacrd.org/directory/program/8111"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

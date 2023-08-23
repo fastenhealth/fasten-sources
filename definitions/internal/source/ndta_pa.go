@@ -28,6 +28,8 @@ func GetSourceNdtaPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "NDTA PA"
 	sourceDef.SourceType = pkg.SourceTypeNdtaPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.no.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

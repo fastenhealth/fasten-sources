@@ -29,6 +29,7 @@ func GetSourceWestPalmdaleHealthCare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "West Palmdale Health Care"
 	sourceDef.SourceType = pkg.SourceTypeWestPalmdaleHealthCare
 	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679020788"}}
 	sourceDef.BrandLogo = "west-palmdale-health-care.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/stayhealthyWPHC/"

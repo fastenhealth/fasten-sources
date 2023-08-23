@@ -29,6 +29,8 @@ func GetSourceTriCityMedicalCenter1(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Tri-City Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeTriCityMedicalCenter1
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "tri-city-medical-center.png"
 	sourceDef.PatientAccessUrl = "https://www.tricitymed.org/"
 	sourceDef.SecretKeyPrefix = "cerner"

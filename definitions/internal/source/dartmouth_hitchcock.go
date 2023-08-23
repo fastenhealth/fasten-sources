@@ -29,6 +29,8 @@ func GetSourceDartmouthHitchcock(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dartmouth-Hitchcock"
 	sourceDef.SourceType = pkg.SourceTypeDartmouthHitchcock
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

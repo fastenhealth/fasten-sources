@@ -28,6 +28,8 @@ func GetSourceArthritisPainAssocOfPgCounty(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Arthritis  Pain Assoc Of Pg County"
 	sourceDef.SourceType = pkg.SourceTypeArthritisPainAssocOfPgCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

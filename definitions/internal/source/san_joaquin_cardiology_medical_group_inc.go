@@ -29,6 +29,7 @@ func GetSourceSanJoaquinCardiologyMedicalGroupInc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.Display = "San Joaquin Cardiology Medical Group Inc"
 	sourceDef.SourceType = pkg.SourceTypeSanJoaquinCardiologyMedicalGroupInc
 	sourceDef.Category = []string{"207RC0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497785455"}}
 	sourceDef.PatientAccessUrl = "https://www.sanjoaquincardiology.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -28,6 +28,8 @@ func GetSourceValleyObstetricsAndGynecologyMedGrp(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Valley Obstetrics & Gynecology Med Grp"
 	sourceDef.SourceType = pkg.SourceTypeValleyObstetricsAndGynecologyMedGrp
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://valleyobcare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

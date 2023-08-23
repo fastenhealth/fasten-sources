@@ -30,6 +30,7 @@ func GetSourceKetteringHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "Kettering Health Network"
 	sourceDef.SourceType = pkg.SourceTypeKetteringHealthNetwork
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356669840"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

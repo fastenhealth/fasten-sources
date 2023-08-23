@@ -29,6 +29,7 @@ func GetSourceGreeneCountyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Greene County Health"
 	sourceDef.SourceType = pkg.SourceTypeGreeneCountyHealth
 	sourceDef.Category = []string{"363LF0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912432832"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

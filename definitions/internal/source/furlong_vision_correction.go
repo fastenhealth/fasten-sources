@@ -28,6 +28,8 @@ func GetSourceFurlongVisionCorrection(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Furlong Vision Correction"
 	sourceDef.SourceType = pkg.SourceTypeFurlongVisionCorrection
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://furlongvision.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

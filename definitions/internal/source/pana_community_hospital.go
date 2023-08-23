@@ -29,6 +29,8 @@ func GetSourcePanaCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Pana Community Hospital"
 	sourceDef.SourceType = pkg.SourceTypePanaCommunityHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://panahospital.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

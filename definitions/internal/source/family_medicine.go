@@ -28,6 +28,8 @@ func GetSourceFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cmcfc.org/clinics/family-medicine/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

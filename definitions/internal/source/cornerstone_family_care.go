@@ -28,6 +28,8 @@ func GetSourceCornerstoneFamilyCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cornerstone Family Care"
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneFamilyCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cornerstonefamilycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

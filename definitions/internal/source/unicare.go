@@ -28,6 +28,7 @@ func GetSourceUnicare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Display = "Unicare"
 	sourceDef.SourceType = pkg.SourceTypeUnicare
 	sourceDef.Category = []string{"332B00000X", "335E00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770802845"}}
 	sourceDef.SecretKeyPrefix = "anthem"
 

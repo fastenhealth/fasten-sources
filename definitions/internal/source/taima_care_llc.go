@@ -28,6 +28,8 @@ func GetSourceTaimaCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Taima Care LLC"
 	sourceDef.SourceType = pkg.SourceTypeTaimaCareLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

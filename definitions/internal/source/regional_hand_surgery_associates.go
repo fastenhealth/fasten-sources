@@ -28,6 +28,8 @@ func GetSourceRegionalHandSurgeryAssociates(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Regional Hand Surgery Associates"
 	sourceDef.SourceType = pkg.SourceTypeRegionalHandSurgeryAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "regional-hand-surgery-associates.jpg"
 	sourceDef.PatientAccessUrl = "https://regionalhand.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

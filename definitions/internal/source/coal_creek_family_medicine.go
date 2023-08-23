@@ -29,6 +29,7 @@ func GetSourceCoalCreekFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Display = "Coal Creek Family Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCoalCreekFamilyMedicine
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942407622"}}
 	sourceDef.BrandLogo = "coal-creek-family-medicine.jpg"
 	sourceDef.PatientAccessUrl = "https://coalcreekfamilymedicine.com/"

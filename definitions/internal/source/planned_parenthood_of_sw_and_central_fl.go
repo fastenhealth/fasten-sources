@@ -28,6 +28,8 @@ func GetSourcePlannedParenthoodOfSwAndCentralFl(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Planned Parenthood Of SW and Central FL"
 	sourceDef.SourceType = pkg.SourceTypePlannedParenthoodOfSwAndCentralFl
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.plannedparenthood.org/planned-parenthood-southwest-central-florida"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

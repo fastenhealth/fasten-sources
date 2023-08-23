@@ -28,6 +28,8 @@ func GetSourceInlandEmpireAllergyLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Inland Empire Allergy LLC"
 	sourceDef.SourceType = pkg.SourceTypeInlandEmpireAllergyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/physician/dr-michael-raber-g6xn4"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

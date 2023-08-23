@@ -28,6 +28,8 @@ func GetSourcePhysiciansEyeCenterOfOwensboro(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Physicians Eye Center Of Owensboro"
 	sourceDef.SourceType = pkg.SourceTypePhysiciansEyeCenterOfOwensboro
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "physicians-eye-center-of-owensboro.svg"
 	sourceDef.PatientAccessUrl = "https://owensboroeye.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

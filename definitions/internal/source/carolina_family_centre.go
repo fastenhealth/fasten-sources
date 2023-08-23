@@ -28,6 +28,8 @@ func GetSourceCarolinaFamilyCentre(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Carolina Family Centre"
 	sourceDef.SourceType = pkg.SourceTypeCarolinaFamilyCentre
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.cfhcnc.org/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

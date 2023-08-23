@@ -28,6 +28,8 @@ func GetSourceCommunityHealthPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Community Health Practice"
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.whcg.org.au/community-health"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

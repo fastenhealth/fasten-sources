@@ -29,6 +29,8 @@ func GetSourceRaleighVeinAndLaserCenter(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Raleigh Vein And Laser Center"
 	sourceDef.SourceType = pkg.SourceTypeRaleighVeinAndLaserCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

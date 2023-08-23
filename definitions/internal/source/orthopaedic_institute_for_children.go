@@ -29,6 +29,8 @@ func GetSourceOrthopaedicInstituteForChildren(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Orthopaedic Institute for Children"
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicInstituteForChildren
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://luskinoic.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

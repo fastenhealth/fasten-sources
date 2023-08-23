@@ -29,6 +29,8 @@ func GetSourceTheNationalDiabetesAndObesityResearchInstitute(env pkg.FastenLight
 
 	sourceDef.Display = "The National Diabetes & Obesity Research Institute"
 	sourceDef.SourceType = pkg.SourceTypeTheNationalDiabetesAndObesityResearchInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ndori.org/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

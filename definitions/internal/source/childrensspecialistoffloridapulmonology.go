@@ -28,6 +28,8 @@ func GetSourceChildrensspecialistoffloridapulmonology(env pkg.FastenLighthouseEn
 
 	sourceDef.Display = "ChildrensSpecialistOfFloridaPulmonology"
 	sourceDef.SourceType = pkg.SourceTypeChildrensspecialistoffloridapulmonology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,7 @@ func GetSourceHHerbertWashingtonMdPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Display = "H Herbert Washington Md Pc"
 	sourceDef.SourceType = pkg.SourceTypeHHerbertWashingtonMdPc
 	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275956724"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

@@ -28,6 +28,8 @@ func GetSourceMfhsNurseFamilyPartnership(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "MFHS Nurse Family Partnership"
 	sourceDef.SourceType = pkg.SourceTypeMfhsNurseFamilyPartnership
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nursefamilypartnership.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

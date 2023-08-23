@@ -30,6 +30,7 @@ func GetSourceNavicentHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Navicent Health"
 	sourceDef.SourceType = pkg.SourceTypeNavicentHealth1
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164883492"}}
 	sourceDef.BrandLogo = "navicent-health.png"
 	sourceDef.PatientAccessUrl = "https://navicenthealth.org/"

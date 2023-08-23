@@ -28,6 +28,8 @@ func GetSourceNchieTestDb2(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "NCHIE Test DB 2"
 	sourceDef.SourceType = pkg.SourceTypeNchieTestDb2
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

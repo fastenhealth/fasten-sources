@@ -29,6 +29,8 @@ func GetSourceObGynAssociatesOfWacoDrRisterDrKoeritz(env pkg.FastenLighthouseEnv
 
 	sourceDef.Display = "OB/GYN Associates of Waco - Dr. Rister, Dr. Koeritz"
 	sourceDef.SourceType = pkg.SourceTypeObGynAssociatesOfWacoDrRisterDrKoeritz
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceWmgMichaelAvakianAndMarinaManvelyan(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "WMG Michael Avakian and Marina Manvelyan"
 	sourceDef.SourceType = pkg.SourceTypeWmgMichaelAvakianAndMarinaManvelyan
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

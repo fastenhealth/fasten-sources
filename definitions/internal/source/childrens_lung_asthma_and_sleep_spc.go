@@ -28,6 +28,8 @@ func GetSourceChildrensLungAsthmaAndSleepSpc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Childrens Lung Asthma And Sleep Spc"
 	sourceDef.SourceType = pkg.SourceTypeChildrensLungAsthmaAndSleepSpc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://childrenssleeplab.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

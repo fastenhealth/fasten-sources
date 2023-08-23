@@ -29,6 +29,8 @@ func GetSourceBridgesMedicalServices(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Bridges Medical Services"
 	sourceDef.SourceType = pkg.SourceTypeBridgesMedicalServices
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceProactiveHeartAndVascularPllc(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "ProActive Heart And Vascular PLLC"
 	sourceDef.SourceType = pkg.SourceTypeProactiveHeartAndVascularPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://proactivehv.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

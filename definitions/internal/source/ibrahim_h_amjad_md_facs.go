@@ -29,6 +29,8 @@ func GetSourceIbrahimHAmjadMdFacs(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Ibrahim H Amjad MD FACS"
 	sourceDef.SourceType = pkg.SourceTypeIbrahimHAmjadMdFacs
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://amjadplastics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -28,6 +28,8 @@ func GetSourceMadisonHealthplexAndSportPerf(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Madison Healthplex And Sport Perf"
 	sourceDef.SourceType = pkg.SourceTypeMadisonHealthplexAndSportPerf
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.healthplexperformance.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

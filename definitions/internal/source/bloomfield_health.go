@@ -29,6 +29,8 @@ func GetSourceBloomfieldHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Bloomfield Health"
 	sourceDef.SourceType = pkg.SourceTypeBloomfieldHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -29,6 +29,8 @@ func GetSourceNorthOaks(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "North Oaks"
 	sourceDef.SourceType = pkg.SourceTypeNorthOaks
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

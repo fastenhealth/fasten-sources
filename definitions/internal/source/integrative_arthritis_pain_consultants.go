@@ -28,6 +28,8 @@ func GetSourceIntegrativeArthritisPainConsultants(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Integrative Arthritis Pain Consultants"
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeArthritisPainConsultants
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://integrativearthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

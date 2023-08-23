@@ -29,6 +29,8 @@ func GetSourceYourNextStepPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Your Next Step, PC"
 	sourceDef.SourceType = pkg.SourceTypeYourNextStepPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

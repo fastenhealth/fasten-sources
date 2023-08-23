@@ -28,6 +28,8 @@ func GetSourceProgressivePainSolInvestigation(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Progressive Pain Sol Investigation"
 	sourceDef.SourceType = pkg.SourceTypeProgressivePainSolInvestigation
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

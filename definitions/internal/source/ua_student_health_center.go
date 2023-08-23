@@ -28,6 +28,8 @@ func GetSourceUaStudentHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "UA Student Health Center"
 	sourceDef.SourceType = pkg.SourceTypeUaStudentHealthCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "ua-student-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://cchs.ua.edu/shc/"
 	sourceDef.SecretKeyPrefix = "nextgen"

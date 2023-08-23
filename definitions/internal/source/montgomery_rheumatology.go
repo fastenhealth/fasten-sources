@@ -29,6 +29,8 @@ func GetSourceMontgomeryRheumatology(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Montgomery Rheumatology"
 	sourceDef.SourceType = pkg.SourceTypeMontgomeryRheumatology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/montgomery/montgomery-rheumatology-assocs-x3l4ht"
 	sourceDef.SecretKeyPrefix = "cerner"
 

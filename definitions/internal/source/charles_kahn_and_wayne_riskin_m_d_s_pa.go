@@ -28,6 +28,8 @@ func GetSourceCharlesKahnAndWayneRiskinMDSPa(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "CHARLES KAHN AND WAYNE RISKIN M D S PA"
 	sourceDef.SourceType = pkg.SourceTypeCharlesKahnAndWayneRiskinMDSPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

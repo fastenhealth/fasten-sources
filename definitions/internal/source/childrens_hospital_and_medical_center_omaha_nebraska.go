@@ -29,6 +29,8 @@ func GetSourceChildrensHospitalAndMedicalCenterOmahaNebraska(env pkg.FastenLight
 
 	sourceDef.Display = "Children's Hospital and Medical Center, Omaha Nebraska"
 	sourceDef.SourceType = pkg.SourceTypeChildrensHospitalAndMedicalCenterOmahaNebraska
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

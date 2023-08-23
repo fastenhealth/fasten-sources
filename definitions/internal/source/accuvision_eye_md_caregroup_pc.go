@@ -28,6 +28,7 @@ func GetSourceAccuvisionEyeMdCaregroupPc(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Accuvision Eye MD Caregroup PC"
 	sourceDef.SourceType = pkg.SourceTypeAccuvisionEyeMdCaregroupPc
+	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{"Philadelphia Ophthalmology Associates"}
 	sourceDef.BrandLogo = "accuvision-eye-md-caregroup-pc.jpg"
 	sourceDef.PatientAccessUrl = "http://www.phillyeyedocs.com/"

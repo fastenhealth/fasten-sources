@@ -29,6 +29,8 @@ func GetSourceMMunirZaitoonMD(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 
 	sourceDef.Display = "M. Munir Zaitoon, M.D"
 	sourceDef.SourceType = pkg.SourceTypeMMunirZaitoonMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.excelahealth.org/find-a-doctor/mohammad-m-zaitoon-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

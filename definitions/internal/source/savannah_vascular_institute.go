@@ -28,6 +28,8 @@ func GetSourceSavannahVascularInstitute(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Savannah Vascular Institute"
 	sourceDef.SourceType = pkg.SourceTypeSavannahVascularInstitute
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/savannahvascularinstitute/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

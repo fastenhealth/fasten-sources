@@ -28,6 +28,8 @@ func GetSourceHscHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 
 	sourceDef.Display = "HSC Health"
 	sourceDef.SourceType = pkg.SourceTypeHscHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hsc-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.unthsc.edu/"
 	sourceDef.SecretKeyPrefix = "nextgen"

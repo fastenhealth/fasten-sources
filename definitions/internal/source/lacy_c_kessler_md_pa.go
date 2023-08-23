@@ -29,6 +29,8 @@ func GetSourceLacyCKesslerMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Lacy C Kessler, MD, PA"
 	sourceDef.SourceType = pkg.SourceTypeLacyCKesslerMdPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

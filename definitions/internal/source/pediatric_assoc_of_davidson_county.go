@@ -28,6 +28,8 @@ func GetSourcePediatricAssocOfDavidsonCounty(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Pediatric Assoc Of Davidson County"
 	sourceDef.SourceType = pkg.SourceTypePediatricAssocOfDavidsonCounty
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

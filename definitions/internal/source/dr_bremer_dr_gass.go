@@ -28,6 +28,8 @@ func GetSourceDrBremerDrGass(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Dr Bremer  Dr Gass"
 	sourceDef.SourceType = pkg.SourceTypeDrBremerDrGass
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.doximity.com/pub/abigail-gass-md"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

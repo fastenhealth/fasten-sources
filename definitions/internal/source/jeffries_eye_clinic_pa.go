@@ -28,6 +28,8 @@ func GetSourceJeffriesEyeClinicPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Jeffries Eye Clinic PA"
 	sourceDef.SourceType = pkg.SourceTypeJeffriesEyeClinicPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "jeffries-eye-clinic-pa.jpg"
 	sourceDef.PatientAccessUrl = "https://jeffrieseye.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

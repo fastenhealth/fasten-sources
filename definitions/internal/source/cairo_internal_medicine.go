@@ -28,6 +28,8 @@ func GetSourceCairoInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Cairo Internal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCairoInternalMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://archbold.org/cairo-internal-medicine"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

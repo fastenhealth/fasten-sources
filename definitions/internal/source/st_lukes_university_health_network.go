@@ -30,6 +30,7 @@ func GetSourceStLukesUniversityHealthNetwork(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "St. Luke's University Health Network"
 	sourceDef.SourceType = pkg.SourceTypeStLukesUniversityHealthNetwork
 	sourceDef.Category = []string{"282N00000X", "282NW0100X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598149361", "1699032425"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

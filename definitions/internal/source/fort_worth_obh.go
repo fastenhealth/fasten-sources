@@ -28,6 +28,8 @@ func GetSourceFortWorthObh(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Fort Worth OBH"
 	sourceDef.SourceType = pkg.SourceTypeFortWorthObh
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.bswhealth.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

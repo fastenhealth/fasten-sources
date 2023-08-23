@@ -28,6 +28,8 @@ func GetSourceAltaCaliforniaMedicalGroup(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Alta California Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeAltaCaliforniaMedicalGroup
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://altacaliforniamedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

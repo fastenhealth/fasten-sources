@@ -29,6 +29,8 @@ func GetSourcePipelineHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Pipeline Health"
 	sourceDef.SourceType = pkg.SourceTypePipelineHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "pipeline-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.pipelinehealth.us/"
 	sourceDef.SecretKeyPrefix = "cerner"

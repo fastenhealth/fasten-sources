@@ -28,6 +28,8 @@ func GetSourceAscPayerDefaultPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "ASC Payer Default Practice"
 	sourceDef.SourceType = pkg.SourceTypeAscPayerDefaultPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.beckersasc.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

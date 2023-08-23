@@ -29,6 +29,8 @@ func GetSourceShahlaMedicalAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Shahla Medical Associates"
 	sourceDef.SourceType = pkg.SourceTypeShahlaMedicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.drshahla.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

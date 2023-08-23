@@ -29,6 +29,8 @@ func GetSourceCookChildrensHealthCareSystem(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Cook Children’s Health Care System"
 	sourceDef.SourceType = pkg.SourceTypeCookChildrensHealthCareSystem
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

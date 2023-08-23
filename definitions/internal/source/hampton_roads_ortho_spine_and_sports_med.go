@@ -28,6 +28,8 @@ func GetSourceHamptonRoadsOrthoSpineAndSportsMed(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Hampton Roads Ortho Spine And Sports Med"
 	sourceDef.SourceType = pkg.SourceTypeHamptonRoadsOrthoSpineAndSportsMed
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "hampton-roads-ortho-spine-and-sports-med.webp"
 	sourceDef.PatientAccessUrl = "https://www.hrosm.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

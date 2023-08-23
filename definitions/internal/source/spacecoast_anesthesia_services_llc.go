@@ -28,6 +28,8 @@ func GetSourceSpacecoastAnesthesiaServicesLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Spacecoast Anesthesia Services LLC"
 	sourceDef.SourceType = pkg.SourceTypeSpacecoastAnesthesiaServicesLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://nopage.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

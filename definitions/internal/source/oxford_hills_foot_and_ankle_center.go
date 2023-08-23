@@ -29,6 +29,8 @@ func GetSourceOxfordHillsFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, cli
 
 	sourceDef.Display = "Oxford Hills Foot & Ankle Center"
 	sourceDef.SourceType = pkg.SourceTypeOxfordHillsFootAndAnkleCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/oxford-hills-foot-and-ankle-center-da3343c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

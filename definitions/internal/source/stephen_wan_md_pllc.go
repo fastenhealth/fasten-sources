@@ -28,6 +28,8 @@ func GetSourceStephenWanMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Stephen Wan MD PLLC"
 	sourceDef.SourceType = pkg.SourceTypeStephenWanMdPllc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://profiles.mountsinai.org/stephen-wan"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

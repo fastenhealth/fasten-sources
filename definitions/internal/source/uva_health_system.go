@@ -30,6 +30,7 @@ func GetSourceUvaHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "UVA Health System"
 	sourceDef.SourceType = pkg.SourceTypeUvaHealthSystem
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689669814"}}
 	sourceDef.PatientAccessUrl = "https://uvahealth.com/"
 	sourceDef.SecretKeyPrefix = "epic"

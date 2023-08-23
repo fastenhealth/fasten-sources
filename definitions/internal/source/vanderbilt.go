@@ -29,6 +29,8 @@ func GetSourceVanderbilt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Vanderbilt"
 	sourceDef.SourceType = pkg.SourceTypeVanderbilt
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

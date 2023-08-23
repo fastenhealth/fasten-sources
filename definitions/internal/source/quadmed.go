@@ -29,6 +29,8 @@ func GetSourceQuadmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "QuadMed"
 	sourceDef.SourceType = pkg.SourceTypeQuadmed
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

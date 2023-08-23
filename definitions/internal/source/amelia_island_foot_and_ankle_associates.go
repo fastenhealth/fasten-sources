@@ -29,6 +29,8 @@ func GetSourceAmeliaIslandFootAndAnkleAssociates(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Amelia Island Foot and Ankle Associates"
 	sourceDef.SourceType = pkg.SourceTypeAmeliaIslandFootAndAnkleAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.ameliafootandankle.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

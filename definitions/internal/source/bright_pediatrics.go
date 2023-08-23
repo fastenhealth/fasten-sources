@@ -29,6 +29,8 @@ func GetSourceBrightPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Bright Pediatrics"
 	sourceDef.SourceType = pkg.SourceTypeBrightPediatrics
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://bright-pediatrics.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -30,6 +30,7 @@ func GetSourceInternalMedicineAndPediatricsOfCullmanPC(env pkg.FastenLighthouseE
 	sourceDef.Display = "Internal Medicine and Pediatrics of Cullman, P.C."
 	sourceDef.SourceType = pkg.SourceTypeInternalMedicineAndPediatricsOfCullmanPC
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326130550"}}
 	sourceDef.PatientAccessUrl = "http://impcullman.com/doc/"
 	sourceDef.SecretKeyPrefix = "cerner"

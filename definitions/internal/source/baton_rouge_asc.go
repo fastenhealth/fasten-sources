@@ -28,6 +28,8 @@ func GetSourceBatonRougeAsc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Baton Rouge ASC"
 	sourceDef.SourceType = pkg.SourceTypeBatonRougeAsc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "baton-rouge-asc.jpg"
 	sourceDef.PatientAccessUrl = "Name: Baton Rouge ASC Address: 505 E Airport Ave City: Baton Rouge Zip: 708066515 State: Louisiana Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"

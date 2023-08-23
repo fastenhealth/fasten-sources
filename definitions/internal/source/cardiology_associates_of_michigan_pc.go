@@ -28,6 +28,8 @@ func GetSourceCardiologyAssociatesOfMichiganPc(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Cardiology Associates Of Michigan PC"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyAssociatesOfMichiganPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

@@ -28,6 +28,8 @@ func GetSourceFondDuLacHumanServicesDivision(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Fond du Lac Human Services Division"
 	sourceDef.SourceType = pkg.SourceTypeFondDuLacHumanServicesDivision
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "fond-du-lac-hsd-purchased-referred-care.png"
 	sourceDef.PatientAccessUrl = "http://www.fdlrez.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

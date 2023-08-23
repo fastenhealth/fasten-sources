@@ -27,6 +27,8 @@ func GetSourceAnthemBlueCrossCa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Anthem Blue Cross CA"
 	sourceDef.SourceType = pkg.SourceTypeAnthemBlueCrossCa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "anthem.png"
 	sourceDef.SecretKeyPrefix = "anthem"
 

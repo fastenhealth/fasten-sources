@@ -29,6 +29,8 @@ func GetSourceAlonDavisMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Alon Davis MD"
 	sourceDef.SourceType = pkg.SourceTypeAlonDavisMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

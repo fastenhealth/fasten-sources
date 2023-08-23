@@ -28,6 +28,8 @@ func GetSourcePediatricImmediateCare(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Pediatric Immediate Care"
 	sourceDef.SourceType = pkg.SourceTypePediatricImmediateCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

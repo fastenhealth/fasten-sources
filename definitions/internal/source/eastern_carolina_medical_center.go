@@ -29,6 +29,7 @@ func GetSourceEasternCarolinaMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Display = "Eastern Carolina Medical Center"
 	sourceDef.SourceType = pkg.SourceTypeEasternCarolinaMedicalCenter
 	sourceDef.Category = []string{"3336C0003X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245521020"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

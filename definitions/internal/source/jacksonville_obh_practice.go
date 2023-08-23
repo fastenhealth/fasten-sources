@@ -28,6 +28,8 @@ func GetSourceJacksonvilleObhPractice(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Jacksonville OBH Practice"
 	sourceDef.SourceType = pkg.SourceTypeJacksonvilleObhPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "http://www.pediatrix.com/?utm_medium=Referral&utm_campaign=General&utm_content=Listing&utm_source=GMB_Reputation"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

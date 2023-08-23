@@ -28,6 +28,8 @@ func GetSourceBoundaryRegionalCommunityHealthCtr(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Boundary Regional Community Health Ctr"
 	sourceDef.SourceType = pkg.SourceTypeBoundaryRegionalCommunityHealthCtr
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.boundarycommunityhospital.org/clinics/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

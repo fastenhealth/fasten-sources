@@ -29,6 +29,7 @@ func GetSourceSacopeeValleyHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Display = "Sacopee Valley Health Center"
 	sourceDef.SourceType = pkg.SourceTypeSacopeeValleyHealthCenter
 	sourceDef.Category = []string{"261Q00000X", "261QD0000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245772821", "1316697154", "1952470411"}}
 	sourceDef.BrandLogo = "sacopee-valley-health-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.svhc.org/"

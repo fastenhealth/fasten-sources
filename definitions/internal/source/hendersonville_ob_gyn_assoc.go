@@ -29,6 +29,8 @@ func GetSourceHendersonvilleObGynAssoc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Hendersonville OB GYN Assoc"
 	sourceDef.SourceType = pkg.SourceTypeHendersonvilleObGynAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hvilleobgyn.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 

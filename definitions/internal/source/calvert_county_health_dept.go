@@ -28,6 +28,8 @@ func GetSourceCalvertCountyHealthDept(env pkg.FastenLighthouseEnvType, clientIdL
 
 	sourceDef.Display = "Calvert County Health Dept"
 	sourceDef.SourceType = pkg.SourceTypeCalvertCountyHealthDept
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

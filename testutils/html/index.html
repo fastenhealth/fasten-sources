@@ -50,8 +50,12 @@
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 <script type="module">
     import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+
+    //GLOBAL variables
+    var CURRENT_FILTER = newMedicalSourcesFilter()
 
     function requestSourceList(filter){
         var sourceList = $('ul.source-list')
@@ -147,17 +151,49 @@
     function newMedicalSourcesFilter(){
         let filter = {}
         filter.fields = ["*"];
+        // filter.searchAfter = '';
 
         return filter
     }
 
 
     $(function() {
-        requestSourceList(newMedicalSourcesFilter())
+        var $container = $('ul.source-list')
+        $container.infiniteScroll({
+            // options
+            prefill: false,
+            history: false,
+            responseBody: 'json',
+            path: function() {
+                var lighthouseEndpoint = $('input[name="mode"]:checked').val()
+                localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
+                return lighthouseEndpoint + 'search'
+            },
 
-        $('input[name="mode"]').change(function() {
-            requestSourceList(newMedicalSourcesFilter())
+            fetchOptions: function(){
+                return {
+                    method: "POST",
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(CURRENT_FILTER)
+                }
+            },
+
         });
+        $container.on( 'load.infiniteScroll', function( event, data ) {
+            // data is JSON
+            console.log(event, data)
+        });
+
+
+        // requestSourceList(newMedicalSourcesFilter())
+
+        // $('input[name="mode"]').change(function() {
+        //     requestSourceList(newMedicalSourcesFilter())
+        // });
 
     });
 

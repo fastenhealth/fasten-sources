@@ -28,6 +28,8 @@ func GetSourceConquestMdSpineCareSportsMedicine(env pkg.FastenLighthouseEnvType,
 
 	sourceDef.Display = "Conquest Md Spine Care Sports Medicine"
 	sourceDef.SourceType = pkg.SourceTypeConquestMdSpineCareSportsMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

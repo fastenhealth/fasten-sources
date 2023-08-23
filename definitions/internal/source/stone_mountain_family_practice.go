@@ -28,6 +28,8 @@ func GetSourceStoneMountainFamilyPractice(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Stone Mountain Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeStoneMountainFamilyPractice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

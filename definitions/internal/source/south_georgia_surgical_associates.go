@@ -28,6 +28,8 @@ func GetSourceSouthGeorgiaSurgicalAssociates(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "South Georgia Surgical Associates"
 	sourceDef.SourceType = pkg.SourceTypeSouthGeorgiaSurgicalAssociates
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://archbold.org/services/surgery-services"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

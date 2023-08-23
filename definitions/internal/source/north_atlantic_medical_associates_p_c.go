@@ -29,6 +29,8 @@ func GetSourceNorthAtlanticMedicalAssociatesPC(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "North Atlantic Medical Associates, P.C."
 	sourceDef.SourceType = pkg.SourceTypeNorthAtlanticMedicalAssociatesPC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/north-atlantic-medical-associates-07d0a3c8-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

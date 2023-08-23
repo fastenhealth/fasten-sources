@@ -29,6 +29,8 @@ func GetSourceDrKennethTreadwell(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dr. Kenneth Treadwell"
 	sourceDef.SourceType = pkg.SourceTypeDrKennethTreadwell
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.rwjbh.org/doctors/kenneth-treadwell-jr-md/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

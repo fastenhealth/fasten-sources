@@ -29,6 +29,8 @@ func GetSourceCatskillOrthopedicsPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Catskill Orthopedics PC"
 	sourceDef.SourceType = pkg.SourceTypeCatskillOrthopedicsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

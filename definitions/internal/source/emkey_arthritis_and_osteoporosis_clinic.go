@@ -28,6 +28,8 @@ func GetSourceEmkeyArthritisAndOsteoporosisClinic(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Emkey Arthritis And Osteoporosis Clinic"
 	sourceDef.SourceType = pkg.SourceTypeEmkeyArthritisAndOsteoporosisClinic
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "emkey-arthritis-and-osteoporosis-clinic.jpg"
 	sourceDef.PatientAccessUrl = "https://emkeyarthritis.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

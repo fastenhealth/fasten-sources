@@ -29,6 +29,8 @@ func GetSourceProspectMedicalHoldingsWaterburyHospital(env pkg.FastenLighthouseE
 
 	sourceDef.Display = "Prospect Medical Holdings  - Waterbury Hospital"
 	sourceDef.SourceType = pkg.SourceTypeProspectMedicalHoldingsWaterburyHospital
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://about.usps.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

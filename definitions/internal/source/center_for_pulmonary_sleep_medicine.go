@@ -28,6 +28,8 @@ func GetSourceCenterForPulmonarySleepMedicine(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Center For Pulmonary Sleep Medicine"
 	sourceDef.SourceType = pkg.SourceTypeCenterForPulmonarySleepMedicine
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

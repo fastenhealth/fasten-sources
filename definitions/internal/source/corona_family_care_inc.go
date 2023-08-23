@@ -28,6 +28,8 @@ func GetSourceCoronaFamilyCareInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Corona Family Care Inc"
 	sourceDef.SourceType = pkg.SourceTypeCoronaFamilyCareInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.coronafamilycare.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

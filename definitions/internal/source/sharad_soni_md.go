@@ -28,6 +28,8 @@ func GetSourceSharadSoniMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 
 	sourceDef.Display = "Sharad Soni Md"
 	sourceDef.SourceType = pkg.SourceTypeSharadSoniMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

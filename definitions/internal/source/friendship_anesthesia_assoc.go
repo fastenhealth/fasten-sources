@@ -28,6 +28,8 @@ func GetSourceFriendshipAnesthesiaAssoc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Friendship Anesthesia Assoc"
 	sourceDef.SourceType = pkg.SourceTypeFriendshipAnesthesiaAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

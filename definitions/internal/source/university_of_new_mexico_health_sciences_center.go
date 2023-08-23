@@ -30,6 +30,7 @@ func GetSourceUniversityOfNewMexicoHealthSciencesCenter(env pkg.FastenLighthouse
 	sourceDef.Display = "University of New Mexico Health Sciences Center"
 	sourceDef.SourceType = pkg.SourceTypeUniversityOfNewMexicoHealthSciencesCenter
 	sourceDef.Category = []string{"282N00000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366685729", "1841266038"}}
 	sourceDef.BrandLogo = "university-of-new-mexico-health-sciences-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/unmhsc/"

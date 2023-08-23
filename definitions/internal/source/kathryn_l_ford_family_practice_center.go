@@ -29,6 +29,8 @@ func GetSourceKathrynLFordFamilyPracticeCenter(env pkg.FastenLighthouseEnvType, 
 
 	sourceDef.Display = "Kathryn L. Ford Family Practice Center"
 	sourceDef.SourceType = pkg.SourceTypeKathrynLFordFamilyPracticeCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/de-delaware/dover/kathryn-l-ford-family-pract-dover-de-x4h72n"
 	sourceDef.SecretKeyPrefix = "cerner"
 

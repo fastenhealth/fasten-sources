@@ -30,6 +30,7 @@ func GetSourceVenturaEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Ventura Eye Institute"
 	sourceDef.SourceType = pkg.SourceTypeVenturaEyeInstitute
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922168731"}}
 	sourceDef.PatientAccessUrl = "https://www.venturaeyeinstitute.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

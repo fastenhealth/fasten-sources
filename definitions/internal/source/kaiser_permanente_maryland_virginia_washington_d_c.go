@@ -29,6 +29,8 @@ func GetSourceKaiserPermanenteMarylandVirginiaWashingtonDC(env pkg.FastenLightho
 
 	sourceDef.Display = "Kaiser Permanente - Maryland/Virginia/Washington D.C."
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteMarylandVirginiaWashingtonDC
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

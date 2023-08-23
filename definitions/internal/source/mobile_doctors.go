@@ -29,6 +29,8 @@ func GetSourceMobileDoctors(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Mobile Doctors"
 	sourceDef.SourceType = pkg.SourceTypeMobileDoctors
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

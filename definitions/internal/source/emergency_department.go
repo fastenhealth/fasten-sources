@@ -28,6 +28,8 @@ func GetSourceEmergencyDepartment(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Emergency Department"
 	sourceDef.SourceType = pkg.SourceTypeEmergencyDepartment
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "emergency-department.jpg"
 	sourceDef.PatientAccessUrl = "https://www.hunterdonhealth.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

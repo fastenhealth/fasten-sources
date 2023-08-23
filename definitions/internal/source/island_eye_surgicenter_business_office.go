@@ -28,6 +28,8 @@ func GetSourceIslandEyeSurgicenterBusinessOffice(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Island Eye Surgicenter (Business Office)"
 	sourceDef.SourceType = pkg.SourceTypeIslandEyeSurgicenterBusinessOffice
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "island-eye-surgicenter-business-office.jpg"
 	sourceDef.PatientAccessUrl = "https://www.islandeye.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

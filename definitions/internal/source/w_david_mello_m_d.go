@@ -29,6 +29,8 @@ func GetSourceWDavidMelloMD(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "W. David Mello, M.D."
 	sourceDef.SourceType = pkg.SourceTypeWDavidMelloMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.keckmedicine.org/locations/1818-verdugo-blvd-glendale/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

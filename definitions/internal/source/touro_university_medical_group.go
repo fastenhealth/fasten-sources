@@ -30,6 +30,7 @@ func GetSourceTouroUniversityMedicalGroup(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Touro University Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeTouroUniversityMedicalGroup
 	sourceDef.Category = []string{"207R00000X", "2084N0400X", "2084N0600X", "2084P0800X", "2084P0804X", "261QM1300X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215573613"}}
 	sourceDef.PatientAccessUrl = "https://www.mytumg.org/contact/"
 	sourceDef.SecretKeyPrefix = "cerner"

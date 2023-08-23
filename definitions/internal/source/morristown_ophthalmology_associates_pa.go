@@ -28,6 +28,8 @@ func GetSourceMorristownOphthalmologyAssociatesPa(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "Morristown Ophthalmology Associates PA"
 	sourceDef.SourceType = pkg.SourceTypeMorristownOphthalmologyAssociatesPa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.morristownnjlasik.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

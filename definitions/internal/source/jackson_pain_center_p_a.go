@@ -28,6 +28,8 @@ func GetSourceJacksonPainCenterPA(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Jackson Pain Center P A"
 	sourceDef.SourceType = pkg.SourceTypeJacksonPainCenterPA
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "jackson-pain-center-p-a.jpg"
 	sourceDef.PatientAccessUrl = "https://jacksonpaincenter.net/"
 	sourceDef.SecretKeyPrefix = "nextgen"

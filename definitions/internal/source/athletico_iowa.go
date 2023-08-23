@@ -28,6 +28,8 @@ func GetSourceAthleticoIowa(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 
 	sourceDef.Display = "Athletico Iowa"
 	sourceDef.SourceType = pkg.SourceTypeAthleticoIowa
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "athletico-south-central.jpg"
 	sourceDef.PatientAccessUrl = "https://www.mapquest.com"
 	sourceDef.SecretKeyPrefix = "nextgen"

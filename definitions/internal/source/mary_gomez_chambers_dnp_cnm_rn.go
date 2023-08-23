@@ -28,6 +28,8 @@ func GetSourceMaryGomezChambersDnpCnmRn(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Mary Gomez Chambers DNP CNM RN"
 	sourceDef.SourceType = pkg.SourceTypeMaryGomezChambersDnpCnmRn
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://provider.kareo.com/dr-mary-gomez-chambers"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

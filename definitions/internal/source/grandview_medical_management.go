@@ -28,6 +28,8 @@ func GetSourceGrandviewMedicalManagement(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Grandview Medical Management"
 	sourceDef.SourceType = pkg.SourceTypeGrandviewMedicalManagement
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

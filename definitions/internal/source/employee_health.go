@@ -28,6 +28,8 @@ func GetSourceEmployeeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Employee Health"
 	sourceDef.SourceType = pkg.SourceTypeEmployeeHealth
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "employee-health.svg"
 	sourceDef.PatientAccessUrl = "https://www.clinica.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

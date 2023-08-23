@@ -29,6 +29,7 @@ func GetSourceCountryHillsEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "Country Hills Eye Center"
 	sourceDef.SourceType = pkg.SourceTypeCountryHillsEyeCenter
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447460464"}}
 	sourceDef.BrandLogo = "country-hills-eye-center.jpg"
 	sourceDef.PatientAccessUrl = "https://www.checdocs.org/"

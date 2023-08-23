@@ -29,6 +29,8 @@ func GetSourceDrMariaERamonCoton(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Dr. Maria E. Ramon-Coton"
 	sourceDef.SourceType = pkg.SourceTypeDrMariaERamonCoton
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/find-a-physician/physician-details/en/1023005477/maria-ramon-coton-general-pediatrics"
 	sourceDef.SecretKeyPrefix = "cerner"
 

@@ -29,6 +29,8 @@ func GetSourceCentralValleyPhysiatry(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Central Valley Physiatry"
 	sourceDef.SourceType = pkg.SourceTypeCentralValleyPhysiatry
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "central-valley-physiatry.gif"
 	sourceDef.PatientAccessUrl = "http://www.cvphysiatry.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

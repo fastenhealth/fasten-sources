@@ -29,6 +29,8 @@ func GetSourceDrJuanBMartinezJrMd(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Dr. Juan B. Martinez Jr, MD"
 	sourceDef.SourceType = pkg.SourceTypeDrJuanBMartinezJrMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.nicklauschildrens.org/find-a-physician/physician-details/en/1093822041/juan-martinez-jr-general-pediatrics"
 	sourceDef.SecretKeyPrefix = "cerner"
 

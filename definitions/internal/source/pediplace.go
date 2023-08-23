@@ -29,6 +29,7 @@ func GetSourcePediplace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Display = "PediPlace"
 	sourceDef.SourceType = pkg.SourceTypePediplace
 	sourceDef.Category = []string{"174400000X", "208000000X", "363LP0200X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467573311"}}
 	sourceDef.BrandLogo = "pediplace.svg"
 	sourceDef.PatientAccessUrl = "https://www.pediplace.org/contact-us"

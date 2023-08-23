@@ -29,6 +29,7 @@ func GetSourceFortBendRheumatologyAssociatesPllc(env pkg.FastenLighthouseEnvType
 	sourceDef.Display = "Fort Bend Rheumatology Associates PLLC"
 	sourceDef.SourceType = pkg.SourceTypeFortBendRheumatologyAssociatesPllc
 	sourceDef.Category = []string{"174400000X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770516551"}}
 	sourceDef.BrandLogo = "fort-bend-rheumatology-associates-pllc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.fortbendrheumatology.com/"

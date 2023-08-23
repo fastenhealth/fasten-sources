@@ -28,6 +28,8 @@ func GetSourceMedcorAtHitachiAstemoRockSpringInc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Medcor At Hitachi Astemo Rock Spring Inc"
 	sourceDef.SourceType = pkg.SourceTypeMedcorAtHitachiAstemoRockSpringInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.hitachiastemo.com/en/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceAmadorHormillaMD(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Amador Hormilla, M.D."
 	sourceDef.SourceType = pkg.SourceTypeAmadorHormillaMD
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://health.usnews.com/doctors/amador-hormilla-144971"
 	sourceDef.SecretKeyPrefix = "cerner"
 

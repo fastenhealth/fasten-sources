@@ -28,6 +28,8 @@ func GetSourceCesarVegaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "Cesar Vega MD"
 	sourceDef.SourceType = pkg.SourceTypeCesarVegaMd
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

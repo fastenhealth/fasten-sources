@@ -28,6 +28,8 @@ func GetSourceSunilaNFusterMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Sunila N Fuster MD Inc"
 	sourceDef.SourceType = pkg.SourceTypeSunilaNFusterMdInc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "Name: Sunila N Fuster MD Inc Address: 4201 Torrance Blvd City: Torrance Zip: 905034353 State: California Country: USA"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

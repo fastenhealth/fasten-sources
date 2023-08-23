@@ -28,6 +28,8 @@ func GetSourceDigestiveHealthCtrOfNRichlandHills(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Digestive Health Ctr Of N Richland Hills"
 	sourceDef.SourceType = pkg.SourceTypeDigestiveHealthCtrOfNRichlandHills
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

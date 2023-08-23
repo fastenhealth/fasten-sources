@@ -28,6 +28,8 @@ func GetSourceLifelineVascularCenterAlbanyLlc(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Lifeline Vascular Center Albany LLC"
 	sourceDef.SourceType = pkg.SourceTypeLifelineVascularCenterAlbanyLlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://lifelinevascular.com/location/vascular-health-and-wellness-llc/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

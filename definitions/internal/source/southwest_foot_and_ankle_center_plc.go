@@ -29,6 +29,8 @@ func GetSourceSouthwestFootAndAnkleCenterPlc(env pkg.FastenLighthouseEnvType, cl
 
 	sourceDef.Display = "Southwest Foot & Ankle Center, PLC"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestFootAndAnkleCenterPlc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.southwestfootanklecenter.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

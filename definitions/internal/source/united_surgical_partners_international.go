@@ -29,6 +29,8 @@ func GetSourceUnitedSurgicalPartnersInternational(env pkg.FastenLighthouseEnvTyp
 
 	sourceDef.Display = "United Surgical Partners International"
 	sourceDef.SourceType = pkg.SourceTypeUnitedSurgicalPartnersInternational
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "united-surgical-partners-international.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/UnitedSurgicalPartners/"
 	sourceDef.SecretKeyPrefix = "cerner"

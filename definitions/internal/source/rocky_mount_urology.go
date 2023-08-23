@@ -29,6 +29,8 @@ func GetSourceRockyMountUrology(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Rocky Mount Urology"
 	sourceDef.SourceType = pkg.SourceTypeRockyMountUrology
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSturgesClinicInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Display = "Sturges Clinic Inc"
 	sourceDef.SourceType = pkg.SourceTypeSturgesClinicInc
 	sourceDef.Category = []string{"2084P0800X"}
+	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417160102"}}
 	sourceDef.SecretKeyPrefix = "allscripts"
 

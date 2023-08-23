@@ -29,6 +29,8 @@ func GetSourceEasternMedicalSpecialistsPc(env pkg.FastenLighthouseEnvType, clien
 
 	sourceDef.Display = "Eastern Medical Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeEasternMedicalSpecialistsPc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.healthgrades.com/group-directory/al-alabama/birmingham/eastern-medical-specialists-pc-birmingham-al-x8jgwh"
 	sourceDef.SecretKeyPrefix = "cerner"
 

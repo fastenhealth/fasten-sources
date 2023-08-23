@@ -28,6 +28,8 @@ func GetSourceFourSeasonsCompassionForLife(env pkg.FastenLighthouseEnvType, clie
 
 	sourceDef.Display = "Four Seasons Compassion For Life"
 	sourceDef.SourceType = pkg.SourceTypeFourSeasonsCompassionForLife
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://fourseasonscare.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -29,6 +29,8 @@ func GetSourceTulaneDoctorsConnectedCare(env pkg.FastenLighthouseEnvType, client
 
 	sourceDef.Display = "Tulane Doctors Connected Care"
 	sourceDef.SourceType = pkg.SourceTypeTulaneDoctorsConnectedCare
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

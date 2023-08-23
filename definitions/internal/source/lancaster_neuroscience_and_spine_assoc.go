@@ -29,6 +29,8 @@ func GetSourceLancasterNeuroscienceAndSpineAssoc(env pkg.FastenLighthouseEnvType
 
 	sourceDef.Display = "Lancaster NeuroScience & Spine Assoc."
 	sourceDef.SourceType = pkg.SourceTypeLancasterNeuroscienceAndSpineAssoc
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "lancaster-neuroscience-and-spine-assoc.svg"
 	sourceDef.PatientAccessUrl = "https://lancasterneuroscience.com/"
 	sourceDef.SecretKeyPrefix = "cerner"

@@ -28,6 +28,8 @@ func GetSourceColorectalSpecialists(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Colorectal Specialists"
 	sourceDef.SourceType = pkg.SourceTypeColorectalSpecialists
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

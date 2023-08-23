@@ -28,6 +28,8 @@ func GetSourceAndersonInfectiousDiseaseCenter(env pkg.FastenLighthouseEnvType, c
 
 	sourceDef.Display = "Anderson Infectious Disease Center"
 	sourceDef.SourceType = pkg.SourceTypeAndersonInfectiousDiseaseCenter
+	sourceDef.Category = []string{}
+	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.andersonregional.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
