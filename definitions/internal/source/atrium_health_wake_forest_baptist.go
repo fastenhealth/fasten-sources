@@ -30,7 +30,7 @@ func GetSourceAtriumHealthWakeForestBaptist(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Display = "Atrium Health Wake Forest Baptist"
 	sourceDef.SourceType = pkg.SourceTypeAtriumHealthWakeForestBaptist
 	sourceDef.Category = []string{"251E00000X"}
-	sourceDef.Aliases = []string{"ATRIUM HEALTH WAKE FOREST BAPTIST"}
+	sourceDef.Aliases = []string{"ATRIUM HEALTH WAKE FOREST BAPTIST", "ATRIUM HEALTH WAKE FOREST BAPTIST - CARE AT HOME"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861422990"}}
 	sourceDef.SecretKeyPrefix = "epic"
 

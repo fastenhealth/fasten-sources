@@ -28,7 +28,7 @@ func GetSourceProlianceEastsideSurgicalSpecialists(env pkg.FastenLighthouseEnvTy
 
 	sourceDef.Display = "Proliance Eastside Surgical Specialists"
 	sourceDef.SourceType = pkg.SourceTypeProlianceEastsideSurgicalSpecialists
-	sourceDef.Category = []string{"208600000X", "2086X0206X", "208C00000X", "261QM1300X"}
+	sourceDef.Category = []string{"207Y00000X", "208600000X", "2086X0206X", "208C00000X", "261QM1300X"}
 	sourceDef.Aliases = []string{"PROLIANCE EASTSIDE SURGICAL SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306434691", "1578801718"}}
 	sourceDef.BrandLogo = "proliance-eastside-surgical-specialists.jpg"

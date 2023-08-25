@@ -28,7 +28,7 @@ func GetSourceMarylandMedicalFirstPA(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Maryland Medical First P.A."
 	sourceDef.SourceType = pkg.SourceTypeMarylandMedicalFirstPA
-	sourceDef.Category = []string{"207R00000X"}
+	sourceDef.Category = []string{"207R00000X", "207RE0101X", "207RN0300X", "207RS0012X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013005016"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"

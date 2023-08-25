@@ -29,7 +29,7 @@ func GetSourceAvenalCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "Avenal Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeAvenalCommunityHealthCenter
 	sourceDef.Category = []string{"171M00000X", "251X00000X", "261QF0400X"}
-	sourceDef.Aliases = []string{"ARIA COMMUNITY HEALTH CENTER", "ARIA COMMUNITY HEALTH CENTER AMC", "ARIA COMMUNITY HEALTH CENTER STRATFORD"}
+	sourceDef.Aliases = []string{"ARIA COMMUNITY HEALTH CENTER", "ARIA COMMUNITY HEALTH CENTER AMC", "ARIA COMMUNITY HEALTH CENTER RIVERDALE", "ARIA COMMUNITY HEALTH CENTER STRATFORD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154736429", "1174142798", "1235562224", "1265051882", "1811516438", "1912312273", "1932169240", "1992176267"}}
 	sourceDef.BrandLogo = "avenal-community-health-center.jpeg"
 	sourceDef.PatientAccessUrl = "https://ariachc.org/"

@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/0004855/metadata
 func GetSourceMonroeMedicalAsoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/bfe2897c-4959-43bc-92e1-a39400efbd8a/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/bfe2897c-4959-43bc-92e1-a39400efbd8a/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/b66e8a85-6cc4-4419-9fd7-a80900818731/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/b66e8a85-6cc4-4419-9fd7-a80900818731/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/0004855"
 
