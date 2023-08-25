@@ -50104,8 +50104,6 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 		return source.GetSourceClientZzzdeleteseattleDispatchhealth(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAetna:
 		return source.GetSourceClientAetna(env, ctx, globalLogger, sourceCreds, testHttpClient...)
-	case pkg.SourceTypeAthenaCustom:
-		return source.GetSourceClientAthenaCustom(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeBluebutton:
 		return source.GetSourceClientBluebutton(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeCigna:

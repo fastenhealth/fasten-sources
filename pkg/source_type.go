@@ -25051,7 +25051,6 @@ const (
 	SourceTypeZynithHealthCareAssociatesLlc                                                    SourceType = "zynith-health-care-associates-llc"
 	SourceTypeZzzdeleteseattleDispatchhealth                                                   SourceType = "zzzdeleteseattle-dispatchhealth"
 	SourceTypeAetna                                                                            SourceType = "aetna"
-	SourceTypeAthenaCustom                                                                     SourceType = "athena-custom"
 	SourceTypeBluebutton                                                                       SourceType = "bluebutton"
 	SourceTypeCigna                                                                            SourceType = "cigna"
 	// sandbox
