@@ -10,10 +10,13 @@ type SourceType string
 const (
 	SourceTypeManual SourceType = "manual"
 	// platform
+	SourceTypeAetna          SourceType = "aetna"
 	SourceTypeAllscripts     SourceType = "allscripts"
 	SourceTypeAthena         SourceType = "athena"
+	SourceTypeBluebutton     SourceType = "bluebutton"
 	SourceTypeCareevolution  SourceType = "careevolution"
 	SourceTypeCerner         SourceType = "cerner"
+	SourceTypeCigna          SourceType = "cigna"
 	SourceTypeEclinicalworks SourceType = "eclinicalworks"
 	SourceTypeEpic           SourceType = "epic"
 	SourceTypeMeditech       SourceType = "meditech"
@@ -25050,9 +25053,6 @@ const (
 	SourceTypeZuwaFamilyCarePllc                                                               SourceType = "zuwa-family-care-pllc"
 	SourceTypeZynithHealthCareAssociatesLlc                                                    SourceType = "zynith-health-care-associates-llc"
 	SourceTypeZzzdeleteseattleDispatchhealth                                                   SourceType = "zzzdeleteseattle-dispatchhealth"
-	SourceTypeAetna                                                                            SourceType = "aetna"
-	SourceTypeBluebutton                                                                       SourceType = "bluebutton"
-	SourceTypeCigna                                                                            SourceType = "cigna"
 	// sandbox
 	SourceTypeHealthit SourceType = "healthit"
 	SourceTypeKaiser   SourceType = "kaiser"
