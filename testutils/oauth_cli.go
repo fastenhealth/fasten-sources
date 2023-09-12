@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
@@ -25,6 +26,9 @@ type ResourceRequest struct {
 	ClientId        string `json:"clientId"`
 }
 
+//go:embed html
+var staticHtml embed.FS
+
 func JSONError(w http.ResponseWriter, err interface{}, code int) {
 	log.Printf("%v", err)
 
@@ -38,12 +42,24 @@ func JSONError(w http.ResponseWriter, err interface{}, code int) {
 	return
 }
 func main() {
+
 	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
 		log.Printf("%v", req.URL.Path)
 		if strings.HasPrefix(req.URL.Path, "/callback") {
-			http.ServeFile(res, req, "html/callback.html")
+			callbackHtml, err := staticHtml.ReadFile("html/callback.html")
+			if err != nil {
+				log.Fatalf("error reading static files: %v", err)
+			}
+			res.Write(callbackHtml)
+			//http.ServeFile(res, req, "html/callback.html")
 		} else {
-			http.ServeFile(res, req, "html/index.html")
+			indexHtml, err := staticHtml.ReadFile("html/index.html")
+			if err != nil {
+				log.Fatalf("error reading static files: %v", err)
+			}
+			res.Write(indexHtml)
+
+			//http.ServeFile(res, req, "html/index.html")
 		}
 	})
 	url := "http://localhost:9999"

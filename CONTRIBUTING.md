@@ -162,3 +162,14 @@ go clean -cache
 time go build ./...
 # 129.83s user 5.78s system 204% cpu 1:06.23 total
 ```
+
+
+# Docker
+
+```bash
+
+docker build . -t fasten_sources
+docker run --rm -it -p 9999:9999 fasten_sources
+
+
+```
