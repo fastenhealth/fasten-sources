@@ -86,11 +86,11 @@
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-outline-primary active">
-                        <input type="radio" class="btn-check" name="source_mode" id="sandbox" autocomplete="off" value="https://lighthouse.fastenhealth.com/sandbox/" checked>
+                        <input type="radio" class="btn-check" name="source_mode" id="sandbox" autocomplete="off" value="sandbox" checked>
                         Sandbox Providers
                     </label>
                     <label class="btn btn-outline-secondary">
-                        <input type="radio" class="btn-check" name="source_mode" id="prod" value="https://lighthouse.fastenhealth.com/v1/" autocomplete="off">
+                        <input type="radio" class="btn-check" name="source_mode" id="prod" value="prod" autocomplete="off">
                         Production Providers
                     </label>
                 </div>
@@ -145,11 +145,17 @@
         //GLOBAL variables
         var CURRENT_FILTER = newMedicalSourcesFilter()
 
+        var SOURCE_ENDPOINT_LOOKUP = {
+            "sandbox": "https://lighthouse.fastenhealth.com/sandbox/",
+            "prod": "https://lighthouse.fastenhealth.com/v1/"
+        }
+
+
         function requestSourceList(filter){
             var sourceList = $('#sourceList')
             sourceList.html("")
 
-            var lighthouseEndpoint = $('input[name="source_mode"]:checked').val()
+            var lighthouseEndpoint = SOURCE_ENDPOINT_LOOKUP[$('input[name="source_mode"]:checked').val()]
             localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
 
 
@@ -268,6 +274,9 @@
             $('input[name="source_mode"]').change(function() {
                 $('#sourceNameSearch').val('') //reset text search
                 requestSourceList(CURRENT_FILTER)
+                //store the source_mode id in localStorage
+                var sourceMode = $('input[name="source_mode"]:checked').val()
+                localStorage.setItem('sourceMode', sourceMode)
             });
 
             $('#sourceNameSearch').on("change paste keyup", function() {
