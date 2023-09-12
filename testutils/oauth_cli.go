@@ -133,7 +133,7 @@ func main() {
 		time.Sleep(1 * time.Second)
 		err := open.Run(url)
 		if err != nil {
-			log.Fatalf("an error occurred opening browser: %v", err)
+			log.Printf("an error occurred opening browser: %v", err)
 		}
 		time.Sleep(1 * time.Second)
 		log.Printf("Authentication URL: %s\n", url)
