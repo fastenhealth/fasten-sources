@@ -133,6 +133,113 @@
         </div>
 <!--        END - Source Search-->
 
+<!--        START - CUSTOM SOURCE-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Define Custom Source
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="customSourceType">Source Type</label>
+                                        <input required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customAuthEndpoint">Authorization Endpoint</label>
+                                        <input required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customResponseMode">Response Mode</label>
+                                        <select required class="form-control" id="customResponseMode">
+                                            <option>fragment</option>
+                                            <option>query</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customClientId">Client ID</label>
+                                        <input required type="text" class="form-control" id="customClientId" placeholder="xxx-xxx-xxx">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customScopes">Scopes</label>
+                                        <select required multiple class="form-control" id="customScopes">
+                                            <optgroup>
+                                                <option selected>fhirUser</option>
+                                                <option selected>openid</option>
+                                                <option selected>profile</option>
+                                                <option>offline</option>
+                                            </optgroup>
+                                            <optgroup>
+                                                <option>patient/*.read</option>
+                                                <option>patient/*</option>
+                                                <option>patient/*.*</option>
+                                            </optgroup>
+                                            <optgroup>
+                                                <option>patient/Account.read</option>
+                                                <option>patient/AllergyIntolerance.read</option>
+                                                <option>patient/Appointment.read</option>
+                                                <option>patient/Binary.read</option>
+                                                <option>patient/CarePlan.read</option>
+                                                <option>patient/CareTeam.read</option>
+                                                <option>patient/ChargeItem.read</option>
+                                                <option>patient/Communication.read</option>
+                                                <option>patient/Condition.read</option>
+                                                <option>patient/Consent.read</option>
+                                                <option>patient/Coverage.read</option>
+                                                <option>patient/Device.read</option>
+                                                <option>patient/DiagnosticReport.read</option>
+                                                <option>patient/DocumentReference.read</option>
+                                                <option>patient/Encounter.read</option>
+                                                <option>patient/FamilyMemberHistory.read</option>
+                                                <option>patient/Goal.read</option>
+                                                <option>patient/Immunization.read</option>
+                                                <option>patient/InsurancePlan.read</option>
+                                                <option>patient/MedicationAdministration.read</option>
+                                                <option>patient/MedicationRequest.read</option>
+                                                <option>patient/NutritionOrder.read</option>
+                                                <option>patient/Observation.read</option>
+                                                <option>patient/Patient.read</option>
+                                                <option>patient/Person.read</option>
+                                                <option>patient/Procedure.read</option>
+                                                <option>patient/Provenance.read</option>
+                                                <option>patient/Questionnaire.read</option>
+                                                <option>patient/QuestionnaireResponse.read</option>
+                                                <option>patient/RelatedPerson.read</option>
+                                                <option>patient/Schedule.read</option>
+                                                <option>patient/ServiceRequest.read</option>
+                                                <option>patient/Slot.read</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customAudience">Audience</label>
+                                        <input type="text" class="form-control" id="customAudience" placeholder="(optional)">
+                                    </div>
+
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="customConfidential">
+                                        <label class="form-check-label" for="customConfidential">Confidential</label>
+                                    </div>
+
+                                    <button id="customSourceSubmit" type="button" class="btn btn-primary btn-sm mb-3">Submit</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        END - CUSTOM SOURCE-->
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -150,6 +257,27 @@
             "prod": "https://lighthouse.fastenhealth.com/v1/"
         }
 
+
+        function defineCustomSource(){
+            var lighthouseEndpoint = SOURCE_ENDPOINT_LOOKUP[$('input[name="source_mode"]:checked').val()]
+
+            var sourceType = $('#customSourceType').val()
+            var customSource = {
+                authorization_endpoint: $('#customAuthEndpoint').val(),
+                redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
+                response_types_supported: ['authorization_code'],
+                response_modes_supported: [$('#customResponseMode').val()],
+                aud: $('#customAudience').val(),
+                confidential: $('#customConfidential').is(":checked"),
+                code_challenge_methods_supported: ['S256'],
+                client_id: $('#customClientId').val(),
+                scopes_supported: $('#customScopes').val(),
+
+            }
+            console.log(customSource)
+
+            generateSourceAuthorizeUrl(sourceType, customSource)
+        }
 
         function requestSourceList(filter){
             var sourceList = $('#sourceList')
@@ -267,6 +395,17 @@
         }
 
 
+        //autosave and reload custom source form
+        // function persist(event) {
+        //     localStorage.setItem(event.target.id, event.target.value);
+        // }
+        //
+        // // you may use a more specific selector;
+        // document.querySelectorAll(".form-control.auto-save").forEach((inputEl) => {
+        //     inputEl.value = localStorage.getItem(inputEl.id);
+        //     inputEl.addEventListener("change", persist);
+        // });
+
         $(function() {
 
             //search depends on 2 things
@@ -283,6 +422,10 @@
             $('#sourceNameSearch').on("change paste keyup", function() {
                 CURRENT_FILTER.query = $(this).val()
                 requestSourceList(CURRENT_FILTER)
+            });
+
+            $('#customSourceSubmit').click(function() {
+                defineCustomSource()
             });
 
             // on startup, populate the table with sources
