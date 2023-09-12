@@ -97,7 +97,8 @@
 
 
 
-<!--                    <label class="btn btn-outline-primary" for="sandbox">Sandbox Providers</label>-->
+
+                <!--                    <label class="btn btn-outline-primary" for="sandbox">Sandbox Providers</label>-->
 
 
 <!--                    <input type="radio" class="btn-check" name="source_mode" id="prod" value="https://lighthouse.fastenhealth.com/v1/" autocomplete="off">-->
@@ -105,13 +106,17 @@
 
 <!--                    <a href="#" class="btn btn-primary my-2">Sandbox Providers</a>-->
 <!--                    <a href="#" class="btn btn-secondary my-2">Production Providers</a>-->
-                </p>
             </div>
         </section>
 
 <!--        START - Source Search -->
         <div class="album py-5 bg-light">
             <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="sourceTotal" class="alert alert-warning" role="alert"></div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group row">
@@ -182,6 +187,8 @@
                             });
                         })
                         .appendTo(li);
+
+                    $('#sourceTotal').html(response.data.hits.total.value + " sources found. Showing page 1.")
                 }
                 hideSpinner()
             });
@@ -190,10 +197,12 @@
         function showSpinner(){
             $('#sourceSpinner').show()
             $('#sourceList').hide()
+            $('#sourceTotal').hide()
         }
         function hideSpinner(){
             $('#sourceSpinner').hide()
             $('#sourceList').show()
+            $('#sourceTotal').show()
         }
 
         async function  generateSourceAuthorizeUrl(sourceType, lighthouseSource){

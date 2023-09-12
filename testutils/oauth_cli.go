@@ -19,6 +19,14 @@ func main() {
 	})
 	url := "http://localhost:9999"
 
+	http.HandleFunc("/api/sync", func(res http.ResponseWriter, req *http.Request) {
+		log.Printf("%v", req.URL.Path)
+		//write simple json response
+		res.Header().Set("Content-Type", "application/json")
+		res.Write([]byte(`{"hello": "world"}`))
+		return
+	})
+
 	go func() {
 		log.Println("You will now be taken to your browser for authentication")
 		time.Sleep(1 * time.Second)
