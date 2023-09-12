@@ -82,8 +82,7 @@ If we're testing or making changes to an existing client, we can do the followin
 2. Open browser tool to which will allow us to generate a access-token for our source. 
 ```bash
 
-cd testutils
-go run oauth_cli.go
+make serve-backend
 
 # this should start a simple webserver and open a browser to http://localhost:9999
 ```
