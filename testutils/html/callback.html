@@ -128,7 +128,9 @@
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <pre id="patient_data"></pre>
+                                        <pre id="patient_id"></pre>
+                                        <button id="populatePatient" type="button" class="btn btn-primary btn-sm">Request</button>
+                                        <pre style="max-height:400px" id="patient_data" style="display:none;"></pre>
                                     </div>
                                 </div>
                             </div>
@@ -154,6 +156,56 @@
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
     <script type="module">
         import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+
+
+        function populatePatient(){
+            //get patient id
+            var patientId = localStorage.getItem("patientId")
+
+            $("#patient_data").show().text("Loading...")
+            var resp = sourceRequest("Patient", patientId)
+            $("#patient_data").text(JSON.stringify(resp, null, 4))
+
+        }
+
+        function sourceRequest(resourceType, resourceRequest){
+            var parts = window.location.pathname.split("/")
+            var sourceType = parts[parts.length-1]
+
+            //get sourceMode from localStorage
+            var sourceMode = localStorage.getItem("sourceMode")
+            if(sourceMode == null){
+                sourceMode = "sandbox"
+            }
+            //get accessToken from localStorage
+            var accessToken = localStorage.getItem("accessToken")
+
+            var clientId = localStorage.getItem("clientId")
+            let payload = {
+                "sourceMode": sourceMode,
+                "sourceType": sourceType,
+                "resourceType": resourceType,
+                "resourceRequest": resourceRequest,
+                "accessToken": accessToken,
+                "clientId": clientId,
+            }
+
+            //post JSON payload to /api/source/request using fetch
+            var resp_data
+            $.ajax({
+                type: 'POST',
+                url: '/api/source/request',
+                data: JSON.stringify (payload),
+                contentType: "application/json",
+                dataType: 'json',
+                async: false,
+                success: function (json) {
+                    resp_data = json;
+                }
+            })
+            return resp_data
+        }
+
 
         async function swapOauthToken(sourceType, sourceMetadata, expectedSourceStateInfo, code){
             // @ts-expect-error
@@ -205,6 +257,13 @@
 
         $(function() {
 
+            //register handlers
+
+            $("#populatePatient").click(function(){
+                $(this).prop('disabled', true);
+                populatePatient()
+            })
+
 
             //get sourceType from url (example.com/callback/{{sourceType}})
             var parts = window.location.pathname.split("/")
@@ -244,6 +303,8 @@
 
                 let payload = await swapOauthToken(sourceType, sourceMetadata,expectedSourceStateInfo, callbackCode)
                 $('#oauth_data').text(JSON.stringify(payload, null, 4))
+                localStorage.setItem("accessToken", payload.access_token)
+
 
                 //check if the access token is a JWT
                 if(payload.access_token.split(".").length == 3){
@@ -251,7 +312,8 @@
                     $('#jwt_data').text(JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4))
                 }
 
-                $('#patient_data').text(payload.patient)
+                $('#patient_id').text(payload.patient)
+                localStorage.setItem("patientId", payload.patient)
 
             });
 
