@@ -25,6 +25,18 @@ type ResourceRequest struct {
 	ClientId        string `json:"clientId"`
 }
 
+func JSONError(w http.ResponseWriter, err interface{}, code int) {
+	log.Printf("%v", err)
+
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	w.WriteHeader(code)
+	json.NewEncoder(w).Encode(map[string]interface{}{
+		"success": false,
+		"error":   err,
+	})
+	return
+}
 func main() {
 	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
 		log.Printf("%v", req.URL.Path)
@@ -46,9 +58,9 @@ func main() {
 		var requestData ResourceRequest
 		err := json.NewDecoder(req.Body).Decode(&requestData)
 		if err != nil {
-			log.Printf("Error decoding request body: %v", err)
+
+			JSONError(res, fmt.Errorf("error decoding request body: %v", err), http.StatusBadRequest)
 			httputil.DumpRequest(req, true)
-			http.Error(res, err.Error(), http.StatusBadRequest)
 			return
 		}
 		log.Printf("%v", requestData)
@@ -57,8 +69,7 @@ func main() {
 		//get the source defintiion
 		sourceConfig, err := defFactory.GetSourceConfig(pkg.FastenLighthouseEnvType(requestData.SourceMode), pkg.SourceType(requestData.SourceType), map[pkg.SourceType]string{})
 		if err != nil {
-			logger.Errorln("An error occurred while initializing source config", err)
-			http.Error(res, err.Error(), http.StatusBadRequest)
+			JSONError(res, fmt.Errorf("an error occurred while initializing source config", err), http.StatusBadRequest)
 			return
 		}
 
@@ -79,8 +90,7 @@ func main() {
 
 		sourceClient, err := factory.GetSourceClient(pkg.FastenLighthouseEnvType(requestData.SourceMode), pkg.SourceType(requestData.SourceType), bgContext, logger, &sc)
 		if err != nil {
-			logger.Errorln("An error occurred while initializing hub client using source credential", err)
-			http.Error(res, err.Error(), http.StatusBadRequest)
+			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
 			return
 		}
 
@@ -88,15 +98,13 @@ func main() {
 
 		_, err = sourceClient.GetRequest(fmt.Sprintf("%s/%s", requestData.ResourceType, strings.TrimLeft(requestData.ResourceRequest, "/")), &response)
 		if err != nil {
-			logger.Errorln("An error occurred while fetching data from source", err)
-			http.Error(res, err.Error(), http.StatusBadRequest)
+			JSONError(res, fmt.Errorf("an error occurred while fetching data from source: %v", err), http.StatusInternalServerError)
 			return
 		}
 
 		responeJson, err := json.MarshalIndent(response, "", "  ")
 		if err != nil {
-			logger.Errorln("An error occurred while marshalling response", err)
-			http.Error(res, err.Error(), http.StatusBadRequest)
+			JSONError(res, fmt.Errorf("an error occurred while marshalling response: %v", err), http.StatusInternalServerError)
 			return
 		}
 

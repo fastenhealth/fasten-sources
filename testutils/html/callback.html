@@ -129,8 +129,35 @@
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <pre id="patient_id"></pre>
-                                        <button id="populatePatient" type="button" class="btn btn-primary btn-sm">Request</button>
-                                        <pre style="max-height:400px" id="patient_data" style="display:none;"></pre>
+                                        <button id="populatePatient" type="button" class="btn btn-primary btn-sm mb-3">Request</button>
+                                        <pre style="max-height:400px; display:none;" id="patient_data"></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingRaw">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseRaw" aria-expanded="false" aria-controls="collapseRaw">
+                                            Authenticated Raw Request
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseRaw" class="collapse" aria-labelledby="headingRaw" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="rawResourceType">Resource Type</label>
+                                            <input type="text" placeholder="Observation,Patient,etc" class="form-control" id="rawResourceType" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rawResourcePath">Resource Path</label>
+                                            <input type="text" class="form-control" id="rawResourcePath">
+                                        </div>
+
+                                        <button id="rawPatient" type="button" class="btn btn-primary btn-sm mb-3">Submit Request</button>
+                                        <pre style="max-height:400px; display:none;" id="raw_data"></pre>
+                                        <div style="display:none;" class="alert alert-danger" role="alert" id="raw_data_error"></div>
+
                                     </div>
                                 </div>
                             </div>
@@ -158,13 +185,29 @@
         import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
 
 
-        function populatePatient(){
+        function populatePatientRequest(){
             //get patient id
             var patientId = localStorage.getItem("patientId")
 
             $("#patient_data").show().text("Loading...")
             var resp = sourceRequest("Patient", patientId)
             $("#patient_data").text(JSON.stringify(resp, null, 4))
+
+        }
+
+        function rawPatientRequest(){
+            var rawResourceType = $("#rawResourceType").val()
+            var rawResourcePath = $("#rawResourcePath").val()
+
+            $("#raw_data").show().text("Loading...")
+            $("#raw_data_error").hide()
+            try{
+                var resp = sourceRequest(rawResourceType, rawResourcePath)
+                $("#raw_data").text(JSON.stringify(resp, null, 4))
+            }catch(e){
+                $("#raw_data").hide()
+                $("#raw_data_error").show().text(e)
+            }
 
         }
 
@@ -192,6 +235,7 @@
 
             //post JSON payload to /api/source/request using fetch
             var resp_data
+            var resp_err
             $.ajax({
                 type: 'POST',
                 url: '/api/source/request',
@@ -201,8 +245,15 @@
                 async: false,
                 success: function (json) {
                     resp_data = json;
+                },
+                error: function (e) {
+                    console.log(e);
+                    resp_err = e.responseText
                 }
             })
+            if(resp_err){
+                throw resp_err
+            }
             return resp_data
         }
 
@@ -261,7 +312,13 @@
 
             $("#populatePatient").click(function(){
                 $(this).prop('disabled', true);
-                populatePatient()
+                populatePatientRequest()
+            })
+
+            $("#rawPatient").click(function(){
+                $(this).prop('disabled', true);
+                rawPatientRequest()
+                $(this).prop('disabled', false);
             })
 
 
