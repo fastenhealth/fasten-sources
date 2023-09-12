@@ -18,6 +18,7 @@ const (
 	SourceTypeCerner         SourceType = "cerner"
 	SourceTypeCigna          SourceType = "cigna"
 	SourceTypeEclinicalworks SourceType = "eclinicalworks"
+	SourceTypeEdifecs        SourceType = "edifecs"
 	SourceTypeEpic           SourceType = "epic"
 	SourceTypeMeditech       SourceType = "meditech"
 	SourceTypeNextgen        SourceType = "nextgen"
@@ -25053,6 +25054,7 @@ const (
 	SourceTypeZuwaFamilyCarePllc                                                               SourceType = "zuwa-family-care-pllc"
 	SourceTypeZynithHealthCareAssociatesLlc                                                    SourceType = "zynith-health-care-associates-llc"
 	SourceTypeZzzdeleteseattleDispatchhealth                                                   SourceType = "zzzdeleteseattle-dispatchhealth"
+	SourceTypeBcbsal                                                                           SourceType = "bcbsal"
 	// sandbox
 	SourceTypeHealthit SourceType = "healthit"
 	SourceTypeKaiser   SourceType = "kaiser"
