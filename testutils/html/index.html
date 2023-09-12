@@ -12,6 +12,7 @@
     <meta name="author" content="Fasten Health">
 
     <title>Testing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         p {
             text-align: justify;
@@ -33,171 +34,253 @@
             justify-content: space-around;
             gap: 0 3em;
         }
+
+        .jumbotron {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        @media (min-width: 768px) {
+            .jumbotron {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        .jumbotron p:last-child {
+            margin-bottom: 0;
+        }
+
+        .jumbotron h1 {
+            font-weight: 300;
+        }
+
+        /*.jumbotron .container {*/
+        /*    max-width: 40rem;*/
+        /*}*/
+
+        footer {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        footer p {
+            margin-bottom: .25rem;
+        }
+
     </style>
 </head>
 <body class="az-body">
-<div class="az-error-wrapper">
-    <h2>Lighthouse Source Type</h2>
-    <input type="radio" id="sandbox" name="mode" value="https://lighthouse.fastenhealth.com/sandbox/">
-    <label for="sandbox">Sandbox</label><br>
-    <input type="radio" id="prod" name="mode" value="https://lighthouse.fastenhealth.com/v1/">
-    <label for="prod">Prod</label><br>
-
-    <h2>Available Sources</h2>
-    <ul class="source-list"></ul>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
-<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
-<script type="module">
-    import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
-
-    //GLOBAL variables
-    var CURRENT_FILTER = newMedicalSourcesFilter()
-
-    function requestSourceList(filter){
-        var sourceList = $('ul.source-list')
-        sourceList.html("")
-
-        var lighthouseEndpoint = $('input[name="mode"]:checked').val()
-        localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
-
-        if(filter.searchAfter){
-            filter.searchAfter = filter.searchAfter.split(',')
-        } else {
-            filter.searchAfter = []
-        }
-
-        $.post(  lighthouseEndpoint + 'search', JSON.stringify(filter), function( response ) {
-            console.log(response.data)
-            for(const source of response.data.hits.hits){
-                var li = $('<li/>')
-                    .appendTo(sourceList);
-                var sourceLink = $('<a/>')
-                    .text(source._source.display)
-                    .addClass("cursor-pointer")
-                    .on('click', function() {
-                        //get the full source information and generate the authorization url
-                        $.get(  lighthouseEndpoint + 'connect/' + source._id, function( response ) {
-                            console.log(response.data)
-                            generateSourceAuthorizeUrl(source._id, response.data)
-                        });
-                    })
-                    .appendTo(li);
-            }
-        });
-    }
-
-    async function  generateSourceAuthorizeUrl(sourceType, lighthouseSource){
-        const state = 'custom'
-        let sourceStateInfo = {}
-        sourceStateInfo.state = state
-        sourceStateInfo.source_type = sourceType
-
-        // generate the authorization url
-        const authorizationUrl = new URL(lighthouseSource.authorization_endpoint);
-        authorizationUrl.searchParams.set('redirect_uri', lighthouseSource.redirect_uri);
-        authorizationUrl.searchParams.set('response_type', lighthouseSource.response_types_supported[0]);
-        authorizationUrl.searchParams.set('response_mode', lighthouseSource.response_modes_supported[0]);
-        authorizationUrl.searchParams.set('state', state);
-        authorizationUrl.searchParams.set('client_id', lighthouseSource.client_id);
-        if(lighthouseSource.scopes_supported && lighthouseSource.scopes_supported.length){
-            authorizationUrl.searchParams.set('scope', lighthouseSource.scopes_supported.join(' '));
-        }
-        if (lighthouseSource.aud) {
-            authorizationUrl.searchParams.set('aud', lighthouseSource.aud);
-        }
-
-        //this is for providers that support CORS and PKCE (public client auth)
-        if(!lighthouseSource.confidential){
-            // https://github.com/panva/oauth4webapi/blob/8eba19eac408bdec5c1fe8abac2710c50bfadcc3/examples/public.ts
-            const codeVerifier = Oauth.generateRandomCodeVerifier();
-            const codeChallenge = await Oauth.calculatePKCECodeChallenge(codeVerifier);
-            const codeChallengeMethod = lighthouseSource.code_challenge_methods_supported[0]; // 'S256'
-
-            sourceStateInfo.code_verifier = codeVerifier
-            sourceStateInfo.code_challenge = codeChallenge
-            sourceStateInfo.code_challenge_method = codeChallengeMethod
-
-            authorizationUrl.searchParams.set('code_challenge', codeChallenge);
-            authorizationUrl.searchParams.set('code_challenge_method', codeChallengeMethod);
-        }
-
-        localStorage.setItem(state, JSON.stringify(sourceStateInfo))
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1>Fasten Lighthouse Sources</h1>
+                <p class="lead text-muted">There are 2 flavors of Fasten:</p>
+                <ul>
+                    <li><strong>Sandbox</strong>  only allows you to connect to a handful of Healthcare providers, using Sandbox accounts that are meant for testing</li>
+                    <li><strong>Prod</strong>  allow you to connect and retrieve your personal electronic medical record and store it within Fasten. Be careful, this is YOUR health data</li>
+                </ul>
 
 
-        redirectWithOriginAndDestination(authorizationUrl, sourceType, lighthouseSource.redirect_uri);
-    }
 
-    function redirectWithOriginAndDestination(destUrl, sourceType, callbackUri) {
-        const originUrlParts = new URL(window.location.href)
-        originUrlParts.hash = "" //reset hash in-case its present.
-        originUrlParts.pathname = originUrlParts.pathname + `/callback/${sourceType}`
-
-
-        const redirectUrlParts = new URL(callbackUri.replace("/callback/", "/redirect/"));
-        const redirectParams = new URLSearchParams()
-        redirectParams.set("origin_url", originUrlParts.toString())
-        redirectParams.set("dest_url", destUrl)
-        redirectUrlParts.search = redirectParams.toString()
-        console.log(redirectUrlParts.toString());
-
-        // Simulate a mouse click:
-        window.location.href = redirectUrlParts.toString();
-    }
-
-    function newMedicalSourcesFilter(){
-        let filter = {}
-        filter.fields = ["*"];
-        // filter.searchAfter = '';
-
-        return filter
-    }
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="radio" class="btn-check" name="source_mode" id="sandbox" autocomplete="off" value="https://lighthouse.fastenhealth.com/sandbox/" checked>
+                        Sandbox Providers
+                    </label>
+                    <label class="btn btn-outline-secondary">
+                        <input type="radio" class="btn-check" name="source_mode" id="prod" value="https://lighthouse.fastenhealth.com/v1/" autocomplete="off">
+                        Production Providers
+                    </label>
+                </div>
 
 
-    $(function() {
-        var $container = $('ul.source-list')
-        $container.infiniteScroll({
-            // options
-            prefill: false,
-            history: false,
-            responseBody: 'json',
-            path: function() {
-                var lighthouseEndpoint = $('input[name="mode"]:checked').val()
-                localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
-                return lighthouseEndpoint + 'search'
-            },
 
-            fetchOptions: function(){
-                return {
-                    method: "POST",
-                    mode: 'cors',
-                    cache: 'no-cache',
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(CURRENT_FILTER)
+<!--                    <label class="btn btn-outline-primary" for="sandbox">Sandbox Providers</label>-->
+
+
+<!--                    <input type="radio" class="btn-check" name="source_mode" id="prod" value="https://lighthouse.fastenhealth.com/v1/" autocomplete="off">-->
+<!--                    <label class="btn btn-outline-secondary" for="prod">Production Providers</label>-->
+
+<!--                    <a href="#" class="btn btn-primary my-2">Sandbox Providers</a>-->
+<!--                    <a href="#" class="btn btn-secondary my-2">Production Providers</a>-->
+                </p>
+            </div>
+        </section>
+
+<!--        START - Source Search -->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <label for="sourceNameSearch" class="col-sm-2 col-form-label">Source Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="sourceNameSearch">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div id="sourceSpinner" class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <ul id="sourceList" class="list-unstyled row">
+                            <li class="list-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        END - Source Search-->
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
+    <!--<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>-->
+    <script type="module">
+        import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+
+        //GLOBAL variables
+        var CURRENT_FILTER = newMedicalSourcesFilter()
+
+        function requestSourceList(filter){
+            var sourceList = $('#sourceList')
+            sourceList.html("")
+
+            var lighthouseEndpoint = $('input[name="source_mode"]:checked').val()
+            localStorage.setItem('lighthouseEndpoint', lighthouseEndpoint)
+
+
+            showSpinner()
+            $.post(  lighthouseEndpoint + 'search', JSON.stringify(filter), function( response ) {
+                console.log(response.data)
+                for(const source of response.data.hits.hits){
+                    var li = $('<li/>')
+                        .addClass("list-item")
+                        .addClass("col-4")
+                        .appendTo(sourceList);
+                    $('<a/>')
+                        .text(source._source.display)
+                        .addClass("cursor-pointer")
+                        .on('click', function() {
+                            //disable everything
+                            showSpinner()
+
+                            //get the full source information and generate the authorization url
+                            $.get(  lighthouseEndpoint + 'connect/' + source._id, function( response ) {
+                                console.log(response.data)
+                                generateSourceAuthorizeUrl(source._id, response.data)
+                            });
+                        })
+                        .appendTo(li);
                 }
-            },
+                hideSpinner()
+            });
+        }
 
+        function showSpinner(){
+            $('#sourceSpinner').show()
+            $('#sourceList').hide()
+        }
+        function hideSpinner(){
+            $('#sourceSpinner').hide()
+            $('#sourceList').show()
+        }
+
+        async function  generateSourceAuthorizeUrl(sourceType, lighthouseSource){
+            const state = 'custom'
+            let sourceStateInfo = {}
+            sourceStateInfo.state = state
+            sourceStateInfo.source_type = sourceType
+
+            // generate the authorization url
+            const authorizationUrl = new URL(lighthouseSource.authorization_endpoint);
+            authorizationUrl.searchParams.set('redirect_uri', lighthouseSource.redirect_uri);
+            authorizationUrl.searchParams.set('response_type', lighthouseSource.response_types_supported[0]);
+            authorizationUrl.searchParams.set('response_mode', lighthouseSource.response_modes_supported[0]);
+            authorizationUrl.searchParams.set('state', state);
+            authorizationUrl.searchParams.set('client_id', lighthouseSource.client_id);
+            if(lighthouseSource.scopes_supported && lighthouseSource.scopes_supported.length){
+                authorizationUrl.searchParams.set('scope', lighthouseSource.scopes_supported.join(' '));
+            }
+            if (lighthouseSource.aud) {
+                authorizationUrl.searchParams.set('aud', lighthouseSource.aud);
+            }
+
+            //this is for providers that support CORS and PKCE (public client auth)
+            if(!lighthouseSource.confidential){
+                // https://github.com/panva/oauth4webapi/blob/8eba19eac408bdec5c1fe8abac2710c50bfadcc3/examples/public.ts
+                const codeVerifier = Oauth.generateRandomCodeVerifier();
+                const codeChallenge = await Oauth.calculatePKCECodeChallenge(codeVerifier);
+                const codeChallengeMethod = lighthouseSource.code_challenge_methods_supported[0]; // 'S256'
+
+                sourceStateInfo.code_verifier = codeVerifier
+                sourceStateInfo.code_challenge = codeChallenge
+                sourceStateInfo.code_challenge_method = codeChallengeMethod
+
+                authorizationUrl.searchParams.set('code_challenge', codeChallenge);
+                authorizationUrl.searchParams.set('code_challenge_method', codeChallengeMethod);
+            }
+
+            localStorage.setItem(state, JSON.stringify(sourceStateInfo))
+
+
+            redirectWithOriginAndDestination(authorizationUrl, sourceType, lighthouseSource.redirect_uri);
+        }
+
+        function redirectWithOriginAndDestination(destUrl, sourceType, callbackUri) {
+            const originUrlParts = new URL(window.location.href)
+            originUrlParts.hash = "" //reset hash in-case its present.
+            originUrlParts.pathname = originUrlParts.pathname + `/callback/${sourceType}`
+
+
+            const redirectUrlParts = new URL(callbackUri.replace("/callback/", "/redirect/"));
+            const redirectParams = new URLSearchParams()
+            redirectParams.set("origin_url", originUrlParts.toString())
+            redirectParams.set("dest_url", destUrl)
+            redirectUrlParts.search = redirectParams.toString()
+            console.log(redirectUrlParts.toString());
+
+            // Simulate a mouse click:
+            window.location.href = redirectUrlParts.toString();
+        }
+
+        function newMedicalSourcesFilter(){
+            let filter = {}
+            filter.fields = ["*"];
+            // filter.searchAfter = '';
+
+            return filter
+        }
+
+
+        $(function() {
+
+            //search depends on 2 things
+            //the source_mode and the search field
+
+            $('input[name="source_mode"]').change(function() {
+                $('#sourceNameSearch').val('') //reset text search
+                requestSourceList(CURRENT_FILTER)
+            });
+
+            $('#sourceNameSearch').on("change paste keyup", function() {
+                CURRENT_FILTER.query = $(this).val()
+                requestSourceList(CURRENT_FILTER)
+            });
+
+            // on startup, populate the table with sources
+            requestSourceList(newMedicalSourcesFilter());
         });
-        $container.on( 'load.infiniteScroll', function( event, data ) {
-            // data is JSON
-            console.log(event, data)
-        });
-
-
-        // requestSourceList(newMedicalSourcesFilter())
-
-        // $('input[name="mode"]').change(function() {
-        //     requestSourceList(newMedicalSourcesFilter())
-        // });
-
-    });
-
-
-</script>
+    </script>
 </body>
 </html>
