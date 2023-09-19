@@ -20,7 +20,7 @@ This list of platforms is sourced from various locations, including:
 | [Anthem](https://patient360.anthem.com/P360Member/fhir/endpoints)                                                                                                                  | :white_check_mark:                    | :white_check_mark:                 | :white_check_mark:                                                  | 57 R4                                                                              |
 | [AssureCare/IPatientCare](https://ipatientcare.com/onc-acb-certified-2015-edition/)                                                                                                |                                       |                                    |                                                                     |                                                                                    |
 | [Athena](https://docs.athenahealth.com/api/base-fhir-urls) [(1)](https://mydata.athenahealth.com/home) [(2)](https://fhir.athena.io/athena-fhir-urls/athenanet-fhir-base-urls.csv) | :white_check_mark:                    | :white_check_mark:                 | :construction: - app created, testing                               | 16519 R4                                                                           |
-| [BlueButton/Medicare](https://bluebutton.cms.gov/developers/#production-api-access)                                                                                                                       | :white_check_mark:                    | :white_check_mark:                                   | :construction: - [Checklist](https://bluebutton.cms.gov/checklist/) | 1 R4                                                                               |
+| [BlueButton/Medicare](https://bluebutton.cms.gov/developers/#production-api-access)                                                                                                | :white_check_mark:                    | :white_check_mark:                 | :construction: - [Checklist](https://bluebutton.cms.gov/checklist/) | 1 R4                                                                               |
 | [Bizmatics/Prognocis](https://prognocis.com/fhir/index.html)                                                                                                                       |                                       |                                    |                                                                     |                                                                                    |
 | [Bridgepatientportal](https://bridgepatientportal.docs.apiary.io/#/introduction/fhir-bridge-patient-portal/fhir-endpoints)                                                         |                                       |                                    |                                                                     |                                                                                    |
 | [CPSI/Unify](https://unify-developer.chbase.com/?page=FHIRAPI)                                                                                                                     | :no_entry_sign: - cannot register app |                                    |                                                                     |                                                                                    |
@@ -66,8 +66,112 @@ This list of platforms is sourced from various locations, including:
 | [Trimedtech](https://www.trimedtech.com/Documentation/FHIRAPI/FHIRAPI.html) [(1)](https://www.trimedtech.com/Documentation/FHIRAPI/V8FHIRAPI.html)                                 |                                       |                                    |                                                                     |                                                                                    |
 | [United HealthCare](https://www.uhc.com/legal/interoperability-apis)                                                                                                               |                                       |                                    |                                                                     | 4 FHIR (UnitedHealthcare, Sierra Health and Life, Rocky Mountain, People's Health) |
 | [Welligent](https://www.welligent.com/)                                                                                                                                            |                                       |                                    |                                                                     | 148 R4                                                                             |
-| [PointClickCare](https://developer.pointclickcare.com) | :construction: requested              |  |  |  |
-| [AdvanceMD](https://developers.advancedmd.com/) | :construction: requested              |  |  |  |
+| [PointClickCare](https://developer.pointclickcare.com)                                                                                                                             | :construction: requested              |                                    |  |  |
+| [AdvanceMD](https://developers.advancedmd.com/)                                                                                                                                    | :white_check_mark:              | :construction:                     |  |  |
+| WebPT                                                                                                                                                                              | | | | |
+| Greenway Health                                                                                                                                                                    | | | | |
+| GE Healthcare                                                                                                                                                                      | | | | |
+| CPSI                                                                                                                                                                               | | | | |
+| Modernizing Medicine                                                                                                                                                               | | | | |
+| eIVF                                                                                                                                                                               | | | | |
+| NetSmart                                                                                                                                                                           | | | | |
+| Flatiron                                                                                                                                                                           | | | | |
+| MatrixCare                                                                                                                                                                         | | | | |
+| Exscribe                                                                                                                                                                           | | | | |
+| Change Healthcare                                                                                                                                                                  | | | | |
+| Clinicient                                                                                                                                                                         | | | | |
+| drchrono                                                                                                                                                                           | | | | |
+| nAble                                                                                                                                                                              | | | | |
+| Kareo                                                                                                                                                                              | | | | |
+| McKesson                                                                                                                                                                           | | | | |
+| MEDENT                                                                                                                                                                             | | | | |
+| eMDs                                                                                                                                                                               | | | | |
+| NextTech                                                                                                                                                                           | | | | |
+| AllMeds                                                                                                                                                                            | | | | |
+| CareCloud                                                                                                                                                                          | | | | |
+| Phoenix Ortho                                                                                                                                                                      | | | | |
+| MedEvolve                                                                                                                                                                          | | | | |
+| Elation Health                                                                                                                                                                     | | | | |
+| CodoniX                                                                                                                                                                            | | | | |
+| Merative                                                                                                                                                                           | | | | |
+| Surgical Information Systems                                                                                                                                                       | | | | |
+| iSALUS OfficeEMR                                                                                                                                                                   | | | | |
+| Orchard Software                                                                                                                                                                   | | | | |
+| Prognocis                                                                                                                                                                          | | | | |
+| Fujifilm Synapse                                                                                                                                                                   | | | | |
+| Pulse                                                                                                                                                                              | | | | |
+| Fertisoft                                                                                                                                                                          | | | | |
+| ELLKAY                                                                                                                                                                             | | | | |
+| Brightree                                                                                                                                                                          | | | | |
+| Ascend BPO                                                                                                                                                                         | | | | |
+| Net Health                                                                                                                                                                         | | | | |
+| PCIS Gold                                                                                                                                                                          | | | | |
+| Mellowood Medical                                                                                                                                                                  | | | | |
+| MD Logic                                                                                                                                                                           | | | | |
+| AgileEMR                                                                                                                                                                           | | | | |
+| CollaborateMD                                                                                                                                                                      | | | | |
+| Advanced Data Systems MedicsCloud                                                                                                                                                  | | | | |
+| Picis                                                                                                                                                                              | | | | |
+| Sevocity                                                                                                                                                                           | | | | |
+| WebChart                                                                                                                                                                           | | | | |
+| Dentrix eService                                                                                                                                                                   | | | | |
+| Glenwood Systems                                                                                                                                                                   | | | | |
+| MacPractice                                                                                                                                                                        | | | | |
+| Renesan Software                                                                                                                                                                   | | | | |
+| Thornberry                                                                                                                                                                         | | | | |
+| ECLIPSE                                                                                                                                                                            | | | | |
+| Eyefinity                                                                                                                                                                          | | | | |
+| Integrity Medical Systems                                                                                                                                                          | | | | |
+| Medgen                                                                                                                                                                             | | | | |
+| Meditab                                                                                                                                                                            | | | | |
+| Ankhos                                                                                                                                                                             | | | | |
+| Aspyra Cyberlab                                                                                                                                                                    | | | | |
+| Azalea Health                                                                                                                                                                      | | | | |
+| Benchmark Systems                                                                                                                                                                  | | | | |
+| Better Day Health                                                                                                                                                                  | | | | |
+| Cantata Health                                                                                                                                                                     | | | | |
+| ChartLogic                                                                                                                                                                         | | | | |
+| CliniComp                                                                                                                                                                          | | | | |
+| Clinix                                                                                                                                                                             | | | | |
+| Correct Care Solutions                                                                                                                                                             | | | | |
+| DNAVisit                                                                                                                                                                           | | | | |
+| Elekta                                                                                                                                                                             | | | | |
+| Experity                                                                                                                                                                           | | | | |
+| Homecare Homebase                                                                                                                                                                  | | | | |
+| Infomedika                                                                                                                                                                         | | | | |
+| IntakeQ                                                                                                                                                                            | | | | |
+| Intergy                                                                                                                                                                            | | | | |
+| Invision                                                                                                                                                                           | | | | |
+| Labcorp                                                                                                                                                                            | | | | |
+| MedEZ                                                                                                                                                                              | | | | |
+| Medsphere                                                                                                                                                                          | | | | |
+| NTT Data                                                                                                                                                                           | | | | |
+| OpenEHR                                                                                                                                                                            | | | | |
+| PDS Med                                                                                                                                                                            | | | | |
+| QRS Healthcare Solutions                                                                                                                                                           | | | | |
+| Quanum                                                                                                                                                                             | | | | |
+| Quest Diagnostics                                                                                                                                                                  | | | | |
+| Raintree Systems                                                                                                                                                                   | | | | |
+| SigmaCare                                                                                                                                                                          | | | | |
+| Sigmund Software                                                                                                                                                                   | | | | |
+| Soft Computer SoftLab                                                                                                                                                              | | | | |
+| Star EHR                                                                                                                                                                           | | | | |
+| Streamline Healthcare Solutions                                                                                                                                                    | | | | | 
+| CliniSys                                                                                                                                                                          | | | | |
+| Technomad                                                                                                                                                                          | | | | |
+| TriMed Technologies                                                                                                                                                                | | | | |
+| VistA                                                                                                                                                                              | | | | |
+| WeInfuse                                                                                                                                                                           | | | | |
+| Exan Software                                                                                                                                                                      | | | | |
+| WellSky                                                                                                                                                                            | | | | |
+| CureMD                                                                                                                                                                             | | | | |
+| EMR Link                                                                                                                                                                           | | | | |
+| eRAD                                                                                                                                                                               | | | | |
+
+
+
+
+
 # Research
 
 > https://www.healthit.gov/sites/default/files/facas/2018-10-17_HITAC_FHIR_Presentation_508.pdf
