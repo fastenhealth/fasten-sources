@@ -27,6 +27,7 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
 	sourceDef.Audience = "https://sandbox.bluebutton.cms.gov/v2/fhir"
+	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 
 	sourceDef.ApiEndpointBaseUrl = "https://sandbox.bluebutton.cms.gov/v2/fhir"
 	// retrieve client-id, if available

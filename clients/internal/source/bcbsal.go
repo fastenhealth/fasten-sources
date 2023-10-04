@@ -35,6 +35,6 @@ func GetSourceClientBcbsal(env pkg.FastenLighthouseEnvType, ctx context.Context,
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
 func (c sourceClientBcbsal) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
-	supportedResources := append(c.GetUsCoreResources(), []string{"Coverage", "ExplanationOfBenefit", "Medication", "DetectedIssue", "ResearchStudy", "ImmunizationRecommendation", "ServiceRequest", "MedicationStatement", "MedicationDispense", "InsurancePlan", "HealthcareService", "PractitionerRole"}...)
+	supportedResources := append(c.GetUsCoreResources(), []string{"Coverage", "DetectedIssue", "ExplanationOfBenefit", "HealthcareService", "ImmunizationRecommendation", "InsurancePlan", "Medication", "MedicationDispense", "MedicationStatement", "PractitionerRole", "ResearchStudy", "ServiceRequest"}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }
