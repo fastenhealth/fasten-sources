@@ -23,6 +23,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 	switch sourceResourceTyped := resourceRaw.(type) {
 
 	case fhir401.AllergyIntolerance:
+		resource.ContainedResources = sourceResourceTyped.Contained
 		if sourceResourceTyped.Code != nil && len(sourceResourceTyped.Code.Coding) > 0 && sourceResourceTyped.Code.Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
 		}
@@ -68,6 +69,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.CarePlan:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Title != nil {
 			sortTitle = sourceResourceTyped.Title
@@ -232,6 +234,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.CareTeam:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Name != nil {
 			sortTitle = sourceResourceTyped.Name
@@ -293,6 +296,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Condition:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code != nil && len(sourceResourceTyped.Code.Coding) > 0 && sourceResourceTyped.Code.Coding[0].Display != nil {
 			sortTitle = sourceResourceTyped.Code.Coding[0].Display
@@ -363,6 +367,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Coverage:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Class) > 0 && sourceResourceTyped.Class[0].Name != nil {
 			sortTitle = sourceResourceTyped.Class[0].Name
@@ -401,6 +406,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Device:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.DeviceName) > 0 {
 			sortTitle = &sourceResourceTyped.DeviceName[0].Name
@@ -427,6 +433,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.DiagnosticReport:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code.Text != nil {
 			sortTitle = sourceResourceTyped.Code.Text
@@ -536,6 +543,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.DocumentReference:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Category) > 0 && sourceResourceTyped.Category[0].Text != nil {
 			sortTitle = sourceResourceTyped.Category[0].Text
@@ -629,6 +637,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Encounter:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Type) > 0 && sourceResourceTyped.Type[0].Text != nil {
 			sortTitle = sourceResourceTyped.Type[0].Text
@@ -752,13 +761,19 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.ExplanationOfBenefit:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Diagnosis != nil && len(sourceResourceTyped.Diagnosis) > 0 {
-			if sourceResourceTyped.Diagnosis[0].DiagnosisCodeableConcept.Text != nil {
-				sortTitle = sourceResourceTyped.Diagnosis[0].DiagnosisCodeableConcept.Text
-			} else if sourceResourceTyped.Diagnosis[0].DiagnosisReference.Display != nil {
-				sortTitle = sourceResourceTyped.Diagnosis[0].DiagnosisReference.Display
+			for rndx, _ := range sourceResourceTyped.Diagnosis {
+				if sourceResourceTyped.Diagnosis[rndx].DiagnosisCodeableConcept.Text != nil {
+					sortTitle = sourceResourceTyped.Diagnosis[rndx].DiagnosisCodeableConcept.Text
+					break
+				} else if sourceResourceTyped.Diagnosis[rndx].DiagnosisReference.Display != nil {
+					sortTitle = sourceResourceTyped.Diagnosis[rndx].DiagnosisReference.Display
+					break
+				}
 			}
+
 		} else if sourceResourceTyped.Type.Text != nil {
 			sortTitle = sourceResourceTyped.Type.Text
 		} else if len(sourceResourceTyped.Type.Coding) > 0 && sourceResourceTyped.Type.Coding[0].Display != nil {
@@ -928,6 +943,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.FamilyMemberHistory:
+		resource.ContainedResources = sourceResourceTyped.Contained
+
 		if sourceResourceTyped.Name != nil {
 			sortTitle = sourceResourceTyped.Name
 		} else if sourceResourceTyped.Relationship.Text != nil {
@@ -959,8 +976,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
-
 	case fhir401.Goal:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Note) > 0 {
 			sortTitle = &sourceResourceTyped.Note[0].Text
@@ -1000,6 +1017,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Immunization:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.VaccineCode.Text != nil {
 			sortTitle = sourceResourceTyped.VaccineCode.Text
@@ -1083,6 +1101,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Location:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Name != nil {
 			sortTitle = sourceResourceTyped.Name
@@ -1113,6 +1132,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Media:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Type != nil && sourceResourceTyped.Type.Text != nil {
 			sortTitle = sourceResourceTyped.Type.Text
@@ -1161,6 +1181,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Medication:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code != nil && sourceResourceTyped.Code.Text != nil {
 			sortTitle = sourceResourceTyped.Code.Text
@@ -1177,6 +1198,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.MedicationRequest:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Identifier) > 0 && sourceResourceTyped.Identifier[0].Value != nil {
 			sortTitle = sourceResourceTyped.Identifier[0].Value
@@ -1285,6 +1307,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.MedicationDispense:
+		resource.ContainedResources = sourceResourceTyped.Contained
+
 		if sourceResourceTyped.MedicationCodeableConcept.Text != nil {
 			sortTitle = sourceResourceTyped.MedicationCodeableConcept.Text
 		} else if len(sourceResourceTyped.MedicationCodeableConcept.Coding) > 0 && sourceResourceTyped.MedicationCodeableConcept.Coding[0].Display != nil {
@@ -1405,8 +1429,9 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
-
 	case fhir401.NutritionOrder:
+		resource.ContainedResources = sourceResourceTyped.Contained
+
 		if sourceResourceTyped.FoodPreferenceModifier != nil && len(sourceResourceTyped.FoodPreferenceModifier) > 0 {
 			sortTitle = sourceResourceTyped.FoodPreferenceModifier[0].Text
 		}
@@ -1439,8 +1464,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 				}
 			}
 		}
-
 	case fhir401.Observation:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code.Text != nil {
 			sortTitle = sourceResourceTyped.Code.Text
@@ -1526,6 +1551,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Organization:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Name != nil {
 			sortTitle = sourceResourceTyped.Name
@@ -1547,6 +1573,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Patient:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Name) > 0 && sourceResourceTyped.Name[0].Text != nil {
 			sortTitle = sourceResourceTyped.Name[0].Text
@@ -1596,6 +1623,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Practitioner:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if len(sourceResourceTyped.Name) > 0 && sourceResourceTyped.Name[0].Text != nil {
 			sortTitle = sourceResourceTyped.Name[0].Text
@@ -1626,6 +1654,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.PractitionerRole:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Practitioner != nil && sourceResourceTyped.Practitioner.Display != nil {
 			sortTitle = sourceResourceTyped.Practitioner.Display
@@ -1671,6 +1700,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Procedure:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code != nil && sourceResourceTyped.Code.Text != nil {
 			sortTitle = sourceResourceTyped.Code.Text
@@ -1762,6 +1792,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.Provenance:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Activity != nil && sourceResourceTyped.Activity.Text != nil {
 			sortTitle = sourceResourceTyped.Activity.Text
@@ -1810,6 +1841,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.RelatedPerson:
+		resource.ContainedResources = sourceResourceTyped.Contained
+
 		if len(sourceResourceTyped.Name) > 0 && sourceResourceTyped.Name[0].Text != nil {
 			sortTitle = sourceResourceTyped.Name[0].Text
 		} else if len(sourceResourceTyped.Name) > 0 && len(sourceResourceTyped.Name[0].Given) > 0 && sourceResourceTyped.Name[0].Family != nil {
@@ -1835,6 +1868,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 		break
 	case fhir401.ServiceRequest:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.Code != nil && sourceResourceTyped.Code.Text != nil {
 			sortTitle = sourceResourceTyped.Code.Text
@@ -1955,6 +1989,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 		}
 		break
 	case fhir401.Specimen:
+		resource.ContainedResources = sourceResourceTyped.Contained
 
 		if sourceResourceTyped.ReceivedTime != nil {
 			sortDate = sourceResourceTyped.ReceivedTime
@@ -2009,8 +2044,8 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 
 }
 
-//normalizeReference takes a reference string and returns a normalized reference string
-//FHIR references come in multiple forms:
+// normalizeReference takes a reference string and returns a normalized reference string
+// FHIR references come in multiple forms:
 //
 // [id] the logical [id] of a resource using a local reference (i.e. a relative reference).
 // [type]/[id] the logical [id] of a resource of a specified type using a local reference (i.e. a relative reference), for when the reference can point to different types of resources (e.g. Observation.subject).
@@ -2061,7 +2096,7 @@ func removeDuplicateStr(strSlice []string) []string {
 	return list
 }
 
-//attempt to parse datetime with RFC3339,
+// attempt to parse datetime with RFC3339,
 // if that fails, attempt to parse without seconds
 // if that fails, attempt to parse without time
 func parseDateTimeWithFallback(dateTime *string) *time.Time {
