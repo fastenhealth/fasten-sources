@@ -140,3 +140,64 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	}, referencedResourcesLookup)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
+
+func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
+	t.Parallel()
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	require.NoError(t, err)
+	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
+
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/medicare-eob.json")
+	require.NoError(t, err)
+	referencedResourcesLookup := map[string]bool{}
+	internalFragmentReferenceLookup := map[string]string{}
+	summary := models.UpsertSummary{}
+
+	rawResource := models.RawResourceFhir{
+		SourceResourceID:   "carrier--10000930037921",
+		SourceResourceType: "ExplanationOfBenefit",
+		ResourceRaw:        jsonBytes,
+	}
+
+	// test
+	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 23, len(referencedResourcesLookup))
+	//notice how the contained resources are tagged as completed in the referencedResourcesLookup
+	require.Equal(t, map[string]bool{
+		"Coverage/part-b--10000010254618":              false,
+		"ExplanationOfBenefit/carrier--10000930037921": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi00":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi01":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi02":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi03":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi04":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi05":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0x":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xMA==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xMQ==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xMg==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xMw==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xNA==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xNQ==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xNg==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xNw==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xOA==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0xOQ==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0y":     true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0yMA==": true,
+		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0z":     true,
+		"Patient/-10000010254618": false,
+	}, referencedResourcesLookup)
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}

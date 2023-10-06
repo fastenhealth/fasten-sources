@@ -3,7 +3,7 @@ module github.com/fastenhealth/fasten-sources
 go 1.18
 
 require (
-	github.com/fastenhealth/gofhir-models v0.0.5
+	github.com/fastenhealth/gofhir-models v0.0.6
 	github.com/golang/mock v1.6.0
 	github.com/samber/lo v1.35.0
 	github.com/seborama/govcr v4.5.0+incompatible
@@ -25,4 +25,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/fastenhealth/gofhir-models => ../gofhir-models
+//replace github.com/fastenhealth/gofhir-models => ../gofhir-models

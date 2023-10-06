@@ -2030,7 +2030,7 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 	//before storing resource references, we need to determine if any of them are internal bundle references, and replace them if so.
 	for ndx, _ := range cleanResourceRefs {
 		internalRef := cleanResourceRefs[ndx]
-		cleanResourceRefs[ndx] = normalizeReferenceId(internalRef, internalFragmentReferenceLookup)
+		cleanResourceRefs[ndx] = normalizeReferenceId(internalRef, internalFragmentReferenceLookup, resource)
 	}
 	resource.ReferencedResources = cleanResourceRefs
 
@@ -2055,10 +2055,18 @@ func SourceClientFHIR401ExtractResourceMetadata(resourceRaw interface{}, resourc
 //
 // see https://build.fhir.org/search.html#reference
 // see https://build.fhir.org/references.html
-func normalizeReferenceId(originalReference string, internalFragmentReferenceLookup map[string]string) string {
+func normalizeReferenceId(originalReference string, internalFragmentReferenceLookup map[string]string, resource *models.RawResourceFhir) string {
 	if strings.HasPrefix(originalReference, "urn:uuid:") {
 		if relativeReference, relativeReferenceOk := internalFragmentReferenceLookup[originalReference]; relativeReferenceOk {
 			//replace internal reference with relative reference
+			return relativeReference
+		}
+	}
+	if strings.HasPrefix(originalReference, "#") {
+		//relative reference to internal fragment
+		normalizedContainedReference := normalizeContainedResourceId(resource.SourceResourceType, resource.SourceResourceID, originalReference)
+		if relativeReference, relativeReferenceOk := internalFragmentReferenceLookup[normalizedContainedReference]; relativeReferenceOk {
+			//replace contained relative reference with relative reference
 			return relativeReference
 		}
 	}
@@ -2116,4 +2124,14 @@ func parseDateTimeWithFallback(dateTime *string) *time.Time {
 		}
 	}
 	return &parsedDateTime
+}
+
+// we're going to generate a base64 url encoded string that is the concatenation of the parent resource type, parent resource id, and the contained resource id fragment
+// this will be used as the key in the internalFragmentReferenceLookup map
+// eg. ExplanationOfBenefits/1234 contains an Observation resource with id #5678
+// the key will be ExplanationOfBenefits/1234#5678
+func normalizeContainedResourceId(parentResourceType string, parentResourceId string, containedResourceIdFragment string) string {
+	//TODO: throw an error if the containedResourceIdFragment doesnt start with '#'
+
+	return fmt.Sprintf("%s/%s#%s", parentResourceType, parentResourceId, strings.TrimPrefix(containedResourceIdFragment, "#"))
 }
