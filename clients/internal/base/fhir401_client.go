@@ -30,9 +30,9 @@ func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context
 	}, err
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sync
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
 	if err != nil {
@@ -243,9 +243,9 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 	return lookupResourceReferences, syncErrors
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FHIR
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (interface{}, error) {
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
@@ -322,9 +322,9 @@ func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, err
 	return patient, err
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.RawResourceFhir, map[string]string, error) {
 
 	//bundles may contain references to resources in one of 3 formats: - https://www.hl7.org/fhir/references.html#literal
@@ -345,12 +345,6 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 			//no resourceId present for this resource, we'll ignore it.
 			return models.RawResourceFhir{}, false
 		}
-		// TODO find a way to safely/consistently get the resource updated date (and other metadata) which shoudl be added to the model.
-		//if originalResource.Meta != nil && originalResource.Meta.LastUpdated != nil {
-		//	if parsed, err := time.Parse(time.RFC3339Nano, *originalResource.Meta.LastUpdated); err == nil {
-		//		patientProfile.UpdatedAt = parsed
-		//	}
-		//}
 
 		if bundleEntry.FullUrl != nil && strings.HasPrefix(*bundleEntry.FullUrl, "urn:uuid:") {
 			internalFragmentReferenceLookup[*bundleEntry.FullUrl] = fmt.Sprintf("%s/%s", resourceType, *resourceId)
@@ -367,10 +361,10 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 	return wrappedResourceModels, internalFragmentReferenceLookup, nil
 }
 
-//process a resource by:
-//- inserting into the database
-//- increment the updatedResources list if the resource has been updated
-//- extract all external references from the resource payload (adding the the lookup table)
+// process a resource by:
+// - inserting into the database
+// - increment the updatedResources list if the resource has been updated
+// - extract all external references from the resource payload (adding the the lookup table)
 func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup map[string]bool, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) error {
 	referencedResourcesLookup[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
 	if len(resource.SourceUri) > 0 {
@@ -382,6 +376,47 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 	if err != nil {
 		return err
 	}
+
+	resourceObjTyped := resourceObj.(models.ResourceInterface)
+	currentResourceType, currentResourceId := resourceObjTyped.ResourceRef()
+
+	//before processing this resource, we should check if it has any contained resources that we need to process first (recursively)
+	containedResources := resourceObj.(models.ResourceInterface).ContainedResources()
+	if containedResources != nil && len(containedResources) > 0 {
+		for cndx, containedResource := range containedResources {
+			containedResourceObj, err := fhirutils.MapToResource(containedResource, false)
+			if err != nil {
+				c.Logger.Warnf("Skipping contained resource (index %d) in %s/%s: %v", cndx, currentResourceType, *currentResourceId, err.Error())
+				continue
+			}
+
+			containedResourceTyped := containedResourceObj.(models.ResourceInterface)
+			containedResourceType, containedResourceId := containedResourceTyped.ResourceRef()
+			if containedResourceId == nil {
+				//no id present for this contained resource, we'll ignore it. (since theres no way to reference it anyways)
+				c.Logger.Warnf("Skipping contained resource missing id: (%s/%s#%s index: %d)", currentResourceType, *currentResourceId, containedResourceType, cndx)
+				continue
+			}
+			normalizedContainedResourceId := normalizeContainedResourceId(currentResourceType, *currentResourceId, *containedResourceId)
+
+			//generate a unique id for this contained resource by base64 url encoding this string
+			base64ContainedResourceId := base64.URLEncoding.EncodeToString([]byte(normalizedContainedResourceId))
+
+			//add this mapping to the internalFragmentReferenceLookup
+			internalFragmentReferenceLookup[normalizedContainedResourceId] = fmt.Sprintf("%s/%s", containedResourceType, base64ContainedResourceId)
+
+			containedResourceWrapped := models.RawResourceFhir{
+				SourceResourceID:   base64ContainedResourceId,
+				SourceResourceType: containedResourceType,
+				ResourceRaw:        containedResource,
+			}
+			err = c.ProcessResource(db, containedResourceWrapped, referencedResourcesLookup, internalFragmentReferenceLookup, summary)
+			if err != nil {
+				return err
+			}
+		}
+	}
+
 	SourceClientFHIR401ExtractResourceMetadata(resourceObj, &resource, internalFragmentReferenceLookup)
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)

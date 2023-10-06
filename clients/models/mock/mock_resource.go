@@ -5,6 +5,7 @@
 package mock_models
 
 import (
+	json "encoding/json"
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
@@ -31,6 +32,20 @@ func NewMockResourceInterface(ctrl *gomock.Controller) *MockResourceInterface {
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockResourceInterface) EXPECT() *MockResourceInterfaceMockRecorder {
 	return m.recorder
+}
+
+// ContainedResources mocks base method.
+func (m *MockResourceInterface) ContainedResources() []json.RawMessage {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ContainedResources")
+	ret0, _ := ret[0].([]json.RawMessage)
+	return ret0
+}
+
+// ContainedResources indicates an expected call of ContainedResources.
+func (mr *MockResourceInterfaceMockRecorder) ContainedResources() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ContainedResources", reflect.TypeOf((*MockResourceInterface)(nil).ContainedResources))
 }
 
 // ResourceRef mocks base method.

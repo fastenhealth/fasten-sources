@@ -53,11 +53,12 @@ func (mr *MockSourceClientMockRecorder) ExtractPatientId(bundleFile interface{})
 }
 
 // GetRequest mocks base method.
-func (m *MockSourceClient) GetRequest(resourceSubpath string, decodeModelPtr interface{}) error {
+func (m *MockSourceClient) GetRequest(resourceSubpath string, decodeModelPtr interface{}) (string, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRequest", resourceSubpath, decodeModelPtr)
-	ret0, _ := ret[0].(error)
-	return ret0
+	ret0, _ := ret[0].(string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
 }
 
 // GetRequest indicates an expected call of GetRequest.
