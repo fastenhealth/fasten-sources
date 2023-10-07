@@ -12,6 +12,7 @@ import (
 	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
 	"net/http"
+	"sort"
 	"strings"
 )
 
@@ -79,6 +80,13 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
 	}
 
+	db.BackgroundJobCheckpoint(c.Context,
+		map[string]interface{}{
+			"stage":   "PendingResources",
+			"summary": summary,
+		},
+		map[string]interface{}{"errors": syncErrors},
+	)
 	return summary, nil
 }
 
@@ -125,6 +133,8 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	lookupResourceReferences := map[string]bool{}
 
 	//query for resources by resource name
+	resourceNames = lo.Uniq(resourceNames)
+	sort.Strings(resourceNames)
 	for _, resourceType := range resourceNames {
 		bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?patient=%s", resourceType, c.SourceCredential.GetPatientId()))
 		if err != nil {
@@ -145,17 +155,38 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 				syncErrors[resourceType] = err
 				continue
 			}
-
 		}
+
+		checkpointErrorData := map[string]interface{}{}
+		if len(syncErrors) > 0 {
+			checkpointErrorData["errors"] = syncErrors
+		}
+
+		db.BackgroundJobCheckpoint(c.Context,
+			map[string]interface{}{
+				"stage":   resourceType,
+				"summary": summary,
+			},
+			checkpointErrorData,
+		)
 	}
 
 	//process any pending resources
 	lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
 
+	checkpointErrorData := map[string]interface{}{}
 	if len(syncErrors) > 0 {
-		//TODO: ignore errors.
+		//ignore errors.
 		c.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+		checkpointErrorData["errors"] = syncErrors
 	}
+	db.BackgroundJobCheckpoint(c.Context,
+		map[string]interface{}{
+			"stage":   "PendingResources",
+			"summary": summary,
+		},
+		checkpointErrorData,
+	)
 	return summary, nil
 }
 
@@ -290,7 +321,7 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 		}
 	}
 
-	c.Logger.Infof("BUNDLE - %v", bundle)
+	//c.Logger.Debugf("BUNDLE - %v", bundle)
 	return bundle, err
 
 }
