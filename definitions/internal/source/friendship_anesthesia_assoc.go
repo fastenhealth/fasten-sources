@@ -11,6 +11,7 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/1100972Q/.well-known/smart-configuration
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/1100972Q/metadata
 func GetSourceFriendshipAnesthesiaAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)

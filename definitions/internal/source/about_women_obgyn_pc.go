@@ -30,6 +30,7 @@ func GetSourceAboutWomenObgynPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeAboutWomenObgynPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.aboutwomenobgyn.com/"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

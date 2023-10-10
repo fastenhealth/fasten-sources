@@ -11,6 +11,7 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
+// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/0011519/.well-known/smart-configuration
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/0011519/metadata
 func GetSourceKenlyMedicalAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)

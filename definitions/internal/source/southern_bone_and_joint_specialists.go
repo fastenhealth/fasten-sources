@@ -26,7 +26,7 @@ func GetSourceSouthernBoneAndJointSpecialists(env pkg.FastenLighthouseEnvType, c
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Southern Bone And Joint Specialists"
+	sourceDef.Display = "Southern Bone and Joint Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSouthernBoneAndJointSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

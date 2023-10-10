@@ -30,6 +30,7 @@ func GetSourceAdvancedAccessMedicalCarePllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeAdvancedAccessMedicalCarePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.aamcaccess.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

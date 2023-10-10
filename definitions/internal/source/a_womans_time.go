@@ -30,6 +30,7 @@ func GetSourceAWomansTime(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeAWomansTime
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.devwp.awomanstime.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

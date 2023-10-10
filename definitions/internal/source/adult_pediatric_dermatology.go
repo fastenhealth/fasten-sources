@@ -30,6 +30,7 @@ func GetSourceAdultPediatricDermatology(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAdultPediatricDermatology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.apderm.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

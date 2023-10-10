@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/CJFFCA/metadata
+// https://fhir4.healow.com/fhir/r4/CJFFCA/metadata
 func GetSourceAbilityRehabAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/CJFFCA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/CJFFCA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/CJFFCA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/CJFFCA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAbilityRehabAssociates]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -31,6 +31,7 @@ func GetSourceAbilityRehabAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"208100000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356444590"}}
+	sourceDef.PatientAccessUrl = "http://abilityrehab.com/"
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

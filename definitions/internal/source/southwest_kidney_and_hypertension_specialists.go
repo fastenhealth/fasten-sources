@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/FGAICA/metadata
+// https://fhir4.healow.com/fhir/r4/FGAICA/metadata
 func GetSourceSouthwestKidneyAndHypertensionSpecialists(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/FGAICA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FGAICA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/FGAICA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FGAICA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSouthwestKidneyAndHypertensionSpecialists]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Southwest Kidney and Hypertension Specialists"
+	sourceDef.Display = "Southwest Kidney & Hypertension Specialists"
 	sourceDef.SourceType = pkg.SourceTypeSouthwestKidneyAndHypertensionSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

@@ -30,6 +30,8 @@ func GetSourceAWomansPlaceInFayetteville(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeAWomansPlaceInFayetteville
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "a-womans-place-in-fayetteville.jpg"
+	sourceDef.PatientAccessUrl = "https://www.awomansplacenc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -27,10 +27,11 @@ func GetSourceAssociatesInWomensHealth(env pkg.FastenLighthouseEnvType, clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
-	sourceDef.Display = "Associates In Women's Health"
+	sourceDef.Display = "Associates In Womens Health"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInWomensHealth
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"174400000X", "207V00000X"}
+	sourceDef.Aliases = []string{"FELD, VALIDO & GENNARI MD'S"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477512317", "1689848475", "1689891970"}}
 	sourceDef.PatientAccessUrl = "https://myawh.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

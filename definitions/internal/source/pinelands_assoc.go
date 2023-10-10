@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/75560/metadata
 func GetSourcePinelandsAssoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/d98f28e4-d991-453e-896f-6b14b6f17b0a/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/d98f28e4-d991-453e-896f-6b14b6f17b0a/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/fa3aedc0-53a0-4c4b-8909-fc105d12dd04/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/fa3aedc0-53a0-4c4b-8909-fc105d12dd04/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/75560"
 

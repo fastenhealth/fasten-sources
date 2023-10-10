@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/CIJHAA/metadata
+// https://fhir4.healow.com/fhir/r4/CIJHAA/metadata
 func GetSourceWakeSpineAndPainSpecialistsPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/CIJHAA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/CIJHAA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/CIJHAA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/CIJHAA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeWakeSpineAndPainSpecialistsPc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Wake Spine and Pain Specialists, PC"
+	sourceDef.Display = "Wake Spine and Pain Specialists PC"
 	sourceDef.SourceType = pkg.SourceTypeWakeSpineAndPainSpecialistsPc
 	sourceDef.Category = []string{"207LP2900X"}
 	sourceDef.Aliases = []string{}

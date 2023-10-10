@@ -28,8 +28,9 @@ func GetSourceOptum(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "Optum"
 	sourceDef.SourceType = pkg.SourceTypeOptum
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"204C00000X", "207K00000X", "207L00000X", "207N00000X", "207Q00000X", "207QA0505X", "207R00000X", "207RA0401X", "207RC0000X", "207RE0101X", "207RG0100X", "207RH0003X", "207RR0500X", "207U00000X", "207V00000X", "207VG0400X", "207VM0101X", "207W00000X", "207X00000X", "207Y00000X", "208000000X", "2084N0400X", "2085R0202X", "208600000X", "208800000X", "208D00000X", "208M00000X", "261QA1903X", "305S00000X", "332B00000X"}
+	sourceDef.Aliases = []string{"OPTUM"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053384214", "1376876912", "1437434735", "1629037577", "1649503319", "1659312593", "1659884294", "1760057269", "1891981502", "1912335746"}}
 	sourceDef.BrandLogo = "optum.svg"
 	sourceDef.PatientAccessUrl = "https://www.optum.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"

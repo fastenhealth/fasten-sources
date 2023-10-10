@@ -30,6 +30,8 @@ func GetSourceAccentOnWomensHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeAccentOnWomensHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "accent-on-womens-health.jpg"
+	sourceDef.PatientAccessUrl = "https://www.aonwh.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

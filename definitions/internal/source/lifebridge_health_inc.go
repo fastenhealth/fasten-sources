@@ -11,6 +11,7 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
+// https://fhir-myrecord.cerner.com/r4/136fea15-c667-40bc-9ed2-b1115d62123b/.well-known/smart-configuration
 // https://fhir-myrecord.cerner.com/r4/136fea15-c667-40bc-9ed2-b1115d62123b/metadata
 func GetSourceLifebridgeHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)

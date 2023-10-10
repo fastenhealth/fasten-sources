@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/GIHFBD/metadata
+// https://fhir4.healow.com/fhir/r4/GIHFBD/metadata
 func GetSourceMetroSurgicalAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/GIHFBD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/GIHFBD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/GIHFBD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/GIHFBD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMetroSurgicalAssociates]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Metro Surgical Associates"
+	sourceDef.Display = "METRO SURGICAL ASSOCIATES"
 	sourceDef.SourceType = pkg.SourceTypeMetroSurgicalAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

@@ -11,25 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/AICDBD/metadata
+// https://fhir4.healow.com/fhir/r4/AICDBD/metadata
 func GetSourceEyeSurgeonsOfRichmondInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/AICDBD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/AICDBD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/AICDBD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/AICDBD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeEyeSurgeonsOfRichmondInc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Eye Surgeons of Richmond, Inc"
+	sourceDef.Display = "Eye Surgeons of Richmond, Inc."
 	sourceDef.SourceType = pkg.SourceTypeEyeSurgeonsOfRichmondInc
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"152W00000X", "207W00000X", "332H00000X"}
+	sourceDef.Aliases = []string{"VIRGINIA EYE INSTITUTE", "VIRGINIA EYE INSTITUTE - IRONBRIDGE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033625744", "1063928984", "1093017170", "1124396981", "1184640344", "1437665353", "1528336385", "1669480448", "1699270496"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

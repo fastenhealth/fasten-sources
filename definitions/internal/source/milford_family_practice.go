@@ -29,9 +29,9 @@ func GetSourceMilfordFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "Milford Family Practice"
 	sourceDef.SourceType = pkg.SourceTypeMilfordFamilyPractice
-	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RR0500X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RR0500X", "261QH0100X"}
 	sourceDef.Aliases = []string{}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114149317"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114149317", "1831779289"}}
 	sourceDef.PatientAccessUrl = "https://doctor.webmd.com/practice/milford-family-practice-1c643fc9-4703-e211-a42b-001f29e3eb44"
 	sourceDef.SecretKeyPrefix = "cerner"
 

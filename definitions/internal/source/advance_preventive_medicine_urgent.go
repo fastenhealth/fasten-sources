@@ -30,6 +30,7 @@ func GetSourceAdvancePreventiveMedicineUrgent(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAdvancePreventiveMedicineUrgent
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://apmuc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

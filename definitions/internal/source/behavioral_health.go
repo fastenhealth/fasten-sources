@@ -28,8 +28,9 @@ func GetSourceBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 
 	sourceDef.Display = "Behavioral Health"
 	sourceDef.SourceType = pkg.SourceTypeBehavioralHealth
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"101YA0400X", "101YM0800X", "101YP2500X", "103TB0200X", "103TP2701X", "104100000X", "1041C0700X", "2084P0800X", "251S00000X", "261Q00000X"}
+	sourceDef.Aliases = []string{"BEHAVIORAL HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265074611", "1356047666", "1407310766", "1548481427", "1942718275"}}
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

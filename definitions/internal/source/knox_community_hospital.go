@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10058176/metadata
 func GetSourceKnoxCommunityHospital(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/11200b71-913a-4726-885a-a5e262f10242/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/11200b71-913a-4726-885a-a5e262f10242/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/cee22079-9d39-49c5-ad6a-a83f0106bc66/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/cee22079-9d39-49c5-ad6a-a83f0106bc66/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10058176"
 

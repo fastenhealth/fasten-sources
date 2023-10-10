@@ -28,7 +28,7 @@ func GetSourceJacksonPhysicianCorp(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Jackson Physician Corp"
 	sourceDef.SourceType = pkg.SourceTypeJacksonPhysicianCorp
-	sourceDef.Category = []string{"207Q00000X", "207RC0000X", "2088P0231X", "208D00000X", "213ES0103X", "261QP2000X", "332B00000X", "363L00000X"}
+	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RC0000X", "2088P0231X", "208D00000X", "213ES0103X", "261QP2000X", "332B00000X", "363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023219425", "1063712701", "1134261167", "1164722807", "1841234671"}}
 	sourceDef.SecretKeyPrefix = "athena"

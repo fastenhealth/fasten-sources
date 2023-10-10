@@ -28,7 +28,7 @@ func GetSourceGalatiansCommunityHealth(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Galatians Community Health"
 	sourceDef.SourceType = pkg.SourceTypeGalatiansCommunityHealth
-	sourceDef.Category = []string{"207Q00000X", "207V00000X", "208000000X", "261QM1300X"}
+	sourceDef.Category = []string{"207Q00000X", "207V00000X", "208000000X", "261QM1300X", "363A00000X", "363L00000X", "367A00000X"}
 	sourceDef.Aliases = []string{"GALATIANS COMMUNITY HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861160038"}}
 	sourceDef.SecretKeyPrefix = "athena"

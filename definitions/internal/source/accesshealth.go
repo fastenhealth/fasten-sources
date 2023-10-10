@@ -30,7 +30,7 @@ func GetSourceAccesshealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeAccesshealth
 	sourceDef.Category = []string{"207Q00000X", "207V00000X", "261QF0400X", "261QM1300X", "261QR0405X", "3336C0002X"}
 	sourceDef.Aliases = []string{"ACCESSHEALTH"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154649523", "1265596068", "1558061812", "1801422092", "1831263359", "1851981781"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154649523", "1265596068", "1558061812", "1801422092", "1831263359", "1851981781", "1962884189"}}
 	sourceDef.PatientAccessUrl = "https://myaccesshealth.org"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

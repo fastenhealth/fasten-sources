@@ -28,8 +28,9 @@ func GetSourceOrtho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 
 	sourceDef.Display = "Ortho"
 	sourceDef.SourceType = pkg.SourceTypeOrtho
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"1223X0400X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417316175"}}
 	sourceDef.PatientAccessUrl = "https://www.cmcfc.org/clinics/orthomidwest/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

@@ -31,6 +31,7 @@ func GetSourceAcWellness(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"163W00000X", "207Q00000X", "207R00000X", "2080S0012X", "261QC1800X", "363LA2200X"}
 	sourceDef.Aliases = []string{"AC WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063026292", "1306348172", "1689180002", "1801399548"}}
+	sourceDef.PatientAccessUrl = "https://www.acwellness.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

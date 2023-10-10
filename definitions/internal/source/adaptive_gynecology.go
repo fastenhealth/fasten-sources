@@ -30,6 +30,8 @@ func GetSourceAdaptiveGynecology(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeAdaptiveGynecology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "adaptive-gynecology.svg"
+	sourceDef.PatientAccessUrl = "https://www.adaptivegynecology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

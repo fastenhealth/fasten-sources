@@ -29,7 +29,7 @@ func GetSourceChristianCommunityHealthCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Display = "Christian Community Health Center"
 	sourceDef.SourceType = pkg.SourceTypeChristianCommunityHealthCenter
 	sourceDef.Category = []string{"207R00000X", "207V00000X", "261QC1500X", "261QF0400X"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"ROSELAND CHRISTIAN HEALTH MINISTRIES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043570310", "1174853410", "1306106679", "1396078374", "1477726453", "1750619680", "1750757449", "1790888238", "1902064934", "1912170457"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

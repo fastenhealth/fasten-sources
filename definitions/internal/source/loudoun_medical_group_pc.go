@@ -31,6 +31,7 @@ func GetSourceLoudounMedicalGroupPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"213E00000X", "213ES0131X"}
 	sourceDef.Aliases = []string{"LOUDOUN MEDICAL GROUP", "LOUDOUN MEDICAL GROUP PC", "PRINCE WILLIAM FOOT & ANKLE CENTER, PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184731796", "1386255602"}}
+	sourceDef.PatientAccessUrl = "https://mycw86.ecwcloud.com/portal11511/jsp/100mp/login_otp.jsp"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

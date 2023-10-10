@@ -30,6 +30,8 @@ func GetSource100Beautybymd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceType100Beautybymd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "100beautybymd.webp"
+	sourceDef.PatientAccessUrl = "https://100beautymd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

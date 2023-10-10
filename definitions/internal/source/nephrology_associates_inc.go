@@ -27,11 +27,11 @@ func GetSourceNephrologyAssociatesInc(env pkg.FastenLighthouseEnvType, clientIdL
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
 
-	sourceDef.Display = "Nephrology Associates, Inc."
+	sourceDef.Display = "NEPHROLOGY ASSOCIATES INC"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesInc
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Aliases = []string{}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497864532"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366426801", "1457349797", "1497864532"}}
 	sourceDef.PatientAccessUrl = "https://www.kidneycareok.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

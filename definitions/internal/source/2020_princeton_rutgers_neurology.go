@@ -30,6 +30,8 @@ func GetSource2020PrincetonRutgersNeurology(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceType2020PrincetonRutgersNeurology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "2020princeton-rutgers-neurology.svg"
+	sourceDef.PatientAccessUrl = "https://www.prneurology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

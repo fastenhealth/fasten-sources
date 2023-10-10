@@ -11,25 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/BFFACA/metadata
+// https://fhir4.healow.com/fhir/r4/BFFACA/metadata
 func GetSourceTexasNeurosurgeryLlp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/BFFACA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BFFACA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/BFFACA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BFFACA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeTexasNeurosurgeryLlp]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Texas Neurosurgery LLP"
+	sourceDef.Display = "Texas Neurosurgery, LLP"
 	sourceDef.SourceType = pkg.SourceTypeTexasNeurosurgeryLlp
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891865978"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceIngeniousHealthSolutionsLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Display = "INGENIOUS HEALTH SOLUTIONS LLC"
 	sourceDef.SourceType = pkg.SourceTypeIngeniousHealthSolutionsLlc
 	sourceDef.Category = []string{"363LF0000X", "363LP0808X"}
-	sourceDef.Aliases = []string{"INGENIOUS HEALTH & WELLNESS", "THE DOSE BAR"}
+	sourceDef.Aliases = []string{"INGENIOUS HEALTH & WELLNESS", "INGENIOUS HEALTH SOLUTIONS LLC", "THE DOSE BAR"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861026973"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

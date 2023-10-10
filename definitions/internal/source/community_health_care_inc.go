@@ -26,11 +26,11 @@ func GetSourceCommunityHealthCareInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Community Health Care Inc"
+	sourceDef.Display = "Community Health Care Inc."
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthCareInc
-	sourceDef.Category = []string{"261QF0400X", "3336C0002X"}
+	sourceDef.Category = []string{"207Q00000X", "261QF0400X", "3336C0002X"}
 	sourceDef.Aliases = []string{"CHC PHARMACY"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275175002", "1326680067", "1598152019", "1861518276"}}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114902137", "1275175002", "1326680067", "1598152019", "1861518276"}}
 	sourceDef.BrandLogo = "community-health-care-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.chcqca.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"

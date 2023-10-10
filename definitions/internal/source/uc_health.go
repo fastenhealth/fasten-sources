@@ -32,6 +32,7 @@ func GetSourceUcHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013297340"}}
+	sourceDef.PatientAccessUrl = "https://www.uchealth.com/en"
 	sourceDef.SecretKeyPrefix = "epic"
 
 	return sourceDef, err

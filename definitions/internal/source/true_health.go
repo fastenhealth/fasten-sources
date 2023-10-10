@@ -28,7 +28,7 @@ func GetSourceTrueHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "True Health"
 	sourceDef.SourceType = pkg.SourceTypeTrueHealth
-	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "3336C0002X", "3336C0003X"}
+	sourceDef.Category = []string{"261QC1500X", "261QF0400X", "3336C0003X"}
 	sourceDef.Aliases = []string{"CENTRAL FLORIDA FAMILY HEALTH CENTER", "TRUE HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023155454", "1033139621", "1235804956", "1255005476", "1265643241", "1275693202", "1396746988", "1477694826", "1689245839", "1821763533"}}
 	sourceDef.SecretKeyPrefix = "athena"

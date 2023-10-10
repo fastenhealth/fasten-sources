@@ -26,7 +26,7 @@ func GetSourceNephrologyAssociatesMedicalGroup(env pkg.FastenLighthouseEnvType, 
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Nephrology Associates Medical Group"
+	sourceDef.Display = "NEPHROLOGY ASSOCIATES MEDICAL GROUP"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociatesMedicalGroup
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Aliases = []string{}

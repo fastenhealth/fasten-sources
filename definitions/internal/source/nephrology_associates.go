@@ -26,10 +26,11 @@ func GetSourceNephrologyAssociates(env pkg.FastenLighthouseEnvType, clientIdLook
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "NEPHROLOGY ASSOCIATES"
+	sourceDef.Display = "Nephrology Associates"
 	sourceDef.SourceType = pkg.SourceTypeNephrologyAssociates
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"174400000X", "207RN0300X"}
+	sourceDef.Aliases = []string{"NEPHROLOGY ASSOCIATES"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063462950", "1760594600", "1790729689", "1811947765", "1871506048"}}
 	sourceDef.PatientAccessUrl = "https://www.nkch.org/location/nephrology-associates-md-pc"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

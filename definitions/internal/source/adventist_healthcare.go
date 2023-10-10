@@ -11,21 +11,20 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir-myrecord.cerner.com/r4/f71725f4-8a5d-45dc-9e68-6ddbc583dfb3/metadata
+// https://fhir4.healow.com/fhir/r4/IGIFAD/metadata
 func GetSourceAdventistHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceCerner(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://authorization.cerner.com/tenants/f71725f4-8a5d-45dc-9e68-6ddbc583dfb3/protocols/oauth2/profiles/smart-v1/personas/patient/authorize"
-	sourceDef.TokenEndpoint = "https://authorization.cerner.com/tenants/f71725f4-8a5d-45dc-9e68-6ddbc583dfb3/protocols/oauth2/profiles/smart-v1/token"
-	sourceDef.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
+	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir-myrecord.cerner.com/r4/f71725f4-8a5d-45dc-9e68-6ddbc583dfb3"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/IGIFAD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir-myrecord.cerner.com/r4/f71725f4-8a5d-45dc-9e68-6ddbc583dfb3"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/IGIFAD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAdventistHealthcare]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeCerner))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
 	sourceDef.Display = "Adventist HealthCare"
 	sourceDef.SourceType = pkg.SourceTypeAdventistHealthcare
@@ -33,7 +32,7 @@ func GetSourceAdventistHealthcare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Aliases = []string{}
 	sourceDef.BrandLogo = "adventist-health-west.png"
 	sourceDef.PatientAccessUrl = "https://www.adventisthealthcare.com"
-	sourceDef.SecretKeyPrefix = "cerner"
+	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err
 }

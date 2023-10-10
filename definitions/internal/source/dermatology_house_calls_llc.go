@@ -28,7 +28,7 @@ func GetSourceDermatologyHouseCallsLlc(env pkg.FastenLighthouseEnvType, clientId
 
 	sourceDef.Display = "Dermatology House Calls LLC"
 	sourceDef.SourceType = pkg.SourceTypeDermatologyHouseCallsLlc
-	sourceDef.Category = []string{"207N00000X"}
+	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609573757"}}
 	sourceDef.SecretKeyPrefix = "athena"

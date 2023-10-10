@@ -28,7 +28,7 @@ func GetSourceJohnsonsFamilyMedicineLlc(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Johnsons Family Medicine LLC"
 	sourceDef.SourceType = pkg.SourceTypeJohnsonsFamilyMedicineLlc
-	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528772480"}}
 	sourceDef.SecretKeyPrefix = "athena"

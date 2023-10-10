@@ -29,7 +29,7 @@ func GetSourceHudsonPhysiciansSC(env pkg.FastenLighthouseEnvType, clientIdLookup
 
 	sourceDef.Display = "Hudson Physicians, S.C."
 	sourceDef.SourceType = pkg.SourceTypeHudsonPhysiciansSC
-	sourceDef.Category = []string{"208600000X", "261Q00000X", "261QM1300X", "291U00000X"}
+	sourceDef.Category = []string{"207Q00000X", "208600000X", "261Q00000X", "261QM1300X", "291U00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205589892", "1316102734", "1598416133", "1679224273", "1770916827"}}
 	sourceDef.BrandLogo = "hudson-physicians-s-c.jpg"

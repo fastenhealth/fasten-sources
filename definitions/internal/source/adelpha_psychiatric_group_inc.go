@@ -30,6 +30,7 @@ func GetSourceAdelphaPsychiatricGroupInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeAdelphaPsychiatricGroupInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.adelphapsych.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

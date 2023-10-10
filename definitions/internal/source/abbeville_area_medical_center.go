@@ -31,6 +31,8 @@ func GetSourceAbbevilleAreaMedicalCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"282NC0060X", "3336C0003X"}
 	sourceDef.Aliases = []string{"ABBEVILLE AREA MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063449361"}}
+	sourceDef.BrandLogo = "abbeville-area-medical-center.jpg"
+	sourceDef.PatientAccessUrl = "https://www.abbevilleareamc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

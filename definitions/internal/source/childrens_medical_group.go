@@ -26,11 +26,11 @@ func GetSourceChildrensMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Children's Medical Group"
+	sourceDef.Display = "Childrens Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeChildrensMedicalGroup
 	sourceDef.Category = []string{"101YM0800X", "101YP2500X", "103TC2200X", "104100000X", "1041C0700X", "106H00000X", "208000000X", "2080A0000X", "2084P0800X", "2084P0804X"}
-	sourceDef.Aliases = []string{"CEDARBURG PEDIATRICS", "GOOD HOPE PEDIATRICS", "NEXT DOOR PEDIATRICS", "NORTH SHORE PEDIATRICS"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114192499", "1174999163", "1255506598", "1275708539", "1295951051", "1326213562", "1659546877", "1801061064", "1831502327", "1922273184"}}
+	sourceDef.Aliases = []string{"CEDARBURG PEDIATRICS", "CHILDREN'S MEDICAL GROUP", "GOOD HOPE PEDIATRICS", "NEXT DOOR PEDIATRICS", "NORTH SHORE PEDIATRICS"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114192499", "1174999163", "1255506598", "1275708539", "1295951051", "1326213562", "1578569497", "1659546877", "1760456065", "1801061064", "1831502327", "1922273184"}}
 	sourceDef.PatientAccessUrl = "https://www.childrensmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

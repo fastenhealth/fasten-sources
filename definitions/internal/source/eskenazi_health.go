@@ -29,7 +29,7 @@ func GetSourceEskenaziHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "Eskenazi Health"
 	sourceDef.SourceType = pkg.SourceTypeEskenaziHealth
-	sourceDef.Category = []string{"152W00000X", "261QM0801X", "282N00000X", "293D00000X", "332B00000X", "332H00000X", "341600000X", "3416L0300X", "363L00000X"}
+	sourceDef.Category = []string{"152W00000X", "156FX1800X", "261QM0801X", "273R00000X", "282N00000X", "293D00000X", "332B00000X", "332H00000X", "341600000X", "3416L0300X", "363L00000X"}
 	sourceDef.Aliases = []string{"ESKENAZI HEALTH", "ESKENAZI HEALTH FOREST MANOR OPTOMETRY & OPTICAL", "ESKENAZI HEALTH IMAGING WEST 38TH STREET", "ESKENAZI HEALTH PECAR OPTOMETRY & OPTICAL", "WILLOWBROOK FAMILY PLANNING CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003543075", "1023787314", "1073178059", "1073282356", "1568407310", "1568842490", "1598320566", "1689104259", "1750053617", "1841855897"}}
 	sourceDef.SecretKeyPrefix = "epic"

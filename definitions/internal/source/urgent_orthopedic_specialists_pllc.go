@@ -29,7 +29,7 @@ func GetSourceUrgentOrthopedicSpecialistsPllc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Display = "Urgent Orthopedic Specialists PLLC"
 	sourceDef.SourceType = pkg.SourceTypeUrgentOrthopedicSpecialistsPllc
 	sourceDef.Category = []string{"207X00000X"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"ORTHOMIDLAND"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215271929"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

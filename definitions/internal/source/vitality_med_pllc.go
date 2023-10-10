@@ -29,7 +29,7 @@ func GetSourceVitalityMedPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Display = "Vitality Med PLLC"
 	sourceDef.SourceType = pkg.SourceTypeVitalityMedPllc
 	sourceDef.Category = []string{"207Q00000X"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"VITALITY MED LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043806730"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/BFBHAA/metadata
+// https://fhir4.healow.com/fhir/r4/BFBHAA/metadata
 func GetSourceCommonwealthDermatologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/BFBHAA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BFBHAA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/BFBHAA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BFBHAA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCommonwealthDermatologyPc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Commonwealth Dermatology, PC"
+	sourceDef.Display = "Commonwealth Dermatology PC"
 	sourceDef.SourceType = pkg.SourceTypeCommonwealthDermatologyPc
 	sourceDef.Category = []string{"207N00000X", "207ND0101X", "207NP0225X", "363LA2100X", "363LF0000X"}
 	sourceDef.Aliases = []string{}

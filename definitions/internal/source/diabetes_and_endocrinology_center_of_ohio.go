@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/FFJAAA/metadata
+// https://fhir4.healow.com/fhir/r4/FFJAAA/metadata
 func GetSourceDiabetesAndEndocrinologyCenterOfOhio(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/FFJAAA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FFJAAA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/FFJAAA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FFJAAA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeDiabetesAndEndocrinologyCenterOfOhio]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Diabetes And Endocrinology Center Of Ohio"
+	sourceDef.Display = "Diabetes and Endocrinology Center of Ohio"
 	sourceDef.SourceType = pkg.SourceTypeDiabetesAndEndocrinologyCenterOfOhio
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

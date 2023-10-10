@@ -11,26 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://api.platform.athenahealth.com/fhir/r4/metadata
+// https://fhir4.healow.com/fhir/r4/EBECCA/metadata
 func GetSourceCardiologyPhysicians(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceAthena(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/authorize"
-	sourceDef.TokenEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/token"
+	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://api.platform.athenahealth.com/fhir/r4"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/EBECCA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://api.platform.athenahealth.com/fhir/r4"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/EBECCA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeCardiologyPhysicians]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
 	sourceDef.Display = "Cardiology Physicians"
 	sourceDef.SourceType = pkg.SourceTypeCardiologyPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.SecretKeyPrefix = "athena"
+	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err
 }

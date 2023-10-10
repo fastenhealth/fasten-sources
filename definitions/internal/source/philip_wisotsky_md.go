@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/DBGECD/metadata
+// https://fhir4.healow.com/fhir/r4/DBGECD/metadata
 func GetSourcePhilipWisotskyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/DBGECD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/DBGECD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/DBGECD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/DBGECD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePhilipWisotskyMd]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Philip Wisotsky MD"
+	sourceDef.Display = "Philip Wisotsky, MD"
 	sourceDef.SourceType = pkg.SourceTypePhilipWisotskyMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

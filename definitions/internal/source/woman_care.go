@@ -14,8 +14,8 @@ import (
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10041587/metadata
 func GetSourceWomanCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/a1fa95a1-ddcb-4971-8ec2-f0ef27a1e023/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/a1fa95a1-ddcb-4971-8ec2-f0ef27a1e023/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/37b21f6e-039c-4350-909f-af860175584c/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/37b21f6e-039c-4350-909f-af860175584c/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/10041587"
 

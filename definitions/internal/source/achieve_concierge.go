@@ -30,6 +30,7 @@ func GetSourceAchieveConcierge(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeAchieveConcierge
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://achieveconcierge.com/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

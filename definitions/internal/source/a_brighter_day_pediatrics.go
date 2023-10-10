@@ -31,6 +31,7 @@ func GetSourceABrighterDayPediatrics(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"A BRIGHTER DAY PEDIATRICS", "A BRIGHTER DAY PEDIATRICS, LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750863874"}}
+	sourceDef.PatientAccessUrl = "https://abdpeds.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

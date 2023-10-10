@@ -29,7 +29,7 @@ func GetSourceBristleconeFamilyResources(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Display = "BRISTLECONE FAMILY RESOURCES"
 	sourceDef.SourceType = pkg.SourceTypeBristleconeFamilyResources
 	sourceDef.Category = []string{"324500000X"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"BRISTLECONE RECOVERY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013354604", "1457515850"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

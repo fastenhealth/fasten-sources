@@ -28,8 +28,9 @@ func GetSourceAmg(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 
 	sourceDef.Display = "AMG"
 	sourceDef.SourceType = pkg.SourceTypeAmg
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{"Archbold Medical Group"}
+	sourceDef.Category = []string{"261QP2300X", "261QU0200X", "363L00000X"}
+	sourceDef.Aliases = []string{"AMG", "Archbold Medical Group"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508338344"}}
 	sourceDef.BrandLogo = "amg.svg"
 	sourceDef.PatientAccessUrl = "https://archbold.org/amg-locations"
 	sourceDef.SecretKeyPrefix = "nextgen"

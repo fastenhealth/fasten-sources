@@ -11,12 +11,11 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/76109/.well-known/smart-configuration
 // https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/76109/metadata
 func GetSourcePremierHealthcareAssocPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/d88155b9-8402-44ca-b0b4-b34e23a7945a/connect/authorize"
-	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/patientauthv2/d88155b9-8402-44ca-b0b4-b34e23a7945a/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/85c884ff-2bf8-4334-a711-a3b200958792/connect/authorize"
+	sourceDef.TokenEndpoint = "https://open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/85c884ff-2bf8-4334-a711-a3b200958792/connect/token"
 
 	sourceDef.Audience = "https://fhir.fhirpoint.open.allscripts.com/fhirroute/open/76109"
 

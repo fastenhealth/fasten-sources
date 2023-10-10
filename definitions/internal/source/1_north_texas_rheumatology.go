@@ -30,6 +30,7 @@ func GetSource1NorthTexasRheumatology(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceType1NorthTexasRheumatology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.northtexasrheumatology.com/index.php"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

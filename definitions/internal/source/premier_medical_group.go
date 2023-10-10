@@ -28,8 +28,9 @@ func GetSourcePremierMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Premier Medical Group"
 	sourceDef.SourceType = pkg.SourceTypePremierMedicalGroup
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"207Q00000X", "207VF0040X", "261QP2300X"}
+	sourceDef.Aliases = []string{"PREMIER MEDICAL GROUP"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063067643", "1154856896", "1518607738", "1609453000"}}
 	sourceDef.PatientAccessUrl = "https://pmgarizona.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

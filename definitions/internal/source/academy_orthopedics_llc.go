@@ -11,27 +11,29 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/GGBBCD/metadata
+// https://api.platform.athenahealth.com/fhir/r4/metadata
 func GetSourceAcademyOrthopedicsLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
+	sourceDef, err := platform.GetSourceAthena(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/authorize"
+	sourceDef.TokenEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/GGBBCD"
+	sourceDef.Audience = "https://api.platform.athenahealth.com/fhir/r4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/GGBBCD"
+	sourceDef.ApiEndpointBaseUrl = "https://api.platform.athenahealth.com/fhir/r4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAcademyOrthopedicsLlc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
 
 	sourceDef.Display = "Academy Orthopedics LLC"
 	sourceDef.SourceType = pkg.SourceTypeAcademyOrthopedicsLlc
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356317903"}}
-	sourceDef.SecretKeyPrefix = "eclinicalworks"
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356317903", "1649655283", "1962887596"}}
+	sourceDef.BrandLogo = "academy-orthopedics-llc.jpg"
+	sourceDef.PatientAccessUrl = "https://www.academyorthopedics.com/"
+	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err
 }

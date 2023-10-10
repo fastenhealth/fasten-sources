@@ -31,6 +31,7 @@ func GetSource360PainAndSpinePllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207L00000X", "207LP2900X", "2084N0400X", "208VP0014X"}
 	sourceDef.Aliases = []string{"RENNER PAIN AND SPINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821611153"}}
+	sourceDef.PatientAccessUrl = "https://www.360paintreatment.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -29,7 +29,7 @@ func GetSourceRedefineHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Display = "Redefine Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeRedefineHealthcare
 	sourceDef.Category = []string{"111N00000X", "207T00000X", "207X00000X", "207XS0117X", "208100000X", "2081P2900X", "2084P2900X", "2084S0010X", "208VP0014X", "225100000X", "332B00000X", "363A00000X", "363AM0700X"}
-	sourceDef.Aliases = []string{"REDEFINE HEALTHCARE"}
+	sourceDef.Aliases = []string{"DBA REDEFINE HEALTHCARE", "INNOVATIVE SPINE AND PAIN", "MERCER-BUCKS ORTHOPAEDICS", "ORTHOPEDICS UNLIMITED", "REDEFINE HEALTHCARE", "SPORTS, PAIN & REGENERATIVE INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295459006", "1417632399", "1427771419", "1689770539", "1922771377", "1972226181"}}
 	sourceDef.SecretKeyPrefix = "athena"
 

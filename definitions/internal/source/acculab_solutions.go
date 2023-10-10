@@ -30,6 +30,8 @@ func GetSourceAcculabSolutions(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeAcculabSolutions
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "acculab-solutions.jpg"
+	sourceDef.PatientAccessUrl = "https://www.acculabsolutions.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -26,10 +26,11 @@ func GetSourceMaternalAndFamilyHealthServices(env pkg.FastenLighthouseEnvType, c
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Maternal & Family Health Services"
+	sourceDef.Display = "Maternal and Family Health Services"
 	sourceDef.SourceType = pkg.SourceTypeMaternalAndFamilyHealthServices
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"163W00000X", "207V00000X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033391057", "1285834648"}}
 	sourceDef.PatientAccessUrl = "https://www.mfhs.org/"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

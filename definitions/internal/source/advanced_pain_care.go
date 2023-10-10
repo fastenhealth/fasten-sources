@@ -11,26 +11,27 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/CHIEBD/metadata
+// https://api.platform.athenahealth.com/fhir/r4/metadata
 func GetSourceAdvancedPainCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
+	sourceDef, err := platform.GetSourceAthena(env, clientIdLookup)
+	sourceDef.AuthorizationEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/authorize"
+	sourceDef.TokenEndpoint = "https://api.platform.athenahealth.com/oauth2/v1/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/CHIEBD"
+	sourceDef.Audience = "https://api.platform.athenahealth.com/fhir/r4"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/CHIEBD"
+	sourceDef.ApiEndpointBaseUrl = "https://api.platform.athenahealth.com/fhir/r4"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAdvancedPainCare]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeAthena))
 
 	sourceDef.Display = "Advanced Pain Care"
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPainCare
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
-	sourceDef.SecretKeyPrefix = "eclinicalworks"
+	sourceDef.Category = []string{"207L00000X", "207LP2900X", "363A00000X"}
+	sourceDef.Aliases = []string{"ADVANCED PAIN CARE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063168318", "1083195259", "1225614936", "1386148138", "1417517046", "1447550223", "1548825003", "1710522859", "1770214124", "1861152423"}}
+	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err
 }

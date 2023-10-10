@@ -29,7 +29,7 @@ func GetSourceFairviewHealthServices(env pkg.FastenLighthouseEnvType, clientIdLo
 
 	sourceDef.Display = "Fairview Health Services"
 	sourceDef.SourceType = pkg.SourceTypeFairviewHealthServices
-	sourceDef.Category = []string{"101Y00000X", "208D00000X", "261Q00000X", "282N00000X", "332B00000X", "332BC3200X", "335E00000X"}
+	sourceDef.Category = []string{"282N00000X", "332B00000X", "332BC3200X", "335E00000X"}
 	sourceDef.Aliases = []string{"FAIRVIEW CLINICS - NORTH HENNEPIN COMMUNITY COLLEGE", "FAIRVIEW HOME MEDICAL EQUIPMENT", "FAIRVIEW ORTHOTICS AND PROSTHETICS", "UNIVERSITY OF MINNESOTA MEDICAL CENTER, TRANSPLANTATION SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104392398", "1316422397", "1508891946", "1588265375", "1598007726", "1730620196", "1841731213", "1972084044", "1982060075", "1992286082"}}
 	sourceDef.BrandLogo = "fairview-health-services.svg"

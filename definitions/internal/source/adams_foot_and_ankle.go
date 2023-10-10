@@ -30,6 +30,8 @@ func GetSourceAdamsFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeAdamsFootAndAnkle
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "adams-foot-and-ankle.jpg"
+	sourceDef.PatientAccessUrl = "https://www.adamsfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

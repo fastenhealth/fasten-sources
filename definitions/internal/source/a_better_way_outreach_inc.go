@@ -28,9 +28,10 @@ func GetSourceABetterWayOutreachInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 
 	sourceDef.Display = "A Better Way Outreach INC"
 	sourceDef.SourceType = pkg.SourceTypeABetterWayOutreachInc
-	sourceDef.Category = []string{"261QC1500X", "261QR0405X"}
+	sourceDef.Category = []string{"261QR0405X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215599089"}}
+	sourceDef.PatientAccessUrl = "https://abetterwayoutreach.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

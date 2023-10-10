@@ -28,8 +28,9 @@ func GetSourceBaptistHealthMedicalGroup(env pkg.FastenLighthouseEnvType, clientI
 
 	sourceDef.Display = "Baptist Health Medical Group"
 	sourceDef.SourceType = pkg.SourceTypeBaptistHealthMedicalGroup
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"207X00000X", "208M00000X", "261QR1300X"}
+	sourceDef.Aliases = []string{"METROPOLIS FAMILY MEDICINE", "PADUCAH WOMAN'S CHOICE"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124623202", "1326443136", "1366847469", "1457756553", "1831794395"}}
 	sourceDef.PatientAccessUrl = "https://npino.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 

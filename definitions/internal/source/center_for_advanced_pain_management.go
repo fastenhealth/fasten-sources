@@ -26,7 +26,7 @@ func GetSourceCenterForAdvancedPainManagement(env pkg.FastenLighthouseEnvType, c
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Center For Advanced Pain Management"
+	sourceDef.Display = "Center for Advanced Pain Management"
 	sourceDef.SourceType = pkg.SourceTypeCenterForAdvancedPainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

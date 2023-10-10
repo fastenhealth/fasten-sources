@@ -31,6 +31,7 @@ func GetSourceAchillesHealthCareLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"302R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275906018"}}
+	sourceDef.PatientAccessUrl = "http://www.achilleshealthcareservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

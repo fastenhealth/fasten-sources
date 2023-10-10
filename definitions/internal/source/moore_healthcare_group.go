@@ -28,7 +28,7 @@ func GetSourceMooreHealthcareGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 
 	sourceDef.Display = "Moore Healthcare Group"
 	sourceDef.SourceType = pkg.SourceTypeMooreHealthcareGroup
-	sourceDef.Category = []string{"207Q00000X"}
+	sourceDef.Category = []string{"207Q00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"MOORE HEALTHCARE GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366659849"}}
 	sourceDef.SecretKeyPrefix = "athena"

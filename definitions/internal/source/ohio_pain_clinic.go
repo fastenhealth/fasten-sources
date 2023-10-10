@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/IDBDAD/metadata
+// https://fhir4.healow.com/fhir/r4/IDBDAD/metadata
 func GetSourceOhioPainClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/IDBDAD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/IDBDAD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/IDBDAD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/IDBDAD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOhioPainClinic]; clientIdOk {
 		sourceDef.ClientId = clientId

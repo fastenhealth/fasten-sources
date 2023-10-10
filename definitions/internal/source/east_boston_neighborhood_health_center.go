@@ -14,9 +14,9 @@ import (
 // https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4/metadata
 func GetSourceEastBostonNeighborhoodHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://ebmobile14.ebnhc.org/FHIR/oauth2/register"
+	sourceDef.AuthorizationEndpoint = "https://host8.ebnhc.org/FHIR/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://host8.ebnhc.org/FHIR/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://host8.ebnhc.org/FHIR/oauth2/register"
 
 	sourceDef.Audience = "https://ebmobile14.ebnhc.org/FHIR/api/FHIR/R4"
 

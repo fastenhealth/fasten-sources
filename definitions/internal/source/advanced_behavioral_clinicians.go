@@ -31,6 +31,7 @@ func GetSourceAdvancedBehavioralClinicians(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"363LP0808X"}
 	sourceDef.Aliases = []string{"ADAIR DEICKE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134741218"}}
+	sourceDef.PatientAccessUrl = "https://abclinicians.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

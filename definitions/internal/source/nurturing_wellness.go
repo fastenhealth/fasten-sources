@@ -28,7 +28,7 @@ func GetSourceNurturingWellness(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Nurturing Wellness"
 	sourceDef.SourceType = pkg.SourceTypeNurturingWellness
-	sourceDef.Category = []string{"261QH0100X", "261QP2300X"}
+	sourceDef.Category = []string{"171100000X", "175F00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598413890"}}
 	sourceDef.SecretKeyPrefix = "athena"

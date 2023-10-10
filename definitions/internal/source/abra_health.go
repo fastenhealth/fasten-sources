@@ -30,6 +30,7 @@ func GetSourceAbraHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeAbraHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://abrahealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

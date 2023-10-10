@@ -31,6 +31,7 @@ func GetSourceAdamsEndocrinologyAssociatesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207RE0101X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871094623"}}
+	sourceDef.PatientAccessUrl = "https://www.adamsendocrinology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

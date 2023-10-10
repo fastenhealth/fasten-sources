@@ -31,6 +31,7 @@ func GetSource1StChoiceUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X", "261QM1300X", "261QP2300X", "261QU0200X", "363AM0700X", "363L00000X"}
 	sourceDef.Aliases = []string{"1ST CHOICE URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447916044", "1639603897", "1740923572"}}
+	sourceDef.PatientAccessUrl = "https://www.1ucpc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

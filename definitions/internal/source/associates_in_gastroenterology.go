@@ -11,22 +11,22 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/DCEFBA/metadata
+// https://fhir4.healow.com/fhir/r4/FEHCAA/metadata
 func GetSourceAssociatesInGastroenterology(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/DCEFBA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FEHCAA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/DCEFBA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FEHCAA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeAssociatesInGastroenterology]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Associates in Gastroenterology"
+	sourceDef.Display = "Associates In Gastroenterology"
 	sourceDef.SourceType = pkg.SourceTypeAssociatesInGastroenterology
 	sourceDef.Category = []string{"207RG0100X", "207ZP0102X", "363L00000X", "367500000X"}
 	sourceDef.Aliases = []string{"ASSOCIATES IN GASTROENTEROLOGY", "DIGESTIVE HEALTH SPECIALISTS", "FRANKLIN GASTROENTEROLOGY", "GASTRO ONE", "GASTROENTEROLOGY ASSOCIATES OF NORTH MISSISSIPPI", "MIDSTATE GASTROENTEROLOGY", "SKYLINE GASTROENTEROLOGY OF WEST TENNESSEE"}

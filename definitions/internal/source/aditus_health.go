@@ -31,6 +31,7 @@ func GetSourceAditusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"261Q00000X", "261QR1300X", "261QU0200X"}
 	sourceDef.Aliases = []string{"ADITUS HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922699198"}}
+	sourceDef.PatientAccessUrl = "https://aditus-health.net/index.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

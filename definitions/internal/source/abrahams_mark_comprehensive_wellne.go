@@ -30,6 +30,7 @@ func GetSourceAbrahamsMarkComprehensiveWellne(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAbrahamsMarkComprehensiveWellne
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.abrahamsmark.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -29,7 +29,8 @@ func GetSourceABetterBirthMidwifery(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Display = "A Better Birth Midwifery"
 	sourceDef.SourceType = pkg.SourceTypeABetterBirthMidwifery
 	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"Charm City Midwives"}
+	sourceDef.PatientAccessUrl = "https://www.charmcitymidwives.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

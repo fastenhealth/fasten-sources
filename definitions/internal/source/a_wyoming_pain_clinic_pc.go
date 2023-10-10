@@ -30,6 +30,7 @@ func GetSourceAWyomingPainClinicPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeAWyomingPainClinicPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://awyomingpainclinic.yourwebsitespace.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

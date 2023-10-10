@@ -29,7 +29,8 @@ func GetSourceAcrmc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Display = "ACRMC"
 	sourceDef.SourceType = pkg.SourceTypeAcrmc
 	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"Adams County Regional Medical Center"}
+	sourceDef.PatientAccessUrl = "https://acrmc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAccomplishHealthServices(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeAccomplishHealthServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.accomplish.health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

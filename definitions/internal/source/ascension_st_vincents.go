@@ -29,7 +29,9 @@ func GetSourceAscensionStVincents(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Ascension St Vincents"
 	sourceDef.SourceType = pkg.SourceTypeAscensionStVincents
 	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"Ascension St Vincents Birmingham"}
+	sourceDef.BrandLogo = "ascension-st-vincents.svg"
+	sourceDef.PatientAccessUrl = "https://healthcare.ascension.org/en/locations/alabama/albir/birmingham-ascension-st-vincents-birmingham"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

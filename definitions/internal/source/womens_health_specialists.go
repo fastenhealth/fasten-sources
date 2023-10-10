@@ -26,7 +26,7 @@ func GetSourceWomensHealthSpecialists(env pkg.FastenLighthouseEnvType, clientIdL
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Women's Health Specialists"
+	sourceDef.Display = "Womens Health Specialists"
 	sourceDef.SourceType = pkg.SourceTypeWomensHealthSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

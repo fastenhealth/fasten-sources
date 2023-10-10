@@ -26,7 +26,7 @@ func GetSourceFpsMedicalCenterLtd(env pkg.FastenLighthouseEnvType, clientIdLooku
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "FPS Medical Center Ltd"
+	sourceDef.Display = "FPS MEDICAL CENTER LTD"
 	sourceDef.SourceType = pkg.SourceTypeFpsMedicalCenterLtd
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}

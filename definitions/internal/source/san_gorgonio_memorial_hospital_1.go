@@ -14,8 +14,8 @@ import (
 // https://scmprodweb.sng.hos.allscriptscloud.com/FHIR/metadata
 func GetSourceSanGorgonioMemorialHospital1(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://scmprodweb.sng.hos.allscriptscloud.com/authorization/connect/authorize"
-	sourceDef.TokenEndpoint = "https://scmprodweb.sng.hos.allscriptscloud.com/authorization/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://fhir.sng.hos.allscriptscloud.com/authorization/connect/authorize"
+	sourceDef.TokenEndpoint = "https://fhir.sng.hos.allscriptscloud.com/authorization/connect/token"
 
 	sourceDef.Audience = "https://scmprodweb.sng.hos.allscriptscloud.com/FHIR"
 

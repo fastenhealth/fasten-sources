@@ -26,7 +26,7 @@ func GetSourceNeurocareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "NeuroCare Center"
+	sourceDef.Display = "NEUROCARE CENTER"
 	sourceDef.SourceType = pkg.SourceTypeNeurocareCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

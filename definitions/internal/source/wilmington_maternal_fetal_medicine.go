@@ -26,7 +26,7 @@ func GetSourceWilmingtonMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, c
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Wilmington Maternal-Fetal Medicine"
+	sourceDef.Display = "Wilmington Maternal Fetal Medicine"
 	sourceDef.SourceType = pkg.SourceTypeWilmingtonMaternalFetalMedicine
 	sourceDef.Category = []string{"207VM0101X"}
 	sourceDef.Aliases = []string{"WILMINGTON MATERNAL-FETAL MEDICINE"}

@@ -26,7 +26,7 @@ func GetSourceMiddletownValleyFamilyMedicine(env pkg.FastenLighthouseEnvType, cl
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Middletown Valley Family Medicine"
+	sourceDef.Display = "MIDDLETOWN VALLEY FAMILY MEDICINE"
 	sourceDef.SourceType = pkg.SourceTypeMiddletownValleyFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

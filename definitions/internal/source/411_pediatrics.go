@@ -30,6 +30,8 @@ func GetSource411Pediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceType411Pediatrics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "411-pediatrics.jpg"
+	sourceDef.PatientAccessUrl = "https://411pediatrics.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

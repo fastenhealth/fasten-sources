@@ -11,25 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/IEHHBD/metadata
+// https://fhir4.healow.com/fhir/r4/IEHHBD/metadata
 func GetSourceOklahomaPainInstitutePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/IEHHBD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/IEHHBD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/IEHHBD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/IEHHBD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeOklahomaPainInstitutePllc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Oklahoma Pain Institute, PLLC"
+	sourceDef.Display = "Oklahoma Pain Institute PLLC"
 	sourceDef.SourceType = pkg.SourceTypeOklahomaPainInstitutePllc
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"208VP0014X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013353440"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

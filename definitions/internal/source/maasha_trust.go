@@ -28,7 +28,7 @@ func GetSourceMaashaTrust(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 
 	sourceDef.Display = "MAASHA TRUST"
 	sourceDef.SourceType = pkg.SourceTypeMaashaTrust
-	sourceDef.Category = []string{"251K00000X"}
+	sourceDef.Category = []string{"207R00000X", "251K00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"MAASHA TRUST"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497379804"}}
 	sourceDef.SecretKeyPrefix = "athena"

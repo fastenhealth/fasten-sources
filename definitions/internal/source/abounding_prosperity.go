@@ -30,6 +30,7 @@ func GetSourceAboundingProsperity(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeAboundingProsperity
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.aboundingprosperity.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

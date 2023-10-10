@@ -31,6 +31,7 @@ func GetSourceAdamsBoneAndJointPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497253934"}}
+	sourceDef.PatientAccessUrl = "https://www.adamsboneandjoint.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,8 @@ func GetSourceAccessCarroll(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeAccessCarroll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "access-carroll.jpg"
+	sourceDef.PatientAccessUrl = "https://www.accesscarroll.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

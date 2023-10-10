@@ -11,25 +11,26 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/FFACCD/metadata
+// https://fhir4.healow.com/fhir/r4/FFACCD/metadata
 func GetSourceInvictusHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/FFACCD"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FFACCD"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/FFACCD"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FFACCD"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeInvictusHealthLlc]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEclinicalworks))
 
-	sourceDef.Display = "Invictus Health, LLC"
+	sourceDef.Display = "Invictus Health Llc"
 	sourceDef.SourceType = pkg.SourceTypeInvictusHealthLlc
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"207QS0010X", "261QP2000X", "261QP3300X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104398205"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

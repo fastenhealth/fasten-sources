@@ -26,7 +26,7 @@ func GetSourceNeurologyOfBethlehemPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	}
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeNextgen))
 
-	sourceDef.Display = "Neurology Of Bethlehem PC"
+	sourceDef.Display = "Neurology of Bethlehem PC"
 	sourceDef.SourceType = pkg.SourceTypeNeurologyOfBethlehemPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}

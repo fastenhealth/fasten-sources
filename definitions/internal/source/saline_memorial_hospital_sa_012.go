@@ -14,8 +14,8 @@ import (
 // https://fhirprod.sa0.hos.allscriptscloud.com/R4/open-Prod/metadata
 func GetSourceSalineMemorialHospitalSa012(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceAllscripts(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://global.open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/76929a22-c684-410b-9748-a4b2009540a0/connect/authorize"
-	sourceDef.TokenEndpoint = "https://global.open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/76929a22-c684-410b-9748-a4b2009540a0/connect/token"
+	sourceDef.AuthorizationEndpoint = "https://global.open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/f5c42b0d-92aa-4536-8c39-a54100818616/connect/authorize"
+	sourceDef.TokenEndpoint = "https://global.open.allscripts.com/fhirroute/fmhpatientauth/fmhorgid/f5c42b0d-92aa-4536-8c39-a54100818616/connect/token"
 
 	sourceDef.Audience = "https://fhirprod.sa0.hos.allscriptscloud.com/R4/open-Prod"
 

@@ -31,6 +31,8 @@ func GetSourceAcuteCareEmergence(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225539760", "1770066268"}}
+	sourceDef.BrandLogo = "acute-care-emergence.webp"
+	sourceDef.PatientAccessUrl = "https://www.acutecareemergence.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

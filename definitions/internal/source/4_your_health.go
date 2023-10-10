@@ -31,6 +31,8 @@ func GetSource4YourHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"4 YOUR HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083264345"}}
+	sourceDef.BrandLogo = "4-your-health.jpg"
+	sourceDef.PatientAccessUrl = "https://4yourhealth.us/about-us-2/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

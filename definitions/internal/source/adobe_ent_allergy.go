@@ -30,6 +30,7 @@ func GetSourceAdobeEntAllergy(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeAdobeEntAllergy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://adobe-ent.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

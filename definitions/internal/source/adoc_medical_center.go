@@ -30,6 +30,8 @@ func GetSourceAdocMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeAdocMedicalCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "adoc-medical-center.svg"
+	sourceDef.PatientAccessUrl = "https://www.adoc.us/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

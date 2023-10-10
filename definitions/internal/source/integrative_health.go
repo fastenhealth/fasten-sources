@@ -28,8 +28,9 @@ func GetSourceIntegrativeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 
 	sourceDef.Display = "Integrative Health"
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeHealth
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
+	sourceDef.Category = []string{"111N00000X", "207Q00000X"}
+	sourceDef.Aliases = []string{"INTEGRATIVE HEALTH"}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275931818", "1760186217"}}
 	sourceDef.BrandLogo = "integrative-health.jpg"
 	sourceDef.PatientAccessUrl = "https://www.facebook.com/IntegrativeHealthWellnessClinic/"
 	sourceDef.SecretKeyPrefix = "nextgen"

@@ -30,6 +30,8 @@ func GetSourceAPlusFamilyUrgentCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeAPlusFamilyUrgentCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "a-plus-family-urgent-care.gif"
+	sourceDef.PatientAccessUrl = "https://aplusfamilyuc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

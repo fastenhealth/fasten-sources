@@ -30,6 +30,8 @@ func GetSource3DSportsMedicineAndOrthopaedic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceType3DSportsMedicineAndOrthopaedic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "3d-sports-medicine-and-orthopaedic.jpg"
+	sourceDef.PatientAccessUrl = "https://www.3dsportsmed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

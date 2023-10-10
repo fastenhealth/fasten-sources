@@ -11,15 +11,15 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 )
 
-// https://fhir4.eclinicalworks.com/fhir/r4/CGIECA/metadata
+// https://fhir4.healow.com/fhir/r4/CGIECA/metadata
 func GetSourcePremierFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEclinicalworks(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
-	sourceDef.Audience = "https://fhir4.eclinicalworks.com/fhir/r4/CGIECA"
+	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/CGIECA"
 
-	sourceDef.ApiEndpointBaseUrl = "https://fhir4.eclinicalworks.com/fhir/r4/CGIECA"
+	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/CGIECA"
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypePremierFamilyClinic]; clientIdOk {
 		sourceDef.ClientId = clientId
@@ -28,8 +28,9 @@ func GetSourcePremierFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 
 	sourceDef.Display = "Premier Family Clinic"
 	sourceDef.SourceType = pkg.SourceTypePremierFamilyClinic
-	sourceDef.Category = []string{}
+	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
+	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528113107"}}
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err
