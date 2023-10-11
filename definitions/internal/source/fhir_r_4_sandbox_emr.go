@@ -17,6 +17,7 @@ func GetSourceFhirR4SandboxEmr(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/FFBJCD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FFBJCD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FFBJCD"

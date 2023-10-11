@@ -17,6 +17,7 @@ func GetSourcePrimeMedicPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/AJAAAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/AJAAAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/AJAAAA"

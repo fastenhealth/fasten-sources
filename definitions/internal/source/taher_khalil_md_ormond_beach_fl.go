@@ -17,6 +17,7 @@ func GetSourceTaherKhalilMdOrmondBeachFl(env pkg.FastenLighthouseEnvType, client
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/EJACBD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/EJACBD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/EJACBD"

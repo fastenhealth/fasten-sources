@@ -17,6 +17,7 @@ func GetSourcePainManagement(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/EGBFAD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/EGBFAD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/EGBFAD"

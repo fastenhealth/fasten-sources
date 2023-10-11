@@ -17,6 +17,7 @@ func GetSourceVascularCareOfTexas(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/JBDADA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/JBDADA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/JBDADA"

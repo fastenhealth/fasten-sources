@@ -17,6 +17,7 @@ func GetSourceCompleteVascularCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/JEFABA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/JEFABA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/JEFABA"

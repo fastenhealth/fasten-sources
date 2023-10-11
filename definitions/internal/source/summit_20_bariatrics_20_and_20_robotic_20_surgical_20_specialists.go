@@ -17,6 +17,7 @@ func GetSourceSummit20Bariatrics20And20Robotic20Surgical20Specialists(env pkg.Fa
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/CFCJCD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/CFCJCD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/CFCJCD"

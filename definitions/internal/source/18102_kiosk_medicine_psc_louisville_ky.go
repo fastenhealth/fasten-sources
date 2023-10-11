@@ -17,6 +17,7 @@ func GetSource18102KioskMedicinePscLouisvilleKy(env pkg.FastenLighthouseEnvType,
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BAAJAD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BAAJAD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BAAJAD"

@@ -17,6 +17,7 @@ func GetSourceChicagoAnesthesiaPainSpecialistsPainManagementCenter(env pkg.Faste
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/JDJDCA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/JDJDCA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/JDJDCA"

@@ -17,6 +17,7 @@ func GetSourceTheLittleClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BDCBAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BDCBAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BDCBAA"

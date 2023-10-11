@@ -17,6 +17,7 @@ func GetSourceBrainSpineAndSleepInstitute(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/HGBHBD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/HGBHBD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/HGBHBD"

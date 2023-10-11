@@ -17,6 +17,7 @@ func GetSourceFortNorfolkPlazaCardiologyAssocNorfolkVa(env pkg.FastenLighthouseE
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BEHIBD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BEHIBD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BEHIBD"

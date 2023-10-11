@@ -17,6 +17,7 @@ func GetSourcePacificGastroenterologyMedicalAssociates(env pkg.FastenLighthouseE
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/ECIBAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/ECIBAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/ECIBAA"

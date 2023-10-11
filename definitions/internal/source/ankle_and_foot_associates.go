@@ -17,6 +17,7 @@ func GetSourceAnkleAndFootAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/FHFEAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/FHFEAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/FHFEAA"

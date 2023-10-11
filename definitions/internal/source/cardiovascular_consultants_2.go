@@ -17,6 +17,7 @@ func GetSourceCardiovascularConsultants2(env pkg.FastenLighthouseEnvType, client
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/DEDDAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/DEDDAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/DEDDAA"

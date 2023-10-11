@@ -17,6 +17,7 @@ func GetSourceMarlboroInternalMedicine(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BHCCAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BHCCAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BHCCAA"

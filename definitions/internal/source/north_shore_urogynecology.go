@@ -17,6 +17,7 @@ func GetSourceNorthShoreUrogynecology(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BCHJAA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BCHJAA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BCHJAA"

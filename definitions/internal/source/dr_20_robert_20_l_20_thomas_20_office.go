@@ -17,6 +17,7 @@ func GetSourceDr20Robert20L20Thomas20Office(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/IHHJBD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/IHHJBD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/IHHJBD"

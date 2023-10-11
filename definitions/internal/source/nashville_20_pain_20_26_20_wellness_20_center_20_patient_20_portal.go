@@ -17,6 +17,7 @@ func GetSourceNashville20Pain202620Wellness20Center20Patient20Portal(env pkg.Fas
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/BEICCD"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/BEICCD"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/BEICCD"

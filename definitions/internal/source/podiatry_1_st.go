@@ -17,6 +17,7 @@ func GetSourcePodiatry1St(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.AuthorizationEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://oauthserver.eclinicalworks.com/oauth/oauth2/token"
 
+	sourceDef.Issuer = "https://fhir4.healow.com/fhir/r4/HGJJCA"
 	sourceDef.Audience = "https://fhir4.healow.com/fhir/r4/HGJJCA"
 
 	sourceDef.ApiEndpointBaseUrl = "https://fhir4.healow.com/fhir/r4/HGJJCA"
