@@ -242,8 +242,8 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
 		b, _ := io.ReadAll(resp.Body)
 		bodyContent := string(b)
-		if len(bodyContent) > 300 {
-			bodyContent = bodyContent[:300]
+		if len(bodyContent) > 600 {
+			bodyContent = bodyContent[:600]
 		}
 		c.LoggerDebugResponse(resp, true)
 		return "", fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
@@ -279,9 +279,9 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	return resourceUrl.String(), err
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Helper Functions
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func UnmarshalJson(r io.Reader, decodeModelPtr interface{}) error {
 	decoder := json.NewDecoder(r)
 	//decoder.DisallowUnknownFields() //make sure we throw an error if unknown fields are present.
