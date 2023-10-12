@@ -306,6 +306,46 @@
             return payload
         }
 
+
+        async function processCallbackUsingLighthouseSource(sourceType, lighthouseSource){
+            //get required parameters from the URI and local storage
+            const callbackUrlParts = new URL(window.location.href)
+            const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
+            const callbackCode = callbackUrlParts.searchParams.get("code") || fragmentParams.get("code")
+            const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
+            const callbackError = callbackUrlParts.searchParams.get("error") || fragmentParams.get("error")
+            const callbackErrorDescription = callbackUrlParts.searchParams.get("error_description") || fragmentParams.get("error_description")
+
+
+            const expectedSourceStateInfo = JSON.parse(localStorage.getItem(callbackState))
+            localStorage.removeItem(callbackState)
+
+            if(callbackError && !callbackCode){
+                //TOOD: print this message in the UI
+                let errMsg = "an error occurred while authenticating to this source. Please try again later"
+                console.error(errMsg, callbackErrorDescription)
+                throw new Error(errMsg)
+            }
+
+            console.log("callback code:", callbackCode)
+            $('#callback_code').text(callbackCode)
+
+
+            let payload = await swapOauthToken(sourceType, lighthouseSource,expectedSourceStateInfo, callbackCode)
+            $('#oauth_data').text(JSON.stringify(payload, null, 4))
+            localStorage.setItem("accessToken", payload.access_token)
+
+
+            //check if the access token is a JWT
+            if(payload.access_token.split(".").length === 3){
+                //if it is, decode it and print it
+                $('#jwt_data').text(JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4))
+            }
+
+            $('#patient_id').text(payload.patient)
+            localStorage.setItem("patientId", payload.patient)
+        }
+
         $(function() {
 
             //register handlers
@@ -327,52 +367,26 @@
             var sourceType = parts[parts.length-1]
 
 
-            var lighthouseEndpoint = localStorage.getItem('lighthouseEndpoint')
+            const callbackUrlParts = new URL(window.location.href)
+            const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
+            const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
 
-            $.get(  lighthouseEndpoint + `connect/${sourceType}`, async function( data ) {
-                console.log(data.data)
-
-                var sourceMetadata = data.data
-
-
-                //get required parameters from the URI and local storage
-                const callbackUrlParts = new URL(window.location.href)
-                const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
-                const callbackCode = callbackUrlParts.searchParams.get("code") || fragmentParams.get("code")
-                const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
-                const callbackError = callbackUrlParts.searchParams.get("error") || fragmentParams.get("error")
-                const callbackErrorDescription = callbackUrlParts.searchParams.get("error_description") || fragmentParams.get("error_description")
-
-
-                const expectedSourceStateInfo = JSON.parse(localStorage.getItem(callbackState))
-                localStorage.removeItem(callbackState)
-
-                if(callbackError && !callbackCode){
-                    //TOOD: print this message in the UI
-                    let errMsg = "an error occurred while authenticating to this source. Please try again later"
-                    console.error(errMsg, callbackErrorDescription)
-                    throw new Error(errMsg)
-                }
-
-                console.log("callback code:", callbackCode)
-                $('#callback_code').text(callbackCode)
+            //check if localstorage has a customSource for this state
+            if(callbackState && localStorage.getItem(`${callbackState}.customSource`)){
+                console.log("using custom source for this state")
+                var customSource = JSON.parse(localStorage.getItem(`${callbackState}.customSource`))
+                localStorage.removeItem(`${callbackState}.customSource`)
+                processCallbackUsingLighthouseSource(sourceType, customSource).then(console.log).catch(console.error)
+            } else {
+                var lighthouseEndpoint = localStorage.getItem('lighthouseEndpoint')
+                $.get(  lighthouseEndpoint + `connect/${sourceType}`, async function( data ) {
+                    console.log(data.data)
+                    var lighthouseSource = data.data
+                    await processCallbackUsingLighthouseSource(sourceType, lighthouseSource)
+                });
+            }
 
 
-                let payload = await swapOauthToken(sourceType, sourceMetadata,expectedSourceStateInfo, callbackCode)
-                $('#oauth_data').text(JSON.stringify(payload, null, 4))
-                localStorage.setItem("accessToken", payload.access_token)
-
-
-                //check if the access token is a JWT
-                if(payload.access_token.split(".").length == 3){
-                    //if it is, decode it and print it
-                    $('#jwt_data').text(JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4))
-                }
-
-                $('#patient_id').text(payload.patient)
-                localStorage.setItem("patientId", payload.patient)
-
-            });
 
 
         });

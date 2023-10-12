@@ -158,6 +158,14 @@
                                         <input required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
                                     </div>
                                     <div class="form-group">
+                                        <label for="customTokenEndpoint">Token Endpoint</label>
+                                        <input required type="text" class="form-control" id="customTokenEndpoint" placeholder="https://www.example.com/oauth/oauth2/token">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customApiEndpointBaseUrl">Api Endpoint Base Url</label>
+                                        <input required type="text" class="form-control" id="customApiEndpointBaseUrl" placeholder="https://www.example.com/r4/fhir">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="customResponseMode">Response Mode</label>
                                         <select required class="form-control" id="customResponseMode">
                                             <option>fragment</option>
@@ -229,7 +237,7 @@
 
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="customConfidential">
-                                        <label class="form-check-label" for="customConfidential">Confidential</label>
+                                        <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
                                     </div>
 
                                     <button id="customSourceSubmit" type="button" class="btn btn-primary btn-sm mb-3">Submit</button>
@@ -264,13 +272,25 @@
         function defineCustomSource(){
             var lighthouseEndpoint = SOURCE_ENDPOINT_LOOKUP[$('input[name="source_mode"]:checked').val()]
 
+            let api_endpoint_base_url = $('#customApiEndpointBaseUrl').val()
+            //if api_endpoint_base_url ends with "/" character, trim
+            if (api_endpoint_base_url[api_endpoint_base_url.length - 1] === "/") {
+                api_endpoint_base_url = api_endpoint_base_url.slice(0, -1)
+            }
+
+
             var sourceType = $('#customSourceType').val()
             var customSource = {
+                custom_source: true,
+
                 authorization_endpoint: $('#customAuthEndpoint').val(),
+                token_endpoint: $('#customTokenEndpoint').val(),
                 redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
                 response_types_supported: ['code'],
                 response_modes_supported: [$('#customResponseMode').val()],
                 aud: $('#customAudience').val(),
+                issuer: api_endpoint_base_url,
+                api_endpoint_base_url: api_endpoint_base_url,
                 confidential: $('#customConfidential').is(":checked"),
                 code_challenge_methods_supported: ['S256'],
                 client_id: $('#customClientId').val(),
@@ -368,6 +388,11 @@
             localStorage.setItem(state, JSON.stringify(sourceStateInfo))
             localStorage.setItem("clientId", lighthouseSource.client_id)
 
+            if(lighthouseSource.custom_source){
+                //this isn't actually a lighthouse retrieved source, this is a custom defined source
+                // we need to store this configuration in local storage so we can use it later
+                localStorage.setItem(`${state}.customSource`, JSON.stringify(lighthouseSource))
+            }
 
             redirectWithOriginAndDestination(authorizationUrl, sourceType, lighthouseSource.redirect_uri);
         }
