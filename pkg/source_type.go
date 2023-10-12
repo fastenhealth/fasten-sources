@@ -22,6 +22,7 @@ const (
 	SourceTypeEpic           SourceType = "epic"
 	SourceTypeMeditech       SourceType = "meditech"
 	SourceTypeNextgen        SourceType = "nextgen"
+	SourceTypeVahealth       SourceType = "vahealth"
 	// source
 	SourceType1CpPlacePllc                                                                     SourceType = "1-cp-place-pllc"
 	SourceType1SandraKHutchisonMd                                                              SourceType = "1-sandra-k-hutchison-md"
