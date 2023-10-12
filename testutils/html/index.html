@@ -176,6 +176,8 @@
                                                 <option selected>openid</option>
                                                 <option selected>profile</option>
                                                 <option>offline</option>
+                                                <option>offline_access</option>
+                                                <option>launch/patient</option>
                                             </optgroup>
                                             <optgroup>
                                                 <option>patient/*.read</option>
@@ -216,6 +218,7 @@
                                                 <option>patient/Schedule.read</option>
                                                 <option>patient/ServiceRequest.read</option>
                                                 <option>patient/Slot.read</option>
+                                                <option>system/Appointment.read</option>
                                             </optgroup>
                                         </select>
                                     </div>
@@ -265,7 +268,7 @@
             var customSource = {
                 authorization_endpoint: $('#customAuthEndpoint').val(),
                 redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
-                response_types_supported: ['authorization_code'],
+                response_types_supported: ['code'],
                 response_modes_supported: [$('#customResponseMode').val()],
                 aud: $('#customAudience').val(),
                 confidential: $('#customConfidential').is(":checked"),
