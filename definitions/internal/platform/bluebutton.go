@@ -37,7 +37,7 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeBluebutton))
 	sourceDef.Confidential = true
 
-	sourceDef.Display = "Medicare (BlueButton)"
+	sourceDef.Display = "Medicare"
 	sourceDef.PlatformType = pkg.SourceTypeBluebutton
 	sourceDef.SourceType = pkg.SourceTypeBluebutton
 	sourceDef.Category = []string{"Hospital"}
