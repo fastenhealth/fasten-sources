@@ -64,11 +64,22 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	//lookup table for every resource ID found by Fasten
 	lookupResourceReferences := map[string]bool{}
 
-	for _, apiModel := range rawResourceModels {
+	for ndx, apiModel := range rawResourceModels {
 		err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 		if err != nil {
 			syncErrors[apiModel.SourceResourceType] = err
 			continue
+		}
+
+		if ndx%100 == 0 {
+			db.BackgroundJobCheckpoint(c.Context,
+				map[string]interface{}{
+					"stage":          "EverythingBundle",
+					"stage_progress": ndx,
+					"summary":        summary,
+				},
+				map[string]interface{}{"errors": syncErrors},
+			)
 		}
 	}
 
@@ -149,11 +160,26 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		}
 		summary.TotalResources += len(rawResourceModels)
 
-		for _, apiModel := range rawResourceModels {
+		for ndx, apiModel := range rawResourceModels {
 			err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
+			}
+
+			if ndx%100 == 0 {
+				stageErrorData := map[string]interface{}{}
+				if len(syncErrors) > 0 {
+					stageErrorData["errors"] = syncErrors
+				}
+				db.BackgroundJobCheckpoint(c.Context,
+					map[string]interface{}{
+						"stage":          resourceType,
+						"stage_progress": ndx,
+						"summary":        summary,
+					},
+					stageErrorData,
+				)
 			}
 		}
 
@@ -222,7 +248,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 
 		//process pending resources
 		summary.TotalResources += len(pendingResourceReferences)
-		for _, pendingResourceIdOrUri := range pendingResourceReferences {
+		for ndx, pendingResourceIdOrUri := range pendingResourceReferences {
 			var resourceRaw map[string]interface{}
 
 			resourceSourceUri, err := c.GetRequest(pendingResourceIdOrUri, &resourceRaw)
@@ -267,6 +293,21 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 			if err != nil {
 				syncErrors[pendingResourceIdOrUri] = err
 				continue
+			}
+
+			if ndx%100 == 0 {
+				stageErrorData := map[string]interface{}{}
+				if len(syncErrors) > 0 {
+					stageErrorData["errors"] = syncErrors
+				}
+				db.BackgroundJobCheckpoint(c.Context,
+					map[string]interface{}{
+						"stage":          "PendingResources",
+						"stage_progress": ndx,
+						"summary":        summary,
+					},
+					stageErrorData,
+				)
 			}
 		}
 		extractionLoopCount += 1
