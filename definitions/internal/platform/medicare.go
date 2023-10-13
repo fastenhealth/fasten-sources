@@ -15,7 +15,7 @@ import (
 https://groups.google.com/g/Developer-group-for-cms-blue-button-api/c/mVNFJI4dxbs
 https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHloM/m/jQHZVNznBAAJ?utm_medium=email&utm_source=footer
 */
-func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
+func GetSourceMedicare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef := models.LighthouseSourceDefinition{}
 	sourceDef.AuthorizationEndpoint = "https://sandbox.bluebutton.cms.gov/v2/o/authorize/"
 	sourceDef.TokenEndpoint = "https://sandbox.bluebutton.cms.gov/v2/o/token/"
@@ -31,15 +31,15 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.ApiEndpointBaseUrl = "https://sandbox.bluebutton.cms.gov/v2/fhir"
 	// retrieve client-id, if available
-	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeBluebutton]; clientIdOk {
+	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMedicare]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeBluebutton))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeMedicare))
 	sourceDef.Confidential = true
 
 	sourceDef.Display = "Medicare"
-	sourceDef.PlatformType = pkg.SourceTypeBluebutton
-	sourceDef.SourceType = pkg.SourceTypeBluebutton
+	sourceDef.PlatformType = pkg.SourceTypeMedicare
+	sourceDef.SourceType = pkg.SourceTypeMedicare
 	sourceDef.Category = []string{"Hospital"}
 	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://sandbox.bluebutton.cms.gov/"

@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-type sourceClientBluebutton struct {
+type sourceClientMedicare struct {
 	models.SourceClient
 }
 
@@ -23,18 +23,18 @@ type sourceClientBluebutton struct {
 https://groups.google.com/g/Developer-group-for-cms-blue-button-api/c/mVNFJI4dxbs
 https://groups.google.com/g/developer-group-for-cms-blue-button-api/c/77ZDwZWHloM/m/jQHZVNznBAAJ?utm_medium=email&utm_source=footer
 */
-func GetSourceClientBluebutton(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+func GetSourceClientMedicare(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	if err != nil {
 		return nil, err
 	}
 
-	return sourceClientBluebutton{baseClient}, err
+	return sourceClientMedicare{baseClient}, err
 }
 
 // Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 // Manually processing individual resources
-func (c sourceClientBluebutton) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c sourceClientMedicare) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	supportedResources := append(c.GetUsCoreResources(), []string{"ExplanationOfBenefit", "Coverage"}...)
 	return c.SyncAllByResourceName(db, supportedResources)
 }
