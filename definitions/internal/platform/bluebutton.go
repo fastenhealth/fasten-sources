@@ -42,7 +42,7 @@ func GetSourceBluebutton(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeBluebutton
 	sourceDef.Category = []string{"Hospital"}
 	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://www.medicare.gov"
+	sourceDef.PatientAccessUrl = "https://sandbox.bluebutton.cms.gov/"
 
 	return sourceDef, nil
 }

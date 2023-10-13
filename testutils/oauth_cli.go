@@ -42,7 +42,8 @@ func JSONError(w http.ResponseWriter, err interface{}, code int) {
 	return
 }
 func main() {
-
+	log.Printf("Starting oauth cli")
+	defer log.Printf("Finished oauth cli")
 	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
 		log.Printf("%v", req.URL.Path)
 		if strings.HasPrefix(req.URL.Path, "/callback") {

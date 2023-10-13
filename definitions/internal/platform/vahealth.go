@@ -19,7 +19,7 @@ func GetSourceVahealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.TokenEndpoint = "https://sandbox-api.va.gov/oauth2/token"
 
 	sourceDef.Issuer = "https://sandbox-api.va.gov/services/fhir/v0/r4"
-	sourceDef.Scopes = []string{"launch/patient", "offline_access", "openid", "patient/AllergyIntolerance.read", "patient/Binary.read", "patient/Condition.read", "patient/Device.read", "patient/DeviceRequest.read", "patient/DiagnosticReport.read", "patient/DocumentReference.read", "patient/Encounter.read", "patient/Immunization.read", "patient/Medication.read", "patient/MedicationRequest.read", "patient/Observation.read", "patient/Patient.read", "patient/Practitioner.read", "patient/PractitionerRole.read", "patient/Procedure.read", "profile", "system/Appointment.read"}
+	sourceDef.Scopes = []string{"launch/patient", "offline_access", "openid", "patient/AllergyIntolerance.read", "patient/Appointment.read", "patient/Binary.read", "patient/Condition.read", "patient/Device.read", "patient/DeviceRequest.read", "patient/DiagnosticReport.read", "patient/DocumentReference.read", "patient/Encounter.read", "patient/Immunization.read", "patient/Medication.read", "patient/MedicationRequest.read", "patient/Observation.read", "patient/Patient.read", "patient/Practitioner.read", "patient/PractitionerRole.read", "patient/Procedure.read", "profile"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"query"}
