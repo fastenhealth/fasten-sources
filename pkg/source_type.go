@@ -19,6 +19,7 @@ const (
 	SourceTypeEclinicalworks SourceType = "eclinicalworks"
 	SourceTypeEdifecs        SourceType = "edifecs"
 	SourceTypeEpic           SourceType = "epic"
+	SourceTypeHumana         SourceType = "humana"
 	SourceTypeMedicare       SourceType = "medicare"
 	SourceTypeMeditech       SourceType = "meditech"
 	SourceTypeNextgen        SourceType = "nextgen"
