@@ -86,7 +86,7 @@ func main() {
 		//get the source defintiion
 		sourceConfig, err := defFactory.GetSourceConfig(pkg.FastenLighthouseEnvType(requestData.SourceMode), pkg.SourceType(requestData.SourceType), map[pkg.SourceType]string{})
 		if err != nil {
-			JSONError(res, fmt.Errorf("an error occurred while initializing source config", err), http.StatusBadRequest)
+			JSONError(res, fmt.Errorf("an error occurred while initializing source config: %w", err), http.StatusBadRequest)
 			return
 		}
 
