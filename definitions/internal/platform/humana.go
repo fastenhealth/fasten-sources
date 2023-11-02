@@ -38,7 +38,7 @@ func GetSourceHumana(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Display = "Humana"
 	sourceDef.PlatformType = pkg.SourceTypeHumana
 	sourceDef.SourceType = pkg.SourceTypeHumana
-	sourceDef.Category = []string{"Hospital"}
+	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.humana.com/"
 

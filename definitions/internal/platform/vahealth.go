@@ -34,7 +34,7 @@ func GetSourceVahealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Display = "VA Health"
 	sourceDef.PlatformType = pkg.SourceTypeVahealth
 	sourceDef.SourceType = pkg.SourceTypeVahealth
-	sourceDef.Category = []string{"Sandbox"}
+	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Aliases = []string{}
 	sourceDef.PatientAccessUrl = "https://www.va.gov"
 
