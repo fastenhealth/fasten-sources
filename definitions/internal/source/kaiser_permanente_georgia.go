@@ -13,7 +13,7 @@ import (
 
 // https://fhir.kp.org/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/200/api/FHIR/R4/metadata
 func GetSourceKaiserPermanenteGeorgia(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/200/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/200/oauth2/token"
 	sourceDef.RegistrationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/200/oauth2/register"
@@ -25,7 +25,7 @@ func GetSourceKaiserPermanenteGeorgia(env pkg.FastenLighthouseEnvType, clientIdL
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeKaiserPermanenteGeorgia]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Kaiser Permanente – Georgia"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteGeorgia

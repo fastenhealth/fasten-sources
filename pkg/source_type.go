@@ -18,6 +18,7 @@ const (
 	SourceTypeCigna          SourceType = "cigna"
 	SourceTypeEclinicalworks SourceType = "eclinicalworks"
 	SourceTypeEdifecs        SourceType = "edifecs"
+	SourceTypeEpicLegacy     SourceType = "epic-legacy"
 	SourceTypeEpic           SourceType = "epic"
 	SourceTypeHumana         SourceType = "humana"
 	SourceTypeMedicare       SourceType = "medicare"

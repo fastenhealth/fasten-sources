@@ -13,7 +13,7 @@ import (
 
 // https://fhir.kp.org/Interconnect-FHIR-PRD/api/FHIR/R4/metadata
 func GetSourceKaiserPermanenteWashington(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/token"
 	sourceDef.RegistrationEndpoint = "https://fhir.kp.org/Interconnect-FHIR-PRD/oauth2/register"
@@ -25,7 +25,7 @@ func GetSourceKaiserPermanenteWashington(env pkg.FastenLighthouseEnvType, client
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeKaiserPermanenteWashington]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Kaiser Permanente - Washington"
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteWashington
