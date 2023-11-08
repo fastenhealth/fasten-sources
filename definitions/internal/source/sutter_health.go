@@ -13,7 +13,7 @@ import (
 
 // https://apiservices.sutterhealth.org/ifs/api/FHIR/R4/metadata
 func GetSourceSutterHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/token"
 	sourceDef.RegistrationEndpoint = "https://apiservices.sutterhealth.org/ifs/oauth2/register"
@@ -25,7 +25,7 @@ func GetSourceSutterHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeSutterHealth]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Sutter Health"
 	sourceDef.SourceType = pkg.SourceTypeSutterHealth
