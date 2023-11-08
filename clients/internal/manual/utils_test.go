@@ -32,6 +32,7 @@ func TestGetFileDocumentType(t *testing.T) {
 		{"testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json", true, DocumentTypeFhirBundle},
 		{"testdata/fixtures/401-R4/phr-ndjson-jsonl/JohnDoe.phr", true, DocumentTypeFhirNDJSON},
 		{"testdata/fixtures/401-R4/phr-ndjson-jsonl/TimmySmart-FosterCareTimeline.phr", true, DocumentTypeFhirNDJSON},
+		{"testdata/fixtures/README.md", false, DocumentType("")},
 	}
 
 	for _, tt := range documentTypeTests {
