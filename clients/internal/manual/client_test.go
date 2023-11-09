@@ -11,6 +11,78 @@ import (
 	"testing"
 )
 
+func TestGetSourceClientManual_ExtractPatientId_Bundle(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/bundle/synthea_Tania553_Harris789_545c2380-b77f-4919-ab5d-0f615f877250.json")
+	require.NoError(t, err)
+
+	//test
+	resp, ver, err := client.ExtractPatientId(bundleFile)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, pkg.FhirVersion401, ver)
+	require.Equal(t, "57959813-8cd2-4e3c-8970-e4364b74980a", resp)
+}
+
+func TestGetSourceClientManual_ExtractPatientId_BundleIPS(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json")
+	require.NoError(t, err)
+
+	//test
+	resp, ver, err := client.ExtractPatientId(bundleFile)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, pkg.FhirVersion401, ver)
+	require.Equal(t, "2b90dd2b-2dab-4c75-9bb9-a355e07401e8", resp)
+}
+
+func TestGetSourceClientManual_ExtractPatientId_NDJSON(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/TimmySmart-FosterCareTimeline.phr")
+	require.NoError(t, err)
+
+	//test
+	resp, ver, err := client.ExtractPatientId(bundleFile)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, pkg.FhirVersion401, ver)
+	require.Equal(t, "12724069", resp)
+}
+
 func TestGetSourceClientManual_SyncAllBundle(t *testing.T) {
 	t.Parallel()
 	//setup
@@ -20,7 +92,7 @@ func TestGetSourceClientManual_SyncAllBundle(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(195+1).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(234).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
@@ -35,6 +107,90 @@ func TestGetSourceClientManual_SyncAllBundle(t *testing.T) {
 
 	//assert
 	require.Equal(t, 195+1, resp.TotalResources)
-	require.Equal(t, 195+1, len(resp.UpdatedResources))
+	require.Equal(t, 234, len(resp.UpdatedResources))
+	require.NoError(t, err)
+}
+
+func TestGetSourceClientManual_SyncAllBundle_IPS(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(234).Return(true, nil)
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json")
+	require.NoError(t, err)
+
+	//test
+	resp, err := client.SyncAllBundle(fakeDatabase, bundleFile, pkg.FhirVersion401)
+	require.NoError(t, err)
+
+	//assert
+	require.Equal(t, 20, resp.TotalResources)
+	require.Equal(t, 20, len(resp.UpdatedResources))
+	require.NoError(t, err)
+}
+
+func TestGetSourceClientManual_SyncAllBundle_NDJSON(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/TimmySmart-FosterCareTimeline.phr")
+	require.NoError(t, err)
+
+	//test
+	resp, err := client.SyncAllBundle(fakeDatabase, bundleFile, pkg.FhirVersion401)
+	require.NoError(t, err)
+
+	//assert
+	require.Equal(t, 123, resp.TotalResources)
+	require.Equal(t, 123, len(resp.UpdatedResources))
+	require.NoError(t, err)
+}
+
+func TestGetSourceClientManual_SyncAllBundle_NDJSON2(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/JohnDoe.phr")
+	require.NoError(t, err)
+
+	//test
+	resp, err := client.SyncAllBundle(fakeDatabase, bundleFile, pkg.FhirVersion401)
+	require.NoError(t, err)
+
+	//assert
+	require.Equal(t, 12, resp.TotalResources)
+	require.Equal(t, 12, len(resp.UpdatedResources))
 	require.NoError(t, err)
 }

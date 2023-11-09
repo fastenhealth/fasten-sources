@@ -35,6 +35,18 @@ func (m *MockDatabaseRepository) EXPECT() *MockDatabaseRepositoryMockRecorder {
 	return m.recorder
 }
 
+// BackgroundJobCheckpoint mocks base method.
+func (m *MockDatabaseRepository) BackgroundJobCheckpoint(ctx context.Context, checkpointData, errorData map[string]interface{}) {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "BackgroundJobCheckpoint", ctx, checkpointData, errorData)
+}
+
+// BackgroundJobCheckpoint indicates an expected call of BackgroundJobCheckpoint.
+func (mr *MockDatabaseRepositoryMockRecorder) BackgroundJobCheckpoint(ctx, checkpointData, errorData interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BackgroundJobCheckpoint", reflect.TypeOf((*MockDatabaseRepository)(nil).BackgroundJobCheckpoint), ctx, checkpointData, errorData)
+}
+
 // UpsertRawResource mocks base method.
 func (m *MockDatabaseRepository) UpsertRawResource(ctx context.Context, sourceCredentials models.SourceCredential, rawResource models.RawResourceFhir) (bool, error) {
 	m.ctrl.T.Helper()
