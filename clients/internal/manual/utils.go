@@ -3,19 +3,12 @@ package manual
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/fastenhealth/fasten-sources/pkg"
 	fhir401utils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"io"
 	"net/http"
 	"os"
 	"strings"
-)
-
-type DocumentType string
-
-const (
-	DocumentTypeCCDA       DocumentType = "CCDA"
-	DocumentTypeFhirBundle DocumentType = "FHIR_BUNDLE"
-	DocumentTypeFhirNDJSON DocumentType = "NDJSON"
 )
 
 /*
@@ -25,7 +18,7 @@ If the file is JSON, we'll determine if it's a FHIR bundle.
 If the file is NDJson, we'll parse the first entry to ensure it's a valid fhir resource.
 We can't depend on just http.DetectContentType because it doesn't detect the difference between JSON, NDJSON, FHIR, XML and CCDAs.
 */
-func GetFileDocumentType(file *os.File) (DocumentType, error) {
+func GetFileDocumentType(file *os.File) (pkg.DocumentType, error) {
 
 	// Only the first 512 bytes are used to sniff the content type.
 	buffer := make([]byte, 512)
@@ -46,10 +39,10 @@ func GetFileDocumentType(file *os.File) (DocumentType, error) {
 
 		//determine the content-type using buffer
 		if firstNonWS == len(buffer) {
-			return DocumentType(contentTypeParts[0]), fmt.Errorf("file is empty")
+			return pkg.DocumentType(contentTypeParts[0]), fmt.Errorf("file is empty")
 		} else if buffer[firstNonWS] == '<' {
 			//TODO: we should do some additional parsing to confirm
-			return DocumentTypeCCDA, nil
+			return pkg.DocumentTypeCCDA, nil
 		} else if buffer[firstNonWS] == '{' {
 			//reset file to beginning
 			file.Seek(0, io.SeekStart)
@@ -83,13 +76,13 @@ func GetFileDocumentType(file *os.File) (DocumentType, error) {
 			}
 
 			if containsFhirResource && documentCount > 1 {
-				return DocumentTypeFhirNDJSON, nil
+				return pkg.DocumentTypeFhirNDJSON, nil
 			} else if containsFhirResource && documentCount == 1 {
-				return DocumentTypeFhirBundle, nil
+				return pkg.DocumentTypeFhirBundle, nil
 			}
 		}
 	}
-	return DocumentType(contentTypeParts[0]), fmt.Errorf("unknown document type, content-type: %s", contentTypeParts[0])
+	return pkg.DocumentType(contentTypeParts[0]), fmt.Errorf("unknown document type, content-type: %s", contentTypeParts[0])
 }
 
 // isWhitespaceChar reports whether the provided byte is a whitespace byte (0xWS)

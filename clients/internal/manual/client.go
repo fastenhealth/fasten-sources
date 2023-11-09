@@ -2,15 +2,13 @@ package manual
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	fhir401utils "github.com/fastenhealth/gofhir-models/fhir401/utils"
-	"github.com/fastenhealth/gofhir-models/fhir430"
-	fhir430utils "github.com/fastenhealth/gofhir-models/fhir430/utils"
-	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
 	"io"
 	"net/http"
@@ -77,39 +75,27 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	//lookup table for bundle internal references -> relative references (used heavily by file Bundles)
 	internalFragmentReferenceLookup := map[string]string{}
 
-	switch bundleType {
-	case pkg.FhirVersion430:
-		bundle430Data := fhir430.Bundle{}
-		err := base.UnmarshalJson(bundleFile, &bundle430Data)
-		if err != nil {
-			return summary, fmt.Errorf("an error occurred while parsing 4.3.0 bundle: %w", err)
-		}
-		client, err := base.GetSourceClientFHIR430(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
-		if err != nil {
-			return summary, fmt.Errorf("an error occurred while creating 4.3.0 client: %w", err)
-		}
-		rawResourceList, err = client.ProcessBundle(bundle430Data)
-		if err != nil {
-			return summary, fmt.Errorf("an error occurred while processing 4.3.0 resources: %w", err)
-		}
+	//retrieve the FHIR client
+	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
+	if err != nil {
+		return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
+	}
 
-		//for _, apiModel := range rawResourceList {
-		//	err = client.ProcessResource(db, apiModel, lookupResourceReferences, &summary)
-		//	if err != nil {
-		//		syncErrors[apiModel.SourceResourceType] = err
-		//		continue
-		//	}
-		//}
-	case pkg.FhirVersion401:
+	//parse the document
+	documentType, err := GetFileDocumentType(bundleFile)
+	if err != nil {
+		return summary, err
+	}
+	m.Logger.Infof("Begin processing document: %s", documentType)
+	switch documentType {
+	case pkg.DocumentTypeFhirBundle:
+
 		bundle401Data := fhir401.Bundle{}
 		err := base.UnmarshalJson(bundleFile, &bundle401Data)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while parsing 4.0.1 bundle: %w", err)
 		}
-		client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
-		if err != nil {
-			return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
-		}
+
 		rawResourceList, internalFragmentReferenceLookup, err = client.ProcessBundle(bundle401Data)
 		if err != nil {
 			return summary, fmt.Errorf("an error occurred while processing 4.0.1 resources: %w", err)
@@ -123,8 +109,53 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 			}
 		}
 
+	case pkg.DocumentTypeFhirNDJSON:
+		d := json.NewDecoder(bundleFile)
+		counter := 0
+		for {
+
+			var resource json.RawMessage
+			err := d.Decode(&resource)
+			if err != nil {
+				// io.EOF is expected at end of stream.
+				if err == io.EOF {
+					break //we're done
+				} else {
+					continue //skip this document, invalid json
+				}
+			}
+
+			resourceObj, err := fhir401utils.MapToResource(resource, false)
+			if err != nil {
+				syncErrors[fmt.Sprintf("index: %d", counter)] = err
+				continue
+			}
+
+			resourceObjTyped := resourceObj.(models.ResourceInterface)
+			resourceType, resourceId := resourceObjTyped.ResourceRef()
+			if resourceId == nil {
+				syncErrors[fmt.Sprintf("%s (index: %d)", resourceType, counter)] = fmt.Errorf("resource ID is nil, skipping")
+				continue
+			}
+
+			apiModel := models.RawResourceFhir{
+				SourceResourceID:   *resourceId,
+				SourceResourceType: resourceType,
+				ResourceRaw:        resource,
+			}
+			rawResourceList = append(rawResourceList, apiModel)
+			err = client.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			if err != nil {
+				syncErrors[apiModel.SourceResourceType] = err
+				continue
+			}
+
+			counter += 1
+		}
 	}
 	summary.TotalResources = len(rawResourceList)
+
+	m.Logger.Infof("Completed document processing: %d resources", summary.TotalResources)
 
 	if len(syncErrors) > 0 {
 		//TODO: ignore errors.
@@ -134,29 +165,18 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 }
 
 func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
-	// TODO: find a way to correctly detect bundle version
-
-	bundleType := pkg.FhirVersion401
-	patientIds, err := parse401Bundle(bundleFile)
-	bundleFile.Seek(0, io.SeekStart)
-
-	//fallback to 430 bundle
-	if err != nil || patientIds == nil || len(patientIds) == 0 {
-		bundleType = pkg.FhirVersion430
-
-		patientIds, err = parse430Bundle(bundleFile)
-		bundleFile.Seek(0, io.SeekStart)
-
-	}
+	documentType, err := GetFileDocumentType(bundleFile)
 	if err != nil {
-		//failed to parse the bundle as 401 and 430, return an error
-		return "", "", fmt.Errorf("could not determine bundle version: %v", err)
-	} else if patientIds == nil || len(patientIds) == 0 {
-		return "", "", fmt.Errorf("could not determine patient id")
-	} else {
-		//reset reader
+		return "", pkg.FhirVersion401, err
+	}
 
-		return strings.TrimLeft(patientIds[0], "Patient/"), bundleType, nil
+	switch documentType {
+	case pkg.DocumentTypeFhirBundle:
+		return extractPatientIdBundle(bundleFile)
+	case pkg.DocumentTypeFhirNDJSON:
+		return extractPatientIdNDJson(bundleFile)
+	default:
+		return "", pkg.FhirVersion401, fmt.Errorf("unsupported document type: %s", documentType)
 	}
 }
 
@@ -169,52 +189,6 @@ func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context,
 	}, nil
 }
 
-//TODO: find a better, more generic way to do this.
-
-func parse401Bundle(bundleFile *os.File) ([]string, error) {
-	bundle401Data := fhir401.Bundle{}
-	//try parsing the bundle as a 401 bundle
-	if err := base.UnmarshalJson(bundleFile, &bundle401Data); err == nil {
-		patientIds := lo.FilterMap[fhir401.BundleEntry, string](bundle401Data.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (string, bool) {
-			parsedResource, err := fhir401utils.MapToResource(bundleEntry.Resource, false)
-			if err != nil {
-				return "", false
-			}
-			typedResource := parsedResource.(models.ResourceInterface)
-			resourceType, resourceId := typedResource.ResourceRef()
-
-			if resourceId == nil || len(*resourceId) == 0 {
-				return "", false
-			}
-			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
-		})
-
-		return patientIds, nil
-	} else {
-		return nil, err
-	}
-
-}
-
-func parse430Bundle(bundleFile *os.File) ([]string, error) {
-	bundle430Data := fhir430.Bundle{}
-	//try parsing the bundle as a 430 bundle
-	if err := base.UnmarshalJson(bundleFile, &bundle430Data); err == nil {
-		patientIds := lo.FilterMap[fhir430.BundleEntry, string](bundle430Data.Entry, func(bundleEntry fhir430.BundleEntry, _ int) (string, bool) {
-			parsedResource, err := fhir430utils.MapToResource(bundleEntry.Resource, false)
-			if err != nil {
-				return "", false
-			}
-			typedResource := parsedResource.(models.ResourceInterface)
-			resourceType, resourceId := typedResource.ResourceRef()
-
-			if resourceId == nil || len(*resourceId) == 0 {
-				return "", false
-			}
-			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
-		})
-		return patientIds, nil
-	} else {
-		return nil, err
-	}
+func cleanPatientIdPrefix(patientId string) string {
+	return strings.TrimLeft(patientId, "Patient/")
 }
