@@ -21,10 +21,10 @@ func GetSourceUnitedhealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.UserInfoEndpoint = "https://sandbox.authz.flex.optum.com/userinfo"
 
 	sourceDef.Issuer = "https://sandbox.fhir.flex.optum.com/R4"
-	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/Condition.read", "patient/Coverage.read", "patient/Encounter.read", "patient/ExplanationOfBenefit.read", "patient/Immunization.read", "patient/MedicationDispense.read", "patient/MedicationRequest.read", "patient/Observation.read", "patient/Patient.read", "patient/Procedure.read", "public/Endpoint.read", "public/HealthcareService.read", "public/InsurancePlan.read", "public/Location.read", "public/Network.read", "public/Organization.read", "public/OrganizationAffiliation.read", "public/Practitioner.read", "public/PractitionerRole.read"}
+	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/Condition.read", "patient/Coverage.read", "patient/Encounter.read", "patient/ExplanationOfBenefit.read", "patient/Immunization.read", "patient/MedicationDispense.read", "patient/MedicationRequest.read", "patient/Observation.read", "patient/Patient.read", "patient/Procedure.read", "profile"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
-	sourceDef.ResponseModesSupported = []string{"query"}
+	sourceDef.ResponseModesSupported = []string{"fragment", "query"}
 	sourceDef.Audience = "https://sandbox.fhir.flex.optum.com/R4"
 	sourceDef.CodeChallengeMethodsSupported = []string{"S256"}
 

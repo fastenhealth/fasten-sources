@@ -30,11 +30,9 @@ func GetSourceClientUnitedhealthcare(env pkg.FastenLighthouseEnvType, ctx contex
 	return sourceClientUnitedhealthcare{baseClient}, err
 }
 
-// Operation-PatientEverything uses non-standard endpoint - https://build.fhir.org/operation-patient-everything.html
+// Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
+// Manually processing individual resources
 func (c sourceClientUnitedhealthcare) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
-	bundle, err := c.GetResourceBundle("Patient")
-	if err != nil {
-		return models.UpsertSummary{UpdatedResources: []string{}}, err
-	}
-	return c.SyncAllByPatientEverythingBundle(db, bundle)
+	supportedResources := append(c.GetUsCoreResources(), []string{"MedicationDispense"}...)
+	return c.SyncAllByResourceName(db, supportedResources)
 }
