@@ -42,7 +42,7 @@ func GetSourceMedicare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeMedicare
 	sourceDef.Category = []string{"Insurance"}
 	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://sandbox.bluebutton.cms.gov/"
+	sourceDef.PatientAccessUrl = "https://www.medicare.gov"
 
 	return sourceDef, nil
 }
