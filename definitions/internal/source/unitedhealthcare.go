@@ -28,11 +28,12 @@ func GetSourceUnitedhealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeUnitedhealthcare]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeUnitedhealthcare))
 
 	sourceDef.Display = "United Healthcare"
 	sourceDef.SourceType = pkg.SourceTypeUnitedhealthcare
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"uhc"}
 	sourceDef.PatientAccessUrl = "https://www.uhc.com"
 
 	return sourceDef, err

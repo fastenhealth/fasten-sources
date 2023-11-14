@@ -32,7 +32,7 @@ func GetSourceSierrahealthandlife(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Display = "Sierra Health and Life"
 	sourceDef.SourceType = pkg.SourceTypeSierrahealthandlife
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"sierra"}
 	sourceDef.PatientAccessUrl = "https://www.sierrahealthandlife.com/"
 
 	return sourceDef, err

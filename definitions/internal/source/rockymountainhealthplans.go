@@ -32,7 +32,7 @@ func GetSourceRockymountainhealthplans(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Display = "Rocky Mountain Health Plans"
 	sourceDef.SourceType = pkg.SourceTypeRockymountainhealthplans
 	sourceDef.Category = []string{"Insurance"}
-	sourceDef.Aliases = []string{}
+	sourceDef.Aliases = []string{"rmhp"}
 	sourceDef.PatientAccessUrl = "https://www.rmhp.org/"
 
 	return sourceDef, err
