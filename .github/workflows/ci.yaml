@@ -43,6 +43,7 @@ jobs:
           fail_ci_if_error: true
           verbose: true
   docker:
+    if: always()
     runs-on: ubuntu-latest
     permissions:
       contents: read
