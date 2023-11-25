@@ -23,6 +23,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 	case pkg.SourceTypeManual:
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// platform
+	case pkg.SourceTypeAdvancedmdSandbox:
+		return platform.GetSourceClientAdvancedmdSandbox(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAetna:
 		return platform.GetSourceClientAetna(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	case pkg.SourceTypeAllscripts:

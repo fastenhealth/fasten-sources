@@ -10,6 +10,7 @@ type SourceType string
 const (
 	SourceTypeManual SourceType = "manual"
 	// platform
+	SourceTypeAdvancedmdSandbox       SourceType = "advancedmd-sandbox"
 	SourceTypeAetna                   SourceType = "aetna"
 	SourceTypeAllscripts              SourceType = "allscripts"
 	SourceTypeAthena                  SourceType = "athena"
