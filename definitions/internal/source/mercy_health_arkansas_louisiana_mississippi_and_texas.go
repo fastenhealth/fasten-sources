@@ -13,10 +13,9 @@ import (
 
 // https://epic-fhir.mercy.net/prdfhirstl/api/FHIR/R4/metadata
 func GetSourceMercyHealthArkansasLouisianaMississippiAndTexas(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir.mercy.net/prdfhirstl/api/FHIR/R4"
 
@@ -25,13 +24,13 @@ func GetSourceMercyHealthArkansasLouisianaMississippiAndTexas(env pkg.FastenLigh
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeMercyHealthArkansasLouisianaMississippiAndTexas]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Mercy Health (Arkansas, Louisiana, Mississippi and Texas)"
 	sourceDef.SourceType = pkg.SourceTypeMercyHealthArkansasLouisianaMississippiAndTexas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

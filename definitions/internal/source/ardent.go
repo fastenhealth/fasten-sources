@@ -13,10 +13,9 @@ import (
 
 // https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4/metadata
 func GetSourceArdent(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://epicproxy.ardenthealth.com/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.ardenthealth.com/fhir/api/FHIR/R4"
 
@@ -25,13 +24,13 @@ func GetSourceArdent(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeArdent]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Ardent"
 	sourceDef.SourceType = pkg.SourceTypeArdent
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

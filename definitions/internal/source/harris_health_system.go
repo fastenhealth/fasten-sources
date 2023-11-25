@@ -13,10 +13,9 @@ import (
 
 // https://fhir.harrishealth.org/fhir/api/FHIR/R4/metadata
 func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://fhir.harrishealth.org/fhir/oauth2/register"
 
 	sourceDef.Audience = "https://fhir.harrishealth.org/fhir/api/FHIR/R4"
 
@@ -25,7 +24,7 @@ func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeHarrisHealthSystem]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Harris Health System"
 	sourceDef.SourceType = pkg.SourceTypeHarrisHealthSystem
@@ -34,7 +33,7 @@ func GetSourceHarrisHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538833231"}}
 	sourceDef.BrandLogo = "harris-health-system.jpg"
 	sourceDef.PatientAccessUrl = "https://www.harrishealth.org/"
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

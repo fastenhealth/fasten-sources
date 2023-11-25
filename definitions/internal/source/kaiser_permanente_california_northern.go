@@ -16,7 +16,6 @@ func GetSourceKaiserPermanenteCaliforniaNorthern(env pkg.FastenLighthouseEnvType
 	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/320/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/320/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/320/oauth2/register"
 
 	sourceDef.Audience = "https://FHIR.KP.ORG/service/ptnt_care/EpicEdiFhirRoutingSvc/v2014/esb-envlbl/312/api/FHIR/R4"
 
@@ -31,7 +30,7 @@ func GetSourceKaiserPermanenteCaliforniaNorthern(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeKaiserPermanenteCaliforniaNorthern
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

@@ -13,10 +13,9 @@ import (
 
 // https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/api/FHIR/R4/metadata
 func GetSourceRiverviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/oauth2/register"
 
 	sourceDef.Audience = "https://epic-fhir.mercy.net/PRDFHIRSTL/RVH/api/FHIR/R4"
 
@@ -25,14 +24,14 @@ func GetSourceRiverviewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeRiverviewHealth]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Riverview Health"
 	sourceDef.SourceType = pkg.SourceTypeRiverviewHealth
 	sourceDef.Category = []string{"261QR1300X", "273Y00000X", "282N00000X", "333600000X", "3336C0003X", "3336I0012X", "3336L0003X", "363LF0000X"}
 	sourceDef.Aliases = []string{"RIVERVIEW HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083763650", "1225275928", "1255688370", "1316945066", "1386309185"}}
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

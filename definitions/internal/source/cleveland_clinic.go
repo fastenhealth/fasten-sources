@@ -13,10 +13,9 @@ import (
 
 // https://api.ccf.org/mu/api/FHIR/R4/metadata
 func GetSourceClevelandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
+	sourceDef, err := platform.GetSourceEpicLegacy(env, clientIdLookup)
 	sourceDef.AuthorizationEndpoint = "https://api.ccf.org/mu/oauth2/authorize"
 	sourceDef.TokenEndpoint = "https://api.ccf.org/mu/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://api.ccf.org/mu/oauth2/register"
 
 	sourceDef.Audience = "https://api.ccf.org/mu/api/FHIR/R4"
 
@@ -25,14 +24,14 @@ func GetSourceClevelandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	if clientId, clientIdOk := clientIdLookup[pkg.SourceTypeClevelandClinic]; clientIdOk {
 		sourceDef.ClientId = clientId
 	}
-	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpic))
+	sourceDef.RedirectUri = pkg.GetCallbackEndpoint(string(pkg.SourceTypeEpicLegacy))
 
 	sourceDef.Display = "Cleveland Clinic"
 	sourceDef.SourceType = pkg.SourceTypeClevelandClinic
 	sourceDef.Category = []string{"1835P2201X", "261Q00000X", "261QP2000X", "281P00000X", "282N00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053563767", "1104099217", "1275791162", "1336316389", "1356508964", "1487102679", "1558319491", "1629255575", "1841616752", "1962837658"}}
-	sourceDef.SecretKeyPrefix = "epic"
+	sourceDef.SecretKeyPrefix = "epic-legacy"
 
 	return sourceDef, err
 }

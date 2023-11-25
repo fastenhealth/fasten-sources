@@ -14,9 +14,9 @@ import (
 // https://epicproxy.bswhealth.org/FHIR-PRD/BSW/api/FHIR/R4/metadata
 func GetSourceBaylorScottAndWhite(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
 	sourceDef, err := platform.GetSourceEpic(env, clientIdLookup)
-	sourceDef.AuthorizationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/authorize"
-	sourceDef.TokenEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/token"
-	sourceDef.RegistrationEndpoint = "https://rxproxy.sw.org/FHIR-PRD/BSW/oauth2/register"
+	sourceDef.AuthorizationEndpoint = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/oauth2/authorize"
+	sourceDef.TokenEndpoint = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/oauth2/token"
+	sourceDef.RegistrationEndpoint = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/oauth2/register"
 
 	sourceDef.Audience = "https://epicproxy.bswhealth.org/FHIR-PRD/BSW/api/FHIR/R4"
 
