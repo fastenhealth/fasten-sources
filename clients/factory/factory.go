@@ -8,6 +8,7 @@ package factory
 import (
 	"context"
 	"fmt"
+	fasten "github.com/fastenhealth/fasten-sources/clients/internal/fasten"
 	manual "github.com/fastenhealth/fasten-sources/clients/internal/manual"
 	platform "github.com/fastenhealth/fasten-sources/clients/internal/platform"
 	sandbox "github.com/fastenhealth/fasten-sources/clients/internal/sandbox"
@@ -22,6 +23,8 @@ func GetSourceClient(env pkg.FastenLighthouseEnvType, sourceType pkg.SourceType,
 	switch sourceType {
 	case pkg.SourceTypeManual:
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+	case pkg.SourceTypeFasten:
+		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	// platform
 	case pkg.SourceTypeAdvancedmdSandbox:
 		return platform.GetSourceClientAdvancedmdSandbox(env, ctx, globalLogger, sourceCreds, testHttpClient...)

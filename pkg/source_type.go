@@ -9,6 +9,7 @@ type SourceType string
 
 const (
 	SourceTypeManual SourceType = "manual"
+	SourceTypeFasten SourceType = "fasten"
 	// platform
 	SourceTypeAdvancedmdSandbox       SourceType = "advancedmd-sandbox"
 	SourceTypeAetna                   SourceType = "aetna"
