@@ -61,3 +61,17 @@ func (mr *MockDatabaseRepositoryMockRecorder) UpsertRawResource(ctx, sourceCrede
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpsertRawResource", reflect.TypeOf((*MockDatabaseRepository)(nil).UpsertRawResource), ctx, sourceCredentials, rawResource)
 }
+
+// UpsertRawResourceAssociation mocks base method.
+func (m *MockDatabaseRepository) UpsertRawResourceAssociation(ctx context.Context, sourceId, sourceResourceType, sourceResourceId, targetSourceId, targetResourceType, targetResourceId string) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpsertRawResourceAssociation", ctx, sourceId, sourceResourceType, sourceResourceId, targetSourceId, targetResourceType, targetResourceId)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// UpsertRawResourceAssociation indicates an expected call of UpsertRawResourceAssociation.
+func (mr *MockDatabaseRepositoryMockRecorder) UpsertRawResourceAssociation(ctx, sourceId, sourceResourceType, sourceResourceId, targetSourceId, targetResourceType, targetResourceId interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpsertRawResourceAssociation", reflect.TypeOf((*MockDatabaseRepository)(nil).UpsertRawResourceAssociation), ctx, sourceId, sourceResourceType, sourceResourceId, targetSourceId, targetResourceType, targetResourceId)
+}

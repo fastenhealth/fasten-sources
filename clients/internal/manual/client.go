@@ -108,7 +108,73 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 				continue
 			}
 		}
+	case pkg.DocumentTypeFhirList:
+		list401Data := fhir401.List{}
+		err := base.UnmarshalJson(bundleFile, &list401Data)
+		if err != nil {
+			return summary, fmt.Errorf("an error occurred while parsing 4.0.1 list: %w", err)
+		}
 
+		//find the encounter reference
+		if list401Data.Encounter == nil || list401Data.Encounter.Reference == nil || *list401Data.Encounter.Reference == "" {
+			return summary, fmt.Errorf("list does not contain an encounter reference")
+		}
+		var encounterSourceId, encounterResourceType, encounterResourceId string
+		encounterSourceId, encounterResourceType, encounterResourceId, err = pkg.ParseReferenceUri(list401Data.Encounter.Reference)
+		if err != nil {
+			referenceParts := strings.Split(*list401Data.Encounter.Reference, "/")
+
+			if len(referenceParts) == 2 {
+				encounterSourceId = m.SourceCredential.GetSourceId()
+				encounterResourceType = referenceParts[0]
+				encounterResourceId = referenceParts[1]
+			} else {
+				return summary, fmt.Errorf("an error occurred while parsing encounter reference: %w", err)
+			}
+		}
+
+		//loop though all the contained resources, and process them
+		for ndx, contained := range list401Data.Contained {
+			//attempt to parse the FHIR Resource
+			apiModel, err := wrapFhir401JsonToRawResource(contained)
+			if err != nil {
+				syncErrors[fmt.Sprintf("contained index: %d", ndx)] = err
+				continue
+			}
+
+			rawResourceList = append(rawResourceList, *apiModel)
+			err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			if err != nil {
+				syncErrors[apiModel.SourceResourceType] = err
+				continue
+			}
+		}
+
+		//loop though all the entries (references), and process them
+		for ndx, entry := range list401Data.Entry {
+			//parse the Reference
+
+			entrySourceId, entryResourceType, entryResourceId, err := pkg.ParseReferenceUri(entry.Item.Reference)
+			if err != nil {
+				syncErrors[fmt.Sprintf("reference (%s)", ndx)] = err
+				continue
+			}
+
+			err = db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, entrySourceId, entryResourceType, entryResourceId)
+			if err != nil {
+				syncErrors[fmt.Sprintf("reference association (%s)", ndx)] = err
+				continue
+			}
+		}
+
+		summary.TotalResources = len(rawResourceList)
+		m.Logger.Infof("Completed document processing: %d resources", summary.TotalResources)
+
+		if len(syncErrors) > 0 {
+			//TODO: ignore errors.
+			m.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+		}
+		return summary, nil
 	case pkg.DocumentTypeFhirNDJSON:
 		d := json.NewDecoder(bundleFile)
 		counter := 0
@@ -125,32 +191,22 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 				}
 			}
 
-			resourceObj, err := fhir401utils.MapToResource(resource, false)
+			//attempt to parse the FHIR Resource
+			apiModel, err := wrapFhir401JsonToRawResource(resource)
 			if err != nil {
 				syncErrors[fmt.Sprintf("index: %d", counter)] = err
 				continue
 			}
 
-			resourceObjTyped := resourceObj.(models.ResourceInterface)
-			resourceType, resourceId := resourceObjTyped.ResourceRef()
-			if resourceId == nil {
-				syncErrors[fmt.Sprintf("%s (index: %d)", resourceType, counter)] = fmt.Errorf("resource ID is nil, skipping")
-				continue
-			}
-
-			apiModel := models.RawResourceFhir{
-				SourceResourceID:   *resourceId,
-				SourceResourceType: resourceType,
-				ResourceRaw:        resource,
-			}
-			rawResourceList = append(rawResourceList, apiModel)
-			err = client.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			rawResourceList = append(rawResourceList, *apiModel)
+			err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[apiModel.SourceResourceType] = err
 				continue
 			}
 
 			counter += 1
+
 		}
 	}
 	summary.TotalResources = len(rawResourceList)
@@ -191,4 +247,24 @@ func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context,
 
 func cleanPatientIdPrefix(patientId string) string {
 	return strings.TrimLeft(patientId, "Patient/")
+}
+
+func wrapFhir401JsonToRawResource(jsonResource json.RawMessage) (*models.RawResourceFhir, error) {
+	resourceObj, err := fhir401utils.MapToResource(jsonResource, false)
+	if err != nil {
+		return nil, err
+	}
+
+	resourceObjTyped := resourceObj.(models.ResourceInterface)
+	resourceType, resourceId := resourceObjTyped.ResourceRef()
+	if resourceId == nil {
+		return nil, fmt.Errorf("resource ID is nil, skipping")
+	}
+
+	return &models.RawResourceFhir{
+		SourceResourceID:   *resourceId,
+		SourceResourceType: resourceType,
+		ResourceRaw:        jsonResource,
+	}, nil
+
 }

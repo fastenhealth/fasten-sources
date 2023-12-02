@@ -146,6 +146,20 @@ func (mr *MockSourceCredentialMockRecorder) GetRefreshToken() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRefreshToken", reflect.TypeOf((*MockSourceCredential)(nil).GetRefreshToken))
 }
 
+// GetSourceId mocks base method.
+func (m *MockSourceCredential) GetSourceId() string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSourceId")
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+// GetSourceId indicates an expected call of GetSourceId.
+func (mr *MockSourceCredentialMockRecorder) GetSourceId() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceId", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceId))
+}
+
 // GetSourceType mocks base method.
 func (m *MockSourceCredential) GetSourceType() pkg.SourceType {
 	m.ctrl.T.Helper()

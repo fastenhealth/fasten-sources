@@ -2,9 +2,11 @@ package models
 
 import "github.com/fastenhealth/fasten-sources/pkg"
 
+// this is actually an interface to a pointer receiver
+//
 //go:generate mockgen -source=source_credential.go -destination=mock/mock_source_credential.go
-//this is actually an interface to a pointer receiver
 type SourceCredential interface {
+	GetSourceId() string
 	GetSourceType() pkg.SourceType
 	GetClientId() string
 	GetPatientId() string

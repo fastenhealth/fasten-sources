@@ -87,6 +87,8 @@ func GetFileDocumentType(file *os.File) (pkg.DocumentType, error) {
 				primaryResourceType, _ := parsedResource.ResourceRef()
 				if primaryResourceType == "Bundle" {
 					return pkg.DocumentTypeFhirBundle, nil
+				} else if primaryResourceType == "List" {
+					return pkg.DocumentTypeFhirList, nil
 				} else {
 					return pkg.DocumentType("unknown"), fmt.Errorf("unknown FHIR Resource collection type: %s", primaryResourceType)
 				}
