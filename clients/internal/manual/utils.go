@@ -3,6 +3,7 @@ package manual
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	fhir401utils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"io"
@@ -50,6 +51,7 @@ func GetFileDocumentType(file *os.File) (pkg.DocumentType, error) {
 			//this is 1 or more json documents
 			documentCount := 0
 			containsFhirResource := false
+			var parsedResource models.ResourceInterface
 			d := json.NewDecoder(file)
 			for {
 
@@ -66,10 +68,14 @@ func GetFileDocumentType(file *os.File) (pkg.DocumentType, error) {
 
 				//we have a valid json document, lets check if it's a FHIR resource
 				if !containsFhirResource {
-					_, err := fhir401utils.MapToResource(resource, false)
+					unknownResource, err := fhir401utils.MapToResource(resource, false)
 					if err == nil {
 						containsFhirResource = true
 					}
+					if castedResource, ok := unknownResource.(models.ResourceInterface); ok {
+						parsedResource = castedResource
+					}
+
 				}
 
 				documentCount++
@@ -77,8 +83,14 @@ func GetFileDocumentType(file *os.File) (pkg.DocumentType, error) {
 
 			if containsFhirResource && documentCount > 1 {
 				return pkg.DocumentTypeFhirNDJSON, nil
-			} else if containsFhirResource && documentCount == 1 {
-				return pkg.DocumentTypeFhirBundle, nil
+			} else if containsFhirResource && documentCount == 1 && parsedResource != nil {
+				primaryResourceType, _ := parsedResource.ResourceRef()
+				if primaryResourceType == "Bundle" {
+					return pkg.DocumentTypeFhirBundle, nil
+				} else {
+					return pkg.DocumentType("unknown"), fmt.Errorf("unknown FHIR Resource collection type: %s", primaryResourceType)
+				}
+
 			}
 		}
 	}

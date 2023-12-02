@@ -403,7 +403,7 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 	//
 	// - an absolute URL
 	// - a relative URL, which is relative to the Service Base URL, or, if processing a resource from a bundle, which is relative to the base URL implied by the Bundle.entry.fullUrl (see Resolving References in Bundles)
-	// - an internal fragment reference (see "Contained Resources" below) -- eg. urn:uuid:c088b7af-fc41-43cc-ab80-4a9ab8d47cd9
+	// - an internal fragment reference (see "Contained Resources" below) -- eg. urn:uuid:c088b7af-fc41-43cc-ab80-4a9ab8d47cd9 or #c088b7af-fc41-43cc-ab80-4a9ab8d47cd9
 	//
 	// this last case is complicated, so we'll create a internal -> relative map that we can use when we find `urn:uuid:` references.
 	internalFragmentReferenceLookup := map[string]string{}
@@ -418,7 +418,7 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 			return models.RawResourceFhir{}, false
 		}
 
-		if bundleEntry.FullUrl != nil && strings.HasPrefix(*bundleEntry.FullUrl, "urn:uuid:") {
+		if bundleEntry.FullUrl != nil && (strings.HasPrefix(*bundleEntry.FullUrl, "urn:uuid:") || strings.HasPrefix(*bundleEntry.FullUrl, "#")) {
 			internalFragmentReferenceLookup[*bundleEntry.FullUrl] = fmt.Sprintf("%s/%s", resourceType, *resourceId)
 		}
 
