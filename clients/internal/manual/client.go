@@ -156,13 +156,13 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 
 			entrySourceId, entryResourceType, entryResourceId, err := pkg.ParseReferenceUri(entry.Item.Reference)
 			if err != nil {
-				syncErrors[fmt.Sprintf("reference (%s)", ndx)] = err
+				syncErrors[fmt.Sprintf("reference (%d)", ndx)] = err
 				continue
 			}
 
 			err = db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, entrySourceId, entryResourceType, entryResourceId)
 			if err != nil {
-				syncErrors[fmt.Sprintf("reference association (%s)", ndx)] = err
+				syncErrors[fmt.Sprintf("reference association (%d)", ndx)] = err
 				continue
 			}
 		}

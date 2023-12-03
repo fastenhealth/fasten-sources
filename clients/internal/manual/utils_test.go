@@ -30,7 +30,7 @@ func TestGetFileDocumentType(t *testing.T) {
 		//test
 		contentType, err := GetFileDocumentType(file)
 		if tt.expectedSuccess {
-			require.NoError(t, err)
+			require.NoError(t, err, "fixture: %s", tt.fixturePath)
 			require.Equal(t, contentType, tt.expectedDocumentType, "fixture: %s", tt.fixturePath)
 		} else {
 			require.Error(t, err, "fixture: %s", tt.fixturePath)
