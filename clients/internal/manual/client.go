@@ -148,6 +148,15 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 				syncErrors[apiModel.SourceResourceType] = err
 				continue
 			}
+
+			if apiModel.ReferencedResources == nil || len(apiModel.ReferencedResources) == 0 {
+				//if the created resources do not have any referenced resources, lets add the association to the encounter
+				err = db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, m.SourceCredential.GetSourceId(), apiModel.SourceResourceType, apiModel.SourceResourceID)
+				if err != nil {
+					syncErrors[fmt.Sprintf("contained association (%d)", ndx)] = err
+					continue
+				}
+			}
 		}
 
 		//loop though all the entries (references), and process them
