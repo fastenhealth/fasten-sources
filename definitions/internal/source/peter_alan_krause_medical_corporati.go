@@ -30,6 +30,7 @@ func GetSourcePeterAlanKrauseMedicalCorporati(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypePeterAlanKrauseMedicalCorporati
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dockrause.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

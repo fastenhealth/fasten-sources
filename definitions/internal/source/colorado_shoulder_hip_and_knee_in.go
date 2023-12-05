@@ -30,6 +30,7 @@ func GetSourceColoradoShoulderHipAndKneeIn(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeColoradoShoulderHipAndKneeIn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ryancarrmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

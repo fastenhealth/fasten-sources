@@ -30,6 +30,7 @@ func GetSourceA3BAcceptanceBelievingbonding(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeA3BAcceptanceBelievingbonding
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://a3b.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

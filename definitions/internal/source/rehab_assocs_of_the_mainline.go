@@ -30,6 +30,7 @@ func GetSourceRehabAssocsOfTheMainline(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeRehabAssocsOfTheMainline
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ramldoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

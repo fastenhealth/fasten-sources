@@ -30,6 +30,7 @@ func GetSourceGardnerMdPcAndHamantMdPc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeGardnerMdPcAndHamantMdPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mhamantmd.com/default.aspx"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

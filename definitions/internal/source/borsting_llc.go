@@ -31,6 +31,7 @@ func GetSourceBorstingLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"208200000X"}
 	sourceDef.Aliases = []string{"BORSTING LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780300954"}}
+	sourceDef.PatientAccessUrl = "https://www.borstingmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

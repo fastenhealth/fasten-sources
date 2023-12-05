@@ -30,6 +30,7 @@ func GetSourceYavapaiFamilyMedical(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeYavapaiFamilyMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.yavmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

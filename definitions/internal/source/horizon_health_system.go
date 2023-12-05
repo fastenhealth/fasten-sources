@@ -30,6 +30,7 @@ func GetSourceHorizonHealthSystem(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHorizonHealthSystem
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.HORIZONHEALTHSYSTEM.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

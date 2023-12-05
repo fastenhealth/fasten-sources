@@ -31,6 +31,7 @@ func GetSourceMediproHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417419490"}}
+	sourceDef.PatientAccessUrl = "http://www.mediprohealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

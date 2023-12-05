@@ -30,6 +30,7 @@ func GetSourceWayfinderWellnessPhysicalThera(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeWayfinderWellnessPhysicalThera
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wayfindervt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

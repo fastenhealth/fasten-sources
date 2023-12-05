@@ -31,6 +31,7 @@ func GetSourceMountainViewHealthPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568087005"}}
+	sourceDef.PatientAccessUrl = "http://www.mtviewhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

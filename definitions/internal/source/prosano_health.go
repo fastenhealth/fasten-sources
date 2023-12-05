@@ -30,6 +30,7 @@ func GetSourceProsanoHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeProsanoHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.prosanohealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

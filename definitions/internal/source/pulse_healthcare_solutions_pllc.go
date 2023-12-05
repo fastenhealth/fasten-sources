@@ -31,6 +31,7 @@ func GetSourcePulseHealthcareSolutionsPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QM0801X", "261QM1300X", "363LP0808X"}
 	sourceDef.Aliases = []string{"PULSE HEALTHCARE SOLUTIONS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962096487"}}
+	sourceDef.PatientAccessUrl = "http://Pulsehcs.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

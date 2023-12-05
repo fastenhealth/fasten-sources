@@ -30,6 +30,7 @@ func GetSourceWinfieldFamilyMedicinellc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeWinfieldFamilyMedicinellc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.winfieldfamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

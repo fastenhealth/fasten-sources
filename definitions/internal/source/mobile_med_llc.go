@@ -30,6 +30,7 @@ func GetSourceMobileMedLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeMobileMedLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.MOBILEMED614.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

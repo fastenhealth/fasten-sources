@@ -30,6 +30,7 @@ func GetSourceWomensWellnessPlace(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeWomensWellnessPlace
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://thewomenswellnessplace.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

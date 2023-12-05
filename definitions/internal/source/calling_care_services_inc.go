@@ -31,6 +31,7 @@ func GetSourceCallingCareServicesInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Aliases = []string{"VIVIA HEALTH ROGERS PARK"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538884283"}}
+	sourceDef.PatientAccessUrl = "http://viviahealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceRaoCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QC1500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972143394"}}
+	sourceDef.PatientAccessUrl = "http://raoassist.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

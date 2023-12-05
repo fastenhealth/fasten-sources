@@ -30,6 +30,7 @@ func GetSourceVarkeyMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeVarkeyMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.varkeymedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

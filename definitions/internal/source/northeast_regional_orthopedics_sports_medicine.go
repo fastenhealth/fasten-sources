@@ -30,6 +30,7 @@ func GetSourceNortheastRegionalOrthopedicsSportsMedicine(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypeNortheastRegionalOrthopedicsSportsMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kirksvilledocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

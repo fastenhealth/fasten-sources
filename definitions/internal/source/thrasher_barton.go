@@ -30,6 +30,7 @@ func GetSourceThrasherBarton(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeThrasherBarton
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thrasherclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCasanovaPhysicalTherapyLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeCasanovaPhysicalTherapyLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.casanovapt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

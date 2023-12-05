@@ -31,6 +31,7 @@ func GetSourcePediatricDirectCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"104100000X", "163W00000X", "171M00000X", "2080A0000X", "224Z00000X", "225100000X", "225200000X", "225X00000X", "235Z00000X", "251J00000X", "252Y00000X", "261Q00000X", "261QE0002X", "363L00000X", "363LP0200X"}
 	sourceDef.Aliases = []string{"PEDIATRIC DIRECT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154957942"}}
+	sourceDef.PatientAccessUrl = "http://www.pediatricdirectcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

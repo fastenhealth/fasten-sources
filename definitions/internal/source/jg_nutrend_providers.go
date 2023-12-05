@@ -30,6 +30,7 @@ func GetSourceJgNutrendProviders(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeJgNutrendProviders
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trendhealthclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

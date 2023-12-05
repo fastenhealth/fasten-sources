@@ -30,6 +30,7 @@ func GetSourceWoodlandsCannabisClinicPllc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeWoodlandsCannabisClinicPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://drkaspermedgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

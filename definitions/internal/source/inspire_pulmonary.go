@@ -30,6 +30,7 @@ func GetSourceInspirePulmonary(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeInspirePulmonary
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://inspirepulmonary.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

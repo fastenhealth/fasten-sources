@@ -30,6 +30,7 @@ func GetSourceGeneralPractice(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeGeneralPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sunsetwalk-inhealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

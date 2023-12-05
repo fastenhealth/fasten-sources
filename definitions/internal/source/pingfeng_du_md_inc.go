@@ -30,6 +30,7 @@ func GetSourcePingfengDuMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypePingfengDuMdInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ducardiology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

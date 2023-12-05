@@ -30,6 +30,7 @@ func GetSourceDigestiveLiverSpecialists(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeDigestiveLiverSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.gidocs.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

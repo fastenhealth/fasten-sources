@@ -30,6 +30,7 @@ func GetSourceBerkeleyFootAndAnklePodiatryGr(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeBerkeleyFootAndAnklePodiatryGr
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bayareafootandlaser.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

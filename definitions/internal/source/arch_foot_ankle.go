@@ -30,6 +30,7 @@ func GetSourceArchFootAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeArchFootAnkle
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.archfootandankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

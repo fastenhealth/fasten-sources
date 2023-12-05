@@ -30,6 +30,7 @@ func GetSourceSaintVincentsCatholicMedical(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeSaintVincentsCatholicMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.usfhp.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

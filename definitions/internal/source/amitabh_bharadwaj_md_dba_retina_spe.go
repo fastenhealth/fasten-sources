@@ -30,6 +30,7 @@ func GetSourceAmitabhBharadwajMdDbaRetinaSpe(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeAmitabhBharadwajMdDbaRetinaSpe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.marinretina.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

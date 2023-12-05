@@ -31,6 +31,7 @@ func GetSourceLanierSupportiveMedicineLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"207RH0002X", "261QM2500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932836244"}}
+	sourceDef.PatientAccessUrl = "http://laniersupportivemedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

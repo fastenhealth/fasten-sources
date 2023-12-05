@@ -30,6 +30,7 @@ func GetSourceIdentityInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeIdentityInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://identityalaska.org/programs/identityhealthclinic/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

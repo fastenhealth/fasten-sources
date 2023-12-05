@@ -30,6 +30,7 @@ func GetSourceWayOutWestSpineAndMobilityPl(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeWayOutWestSpineAndMobilityPl
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://urldefense.com/v3/__https://wowspine.com/__;!!E3l7wfIP!x8EVCHF3eTKPNUoGq4gy8aY4BnQF7DJ2r--uK"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

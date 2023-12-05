@@ -30,6 +30,7 @@ func GetSourceIntegrityMedicalPlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeIntegrityMedicalPlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://integritymedicalmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceSchwartzMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730532938"}}
+	sourceDef.PatientAccessUrl = "http://www.schwartzmedicalgroup.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

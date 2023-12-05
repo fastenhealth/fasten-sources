@@ -30,6 +30,7 @@ func GetSourceTaosSportsAndPhysicalMedicine(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTaosSportsAndPhysicalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://taoshospital.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

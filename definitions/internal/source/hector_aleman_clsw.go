@@ -30,6 +30,7 @@ func GetSourceHectorAlemanClsw(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeHectorAlemanClsw
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chilfpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

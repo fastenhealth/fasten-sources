@@ -30,6 +30,7 @@ func GetSourceSuperShotInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeSuperShotInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://supershot.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

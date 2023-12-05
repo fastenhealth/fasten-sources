@@ -30,6 +30,7 @@ func GetSourceNorrisHealthcareConcierge(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeNorrisHealthcareConcierge
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://\thttps://www.norrishealthcareconcierge.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCentralFloridaCardiologyGroup(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCentralFloridaCardiologyGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.cfcg.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

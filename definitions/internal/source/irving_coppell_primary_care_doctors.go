@@ -30,6 +30,7 @@ func GetSourceIrvingCoppellPrimaryCareDoctors(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeIrvingCoppellPrimaryCareDoctors
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.irvingcoppellpcp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

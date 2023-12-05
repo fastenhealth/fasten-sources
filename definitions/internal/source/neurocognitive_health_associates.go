@@ -31,6 +31,7 @@ func GetSourceNeurocognitiveHealthAssociates(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"103G00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972997187"}}
+	sourceDef.PatientAccessUrl = "http://www.brainhealthnj.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

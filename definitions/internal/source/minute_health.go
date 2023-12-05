@@ -31,6 +31,7 @@ func GetSourceMinuteHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891367728"}}
+	sourceDef.PatientAccessUrl = "http://www.minutehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

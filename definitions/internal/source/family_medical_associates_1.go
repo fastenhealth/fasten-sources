@@ -32,6 +32,7 @@ func GetSourceFamilyMedicalAssociates1(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208000000X", "208D00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"COMMUNITY MEDICAL ASSOC OF B.C.H.", "FAMILY MEDICAL ASSOCIATES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184730020", "1194734855", "1205871548", "1497302871"}}
+	sourceDef.PatientAccessUrl = "http://www.familymedassociates.com"
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

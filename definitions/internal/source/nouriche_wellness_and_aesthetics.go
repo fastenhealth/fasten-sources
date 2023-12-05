@@ -30,6 +30,7 @@ func GetSourceNouricheWellnessAndAesthetics(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeNouricheWellnessAndAesthetics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.nourichemedspa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHarmonyMedicallSpineSportspain(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeHarmonyMedicallSpineSportspain
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.harmonymedicall.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

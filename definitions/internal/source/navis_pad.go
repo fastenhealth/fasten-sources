@@ -31,6 +31,7 @@ func GetSourceNavisPad(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"251C00000X", "251J00000X", "252Y00000X", "261QA0600X", "261QD1600X", "261QH0700X", "261QM0850X", "261QM0855X", "320600000X", "320700000X", "320800000X", "320900000X", "322D00000X", "385HR2055X", "385HR2060X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033866330"}}
+	sourceDef.PatientAccessUrl = "http://www.navispad.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

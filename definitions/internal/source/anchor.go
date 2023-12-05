@@ -30,6 +30,7 @@ func GetSourceAnchor(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeAnchor
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.anchormedical.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDestinyTotalHealthcare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeDestinyTotalHealthcare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.destinytotalhealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBetterLifePainClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBetterLifePainClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.BetterLifeHouston.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFlMobileMedicalStartup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeFlMobileMedicalStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.keysmobilemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

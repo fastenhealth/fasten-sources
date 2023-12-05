@@ -30,6 +30,7 @@ func GetSourceSensenbrennerJohn(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeSensenbrennerJohn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sensenbrennerprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

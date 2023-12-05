@@ -30,6 +30,7 @@ func GetSourceAooradvancedOrthopaedicsOfReading(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeAooradvancedOrthopaedicsOfReading
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aoreading.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

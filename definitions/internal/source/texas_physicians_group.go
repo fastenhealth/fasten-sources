@@ -31,6 +31,7 @@ func GetSourceTexasPhysiciansGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207R00000X", "207RC0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497014369"}}
+	sourceDef.PatientAccessUrl = "https://texasphysiciansgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

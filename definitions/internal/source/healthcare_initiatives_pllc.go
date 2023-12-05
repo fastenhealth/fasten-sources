@@ -30,6 +30,7 @@ func GetSourceHealthcareInitiativesPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeHealthcareInitiativesPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dralanroth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

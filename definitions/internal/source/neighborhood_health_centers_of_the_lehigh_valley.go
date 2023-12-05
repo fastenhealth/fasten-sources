@@ -31,6 +31,7 @@ func GetSourceNeighborhoodHealthCentersOfTheLehighValley(env pkg.FastenLighthous
 	sourceDef.Category = []string{"104100000X", "1041C0700X", "122300000X", "207Q00000X", "261Q00000X", "261QC1500X", "261QF0400X"}
 	sourceDef.Aliases = []string{"NHCLV AT TWO RIVERS H&W", "NHCLV-BETHLEHEM", "NHCLV-HAMILTON", "NHCLVAT BROAD STREET", "VIDA NUEVA AT CASA GUADALUPE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053946079", "1235477480", "1326418245", "1619106382", "1699418509", "1699470807", "1750821369", "1841429529", "1942439385"}}
+	sourceDef.PatientAccessUrl = "https://www.nhclv.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

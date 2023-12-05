@@ -30,6 +30,7 @@ func GetSourceWeightwise(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeWeightwise
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.weightwise.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

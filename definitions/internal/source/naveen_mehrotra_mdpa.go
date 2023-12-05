@@ -30,6 +30,7 @@ func GetSourceNaveenMehrotraMdpa(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeNaveenMehrotraMdpa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mywholechildpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

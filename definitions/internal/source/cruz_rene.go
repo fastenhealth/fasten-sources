@@ -30,6 +30,7 @@ func GetSourceCruzRene(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeCruzRene
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.primarydoctororlando.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

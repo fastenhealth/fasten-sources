@@ -31,6 +31,7 @@ func GetSourceDiabesitymd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"DIABESITYMD PLLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265028518"}}
+	sourceDef.PatientAccessUrl = "http://www.diabesitymd.co"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

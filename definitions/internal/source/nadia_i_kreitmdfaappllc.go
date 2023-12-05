@@ -30,6 +30,7 @@ func GetSourceNadiaIKreitmdfaappllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeNadiaIKreitmdfaappllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kreitpediatrics.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

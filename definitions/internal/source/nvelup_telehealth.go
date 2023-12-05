@@ -30,6 +30,7 @@ func GetSourceNvelupTelehealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeNvelupTelehealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nvelup.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

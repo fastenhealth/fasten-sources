@@ -31,6 +31,7 @@ func GetSourceGobBehavioralHealthPllc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740955053"}}
+	sourceDef.PatientAccessUrl = "http://www.gobbehavioralhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

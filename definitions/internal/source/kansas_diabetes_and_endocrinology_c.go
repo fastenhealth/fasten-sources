@@ -30,6 +30,7 @@ func GetSourceKansasDiabetesAndEndocrinologyC(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeKansasDiabetesAndEndocrinologyC
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kansasdec.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

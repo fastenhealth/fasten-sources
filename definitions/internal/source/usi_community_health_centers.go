@@ -30,6 +30,7 @@ func GetSourceUsiCommunityHealthCenters(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeUsiCommunityHealthCenters
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.usi.edu/health/community-health-centers"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

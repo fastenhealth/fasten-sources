@@ -30,6 +30,7 @@ func GetSourcePacificWoundCenterMedicalGroupIncDoNotUse(env pkg.FastenLighthouse
 	sourceDef.SourceType = pkg.SourceTypePacificWoundCenterMedicalGroupIncDoNotUse
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sjfeet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

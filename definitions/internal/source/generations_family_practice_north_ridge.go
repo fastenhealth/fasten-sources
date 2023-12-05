@@ -30,6 +30,7 @@ func GetSourceGenerationsFamilyPracticeNorthRidge(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeGenerationsFamilyPracticeNorthRidge
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.generationsfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

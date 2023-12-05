@@ -30,6 +30,7 @@ func GetSourcePrimeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypePrimeMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.memphispcp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

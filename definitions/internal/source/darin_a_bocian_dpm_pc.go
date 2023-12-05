@@ -31,6 +31,7 @@ func GetSourceDarinABocianDpmPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"213ES0131X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1841666914"}}
+	sourceDef.PatientAccessUrl = "http://www.bociandpm.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

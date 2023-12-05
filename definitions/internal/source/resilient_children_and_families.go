@@ -31,6 +31,7 @@ func GetSourceResilientChildrenAndFamilies(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043920838"}}
+	sourceDef.PatientAccessUrl = "http://www.resilient-children.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

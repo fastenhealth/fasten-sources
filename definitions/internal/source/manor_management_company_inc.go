@@ -31,6 +31,7 @@ func GetSourceManorManagementCompanyInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"INTERNAL MEDICINE PHYSICIANS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639194483"}}
+	sourceDef.PatientAccessUrl = "http://www.impdoctors.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

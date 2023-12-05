@@ -30,6 +30,7 @@ func GetSourceKnoxClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeKnoxClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://MyGalesburg.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

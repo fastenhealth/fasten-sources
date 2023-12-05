@@ -30,6 +30,7 @@ func GetSourceHoustonSouthwestColonAndRectal(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeHoustonSouthwestColonAndRectal
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.houstonswcolon.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

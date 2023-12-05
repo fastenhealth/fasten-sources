@@ -30,6 +30,7 @@ func GetSourceOrthopedicPhysicalTherapyService(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicPhysicalTherapyService
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://OrthopedicPTServices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

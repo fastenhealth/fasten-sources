@@ -30,6 +30,7 @@ func GetSourceWncHealingCollaborative(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeWncHealingCollaborative
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wnchealing.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

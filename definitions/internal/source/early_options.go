@@ -30,6 +30,7 @@ func GetSourceEarlyOptions(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeEarlyOptions
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://earlyabortionoptions.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

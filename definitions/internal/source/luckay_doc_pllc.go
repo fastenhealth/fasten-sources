@@ -30,6 +30,7 @@ func GetSourceLuckayDocPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLuckayDocPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.luckaydoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

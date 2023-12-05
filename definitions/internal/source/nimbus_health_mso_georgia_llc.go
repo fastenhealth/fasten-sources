@@ -30,6 +30,7 @@ func GetSourceNimbusHealthMsoGeorgiaLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeNimbusHealthMsoGeorgiaLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.nimbushealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

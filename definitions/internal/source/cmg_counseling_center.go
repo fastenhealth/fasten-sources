@@ -30,6 +30,7 @@ func GetSourceCmgCounselingCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeCmgCounselingCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.clarkstonmedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

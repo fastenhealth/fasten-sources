@@ -30,6 +30,7 @@ func GetSourceRidgeFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeRidgeFamilyPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ridgedocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

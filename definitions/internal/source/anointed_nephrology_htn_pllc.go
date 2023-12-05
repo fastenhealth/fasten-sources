@@ -30,6 +30,7 @@ func GetSourceAnointedNephrologyHtnPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAnointedNephrologyHtnPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.anointedneph.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

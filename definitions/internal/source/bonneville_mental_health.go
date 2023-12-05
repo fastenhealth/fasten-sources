@@ -31,6 +31,7 @@ func GetSourceBonnevilleMentalHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QM0855X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275961781"}}
+	sourceDef.PatientAccessUrl = "http://www.BonnevilleFP.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

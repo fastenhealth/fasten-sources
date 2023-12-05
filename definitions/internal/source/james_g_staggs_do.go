@@ -30,6 +30,7 @@ func GetSourceJamesGStaggsDo(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeJamesGStaggsDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drjamesstaggs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

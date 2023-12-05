@@ -30,6 +30,7 @@ func GetSourceMercyGracePrivatePractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeMercyGracePrivatePractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mgppaz.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

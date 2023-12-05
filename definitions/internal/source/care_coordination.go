@@ -30,6 +30,7 @@ func GetSourceCareCoordination(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeCareCoordination
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.schosp.com"
 	sourceDef.SecretKeyPrefix = "nextgen"
 
 	return sourceDef, err

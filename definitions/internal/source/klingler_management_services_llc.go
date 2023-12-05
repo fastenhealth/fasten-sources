@@ -30,6 +30,7 @@ func GetSourceKlinglerManagementServicesLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeKlinglerManagementServicesLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.revolutionhealthpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

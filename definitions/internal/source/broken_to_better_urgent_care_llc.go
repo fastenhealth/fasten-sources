@@ -30,6 +30,7 @@ func GetSourceBrokenToBetterUrgentCareLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeBrokenToBetterUrgentCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.betteruc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

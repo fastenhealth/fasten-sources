@@ -30,6 +30,7 @@ func GetSourceAgersonKirk(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeAgersonKirk
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://login.KirkAgersonMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

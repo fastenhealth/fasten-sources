@@ -31,6 +31,7 @@ func GetSourceNephrologySpecialistsPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578645107"}}
+	sourceDef.PatientAccessUrl = "https://www.nspcva.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

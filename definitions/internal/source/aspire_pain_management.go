@@ -30,6 +30,7 @@ func GetSourceAspirePainManagement(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeAspirePainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://aspirepainmedicalcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

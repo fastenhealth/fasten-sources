@@ -31,6 +31,7 @@ func GetSourceShafaMedicalClinicPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194906925"}}
+	sourceDef.PatientAccessUrl = "http://www.shafamedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTomballGastroenterologyAssociates(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeTomballGastroenterologyAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.txgastrotomball.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

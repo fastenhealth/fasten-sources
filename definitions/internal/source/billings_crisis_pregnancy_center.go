@@ -30,6 +30,7 @@ func GetSourceBillingsCrisisPregnancyCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBillingsCrisisPregnancyCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.laviebillings.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

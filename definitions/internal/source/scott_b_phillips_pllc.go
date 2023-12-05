@@ -31,6 +31,7 @@ func GetSourceScottBPhillipsPllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207T00000X", "261QM1300X"}
 	sourceDef.Aliases = []string{"EXCELSIS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447869003", "1669983201"}}
+	sourceDef.PatientAccessUrl = "http://www.excelsis.life"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

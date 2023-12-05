@@ -30,6 +30,7 @@ func GetSourceGlobalPsychiatricServicesPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeGlobalPsychiatricServicesPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.doctorsgps.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

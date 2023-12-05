@@ -31,6 +31,7 @@ func GetSourceSuzukiMedicalAssociatesPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730349473"}}
+	sourceDef.PatientAccessUrl = "http://www.sanctuarysma.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

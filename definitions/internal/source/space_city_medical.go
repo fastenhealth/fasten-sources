@@ -30,6 +30,7 @@ func GetSourceSpaceCityMedical(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeSpaceCityMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://spacecityurgentcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

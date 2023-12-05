@@ -31,6 +31,7 @@ func GetSourceRehabonPhysicalTherapy(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"225100000X"}
 	sourceDef.Aliases = []string{"REHABON PHYSICAL THERAPY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699324095"}}
+	sourceDef.PatientAccessUrl = "http://www.rehabon.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

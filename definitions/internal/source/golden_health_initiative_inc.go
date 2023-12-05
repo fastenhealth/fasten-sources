@@ -31,6 +31,7 @@ func GetSourceGoldenHealthInitiativeInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"133VN1006X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699308460"}}
+	sourceDef.PatientAccessUrl = "http://www.goldenhealthinitiative.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

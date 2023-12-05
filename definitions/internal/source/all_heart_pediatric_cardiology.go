@@ -31,6 +31,7 @@ func GetSourceAllHeartPediatricCardiology(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"2080P0202X"}
 	sourceDef.Aliases = []string{"ALL HEART PEDIATRIC CARDIOLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316459829"}}
+	sourceDef.PatientAccessUrl = "http://www.allheartpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

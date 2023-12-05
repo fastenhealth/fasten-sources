@@ -30,6 +30,7 @@ func GetSourceFmchCombinedClinics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeFmchCombinedClinics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fhsms.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

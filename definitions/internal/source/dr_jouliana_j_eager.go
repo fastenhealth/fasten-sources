@@ -30,6 +30,7 @@ func GetSourceDrJoulianaJEager(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeDrJoulianaJEager
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Eagerinternalmedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

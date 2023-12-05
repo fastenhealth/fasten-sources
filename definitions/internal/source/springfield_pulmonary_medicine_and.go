@@ -30,6 +30,7 @@ func GetSourceSpringfieldPulmonaryMedicineAnd(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeSpringfieldPulmonaryMedicineAnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chadalavadamd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

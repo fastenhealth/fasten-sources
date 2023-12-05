@@ -30,6 +30,7 @@ func GetSourceHealingUnleashedHealthServicesL(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeHealingUnleashedHealthServicesL
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://healingunleashed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

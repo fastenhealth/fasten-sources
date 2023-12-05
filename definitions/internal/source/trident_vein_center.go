@@ -30,6 +30,7 @@ func GetSourceTridentVeinCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeTridentVeinCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tridentvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

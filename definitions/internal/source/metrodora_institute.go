@@ -30,6 +30,7 @@ func GetSourceMetrodoraInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeMetrodoraInstitute
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.metrodora.co"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

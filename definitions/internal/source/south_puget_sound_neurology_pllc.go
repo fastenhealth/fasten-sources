@@ -30,6 +30,7 @@ func GetSourceSouthPugetSoundNeurologyPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeSouthPugetSoundNeurologyPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.PSneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

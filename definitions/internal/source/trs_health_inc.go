@@ -31,6 +31,7 @@ func GetSourceTrsHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"207Q00000X", "2084P0800X", "251S00000X", "261QI0500X", "261QP2300X", "332B00000X", "333600000X", "3336C0002X", "3336C0003X", "3336S0011X"}
 	sourceDef.Aliases = []string{"TRS PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114667847", "1699395673"}}
+	sourceDef.PatientAccessUrl = "http://trshealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

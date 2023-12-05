@@ -30,6 +30,7 @@ func GetSourceElevateHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeElevateHealthInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ElevateFoot.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

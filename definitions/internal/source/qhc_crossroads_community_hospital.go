@@ -30,6 +30,7 @@ func GetSourceQhcCrossroadsCommunityHospital(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeQhcCrossroadsCommunityHospital
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mtvernonproviders.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

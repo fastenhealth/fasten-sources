@@ -30,6 +30,7 @@ func GetSourceFairfaxInternalMedicinePc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeFairfaxInternalMedicinePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://fairfaxinternalmedicine.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

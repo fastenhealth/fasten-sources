@@ -31,6 +31,7 @@ func GetSourceFrontRangePodiatryPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"213E00000X", "213ES0103X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497450514", "1598403990"}}
+	sourceDef.PatientAccessUrl = "http://www.frontrangepodiatry.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

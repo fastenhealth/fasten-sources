@@ -30,6 +30,7 @@ func GetSourceOaktreeMedicalCenters(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeOaktreeMedicalCenters
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.painmanagementassociates.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

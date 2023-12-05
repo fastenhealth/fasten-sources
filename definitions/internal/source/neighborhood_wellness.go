@@ -30,6 +30,7 @@ func GetSourceNeighborhoodWellness(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeNeighborhoodWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neighborhoodwellness.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

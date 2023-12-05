@@ -30,6 +30,7 @@ func GetSourceGlickMedicalGroupPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeGlickMedicalGroupPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ihealthi.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

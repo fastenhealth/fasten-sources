@@ -30,6 +30,7 @@ func GetSourceArroyoVistaAdvancedPainSpeciali(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeArroyoVistaAdvancedPainSpeciali
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.avapsi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

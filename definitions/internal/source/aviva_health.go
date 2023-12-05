@@ -30,6 +30,7 @@ func GetSourceAvivaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeAvivaHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://aviva.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

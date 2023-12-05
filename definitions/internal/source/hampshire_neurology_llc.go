@@ -31,6 +31,7 @@ func GetSourceHampshireNeurologyLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417475336"}}
+	sourceDef.PatientAccessUrl = "https://www.hampshireneuro.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

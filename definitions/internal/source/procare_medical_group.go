@@ -30,6 +30,7 @@ func GetSourceProcareMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeProcareMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.procaremed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

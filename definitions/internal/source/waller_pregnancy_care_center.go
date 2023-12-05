@@ -30,6 +30,7 @@ func GetSourceWallerPregnancyCareCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeWallerPregnancyCareCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://wtloutreach.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

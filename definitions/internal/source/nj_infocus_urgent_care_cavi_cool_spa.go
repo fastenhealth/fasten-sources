@@ -30,6 +30,7 @@ func GetSourceNjInfocusUrgentCareCaviCoolSpa(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeNjInfocusUrgentCareCaviCoolSpa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.infocusurgentcare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

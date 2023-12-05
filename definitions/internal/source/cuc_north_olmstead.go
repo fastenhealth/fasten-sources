@@ -30,6 +30,7 @@ func GetSourceCucNorthOlmstead(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeCucNorthOlmstead
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.clevelanducare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

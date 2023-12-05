@@ -30,6 +30,7 @@ func GetSourceEmbraceFmoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeEmbraceFmoLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.embracedoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

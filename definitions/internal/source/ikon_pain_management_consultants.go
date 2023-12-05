@@ -30,6 +30,7 @@ func GetSourceIkonPainManagementConsultants(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeIkonPainManagementConsultants
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.ikonpainmanagement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

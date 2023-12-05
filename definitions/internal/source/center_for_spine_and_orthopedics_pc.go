@@ -31,6 +31,7 @@ func GetSourceCenterForSpineAndOrthopedicsPc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207X00000X", "2081P2900X", "261QM1300X", "332B00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245215862", "1578135968"}}
+	sourceDef.PatientAccessUrl = "http://www.centerforspinaldisorders.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

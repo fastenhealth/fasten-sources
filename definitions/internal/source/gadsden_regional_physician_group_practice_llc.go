@@ -31,6 +31,7 @@ func GetSourceGadsdenRegionalPhysicianGroupPracticeLlc(env pkg.FastenLighthouseE
 	sourceDef.Category = []string{"207L00000X", "207Q00000X", "207R00000X", "207RP1001X", "208000000X", "2084P0800X", "208M00000X", "367500000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558506550"}}
+	sourceDef.PatientAccessUrl = "https://www.gadsdenphysicianclinics.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

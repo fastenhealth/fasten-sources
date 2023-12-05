@@ -31,6 +31,7 @@ func GetSourceNorwoodPodiatryAssociatesPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"213E00000X", "225100000X"}
 	sourceDef.Aliases = []string{"NPA CAPE ANN FOOT AND ANKLE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821089079", "1942504311"}}
+	sourceDef.PatientAccessUrl = "http://www.norwoodpodiatrist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

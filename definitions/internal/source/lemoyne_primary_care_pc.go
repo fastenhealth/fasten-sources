@@ -31,6 +31,7 @@ func GetSourceLemoynePrimaryCarePc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861871352"}}
+	sourceDef.PatientAccessUrl = "http://lemoyneprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

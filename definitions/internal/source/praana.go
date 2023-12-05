@@ -31,6 +31,7 @@ func GetSourcePraana(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Category = []string{"2080P0214X", "261QS1200X"}
 	sourceDef.Aliases = []string{"PRAANA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366072183"}}
+	sourceDef.PatientAccessUrl = "http://www.goodphysician.me"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

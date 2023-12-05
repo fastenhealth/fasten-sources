@@ -30,6 +30,7 @@ func GetSourceTheDotExpress(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeTheDotExpress
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thedotexpress.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGhalySleepManagementServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeGhalySleepManagementServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sleepinsights.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

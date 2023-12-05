@@ -30,6 +30,7 @@ func GetSourceTugRiverHealthAssociationInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeTugRiverHealthAssociationInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tugrivermedical.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceKrumianRazmigDo(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeKrumianRazmigDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/RazmigKrumianDO"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

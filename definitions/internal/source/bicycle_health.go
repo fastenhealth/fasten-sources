@@ -30,6 +30,7 @@ func GetSourceBicycleHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeBicycleHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.bicyclehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

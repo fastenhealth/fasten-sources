@@ -31,6 +31,7 @@ func GetSourceSumnersMaternalFetalMedicinePc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207VM0101X"}
 	sourceDef.Aliases = []string{"SUMNERS MATERNAL FETAL MEDICINE PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558082495"}}
+	sourceDef.PatientAccessUrl = "http://www.sumnersmfm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

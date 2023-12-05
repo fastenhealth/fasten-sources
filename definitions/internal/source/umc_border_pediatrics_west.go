@@ -30,6 +30,7 @@ func GetSourceUmcBorderPediatricsWest(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeUmcBorderPediatricsWest
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.umcelpaso.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

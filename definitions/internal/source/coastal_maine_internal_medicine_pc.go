@@ -30,6 +30,7 @@ func GetSourceCoastalMaineInternalMedicinePc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeCoastalMaineInternalMedicinePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://coastalmaineim.wixsite.com/cmim"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMedicalCenterAtOceanReef(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeMedicalCenterAtOceanReef
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mcor.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

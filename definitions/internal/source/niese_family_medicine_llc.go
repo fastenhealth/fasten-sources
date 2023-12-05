@@ -31,6 +31,7 @@ func GetSourceNieseFamilyMedicineLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"251E00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417548256"}}
+	sourceDef.PatientAccessUrl = "http://niesefamilymedicine.godaddysites.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

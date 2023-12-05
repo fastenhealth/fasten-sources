@@ -30,6 +30,7 @@ func GetSourceDConradHarperMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeDConradHarperMdLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drconradharper.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceVerdeMedicalGroupPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710638390"}}
+	sourceDef.PatientAccessUrl = "http://www.mysunnyhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

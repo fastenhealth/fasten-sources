@@ -30,6 +30,7 @@ func GetSourceTxAminFootCareStartup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeTxAminFootCareStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cypressfootandanklecenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

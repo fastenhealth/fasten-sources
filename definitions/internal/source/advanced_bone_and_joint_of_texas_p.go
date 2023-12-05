@@ -30,6 +30,7 @@ func GetSourceAdvancedBoneAndJointOfTexasP(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeAdvancedBoneAndJointOfTexasP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://quinbyortho.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

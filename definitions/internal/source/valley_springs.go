@@ -30,6 +30,7 @@ func GetSourceValleySprings(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeValleySprings
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vshwc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

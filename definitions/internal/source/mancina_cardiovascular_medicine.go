@@ -31,6 +31,7 @@ func GetSourceMancinaCardiovascularMedicine(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083010458"}}
+	sourceDef.PatientAccessUrl = "http://msmancinamdcardiology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

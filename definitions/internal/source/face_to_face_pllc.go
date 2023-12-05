@@ -30,6 +30,7 @@ func GetSourceFaceToFacePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeFaceToFacePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://f2fhomemedsvc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

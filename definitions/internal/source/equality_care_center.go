@@ -30,6 +30,7 @@ func GetSourceEqualityCareCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeEqualityCareCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.equalityhealthclinic.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

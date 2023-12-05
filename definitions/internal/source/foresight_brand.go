@@ -30,6 +30,7 @@ func GetSourceForesightBrand(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeForesightBrand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.foresightmentalhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

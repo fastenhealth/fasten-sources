@@ -30,6 +30,7 @@ func GetSourceTurningpoint(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTurningpoint
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.turningpoint-healthcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

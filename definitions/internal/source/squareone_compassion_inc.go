@@ -31,6 +31,7 @@ func GetSourceSquareoneCompassionInc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"SQUAREONE MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508493784"}}
+	sourceDef.PatientAccessUrl = "http://www.squareonemedicalcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceChandakimMousumi(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeChandakimMousumi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/mousumichandakimmd"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

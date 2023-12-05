@@ -30,6 +30,7 @@ func GetSourceAppalachianOrthopaedicAssoc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeAppalachianOrthopaedicAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.appalachianortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

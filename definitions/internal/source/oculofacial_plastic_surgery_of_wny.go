@@ -30,6 +30,7 @@ func GetSourceOculofacialPlasticSurgeryOfWny(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOculofacialPlasticSurgeryOfWny
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://plasticeyedr.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

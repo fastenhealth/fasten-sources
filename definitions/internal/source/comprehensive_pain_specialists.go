@@ -31,6 +31,7 @@ func GetSourceComprehensivePainSpecialists(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QP3300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639583941"}}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

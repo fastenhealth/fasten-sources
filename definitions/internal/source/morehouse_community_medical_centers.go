@@ -30,6 +30,7 @@ func GetSourceMorehouseCommunityMedicalCenters(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeMorehouseCommunityMedicalCenters
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mcmcinc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

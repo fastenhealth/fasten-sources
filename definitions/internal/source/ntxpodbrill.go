@@ -30,6 +30,7 @@ func GetSourceNtxpodbrill(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeNtxpodbrill
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

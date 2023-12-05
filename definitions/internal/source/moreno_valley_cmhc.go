@@ -31,6 +31,7 @@ func GetSourceMorenoValleyCmhc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"101YA0400X", "133V00000X", "175T00000X", "1835P0018X", "1835P1200X", "225XM0800X", "261QM0801X", "363LP0808X", "363LP1700X"}
 	sourceDef.Aliases = []string{"ELEOS COGNITIVE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710450036"}}
+	sourceDef.PatientAccessUrl = "https://www.eleoscognitivecenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

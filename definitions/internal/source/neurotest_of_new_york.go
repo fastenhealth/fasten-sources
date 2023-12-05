@@ -30,6 +30,7 @@ func GetSourceNeurotestOfNewYork(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeNeurotestOfNewYork
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://neurotestny.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

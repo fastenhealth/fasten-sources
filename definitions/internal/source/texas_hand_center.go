@@ -30,6 +30,7 @@ func GetSourceTexasHandCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeTexasHandCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.texashandcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

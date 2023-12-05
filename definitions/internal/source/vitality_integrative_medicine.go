@@ -30,6 +30,7 @@ func GetSourceVitalityIntegrativeMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeVitalityIntegrativeMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ctvitality.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

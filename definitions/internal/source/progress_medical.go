@@ -30,6 +30,7 @@ func GetSourceProgressMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeProgressMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://progressmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

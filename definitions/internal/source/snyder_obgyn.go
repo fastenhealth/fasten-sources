@@ -31,6 +31,7 @@ func GetSourceSnyderObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316128127"}}
+	sourceDef.PatientAccessUrl = "http://www.snyderobgyn.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

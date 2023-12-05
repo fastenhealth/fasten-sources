@@ -31,6 +31,7 @@ func GetSourceCrabappleFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518302140"}}
+	sourceDef.PatientAccessUrl = "http://www.crabapplefamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

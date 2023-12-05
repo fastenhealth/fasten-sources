@@ -30,6 +30,7 @@ func GetSourceOffTheGridMidwiferyAndWomens(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeOffTheGridMidwiferyAndWomens
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.offthegridmidwifery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

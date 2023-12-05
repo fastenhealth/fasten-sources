@@ -30,6 +30,7 @@ func GetSourceMetroEntPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeMetroEntPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://metro-ent.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePhillipsHealthcareANursePractit(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypePhillipsHealthcareANursePractit
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.phillipshealthcarecenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

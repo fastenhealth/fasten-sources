@@ -30,6 +30,7 @@ func GetSourceSulzbacher(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeSulzbacher
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sulzbacherjax.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFlyteMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeFlyteMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.flytemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

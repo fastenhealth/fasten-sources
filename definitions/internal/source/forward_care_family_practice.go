@@ -30,6 +30,7 @@ func GetSourceForwardCareFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeForwardCareFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fwdcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

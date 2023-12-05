@@ -30,6 +30,7 @@ func GetSourceNextStep(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeNextStep
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nextstepboca.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

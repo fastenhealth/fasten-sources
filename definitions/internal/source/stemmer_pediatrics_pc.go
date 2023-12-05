@@ -31,6 +31,7 @@ func GetSourceStemmerPediatricsPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912124645"}}
+	sourceDef.PatientAccessUrl = "http://stemmerpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

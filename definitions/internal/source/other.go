@@ -31,6 +31,7 @@ func GetSourceOther(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
 	sourceDef.Aliases = []string{"OTHER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093741365"}}
+	sourceDef.PatientAccessUrl = "http://willamettevalleyclinics.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceFoodCity(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"333600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881139798"}}
+	sourceDef.PatientAccessUrl = "https://www.equalityhealthclinic.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

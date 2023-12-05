@@ -30,6 +30,7 @@ func GetSourceBafcPainAndWellness(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeBafcPainAndWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sjfeet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

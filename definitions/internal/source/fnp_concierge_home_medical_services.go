@@ -31,6 +31,7 @@ func GetSourceFnpConciergeHomeMedicalServices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"363LF0000X", "364SH0200X"}
 	sourceDef.Aliases = []string{"FNP CONCIERGE HOME MEDICAL SERVICES", "FNPCONCIERGEMEDICALSERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265102545"}}
+	sourceDef.PatientAccessUrl = "https://npidb.org/organizations/physician_assistants/family_363lf0000x/1265102545.aspx"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

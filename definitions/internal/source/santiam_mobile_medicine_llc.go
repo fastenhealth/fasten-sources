@@ -31,6 +31,7 @@ func GetSourceSantiamMobileMedicineLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750899035"}}
+	sourceDef.PatientAccessUrl = "http://www.santiammobilemedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

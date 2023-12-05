@@ -30,6 +30,7 @@ func GetSourceCityAndCountyOfBroomfieldRepro(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeCityAndCountyOfBroomfieldRepro
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Broomfieldhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

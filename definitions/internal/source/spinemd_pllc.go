@@ -31,6 +31,7 @@ func GetSourceSpinemdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207X00000X", "207XS0117X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851850291"}}
+	sourceDef.PatientAccessUrl = "http://www.myspinemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

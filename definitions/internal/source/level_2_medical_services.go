@@ -30,6 +30,7 @@ func GetSourceLevel2MedicalServices(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeLevel2MedicalServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://lvl2.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

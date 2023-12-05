@@ -30,6 +30,7 @@ func GetSourceSkypointMedicalCenterSc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeSkypointMedicalCenterSc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.skypointmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

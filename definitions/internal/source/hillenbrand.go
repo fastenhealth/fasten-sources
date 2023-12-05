@@ -30,6 +30,7 @@ func GetSourceHillenbrand(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeHillenbrand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.saintthomasdoctors.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

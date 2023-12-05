@@ -31,6 +31,7 @@ func GetSourceSpringviewCounselingInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"101Y00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922679810"}}
+	sourceDef.PatientAccessUrl = "http://SpringviewCounseling.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

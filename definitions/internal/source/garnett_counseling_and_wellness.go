@@ -31,6 +31,7 @@ func GetSourceGarnettCounselingAndWellness(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Aliases = []string{"GARNETT COUNSELING AND WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578291688"}}
+	sourceDef.PatientAccessUrl = "http://www.garnettcounseling.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

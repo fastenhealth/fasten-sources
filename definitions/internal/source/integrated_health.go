@@ -31,6 +31,7 @@ func GetSourceIntegratedHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"2084P0015X", "2084P0800X", "2084P0802X", "363LP0808X"}
 	sourceDef.Aliases = []string{"INTEGRATED HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366811176"}}
+	sourceDef.PatientAccessUrl = "http://ititherapy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

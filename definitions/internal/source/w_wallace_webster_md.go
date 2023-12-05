@@ -30,6 +30,7 @@ func GetSourceWWallaceWebsterMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeWWallaceWebsterMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.oregoncoastallergyandsinus.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHolyFamilyCatholicClinicPs(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeHolyFamilyCatholicClinicPs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.holyfamilyclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

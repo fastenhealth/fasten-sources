@@ -31,6 +31,7 @@ func GetSourceTulsaCardiovascularClinic(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207R00000X", "207RC0000X", "207RI0011X"}
 	sourceDef.Aliases = []string{"TULSA CARDIOVASCULAR CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578128591"}}
+	sourceDef.PatientAccessUrl = "https://www.tulsacardiovascularcenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGracewayDirectPrimaryCarePllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeGracewayDirectPrimaryCarePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gracewaydirect.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

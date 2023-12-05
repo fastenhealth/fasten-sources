@@ -31,6 +31,7 @@ func GetSourceOpenDoorHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{"OPEN DOOR HEALTH", "OPEN DOOR HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669024329"}}
+	sourceDef.PatientAccessUrl = "http://opendoorhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

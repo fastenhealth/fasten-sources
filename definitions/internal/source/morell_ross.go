@@ -30,6 +30,7 @@ func GetSourceMorellRoss(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeMorellRoss
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.drrossmorell.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWoodwayInternalMedicinePc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207R00000X", "261QH0100X"}
 	sourceDef.Aliases = []string{"WOODWAY MEDICAL GROUP PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730509050"}}
+	sourceDef.PatientAccessUrl = "http://woodwaymd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHectorLCervantesDpm(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHectorLCervantesDpm
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sjfeet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

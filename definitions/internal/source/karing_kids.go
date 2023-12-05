@@ -31,6 +31,7 @@ func GetSourceKaringKids(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"103K00000X", "104100000X", "261QM0855X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467100669"}}
+	sourceDef.PatientAccessUrl = "http://www.thekklc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

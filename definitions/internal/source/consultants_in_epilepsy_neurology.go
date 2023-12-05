@@ -30,6 +30,7 @@ func GetSourceConsultantsInEpilepsyNeurology(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeConsultantsInEpilepsyNeurology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.idneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

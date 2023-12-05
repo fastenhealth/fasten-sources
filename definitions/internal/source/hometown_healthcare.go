@@ -30,6 +30,7 @@ func GetSourceHometownHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeHometownHealthcare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hhofrv.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

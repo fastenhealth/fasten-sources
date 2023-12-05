@@ -31,6 +31,7 @@ func GetSourceHospitalAuthorityOfCandlerCounty(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Category = []string{"174400000X", "207PE0004X", "207Q00000X", "207R00000X", "207RG0100X", "208600000X", "261QR1300X", "261QU0200X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"CANDLER COUNTY EMERGENCY PHYSICIANS", "CANDLER COUNTY HOSPITAL", "CANDLER FAMILY HEALTH CENTER", "CANDLER GASTROENTEROLOGY", "CANDLER MEDICAL GROUP RHC", "CANDLER SURGICAL ASSOCIATES", "DR. LEON E. CURRY URGENT CARE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235715632", "1306276324", "1316523707", "1376118505", "1588868947", "1598056988", "1790088169", "1790888089", "1831728005", "1902369770"}}
+	sourceDef.PatientAccessUrl = "http://candlercountyhospital.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

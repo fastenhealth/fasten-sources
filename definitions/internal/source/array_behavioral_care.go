@@ -30,6 +30,7 @@ func GetSourceArrayBehavioralCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeArrayBehavioralCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://arraybc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

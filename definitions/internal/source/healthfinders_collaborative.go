@@ -30,6 +30,7 @@ func GetSourceHealthfindersCollaborative(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeHealthfindersCollaborative
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.healthfindersmn.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

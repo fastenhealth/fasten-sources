@@ -32,6 +32,7 @@ func GetSourceSouthGeorgiaMedicalCenter1(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Aliases = []string{"SOUTH GEORGIA MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306896253", "1386626570", "1467404046", "1649641721", "1831171867", "1891045191"}}
 	sourceDef.BrandLogo = "south-georgia-medical-center.png"
+	sourceDef.PatientAccessUrl = "http://www.sgmc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourcePremierMedicalCenterOfBoyntonBeach(env pkg.FastenLighthouseEnvType
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114520673"}}
+	sourceDef.PatientAccessUrl = "http://www.bhpgdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

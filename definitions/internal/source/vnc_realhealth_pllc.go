@@ -30,6 +30,7 @@ func GetSourceVncRealhealthPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeVncRealhealthPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vncrealhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

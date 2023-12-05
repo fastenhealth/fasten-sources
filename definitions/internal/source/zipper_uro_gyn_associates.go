@@ -30,6 +30,7 @@ func GetSourceZipperUroGynAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeZipperUroGynAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.zipperurogyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

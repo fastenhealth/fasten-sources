@@ -30,6 +30,7 @@ func GetSourceAxisCardiovascular(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeAxisCardiovascular
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.axiscv.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

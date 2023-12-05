@@ -30,6 +30,7 @@ func GetSourceRobinsonMdFunctionalAndConcierg(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeRobinsonMdFunctionalAndConcierg
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://robinsonmed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGaTotalCarePedsStartup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeGaTotalCarePedsStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tcpga.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

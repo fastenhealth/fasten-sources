@@ -30,6 +30,7 @@ func GetSourceOnpointFamilyMedicineDakotaRidge(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeOnpointFamilyMedicineDakotaRidge
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDelawareSportsMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeDelawareSportsMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.desportsmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

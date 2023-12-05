@@ -31,6 +31,7 @@ func GetSourceEastsideIntegrativeMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"175F00000X"}
 	sourceDef.Aliases = []string{"EASTSIDE INTEGRATIVE MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093316614"}}
+	sourceDef.PatientAccessUrl = "http://www.eastsideintegrative.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

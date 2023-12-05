@@ -30,6 +30,7 @@ func GetSourceDiscoverHealthMedicalGroup2(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeDiscoverHealthMedicalGroup2
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.redbikemedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

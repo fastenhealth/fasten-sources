@@ -30,6 +30,7 @@ func GetSourceDupageFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeDupageFootAndAnkle
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.advancedpaincenters.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceKcMedicalPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578594727"}}
+	sourceDef.PatientAccessUrl = "http://www.foundersfamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

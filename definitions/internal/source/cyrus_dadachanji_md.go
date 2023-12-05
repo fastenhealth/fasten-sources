@@ -30,6 +30,7 @@ func GetSourceCyrusDadachanjiMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCyrusDadachanjiMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.painmdplus.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

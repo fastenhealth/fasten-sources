@@ -31,6 +31,7 @@ func GetSourceAltruisticHealthcareServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261Q00000X", "261QM0801X", "261QR0401X", "261QR0405X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104416114", "1104497593", "1295339653", "1770176513"}}
+	sourceDef.PatientAccessUrl = "http://www.altruistichcs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

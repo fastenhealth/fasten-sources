@@ -30,6 +30,7 @@ func GetSourceCloverHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeCloverHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.cloverhealth.com/en/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBrotherBillsHelpingHand(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeBrotherBillsHelpingHand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bbhh.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

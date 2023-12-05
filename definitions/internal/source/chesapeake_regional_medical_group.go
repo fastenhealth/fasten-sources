@@ -31,6 +31,7 @@ func GetSourceChesapeakeRegionalMedicalGroup(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207LP2900X", "207Q00000X", "207R00000X", "207RP1001X", "207VX0000X", "2084N0400X", "2084V0102X", "208600000X", "208D00000X", "208G00000X", "209800000X", "363A00000X", "363LA2200X", "363LF0000X", "363LP2300X", "363LX0001X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699940270", "1831331503"}}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

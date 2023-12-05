@@ -31,6 +31,7 @@ func GetSourceHollisterPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982879722"}}
+	sourceDef.PatientAccessUrl = "https://www.hollisterpediatrics.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

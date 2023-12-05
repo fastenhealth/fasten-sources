@@ -31,6 +31,7 @@ func GetSourceUsNeuroSpecialistsPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"2084N0400X", "261QM2500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265783237"}}
+	sourceDef.PatientAccessUrl = "http://neuromd.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceWellnessSuite360Pc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeWellnessSuite360Pc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wellnesssuite360.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

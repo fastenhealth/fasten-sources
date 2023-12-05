@@ -30,6 +30,7 @@ func GetSourceLadyOfTheSeaMedicalClinicCutOff(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeLadyOfTheSeaMedicalClinicCutOff
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.losgh.org/clinicportal"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTemeculaValleyObgyn(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTemeculaValleyObgyn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.temeculavalleyobgyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

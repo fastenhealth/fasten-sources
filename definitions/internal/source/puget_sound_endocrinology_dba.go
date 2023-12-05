@@ -30,6 +30,7 @@ func GetSourcePugetSoundEndocrinologyDba(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypePugetSoundEndocrinologyDba
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.pugetsoundendocrinology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

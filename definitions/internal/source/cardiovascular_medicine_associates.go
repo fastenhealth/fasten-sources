@@ -30,6 +30,7 @@ func GetSourceCardiovascularMedicineAssociates(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCardiovascularMedicineAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mycardiologist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

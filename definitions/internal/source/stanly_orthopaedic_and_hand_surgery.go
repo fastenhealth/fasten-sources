@@ -30,6 +30,7 @@ func GetSourceStanlyOrthopaedicAndHandSurgery(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeStanlyOrthopaedicAndHandSurgery
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://StanlyOrtho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

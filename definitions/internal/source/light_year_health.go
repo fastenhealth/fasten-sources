@@ -30,6 +30,7 @@ func GetSourceLightYearHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeLightYearHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://lightyearhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAlaskaCenterForPainRelief(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAlaskaCenterForPainRelief
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.painlessalaska.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

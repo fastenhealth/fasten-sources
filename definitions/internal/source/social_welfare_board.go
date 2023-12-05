@@ -30,6 +30,7 @@ func GetSourceSocialWelfareBoard(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeSocialWelfareBoard
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.socialwelfareboard.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSdAllergyAsthmaImmunology(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeSdAllergyAsthmaImmunology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.sandiegoallergyconsultants.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

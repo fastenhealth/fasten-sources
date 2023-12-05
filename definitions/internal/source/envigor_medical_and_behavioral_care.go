@@ -30,6 +30,7 @@ func GetSourceEnvigorMedicalAndBehavioralCare(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeEnvigorMedicalAndBehavioralCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://envigorhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

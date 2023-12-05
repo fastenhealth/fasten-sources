@@ -31,6 +31,7 @@ func GetSourceSarasotaPainAssociatesPa(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"261QP3300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629095419"}}
+	sourceDef.PatientAccessUrl = "http://www.sarasotapainassociates.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

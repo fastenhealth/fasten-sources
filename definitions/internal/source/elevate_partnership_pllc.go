@@ -30,6 +30,7 @@ func GetSourceElevatePartnershipPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeElevatePartnershipPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://austinurologyinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

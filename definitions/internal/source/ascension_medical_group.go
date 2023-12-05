@@ -31,6 +31,7 @@ func GetSourceAscensionMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207V00000X", "207VG0400X", "207VX0000X", "261Q00000X", "261QM1300X", "332B00000X"}
 	sourceDef.Aliases = []string{"ASCENSION MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013174465", "1073970984", "1093982530", "1154588606", "1194983478", "1306002704", "1407969090", "1558462820", "1639226962", "1639282544"}}
+	sourceDef.PatientAccessUrl = "http://www.ministryhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

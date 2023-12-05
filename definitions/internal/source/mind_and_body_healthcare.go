@@ -31,6 +31,7 @@ func GetSourceMindAndBodyHealthcare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"2084P0800X", "261QM0801X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043884992"}}
+	sourceDef.PatientAccessUrl = "http://mindandbodyhealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

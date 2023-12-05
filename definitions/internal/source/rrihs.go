@@ -30,6 +30,7 @@ func GetSourceRrihs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.SourceType = pkg.SourceTypeRrihs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rrihs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceOrNurturingMindsStartup(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeOrNurturingMindsStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nurturingminds.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

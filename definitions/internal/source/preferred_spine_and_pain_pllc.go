@@ -31,6 +31,7 @@ func GetSourcePreferredSpineAndPainPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207LP2900X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104258565"}}
+	sourceDef.PatientAccessUrl = "http://www.preferredspineandpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

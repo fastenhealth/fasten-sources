@@ -30,6 +30,7 @@ func GetSourceBarbaraSRickardsDpm(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeBarbaraSRickardsDpm
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.two-feet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

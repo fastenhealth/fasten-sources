@@ -31,6 +31,7 @@ func GetSourceAllAroundPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"ALL AROUND PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598411662"}}
+	sourceDef.PatientAccessUrl = "http://allaroundpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSymphonyMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeSymphonyMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.symphonymed.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

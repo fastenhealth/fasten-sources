@@ -30,6 +30,7 @@ func GetSourceTheNirmelNeurologicalInstitute(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTheNirmelNeurologicalInstitute
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.spinebrain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

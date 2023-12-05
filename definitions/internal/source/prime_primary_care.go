@@ -31,6 +31,7 @@ func GetSourcePrimePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"PRIME PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477286979"}}
+	sourceDef.PatientAccessUrl = "http://www.primeprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

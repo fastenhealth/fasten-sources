@@ -30,6 +30,7 @@ func GetSourceSamSunshineMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeSamSunshineMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ocsportsandwellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

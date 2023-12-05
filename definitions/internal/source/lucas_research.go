@@ -30,6 +30,7 @@ func GetSourceLucasResearch(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLucasResearch
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://lucasresearch.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDreamCentersOfColoradoSprings(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeDreamCentersOfColoradoSprings
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dreamcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

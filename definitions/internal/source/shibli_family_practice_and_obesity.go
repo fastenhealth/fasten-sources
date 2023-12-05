@@ -30,6 +30,7 @@ func GetSourceShibliFamilyPracticeAndObesity(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeShibliFamilyPracticeAndObesity
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.uroojshiblimd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

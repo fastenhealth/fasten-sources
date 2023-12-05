@@ -31,6 +31,7 @@ func GetSourceSignatureHealthPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477730976"}}
+	sourceDef.PatientAccessUrl = "http://www.robspiegelmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

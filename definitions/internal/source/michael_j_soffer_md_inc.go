@@ -31,6 +31,7 @@ func GetSourceMichaelJSofferMdInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207RP1001X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528204518"}}
+	sourceDef.PatientAccessUrl = "http://www.michaelsoffermd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

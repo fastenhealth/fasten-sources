@@ -30,6 +30,7 @@ func GetSourceWaJenniferSteelStartUp(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeWaJenniferSteelStartUp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.t-townpediatrics.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

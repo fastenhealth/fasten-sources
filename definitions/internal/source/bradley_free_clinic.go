@@ -31,6 +31,7 @@ func GetSourceBradleyFreeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QP2300X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"BRADLEY FREE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902157712"}}
+	sourceDef.PatientAccessUrl = "http://www.bradleyfreeclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

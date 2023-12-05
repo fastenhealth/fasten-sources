@@ -30,6 +30,7 @@ func GetSourceFhenixForever(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeFhenixForever
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fhenixforever.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

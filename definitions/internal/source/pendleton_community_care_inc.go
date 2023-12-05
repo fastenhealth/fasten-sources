@@ -31,6 +31,7 @@ func GetSourcePendletonCommunityCareInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QF0400X", "291U00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205243961", "1386051035", "1417936535", "1437401643", "1912314667", "1932516697"}}
+	sourceDef.PatientAccessUrl = "http://www.pccnfc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceJuanCarlosZubietaMdMphPllc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207R00000X", "207RC0200X", "207RE0101X", "261QM2500X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023662673"}}
+	sourceDef.PatientAccessUrl = "http://www.northhoustondiabetes.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

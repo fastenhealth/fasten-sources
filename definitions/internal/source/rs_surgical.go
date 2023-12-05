@@ -31,6 +31,7 @@ func GetSourceRsSurgical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"208C00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821645458"}}
+	sourceDef.PatientAccessUrl = "http://www.rssurgicalmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

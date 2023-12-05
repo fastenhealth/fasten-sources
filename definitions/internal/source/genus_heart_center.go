@@ -30,6 +30,7 @@ func GetSourceGenusHeartCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeGenusHeartCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.valleyperinatal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

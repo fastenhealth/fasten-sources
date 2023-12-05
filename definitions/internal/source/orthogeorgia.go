@@ -31,6 +31,7 @@ func GetSourceOrthogeorgia(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"207X00000X", "207XS0106X", "207XS0117X", "207XX0004X", "207XX0005X", "225100000X", "225X00000X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"ORTHOGEORGIA", "SPINE AND ORTHOPAEDIC CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023425485", "1356489850", "1629447032", "1770990137", "1851708218"}}
+	sourceDef.PatientAccessUrl = "http://www.orthoga.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

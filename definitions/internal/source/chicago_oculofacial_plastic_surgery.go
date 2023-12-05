@@ -30,6 +30,7 @@ func GetSourceChicagoOculofacialPlasticSurgery(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeChicagoOculofacialPlasticSurgery
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drphelps.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

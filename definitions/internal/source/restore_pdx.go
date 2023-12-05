@@ -30,6 +30,7 @@ func GetSourceRestorePdx(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeRestorePdx
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://restorepdx.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

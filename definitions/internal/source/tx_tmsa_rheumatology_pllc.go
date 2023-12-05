@@ -30,6 +30,7 @@ func GetSourceTxTmsaRheumatologyPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeTxTmsaRheumatologyPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://drfanmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

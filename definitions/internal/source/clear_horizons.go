@@ -30,6 +30,7 @@ func GetSourceClearHorizons(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeClearHorizons
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.seeyourhorizonsclearly.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

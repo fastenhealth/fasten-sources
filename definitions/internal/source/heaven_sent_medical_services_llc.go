@@ -31,6 +31,7 @@ func GetSourceHeavenSentMedicalServicesLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"363LA2200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467760843"}}
+	sourceDef.PatientAccessUrl = "http://HeavenSentMedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

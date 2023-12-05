@@ -31,6 +31,7 @@ func GetSourceCabralInternalMedicinePllc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205155801"}}
+	sourceDef.PatientAccessUrl = "http://www.cabralinternalmedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

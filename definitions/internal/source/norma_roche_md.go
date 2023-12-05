@@ -30,6 +30,7 @@ func GetSourceNormaRocheMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeNormaRocheMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.normarochemd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

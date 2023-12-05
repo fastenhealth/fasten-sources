@@ -31,6 +31,7 @@ func GetSourceGoughSurgicalPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003455197"}}
+	sourceDef.PatientAccessUrl = "http://www.goughmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

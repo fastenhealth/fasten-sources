@@ -30,6 +30,7 @@ func GetSourceMiSpine(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeMiSpine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://newportspinemd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

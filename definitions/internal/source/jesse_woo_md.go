@@ -30,6 +30,7 @@ func GetSourceJesseWooMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeJesseWooMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://comprehensiveobgyncare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

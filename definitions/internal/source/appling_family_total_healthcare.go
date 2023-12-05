@@ -30,6 +30,7 @@ func GetSourceApplingFamilyTotalHealthcare(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeApplingFamilyTotalHealthcare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jefferybutlermd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

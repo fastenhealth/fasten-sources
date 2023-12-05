@@ -30,6 +30,7 @@ func GetSourceSavannahAgeManagementMedicine(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeSavannahAgeManagementMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.agemanagementmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceArtiusIntegrativeMedicine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeArtiusIntegrativeMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.artiusmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

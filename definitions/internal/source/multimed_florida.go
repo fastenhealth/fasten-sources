@@ -30,6 +30,7 @@ func GetSourceMultimedFlorida(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeMultimedFlorida
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://multimedfl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

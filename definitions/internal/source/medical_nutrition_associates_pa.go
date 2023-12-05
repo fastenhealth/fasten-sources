@@ -31,6 +31,7 @@ func GetSourceMedicalNutritionAssociatesPa(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881738235"}}
+	sourceDef.PatientAccessUrl = "http://www.metanucenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

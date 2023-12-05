@@ -30,6 +30,7 @@ func GetSourceDiabetesSelfCareManagementInsti(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeDiabetesSelfCareManagementInsti
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://my-diabetes.co"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

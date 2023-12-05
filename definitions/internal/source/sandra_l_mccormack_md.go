@@ -30,6 +30,7 @@ func GetSourceSandraLMccormackMd(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeSandraLMccormackMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hellohopscotch.com/locations"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

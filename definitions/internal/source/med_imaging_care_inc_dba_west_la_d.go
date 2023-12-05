@@ -30,6 +30,7 @@ func GetSourceMedImagingCareIncDbaWestLaD(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeMedImagingCareIncDbaWestLaD
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.medimagingcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

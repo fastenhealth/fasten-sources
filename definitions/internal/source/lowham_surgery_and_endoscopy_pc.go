@@ -30,6 +30,7 @@ func GetSourceLowhamSurgeryAndEndoscopyPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeLowhamSurgeryAndEndoscopyPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.walkersurgery.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceJamesJCaserioMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeJamesJCaserioMdPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jcaseriomdpa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

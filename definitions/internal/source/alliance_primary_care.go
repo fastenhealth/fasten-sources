@@ -31,6 +31,7 @@ func GetSourceAlliancePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184105298"}}
+	sourceDef.PatientAccessUrl = "http://allianceprimary.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

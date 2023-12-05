@@ -31,6 +31,7 @@ func GetSourceOriginHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"208M00000X"}
 	sourceDef.Aliases = []string{"ORIGIN HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003583683"}}
+	sourceDef.PatientAccessUrl = "http://www.originhc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

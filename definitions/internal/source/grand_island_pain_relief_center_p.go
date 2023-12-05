@@ -30,6 +30,7 @@ func GetSourceGrandIslandPainReliefCenterP(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeGrandIslandPainReliefCenterP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.giprc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

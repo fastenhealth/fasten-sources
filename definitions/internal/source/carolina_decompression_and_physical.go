@@ -30,6 +30,7 @@ func GetSourceCarolinaDecompressionAndPhysical(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCarolinaDecompressionAndPhysical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.carolinaspineanddisc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

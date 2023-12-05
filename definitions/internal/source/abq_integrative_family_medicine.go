@@ -30,6 +30,7 @@ func GetSourceAbqIntegrativeFamilyMedicine(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeAbqIntegrativeFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.abqifm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

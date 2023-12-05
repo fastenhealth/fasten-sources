@@ -31,6 +31,7 @@ func GetSourceMobilLabForAllInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770103699"}}
+	sourceDef.PatientAccessUrl = "http://www.mobillabforall.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFowlerAllergy(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeFowlerAllergy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fowlerallergy.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

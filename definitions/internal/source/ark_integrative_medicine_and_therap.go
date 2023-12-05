@@ -30,6 +30,7 @@ func GetSourceArkIntegrativeMedicineAndTherap(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeArkIntegrativeMedicineAndTherap
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ark-imed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

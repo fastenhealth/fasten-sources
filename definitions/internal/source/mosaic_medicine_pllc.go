@@ -30,6 +30,7 @@ func GetSourceMosaicMedicinePllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeMosaicMedicinePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://getmosaicmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

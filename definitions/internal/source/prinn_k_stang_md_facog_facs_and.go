@@ -30,6 +30,7 @@ func GetSourcePrinnKStangMdFacogFacsAnd(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypePrinnKStangMdFacogFacsAnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.7383220.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

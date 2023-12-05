@@ -30,6 +30,7 @@ func GetSourceOhioStatePainManagementCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeOhioStatePainManagementCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.columbuspain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

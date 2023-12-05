@@ -30,6 +30,7 @@ func GetSourceOceanfrontPainMgmtAndSportsMed(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOceanfrontPainMgmtAndSportsMed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://opmsm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

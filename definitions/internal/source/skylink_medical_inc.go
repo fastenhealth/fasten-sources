@@ -31,6 +31,7 @@ func GetSourceSkylinkMedicalInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207QS1201X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861163305"}}
+	sourceDef.PatientAccessUrl = "https://skylinkmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

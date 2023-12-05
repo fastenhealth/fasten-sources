@@ -31,6 +31,7 @@ func GetSourceCommunityCareResourcesInc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"208D00000X", "261QM1300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821614702"}}
+	sourceDef.PatientAccessUrl = "http://www.ccrsfl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

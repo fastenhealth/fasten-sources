@@ -30,6 +30,7 @@ func GetSourceAcclaimedRheumatologyAndWellness(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeAcclaimedRheumatologyAndWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.AchyJoint.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

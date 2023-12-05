@@ -30,6 +30,7 @@ func GetSourceMountainEntAssociates(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeMountainEntAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mountainent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

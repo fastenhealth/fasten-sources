@@ -30,6 +30,7 @@ func GetSourceCookSiuPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeCookSiuPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cookandsiupc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

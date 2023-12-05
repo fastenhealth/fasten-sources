@@ -30,6 +30,7 @@ func GetSourceStridecareWoundCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeStridecareWoundCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

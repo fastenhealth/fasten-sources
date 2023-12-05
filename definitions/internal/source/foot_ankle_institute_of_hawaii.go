@@ -30,6 +30,7 @@ func GetSourceFootAnkleInstituteOfHawaii(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeFootAnkleInstituteOfHawaii
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.faihawaii.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

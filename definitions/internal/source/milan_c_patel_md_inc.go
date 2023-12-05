@@ -30,6 +30,7 @@ func GetSourceMilanCPatelMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeMilanCPatelMdInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.patelneurodoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

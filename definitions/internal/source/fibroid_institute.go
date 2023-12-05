@@ -30,6 +30,7 @@ func GetSourceFibroidInstitute(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeFibroidInstitute
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

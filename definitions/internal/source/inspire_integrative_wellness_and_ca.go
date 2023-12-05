@@ -30,6 +30,7 @@ func GetSourceInspireIntegrativeWellnessAndCa(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeInspireIntegrativeWellnessAndCa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.inspireintegrativewellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

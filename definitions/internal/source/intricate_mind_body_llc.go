@@ -30,6 +30,7 @@ func GetSourceIntricateMindBodyLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeIntricateMindBodyLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.intricatemindandbody.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

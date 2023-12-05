@@ -30,6 +30,7 @@ func GetSourceAtlantaKidneyHypertensionAssoc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeAtlantaKidneyHypertensionAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.atlantakidney.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFamilyServiceOfGreaterBatonRou(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeFamilyServiceOfGreaterBatonRou
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fsgbr.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

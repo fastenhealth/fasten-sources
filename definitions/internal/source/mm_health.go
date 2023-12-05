@@ -30,6 +30,7 @@ func GetSourceMmHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeMmHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.weightwise.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

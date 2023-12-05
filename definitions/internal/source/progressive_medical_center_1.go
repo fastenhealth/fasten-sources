@@ -31,6 +31,7 @@ func GetSourceProgressiveMedicalCenter1(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"111N00000X", "207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851488209"}}
+	sourceDef.PatientAccessUrl = "http://www.pmconline.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

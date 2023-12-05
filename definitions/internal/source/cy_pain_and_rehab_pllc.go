@@ -31,6 +31,7 @@ func GetSourceCyPainAndRehabPllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QP3300X", "261QR0400X"}
 	sourceDef.Aliases = []string{"EXCALIBUR PAIN AND REHAB"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255972972"}}
+	sourceDef.PatientAccessUrl = "http://www.excaliburpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVipHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeVipHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.myviphealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

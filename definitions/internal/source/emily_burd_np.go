@@ -30,6 +30,7 @@ func GetSourceEmilyBurdNp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeEmilyBurdNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.nt4kids.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

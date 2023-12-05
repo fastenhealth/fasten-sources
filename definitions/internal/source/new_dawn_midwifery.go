@@ -30,6 +30,7 @@ func GetSourceNewDawnMidwifery(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeNewDawnMidwifery
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.newdawnmidwifery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

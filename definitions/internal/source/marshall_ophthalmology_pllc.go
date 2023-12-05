@@ -30,6 +30,7 @@ func GetSourceMarshallOphthalmologyPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeMarshallOphthalmologyPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.marshalleyedoctor.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

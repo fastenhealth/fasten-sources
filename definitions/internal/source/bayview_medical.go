@@ -30,6 +30,7 @@ func GetSourceBayviewMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeBayviewMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.info@bayviewmedicalfl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

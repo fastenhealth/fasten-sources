@@ -30,6 +30,7 @@ func GetSourcePrimeEndocrinologyLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePrimeEndocrinologyLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.primeendocrinology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

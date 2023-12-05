@@ -30,6 +30,7 @@ func GetSourceSouthernGastroenterologyAssociate(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeSouthernGastroenterologyAssociate
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.southerngassociates.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

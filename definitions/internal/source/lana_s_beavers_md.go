@@ -30,6 +30,7 @@ func GetSourceLanaSBeaversMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeLanaSBeaversMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://LANABEAVERSMD.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

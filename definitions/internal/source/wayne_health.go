@@ -31,6 +31,7 @@ func GetSourceWayneHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"204F00000X", "207K00000X", "207L00000X", "207N00000X", "207P00000X", "207Q00000X", "207R00000X", "207SG0201X", "207T00000X", "207V00000X", "207W00000X", "207X00000X", "207Y00000X", "207ZP0102X", "208000000X"}
 	sourceDef.Aliases = []string{"WAYNE HEALTH", "WAYNE STATE UNIVERSITY PHYSICIAN GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447299797"}}
+	sourceDef.PatientAccessUrl = "https://www.waynehealthcares.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

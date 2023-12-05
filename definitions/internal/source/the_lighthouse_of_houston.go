@@ -31,6 +31,7 @@ func GetSourceTheLighthouseOfHouston(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"101Y00000X", "152WL0500X", "2084P0800X", "251V00000X", "261QA0600X", "332B00000X", "332H00000X"}
 	sourceDef.Aliases = []string{"THE LIGHTHOUSE OF HOUSTON"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407056690", "1588878870", "1952501140"}}
+	sourceDef.PatientAccessUrl = "http://www.houstonlighthouse.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

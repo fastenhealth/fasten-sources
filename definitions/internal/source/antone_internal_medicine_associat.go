@@ -30,6 +30,7 @@ func GetSourceAntoneInternalMedicineAssociat(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeAntoneInternalMedicineAssociat
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mayantonemd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

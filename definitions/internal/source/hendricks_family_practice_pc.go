@@ -30,6 +30,7 @@ func GetSourceHendricksFamilyPracticePc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeHendricksFamilyPracticePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hendricksfp.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

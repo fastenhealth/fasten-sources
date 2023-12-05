@@ -30,6 +30,7 @@ func GetSourceSimplifedInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeSimplifedInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://simplifed.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

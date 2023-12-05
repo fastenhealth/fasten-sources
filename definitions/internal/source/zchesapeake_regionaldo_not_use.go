@@ -30,6 +30,7 @@ func GetSourceZchesapeakeRegionaldoNotUse(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeZchesapeakeRegionaldoNotUse
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

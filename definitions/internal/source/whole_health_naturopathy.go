@@ -31,6 +31,7 @@ func GetSourceWholeHealthNaturopathy(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"175F00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194147819"}}
+	sourceDef.PatientAccessUrl = "https://wholehealthnaturopathy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

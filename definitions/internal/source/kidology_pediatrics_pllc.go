@@ -31,6 +31,7 @@ func GetSourceKidologyPediatricsPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"208000000X", "261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639837917"}}
+	sourceDef.PatientAccessUrl = "https://www.kidology.care/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

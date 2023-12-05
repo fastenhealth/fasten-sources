@@ -30,6 +30,7 @@ func GetSourceHeartlandPulmonaryAndSleepMedic(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeHeartlandPulmonaryAndSleepMedic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.heartlandpsm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

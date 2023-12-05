@@ -31,6 +31,7 @@ func GetSourcePediatricPartnersOfHamptonRoads(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"PEDIATRIC PARTNERS OF HAMPTON ROADS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770049215"}}
+	sourceDef.PatientAccessUrl = "http://www.pphr.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

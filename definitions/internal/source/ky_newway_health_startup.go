@@ -30,6 +30,7 @@ func GetSourceKyNewwayHealthStartup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeKyNewwayHealthStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.findyournewway.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

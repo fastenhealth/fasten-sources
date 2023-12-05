@@ -31,6 +31,7 @@ func GetSourceUniqueHealthcareOptions(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QP2300X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174927685"}}
+	sourceDef.PatientAccessUrl = "http://uniquehco.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePremierNeurologyMedicalGroupIn(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePremierNeurologyMedicalGroupIn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.premier-neurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

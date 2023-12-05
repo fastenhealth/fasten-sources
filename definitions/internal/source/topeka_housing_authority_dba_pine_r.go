@@ -30,6 +30,7 @@ func GetSourceTopekaHousingAuthorityDbaPineR(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTopekaHousingAuthorityDbaPineR
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.tha.gov/pine-ridge-health-center/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

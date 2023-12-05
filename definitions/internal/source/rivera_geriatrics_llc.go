@@ -31,6 +31,7 @@ func GetSourceRiveraGeriatricsLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{"CARING CORNER HAWAII"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003424490"}}
+	sourceDef.PatientAccessUrl = "http://www.riverageriatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

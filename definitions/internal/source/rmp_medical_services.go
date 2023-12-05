@@ -31,6 +31,7 @@ func GetSourceRmpMedicalServices(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"RMP MEDICAL SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588132559"}}
+	sourceDef.PatientAccessUrl = "http://rmpmedicalservices.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

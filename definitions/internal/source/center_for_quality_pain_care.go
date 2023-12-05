@@ -30,6 +30,7 @@ func GetSourceCenterForQualityPainCare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCenterForQualityPainCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.qualitypaincare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceEstrellaFamilyCareAndAesthetics(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{"ESTRELLA FAMILY CARE AND AESTHETICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912666868"}}
+	sourceDef.PatientAccessUrl = "http://www.estrellafamilycareandaesthetics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAdvocatemd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"207Q00000X", "207R00000X"}
 	sourceDef.Aliases = []string{"ADVOCATEMD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306413356"}}
+	sourceDef.PatientAccessUrl = "http://www.myadvocateMd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

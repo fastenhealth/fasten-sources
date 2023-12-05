@@ -30,6 +30,7 @@ func GetSourceOpsmedgroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeOpsmedgroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.opsmedgrp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

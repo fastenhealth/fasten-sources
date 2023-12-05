@@ -30,6 +30,7 @@ func GetSourceNeosleepLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeNeosleepLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neosleep.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

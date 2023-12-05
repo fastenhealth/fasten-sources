@@ -30,6 +30,7 @@ func GetSourceShootingStarFeedingAndSwallowin(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeShootingStarFeedingAndSwallowin
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.shootingstarot.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

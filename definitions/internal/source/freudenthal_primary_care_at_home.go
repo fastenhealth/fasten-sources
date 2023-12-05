@@ -30,6 +30,7 @@ func GetSourceFreudenthalPrimaryCareAtHome(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeFreudenthalPrimaryCareAtHome
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://freudenthalhh.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

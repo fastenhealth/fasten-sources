@@ -30,6 +30,7 @@ func GetSourceTidewaterLungAndSleepCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeTidewaterLungAndSleepCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tidewaterlungsleep.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

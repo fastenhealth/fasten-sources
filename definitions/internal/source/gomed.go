@@ -30,6 +30,7 @@ func GetSourceGomed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.SourceType = pkg.SourceTypeGomed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://gomedhealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

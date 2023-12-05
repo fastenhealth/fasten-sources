@@ -30,6 +30,7 @@ func GetSourceCarenetOfLancaster(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeCarenetOfLancaster
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.plexushealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceLoxahatcheeFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeLoxahatcheeFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bhpgdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHooperBurnetteInternalMedicine(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeHooperBurnetteInternalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fhic.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

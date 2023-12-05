@@ -31,6 +31,7 @@ func GetSourceOldTownFamilyPracticePa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487757571"}}
+	sourceDef.PatientAccessUrl = "http://www.docswaldi.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

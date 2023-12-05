@@ -30,6 +30,7 @@ func GetSourceEyeAssociatesOfPlantation(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeEyeAssociatesOfPlantation
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://portal.cohnmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

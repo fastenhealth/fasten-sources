@@ -30,6 +30,7 @@ func GetSourceEliteImagingCenter(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeEliteImagingCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://themcginleyclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

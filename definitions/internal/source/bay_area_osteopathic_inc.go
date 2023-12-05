@@ -30,6 +30,7 @@ func GetSourceBayAreaOsteopathicInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeBayAreaOsteopathicInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.baodocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

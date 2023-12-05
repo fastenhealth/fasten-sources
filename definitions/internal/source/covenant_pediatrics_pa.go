@@ -31,6 +31,7 @@ func GetSourceCovenantPediatricsPa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208000000X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932521630"}}
+	sourceDef.PatientAccessUrl = "http://www.covenantkid.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

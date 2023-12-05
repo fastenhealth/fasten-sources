@@ -30,6 +30,7 @@ func GetSourceLosLunasFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeLosLunasFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://loslunasfp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceYatawaraGynecologyWellnessAes(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeYatawaraGynecologyWellnessAes
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.yatawaramd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

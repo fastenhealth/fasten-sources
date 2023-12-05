@@ -31,6 +31,7 @@ func GetSourceJillABresslerMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"171100000X", "174400000X"}
 	sourceDef.Aliases = []string{"NORTHERN NEUROLOGY SPECIALTIES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831312347"}}
+	sourceDef.PatientAccessUrl = "http://www.neurologyspecialties.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

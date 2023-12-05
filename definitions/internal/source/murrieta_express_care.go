@@ -31,6 +31,7 @@ func GetSourceMurrietaExpressCare(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261QU0200X"}
 	sourceDef.Aliases = []string{"MURRIETA EXPRESS CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740823632"}}
+	sourceDef.PatientAccessUrl = "http://www.gracefamilyhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTelemedAtHomePc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeTelemedAtHomePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.pillar.health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

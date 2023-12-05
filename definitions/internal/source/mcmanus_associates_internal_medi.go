@@ -30,6 +30,7 @@ func GetSourceMcmanusAssociatesInternalMedi(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeMcmanusAssociatesInternalMedi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://MYMCMANUSMD.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

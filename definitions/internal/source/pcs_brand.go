@@ -30,6 +30,7 @@ func GetSourcePcsBrand(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypePcsBrand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pcsonlineportal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

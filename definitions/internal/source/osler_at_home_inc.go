@@ -31,6 +31,7 @@ func GetSourceOslerAtHomeInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447764717"}}
+	sourceDef.PatientAccessUrl = "http://www.oslerathome.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

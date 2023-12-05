@@ -31,6 +31,7 @@ func GetSourceSteppingStonesPediatricsPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"363LF0000X", "363LP0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1598346611"}}
+	sourceDef.PatientAccessUrl = "http://steppingstonespeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

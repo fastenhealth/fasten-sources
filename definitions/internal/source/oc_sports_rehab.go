@@ -30,6 +30,7 @@ func GetSourceOcSportsRehab(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeOcSportsRehab
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sjfeet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

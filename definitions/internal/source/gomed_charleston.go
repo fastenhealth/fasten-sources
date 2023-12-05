@@ -31,6 +31,7 @@ func GetSourceGomedCharleston(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"208D00000X", "261QU0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790254365"}}
+	sourceDef.PatientAccessUrl = "https://gomedhealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

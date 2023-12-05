@@ -30,6 +30,7 @@ func GetSourceGenerationsFmc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeGenerationsFmc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://generationsfamilymedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

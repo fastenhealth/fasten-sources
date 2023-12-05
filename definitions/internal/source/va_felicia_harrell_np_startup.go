@@ -30,6 +30,7 @@ func GetSourceVaFeliciaHarrellNpStartup(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeVaFeliciaHarrellNpStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://completecaretelehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

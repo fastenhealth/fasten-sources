@@ -31,6 +31,7 @@ func GetSourceTlFamilyNursePractice(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"TL FAMILY NURSE PRACTICE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346862406"}}
+	sourceDef.PatientAccessUrl = "http://tlfamilynursepractice.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

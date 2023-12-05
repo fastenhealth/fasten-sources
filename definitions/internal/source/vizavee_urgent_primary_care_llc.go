@@ -30,6 +30,7 @@ func GetSourceVizaveeUrgentPrimaryCareLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeVizaveeUrgentPrimaryCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vizavee.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

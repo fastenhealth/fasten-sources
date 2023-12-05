@@ -30,6 +30,7 @@ func GetSourceSacoRiverMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeSacoRiverMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.sacodocs.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

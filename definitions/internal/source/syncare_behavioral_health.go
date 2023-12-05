@@ -30,6 +30,7 @@ func GetSourceSyncareBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeSyncareBehavioralHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://syncarebh.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

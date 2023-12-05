@@ -30,6 +30,7 @@ func GetSourceSouthernRegionalAhec(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeSouthernRegionalAhec
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.southernregionalahec.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

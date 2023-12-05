@@ -30,6 +30,7 @@ func GetSourceIntegrativeFamilyMedicine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drlentine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

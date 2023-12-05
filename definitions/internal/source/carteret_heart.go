@@ -30,6 +30,7 @@ func GetSourceCarteretHeart(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeCarteretHeart
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.carteretheart.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceOneTentHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"251K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740808427"}}
+	sourceDef.PatientAccessUrl = "http://www.onetenthealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

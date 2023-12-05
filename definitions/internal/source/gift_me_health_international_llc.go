@@ -31,6 +31,7 @@ func GetSourceGiftMeHealthInternationalLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"GIFT ME HEALTH WOMEN'S PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437803111"}}
+	sourceDef.PatientAccessUrl = "http://giftmehealthinternational.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

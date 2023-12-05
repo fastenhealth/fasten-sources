@@ -30,6 +30,7 @@ func GetSourceMdOneInternalMedicineAssociates(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMdOneInternalMedicineAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mdoneprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

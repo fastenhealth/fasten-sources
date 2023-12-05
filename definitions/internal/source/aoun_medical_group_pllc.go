@@ -31,6 +31,7 @@ func GetSourceAounMedicalGroupPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QU0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811508229"}}
+	sourceDef.PatientAccessUrl = "http://www.elitehealthdetroit.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

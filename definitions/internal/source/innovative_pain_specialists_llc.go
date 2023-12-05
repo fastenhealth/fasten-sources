@@ -31,6 +31,7 @@ func GetSourceInnovativePainSpecialistsLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207LP2900X", "332900000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225385131", "1982988663"}}
+	sourceDef.PatientAccessUrl = "http://www.IPSIllinois.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

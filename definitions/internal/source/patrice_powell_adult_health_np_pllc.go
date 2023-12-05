@@ -31,6 +31,7 @@ func GetSourcePatricePowellAdultHealthNpPllc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"163WH0200X", "207R00000X", "207RG0300X", "251E00000X", "363LA2200X", "363LC1500X", "363LG0600X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639892821"}}
+	sourceDef.PatientAccessUrl = "http://www.outlierhealthandwellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

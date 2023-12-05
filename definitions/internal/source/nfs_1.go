@@ -30,6 +30,7 @@ func GetSourceNfs1(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeNfs1
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nflsurgeons.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

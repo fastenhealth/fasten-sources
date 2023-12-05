@@ -30,6 +30,7 @@ func GetSourceJohnBClemmonsJrMdPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeJohnBClemmonsJrMdPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.sharecare.com/doctor/dr-john-b-clemmons"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

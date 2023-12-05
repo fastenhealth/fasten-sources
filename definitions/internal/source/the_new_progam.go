@@ -30,6 +30,7 @@ func GetSourceTheNewProgam(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTheNewProgam
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thenewprogram.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

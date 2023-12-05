@@ -31,6 +31,7 @@ func GetSourceColumnHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"291U00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528535762"}}
+	sourceDef.PatientAccessUrl = "http://www.columnhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

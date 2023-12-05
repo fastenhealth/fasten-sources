@@ -30,6 +30,7 @@ func GetSourceTexomaFootAnkleSpecialists(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeTexomaFootAnkleSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

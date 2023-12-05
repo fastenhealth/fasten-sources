@@ -31,6 +31,7 @@ func GetSourceDemeanHealthcareSolutionsLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{"DEMEAN FAMILY MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932722451"}}
+	sourceDef.PatientAccessUrl = "http://demeanfamilymed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

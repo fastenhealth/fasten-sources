@@ -30,6 +30,7 @@ func GetSourceBcpa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeBcpa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bcpa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

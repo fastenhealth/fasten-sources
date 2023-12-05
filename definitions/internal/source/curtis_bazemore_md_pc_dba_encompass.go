@@ -30,6 +30,7 @@ func GetSourceCurtisBazemoreMdPcDbaEncompass(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeCurtisBazemoreMdPcDbaEncompass
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://encompasscarelv.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

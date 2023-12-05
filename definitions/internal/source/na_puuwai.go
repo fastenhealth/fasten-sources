@@ -30,6 +30,7 @@ func GetSourceNaPuuwai(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeNaPuuwai
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://napuuwai.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

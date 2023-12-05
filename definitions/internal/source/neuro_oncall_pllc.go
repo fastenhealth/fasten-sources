@@ -30,6 +30,7 @@ func GetSourceNeuroOncallPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeNeuroOncallPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cbsi.md"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

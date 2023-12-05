@@ -30,6 +30,7 @@ func GetSourceThreeLowerCountiesCommunityServices(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeThreeLowerCountiesCommunityServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tlccs.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

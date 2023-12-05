@@ -31,6 +31,7 @@ func GetSourceHappyDocFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"HAPPY DOC FAMILY MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306274428"}}
+	sourceDef.PatientAccessUrl = "http://happydoc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

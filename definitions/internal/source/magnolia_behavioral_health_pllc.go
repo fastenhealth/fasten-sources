@@ -30,6 +30,7 @@ func GetSourceMagnoliaBehavioralHealthPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeMagnoliaBehavioralHealthPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mbhealth.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

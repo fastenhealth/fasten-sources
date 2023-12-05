@@ -30,6 +30,7 @@ func GetSourceInspiremdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeInspiremdInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gisellecarvalhomd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

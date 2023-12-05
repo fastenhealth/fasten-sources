@@ -30,6 +30,7 @@ func GetSourceScHouseCallsmainStreetPhysicians(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeScHouseCallsmainStreetPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://schousecalls.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceWaEndomedFamilyClinicStartup(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeWaEndomedFamilyClinicStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.endomedfamily.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

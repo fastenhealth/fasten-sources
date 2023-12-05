@@ -30,6 +30,7 @@ func GetSourceSaludLatinx(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeSaludLatinx
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mimedicomendez.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

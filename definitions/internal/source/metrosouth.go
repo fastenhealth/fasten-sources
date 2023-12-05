@@ -30,6 +30,7 @@ func GetSourceMetrosouth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeMetrosouth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.metrosouthhealthcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

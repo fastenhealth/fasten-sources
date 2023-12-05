@@ -30,6 +30,7 @@ func GetSourceHmeIntegrative(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeHmeIntegrative
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.AMGFairbanks.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourcePrincetonEntAndSleepLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207YS0012X"}
 	sourceDef.Aliases = []string{"PRINCETON EAR, NOSE, AND THROAT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639654106"}}
+	sourceDef.PatientAccessUrl = "http://princetonent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

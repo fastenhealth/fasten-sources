@@ -30,6 +30,7 @@ func GetSourceEndo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeEndo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.deltagastro.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

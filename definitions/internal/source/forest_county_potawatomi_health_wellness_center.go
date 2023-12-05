@@ -30,6 +30,7 @@ func GetSourceForestCountyPotawatomiHealthWellnessCenter(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypeForestCountyPotawatomiHealthWellnessCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://health.fcpotawatomi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

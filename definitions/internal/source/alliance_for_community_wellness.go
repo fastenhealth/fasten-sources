@@ -31,6 +31,7 @@ func GetSourceAllianceForCommunityWellness(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207RI0200X", "251B00000X", "251S00000X"}
 	sourceDef.Aliases = []string{"ALLIANCE FOR COMMUNITY WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295134708"}}
+	sourceDef.PatientAccessUrl = "http://hivalliance.org/acw"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

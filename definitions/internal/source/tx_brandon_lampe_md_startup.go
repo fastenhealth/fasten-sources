@@ -30,6 +30,7 @@ func GetSourceTxBrandonLampeMdStartup(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeTxBrandonLampeMdStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://facdallas.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceLakeshoreConciergeMedicinePlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeLakeshoreConciergeMedicinePlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Toddrexfordmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

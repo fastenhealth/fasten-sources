@@ -31,6 +31,7 @@ func GetSourceComprehensivePainCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207LP2900X", "367500000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205298692", "1588940803"}}
+	sourceDef.PatientAccessUrl = "http://www.paincenterms.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSummitOrthopedicSpecialists(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeSummitOrthopedicSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mysummitortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceHealthyCommunityCenterLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"251S00000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"DBA. HEALTHY MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023609872", "1205535572"}}
+	sourceDef.PatientAccessUrl = "http://www.integrallyheathy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

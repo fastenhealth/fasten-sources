@@ -30,6 +30,7 @@ func GetSourceShelbyPediatricAssocLungCtr(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeShelbyPediatricAssocLungCtr
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.shelbypediatricassociates.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

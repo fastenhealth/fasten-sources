@@ -30,6 +30,7 @@ func GetSourceSckMidwives(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeSckMidwives
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://winfieldmedicalarts.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

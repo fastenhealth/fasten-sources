@@ -30,6 +30,7 @@ func GetSourceReginaLEdmondMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeReginaLEdmondMdInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://signaturemd.com/concierge-physicians/regina-edmond-md-west-hollywood-ca/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

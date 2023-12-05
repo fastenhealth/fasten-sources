@@ -30,6 +30,7 @@ func GetSourceCoastalNaturopathicAcupuncture(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeCoastalNaturopathicAcupuncture
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://drtrofa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

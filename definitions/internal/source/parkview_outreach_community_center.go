@@ -31,6 +31,7 @@ func GetSourceParkviewOutreachCommunityCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"251V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487968806"}}
+	sourceDef.PatientAccessUrl = "http://www.parkviewmedicalclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

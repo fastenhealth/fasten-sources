@@ -30,6 +30,7 @@ func GetSourceFisherTobin(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeFisherTobin
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/TobinFisherMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

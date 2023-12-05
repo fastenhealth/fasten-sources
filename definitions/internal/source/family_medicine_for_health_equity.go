@@ -30,6 +30,7 @@ func GetSourceFamilyMedicineForHealthEquity(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicineForHealthEquity
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cahep.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

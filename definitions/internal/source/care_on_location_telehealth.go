@@ -30,6 +30,7 @@ func GetSourceCareOnLocationTelehealth(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCareOnLocationTelehealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.careonlocation.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

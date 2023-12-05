@@ -31,6 +31,7 @@ func GetSourceUtHealthRgv(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"101YP2500X", "103TC0700X", "152W00000X", "207Q00000X", "207QS0010X", "207R00000X", "207V00000X", "208000000X", "2084N0402X", "2084P0800X", "208600000X", "2086S0102X", "2086S0122X", "261QA0005X", "291U00000X"}
 	sourceDef.Aliases = []string{"UT HEALTH RGV"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477960730"}}
+	sourceDef.PatientAccessUrl = "http://www.uthealthrgv.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

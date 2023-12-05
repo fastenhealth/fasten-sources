@@ -30,6 +30,7 @@ func GetSourceNorthTexasEndocrineCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeNorthTexasEndocrineCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ntendocenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

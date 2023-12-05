@@ -30,6 +30,7 @@ func GetSourceEastMarkMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeEastMarkMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.VIRTUALMEDRX.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

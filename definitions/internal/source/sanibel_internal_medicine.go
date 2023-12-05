@@ -30,6 +30,7 @@ func GetSourceSanibelInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeSanibelInternalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sanibelmedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

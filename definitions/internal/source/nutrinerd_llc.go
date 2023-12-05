@@ -31,6 +31,7 @@ func GetSourceNutrinerdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"133V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093394678"}}
+	sourceDef.PatientAccessUrl = "http://nutrinerd.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

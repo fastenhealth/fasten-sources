@@ -30,6 +30,7 @@ func GetSourceDawsonMed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeDawsonMed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dawson-med.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

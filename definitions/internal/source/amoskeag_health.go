@@ -31,6 +31,7 @@ func GetSourceAmoskeagHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"AMOSKEAG HEALTH AT HENRY WILSON ELEMENTARY SCHOOL", "AMOSKEAG HEALTH AT MCDONOUGH ELEMENTARY SCHOOL", "AMOSKEAG HEALTH AT MEMORIAL HIGH SCHOOL", "AMOSKEAG HEALTH AT PARKSIDE MIDDLE SCHOOL", "AMOSKEAG HEALTH AT SOUTHSIDE MIDDLE SCHOOL", "AMOSKEAG HEALTH AT WESTON ELEMENTARY SCHOOL", "CHILD HEALTH SERVICES", "WEST SIDE NEIGHBORHOOD HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083617013", "1225625643", "1255928677", "1295112530", "1487022992", "1629790829", "1679295877", "1699012492", "1770247785", "1902495930"}}
+	sourceDef.PatientAccessUrl = "https://www.amoskeaghealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

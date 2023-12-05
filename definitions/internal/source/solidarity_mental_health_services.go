@@ -30,6 +30,7 @@ func GetSourceSolidarityMentalHealthServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSolidarityMentalHealthServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.solidaritymentalhealthservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceValleyHouseDoctorsPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207Q00000X", "207QG0300X", "207QH0002X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972985315"}}
+	sourceDef.PatientAccessUrl = "http://www.valleyhousedoctors.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

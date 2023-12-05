@@ -30,6 +30,7 @@ func GetSourceMontesWeightManagementCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeMontesWeightManagementCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bespokemdrgv.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

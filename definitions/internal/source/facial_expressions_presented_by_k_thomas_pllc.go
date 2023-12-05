@@ -30,6 +30,7 @@ func GetSourceFacialExpressionsPresentedByKThomasPllc(env pkg.FastenLighthouseEn
 	sourceDef.SourceType = pkg.SourceTypeFacialExpressionsPresentedByKThomasPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.facialexpressionsmedispa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

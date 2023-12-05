@@ -31,6 +31,7 @@ func GetSourceBertEGeerDoPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619074994"}}
+	sourceDef.PatientAccessUrl = "http://cookevillegynecology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

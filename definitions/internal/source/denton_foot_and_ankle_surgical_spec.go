@@ -30,6 +30,7 @@ func GetSourceDentonFootAndAnkleSurgicalSpec(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeDentonFootAndAnkleSurgicalSpec
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dentonfootandanklesurgery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

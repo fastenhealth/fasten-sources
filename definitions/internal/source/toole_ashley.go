@@ -30,6 +30,7 @@ func GetSourceTooleAshley(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeTooleAshley
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/AshleyTooleDO"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePurcellKulnarin(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypePurcellKulnarin
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://enhancedhealthandwellness.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

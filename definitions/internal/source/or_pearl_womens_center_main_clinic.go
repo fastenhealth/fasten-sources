@@ -30,6 +30,7 @@ func GetSourceOrPearlWomensCenterMainClinic(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeOrPearlWomensCenterMainClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pearlwomenscenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

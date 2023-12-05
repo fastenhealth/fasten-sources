@@ -31,6 +31,7 @@ func GetSourceGlowMidwiferyPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"367A00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770193179"}}
+	sourceDef.PatientAccessUrl = "http://www.glowmw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

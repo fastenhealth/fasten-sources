@@ -30,6 +30,7 @@ func GetSourceCommunitySchoolForApprenticeship(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCommunitySchoolForApprenticeship
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://vphcandcarecenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

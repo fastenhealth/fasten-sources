@@ -31,6 +31,7 @@ func GetSourceDwellFamilyDoctors(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{"DWELL FAMILY DOCTORS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801127576"}}
+	sourceDef.PatientAccessUrl = "https://www.myprivia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

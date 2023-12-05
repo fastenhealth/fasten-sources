@@ -30,6 +30,7 @@ func GetSourceJewishFamilyServiceOfGreaterDallas(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeJewishFamilyServiceOfGreaterDallas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://jfsdallas.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

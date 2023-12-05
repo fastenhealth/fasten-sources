@@ -31,6 +31,7 @@ func GetSourcePenobscotValleyHospital(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QR1300X", "275N00000X", "282NC0060X"}
 	sourceDef.Aliases = []string{"PENOBSCOT PRIMARY CARE (RURAL HEALTH)"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093716086", "1588995948", "1700805868"}}
+	sourceDef.PatientAccessUrl = "http://www.pvhme.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

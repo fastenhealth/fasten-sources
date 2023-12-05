@@ -31,6 +31,7 @@ func GetSourceStephenMSinkoeDpmPa(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"213E00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558500835"}}
+	sourceDef.PatientAccessUrl = "http://www.ccfootankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

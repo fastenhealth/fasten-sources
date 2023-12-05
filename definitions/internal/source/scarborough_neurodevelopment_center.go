@@ -30,6 +30,7 @@ func GetSourceScarboroughNeurodevelopmentCenter(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeScarboroughNeurodevelopmentCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trainyourbrain.me"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

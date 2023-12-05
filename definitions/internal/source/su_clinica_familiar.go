@@ -31,6 +31,7 @@ func GetSourceSuClinicaFamiliar(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207Q00000X", "2083P0901X", "251K00000X", "261QF0400X", "3336C0002X"}
 	sourceDef.Aliases = []string{"SU CLINICA", "SU CLINICA FAMILIAR"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093819062", "1194820969", "1205384138", "1386960862", "1427071968", "1467460808", "1639171804", "1760088256", "1811901655", "1841891934"}}
+	sourceDef.PatientAccessUrl = "http://www.suclinica.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBaytownEnt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeBaytownEnt
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://baytownent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRidgeviewInternalMedicineGroup(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeRidgeviewInternalMedicineGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ridgeviewmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

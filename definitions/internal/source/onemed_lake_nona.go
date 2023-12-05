@@ -30,6 +30,7 @@ func GetSourceOnemedLakeNona(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeOnemedLakeNona
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.onemed.clinic"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

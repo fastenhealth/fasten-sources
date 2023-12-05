@@ -31,6 +31,7 @@ func GetSourceRegionalHealthAndTestingCenter(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407202112"}}
+	sourceDef.PatientAccessUrl = "http://www.regionalhealthTC.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRumcBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeRumcBehavioralHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.rumcsi.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

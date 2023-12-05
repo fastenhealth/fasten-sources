@@ -31,6 +31,7 @@ func GetSourceMountainSpringVascular(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"2085R0204X", "213E00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639770621"}}
+	sourceDef.PatientAccessUrl = "http://www.mountainspringvascular.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

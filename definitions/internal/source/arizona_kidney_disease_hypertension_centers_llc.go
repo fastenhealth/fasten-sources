@@ -30,6 +30,7 @@ func GetSourceArizonaKidneyDiseaseHypertensionCentersLlc(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypeArizonaKidneyDiseaseHypertensionCentersLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.akdhc.net/newakdhcwebsite/index.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

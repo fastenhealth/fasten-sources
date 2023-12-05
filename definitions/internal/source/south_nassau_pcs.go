@@ -30,6 +30,7 @@ func GetSourceSouthNassauPcs(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeSouthNassauPcs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.southnassau.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

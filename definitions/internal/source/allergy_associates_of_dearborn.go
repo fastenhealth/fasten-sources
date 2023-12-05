@@ -31,6 +31,7 @@ func GetSourceAllergyAssociatesOfDearborn(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{"ALLERGY ASSOCIATES OF DEARBORN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154807337", "1730378738"}}
+	sourceDef.PatientAccessUrl = "http://allergyad.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

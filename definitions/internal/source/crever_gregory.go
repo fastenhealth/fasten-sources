@@ -30,6 +30,7 @@ func GetSourceCreverGregory(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeCreverGregory
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http:// http://mdvip.com/GregoryCreverMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

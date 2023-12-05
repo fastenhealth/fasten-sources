@@ -31,6 +31,7 @@ func GetSourceSoutheastLungAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"174400000X", "207RP1001X"}
 	sourceDef.Aliases = []string{"SOUTHEAST LUNG ASSOCIATES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023383247", "1104346394", "1134775182", "1235659814", "1275189086", "1366064164", "1528578028", "1548815053", "1740244276"}}
+	sourceDef.PatientAccessUrl = "http://www.selung.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

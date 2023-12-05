@@ -30,6 +30,7 @@ func GetSourceReclaimabilityPainServices(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeReclaimabilityPainServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://rapaindocs.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceStockrahmJon(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeStockrahmJon
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/JonStockrahmDO"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAdvancedNeurologyEpilepsy(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAdvancedNeurologyEpilepsy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.anesc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

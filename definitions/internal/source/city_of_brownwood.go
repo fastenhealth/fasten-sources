@@ -31,6 +31,7 @@ func GetSourceCityOfBrownwood(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"251K00000X", "261QP0905X", "332U00000X"}
 	sourceDef.Aliases = []string{"BROWNWOOD/BROWN COUNTY HEALTH DEPARTMENT", "CITY OF BROWNWOOD SENIOR CITIZENS CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447474549", "1780090845"}}
+	sourceDef.PatientAccessUrl = "https://www.brownwoodtexas.gov/199/Brownwood-Brown-County-Health-Department"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceChicagoMovementSpecialistsLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeChicagoMovementSpecialistsLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chicago-movement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

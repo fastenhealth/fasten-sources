@@ -30,6 +30,7 @@ func GetSourceHoliqHealthPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeHoliqHealthPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.holiqhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBrightsideSpecialtyCommunicatorBrand(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeBrightsideSpecialtyCommunicatorBrand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://brightsidespecialtyclinics.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

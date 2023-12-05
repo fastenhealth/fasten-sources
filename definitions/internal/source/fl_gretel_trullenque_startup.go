@@ -30,6 +30,7 @@ func GetSourceFlGretelTrullenqueStartup(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeFlGretelTrullenqueStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.harbormd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

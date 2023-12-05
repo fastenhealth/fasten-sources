@@ -30,6 +30,7 @@ func GetSourceUndergroundFreeClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeUndergroundFreeClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.undergroundclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

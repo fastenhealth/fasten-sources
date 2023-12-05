@@ -30,6 +30,7 @@ func GetSourceCenterForColonAndRectalHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCenterForColonAndRectalHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.coloncenters.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceImpactNw(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"251B00000X", "251S00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053624387", "1417495862"}}
+	sourceDef.PatientAccessUrl = "https://impactnw.org/programs/early-childhood/pcts/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

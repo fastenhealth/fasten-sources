@@ -30,6 +30,7 @@ func GetSourceOcalaInfectiousDiseaseAndWound(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOcalaInfectiousDiseaseAndWound
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://ocalawoundcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

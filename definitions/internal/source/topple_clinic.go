@@ -30,6 +30,7 @@ func GetSourceToppleClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeToppleClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.concussionctr.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

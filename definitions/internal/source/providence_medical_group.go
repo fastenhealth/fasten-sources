@@ -31,6 +31,7 @@ func GetSourceProvidenceMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"104100000X", "202D00000X", "204E00000X", "207L00000X", "207LP2900X", "207N00000X", "207Q00000X", "207R00000X", "207RC0000X", "207RE0101X", "207RG0100X", "207RI0200X", "207VF0040X", "207X00000X", "207XX0005X", "208100000X", "2083P0011X", "2083X0100X", "2084N0400X", "2084P0800X", "2084P0802X", "2084P0804X", "2085R0202X", "208600000X", "2086S0120X", "208D00000X", "208M00000X", "225100000X", "2251S0007X", "225X00000X", "235Z00000X", "261Q00000X", "261QE0002X", "261QU0200X"}
 	sourceDef.Aliases = []string{"PROVIDENCE GORGE SPINE AND SPORTS MEDICINE", "PROVIDENCE MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003319724", "1033804091", "1124458914", "1164623401", "1346751443", "1356683213", "1366145716", "1437845641", "1609274133", "1760177737"}}
+	sourceDef.PatientAccessUrl = "http://www.provmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

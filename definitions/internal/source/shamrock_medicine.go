@@ -31,6 +31,7 @@ func GetSourceShamrockMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"SHAMROCK MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407514193"}}
+	sourceDef.PatientAccessUrl = "http://www.shamrockmedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

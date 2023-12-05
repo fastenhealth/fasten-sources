@@ -31,6 +31,7 @@ func GetSourceAllianceBehavioralHealthLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205470903"}}
+	sourceDef.PatientAccessUrl = "http://abhpsych.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

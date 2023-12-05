@@ -30,6 +30,7 @@ func GetSourceCsraRenalServices(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCsraRenalServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.csrarenal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceHeartOfTheValleyHealthcarePc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710925797"}}
+	sourceDef.PatientAccessUrl = "http://heartofthevalleyhealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBrightonFamilyPhysicians(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeBrightonFamilyPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bfdocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

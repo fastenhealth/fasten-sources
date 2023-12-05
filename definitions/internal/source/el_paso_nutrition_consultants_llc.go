@@ -31,6 +31,7 @@ func GetSourceElPasoNutritionConsultantsLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"133V00000X"}
 	sourceDef.Aliases = []string{"ADRIANA RASCON NUTRITION CONSULTANT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215235445"}}
+	sourceDef.PatientAccessUrl = "http://www.elpasonutritionconsultants.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

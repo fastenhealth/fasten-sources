@@ -31,6 +31,7 @@ func GetSourceModeraClinicPllc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962957639"}}
+	sourceDef.PatientAccessUrl = "https://www.moderaclinic.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

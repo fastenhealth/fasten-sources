@@ -31,6 +31,7 @@ func GetSourceDelPuertoHealthCareDistrict(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"261QR1300X", "341600000X"}
 	sourceDef.Aliases = []string{"DEL PUERTO HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063430916", "1841380763"}}
+	sourceDef.PatientAccessUrl = "https://dphealth.org/patients"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMountainSpringPodiatry(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeMountainSpringPodiatry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mountainspringvascular.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

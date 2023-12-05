@@ -30,6 +30,7 @@ func GetSourceTimc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeTimc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.talcottinternalmedicineandcardiology.co"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

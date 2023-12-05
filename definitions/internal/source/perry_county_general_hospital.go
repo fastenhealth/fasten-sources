@@ -31,6 +31,7 @@ func GetSourcePerryCountyGeneralHospital(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"282NC0060X", "363L00000X"}
 	sourceDef.Aliases = []string{"PERRY COUNTY GENERAL HOSPITAL", "PERRY COUNTY GENERAL HOSPITAL, CAH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437470622"}}
+	sourceDef.PatientAccessUrl = "http://www.pcghosp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

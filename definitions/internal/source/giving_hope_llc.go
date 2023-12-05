@@ -31,6 +31,7 @@ func GetSourceGivingHopeLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207LP2900X"}
 	sourceDef.Aliases = []string{"ALPENGLOW PAIN & WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508321639"}}
+	sourceDef.PatientAccessUrl = "http://www.AlpenglowPain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

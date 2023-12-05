@@ -31,6 +31,7 @@ func GetSourceGroveMedicalEquipment(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"332B00000X", "332BX2000X"}
 	sourceDef.Aliases = []string{"GROVE MEDICAL EQUIPMENT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487367678", "1699482562"}}
+	sourceDef.PatientAccessUrl = "http://www.californiasleepcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

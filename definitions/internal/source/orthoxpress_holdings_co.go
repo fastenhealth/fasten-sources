@@ -30,6 +30,7 @@ func GetSourceOrthoxpressHoldingsCo(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeOrthoxpressHoldingsCo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mitiasortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

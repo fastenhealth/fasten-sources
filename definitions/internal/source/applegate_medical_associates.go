@@ -31,6 +31,7 @@ func GetSourceApplegateMedicalAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{"APPLEGATE MEDICAL ASSOCIATES - EAST"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417035031"}}
+	sourceDef.PatientAccessUrl = "http://www.applegatemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

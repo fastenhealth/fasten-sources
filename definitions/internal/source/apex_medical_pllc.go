@@ -30,6 +30,7 @@ func GetSourceApexMedicalPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeApexMedicalPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.apexmedical.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

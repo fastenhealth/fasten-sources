@@ -30,6 +30,7 @@ func GetSourceComtreaHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeComtreaHealthCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.comtrea.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAzhVascularCenter(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeAzhVascularCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.azhcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceSynergyPhysiciansPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"2086S0102X", "2086S0122X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083271746"}}
+	sourceDef.PatientAccessUrl = "http://www.TheSynergyHealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

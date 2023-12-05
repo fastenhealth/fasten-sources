@@ -31,6 +31,7 @@ func GetSourceFullCircleHealthCareLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578521084"}}
+	sourceDef.PatientAccessUrl = "http://www.fullcirclehc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

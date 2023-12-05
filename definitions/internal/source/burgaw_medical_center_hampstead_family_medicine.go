@@ -30,6 +30,7 @@ func GetSourceBurgawMedicalCenterHampsteadFamilyMedicine(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypeBurgawMedicalCenterHampsteadFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://burgawmedicalcenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

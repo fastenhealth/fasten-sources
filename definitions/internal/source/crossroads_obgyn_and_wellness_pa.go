@@ -31,6 +31,7 @@ func GetSourceCrossroadsObgynAndWellnessPa(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144550617"}}
+	sourceDef.PatientAccessUrl = "http://www.crossroadsobgyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceSelkirkNeurologyPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730683053"}}
+	sourceDef.PatientAccessUrl = "http://www.selkirkneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

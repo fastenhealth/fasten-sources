@@ -30,6 +30,7 @@ func GetSourceFosnightCenterForSexualHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeFosnightCenterForSexualHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fosnightcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

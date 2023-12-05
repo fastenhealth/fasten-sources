@@ -30,6 +30,7 @@ func GetSourceWholeSystemsHealthcareBoulder(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeWholeSystemsHealthcareBoulder
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://wshcare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

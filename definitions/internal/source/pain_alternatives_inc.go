@@ -30,6 +30,7 @@ func GetSourcePainAlternativesInc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypePainAlternativesInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://painalternativesonline.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceImMarvin(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeImMarvin
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://login.MarvinImDO.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

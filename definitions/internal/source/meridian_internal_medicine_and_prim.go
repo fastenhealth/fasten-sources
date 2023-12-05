@@ -30,6 +30,7 @@ func GetSourceMeridianInternalMedicineAndPrim(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMeridianInternalMedicineAndPrim
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.meridianim.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

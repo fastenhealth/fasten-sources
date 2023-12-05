@@ -30,6 +30,7 @@ func GetSourceHomedocs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeHomedocs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.primarycareoforangecity.com/index.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

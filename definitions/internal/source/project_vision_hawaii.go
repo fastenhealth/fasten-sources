@@ -31,6 +31,7 @@ func GetSourceProjectVisionHawaii(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629534268"}}
+	sourceDef.PatientAccessUrl = "http://www.projectvisionhawaii.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

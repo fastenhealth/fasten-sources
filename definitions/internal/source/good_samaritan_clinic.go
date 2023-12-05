@@ -31,6 +31,7 @@ func GetSourceGoodSamaritanClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013127364"}}
+	sourceDef.PatientAccessUrl = "http://www.gscburke.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

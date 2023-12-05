@@ -31,6 +31,7 @@ func GetSourceOsceolaCommunityHealthServices(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"261QF0400X", "364SC1501X", "364SH0200X"}
 	sourceDef.Aliases = []string{"OSCEOLA COMMUNITY HEALTH SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093232605", "1407481039", "1457986788"}}
+	sourceDef.PatientAccessUrl = "https://www.osceolahealthcare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

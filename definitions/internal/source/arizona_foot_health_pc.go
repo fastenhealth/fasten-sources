@@ -30,6 +30,7 @@ func GetSourceArizonaFootHealthPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeArizonaFootHealthPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.azfootdocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

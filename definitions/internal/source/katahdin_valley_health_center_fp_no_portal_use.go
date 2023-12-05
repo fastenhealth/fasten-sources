@@ -30,6 +30,7 @@ func GetSourceKatahdinValleyHealthCenterFpNoPortalUse(env pkg.FastenLighthouseEn
 	sourceDef.SourceType = pkg.SourceTypeKatahdinValleyHealthCenterFpNoPortalUse
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kvhc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

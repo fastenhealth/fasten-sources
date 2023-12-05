@@ -31,6 +31,7 @@ func GetSourceRemeHealthcareCorp(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"MIDCARE PCP", "MIDCARE TCM", "MIDCARE TELEHEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316671555"}}
+	sourceDef.PatientAccessUrl = "http://www.remehealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

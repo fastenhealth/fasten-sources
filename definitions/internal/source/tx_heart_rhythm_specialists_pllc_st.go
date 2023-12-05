@@ -30,6 +30,7 @@ func GetSourceTxHeartRhythmSpecialistsPllcSt(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTxHeartRhythmSpecialistsPllcSt
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hrsmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

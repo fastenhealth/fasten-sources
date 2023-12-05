@@ -30,6 +30,7 @@ func GetSourceTriibeMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeTriibeMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.triibemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

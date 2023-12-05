@@ -30,6 +30,7 @@ func GetSourceTemescalCreekMedicine(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeTemescalCreekMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.tcreekmed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

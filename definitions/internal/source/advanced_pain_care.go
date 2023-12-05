@@ -31,6 +31,7 @@ func GetSourceAdvancedPainCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207L00000X", "207LP2900X", "363A00000X"}
 	sourceDef.Aliases = []string{"ADVANCED PAIN CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063168318", "1083195259", "1225614936", "1386148138", "1417517046", "1447550223", "1548825003", "1710522859", "1770214124", "1861152423"}}
+	sourceDef.PatientAccessUrl = "https://austinpaindoctor.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

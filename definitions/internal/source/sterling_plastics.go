@@ -30,6 +30,7 @@ func GetSourceSterlingPlastics(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeSterlingPlastics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.drmarkmathieson.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

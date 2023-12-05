@@ -31,6 +31,7 @@ func GetSourceSummitBehavioralHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"103TA0400X", "103TB0200X", "103TC0700X", "103TC1900X", "103TP2701X", "2084P0800X", "2084P0802X", "2084S0012X"}
 	sourceDef.Aliases = []string{"SUMMIT BEHAVIORAL HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285290072"}}
+	sourceDef.PatientAccessUrl = "https://www.summitbhp.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

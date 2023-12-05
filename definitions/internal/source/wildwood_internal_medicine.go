@@ -30,6 +30,7 @@ func GetSourceWildwoodInternalMedicine(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeWildwoodInternalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wildwoodim.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBeaginErinn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeBeaginErinn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/doctors/ErinnBeaginMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

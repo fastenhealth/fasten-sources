@@ -30,6 +30,7 @@ func GetSourceTrinityPrimaryCarePa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeTrinityPrimaryCarePa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.TRINITYCARE.CO"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

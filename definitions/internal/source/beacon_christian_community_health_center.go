@@ -31,6 +31,7 @@ func GetSourceBeaconChristianCommunityHealthCenter(env pkg.FastenLighthouseEnvTy
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801271911"}}
+	sourceDef.PatientAccessUrl = "http://www.beaconcchc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

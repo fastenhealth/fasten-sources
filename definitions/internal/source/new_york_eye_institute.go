@@ -31,6 +31,7 @@ func GetSourceNewYorkEyeInstitute(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{"NEW YORK EYE INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326267568"}}
+	sourceDef.PatientAccessUrl = "http://www.nynjeye.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

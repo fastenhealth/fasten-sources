@@ -30,6 +30,7 @@ func GetSourceFirstChoicePhysicalTherapyServicesPllc(env pkg.FastenLighthouseEnv
 	sourceDef.SourceType = pkg.SourceTypeFirstChoicePhysicalTherapyServicesPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.firstchoiceucc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceChadSmokerMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeChadSmokerMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hellohopscotch.com/locations"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

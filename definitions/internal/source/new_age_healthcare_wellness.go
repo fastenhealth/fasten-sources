@@ -30,6 +30,7 @@ func GetSourceNewAgeHealthcareWellness(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeNewAgeHealthcareWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.newagehcw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

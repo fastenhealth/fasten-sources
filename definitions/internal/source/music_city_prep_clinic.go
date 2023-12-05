@@ -31,6 +31,7 @@ func GetSourceMusicCityPrepClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RI0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912676461"}}
+	sourceDef.PatientAccessUrl = "https://www.musiccityprep.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

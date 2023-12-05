@@ -30,6 +30,7 @@ func GetSourceSvmcMedicalPracticesAndAffiliates(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeSvmcMedicalPracticesAndAffiliates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://svhealthcare.org/officepatientportal"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

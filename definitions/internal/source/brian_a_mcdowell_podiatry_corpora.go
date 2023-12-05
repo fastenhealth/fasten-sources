@@ -30,6 +30,7 @@ func GetSourceBrianAMcdowellPodiatryCorpora(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBrianAMcdowellPodiatryCorpora
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pposac.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

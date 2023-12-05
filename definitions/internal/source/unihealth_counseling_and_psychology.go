@@ -30,6 +30,7 @@ func GetSourceUnihealthCounselingAndPsychology(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeUnihealthCounselingAndPsychology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.myunihealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

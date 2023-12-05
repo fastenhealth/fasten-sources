@@ -30,6 +30,7 @@ func GetSourcePrimedoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypePrimedoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://primedoc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

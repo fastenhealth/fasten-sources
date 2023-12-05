@@ -30,6 +30,7 @@ func GetSourceMetroFootSpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeMetroFootSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.podiatristinstlouis.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

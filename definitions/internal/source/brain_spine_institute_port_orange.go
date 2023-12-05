@@ -30,6 +30,7 @@ func GetSourceBrainSpineInstitutePortOrange(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBrainSpineInstitutePortOrange
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.brainandspinepo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDigestiveLiverDiseaseCenterOfS(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeDigestiveLiverDiseaseCenterOfS
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dldsa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

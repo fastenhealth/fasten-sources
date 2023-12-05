@@ -31,6 +31,7 @@ func GetSourceParkerUniversity(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"111N00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669582680"}}
+	sourceDef.PatientAccessUrl = "http://www.parkerperformanceinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

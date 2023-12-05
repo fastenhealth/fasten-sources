@@ -30,6 +30,7 @@ func GetSourceBehavioralPediatricsOfRuralGeor(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeBehavioralPediatricsOfRuralGeor
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.DoctorZeanah.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

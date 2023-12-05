@@ -31,6 +31,7 @@ func GetSourceCompleteHealthAtGreenOaksPllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"261QH0100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245833243"}}
+	sourceDef.PatientAccessUrl = "http://www.completehealthgreenoaks.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

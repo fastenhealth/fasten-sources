@@ -30,6 +30,7 @@ func GetSourceOeschSeth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeOeschSeth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/SethOeschMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

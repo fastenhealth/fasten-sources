@@ -31,6 +31,7 @@ func GetSourceWestCoastKidneyInstitute(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Aliases = []string{"WEST COAST KIDNEY INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952914681"}}
+	sourceDef.PatientAccessUrl = "http://chabotnephrology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

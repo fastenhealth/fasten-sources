@@ -30,6 +30,7 @@ func GetSourceIdealFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeIdealFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bhpgdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

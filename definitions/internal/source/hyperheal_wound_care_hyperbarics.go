@@ -30,6 +30,7 @@ func GetSourceHyperhealWoundCareHyperbarics(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeHyperhealWoundCareHyperbarics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hyperheal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

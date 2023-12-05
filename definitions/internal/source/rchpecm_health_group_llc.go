@@ -30,6 +30,7 @@ func GetSourceRchpecmHealthGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeRchpecmHealthGroupLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chgroup.org/ecm"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

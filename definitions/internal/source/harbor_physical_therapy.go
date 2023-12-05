@@ -30,6 +30,7 @@ func GetSourceHarborPhysicalTherapy(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeHarborPhysicalTherapy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gigharborpt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

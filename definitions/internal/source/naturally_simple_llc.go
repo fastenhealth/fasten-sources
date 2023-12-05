@@ -30,6 +30,7 @@ func GetSourceNaturallySimpleLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeNaturallySimpleLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.upliftingwomenswellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

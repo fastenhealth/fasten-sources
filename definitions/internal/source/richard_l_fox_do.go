@@ -30,6 +30,7 @@ func GetSourceRichardLFoxDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeRichardLFoxDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.doctorfox.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

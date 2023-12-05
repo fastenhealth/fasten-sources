@@ -30,6 +30,7 @@ func GetSourcePerimeterOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePerimeterOrthopaedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.perimeterortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

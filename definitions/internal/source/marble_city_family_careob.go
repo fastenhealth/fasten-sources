@@ -30,6 +30,7 @@ func GetSourceMarbleCityFamilyCareob(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeMarbleCityFamilyCareob
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://marblecityfamilycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

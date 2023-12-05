@@ -31,6 +31,7 @@ func GetSourceBluegrassDirectPrimaryCare(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X", "208000000X"}
 	sourceDef.Aliases = []string{"BLUEGRASS DIRECT PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700582327"}}
+	sourceDef.PatientAccessUrl = "http://bluegrassdirectprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

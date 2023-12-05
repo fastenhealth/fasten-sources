@@ -30,6 +30,7 @@ func GetSourceCentralTexasDiabetesWellness(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeCentralTexasDiabetesWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.centraltxdm.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

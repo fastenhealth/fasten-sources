@@ -30,6 +30,7 @@ func GetSourceBautistaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBautistaMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lwrtelehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

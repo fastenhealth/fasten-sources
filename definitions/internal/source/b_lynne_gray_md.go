@@ -30,6 +30,7 @@ func GetSourceBLynneGrayMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeBLynneGrayMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://blgray.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

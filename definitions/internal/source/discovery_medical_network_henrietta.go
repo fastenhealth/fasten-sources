@@ -30,6 +30,7 @@ func GetSourceDiscoveryMedicalNetworkHenrietta(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeDiscoveryMedicalNetworkHenrietta
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ccmhospital.com/clinic.php"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

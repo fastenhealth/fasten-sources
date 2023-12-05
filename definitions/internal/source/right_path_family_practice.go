@@ -31,6 +31,7 @@ func GetSourceRightPathFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"RIGHT PATH FAMILY PRACTICE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952885162"}}
+	sourceDef.PatientAccessUrl = "http://www.rightpathfamilypractice.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

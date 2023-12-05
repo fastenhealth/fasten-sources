@@ -30,6 +30,7 @@ func GetSourceTransitionalCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeTransitionalCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://havenmedicalhome.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWabanakiPublicHealthAndWellness(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"103TA0400X", "251B00000X", "251K00000X", "251S00000X", "261QM0801X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1689335184"}}
+	sourceDef.PatientAccessUrl = "http://wabanakiphw.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

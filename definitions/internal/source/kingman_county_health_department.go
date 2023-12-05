@@ -30,6 +30,7 @@ func GetSourceKingmanCountyHealthDepartment(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeKingmanCountyHealthDepartment
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kingmancoks.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

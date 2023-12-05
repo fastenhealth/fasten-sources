@@ -31,6 +31,7 @@ func GetSourceDoNotUse(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208100000X", "2083X0100X", "208600000X", "208D00000X", "261Q00000X", "261QA1903X", "261QP2300X", "282N00000X", "282NR1301X"}
 	sourceDef.Aliases = []string{"DO NOT USE", "NPI NOT IN USE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013175991", "1013983287", "1043491467", "1255939559", "1336269117", "1477891406", "1689831158", "1689867368", "1952582371", "1992962468"}}
+	sourceDef.PatientAccessUrl = "http://cedarparkdoctors.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

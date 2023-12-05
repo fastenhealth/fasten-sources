@@ -30,6 +30,7 @@ func GetSourceTheMyersInstituteOfPlasticAnd(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTheMyersInstituteOfPlasticAnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Themyersinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

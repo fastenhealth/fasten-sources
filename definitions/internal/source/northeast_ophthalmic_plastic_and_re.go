@@ -30,6 +30,7 @@ func GetSourceNortheastOphthalmicPlasticAndRe(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeNortheastOphthalmicPlasticAndRe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neoprs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

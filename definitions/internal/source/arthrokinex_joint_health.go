@@ -30,6 +30,7 @@ func GetSourceArthrokinexJointHealth(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeArthrokinexJointHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.barretohealthcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

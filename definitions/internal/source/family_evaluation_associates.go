@@ -30,6 +30,7 @@ func GetSourceFamilyEvaluationAssociates(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeFamilyEvaluationAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.familyevaluation.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

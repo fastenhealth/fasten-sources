@@ -30,6 +30,7 @@ func GetSourceCsps2019Llc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeCsps2019Llc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mvamvp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

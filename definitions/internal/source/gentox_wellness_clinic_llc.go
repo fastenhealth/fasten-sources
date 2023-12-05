@@ -31,6 +31,7 @@ func GetSourceGentoxWellnessClinicLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QX0100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295450625"}}
+	sourceDef.PatientAccessUrl = "http://gentoxin.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

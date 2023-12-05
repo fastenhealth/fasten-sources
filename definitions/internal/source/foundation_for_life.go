@@ -31,6 +31,7 @@ func GetSourceFoundationForLife(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QA0005X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144747981"}}
+	sourceDef.PatientAccessUrl = "http://www.foundationforlife.org/about.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

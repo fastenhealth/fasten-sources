@@ -31,6 +31,7 @@ func GetSourceAdvancedWoundCareCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X", "208600000X", "363L00000X"}
 	sourceDef.Aliases = []string{"ADVANCED WOUND CARE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366148611", "1396322111"}}
+	sourceDef.PatientAccessUrl = "http://www.advancedveincenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAdvancedMidwestInterventionalRad(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeAdvancedMidwestInterventionalRad
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.advancedmidwestir.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceClincareInternationalCenterPsychiatry(env pkg.FastenLighthouseEnvT
 	sourceDef.SourceType = pkg.SourceTypeClincareInternationalCenterPsychiatry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://cic-america.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

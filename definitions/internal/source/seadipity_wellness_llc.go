@@ -31,6 +31,7 @@ func GetSourceSeadipityWellnessLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QP2300X", "363LP2300X", "363LW0102X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336803642"}}
+	sourceDef.PatientAccessUrl = "http://www.seadipity.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBoneJointSpecialists(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBoneJointSpecialists
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.orthopedicdoctors.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

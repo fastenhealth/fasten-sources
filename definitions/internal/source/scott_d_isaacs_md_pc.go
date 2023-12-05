@@ -30,6 +30,7 @@ func GetSourceScottDIsaacsMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeScottDIsaacsMdPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.atlantaendocrine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

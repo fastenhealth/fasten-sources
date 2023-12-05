@@ -31,6 +31,7 @@ func GetSourceSonterraCardiovascularInstitute(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730294166"}}
+	sourceDef.PatientAccessUrl = "http://www.sonterracardiovascularinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

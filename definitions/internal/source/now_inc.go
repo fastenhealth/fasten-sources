@@ -30,6 +30,7 @@ func GetSourceNowInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeNowInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://md-now.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

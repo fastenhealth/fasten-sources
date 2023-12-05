@@ -30,6 +30,7 @@ func GetSourceAllianceRegenAndRehabPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAllianceRegenAndRehabPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.thealliancerx.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCucE79ThSt(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeCucE79ThSt
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.clevelanducare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

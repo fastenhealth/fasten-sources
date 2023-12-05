@@ -31,6 +31,7 @@ func GetSourceHealMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"163WC1500X", "163WD0400X", "171100000X", "174H00000X", "207Q00000X", "207R00000X", "207VG0400X", "2080A0000X", "2083P0901X", "208D00000X", "2255A2300X", "261QM0850X", "363LA2200X", "363LF0000X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508365206"}}
+	sourceDef.PatientAccessUrl = "http://www.healmedical.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

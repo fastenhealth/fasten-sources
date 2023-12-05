@@ -30,6 +30,7 @@ func GetSourceIndianaHemophiliaThrombosisCenterInc(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeIndianaHemophiliaThrombosisCenterInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.ihtc.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

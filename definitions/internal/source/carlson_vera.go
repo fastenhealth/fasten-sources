@@ -30,6 +30,7 @@ func GetSourceCarlsonVera(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeCarlsonVera
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.VeraCarlsonMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

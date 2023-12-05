@@ -31,6 +31,7 @@ func GetSourcePalliativeAndMedicalConsultants(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207R00000X", "207RH0002X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669879243"}}
+	sourceDef.PatientAccessUrl = "http://www.sleepydocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

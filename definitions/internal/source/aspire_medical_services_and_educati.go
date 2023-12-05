@@ -30,6 +30,7 @@ func GetSourceAspireMedicalServicesAndEducati(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAspireMedicalServicesAndEducati
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://aspirepagosa.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

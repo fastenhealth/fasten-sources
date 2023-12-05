@@ -30,6 +30,7 @@ func GetSourceMemorialMedicalGroupOfSouthFlo(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeMemorialMedicalGroupOfSouthFlo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.memorialflorida.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

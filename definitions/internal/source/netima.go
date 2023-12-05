@@ -30,6 +30,7 @@ func GetSourceNetima(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeNetima
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.netima.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceJustHeartCardiovascularGroupInc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeJustHeartCardiovascularGroupInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://myjustheart.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

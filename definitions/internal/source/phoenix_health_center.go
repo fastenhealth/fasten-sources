@@ -31,6 +31,7 @@ func GetSourcePhoenixHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261QM2800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679971097"}}
+	sourceDef.PatientAccessUrl = "http://www.phoenixhctyler.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

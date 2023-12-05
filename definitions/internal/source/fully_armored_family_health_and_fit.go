@@ -30,6 +30,7 @@ func GetSourceFullyArmoredFamilyHealthAndFit(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeFullyArmoredFamilyHealthAndFit
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fullyarmored.info"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

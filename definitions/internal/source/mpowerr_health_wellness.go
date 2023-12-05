@@ -30,6 +30,7 @@ func GetSourceMpowerrHealthWellness(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeMpowerrHealthWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mpowerrhwa.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceMidwestCenterForWomensHealthcare(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821079518"}}
+	sourceDef.PatientAccessUrl = "http://mcwhc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

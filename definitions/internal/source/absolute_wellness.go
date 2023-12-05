@@ -30,6 +30,7 @@ func GetSourceAbsoluteWellness(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeAbsoluteWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://absolutepaintx.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

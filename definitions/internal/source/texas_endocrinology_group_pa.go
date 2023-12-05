@@ -30,6 +30,7 @@ func GetSourceTexasEndocrinologyGroupPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeTexasEndocrinologyGroupPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.txendocrine.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

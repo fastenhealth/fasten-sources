@@ -30,6 +30,7 @@ func GetSourceGuyRFogelMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeGuyRFogelMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.spinepainbegone.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceUrgentWellness(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeUrgentWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://UrgentWellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

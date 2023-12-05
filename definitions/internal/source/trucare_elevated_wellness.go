@@ -31,6 +31,7 @@ func GetSourceTrucareElevatedWellness(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{"TRUCARE ELEVATED WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891428777"}}
+	sourceDef.PatientAccessUrl = "https://trucarewellness.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

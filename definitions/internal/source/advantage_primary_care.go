@@ -31,6 +31,7 @@ func GetSourceAdvantagePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"363A00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245959287"}}
+	sourceDef.PatientAccessUrl = "http://www.advantageRVA.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

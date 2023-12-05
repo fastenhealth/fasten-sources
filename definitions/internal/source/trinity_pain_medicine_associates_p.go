@@ -30,6 +30,7 @@ func GetSourceTrinityPainMedicineAssociatesP(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTrinityPainMedicineAssociatesP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trinitypain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

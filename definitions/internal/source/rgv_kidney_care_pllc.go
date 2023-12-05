@@ -30,6 +30,7 @@ func GetSourceRgvKidneyCarePllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeRgvKidneyCarePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.RGVKidneyCare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceNaplesConciergeCardiologyAndInt(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeNaplesConciergeCardiologyAndInt
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.naplesccim.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

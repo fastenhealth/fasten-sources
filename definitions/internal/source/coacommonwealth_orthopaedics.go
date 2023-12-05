@@ -30,6 +30,7 @@ func GetSourceCoacommonwealthOrthopaedics(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeCoacommonwealthOrthopaedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aoreading.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

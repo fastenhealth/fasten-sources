@@ -30,6 +30,7 @@ func GetSourceTheNutritionProfessionals(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeTheNutritionProfessionals
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nutritionpro.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

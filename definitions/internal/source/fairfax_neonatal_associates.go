@@ -31,6 +31,7 @@ func GetSourceFairfaxNeonatalAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"2080N0001X", "2080P0214X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821055609"}}
+	sourceDef.PatientAccessUrl = "https://www.fnapc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

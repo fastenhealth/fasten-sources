@@ -30,6 +30,7 @@ func GetSourceAmitaHealthAbbhh(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeAmitaHealthAbbhh
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://myamitahealthdoc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

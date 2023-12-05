@@ -30,6 +30,7 @@ func GetSourceSerendipityAssociatesMentalHealt(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeSerendipityAssociatesMentalHealt
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.serendipitynp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

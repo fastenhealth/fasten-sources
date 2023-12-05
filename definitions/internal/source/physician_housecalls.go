@@ -30,6 +30,7 @@ func GetSourcePhysicianHousecalls(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypePhysicianHousecalls
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mobilemedicalks.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

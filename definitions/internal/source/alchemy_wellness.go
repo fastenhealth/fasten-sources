@@ -31,6 +31,7 @@ func GetSourceAlchemyWellness(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"261QM0801X", "261QP3300X"}
 	sourceDef.Aliases = []string{"ALCHEMY WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750923173"}}
+	sourceDef.PatientAccessUrl = "http://www.wellwithalchemy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

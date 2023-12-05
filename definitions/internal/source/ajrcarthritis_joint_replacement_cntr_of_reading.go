@@ -30,6 +30,7 @@ func GetSourceAjrcarthritisJointReplacementCntrOfReading(env pkg.FastenLighthous
 	sourceDef.SourceType = pkg.SourceTypeAjrcarthritisJointReplacementCntrOfReading
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aoreading.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

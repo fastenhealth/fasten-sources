@@ -31,6 +31,7 @@ func GetSourceCarePlusFamilyClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"CARE PLUS FAMILY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285220376"}}
+	sourceDef.PatientAccessUrl = "http://www.careplusfc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

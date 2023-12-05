@@ -30,6 +30,7 @@ func GetSourceBird(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeBird
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/DavidBirdMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

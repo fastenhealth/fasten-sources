@@ -31,6 +31,7 @@ func GetSourceTheHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"103T00000X", "122300000X", "261QF0400X", "261QM1300X", "261QS1000X", "332900000X"}
 	sourceDef.Aliases = []string{"THE HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053525139", "1154535227", "1245444314", "1245444397", "1609083922", "1639383797", "1699755348", "1720313026", "1972710200"}}
+	sourceDef.PatientAccessUrl = "https://thcplainfield.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSpringboardPediatrics(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeSpringboardPediatrics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.springboardpeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

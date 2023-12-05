@@ -30,6 +30,7 @@ func GetSourceGuohio(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeGuohio
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://guohio.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

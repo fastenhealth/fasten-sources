@@ -30,6 +30,7 @@ func GetSourceOrthoOic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeOrthoOic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.orthooic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

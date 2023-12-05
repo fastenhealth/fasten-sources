@@ -31,6 +31,7 @@ func GetSourceStrideHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207ZD0900X", "207ZP0102X", "2085R0202X", "2085R0204X", "208600000X", "2086S0129X", "213E00000X", "213EP1101X", "213ES0103X", "213ES0131X"}
 	sourceDef.Aliases = []string{"STRIDE HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194380097", "1750814737"}}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

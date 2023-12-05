@@ -30,6 +30,7 @@ func GetSourceVibrantFamilyChiropracticWellnessLlc(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeVibrantFamilyChiropracticWellnessLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vervech.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

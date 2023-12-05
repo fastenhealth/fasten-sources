@@ -30,6 +30,7 @@ func GetSourceChristianPsychiatricServicesPc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeChristianPsychiatricServicesPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.christianpsychiatricservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

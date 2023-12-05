@@ -30,6 +30,7 @@ func GetSourceHighRiskPregnancyCenterOfAz(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeHighRiskPregnancyCenterOfAz
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hrpcaz.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceInspireYourWhyCompany(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"101Y00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225774078"}}
+	sourceDef.PatientAccessUrl = "https://inspireyoury.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

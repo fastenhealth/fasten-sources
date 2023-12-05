@@ -31,6 +31,7 @@ func GetSourceTroyMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"261QM1300X"}
 	sourceDef.Aliases = []string{"TROY MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760077747"}}
+	sourceDef.PatientAccessUrl = "http://www.troymed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

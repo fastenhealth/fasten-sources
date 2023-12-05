@@ -30,6 +30,7 @@ func GetSourceDermatologyPhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeDermatologyPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chicagodermphysicians.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

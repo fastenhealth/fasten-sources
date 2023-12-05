@@ -31,6 +31,7 @@ func GetSourceClarityTelehealthOfFlorida(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457020125"}}
+	sourceDef.PatientAccessUrl = "http://www.clarityth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

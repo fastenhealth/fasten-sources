@@ -30,6 +30,7 @@ func GetSourceSyedWHaqueMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeSyedWHaqueMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.syedwhaquemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

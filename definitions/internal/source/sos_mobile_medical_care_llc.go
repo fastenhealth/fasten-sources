@@ -31,6 +31,7 @@ func GetSourceSosMobileMedicalCareLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QP2300X", "261QU0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770239162"}}
+	sourceDef.PatientAccessUrl = "http://www.sosmmc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

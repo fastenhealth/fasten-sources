@@ -31,6 +31,7 @@ func GetSourceStephensMemorialHospital(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207PE0004X", "207Q00000X", "261Q00000X", "261QA1903X", "261QP2000X", "261QS1200X", "273R00000X", "282N00000X", "341600000X", "367500000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063638948", "1154547032", "1225253743", "1225365026", "1346293172", "1467513044", "1760606339", "1831196005", "1871736660", "1952527830"}}
+	sourceDef.PatientAccessUrl = "http://www.smhtx.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

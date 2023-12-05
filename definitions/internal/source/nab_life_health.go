@@ -31,6 +31,7 @@ func GetSourceNabLifeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"261QH0100X", "261QP2300X"}
 	sourceDef.Aliases = []string{"NAB LIFE HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548820798"}}
+	sourceDef.PatientAccessUrl = "https://www.nablifehealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

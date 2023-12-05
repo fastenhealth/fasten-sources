@@ -30,6 +30,7 @@ func GetSourceHinesDermatologyAssociatesInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeHinesDermatologyAssociatesInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hinesdermatologyassociates.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

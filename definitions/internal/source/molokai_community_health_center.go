@@ -31,6 +31,7 @@ func GetSourceMolokaiCommunityHealthCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261Q00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"MOLOKAI COMMUNITY HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336805621", "1770570780"}}
+	sourceDef.PatientAccessUrl = "https://molokaichc.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceMichaelACastilloMdPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207LP2900X", "208VP0000X", "208VP0014X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750562534"}}
+	sourceDef.PatientAccessUrl = "http://www.macmdaz.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

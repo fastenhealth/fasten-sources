@@ -31,6 +31,7 @@ func GetSourceJthinkLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023395001"}}
+	sourceDef.PatientAccessUrl = "http://www.meadowcityfamily.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

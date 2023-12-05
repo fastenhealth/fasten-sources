@@ -30,6 +30,7 @@ func GetSourceTelescope(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeTelescope
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.telescopehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

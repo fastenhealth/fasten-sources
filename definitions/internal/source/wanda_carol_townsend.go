@@ -30,6 +30,7 @@ func GetSourceWandaCarolTownsend(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeWandaCarolTownsend
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://pottsvillemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

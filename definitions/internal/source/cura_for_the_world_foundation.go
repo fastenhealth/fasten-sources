@@ -30,6 +30,7 @@ func GetSourceCuraForTheWorldFoundation(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeCuraForTheWorldFoundation
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.curafortheworld.org/oklahoma-clinic"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBonaventureMedicalFoundation(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QM2500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083960108"}}
+	sourceDef.PatientAccessUrl = "http://myamitahealthdoc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

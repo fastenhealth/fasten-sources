@@ -30,6 +30,7 @@ func GetSourceJuneRTunstallMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeJuneRTunstallMdPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.junertunstallmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

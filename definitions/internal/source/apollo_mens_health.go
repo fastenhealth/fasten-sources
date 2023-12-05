@@ -30,6 +30,7 @@ func GetSourceApolloMensHealth(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeApolloMensHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.apollomh.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

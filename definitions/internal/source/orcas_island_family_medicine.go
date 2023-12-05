@@ -30,6 +30,7 @@ func GetSourceOrcasIslandFamilyMedicine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeOrcasIslandFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.oifmpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

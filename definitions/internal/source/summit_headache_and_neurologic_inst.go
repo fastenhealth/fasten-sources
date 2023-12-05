@@ -30,6 +30,7 @@ func GetSourceSummitHeadacheAndNeurologicInst(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeSummitHeadacheAndNeurologicInst
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.coloradoheadache.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceComtreaCommunityTreatment(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeComtreaCommunityTreatment
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.comtrea.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

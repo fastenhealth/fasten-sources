@@ -30,6 +30,7 @@ func GetSourceAdvancedPracticeNursingSpecialis(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeAdvancedPracticeNursingSpecialis
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://apnslv.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVulcanPainManagement(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeVulcanPainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://http:/www.vulcan pain management.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

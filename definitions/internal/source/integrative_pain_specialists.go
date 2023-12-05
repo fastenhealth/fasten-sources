@@ -31,6 +31,7 @@ func GetSourceIntegrativePainSpecialists(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"208VP0014X"}
 	sourceDef.Aliases = []string{"INTEGRATIVE PAIN SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609012905"}}
+	sourceDef.PatientAccessUrl = "https://feelbetterrva.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

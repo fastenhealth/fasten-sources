@@ -30,6 +30,7 @@ func GetSourceHanafyRasha(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeHanafyRasha
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.Drrashahanafy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAppalachianPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"305S00000X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548331960"}}
+	sourceDef.PatientAccessUrl = "http://www.envisionpainmanagement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

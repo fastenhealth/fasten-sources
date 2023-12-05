@@ -30,6 +30,7 @@ func GetSourceNursesGlobalOutreachInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeNursesGlobalOutreachInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nursesglobaloutreach.org/ict-street-team/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

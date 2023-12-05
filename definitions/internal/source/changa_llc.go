@@ -31,6 +31,7 @@ func GetSourceChangaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"MONARCH MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215658380"}}
+	sourceDef.PatientAccessUrl = "http://www.monarch-med.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

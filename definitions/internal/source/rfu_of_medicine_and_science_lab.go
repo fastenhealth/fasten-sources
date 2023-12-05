@@ -30,6 +30,7 @@ func GetSourceRfuOfMedicineAndScienceLab(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeRfuOfMedicineAndScienceLab
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rosalindfranklin.edu/RFUHS/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

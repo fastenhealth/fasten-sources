@@ -31,6 +31,7 @@ func GetSourceOpenloopHealthcarePartnersPc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"103TC1900X", "104100000X", "106H00000X", "111N00000X", "133V00000X", "163W00000X", "208D00000X", "235Z00000X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043979842", "1245820661", "1275291288", "1821757758"}}
+	sourceDef.PatientAccessUrl = "https://www.khorasolutions.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

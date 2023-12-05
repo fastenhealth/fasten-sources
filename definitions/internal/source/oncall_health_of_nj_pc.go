@@ -30,6 +30,7 @@ func GetSourceOncallHealthOfNjPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeOncallHealthOfNjPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.cayabacare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

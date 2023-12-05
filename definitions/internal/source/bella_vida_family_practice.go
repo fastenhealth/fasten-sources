@@ -30,6 +30,7 @@ func GetSourceBellaVidaFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeBellaVidaFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bhpgdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

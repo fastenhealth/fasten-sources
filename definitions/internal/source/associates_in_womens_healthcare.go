@@ -31,6 +31,7 @@ func GetSourceAssociatesInWomensHealthcare(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831276674"}}
+	sourceDef.PatientAccessUrl = "http://www.healthcareforallwomen.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

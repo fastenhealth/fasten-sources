@@ -30,6 +30,7 @@ func GetSourceEverbloomPsychiatricAndMentalHe(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeEverbloomPsychiatricAndMentalHe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://everbloom.demoapp2-lc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

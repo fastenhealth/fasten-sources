@@ -30,6 +30,7 @@ func GetSourceBreathingAssociationLungHealth(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeBreathingAssociationLungHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.breathingassociation.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

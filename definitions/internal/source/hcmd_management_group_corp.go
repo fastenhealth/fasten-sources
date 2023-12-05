@@ -30,6 +30,7 @@ func GetSourceHcmdManagementGroupCorp(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeHcmdManagementGroupCorp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://dockmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

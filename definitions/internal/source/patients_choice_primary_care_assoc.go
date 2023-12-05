@@ -30,6 +30,7 @@ func GetSourcePatientsChoicePrimaryCareAssoc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePatientsChoicePrimaryCareAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.PatientsChoiceVIP.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

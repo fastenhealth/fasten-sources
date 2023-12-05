@@ -31,6 +31,7 @@ func GetSourceAllyEndocrinologyPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QM2500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255900395"}}
+	sourceDef.PatientAccessUrl = "http://allyendo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

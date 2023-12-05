@@ -31,6 +31,7 @@ func GetSourceSurpriseFamilyMedicinePlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548591886"}}
+	sourceDef.PatientAccessUrl = "http://www.surprisefamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHealingHandsIntegratedWellness(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeHealingHandsIntegratedWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://healinghandsfp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCenterForRareNeurologicalDiseas(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeCenterForRareNeurologicalDiseas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://rareneuro.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

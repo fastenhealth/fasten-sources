@@ -30,6 +30,7 @@ func GetSourceColumnSturdy(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeColumnSturdy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.columnhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

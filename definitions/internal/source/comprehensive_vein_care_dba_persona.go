@@ -30,6 +30,7 @@ func GetSourceComprehensiveVeinCareDbaPersona(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveVeinCareDbaPersona
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://personalcarefamilypractice.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

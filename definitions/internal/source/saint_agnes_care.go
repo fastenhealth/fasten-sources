@@ -31,6 +31,7 @@ func GetSourceSaintAgnesCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"207P00000X", "207Q00000X", "207R00000X", "207T00000X", "207V00000X", "207X00000X", "208600000X", "2086S0122X", "208C00000X", "208G00000X", "261QM1300X", "310400000X"}
 	sourceDef.Aliases = []string{"SAINT AGNES CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558819482", "1568939635"}}
+	sourceDef.PatientAccessUrl = "http://www.saintagnescare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDoralMsoLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeDoralMsoLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://doralhw.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

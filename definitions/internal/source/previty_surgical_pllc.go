@@ -30,6 +30,7 @@ func GetSourcePrevitySurgicalPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypePrevitySurgicalPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.prevityclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

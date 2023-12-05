@@ -31,6 +31,7 @@ func GetSourceOzarkOrthopaedics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207X00000X", "208100000X", "332B00000X"}
 	sourceDef.Aliases = []string{"ORTHOPAEDIC CLINIC, LTD.", "OTHOPAEDIC CLINIC, LTD.", "OZARK ORTHOPAEDICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235573577", "1649614231"}}
+	sourceDef.PatientAccessUrl = "http://www.ozark-ortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

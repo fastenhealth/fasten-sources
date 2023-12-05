@@ -30,6 +30,7 @@ func GetSourceOptimalHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeOptimalHealthCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drchastang.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

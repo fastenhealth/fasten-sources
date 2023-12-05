@@ -30,6 +30,7 @@ func GetSourceWhiteMemorialMedicalGroupInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeWhiteMemorialMedicalGroupInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.adventisthealth.org/locations/white-memorial-medical-group/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

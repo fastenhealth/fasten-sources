@@ -30,6 +30,7 @@ func GetSourceNeurologyHeadacheCenterInc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeNeurologyHeadacheCenterInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://regainmemorycenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

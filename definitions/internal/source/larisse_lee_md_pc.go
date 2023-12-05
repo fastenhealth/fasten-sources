@@ -31,6 +31,7 @@ func GetSourceLarisseLeeMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"2086S0129X"}
 	sourceDef.Aliases = []string{"L.A. VEIN CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376811406"}}
+	sourceDef.PatientAccessUrl = "http://www.laveincenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -32,6 +32,7 @@ func GetSourceRheumatologyAssociates(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207RR0500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225208606"}}
+	sourceDef.PatientAccessUrl = "http://rheumatologyassociates.us"
 	sourceDef.SecretKeyPrefix = "eclinicalworks"
 
 	return sourceDef, err

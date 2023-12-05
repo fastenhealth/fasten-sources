@@ -31,6 +31,7 @@ func GetSourceMaryKathleenWDitursiMdPc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"HARMONY MILLS PEDIATRICS", "MARY KATHLEEN W DITURSI MD PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417391319"}}
+	sourceDef.PatientAccessUrl = "http://www.harmonymillspeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

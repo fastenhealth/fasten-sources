@@ -31,6 +31,7 @@ func GetSourceGerihealPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760014120"}}
+	sourceDef.PatientAccessUrl = "http://www.drbrinley.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

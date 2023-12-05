@@ -31,6 +31,7 @@ func GetSourceJeremyLaMotteMd(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"208D00000X"}
 	sourceDef.Aliases = []string{"STARWEST MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659820298"}}
+	sourceDef.PatientAccessUrl = "https://seapointemedicalgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

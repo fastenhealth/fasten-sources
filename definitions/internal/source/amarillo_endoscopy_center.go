@@ -30,6 +30,7 @@ func GetSourceAmarilloEndoscopyCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeAmarilloEndoscopyCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://amarilloendoscopy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

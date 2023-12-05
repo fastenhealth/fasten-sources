@@ -31,6 +31,7 @@ func GetSourceTheInstituteOfSurgicalArts(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619186251"}}
+	sourceDef.PatientAccessUrl = "http://www.DrSayah.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

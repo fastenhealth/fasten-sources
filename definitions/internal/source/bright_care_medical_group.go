@@ -30,6 +30,7 @@ func GetSourceBrightCareMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeBrightCareMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.brightcaremedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

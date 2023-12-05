@@ -30,6 +30,7 @@ func GetSourceAllianceHandAndWristSurgeryPll(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeAllianceHandAndWristSurgeryPll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.alliance-hw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

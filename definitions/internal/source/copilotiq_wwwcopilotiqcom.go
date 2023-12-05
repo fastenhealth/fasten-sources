@@ -30,6 +30,7 @@ func GetSourceCopilotiqWwwcopilotiqcom(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCopilotiqWwwcopilotiqcom
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.copilotiq.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

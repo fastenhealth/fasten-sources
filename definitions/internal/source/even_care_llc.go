@@ -30,6 +30,7 @@ func GetSourceEvenCareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeEvenCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://evencaredoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

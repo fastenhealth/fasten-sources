@@ -30,6 +30,7 @@ func GetSourceChapnLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeChapnLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chapn4all.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

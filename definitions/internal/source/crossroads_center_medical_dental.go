@@ -30,6 +30,7 @@ func GetSourceCrossroadsCenterMedicalDental(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsCenterMedicalDental
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.crossroadsclinicvalp.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

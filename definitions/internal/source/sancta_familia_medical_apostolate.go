@@ -30,6 +30,7 @@ func GetSourceSanctaFamiliaMedicalApostolate(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSanctaFamiliaMedicalApostolate
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://omahacatholicdoctors.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceEsperConciergeAndSleepMedicine(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeEsperConciergeAndSleepMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.EsperMedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

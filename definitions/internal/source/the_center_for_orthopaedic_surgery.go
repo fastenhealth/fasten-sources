@@ -31,6 +31,7 @@ func GetSourceTheCenterForOrthopaedicSurgery(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"THE CENTER FOR ORTHOPAEDIC SURGERY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811345267"}}
+	sourceDef.PatientAccessUrl = "http://www.c-osa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

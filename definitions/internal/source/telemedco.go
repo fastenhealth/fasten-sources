@@ -30,6 +30,7 @@ func GetSourceTelemedco(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeTelemedco
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.telemedco.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

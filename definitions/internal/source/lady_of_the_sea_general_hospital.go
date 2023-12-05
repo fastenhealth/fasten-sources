@@ -31,6 +31,7 @@ func GetSourceLadyOfTheSeaGeneralHospital(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"273Y00000X", "275N00000X", "282NC0060X", "282NR1301X"}
 	sourceDef.Aliases = []string{"LADY OF THE SEA GENERAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043358120", "1407883341", "1922005842"}}
+	sourceDef.PatientAccessUrl = "http://www.losgh.org/clinicportal"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

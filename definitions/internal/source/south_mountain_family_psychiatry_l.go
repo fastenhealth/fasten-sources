@@ -30,6 +30,7 @@ func GetSourceSouthMountainFamilyPsychiatryL(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSouthMountainFamilyPsychiatryL
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.smfamilypsych.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

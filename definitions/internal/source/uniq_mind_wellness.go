@@ -30,6 +30,7 @@ func GetSourceUniqMindWellness(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeUniqMindWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.uniq-mind.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

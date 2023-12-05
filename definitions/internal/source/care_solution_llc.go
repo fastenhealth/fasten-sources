@@ -30,6 +30,7 @@ func GetSourceCareSolutionLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeCareSolutionLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://timoniumurgentcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

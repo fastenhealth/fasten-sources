@@ -30,6 +30,7 @@ func GetSourceTriadOcularAndFacialPlasticSur(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTriadOcularAndFacialPlasticSur
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.triadocularfacial.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

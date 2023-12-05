@@ -31,6 +31,7 @@ func GetSourceSteubenCountyHealthDepartment(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"251K00000X"}
 	sourceDef.Aliases = []string{"STEUBEN COUNTY HEALTH DEPARTMENT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992342562"}}
+	sourceDef.PatientAccessUrl = "https://www.co.steuben.in.us/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

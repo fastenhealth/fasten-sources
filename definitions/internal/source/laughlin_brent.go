@@ -30,6 +30,7 @@ func GetSourceLaughlinBrent(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLaughlinBrent
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://login.BrentLaughlinMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

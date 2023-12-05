@@ -30,6 +30,7 @@ func GetSourceAliciaMPriceAocnpLlcDbaNew(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeAliciaMPriceAocnpLlcDbaNew
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.newpulsehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

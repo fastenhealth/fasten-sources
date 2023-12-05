@@ -30,6 +30,7 @@ func GetSourceGastrointestinalMedicineAssociate(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeGastrointestinalMedicineAssociate
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gastromedva.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

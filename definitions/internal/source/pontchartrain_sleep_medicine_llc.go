@@ -30,6 +30,7 @@ func GetSourcePontchartrainSleepMedicineLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypePontchartrainSleepMedicineLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://pontchartrainsleepmedicine.squarespace.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSolsticeHealthWellness(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeSolsticeHealthWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.solsticehw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

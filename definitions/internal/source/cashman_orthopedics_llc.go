@@ -30,6 +30,7 @@ func GetSourceCashmanOrthopedicsLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeCashmanOrthopedicsLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jlcashmanmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceIslamicAssociationOfNorthTexas(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeIslamicAssociationOfNorthTexas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://iant.com/services/#"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

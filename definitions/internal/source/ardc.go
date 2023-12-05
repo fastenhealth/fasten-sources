@@ -30,6 +30,7 @@ func GetSourceArdc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeArdc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mhmh.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

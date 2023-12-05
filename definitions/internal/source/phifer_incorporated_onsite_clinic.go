@@ -30,6 +30,7 @@ func GetSourcePhiferIncorporatedOnsiteClinic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePhiferIncorporatedOnsiteClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://clinic.phifer.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

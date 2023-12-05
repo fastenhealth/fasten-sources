@@ -30,6 +30,7 @@ func GetSourceElPasoColonAndRectal(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeElPasoColonAndRectal
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drjaimegomez.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

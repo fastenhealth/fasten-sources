@@ -30,6 +30,7 @@ func GetSourceTruhealthnow(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTruhealthnow
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.medicalaccessmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

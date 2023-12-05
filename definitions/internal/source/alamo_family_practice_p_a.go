@@ -30,6 +30,7 @@ func GetSourceAlamoFamilyPracticePA(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeAlamoFamilyPracticePA
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.alamofamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVirginiaEndocrinology1(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeVirginiaEndocrinology1
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nahrainal-zubaidi.md.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

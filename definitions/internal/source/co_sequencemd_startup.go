@@ -30,6 +30,7 @@ func GetSourceCoSequencemdStartup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeCoSequencemdStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sequencemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

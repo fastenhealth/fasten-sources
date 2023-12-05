@@ -31,6 +31,7 @@ func GetSourceClinicalNeurosciencePa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760459671"}}
+	sourceDef.PatientAccessUrl = "https://plus.google.com/+ClinicalNeuroscienceFortWorth/about"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

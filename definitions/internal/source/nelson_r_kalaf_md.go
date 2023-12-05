@@ -30,6 +30,7 @@ func GetSourceNelsonRKalafMd(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeNelsonRKalafMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kalafmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

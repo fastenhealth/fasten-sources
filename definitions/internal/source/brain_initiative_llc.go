@@ -30,6 +30,7 @@ func GetSourceBrainInitiativeLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeBrainInitiativeLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://sherzaimd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

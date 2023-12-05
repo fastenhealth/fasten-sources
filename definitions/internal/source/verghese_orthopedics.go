@@ -30,6 +30,7 @@ func GetSourceVergheseOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeVergheseOrthopedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vergheseorthopedics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

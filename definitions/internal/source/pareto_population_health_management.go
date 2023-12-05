@@ -30,6 +30,7 @@ func GetSourceParetoPopulationHealthManagement(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeParetoPopulationHealthManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.paretoclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceFloridaBladderInstitute(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207VF0040X"}
 	sourceDef.Aliases = []string{"FLORIDA BLADDER INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740229665"}}
+	sourceDef.PatientAccessUrl = "http://www.floridabladderinstitute.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceKogaLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"207T00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346880010"}}
+	sourceDef.PatientAccessUrl = "http://sebastiankoga.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceEvolveMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeEvolveMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.evolvemymed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

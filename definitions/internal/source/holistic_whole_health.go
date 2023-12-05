@@ -30,6 +30,7 @@ func GetSourceHolisticWholeHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHolisticWholeHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hwhgroup.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

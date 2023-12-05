@@ -31,6 +31,7 @@ func GetSourceFloridaPainCenterOfNaples(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"208VP0014X"}
 	sourceDef.Aliases = []string{"FLORIDA PAIN CENTER OF NAPLES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619928512"}}
+	sourceDef.PatientAccessUrl = "http://flpaincenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

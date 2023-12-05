@@ -31,6 +31,7 @@ func GetSourceCaremed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"332B00000X", "332BP3500X", "332BX2000X"}
 	sourceDef.Aliases = []string{"CAREMED"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285645812"}}
+	sourceDef.PatientAccessUrl = "http://caremedmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

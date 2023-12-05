@@ -30,6 +30,7 @@ func GetSourceDowningEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeDowningEyeCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.downingeyecare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

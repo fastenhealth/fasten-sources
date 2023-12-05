@@ -30,6 +30,7 @@ func GetSourcePrecisionFamilyMedicineAesthet(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePrecisionFamilyMedicineAesthet
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.precisionfammed.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

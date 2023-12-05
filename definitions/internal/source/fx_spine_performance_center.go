@@ -30,6 +30,7 @@ func GetSourceFxSpinePerformanceCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeFxSpinePerformanceCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://fxspinecenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

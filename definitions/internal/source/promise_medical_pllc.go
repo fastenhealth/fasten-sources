@@ -31,6 +31,7 @@ func GetSourcePromiseMedicalPllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548753866"}}
+	sourceDef.PatientAccessUrl = "http://promisemedicalutah.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

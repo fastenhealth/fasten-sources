@@ -31,6 +31,7 @@ func GetSourceGenesisMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"291U00000X", "332B00000X"}
 	sourceDef.Aliases = []string{"GENESIS MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881063766", "1891348959"}}
+	sourceDef.PatientAccessUrl = "https://www.genesisdoctors.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

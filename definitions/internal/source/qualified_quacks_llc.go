@@ -30,6 +30,7 @@ func GetSourceQualifiedQuacksLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeQualifiedQuacksLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.qualifiedquacks.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceUnchartedTerritoryMentalHealthS(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeUnchartedTerritoryMentalHealthS
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.utmh.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

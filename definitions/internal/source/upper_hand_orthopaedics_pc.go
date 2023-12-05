@@ -30,6 +30,7 @@ func GetSourceUpperHandOrthopaedicsPc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeUpperHandOrthopaedicsPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.upperhandortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

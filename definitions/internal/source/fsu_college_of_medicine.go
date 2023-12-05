@@ -30,6 +30,7 @@ func GetSourceFsuCollegeOfMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeFsuCollegeOfMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://med.fsu.edu/fmpp/home"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

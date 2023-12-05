@@ -31,6 +31,7 @@ func GetSourceMetabolicLeaderLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207RE0101X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134436165"}}
+	sourceDef.PatientAccessUrl = "http://metabolicleader.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

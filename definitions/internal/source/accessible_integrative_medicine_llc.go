@@ -30,6 +30,7 @@ func GetSourceAccessibleIntegrativeMedicineLlc(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeAccessibleIntegrativeMedicineLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.legacypaindocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

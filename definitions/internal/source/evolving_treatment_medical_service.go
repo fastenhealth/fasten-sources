@@ -30,6 +30,7 @@ func GetSourceEvolvingTreatmentMedicalService(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeEvolvingTreatmentMedicalService
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drharrylindman.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

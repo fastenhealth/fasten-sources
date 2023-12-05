@@ -31,6 +31,7 @@ func GetSourceBigTreeMedicalHome(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"103K00000X", "207K00000X", "207Q00000X", "251S00000X", "333600000X"}
 	sourceDef.Aliases = []string{"BIG TREE MEDICAL HOME", "BIG TREE PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619577905", "1740858562"}}
+	sourceDef.PatientAccessUrl = "http://www.bigtreemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

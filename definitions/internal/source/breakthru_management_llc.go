@@ -30,6 +30,7 @@ func GetSourceBreakthruManagementLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeBreakthruManagementLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://breakthrupsych.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

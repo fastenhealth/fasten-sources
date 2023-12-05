@@ -30,6 +30,7 @@ func GetSourceVirtuosaGyn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeVirtuosaGyn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.virtuosagyn.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

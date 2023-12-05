@@ -30,6 +30,7 @@ func GetSourcePersonalizedAndRestorativeWellne(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypePersonalizedAndRestorativeWellne
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.prestigeinternalmedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

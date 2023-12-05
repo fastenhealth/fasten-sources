@@ -31,6 +31,7 @@ func GetSourceMaximumWellnessMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QH0100X", "261QM1300X"}
 	sourceDef.Aliases = []string{"MAXIMUM WELLNESS MD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699259655"}}
+	sourceDef.PatientAccessUrl = "https://www.definemaximumwellnessmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

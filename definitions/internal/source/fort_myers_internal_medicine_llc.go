@@ -31,6 +31,7 @@ func GetSourceFortMyersInternalMedicineLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346588621"}}
+	sourceDef.PatientAccessUrl = "http://www.fmimdocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

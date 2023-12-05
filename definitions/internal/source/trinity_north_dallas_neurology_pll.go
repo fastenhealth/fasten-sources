@@ -30,6 +30,7 @@ func GetSourceTrinityNorthDallasNeurologyPll(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTrinityNorthDallasNeurologyPll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trinityneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

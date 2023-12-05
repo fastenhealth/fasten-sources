@@ -30,6 +30,7 @@ func GetSourceHudsonPrimaryAonePlus(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeHudsonPrimaryAonePlus
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://HUDSONPRIMARYCARE.NET"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

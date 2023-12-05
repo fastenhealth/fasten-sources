@@ -31,6 +31,7 @@ func GetSourceFamilyPodiatryPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"213EP1101X", "332B00000X"}
 	sourceDef.Aliases = []string{"FAMILY PODIATRY PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558667204"}}
+	sourceDef.PatientAccessUrl = "http://www.familypodiatrydc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

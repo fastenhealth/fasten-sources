@@ -31,6 +31,7 @@ func GetSourceTelemedNowLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207P00000X", "363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316685365"}}
+	sourceDef.PatientAccessUrl = "http://www.telemedicalnow.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

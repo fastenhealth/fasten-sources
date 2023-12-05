@@ -30,6 +30,7 @@ func GetSourceCornerstoneGeriatricCare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneGeriatricCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cornerstonegeriatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceIcnShifaClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeIcnShifaClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.icnshifa.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

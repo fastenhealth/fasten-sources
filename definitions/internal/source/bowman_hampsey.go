@@ -30,6 +30,7 @@ func GetSourceBowmanHampsey(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeBowmanHampsey
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.visitonehealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

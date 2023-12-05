@@ -30,6 +30,7 @@ func GetSourceSandmanCenterForVeins(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeSandmanCenterForVeins
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://sandmanveins.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBretScher(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeBretScher
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.LowCarbCardiologist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

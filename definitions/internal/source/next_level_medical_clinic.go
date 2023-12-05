@@ -31,6 +31,7 @@ func GetSourceNextLevelMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{"MAGDALENA SALINAS APRN, FNP-C, RNFA, PLLC", "NEXT LEVEL MEDICAL CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588133276"}}
+	sourceDef.PatientAccessUrl = "http://www.nextlevelmedicalclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

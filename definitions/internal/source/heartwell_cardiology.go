@@ -30,6 +30,7 @@ func GetSourceHeartwellCardiology(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHeartwellCardiology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.hearttech.health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

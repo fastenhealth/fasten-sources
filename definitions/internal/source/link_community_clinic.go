@@ -30,6 +30,7 @@ func GetSourceLinkCommunityClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeLinkCommunityClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.linkclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

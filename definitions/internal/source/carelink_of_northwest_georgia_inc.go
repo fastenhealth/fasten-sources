@@ -30,6 +30,7 @@ func GetSourceCarelinkOfNorthwestGeorgiaInc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCarelinkOfNorthwestGeorgiaInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.carelinkga.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

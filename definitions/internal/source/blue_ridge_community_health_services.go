@@ -31,6 +31,7 @@ func GetSourceBlueRidgeCommunityHealthServices(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Category = []string{"207Q00000X", "261QD0000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"BLUE RIDGE COMMUNITY HEALTH SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003272246", "1225029051", "1750621603"}}
+	sourceDef.PatientAccessUrl = "http://www.brchs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

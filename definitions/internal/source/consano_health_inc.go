@@ -31,6 +31,7 @@ func GetSourceConsanoHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"251B00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184391831"}}
+	sourceDef.PatientAccessUrl = "http://Www.consanohealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

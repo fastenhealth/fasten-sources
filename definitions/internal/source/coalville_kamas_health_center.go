@@ -30,6 +30,7 @@ func GetSourceCoalvilleKamasHealthCenter(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeCoalvilleKamasHealthCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ckdocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

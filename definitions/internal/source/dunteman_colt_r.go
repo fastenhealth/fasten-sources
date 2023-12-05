@@ -30,6 +30,7 @@ func GetSourceDuntemanColtR(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeDuntemanColtR
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/ColtDuntemanMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

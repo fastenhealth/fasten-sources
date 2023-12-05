@@ -31,6 +31,7 @@ func GetSourceThrivePediatricsLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1669934220"}}
+	sourceDef.PatientAccessUrl = "https://www.thrive-pediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

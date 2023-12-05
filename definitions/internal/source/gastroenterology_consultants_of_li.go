@@ -30,6 +30,7 @@ func GetSourceGastroenterologyConsultantsOfLi(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeGastroenterologyConsultantsOfLi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bestgidoc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

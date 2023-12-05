@@ -31,6 +31,7 @@ func GetSourceBayAreaFootCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"163WW0000X", "213E00000X", "213EP1101X", "213ES0103X", "213ES0131X"}
 	sourceDef.Aliases = []string{"BAY AREA FOOT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073156337", "1073291738", "1508911892", "1598460156", "1659903722", "1730856576", "1912539891", "1922702182", "1932797347", "1942904107"}}
+	sourceDef.PatientAccessUrl = "https://sjfeet.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

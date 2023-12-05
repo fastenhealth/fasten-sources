@@ -30,6 +30,7 @@ func GetSourceDavidVuMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeDavidVuMdPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.davidvumd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

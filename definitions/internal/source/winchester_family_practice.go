@@ -30,6 +30,7 @@ func GetSourceWinchesterFamilyPractice(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeWinchesterFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wfpky.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

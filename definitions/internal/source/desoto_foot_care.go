@@ -31,6 +31,7 @@ func GetSourceDesotoFootCare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"261QP1100X"}
 	sourceDef.Aliases = []string{"DESOTO FOOT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073557799"}}
+	sourceDef.PatientAccessUrl = "http://www.mydesotofootcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

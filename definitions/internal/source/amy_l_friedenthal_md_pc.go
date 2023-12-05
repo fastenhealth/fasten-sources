@@ -31,6 +31,7 @@ func GetSourceAmyLFriedenthalMdPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174722664"}}
+	sourceDef.PatientAccessUrl = "http://www.drfriedenthal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBarrettClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"261QC1500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215340096"}}
+	sourceDef.PatientAccessUrl = "http:// http://www.barrettclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMauiAidsFoundationInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeMauiAidsFoundationInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mauiaids.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

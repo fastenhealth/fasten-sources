@@ -30,6 +30,7 @@ func GetSourceStJosephCountyDepartmentOfHea(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeStJosephCountyDepartmentOfHea
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.in.gov/localhealth/stjosephcounty/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

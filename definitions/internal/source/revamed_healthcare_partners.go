@@ -30,6 +30,7 @@ func GetSourceRevamedHealthcarePartners(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeRevamedHealthcarePartners
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bocaintegrativehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

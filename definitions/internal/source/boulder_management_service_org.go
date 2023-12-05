@@ -30,6 +30,7 @@ func GetSourceBoulderManagementServiceOrg(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeBoulderManagementServiceOrg
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thayermd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

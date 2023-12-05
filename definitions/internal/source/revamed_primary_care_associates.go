@@ -30,6 +30,7 @@ func GetSourceRevamedPrimaryCareAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeRevamedPrimaryCareAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bocaintegrativehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

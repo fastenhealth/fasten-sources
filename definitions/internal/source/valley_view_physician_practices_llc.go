@@ -31,6 +31,7 @@ func GetSourceValleyViewPhysicianPracticesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RG0100X", "207V00000X", "207X00000X", "207Y00000X", "208600000X", "2086S0102X", "2086S0122X", "2086S0129X", "208G00000X", "261QU0200X", "363LF0000X"}
 	sourceDef.Aliases = []string{"VALLEY VIEW EAR, NOSE & THROAT", "VALLEY VIEW GENERAL AND VASCULAR SURGERY", "VALLEY VIEW OB/GYN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033359583", "1114355955", "1134404742", "1144455478", "1225313836", "1386008506", "1548510811", "1548660756", "1689918302", "1922381979"}}
+	sourceDef.PatientAccessUrl = "http://www.svmedicalgroup.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

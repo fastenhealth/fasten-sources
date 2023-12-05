@@ -31,6 +31,7 @@ func GetSourceChristopherJCalcagniDpmPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912258021"}}
+	sourceDef.PatientAccessUrl = "http://www.coastalfootcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

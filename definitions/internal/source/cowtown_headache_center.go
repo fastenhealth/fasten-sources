@@ -31,6 +31,7 @@ func GetSourceCowtownHeadacheCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"2084N0400X", "363AM0700X"}
 	sourceDef.Aliases = []string{"COWTOWN HEADACHE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720743982"}}
+	sourceDef.PatientAccessUrl = "http://www.cowtownheadache.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

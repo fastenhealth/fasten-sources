@@ -30,6 +30,7 @@ func GetSourceWilsonPsychologyGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeWilsonPsychologyGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wilsonpsychology.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

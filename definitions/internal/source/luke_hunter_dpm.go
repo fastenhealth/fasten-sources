@@ -30,6 +30,7 @@ func GetSourceLukeHunterDpm(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLukeHunterDpm
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thefootandankleclinicofwestmonroe.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBarretoHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207Q00000X", "207QG0300X"}
 	sourceDef.Aliases = []string{"BARRETO HEALTH CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013976638"}}
+	sourceDef.PatientAccessUrl = "http://www.barretohealthcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

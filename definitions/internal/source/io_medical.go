@@ -30,6 +30,7 @@ func GetSourceIoMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeIoMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.iomedical.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

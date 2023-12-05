@@ -30,6 +30,7 @@ func GetSourceLauraAMichieCccslpLlcDbaFrede(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeLauraAMichieCccslpLlcDbaFrede
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.frederick-slp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

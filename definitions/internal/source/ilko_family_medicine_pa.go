@@ -31,6 +31,7 @@ func GetSourceIlkoFamilyMedicinePa(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124281571"}}
+	sourceDef.PatientAccessUrl = "http://www.ilkofamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

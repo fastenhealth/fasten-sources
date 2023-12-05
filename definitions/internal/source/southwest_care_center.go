@@ -31,6 +31,7 @@ func GetSourceSouthwestCareCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"174400000X", "261Q00000X", "261QB0400X", "261QF0400X", "261QM1300X", "261QP2300X", "3336C0003X"}
 	sourceDef.Aliases = []string{"SOUTHWEST CARE CENTER FAMILY MEDICINE", "SOUTHWEST CARE CENTER PHARMACY ALAMEDA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154742765", "1295109072", "1316303647", "1609336460", "1871602698", "1952774796"}}
+	sourceDef.PatientAccessUrl = "http://southwestcare.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

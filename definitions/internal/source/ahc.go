@@ -31,6 +31,7 @@ func GetSourceAhc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.Category = []string{"163WG0000X", "164W00000X", "247ZC0005X", "251J00000X"}
 	sourceDef.Aliases = []string{"ADVANTAGE HEALTH CONNECTION", "ADVANTAGE HEALTH CONNECTION INC.", "AHC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568115764"}}
+	sourceDef.PatientAccessUrl = "http://www.drlevan.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

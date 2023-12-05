@@ -30,6 +30,7 @@ func GetSourceProPodiatryLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeProPodiatryLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.premierpodiatry.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

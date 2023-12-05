@@ -31,6 +31,7 @@ func GetSourceK2FootAndAnklePllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629371307"}}
+	sourceDef.PatientAccessUrl = "http://www.k2footandankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

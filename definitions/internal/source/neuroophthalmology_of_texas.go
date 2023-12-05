@@ -30,6 +30,7 @@ func GetSourceNeuroophthalmologyOfTexas(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeNeuroophthalmologyOfTexas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neuroeye.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

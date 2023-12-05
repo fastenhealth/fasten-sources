@@ -30,6 +30,7 @@ func GetSourceIntegratedMedicalHealthcareServi(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeIntegratedMedicalHealthcareServi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.imhcares.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

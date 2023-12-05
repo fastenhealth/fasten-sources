@@ -31,6 +31,7 @@ func GetSourceDallasHandCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207XS0106X"}
 	sourceDef.Aliases = []string{"DALLAS HAND CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811151012"}}
+	sourceDef.PatientAccessUrl = "http://www.dallashandcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

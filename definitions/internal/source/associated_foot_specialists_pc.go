@@ -30,6 +30,7 @@ func GetSourceAssociatedFootSpecialistsPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeAssociatedFootSpecialistsPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://hudsonpodiatry.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

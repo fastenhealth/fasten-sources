@@ -30,6 +30,7 @@ func GetSourceCynthiaNSchaefferMdPa(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeCynthiaNSchaefferMdPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://pedsplace.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

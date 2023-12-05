@@ -31,6 +31,7 @@ func GetSourceMobileMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"101YM0800X", "175F00000X", "208D00000X", "261QF0400X", "363LP0808X"}
 	sourceDef.Aliases = []string{"MOBILE MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144524257", "1174112007", "1245983022", "1851524870"}}
+	sourceDef.PatientAccessUrl = "https://www.mobilemedicalks.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

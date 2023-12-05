@@ -30,6 +30,7 @@ func GetSourceTaelLaserCenter(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeTaelLaserCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.etael.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

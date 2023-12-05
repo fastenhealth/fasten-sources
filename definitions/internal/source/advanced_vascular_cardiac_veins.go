@@ -30,6 +30,7 @@ func GetSourceAdvancedVascularCardiacVeins(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeAdvancedVascularCardiacVeins
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.advancedvcv.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

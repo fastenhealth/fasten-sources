@@ -31,6 +31,7 @@ func GetSourceBalancedWellnessLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"171M00000X", "363L00000X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790433456"}}
+	sourceDef.PatientAccessUrl = "http://www.balancedwellness.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceCommonwealthSleepAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"207R00000X", "207RH0002X", "207RS0012X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538565635"}}
+	sourceDef.PatientAccessUrl = "http://www.sleepydocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

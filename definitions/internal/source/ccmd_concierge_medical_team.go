@@ -30,6 +30,7 @@ func GetSourceCcmdConciergeMedicalTeam(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCcmdConciergeMedicalTeam
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://myccmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

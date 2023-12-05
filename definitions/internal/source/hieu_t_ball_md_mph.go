@@ -30,6 +30,7 @@ func GetSourceHieuTBallMdMph(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeHieuTBallMdMph
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.calspinemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

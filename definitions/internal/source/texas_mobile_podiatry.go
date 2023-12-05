@@ -30,6 +30,7 @@ func GetSourceTexasMobilePodiatry(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTexasMobilePodiatry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nashthefootdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

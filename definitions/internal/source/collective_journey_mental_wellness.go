@@ -30,6 +30,7 @@ func GetSourceCollectiveJourneyMentalWellness(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeCollectiveJourneyMentalWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.collectivejourneymwc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

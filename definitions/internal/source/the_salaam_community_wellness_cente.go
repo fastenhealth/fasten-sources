@@ -30,6 +30,7 @@ func GetSourceTheSalaamCommunityWellnessCente(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeTheSalaamCommunityWellnessCente
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.salaamcwc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

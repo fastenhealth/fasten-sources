@@ -30,6 +30,7 @@ func GetSourceHectorLSalcedoMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeHectorLSalcedoMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://salcedomedicalcenter.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

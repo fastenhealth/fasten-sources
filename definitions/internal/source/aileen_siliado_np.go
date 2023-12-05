@@ -30,6 +30,7 @@ func GetSourceAileenSiliadoNp(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeAileenSiliadoNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nlt-808-consultservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

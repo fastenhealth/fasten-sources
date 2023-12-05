@@ -31,6 +31,7 @@ func GetSourceOhioSleepAndPulmonaryCenterInc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"207RP1001X", "261QS1200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346274313"}}
+	sourceDef.PatientAccessUrl = "http://www.ohiosleep.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

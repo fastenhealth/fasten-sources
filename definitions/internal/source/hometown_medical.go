@@ -30,6 +30,7 @@ func GetSourceHometownMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeHometownMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.facebook.com/hometownmed.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

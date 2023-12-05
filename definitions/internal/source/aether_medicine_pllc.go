@@ -31,6 +31,7 @@ func GetSourceAetherMedicinePllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"208100000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659973832"}}
+	sourceDef.PatientAccessUrl = "http://www.aethermedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

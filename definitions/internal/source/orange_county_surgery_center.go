@@ -31,6 +31,7 @@ func GetSourceOrangeCountySurgeryCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"ORANGE COUNTY SURGERY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376244400", "1467647321"}}
+	sourceDef.PatientAccessUrl = "http://aspirepainmedicalcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

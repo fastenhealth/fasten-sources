@@ -31,6 +31,7 @@ func GetSourceOptumcareFloridaLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "208D00000X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"DAVITA MEDICAL GROUP", "OPTUM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053384214", "1972663102"}}
+	sourceDef.PatientAccessUrl = "http:// www.jsahealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

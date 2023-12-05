@@ -30,6 +30,7 @@ func GetSourceTosc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeTosc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.toshmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTriadCompleteHealthcareA07Llc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTriadCompleteHealthcareA07Llc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://triadcompletehealthcare.com/muskogee"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

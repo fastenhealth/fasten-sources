@@ -30,6 +30,7 @@ func GetSourceAllianceSharedPhysicians(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeAllianceSharedPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.provmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

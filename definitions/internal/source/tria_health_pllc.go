@@ -30,6 +30,7 @@ func GetSourceTriaHealthPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeTriaHealthPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.triamedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

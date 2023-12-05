@@ -30,6 +30,7 @@ func GetSourceThriveNwIntegrativeMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeThriveNwIntegrativeMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thrivenwmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

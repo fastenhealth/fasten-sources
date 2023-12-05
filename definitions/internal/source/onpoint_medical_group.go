@@ -31,6 +31,7 @@ func GetSourceOnpointMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"ROSE PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699360313"}}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

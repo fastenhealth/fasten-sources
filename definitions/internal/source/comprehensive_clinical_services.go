@@ -30,6 +30,7 @@ func GetSourceComprehensiveClinicalServices(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveClinicalServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.discoverccs.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

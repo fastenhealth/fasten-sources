@@ -31,6 +31,7 @@ func GetSourceRfmpPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"207Q00000X", "207V00000X", "208000000X"}
 	sourceDef.Aliases = []string{"RAINIER FAMILY MEDICINE & PEDIATRICS PLLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720575400"}}
+	sourceDef.PatientAccessUrl = "http://www.rainiermedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

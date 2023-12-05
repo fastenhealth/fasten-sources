@@ -30,6 +30,7 @@ func GetSourceEndoscopicSolutions(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeEndoscopicSolutions
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.endoscopicsolutions.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

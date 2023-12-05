@@ -30,6 +30,7 @@ func GetSourceMvpMedicalClinicPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeMvpMedicalClinicPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://mvpmedicalclinicpllc.godaddysites.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

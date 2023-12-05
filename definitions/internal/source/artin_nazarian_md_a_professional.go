@@ -30,6 +30,7 @@ func GetSourceArtinNazarianMdAProfessional(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeArtinNazarianMdAProfessional
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nazarianmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

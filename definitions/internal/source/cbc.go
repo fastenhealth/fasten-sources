@@ -30,6 +30,7 @@ func GetSourceCbc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.SourceType = pkg.SourceTypeCbc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cbcsurgery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceOneMission(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeOneMission
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://WWW.HYDRIPHEALTH.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

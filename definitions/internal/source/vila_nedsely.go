@@ -30,6 +30,7 @@ func GetSourceVilaNedsely(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeVilaNedsely
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/NedselyVilaMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

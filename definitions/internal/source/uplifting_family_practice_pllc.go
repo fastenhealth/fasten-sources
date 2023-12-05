@@ -30,6 +30,7 @@ func GetSourceUpliftingFamilyPracticePllc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeUpliftingFamilyPracticePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://upliftingfamilypra.wixsite.com/upliftingfamilypract"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

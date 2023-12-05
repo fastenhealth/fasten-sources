@@ -31,6 +31,7 @@ func GetSourceDtmsCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760868699"}}
+	sourceDef.PatientAccessUrl = "http://www.doctortendler.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

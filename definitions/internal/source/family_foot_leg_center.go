@@ -30,6 +30,7 @@ func GetSourceFamilyFootLegCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeFamilyFootLegCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.naplespodiatrist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

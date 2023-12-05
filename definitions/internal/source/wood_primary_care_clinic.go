@@ -31,6 +31,7 @@ func GetSourceWoodPrimaryCareClinic(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{"WOOD PRIMARY CARE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407588346"}}
+	sourceDef.PatientAccessUrl = "http://www.woodprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

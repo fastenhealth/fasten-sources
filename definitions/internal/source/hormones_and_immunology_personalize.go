@@ -30,6 +30,7 @@ func GetSourceHormonesAndImmunologyPersonalize(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeHormonesAndImmunologyPersonalize
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hip-m.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

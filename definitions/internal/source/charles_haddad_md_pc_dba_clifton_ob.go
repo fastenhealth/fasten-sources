@@ -30,6 +30,7 @@ func GetSourceCharlesHaddadMdPcDbaCliftonOb(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCharlesHaddadMdPcDbaCliftonOb
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.cliftonobgyn.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

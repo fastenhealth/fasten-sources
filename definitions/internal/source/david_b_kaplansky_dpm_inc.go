@@ -31,6 +31,7 @@ func GetSourceDavidBKaplanskyDpmInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"213E00000X"}
 	sourceDef.Aliases = []string{"KAPLANSKY FOOT AND ANKLE CENTERS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790814325"}}
+	sourceDef.PatientAccessUrl = "http://www.columbusohiopodiatrist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePartnermd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypePartnermd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.partnermd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

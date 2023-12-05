@@ -30,6 +30,7 @@ func GetSourceTranscendPerformanceAndLifestyle(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeTranscendPerformanceAndLifestyle
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.transcendmylimits.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

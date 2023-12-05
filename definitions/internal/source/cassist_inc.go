@@ -30,6 +30,7 @@ func GetSourceCassistInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeCassistInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fhc.c-asist.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

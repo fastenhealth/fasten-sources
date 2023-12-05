@@ -30,6 +30,7 @@ func GetSourceConsultantsInInfectiousDiseases(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeConsultantsInInfectiousDiseases
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cidteam.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

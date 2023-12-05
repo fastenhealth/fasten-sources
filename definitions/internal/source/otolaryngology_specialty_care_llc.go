@@ -30,6 +30,7 @@ func GetSourceOtolaryngologySpecialtyCareLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOtolaryngologySpecialtyCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.osc-ent.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

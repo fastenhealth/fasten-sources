@@ -31,6 +31,7 @@ func GetSourceBayouPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"363LP0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629691530"}}
+	sourceDef.PatientAccessUrl = "http://Bayoupeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

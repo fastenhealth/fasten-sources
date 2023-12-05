@@ -30,6 +30,7 @@ func GetSourceVictorModePhysicalTherapyWell(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeVictorModePhysicalTherapyWell
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.victormode.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

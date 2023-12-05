@@ -30,6 +30,7 @@ func GetSourceSpineVuePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeSpineVuePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.spinevuetx.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

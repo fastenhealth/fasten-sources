@@ -31,6 +31,7 @@ func GetSourceNewPath(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"101YA0400X", "261QF0400X", "261QM0801X", "261QM0850X", "261QM0855X"}
 	sourceDef.Aliases = []string{"COLUMBIA PEDIATRICS BEHAVIORAL", "CVCH BEHAVIORAL HEALTH", "CVCH BEHAVIORAL MEDICINE", "CVCH CHELAN BEHAVIORAL", "CVCH CHILDREN'S BEHAVIORAL HEALTH", "EAST WENATCHEE BEHAVIORAL", "NEW PATH", "WENATCHEE VALLEY COLLEGE BEHAVIORAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346266152"}}
+	sourceDef.PatientAccessUrl = "http://www.CVCH.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

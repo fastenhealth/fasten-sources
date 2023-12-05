@@ -30,6 +30,7 @@ func GetSourceFlatlandAnesthesiaAndPainServic(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeFlatlandAnesthesiaAndPainServic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.flatlandanesthesia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

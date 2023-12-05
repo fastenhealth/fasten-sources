@@ -31,6 +31,7 @@ func GetSourceKoniAprnFamilyPracticeLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1740823640"}}
+	sourceDef.PatientAccessUrl = "http://www.konifamilypractice.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

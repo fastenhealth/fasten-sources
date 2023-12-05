@@ -30,6 +30,7 @@ func GetSourceTusseyMountainFootAnkleSpecia(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTusseyMountainFootAnkleSpecia
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://tusseyfootankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

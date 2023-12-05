@@ -30,6 +30,7 @@ func GetSourceCaliforniaCenterForSleepDisorders(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeCaliforniaCenterForSleepDisorders
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.californiasleepcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

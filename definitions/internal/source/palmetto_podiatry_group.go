@@ -30,6 +30,7 @@ func GetSourcePalmettoPodiatryGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePalmettoPodiatryGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.palmettopodiatry.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

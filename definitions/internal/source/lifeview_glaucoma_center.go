@@ -31,6 +31,7 @@ func GetSourceLifeviewGlaucomaCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{"LIFEVIEW GLAUCOMA CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063064640"}}
+	sourceDef.PatientAccessUrl = "https://www.lifeviewglaucoma.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

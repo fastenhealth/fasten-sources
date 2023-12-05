@@ -30,6 +30,7 @@ func GetSourceFarookKShroff(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeFarookKShroff
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cardiovascularcarecenter.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

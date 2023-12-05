@@ -30,6 +30,7 @@ func GetSourcePediatricsAtWhitlock(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypePediatricsAtWhitlock
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pediatricsatwhitlock.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

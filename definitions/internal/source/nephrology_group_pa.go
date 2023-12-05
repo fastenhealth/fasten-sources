@@ -30,6 +30,7 @@ func GetSourceNephrologyGroupPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeNephrologyGroupPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://thenephrologygroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

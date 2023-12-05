@@ -31,6 +31,7 @@ func GetSourcePrimusMedicalGroupPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710028493"}}
+	sourceDef.PatientAccessUrl = "http://www.primusmedicalgroup.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

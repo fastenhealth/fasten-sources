@@ -31,6 +31,7 @@ func GetSourceCentralBucksRheumatology(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207RR0500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770178600"}}
+	sourceDef.PatientAccessUrl = "http://www.cbrheumatology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

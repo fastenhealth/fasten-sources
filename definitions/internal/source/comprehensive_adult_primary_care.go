@@ -30,6 +30,7 @@ func GetSourceComprehensiveAdultPrimaryCare(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveAdultPrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.capcareclinics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

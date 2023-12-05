@@ -30,6 +30,7 @@ func GetSourceLegacyEyelidsCosmeticSurgeryP(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeLegacyEyelidsCosmeticSurgeryP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kalyammd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceNewJerseyFootAndAnkleAssociate(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeNewJerseyFootAndAnkleAssociate
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.njfaa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceDfwRadiologyAssociatesPllc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"2085R0204X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275022584"}}
+	sourceDef.PatientAccessUrl = "http://www.fibroidfree.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

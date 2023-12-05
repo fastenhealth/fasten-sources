@@ -31,6 +31,7 @@ func GetSourceMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"1041C0700X", "106H00000X", "163W00000X", "207Q00000X", "207R00000X", "207RE0101X", "207RG0100X", "207VX0201X", "207X00000X", "208600000X", "2086S0129X", "208G00000X", "208M00000X", "363AM0700X", "363L00000X"}
 	sourceDef.Aliases = []string{"MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144677568"}}
+	sourceDef.PatientAccessUrl = "http://myamitahealthdoc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

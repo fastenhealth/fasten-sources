@@ -30,6 +30,7 @@ func GetSourceKiwellNutritionConsulting(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeKiwellNutritionConsulting
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kiwellnutritionconsulting.com\t\t\t\t\t\t\t\t\t\t\t\t"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

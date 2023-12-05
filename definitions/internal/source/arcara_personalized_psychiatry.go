@@ -30,6 +30,7 @@ func GetSourceArcaraPersonalizedPsychiatry(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeArcaraPersonalizedPsychiatry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://arcarapsychiatry.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

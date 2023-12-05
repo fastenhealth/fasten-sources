@@ -31,6 +31,7 @@ func GetSourceSherryBarnettMdPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{"FLOWER MOUND ALLERGY ASTHMA CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790268456"}}
+	sourceDef.PatientAccessUrl = "https://barnettallergytx.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceFishRiverRuralHealth(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174741094", "1376761288", "1467902668", "1528608437", "1568838928"}}
+	sourceDef.PatientAccessUrl = "http://www.frrh.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

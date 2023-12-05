@@ -30,6 +30,7 @@ func GetSourceHeartFitForDutyLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeHeartFitForDutyLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://heartfitforduty.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

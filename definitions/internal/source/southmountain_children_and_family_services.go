@@ -31,6 +31,7 @@ func GetSourceSouthmountainChildrenAndFamilyServices(env pkg.FastenLighthouseEnv
 	sourceDef.Category = []string{"101Y00000X", "101YM0800X", "101YP2500X", "103T00000X", "103TB0200X", "103TC0700X", "103TC2200X", "103TM1800X", "104100000X", "1041C0700X", "174400000X", "207Q00000X", "2084P0804X", "363L00000X", "363LF0000X", "363LP0200X"}
 	sourceDef.Aliases = []string{"CHILDREN'S ADVOCACY CENTER OF THE BLUE RIDGE", "MCDOWELL CHILD ADVOCACY CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033462148", "1033481650", "1073145546", "1396066965", "1427689173", "1467763797", "1689996332", "1700519303", "1952689309", "1972077618"}}
+	sourceDef.PatientAccessUrl = "https://www.southmountain.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

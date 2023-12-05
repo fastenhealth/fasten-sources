@@ -31,6 +31,7 @@ func GetSourceMercyMedicalMinistry(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770006454"}}
+	sourceDef.PatientAccessUrl = "http://www.mercymedicalauburn.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

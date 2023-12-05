@@ -30,6 +30,7 @@ func GetSourceSollEyeAssociates(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeSollEyeAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.solleye.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

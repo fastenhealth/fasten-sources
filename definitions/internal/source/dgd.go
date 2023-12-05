@@ -30,6 +30,7 @@ func GetSourceDgd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.SourceType = pkg.SourceTypeDgd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dgdclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBostonBrace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeBostonBrace
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bostonoandp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

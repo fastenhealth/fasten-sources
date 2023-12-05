@@ -30,6 +30,7 @@ func GetSourceCornerstoneWholeHealthOrganizati(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCornerstoneWholeHealthOrganizati
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://c-who.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

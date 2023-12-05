@@ -30,6 +30,7 @@ func GetSourceUmcElPaso(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeUmcElPaso
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.umcelpaso.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

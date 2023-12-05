@@ -30,6 +30,7 @@ func GetSourceQuadCitiesFootAndAnkleAssociat(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeQuadCitiesFootAndAnkleAssociat
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://qcfootandankleassociates.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

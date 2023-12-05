@@ -30,6 +30,7 @@ func GetSourceChildrensMedicalGroupPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeChildrensMedicalGroupPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cmgaustin.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

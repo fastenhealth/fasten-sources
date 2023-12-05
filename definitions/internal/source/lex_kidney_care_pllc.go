@@ -31,6 +31,7 @@ func GetSourceLexKidneyCarePllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207RN0300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285233031"}}
+	sourceDef.PatientAccessUrl = "http://lexkidneycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

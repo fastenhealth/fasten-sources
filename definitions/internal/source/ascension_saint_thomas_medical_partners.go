@@ -30,6 +30,7 @@ func GetSourceAscensionSaintThomasMedicalPartners(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeAscensionSaintThomasMedicalPartners
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.saintthomasdoctors.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

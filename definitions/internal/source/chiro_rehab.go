@@ -30,6 +30,7 @@ func GetSourceChiroRehab(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeChiroRehab
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fitlabrehab.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

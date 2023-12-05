@@ -31,6 +31,7 @@ func GetSourceCapitalMentalHealth(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"2084P0800X", "261QM0850X", "261QM0855X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790358927"}}
+	sourceDef.PatientAccessUrl = "http://www.capitalmentalhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

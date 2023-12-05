@@ -31,6 +31,7 @@ func GetSourceHumboldtParkHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207V00000X", "207Y00000X", "208600000X", "208M00000X", "213E00000X", "261Q00000X", "261QM0850X", "273R00000X", "282N00000X", "367A00000X"}
 	sourceDef.Aliases = []string{"PHYSICIAN SPECIALTY", "PROHEALTH MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013944479", "1447712245", "1609045863", "1619146867", "1740417153", "1972594877"}}
+	sourceDef.PatientAccessUrl = "http://www.hph.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

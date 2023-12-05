@@ -31,6 +31,7 @@ func GetSourcePiraHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"208000000X", "261QP2300X", "363LP0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134788185"}}
+	sourceDef.PatientAccessUrl = "http://www.bluemoose.me"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceLevineYi(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeLevineYi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/JoAnnYiMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

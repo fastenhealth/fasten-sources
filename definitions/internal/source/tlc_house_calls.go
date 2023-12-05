@@ -30,6 +30,7 @@ func GetSourceTlcHouseCalls(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeTlcHouseCalls
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://tlchousecalls.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

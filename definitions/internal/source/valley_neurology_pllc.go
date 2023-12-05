@@ -31,6 +31,7 @@ func GetSourceValleyNeurologyPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114566031"}}
+	sourceDef.PatientAccessUrl = "http://www.valleyneurology.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

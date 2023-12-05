@@ -30,6 +30,7 @@ func GetSourceMillenniumPhysicianGroupDurhamInternalMedicine(env pkg.FastenLight
 	sourceDef.SourceType = pkg.SourceTypeMillenniumPhysicianGroupDurhamInternalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://durhaminternalmedicine.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

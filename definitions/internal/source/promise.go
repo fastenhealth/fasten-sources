@@ -31,6 +31,7 @@ func GetSourcePromise(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"374U00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578732905"}}
+	sourceDef.PatientAccessUrl = "https://www.promisechc.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

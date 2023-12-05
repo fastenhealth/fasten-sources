@@ -30,6 +30,7 @@ func GetSourceRheumatologix(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeRheumatologix
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rheumatologix.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

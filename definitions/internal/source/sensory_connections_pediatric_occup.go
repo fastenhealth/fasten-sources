@@ -30,6 +30,7 @@ func GetSourceSensoryConnectionsPediatricOccup(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeSensoryConnectionsPediatricOccup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sensoryconnectionsot.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

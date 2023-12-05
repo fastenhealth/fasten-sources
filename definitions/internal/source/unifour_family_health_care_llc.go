@@ -31,6 +31,7 @@ func GetSourceUnifourFamilyHealthCareLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"261Q00000X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609178342", "1730364340"}}
+	sourceDef.PatientAccessUrl = "http://www.portal.ufhc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

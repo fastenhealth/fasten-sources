@@ -30,6 +30,7 @@ func GetSourceTrinitykare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeTrinitykare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trinitykare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAbdulGChaudryObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeAbdulGChaudryObgyn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.agchaudrymd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

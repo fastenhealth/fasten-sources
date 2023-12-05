@@ -30,6 +30,7 @@ func GetSourceChesapeakeRegionalNeurosciencespainManagement(env pkg.FastenLighth
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeRegionalNeurosciencespainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

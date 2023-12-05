@@ -30,6 +30,7 @@ func GetSourceTheNeurosurgeryCenterAtNorthwestHealthSystem(env pkg.FastenLightho
 	sourceDef.SourceType = pkg.SourceTypeTheNeurosurgeryCenterAtNorthwestHealthSystem
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.NW-physicians.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

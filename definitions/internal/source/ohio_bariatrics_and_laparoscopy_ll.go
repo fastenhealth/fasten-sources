@@ -30,6 +30,7 @@ func GetSourceOhioBariatricsAndLaparoscopyLl(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOhioBariatricsAndLaparoscopyLl
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ohiobariatricandlaparoscopy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

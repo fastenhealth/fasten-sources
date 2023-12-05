@@ -31,6 +31,7 @@ func GetSourceNovatio(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{"NOVATIO"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174034334", "1780280941"}}
+	sourceDef.PatientAccessUrl = "http://www.NovatioOrtho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHealthcareRemotely(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeHealthcareRemotely
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hcremotely.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

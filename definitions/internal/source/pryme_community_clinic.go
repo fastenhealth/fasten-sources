@@ -30,6 +30,7 @@ func GetSourcePrymeCommunityClinic(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypePrymeCommunityClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.prymeclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

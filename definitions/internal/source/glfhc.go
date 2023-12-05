@@ -30,6 +30,7 @@ func GetSourceGlfhc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.SourceType = pkg.SourceTypeGlfhc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.glfhc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceArtemisInspiredMedicinePc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeArtemisInspiredMedicinePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.artemisgyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

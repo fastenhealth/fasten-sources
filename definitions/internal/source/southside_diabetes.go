@@ -31,6 +31,7 @@ func GetSourceSouthsideDiabetes(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QM2500X", "363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417616202"}}
+	sourceDef.PatientAccessUrl = "https://southsidediabetesva.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

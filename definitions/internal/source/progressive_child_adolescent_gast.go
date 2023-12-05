@@ -30,6 +30,7 @@ func GetSourceProgressiveChildAdolescentGast(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeProgressiveChildAdolescentGast
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://smadanimd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

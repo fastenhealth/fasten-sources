@@ -30,6 +30,7 @@ func GetSourceEastSidePrimaryMedicalCarePc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeEastSidePrimaryMedicalCarePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.espmc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

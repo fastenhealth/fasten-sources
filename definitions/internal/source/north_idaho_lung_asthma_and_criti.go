@@ -30,6 +30,7 @@ func GetSourceNorthIdahoLungAsthmaAndCriti(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeNorthIdahoLungAsthmaAndCriti
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.niladocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

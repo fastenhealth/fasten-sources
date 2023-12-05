@@ -30,6 +30,7 @@ func GetSourceIntegraRehabPhysicians(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeIntegraRehabPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.integrarehabphysicians.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

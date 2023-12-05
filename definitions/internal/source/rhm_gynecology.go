@@ -30,6 +30,7 @@ func GetSourceRhmGynecology(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeRhmGynecology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rhmgyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

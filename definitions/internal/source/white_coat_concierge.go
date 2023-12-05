@@ -31,6 +31,7 @@ func GetSourceWhiteCoatConcierge(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255075453"}}
+	sourceDef.PatientAccessUrl = "http://www.whitecoatconcierge.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

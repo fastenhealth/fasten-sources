@@ -30,6 +30,7 @@ func GetSourceGriffinMarcus(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeGriffinMarcus
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/MarcusGriffinMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

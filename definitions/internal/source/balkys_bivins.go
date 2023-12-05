@@ -30,6 +30,7 @@ func GetSourceBalkysBivins(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeBalkysBivins
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.monumentalhealthpartners.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

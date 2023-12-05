@@ -31,6 +31,7 @@ func GetSourcePremierFootAndAnkle(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"213E00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356943963"}}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

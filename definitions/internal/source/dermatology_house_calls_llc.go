@@ -31,6 +31,7 @@ func GetSourceDermatologyHouseCallsLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609573757"}}
+	sourceDef.PatientAccessUrl = "https://www.dermcalls.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

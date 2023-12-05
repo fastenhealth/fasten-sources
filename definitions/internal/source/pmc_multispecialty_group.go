@@ -30,6 +30,7 @@ func GetSourcePmcMultispecialtyGroup(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypePmcMultispecialtyGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://pmcmedicalgroup.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

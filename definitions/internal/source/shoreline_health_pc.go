@@ -30,6 +30,7 @@ func GetSourceShorelineHealthPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeShorelineHealthPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.shoreline-health.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

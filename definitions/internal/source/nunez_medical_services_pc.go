@@ -31,6 +31,7 @@ func GetSourceNunezMedicalServicesPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"24HR PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699377978"}}
+	sourceDef.PatientAccessUrl = "http://www.24hrpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

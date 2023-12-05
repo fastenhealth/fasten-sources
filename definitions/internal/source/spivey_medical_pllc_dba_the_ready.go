@@ -30,6 +30,7 @@ func GetSourceSpiveyMedicalPllcDbaTheReady(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeSpiveyMedicalPllcDbaTheReady
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thereadycareclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

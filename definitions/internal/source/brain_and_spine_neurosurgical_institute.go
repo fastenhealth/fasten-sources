@@ -30,6 +30,7 @@ func GetSourceBrainAndSpineNeurosurgicalInstitute(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeBrainAndSpineNeurosurgicalInstitute
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Grahamcountyhospital.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

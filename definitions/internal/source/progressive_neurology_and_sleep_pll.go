@@ -30,6 +30,7 @@ func GetSourceProgressiveNeurologyAndSleepPll(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeProgressiveNeurologyAndSleepPll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.progressiveneurosleep.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

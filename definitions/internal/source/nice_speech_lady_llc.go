@@ -31,6 +31,7 @@ func GetSourceNiceSpeechLadyLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"235Z00000X", "261QH0700X"}
 	sourceDef.Aliases = []string{"NICE SPEECH LADY PLLC", "THE NICE SPEECH LADY LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134714348"}}
+	sourceDef.PatientAccessUrl = "https://nicespeechladytelepractice"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

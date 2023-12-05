@@ -30,6 +30,7 @@ func GetSourceAccessHealthcareMultispecialtyGroup(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeAccessHealthcareMultispecialtyGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.access-healthcare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

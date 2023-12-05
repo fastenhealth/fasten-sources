@@ -31,6 +31,7 @@ func GetSourceIheomaNwaoguMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770135212"}}
+	sourceDef.PatientAccessUrl = "http://www.EndocrineSurgeryMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceOnsiteHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeOnsiteHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.on-sitehealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceHooverPodiatry(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{"HOOVER PODIATRY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801312442"}}
+	sourceDef.PatientAccessUrl = "http://www.hooverpodiatry.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

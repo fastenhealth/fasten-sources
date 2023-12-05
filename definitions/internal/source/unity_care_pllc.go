@@ -31,6 +31,7 @@ func GetSourceUnityCarePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"363LF0000X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679278485"}}
+	sourceDef.PatientAccessUrl = "http://www.unitycarepllc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

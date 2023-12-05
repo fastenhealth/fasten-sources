@@ -30,6 +30,7 @@ func GetSourcePremierFootAndAnkleSpecialistP(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePremierFootAndAnkleSpecialistP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.premierwalking.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

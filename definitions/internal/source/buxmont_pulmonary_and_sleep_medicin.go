@@ -30,6 +30,7 @@ func GetSourceBuxmontPulmonaryAndSleepMedicin(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeBuxmontPulmonaryAndSleepMedicin
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://BREATHESLEEP.NET"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

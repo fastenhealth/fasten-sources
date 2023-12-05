@@ -30,6 +30,7 @@ func GetSourceMidwestMedicalConsultingIncDb(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeMidwestMedicalConsultingIncDb
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.northwindsleep.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceDauphinIslandMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114639770"}}
+	sourceDef.PatientAccessUrl = "http://www.dauphinislandmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

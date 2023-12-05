@@ -30,6 +30,7 @@ func GetSourceGrayStationNeurologyPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeGrayStationNeurologyPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://graystationneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

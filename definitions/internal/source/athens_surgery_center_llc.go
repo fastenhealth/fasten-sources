@@ -31,6 +31,7 @@ func GetSourceAthensSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"ATHENS SURGERY CENTER LLC", "CLARKE COUNTY SURGERY CENTER LLC", "THE SURGERY CENTER OF ATHENS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316290380", "1467140327"}}
+	sourceDef.PatientAccessUrl = "http://www.southernpainandspine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRiseDirectPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeRiseDirectPrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.risedpcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

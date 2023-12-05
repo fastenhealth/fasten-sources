@@ -31,6 +31,7 @@ func GetSourceClarkeLewMedicalCorp(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"101YA0400X", "101YM0800X", "104100000X", "1041C0700X", "122300000X", "163W00000X", "207Q00000X", "207R00000X", "2084P0800X", "261QC1500X", "261QM1300X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"ILLUMINATION FOUNDATION MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205444742"}}
+	sourceDef.PatientAccessUrl = "http://www.ifmedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

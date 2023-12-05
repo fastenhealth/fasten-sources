@@ -30,6 +30,7 @@ func GetSourceTotsToTeensLlcDbaGlencoePedi(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeTotsToTeensLlcDbaGlencoePedi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.glencoepediatrics.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

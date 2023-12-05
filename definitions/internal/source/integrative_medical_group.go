@@ -31,6 +31,7 @@ func GetSourceIntegrativeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306029301"}}
+	sourceDef.PatientAccessUrl = "http://www.doctorojax.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

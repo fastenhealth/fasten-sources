@@ -30,6 +30,7 @@ func GetSourceDestaAnthonyMobilenpAdultHealth(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeDestaAnthonyMobilenpAdultHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mobilenp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

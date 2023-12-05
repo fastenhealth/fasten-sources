@@ -31,6 +31,7 @@ func GetSourceFolahanAyoolaMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922439389"}}
+	sourceDef.PatientAccessUrl = "http://www.weightlosssurgeon.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

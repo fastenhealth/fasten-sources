@@ -31,6 +31,7 @@ func GetSourceObriaMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QF0050X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437695533"}}
+	sourceDef.PatientAccessUrl = "http://www.obria.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

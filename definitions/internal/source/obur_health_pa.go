@@ -31,6 +31,7 @@ func GetSourceOburHealthPa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912526997"}}
+	sourceDef.PatientAccessUrl = "http://www.oburhealth.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

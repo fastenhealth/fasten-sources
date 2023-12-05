@@ -31,6 +31,7 @@ func GetSourceClaytonSchroederMdPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"BLUE LOTUS PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073221974"}}
+	sourceDef.PatientAccessUrl = "https://www.bluelotusprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

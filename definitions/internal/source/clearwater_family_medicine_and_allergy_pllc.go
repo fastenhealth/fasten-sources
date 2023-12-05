@@ -30,6 +30,7 @@ func GetSourceClearwaterFamilyMedicineAndAllergyPllc(env pkg.FastenLighthouseEnv
 	sourceDef.SourceType = pkg.SourceTypeClearwaterFamilyMedicineAndAllergyPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cfma.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

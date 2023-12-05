@@ -30,6 +30,7 @@ func GetSource263813MauaMainOffice(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceType263813MauaMainOffice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mauamd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

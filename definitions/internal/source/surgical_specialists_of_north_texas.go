@@ -30,6 +30,7 @@ func GetSourceSurgicalSpecialistsOfNorthTexas(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeSurgicalSpecialistsOfNorthTexas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.surgicalspecialistdfw.com"
 	sourceDef.SecretKeyPrefix = "allscripts"
 
 	return sourceDef, err

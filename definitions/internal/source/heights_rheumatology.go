@@ -30,6 +30,7 @@ func GetSourceHeightsRheumatology(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHeightsRheumatology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.heightsrheumatology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

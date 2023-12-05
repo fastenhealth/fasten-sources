@@ -31,6 +31,7 @@ func GetSourcePriorityHealthAndWellness(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QC1500X", "261QH0100X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629693411"}}
+	sourceDef.PatientAccessUrl = "http://www.priorityhw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

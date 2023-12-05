@@ -30,6 +30,7 @@ func GetSourcePainSolutionsOfNorthernNy(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypePainSolutionsOfNorthernNy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://painsolutionsnny.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

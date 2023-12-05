@@ -31,6 +31,7 @@ func GetSourceMuntherSTabetMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"2084N0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912951252"}}
+	sourceDef.PatientAccessUrl = "http://tabet-neurology.weebly.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

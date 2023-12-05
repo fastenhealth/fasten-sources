@@ -31,6 +31,7 @@ func GetSourceRegionalHealthcareAssociatesLlc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207Q00000X", "207QG0300X", "207R00000X", "207RC0000X", "207RG0100X", "207RI0200X", "207V00000X", "207ZM0300X", "207ZP0102X", "208000000X", "208600000X", "208D00000X", "208M00000X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043390156"}}
+	sourceDef.PatientAccessUrl = "http://www.regionalhealthcareassociates.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

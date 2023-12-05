@@ -31,6 +31,7 @@ func GetSourceDragonflyPrimaryCareLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033782156"}}
+	sourceDef.PatientAccessUrl = "http://www.dragonflyprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

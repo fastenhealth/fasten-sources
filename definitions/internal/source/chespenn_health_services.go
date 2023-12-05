@@ -31,6 +31,7 @@ func GetSourceChespennHealthServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225270499", "1225272263", "1396799417", "1659325751", "1750329603"}}
+	sourceDef.PatientAccessUrl = "https://chespenn.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

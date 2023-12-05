@@ -30,6 +30,7 @@ func GetSourceSimplePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeSimplePrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.simplepcp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

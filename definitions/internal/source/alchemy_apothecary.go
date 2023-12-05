@@ -31,6 +31,7 @@ func GetSourceAlchemyApothecary(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{"ALCHEMY APOTHECARY", "ALCHEMY APOTHECARY, PLLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154094779", "1316560204"}}
+	sourceDef.PatientAccessUrl = "https://www.alchemyapothecary.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

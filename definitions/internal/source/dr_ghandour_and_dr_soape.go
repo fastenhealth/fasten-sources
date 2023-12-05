@@ -30,6 +30,7 @@ func GetSourceDrGhandourAndDrSoape(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeDrGhandourAndDrSoape
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://jessicasilvas1.wixsite.com/egmdpa"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

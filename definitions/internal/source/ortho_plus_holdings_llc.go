@@ -31,6 +31,7 @@ func GetSourceOrthoPlusHoldingsLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207XX0005X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023788098", "1548620529"}}
+	sourceDef.PatientAccessUrl = "http://www.orthoplusclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

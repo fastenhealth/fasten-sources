@@ -31,6 +31,7 @@ func GetSourceNightAndDayPediatricsLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"208000000X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881026979"}}
+	sourceDef.PatientAccessUrl = "http://www.nightanddaypediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

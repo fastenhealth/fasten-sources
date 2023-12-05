@@ -31,6 +31,7 @@ func GetSourceLakeCityPrimaryCarePc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QP2300X", "261QR1300X"}
 	sourceDef.Aliases = []string{"LAKE CITY PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952896151"}}
+	sourceDef.PatientAccessUrl = "http://www.https://www.lakecityprimary.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

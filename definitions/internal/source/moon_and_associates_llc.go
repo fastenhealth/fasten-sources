@@ -30,6 +30,7 @@ func GetSourceMoonAndAssociatesLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeMoonAndAssociatesLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.newmoondoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGeorgiaHandShoulderElbowPc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeGeorgiaHandShoulderElbowPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gahand.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

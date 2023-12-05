@@ -30,6 +30,7 @@ func GetSourceNcMarshirlLocklearFnpPllc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeNcMarshirlLocklearFnpPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.locklearfnp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

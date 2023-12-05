@@ -31,6 +31,7 @@ func GetSourceCornerstonePainManagement(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207L00000X", "207LP2900X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780810259"}}
+	sourceDef.PatientAccessUrl = "http://www.cornerstonepainmanagement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

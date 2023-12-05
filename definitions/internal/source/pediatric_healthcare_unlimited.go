@@ -31,6 +31,7 @@ func GetSourcePediatricHealthcareUnlimited(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982766390"}}
+	sourceDef.PatientAccessUrl = "http://www.altonpeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

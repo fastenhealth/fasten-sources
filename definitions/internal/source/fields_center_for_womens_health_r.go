@@ -30,6 +30,7 @@ func GetSourceFieldsCenterForWomensHealthR(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeFieldsCenterForWomensHealthR
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://fieldsgynroboticsurgery.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

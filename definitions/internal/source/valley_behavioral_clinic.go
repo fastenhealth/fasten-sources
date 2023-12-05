@@ -30,6 +30,7 @@ func GetSourceValleyBehavioralClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeValleyBehavioralClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.valleycares.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRedmondMedicalAndMentalHealth(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeRedmondMedicalAndMentalHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.redmondmmh.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

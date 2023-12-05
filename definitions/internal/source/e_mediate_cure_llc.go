@@ -31,6 +31,7 @@ func GetSourceEMediateCureLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"261QU0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780051466"}}
+	sourceDef.PatientAccessUrl = "http://www.emediatecure.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

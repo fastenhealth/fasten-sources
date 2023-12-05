@@ -31,6 +31,7 @@ func GetSourceDiamondbackPainPa(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"174400000X", "208100000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568737708", "1700274081"}}
+	sourceDef.PatientAccessUrl = "http://www.diamondbackpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

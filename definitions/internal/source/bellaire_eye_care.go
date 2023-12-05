@@ -30,6 +30,7 @@ func GetSourceBellaireEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeBellaireEyeCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neuroeye.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

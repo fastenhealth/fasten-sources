@@ -31,6 +31,7 @@ func GetSourceGreaterSeacoastCommunityHealth(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"261Q00000X", "261QD0000X", "261QF0400X", "333600000X", "3336C0003X"}
 	sourceDef.Aliases = []string{"FAMILIES FIRST HEALTH & SUPPORT CENTER", "FAMILIES FIRST OF THE GREATER SEACOAST", "GOODWIN COMMUNITY HEALTH PHARMACY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003431925", "1013688100", "1114935871", "1235815309", "1366027609", "1407331978", "1447413141", "1548423247", "1639339948", "1821479353"}}
+	sourceDef.PatientAccessUrl = "https://getcommunityhealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

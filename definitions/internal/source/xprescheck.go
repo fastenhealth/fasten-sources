@@ -30,6 +30,7 @@ func GetSourceXprescheck(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeXprescheck
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://treat.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

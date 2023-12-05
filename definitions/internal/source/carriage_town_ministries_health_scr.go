@@ -30,6 +30,7 @@ func GetSourceCarriageTownMinistriesHealthScr(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeCarriageTownMinistriesHealthScr
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.carriagetown.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

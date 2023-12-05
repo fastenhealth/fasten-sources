@@ -30,6 +30,7 @@ func GetSourceEnsignMedicalInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeEnsignMedicalInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.richardbartonmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAscensionMedicalGroupProvidence(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAscensionMedicalGroupProvidence
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://phnclinics.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

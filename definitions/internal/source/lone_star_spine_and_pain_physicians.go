@@ -30,6 +30,7 @@ func GetSourceLoneStarSpineAndPainPhysicians(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeLoneStarSpineAndPainPhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.REDEFINEYOURPAIN.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

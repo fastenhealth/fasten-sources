@@ -30,6 +30,7 @@ func GetSourceCalvaryPsychiatricServicesLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCalvaryPsychiatricServicesLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.calvarypsychiatricservices.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

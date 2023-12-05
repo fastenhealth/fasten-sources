@@ -30,6 +30,7 @@ func GetSourceEllenLinMdPaDbaAdvancedSpine(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeEllenLinMdPaDbaAdvancedSpine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.advancedpaindoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

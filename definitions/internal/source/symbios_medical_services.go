@@ -31,6 +31,7 @@ func GetSourceSymbiosMedicalServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207VG0400X", "207ZC0006X", "225100000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083389589"}}
+	sourceDef.PatientAccessUrl = "https://www.mysymbios.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceDeepWellHealthCareLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457940793"}}
+	sourceDef.PatientAccessUrl = "http://www.deepwellhc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

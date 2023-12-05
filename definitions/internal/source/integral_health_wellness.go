@@ -30,6 +30,7 @@ func GetSourceIntegralHealthWellness(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeIntegralHealthWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.your-nubody.com/integral-health---wellness"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

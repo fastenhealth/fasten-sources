@@ -30,6 +30,7 @@ func GetSourceSamPChiaMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeSamPChiaMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://samchiamd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

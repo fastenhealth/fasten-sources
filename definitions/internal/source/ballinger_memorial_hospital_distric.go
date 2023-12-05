@@ -30,6 +30,7 @@ func GetSourceBallingerMemorialHospitalDistric(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeBallingerMemorialHospitalDistric
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ballingerhospital.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

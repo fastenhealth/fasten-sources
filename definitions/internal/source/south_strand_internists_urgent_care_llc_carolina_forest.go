@@ -30,6 +30,7 @@ func GetSourceSouthStrandInternistsUrgentCareLlcCarolinaForest(env pkg.FastenLig
 	sourceDef.SourceType = pkg.SourceTypeSouthStrandInternistsUrgentCareLlcCarolinaForest
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.southstrandinternists.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceMobileCareChicago(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{"MOBILE CARE CHICAGO"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265502728"}}
+	sourceDef.PatientAccessUrl = "http://www.mobilecarechicago.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

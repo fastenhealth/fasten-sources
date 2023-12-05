@@ -30,6 +30,7 @@ func GetSourcePangarkar(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypePangarkar
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.crpscenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

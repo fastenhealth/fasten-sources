@@ -30,6 +30,7 @@ func GetSourcePrimaryCaringOfMalibu(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePrimaryCaringOfMalibu
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.primarycaring.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

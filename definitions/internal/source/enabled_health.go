@@ -30,6 +30,7 @@ func GetSourceEnabledHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeEnabledHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://enabled.healthcare"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

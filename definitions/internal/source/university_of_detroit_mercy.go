@@ -31,6 +31,7 @@ func GetSourceUniversityOfDetroitMercy(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"122300000X", "208D00000X", "251300000X", "302R00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"UNIVERSITY OF DETROIT MERCY WELLNESS CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114396264", "1376095273", "1386050664", "1669187696", "1760561062"}}
+	sourceDef.PatientAccessUrl = "http://www.udmercy.edu/life/health/index.php"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

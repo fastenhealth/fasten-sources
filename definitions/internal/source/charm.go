@@ -30,6 +30,7 @@ func GetSourceCharm(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.SourceType = pkg.SourceTypeCharm
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.charmaustin.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

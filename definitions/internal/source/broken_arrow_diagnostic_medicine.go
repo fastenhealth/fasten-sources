@@ -30,6 +30,7 @@ func GetSourceBrokenArrowDiagnosticMedicine(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBrokenArrowDiagnosticMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bamedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFemHealthUsaIncDbaCarafem(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeFemHealthUsaIncDbaCarafem
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.carafem.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

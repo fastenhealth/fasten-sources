@@ -30,6 +30,7 @@ func GetSourceDarylJCallahanDoPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeDarylJCallahanDoPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://patient360.info"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

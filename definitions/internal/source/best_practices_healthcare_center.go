@@ -31,6 +31,7 @@ func GetSourceBestPracticesHealthcareCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"BEST PRACTICES HEALTHCARE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851919476"}}
+	sourceDef.PatientAccessUrl = "http://www.bestpracticesselah.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

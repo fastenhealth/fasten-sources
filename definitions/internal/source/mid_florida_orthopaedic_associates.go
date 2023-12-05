@@ -30,6 +30,7 @@ func GetSourceMidFloridaOrthopaedicAssociates(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMidFloridaOrthopaedicAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.midfloridaortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

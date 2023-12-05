@@ -30,6 +30,7 @@ func GetSourceOrthopedicCenterOfPalmBeachCountyLlc(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicCenterOfPalmBeachCountyLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://ocpbc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

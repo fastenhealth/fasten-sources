@@ -31,6 +31,7 @@ func GetSourceHealthlinknowInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"101YM0800X", "103TC0700X", "1041C0700X", "2084P0015X", "2084P0800X", "2084P0804X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336493972"}}
+	sourceDef.PatientAccessUrl = "http://www.healthlinknow.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

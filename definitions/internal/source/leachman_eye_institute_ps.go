@@ -30,6 +30,7 @@ func GetSourceLeachmanEyeInstitutePs(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeLeachmanEyeInstitutePs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.leachmaneye.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

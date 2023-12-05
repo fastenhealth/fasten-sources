@@ -30,6 +30,7 @@ func GetSourceFrederickInternalMedicineAndEnd(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeFrederickInternalMedicineAndEnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://fimes.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

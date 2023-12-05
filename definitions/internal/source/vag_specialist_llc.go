@@ -31,6 +31,7 @@ func GetSourceVagSpecialistLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207V00000X", "207VF0040X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265100069"}}
+	sourceDef.PatientAccessUrl = "http://www.DrMariaLuzNieto.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

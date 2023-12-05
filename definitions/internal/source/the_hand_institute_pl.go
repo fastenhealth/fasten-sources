@@ -31,6 +31,7 @@ func GetSourceTheHandInstitutePl(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207X00000X", "207XS0106X", "207XX0004X", "207XX0005X", "225X00000X"}
 	sourceDef.Aliases = []string{"MIAMI BONE & JOINT INSTITUTE", "MIAMI HAND, BONE & JOINT INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346909124", "1801040480"}}
+	sourceDef.PatientAccessUrl = "http://www.miamiboneandjoint.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

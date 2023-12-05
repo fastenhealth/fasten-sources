@@ -30,6 +30,7 @@ func GetSourceCrownAndSoulPrimaryCareAndWel(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeCrownAndSoulPrimaryCareAndWel
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://crownandsoulwellnesscenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

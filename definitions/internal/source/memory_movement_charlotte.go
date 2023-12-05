@@ -30,6 +30,7 @@ func GetSourceMemoryMovementCharlotte(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeMemoryMovementCharlotte
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mmclt.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTheAlivenessProject(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTheAlivenessProject
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aliveness.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

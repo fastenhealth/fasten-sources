@@ -30,6 +30,7 @@ func GetSourceAurelianStandardPllc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeAurelianStandardPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.theaurelianstandard.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

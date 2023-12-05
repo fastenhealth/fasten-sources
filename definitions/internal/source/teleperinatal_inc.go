@@ -30,6 +30,7 @@ func GetSourceTeleperinatalInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeTeleperinatalInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://teleperinatal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

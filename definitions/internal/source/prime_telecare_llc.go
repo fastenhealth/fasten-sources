@@ -31,6 +31,7 @@ func GetSourcePrimeTelecareLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{"PRIME FAMILY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1629678347"}}
+	sourceDef.PatientAccessUrl = "http://www.primefamilycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

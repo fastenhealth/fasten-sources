@@ -30,6 +30,7 @@ func GetSourceEmergeortho(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeEmergeortho
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.emergeortho.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

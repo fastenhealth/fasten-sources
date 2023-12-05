@@ -30,6 +30,7 @@ func GetSourceHrmcLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeHrmcLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.svmedicalgroup.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

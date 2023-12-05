@@ -30,6 +30,7 @@ func GetSourceEnvisionPainManagement(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeEnvisionPainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.envisionpainmanagement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

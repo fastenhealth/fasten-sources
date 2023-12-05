@@ -30,6 +30,7 @@ func GetSourceKodiakIslandAmbulatoryCare(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeKodiakIslandAmbulatoryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kiacc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

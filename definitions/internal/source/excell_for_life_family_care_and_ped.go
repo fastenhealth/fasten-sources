@@ -30,6 +30,7 @@ func GetSourceExcellForLifeFamilyCareAndPed(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeExcellForLifeFamilyCareAndPed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.excellforlife.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

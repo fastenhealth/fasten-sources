@@ -30,6 +30,7 @@ func GetSourcePrager(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypePrager
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.crpscenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

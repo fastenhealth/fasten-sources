@@ -30,6 +30,7 @@ func GetSourceFlCristianGuareNpStartup(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeFlCristianGuareNpStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.advancedhealthfamily.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

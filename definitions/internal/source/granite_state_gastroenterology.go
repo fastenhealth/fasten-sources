@@ -30,6 +30,7 @@ func GetSourceGraniteStateGastroenterology(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeGraniteStateGastroenterology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.granitegastro.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

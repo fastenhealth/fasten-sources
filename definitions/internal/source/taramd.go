@@ -30,6 +30,7 @@ func GetSourceTaramd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeTaramd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.taramd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

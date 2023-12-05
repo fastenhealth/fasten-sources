@@ -31,6 +31,7 @@ func GetSourceHorizonHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"101YA0400X", "103T00000X", "103TB0200X", "104100000X", "133N00000X", "207LP2900X", "207Q00000X", "207R00000X", "207V00000X", "207X00000X", "208000000X", "2084P0800X", "208600000X", "208800000X", "208VP0000X", "213E00000X", "251S00000X", "261QM1300X", "261QP2300X", "261QP3300X", "261QR0405X", "261QR0800X", "261QR1300X", "324500000X", "367500000X"}
 	sourceDef.Aliases = []string{"HORIZON HEALTH", "SYCAMORE PAIN & WELLNESS", "TERRE HAUTE SPECIALTY CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043886591", "1184353989", "1629280367", "1972063204"}}
+	sourceDef.PatientAccessUrl = "https://myhorizonhealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceEarlyScript(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeEarlyScript
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.earlyscript.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

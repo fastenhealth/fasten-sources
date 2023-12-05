@@ -31,6 +31,7 @@ func GetSourceNewAlternatives(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"101Y00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164151510"}}
+	sourceDef.PatientAccessUrl = "http://patientmessages.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

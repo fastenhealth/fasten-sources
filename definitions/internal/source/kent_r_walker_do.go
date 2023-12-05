@@ -30,6 +30,7 @@ func GetSourceKentRWalkerDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeKentRWalkerDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://DRWALKERDO.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

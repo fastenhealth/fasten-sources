@@ -30,6 +30,7 @@ func GetSourcePrecisionEpilepsy(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypePrecisionEpilepsy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://precisionepilepsy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

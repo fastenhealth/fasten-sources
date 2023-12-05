@@ -31,6 +31,7 @@ func GetSourceQuickMedUrgentCareLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207VG0400X", "261QD0000X", "261QP2300X", "261QU0200X", "291U00000X"}
 	sourceDef.Aliases = []string{"QUICKMED URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528528726"}}
+	sourceDef.PatientAccessUrl = "http://www.quickmed-uc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

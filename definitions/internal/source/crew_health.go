@@ -31,6 +31,7 @@ func GetSourceCrewHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982179586"}}
+	sourceDef.PatientAccessUrl = "http://www.crewhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

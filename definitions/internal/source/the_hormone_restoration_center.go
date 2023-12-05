@@ -31,6 +31,7 @@ func GetSourceTheHormoneRestorationCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"302R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023484565"}}
+	sourceDef.PatientAccessUrl = "http://www.thehormonerestorationcenter.com/index.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

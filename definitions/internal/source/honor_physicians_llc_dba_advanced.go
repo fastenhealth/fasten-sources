@@ -30,6 +30,7 @@ func GetSourceHonorPhysiciansLlcDbaAdvanced(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeHonorPhysiciansLlcDbaAdvanced
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aimofmichiana.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

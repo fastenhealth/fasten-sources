@@ -30,6 +30,7 @@ func GetSourceCoreOrdinatesInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeCoreOrdinatesInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.coreordinates.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

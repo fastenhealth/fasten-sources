@@ -30,6 +30,7 @@ func GetSourceMissionGastroenterologyPa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeMissionGastroenterologyPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://missiongastro.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

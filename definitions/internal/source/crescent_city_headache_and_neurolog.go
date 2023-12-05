@@ -30,6 +30,7 @@ func GetSourceCrescentCityHeadacheAndNeurolog(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeCrescentCityHeadacheAndNeurolog
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neworleansheadachedoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

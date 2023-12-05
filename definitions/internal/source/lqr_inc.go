@@ -30,6 +30,7 @@ func GetSourceLqrInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeLqrInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.lifequalityresources.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

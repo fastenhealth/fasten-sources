@@ -30,6 +30,7 @@ func GetSourceMobileCarePartnersOfConnecticut(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMobileCarePartnersOfConnecticut
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mcpct.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

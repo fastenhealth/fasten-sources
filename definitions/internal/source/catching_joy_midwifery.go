@@ -31,6 +31,7 @@ func GetSourceCatchingJoyMidwifery(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"367A00000X"}
 	sourceDef.Aliases = []string{"CATCHING JOY MIDWIFERY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700551272"}}
+	sourceDef.PatientAccessUrl = "http://www.catchingjoy.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

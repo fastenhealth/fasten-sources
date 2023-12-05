@@ -31,6 +31,7 @@ func GetSourceGuidingStarCedarValley(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QF0050X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235875972"}}
+	sourceDef.PatientAccessUrl = "https://guidingstarcedarvalley.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

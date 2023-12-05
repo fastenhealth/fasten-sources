@@ -30,6 +30,7 @@ func GetSourceWaringCourtPediatricAndAdultMe(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeWaringCourtPediatricAndAdultMe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wcpamg.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

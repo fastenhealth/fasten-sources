@@ -31,6 +31,7 @@ func GetSourceBearRiverPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"MI BETTER HEALTH AND WELLNESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609427541"}}
+	sourceDef.PatientAccessUrl = "http://brhprimarycare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

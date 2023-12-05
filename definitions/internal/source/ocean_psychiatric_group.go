@@ -30,6 +30,7 @@ func GetSourceOceanPsychiatricGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeOceanPsychiatricGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.oceanpsychiatric.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

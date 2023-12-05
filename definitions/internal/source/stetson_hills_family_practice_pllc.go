@@ -30,6 +30,7 @@ func GetSourceStetsonHillsFamilyPracticePllc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeStetsonHillsFamilyPracticePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.stetsonhillsfm.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

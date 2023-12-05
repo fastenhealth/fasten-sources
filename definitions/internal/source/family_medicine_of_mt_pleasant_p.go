@@ -30,6 +30,7 @@ func GetSourceFamilyMedicineOfMtPleasantP(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeFamilyMedicineOfMtPleasantP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fmmtp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

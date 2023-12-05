@@ -31,6 +31,7 @@ func GetSourceMarkJCoronelMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207RG0100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1639445869"}}
+	sourceDef.PatientAccessUrl = "http://www.eastendgastro.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

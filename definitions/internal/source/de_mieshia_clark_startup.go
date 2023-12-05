@@ -30,6 +30,7 @@ func GetSourceDeMieshiaClarkStartup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeDeMieshiaClarkStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.inohealthcare.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

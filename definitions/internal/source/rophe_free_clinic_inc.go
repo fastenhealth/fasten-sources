@@ -30,6 +30,7 @@ func GetSourceRopheFreeClinicInc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeRopheFreeClinicInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rophe.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

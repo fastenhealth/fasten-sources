@@ -31,6 +31,7 @@ func GetSourceAspenHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"208000000X", "2080A0000X", "261QH0100X", "261QM0850X", "261QM0855X", "261QM1300X", "363LN0000X", "363LP0200X", "363LP0808X", "364SF0001X", "364SP0807X"}
 	sourceDef.Aliases = []string{"ASPEN HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801352729"}}
+	sourceDef.PatientAccessUrl = "http://www.aspenhealth-ut.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceConsensusHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeConsensusHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.consensushealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

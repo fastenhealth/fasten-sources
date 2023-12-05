@@ -31,6 +31,7 @@ func GetSourcePriviaMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{"FAMILY ORTHOPAEDICS AND SPORTS MEDICINE OF NORTHERN VIRGINIA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467908061"}}
+	sourceDef.PatientAccessUrl = "https://www.myprivia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

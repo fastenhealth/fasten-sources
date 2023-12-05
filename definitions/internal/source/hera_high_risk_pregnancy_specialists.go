@@ -31,6 +31,7 @@ func GetSourceHeraHighRiskPregnancySpecialists(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Category = []string{"207VM0101X"}
 	sourceDef.Aliases = []string{"HERA HIGH RISK PREGNANCY SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821728916"}}
+	sourceDef.PatientAccessUrl = "https://herahrps.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceCollinCountyPulmonaryAssociates(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207RP1001X"}
 	sourceDef.Aliases = []string{"COLLIN COUNTY PULMONARY ASSOCIATES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205048956"}}
+	sourceDef.PatientAccessUrl = "http://www.ccpaplano.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTrueRejuvenationPeptideAndHormo(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeTrueRejuvenationPeptideAndHormo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://truerejuvenationhormonetherapy.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

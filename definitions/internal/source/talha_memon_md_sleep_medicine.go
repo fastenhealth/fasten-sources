@@ -30,6 +30,7 @@ func GetSourceTalhaMemonMdSleepMedicine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeTalhaMemonMdSleepMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.completesleepsolutions.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBeaconPrimaryMedicineInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeBeaconPrimaryMedicineInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://beaconmed.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

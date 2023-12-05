@@ -30,6 +30,7 @@ func GetSourceHudsonHeadwaters(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeHudsonHeadwaters
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hhhn.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

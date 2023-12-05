@@ -31,6 +31,7 @@ func GetSourceFriscoQuickCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207R00000X", "261QP2300X", "261QU0200X"}
 	sourceDef.Aliases = []string{"FRISCO QUICK CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154913572"}}
+	sourceDef.PatientAccessUrl = "http://www.friscoquickcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

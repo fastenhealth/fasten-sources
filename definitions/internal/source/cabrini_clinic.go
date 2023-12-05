@@ -30,6 +30,7 @@ func GetSourceCabriniClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeCabriniClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cabriniclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

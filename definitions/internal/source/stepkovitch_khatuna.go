@@ -30,6 +30,7 @@ func GetSourceStepkovitchKhatuna(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeStepkovitchKhatuna
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://MarcellusMedicalGroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

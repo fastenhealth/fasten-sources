@@ -31,6 +31,7 @@ func GetSourceInstituteOnHealthcareDirectives(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207P00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366891368"}}
+	sourceDef.PatientAccessUrl = "https://institutehcd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

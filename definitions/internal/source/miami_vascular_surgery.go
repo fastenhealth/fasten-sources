@@ -31,6 +31,7 @@ func GetSourceMiamiVascularSurgery(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"2086S0129X"}
 	sourceDef.Aliases = []string{"MIAMI VASCULAR SURGERY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1952343550"}}
+	sourceDef.PatientAccessUrl = "http://www.miamivascularsurgery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

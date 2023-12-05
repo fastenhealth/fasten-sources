@@ -31,6 +31,7 @@ func GetSourceLchHealthAndCommunityServices(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"LA COMUNIDAD HISPANA, INC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063901205", "1285984476", "1447709571", "1699305375", "1760854293", "1811587512"}}
+	sourceDef.PatientAccessUrl = "https://lchcommunityhealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

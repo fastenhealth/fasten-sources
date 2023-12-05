@@ -30,6 +30,7 @@ func GetSourceCrossroadsRhc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeCrossroadsRhc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mtvernonproviders.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

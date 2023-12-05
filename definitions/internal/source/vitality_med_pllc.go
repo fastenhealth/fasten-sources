@@ -31,6 +31,7 @@ func GetSourceVitalityMedPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"VITALITY MED LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1043806730"}}
+	sourceDef.PatientAccessUrl = "http://www.putmanfamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceShastaCascadeHealthCenters(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"261QF0400X", "261QR1300X"}
 	sourceDef.Aliases = []string{"SHASTA CASCADE HEALTH CENTERS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164428488"}}
+	sourceDef.PatientAccessUrl = "https://www.shastacascadehealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

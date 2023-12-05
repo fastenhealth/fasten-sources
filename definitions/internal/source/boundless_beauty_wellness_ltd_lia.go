@@ -30,6 +30,7 @@ func GetSourceBoundlessBeautyWellnessLtdLia(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBoundlessBeautyWellnessLtdLia
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.boundlessbeautyatl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

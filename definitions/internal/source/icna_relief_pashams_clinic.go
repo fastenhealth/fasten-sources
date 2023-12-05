@@ -30,6 +30,7 @@ func GetSourceIcnaReliefPashamsClinic(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeIcnaReliefPashamsClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.shamsclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVenesaludPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeVenesaludPrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.venesaludpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

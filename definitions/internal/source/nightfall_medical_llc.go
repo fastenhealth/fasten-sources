@@ -31,6 +31,7 @@ func GetSourceNightfallMedicalLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261QU0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285386193"}}
+	sourceDef.PatientAccessUrl = "http://nightfallmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

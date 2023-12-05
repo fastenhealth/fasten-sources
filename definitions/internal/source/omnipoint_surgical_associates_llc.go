@@ -31,6 +31,7 @@ func GetSourceOmnipointSurgicalAssociatesLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306245162"}}
+	sourceDef.PatientAccessUrl = "http://www.twincountyphysicianpractices.com/page/view/4307"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

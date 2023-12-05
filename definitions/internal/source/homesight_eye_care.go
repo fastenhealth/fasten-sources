@@ -31,6 +31,7 @@ func GetSourceHomesightEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"152W00000X"}
 	sourceDef.Aliases = []string{"HOMESIGHT EYE CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962902486"}}
+	sourceDef.PatientAccessUrl = "http://www.homesighteyecare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

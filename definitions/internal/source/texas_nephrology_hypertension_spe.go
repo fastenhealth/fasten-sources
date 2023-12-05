@@ -30,6 +30,7 @@ func GetSourceTexasNephrologyHypertensionSpe(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTexasNephrologyHypertensionSpe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://itconcepts.com/TexasNephrology/web/index.ht"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

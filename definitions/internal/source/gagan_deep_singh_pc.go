@@ -31,6 +31,7 @@ func GetSourceGaganDeepSinghPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207QA0000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"GET WELL URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184278798"}}
+	sourceDef.PatientAccessUrl = "http://www.getwellurgentcares.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

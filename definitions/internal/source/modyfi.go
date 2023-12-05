@@ -31,6 +31,7 @@ func GetSourceModyfi(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Aliases = []string{"MODYFI"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376015206"}}
+	sourceDef.PatientAccessUrl = "https://modyfihealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

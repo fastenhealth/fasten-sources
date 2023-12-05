@@ -31,6 +31,7 @@ func GetSourceGoodHabitsNutrition(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"133V00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1881353183"}}
+	sourceDef.PatientAccessUrl = "https://www.goodhabitsnutrition.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

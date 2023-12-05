@@ -30,6 +30,7 @@ func GetSourceTryonMedicalPartners(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeTryonMedicalPartners
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tryonmed.com/portal"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

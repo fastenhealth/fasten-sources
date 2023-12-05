@@ -31,6 +31,7 @@ func GetSourceHealthierWayIvSolutions(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261Q00000X", "261QP2300X", "261QR1300X", "261QU0200X", "363LF0000X"}
 	sourceDef.Aliases = []string{"HEALTHIER WAY IV SOLUTIONS", "HEALTHIER WAY IV SOLUTIONS, PLLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023612777"}}
+	sourceDef.PatientAccessUrl = "https://www.hwivs.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGainesvilleHeartVascularGroup(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeGainesvilleHeartVascularGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ghvg.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

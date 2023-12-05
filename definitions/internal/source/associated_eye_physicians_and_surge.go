@@ -30,6 +30,7 @@ func GetSourceAssociatedEyePhysiciansAndSurge(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAssociatedEyePhysiciansAndSurge
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.associatedeyenj.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

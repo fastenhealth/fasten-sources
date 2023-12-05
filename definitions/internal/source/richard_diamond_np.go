@@ -30,6 +30,7 @@ func GetSourceRichardDiamondNp(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeRichardDiamondNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://carolinaaveclinic.wixsite.com/carolina-avenue-clin/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

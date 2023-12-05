@@ -30,6 +30,7 @@ func GetSourceHappyJointsInc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeHappyJointsInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.happyjointsnj.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

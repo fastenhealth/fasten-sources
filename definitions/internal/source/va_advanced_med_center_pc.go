@@ -30,6 +30,7 @@ func GetSourceVaAdvancedMedCenterPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeVaAdvancedMedCenterPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://2vamc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

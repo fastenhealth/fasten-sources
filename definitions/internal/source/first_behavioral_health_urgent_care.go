@@ -30,6 +30,7 @@ func GetSourceFirstBehavioralHealthUrgentCare(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeFirstBehavioralHealthUrgentCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fbhucc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

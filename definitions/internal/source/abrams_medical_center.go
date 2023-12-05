@@ -30,6 +30,7 @@ func GetSourceAbramsMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeAbramsMedicalCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.miramardoctor.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

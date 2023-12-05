@@ -31,6 +31,7 @@ func GetSourceFortWorthVeinCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{"FORT WORTH VEIN CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1801486568"}}
+	sourceDef.PatientAccessUrl = "http://www.ftworthveins.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

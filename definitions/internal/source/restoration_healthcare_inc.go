@@ -31,6 +31,7 @@ func GetSourceRestorationHealthcareInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207QS0010X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1275931800"}}
+	sourceDef.PatientAccessUrl = "http://www.rhealthc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

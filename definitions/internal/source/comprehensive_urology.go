@@ -31,6 +31,7 @@ func GetSourceComprehensiveUrology(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208800000X"}
 	sourceDef.Aliases = []string{"COMPREHENSIVE UROLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518687227"}}
+	sourceDef.PatientAccessUrl = "http://urologist.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

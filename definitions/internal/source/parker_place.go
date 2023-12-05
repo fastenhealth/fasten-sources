@@ -31,6 +31,7 @@ func GetSourceParkerPlace(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"101YP2500X", "103TC1900X", "2080P0205X", "310400000X"}
 	sourceDef.Aliases = []string{"PARKER PLACE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063920197", "1134870447", "1700554466"}}
+	sourceDef.PatientAccessUrl = "https://www.parkerplaceannapolis.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

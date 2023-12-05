@@ -31,6 +31,7 @@ func GetSourceRoseBowlAquaticsCenter(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QP2000X"}
 	sourceDef.Aliases = []string{"ROSE BOWL AQUATICS CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912521642"}}
+	sourceDef.PatientAccessUrl = "https://www.rosebowlaquatics.org/programs/physical-therapy/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

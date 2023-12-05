@@ -31,6 +31,7 @@ func GetSourcePreciseImmediateCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699498907"}}
+	sourceDef.PatientAccessUrl = "https://www.precisecaremedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

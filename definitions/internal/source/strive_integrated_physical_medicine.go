@@ -30,6 +30,7 @@ func GetSourceStriveIntegratedPhysicalMedicine(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeStriveIntegratedPhysicalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.strivephysmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

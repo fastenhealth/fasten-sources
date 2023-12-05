@@ -30,6 +30,7 @@ func GetSourceTarponInterventionalPainAndSpineCare(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeTarponInterventionalPainAndSpineCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tarponpa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

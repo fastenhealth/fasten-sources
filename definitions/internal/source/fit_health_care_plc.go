@@ -30,6 +30,7 @@ func GetSourceFitHealthCarePlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeFitHealthCarePlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://fithcc.com/index-fb.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

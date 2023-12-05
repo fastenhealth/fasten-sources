@@ -30,6 +30,7 @@ func GetSourceEssieMbSmithFootClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeEssieMbSmithFootClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.ESSIEMBSMITHFOOTCLINIC.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

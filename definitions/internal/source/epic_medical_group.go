@@ -30,6 +30,7 @@ func GetSourceEpicMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeEpicMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.epicmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

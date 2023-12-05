@@ -30,6 +30,7 @@ func GetSourceMtsi(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeMtsi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nyallergy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

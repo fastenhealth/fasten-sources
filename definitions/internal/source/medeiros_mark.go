@@ -30,6 +30,7 @@ func GetSourceMedeirosMark(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeMedeirosMark
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.MarkMedeirosMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

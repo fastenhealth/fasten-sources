@@ -30,6 +30,7 @@ func GetSourceNaturopathicFamilyMedicineAndNu(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeNaturopathicFamilyMedicineAndNu
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drnataliecolicci.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

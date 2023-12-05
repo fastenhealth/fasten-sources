@@ -30,6 +30,7 @@ func GetSourceChp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Source
 	sourceDef.SourceType = pkg.SourceTypeChp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.CommunityHealthPrograms.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

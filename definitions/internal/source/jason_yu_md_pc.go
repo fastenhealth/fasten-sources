@@ -30,6 +30,7 @@ func GetSourceJasonYuMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeJasonYuMdPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jasonyumd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

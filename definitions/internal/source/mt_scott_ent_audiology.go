@@ -30,6 +30,7 @@ func GetSourceMtScottEntAudiology(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeMtScottEntAudiology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mtscottent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

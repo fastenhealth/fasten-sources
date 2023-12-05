@@ -31,6 +31,7 @@ func GetSourceSeeAlternativesPediatrics(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{"SEE ALTERNATIVES PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376996546"}}
+	sourceDef.PatientAccessUrl = "http://www.seealternatives.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

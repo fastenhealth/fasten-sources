@@ -30,6 +30,7 @@ func GetSourceCaShandiFullerStartup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeCaShandiFullerStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.doctor4thepeople.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

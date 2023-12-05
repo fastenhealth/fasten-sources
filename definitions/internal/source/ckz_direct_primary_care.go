@@ -30,6 +30,7 @@ func GetSourceCkzDirectPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeCkzDirectPrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.CKZDirectPrimaryCare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

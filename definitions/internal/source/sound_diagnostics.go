@@ -31,6 +31,7 @@ func GetSourceSoundDiagnostics(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"261QR0200X"}
 	sourceDef.Aliases = []string{"SOUND DIAGNOSTICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659855443"}}
+	sourceDef.PatientAccessUrl = "http://www.sounddiagnosticsbozeman.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

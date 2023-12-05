@@ -31,6 +31,7 @@ func GetSourceElizabethPacochaDpmPc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558665869"}}
+	sourceDef.PatientAccessUrl = "http://www.advancedpaincenters.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

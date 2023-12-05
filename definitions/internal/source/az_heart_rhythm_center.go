@@ -31,6 +31,7 @@ func GetSourceAzHeartRhythmCenter(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207RC0001X"}
 	sourceDef.Aliases = []string{"AZ HEART RHYTHM CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356663736"}}
+	sourceDef.PatientAccessUrl = "http://www.azheartrhythmcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

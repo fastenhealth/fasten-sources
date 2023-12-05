@@ -31,6 +31,7 @@ func GetSourcePodiatryGroupOfAnnapolisPa(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"213E00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427167923"}}
+	sourceDef.PatientAccessUrl = "http://podiatrygroup.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

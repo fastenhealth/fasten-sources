@@ -30,6 +30,7 @@ func GetSourceVolunteersInMedicineClinic(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeVolunteersInMedicineClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vimclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

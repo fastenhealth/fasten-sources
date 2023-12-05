@@ -30,6 +30,7 @@ func GetSourceIvExpressLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeIvExpressLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ivexpress.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

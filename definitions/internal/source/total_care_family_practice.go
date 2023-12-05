@@ -30,6 +30,7 @@ func GetSourceTotalCareFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeTotalCareFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://totalcarechicago.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

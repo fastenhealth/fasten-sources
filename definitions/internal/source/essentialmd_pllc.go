@@ -30,6 +30,7 @@ func GetSourceEssentialmdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeEssentialmdPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http:// www.essentialmdtulsa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

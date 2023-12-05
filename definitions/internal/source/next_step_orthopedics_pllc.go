@@ -30,6 +30,7 @@ func GetSourceNextStepOrthopedicsPllc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeNextStepOrthopedicsPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nextsteportho.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

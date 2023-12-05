@@ -30,6 +30,7 @@ func GetSourceBabsonAssociatesPrimaryCarePc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBabsonAssociatesPrimaryCarePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.babsonwy.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMindfulPrimaryPsychCarePllc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeMindfulPrimaryPsychCarePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mindfulprimaryandpsychcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

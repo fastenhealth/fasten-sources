@@ -31,6 +31,7 @@ func GetSourceTotalFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QP1100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1154919090"}}
+	sourceDef.PatientAccessUrl = "http://honesdalepodiatrist.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

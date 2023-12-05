@@ -32,6 +32,7 @@ func GetSourcePremierHealth1(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Aliases = []string{"PREMIER HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922775865", "1952778003"}}
 	sourceDef.BrandLogo = "premier-health.png"
+	sourceDef.PatientAccessUrl = "http://www.doctorlynnbrook.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

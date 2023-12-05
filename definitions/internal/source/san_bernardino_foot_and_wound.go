@@ -31,6 +31,7 @@ func GetSourceSanBernardinoFootAndWound(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"213ES0131X"}
 	sourceDef.Aliases = []string{"SAN BERNARDO FOOT AND WOUND"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1821710559"}}
+	sourceDef.PatientAccessUrl = "http://www.sdamc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

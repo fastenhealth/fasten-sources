@@ -30,6 +30,7 @@ func GetSourceEzTelemd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeEzTelemd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.eztelemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRuffinAssociatesHealthyHousecall(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeRuffinAssociatesHealthyHousecall
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.ruffinmedgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

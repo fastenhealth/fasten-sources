@@ -31,6 +31,7 @@ func GetSourceArthrokinexRegenerativeMedicineLlc(env pkg.FastenLighthouseEnvType
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982142972"}}
+	sourceDef.PatientAccessUrl = "http://www.barretohealthcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVieveLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeVieveLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vievewellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

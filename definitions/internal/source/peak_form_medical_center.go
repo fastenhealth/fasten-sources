@@ -30,6 +30,7 @@ func GetSourcePeakFormMedicalCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePeakFormMedicalCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.peakformcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

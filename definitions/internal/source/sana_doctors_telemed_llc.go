@@ -30,6 +30,7 @@ func GetSourceSanaDoctorsTelemedLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeSanaDoctorsTelemedLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.doctortelemed.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

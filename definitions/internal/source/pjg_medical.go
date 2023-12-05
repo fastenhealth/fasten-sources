@@ -30,6 +30,7 @@ func GetSourcePjgMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypePjgMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.yourpathhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

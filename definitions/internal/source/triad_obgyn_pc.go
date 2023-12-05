@@ -30,6 +30,7 @@ func GetSourceTriadObgynPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTriadObgynPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://triadobgyn.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

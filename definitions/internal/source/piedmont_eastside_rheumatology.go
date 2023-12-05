@@ -30,6 +30,7 @@ func GetSourcePiedmontEastsideRheumatology(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypePiedmontEastsideRheumatology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.perdraluoch.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

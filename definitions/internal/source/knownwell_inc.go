@@ -30,6 +30,7 @@ func GetSourceKnownwellInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeKnownwellInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.knownwell.co/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

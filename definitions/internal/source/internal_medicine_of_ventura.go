@@ -31,6 +31,7 @@ func GetSourceInternalMedicineOfVentura(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902486517"}}
+	sourceDef.PatientAccessUrl = "http://IMofventura.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

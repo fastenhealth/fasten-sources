@@ -31,6 +31,7 @@ func GetSourceAllanWangMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700055217"}}
+	sourceDef.PatientAccessUrl = "http://www.HIAllergy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

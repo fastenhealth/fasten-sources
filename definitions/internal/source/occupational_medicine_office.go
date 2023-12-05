@@ -30,6 +30,7 @@ func GetSourceOccupationalMedicineOffice(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeOccupationalMedicineOffice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sunsetwalk-inhealthcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

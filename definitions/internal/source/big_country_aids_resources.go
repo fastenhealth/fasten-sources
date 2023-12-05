@@ -31,6 +31,7 @@ func GetSourceBigCountryAidsResources(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{"BIG COUNTRY AIDS RESOURCES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235506429"}}
+	sourceDef.PatientAccessUrl = "http://www.bcartx.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

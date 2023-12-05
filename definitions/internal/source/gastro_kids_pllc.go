@@ -30,6 +30,7 @@ func GetSourceGastroKidsPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeGastroKidsPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gastrokidstx.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

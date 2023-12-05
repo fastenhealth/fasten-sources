@@ -30,6 +30,7 @@ func GetSourceSamuelCLeeDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeSamuelCLeeDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://drsamuellee.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

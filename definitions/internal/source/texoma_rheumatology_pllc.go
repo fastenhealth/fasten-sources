@@ -31,6 +31,7 @@ func GetSourceTexomaRheumatologyPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207RR0500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477154581"}}
+	sourceDef.PatientAccessUrl = "https://texomarheumatology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

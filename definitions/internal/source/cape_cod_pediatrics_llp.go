@@ -31,6 +31,7 @@ func GetSourceCapeCodPediatricsLlp(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053423087"}}
+	sourceDef.PatientAccessUrl = "http://capecodpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

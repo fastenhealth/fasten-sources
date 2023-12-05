@@ -31,6 +31,7 @@ func GetSourceForeRiverUrologyLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208800000X", "2088F0040X", "2088P0231X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003248436", "1215332606"}}
+	sourceDef.PatientAccessUrl = "http://www.frurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

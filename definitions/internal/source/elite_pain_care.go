@@ -30,6 +30,7 @@ func GetSourceElitePainCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeElitePainCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.elitepaincenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

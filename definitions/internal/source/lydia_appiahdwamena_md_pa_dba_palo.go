@@ -30,6 +30,7 @@ func GetSourceLydiaAppiahdwamenaMdPaDbaPalo(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeLydiaAppiahdwamenaMdPaDbaPalo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://paloaltowomenshealthcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

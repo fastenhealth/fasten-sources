@@ -31,6 +31,7 @@ func GetSourcePrimaryCareOfOrangeCityLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X", "363L00000X", "363LF0000X"}
 	sourceDef.Aliases = []string{"HOME WOUND CARE FLORIDA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831615087", "1972249530"}}
+	sourceDef.PatientAccessUrl = "https://www.primarycareoforangecity.com/index.html"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

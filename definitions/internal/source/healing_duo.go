@@ -30,6 +30,7 @@ func GetSourceHealingDuo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeHealingDuo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.thehealingduo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

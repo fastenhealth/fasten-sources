@@ -31,6 +31,7 @@ func GetSourceLicensedToSolve(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"251S00000X"}
 	sourceDef.Aliases = []string{"LICENSED TO SOLVE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194342923"}}
+	sourceDef.PatientAccessUrl = "http://www.licensedtosolve.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

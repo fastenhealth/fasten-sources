@@ -30,6 +30,7 @@ func GetSourceVvpa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeVvpa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nuthera.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBahtiarianGregoryADo(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBahtiarianGregoryADo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/MoniqueYostMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

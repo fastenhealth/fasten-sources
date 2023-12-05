@@ -30,6 +30,7 @@ func GetSourceBoneAndJointSurgeryAssociates(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeBoneAndJointSurgeryAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bjsapa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

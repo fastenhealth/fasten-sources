@@ -31,6 +31,7 @@ func GetSourceChoiceHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207Q00000X", "261Q00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"CHOICE HEALTH NETWORK"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306356506", "1952073157"}}
+	sourceDef.PatientAccessUrl = "http://www.choice-health.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

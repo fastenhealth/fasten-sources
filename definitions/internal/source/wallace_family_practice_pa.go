@@ -31,6 +31,7 @@ func GetSourceWallaceFamilyPracticePa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063548410"}}
+	sourceDef.PatientAccessUrl = "http://www.wallacefamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

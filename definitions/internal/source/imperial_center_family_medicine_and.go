@@ -30,6 +30,7 @@ func GetSourceImperialCenterFamilyMedicineAnd(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeImperialCenterFamilyMedicineAnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.icfamilymedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

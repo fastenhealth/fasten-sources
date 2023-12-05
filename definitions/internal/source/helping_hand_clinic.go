@@ -31,6 +31,7 @@ func GetSourceHelpingHandClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QC1500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710367339"}}
+	sourceDef.PatientAccessUrl = "http://www.hhcsanford.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

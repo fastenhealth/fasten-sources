@@ -31,6 +31,7 @@ func GetSourceHealingWordCounselingCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"251S00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528391869"}}
+	sourceDef.PatientAccessUrl = "http://wellness901.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

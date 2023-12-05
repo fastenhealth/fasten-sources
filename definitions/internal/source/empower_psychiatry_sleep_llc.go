@@ -30,6 +30,7 @@ func GetSourceEmpowerPsychiatrySleepLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeEmpowerPsychiatrySleepLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://atlantatms.clinic"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceSuggeroHealthcareServicesLlc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"163WH0200X", "251E00000X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447686118"}}
+	sourceDef.PatientAccessUrl = "http://www.suggerohealthcareservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

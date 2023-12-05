@@ -31,6 +31,7 @@ func GetSourceTrueUClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"363LA2200X", "363LF0000X"}
 	sourceDef.Aliases = []string{"TRUE U CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770155665"}}
+	sourceDef.PatientAccessUrl = "http://ww.trueuclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

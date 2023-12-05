@@ -30,6 +30,7 @@ func GetSourceVancouverSleepCenterLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeVancouverSleepCenterLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vansleep.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

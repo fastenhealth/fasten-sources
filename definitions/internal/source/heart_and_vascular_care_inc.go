@@ -30,6 +30,7 @@ func GetSourceHeartAndVascularCareInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeHeartAndVascularCareInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hvcmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

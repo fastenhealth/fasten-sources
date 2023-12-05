@@ -30,6 +30,7 @@ func GetSourceTexasDiabetesAndThyroidClinic(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTexasDiabetesAndThyroidClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.txdtc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

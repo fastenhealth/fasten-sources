@@ -31,6 +31,7 @@ func GetSourceGtHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"261Q00000X", "261QM1300X"}
 	sourceDef.Aliases = []string{"GT HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144970450", "1881306488"}}
+	sourceDef.PatientAccessUrl = "http://www.gthealthcare.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

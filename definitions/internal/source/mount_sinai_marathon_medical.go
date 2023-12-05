@@ -31,6 +31,7 @@ func GetSourceMountSinaiMarathonMedical(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207R00000X", "207RB0002X"}
 	sourceDef.Aliases = []string{"MOUNT SINAI MARATHON MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508127531"}}
+	sourceDef.PatientAccessUrl = "http://www.southnassau.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

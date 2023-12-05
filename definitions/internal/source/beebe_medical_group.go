@@ -31,6 +31,7 @@ func GetSourceBeebeMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207QA0505X", "207R00000X", "207RC0000X", "207RC0200X", "207RG0100X", "207RI0011X", "207RI0200X", "207RP1001X", "207RS0012X", "208600000X", "2086X0206X", "208M00000X", "363AM0700X", "363LF0000X", "363LN0000X"}
 	sourceDef.Aliases = []string{"BEEBE MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730133992"}}
+	sourceDef.PatientAccessUrl = "http://www.beebemed.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceTridentMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093498230"}}
+	sourceDef.PatientAccessUrl = "http://www.tmg.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

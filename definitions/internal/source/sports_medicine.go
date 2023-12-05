@@ -31,6 +31,7 @@ func GetSourceSportsMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"2083S0010X"}
 	sourceDef.Aliases = []string{"SPORTS MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871674754"}}
+	sourceDef.PatientAccessUrl = "http://www.mhmh.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBaoDinhDoPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144704040"}}
+	sourceDef.PatientAccessUrl = "http://www.atlantichealthgroupnova.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAmeduriHealthServicesLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962131789"}}
+	sourceDef.PatientAccessUrl = "http://www.ahslasvegas.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceTennesseeValleyPainManagement(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"174400000X", "208VP0000X", "291U00000X", "363A00000X", "363L00000X"}
 	sourceDef.Aliases = []string{"TENNESSEE VALLEY PAIN MANAGEMENT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619056462", "1619212453"}}
+	sourceDef.PatientAccessUrl = "http://www.tvpmonline.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

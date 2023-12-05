@@ -31,6 +31,7 @@ func GetSourceRiseCounselingServices(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"1041C0700X"}
 	sourceDef.Aliases = []string{"RISE COUNSELING SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316607617"}}
+	sourceDef.PatientAccessUrl = "https://www.risecounselingservice.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

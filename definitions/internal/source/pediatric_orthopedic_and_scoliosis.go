@@ -30,6 +30,7 @@ func GetSourcePediatricOrthopedicAndScoliosis(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypePediatricOrthopedicAndScoliosis
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.maguireearlyorthopedics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWildwoodSanitariumIncorporated(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"282N00000X", "3336C0003X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093058265", "1902957541"}}
+	sourceDef.PatientAccessUrl = "https://wildwoodhealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

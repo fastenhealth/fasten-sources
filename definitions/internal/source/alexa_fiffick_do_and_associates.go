@@ -30,6 +30,7 @@ func GetSourceAlexaFiffickDoAndAssociates(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeAlexaFiffickDoAndAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mymsmedicine.com/cmow-coming-soon"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

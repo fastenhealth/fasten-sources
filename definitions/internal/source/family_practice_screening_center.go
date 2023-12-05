@@ -30,6 +30,7 @@ func GetSourceFamilyPracticeScreeningCenter(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeScreeningCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fpscmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

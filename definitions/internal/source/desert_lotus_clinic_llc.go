@@ -31,6 +31,7 @@ func GetSourceDesertLotusClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261Q00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{"DESERT LOTUS CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205541455"}}
+	sourceDef.PatientAccessUrl = "https://urldefense.com/v3/__http://www.desertlotusclinic.com__;!!E3l7wfIP!mRo5yckHKmc54H1r_2VEveVFb7"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

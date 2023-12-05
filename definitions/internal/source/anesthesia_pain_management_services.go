@@ -30,6 +30,7 @@ func GetSourceAnesthesiaPainManagementServices(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeAnesthesiaPainManagementServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.manchesterpain.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

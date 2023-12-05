@@ -30,6 +30,7 @@ func GetSourcePrecisionObgyn(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypePrecisionObgyn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://vbsurgicalarts.com/gynecology/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

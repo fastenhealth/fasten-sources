@@ -31,6 +31,7 @@ func GetSourceTedKovacevMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{"TED KOVACEV MD"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588215933"}}
+	sourceDef.PatientAccessUrl = "http://www.LJSurgery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

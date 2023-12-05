@@ -30,6 +30,7 @@ func GetSourceGoodShepherdClinicOfDawsonville(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeGoodShepherdClinicOfDawsonville
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.goodshepherddawsonco.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

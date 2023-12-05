@@ -30,6 +30,7 @@ func GetSourceCapitalOrthopaedicsSportsMedicinePc(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeCapitalOrthopaedicsSportsMedicinePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.dsmcapitalortho.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceTexasIntegrativeWellnessPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"208D00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770107542"}}
+	sourceDef.PatientAccessUrl = "http://www.bluvida.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

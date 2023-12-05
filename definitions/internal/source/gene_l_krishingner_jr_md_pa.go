@@ -31,6 +31,7 @@ func GetSourceGeneLKrishingnerJrMdPa(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{"GENE L KRISHINGNER JR MD PA", "OBGYN CARE ORALNDO"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942971569"}}
+	sourceDef.PatientAccessUrl = "http://www.obgyncareorlando.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

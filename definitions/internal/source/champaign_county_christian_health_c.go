@@ -30,6 +30,7 @@ func GetSourceChampaignCountyChristianHealthC(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeChampaignCountyChristianHealthC
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ccchc2003.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

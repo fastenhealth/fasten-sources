@@ -30,6 +30,7 @@ func GetSourcePittmanBeau(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypePittmanBeau
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://login.beaupittmanmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

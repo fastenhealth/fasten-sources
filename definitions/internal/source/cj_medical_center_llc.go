@@ -31,6 +31,7 @@ func GetSourceCjMedicalCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"261QH0100X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366141848"}}
+	sourceDef.PatientAccessUrl = "http://www.cj-mcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

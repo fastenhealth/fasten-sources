@@ -31,6 +31,7 @@ func GetSourceCalcagnoPediatricsPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255322194"}}
+	sourceDef.PatientAccessUrl = "http://www.calcagnopediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

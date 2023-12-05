@@ -30,6 +30,7 @@ func GetSourcePremierOrthopaedicTraumaSpeciali(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypePremierOrthopaedicTraumaSpeciali
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.premierortho.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

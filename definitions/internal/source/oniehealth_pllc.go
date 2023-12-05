@@ -31,6 +31,7 @@ func GetSourceOniehealthPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902530421"}}
+	sourceDef.PatientAccessUrl = "http://www.oniehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

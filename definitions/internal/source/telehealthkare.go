@@ -30,6 +30,7 @@ func GetSourceTelehealthkare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeTelehealthkare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.telehealthkare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

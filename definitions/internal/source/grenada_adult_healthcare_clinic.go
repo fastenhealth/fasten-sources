@@ -30,6 +30,7 @@ func GetSourceGrenadaAdultHealthcareClinic(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeGrenadaAdultHealthcareClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gahc.wpengine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

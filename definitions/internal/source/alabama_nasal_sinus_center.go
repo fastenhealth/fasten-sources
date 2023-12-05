@@ -30,6 +30,7 @@ func GetSourceAlabamaNasalSinusCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeAlabamaNasalSinusCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.alabamasinus.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

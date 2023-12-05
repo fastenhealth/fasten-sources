@@ -30,6 +30,7 @@ func GetSourceHoosierCrescentFoundationCorpora(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeHoosierCrescentFoundationCorpora
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.HCFCorp.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

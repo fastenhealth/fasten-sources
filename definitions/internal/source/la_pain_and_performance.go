@@ -31,6 +31,7 @@ func GetSourceLaPainAndPerformance(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208VP0014X", "332B00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245888775", "1386235422", "1528730090", "1669063707"}}
+	sourceDef.PatientAccessUrl = "http://www.lapainandperformance.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

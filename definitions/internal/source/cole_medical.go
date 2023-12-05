@@ -31,6 +31,7 @@ func GetSourceColeMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"208D00000X"}
 	sourceDef.Aliases = []string{"COLE MEDICAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477273233"}}
+	sourceDef.PatientAccessUrl = "https://colemedical.health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

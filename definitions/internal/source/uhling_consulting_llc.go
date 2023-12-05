@@ -30,6 +30,7 @@ func GetSourceUhlingConsultingLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeUhlingConsultingLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.uhlingconsulting.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

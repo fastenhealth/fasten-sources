@@ -30,6 +30,7 @@ func GetSourceStlPlasticHandSurgery(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeStlPlasticHandSurgery
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neuropaxclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

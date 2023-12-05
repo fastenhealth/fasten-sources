@@ -31,6 +31,7 @@ func GetSourceHousecalls(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"207QG0300X", "208D00000X", "251E00000X"}
 	sourceDef.Aliases = []string{"HOUSECALLS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063905354", "1841751047"}}
+	sourceDef.PatientAccessUrl = "http://www.agenacare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

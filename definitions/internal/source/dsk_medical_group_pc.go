@@ -30,6 +30,7 @@ func GetSourceDskMedicalGroupPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeDskMedicalGroupPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mark rigney md .com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

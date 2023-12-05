@@ -31,6 +31,7 @@ func GetSourceGladeviewMedicalLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962022392"}}
+	sourceDef.PatientAccessUrl = "http://www.gladeviewmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

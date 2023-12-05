@@ -30,6 +30,7 @@ func GetSourceAspireIndianaHealthFqhc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeAspireIndianaHealthFqhc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.aspireindiana.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

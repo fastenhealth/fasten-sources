@@ -30,6 +30,7 @@ func GetSourceSimplyVein(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeSimplyVein
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.simplyvein.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

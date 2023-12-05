@@ -31,6 +31,7 @@ func GetSourceHamdardHealthAlliance(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QA0600X", "261QF0400X"}
 	sourceDef.Aliases = []string{"HAMDARD CENTER FOR HEALTH AND HUMAN SERVICES, NFP", "HAMDARD HEALTHCARE", "HAMDARD HEALTHCARE- SKOKIE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013629146", "1356772834", "1376299065", "1609875053", "1700470580"}}
+	sourceDef.PatientAccessUrl = "http://www.hamdardcenter.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

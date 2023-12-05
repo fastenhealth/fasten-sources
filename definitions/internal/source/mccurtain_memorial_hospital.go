@@ -31,6 +31,7 @@ func GetSourceMccurtainMemorialHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"282NC0060X"}
 	sourceDef.Aliases = []string{"MCCURTAIN MEMORIAL HOSPITAL"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063900975"}}
+	sourceDef.PatientAccessUrl = "http://www.mmhok.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

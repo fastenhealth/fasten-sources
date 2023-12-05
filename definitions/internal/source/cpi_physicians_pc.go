@@ -30,6 +30,7 @@ func GetSourceCpiPhysiciansPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeCpiPhysiciansPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cpiphysicians.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

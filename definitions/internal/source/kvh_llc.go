@@ -30,6 +30,7 @@ func GetSourceKvhLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeKvhLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.claytonsleep.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

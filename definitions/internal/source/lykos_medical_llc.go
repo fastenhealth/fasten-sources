@@ -31,6 +31,7 @@ func GetSourceLykosMedicalLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215423124"}}
+	sourceDef.PatientAccessUrl = "http://www.lykosmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

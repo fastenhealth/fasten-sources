@@ -30,6 +30,7 @@ func GetSourceRaphaIntegrativeFamilyClinicPll(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeRaphaIntegrativeFamilyClinicPll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.raphafamilyclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

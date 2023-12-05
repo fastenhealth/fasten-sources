@@ -30,6 +30,7 @@ func GetSourceBluerockCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeBluerockCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bluerock.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

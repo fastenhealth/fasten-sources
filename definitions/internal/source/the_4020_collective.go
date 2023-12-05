@@ -30,6 +30,7 @@ func GetSourceThe4020Collective(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeThe4020Collective
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.the4020collective.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

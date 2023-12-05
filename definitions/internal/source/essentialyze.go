@@ -30,6 +30,7 @@ func GetSourceEssentialyze(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeEssentialyze
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.essentialyze.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

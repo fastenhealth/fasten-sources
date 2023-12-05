@@ -30,6 +30,7 @@ func GetSourceEarlSumblerMemorialHealthcareCe(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeEarlSumblerMemorialHealthcareCe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://sumblermemorialhealthcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

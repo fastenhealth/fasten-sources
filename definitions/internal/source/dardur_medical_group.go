@@ -31,6 +31,7 @@ func GetSourceDardurMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X", "207V00000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"DARDUR MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1518583210"}}
+	sourceDef.PatientAccessUrl = "http://www.dardurmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

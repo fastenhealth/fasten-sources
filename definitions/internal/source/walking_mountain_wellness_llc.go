@@ -31,6 +31,7 @@ func GetSourceWalkingMountainWellnessLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{"WALKING MOUNTAIN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356042725"}}
+	sourceDef.PatientAccessUrl = "http://www.walkingmountain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGlobalHealthcareSystems(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeGlobalHealthcareSystems
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.globalhealthcaresystems.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

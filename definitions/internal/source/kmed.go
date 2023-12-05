@@ -30,6 +30,7 @@ func GetSourceKmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeKmed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kmedocala.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePinnacleHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypePinnacleHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.reachpeakwellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

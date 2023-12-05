@@ -31,6 +31,7 @@ func GetSourceMonarchHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207RA0401X"}
 	sourceDef.Aliases = []string{"MONARCH ADDICTION RECOVERY CENTERS", "SEQUOIA PRACTICE MANAGEMENT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922627595"}}
+	sourceDef.PatientAccessUrl = "http://www.monarchrecovery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

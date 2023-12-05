@@ -30,6 +30,7 @@ func GetSourceRevolutionPainManagementPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeRevolutionPainManagementPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.revolutionpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

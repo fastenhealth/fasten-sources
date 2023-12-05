@@ -31,6 +31,7 @@ func GetSourceCeronPediatricsAndIntegrativeMedicine(env pkg.FastenLighthouseEnvT
 	sourceDef.Category = []string{"207Q00000X", "208000000X", "261QM1300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477043180"}}
+	sourceDef.PatientAccessUrl = "http://www.bestpeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

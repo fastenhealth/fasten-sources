@@ -30,6 +30,7 @@ func GetSourceCharterInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeCharterInternalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cimdocs.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

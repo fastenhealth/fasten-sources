@@ -30,6 +30,7 @@ func GetSourceOrthopedicServicesSportsMedicinepeterAPizzarelloMd(env pkg.FastenL
 	sourceDef.SourceType = pkg.SourceTypeOrthopedicServicesSportsMedicinepeterAPizzarelloMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pizzarelloorthopedics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

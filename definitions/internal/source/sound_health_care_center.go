@@ -30,6 +30,7 @@ func GetSourceSoundHealthCareCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeSoundHealthCareCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.soundhcc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

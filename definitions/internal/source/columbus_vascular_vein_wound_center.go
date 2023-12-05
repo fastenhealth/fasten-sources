@@ -30,6 +30,7 @@ func GetSourceColumbusVascularVeinWoundCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeColumbusVascularVeinWoundCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cvvwc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

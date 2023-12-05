@@ -30,6 +30,7 @@ func GetSourceShadeNaturalMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeShadeNaturalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://drkellenshade.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

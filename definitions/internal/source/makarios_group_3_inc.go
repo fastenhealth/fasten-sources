@@ -30,6 +30,7 @@ func GetSourceMakariosGroup3Inc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeMakariosGroup3Inc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.newlifemedcenters.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

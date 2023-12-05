@@ -31,6 +31,7 @@ func GetSourceProvidenceOrthopaedicGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207X00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285674572"}}
+	sourceDef.PatientAccessUrl = "http://www.moorecenter.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

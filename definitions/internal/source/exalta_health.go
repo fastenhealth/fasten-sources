@@ -31,6 +31,7 @@ func GetSourceExaltaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588840854"}}
+	sourceDef.PatientAccessUrl = "https://www.exaltahealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

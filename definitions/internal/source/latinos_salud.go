@@ -31,6 +31,7 @@ func GetSourceLatinosSalud(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"163WC1500X", "261QC1500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447872213"}}
+	sourceDef.PatientAccessUrl = "http://latinossalud.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

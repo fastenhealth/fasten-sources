@@ -30,6 +30,7 @@ func GetSourceFigFernAesthetics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeFigFernAesthetics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nwmedwm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

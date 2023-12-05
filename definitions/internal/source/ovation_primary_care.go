@@ -31,6 +31,7 @@ func GetSourceOvationPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"OVATION PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1144921867"}}
+	sourceDef.PatientAccessUrl = "http://www.ovationpcp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

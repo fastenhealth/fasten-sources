@@ -30,6 +30,7 @@ func GetSourceIndianaEar(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeIndianaEar
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://indianaear.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

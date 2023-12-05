@@ -30,6 +30,7 @@ func GetSourceZinfectiousDiseaseConsultantsOfHamptonRoads(env pkg.FastenLighthou
 	sourceDef.SourceType = pkg.SourceTypeZinfectiousDiseaseConsultantsOfHamptonRoads
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePermianGastroenterologyAssociates(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypePermianGastroenterologyAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.permiangi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

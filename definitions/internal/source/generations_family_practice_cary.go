@@ -30,6 +30,7 @@ func GetSourceGenerationsFamilyPracticeCary(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeGenerationsFamilyPracticeCary
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.generationsfamilypractice.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

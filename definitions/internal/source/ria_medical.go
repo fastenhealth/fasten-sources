@@ -30,6 +30,7 @@ func GetSourceRiaMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeRiaMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.riamedstl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

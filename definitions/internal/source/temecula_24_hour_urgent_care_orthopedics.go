@@ -30,6 +30,7 @@ func GetSourceTemecula24HourUrgentCareOrthopedics(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeTemecula24HourUrgentCareOrthopedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.temecula24hoururgentcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

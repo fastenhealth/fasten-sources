@@ -30,6 +30,7 @@ func GetSourceChesapeakeRegionalBehavioralHealth(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeRegionalBehavioralHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

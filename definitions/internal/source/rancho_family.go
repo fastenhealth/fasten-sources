@@ -30,6 +30,7 @@ func GetSourceRanchoFamily(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeRanchoFamily
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.RanchoFamilyMed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

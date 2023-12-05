@@ -30,6 +30,7 @@ func GetSourceHappyFeetPodiatryPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHappyFeetPodiatryPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ocfootdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

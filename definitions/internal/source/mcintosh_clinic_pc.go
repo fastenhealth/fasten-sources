@@ -30,6 +30,7 @@ func GetSourceMcintoshClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeMcintoshClinicPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.myprivia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

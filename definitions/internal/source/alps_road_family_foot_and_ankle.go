@@ -31,6 +31,7 @@ func GetSourceAlpsRoadFamilyFootAndAnkle(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"261QP1100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245480003"}}
+	sourceDef.PatientAccessUrl = "http://www.alpsroadfootandankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

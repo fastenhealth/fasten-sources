@@ -30,6 +30,7 @@ func GetSourceThePainTreatmentCenterOfTheBluegrass(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeThePainTreatmentCenterOfTheBluegrass
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://pain-ptc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAmarantaClinicaDeMedicinaPreven(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAmarantaClinicaDeMedicinaPreven
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://amarantacmp.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

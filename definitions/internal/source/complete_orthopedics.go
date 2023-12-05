@@ -30,6 +30,7 @@ func GetSourceCompleteOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeCompleteOrthopedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cortho.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

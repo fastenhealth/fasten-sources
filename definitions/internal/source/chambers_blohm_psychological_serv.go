@@ -30,6 +30,7 @@ func GetSourceChambersBlohmPsychologicalServ(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeChambersBlohmPsychologicalServ
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://chambersandblohm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

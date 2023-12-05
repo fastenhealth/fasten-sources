@@ -31,6 +31,7 @@ func GetSourceVerveCollaborativeHealth(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"261QM0801X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124618418"}}
+	sourceDef.PatientAccessUrl = "http://www.vervech.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

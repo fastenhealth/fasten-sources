@@ -30,6 +30,7 @@ func GetSourceBalanceRegenerativeMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeBalanceRegenerativeMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.balanceregenerativemedicine.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

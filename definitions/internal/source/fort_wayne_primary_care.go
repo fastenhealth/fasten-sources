@@ -30,6 +30,7 @@ func GetSourceFortWaynePrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeFortWaynePrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fwimed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

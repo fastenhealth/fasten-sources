@@ -30,6 +30,7 @@ func GetSourceDiabeticEyeMacularDiseaseSpec(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeDiabeticEyeMacularDiseaseSpec
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.diabeticeyedc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

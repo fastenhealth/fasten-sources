@@ -30,6 +30,7 @@ func GetSourceTheUpsideOfChatConsultingThe(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeTheUpsideOfChatConsultingThe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.theupsideofchat.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

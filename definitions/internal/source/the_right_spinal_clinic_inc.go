@@ -31,6 +31,7 @@ func GetSourceTheRightSpinalClinicInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207Q00000X", "261Q00000X"}
 	sourceDef.Aliases = []string{"EASYCARE FLORIDA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619487246", "1962086777"}}
+	sourceDef.PatientAccessUrl = "https://www.trspinalclinic.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

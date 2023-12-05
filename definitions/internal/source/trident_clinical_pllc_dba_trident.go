@@ -30,6 +30,7 @@ func GetSourceTridentClinicalPllcDbaTrident(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTridentClinicalPllcDbaTrident
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tridenthealthcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

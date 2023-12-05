@@ -31,6 +31,7 @@ func GetSourceIdealSelfLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"363LF0000X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467182774"}}
+	sourceDef.PatientAccessUrl = "http://www.idealself.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

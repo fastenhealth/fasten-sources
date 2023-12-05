@@ -31,6 +31,7 @@ func GetSourceBriarpatchPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073678157"}}
+	sourceDef.PatientAccessUrl = "http://www.briarpatchpedi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

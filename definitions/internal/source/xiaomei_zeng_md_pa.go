@@ -30,6 +30,7 @@ func GetSourceXiaomeiZengMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeXiaomeiZengMdPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.drzengonline.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceHealthPartnersFreeClinic(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205509775"}}
+	sourceDef.PatientAccessUrl = "http://www.healthpartnersclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

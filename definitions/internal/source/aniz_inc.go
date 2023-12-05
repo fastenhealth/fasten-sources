@@ -30,6 +30,7 @@ func GetSourceAnizInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeAnizInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aniz.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

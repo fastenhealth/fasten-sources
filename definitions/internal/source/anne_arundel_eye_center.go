@@ -31,6 +31,7 @@ func GetSourceAnneArundelEyeCenter(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{"ANNE ARUNDEL EYE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396898771"}}
+	sourceDef.PatientAccessUrl = "http://www.annearundeleyecenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

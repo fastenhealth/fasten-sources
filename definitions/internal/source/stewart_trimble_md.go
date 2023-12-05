@@ -30,6 +30,7 @@ func GetSourceStewartTrimbleMd(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeStewartTrimbleMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hellohopscotch.com/locations"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFamilyPracticeAfterHours(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeAfterHours
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fpahc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

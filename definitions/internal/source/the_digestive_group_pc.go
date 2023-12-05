@@ -30,6 +30,7 @@ func GetSourceTheDigestiveGroupPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTheDigestiveGroupPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.digestivegroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

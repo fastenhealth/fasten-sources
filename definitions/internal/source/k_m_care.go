@@ -30,6 +30,7 @@ func GetSourceKMCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeKMCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kandmcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

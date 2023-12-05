@@ -30,6 +30,7 @@ func GetSourceDrIfeomaEgbuonu(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeDrIfeomaEgbuonu
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.diabetesspecialistselpaso.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRoninSleepSolutions(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeRoninSleepSolutions
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.roninss.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

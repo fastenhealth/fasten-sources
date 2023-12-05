@@ -30,6 +30,7 @@ func GetSourcePeerwellHealthPcCa(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypePeerwellHealthPcCa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://peerwell.co/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

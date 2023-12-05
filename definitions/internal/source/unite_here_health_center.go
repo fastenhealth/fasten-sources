@@ -30,6 +30,7 @@ func GetSourceUniteHereHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeUniteHereHealthCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.uhh.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

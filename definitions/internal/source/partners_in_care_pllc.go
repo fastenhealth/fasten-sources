@@ -31,6 +31,7 @@ func GetSourcePartnersInCarePllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207R00000X", "207RG0300X", "207RH0002X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780030445"}}
+	sourceDef.PatientAccessUrl = "http://drterrymelvin.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

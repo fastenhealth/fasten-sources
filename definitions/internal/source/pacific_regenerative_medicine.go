@@ -31,6 +31,7 @@ func GetSourcePacificRegenerativeMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"175F00000X"}
 	sourceDef.Aliases = []string{"PAC REGEN"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851004741"}}
+	sourceDef.PatientAccessUrl = "http://www.pacregen.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWallaceRHodgesMdLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"BETTER INTERNAL MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1720404882"}}
+	sourceDef.PatientAccessUrl = "http://BetterInternalMedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

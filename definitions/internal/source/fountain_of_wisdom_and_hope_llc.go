@@ -31,6 +31,7 @@ func GetSourceFountainOfWisdomAndHopeLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"101Y00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427619758"}}
+	sourceDef.PatientAccessUrl = "https://www.psychologytoday.com/us/therapists/fountain-of-wisdom-and-hope-lansing-mi/401068"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

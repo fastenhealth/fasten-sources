@@ -30,6 +30,7 @@ func GetSourceCatalystTherapies(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCatalystTherapies
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://catalysttherapies.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

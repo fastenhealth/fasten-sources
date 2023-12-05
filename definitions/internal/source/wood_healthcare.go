@@ -30,6 +30,7 @@ func GetSourceWoodHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeWoodHealthcare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WoodHealthcareelite.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

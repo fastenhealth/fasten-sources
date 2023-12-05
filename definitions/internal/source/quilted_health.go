@@ -31,6 +31,7 @@ func GetSourceQuiltedHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"367A00000X"}
 	sourceDef.Aliases = []string{"QUILTED HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114548534", "1609586148", "1649982448"}}
+	sourceDef.PatientAccessUrl = "http://www.quiltedhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

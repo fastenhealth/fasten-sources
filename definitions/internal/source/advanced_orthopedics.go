@@ -31,6 +31,7 @@ func GetSourceAdvancedOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X", "207X00000X", "207XX0005X", "208100000X", "213E00000X", "225100000X", "261QM2500X"}
 	sourceDef.Aliases = []string{"ADVANCED ORTHOPEDICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124231493", "1154801694", "1790224962", "1851786008", "1871271338", "1922784479", "1982382438"}}
+	sourceDef.PatientAccessUrl = "http://www.planoorthodoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

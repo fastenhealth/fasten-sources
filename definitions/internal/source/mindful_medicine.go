@@ -30,6 +30,7 @@ func GetSourceMindfulMedicine(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeMindfulMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lex-mindful-medicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

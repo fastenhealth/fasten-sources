@@ -30,6 +30,7 @@ func GetSourceIowaRehabMedicineAndPainCoachi(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeIowaRehabMedicineAndPainCoachi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.IowaRehabMedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

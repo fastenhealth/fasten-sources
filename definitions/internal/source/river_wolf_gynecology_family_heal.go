@@ -30,6 +30,7 @@ func GetSourceRiverWolfGynecologyFamilyHeal(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeRiverWolfGynecologyFamilyHeal
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.okcbirthcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

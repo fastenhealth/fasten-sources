@@ -30,6 +30,7 @@ func GetSourceOnpointInternalMedicineHarvardPark(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeOnpointInternalMedicineHarvardPark
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

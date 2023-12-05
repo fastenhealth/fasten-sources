@@ -30,6 +30,7 @@ func GetSourceCummingsTimothy(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeCummingsTimothy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/TimCummingsMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

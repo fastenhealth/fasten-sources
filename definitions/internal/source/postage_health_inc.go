@@ -30,6 +30,7 @@ func GetSourcePostageHealthInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypePostageHealthInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://postagehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

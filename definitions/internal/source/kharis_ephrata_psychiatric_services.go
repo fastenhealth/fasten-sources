@@ -30,6 +30,7 @@ func GetSourceKharisEphrataPsychiatricServices(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeKharisEphrataPsychiatricServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://kepspsychiatricservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

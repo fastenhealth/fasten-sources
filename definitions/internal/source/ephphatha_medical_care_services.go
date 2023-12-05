@@ -30,6 +30,7 @@ func GetSourceEphphathaMedicalCareServices(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeEphphathaMedicalCareServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ephphathamedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

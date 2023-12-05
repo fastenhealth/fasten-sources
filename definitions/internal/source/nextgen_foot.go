@@ -30,6 +30,7 @@ func GetSourceNextgenFoot(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeNextgenFoot
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nextgenfoot.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

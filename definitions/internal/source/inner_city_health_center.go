@@ -31,6 +31,7 @@ func GetSourceInnerCityHealthCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"122300000X", "1223D0001X", "124Q00000X", "261QD0000X", "261QF0400X", "261QH0100X"}
 	sourceDef.Aliases = []string{"INNER CITY HEALTH CENTER AT WHEATRIDGE", "NEW HOPE", "WHEAT RIDGE AT INNER CITY HEALTH CENTER", "WHEAT RIDGE FAMILY HEALTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003078742", "1013491208", "1558964734", "1578539979", "1811159551"}}
+	sourceDef.PatientAccessUrl = "https://innercityhealth.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

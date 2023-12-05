@@ -30,6 +30,7 @@ func GetSourceMercedFacultyAssociates(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeMercedFacultyAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mfamg.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

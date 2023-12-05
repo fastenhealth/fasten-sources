@@ -30,6 +30,7 @@ func GetSourceStevenKShoemakerDpmAssocIn(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeStevenKShoemakerDpmAssocIn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://shoemakerpodiatry.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

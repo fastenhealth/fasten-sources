@@ -31,6 +31,7 @@ func GetSourceSckcPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207Q00000X", "261QR1300X"}
 	sourceDef.Aliases = []string{"SCKC PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659915734"}}
+	sourceDef.PatientAccessUrl = "http://winfieldmedicalarts.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

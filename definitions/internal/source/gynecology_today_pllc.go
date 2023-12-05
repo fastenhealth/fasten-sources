@@ -30,6 +30,7 @@ func GetSourceGynecologyTodayPllc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeGynecologyTodayPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.gyntoday.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

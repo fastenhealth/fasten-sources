@@ -31,6 +31,7 @@ func GetSourceNpmdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"207QA0505X", "207QG0300X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235743881"}}
+	sourceDef.PatientAccessUrl = "http://npmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

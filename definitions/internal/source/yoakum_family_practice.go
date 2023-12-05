@@ -31,6 +31,7 @@ func GetSourceYoakumFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208D00000X"}
 	sourceDef.Aliases = []string{"YOAKUM FAMILY PRACTICE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619399128"}}
+	sourceDef.PatientAccessUrl = "http://www.yoakumhospital.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

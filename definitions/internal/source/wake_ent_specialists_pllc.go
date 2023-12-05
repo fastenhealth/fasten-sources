@@ -30,6 +30,7 @@ func GetSourceWakeEntSpecialistsPllc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeWakeEntSpecialistsPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wakeent.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

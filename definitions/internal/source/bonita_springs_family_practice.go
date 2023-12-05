@@ -30,6 +30,7 @@ func GetSourceBonitaSpringsFamilyPractice(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeBonitaSpringsFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wilsonmedical.online"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

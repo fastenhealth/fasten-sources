@@ -30,6 +30,7 @@ func GetSourceMidwestNeurologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeMidwestNeurologyPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mwneurology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

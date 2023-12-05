@@ -31,6 +31,7 @@ func GetSourceMCarePllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Category = []string{"207R00000X", "207RG0300X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508309295"}}
+	sourceDef.PatientAccessUrl = "http://www.wallstreetmedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

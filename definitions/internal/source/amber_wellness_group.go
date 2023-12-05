@@ -31,6 +31,7 @@ func GetSourceAmberWellnessGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"175F00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265704209"}}
+	sourceDef.PatientAccessUrl = "https://www.amberwellnessgroup.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

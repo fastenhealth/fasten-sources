@@ -30,6 +30,7 @@ func GetSourceTreeOfLifeIntegrativeFamilyMed(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeTreeOfLifeIntegrativeFamilyMed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tolifm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

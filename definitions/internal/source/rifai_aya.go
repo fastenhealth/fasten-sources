@@ -30,6 +30,7 @@ func GetSourceRifaiAya(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeRifaiAya
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.integritaswellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceSunflowerPrimarypromptCareLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeSunflowerPrimarypromptCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sunflowerpc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

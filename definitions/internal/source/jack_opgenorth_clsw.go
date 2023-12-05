@@ -30,6 +30,7 @@ func GetSourceJackOpgenorthClsw(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeJackOpgenorthClsw
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chilfpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

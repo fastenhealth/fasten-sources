@@ -30,6 +30,7 @@ func GetSourceCityMindNpInPsychiatryPc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCityMindNpInPsychiatryPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://citymindnp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

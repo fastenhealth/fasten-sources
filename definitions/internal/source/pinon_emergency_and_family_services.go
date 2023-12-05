@@ -30,6 +30,7 @@ func GetSourcePinonEmergencyAndFamilyServices(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypePinonEmergencyAndFamilyServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://pinonfamily.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceCahabaMedicalCareFoundation(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"261QF0400X", "261QM1300X", "261QP2300X"}
 	sourceDef.Aliases = []string{"CAHABA MEDICAL CARE WEST END SPECIALTY CLINIC", "CMC PHARMACY", "CMC PHARMACY - CENTREVILLE", "CMC PHARMACY CENTREVILLE", "DENTISTRY FOR AWESOME KIDS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093058133", "1104510486", "1316201809", "1316289515", "1316498041", "1316542624", "1427514199", "1437710183", "1881153401", "1891165437"}}
+	sourceDef.PatientAccessUrl = "http://www.cahabamedicalcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

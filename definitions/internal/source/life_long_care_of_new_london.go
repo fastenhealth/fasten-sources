@@ -30,6 +30,7 @@ func GetSourceLifeLongCareOfNewLondon(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeLifeLongCareOfNewLondon
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lifelongcare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

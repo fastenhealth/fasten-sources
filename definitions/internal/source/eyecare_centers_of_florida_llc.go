@@ -31,6 +31,7 @@ func GetSourceEyecareCentersOfFloridaLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207W00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1760672968"}}
+	sourceDef.PatientAccessUrl = "http://www.visualaxis.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

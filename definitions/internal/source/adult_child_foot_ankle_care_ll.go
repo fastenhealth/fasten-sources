@@ -30,6 +30,7 @@ func GetSourceAdultChildFootAnkleCareLl(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAdultChildFootAnkleCareLl
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.acfac.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

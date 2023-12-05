@@ -30,6 +30,7 @@ func GetSourceZeusPrimaryCareAssociates(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeZeusPrimaryCareAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://urldefense.com/v3/__http://www.qualitycaremd.com__;!!E3l7wfIP!wBW2X9gExPyf02kFceL2Nup_Didfzl"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

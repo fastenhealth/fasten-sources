@@ -30,6 +30,7 @@ func GetSourceTreat(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.SourceType = pkg.SourceTypeTreat
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://treat.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

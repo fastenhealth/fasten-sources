@@ -30,6 +30,7 @@ func GetSourceHunterBradley(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeHunterBradley
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/bradleyhunterdo"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCommunityHealthMinistry(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeCommunityHealthMinistry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ccmks.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

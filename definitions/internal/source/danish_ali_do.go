@@ -30,6 +30,7 @@ func GetSourceDanishAliDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeDanishAliDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.archpointpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

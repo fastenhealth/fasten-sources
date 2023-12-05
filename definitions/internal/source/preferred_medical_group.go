@@ -30,6 +30,7 @@ func GetSourcePreferredMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypePreferredMedicalGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://preferreddocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

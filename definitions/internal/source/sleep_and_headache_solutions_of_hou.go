@@ -30,6 +30,7 @@ func GetSourceSleepAndHeadacheSolutionsOfHou(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSleepAndHeadacheSolutionsOfHou
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sleepandheadache.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

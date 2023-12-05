@@ -30,6 +30,7 @@ func GetSourceWellspringPainSolutions(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeWellspringPainSolutions
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wellspringpainsolutions.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

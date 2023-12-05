@@ -31,6 +31,7 @@ func GetSourceNwcareInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.Category = []string{"251E00000X", "251S00000X", "261QD0000X", "261QH0100X", "261QM1300X", "261QP1100X", "261QR0400X", "261QR0401X", "261QR0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528653995"}}
+	sourceDef.PatientAccessUrl = "http://Nw-care.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

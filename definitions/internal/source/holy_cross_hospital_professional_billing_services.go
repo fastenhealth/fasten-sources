@@ -30,6 +30,7 @@ func GetSourceHolyCrossHospitalProfessionalBillingServices(env pkg.FastenLightho
 	sourceDef.SourceType = pkg.SourceTypeHolyCrossHospitalProfessionalBillingServices
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://taoshospital.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

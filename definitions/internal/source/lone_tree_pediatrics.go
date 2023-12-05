@@ -31,6 +31,7 @@ func GetSourceLoneTreePediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"176B00000X", "207Q00000X", "207R00000X", "207V00000X", "208000000X", "208D00000X", "225100000X", "363A00000X", "363L00000X", "363LF0000X", "363LP0200X", "363LP2300X", "363LW0102X", "363LX0001X", "367A00000X"}
 	sourceDef.Aliases = []string{"COLUMBINE FAMILY PRACTICE", "EAST-WEST HEALTH CENTERS", "HEALTHMARK", "LONE TREE PEDIATRICS", "MOUNTAIN VISTA FAMILY PRACTICE", "PARKER SQUARE FAMILY PRACTICE", "SOUTH DENVER OBGYN & MIDWIVES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376912931"}}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceKleinhenIanD(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeKleinhenIanD
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://login.iankleinhenmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

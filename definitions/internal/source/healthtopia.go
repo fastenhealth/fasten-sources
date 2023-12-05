@@ -31,6 +31,7 @@ func GetSourceHealthtopia(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207P00000X", "207Q00000X", "261QU0200X"}
 	sourceDef.Aliases = []string{"HEALTHTOPIA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124508296"}}
+	sourceDef.PatientAccessUrl = "http://www.healthtopiaclinics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

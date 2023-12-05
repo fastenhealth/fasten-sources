@@ -30,6 +30,7 @@ func GetSourceSmartmed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeSmartmed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.smartmeddrivethru.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

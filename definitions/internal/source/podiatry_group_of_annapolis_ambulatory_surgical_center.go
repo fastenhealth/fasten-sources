@@ -31,6 +31,7 @@ func GetSourcePodiatryGroupOfAnnapolisAmbulatorySurgicalCenter(env pkg.FastenLig
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285736207"}}
+	sourceDef.PatientAccessUrl = "http://podiatrygroup.us"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

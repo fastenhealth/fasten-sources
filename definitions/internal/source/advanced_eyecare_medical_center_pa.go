@@ -30,6 +30,7 @@ func GetSourceAdvancedEyecareMedicalCenterPa(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeAdvancedEyecareMedicalCenterPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.envisioneyeandlaser.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

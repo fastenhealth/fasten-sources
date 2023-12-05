@@ -30,6 +30,7 @@ func GetSourceVenaflux(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeVenaflux
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.venaflux.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

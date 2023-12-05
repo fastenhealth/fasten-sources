@@ -30,6 +30,7 @@ func GetSourceDocgoOndemand(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeDocgoOndemand
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://DocGo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

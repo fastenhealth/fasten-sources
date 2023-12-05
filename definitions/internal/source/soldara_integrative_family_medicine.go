@@ -30,6 +30,7 @@ func GetSourceSoldaraIntegrativeFamilyMedicine(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeSoldaraIntegrativeFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.soldaramed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

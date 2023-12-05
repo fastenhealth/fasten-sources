@@ -31,6 +31,7 @@ func GetSourceCoresmartInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"2081P2900X", "2081S0010X", "208VP0000X", "208VP0014X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861819898"}}
+	sourceDef.PatientAccessUrl = "http://www.cure4pain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

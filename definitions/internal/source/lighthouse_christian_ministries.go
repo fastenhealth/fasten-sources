@@ -30,6 +30,7 @@ func GetSourceLighthouseChristianMinistries(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeLighthouseChristianMinistries
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Lighthousecm.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

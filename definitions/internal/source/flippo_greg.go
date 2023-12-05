@@ -30,6 +30,7 @@ func GetSourceFlippoGreg(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeFlippoGreg
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://\thttps://www.mdvip.com/GregFlippoMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

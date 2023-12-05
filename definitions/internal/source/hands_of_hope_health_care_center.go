@@ -31,6 +31,7 @@ func GetSourceHandsOfHopeHealthCareCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"261QM1300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1487923520"}}
+	sourceDef.PatientAccessUrl = "http://www.handsofhopehc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

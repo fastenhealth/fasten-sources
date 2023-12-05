@@ -30,6 +30,7 @@ func GetSourceSpotlyteBehavioralHealthOfNj(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeSpotlyteBehavioralHealthOfNj
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.spotlytehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

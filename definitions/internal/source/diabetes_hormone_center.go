@@ -30,6 +30,7 @@ func GetSourceDiabetesHormoneCenter(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeDiabetesHormoneCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.dhchealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

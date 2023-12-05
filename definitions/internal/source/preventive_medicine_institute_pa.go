@@ -31,6 +31,7 @@ func GetSourcePreventiveMedicineInstitutePa(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207RA0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831396639"}}
+	sourceDef.PatientAccessUrl = "http://www.preventivemedicineinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceMunchkinsPediatrics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"208000000X", "261QP2300X", "261QU0200X", "363LF0000X", "363LP0200X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558821850"}}
+	sourceDef.PatientAccessUrl = "http://munchkinspediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

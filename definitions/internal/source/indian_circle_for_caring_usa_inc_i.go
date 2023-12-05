@@ -30,6 +30,7 @@ func GetSourceIndianCircleForCaringUsaIncI(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeIndianCircleForCaringUsaIncI
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://wwwouricc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

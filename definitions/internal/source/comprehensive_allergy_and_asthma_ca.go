@@ -30,6 +30,7 @@ func GetSourceComprehensiveAllergyAndAsthmaCa(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeComprehensiveAllergyAndAsthmaCa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drannemaitland.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

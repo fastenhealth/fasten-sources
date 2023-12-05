@@ -31,6 +31,7 @@ func GetSourceMyFamilyDoc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"MY FAMILY DOC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1336679356"}}
+	sourceDef.PatientAccessUrl = "http://www.myfamilydoc.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

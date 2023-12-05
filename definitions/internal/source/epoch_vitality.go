@@ -30,6 +30,7 @@ func GetSourceEpochVitality(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeEpochVitality
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.epochvitality.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

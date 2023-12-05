@@ -30,6 +30,7 @@ func GetSourceWomensPavilionOfSouthMississip(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeWomensPavilionOfSouthMississip
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://womenspavilionms.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

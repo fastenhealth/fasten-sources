@@ -31,6 +31,7 @@ func GetSourceRisePediatricsPllc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"363LP0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235803727"}}
+	sourceDef.PatientAccessUrl = "http://risepeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

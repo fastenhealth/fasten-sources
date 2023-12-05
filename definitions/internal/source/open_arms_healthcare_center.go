@@ -31,6 +31,7 @@ func GetSourceOpenArmsHealthcareCenter(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225556319"}}
+	sourceDef.PatientAccessUrl = "https://oahcc.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

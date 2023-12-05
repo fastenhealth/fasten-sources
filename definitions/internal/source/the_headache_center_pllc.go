@@ -30,6 +30,7 @@ func GetSourceTheHeadacheCenterPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeTheHeadacheCenterPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.headache.ms"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

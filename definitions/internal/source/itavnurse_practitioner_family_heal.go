@@ -30,6 +30,7 @@ func GetSourceItavnursePractitionerFamilyHeal(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeItavnursePractitionerFamilyHeal
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.itav-npfamilyhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

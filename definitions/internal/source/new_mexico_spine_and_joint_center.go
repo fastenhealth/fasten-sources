@@ -31,6 +31,7 @@ func GetSourceNewMexicoSpineAndJointCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207XS0117X"}
 	sourceDef.Aliases = []string{"NEW MEXICO SPINE AND JOINT CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609531151"}}
+	sourceDef.PatientAccessUrl = "http://newmexicospineandjointcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

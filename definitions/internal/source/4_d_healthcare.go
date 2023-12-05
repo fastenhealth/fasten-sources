@@ -31,6 +31,7 @@ func GetSource4DHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"261QM0801X", "261QM1300X", "261QP2300X"}
 	sourceDef.Aliases = []string{"4D HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164129755"}}
+	sourceDef.PatientAccessUrl = "http://www.4dhealthcare.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

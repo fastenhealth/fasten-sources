@@ -31,6 +31,7 @@ func GetSourceMedicineAtHome(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"363AM0700X"}
 	sourceDef.Aliases = []string{"MEDICINE AT HOME"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376914481"}}
+	sourceDef.PatientAccessUrl = "https://www.medicineathome.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

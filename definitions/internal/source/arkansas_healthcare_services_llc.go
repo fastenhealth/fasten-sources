@@ -31,6 +31,7 @@ func GetSourceArkansasHealthcareServicesLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207R00000X", "207RC0000X", "207RP1001X", "207V00000X", "207X00000X", "2084N0400X", "208600000X", "208800000X", "208G00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174582621"}}
+	sourceDef.PatientAccessUrl = "http://nationalparkphysicianservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

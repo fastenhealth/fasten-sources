@@ -30,6 +30,7 @@ func GetSourceHamlinMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeHamlinMedicalClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hamlinhealth.org/getpage.php?name=clinic&amp;sub=Hamlin+Medical+Clinic"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

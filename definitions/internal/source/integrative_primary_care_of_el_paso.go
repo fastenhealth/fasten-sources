@@ -30,6 +30,7 @@ func GetSourceIntegrativePrimaryCareOfElPaso(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeIntegrativePrimaryCareOfElPaso
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ipcep.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

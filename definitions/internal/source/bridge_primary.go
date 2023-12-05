@@ -31,6 +31,7 @@ func GetSourceBridgePrimary(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"BRIDGE PRIMARY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386247625"}}
+	sourceDef.PatientAccessUrl = "http://www.bridgeprimary.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

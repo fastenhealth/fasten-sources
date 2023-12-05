@@ -31,6 +31,7 @@ func GetSourceThriveCollaborativeCare(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"101YM0800X", "363LP0808X"}
 	sourceDef.Aliases = []string{"THRIVE COLLABORATIVE CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457006157"}}
+	sourceDef.PatientAccessUrl = "http://www.thrivetogether365.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVeinCenterOfNorthTexas(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeVeinCenterOfNorthTexas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vcnt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

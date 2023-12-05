@@ -31,6 +31,7 @@ func GetSourceGlowHealthMedicalClinic(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1194442707"}}
+	sourceDef.PatientAccessUrl = "http://www.glowhmc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

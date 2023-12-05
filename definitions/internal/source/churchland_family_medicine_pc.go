@@ -31,6 +31,7 @@ func GetSourceChurchlandFamilyMedicinePc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1871732784"}}
+	sourceDef.PatientAccessUrl = "http://churchlandfamilymed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

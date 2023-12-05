@@ -30,6 +30,7 @@ func GetSourceOnealEnterprisesLlcDbaWyoCar(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeOnealEnterprisesLlcDbaWyoCar
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wyocareclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFamilyPsychiatryPracticeAssoci(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeFamilyPsychiatryPracticeAssoci
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fppa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

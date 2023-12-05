@@ -31,6 +31,7 @@ func GetSourceJMichaelKingMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207Y00000X"}
 	sourceDef.Aliases = []string{"PEAK ENT AND VOICE CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104113430"}}
+	sourceDef.PatientAccessUrl = "http://peakentandvoicecenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

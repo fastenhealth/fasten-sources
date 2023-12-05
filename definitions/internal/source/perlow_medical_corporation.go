@@ -31,6 +31,7 @@ func GetSourcePerlowMedicalCorporation(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207V00000X", "207VG0400X", "207VX0000X"}
 	sourceDef.Aliases = []string{"PERLOW HEALTH & WELLNESS", "REBECCA LEE PERLOW D.O."}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073857413"}}
+	sourceDef.PatientAccessUrl = "http://www.drperlow.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

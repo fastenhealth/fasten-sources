@@ -30,6 +30,7 @@ func GetSourceProSportsTherapy(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeProSportsTherapy
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.prosportstherapy.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

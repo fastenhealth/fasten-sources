@@ -30,6 +30,7 @@ func GetSourceSpectrumSpineAndPainCarepoolerOffice(env pkg.FastenLighthouseEnvTy
 	sourceDef.SourceType = pkg.SourceTypeSpectrumSpineAndPainCarepoolerOffice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rowespineandpain.com/spectrum"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

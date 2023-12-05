@@ -30,6 +30,7 @@ func GetSourceNessCountyHealthDepartment(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeNessCountyHealthDepartment
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nesscounty.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

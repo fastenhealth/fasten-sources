@@ -30,6 +30,7 @@ func GetSourceUaSpineJointCareLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeUaSpineJointCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.isjiflorida.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

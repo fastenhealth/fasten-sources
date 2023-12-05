@@ -31,6 +31,7 @@ func GetSourceHuntRegionalMedicalPartners(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"174400000X", "207Q00000X", "208D00000X", "261QR1300X", "261QU0200X"}
 	sourceDef.Aliases = []string{"FAMILY PRACTICE AT WESLEY MEDICAL PLAZA SUITE E", "FAMILY PRACTICE AT WESLEY SUITE D", "FAMILY PRACTICE LEONARD", "HUNT REGIONAL MEDICAL PARTNERS", "HUNT REGIONAL MEDICAL PARTNERS AT LIVE OAK", "HUNT REGIONAL MEDICAL PARTNERS URGENT CARE", "HUNT REGIONAL URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033617931", "1043930738", "1124012935", "1235435892", "1457071243", "1568080364", "1699134882", "1750041943", "1821593567", "1861958274"}}
+	sourceDef.PatientAccessUrl = "http://www.hrmedpartners.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

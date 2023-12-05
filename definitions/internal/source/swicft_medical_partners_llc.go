@@ -31,6 +31,7 @@ func GetSourceSwicftMedicalPartnersLlc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609986181"}}
+	sourceDef.PatientAccessUrl = "http://www.swicft.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

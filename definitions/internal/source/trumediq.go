@@ -30,6 +30,7 @@ func GetSourceTrumediq(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeTrumediq
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.trumediq.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

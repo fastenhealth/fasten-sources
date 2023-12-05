@@ -31,6 +31,7 @@ func GetSourceGreatHillsEnt(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207Y00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205977600"}}
+	sourceDef.PatientAccessUrl = "http://www.greathillsent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

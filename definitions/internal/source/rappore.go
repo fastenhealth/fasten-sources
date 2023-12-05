@@ -31,6 +31,7 @@ func GetSourceRappore(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"251K00000X", "251S00000X", "261QM0801X"}
 	sourceDef.Aliases = []string{"RAPPORE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1457980021"}}
+	sourceDef.PatientAccessUrl = "https://rappore.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

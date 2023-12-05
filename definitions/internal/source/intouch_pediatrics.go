@@ -30,6 +30,7 @@ func GetSourceIntouchPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeIntouchPediatrics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.intouchpediatric.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

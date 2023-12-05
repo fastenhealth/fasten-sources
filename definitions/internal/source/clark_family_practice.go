@@ -31,6 +31,7 @@ func GetSourceClarkFamilyPractice(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"363L00000X"}
 	sourceDef.Aliases = []string{"CLARK FAMILY PRACTICE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528799186"}}
+	sourceDef.PatientAccessUrl = "https://clarkfamilypracticellc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceRiverCityMinistry(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeRiverCityMinistry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rivercityministry.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

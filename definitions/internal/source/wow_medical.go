@@ -30,6 +30,7 @@ func GetSourceWowMedical(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeWowMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hebervalleymedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

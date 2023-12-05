@@ -30,6 +30,7 @@ func GetSourceBostonMaternalFetalMedicine(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeBostonMaternalFetalMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bostonmfm.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

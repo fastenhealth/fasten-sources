@@ -31,6 +31,7 @@ func GetSourceNucleusClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"251K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1982882742"}}
+	sourceDef.PatientAccessUrl = "http://www.nucleusclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

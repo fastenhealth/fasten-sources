@@ -31,6 +31,7 @@ func GetSourceCarolinasCenterForAdvancedManagementOfPain(env pkg.FastenLighthous
 	sourceDef.Category = []string{"208VP0014X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578968079"}}
+	sourceDef.PatientAccessUrl = "http://www.carolinapain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

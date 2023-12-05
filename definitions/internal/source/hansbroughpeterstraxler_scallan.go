@@ -30,6 +30,7 @@ func GetSourceHansbroughpeterstraxlerScallan(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeHansbroughpeterstraxlerScallan
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.entbr.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

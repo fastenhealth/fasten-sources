@@ -31,6 +31,7 @@ func GetSourceVantageFootAndAnkleCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"213ES0131X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053966648"}}
+	sourceDef.PatientAccessUrl = "https://vantagefootandankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

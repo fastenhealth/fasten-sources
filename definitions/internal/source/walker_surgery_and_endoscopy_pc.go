@@ -31,6 +31,7 @@ func GetSourceWalkerSurgeryAndEndoscopyPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851723324"}}
+	sourceDef.PatientAccessUrl = "http://www.walkersurgery.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceChannanGitanjli(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeChannanGitanjli
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/GitanjliChannanMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceWebsterFamilyPhysiciansPc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeWebsterFamilyPhysiciansPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.websterfp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

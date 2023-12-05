@@ -30,6 +30,7 @@ func GetSourceKemHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeKemHealthLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.promisedlandwc.care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceQuickcareNp(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeQuickcareNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://quickcarenp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

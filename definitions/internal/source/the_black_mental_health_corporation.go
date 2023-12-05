@@ -31,6 +31,7 @@ func GetSourceTheBlackMentalHealthCorporation(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"101YA0400X", "261QM0801X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1679053664", "1679140040"}}
+	sourceDef.PatientAccessUrl = "http://www.theblackmentalhealthcorporation.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

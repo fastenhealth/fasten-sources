@@ -30,6 +30,7 @@ func GetSourceNewEnglandEarNoseThroatfacialPlasticSurgeryPc(env pkg.FastenLighth
 	sourceDef.SourceType = pkg.SourceTypeNewEnglandEarNoseThroatfacialPlasticSurgeryPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://newenglandent.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

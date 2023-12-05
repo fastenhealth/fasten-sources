@@ -31,6 +31,7 @@ func GetSourceWandaMBooteMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366639569"}}
+	sourceDef.PatientAccessUrl = "http://www.drboote.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

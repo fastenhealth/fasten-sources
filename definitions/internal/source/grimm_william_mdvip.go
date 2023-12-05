@@ -30,6 +30,7 @@ func GetSourceGrimmWilliamMdvip(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeGrimmWilliamMdvip
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.WilliamGrimmdo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

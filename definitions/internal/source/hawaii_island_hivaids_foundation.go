@@ -30,6 +30,7 @@ func GetSourceHawaiiIslandHivaidsFoundation(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeHawaiiIslandHivaidsFoundation
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.kumukahihealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

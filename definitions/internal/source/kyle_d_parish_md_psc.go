@@ -31,6 +31,7 @@ func GetSourceKyleDParishMdPsc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207QS0010X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447449350"}}
+	sourceDef.PatientAccessUrl = "http://www.parishmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

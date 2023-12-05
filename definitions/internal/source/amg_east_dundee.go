@@ -30,6 +30,7 @@ func GetSourceAmgEastDundee(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeAmgEastDundee
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.foxvalleycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

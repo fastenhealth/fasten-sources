@@ -30,6 +30,7 @@ func GetSourceScheffelFootCenterPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeScheffelFootCenterPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.scheffelfootcenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

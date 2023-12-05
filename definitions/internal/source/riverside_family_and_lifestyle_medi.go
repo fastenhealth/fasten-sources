@@ -30,6 +30,7 @@ func GetSourceRiversideFamilyAndLifestyleMedi(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeRiversideFamilyAndLifestyleMedi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rslifestylemed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

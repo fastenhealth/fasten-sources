@@ -31,6 +31,7 @@ func GetSourceHeightsFamilyMedicineClinicPllc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"HEIGHTS FAMILY MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285198291"}}
+	sourceDef.PatientAccessUrl = "http://www.heightsfm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceAcmConnect(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeAcmConnect
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.missionpoint.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWestVirginiaOrthoneuro(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207T00000X", "207X00000X", "207XS0117X", "213ES0103X"}
 	sourceDef.Aliases = []string{"WEST VIRGINIA ORTHONEURO"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1699279455", "1841256849"}}
+	sourceDef.PatientAccessUrl = "https://wvorthoneuro.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceDiscoveryMedicalNetworkMatagorda(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeDiscoveryMedicalNetworkMatagorda
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.matagordamedicalgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

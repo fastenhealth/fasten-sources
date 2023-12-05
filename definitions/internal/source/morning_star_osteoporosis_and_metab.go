@@ -30,6 +30,7 @@ func GetSourceMorningStarOsteoporosisAndMetab(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMorningStarOsteoporosisAndMetab
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drstanciumd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

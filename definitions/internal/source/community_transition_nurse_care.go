@@ -30,6 +30,7 @@ func GetSourceCommunityTransitionNurseCare(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeCommunityTransitionNurseCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.transitionnurse.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

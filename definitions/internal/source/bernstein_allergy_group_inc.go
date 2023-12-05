@@ -31,6 +31,7 @@ func GetSourceBernsteinAllergyGroupInc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811996549"}}
+	sourceDef.PatientAccessUrl = "http://www.bernsteinallergyresearch.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

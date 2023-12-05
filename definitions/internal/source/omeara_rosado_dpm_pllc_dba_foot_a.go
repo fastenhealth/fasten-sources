@@ -30,6 +30,7 @@ func GetSourceOmearaRosadoDpmPllcDbaFootA(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeOmearaRosadoDpmPllcDbaFootA
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.epfootandankle.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

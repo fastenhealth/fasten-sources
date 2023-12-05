@@ -30,6 +30,7 @@ func GetSourcePivotalCarePartnership(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypePivotalCarePartnership
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pivotalcare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

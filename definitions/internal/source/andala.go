@@ -30,6 +30,7 @@ func GetSourceAndala(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeAndala
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.andalahealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

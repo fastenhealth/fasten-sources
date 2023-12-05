@@ -30,6 +30,7 @@ func GetSourceHodesNauserMdsPa(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeHodesNauserMdsPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hodesnauser.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

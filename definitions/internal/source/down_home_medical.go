@@ -30,6 +30,7 @@ func GetSourceDownHomeMedical(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeDownHomeMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://downhomemedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

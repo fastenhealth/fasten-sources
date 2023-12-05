@@ -30,6 +30,7 @@ func GetSourceBachGodofskyInfectiousDiseases(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeBachGodofskyInfectiousDiseases
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bachandgodofsky.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

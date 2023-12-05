@@ -30,6 +30,7 @@ func GetSourcePavilionFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypePavilionFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wsfmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceBrawBeathanLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"163W00000X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245916006"}}
+	sourceDef.PatientAccessUrl = "https://braw-beathan-mxvgj.zensmb.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

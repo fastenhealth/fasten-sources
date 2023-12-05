@@ -30,6 +30,7 @@ func GetSourceSiaspecialtyInfusionLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeSiaspecialtyInfusionLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sia-boca.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

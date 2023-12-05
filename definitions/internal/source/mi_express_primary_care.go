@@ -31,6 +31,7 @@ func GetSourceMiExpressPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"MI EXPRESS PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1609433549"}}
+	sourceDef.PatientAccessUrl = "http://www.miexpresscare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

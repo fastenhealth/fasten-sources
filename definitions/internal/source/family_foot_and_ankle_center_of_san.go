@@ -30,6 +30,7 @@ func GetSourceFamilyFootAndAnkleCenterOfSan(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeFamilyFootAndAnkleCenterOfSan
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.familyfootSA.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

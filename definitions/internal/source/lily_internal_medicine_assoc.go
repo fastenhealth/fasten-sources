@@ -30,6 +30,7 @@ func GetSourceLilyInternalMedicineAssoc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeLilyInternalMedicineAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lilyinternalmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

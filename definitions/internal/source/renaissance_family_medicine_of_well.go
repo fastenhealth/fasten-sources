@@ -30,6 +30,7 @@ func GetSourceRenaissanceFamilyMedicineOfWell(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeRenaissanceFamilyMedicineOfWell
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://rfmofwellesley.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

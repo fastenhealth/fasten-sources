@@ -31,6 +31,7 @@ func GetSourceAaiHealthServices(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164542700", "1457762312"}}
+	sourceDef.PatientAccessUrl = "http://aaiurgentcare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

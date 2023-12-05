@@ -30,6 +30,7 @@ func GetSourcePriviaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypePriviaHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.myprivia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

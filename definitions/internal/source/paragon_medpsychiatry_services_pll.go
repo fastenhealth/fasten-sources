@@ -30,6 +30,7 @@ func GetSourceParagonMedpsychiatryServicesPll(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeParagonMedpsychiatryServicesPll
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.paragonmedpsychiatryservices.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

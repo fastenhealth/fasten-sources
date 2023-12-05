@@ -30,6 +30,7 @@ func GetSourceAffirmDirectPrimaryCarePa(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeAffirmDirectPrimaryCarePa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.affirmdpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

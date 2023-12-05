@@ -31,6 +31,7 @@ func GetSourceGabrielaBalfPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1215625645"}}
+	sourceDef.PatientAccessUrl = "http://www.dr-gabriela.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

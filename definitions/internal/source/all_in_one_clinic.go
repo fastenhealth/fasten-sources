@@ -31,6 +31,7 @@ func GetSourceAllInOneClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"ALL IN ONE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083233654"}}
+	sourceDef.PatientAccessUrl = "http://www.allinoneclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

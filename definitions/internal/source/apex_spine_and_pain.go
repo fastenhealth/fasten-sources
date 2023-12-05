@@ -30,6 +30,7 @@ func GetSourceApexSpineAndPain(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeApexSpineAndPain
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.apexspinepain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

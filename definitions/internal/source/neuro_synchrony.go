@@ -30,6 +30,7 @@ func GetSourceNeuroSynchrony(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeNeuroSynchrony
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.neuro-synchrony.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBalanceRegenerativeSportsAndRe(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeBalanceRegenerativeSportsAndRe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.BalanceBklyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

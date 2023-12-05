@@ -31,6 +31,7 @@ func GetSourceJasperSurgeryCenterLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1730842311"}}
+	sourceDef.PatientAccessUrl = "http://www.southernpainandspine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceSyedAAliMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205825924"}}
+	sourceDef.PatientAccessUrl = "http://www.syedalimdinc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

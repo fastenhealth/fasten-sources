@@ -31,6 +31,7 @@ func GetSourceJeeHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"261Q00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184380628"}}
+	sourceDef.PatientAccessUrl = "http://josephescobarmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

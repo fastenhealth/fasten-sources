@@ -30,6 +30,7 @@ func GetSourceRomeoPPapicaIi(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.SourceType = pkg.SourceTypeRomeoPPapicaIi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.romeopapicamd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

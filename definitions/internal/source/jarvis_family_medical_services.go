@@ -31,6 +31,7 @@ func GetSourceJarvisFamilyMedicalServices(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013468784"}}
+	sourceDef.PatientAccessUrl = "http://www.jarvisfamilymedicalservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

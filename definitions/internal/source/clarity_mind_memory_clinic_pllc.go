@@ -30,6 +30,7 @@ func GetSourceClarityMindMemoryClinicPllc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeClarityMindMemoryClinicPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.memoryclinicnd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

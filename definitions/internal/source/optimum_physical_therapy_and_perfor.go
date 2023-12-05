@@ -30,6 +30,7 @@ func GetSourceOptimumPhysicalTherapyAndPerfor(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeOptimumPhysicalTherapyAndPerfor
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.optimumptpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceRegenerativeSurgicalLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QA1903X"}
 	sourceDef.Aliases = []string{"REGENERATIVE SURGICAL LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1548823859"}}
+	sourceDef.PatientAccessUrl = "http://houstonscoliosisandspineinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

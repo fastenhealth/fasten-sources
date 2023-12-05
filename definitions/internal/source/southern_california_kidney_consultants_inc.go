@@ -30,6 +30,7 @@ func GetSourceSouthernCaliforniaKidneyConsultantsInc(env pkg.FastenLighthouseEnv
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaliforniaKidneyConsultantsInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://socalkidneyonline.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

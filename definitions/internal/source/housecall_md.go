@@ -30,6 +30,7 @@ func GetSourceHousecallMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeHousecallMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.housecallmd.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

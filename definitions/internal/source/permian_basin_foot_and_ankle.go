@@ -31,6 +31,7 @@ func GetSourcePermianBasinFootAndAnkle(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{"PERMIAN BASIN FOOT AND ANKLE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003457318"}}
+	sourceDef.PatientAccessUrl = "http://www.hamiltonvein.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

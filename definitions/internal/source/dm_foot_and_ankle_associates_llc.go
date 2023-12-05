@@ -31,6 +31,7 @@ func GetSourceDmFootAndAnkleAssociatesLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"213ES0103X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1912190349"}}
+	sourceDef.PatientAccessUrl = "http://www.dmfootandankle.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

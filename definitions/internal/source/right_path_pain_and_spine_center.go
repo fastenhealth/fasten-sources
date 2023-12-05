@@ -30,6 +30,7 @@ func GetSourceRightPathPainAndSpineCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeRightPathPainAndSpineCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rppsc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

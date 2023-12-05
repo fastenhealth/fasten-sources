@@ -30,6 +30,7 @@ func GetSourceWellnessAndPreventiveCareOfSou(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeWellnessAndPreventiveCareOfSou
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wpcofswfl.info"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

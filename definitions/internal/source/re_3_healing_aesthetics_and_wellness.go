@@ -30,6 +30,7 @@ func GetSourceRe3HealingAestheticsAndWellness(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeRe3HealingAestheticsAndWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.re3neuroscience.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

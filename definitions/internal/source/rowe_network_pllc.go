@@ -30,6 +30,7 @@ func GetSourceRoweNetworkPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeRoweNetworkPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.Rowedocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

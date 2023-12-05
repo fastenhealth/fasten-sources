@@ -30,6 +30,7 @@ func GetSourceSotomaddixPsychiatricGroup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeSotomaddixPsychiatricGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sotomaddix.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMcgowanBlake(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeMcgowanBlake
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/doctors/wblakemcgowanmd"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

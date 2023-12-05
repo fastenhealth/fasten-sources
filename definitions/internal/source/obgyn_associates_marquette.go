@@ -30,6 +30,7 @@ func GetSourceObgynAssociatesMarquette(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeObgynAssociatesMarquette
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://obgynmqt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

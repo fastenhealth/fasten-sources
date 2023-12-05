@@ -30,6 +30,7 @@ func GetSourceWallstromBarber(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeWallstromBarber
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.verdugointernalmedicine.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceKaufmanAllergyAsthmaAndImmunolo(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeKaufmanAllergyAsthmaAndImmunolo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kaufmanallergy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceMedcare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.Category = []string{"207Q00000X", "208100000X", "208D00000X", "225100000X", "225X00000X", "235Z00000X", "251E00000X", "261QH0100X", "261QR0401X", "332B00000X"}
 	sourceDef.Aliases = []string{"MEDCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003993296", "1710374780", "1720631450", "1801917331"}}
+	sourceDef.PatientAccessUrl = "http://www.medcarenj.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

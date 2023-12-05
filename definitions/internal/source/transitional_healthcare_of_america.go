@@ -31,6 +31,7 @@ func GetSourceTransitionalHealthcareOfAmerica(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"251E00000X", "261Q00000X", "261QH0100X"}
 	sourceDef.Aliases = []string{"TRANSITIONAL HEALTHCARE OF AMERICA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407238082"}}
+	sourceDef.PatientAccessUrl = "http://www.mythcoa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

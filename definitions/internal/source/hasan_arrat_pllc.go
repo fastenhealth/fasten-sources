@@ -31,6 +31,7 @@ func GetSourceHasanArratPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"207R00000X", "207RG0300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902370240"}}
+	sourceDef.PatientAccessUrl = "https://thegeriatricprimarycareclinic.business.site/?utm_source=gmb&amp;utm_medium=referral"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

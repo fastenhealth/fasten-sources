@@ -30,6 +30,7 @@ func GetSourceAccessInternalMedicinePc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeAccessInternalMedicinePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.accessinternalmedicine.info"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

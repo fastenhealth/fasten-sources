@@ -31,6 +31,7 @@ func GetSourceRobisonAdvancedGynSolutionsPllc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"207V00000X", "207VF0040X", "208800000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356813844"}}
+	sourceDef.PatientAccessUrl = "http://Advanced-gyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

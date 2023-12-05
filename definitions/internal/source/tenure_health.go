@@ -30,6 +30,7 @@ func GetSourceTenureHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTenureHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.tenurehealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

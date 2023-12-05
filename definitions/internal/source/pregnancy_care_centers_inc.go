@@ -31,6 +31,7 @@ func GetSourcePregnancyCareCentersInc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207V00000X", "207ZP0105X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1811539448"}}
+	sourceDef.PatientAccessUrl = "https://pccnwv.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

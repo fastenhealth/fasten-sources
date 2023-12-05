@@ -30,6 +30,7 @@ func GetSourceLubbockPsychiatry(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeLubbockPsychiatry
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lubbockpsych.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

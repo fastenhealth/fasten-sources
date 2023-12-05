@@ -31,6 +31,7 @@ func GetSourceWiseWeightManagementPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207QB0002X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649852013"}}
+	sourceDef.PatientAccessUrl = "http://wiseweightmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

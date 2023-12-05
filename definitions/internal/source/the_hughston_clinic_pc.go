@@ -31,6 +31,7 @@ func GetSourceTheHughstonClinicPc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"332B00000X"}
 	sourceDef.Aliases = []string{"THE HUGHSTON CLINIC PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1477986859", "1588806707", "1699951897", "1700219227"}}
+	sourceDef.PatientAccessUrl = "http://www.hughston.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

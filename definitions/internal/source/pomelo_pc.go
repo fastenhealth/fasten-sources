@@ -31,6 +31,7 @@ func GetSourcePomeloPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.Category = []string{"101YM0800X", "207Q00000X", "207V00000X", "208000000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538827324"}}
+	sourceDef.PatientAccessUrl = "http://www.pomelocare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

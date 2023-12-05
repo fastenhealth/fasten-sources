@@ -30,6 +30,7 @@ func GetSourceBacasPainManagement(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeBacasPainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.bacasmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

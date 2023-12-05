@@ -30,6 +30,7 @@ func GetSourceMariaColeFnpbcPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeMariaColeFnpbcPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mcfnp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

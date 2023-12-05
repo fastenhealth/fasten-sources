@@ -30,6 +30,7 @@ func GetSourceAnneMMooneyMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeAnneMMooneyMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://sleepwelldoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

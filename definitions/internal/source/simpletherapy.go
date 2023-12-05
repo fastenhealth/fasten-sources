@@ -31,6 +31,7 @@ func GetSourceSimpletherapy(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"174H00000X", "252Y00000X", "253Z00000X"}
 	sourceDef.Aliases = []string{"SIMPLETHERAPY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1497143127"}}
+	sourceDef.PatientAccessUrl = "http://simpletherapy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

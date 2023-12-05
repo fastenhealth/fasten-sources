@@ -30,6 +30,7 @@ func GetSourceReedSpenser(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeReedSpenser
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.mdvip.com/doctors/spenserreedmd"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

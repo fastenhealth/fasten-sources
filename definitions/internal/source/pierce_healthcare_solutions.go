@@ -31,6 +31,7 @@ func GetSourcePierceHealthcareSolutions(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207Q00000X", "261QM1300X", "363L00000X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831822386"}}
+	sourceDef.PatientAccessUrl = "https://phcsllcweightloss.as.me"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAKumarMdPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"207RP1001X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295473148"}}
+	sourceDef.PatientAccessUrl = "http://oklahomarespiratoryinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

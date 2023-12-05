@@ -30,6 +30,7 @@ func GetSourcePanoramaUrgentCareFamilyMedicine(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypePanoramaUrgentCareFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.panoramaucfm.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

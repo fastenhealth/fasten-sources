@@ -31,6 +31,7 @@ func GetSourceBergenPassaicPediatricNeurology(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"2084N0402X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1417009077"}}
+	sourceDef.PatientAccessUrl = "http://www.bpneuro.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

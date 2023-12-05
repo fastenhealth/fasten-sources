@@ -31,6 +31,7 @@ func GetSourcePsychPointeLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"251S00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1861087355"}}
+	sourceDef.PatientAccessUrl = "https://www.psychpointe.org/home"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

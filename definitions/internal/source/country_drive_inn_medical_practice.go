@@ -31,6 +31,7 @@ func GetSourceCountryDriveInnMedicalPractice(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003524430"}}
+	sourceDef.PatientAccessUrl = "https://www.countrydriveinnmedicalpractice.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

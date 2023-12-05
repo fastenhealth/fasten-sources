@@ -30,6 +30,7 @@ func GetSourceVenturaAdvancedSurgicalAssoc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeVenturaAdvancedSurgicalAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://drbillybariatrics.com/default"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBeebeSchoolBasedWellness(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeBeebeSchoolBasedWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.beebemed.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

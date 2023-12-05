@@ -30,6 +30,7 @@ func GetSourceAnthemPainManagement(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeAnthemPainManagement
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.AnthemPainManagement.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

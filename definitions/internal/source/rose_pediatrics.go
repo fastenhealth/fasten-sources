@@ -31,6 +31,7 @@ func GetSourceRosePediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"ROSE PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1366029274", "1669078416", "1699360313", "1992971402"}}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

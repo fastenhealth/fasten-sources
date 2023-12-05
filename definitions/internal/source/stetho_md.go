@@ -30,6 +30,7 @@ func GetSourceStethoMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 	sourceDef.SourceType = pkg.SourceTypeStethoMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.stethomd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAlexianBrothersMedicalCenter(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"174400000X", "174H00000X", "2085R0202X", "251E00000X", "251G00000X", "273R00000X", "273Y00000X", "275N00000X", "282N00000X"}
 	sourceDef.Aliases = []string{"ALEXIAN BROTHERS DIABETES SERVICES", "ALEXIAN BROTHERS MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063833929", "1265577191", "1316169949", "1477598589", "1710057807", "1710646757", "1720314115", "1760421697", "1902941628"}}
+	sourceDef.PatientAccessUrl = "http://myamitahealthdoc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

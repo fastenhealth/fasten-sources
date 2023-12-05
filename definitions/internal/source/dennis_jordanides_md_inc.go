@@ -31,6 +31,7 @@ func GetSourceDennisJordanidesMdInc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1326318155"}}
+	sourceDef.PatientAccessUrl = "http://www.im365health.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceGoodSamaritanHealthCenter(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"BRIDGE ATLANTA MEDICAL CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1255831293"}}
+	sourceDef.PatientAccessUrl = "http://www.goodsamatlanta.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

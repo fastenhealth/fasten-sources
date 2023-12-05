@@ -31,6 +31,7 @@ func GetSourceHouseCallMedicalServicesLlc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"363LF0000X", "363LP0808X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285026351"}}
+	sourceDef.PatientAccessUrl = "http://WWW.HOUSECALLMEDICALSERVICES.INFO"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

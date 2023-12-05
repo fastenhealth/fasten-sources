@@ -30,6 +30,7 @@ func GetSourceAreteFamilyMedicineAnchorage(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeAreteFamilyMedicineAnchorage
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.akpeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

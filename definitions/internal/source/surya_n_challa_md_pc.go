@@ -31,6 +31,7 @@ func GetSourceSuryaNChallaMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"208600000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1992886568"}}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakeveincenter.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

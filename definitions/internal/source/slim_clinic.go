@@ -31,6 +31,7 @@ func GetSourceSlimClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"207RB0002X"}
 	sourceDef.Aliases = []string{"SLIM CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902529753"}}
+	sourceDef.PatientAccessUrl = "http://slimclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

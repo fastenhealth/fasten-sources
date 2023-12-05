@@ -30,6 +30,7 @@ func GetSourceFitMedicalWeightLossOptimiz(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeFitMedicalWeightLossOptimiz
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.fixittogetherweightloss.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

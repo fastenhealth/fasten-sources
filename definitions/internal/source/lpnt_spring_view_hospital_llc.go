@@ -30,6 +30,7 @@ func GetSourceLpntSpringViewHospitalLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeLpntSpringViewHospitalLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.springviewhospital.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

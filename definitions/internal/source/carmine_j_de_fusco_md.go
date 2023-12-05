@@ -30,6 +30,7 @@ func GetSourceCarmineJDeFuscoMd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCarmineJDeFuscoMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.defuscomd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

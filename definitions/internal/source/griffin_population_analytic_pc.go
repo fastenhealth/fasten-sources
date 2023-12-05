@@ -31,6 +31,7 @@ func GetSourceGriffinPopulationAnalyticPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"207P00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750026225"}}
+	sourceDef.PatientAccessUrl = "http://www.gpapopulationhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

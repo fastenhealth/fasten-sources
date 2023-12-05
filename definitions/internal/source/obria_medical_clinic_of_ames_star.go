@@ -30,6 +30,7 @@ func GetSourceObriaMedicalClinicOfAmesStar(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeObriaMedicalClinicOfAmesStar
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.obria.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

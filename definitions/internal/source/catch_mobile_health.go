@@ -30,6 +30,7 @@ func GetSourceCatchMobileHealth(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCatchMobileHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://catchcardiology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

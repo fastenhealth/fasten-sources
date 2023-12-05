@@ -30,6 +30,7 @@ func GetSourceTheFootAndAnkleInstituteOfGeo(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeTheFootAndAnkleInstituteOfGeo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.faiog.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

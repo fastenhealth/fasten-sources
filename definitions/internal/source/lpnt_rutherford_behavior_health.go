@@ -30,6 +30,7 @@ func GetSourceLpntRutherfordBehaviorHealth(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeLpntRutherfordBehaviorHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.myrutherfordregional.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceNorthGeorgiaEndocrinologyPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeNorthGeorgiaEndocrinologyPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ngaendo.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

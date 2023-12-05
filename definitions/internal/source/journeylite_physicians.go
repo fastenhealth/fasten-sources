@@ -30,6 +30,7 @@ func GetSourceJourneylitePhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeJourneylitePhysicians
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://loseweightcincy.com/athena-portal/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

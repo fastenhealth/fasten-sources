@@ -31,6 +31,7 @@ func GetSourceNewHorizons(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"251B00000X", "251S00000X", "305R00000X", "310400000X"}
 	sourceDef.Aliases = []string{"NEW HORIZONS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1003033473", "1013034867", "1104025857", "1144774209", "1205536786", "1235383415", "1265661912", "1447458385", "1619175551", "1902004849"}}
+	sourceDef.PatientAccessUrl = "http://www.yoakumhospital.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

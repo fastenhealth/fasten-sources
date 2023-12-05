@@ -30,6 +30,7 @@ func GetSourceOrangeCutRateDrugsIncorporated(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeOrangeCutRateDrugsIncorporated
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.groveparkpharmacy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

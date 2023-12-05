@@ -30,6 +30,7 @@ func GetSourceIntegrityWellness(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeIntegrityWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://integritywellness.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

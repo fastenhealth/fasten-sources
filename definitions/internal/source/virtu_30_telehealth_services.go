@@ -31,6 +31,7 @@ func GetSourceVirtu30TelehealthServices(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"207RC0000X", "2083P0901X", "261QM0801X", "363LP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104512979", "1174147193", "1184310955"}}
+	sourceDef.PatientAccessUrl = "http://virtu30telehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

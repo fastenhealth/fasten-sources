@@ -30,6 +30,7 @@ func GetSourceChoptankCommunityHealth(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeChoptankCommunityHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://choptankhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

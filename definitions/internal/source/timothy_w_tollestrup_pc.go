@@ -31,6 +31,7 @@ func GetSourceTimothyWTollestrupPc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"208600000X", "2086S0105X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164654414"}}
+	sourceDef.PatientAccessUrl = "http://www.neuropaxclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

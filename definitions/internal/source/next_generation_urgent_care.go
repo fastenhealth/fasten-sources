@@ -31,6 +31,7 @@ func GetSourceNextGenerationUrgentCare(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"208000000X", "261QU0200X"}
 	sourceDef.Aliases = []string{"NEXT GENERATION PEDIATRIC URGENT CARE", "NEXT GENERATION URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1295449007", "1407457880"}}
+	sourceDef.PatientAccessUrl = "https://www.nextgenerationuc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

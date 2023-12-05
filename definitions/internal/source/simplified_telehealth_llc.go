@@ -31,6 +31,7 @@ func GetSourceSimplifiedTelehealthLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"SIMPLIFIED CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467125989"}}
+	sourceDef.PatientAccessUrl = "http://www.simplifiedtelehealth.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

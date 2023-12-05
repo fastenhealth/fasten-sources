@@ -31,6 +31,7 @@ func GetSourceExpressClinicLlc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207R00000X", "261QP2300X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1285220830"}}
+	sourceDef.PatientAccessUrl = "http://www.expressclinicmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

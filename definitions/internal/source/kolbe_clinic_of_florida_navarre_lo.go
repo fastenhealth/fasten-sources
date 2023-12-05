@@ -30,6 +30,7 @@ func GetSourceKolbeClinicOfFloridaNavarreLo(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeKolbeClinicOfFloridaNavarreLo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kolbehealthservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

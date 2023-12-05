@@ -31,6 +31,7 @@ func GetSourceAmitaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"106S00000X", "282NC2000X"}
 	sourceDef.Aliases = []string{"AMITA HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1346690492", "1851077325"}}
+	sourceDef.PatientAccessUrl = "https://www.amitahealth.org/services/behavioral-medicine-institute/center-for-mental-health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

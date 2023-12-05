@@ -30,6 +30,7 @@ func GetSourceMagnoliaRheumatologyPc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeMagnoliaRheumatologyPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://magnoliarheum.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

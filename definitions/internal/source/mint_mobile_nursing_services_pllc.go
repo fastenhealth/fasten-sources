@@ -30,6 +30,7 @@ func GetSourceMintMobileNursingServicesPllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeMintMobileNursingServicesPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mintmobilenursingservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

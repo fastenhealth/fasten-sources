@@ -30,6 +30,7 @@ func GetSourceOnDemandUrgentCareLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeOnDemandUrgentCareLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.okoduc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

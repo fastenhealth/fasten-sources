@@ -30,6 +30,7 @@ func GetSourceHopeHeartHealMedicalNonProfit(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeHopeHeartHealMedicalNonProfit
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hopeheartheal.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

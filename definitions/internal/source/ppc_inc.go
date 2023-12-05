@@ -30,6 +30,7 @@ func GetSourcePpcInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypePpcInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nhpri.org/Health@Home.aspx"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

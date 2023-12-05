@@ -30,6 +30,7 @@ func GetSourceJosephHNealHealthCollaborative(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeJosephHNealHealthCollaborative
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://josephhnealhealthcollaborative.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

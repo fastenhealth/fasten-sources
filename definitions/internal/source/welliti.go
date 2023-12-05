@@ -30,6 +30,7 @@ func GetSourceWelliti(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeWelliti
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.welliti.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

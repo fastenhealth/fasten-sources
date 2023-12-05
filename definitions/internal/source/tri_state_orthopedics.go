@@ -30,6 +30,7 @@ func GetSourceTriStateOrthopedics(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeTriStateOrthopedics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tri-stateortho.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

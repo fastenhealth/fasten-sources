@@ -30,6 +30,7 @@ func GetSourceNewImageMedicalAestheticsWell(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeNewImageMedicalAestheticsWell
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.NewImageGeorgia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

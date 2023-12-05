@@ -30,6 +30,7 @@ func GetSourceAlecYLuiMd(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeAlecYLuiMd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://alecluimd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

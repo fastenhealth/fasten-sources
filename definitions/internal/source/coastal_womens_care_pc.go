@@ -31,6 +31,7 @@ func GetSourceCoastalWomensCarePc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207VG0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1558628883"}}
+	sourceDef.PatientAccessUrl = "http://www.coastalwomenscare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePropiciusBrainSpineLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypePropiciusBrainSpineLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.patrickbsenatusMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

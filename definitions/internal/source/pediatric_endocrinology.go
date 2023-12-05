@@ -31,6 +31,7 @@ func GetSourcePediatricEndocrinology(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"2080P0205X"}
 	sourceDef.Aliases = []string{"PEDIATRIC ENDOCRINOLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568826048"}}
+	sourceDef.PatientAccessUrl = "http://cmg-hamden.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceEqualHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"207Q00000X", "2084P0800X"}
 	sourceDef.Aliases = []string{"EQUAL HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1780373290"}}
+	sourceDef.PatientAccessUrl = "http://www.getequalhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

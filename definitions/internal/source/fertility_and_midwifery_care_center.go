@@ -30,6 +30,7 @@ func GetSourceFertilityAndMidwiferyCareCenter(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeFertilityAndMidwiferyCareCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.fertilityandmidwifery.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

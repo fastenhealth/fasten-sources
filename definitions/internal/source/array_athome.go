@@ -30,6 +30,7 @@ func GetSourceArrayAthome(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeArrayAthome
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://arraybc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

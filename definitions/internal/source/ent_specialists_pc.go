@@ -30,6 +30,7 @@ func GetSourceEntSpecialistsPc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeEntSpecialistsPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.entspecialistspc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

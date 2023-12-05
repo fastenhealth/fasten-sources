@@ -31,6 +31,7 @@ func GetSourceTanasbournePlasticSurgeryPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"208200000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1174708457"}}
+	sourceDef.PatientAccessUrl = "http://www.tanasbourneplasticsurgery.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

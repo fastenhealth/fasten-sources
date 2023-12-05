@@ -31,6 +31,7 @@ func GetSourceJplrc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sour
 	sourceDef.Category = []string{"207X00000X", "207XP3100X"}
 	sourceDef.Aliases = []string{"JPLRC, LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033507330"}}
+	sourceDef.PatientAccessUrl = "http://jplrc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

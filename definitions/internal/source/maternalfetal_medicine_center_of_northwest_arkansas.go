@@ -30,6 +30,7 @@ func GetSourceMaternalfetalMedicineCenterOfNorthwestArkansas(env pkg.FastenLight
 	sourceDef.SourceType = pkg.SourceTypeMaternalfetalMedicineCenterOfNorthwestArkansas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.NW-physicians.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

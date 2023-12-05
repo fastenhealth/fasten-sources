@@ -30,6 +30,7 @@ func GetSourceJasmineInfusionAndMedSpaPllc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeJasmineInfusionAndMedSpaPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://jasmineinfusions.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceHealthcareNetwork(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"207Q00000X", "208000000X", "208D00000X", "261QC1500X", "261QF0400X", "261QM1300X"}
 	sourceDef.Aliases = []string{"GOLDEN GATE PEDIATRICS", "HEALTHCARE NETWORK", "MIKE DAVIS MEDICAL CENTER", "THE MIKE DAVIS MEDICAL CENTER", "WOMEN'S CARE NORTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1083377139", "1225243132", "1417161852", "1477229755", "1528271012", "1598970402", "1609827211", "1780078998", "1982098083"}}
+	sourceDef.PatientAccessUrl = "http://www.healthcareswfl.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

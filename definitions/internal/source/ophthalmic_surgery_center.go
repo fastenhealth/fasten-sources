@@ -30,6 +30,7 @@ func GetSourceOphthalmicSurgeryCenter(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeOphthalmicSurgeryCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.aurburneye.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

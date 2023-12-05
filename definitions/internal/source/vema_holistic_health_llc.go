@@ -31,6 +31,7 @@ func GetSourceVemaHolisticHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QP2300X", "363L00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073135034"}}
+	sourceDef.PatientAccessUrl = "http://www.vemahealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

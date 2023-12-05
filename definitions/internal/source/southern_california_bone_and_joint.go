@@ -30,6 +30,7 @@ func GetSourceSouthernCaliforniaBoneAndJoint(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeSouthernCaliforniaBoneAndJoint
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.socalboneandjoint.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

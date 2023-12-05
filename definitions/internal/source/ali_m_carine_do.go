@@ -30,6 +30,7 @@ func GetSourceAliMCarineDo(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeAliMCarineDo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drcarine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

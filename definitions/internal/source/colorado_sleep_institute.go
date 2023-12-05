@@ -31,6 +31,7 @@ func GetSourceColoradoSleepInstitute(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"2084S0012X"}
 	sourceDef.Aliases = []string{"COLORADO SLEEP INSTITUTE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1245826783", "1548856081", "1568058006", "1881281608", "1992391437"}}
+	sourceDef.PatientAccessUrl = "http://www.coloradosleep.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

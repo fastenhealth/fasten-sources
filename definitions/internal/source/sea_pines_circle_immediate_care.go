@@ -30,6 +30,7 @@ func GetSourceSeaPinesCircleImmediateCare(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeSeaPinesCircleImmediateCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.seapinescircleimmediatecare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

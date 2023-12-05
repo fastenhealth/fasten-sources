@@ -30,6 +30,7 @@ func GetSourceHealthyGenerationsComprehensiveC(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeHealthyGenerationsComprehensiveC
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.healthy-generations.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

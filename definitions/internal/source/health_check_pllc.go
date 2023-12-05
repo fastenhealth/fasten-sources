@@ -30,6 +30,7 @@ func GetSourceHealthCheckPllc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeHealthCheckPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.healthcheckofvienna.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

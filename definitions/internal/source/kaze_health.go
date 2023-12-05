@@ -31,6 +31,7 @@ func GetSourceKazeHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.Category = []string{"146L00000X", "207PE0004X", "207Q00000X", "251F00000X", "261Q00000X", "261QH0100X", "261QI0500X", "261QP2300X", "261QU0200X", "291U00000X", "3336C0002X", "335V00000X", "341600000X", "3416L0300X", "343900000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1902491228"}}
+	sourceDef.PatientAccessUrl = "https://Kazehealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAccessHealthLouisiana(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"101Y00000X", "103TF0000X", "104100000X", "207Q00000X", "261QF0400X"}
 	sourceDef.Aliases = []string{"ACADIAN CARE NEW ORLEANS", "HAHNVILLE HIGH SBHC", "NORTHWOOD SBHC", "ST TAMMANY MANDEVILLE CHC", "ST. JAMES ALTERNATIVE SCHOOL", "TIOGA HIGH SBHC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104239482", "1174285647", "1285393736", "1386062677", "1437708237", "1447979810", "1538411921", "1548818925", "1568181931", "1790163715"}}
+	sourceDef.PatientAccessUrl = "http://www.accesshealthla.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

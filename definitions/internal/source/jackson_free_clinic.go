@@ -31,6 +31,7 @@ func GetSourceJacksonFreeClinic(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"251V00000X"}
 	sourceDef.Aliases = []string{"JACKSON FREE CLINIC FOR THE HOMELESS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851068324"}}
+	sourceDef.PatientAccessUrl = "http://www.jacksonfreeclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

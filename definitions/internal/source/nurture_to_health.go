@@ -30,6 +30,7 @@ func GetSourceNurtureToHealth(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeNurtureToHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nurturetohealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

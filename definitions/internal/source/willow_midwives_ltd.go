@@ -31,6 +31,7 @@ func GetSourceWillowMidwivesLtd(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261Q00000X", "261QA0005X", "261QB0400X", "261QF0050X", "261QH0700X", "261QP2300X", "261QR1300X"}
 	sourceDef.Aliases = []string{"FULL CIRCLE WELLNESS", "FULL CIRCLE WELLNESS CLINIC", "WILLOW BIRTH CENTER"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1508490541", "1750771143", "1801299128"}}
+	sourceDef.PatientAccessUrl = "http://www.willowmidwives.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

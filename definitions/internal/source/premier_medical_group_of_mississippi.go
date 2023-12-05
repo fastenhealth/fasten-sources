@@ -30,6 +30,7 @@ func GetSourcePremierMedicalGroupOfMississippi(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypePremierMedicalGroupOfMississippi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.pmgm.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

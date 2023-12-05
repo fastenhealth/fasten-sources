@@ -31,6 +31,7 @@ func GetSourceBurrowsInternalMedicine(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"BURROWS INTERNAL MEDICINE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1851933063"}}
+	sourceDef.PatientAccessUrl = "http://www.http://parkersquaremedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

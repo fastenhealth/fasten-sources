@@ -30,6 +30,7 @@ func GetSourceJainSocietyOfMetropolitanChicag(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeJainSocietyOfMetropolitanChicag
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jsmconline.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

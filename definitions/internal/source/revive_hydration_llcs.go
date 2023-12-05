@@ -30,6 +30,7 @@ func GetSourceReviveHydrationLlcs(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeReviveHydrationLlcs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.reviverxwellness.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceChas(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeChas
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chas.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

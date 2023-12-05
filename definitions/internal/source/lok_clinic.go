@@ -30,6 +30,7 @@ func GetSourceLokClinic(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeLokClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.lokclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

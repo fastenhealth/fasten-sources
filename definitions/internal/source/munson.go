@@ -30,6 +30,7 @@ func GetSourceMunson(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.SourceType = pkg.SourceTypeMunson
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://cadillacwomenshealth.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

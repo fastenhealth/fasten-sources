@@ -30,6 +30,7 @@ func GetSourceJustinFeldschauNp(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeJustinFeldschauNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.RestoringNow.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

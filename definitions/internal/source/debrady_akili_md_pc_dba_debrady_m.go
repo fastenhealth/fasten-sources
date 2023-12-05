@@ -30,6 +30,7 @@ func GetSourceDebradyAkiliMdPcDbaDebradyM(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeDebradyAkiliMdPcDbaDebradyM
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://debradymed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

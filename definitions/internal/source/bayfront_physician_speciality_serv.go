@@ -30,6 +30,7 @@ func GetSourceBayfrontPhysicianSpecialityServ(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeBayfrontPhysicianSpecialityServ
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bayfrontphysicians.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTauntonUrologicAssociatesPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeTauntonUrologicAssociatesPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tauntonurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

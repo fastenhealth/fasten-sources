@@ -31,6 +31,7 @@ func GetSourceSummitMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X", "207R00000X", "207RG0100X", "207X00000X", "261QA1903X", "261QP2300X", "261QU0200X", "363LA2200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164788261", "1235275207", "1346515491", "1548536568", "1831595024", "1942532825", "1972918977"}}
+	sourceDef.PatientAccessUrl = "http://www.summitmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

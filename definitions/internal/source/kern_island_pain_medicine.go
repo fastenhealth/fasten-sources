@@ -30,6 +30,7 @@ func GetSourceKernIslandPainMedicine(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeKernIslandPainMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kipm.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

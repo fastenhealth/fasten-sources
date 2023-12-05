@@ -30,6 +30,7 @@ func GetSourceLerroElsa(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeLerroElsa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.elsalerromd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

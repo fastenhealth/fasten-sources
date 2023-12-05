@@ -31,6 +31,7 @@ func GetSourceOptimalMedicalCare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"OPTIMAL MEDICAL CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1972243640"}}
+	sourceDef.PatientAccessUrl = "http://www.optimalmedicalcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

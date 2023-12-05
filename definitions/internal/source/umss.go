@@ -30,6 +30,7 @@ func GetSourceUmss(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeUmss
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.umssclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

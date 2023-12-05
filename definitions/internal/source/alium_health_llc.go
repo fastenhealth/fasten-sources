@@ -31,6 +31,7 @@ func GetSourceAliumHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"101YM0800X", "207Q00000X", "207V00000X", "261QM0801X", "261QM1300X", "363LP0808X", "367A00000X"}
 	sourceDef.Aliases = []string{"MODERN DAY MIDWIFE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386365674", "1619484037", "1699316091"}}
+	sourceDef.PatientAccessUrl = "http://www.aliumhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

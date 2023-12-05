@@ -30,6 +30,7 @@ func GetSourceFamilyHealthCarePc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeFamilyHealthCarePc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.familyhealthcaremd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

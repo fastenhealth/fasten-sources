@@ -31,6 +31,7 @@ func GetSourceFamilyHealthConvenientCareClinic(env pkg.FastenLighthouseEnvType, 
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"FAMILY HEALTH CENTER", "FAMILY HEALTH CONVENIENT CARE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1568576619"}}
+	sourceDef.PatientAccessUrl = "https://familyhealthcenterconvenientcareclinic.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

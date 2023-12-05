@@ -30,6 +30,7 @@ func GetSourceInnovativeExpressCarePlatinumCare(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeInnovativeExpressCarePlatinumCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://patientmessages.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

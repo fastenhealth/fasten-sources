@@ -30,6 +30,7 @@ func GetSourceDulcesSuenosAnesthesiaLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeDulcesSuenosAnesthesiaLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.painspecialistsofbrighton.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

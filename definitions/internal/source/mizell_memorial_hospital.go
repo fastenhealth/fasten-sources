@@ -31,6 +31,7 @@ func GetSourceMizellMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"275N00000X"}
 	sourceDef.Aliases = []string{"MIZELL MEMORIAL HOSPITAL SWING BED UNIT"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962056143"}}
+	sourceDef.PatientAccessUrl = "https://www.mizellmh.com/getpage.php?name=medical_clinic&amp;sub=Services"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

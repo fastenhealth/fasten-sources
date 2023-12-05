@@ -31,6 +31,7 @@ func GetSourceAtlanticInternalMedicine(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1427657667"}}
+	sourceDef.PatientAccessUrl = "http://atlanticinternalmedicine.godaddysites.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

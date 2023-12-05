@@ -30,6 +30,7 @@ func GetSourceCommunityClinicOfSwMissouri(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeCommunityClinicOfSwMissouri
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ccswmo.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

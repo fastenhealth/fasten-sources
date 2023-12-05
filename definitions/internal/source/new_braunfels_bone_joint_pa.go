@@ -30,6 +30,7 @@ func GetSourceNewBraunfelsBoneJointPa(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeNewBraunfelsBoneJointPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://nbsportsmed.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

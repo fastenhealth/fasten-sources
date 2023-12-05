@@ -31,6 +31,7 @@ func GetSourceTrinityMedicalCareLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"363LA2200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710594577"}}
+	sourceDef.PatientAccessUrl = "http://trinitymedicalcare.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

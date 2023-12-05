@@ -30,6 +30,7 @@ func GetSourceSleepInsights(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeSleepInsights
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sleepinsights.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

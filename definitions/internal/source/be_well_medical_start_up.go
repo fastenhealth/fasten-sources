@@ -30,6 +30,7 @@ func GetSourceBeWellMedicalStartUp(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeBeWellMedicalStartUp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bewellmedicaldoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

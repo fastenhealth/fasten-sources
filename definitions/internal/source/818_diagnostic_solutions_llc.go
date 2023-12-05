@@ -31,6 +31,7 @@ func GetSource818DiagnosticSolutionsLlc(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.Category = []string{"252Y00000X", "261QC1500X", "261QH0100X", "291U00000X"}
 	sourceDef.Aliases = []string{"818 DIAGNOSTIC SOLUTIONS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1437816709"}}
+	sourceDef.PatientAccessUrl = "http://818diagnostic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

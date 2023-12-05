@@ -31,6 +31,7 @@ func GetSourceAddictionCenterOfNashvilleLlc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"207RA0401X"}
 	sourceDef.Aliases = []string{"RUTH CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1649764911", "1760076871"}}
+	sourceDef.PatientAccessUrl = "http://www.ruthclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

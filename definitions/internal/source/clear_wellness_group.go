@@ -30,6 +30,7 @@ func GetSourceClearWellnessGroup(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeClearWellnessGroup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.clearwellnessgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCodyClinicPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeCodyClinicPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.codyclinic.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

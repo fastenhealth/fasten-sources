@@ -31,6 +31,7 @@ func GetSourceReimagineCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"363LA2200X"}
 	sourceDef.Aliases = []string{"REIMAGINE CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1831831353"}}
+	sourceDef.PatientAccessUrl = "http://www.reimaginecare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

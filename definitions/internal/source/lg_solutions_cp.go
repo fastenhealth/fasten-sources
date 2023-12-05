@@ -30,6 +30,7 @@ func GetSourceLgSolutionsCp(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLgSolutionsCp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.clinicsanluis.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

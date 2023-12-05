@@ -31,6 +31,7 @@ func GetSourceFortierGynecologyPllc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207VG0400X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407579022"}}
+	sourceDef.PatientAccessUrl = "https://fortiergyn.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

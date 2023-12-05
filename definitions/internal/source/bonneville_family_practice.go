@@ -30,6 +30,7 @@ func GetSourceBonnevilleFamilyPractice(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeBonnevilleFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.BonnevilleFP.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

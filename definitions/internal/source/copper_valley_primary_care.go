@@ -31,6 +31,7 @@ func GetSourceCopperValleyPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1790296853"}}
+	sourceDef.PatientAccessUrl = "http://coppervalleypc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

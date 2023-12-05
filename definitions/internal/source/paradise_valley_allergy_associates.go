@@ -30,6 +30,7 @@ func GetSourceParadiseValleyAllergyAssociates(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeParadiseValleyAllergyAssociates
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://urldefense.com/v3/__http://www.desertridgeallergy.com__;!!E3l7wfIP!zXVSWPaG47qKftvtCQU2fZV_S"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

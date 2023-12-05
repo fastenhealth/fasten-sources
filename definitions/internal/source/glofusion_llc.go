@@ -31,6 +31,7 @@ func GetSourceGlofusionLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"251F00000X", "261QI0500X", "261QM1300X", "261QP2300X"}
 	sourceDef.Aliases = []string{"GLOFUSION CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891266466"}}
+	sourceDef.PatientAccessUrl = "https://www.glofusionhealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

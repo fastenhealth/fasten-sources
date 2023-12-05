@@ -30,6 +30,7 @@ func GetSourceFocusPartnersInc(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeFocusPartnersInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://focusnow.health/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

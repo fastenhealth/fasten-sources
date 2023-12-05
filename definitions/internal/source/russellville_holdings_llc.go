@@ -31,6 +31,7 @@ func GetSourceRussellvilleHoldingsLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"104100000X", "225100000X", "225X00000X", "235Z00000X", "251E00000X", "261QA1903X", "261QR1300X", "273Y00000X", "282N00000X", "314000000X", "363LF0000X"}
 	sourceDef.Aliases = []string{"SAINT MARY'S REGIONAL MEDICAL CENTER REHAB", "ST . MARY'S REGIONAL MEDICAL CENTER", "ST. MARY'S REGIONAL MEDICAL CENTER", "ST. MARY'S REGIONAL MEDICAL CENTER HOME HEALTH", "VALLEY HEALTH SERVICES OF HECTOR"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033160049", "1376595132", "1538111398", "1881646644", "1932150943"}}
+	sourceDef.PatientAccessUrl = "http://www.vhshector.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

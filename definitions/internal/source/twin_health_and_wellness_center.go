@@ -31,6 +31,7 @@ func GetSourceTwinHealthAndWellnessCenter(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"207Q00000X", "261Q00000X", "261QC1500X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1053992396", "1467118083"}}
+	sourceDef.PatientAccessUrl = "https://twinhealthwc.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

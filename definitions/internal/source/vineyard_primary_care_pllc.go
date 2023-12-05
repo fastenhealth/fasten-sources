@@ -31,6 +31,7 @@ func GetSourceVineyardPrimaryCarePllc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"207R00000X", "363AM0700X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1164802542"}}
+	sourceDef.PatientAccessUrl = "http://www.vineyardprimarycare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

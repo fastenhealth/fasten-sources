@@ -31,6 +31,7 @@ func GetSourceOrthorehabLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"261QP2000X"}
 	sourceDef.Aliases = []string{"ORTHOREHAB PHYSICAL THERAPY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447817754"}}
+	sourceDef.PatientAccessUrl = "http://www.myorthorehab.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceBounceBackPhysicalTherapyStart(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeBounceBackPhysicalTherapyStart
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bounceback-pt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCentralArkansasVeinCenterPa(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeCentralArkansasVeinCenterPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.cavc.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

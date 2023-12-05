@@ -30,6 +30,7 @@ func GetSourceObstetricalGynecologicalAssoc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeObstetricalGynecologicalAssoc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.weunderstandwomen.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

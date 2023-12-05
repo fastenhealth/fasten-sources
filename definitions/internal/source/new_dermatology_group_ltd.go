@@ -31,6 +31,7 @@ func GetSourceNewDermatologyGroupLtd(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"207N00000X", "207ND0101X", "207ND0900X", "207NI0002X", "207NP0225X", "207NS0135X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013350958", "1235480112", "1356784334", "1710321633"}}
+	sourceDef.PatientAccessUrl = "http://www.newdermgroup.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

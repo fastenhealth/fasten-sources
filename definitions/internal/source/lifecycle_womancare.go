@@ -31,6 +31,7 @@ func GetSourceLifecycleWomancare(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"103TC0700X", "163WL0100X", "176B00000X", "208D00000X", "261QB0400X", "363LX0001X"}
 	sourceDef.Aliases = []string{"LIFECYCLE WOMANCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1184305120", "1184898256", "1295778900", "1962568428"}}
+	sourceDef.PatientAccessUrl = "http://www.lifecyclewomancare.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

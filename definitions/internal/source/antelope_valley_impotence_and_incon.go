@@ -30,6 +30,7 @@ func GetSourceAntelopeValleyImpotenceAndIncon(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeAntelopeValleyImpotenceAndIncon
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.drrajaratnam.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

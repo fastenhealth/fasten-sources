@@ -30,6 +30,7 @@ func GetSourceWinkeOrthopedicPainManagementCe(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeWinkeOrthopedicPainManagementCe
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.winkepainmanagement.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

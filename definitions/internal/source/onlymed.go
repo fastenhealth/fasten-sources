@@ -30,6 +30,7 @@ func GetSourceOnlymed(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeOnlymed
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://onlymedclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

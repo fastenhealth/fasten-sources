@@ -31,6 +31,7 @@ func GetSourceAdventHealthcare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207Q00000X", "207X00000X", "207XS0117X", "207XX0801X", "251E00000X"}
 	sourceDef.Aliases = []string{"ADVENT HEALTHCARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1750706347", "1760859714"}}
+	sourceDef.PatientAccessUrl = "http://www.bhpgdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

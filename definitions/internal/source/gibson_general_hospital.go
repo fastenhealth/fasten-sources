@@ -31,6 +31,7 @@ func GetSourceGibsonGeneralHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"282NC0060X", "313M00000X", "314000000X"}
 	sourceDef.Aliases = []string{"GIBSON GENERAL HOSPITAL - SNF"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1386044279", "1568453462"}}
+	sourceDef.PatientAccessUrl = "http://www.gibsongeneral.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

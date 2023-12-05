@@ -30,6 +30,7 @@ func GetSourceZenithMentalHealthLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeZenithMentalHealthLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://ww.zenithconsultingservices.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

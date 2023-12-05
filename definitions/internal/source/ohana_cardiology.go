@@ -31,6 +31,7 @@ func GetSourceOhanaCardiology(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"174400000X"}
 	sourceDef.Aliases = []string{"OHANA CARDIOLOGY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1659703650"}}
+	sourceDef.PatientAccessUrl = "https://ohanacardiology.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

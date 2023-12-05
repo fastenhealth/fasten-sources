@@ -31,6 +31,7 @@ func GetSourceEclipseClinicPllc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"2081P2900X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1710551585"}}
+	sourceDef.PatientAccessUrl = "http://www.eclipseclinic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

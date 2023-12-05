@@ -31,6 +31,7 @@ func GetSourcePerfectLifestyle(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207R00000X", "261Q00000X", "261QX0100X"}
 	sourceDef.Aliases = []string{"LIFE'S PERFECT 7", "LIFESTYLE MEDICINE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114566023", "1417545047"}}
+	sourceDef.PatientAccessUrl = "http://mylifestylemed.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

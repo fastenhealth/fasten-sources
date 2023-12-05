@@ -31,6 +31,7 @@ func GetSourceHealthBrigade(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"101Y00000X", "101YA0400X", "101YM0800X", "1041C0700X", "133N00000X", "133NN1002X", "163W00000X", "163WA0400X", "163WC0400X", "163WC1500X", "207QA0505X", "207R00000X", "261QM1300X", "363LA2200X", "363LF0000X", "363LP2300X"}
 	sourceDef.Aliases = []string{"FAN FREE CLINIC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467735324", "1629519111"}}
+	sourceDef.PatientAccessUrl = "http://www.healthbrigade.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

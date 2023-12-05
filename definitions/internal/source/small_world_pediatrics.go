@@ -30,6 +30,7 @@ func GetSourceSmallWorldPediatrics(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeSmallWorldPediatrics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.smallworldpediatrics.weebly.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

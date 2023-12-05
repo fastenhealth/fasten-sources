@@ -30,6 +30,7 @@ func GetSourceDoeunLeeMdInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeDoeunLeeMdInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bayareaendocrine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

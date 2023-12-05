@@ -30,6 +30,7 @@ func GetSourceKennethJProefrockNmdPllcDbaTo(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeKennethJProefrockNmdPllcDbaTo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://totalwellnessmedical.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

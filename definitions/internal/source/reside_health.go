@@ -30,6 +30,7 @@ func GetSourceResideHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeResideHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://reside.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

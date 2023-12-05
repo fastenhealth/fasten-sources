@@ -31,6 +31,7 @@ func GetSourceSnorklHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"207QS1201X"}
 	sourceDef.Aliases = []string{"SNORKL HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356009120"}}
+	sourceDef.PatientAccessUrl = "http://snorklhealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

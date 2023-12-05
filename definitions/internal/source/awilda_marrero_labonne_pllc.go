@@ -31,6 +31,7 @@ func GetSourceAwildaMarreroLabonnePllc(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"208600000X", "261QH0100X", "363AM0700X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1356812895"}}
+	sourceDef.PatientAccessUrl = "http://www.myquikcare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

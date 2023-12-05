@@ -30,6 +30,7 @@ func GetSourceArkansasCenterForArthroscopyPa(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeArkansasCenterForArthroscopyPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.AgilityCenterOrthopedic.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

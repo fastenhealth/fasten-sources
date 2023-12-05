@@ -30,6 +30,7 @@ func GetSourceMorrisonMultspecialitiesCompanies(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeMorrisonMultspecialitiesCompanies
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sdamc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

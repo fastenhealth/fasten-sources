@@ -30,6 +30,7 @@ func GetSourceEasyOnlineHealthcare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeEasyOnlineHealthcare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ehonp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

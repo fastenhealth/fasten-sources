@@ -31,6 +31,7 @@ func GetSourceRoshanRajaDoPc(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"2084N0402X"}
 	sourceDef.Aliases = []string{"CHILD NEUROLOGY SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1033365556"}}
+	sourceDef.PatientAccessUrl = "http://www.KidsNeuro.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCollaborativeCareService(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeCollaborativeCareService
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.bestselfccs.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

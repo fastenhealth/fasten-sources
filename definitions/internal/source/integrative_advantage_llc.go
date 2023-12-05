@@ -30,6 +30,7 @@ func GetSourceIntegrativeAdvantageLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeIntegrativeAdvantageLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.doctordianna.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

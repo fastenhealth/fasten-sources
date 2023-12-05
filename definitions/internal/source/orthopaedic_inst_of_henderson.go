@@ -30,6 +30,7 @@ func GetSourceOrthopaedicInstOfHenderson(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeOrthopaedicInstOfHenderson
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.oihnv.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

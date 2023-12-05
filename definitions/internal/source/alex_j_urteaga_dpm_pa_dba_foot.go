@@ -30,6 +30,7 @@ func GetSourceAlexJUrteagaDpmPaDbaFoot(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeAlexJUrteagaDpmPaDbaFoot
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.goodfootdoc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

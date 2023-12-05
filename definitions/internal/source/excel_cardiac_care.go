@@ -31,6 +31,7 @@ func GetSourceExcelCardiacCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207R00000X", "207RC0000X", "207RI0011X", "246W00000X", "246X00000X", "246XC2901X", "246XC2903X", "246XS1301X", "261QM2500X", "363L00000X"}
 	sourceDef.Aliases = []string{"EXCEL CARDIAC CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1578904512", "1720778293"}}
+	sourceDef.PatientAccessUrl = "http://www.excelcardiaccare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

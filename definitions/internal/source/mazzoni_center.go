@@ -31,6 +31,7 @@ func GetSourceMazzoniCenter(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"101YM0800X", "104100000X", "207Q00000X", "251B00000X", "251S00000X"}
 	sourceDef.Aliases = []string{"PCHA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1225188428", "1477631307"}}
+	sourceDef.PatientAccessUrl = "http://mazzonicenter.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

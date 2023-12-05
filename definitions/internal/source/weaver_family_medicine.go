@@ -30,6 +30,7 @@ func GetSourceWeaverFamilyMedicine(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeWeaverFamilyMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://weavermedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

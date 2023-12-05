@@ -30,6 +30,7 @@ func GetSourcePremierCardiovascularCarePllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypePremierCardiovascularCarePllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.premiercardiovascularcare.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

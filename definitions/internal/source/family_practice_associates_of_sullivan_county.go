@@ -31,6 +31,7 @@ func GetSourceFamilyPracticeAssociatesOfSullivanCounty(env pkg.FastenLighthouseE
 	sourceDef.Category = []string{"207Q00000X", "261QR1300X"}
 	sourceDef.Aliases = []string{"FAMILY PRACTICE ASSOCIATES OF SULLIVAN COUNTY"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1447805965"}}
+	sourceDef.PatientAccessUrl = "http://www.schosp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceJimFrancoisDpmPtPa(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeJimFrancoisDpmPtPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.jimfrancoisdpm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

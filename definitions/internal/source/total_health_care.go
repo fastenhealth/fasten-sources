@@ -31,6 +31,7 @@ func GetSourceTotalHealthCare(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"101YA0400X", "251S00000X", "302R00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023344454", "1144735648", "1578649695", "1679914238", "1801114400", "1942536396", "1982928305"}}
+	sourceDef.PatientAccessUrl = "http://totalhealthcare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceEnerDripIvInfusionMedSpa(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeEnerDripIvInfusionMedSpa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.enerdrip.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

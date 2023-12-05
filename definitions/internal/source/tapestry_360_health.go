@@ -31,6 +31,7 @@ func GetSourceTapestry360Health(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"261QF0400X"}
 	sourceDef.Aliases = []string{"HEARTLAND HEALTH CENTERS", "TAPESTRY - ALBANY PARK", "TAPESTRY 360 HEALTH - ALBANY PARK"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407981392", "1548634991"}}
+	sourceDef.PatientAccessUrl = "https://tap360health.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

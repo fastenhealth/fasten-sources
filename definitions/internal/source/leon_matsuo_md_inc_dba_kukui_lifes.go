@@ -30,6 +30,7 @@ func GetSourceLeonMatsuoMdIncDbaKukuiLifes(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeLeonMatsuoMdIncDbaKukuiLifes
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kukuilifestylemedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

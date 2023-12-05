@@ -31,6 +31,7 @@ func GetSourceCherryCreekHeart(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{"CHERRY CREEK HEART"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1467127985"}}
+	sourceDef.PatientAccessUrl = "http://www.cherrycreekheart.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceHarperByron(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeHarperByron
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.ByronHarperMD.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceFlourishPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"208000000X"}
 	sourceDef.Aliases = []string{"FLOURISH PEDIATRICS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063025690"}}
+	sourceDef.PatientAccessUrl = "http://www.flourishpeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

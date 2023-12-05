@@ -30,6 +30,7 @@ func GetSourceMiGetMindAndBodyHealthyLlcSta(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeMiGetMindAndBodyHealthyLlcSta
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.getmindandbodyhealthy.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

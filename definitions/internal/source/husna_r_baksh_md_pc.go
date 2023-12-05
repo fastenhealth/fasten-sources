@@ -31,6 +31,7 @@ func GetSourceHusnaRBakshMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207R00000X"}
 	sourceDef.Aliases = []string{"HEALTHY STEPS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1265577118"}}
+	sourceDef.PatientAccessUrl = "http://www.myhealthysteps.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

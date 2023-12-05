@@ -30,6 +30,7 @@ func GetSourceChesapeakeRegionalPrimaryCarecurrituck(env pkg.FastenLighthouseEnv
 	sourceDef.SourceType = pkg.SourceTypeChesapeakeRegionalPrimaryCarecurrituck
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.chesapeakregional.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

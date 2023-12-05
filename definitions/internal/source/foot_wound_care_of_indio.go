@@ -30,6 +30,7 @@ func GetSourceFootWoundCareOfIndio(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeFootWoundCareOfIndio
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.sdamc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

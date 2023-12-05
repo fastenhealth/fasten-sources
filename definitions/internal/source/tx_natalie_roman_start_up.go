@@ -30,6 +30,7 @@ func GetSourceTxNatalieRomanStartUp(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeTxNatalieRomanStartUp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.elitepcw.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

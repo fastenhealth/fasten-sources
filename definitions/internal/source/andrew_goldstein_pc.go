@@ -31,6 +31,7 @@ func GetSourceAndrewGoldsteinPc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.Category = []string{"208G00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235382680"}}
+	sourceDef.PatientAccessUrl = "https://arizonaheartandlung.com/phoenix-scottsdale-valley/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

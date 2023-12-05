@@ -31,6 +31,7 @@ func GetSourceElevatedMedspaCorp(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"133NN1002X", "171400000X", "175L00000X", "207N00000X", "207ND0101X", "207ND0900X", "207NI0002X", "207NS0135X", "207SM0001X", "207ZC0500X", "207ZP0101X", "207ZP0102X", "2083P0901X", "261QR1100X", "291U00000X"}
 	sourceDef.Aliases = []string{"ELEVATED DERMATOLOGY & MEDSPA CORP", "ELEVATED DERMATOLOGY& MEDSPA CORP", "ELEVATED DERMPATH CORP", "INDY DERMATOLOGY INC.", "LEI KAY MED INC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1235706946"}}
+	sourceDef.PatientAccessUrl = "https://www.elevatedmedspa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

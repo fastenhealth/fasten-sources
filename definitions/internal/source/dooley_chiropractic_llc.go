@@ -31,6 +31,7 @@ func GetSourceDooleyChiropracticLlc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"261QH0100X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1588998132"}}
+	sourceDef.PatientAccessUrl = "http://www.chiropractorincenterville.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceGordonFlash(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeGordonFlash
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.rossvalleymedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

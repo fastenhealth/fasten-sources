@@ -30,6 +30,7 @@ func GetSourceAdvancedEyeProsthetics(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeAdvancedEyeProsthetics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.advancedeyeprosthetics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

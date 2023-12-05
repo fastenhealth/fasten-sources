@@ -30,6 +30,7 @@ func GetSourceKielhornGene(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeKielhornGene
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mdvip.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourcePlaceOfHope(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypePlaceOfHope
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://placeofhopega.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

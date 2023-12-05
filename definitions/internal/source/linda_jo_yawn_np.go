@@ -30,6 +30,7 @@ func GetSourceLindaJoYawnNp(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeLindaJoYawnNp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https:// silvervalleyfamilypractice.godaddysites.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

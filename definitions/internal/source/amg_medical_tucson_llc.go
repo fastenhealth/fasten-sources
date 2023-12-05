@@ -31,6 +31,7 @@ func GetSourceAmgMedicalTucsonLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"207R00000X", "207RB0002X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1013517333"}}
+	sourceDef.PatientAccessUrl = "http://amgmedicaltucson.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

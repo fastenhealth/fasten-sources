@@ -30,6 +30,7 @@ func GetSourceBestrongDpc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeBestrongDpc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.bestrongdpc.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

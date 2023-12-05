@@ -30,6 +30,7 @@ func GetSourceAmzwellcloudLlc(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeAmzwellcloudLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.amzwellcloud.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

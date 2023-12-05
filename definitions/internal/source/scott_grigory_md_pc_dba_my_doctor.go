@@ -30,6 +30,7 @@ func GetSourceScottGrigoryMdPcDbaMyDoctor(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeScottGrigoryMdPcDbaMyDoctor
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mydoctorpediatrics.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

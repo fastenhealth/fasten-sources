@@ -30,6 +30,7 @@ func GetSourceJaneyLeachmanHammonsArnp(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.SourceType = pkg.SourceTypeJaneyLeachmanHammonsArnp
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.janeylhammonsnpc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceInfectiousDiseasesAssociates(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.Category = []string{"207RI0200X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1396180311"}}
+	sourceDef.PatientAccessUrl = "https://www.srqida.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceTheTanenbaumDermatologyCenterPl(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeTheTanenbaumDermatologyCenterPl
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tanenbaumdermatologycenter.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

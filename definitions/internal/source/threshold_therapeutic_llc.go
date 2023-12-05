@@ -30,6 +30,7 @@ func GetSourceThresholdTherapeuticLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeThresholdTherapeuticLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.thresholdot.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceStevenVKozmaryMdLlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"261QM1300X", "261QP3300X"}
 	sourceDef.Aliases = []string{"CLEVELAND PAIN SPECIALISTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1891271813"}}
+	sourceDef.PatientAccessUrl = "http://www.clevelandbackandpain.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

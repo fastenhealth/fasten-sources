@@ -30,6 +30,7 @@ func GetSourceBarnesHammer(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeBarnesHammer
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.stewardconnect.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

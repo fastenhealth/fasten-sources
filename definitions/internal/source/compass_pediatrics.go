@@ -30,6 +30,7 @@ func GetSourceCompassPediatrics(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeCompassPediatrics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.compass-peds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

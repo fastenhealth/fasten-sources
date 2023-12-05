@@ -31,6 +31,7 @@ func GetSourceGaiaMedPllc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.Category = []string{"133V00000X", "171100000X", "175F00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407345804"}}
+	sourceDef.PatientAccessUrl = "http://www.gaiamed.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

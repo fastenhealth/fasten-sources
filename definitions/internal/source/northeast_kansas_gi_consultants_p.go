@@ -30,6 +30,7 @@ func GetSourceNortheastKansasGiConsultantsP(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeNortheastKansasGiConsultantsP
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.nekgi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

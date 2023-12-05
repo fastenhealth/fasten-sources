@@ -30,6 +30,7 @@ func GetSourceArkangelEndocrinologyDiabetes(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeArkangelEndocrinologyDiabetes
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.annaboron.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceFamilyPracticeAssociatesQuickCare(env pkg.FastenLighthouseEnvType,
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeAssociatesQuickCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.schosp.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

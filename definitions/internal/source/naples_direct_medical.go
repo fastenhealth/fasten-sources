@@ -30,6 +30,7 @@ func GetSourceNaplesDirectMedical(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeNaplesDirectMedical
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Naplesdirectmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

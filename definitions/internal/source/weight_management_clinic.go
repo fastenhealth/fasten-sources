@@ -30,6 +30,7 @@ func GetSourceWeightManagementClinic(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.SourceType = pkg.SourceTypeWeightManagementClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.illuminationscolumbia.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

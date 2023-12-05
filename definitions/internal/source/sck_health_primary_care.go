@@ -30,6 +30,7 @@ func GetSourceSckHealthPrimaryCare(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.SourceType = pkg.SourceTypeSckHealthPrimaryCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://winfieldmedicalarts.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

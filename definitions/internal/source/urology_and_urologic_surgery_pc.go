@@ -31,6 +31,7 @@ func GetSourceUrologyAndUrologicSurgeryPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"208800000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962532515"}}
+	sourceDef.PatientAccessUrl = "http://www.uuspc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

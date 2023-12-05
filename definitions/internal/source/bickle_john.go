@@ -30,6 +30,7 @@ func GetSourceBickleJohn(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeBickleJohn
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.JohnBickleDO.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

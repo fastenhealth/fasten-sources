@@ -31,6 +31,7 @@ func GetSourceGoldbergPsychiatry(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1942956255"}}
+	sourceDef.PatientAccessUrl = "http://www.goldbergpsychiatry.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

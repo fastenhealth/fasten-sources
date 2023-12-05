@@ -30,6 +30,7 @@ func GetSourceMovementDisorderConsultantsPllc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeMovementDisorderConsultantsPllc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.idneurology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

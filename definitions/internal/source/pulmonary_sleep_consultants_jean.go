@@ -30,6 +30,7 @@ func GetSourcePulmonarySleepConsultantsJean(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypePulmonarySleepConsultantsJean
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.pscflorida.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

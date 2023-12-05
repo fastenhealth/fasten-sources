@@ -30,6 +30,7 @@ func GetSourcePeninsulaOrthopaedicGroupPc(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypePeninsulaOrthopaedicGroupPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.penortho.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

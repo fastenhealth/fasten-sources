@@ -30,6 +30,7 @@ func GetSourceGermaneWiseMentalHealthSystem(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeGermaneWiseMentalHealthSystem
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.germanewise.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

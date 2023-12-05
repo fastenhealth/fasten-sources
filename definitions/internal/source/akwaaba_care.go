@@ -30,6 +30,7 @@ func GetSourceAkwaabaCare(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeAkwaabaCare
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.akwaabacare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

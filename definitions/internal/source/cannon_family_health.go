@@ -30,6 +30,7 @@ func GetSourceCannonFamilyHealth(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeCannonFamilyHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hellohopscotch.com/locations"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

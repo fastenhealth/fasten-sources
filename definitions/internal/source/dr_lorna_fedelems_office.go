@@ -30,6 +30,7 @@ func GetSourceDrLornaFedelemsOffice(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeDrLornaFedelemsOffice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Lornafedelemmd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

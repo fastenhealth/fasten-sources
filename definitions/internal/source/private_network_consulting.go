@@ -31,6 +31,7 @@ func GetSourcePrivateNetworkConsulting(env pkg.FastenLighthouseEnvType, clientId
 	sourceDef.Category = []string{"363LP0808X"}
 	sourceDef.Aliases = []string{"GREENE HEALTH SERVICES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1205527124"}}
+	sourceDef.PatientAccessUrl = "https://greenehealth.me/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

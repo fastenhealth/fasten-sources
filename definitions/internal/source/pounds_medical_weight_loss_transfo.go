@@ -30,6 +30,7 @@ func GetSourcePoundsMedicalWeightLossTransfo(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypePoundsMedicalWeightLossTransfo
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://poundstransformation.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

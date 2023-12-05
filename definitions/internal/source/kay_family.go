@@ -30,6 +30,7 @@ func GetSourceKayFamily(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.
 	sourceDef.SourceType = pkg.SourceTypeKayFamily
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://villagemedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

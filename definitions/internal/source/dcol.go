@@ -30,6 +30,7 @@ func GetSourceDcol(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sourc
 	sourceDef.SourceType = pkg.SourceTypeDcol
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://dcol.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

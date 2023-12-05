@@ -30,6 +30,7 @@ func GetSourceSusieNChungMdPa(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.SourceType = pkg.SourceTypeSusieNChungMdPa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.susienchungmd.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

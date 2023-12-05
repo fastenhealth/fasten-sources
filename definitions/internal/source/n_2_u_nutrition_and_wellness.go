@@ -30,6 +30,7 @@ func GetSourceN2UNutritionAndWellness(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeN2UNutritionAndWellness
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.n2unutrition.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

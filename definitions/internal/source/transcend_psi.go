@@ -30,6 +30,7 @@ func GetSourceTranscendPsi(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeTranscendPsi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.transcendpsi.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

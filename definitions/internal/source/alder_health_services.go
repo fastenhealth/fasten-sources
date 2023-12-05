@@ -31,6 +31,7 @@ func GetSourceAlderHealthServices(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.Category = []string{"101YM0800X", "2084P0800X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1073867719"}}
+	sourceDef.PatientAccessUrl = "http://www.alderhealth.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

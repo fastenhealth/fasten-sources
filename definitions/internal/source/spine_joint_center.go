@@ -30,6 +30,7 @@ func GetSourceSpineJointCenter(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeSpineJointCenter
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.ortho.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

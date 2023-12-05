@@ -31,6 +31,7 @@ func GetSourceInsightTmsAndMentalHealthCare(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"2084P0800X"}
 	sourceDef.Aliases = []string{"INSIGHT TMS AND MENTAL HEALTH CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1962171314"}}
+	sourceDef.PatientAccessUrl = "http://insight-tms.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceAdvancedOrthopedicsNewEngland(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"174400000X", "207X00000X", "332B00000X", "335E00000X"}
 	sourceDef.Aliases = []string{"GREATER HRTFORD ORTHOPEDIC GROUP, PC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063703551", "1083905319", "1215086459", "1225329501", "1316469927", "1427348770", "1457803702", "1528640836", "1972907954"}}
+	sourceDef.PatientAccessUrl = "https://www.ctortho.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

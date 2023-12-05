@@ -30,6 +30,7 @@ func GetSourceMidatlanticFamilyPractice(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeMidatlanticFamilyPractice
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mafp.net"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

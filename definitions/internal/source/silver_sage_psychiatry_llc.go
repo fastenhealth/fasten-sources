@@ -31,6 +31,7 @@ func GetSourceSilverSagePsychiatryLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.Category = []string{"364SP0808X"}
 	sourceDef.Aliases = []string{"SILVER SAGE PSYCHIATRY LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619629912"}}
+	sourceDef.PatientAccessUrl = "http://www.vervech.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

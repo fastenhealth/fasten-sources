@@ -30,6 +30,7 @@ func GetSourceGomelbVascularLlcStlFibroidAnd(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeGomelbVascularLlcStlFibroidAnd
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mintstl.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

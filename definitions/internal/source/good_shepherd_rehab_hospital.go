@@ -30,6 +30,7 @@ func GetSourceGoodShepherdRehabHospital(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeGoodShepherdRehabHospital
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.goodshepherdrehab.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

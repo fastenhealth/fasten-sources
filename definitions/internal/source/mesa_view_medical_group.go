@@ -31,6 +31,7 @@ func GetSourceMesaViewMedicalGroup(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"261QR1300X"}
 	sourceDef.Aliases = []string{"MESA VIEW MEDICAL GROUP"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1528639879"}}
+	sourceDef.PatientAccessUrl = "http://www.mesaviewmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceVertraeInc(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 	sourceDef.SourceType = pkg.SourceTypeVertraeInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.vertrae.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

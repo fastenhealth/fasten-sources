@@ -31,6 +31,7 @@ func GetSourceZoeInterventionalPainManagement(env pkg.FastenLighthouseEnvType, c
 	sourceDef.Category = []string{"332900000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1134404718", "1851676258"}}
+	sourceDef.PatientAccessUrl = "http://www.eastidahopain.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

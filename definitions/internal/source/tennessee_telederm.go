@@ -30,6 +30,7 @@ func GetSourceTennesseeTelederm(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeTennesseeTelederm
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Tntelederm.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

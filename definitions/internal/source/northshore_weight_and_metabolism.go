@@ -30,6 +30,7 @@ func GetSourceNorthshoreWeightAndMetabolism(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.SourceType = pkg.SourceTypeNorthshoreWeightAndMetabolism
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.northshoreweightandmetabolism.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

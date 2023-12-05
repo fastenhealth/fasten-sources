@@ -30,6 +30,7 @@ func GetSourceCentersForAdvancedOrthopaedicsAtMmi(env pkg.FastenLighthouseEnvTyp
 	sourceDef.SourceType = pkg.SourceTypeCentersForAdvancedOrthopaedicsAtMmi
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.mmidocs.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

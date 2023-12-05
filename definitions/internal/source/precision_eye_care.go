@@ -31,6 +31,7 @@ func GetSourcePrecisionEyeCare(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.Category = []string{"152W00000X", "207W00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1114408689", "1508342064"}}
+	sourceDef.PatientAccessUrl = "http://www.precisioneyemd.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

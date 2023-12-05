@@ -30,6 +30,7 @@ func GetSourceContinuumHealthcareProvidersWest(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeContinuumHealthcareProvidersWest
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://chcpwfl.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

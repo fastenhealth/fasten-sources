@@ -30,6 +30,7 @@ func GetSourceEncompassWomensHealth(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeEncompassWomensHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.encompasswomenshealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

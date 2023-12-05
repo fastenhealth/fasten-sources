@@ -31,6 +31,7 @@ func GetSourceImpactPrimaryAndUrgentCare(env pkg.FastenLighthouseEnvType, client
 	sourceDef.Category = []string{"207Q00000X"}
 	sourceDef.Aliases = []string{"IMPACT PRIMARY AND URGENT CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124537246"}}
+	sourceDef.PatientAccessUrl = "http://www.impacthealthcarnc.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

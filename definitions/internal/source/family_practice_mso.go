@@ -30,6 +30,7 @@ func GetSourceFamilyPracticeMso(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeFamilyPracticeMso
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.hillsdale-health.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

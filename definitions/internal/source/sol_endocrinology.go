@@ -30,6 +30,7 @@ func GetSourceSolEndocrinology(env pkg.FastenLighthouseEnvType, clientIdLookup m
 	sourceDef.SourceType = pkg.SourceTypeSolEndocrinology
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://WWW.SOL-ENDO.COM"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

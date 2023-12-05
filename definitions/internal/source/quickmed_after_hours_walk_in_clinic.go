@@ -31,6 +31,7 @@ func GetSourceQuickmedAfterHoursWalkInClinic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"261Q00000X", "363LF0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1063995488"}}
+	sourceDef.PatientAccessUrl = "http://www.quickmedafterhours.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

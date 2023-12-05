@@ -30,6 +30,7 @@ func GetSourceTulioHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypeTulioHealth
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tuliohealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

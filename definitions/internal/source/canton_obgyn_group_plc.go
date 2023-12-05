@@ -30,6 +30,7 @@ func GetSourceCantonObgynGroupPlc(env pkg.FastenLighthouseEnvType, clientIdLooku
 	sourceDef.SourceType = pkg.SourceTypeCantonObgynGroupPlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.beaumontcantonobgyn.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

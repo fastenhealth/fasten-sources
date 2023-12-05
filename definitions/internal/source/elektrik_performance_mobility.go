@@ -30,6 +30,7 @@ func GetSourceElektrikPerformanceMobility(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.SourceType = pkg.SourceTypeElektrikPerformanceMobility
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.balancingactpt.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

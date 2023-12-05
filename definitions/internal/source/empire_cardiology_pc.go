@@ -31,6 +31,7 @@ func GetSourceEmpireCardiologyPc(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.Category = []string{"207RC0000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1932379815"}}
+	sourceDef.PatientAccessUrl = "http://empcardiology.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

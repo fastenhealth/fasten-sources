@@ -30,6 +30,7 @@ func GetSourceWholelifeAuthenticCareProviderN(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeWholelifeAuthenticCareProviderN
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.wholelifeac.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

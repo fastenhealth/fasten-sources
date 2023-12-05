@@ -31,6 +31,7 @@ func GetSourceRvaAllergyLlc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.Category = []string{"207K00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1023610946"}}
+	sourceDef.PatientAccessUrl = "http://rvaallergy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

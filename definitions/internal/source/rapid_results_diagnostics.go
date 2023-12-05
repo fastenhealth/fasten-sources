@@ -30,6 +30,7 @@ func GetSourceRapidResultsDiagnostics(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeRapidResultsDiagnostics
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.rapidresultsnwa.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

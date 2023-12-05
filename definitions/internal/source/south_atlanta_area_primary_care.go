@@ -31,6 +31,7 @@ func GetSourceSouthAtlantaAreaPrimaryCare(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"111N00000X", "207Q00000X", "213ES0103X"}
 	sourceDef.Aliases = []string{"SOUTH ATLANTA AREA PRIMARY CARE"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1376952069"}}
+	sourceDef.PatientAccessUrl = "https://mydoctorcares.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

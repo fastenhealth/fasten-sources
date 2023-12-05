@@ -31,6 +31,7 @@ func GetSourcePrescribedna(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.Category = []string{"183500000X"}
 	sourceDef.Aliases = []string{"PRESCRIBEDNA"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1770221624"}}
+	sourceDef.PatientAccessUrl = "http://www.prescribedna.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

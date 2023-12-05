@@ -31,6 +31,7 @@ func GetSourceMusculoskeletalAssociatesPllc(env pkg.FastenLighthouseEnvType, cli
 	sourceDef.Category = []string{"204D00000X", "332900000X", "332B00000X", "363AM0700X", "363L00000X"}
 	sourceDef.Aliases = []string{"FITNESS INSIGHTS"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1124780176", "1477900629"}}
+	sourceDef.PatientAccessUrl = "http://www.fitinlou.com/diabetic"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceRenukaRamakrishnaMdSc(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207V00000X"}
 	sourceDef.Aliases = []string{"RAMAKRISHNA OBSTETRICS AND GYNECOLOGY LIMITED"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1538580725"}}
+	sourceDef.PatientAccessUrl = "http://www.rama-obgyn.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

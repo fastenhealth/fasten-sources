@@ -30,6 +30,7 @@ func GetSourceTruwell(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeTruwell
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.truwell.health"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceCommunitycareFreeMedicalClinic(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeCommunitycareFreeMedicalClinic
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.utcommunitycare.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

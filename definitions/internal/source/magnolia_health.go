@@ -31,6 +31,7 @@ func GetSourceMagnoliaHealth(env pkg.FastenLighthouseEnvType, clientIdLookup map
 	sourceDef.Category = []string{"261QH0100X", "363LW0102X"}
 	sourceDef.Aliases = []string{"MAGNOLIA HEALTH"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1619643483"}}
+	sourceDef.PatientAccessUrl = "http://www.magnoliahealthtulsa.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

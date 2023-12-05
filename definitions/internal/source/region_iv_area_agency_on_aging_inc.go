@@ -30,6 +30,7 @@ func GetSourceRegionIvAreaAgencyOnAgingInc(env pkg.FastenLighthouseEnvType, clie
 	sourceDef.SourceType = pkg.SourceTypeRegionIvAreaAgencyOnAgingInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.areaagencyonaging.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

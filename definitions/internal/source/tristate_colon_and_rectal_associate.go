@@ -30,6 +30,7 @@ func GetSourceTristateColonAndRectalAssociate(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeTristateColonAndRectalAssociate
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.tristatecolonandrectal.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

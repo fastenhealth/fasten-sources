@@ -30,6 +30,7 @@ func GetSourceAllianceObgynDrRajuStartup(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypeAllianceObgynDrRajuStartup
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://allianceobgynma.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

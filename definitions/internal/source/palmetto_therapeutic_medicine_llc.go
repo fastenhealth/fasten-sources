@@ -31,6 +31,7 @@ func GetSourcePalmettoTherapeuticMedicineLlc(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.Category = []string{"310400000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1306215140"}}
+	sourceDef.PatientAccessUrl = "http://www.palmettotherapeuticmedicine.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

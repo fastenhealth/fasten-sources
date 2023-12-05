@@ -30,6 +30,7 @@ func GetSourceElayneAndJamesSchokeJewishFami(env pkg.FastenLighthouseEnvType, cl
 	sourceDef.SourceType = pkg.SourceTypeElayneAndJamesSchokeJewishFami
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.CTJFS.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

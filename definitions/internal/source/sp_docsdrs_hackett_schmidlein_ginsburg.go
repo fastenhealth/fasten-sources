@@ -30,6 +30,7 @@ func GetSourceSpDocsdrsHackettSchmidleinGinsburg(env pkg.FastenLighthouseEnvType
 	sourceDef.SourceType = pkg.SourceTypeSpDocsdrsHackettSchmidleinGinsburg
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.spdocs.net/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

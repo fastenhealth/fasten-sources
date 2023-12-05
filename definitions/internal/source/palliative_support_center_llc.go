@@ -30,6 +30,7 @@ func GetSourcePalliativeSupportCenterLlc(env pkg.FastenLighthouseEnvType, client
 	sourceDef.SourceType = pkg.SourceTypePalliativeSupportCenterLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.crh.org/service-centers/palliative-care"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

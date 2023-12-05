@@ -30,6 +30,7 @@ func GetSourceEnhanceCenterForInterventionalS(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeEnhanceCenterForInterventionalS
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.enhance-center.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

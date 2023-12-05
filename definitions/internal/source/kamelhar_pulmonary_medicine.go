@@ -30,6 +30,7 @@ func GetSourceKamelharPulmonaryMedicine(env pkg.FastenLighthouseEnvType, clientI
 	sourceDef.SourceType = pkg.SourceTypeKamelharPulmonaryMedicine
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.kamelharpulmonary.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

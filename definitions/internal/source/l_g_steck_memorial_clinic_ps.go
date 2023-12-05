@@ -30,6 +30,7 @@ func GetSourceLGSteckMemorialClinicPs(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeLGSteckMemorialClinicPs
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.steckmedical.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

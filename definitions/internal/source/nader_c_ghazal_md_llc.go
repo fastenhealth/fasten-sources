@@ -30,6 +30,7 @@ func GetSourceNaderCGhazalMdLlc(env pkg.FastenLighthouseEnvType, clientIdLookup 
 	sourceDef.SourceType = pkg.SourceTypeNaderCGhazalMdLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.suwaneeorthocare.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

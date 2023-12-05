@@ -30,6 +30,7 @@ func GetSourceDrOzone(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 	sourceDef.SourceType = pkg.SourceTypeDrOzone
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.doctor-ozone.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -31,6 +31,7 @@ func GetSourceWrightStatePhysicians(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.Category = []string{"207V00000X", "208600000X", "2086S0102X", "363A00000X"}
 	sourceDef.Aliases = []string{}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1316188147", "1619161403"}}
+	sourceDef.PatientAccessUrl = "http://www.WrightStatePhysicians.org"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

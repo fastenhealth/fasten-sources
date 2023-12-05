@@ -30,6 +30,7 @@ func GetSourceRichmondHealthNetwork(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeRichmondHealthNetwork
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.rumcsi.org/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

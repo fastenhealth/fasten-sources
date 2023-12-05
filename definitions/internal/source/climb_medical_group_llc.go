@@ -31,6 +31,7 @@ func GetSourceClimbMedicalGroupLlc(env pkg.FastenLighthouseEnvType, clientIdLook
 	sourceDef.Category = []string{"101YA0400X", "103TA0400X", "207Q00000X", "207QA0401X"}
 	sourceDef.Aliases = []string{"CLIMB INNOVATIONS LLC"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1093203291"}}
+	sourceDef.PatientAccessUrl = "http://climbmedical.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

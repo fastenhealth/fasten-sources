@@ -31,6 +31,7 @@ func GetSourceHealthyMindsForHealthyLives(env pkg.FastenLighthouseEnvType, clien
 	sourceDef.Category = []string{"261QP2300X"}
 	sourceDef.Aliases = []string{"HEALTHY MINDS FOR HEALTHY LIVES"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1407505035"}}
+	sourceDef.PatientAccessUrl = "http://www.asustainablemindwf.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

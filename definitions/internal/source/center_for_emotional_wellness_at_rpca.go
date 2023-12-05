@@ -30,6 +30,7 @@ func GetSourceCenterForEmotionalWellnessAtRpca(env pkg.FastenLighthouseEnvType, 
 	sourceDef.SourceType = pkg.SourceTypeCenterForEmotionalWellnessAtRpca
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://bocaintegrativehealth.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

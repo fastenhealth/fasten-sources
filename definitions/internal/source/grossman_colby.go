@@ -30,6 +30,7 @@ func GetSourceGrossmanColby(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeGrossmanColby
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://mdvip.com/ColbyGrossmanMD"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

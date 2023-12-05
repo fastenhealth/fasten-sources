@@ -30,6 +30,7 @@ func GetSourceDegnanAlyssa(env pkg.FastenLighthouseEnvType, clientIdLookup map[p
 	sourceDef.SourceType = pkg.SourceTypeDegnanAlyssa
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://Login.AlyssaDegnanDO.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

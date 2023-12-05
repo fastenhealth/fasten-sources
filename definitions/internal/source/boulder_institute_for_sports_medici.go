@@ -30,6 +30,7 @@ func GetSourceBoulderInstituteForSportsMedici(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeBoulderInstituteForSportsMedici
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.boulderinstitute.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

@@ -30,6 +30,7 @@ func GetSourceMusicCityPeds(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeMusicCityPeds
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "http://www.musiccitypeds.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

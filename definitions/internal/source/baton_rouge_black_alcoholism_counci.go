@@ -30,6 +30,7 @@ func GetSourceBatonRougeBlackAlcoholismCounci(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeBatonRougeBlackAlcoholismCounci
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.PatientAccessUrl = "https://www.brmetrohealth.com/"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

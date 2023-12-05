@@ -31,6 +31,7 @@ func GetSourceTheHealingRheum(env pkg.FastenLighthouseEnvType, clientIdLookup ma
 	sourceDef.Category = []string{"207RR0500X"}
 	sourceDef.Aliases = []string{"THE HEALING RHEUM"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1922767268"}}
+	sourceDef.PatientAccessUrl = "http://www.thehealingrheum.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err

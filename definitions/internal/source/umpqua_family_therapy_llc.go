@@ -31,6 +31,7 @@ func GetSourceUmpquaFamilyTherapyLlc(env pkg.FastenLighthouseEnvType, clientIdLo
 	sourceDef.Category = []string{"251B00000X", "261QM0801X", "261QM0855X"}
 	sourceDef.Aliases = []string{"MEREDITH A YOST-CONCEPCION", "MEREDITH CONCEPCION", "MEREDITH CONCEPCION, LCSW"}
 	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1104401439"}}
+	sourceDef.PatientAccessUrl = "http://umpquafamilytherapy.com"
 	sourceDef.SecretKeyPrefix = "athena"
 
 	return sourceDef, err
