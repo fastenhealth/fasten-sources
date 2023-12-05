@@ -31,6 +31,7 @@ func GetSourceWillsMemorialHospital(env pkg.FastenLighthouseEnvType, clientIdLoo
 	sourceDef.SourceType = pkg.SourceTypeWillsMemorialHospital
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "wills-memorial-hospital.JPG"
 	sourceDef.SecretKeyPrefix = "cerner"
 
 	return sourceDef, err

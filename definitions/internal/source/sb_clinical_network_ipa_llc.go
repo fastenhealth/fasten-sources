@@ -31,6 +31,7 @@ func GetSourceSbClinicalNetworkIpaLlc(env pkg.FastenLighthouseEnvType, clientIdL
 	sourceDef.SourceType = pkg.SourceTypeSbClinicalNetworkIpaLlc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "sb-clinical-network-ipa-llc.JPG"
 	sourceDef.PatientAccessUrl = "htpps://na.com"
 	sourceDef.SecretKeyPrefix = "cerner"
 

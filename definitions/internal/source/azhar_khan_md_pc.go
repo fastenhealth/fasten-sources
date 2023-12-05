@@ -31,7 +31,7 @@ func GetSourceAzharKhanMdPc(env pkg.FastenLighthouseEnvType, clientIdLookup map[
 	sourceDef.SourceType = pkg.SourceTypeAzharKhanMdPc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.BrandLogo = "azhar-khan-md-pc.svg"
+	sourceDef.BrandLogo = "azhar-khan-md-pc.jpg"
 	sourceDef.PatientAccessUrl = "https://integrisok.com/doctors/azhar-khan"
 	sourceDef.SecretKeyPrefix = "cerner"
 

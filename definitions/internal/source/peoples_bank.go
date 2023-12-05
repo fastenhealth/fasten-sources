@@ -31,7 +31,7 @@ func GetSourcePeoplesBank(env pkg.FastenLighthouseEnvType, clientIdLookup map[pk
 	sourceDef.SourceType = pkg.SourceTypePeoplesBank
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.BrandLogo = "peoples-bank.jpg"
+	sourceDef.BrandLogo = "peoples-bank.PNG"
 	sourceDef.PatientAccessUrl = "https://www.peoplesbancorp.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

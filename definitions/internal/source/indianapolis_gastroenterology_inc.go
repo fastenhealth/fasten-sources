@@ -31,7 +31,7 @@ func GetSourceIndianapolisGastroenterologyInc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeIndianapolisGastroenterologyInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.BrandLogo = "indianapolis-gastroenterology-inc.jpg"
+	sourceDef.BrandLogo = "indianapolis-gastroenterology-inc.GIF"
 	sourceDef.PatientAccessUrl = "https://indygastro.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

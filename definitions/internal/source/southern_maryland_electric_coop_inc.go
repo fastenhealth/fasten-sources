@@ -31,7 +31,7 @@ func GetSourceSouthernMarylandElectricCoopInc(env pkg.FastenLighthouseEnvType, c
 	sourceDef.SourceType = pkg.SourceTypeSouthernMarylandElectricCoopInc
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
-	sourceDef.BrandLogo = "southern-maryland-electric-coop-inc.svg"
+	sourceDef.BrandLogo = "southern-maryland-electric-coop-inc.jpg"
 	sourceDef.PatientAccessUrl = "https://www.smeco.coop/"
 	sourceDef.SecretKeyPrefix = "cerner"
 

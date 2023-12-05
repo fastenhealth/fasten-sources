@@ -31,6 +31,7 @@ func GetSourceMarylandLiveCasino(env pkg.FastenLighthouseEnvType, clientIdLookup
 	sourceDef.SourceType = pkg.SourceTypeMarylandLiveCasino
 	sourceDef.Category = []string{}
 	sourceDef.Aliases = []string{}
+	sourceDef.BrandLogo = "maryland-live-casino.PNG"
 	sourceDef.PatientAccessUrl = "https://maryland.livecasinohotel.com/"
 	sourceDef.SecretKeyPrefix = "cerner"
 
