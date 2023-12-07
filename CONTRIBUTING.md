@@ -73,6 +73,7 @@ However, Fasten may have already done this for you, as we keep track of EHR inte
 
 Once you've found the developer documentation for your EHR, you should follow their instructions for registering a client application.
 
+> [!IMPORTANT]  
 > During development, use your personal email & information for registering the client application. Once you've finished testing & development, 
 > a Fasten maintainer will create another client application registration using the Fasten email & information, and then request production access.
 
