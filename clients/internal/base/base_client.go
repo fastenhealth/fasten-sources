@@ -189,7 +189,7 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 	}
 
 	c.OauthClient = oauth2.NewClient(c.Context, oauth2.StaticTokenSource(token))
-	c.OauthClient.Timeout = 30 * time.Second
+	c.OauthClient.Timeout = 120 * time.Second
 
 	return nil
 }
@@ -198,10 +198,10 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 // HttpClient
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//GetRequest makes a GET request to the specified resource subpath or a fully qualified url
-//it will then decodes the response into the specified model (which should be a pointer to map[string]interface{})
+// GetRequest makes a GET request to the specified resource subpath or a fully qualified url
+// it will then decodes the response into the specified model (which should be a pointer to map[string]interface{})
 //
-//This function make the assumption that FHIR endpoint responses are always JSON
+// This function make the assumption that FHIR endpoint responses are always JSON
 func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) (string, error) {
 	//check if we need to refresh the access token
 	err := c.RefreshAccessToken()
