@@ -19,7 +19,6 @@ func GetSourceBcbsal(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 	sourceDef.TokenEndpoint = "https://fhirapi.bcbsal.org/oauth/token"
 
 	sourceDef.Issuer = "https://fhirapi.bcbsal.org/edifecs/fhir/R4/"
-	sourceDef.Scopes = []string{"fhirUser", "openid", "patient/*.read", "profile", "user/HealthcareService.read", "user/InsurancePlan.read", "user/Location.read", "user/MedicationKnowledge.read", "user/Organization.read", "user/OrganizationAffiliation.read", "user/Practitioner.read", "user/PractitionerRole.read"}
 	sourceDef.GrantTypesSupported = []string{"authorization_code"}
 	sourceDef.ResponseType = []string{"code"}
 	sourceDef.ResponseModesSupported = []string{"query"}
