@@ -35,10 +35,10 @@ func GetSourceMeditech(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.S
 
 	sourceDef.Display = "Meditech (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeMeditech
-	sourceDef.SourceType = pkg.SourceTypeMeditech
-	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "www.meditech.com"
+	//sourceDef.SourceType = pkg.SourceTypeMeditech
+	//sourceDef.Category = []string{"Sandbox"}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "www.meditech.com"
 
 	return sourceDef, nil
 }

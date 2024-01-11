@@ -43,10 +43,10 @@ func GetSourceAllscripts(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Allscripts - Veradigm (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeAllscripts
-	sourceDef.SourceType = pkg.SourceTypeAllscripts
-	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://www.allscripts.com"
+	//sourceDef.SourceType = pkg.SourceTypeAllscripts
+	//sourceDef.Category = []string{"Sandbox"}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "https://www.allscripts.com"
 
 	return sourceDef, nil
 }

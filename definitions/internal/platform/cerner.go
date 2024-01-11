@@ -40,11 +40,11 @@ func GetSourceCerner(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Cerner (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeCerner
-	sourceDef.SourceType = pkg.SourceTypeCerner
-	sourceDef.Category = []string{"261QC1800X", "261Q00000X", "333600000X", "363AM0700X"}
-	sourceDef.Aliases = []string{"CERNER HEALTH CONNECTIONS, INC"}
-	sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700190840", "1659860716", "1922697838", "1689269136", "1841868205", "1376161828", "1225690118", "1063171486", "1437780327", "1962028969", "1396376471", "1922676386", "1346915600", "1922507763", "1003518598", "1285336776", "1366950420", "1093328148", "1336586874", "1942718440", "1790444115", "1053909168", "1558939918", "1013585470", "1285197699", "1932723806", "1417450651", "1033629761", "1912672270", "1639555048", "1629511258", "1245999663", "1790444974", "1013479716", "1942969365", "1760820716", "1851050272", "1598141798", "1871252296"}}
-	sourceDef.PatientAccessUrl = "www.cerner.com"
+	//sourceDef.SourceType = pkg.SourceTypeCerner
+	//sourceDef.Category = []string{"261QC1800X", "261Q00000X", "333600000X", "363AM0700X"}
+	//sourceDef.Aliases = []string{"CERNER HEALTH CONNECTIONS, INC"}
+	//sourceDef.Identifiers = map[string][]string{"http://hl7.org/fhir/sid/us-npi": []string{"1700190840", "1659860716", "1922697838", "1689269136", "1841868205", "1376161828", "1225690118", "1063171486", "1437780327", "1962028969", "1396376471", "1922676386", "1346915600", "1922507763", "1003518598", "1285336776", "1366950420", "1093328148", "1336586874", "1942718440", "1790444115", "1053909168", "1558939918", "1013585470", "1285197699", "1932723806", "1417450651", "1033629761", "1912672270", "1639555048", "1629511258", "1245999663", "1790444974", "1013479716", "1942969365", "1760820716", "1851050272", "1598141798", "1871252296"}}
+	//sourceDef.PatientAccessUrl = "www.cerner.com"
 
 	return sourceDef, nil
 }

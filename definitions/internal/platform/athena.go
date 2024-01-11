@@ -39,10 +39,10 @@ func GetSourceAthena(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	sourceDef.Display = "Athena (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeAthena
-	sourceDef.SourceType = pkg.SourceTypeAthena
-	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://www.athenahealth.com"
+	//sourceDef.SourceType = pkg.SourceTypeAthena
+	//sourceDef.Category = []string{"Sandbox"}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "https://www.athenahealth.com"
 
 	return sourceDef, nil
 }

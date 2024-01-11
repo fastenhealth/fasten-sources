@@ -40,10 +40,10 @@ func GetSourceEclinicalworks(env pkg.FastenLighthouseEnvType, clientIdLookup map
 
 	sourceDef.Display = "eClinicalWorks - Healow (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeEclinicalworks
-	sourceDef.SourceType = pkg.SourceTypeEclinicalworks
-	sourceDef.Category = []string{}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://www.eclinicalworks.com"
+	//sourceDef.SourceType = pkg.SourceTypeEclinicalworks
+	//sourceDef.Category = []string{}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "https://www.eclinicalworks.com"
 
 	return sourceDef, nil
 }

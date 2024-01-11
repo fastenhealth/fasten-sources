@@ -40,10 +40,10 @@ func GetSourceEpicLegacy(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg
 
 	sourceDef.Display = "Epic Legacy (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeEpicLegacy
-	sourceDef.SourceType = pkg.SourceTypeEpicLegacy
-	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "www.epic.com"
+	//sourceDef.SourceType = pkg.SourceTypeEpicLegacy
+	//sourceDef.Category = []string{"Sandbox"}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "www.epic.com"
 
 	return sourceDef, nil
 }

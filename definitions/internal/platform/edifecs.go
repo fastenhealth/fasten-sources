@@ -37,10 +37,10 @@ func GetSourceEdifecs(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.So
 
 	sourceDef.Display = "Edifecs (Sandbox)"
 	sourceDef.PlatformType = pkg.SourceTypeEdifecs
-	sourceDef.SourceType = pkg.SourceTypeEdifecs
-	sourceDef.Category = []string{"Sandbox"}
-	sourceDef.Aliases = []string{}
-	sourceDef.PatientAccessUrl = "https://www.edifecs.com/"
+	//sourceDef.SourceType = pkg.SourceTypeEdifecs
+	//sourceDef.Category = []string{"Sandbox"}
+	//sourceDef.Aliases = []string{}
+	//sourceDef.PatientAccessUrl = "https://www.edifecs.com/"
 
 	return sourceDef, nil
 }
