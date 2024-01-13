@@ -1,0 +1,41 @@
+# MANUALLY POPULATED
+platform_type: meditech
+
+#https://greenfield-apis.meditech.com/.well-known/openid-configuration
+scopes_supported:
+  - openid
+  - fhirUser
+  - profile
+  - 'patient/*.read'
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: false
+documentation: https://fhir.meditech.com/explorer/authorization
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: false
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]

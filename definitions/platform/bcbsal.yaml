@@ -1,0 +1,32 @@
+# MANUALLY POPULATED
+platform_type: bcbsal
+
+scopes_supported: []
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: https://www.bcbsal.org/web/documents/1511503/9929524/FHIR+Documentation.pdf
+client_headers:
+  Accept: "application/fhir+json"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Coverage",
+  "DetectedIssue",
+  "ExplanationOfBenefit",
+  "HealthcareService",
+  "ImmunizationRecommendation",
+  "InsurancePlan",
+  "Medication",
+  "MedicationDispense",
+  "MedicationStatement",
+  "PractitionerRole",
+  "ResearchStudy",
+  "ServiceRequest",
+]

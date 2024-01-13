@@ -1,0 +1,39 @@
+# MANUALLY POPULATED
+platform_type: nextgen
+
+scopes_supported:
+  - openid
+  - fhirUser
+  - patient/*.read
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+
+# We're not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
+# so we need to swap the code for the access_token on the server
+confidential: true
+cors_relay_required: false
+documentation: 'https://www.nextgen.com/patient-access-api'
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]

@@ -6,38 +6,50 @@
 package definitions
 
 import (
+	"bytes"
+	"embed"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/catalog"
-	"github.com/fastenhealth/fasten-sources/definitions/internal/platform"
 	models "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	modelsCatalog "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+	"gopkg.in/yaml.v3"
 )
 
+//go:embed platform/*.yaml
+var platformFs embed.FS
+
 type GetSourceConfigOptions struct {
-	PlatformType pkg.SourceType
+	PlatformType pkg.PlatformType
 
 	EndpointId string
 }
 
-func GetSourceConfig(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string, options GetSourceConfigOptions) (models.LighthouseSourceDefinition, error) {
+func GetEndpointConfig(
+	env pkg.FastenLighthouseEnvType,
+	clientIdLookup map[pkg.PlatformType]string,
+	options GetSourceConfigOptions,
+) (*models.LighthouseEndpointDefinition, error) {
 
 	if len(options.PlatformType) > 0 {
-		if options.PlatformType == pkg.SourceTypeManual {
-			return models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.SourceTypeManual)}}, nil
-		} else if options.PlatformType == pkg.SourceTypeFasten {
-			return models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.SourceTypeFasten)}}, nil
+		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
+		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten {
+			platformDefinition, err := GetPlatformDefinition(options.PlatformType, env, clientIdLookup)
+			if err != nil {
+				return nil, fmt.Errorf("error retrieving platform definition (%s): %w", options.PlatformType, err)
+			}
+			return platformDefinition, nil
 		} else {
-			return models.LighthouseSourceDefinition{}, fmt.Errorf("unsupported platform type: %s", options.PlatformType)
+			return nil, fmt.Errorf("unsupported platform type: %s", options.PlatformType)
 		}
 	} else if len(options.EndpointId) > 0 {
 		endpointLookup, err := catalog.GetEndpoints(&modelsCatalog.CatalogQueryOptions{Id: options.EndpointId, LighthouseEnvType: env})
 		if err != nil {
-			return models.LighthouseSourceDefinition{}, fmt.Errorf("error retrieving endpoint (%s): %w", options.EndpointId, err)
+			return nil, fmt.Errorf("error retrieving endpoint (%s): %w", options.EndpointId, err)
 		}
 
 		if len(endpointLookup) > 1 {
-			return models.LighthouseSourceDefinition{}, fmt.Errorf("error unexpected endpoint lookup length (%d)", len(endpointLookup))
+			return nil, fmt.Errorf("error unexpected endpoint lookup length (%d)", len(endpointLookup))
 		}
 		endpoint := endpointLookup[options.EndpointId]
 
@@ -46,62 +58,50 @@ func GetSourceConfig(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 		platformDefinition, err := GetPlatformDefinition(platformType, env, clientIdLookup)
 		if err != nil {
-			return models.LighthouseSourceDefinition{}, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
+			return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
 		//TODO: merge endpoint data into platform definition
 
-		platformDefinition.PatientAccessEndpoint = &endpoint
-		platformDefinition.Populate()
+		platformDefinition.Populate(&endpoint, env, clientIdLookup)
 
 		return platformDefinition, err
 	} else {
-		return models.LighthouseSourceDefinition{}, fmt.Errorf("PlatformType or EndpointID are required")
+		return nil, fmt.Errorf("PlatformType or EndpointID are required")
 	}
 
 }
 
-func GetPlatformDefinition(platformType pkg.SourceType, env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.SourceType]string) (models.LighthouseSourceDefinition, error) {
-	switch platformType {
-	// platform
-	case pkg.SourceTypeAdvancedmd:
-		return platform.GetSourceAdvancedmd(env, clientIdLookup)
-	case pkg.SourceTypeAetna:
-		return platform.GetSourceAetna(env, clientIdLookup)
-	case pkg.SourceTypeAllscripts:
-		return platform.GetSourceAllscripts(env, clientIdLookup)
-	case pkg.SourceTypeAthena:
-		return platform.GetSourceAthena(env, clientIdLookup)
-	case pkg.SourceTypeAnthem:
-		return platform.GetSourceAnthem(env, clientIdLookup)
-	case pkg.SourceTypeCareevolution:
-		return platform.GetSourceCareevolution(env, clientIdLookup)
-	case pkg.SourceTypeCerner:
-		return platform.GetSourceCerner(env, clientIdLookup)
-	case pkg.SourceTypeCigna:
-		return platform.GetSourceCigna(env, clientIdLookup)
-	case pkg.SourceTypeEclinicalworks:
-		return platform.GetSourceEclinicalworks(env, clientIdLookup)
-	case pkg.SourceTypeEdifecs:
-		return platform.GetSourceEdifecs(env, clientIdLookup)
-	case pkg.SourceTypeEpicLegacy:
-		return platform.GetSourceEpicLegacy(env, clientIdLookup)
-	case pkg.SourceTypeEpic:
-		return platform.GetSourceEpic(env, clientIdLookup)
-	case pkg.SourceTypeMeditech:
-		return platform.GetSourceMeditech(env, clientIdLookup)
-	case pkg.SourceTypeNextgen:
-		return platform.GetSourceNextgen(env, clientIdLookup)
-	case pkg.SourceTypeVahealth:
-		return platform.GetSourceVahealth(env, clientIdLookup)
-	case pkg.SourceTypeBcbsal:
-		return platform.GetSourceBcbsal(env, clientIdLookup)
-	case pkg.SourceTypeHumana:
-		return platform.GetSourceHumana(env, clientIdLookup)
-	case pkg.SourceTypeMedicare:
-		return platform.GetSourceMedicare(env, clientIdLookup)
-	case pkg.SourceTypeUnitedhealthcare:
-		return platform.GetSourceUnitedhealthcare(env, clientIdLookup)
-	default:
-		return models.LighthouseSourceDefinition{}, fmt.Errorf("unsupported platform type: %s", platformType)
+func GetPlatformDefinition(platformType pkg.PlatformType, env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.PlatformType]string) (*models.LighthouseEndpointDefinition, error) {
+
+	if platformType == pkg.PlatformTypeManual {
+		return &models.LighthouseEndpointDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
+	} else if platformType == pkg.PlatformTypeFasten {
+		return &models.LighthouseEndpointDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeFasten)}}, nil
 	}
+
+	platformDefinition, err := strictUnmarshalYaml(platformType)
+
+	if err != nil {
+		return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
+	}
+
+	//TODO: set the platform environment specific customizations
+
+	return platformDefinition, nil
+}
+
+func strictUnmarshalYaml(platformType pkg.PlatformType) (*models.LighthouseEndpointDefinition, error) {
+	embeddedFilename := fmt.Sprintf("platform/%s.yaml", platformType)
+
+	fileBytes, err := platformFs.ReadFile(embeddedFilename)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read embedded %s: %w", embeddedFilename, err)
+	}
+
+	var platformDefinition models.LighthouseEndpointDefinition
+
+	decoder := yaml.NewDecoder(bytes.NewReader(fileBytes))
+	decoder.KnownFields(true)
+	err = decoder.Decode(&platformDefinition)
+	return &platformDefinition, err
 }

@@ -53,7 +53,7 @@ func (o *PatientAccessEndpoint) Validate() error {
 }
 
 // GetPlatformType returns the platform type for the endpoint, taking into account overrides
-func (o *PatientAccessEndpoint) GetPlatformType() pkg.SourceType {
+func (o *PatientAccessEndpoint) GetPlatformType() pkg.PlatformType {
 	platformType := o.PlatformType
 
 	//check if there's an overrride
@@ -64,5 +64,5 @@ func (o *PatientAccessEndpoint) GetPlatformType() pkg.SourceType {
 			}
 		}
 	}
-	return pkg.SourceType(platformType)
+	return pkg.PlatformType(platformType)
 }

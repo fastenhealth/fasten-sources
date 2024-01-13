@@ -1,0 +1,79 @@
+# MANUALLY POPULATED
+platform_type: cerner
+
+scopes_supported:
+  - openid
+  - fhirUser
+  - offline_access
+  - patient/Account.read
+  - patient/AllergyIntolerance.read
+  - patient/Appointment.read
+  - patient/Binary.read
+  - patient/CarePlan.read
+  - patient/CareTeam.read
+  - patient/ChargeItem.read
+  - patient/Communication.read
+  - patient/Condition.read
+  - patient/Consent.read
+  - patient/Coverage.read
+  - patient/Device.read
+  - patient/DiagnosticReport.read
+  - patient/DocumentReference.read
+  - patient/Encounter.read
+  - patient/FamilyMemberHistory.read
+  - patient/Goal.read
+  - patient/Immunization.read
+  - patient/InsurancePlan.read
+  - patient/MedicationAdministration.read
+  - patient/MedicationRequest.read
+  - patient/NutritionOrder.read
+  - patient/Observation.read
+  - patient/Patient.read
+  - patient/Person.read
+  - patient/Procedure.read
+  - patient/Provenance.read
+  - patient/Questionnaire.read
+  - patient/QuestionnaireResponse.read
+  - patient/RelatedPerson.read
+  - patient/Schedule.read
+  - patient/ServiceRequest.read
+  - patient/Slot.read
+  - user/Organization.read
+  - user/Location.read
+  - user/Practitioner.read
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: false
+documentation: |
+  https://docs.google.com/document/d/10RnVyF1etl_17pyCyK96tyhUWRbrTyEcqpwzW-Z-Ybs/edit
+
+  https://groups.google.com/g/cerner-fhir-developers
+  http://fhir.cerner.com/millennium/r4/#authorization
+client_headers:
+  Accept: "application/fhir+json"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]

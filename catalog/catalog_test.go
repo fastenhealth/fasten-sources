@@ -1,19 +1,22 @@
-package catalog
+package catalog_test
 
 import (
 	"fmt"
+	"github.com/fastenhealth/fasten-sources/catalog"
+	"github.com/fastenhealth/fasten-sources/definitions"
 	"github.com/fastenhealth/fasten-sources/pkg"
-	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+	modelsCatalog "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+	"github.com/samber/lo"
 	"github.com/stretchr/testify/require"
 	"testing"
 )
 
 func TestCatalog_GetBrands(t *testing.T) {
 	//setup
-	opts := catalog.CatalogQueryOptions{Id: "0000f30d-3987-4539-b743-5c263416a6cf"}
+	opts := modelsCatalog.CatalogQueryOptions{Id: "0000f30d-3987-4539-b743-5c263416a6cf"}
 
 	//test
-	brands, err := GetBrands(&opts)
+	brands, err := catalog.GetBrands(&opts)
 
 	//assert
 	require.NoError(t, err)
@@ -22,10 +25,10 @@ func TestCatalog_GetBrands(t *testing.T) {
 
 func TestCatalog_GetBrands_WithInvalidId(t *testing.T) {
 	//setup
-	opts := catalog.CatalogQueryOptions{Id: "1"}
+	opts := modelsCatalog.CatalogQueryOptions{Id: "1"}
 
 	//test
-	_, err := GetBrands(&opts)
+	_, err := catalog.GetBrands(&opts)
 
 	//assert
 	require.EqualError(t, err, fmt.Sprintf("brand with id %s not found", opts.Id))
@@ -33,10 +36,10 @@ func TestCatalog_GetBrands_WithInvalidId(t *testing.T) {
 
 func TestCatalog_GetBrands_WithSandboxMode(t *testing.T) {
 	//setup
-	opts := catalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
+	opts := modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
 
 	//test
-	brands, err := GetBrands(&opts)
+	brands, err := catalog.GetBrands(&opts)
 
 	//assert
 	require.NoError(t, err)
@@ -49,10 +52,10 @@ func TestCatalog_GetBrands_WithSandboxMode(t *testing.T) {
 
 func TestCatalog_GetPortals_WithSandboxMode(t *testing.T) {
 	//setup
-	opts := catalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
+	opts := modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
 
 	//test
-	portals, err := GetPortals(&opts)
+	portals, err := catalog.GetPortals(&opts)
 
 	//assert
 	require.NoError(t, err)
@@ -65,12 +68,41 @@ func TestCatalog_GetPortals_WithSandboxMode(t *testing.T) {
 
 func TestCatalog_GetEndpoints_WithSandboxMode(t *testing.T) {
 	//setup
-	opts := catalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
+	opts := modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
 
 	//test
-	endpoints, err := GetEndpoints(&opts)
+	endpoints, err := catalog.GetEndpoints(&opts)
 
 	//assert
 	require.NoError(t, err)
 	require.Len(t, endpoints, 20)
+}
+
+func TestCatalog_GetEndpoints_HaveKnownPlatformType(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err)
+
+	endpointPlatformTypes := map[pkg.PlatformType]bool{}
+	knownPlatformTypes := pkg.GetPlatformTypes()
+
+	//test
+	for _, endpoint := range endpoints {
+		endpointPlatformTypes[endpoint.GetPlatformType()] = true
+	}
+	foundAllEndpointPlatfromTypes := lo.EveryBy(lo.Keys(endpointPlatformTypes), func(platformType pkg.PlatformType) bool {
+		return lo.Contains(knownPlatformTypes, platformType)
+	})
+
+	for _, endpointPlatformType := range lo.Keys(endpointPlatformTypes) {
+		_, err := definitions.GetPlatformDefinition(endpointPlatformType, pkg.FastenLighthouseEnvProduction, map[pkg.PlatformType]string{})
+		require.NoError(t, err)
+	}
+
+	//assert
+
+	require.True(t, len(endpointPlatformTypes) >= 1)
+	require.True(t, foundAllEndpointPlatfromTypes)
+
 }

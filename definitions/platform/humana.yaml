@@ -1,0 +1,52 @@
+# MANUALLY POPULATED
+platform_type: humana
+
+scopes_supported:
+  - internal
+  - openid
+  - launch/patient
+  - offline_access
+  - patient/AllergyIntolerance.read
+  - patient/CarePlan.read
+  - patient/CareTeam.read
+  - patient/Condition.read
+  - patient/Coverage.read
+  - patient/DocumentReference.read
+  - patient/ExplanationOfBenefit.read
+  - patient/Goal.read
+  - patient/Immunization.read
+  - patient/List.read
+  - patient/MedicationRequest.read
+  - patient/Observation.read
+  - patient/Patient.read
+  - patient/Procedure.read
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+confidential: true
+cors_relay_required: false
+code_challenge_methods_supported:
+  - S256
+documentation: |
+  https://developers.humana.com/apis/oauth
+client_headers: {}
+missing_op_patient_everything: false
+client_supported_resources: [
+  "AllergyIntolerance",
+  "CarePlan",
+  "CareTeam",
+  "Condition",
+  "Coverage",
+  "DocumentReference",
+  "ExplanationOfBenefit",
+  "Goal",
+  "Immunization",
+  "List",
+  "MedicationRequest",
+  "Observation",
+  "Patient",
+  "Procedure"
+]

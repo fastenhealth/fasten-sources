@@ -1,0 +1,68 @@
+# MANUALLY POPULATED
+platform_type: eclinicalworks
+
+scopes_supported:
+  - openid
+  - fhirUser
+  - offline_access
+  - patient/Patient.read
+  - patient/AllergyIntolerance.read
+  - patient/AllergyIntolerance.search
+  - patient/CarePlan.read
+  - patient/CarePlan.search
+  - patient/CareTeam.search
+  - patient/Condition.read
+  - patient/Condition.search
+  - patient/Device.read
+  - patient/Device.search
+  - patient/DiagnosticReport.read
+  - patient/DiagnosticReport.search
+  - patient/DocumentReference.read
+  - patient/DocumentReference.search
+  - patient/Binary.read
+  - patient/Encounter.read
+  - patient/Encounter.search
+  - patient/Goal.read
+  - patient/Goal.search
+  - patient/Immunization.read
+  - patient/Immunization.search
+  - patient/MedicationAdministration.read
+  - patient/MedicationAdministration.search
+  - patient/MedicationRequest.read
+  - patient/MedicationRequest.search
+  - patient/Observation.read
+  - patient/Observation.search
+  - patient/Organization.read
+  - patient/Organization.search
+  - patient/Patient.read
+  - patient/Patient.search
+  - patient/Practitioner.read
+  - patient/Practitioner.search
+  - patient/Procedure.read
+  - patient/Procedure.search
+  - patient/Provenance.read
+  - patient/CareTeam.read
+  - patient/Medication.read
+  - patient/Location.read
+  - patient/PractitionerRole.read
+  - patient/PractitionerRole.search
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+#  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+
+documentation: |
+  https://fhir.eclinicalworks.com/ecwopendev/documentation
+  https://connect4.healow.com/apps/jsp/dev/signIn.jsp
+  https://fhir.eclinicalworks.com/ecwopendev/
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: true
+client_supported_resources: []

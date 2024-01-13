@@ -1,0 +1,51 @@
+# MANUALLY POPULATED
+platform_type: allscripts
+scopes_supported:
+  - openid
+  - launch/patient
+  - fhirUser
+  - offline_access
+  - patient/*.read
+grant_types_supported:
+  - authorization_code
+code_challenge_methods_supported:
+  - S256
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+
+# We're not actually a confidential client (no client_secret present), however the token endpoint does not support CORS,
+# so we need to swap the code for the access_token on the server
+confidential: true
+cors_relay_required: false
+documentation: |
+  https://developer.veradigm.com/Fhir/FHIR_Sandboxes#pehr
+  https://developer.allscripts.com/content/fhir/content/PRO201_Sandbox/index.html
+  https://allscripts.vanillacommunities.com/search?query=sandbox&scope=site&source=community
+  https://open.allscripts.com/fhirendpoints
+  
+  Allscripts is not actually a confidential client (no client_secret present), however the token endpoint does not support CORS, 
+  so we need to swap the code for the access_token on the server
+
+client_headers:
+  Accept: "application/fhir+json"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]
