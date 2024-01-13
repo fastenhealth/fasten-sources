@@ -16,6 +16,7 @@ const (
 	SourceTypeAllscripts       SourceType = "allscripts"
 	SourceTypeAthena           SourceType = "athena"
 	SourceTypeBcbsal           SourceType = "bcbsal"
+	SourceTypeAnthem           SourceType = "anthem"
 	SourceTypeCareevolution    SourceType = "careevolution"
 	SourceTypeCerner           SourceType = "cerner"
 	SourceTypeCigna            SourceType = "cigna"

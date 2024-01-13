@@ -54,7 +54,7 @@ func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAcc
 			//we need to request the filtered portals, and then find the associated brands (stripping out any brands that don't have portals)
 
 			// filtered portals is a map of sandbox or production portals
-			filteredPortals, err := GetPortals(opts)
+			filteredPortals, err := GetPortals(&catalog.CatalogQueryOptions{LighthouseEnvType: opts.LighthouseEnvType})
 			if err != nil {
 				return nil, fmt.Errorf("failed: %w", err)
 			}
@@ -105,7 +105,7 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 			//we need to request the endpoints, and then find the associated portals (stripping out any portals that don't have endpoints)
 
 			// filtered endpoints is a map of sandbox or production endpoints
-			filteredEndpoints, err := GetEndpoints(opts)
+			filteredEndpoints, err := GetEndpoints(&catalog.CatalogQueryOptions{LighthouseEnvType: opts.LighthouseEnvType})
 			if err != nil {
 				return nil, fmt.Errorf("failed getting endpoints for portal: %w", err)
 			}
@@ -167,6 +167,17 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 
 			})
 		}
+	}
+
+	includeSuspendedEndpoints := false
+	if opts != nil && opts.IncludeSuspendedEndpoints {
+		includeSuspendedEndpoints = true
+	}
+	if !includeSuspendedEndpoints {
+		//filter any endpoints that are not active
+		endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
+			return value.Status == "active"
+		})
 	}
 
 	if len(endpoints) == 0 {

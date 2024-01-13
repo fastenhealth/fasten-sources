@@ -17,8 +17,6 @@ import (
 type GetSourceConfigOptions struct {
 	PlatformType pkg.SourceType
 
-	BrandId    string
-	PortalId   string
 	EndpointId string
 }
 
@@ -26,9 +24,9 @@ func GetSourceConfig(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 
 	if len(options.PlatformType) > 0 {
 		if options.PlatformType == pkg.SourceTypeManual {
-			return models.LighthouseSourceDefinition{PlatformType: pkg.SourceTypeManual}, nil
+			return models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.SourceTypeManual)}}, nil
 		} else if options.PlatformType == pkg.SourceTypeFasten {
-			return models.LighthouseSourceDefinition{PlatformType: pkg.SourceTypeFasten}, nil
+			return models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.SourceTypeFasten)}}, nil
 		} else {
 			return models.LighthouseSourceDefinition{}, fmt.Errorf("unsupported platform type: %s", options.PlatformType)
 		}
@@ -38,8 +36,8 @@ func GetSourceConfig(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 			return models.LighthouseSourceDefinition{}, fmt.Errorf("error retrieving endpoint (%s): %w", options.EndpointId, err)
 		}
 
-		if len(endpointLookup) > 0 {
-			return models.LighthouseSourceDefinition{}, fmt.Errorf("error unexpected endpoint lookup length (%d): %w", len(endpointLookup), err)
+		if len(endpointLookup) > 1 {
+			return models.LighthouseSourceDefinition{}, fmt.Errorf("error unexpected endpoint lookup length (%d)", len(endpointLookup))
 		}
 		endpoint := endpointLookup[options.EndpointId]
 
@@ -51,6 +49,9 @@ func GetSourceConfig(env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.Sou
 			return models.LighthouseSourceDefinition{}, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
 		//TODO: merge endpoint data into platform definition
+
+		platformDefinition.PatientAccessEndpoint = &endpoint
+		platformDefinition.Populate()
 
 		return platformDefinition, err
 	} else {
@@ -70,6 +71,8 @@ func GetPlatformDefinition(platformType pkg.SourceType, env pkg.FastenLighthouse
 		return platform.GetSourceAllscripts(env, clientIdLookup)
 	case pkg.SourceTypeAthena:
 		return platform.GetSourceAthena(env, clientIdLookup)
+	case pkg.SourceTypeAnthem:
+		return platform.GetSourceAnthem(env, clientIdLookup)
 	case pkg.SourceTypeCareevolution:
 		return platform.GetSourceCareevolution(env, clientIdLookup)
 	case pkg.SourceTypeCerner:

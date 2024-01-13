@@ -1,6 +1,9 @@
 package models
 
-import "github.com/fastenhealth/fasten-sources/pkg"
+import (
+	"github.com/fastenhealth/fasten-sources/pkg"
+	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+)
 
 // LighthouseSource
 // https://vteapif1.aetna.com/fhirdemo/v1/fhirserver_auth/oauth2/authorize?
@@ -15,18 +18,11 @@ import "github.com/fastenhealth/fasten-sources/pkg"
 // Similar in functionality to https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
 // /apis/fhir/.well-known/smart-configuration
 type LighthouseSourceDefinition struct {
-	BrandId    string `json:"brand_id" yaml:"brand_id" validate:"required,uuid"`
-	PortalId   string `json:"portal_id" yaml:"brand_id" validate:"required,uuid"`
-	EndpointId string `json:"endpoint_id" yaml:"brand_id" validate:"required,uuid"`
+	BrandId  string `json:"brand_id,omitempty" yaml:"brand_id,omitempty" validate:"required,uuid"`
+	PortalId string `json:"portal_id,omitempty" yaml:"brand_id,omitempty" validate:"required,uuid"`
 
 	// Smart-On-FHIR configuration
 	// https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
-
-	//oauth endpoints
-	AuthorizationEndpoint string `json:"authorization_endpoint"`
-	TokenEndpoint         string `json:"token_endpoint"`
-	IntrospectionEndpoint string `json:"introspection_endpoint"`
-	RegistrationEndpoint  string `json:"registration_endpoint"` //optional - required when Dynamic Client Registration mode is set
 
 	Scopes                        []string `json:"scopes_supported"`
 	Issuer                        string   `json:"issuer"`
@@ -36,18 +32,35 @@ type LighthouseSourceDefinition struct {
 	Audience                      string   `json:"aud"`                              //optional - required for some providers
 	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported"` // If populated: PKCE is supported (can be used with Confidential true or false)
 
-	//Fasten custom configuration
-	UserInfoEndpoint   string `json:"userinfo_endpoint"`     //optional - supported by some providers, not others.
-	ApiEndpointBaseUrl string `json:"api_endpoint_base_url"` //api endpoint we'll communicate with after authentication
-	ClientId           string `json:"client_id"`
-	RedirectUri        string `json:"redirect_uri"` //lighthouse url the provider will redirect to (registered with App)
+	ClientId    string `json:"client_id"`
+	RedirectUri string `json:"redirect_uri"` //lighthouse url the provider will redirect to (registered with App)
 
 	Confidential                  bool   `json:"confidential"`                     //if enabled, requires client_secret to authenticate with provider (PKCE)
 	DynamicClientRegistrationMode string `json:"dynamic_client_registration_mode"` //if enabled, will dynamically register client with provider (https://oauth.net/2/dynamic-client-registration/)
 	CORSRelayRequired             bool   `json:"cors_relay_required"`              //if true, requires CORS proxy/relay, as provider does not return proper response to CORS preflight
 	SecretKeyPrefix               string `json:"-"`                                //the secret key prefix to use, if empty (default) will use the sourceType value
 
-	//Display information
-	PlatformType pkg.SourceType `json:"platform_type"`
-	Display      string         `json:"display"` //display name of the source
+	*catalog.PatientAccessEndpoint `json:",inline"`
+}
+
+func (def *LighthouseSourceDefinition) Populate() {
+
+	//Hide sources for platform types which are still under development
+	//if platformType == pkg.PlatformTypeAllscripts {
+	//	sourceDef.Hidden = true
+	//}
+
+	if !(def.PlatformType == string(pkg.SourceTypeAnthem) ||
+		def.PlatformType == string(pkg.SourceTypeCigna) ||
+		def.PlatformType == string(pkg.SourceTypeNextgen) ||
+		def.PlatformType == string(pkg.SourceTypeVahealth)) {
+		//most providers use the same url for API endpoint and Audience. These are the exceptions
+		def.Audience = def.Url
+	}
+
+	if def.PlatformType == string(pkg.SourceTypeCerner) {
+		def.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
+	}
+
+	def.Issuer = def.Url
 }
