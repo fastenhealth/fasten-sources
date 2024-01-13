@@ -1,4 +1,4 @@
-package platform
+package internal
 
 import (
 	"context"
@@ -21,14 +21,15 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(180).Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("a-80000.E-14545")
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeAthena)
-	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://api.preview.platform.athenahealth.com/fhir/r4")
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeAthena)
+	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("950e9092-8ce7-4926-ad87-64616f00cb4c")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetSourceClientAthena(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

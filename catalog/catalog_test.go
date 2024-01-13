@@ -78,31 +78,64 @@ func TestCatalog_GetEndpoints_WithSandboxMode(t *testing.T) {
 	require.Len(t, endpoints, 20)
 }
 
-func TestCatalog_GetEndpoints_HaveKnownPlatformType(t *testing.T) {
+func TestCatalog_GetEndpoints_HaveKnownPlatformType_Production(t *testing.T) {
 	//setup
-	opts := modelsCatalog.CatalogQueryOptions{}
+	opts := modelsCatalog.CatalogQueryOptions{
+		LighthouseEnvType: pkg.FastenLighthouseEnvProduction,
+	}
 	endpoints, err := catalog.GetEndpoints(&opts)
 	require.NoError(t, err)
 
-	endpointPlatformTypes := map[pkg.PlatformType]bool{}
+	endpointPlatformTypes := map[pkg.PlatformType]string{}
 	knownPlatformTypes := pkg.GetPlatformTypes()
 
 	//test
 	for _, endpoint := range endpoints {
-		endpointPlatformTypes[endpoint.GetPlatformType()] = true
+		if _, exists := endpointPlatformTypes[endpoint.GetPlatformType()]; !exists {
+			endpointPlatformTypes[endpoint.GetPlatformType()] = endpoint.Id
+		}
 	}
 	foundAllEndpointPlatfromTypes := lo.EveryBy(lo.Keys(endpointPlatformTypes), func(platformType pkg.PlatformType) bool {
 		return lo.Contains(knownPlatformTypes, platformType)
 	})
 
-	for _, endpointPlatformType := range lo.Keys(endpointPlatformTypes) {
-		_, err := definitions.GetPlatformDefinition(endpointPlatformType, pkg.FastenLighthouseEnvProduction, map[pkg.PlatformType]string{})
+	for _, endpointId := range endpointPlatformTypes {
+		_, err := definitions.GetSourceDefinition(pkg.FastenLighthouseEnvProduction, map[pkg.PlatformType]string{}, definitions.GetSourceConfigOptions{EndpointId: endpointId})
 		require.NoError(t, err)
 	}
 
 	//assert
-
 	require.True(t, len(endpointPlatformTypes) >= 1)
 	require.True(t, foundAllEndpointPlatfromTypes)
+}
 
+func TestCatalog_GetEndpoints_HaveKnownPlatformType_Sandbox(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		LighthouseEnvType: pkg.FastenLighthouseEnvSandbox,
+	}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err)
+
+	endpointPlatformTypes := map[pkg.PlatformType]string{}
+	knownPlatformTypes := pkg.GetPlatformTypes()
+
+	//test
+	for _, endpoint := range endpoints {
+		if _, exists := endpointPlatformTypes[endpoint.GetPlatformType()]; !exists {
+			endpointPlatformTypes[endpoint.GetPlatformType()] = endpoint.Id
+		}
+	}
+	foundAllEndpointPlatfromTypes := lo.EveryBy(lo.Keys(endpointPlatformTypes), func(platformType pkg.PlatformType) bool {
+		return lo.Contains(knownPlatformTypes, platformType)
+	})
+
+	for _, endpointId := range endpointPlatformTypes {
+		_, err := definitions.GetSourceDefinition(pkg.FastenLighthouseEnvSandbox, map[pkg.PlatformType]string{}, definitions.GetSourceConfigOptions{EndpointId: endpointId})
+		require.NoError(t, err)
+	}
+
+	//assert
+	require.True(t, len(endpointPlatformTypes) >= 1)
+	require.True(t, foundAllEndpointPlatfromTypes)
 }

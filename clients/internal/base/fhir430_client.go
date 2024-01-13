@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir430"
 	fhirutils "github.com/fastenhealth/gofhir-models/fhir430/utils"
@@ -16,8 +17,8 @@ type SourceClientFHIR430 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR430, error) {
-	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*SourceClientFHIR430, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
 	if err != nil {
 		return nil, err
 	}
@@ -27,9 +28,9 @@ func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context
 	}, err
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FHIR
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR430) GetPatientEverything(patientId string) (*fhir430.Bundle, error) {
 
 	// https://www.hl7.org/fhir/patient-operation-everything.html
@@ -45,9 +46,9 @@ func (c *SourceClientFHIR430) GetPatient(patientId string) (*fhir430.Patient, er
 	return &patient, err
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Process Bundles
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *SourceClientFHIR430) ProcessBundle(bundle fhir430.Bundle) ([]models.RawResourceFhir, error) {
 
 	//process each entry in bundle

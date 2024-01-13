@@ -84,7 +84,7 @@ func main() {
 		logger := logrus.WithField("callback", requestData.EndpointId)
 
 		//get the source defintiion
-		sourceConfig, err := definitions.GetEndpointConfig(
+		sourceConfig, err := definitions.GetSourceDefinition(
 			pkg.FastenLighthouseEnvType(requestData.SourceMode),
 			map[pkg.PlatformType]string{},
 			definitions.GetSourceConfigOptions{

@@ -1,4 +1,4 @@
-package platform
+package internal
 
 import (
 	"context"
@@ -21,14 +21,15 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(13).Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("erXuFYUfucBZaryVksYEcMg3")
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeEpic)
-	fakeSourceCredential.EXPECT().GetApiEndpointBaseUrl().AnyTimes().Return("https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4")
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEpic)
+	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("8e2f5de7-46ac-4067-96ba-5e3f60ad52a4")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetSourceClientEpic(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

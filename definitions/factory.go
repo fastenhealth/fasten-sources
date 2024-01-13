@@ -25,16 +25,16 @@ type GetSourceConfigOptions struct {
 	EndpointId string
 }
 
-func GetEndpointConfig(
+func GetSourceDefinition(
 	env pkg.FastenLighthouseEnvType,
 	clientIdLookup map[pkg.PlatformType]string,
 	options GetSourceConfigOptions,
-) (*models.LighthouseEndpointDefinition, error) {
+) (*models.LighthouseSourceDefinition, error) {
 
 	if len(options.PlatformType) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
 		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten {
-			platformDefinition, err := GetPlatformDefinition(options.PlatformType, env, clientIdLookup)
+			platformDefinition, err := getPlatformDefinition(options.PlatformType, env, clientIdLookup)
 			if err != nil {
 				return nil, fmt.Errorf("error retrieving platform definition (%s): %w", options.PlatformType, err)
 			}
@@ -56,7 +56,7 @@ func GetEndpointConfig(
 		//this is the platform that we need to use as the base class.
 		platformType := endpoint.GetPlatformType()
 
-		platformDefinition, err := GetPlatformDefinition(platformType, env, clientIdLookup)
+		platformDefinition, err := getPlatformDefinition(platformType, env, clientIdLookup)
 		if err != nil {
 			return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
@@ -71,12 +71,12 @@ func GetEndpointConfig(
 
 }
 
-func GetPlatformDefinition(platformType pkg.PlatformType, env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.PlatformType]string) (*models.LighthouseEndpointDefinition, error) {
+func getPlatformDefinition(platformType pkg.PlatformType, env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.PlatformType]string) (*models.LighthouseSourceDefinition, error) {
 
 	if platformType == pkg.PlatformTypeManual {
-		return &models.LighthouseEndpointDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
+		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
 	} else if platformType == pkg.PlatformTypeFasten {
-		return &models.LighthouseEndpointDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeFasten)}}, nil
+		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeFasten)}}, nil
 	}
 
 	platformDefinition, err := strictUnmarshalYaml(platformType)
@@ -90,7 +90,7 @@ func GetPlatformDefinition(platformType pkg.PlatformType, env pkg.FastenLighthou
 	return platformDefinition, nil
 }
 
-func strictUnmarshalYaml(platformType pkg.PlatformType) (*models.LighthouseEndpointDefinition, error) {
+func strictUnmarshalYaml(platformType pkg.PlatformType) (*models.LighthouseSourceDefinition, error) {
 	embeddedFilename := fmt.Sprintf("platform/%s.yaml", platformType)
 
 	fileBytes, err := platformFs.ReadFile(embeddedFilename)
@@ -98,7 +98,7 @@ func strictUnmarshalYaml(platformType pkg.PlatformType) (*models.LighthouseEndpo
 		return nil, fmt.Errorf("failed to read embedded %s: %w", embeddedFilename, err)
 	}
 
-	var platformDefinition models.LighthouseEndpointDefinition
+	var platformDefinition models.LighthouseSourceDefinition
 
 	decoder := yaml.NewDecoder(bytes.NewReader(fileBytes))
 	decoder.KnownFields(true)

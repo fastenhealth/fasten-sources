@@ -20,7 +20,7 @@ func TestGetSourceClientManual_ExtractPatientId_Bundle(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/bundle/synthea_Tania553_Harris789_545c2380-b77f-4919-ab5d-0f615f877250.json")
@@ -44,7 +44,7 @@ func TestGetSourceClientManual_ExtractPatientId_BundleIPS(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json")
@@ -68,7 +68,7 @@ func TestGetSourceClientManual_ExtractPatientId_NDJSON(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/TimmySmart-FosterCareTimeline.phr")
@@ -95,7 +95,7 @@ func TestGetSourceClientManual_SyncAllBundle(t *testing.T) {
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(234).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/bundle/synthea_Tania553_Harris789_545c2380-b77f-4919-ab5d-0f615f877250.json")
@@ -120,10 +120,10 @@ func TestGetSourceClientManual_SyncAllBundle_IPS(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(234).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(20).Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json")
@@ -151,7 +151,7 @@ func TestGetSourceClientManual_SyncAllBundle_NDJSON(t *testing.T) {
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/TimmySmart-FosterCareTimeline.phr")
@@ -179,7 +179,7 @@ func TestGetSourceClientManual_SyncAllBundle_NDJSON2(t *testing.T) {
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetSourceType().AnyTimes().Return(pkg.SourceTypeManual)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
 	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
 
 	bundleFile, err := os.Open("testdata/fixtures/401-R4/phr-ndjson-jsonl/JohnDoe.phr")

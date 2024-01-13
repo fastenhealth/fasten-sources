@@ -1,4 +1,4 @@
-package platform
+package internal
 
 //
 //func TestGetSourceClientAllscripts_SyncAll(t *testing.T) {

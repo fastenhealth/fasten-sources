@@ -12,7 +12,7 @@ func TestGetPlatformDefinition(t *testing.T) {
 
 	//test
 	for _, platformType := range platformTypes {
-		_, err := GetPlatformDefinition(platformType, pkg.FastenLighthouseEnvSandbox, map[pkg.PlatformType]string{})
+		_, err := getPlatformDefinition(platformType, pkg.FastenLighthouseEnvSandbox, map[pkg.PlatformType]string{})
 		//assert
 		require.NoError(t, err)
 

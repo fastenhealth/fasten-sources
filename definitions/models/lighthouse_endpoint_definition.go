@@ -17,7 +17,7 @@ import (
 //
 // Similar in functionality to https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
 // /apis/fhir/.well-known/smart-configuration
-type LighthouseEndpointDefinition struct {
+type LighthouseSourceDefinition struct {
 	BrandId  string `json:"brand_id,omitempty" yaml:"-" validate:"omitempty,uuid"`
 	PortalId string `json:"portal_id,omitempty" yaml:"-" validate:"omitempty,uuid"`
 
@@ -60,7 +60,7 @@ type LighthouseEndpointDefinition struct {
 	RedirectUri string `json:"redirect_uri" yaml:"-" validate:"required,http_url"`
 }
 
-func (def *LighthouseEndpointDefinition) Populate(
+func (def *LighthouseSourceDefinition) Populate(
 	endpoint *catalog.PatientAccessEndpoint,
 	env pkg.FastenLighthouseEnvType,
 	clientIdLookup map[pkg.PlatformType]string,
