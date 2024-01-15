@@ -48,6 +48,7 @@ type LighthouseSourceDefinition struct {
 	Documentation string            `json:"-" yaml:"documentation"  validate:"omitempty"`
 	ClientHeaders map[string]string `json:"-" yaml:"client_headers"  validate:"omitempty"`
 
+	//Client configuration
 	MissingOpPatientEverything bool `json:"-" yaml:"missing_op_patient_everything"  validate:"omitempty"`
 	//can only be set if MissingOpPatientEverything is true
 	CustomOpPatientEverything string   `json:"-" yaml:"custom_op_patient_everything"  validate:"omitempty"`

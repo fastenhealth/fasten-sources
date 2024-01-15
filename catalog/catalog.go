@@ -9,6 +9,7 @@ import (
 	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 	"github.com/fastenhealth/fasten-sources/pkg/models/datatypes"
 	"github.com/samber/lo"
+	"strings"
 )
 
 //go:embed brands.json
@@ -186,6 +187,88 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 	return endpoints, nil
 }
 
+func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiEndpoint string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, error) {
+	brands, err := GetBrands(&catalog.CatalogQueryOptions{})
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("error getting brands from catalog: %w", err)
+	}
+
+	portals, err := GetPortals(&catalog.CatalogQueryOptions{})
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("error getting portals from catalog: %w", err)
+	}
+
+	endpoints, err := GetEndpoints(&catalog.CatalogQueryOptions{})
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("error getting endpoints from catalog: %w", err)
+	}
+
+	// Find Portal
+
+	matchingPortals := lo.PickBy(portals, func(key string, portal catalog.PatientAccessPortal) bool {
+		_, found := lo.Find(portal.Identifiers, func(identifier datatypes.Identifier) bool {
+			return identifier.Use == "fasten-legacy-source-type" && identifier.Value == legacySourceType
+		})
+		return found
+	})
+
+	if len(matchingPortals) == 0 {
+		errMessage := fmt.Sprintf("No matching portal found for legacy source type: %s", legacySourceType)
+		return nil, nil, nil, fmt.Errorf(errMessage)
+	}
+
+	if len(matchingPortals) > 1 {
+		errMessage := fmt.Sprintf("Multiple matching portals found for legacy source type: %s vs %v", legacySourceType, lo.Keys(matchingPortals))
+		return nil, nil, nil, fmt.Errorf(errMessage)
+	}
+
+	//found a portal, store it in the source credential
+	matchingPortal := lo.Values(matchingPortals)[0]
+
+	// lets find associated brand. if more than 1 brand is found, we will pick the first one
+	matchingBrands := lo.PickBy(brands, func(key string, brand catalog.PatientAccessBrand) bool {
+		return lo.Contains(brand.PortalsIds, matchingPortal.Id)
+	})
+	if len(matchingBrands) == 0 {
+		errMessage := fmt.Sprintf("No matching brand found for portal: %s", matchingPortal.Id)
+		return nil, nil, nil, fmt.Errorf(errMessage)
+	}
+	matchingBrand := lo.Values(matchingBrands)[0]
+
+	//lets find the associated endpoint.
+	matchingEndpoints := lo.PickByKeys(endpoints, matchingPortal.EndpointIds)
+	if len(matchingEndpoints) == 0 {
+		errMessage := fmt.Sprintf("No matching endpoint found for portal: %s", matchingPortal.Id)
+		return nil, nil, nil, fmt.Errorf(errMessage)
+	}
+
+	//find endpoint by matching the sourceCredetial.ApiEndpointUrl with the endpoint url
+	if len(matchingEndpoints) > 1 {
+		filteredMatchingEndpoints := lo.PickBy(matchingEndpoints, func(key string, endpoint catalog.PatientAccessEndpoint) bool {
+			return normalizeEndpointURL(endpoint.Url) == normalizeEndpointURL(legacyApiEndpoint)
+		})
+		if len(filteredMatchingEndpoints) == 1 {
+			matchingEndpoints = filteredMatchingEndpoints
+		}
+	}
+	// if more than 1 endpoint is found, we will filter any inactive & non-production endpoints
+	if len(matchingEndpoints) > 1 {
+		filteredMatchingEndpoints := lo.PickBy(matchingEndpoints, func(key string, endpoint catalog.PatientAccessEndpoint) bool {
+			return endpoint.Status == "active" && lo.NoneBy(endpoint.Identifiers, func(identifier datatypes.Identifier) bool {
+				return identifier.Use == "fasten-sandbox-mode" && identifier.Value == "true"
+			})
+		})
+		if len(filteredMatchingEndpoints) == 1 {
+			matchingEndpoints = filteredMatchingEndpoints
+		}
+	}
+
+	//select the first endpoint
+	matchingEndpoint := lo.Values(matchingEndpoints)[0]
+
+	return &matchingBrand, &matchingPortal, &matchingEndpoint, nil
+}
+
 //helpers
 
 func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientAccessPortal | catalog.PatientAccessEndpoint](embeddedFile embed.FS, embeddedFilename string) (map[string]T, error) {
@@ -204,4 +287,17 @@ func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientA
 		return nil, fmt.Errorf("failed to decode %s: %w", embeddedFilename, err)
 	}
 	return patientAccessType, nil
+}
+
+func normalizeEndpointURL(url string) string {
+	normalized := url
+	// for cases such as foobar.com
+	if !strings.HasPrefix(url, "https://") && !strings.HasPrefix(url, "http://") {
+		normalized = "https://" + normalized
+	}
+
+	if !strings.HasSuffix(url, "/") {
+		normalized = normalized + "/"
+	}
+	return normalized
 }
