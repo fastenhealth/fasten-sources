@@ -100,7 +100,7 @@ func TestCatalog_GetEndpoints_HaveKnownPlatformType_Production(t *testing.T) {
 	})
 
 	for _, endpointId := range endpointPlatformTypes {
-		_, err := definitions.GetSourceDefinition(pkg.FastenLighthouseEnvProduction, map[pkg.PlatformType]string{}, definitions.GetSourceConfigOptions{EndpointId: endpointId})
+		_, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{EndpointId: endpointId, Env: pkg.FastenLighthouseEnvProduction})
 		require.NoError(t, err)
 	}
 
@@ -131,7 +131,7 @@ func TestCatalog_GetEndpoints_HaveKnownPlatformType_Sandbox(t *testing.T) {
 	})
 
 	for _, endpointId := range endpointPlatformTypes {
-		_, err := definitions.GetSourceDefinition(pkg.FastenLighthouseEnvSandbox, map[pkg.PlatformType]string{}, definitions.GetSourceConfigOptions{EndpointId: endpointId})
+		_, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{EndpointId: endpointId, Env: pkg.FastenLighthouseEnvSandbox})
 		require.NoError(t, err)
 	}
 

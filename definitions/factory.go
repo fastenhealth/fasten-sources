@@ -20,21 +20,24 @@ import (
 var platformFs embed.FS
 
 type GetSourceConfigOptions struct {
+	//One of the following is required: PlatformType or EndpointId
 	PlatformType pkg.PlatformType
+	EndpointId   string
 
-	EndpointId string
+	//Optional - filter's the endpoint id by the environment (sandbox, prod).
+	Env pkg.FastenLighthouseEnvType
+	//Optional - sets the Client ID for the SourceConfig
+	ClientIdLookup map[pkg.PlatformType]string
 }
 
 func GetSourceDefinition(
-	env pkg.FastenLighthouseEnvType,
-	clientIdLookup map[pkg.PlatformType]string,
 	options GetSourceConfigOptions,
 ) (*models.LighthouseSourceDefinition, error) {
 
 	if len(options.PlatformType) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
 		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten {
-			platformDefinition, err := getPlatformDefinition(options.PlatformType, env, clientIdLookup)
+			platformDefinition, err := getPlatformDefinition(options.PlatformType)
 			if err != nil {
 				return nil, fmt.Errorf("error retrieving platform definition (%s): %w", options.PlatformType, err)
 			}
@@ -43,7 +46,12 @@ func GetSourceDefinition(
 			return nil, fmt.Errorf("unsupported platform type: %s", options.PlatformType)
 		}
 	} else if len(options.EndpointId) > 0 {
-		endpointLookup, err := catalog.GetEndpoints(&modelsCatalog.CatalogQueryOptions{Id: options.EndpointId, LighthouseEnvType: env})
+		queryOpts := &modelsCatalog.CatalogQueryOptions{Id: options.EndpointId}
+		if len(options.Env) > 0 {
+			queryOpts.LighthouseEnvType = options.Env
+		}
+
+		endpointLookup, err := catalog.GetEndpoints(queryOpts)
 		if err != nil {
 			return nil, fmt.Errorf("error retrieving endpoint (%s): %w", options.EndpointId, err)
 		}
@@ -56,13 +64,13 @@ func GetSourceDefinition(
 		//this is the platform that we need to use as the base class.
 		platformType := endpoint.GetPlatformType()
 
-		platformDefinition, err := getPlatformDefinition(platformType, env, clientIdLookup)
+		platformDefinition, err := getPlatformDefinition(platformType)
 		if err != nil {
 			return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
 		//TODO: merge endpoint data into platform definition
 
-		platformDefinition.Populate(&endpoint, env, clientIdLookup)
+		platformDefinition.Populate(&endpoint, options.Env, options.ClientIdLookup)
 
 		return platformDefinition, err
 	} else {
@@ -71,7 +79,7 @@ func GetSourceDefinition(
 
 }
 
-func getPlatformDefinition(platformType pkg.PlatformType, env pkg.FastenLighthouseEnvType, clientIdLookup map[pkg.PlatformType]string) (*models.LighthouseSourceDefinition, error) {
+func getPlatformDefinition(platformType pkg.PlatformType) (*models.LighthouseSourceDefinition, error) {
 
 	if platformType == pkg.PlatformTypeManual {
 		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
