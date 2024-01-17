@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	fhir401utils "github.com/fastenhealth/gofhir-models/fhir401/utils"
@@ -18,7 +19,7 @@ import (
 
 type ManualClient struct {
 	FastenEnv  pkg.FastenLighthouseEnvType
-	SourceType pkg.SourceType
+	SourceType pkg.PlatformType
 	Context    context.Context
 	Logger     logrus.FieldLogger
 
@@ -76,7 +77,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	internalFragmentReferenceLookup := map[string]string{}
 
 	//retrieve the FHIR client
-	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, http.DefaultClient)
+	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, &definitionsModels.LighthouseSourceDefinition{}, http.DefaultClient)
 	if err != nil {
 		return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 	}

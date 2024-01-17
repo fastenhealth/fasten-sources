@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	fhirutils "github.com/fastenhealth/gofhir-models/fhir401/utils"
@@ -20,8 +21,8 @@ type SourceClientFHIR401 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientFHIR401, error) {
-	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*SourceClientFHIR401, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
 	if err != nil {
 		return nil, err
 	}
@@ -230,8 +231,8 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 		for i, _ := range pendingResourceReferences {
 			pendingResourceId := pendingResourceReferences[i]
 			//convert absolute urls to relative url if possible
-			if strings.HasPrefix(pendingResourceId, c.SourceCredential.GetApiEndpointBaseUrl()) {
-				pendingResourceReferences[i] = strings.TrimPrefix(strings.TrimPrefix(pendingResourceId, c.SourceCredential.GetApiEndpointBaseUrl()), "/")
+			if strings.HasPrefix(pendingResourceId, c.EndpointDefinition.Url) {
+				pendingResourceReferences[i] = strings.TrimPrefix(strings.TrimPrefix(pendingResourceId, c.EndpointDefinition.Url), "/")
 			}
 		}
 

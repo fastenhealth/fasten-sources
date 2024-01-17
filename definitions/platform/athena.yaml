@@ -1,0 +1,49 @@
+# MANUALLY POPULATED
+platform_type: athena
+
+scopes_supported:
+  - launch/patient
+  - fhirUser
+  - profile
+  - openid
+  - offline_access
+  - patient/AllergyIntolerance.read
+  - patient/Binary.read
+  - patient/CarePlan.read
+  - patient/CareTeam.read
+  - patient/Condition.read
+  - patient/Device.read
+  - patient/DiagnosticReport.read
+  - patient/DocumentReference.read
+  - patient/Encounter.read
+  - patient/Goal.read
+  - patient/Immunization.read
+  - patient/Location.read
+  - patient/Medication.read
+  - patient/MedicationRequest.read
+  - patient/Observation.read
+  - patient/Organization.read
+  - patient/Patient.read
+  - patient/Practitioner.read
+  - patient/Procedure.read
+  - patient/Provenance.read
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: false
+documentation: |
+  sandbox users:
+  Practice ID: #80000
+  Patient ID: #14545
+  Email / Password (for Login with athenahealth): phrtest_preview@mailinator.com / Password1
+
+client_headers: {}
+missing_op_patient_everything: true
+client_supported_resources: []

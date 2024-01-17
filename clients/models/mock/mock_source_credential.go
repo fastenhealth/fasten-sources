@@ -48,18 +48,18 @@ func (mr *MockSourceCredentialMockRecorder) GetAccessToken() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccessToken", reflect.TypeOf((*MockSourceCredential)(nil).GetAccessToken))
 }
 
-// GetApiEndpointBaseUrl mocks base method.
-func (m *MockSourceCredential) GetApiEndpointBaseUrl() string {
+// GetBrandId mocks base method.
+func (m *MockSourceCredential) GetBrandId() string {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetApiEndpointBaseUrl")
+	ret := m.ctrl.Call(m, "GetBrandId")
 	ret0, _ := ret[0].(string)
 	return ret0
 }
 
-// GetApiEndpointBaseUrl indicates an expected call of GetApiEndpointBaseUrl.
-func (mr *MockSourceCredentialMockRecorder) GetApiEndpointBaseUrl() *gomock.Call {
+// GetBrandId indicates an expected call of GetBrandId.
+func (mr *MockSourceCredentialMockRecorder) GetBrandId() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApiEndpointBaseUrl", reflect.TypeOf((*MockSourceCredential)(nil).GetApiEndpointBaseUrl))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBrandId", reflect.TypeOf((*MockSourceCredential)(nil).GetBrandId))
 }
 
 // GetClientId mocks base method.
@@ -76,6 +76,20 @@ func (mr *MockSourceCredentialMockRecorder) GetClientId() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClientId", reflect.TypeOf((*MockSourceCredential)(nil).GetClientId))
 }
 
+// GetEndpointId mocks base method.
+func (m *MockSourceCredential) GetEndpointId() string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetEndpointId")
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+// GetEndpointId indicates an expected call of GetEndpointId.
+func (mr *MockSourceCredentialMockRecorder) GetEndpointId() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEndpointId", reflect.TypeOf((*MockSourceCredential)(nil).GetEndpointId))
+}
+
 // GetExpiresAt mocks base method.
 func (m *MockSourceCredential) GetExpiresAt() int64 {
 	m.ctrl.T.Helper()
@@ -90,34 +104,6 @@ func (mr *MockSourceCredentialMockRecorder) GetExpiresAt() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExpiresAt", reflect.TypeOf((*MockSourceCredential)(nil).GetExpiresAt))
 }
 
-// GetOauthAuthorizationEndpoint mocks base method.
-func (m *MockSourceCredential) GetOauthAuthorizationEndpoint() string {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetOauthAuthorizationEndpoint")
-	ret0, _ := ret[0].(string)
-	return ret0
-}
-
-// GetOauthAuthorizationEndpoint indicates an expected call of GetOauthAuthorizationEndpoint.
-func (mr *MockSourceCredentialMockRecorder) GetOauthAuthorizationEndpoint() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOauthAuthorizationEndpoint", reflect.TypeOf((*MockSourceCredential)(nil).GetOauthAuthorizationEndpoint))
-}
-
-// GetOauthTokenEndpoint mocks base method.
-func (m *MockSourceCredential) GetOauthTokenEndpoint() string {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetOauthTokenEndpoint")
-	ret0, _ := ret[0].(string)
-	return ret0
-}
-
-// GetOauthTokenEndpoint indicates an expected call of GetOauthTokenEndpoint.
-func (mr *MockSourceCredentialMockRecorder) GetOauthTokenEndpoint() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOauthTokenEndpoint", reflect.TypeOf((*MockSourceCredential)(nil).GetOauthTokenEndpoint))
-}
-
 // GetPatientId mocks base method.
 func (m *MockSourceCredential) GetPatientId() string {
 	m.ctrl.T.Helper()
@@ -130,6 +116,34 @@ func (m *MockSourceCredential) GetPatientId() string {
 func (mr *MockSourceCredentialMockRecorder) GetPatientId() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPatientId", reflect.TypeOf((*MockSourceCredential)(nil).GetPatientId))
+}
+
+// GetPlatformType mocks base method.
+func (m *MockSourceCredential) GetPlatformType() pkg.PlatformType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetPlatformType")
+	ret0, _ := ret[0].(pkg.PlatformType)
+	return ret0
+}
+
+// GetPlatformType indicates an expected call of GetPlatformType.
+func (mr *MockSourceCredentialMockRecorder) GetPlatformType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPlatformType", reflect.TypeOf((*MockSourceCredential)(nil).GetPlatformType))
+}
+
+// GetPortalId mocks base method.
+func (m *MockSourceCredential) GetPortalId() string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetPortalId")
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+// GetPortalId indicates an expected call of GetPortalId.
+func (mr *MockSourceCredentialMockRecorder) GetPortalId() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPortalId", reflect.TypeOf((*MockSourceCredential)(nil).GetPortalId))
 }
 
 // GetRefreshToken mocks base method.
@@ -158,20 +172,6 @@ func (m *MockSourceCredential) GetSourceId() string {
 func (mr *MockSourceCredentialMockRecorder) GetSourceId() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceId", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceId))
-}
-
-// GetSourceType mocks base method.
-func (m *MockSourceCredential) GetSourceType() pkg.SourceType {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetSourceType")
-	ret0, _ := ret[0].(pkg.SourceType)
-	return ret0
-}
-
-// GetSourceType indicates an expected call of GetSourceType.
-func (mr *MockSourceCredentialMockRecorder) GetSourceType() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceType", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceType))
 }
 
 // IsDynamicClient mocks base method.

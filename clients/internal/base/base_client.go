@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/exp/slices"
@@ -28,9 +29,10 @@ type SourceClientBase struct {
 	Context   context.Context
 	Logger    logrus.FieldLogger
 
-	OauthClient      *http.Client
-	SourceCredential models.SourceCredential
-	Headers          map[string]string
+	OauthClient        *http.Client
+	SourceCredential   models.SourceCredential
+	EndpointDefinition *definitionsModels.LighthouseSourceDefinition
+	Headers            map[string]string
 
 	UsCoreResources []string
 	FhirVersion     string
@@ -49,14 +51,15 @@ func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.Fh
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (*SourceClientBase, error) {
+func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*SourceClientBase, error) {
 
 	client := &SourceClientBase{
-		FastenEnv:        env,
-		Context:          ctx,
-		Logger:           globalLogger,
-		SourceCredential: sourceCreds,
-		Headers:          map[string]string{},
+		FastenEnv:          env,
+		Context:            ctx,
+		Logger:             globalLogger,
+		SourceCredential:   sourceCreds,
+		EndpointDefinition: endpointDefinition,
+		Headers:            map[string]string{},
 
 		// https://build.fhir.org/ig/HL7/US-Core/
 		UsCoreResources: []string{
@@ -127,8 +130,8 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 		ClientID:     c.SourceCredential.GetClientId(),
 		ClientSecret: "",
 		Endpoint: oauth2.Endpoint{
-			AuthURL:  c.SourceCredential.GetOauthAuthorizationEndpoint(),
-			TokenURL: c.SourceCredential.GetOauthTokenEndpoint(),
+			AuthURL:  c.EndpointDefinition.AuthorizationEndpoint,
+			TokenURL: c.EndpointDefinition.TokenEndpoint,
 		},
 		//RedirectURL:  "",
 		//Scopes:       nil,
@@ -214,7 +217,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		return "", err
 	}
 	if !resourceUrl.IsAbs() {
-		resourceUrl, err = url.Parse(fmt.Sprintf("%s/%s", strings.TrimRight(c.SourceCredential.GetApiEndpointBaseUrl(), "/"), strings.TrimLeft(resourceSubpathOrNext, "/")))
+		resourceUrl, err = url.Parse(fmt.Sprintf("%s/%s", strings.TrimRight(c.EndpointDefinition.Url, "/"), strings.TrimLeft(resourceSubpathOrNext, "/")))
 	}
 	if err != nil {
 		return "", err

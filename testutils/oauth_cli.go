@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
-	defFactory "github.com/fastenhealth/fasten-sources/definitions/factory"
+	definitions "github.com/fastenhealth/fasten-sources/definitions"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
@@ -21,7 +21,7 @@ type ResourceRequest struct {
 	ResourceType    string `json:"resourceType"`
 	ResourceRequest string `json:"resourceRequest"`
 	SourceMode      string `json:"sourceMode"`
-	SourceType      string `json:"sourceType"`
+	EndpointId      string `json:"endpointId"`
 	AccessToken     string `json:"accessToken"`
 	ClientId        string `json:"clientId"`
 }
@@ -81,10 +81,16 @@ func main() {
 			return
 		}
 		log.Printf("%v", requestData)
-		logger := logrus.WithField("callback", requestData.SourceType)
+		logger := logrus.WithField("callback", requestData.EndpointId)
 
 		//get the source defintiion
-		sourceConfig, err := defFactory.GetSourceConfig(pkg.FastenLighthouseEnvType(requestData.SourceMode), pkg.SourceType(requestData.SourceType), map[pkg.SourceType]string{})
+		sourceConfig, err := definitions.GetSourceDefinition(
+			pkg.FastenLighthouseEnvType(requestData.SourceMode),
+			map[pkg.PlatformType]string{},
+			definitions.GetSourceConfigOptions{
+				EndpointId: requestData.EndpointId,
+			},
+		)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing source config: %w", err), http.StatusBadRequest)
 			return
@@ -92,12 +98,11 @@ func main() {
 
 		//populate a fake source credential
 		sc := fakeSourceCredential{
-			SourceType:                 pkg.SourceType(requestData.SourceType),
 			ClientId:                   requestData.ClientId,
 			PatientId:                  "",
 			OauthAuthorizationEndpoint: sourceConfig.AuthorizationEndpoint,
 			OauthTokenEndpoint:         sourceConfig.TokenEndpoint,
-			ApiEndpointBaseUrl:         sourceConfig.ApiEndpointBaseUrl,
+			ApiEndpointBaseUrl:         sourceConfig.Url,
 			RefreshToken:               "",
 			AccessToken:                requestData.AccessToken,
 			ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
@@ -105,7 +110,12 @@ func main() {
 
 		bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
 
-		sourceClient, err := factory.GetSourceClient(pkg.FastenLighthouseEnvType(requestData.SourceMode), pkg.SourceType(requestData.SourceType), bgContext, logger, &sc)
+		sourceClient, err := factory.GetSourceClient(
+			pkg.FastenLighthouseEnvType(requestData.SourceMode),
+			pkg.PlatformType(requestData.SourceType),
+			bgContext,
+			logger,
+			&sc)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
 			return
@@ -146,7 +156,7 @@ func main() {
 
 // implements model.fakeSourceCredential
 type fakeSourceCredential struct {
-	SourceType                 pkg.SourceType
+	SourceType                 pkg.PlatformType
 	ClientId                   string
 	PatientId                  string
 	OauthAuthorizationEndpoint string
@@ -157,7 +167,7 @@ type fakeSourceCredential struct {
 	ExpiresAt                  int64
 }
 
-func (s *fakeSourceCredential) GetSourceType() pkg.SourceType {
+func (s *fakeSourceCredential) GetSourceType() pkg.PlatformType {
 	return s.SourceType
 }
 

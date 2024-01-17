@@ -7,12 +7,14 @@ import "github.com/fastenhealth/fasten-sources/pkg"
 //go:generate mockgen -source=source_credential.go -destination=mock/mock_source_credential.go
 type SourceCredential interface {
 	GetSourceId() string
-	GetSourceType() pkg.SourceType
+
+	GetEndpointId() string
+	GetPortalId() string
+	GetBrandId() string
+	GetPlatformType() pkg.PlatformType
+
 	GetClientId() string
 	GetPatientId() string
-	GetOauthAuthorizationEndpoint() string
-	GetOauthTokenEndpoint() string
-	GetApiEndpointBaseUrl() string
 	GetRefreshToken() string
 	GetAccessToken() string
 	GetExpiresAt() int64

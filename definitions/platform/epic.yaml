@@ -1,0 +1,40 @@
+# MANUALLY POPULATED
+platform_type: epic
+
+scopes_supported:
+  - openid
+  - fhirUser
+  - profile
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: false
+dynamic_client_registration_mode: 'user-authenticated'
+cors_relay_required: false
+documentation: https://fhir.epic.com/Documentation?docId=testpatients
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]
