@@ -187,20 +187,20 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 	return endpoints, nil
 }
 
-func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiEndpoint string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, error) {
+func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiEndpoint string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, pkg.FastenLighthouseEnvType, error) {
 	brands, err := GetBrands(&catalog.CatalogQueryOptions{})
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("error getting brands from catalog: %w", err)
+		return nil, nil, nil, "", fmt.Errorf("error getting brands from catalog: %w", err)
 	}
 
 	portals, err := GetPortals(&catalog.CatalogQueryOptions{})
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("error getting portals from catalog: %w", err)
+		return nil, nil, nil, "", fmt.Errorf("error getting portals from catalog: %w", err)
 	}
 
 	endpoints, err := GetEndpoints(&catalog.CatalogQueryOptions{})
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("error getting endpoints from catalog: %w", err)
+		return nil, nil, nil, "", fmt.Errorf("error getting endpoints from catalog: %w", err)
 	}
 
 	// Find Portal
@@ -214,12 +214,12 @@ func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiE
 
 	if len(matchingPortals) == 0 {
 		errMessage := fmt.Sprintf("No matching portal found for legacy source type: %s", legacySourceType)
-		return nil, nil, nil, fmt.Errorf(errMessage)
+		return nil, nil, nil, "", fmt.Errorf(errMessage)
 	}
 
 	if len(matchingPortals) > 1 {
 		errMessage := fmt.Sprintf("Multiple matching portals found for legacy source type: %s vs %v", legacySourceType, lo.Keys(matchingPortals))
-		return nil, nil, nil, fmt.Errorf(errMessage)
+		return nil, nil, nil, "", fmt.Errorf(errMessage)
 	}
 
 	//found a portal, store it in the source credential
@@ -231,7 +231,7 @@ func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiE
 	})
 	if len(matchingBrands) == 0 {
 		errMessage := fmt.Sprintf("No matching brand found for portal: %s", matchingPortal.Id)
-		return nil, nil, nil, fmt.Errorf(errMessage)
+		return nil, nil, nil, "", fmt.Errorf(errMessage)
 	}
 	matchingBrand := lo.Values(matchingBrands)[0]
 
@@ -239,7 +239,7 @@ func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiE
 	matchingEndpoints := lo.PickByKeys(endpoints, matchingPortal.EndpointIds)
 	if len(matchingEndpoints) == 0 {
 		errMessage := fmt.Sprintf("No matching endpoint found for portal: %s", matchingPortal.Id)
-		return nil, nil, nil, fmt.Errorf(errMessage)
+		return nil, nil, nil, "", fmt.Errorf(errMessage)
 	}
 
 	//find endpoint by matching the sourceCredetial.ApiEndpointUrl with the endpoint url
@@ -266,7 +266,17 @@ func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiE
 	//select the first endpoint
 	matchingEndpoint := lo.Values(matchingEndpoints)[0]
 
-	return &matchingBrand, &matchingPortal, &matchingEndpoint, nil
+	//find the environment
+	var endpointEnv pkg.FastenLighthouseEnvType
+	if _, isSandbox := lo.Find(matchingEndpoint.Identifiers, func(identifier datatypes.Identifier) bool {
+		return identifier.Use == "fasten-sandbox-mode" && identifier.Value == "true"
+	}); isSandbox {
+		endpointEnv = pkg.FastenLighthouseEnvSandbox
+	} else {
+		endpointEnv = pkg.FastenLighthouseEnvProduction
+	}
+
+	return &matchingBrand, &matchingPortal, &matchingEndpoint, endpointEnv, nil
 }
 
 //helpers
