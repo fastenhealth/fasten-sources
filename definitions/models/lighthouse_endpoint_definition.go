@@ -3,6 +3,7 @@ package models
 import (
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+	"strings"
 )
 
 // LighthouseSource
@@ -76,12 +77,16 @@ func (def *LighthouseSourceDefinition) Populate(
 	//	sourceDef.Hidden = true
 	//}
 
-	if !(def.PlatformType == pkg.PlatformTypeAnthem ||
-		def.PlatformType == pkg.PlatformTypeCigna ||
+	if !(def.PlatformType == pkg.PlatformTypeCigna ||
 		def.PlatformType == pkg.PlatformTypeNextgen ||
 		def.PlatformType == pkg.PlatformTypeVahealth) {
 		//most providers use the same url for API endpoint and Audience. These are the exceptions
 		def.Audience = def.Url
+	}
+
+	if def.PlatformType == pkg.PlatformTypeCareevolution || def.PlatformType == pkg.PlatformTypeAnthem {
+		//remove trailing slash for audience for CareEvolution & Anthem
+		def.Audience = strings.TrimSuffix(def.Audience, "/")
 	}
 
 	if def.PlatformType == pkg.PlatformTypeCerner {
