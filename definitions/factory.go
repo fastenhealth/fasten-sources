@@ -68,8 +68,7 @@ func GetSourceDefinition(
 		if err != nil {
 			return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
-		//TODO: merge endpoint data into platform definition
-
+		//platform environment specific customizations happen in Populate method
 		platformDefinition.Populate(&endpoint, options.Env, options.ClientIdLookup)
 
 		return platformDefinition, err
@@ -92,8 +91,6 @@ func getPlatformDefinition(platformType pkg.PlatformType) (*models.LighthouseSou
 	if err != nil {
 		return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 	}
-
-	//TODO: set the platform environment specific customizations
 
 	return platformDefinition, nil
 }

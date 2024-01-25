@@ -93,8 +93,12 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.IntrospectionEndpoint = "https://authorization.cerner.com/tokeninfo"
 	}
 
-	def.Issuer = def.Url
+	if def.PlatformType == pkg.PlatformTypeKaiser && env == pkg.FastenLighthouseEnvSandbox {
+		def.Scopes = append(def.Scopes, "sandbox")
+	}
 
+	//Common defaults. All customizations should be above this line
+	def.Issuer = def.Url
 	// retrieve client-id, if available
 	if clientId, clientIdOk := clientIdLookup[def.PlatformType]; clientIdOk {
 		def.ClientId = clientId

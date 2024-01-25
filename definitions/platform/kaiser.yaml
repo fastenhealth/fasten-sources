@@ -5,7 +5,7 @@ scopes_supported:
   - patient/*.read
   - launch/patient
   - offline_access
-  - sandbox
+#  - sandbox # this scope will be added dynamically depending on the Lighthouse environment (required for sandbox, not for production)
 grant_types_supported:
   - authorization_code
 response_types_supported:
