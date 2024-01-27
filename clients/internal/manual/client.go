@@ -123,6 +123,8 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		var encounterSourceId, encounterResourceType, encounterResourceId string
 		encounterSourceId, encounterResourceType, encounterResourceId, err = pkg.ParseReferenceUri(list401Data.Encounter.Reference)
 		if err != nil {
+			//encounter was not a resource URI, so must be a newly created resource (and will be stored in the Fasten source)
+			// ignore the error, since we can handle it below
 			referenceParts := strings.Split(*list401Data.Encounter.Reference, "/")
 
 			if len(referenceParts) == 2 {
@@ -152,9 +154,10 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 
 			if apiModel.ReferencedResources == nil || len(apiModel.ReferencedResources) == 0 {
 				//if the created resources do not have any referenced resources, lets add the association to the encounter
-				err = db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, m.SourceCredential.GetSourceId(), apiModel.SourceResourceType, apiModel.SourceResourceID)
-				if err != nil {
-					syncErrors[fmt.Sprintf("contained association (%d)", ndx)] = err
+				upsertErr := db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, m.SourceCredential.GetSourceId(), apiModel.SourceResourceType, apiModel.SourceResourceID)
+				if upsertErr != nil {
+					//ignore resource association errors.
+					m.Logger.Warnf("warning contained association failed, safe to ignore (%d): %v", ndx, upsertErr)
 					continue
 				}
 			}
@@ -170,9 +173,10 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 				continue
 			}
 
-			err = db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, entrySourceId, entryResourceType, entryResourceId)
+			upsertErr := db.UpsertRawResourceAssociation(m.Context, encounterSourceId, encounterResourceType, encounterResourceId, entrySourceId, entryResourceType, entryResourceId)
 			if err != nil {
-				syncErrors[fmt.Sprintf("reference association (%d)", ndx)] = err
+				//ignore resource association errors.
+				m.Logger.Warnf("warning reference association failed, safe to ignore (%d): %v", ndx, upsertErr)
 				continue
 			}
 		}
@@ -181,8 +185,8 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		m.Logger.Infof("Completed document processing: %d resources", summary.TotalResources)
 
 		if len(syncErrors) > 0 {
-			//TODO: ignore errors.
-			m.Logger.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+			syncErr := fmt.Errorf("%d error(s) occurred during sync. \n %v", len(syncErrors), syncErrors)
+			return summary, syncErr
 		}
 		return summary, nil
 	case pkg.DocumentTypeFhirNDJSON:
