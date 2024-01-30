@@ -16,7 +16,7 @@ response_modes_supported:
 code_challenge_methods_supported:
   - S256
 confidential: false
-cors_relay_required: true
+cors_relay_required: false
 documentation: https://developerportal.aetna.com/Aetna_TestMember_Data_V6.xls
 
 #client_headers: {}
