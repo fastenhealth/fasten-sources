@@ -37,7 +37,8 @@ response_modes_supported:
 code_challenge_methods_supported:
   - S256
 confidential: false
-cors_relay_required: false
+# required because Athena does not correctly return CORS headers during Token exchange
+cors_relay_required: true
 documentation: |
   sandbox users:
   Practice ID: #80000
