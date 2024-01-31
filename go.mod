@@ -14,6 +14,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17
 	golang.org/x/oauth2 v0.2.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -29,7 +30,6 @@ require (
 	golang.org/x/text v0.13.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 //replace github.com/fastenhealth/gofhir-models => ../gofhir-models

@@ -46,7 +46,11 @@ func TestCatalog_GetBrands_WithSandboxMode(t *testing.T) {
 	require.Len(t, brands, 20)
 
 	for _, brand := range brands {
-		require.Len(t, brand.PortalsIds, 1)
+		if brand.Id == "db814755-2b62-4549-ba65-5138c0b80536" {
+			require.Len(t, brand.PortalsIds, 2)
+		} else {
+			require.Len(t, brand.PortalsIds, 1)
+		}
 	}
 }
 
@@ -59,7 +63,7 @@ func TestCatalog_GetPortals_WithSandboxMode(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Len(t, portals, 20)
+	require.Len(t, portals, 21)
 
 	for _, portal := range portals {
 		require.Len(t, portal.EndpointIds, 1)
@@ -138,4 +142,42 @@ func TestCatalog_GetEndpoints_HaveKnownPlatformType_Sandbox(t *testing.T) {
 	//assert
 	require.True(t, len(endpointPlatformTypes) >= 1)
 	require.True(t, foundAllEndpointPlatfromTypes)
+}
+
+func TestCatalog_GetEndpoints_SuspendedEndpointsShouldBeRemoved(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "0143a953-44e9-416f-a506-4172ed426e3a",
+	}
+	_, err := catalog.GetEndpoints(&opts)
+	require.Error(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
+}
+
+func TestCatalog_GetPortal_KaiserMultipleEndpoints(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "59673c08-e4b5-44d5-b5ab-532e69e8f7e7",
+	}
+	portals, err := catalog.GetPortals(&opts)
+	require.NoError(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
+
+	require.Len(t, portals, 1)
+	for _, portal := range portals {
+		require.Len(t, portal.EndpointIds, 2)
+	}
+}
+
+func TestCatalog_GetPortal_KaiserMultipleEndpoints_Sandbox(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id:                "59673c08-e4b5-44d5-b5ab-532e69e8f7e7",
+		LighthouseEnvType: pkg.FastenLighthouseEnvSandbox,
+	}
+	portals, err := catalog.GetPortals(&opts)
+	require.NoError(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
+
+	require.Len(t, portals, 1)
+	for _, portal := range portals {
+		require.Len(t, portal.EndpointIds, 1)
+	}
 }

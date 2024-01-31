@@ -45,37 +45,49 @@ func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAcc
 				} else if len(matchingBrand) > 1 {
 					return nil, fmt.Errorf("multiple brands found with id %s", opts.Id)
 				} else {
-					return matchingBrand, nil
+					brands = matchingBrand
 				}
 			}
 		}
 
 		// filter by environment if provided
 		if len(opts.LighthouseEnvType) > 0 {
-			//we need to request the filtered portals, and then find the associated brands (stripping out any brands that don't have portals)
+			//we need to request the endpoints, and then find the associated portals (stripping out any portals that don't have endpoints)
 
-			// filtered portals is a map of sandbox or production portals
-			filteredPortals, err := GetPortals(&catalog.CatalogQueryOptions{LighthouseEnvType: opts.LighthouseEnvType})
-			if err != nil {
-				return nil, fmt.Errorf("failed: %w", err)
+			sandboxModeExpectedValue := "false"
+			if opts.LighthouseEnvType == pkg.FastenLighthouseEnvSandbox {
+				sandboxModeExpectedValue = "true"
 			}
 
-			//loop though all the portals, and search for their endpoint ids in the filtered endpoints list
-			filteredBrands := map[string]catalog.PatientAccessBrand{}
-			for brandId, brand := range brands {
+			// pass 1: filter out brands that don't have the expected sandbox mode identifier
+			brands = lo.PickBy(brands, func(key string, value catalog.PatientAccessBrand) bool {
 
-				foundBrandPortals := lo.PickByKeys(filteredPortals, brand.PortalsIds)
+				_, isMatchingEnv := lo.Find(value.Identifiers, func(identifier datatypes.Identifier) bool {
+					return identifier.Use == "fasten-sandbox-mode" && identifier.Value == sandboxModeExpectedValue
+				})
+				return isMatchingEnv
+			})
 
-				//if we have found (sandbox or prod) endpoints for this portal, then we update the endpoint ids, and add this portal to the filtered portals map
-				if len(foundBrandPortals) > 0 {
-					//we have endpoints for this portal, so we can add it to the filtered portals
-					brand.PortalsIds = lo.Keys(foundBrandPortals)
-					filteredBrands[brandId] = brand
+			// pass 2: if the brand has multiple portals, we need to filter out any endpoints that don't match the expected sandbox mode identifier
+			for brandId, _ := range brands {
+				filteredBrand := brands[brandId]
+
+				if len(filteredBrand.PortalsIds) == 1 {
+					continue
 				}
-			}
 
-			//reassign portals to the filtered portals
-			brands = filteredBrands
+				filteredBrand.PortalsIds = lo.Filter(filteredBrand.PortalsIds, func(portalId string, ndx int) bool {
+					_, err := GetPortals(&catalog.CatalogQueryOptions{Id: portalId, LighthouseEnvType: opts.LighthouseEnvType})
+					if err != nil {
+						return false
+					} else {
+						return true
+					}
+				})
+
+				//update
+				brands[brandId] = filteredBrand
+			}
 		}
 	}
 
@@ -105,28 +117,41 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 		if len(opts.LighthouseEnvType) > 0 {
 			//we need to request the endpoints, and then find the associated portals (stripping out any portals that don't have endpoints)
 
-			// filtered endpoints is a map of sandbox or production endpoints
-			filteredEndpoints, err := GetEndpoints(&catalog.CatalogQueryOptions{LighthouseEnvType: opts.LighthouseEnvType})
-			if err != nil {
-				return nil, fmt.Errorf("failed getting endpoints for portal: %w", err)
+			sandboxModeExpectedValue := "false"
+			if opts.LighthouseEnvType == pkg.FastenLighthouseEnvSandbox {
+				sandboxModeExpectedValue = "true"
 			}
 
-			//loop though all the portals, and search for their endpoint ids in the filtered endpoints list
-			filteredPortals := map[string]catalog.PatientAccessPortal{}
-			for portalId, portal := range portals {
+			// pass 1: filter out portals that don't have the expected sandbox mode identifier
+			portals = lo.PickBy(portals, func(key string, value catalog.PatientAccessPortal) bool {
 
-				foundPortalEndpoints := lo.PickByKeys(filteredEndpoints, portal.EndpointIds)
+				_, isMatchingEnv := lo.Find(value.Identifiers, func(identifier datatypes.Identifier) bool {
+					return identifier.Use == "fasten-sandbox-mode" && identifier.Value == sandboxModeExpectedValue
+				})
+				return isMatchingEnv
+			})
 
-				//if we have found (sandbox or prod) endpoints for this portal, then we update the endpoint ids, and add this portal to the filtered portals map
-				if len(foundPortalEndpoints) > 0 {
-					//we have endpoints for this portal, so we can add it to the filtered portals
-					portal.EndpointIds = lo.Keys(foundPortalEndpoints)
-					filteredPortals[portalId] = portal
+			// pass 2: if the portal has multiple endpoints, we need to filter out any endpoints that don't match the expected sandbox mode identifier
+			for portalId, _ := range portals {
+				filteredPortal := portals[portalId]
+
+				if len(filteredPortal.EndpointIds) == 1 {
+					continue
 				}
+
+				filteredPortal.EndpointIds = lo.Filter(filteredPortal.EndpointIds, func(endpointId string, ndx int) bool {
+					_, err := GetEndpoints(&catalog.CatalogQueryOptions{Id: endpointId, LighthouseEnvType: opts.LighthouseEnvType})
+					if err != nil {
+						return false
+					} else {
+						return true
+					}
+				})
+
+				//update
+				portals[portalId] = filteredPortal
 			}
 
-			//reassign portals to the filtered portals
-			portals = filteredPortals
 		}
 
 	}
@@ -155,30 +180,20 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 
 		// filter by environment if provided
 		if len(opts.LighthouseEnvType) > 0 {
+			sandboxModeExpectedValue := "false"
+			if opts.LighthouseEnvType == pkg.FastenLighthouseEnvSandbox {
+				sandboxModeExpectedValue = "true"
+			}
+
 			endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
-				_, sandboxMode := lo.Find(value.Identifiers, func(identifier datatypes.Identifier) bool {
-					return identifier.Use == "fasten-sandbox-mode" && identifier.Value == "true"
+
+				_, isMatchingEnv := lo.Find(value.Identifiers, func(identifier datatypes.Identifier) bool {
+					return identifier.Use == "fasten-sandbox-mode" && identifier.Value == sandboxModeExpectedValue
 				})
 
-				if opts.LighthouseEnvType == pkg.FastenLighthouseEnvSandbox {
-					return sandboxMode
-				} else {
-					return !sandboxMode
-				}
-
+				return isMatchingEnv
 			})
 		}
-	}
-
-	includeSuspendedEndpoints := false
-	if opts != nil && opts.IncludeSuspendedEndpoints {
-		includeSuspendedEndpoints = true
-	}
-	if !includeSuspendedEndpoints {
-		//filter any endpoints that are not active
-		endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
-			return value.Status == "active"
-		})
 	}
 
 	if len(endpoints) == 0 {
