@@ -54,6 +54,28 @@ func TestCatalog_GetBrands_WithSandboxMode(t *testing.T) {
 	}
 }
 
+func TestCatalog_GetBrands_WithCache(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err)
+	portals, err := catalog.GetPortals(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox, CachedEndpointsLookup: &endpoints})
+	//test
+	brands, err := catalog.GetBrands(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox, CachedPortalsLookup: &portals})
+
+	//assert
+	require.NoError(t, err)
+	require.Len(t, brands, 20)
+
+	for _, brand := range brands {
+		if brand.Id == "db814755-2b62-4549-ba65-5138c0b80536" {
+			require.Len(t, brand.PortalsIds, 2)
+		} else {
+			require.Len(t, brand.PortalsIds, 1)
+		}
+	}
+}
+
 func TestCatalog_GetPortals_WithSandboxMode(t *testing.T) {
 	//setup
 	opts := modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}

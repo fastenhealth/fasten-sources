@@ -76,14 +76,19 @@ func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAcc
 					continue
 				}
 
-				filteredBrand.PortalsIds = lo.Filter(filteredBrand.PortalsIds, func(portalId string, ndx int) bool {
-					_, err := GetPortals(&catalog.CatalogQueryOptions{Id: portalId, LighthouseEnvType: opts.LighthouseEnvType})
-					if err != nil {
-						return false
-					} else {
-						return true
-					}
-				})
+				if opts != nil && opts.CachedPortalsLookup != nil {
+					//if we have a cached endpoints lookup, we can use that to filter out the endpoints
+					filteredBrand.PortalsIds = lo.Keys(lo.PickByKeys(*opts.CachedPortalsLookup, filteredBrand.PortalsIds))
+				} else {
+					filteredBrand.PortalsIds = lo.Filter(filteredBrand.PortalsIds, func(portalId string, ndx int) bool {
+						_, err := GetPortals(&catalog.CatalogQueryOptions{Id: portalId, LighthouseEnvType: opts.LighthouseEnvType})
+						if err != nil {
+							return false
+						} else {
+							return true
+						}
+					})
+				}
 
 				//update
 				brands[brandId] = filteredBrand
@@ -139,14 +144,19 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 					continue
 				}
 
-				filteredPortal.EndpointIds = lo.Filter(filteredPortal.EndpointIds, func(endpointId string, ndx int) bool {
-					_, err := GetEndpoints(&catalog.CatalogQueryOptions{Id: endpointId, LighthouseEnvType: opts.LighthouseEnvType})
-					if err != nil {
-						return false
-					} else {
-						return true
-					}
-				})
+				if opts != nil && opts.CachedEndpointsLookup != nil {
+					//if we have a cached endpoints lookup, we can use that to filter out the endpoints
+					filteredPortal.EndpointIds = lo.Keys(lo.PickByKeys(*opts.CachedEndpointsLookup, filteredPortal.EndpointIds))
+				} else {
+					filteredPortal.EndpointIds = lo.Filter(filteredPortal.EndpointIds, func(endpointId string, ndx int) bool {
+						_, err := GetEndpoints(&catalog.CatalogQueryOptions{Id: endpointId, LighthouseEnvType: opts.LighthouseEnvType})
+						if err != nil {
+							return false
+						} else {
+							return true
+						}
+					})
+				}
 
 				//update
 				portals[portalId] = filteredPortal
