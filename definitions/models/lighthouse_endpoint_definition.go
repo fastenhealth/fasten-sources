@@ -84,7 +84,7 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.Audience = def.Url
 	}
 
-	if def.PlatformType == pkg.PlatformTypeCareevolution || def.PlatformType == pkg.PlatformTypeAnthem {
+	if def.PlatformType == pkg.PlatformTypeCareevolution || def.PlatformType == pkg.PlatformTypeAnthem || def.PlatformType == pkg.PlatformTypeEclinicalworks {
 		//remove trailing slash for audience for CareEvolution & Anthem
 		def.Audience = strings.TrimSuffix(def.Audience, "/")
 	}
