@@ -225,6 +225,91 @@ This list of platforms is sourced from various locations, including:
 | [PCIS Gold](https://fhir.pcisgold.com/fhirdocs/practices.json)                                                                                                                                                         |                                       | |                                                                                                       |                                                                                   |
 
 
+# Specialised EHRs
+
+## Post-Acute
+- [WellSky](https://mediwareinc.github.io/consolo.interop-api-docs/)
+- [Raintree Systems](https://www.raintreeinc.com/apitermsofuse/) [1](https://www.raintreeinc.com/interoperability/)
+- [Homecare Homebase](https://hchb.com/) [1](https://hchb.com/our-solutions/hchb-connect/)
+- [Prompt Emr](https://promptemr.com/product/documentation/)
+- PointClickCare (see above)
+- Net Health (see above)
+- [Complia](https://www.compliahealth.com/)
+- AlayaCare
+- Axxess
+- Yardi
+
+## Therapies
+- Clinicient
+- WebPT
+- [Therabill](https://www.therabill.com/)
+- [TheraOffice](https://www.theraoffice.com/)
+- [TherapyNotes](https://www.therapynotes.com/)
+- [TherapySync](https://www.therapysync.com/)
+- [TherapyZen](https://www.therapyzen.com/)
+- Practice Pro
+- NetHealth (see above)
+
+# EMS
+- [EmsCharts](https://www.emscharts.com/)
+- [ImageTrend](https://www.imagetrend.com/)
+- [Zoll](https://www.zolldata.com/)
+- [Physio-Control](https://www.physio-control.com/)
+- [Stryker](https://www.stryker.com/)
+
+## Vision
+- [RevolutionEHR](https://revolutionehr.com/)
+- [CrystalPM](https://www.crystalpm.com/)
+- [MaximEyes](https://www.first-insight.com/)
+- [OfficeMate](https://www.officemate.net/)
+- [My Vision Express](https://www.myvisionexpress.com/)
+- [Eyefinity](https://www.eyefinity.com/)
+- [Compulink](https://www.compulinkadvantage.com/)
+- [VisionWeb](https://www.visionweb.com/)
+
+## Behavioral Health
+- [Therap](https://www.therapservices.net/)
+- [Credible](https://www.credibleinc.com/)
+- [Netsmart](https://www.ntst.com/)
+- [Qualifacts](https://qualifacts.com/)
+- [Valant](https://www.valant.com/)
+- [Welligent](https://www.welligent.com/)
+- [KaleidaCare](https://www.kaleidacare.com/)
+- [Streamline Healthcare](https://streamlinehealthcare.com/)
+- [Core Solutions](https://coresolutionsinc.com/)
+- [ClinicTracker](https://clinictracker.com/)
+- RainTree
+- [ICANotes](https://www.icanotes.com/)
+- [Harris Health](https://www.harrishealthcare.com/)
+- WellSky
+
+## Ambulatory
+- Enable My Practice
+- EMDs
+- ModMed
+- OneTouch EMR
+- OP - Office Practicum
+- [Greenway Health](https://www.greenwayhealth.com/)
+- [Practice Fusion](https://www.practicefusion.com/)
+- [Amazing Charts](https://amazingcharts.com/)
+- [eClinicalWorks](https://www.eclinicalworks.com/)
+- [CareCloud](https://www.carecloud.com/)
+- [DrChrono](https://www.drchrono.com/)
+- [Modernizing Medicine](https://www.modmed.com/)
+- [PracticeSuite](https://www.practicesuite.com/)
+- [Kareo](https://www.kareo.com/)
+- [NextGen Healthcare](https://www.nextgen.com/)
+- [Allscripts](https://www.allscripts.com/)
+- [Cerner](https://www.cerner.com/)
+- [Epic](https://www.epic.com/)
+- [GE Healthcare](https://www.gehealthcare.com/)
+- [MEDHOST](https://www.medhost.com/)
+- [MEDITECH](https://www.meditech.com/)
+- [Netsmart](https://www.ntst.com/)
+- [PointClickCare](https://pointclickcare.com/)
+- [Net Health](https://www.nethealth.com/)
+- 
+
 # Research
 
 > https://www.healthit.gov/sites/default/files/facas/2018-10-17_HITAC_FHIR_Presentation_508.pdf
@@ -241,4 +326,5 @@ This list of platforms is sourced from various locations, including:
 | MEDHOST | FHIR Release 2 | 5% | — |
 | MEDITECH | FHIR Release 2 | 20% | <1% |
 | NextGen | FHIR Release 2 | <1% | 6% |
+
 
