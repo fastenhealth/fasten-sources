@@ -193,8 +193,11 @@
 
                 callback_code: '',
                 oauth_data: '',
+                accessToken: '',
                 jwt_data: '',
                 patient_id: '',
+
+                sourceDefinition: {},
 
                 loadingPatient: false,
                 patient_data: '',
@@ -219,27 +222,17 @@
 
                     this.endpoint_id = sourceStateInfo.endpoint_id
 
-                    //check if localstorage has a customSource for this state
-                    if(callbackState && localStorage.getItem(`${callbackState}.customSource`)){
-                        console.log("using custom source for this state")
-                        var customSource = JSON.parse(localStorage.getItem(`${callbackState}.customSource`))
-                        localStorage.removeItem(`${callbackState}.customSource`)
-                        this.processCallbackUsingLighthouseSource(customSource).then(console.log).catch(console.error)
+                    //check if localstorage has a customDefinition for this state
+                    if(callbackState && localStorage.getItem(`${callbackState}.customDefinition`)){
+                        console.log("using custom definition for this state")
+                        this.sourceDefinition = JSON.parse(localStorage.getItem(`${callbackState}.customDefinition`))
+                        localStorage.removeItem(`${callbackState}.customDefinition`)
+                        this.processCallbackUsingLighthouseSource(this.sourceDefinition).then(console.log).catch(console.error)
                     } else {
-                        var lighthouseEndpoint = localStorage.getItem('lighthouseEndpoint')
-
-                        fetch(  lighthouseEndpoint + 'connect/' + this.endpoint_id)
-                            .then(resp => resp.json())
-                            .then(response => {
-                                console.log(response)
-                                let lighthouseSource = response.data
-                                return this.processCallbackUsingLighthouseSource(lighthouseSource)
-                            })
-                            .then(console.log)
-                            .catch(console.error)
+                        throw new Error("No custom definition found for this state, this should never happen")
                     }
                 },
-                async processCallbackUsingLighthouseSource(lighthouseSource){
+                async processCallbackUsingLighthouseSource(sourceDefinition){
                     //get required parameters from the URI and local storage
                     const callbackUrlParts = new URL(window.location.href)
                     const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
@@ -263,10 +256,9 @@
                     this.callback_code = callbackCode
 
 
-                    let payload = await this.swapOauthToken(lighthouseSource,expectedSourceStateInfo, callbackCode)
+                    let payload = await this.swapOauthToken(sourceDefinition,expectedSourceStateInfo, callbackCode)
                     this.oauth_data = JSON.stringify(payload, null, 4)
-                    localStorage.setItem("accessToken", payload.access_token)
-
+                    this.accessToken = payload.access_token
 
                     //check if the access token is a JWT
                     if(payload.access_token.split(".").length === 3){
@@ -275,28 +267,27 @@
                     }
 
                     this.patient_id = payload.patient
-                    localStorage.setItem("patientId", payload.patient)
                 },
 
-                async swapOauthToken(sourceMetadata, expectedSourceStateInfo, code){
+                async swapOauthToken(sourceDefinition, expectedSourceStateInfo, code){
                     // @ts-expect-error
                     const client = {
-                        client_id: sourceMetadata.client_id
+                        client_id: sourceDefinition.client_id
                     }
                     //this is for providers that support CORS & PKCE (public client auth)
                     let codeVerifier = undefined
 
-                    let tokenEndpointUrl = sourceMetadata.token_endpoint
+                    let tokenEndpointUrl = sourceDefinition.token_endpoint
 
-                    if(sourceMetadata.confidential){
+                    if(sourceDefinition.confidential){
                         console.log("This is a confidential client, using lighthouse token endpoint.")
                         //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
-                        sourceMetadata.token_endpoint = sourceMetadata.redirect_uri.replace("/callback/", "/token/")
+                        sourceDefinition.token_endpoint = sourceDefinition.redirect_uri.replace("/callback/", "/token/")
                         //use a placeholder client_secret (the actual secret is stored in Lighthouse)
                         client.client_secret = "placeholder"
                         client.token_endpoint_auth_method = "client_secret_basic"
                         codeVerifier = "placeholder"
-                    } else if(sourceMetadata.cors_relay_required){
+                    } else if(sourceDefinition.cors_relay_required){
                         console.error("This is a public client, but requires a CORS relay.")
                         throw new Error("This source requires a CORS relay. Not supported in toolbox")
                     } else {
@@ -307,10 +298,10 @@
 
 
                     const as = {
-                        issuer: sourceMetadata.issuer,
-                        authorization_endpoint:	sourceMetadata.authorization_endpoint,
+                        issuer: sourceDefinition.issuer,
+                        authorization_endpoint:	sourceDefinition.authorization_endpoint,
                         token_endpoint:	tokenEndpointUrl,
-                        introspection_endpoint: sourceMetadata.introspection_endpoint,
+                        introspection_endpoint: sourceDefinition.introspection_endpoint,
                     }
 
                     console.log("STARTING--- Oauth.validateAuthResponse", as)
@@ -325,7 +316,7 @@
                         as,
                         client,
                         params,
-                        sourceMetadata.redirect_uri,
+                        sourceDefinition.redirect_uri,
                         codeVerifier,
                     )
                     let payload = await response.json()
@@ -333,22 +324,14 @@
                     return payload
                 },
                 sourceRequest(resourceType, resourceRequest){
-                    //get sourceMode from localStorage
-                    var sourceMode = localStorage.getItem("sourceMode")
-                    if(sourceMode == null){
-                        sourceMode = "sandbox"
-                    }
-                    //get accessToken from localStorage
-                    var accessToken = localStorage.getItem("accessToken")
 
-                    var clientId = localStorage.getItem("clientId")
                     let payload = {
-                        "sourceMode": sourceMode,
-                        "endpointId": this.endpoint_id, //todo, we should use the given configuration, instead of the endpoint id from Lighthouse catalog
-                        "resourceType": resourceType,
-                        "resourceRequest": resourceRequest,
-                        "accessToken": accessToken,
-                        "clientId": clientId,
+                        "sourceDefinition": this.sourceDefinition,
+                        "requestData": {
+                            "resourceType": resourceType,
+                            "resourceRequest": resourceRequest,
+                            "accessToken": this.accessToken,
+                        },
                     }
 
                     //post JSON payload to /api/source/request using fetch
@@ -359,10 +342,12 @@
                             'Content-Type': 'application/json',
                         },
                         body: JSON.stringify(payload)
-                    }).catch((error) => {
-                        console.error('Error:', error);
-                        return error.responseText
                     })
+                        .then(resp => resp.json())
+                        .catch((error) => {
+                            console.error('Error:', error);
+                            return error.responseText
+                        })
                 },
 
                 //Click handlers
@@ -372,6 +357,7 @@
                     this.patient_data = "Loading..."
                     this.sourceRequest("Patient", this.patient_id)
                         .then(resp => {
+                            console.log("Patient data", resp)
                             this.patient_data = JSON.stringify(resp, null, 4)
                             this.loadingPatient = false
                         })
@@ -384,6 +370,7 @@
 
                     this.sourceRequest(this.raw_resource_type, this.raw_resource_path)
                         .then(resp => {
+                            console.log("Raw Request data", resp)
                             this.raw_data = JSON.stringify(resp, null, 4)
                             this.loadingRawRequest = false
                         })

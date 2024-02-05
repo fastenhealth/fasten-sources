@@ -46,6 +46,23 @@ func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context
 	return dynamicSourceClient{SourceClient: baseClient, EndpointDefinition: endpointDefinition}, err
 }
 
+func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (models.SourceClient, error) {
+
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
+	if err != nil {
+		return nil, err
+	}
+
+	// API requires the following headers for every request
+	if len(endpointDefinition.ClientHeaders) > 0 {
+		for k, v := range endpointDefinition.ClientHeaders {
+			baseClient.Headers[k] = v
+		}
+	}
+
+	return dynamicSourceClient{SourceClient: baseClient, EndpointDefinition: endpointDefinition}, err
+}
+
 func (c dynamicSourceClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 
 	if c.EndpointDefinition.MissingOpPatientEverything {

@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
+	"github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
@@ -17,13 +17,23 @@ import (
 	"time"
 )
 
+/*
+"sourceDefinition": this.sourceDefinition,
+                        "requestData": {
+                            "resourceType": resourceType,
+                            "resourceRequest": resourceRequest,
+                            "accessToken": this.accessToken,
+                        },
+
+*/
+
 type ResourceRequest struct {
-	ResourceType    string `json:"resourceType"`
-	ResourceRequest string `json:"resourceRequest"`
-	SourceMode      string `json:"sourceMode"`
-	EndpointId      string `json:"endpointId"`
-	AccessToken     string `json:"accessToken"`
-	ClientId        string `json:"clientId"`
+	SourceDefinition models.LighthouseSourceDefinition `json:"sourceDefinition"`
+	RequestData      struct {
+		ResourceType    string `json:"resourceType"`
+		ResourceRequest string `json:"resourceRequest"`
+		AccessToken     string `json:"accessToken"`
+	} `json:"requestData"`
 }
 
 //go:embed html
@@ -81,42 +91,36 @@ func main() {
 			return
 		}
 		log.Printf("%v", requestData)
-		logger := logrus.WithField("callback", requestData.EndpointId)
-
-		//get the source defintiion
-		sourceConfig, err := definitions.GetSourceDefinition(
-			definitions.GetSourceConfigOptions{
-				Env:            pkg.FastenLighthouseEnvType(requestData.SourceMode),
-				EndpointId:     requestData.EndpointId,
-				ClientIdLookup: map[pkg.PlatformType]string{},
-			},
-		)
-		if err != nil {
-			JSONError(res, fmt.Errorf("an error occurred while initializing source config: %w", err), http.StatusBadRequest)
-			return
-		}
+		logger := logrus.WithField("callback", requestData.SourceDefinition.PlatformType)
 
 		//populate a fake source credential
 		sc := fakeSourceCredential{
-			ClientId:   requestData.ClientId,
+			ClientId:   requestData.SourceDefinition.ClientId,
 			PatientId:  "",
-			EndpointId: requestData.EndpointId,
+			EndpointId: requestData.SourceDefinition.Id,
 
-			OauthAuthorizationEndpoint: sourceConfig.AuthorizationEndpoint,
-			OauthTokenEndpoint:         sourceConfig.TokenEndpoint,
-			ApiEndpointBaseUrl:         sourceConfig.Url,
+			OauthAuthorizationEndpoint: requestData.SourceDefinition.AuthorizationEndpoint,
+			OauthTokenEndpoint:         requestData.SourceDefinition.TokenEndpoint,
+			ApiEndpointBaseUrl:         requestData.SourceDefinition.Url,
 			RefreshToken:               "",
-			AccessToken:                requestData.AccessToken,
+			AccessToken:                requestData.RequestData.AccessToken,
 			ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
 		}
 
 		bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
 
-		sourceClient, err := factory.GetSourceClient(
-			pkg.FastenLighthouseEnvType(requestData.SourceMode),
+		//TODO: SourceDefinition is always misisng ClientHeaders, lets set them ourselves
+		requestData.SourceDefinition.ClientHeaders = map[string]string{
+			"Accept": "application/json+fhir",
+		}
+
+		sourceClient, err := factory.GetSourceClientWithDefinition(
+			pkg.FastenLighthouseEnvProduction,
 			bgContext,
 			logger,
-			&sc)
+			&sc,
+			&requestData.SourceDefinition,
+		)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
 			return
@@ -124,7 +128,7 @@ func main() {
 
 		var response map[string]interface{}
 
-		_, err = sourceClient.GetRequest(fmt.Sprintf("%s/%s", requestData.ResourceType, strings.TrimLeft(requestData.ResourceRequest, "/")), &response)
+		_, err = sourceClient.GetRequest(fmt.Sprintf("%s/%s", requestData.RequestData.ResourceType, strings.TrimLeft(requestData.RequestData.ResourceRequest, "/")), &response)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while fetching data from source: %v", err), http.StatusInternalServerError)
 			return

@@ -311,6 +311,10 @@
                     'prod': 'https://lighthouse.fastenhealth.com/v1/'
                 },
 
+                //custom brand/endpoint
+                customDefinition: {},
+
+
                 newSearchFilter(){
                     let filter = {}
                     filter.fields = ["*"];
@@ -379,7 +383,7 @@
                             lighthouseSource.brand_id = searchResult.brand_id
                             lighthouseSource.portal_id = searchResult.portal_id
 
-                            return this.generateSourceAuthorizeUrl(response.data)
+                            return this.generateSourceAuthorizeUrl(lighthouseSource)
                         })
 
                     //         showSpinner()
@@ -431,13 +435,10 @@
                     }
 
                     localStorage.setItem(state, JSON.stringify(sourceStateInfo))
-                    localStorage.setItem("clientId", lighthouseSource.client_id)
 
-                    if(lighthouseSource.custom_source){
-                        //this isn't actually a lighthouse retrieved source, this is a custom defined source
-                        // we need to store this configuration in local storage so we can use it later
-                        localStorage.setItem(`${state}.customSource`, JSON.stringify(lighthouseSource))
-                    }
+                    //this might be a custom definition instead of a lighthouse retrieved definition
+                    // we need to store this configuration in local storage so we can use it later
+                    localStorage.setItem(`${state}.customDefinition`, JSON.stringify(lighthouseSource))
 
                     this.redirectWithOriginAndDestination(authorizationUrl.toString(), lighthouseSource);
                 },
@@ -471,8 +472,54 @@
                     window.location.href = redirectUrlParts.toString();
                 },
 
+                resetCustomDefinitionModel(){
+                  this.customDefinition = {
+                    custom_definition: true,
+                    platform_type: '',
+                    authorization_endpoint: '',
+                    token_endpoint: '',
+                    redirect_uri: '',
+                    response_types_supported: [],
+                    response_modes_supported: [],
+                    aud: '',
+                    scopes_supported: [],
+                    confidential: false,
+                    code_challenge_methods_supported: []
+                  }
+                },
+
+                defineCustomSource(){
+                    var lighthouseEndpoint = this.lighthouseEndpointLookup[this.searchEndpointEnv]
+
+                    let api_endpoint_base_url = $('#customApiEndpointBaseUrl').val()
+                    //if api_endpoint_base_url ends with "/" character, trim
+                    if (api_endpoint_base_url[api_endpoint_base_url.length - 1] === "/") {
+                        api_endpoint_base_url = api_endpoint_base_url.slice(0, -1)
+                    }
 
 
+                    var sourceType = $('#customSourceType').val()
+                    var customSource = {
+                        custom_source: true,
+
+                        authorization_endpoint: $('#customAuthEndpoint').val(),
+                        token_endpoint: $('#customTokenEndpoint').val(),
+                        redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
+                        response_types_supported: ['code'],
+                        response_modes_supported: [$('#customResponseMode').val()],
+                        aud: $('#customAudience').val(),
+                        issuer: api_endpoint_base_url,
+                        api_endpoint_base_url: api_endpoint_base_url,
+                        confidential: $('#customConfidential').is(":checked"),
+                        code_challenge_methods_supported: ['S256'],
+                        client_id: $('#customClientId').val(),
+                        scopes_supported: $('#customScopes').val(),
+
+                    }
+                    console.log(customSource)
+
+                    this.generateSourceAuthorizeUrl(sourceType, customSource)
+                },
 
                 //helper functions
                 pathJoin(parts, sep){
@@ -504,51 +551,6 @@
                 }
             }
         }
-
-
-
-
-
-
-
-
-        function defineCustomSource(){
-            var lighthouseEndpoint = SOURCE_ENDPOINT_LOOKUP[$('input[name="source_mode"]:checked').val()]
-
-            let api_endpoint_base_url = $('#customApiEndpointBaseUrl').val()
-            //if api_endpoint_base_url ends with "/" character, trim
-            if (api_endpoint_base_url[api_endpoint_base_url.length - 1] === "/") {
-                api_endpoint_base_url = api_endpoint_base_url.slice(0, -1)
-            }
-
-
-            var sourceType = $('#customSourceType').val()
-            var customSource = {
-                custom_source: true,
-
-                authorization_endpoint: $('#customAuthEndpoint').val(),
-                token_endpoint: $('#customTokenEndpoint').val(),
-                redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
-                response_types_supported: ['code'],
-                response_modes_supported: [$('#customResponseMode').val()],
-                aud: $('#customAudience').val(),
-                issuer: api_endpoint_base_url,
-                api_endpoint_base_url: api_endpoint_base_url,
-                confidential: $('#customConfidential').is(":checked"),
-                code_challenge_methods_supported: ['S256'],
-                client_id: $('#customClientId').val(),
-                scopes_supported: $('#customScopes').val(),
-
-            }
-            console.log(customSource)
-
-            generateSourceAuthorizeUrl(sourceType, customSource)
-        }
-
-
-
-
-
 
 
 
