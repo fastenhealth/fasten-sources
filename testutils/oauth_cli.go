@@ -85,10 +85,10 @@ func main() {
 
 		//get the source defintiion
 		sourceConfig, err := definitions.GetSourceDefinition(
-			pkg.FastenLighthouseEnvType(requestData.SourceMode),
-			map[pkg.PlatformType]string{},
 			definitions.GetSourceConfigOptions{
-				EndpointId: requestData.EndpointId,
+				Env:            pkg.FastenLighthouseEnvType(requestData.SourceMode),
+				EndpointId:     requestData.EndpointId,
+				ClientIdLookup: map[pkg.PlatformType]string{},
 			},
 		)
 		if err != nil {
@@ -98,8 +98,10 @@ func main() {
 
 		//populate a fake source credential
 		sc := fakeSourceCredential{
-			ClientId:                   requestData.ClientId,
-			PatientId:                  "",
+			ClientId:   requestData.ClientId,
+			PatientId:  "",
+			EndpointId: requestData.EndpointId,
+
 			OauthAuthorizationEndpoint: sourceConfig.AuthorizationEndpoint,
 			OauthTokenEndpoint:         sourceConfig.TokenEndpoint,
 			ApiEndpointBaseUrl:         sourceConfig.Url,
@@ -112,7 +114,6 @@ func main() {
 
 		sourceClient, err := factory.GetSourceClient(
 			pkg.FastenLighthouseEnvType(requestData.SourceMode),
-			pkg.PlatformType(requestData.SourceType),
 			bgContext,
 			logger,
 			&sc)
@@ -156,7 +157,11 @@ func main() {
 
 // implements model.fakeSourceCredential
 type fakeSourceCredential struct {
-	SourceType                 pkg.PlatformType
+	EndpointId string
+	PortalId   string
+	BrandId    string
+
+	PlatformType               pkg.PlatformType
 	ClientId                   string
 	PatientId                  string
 	OauthAuthorizationEndpoint string
@@ -167,8 +172,24 @@ type fakeSourceCredential struct {
 	ExpiresAt                  int64
 }
 
-func (s *fakeSourceCredential) GetSourceType() pkg.PlatformType {
-	return s.SourceType
+func (s *fakeSourceCredential) GetSourceId() string {
+	return "fake-source-id"
+}
+
+func (s *fakeSourceCredential) GetEndpointId() string {
+	return s.EndpointId
+}
+
+func (s *fakeSourceCredential) GetPortalId() string {
+	return s.PortalId
+}
+
+func (s *fakeSourceCredential) GetBrandId() string {
+	return s.BrandId
+}
+
+func (s *fakeSourceCredential) GetPlatformType() pkg.PlatformType {
+	return s.PlatformType
 }
 
 func (s *fakeSourceCredential) GetClientId() string {
