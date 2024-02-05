@@ -167,36 +167,41 @@
 
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
+
+                                    <div class="alert alert-info">
+                                        <code x-text="JSON.stringify(customDefinition, null, 2)"></code>
+                                    </div>
+
                                     <div class="form-group">
-                                        <label for="customSourceType">Source Type</label>
-                                        <input required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
+                                        <label for="customSourceType">Platform Type</label>
+                                        <input x-model="customDefinition.platform_type" required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
                                     </div>
                                     <div class="form-group">
                                         <label for="customAuthEndpoint">Authorization Endpoint</label>
-                                        <input required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
+                                        <input x-model="customDefinition.authorization_endpoint" required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
                                     </div>
                                     <div class="form-group">
                                         <label for="customTokenEndpoint">Token Endpoint</label>
-                                        <input required type="text" class="form-control" id="customTokenEndpoint" placeholder="https://www.example.com/oauth/oauth2/token">
+                                        <input x-model="customDefinition.token_endpoint" required type="text" class="form-control" id="customTokenEndpoint" placeholder="https://www.example.com/oauth/oauth2/token">
                                     </div>
                                     <div class="form-group">
                                         <label for="customApiEndpointBaseUrl">Api Endpoint Base Url</label>
-                                        <input required type="text" class="form-control" id="customApiEndpointBaseUrl" placeholder="https://www.example.com/r4/fhir">
+                                        <input x-model="customDefinition.url" required type="text" class="form-control" id="customApiEndpointBaseUrl" placeholder="https://www.example.com/r4/fhir">
                                     </div>
                                     <div class="form-group">
                                         <label for="customResponseMode">Response Mode</label>
-                                        <select required class="form-control" id="customResponseMode">
+                                        <select x-model="customDefinition.response_modes_supported[0]" required class="form-control" id="customResponseMode">
                                             <option>fragment</option>
                                             <option>query</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="customClientId">Client ID</label>
-                                        <input required type="text" class="form-control" id="customClientId" placeholder="xxx-xxx-xxx">
+                                        <input x-model="customDefinition.client_id" required type="text" class="form-control" id="customClientId" placeholder="xxx-xxx-xxx">
                                     </div>
                                     <div class="form-group">
                                         <label for="customScopes">Scopes</label>
-                                        <select required multiple class="form-control" id="customScopes">
+                                        <select x-model="customDefinition.scopes_supported" required multiple class="form-control" id="customScopes">
                                             <optgroup>
                                                 <option selected>fhirUser</option>
                                                 <option selected>openid</option>
@@ -254,15 +259,15 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="customAudience">Audience</label>
-                                        <input type="text" class="form-control" id="customAudience" placeholder="(optional)">
+                                        <input x-model="customDefinition.aud" type="text" class="form-control" id="customAudience" placeholder="(optional)">
                                     </div>
 
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="customConfidential">
+                                        <input x-model="customDefinition.confidential" type="checkbox" class="form-check-input" id="customConfidential">
                                         <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
                                     </div>
 
-                                    <button id="customSourceSubmit" type="button" class="btn btn-primary btn-sm mb-3">Submit</button>
+                                    <button @click="defineCustomSource()" type="button" class="btn btn-primary btn-sm mb-3">Submit</button>
 
                                 </div>
                             </div>
@@ -312,7 +317,22 @@
                 },
 
                 //custom brand/endpoint
-                customDefinition: {},
+                customDefinition: {
+                    custom_definition: true,
+                    platform_type: '',
+                    authorization_endpoint: '',
+                    token_endpoint: '',
+                    url: '',
+                    client_id: '',
+                    redirect_uri: '',
+                    grant_types_supported: ['authorization_code'],
+                    response_types_supported: ['code'],
+                    response_modes_supported: [],
+                    aud: '',
+                    scopes_supported: [],
+                    confidential: false,
+                    code_challenge_methods_supported: []
+                },
 
 
                 newSearchFilter(){
@@ -478,8 +498,11 @@
                     platform_type: '',
                     authorization_endpoint: '',
                     token_endpoint: '',
+                    url: '',
+                    client_id: '',
                     redirect_uri: '',
-                    response_types_supported: [],
+                    grant_types_supported: ['authorization_code'],
+                    response_types_supported: ['code'],
                     response_modes_supported: [],
                     aud: '',
                     scopes_supported: [],
@@ -491,34 +514,21 @@
                 defineCustomSource(){
                     var lighthouseEndpoint = this.lighthouseEndpointLookup[this.searchEndpointEnv]
 
-                    let api_endpoint_base_url = $('#customApiEndpointBaseUrl').val()
+                    let api_endpoint_base_url = this.customDefinition.url
                     //if api_endpoint_base_url ends with "/" character, trim
                     if (api_endpoint_base_url[api_endpoint_base_url.length - 1] === "/") {
-                        api_endpoint_base_url = api_endpoint_base_url.slice(0, -1)
+                        this.customDefinition.url = api_endpoint_base_url.slice(0, -1)
                     }
 
 
-                    var sourceType = $('#customSourceType').val()
-                    var customSource = {
-                        custom_source: true,
+                    this.customDefinition.custom_source = true
+                    this.customDefinition.redirect_uri = `${lighthouseEndpoint}callback/${this.customDefinition.platform_type}`
+                    this.customDefinition.issuer = api_endpoint_base_url
+                    this.customDefinition.code_challenge_methods_supported = ['S256']
 
-                        authorization_endpoint: $('#customAuthEndpoint').val(),
-                        token_endpoint: $('#customTokenEndpoint').val(),
-                        redirect_uri: `${lighthouseEndpoint}callback/${sourceType}`,
-                        response_types_supported: ['code'],
-                        response_modes_supported: [$('#customResponseMode').val()],
-                        aud: $('#customAudience').val(),
-                        issuer: api_endpoint_base_url,
-                        api_endpoint_base_url: api_endpoint_base_url,
-                        confidential: $('#customConfidential').is(":checked"),
-                        code_challenge_methods_supported: ['S256'],
-                        client_id: $('#customClientId').val(),
-                        scopes_supported: $('#customScopes').val(),
+                    console.log(this.customDefinition)
 
-                    }
-                    console.log(customSource)
-
-                    this.generateSourceAuthorizeUrl(sourceType, customSource)
+                    this.generateSourceAuthorizeUrl(this.customDefinition)
                 },
 
                 //helper functions
