@@ -11,6 +11,7 @@ import (
 	fasten "github.com/fastenhealth/fasten-sources/clients/internal/fasten"
 	manual "github.com/fastenhealth/fasten-sources/clients/internal/manual"
 	models "github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	logrus "github.com/sirupsen/logrus"
 	"net/http"
@@ -32,4 +33,15 @@ func GetSourceClient(
 	default:
 		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
 	}
+}
+
+func GetSourceClientWithDefinition(
+	env pkg.FastenLighthouseEnvType,
+	ctx context.Context,
+	globalLogger logrus.FieldLogger,
+	sourceCreds models.SourceCredential,
+	endpointDefinition *definitionsModels.LighthouseSourceDefinition,
+	testHttpClient ...*http.Client,
+) (models.SourceClient, error) {
+	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
 }

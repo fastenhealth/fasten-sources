@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:x-bind="http://www.w3.org/1999/xhtml">
 <head>
 
     <!-- Required meta tags -->
@@ -58,7 +58,7 @@
     </style>
 </head>
 <body class="az-body">
-    <main role="main">
+    <main role="main" x-data="pageCallbackData()" x-init="callbackInit()">
 
         <section class="jumbotron text-center">
             <div class="container">
@@ -84,7 +84,7 @@
 
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <pre id="callback_code"></pre>
+                                        <pre x-text="callback_code"></pre>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <pre id="oauth_data"></pre>
+                                        <pre x-text="oauth_data"></pre>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div id="collapseJWT" class="collapse" aria-labelledby="headingJWT" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <pre id="jwt_data"></pre>
+                                        <pre x-text="jwt_data"></pre>
                                     </div>
                                 </div>
                             </div>
@@ -129,8 +129,8 @@
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <pre id="patient_id"></pre>
-                                        <button id="populatePatient" type="button" class="btn btn-primary btn-sm mb-3">Request</button>
-                                        <pre style="max-height:400px; display:none;" id="patient_data"></pre>
+                                        <button @click="populatePatientHandler()" x-bind:disabled="loadingPatient" type="button" class="btn btn-primary btn-sm mb-3">Request</button>
+                                        <pre style="max-height:400px;" x-text="patient_data" x-show="!loadingPatient"></pre>
                                     </div>
                                 </div>
                             </div>
@@ -147,16 +147,16 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="rawResourceType">Resource Type</label>
-                                            <input type="text" placeholder="Observation,Patient,etc" class="form-control" id="rawResourceType" aria-describedby="emailHelp">
+                                            <input type="text" placeholder="Observation,Patient,etc" class="form-control" id="rawResourceType" x-model="raw_resource_type" aria-describedby="emailHelp">
                                         </div>
                                         <div class="form-group">
                                             <label for="rawResourcePath">Resource Path</label>
-                                            <input type="text" class="form-control" id="rawResourcePath">
+                                            <input type="text" class="form-control" id="rawResourcePath" x-model="raw_resource_path">
                                         </div>
 
-                                        <button id="rawPatient" type="button" class="btn btn-primary btn-sm mb-3">Submit Request</button>
-                                        <pre style="max-height:400px; display:none;" id="raw_data"></pre>
-                                        <div style="display:none;" class="alert alert-danger" role="alert" id="raw_data_error"></div>
+                                        <button @click="rawPatientRequestHandler()" type="button" x-bind:disabled="loadingRawRequest" class="btn btn-primary btn-sm mb-3">Submit Request</button>
+                                        <pre style="max-height:400px;" x-show="!loadingRawRequest" x-text="raw_data"></pre>
+                                        <div x-show="!loadingRawRequest && !!raw_data_error" class="alert alert-danger" role="alert" x-text="raw_data_error"></div>
 
                                     </div>
                                 </div>
@@ -182,214 +182,207 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js"></script>
     <script type="module">
+        import alpinejs from 'https://cdn.skypack.dev/alpinejs';
         import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+        alpinejs.data('pageCallbackData', pageCallbackData);
+        alpinejs.start();
+
+        export function pageCallbackData(){
+            return {
+                endpoint_id: '',
+
+                callback_code: '',
+                oauth_data: '',
+                accessToken: '',
+                jwt_data: '',
+                patient_id: '',
+
+                sourceDefinition: {},
+
+                loadingPatient: false,
+                patient_data: '',
+
+                loadingRawRequest: false,
+                raw_resource_type: '',
+                raw_resource_path: '',
+                raw_data: '',
+                raw_data_error: '',
+
+                callbackInit(){
+                    //get sourceType from url (example.com/callback/{{sourceType}})
+                    var parts = window.location.pathname.split("/")
 
 
-        function populatePatientRequest(){
-            //get patient id
-            var patientId = localStorage.getItem("patientId")
+                    const callbackUrlParts = new URL(window.location.href)
+                    const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
+                    const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
 
-            $("#patient_data").show().text("Loading...")
-            var resp = sourceRequest("Patient", patientId)
-            $("#patient_data").text(JSON.stringify(resp, null, 4))
+                    const sourceStateInfoJson = localStorage.getItem(callbackState)
+                    const sourceStateInfo = JSON.parse(sourceStateInfoJson)
 
-        }
+                    this.endpoint_id = sourceStateInfo.endpoint_id
 
-        function rawPatientRequest(){
-            var rawResourceType = $("#rawResourceType").val()
-            var rawResourcePath = $("#rawResourcePath").val()
-
-            $("#raw_data").show().text("Loading...")
-            $("#raw_data_error").hide()
-            try{
-                var resp = sourceRequest(rawResourceType, rawResourcePath)
-                $("#raw_data").text(JSON.stringify(resp, null, 4))
-            }catch(e){
-                $("#raw_data").hide()
-                $("#raw_data_error").show().text(e)
-            }
-
-        }
-
-        function sourceRequest(resourceType, resourceRequest){
-            var parts = window.location.pathname.split("/")
-            var sourceType = parts[parts.length-1]
-
-            //get sourceMode from localStorage
-            var sourceMode = localStorage.getItem("sourceMode")
-            if(sourceMode == null){
-                sourceMode = "sandbox"
-            }
-            //get accessToken from localStorage
-            var accessToken = localStorage.getItem("accessToken")
-
-            var clientId = localStorage.getItem("clientId")
-            let payload = {
-                "sourceMode": sourceMode,
-                "sourceType": sourceType,
-                "resourceType": resourceType,
-                "resourceRequest": resourceRequest,
-                "accessToken": accessToken,
-                "clientId": clientId,
-            }
-
-            //post JSON payload to /api/source/request using fetch
-            var resp_data
-            var resp_err
-            $.ajax({
-                type: 'POST',
-                url: '/api/source/request',
-                data: JSON.stringify (payload),
-                contentType: "application/json",
-                dataType: 'json',
-                async: false,
-                success: function (json) {
-                    resp_data = json;
+                    //check if localstorage has a customDefinition for this state
+                    if(callbackState && localStorage.getItem(`${callbackState}.customDefinition`)){
+                        console.log("using custom definition for this state")
+                        this.sourceDefinition = JSON.parse(localStorage.getItem(`${callbackState}.customDefinition`))
+                        localStorage.removeItem(`${callbackState}.customDefinition`)
+                        this.processCallbackUsingLighthouseSource(this.sourceDefinition).then(console.log).catch(console.error)
+                    } else {
+                        throw new Error("No custom definition found for this state, this should never happen")
+                    }
                 },
-                error: function (e) {
-                    console.log(e);
-                    resp_err = e.responseText
+                async processCallbackUsingLighthouseSource(sourceDefinition){
+                    //get required parameters from the URI and local storage
+                    const callbackUrlParts = new URL(window.location.href)
+                    const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
+                    const callbackCode = callbackUrlParts.searchParams.get("code") || fragmentParams.get("code")
+                    const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
+                    const callbackError = callbackUrlParts.searchParams.get("error") || fragmentParams.get("error")
+                    const callbackErrorDescription = callbackUrlParts.searchParams.get("error_description") || fragmentParams.get("error_description")
+
+
+                    const expectedSourceStateInfo = JSON.parse(localStorage.getItem(callbackState))
+                    localStorage.removeItem(callbackState)
+
+                    if(callbackError && !callbackCode){
+                        //TOOD: print this message in the UI
+                        let errMsg = "an error occurred while authenticating to this source. Please try again later"
+                        console.error(errMsg, callbackErrorDescription)
+                        throw new Error(errMsg)
+                    }
+
+                    console.log("callback code:", callbackCode)
+                    this.callback_code = callbackCode
+
+
+                    let payload = await this.swapOauthToken(sourceDefinition,expectedSourceStateInfo, callbackCode)
+                    this.oauth_data = JSON.stringify(payload, null, 4)
+                    this.accessToken = payload.access_token
+
+                    //check if the access token is a JWT
+                    if(payload.access_token.split(".").length === 3){
+                        //if it is, decode it and print it
+                        this.jwt_data = JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4)
+                    }
+
+                    this.patient_id = payload.patient
+                },
+
+                async swapOauthToken(sourceDefinition, expectedSourceStateInfo, code){
+                    // @ts-expect-error
+                    const client = {
+                        client_id: sourceDefinition.client_id
+                    }
+                    //this is for providers that support CORS & PKCE (public client auth)
+                    let codeVerifier = undefined
+
+                    let tokenEndpointUrl = sourceDefinition.token_endpoint
+
+                    if(sourceDefinition.confidential){
+                        console.log("This is a confidential client, using lighthouse token endpoint.")
+                        //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
+                        sourceDefinition.token_endpoint = sourceDefinition.redirect_uri.replace("/callback/", "/token/")
+                        //use a placeholder client_secret (the actual secret is stored in Lighthouse)
+                        client.client_secret = "placeholder"
+                        client.token_endpoint_auth_method = "client_secret_basic"
+                        codeVerifier = "placeholder"
+                    } else if(sourceDefinition.cors_relay_required){
+                        console.error("This is a public client, but requires a CORS relay.")
+                        throw new Error("This source requires a CORS relay. Not supported in toolbox")
+                    } else {
+                        console.log("This is a public client, using source token endpoint.")
+                        client.token_endpoint_auth_method = 'none'
+                        codeVerifier = expectedSourceStateInfo.code_verifier
+                    }
+
+
+                    const as = {
+                        issuer: sourceDefinition.issuer,
+                        authorization_endpoint:	sourceDefinition.authorization_endpoint,
+                        token_endpoint:	tokenEndpointUrl,
+                        introspection_endpoint: sourceDefinition.introspection_endpoint,
+                    }
+
+                    console.log("STARTING--- Oauth.validateAuthResponse", as)
+                    const params = Oauth.validateAuthResponse(as, client, new URLSearchParams({"code": code, "state": expectedSourceStateInfo.state}), expectedSourceStateInfo.state)
+                    if (Oauth.isOAuth2Error(params)) {
+                        console.log('error', params)
+                        throw new Error('error when validating code & state before token exchange') // Handle OAuth 2.0 redirect error
+                    }
+                    console.log("ENDING--- Oauth.validateAuthResponse")
+                    console.log("STARTING--- Oauth.authorizationCodeGrantRequest")
+                    const response = await Oauth.authorizationCodeGrantRequest(
+                        as,
+                        client,
+                        params,
+                        sourceDefinition.redirect_uri,
+                        codeVerifier,
+                    )
+                    let payload = await response.json()
+                    console.log("ENDING--- Oauth.authorizationCodeGrantRequest", payload)
+                    return payload
+                },
+                sourceRequest(resourceType, resourceRequest){
+
+                    let payload = {
+                        "sourceDefinition": this.sourceDefinition,
+                        "requestData": {
+                            "resourceType": resourceType,
+                            "resourceRequest": resourceRequest,
+                            "accessToken": this.accessToken,
+                        },
+                    }
+
+                    //post JSON payload to /api/source/request using fetch
+
+                    return fetch(  '/api/source/request', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                        .then(resp => resp.json())
+                        .catch((error) => {
+                            console.error('Error:', error);
+                            return error.responseText
+                        })
+                },
+
+                //Click handlers
+                populatePatientHandler(){
+                    this.loadingPatient = true
+
+                    this.patient_data = "Loading..."
+                    this.sourceRequest("Patient", this.patient_id)
+                        .then(resp => {
+                            console.log("Patient data", resp)
+                            this.patient_data = JSON.stringify(resp, null, 4)
+                            this.loadingPatient = false
+                        })
+                },
+                rawPatientRequestHandler(){
+
+                    this.loadingRawRequest = true
+                    this.raw_data = "Loading..."
+                    this.raw_data_error = ""
+
+                    this.sourceRequest(this.raw_resource_type, this.raw_resource_path)
+                        .then(resp => {
+                            console.log("Raw Request data", resp)
+                            this.raw_data = JSON.stringify(resp, null, 4)
+                            this.loadingRawRequest = false
+                        })
+                        .catch(e => {
+                            this.raw_data = ""
+                            this.raw_data_error = e.toString()
+                            this.loadingRawRequest = false
+                        })
                 }
-            })
-            if(resp_err){
-                throw resp_err
             }
-            return resp_data
         }
 
-
-        async function swapOauthToken(sourceType, sourceMetadata, expectedSourceStateInfo, code){
-            // @ts-expect-error
-            const client = {
-                client_id: sourceMetadata.client_id
-            }
-            //this is for providers that support CORS & PKCE (public client auth)
-            let codeVerifier = undefined
-            if(!sourceMetadata.confidential){
-                client.token_endpoint_auth_method = 'none'
-                codeVerifier = expectedSourceStateInfo.code_verifier
-
-            } else {
-                console.log("This is a confidential client, using lighthouse token endpoint.")
-                //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
-                sourceMetadata.token_endpoint = sourceMetadata.redirect_uri.replace("/callback/", "/token/")
-                //use a placeholder client_secret (the actual secret is stored in Lighthouse)
-                client.client_secret = "placeholder"
-                client.token_endpoint_auth_method = "client_secret_basic"
-                codeVerifier = "placeholder"
-            }
-
-            const as = {
-                issuer: sourceMetadata.issuer,
-                authorization_endpoint:	sourceMetadata.authorization_endpoint,
-                token_endpoint:	sourceMetadata.token_endpoint,
-                introspection_endpoint: sourceMetadata.introspection_endpoint,
-            }
-
-            console.log("STARTING--- Oauth.validateAuthResponse", as)
-            const params = Oauth.validateAuthResponse(as, client, new URLSearchParams({"code": code, "state": expectedSourceStateInfo.state}), expectedSourceStateInfo.state)
-            if (Oauth.isOAuth2Error(params)) {
-                console.log('error', params)
-                throw new Error() // Handle OAuth 2.0 redirect error
-            }
-            console.log("ENDING--- Oauth.validateAuthResponse")
-            console.log("STARTING--- Oauth.authorizationCodeGrantRequest")
-            const response = await Oauth.authorizationCodeGrantRequest(
-                as,
-                client,
-                params,
-                sourceMetadata.redirect_uri,
-                codeVerifier,
-            )
-            let payload = await response.json()
-            console.log("ENDING--- Oauth.authorizationCodeGrantRequest", payload)
-            return payload
-        }
-
-
-        async function processCallbackUsingLighthouseSource(sourceType, lighthouseSource){
-            //get required parameters from the URI and local storage
-            const callbackUrlParts = new URL(window.location.href)
-            const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
-            const callbackCode = callbackUrlParts.searchParams.get("code") || fragmentParams.get("code")
-            const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
-            const callbackError = callbackUrlParts.searchParams.get("error") || fragmentParams.get("error")
-            const callbackErrorDescription = callbackUrlParts.searchParams.get("error_description") || fragmentParams.get("error_description")
-
-
-            const expectedSourceStateInfo = JSON.parse(localStorage.getItem(callbackState))
-            localStorage.removeItem(callbackState)
-
-            if(callbackError && !callbackCode){
-                //TOOD: print this message in the UI
-                let errMsg = "an error occurred while authenticating to this source. Please try again later"
-                console.error(errMsg, callbackErrorDescription)
-                throw new Error(errMsg)
-            }
-
-            console.log("callback code:", callbackCode)
-            $('#callback_code').text(callbackCode)
-
-
-            let payload = await swapOauthToken(sourceType, lighthouseSource,expectedSourceStateInfo, callbackCode)
-            $('#oauth_data').text(JSON.stringify(payload, null, 4))
-            localStorage.setItem("accessToken", payload.access_token)
-
-
-            //check if the access token is a JWT
-            if(payload.access_token.split(".").length === 3){
-                //if it is, decode it and print it
-                $('#jwt_data').text(JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4))
-            }
-
-            $('#patient_id').text(payload.patient)
-            localStorage.setItem("patientId", payload.patient)
-        }
-
-        $(function() {
-
-            //register handlers
-
-            $("#populatePatient").click(function(){
-                $(this).prop('disabled', true);
-                populatePatientRequest()
-            })
-
-            $("#rawPatient").click(function(){
-                $(this).prop('disabled', true);
-                rawPatientRequest()
-                $(this).prop('disabled', false);
-            })
-
-
-            //get sourceType from url (example.com/callback/{{sourceType}})
-            var parts = window.location.pathname.split("/")
-            var sourceType = parts[parts.length-1]
-
-
-            const callbackUrlParts = new URL(window.location.href)
-            const fragmentParams = new URLSearchParams(callbackUrlParts.hash.substring(1))
-            const callbackState = callbackUrlParts.searchParams.get("state") || fragmentParams.get("state")
-
-            //check if localstorage has a customSource for this state
-            if(callbackState && localStorage.getItem(`${callbackState}.customSource`)){
-                console.log("using custom source for this state")
-                var customSource = JSON.parse(localStorage.getItem(`${callbackState}.customSource`))
-                localStorage.removeItem(`${callbackState}.customSource`)
-                processCallbackUsingLighthouseSource(sourceType, customSource).then(console.log).catch(console.error)
-            } else {
-                var lighthouseEndpoint = localStorage.getItem('lighthouseEndpoint')
-                $.get(  lighthouseEndpoint + `connect/${sourceType}`, async function( data ) {
-                    console.log(data.data)
-                    var lighthouseSource = data.data
-                    await processCallbackUsingLighthouseSource(sourceType, lighthouseSource)
-                });
-            }
-
-
-
-
-        });
     </script>
 </body>
 </html>

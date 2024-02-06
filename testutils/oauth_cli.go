@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
-	definitions "github.com/fastenhealth/fasten-sources/definitions"
+	"github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
@@ -17,13 +17,23 @@ import (
 	"time"
 )
 
+/*
+"sourceDefinition": this.sourceDefinition,
+                        "requestData": {
+                            "resourceType": resourceType,
+                            "resourceRequest": resourceRequest,
+                            "accessToken": this.accessToken,
+                        },
+
+*/
+
 type ResourceRequest struct {
-	ResourceType    string `json:"resourceType"`
-	ResourceRequest string `json:"resourceRequest"`
-	SourceMode      string `json:"sourceMode"`
-	EndpointId      string `json:"endpointId"`
-	AccessToken     string `json:"accessToken"`
-	ClientId        string `json:"clientId"`
+	SourceDefinition models.LighthouseSourceDefinition `json:"sourceDefinition"`
+	RequestData      struct {
+		ResourceType    string `json:"resourceType"`
+		ResourceRequest string `json:"resourceRequest"`
+		AccessToken     string `json:"accessToken"`
+	} `json:"requestData"`
 }
 
 //go:embed html
@@ -81,41 +91,36 @@ func main() {
 			return
 		}
 		log.Printf("%v", requestData)
-		logger := logrus.WithField("callback", requestData.EndpointId)
-
-		//get the source defintiion
-		sourceConfig, err := definitions.GetSourceDefinition(
-			pkg.FastenLighthouseEnvType(requestData.SourceMode),
-			map[pkg.PlatformType]string{},
-			definitions.GetSourceConfigOptions{
-				EndpointId: requestData.EndpointId,
-			},
-		)
-		if err != nil {
-			JSONError(res, fmt.Errorf("an error occurred while initializing source config: %w", err), http.StatusBadRequest)
-			return
-		}
+		logger := logrus.WithField("callback", requestData.SourceDefinition.PlatformType)
 
 		//populate a fake source credential
 		sc := fakeSourceCredential{
-			ClientId:                   requestData.ClientId,
-			PatientId:                  "",
-			OauthAuthorizationEndpoint: sourceConfig.AuthorizationEndpoint,
-			OauthTokenEndpoint:         sourceConfig.TokenEndpoint,
-			ApiEndpointBaseUrl:         sourceConfig.Url,
+			ClientId:   requestData.SourceDefinition.ClientId,
+			PatientId:  "",
+			EndpointId: requestData.SourceDefinition.Id,
+
+			OauthAuthorizationEndpoint: requestData.SourceDefinition.AuthorizationEndpoint,
+			OauthTokenEndpoint:         requestData.SourceDefinition.TokenEndpoint,
+			ApiEndpointBaseUrl:         requestData.SourceDefinition.Url,
 			RefreshToken:               "",
-			AccessToken:                requestData.AccessToken,
+			AccessToken:                requestData.RequestData.AccessToken,
 			ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
 		}
 
 		bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
 
-		sourceClient, err := factory.GetSourceClient(
-			pkg.FastenLighthouseEnvType(requestData.SourceMode),
-			pkg.PlatformType(requestData.SourceType),
+		//TODO: SourceDefinition is always misisng ClientHeaders, lets set them ourselves
+		requestData.SourceDefinition.ClientHeaders = map[string]string{
+			"Accept": "application/json+fhir",
+		}
+
+		sourceClient, err := factory.GetSourceClientWithDefinition(
+			pkg.FastenLighthouseEnvProduction,
 			bgContext,
 			logger,
-			&sc)
+			&sc,
+			&requestData.SourceDefinition,
+		)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
 			return
@@ -123,7 +128,7 @@ func main() {
 
 		var response map[string]interface{}
 
-		_, err = sourceClient.GetRequest(fmt.Sprintf("%s/%s", requestData.ResourceType, strings.TrimLeft(requestData.ResourceRequest, "/")), &response)
+		_, err = sourceClient.GetRequest(fmt.Sprintf("%s/%s", requestData.RequestData.ResourceType, strings.TrimLeft(requestData.RequestData.ResourceRequest, "/")), &response)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while fetching data from source: %v", err), http.StatusInternalServerError)
 			return
@@ -156,7 +161,11 @@ func main() {
 
 // implements model.fakeSourceCredential
 type fakeSourceCredential struct {
-	SourceType                 pkg.PlatformType
+	EndpointId string
+	PortalId   string
+	BrandId    string
+
+	PlatformType               pkg.PlatformType
 	ClientId                   string
 	PatientId                  string
 	OauthAuthorizationEndpoint string
@@ -167,8 +176,24 @@ type fakeSourceCredential struct {
 	ExpiresAt                  int64
 }
 
-func (s *fakeSourceCredential) GetSourceType() pkg.PlatformType {
-	return s.SourceType
+func (s *fakeSourceCredential) GetSourceId() string {
+	return "fake-source-id"
+}
+
+func (s *fakeSourceCredential) GetEndpointId() string {
+	return s.EndpointId
+}
+
+func (s *fakeSourceCredential) GetPortalId() string {
+	return s.PortalId
+}
+
+func (s *fakeSourceCredential) GetBrandId() string {
+	return s.BrandId
+}
+
+func (s *fakeSourceCredential) GetPlatformType() pkg.PlatformType {
+	return s.PlatformType
 }
 
 func (s *fakeSourceCredential) GetClientId() string {
