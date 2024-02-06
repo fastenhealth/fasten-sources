@@ -72,6 +72,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
+
+                        <div x-show="!!oauth_error.error" class="alert alert-danger">
+                            <strong x-text="oauth_error.error"></strong> <span class="ml-1" x-text="oauth_error.error_description"></span>
+                        </div>
+
                         <div class="accordion" id="accordionExample">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
@@ -196,6 +201,11 @@
                 accessToken: '',
                 jwt_data: '',
                 patient_id: '',
+                oauth_error: {
+                    error: '',
+                    error_description: ''
+                },
+
 
                 sourceDefinition: {},
 
@@ -249,6 +259,9 @@
                         //TOOD: print this message in the UI
                         let errMsg = "an error occurred while authenticating to this source. Please try again later"
                         console.error(errMsg, callbackErrorDescription)
+                        this.oauth_error.error = callbackError
+                        this.oauth_error.error_description = callbackErrorDescription
+
                         throw new Error(errMsg)
                     }
 

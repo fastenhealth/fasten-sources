@@ -105,7 +105,7 @@
                         <div x-show="!searchResultsLoading" x-text="searchResultsTotal + ' sources found. Showing page 1.'" class="alert alert-warning" role="alert"></div>
 
                         <div class="alert alert-info">
-    <code x-text="JSON.stringify({searchText: searchText, searchEndpointEnv: searchEndpointEnv}, null, 2)"></code>
+                            <pre x-text="JSON.stringify({searchText: searchText, searchEndpointEnv: searchEndpointEnv}, null, 2)"></pre>
                         </div>
                     </div>
                 </div>
@@ -169,8 +169,10 @@
                                 <div class="card-body">
 
                                     <div class="alert alert-info">
-                                        <code x-text="JSON.stringify(customDefinition, null, 2)"></code>
+                                        <pre x-text="JSON.stringify(customDefinition, null, 2)"></pre>
                                     </div>
+
+                                    <button x-show="hasSavedCustomSource()" @click="loadCustomSource()" type="button" class="btn btn-primary btn-sm mb-3">Load Definition</button>
 
                                     <div class="form-group">
                                         <label for="customSourceType">Platform Type</label>
@@ -267,8 +269,15 @@
                                         <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
                                     </div>
 
-                                    <button @click="defineCustomSource()" type="button" class="btn btn-primary btn-sm mb-3">Submit</button>
-
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <input x-model="shouldSaveCustom" type="checkbox" id="saveCustom" aria-label="Save Definition">
+                                                <label class="form-check-label ml-1" for="saveCustom">Save</label>
+                                            </div>
+                                        </div>
+                                        <button @click="defineCustomSource()" type="button" class="btn btn-primary">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -333,7 +342,7 @@
                     confidential: false,
                     code_challenge_methods_supported: []
                 },
-
+                shouldSaveCustom: true,
 
                 newSearchFilter(){
                     let filter = {}
@@ -482,9 +491,19 @@
                     const redirectParams = new URLSearchParams()
                     redirectParams.set("origin_url", originUrlParts.toString())
                     redirectParams.set("dest_url", destUrl)
-                    redirectParams.set("brand_id", redirectOpts.brand_id)
-                    redirectParams.set("portal_id", redirectOpts.portal_id)
-                    redirectParams.set("endpoint_id", redirectOpts.id)
+
+                    if (redirectOpts.brand_id) {
+                        redirectParams.set("brand_id", redirectOpts.brand_id)
+                    }
+                    if (redirectOpts.portal_id) {
+                        redirectParams.set("portal_id", redirectOpts.portal_id)
+                    }
+                    if (redirectOpts.id) {
+                        redirectParams.set("endpoint_id", redirectOpts.id)
+                    }
+                    if (redirectOpts.custom_definition) {
+                        redirectParams.set("custom_definition", redirectOpts.custom_definition)
+                    }
                     redirectUrlParts.search = redirectParams.toString()
                     console.log(redirectUrlParts.toString());
 
@@ -512,6 +531,7 @@
                 },
 
                 defineCustomSource(){
+                    this.searchEndpointEnv = "sandbox"
                     var lighthouseEndpoint = this.lighthouseEndpointLookup[this.searchEndpointEnv]
 
                     let api_endpoint_base_url = this.customDefinition.url
@@ -520,16 +540,30 @@
                         this.customDefinition.url = api_endpoint_base_url.slice(0, -1)
                     }
 
-
-                    this.customDefinition.custom_source = true
                     this.customDefinition.redirect_uri = `${lighthouseEndpoint}callback/${this.customDefinition.platform_type}`
                     this.customDefinition.issuer = api_endpoint_base_url
                     this.customDefinition.code_challenge_methods_supported = ['S256']
 
                     console.log(this.customDefinition)
 
+                    if(this.shouldSaveCustom){
+                        //save custom definition before redirecting
+                        this.saveCustomSource()
+                    }
+
                     this.generateSourceAuthorizeUrl(this.customDefinition)
                 },
+                //load custom source from localstorage
+                loadCustomSource(){
+                    this.customDefinition = JSON.parse(localStorage.getItem(`savedCustomDefinition`))
+                },
+                saveCustomSource(){
+                    localStorage.setItem(`savedCustomDefinition`, JSON.stringify(this.customDefinition))
+                },
+                hasSavedCustomSource(){
+                    return localStorage.getItem(`savedCustomDefinition`) !== null
+                },
+
 
                 //helper functions
                 pathJoin(parts, sep){
