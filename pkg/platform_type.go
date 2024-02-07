@@ -24,6 +24,7 @@ const (
 	PlatformTypeHumana           PlatformType = "humana"
 	PlatformTypeKaiser           PlatformType = "kaiser"
 	PlatformTypeMaximeyes        PlatformType = "maximeyes"
+	PlatformTypeMedhost          PlatformType = "medhost"
 	PlatformTypeMedicare         PlatformType = "medicare"
 	PlatformTypeMeditech         PlatformType = "meditech"
 	PlatformTypeNextgen          PlatformType = "nextgen"
@@ -57,6 +58,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeHumana,
 		PlatformTypeKaiser,
 		PlatformTypeMaximeyes,
+		PlatformTypeMedhost,
 		PlatformTypeMedicare,
 		PlatformTypeMeditech,
 		PlatformTypeNextgen,
