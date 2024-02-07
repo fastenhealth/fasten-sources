@@ -1,0 +1,46 @@
+# MANUALLY POPULATED
+platform_type: practicefusion
+
+# https://api.patientfusion.com/fhir/r4/v1/118b460b-8390-4754-8e4a-1dd5ee20f599/.well-known/smart-configuration
+# https://api.patientfusion.com/fhir/r4/v1/118b460b-8390-4754-8e4a-1dd5ee20f599/metadata
+scopes_supported:
+  - fhirUser
+  - openid
+  - profile
+  - offline_access
+  - patient/AllergyIntolerance.read
+  - patient/CarePlan.read
+  - patient/CareTeam.read
+  - patient/Condition.read
+  - patient/Device.read
+  - patient/DiagnosticReport.read
+  - patient/DocumentReference.read
+  - patient/Encounter.read
+  - patient/Goal.read
+  - patient/Immunization.read
+  - patient/MedicationRequest.read
+  - patient/Observation.read
+  - patient/Organization.read
+  - patient/Patient.read
+  - patient/Practitioner.read
+  - patient/Procedure.read
+  - patient/Provenance.read
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  https://practicefusion.com/fhir/get-started/
+  https://help.patientfusion.com/s/article/How-can-I-link-my-health-information-from-Patient-Fusion-to-other-applications
+  https://pfpds.practicefusion.com/s/
+  https://www.practicefusion.com/assets/static_files/ServiceBaseURLs.json
+
+missing_op_patient_everything: true
+client_supported_resources: []
+#custom_op_patient_everything: "Patient"
