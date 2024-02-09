@@ -9,6 +9,7 @@ scopes_supported:
   - offline_access
   - launch/patient
   - patient/AllergyIntolerance.read
+  - patient/Binary.read
   - patient/CarePlan.read
   - patient/CareTeam.read
   - patient/Condition.read
@@ -18,6 +19,7 @@ scopes_supported:
   - patient/Encounter.read
   - patient/Goal.read
   - patient/Immunization.read
+  - patient/List.read
   - patient/Location.read
   - patient/Medication.read
   - patient/MedicationAdministration.read
