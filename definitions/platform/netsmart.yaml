@@ -1,0 +1,33 @@
+# MANUALLY POPULATED
+platform_type: netsmart
+
+#https://careconnect-uat.netsmartcloud.com/
+scopes_supported:
+  - openid
+  - fhirUser
+  - profile
+  - offline_access
+  - launch/patient
+  - 'patient/*.read'
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  Production 
+    https://oauth.netsmartcloud.com/.well-known/oauth-authorization-server 
+    https://fhir.netsmartcloud.com/uscore/v1/metadata
+  Non-Production 
+    https://oauthtest.netsmartcloud.com/.well-known/oauth-authorization-server 
+    https://fhirtest.netsmartcloud.com/uscore/v1/metadata
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: false
+client_supported_resources: []

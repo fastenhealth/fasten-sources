@@ -27,6 +27,7 @@ const (
 	PlatformTypeMedhost          PlatformType = "medhost"
 	PlatformTypeMedicare         PlatformType = "medicare"
 	PlatformTypeMeditech         PlatformType = "meditech"
+	PlatformTypeNetsmart         PlatformType = "netsmart"
 	PlatformTypeNextgen          PlatformType = "nextgen"
 	PlatformTypePracticeFusion   PlatformType = "practicefusion"
 	PlatformTypeUnitedhealthcare PlatformType = "unitedhealthcare"
@@ -61,6 +62,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeMedhost,
 		PlatformTypeMedicare,
 		PlatformTypeMeditech,
+		PlatformTypeNetsmart,
 		PlatformTypeNextgen,
 		PlatformTypePracticeFusion,
 		PlatformTypeUnitedhealthcare,
