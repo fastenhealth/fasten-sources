@@ -122,6 +122,20 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="cardIdJWT" class="card">
+                                <div class="card-header" id="headingIdJWT">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseIdJWT" aria-expanded="false" aria-controls="collapseIdJWT">
+                                            Id Token JWT
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseIdJWT" class="collapse" aria-labelledby="headingIdJWT" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <pre x-text="id_jwt_data"></pre>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="card">
                                 <div class="card-header" id="headingThree">
@@ -200,6 +214,7 @@
                 oauth_data: '',
                 accessToken: '',
                 jwt_data: '',
+                id_jwt_data: '',
                 patient_id: '',
                 oauth_error: {
                     error: '',
@@ -279,6 +294,12 @@
                         this.jwt_data = JSON.stringify(JSON.parse(atob(payload.access_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4)
                     }
 
+                    //check if theres an id token, and its a jwt
+                    if(payload.id_token && payload.id_token.split('.').length === 3){
+                        //if it is, decode it and print it
+                        this.id_jwt_data = JSON.stringify(JSON.parse(atob(payload.id_token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))), null, 4)
+                    }
+
                     this.patient_id = payload.patient
                 },
 
@@ -295,11 +316,17 @@
                     if(sourceDefinition.confidential){
                         console.log("This is a confidential client, using lighthouse token endpoint.")
                         //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
-                        sourceDefinition.token_endpoint = sourceDefinition.redirect_uri.replace("/callback/", "/token/")
+                        let lighthouse_api_endpoint_base = sourceDefinition.redirect_uri.split("/callback/")
+                        tokenEndpointUrl = this.pathJoin([lighthouse_api_endpoint_base[0], `token/${expectedSourceStateInfo.endpoint_id}`])
+
                         //use a placeholder client_secret (the actual secret is stored in Lighthouse)
                         client.client_secret = "placeholder"
                         client.token_endpoint_auth_method = "client_secret_basic"
-                        codeVerifier = "placeholder"
+                        if((sourceDefinition.code_challenge_methods_supported || []).length > 0){
+                            codeVerifier = expectedSourceStateInfo.code_verifier
+                        } else {
+                            codeVerifier = "placeholder"
+                        }
                     } else if(sourceDefinition.cors_relay_required){
                         console.error("This is a public client, but requires a CORS relay.")
                         throw new Error("This source requires a CORS relay. Not supported in toolbox")
@@ -392,7 +419,23 @@
                             this.raw_data_error = e.toString()
                             this.loadingRawRequest = false
                         })
-                }
+                },
+
+                //helpers
+
+                pathJoin(parts, sep){
+                    const separator = sep || '/';
+                    parts = parts.map((part, index)=>{
+                        if (index) {
+                            part = part.replace(new RegExp('^' + separator), '');
+                        }
+                        if (index !== parts.length - 1) {
+                            part = part.replace(new RegExp(separator + '$'), '');
+                        }
+                        return part;
+                    })
+                    return parts.join(separator);
+                },
             }
         }
 

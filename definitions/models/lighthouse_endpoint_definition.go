@@ -88,7 +88,10 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.PlatformType == pkg.PlatformTypeAnthem ||
 		def.PlatformType == pkg.PlatformTypeEclinicalworks ||
 		def.PlatformType == pkg.PlatformTypeMedhost ||
-		def.PlatformType == pkg.PlatformTypeNetsmart {
+		def.PlatformType == pkg.PlatformTypeNetsmart ||
+		def.PlatformType == pkg.PlatformTypeQualifactsCredible ||
+		def.PlatformType == pkg.PlatformTypeQualifactsCareLogic ||
+		def.PlatformType == pkg.PlatformTypeQualifactsInSync {
 		//remove trailing slash for audience for CareEvolution & Anthem
 		def.Audience = strings.TrimSuffix(def.Audience, "/")
 	}
@@ -109,4 +112,7 @@ func (def *LighthouseSourceDefinition) Populate(
 	}
 	def.RedirectUri = pkg.GetCallbackEndpoint(string(def.PlatformType))
 
+	if def.PlatformType == pkg.PlatformTypeQualifactsCredible || def.PlatformType == pkg.PlatformTypeQualifactsCareLogic || def.PlatformType == pkg.PlatformTypeQualifactsInSync {
+		def.RedirectUri = pkg.GetCallbackEndpoint("qualifacts")
+	}
 }
