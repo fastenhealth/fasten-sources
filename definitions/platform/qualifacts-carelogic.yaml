@@ -1,0 +1,30 @@
+# MANUALLY POPULATED
+platform_type: qualifacts-carelogic
+
+# https://documentation.qualifacts.com/platform/carelogic/carelogic-fhir.html
+scopes_supported:
+  - openid
+  - fhirUser
+  - profile
+  - offline_access
+  - launch/patient
+  - 'patient/*.read'
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  https://documentation.qualifacts.com/index.html
+  https://documentation.qualifacts.com/platform/carelogic/carelogic-fhir.html
+  If the issue persists, please notify the CareLogic FHIR API coordinator at CarelogicFHIRAppReg@qualifacts.com
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: false
+client_supported_resources: []
