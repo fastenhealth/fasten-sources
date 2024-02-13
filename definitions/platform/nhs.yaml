@@ -1,0 +1,38 @@
+# MANUALLY POPULATED
+platform_type: nhs
+
+# https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir
+scopes_supported:
+  - 'nhs-login'
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+code_challenge_methods_supported: []
+#  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  developer forums - https://developer.community.nhs.uk/
+  test user ids - https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/testing-apis-with-our-mock-authorisation-service#test-users-for-nhs-login
+  Existing Apps - https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir/integrated-products
+  Developer Portal - https://onboarding.prod.api.platform.nhs.uk/MyApplications
+  Standard Test Data - https://digital.nhs.uk/services/path-to-live-environments/setting-up-test-data-in-our-path-to-live-environments
+  PDS Test Data - https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir/pds-fhir-api-test-data#production-smoke-testing
+  Integration testing auth options - https://digital.nhs.uk/developer/guides-and-documentation/testing#integration-testing-with-our-restful-apis
+  Contact Information - https://digital.nhs.uk/developer/help-and-support
+  Auth Environmnets - https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-login-combined-authentication-and-authorisation
+  Scopes - https://nhsconnect.github.io/nhslogin/scopes-and-claims/
+  
+  The available test users are:
+  User ID 	Proofing level
+  9912003071  	High - P9
+  9912003072  	Medium - P5
+  9912003073  	Low - P0
+
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: true
+client_supported_resources: []

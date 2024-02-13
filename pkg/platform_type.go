@@ -11,9 +11,9 @@ const (
 	PlatformTypeAdvancedmd          PlatformType = "advancedmd"
 	PlatformTypeAetna               PlatformType = "aetna"
 	PlatformTypeAllscripts          PlatformType = "allscripts"
+	PlatformTypeAnthem              PlatformType = "anthem"
 	PlatformTypeAthena              PlatformType = "athena"
 	PlatformTypeBcbsal              PlatformType = "bcbsal"
-	PlatformTypeAnthem              PlatformType = "anthem"
 	PlatformTypeCareevolution       PlatformType = "careevolution"
 	PlatformTypeCerner              PlatformType = "cerner"
 	PlatformTypeCigna               PlatformType = "cigna"
@@ -28,11 +28,12 @@ const (
 	PlatformTypeMedicare            PlatformType = "medicare"
 	PlatformTypeMeditech            PlatformType = "meditech"
 	PlatformTypeMeldrx              PlatformType = "meldrx"
+	PlatformTypeNHS                 PlatformType = "nhs"
 	PlatformTypeNetsmart            PlatformType = "netsmart"
 	PlatformTypeNextgen             PlatformType = "nextgen"
 	PlatformTypePracticeFusion      PlatformType = "practicefusion"
-	PlatformTypeQualifactsCredible  PlatformType = "qualifacts-credible"
 	PlatformTypeQualifactsCareLogic PlatformType = "qualifacts-carelogic"
+	PlatformTypeQualifactsCredible  PlatformType = "qualifacts-credible"
 	PlatformTypeQualifactsInSync    PlatformType = "qualifacts-insync"
 
 	PlatformTypeUnitedhealthcare PlatformType = "unitedhealthcare"
@@ -51,9 +52,9 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeAdvancedmd,
 		PlatformTypeAetna,
 		PlatformTypeAllscripts,
+		PlatformTypeAnthem,
 		PlatformTypeAthena,
 		PlatformTypeBcbsal,
-		PlatformTypeAnthem,
 		PlatformTypeCareevolution,
 		PlatformTypeCerner,
 		PlatformTypeCigna,
@@ -68,11 +69,12 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeMedicare,
 		PlatformTypeMeditech,
 		PlatformTypeMeldrx,
+		PlatformTypeNHS,
 		PlatformTypeNetsmart,
 		PlatformTypeNextgen,
 		PlatformTypePracticeFusion,
-		PlatformTypeQualifactsCredible,
 		PlatformTypeQualifactsCareLogic,
+		PlatformTypeQualifactsCredible,
 		PlatformTypeQualifactsInSync,
 		PlatformTypeUnitedhealthcare,
 		PlatformTypeVahealth,
