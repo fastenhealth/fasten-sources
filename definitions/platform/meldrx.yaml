@@ -1,0 +1,29 @@
+# MANUALLY POPULATED
+platform_type: meldrx
+
+#https://app.sb.meldrx.com/
+scopes_supported:
+  - openid
+  - fhirUser
+  - meldrx-api
+  - offline_access
+  - 'patient/*.read'
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: false
+documentation: |
+  https://app.sb.meldrx.com/api/fhir/bb6382d0-9733-4bd4-9046-0853f1d17c25
+  https://docs.meldrx.com/
+  https://app.sb.meldrx.com/swagger/index.html
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: false
+client_supported_resources: []

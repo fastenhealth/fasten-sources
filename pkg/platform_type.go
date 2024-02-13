@@ -8,28 +8,31 @@ const (
 	PlatformTypeManual PlatformType = "manual"
 	PlatformTypeFasten PlatformType = "fasten"
 	// platform
-	PlatformTypeAdvancedmd       PlatformType = "advancedmd"
-	PlatformTypeAetna            PlatformType = "aetna"
-	PlatformTypeAllscripts       PlatformType = "allscripts"
-	PlatformTypeAthena           PlatformType = "athena"
-	PlatformTypeBcbsal           PlatformType = "bcbsal"
-	PlatformTypeAnthem           PlatformType = "anthem"
-	PlatformTypeCareevolution    PlatformType = "careevolution"
-	PlatformTypeCerner           PlatformType = "cerner"
-	PlatformTypeCigna            PlatformType = "cigna"
-	PlatformTypeEclinicalworks   PlatformType = "eclinicalworks"
-	PlatformTypeEdifecs          PlatformType = "edifecs"
-	PlatformTypeEpic             PlatformType = "epic"
-	PlatformTypeEpicLegacy       PlatformType = "epic-legacy"
-	PlatformTypeHumana           PlatformType = "humana"
-	PlatformTypeKaiser           PlatformType = "kaiser"
-	PlatformTypeMaximeyes        PlatformType = "maximeyes"
-	PlatformTypeMedhost          PlatformType = "medhost"
-	PlatformTypeMedicare         PlatformType = "medicare"
-	PlatformTypeMeditech         PlatformType = "meditech"
-	PlatformTypeNetsmart         PlatformType = "netsmart"
-	PlatformTypeNextgen          PlatformType = "nextgen"
-	PlatformTypePracticeFusion   PlatformType = "practicefusion"
+	PlatformTypeAdvancedmd     PlatformType = "advancedmd"
+	PlatformTypeAetna          PlatformType = "aetna"
+	PlatformTypeAllscripts     PlatformType = "allscripts"
+	PlatformTypeAthena         PlatformType = "athena"
+	PlatformTypeBcbsal         PlatformType = "bcbsal"
+	PlatformTypeAnthem         PlatformType = "anthem"
+	PlatformTypeCareevolution  PlatformType = "careevolution"
+	PlatformTypeCerner         PlatformType = "cerner"
+	PlatformTypeCigna          PlatformType = "cigna"
+	PlatformTypeEclinicalworks PlatformType = "eclinicalworks"
+	PlatformTypeEdifecs        PlatformType = "edifecs"
+	PlatformTypeEpic           PlatformType = "epic"
+	PlatformTypeEpicLegacy     PlatformType = "epic-legacy"
+	PlatformTypeHumana         PlatformType = "humana"
+	PlatformTypeKaiser         PlatformType = "kaiser"
+	PlatformTypeMaximeyes      PlatformType = "maximeyes"
+	PlatformTypeMedhost        PlatformType = "medhost"
+	PlatformTypeMedicare       PlatformType = "medicare"
+	PlatformTypeMeditech       PlatformType = "meditech"
+	PlatformTypeMeldrx         PlatformType = "meldrx"
+	PlatformTypeNetsmart       PlatformType = "netsmart"
+	PlatformTypeNextgen        PlatformType = "nextgen"
+	PlatformTypePracticeFusion PlatformType = "practicefusion"
+	PlatformTypeQualifacts     PlatformType = "qualifacts"
+
 	PlatformTypeUnitedhealthcare PlatformType = "unitedhealthcare"
 	PlatformTypeVahealth         PlatformType = "vahealth"
 
@@ -62,9 +65,11 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeMedhost,
 		PlatformTypeMedicare,
 		PlatformTypeMeditech,
+		PlatformTypeMeldrx,
 		PlatformTypeNetsmart,
 		PlatformTypeNextgen,
 		PlatformTypePracticeFusion,
+		PlatformTypeQualifacts,
 		PlatformTypeUnitedhealthcare,
 		PlatformTypeVahealth,
 
