@@ -28,7 +28,7 @@
         }
 
 
-        ul {
+        ul.flavor-info {
             display: grid;
             grid-template-columns: repeat(3, auto);
             justify-content: space-around;
@@ -77,7 +77,7 @@
             <div class="container">
                 <h1>Fasten Lighthouse Sources</h1>
                 <p class="lead text-muted">There are 2 flavors of Fasten:</p>
-                <ul>
+                <ul class="flavor-info">
                     <li><strong>Sandbox</strong>  only allows you to connect to a handful of Healthcare providers, using Sandbox accounts that are meant for testing</li>
                     <li><strong>Prod</strong>  allow you to connect and retrieve your personal electronic medical record and store it within Fasten. Be careful, this is YOUR health data</li>
                 </ul>
@@ -86,11 +86,11 @@
 
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-outline-primary active">
-                        <input class="btn-check" type="radio" value="sandbox" x-model="searchEndpointEnv" @change="doSearch()">
+                        <input class="btn-check" type="radio" value="sandbox" x-model="searchEndpointEnv" @change="doSearch(true)">
                         Sandbox Providers
                     </label>
                     <label class="btn btn-outline-secondary">
-                        <input class="btn-check" type="radio" value="prod" x-model="searchEndpointEnv" @change="doSearch()">
+                        <input class="btn-check" type="radio" value="prod" x-model="searchEndpointEnv" @change="doSearch(true)">
                         Production Providers
                     </label>
                 </div>
@@ -105,7 +105,7 @@
                         <div x-show="!searchResultsLoading" x-text="searchResultsTotal + ' sources found. Showing page 1.'" class="alert alert-warning" role="alert"></div>
 
                         <div class="alert alert-info">
-                            <pre x-text="JSON.stringify({searchText: searchText, searchEndpointEnv: searchEndpointEnv}, null, 2)"></pre>
+                            <pre x-text="JSON.stringify({searchText: searchText, searchEndpointEnv: searchEndpointEnv, searchAfter: searchAfter}, null, 2)"></pre>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div class="form-group row">
                             <label for="sourceNameSearch" class="col-sm-2 col-form-label">Source Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="sourceNameSearch" x-model.debounce.50ms="searchText" @keydown="doSearch()">
+                                <input type="text" class="form-control" id="sourceNameSearch" x-model.debounce.50ms="searchText" @keydown="doSearch(true)">
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                         </div>
 
 
-                        <table x-show="!searchResultsLoading" x-init="doSearch()" class="table table-hover">
+                        <table x-show="!searchResultsLoading" x-init="doSearch(true)" class="table table-hover">
                             <thead class="thead-light">
                             <tr>
                                 <th scope="col">Name</th>
@@ -145,6 +145,13 @@
                                 </template>
                             </tbody>
                         </table>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-secondary" @click="doSearch(false)" >Next</button>
                     </div>
                 </div>
             </div>
@@ -319,6 +326,7 @@
                 searchResultsLoading: false,
                 searchResults: [],
                 searchResultsTotal: 0,
+                searchAfter: [],
 
                 lighthouseEndpointLookup: {
                     'sandbox': 'https://lighthouse.fastenhealth.com/sandbox/',
@@ -347,14 +355,22 @@
                 newSearchFilter(){
                     let filter = {}
                     filter.fields = ["*"];
-                    // filter.searchAfter = '';
+                    if(this.searchAfter.length > 0){
+                        filter.searchAfter = []
+                        this.searchAfter.forEach((item, index) => {
+                            filter.searchAfter[index] = item.toString()
+                        })
+                    }
                     filter.query = this.searchText
 
                     return filter
                 },
 
-                doSearch(){
-                    console.log('searching...', this.searchText, this.searchEndpointEnv)
+                doSearch(reset){
+                    if(reset){
+                        this.resetSearch()
+                    }
+                    console.log('searching...', this.searchText, this.searchEndpointEnv, this.searchAfter)
 
 
                     this.searchResults = []
@@ -376,7 +392,7 @@
                             console.log(response)
 
                             this.searchResultsTotal = response.data.hits.total.value
-
+                            this.searchAfter = response.data.hits.hits[response.data.hits.hits.length - 1].sort
                             for(const hit of response.data.hits.hits){
 
                                 const brand = hit._source
@@ -566,6 +582,13 @@
 
 
                 //helper functions
+                resetSearch(){
+                    console.log("resetting search...")
+                    this.searchResults = []
+                    this.searchAfter = []
+                    this.searchResultsTotal = []
+                    this.searchResultsLoading = false
+                },
                 pathJoin(parts, sep){
                     const separator = sep || '/';
                     parts = parts.map((part, index)=>{

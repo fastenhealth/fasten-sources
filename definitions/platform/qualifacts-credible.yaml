@@ -4,8 +4,6 @@ platform_type: qualifacts-credible
 # https://documentation.qualifacts.com/platform/credible/credible-fhir.html
 scopes_supported:
   - openid
-  - fhirUser
-  - profile
   - offline_access
   - launch/patient
   - 'patient/*.read'
