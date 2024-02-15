@@ -24,5 +24,5 @@ documentation: |
   Credible FHIR API coordinator at CredibleFHIRAppReg@qualifacts.com.
 client_headers:
   Accept: "application/json+fhir"
-missing_op_patient_everything: false
+missing_op_patient_everything: true
 client_supported_resources: []
