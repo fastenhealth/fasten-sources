@@ -44,5 +44,5 @@ documentation: |
   If the issue persists, please notify the CareLogic FHIR API coordinator at CarelogicFHIRAppReg@qualifacts.com
 client_headers:
   Accept: "application/json+fhir"
-missing_op_patient_everything: false
+missing_op_patient_everything: true
 client_supported_resources: []
