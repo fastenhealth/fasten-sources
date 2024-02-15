@@ -16,8 +16,8 @@ response_types_supported:
 response_modes_supported:
   - fragment
   - query
-code_challenge_methods_supported:
-  - S256
+# does not support PKCE
+code_challenge_methods_supported: []
 confidential: true
 cors_relay_required: false
 documentation: |

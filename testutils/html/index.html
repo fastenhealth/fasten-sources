@@ -186,6 +186,19 @@
                                         <input x-model="customDefinition.platform_type" required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
                                     </div>
                                     <div class="form-group">
+                                        <label for="customOverrideRedirect">Override Callback Redirect</label>
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input x-model="customDefinition.should_override_redirect" type="checkbox" aria-label="Override Redirect">
+                                                </div>
+                                            </div>
+                                            <input x-bind:disabled="!customDefinition.should_override_redirect" x-model="customDefinition.override_redirect" id="customOverrideRedirect"  type="text" class="form-control" aria-label="override redirect" x-bind:placeholder="customDefinition.platform_type">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
                                         <label for="customAuthEndpoint">Authorization Endpoint</label>
                                         <input x-model="customDefinition.authorization_endpoint" required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
                                     </div>
@@ -277,6 +290,11 @@
                                         <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
                                     </div>
 
+                                    <div x-show="customDefinition.confidential" class="form-group">
+                                        <label for="customConfidentialEndpointId">Confidential Endpoint</label>
+                                        <input x-model="customDefinition.confidential_endpoint" required type="text" class="form-control" id="customConfidentialEndpointId" placeholder="xxx-xxx-xxx">
+                                    </div>
+
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -338,6 +356,8 @@
                 customDefinition: {
                     custom_definition: true,
                     platform_type: '',
+                    should_override_redirect: false,
+                    override_redirect: '',
                     authorization_endpoint: '',
                     token_endpoint: '',
                     url: '',
@@ -349,6 +369,7 @@
                     aud: '',
                     scopes_supported: [],
                     confidential: false,
+                    confidential_endpoint: '',
                     code_challenge_methods_supported: []
                 },
                 shouldSaveCustom: true,
@@ -532,6 +553,8 @@
                   this.customDefinition = {
                     custom_definition: true,
                     platform_type: '',
+                    should_override_redirect: false,
+                    override_redirect: '',
                     authorization_endpoint: '',
                     token_endpoint: '',
                     url: '',
@@ -543,6 +566,7 @@
                     aud: '',
                     scopes_supported: [],
                     confidential: false,
+                    confidential_endpoint: '',
                     code_challenge_methods_supported: []
                   }
                 },
@@ -557,9 +581,14 @@
                         this.customDefinition.url = api_endpoint_base_url.slice(0, -1)
                     }
 
-                    this.customDefinition.redirect_uri = `${lighthouseEndpoint}callback/${this.customDefinition.platform_type}`
+                    let callbackRedirect = this.customDefinition.platform_type
+                    if(this.customDefinition.should_override_redirect) {
+                        callbackRedirect = this.customDefinition.override_redirect
+                    }
+
+                    this.customDefinition.redirect_uri = `${lighthouseEndpoint}callback/${callbackRedirect}`
                     this.customDefinition.issuer = api_endpoint_base_url
-                    this.customDefinition.code_challenge_methods_supported = ['S256']
+                    // this.customDefinition.code_challenge_methods_supported = ['S256']
 
                     console.log(this.customDefinition)
 

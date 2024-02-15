@@ -317,7 +317,13 @@
                         console.log("This is a confidential client, using lighthouse token endpoint.")
                         //if this is a confidential client, we need to "override" token endpoint, and use the Fasten Lighthouse to complete the swap
                         let lighthouse_api_endpoint_base = sourceDefinition.redirect_uri.split("/callback/")
-                        tokenEndpointUrl = this.pathJoin([lighthouse_api_endpoint_base[0], `token/${expectedSourceStateInfo.endpoint_id}`])
+
+                        let endpoint_id = expectedSourceStateInfo.endpoint_id
+                        if(sourceDefinition.confidential_endpoint){
+                            endpoint_id = sourceDefinition.confidential_endpoint
+                        }
+
+                        tokenEndpointUrl = this.pathJoin([lighthouse_api_endpoint_base[0], `token/${endpoint_id}`])
 
                         //use a placeholder client_secret (the actual secret is stored in Lighthouse)
                         client.client_secret = "placeholder"
