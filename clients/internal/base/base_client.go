@@ -168,6 +168,7 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 			src := conf.TokenSource(c.Context, token)
 			newToken, err := src.Token() // this actually goes and renews the tokens
 			if err != nil {
+				log.Printf("An error occurred during token refresh: %v", err)
 				return err
 			}
 			log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
