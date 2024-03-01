@@ -36,3 +36,4 @@ client_headers:
   Accept: "application/json+fhir"
 missing_op_patient_everything: true
 client_supported_resources: []
+token_endpoint_auth_methods_supported: ["private_key_jwt"]

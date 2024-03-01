@@ -357,7 +357,7 @@
                         throw new Error('error when validating code & state before token exchange') // Handle OAuth 2.0 redirect error
                     }
                     console.log("ENDING--- Oauth.validateAuthResponse")
-                    console.log("STARTING--- Oauth.authorizationCodeGrantRequest")
+                    console.log("STARTING--- Oauth.authorizationCodeGrantRequest", sourceDefinition.redirect_uri, params, codeVerifier)
                     const response = await Oauth.authorizationCodeGrantRequest(
                         as,
                         client,

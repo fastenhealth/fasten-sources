@@ -27,10 +27,11 @@ type LighthouseSourceDefinition struct {
 	// Smart-On-FHIR configuration
 	// https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
 
-	Scopes                 []string `json:"scopes_supported" yaml:"scopes_supported" validate:"required"`
-	GrantTypesSupported    []string `json:"grant_types_supported" yaml:"grant_types_supported" validate:"required"`
-	ResponseType           []string `json:"response_types_supported" yaml:"response_types_supported" validate:"required"`
-	ResponseModesSupported []string `json:"response_modes_supported" yaml:"response_modes_supported" validate:"required"`
+	Scopes                            []string `json:"scopes_supported" yaml:"scopes_supported" validate:"required"`
+	GrantTypesSupported               []string `json:"grant_types_supported" yaml:"grant_types_supported" validate:"required"`
+	ResponseType                      []string `json:"response_types_supported" yaml:"response_types_supported" validate:"required"`
+	ResponseModesSupported            []string `json:"response_modes_supported" yaml:"response_modes_supported" validate:"required"`
+	TokenEndpointAuthMethodsSupported []string `json:"token_endpoint_auth_methods_supported,omitempty" yaml:"token_endpoint_auth_methods_supported,omitempty"` //optional, if not set, assumed to be 'client_secret_basic'
 	// If populated: PKCE is supported (can be used with Confidential true or false)
 	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported" yaml:"code_challenge_methods_supported" validate:"required"`
 
@@ -77,10 +78,13 @@ func (def *LighthouseSourceDefinition) Populate(
 	//	sourceDef.Hidden = true
 	//}
 
-	if !(def.PlatformType == pkg.PlatformTypeCigna ||
+	if def.PlatformType == pkg.PlatformTypeCigna ||
 		def.PlatformType == pkg.PlatformTypeNextgen ||
-		def.PlatformType == pkg.PlatformTypeVahealth) {
-		//most providers use the same url for API endpoint and Audience. These are the exceptions
+		def.PlatformType == pkg.PlatformTypeVahealth ||
+		def.PlatformType == pkg.PlatformTypeNHS {
+		//most providers use the same url for API endpoint and Audience. These are the exceptions, which must not have an aud
+		def.Audience = ""
+	} else {
 		def.Audience = def.Url
 	}
 
