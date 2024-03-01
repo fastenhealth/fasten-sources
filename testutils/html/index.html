@@ -181,120 +181,130 @@
 
                                     <button x-show="hasSavedCustomSource()" @click="loadCustomSource()" type="button" class="btn btn-primary btn-sm mb-3">Load Definition</button>
 
-                                    <div class="form-group">
-                                        <label for="customSourceType">Platform Type</label>
-                                        <input x-model="customDefinition.platform_type" required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customOverrideRedirect">Override Callback Redirect</label>
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label for="customSourceType">Platform Type</label>
+                                            <input x-model="customDefinition.platform_type" required type="text" class="form-control auto-save" id="customSourceType" placeholder="epic,cerner,etc">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="customOverrideRedirect">Override Callback Redirect</label>
 
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <input x-model="customDefinition.should_override_redirect" type="checkbox" aria-label="Override Redirect">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <input x-model="customDefinition.should_override_redirect" type="checkbox" aria-label="Override Redirect">
+                                                    </div>
                                                 </div>
+                                                <input x-bind:disabled="!customDefinition.should_override_redirect" x-model="customDefinition.override_redirect" id="customOverrideRedirect"  type="text" class="form-control" aria-label="override redirect" x-bind:placeholder="customDefinition.platform_type">
                                             </div>
-                                            <input x-bind:disabled="!customDefinition.should_override_redirect" x-model="customDefinition.override_redirect" id="customOverrideRedirect"  type="text" class="form-control" aria-label="override redirect" x-bind:placeholder="customDefinition.platform_type">
+
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="customAuthEndpoint">Authorization Endpoint</label>
+                                            <input x-model="customDefinition.authorization_endpoint" required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="customTokenEndpoint">Token Endpoint</label>
+                                            <input x-model="customDefinition.token_endpoint" required type="text" class="form-control" id="customTokenEndpoint" placeholder="https://www.example.com/oauth/oauth2/token">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="customApiEndpointBaseUrl">Api Endpoint Base Url</label>
+                                            <input x-model="customDefinition.url" required type="text" class="form-control" id="customApiEndpointBaseUrl" placeholder="https://www.example.com/r4/fhir">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="customResponseMode">Response Mode</label>
+                                            <select x-model="customDefinition.response_modes_supported[0]" required class="form-control" id="customResponseMode">
+                                                <option>fragment</option>
+                                                <option>query</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-8">
+                                            <label for="customClientId">Client ID</label>
+                                            <input x-model="customDefinition.client_id" required type="text" class="form-control" id="customClientId" placeholder="xxx-xxx-xxx">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="customScopes">Scopes</label>
+                                            <select x-model="customDefinition.scopes_supported" required multiple class="form-control" id="customScopes">
+                                                <optgroup>
+                                                    <option selected>fhirUser</option>
+                                                    <option selected>openid</option>
+                                                    <option selected>profile</option>
+                                                    <option>offline</option>
+                                                    <option>offline_access</option>
+                                                    <option>launch/patient</option>
+                                                    <option>nhs-login</option>
+                                                </optgroup>
+                                                <optgroup>
+                                                    <option>patient/*.read</option>
+                                                    <option>patient/*</option>
+                                                    <option>patient/*.*</option>
+                                                </optgroup>
+                                                <optgroup>
+                                                    <option>patient/Account.read</option>
+                                                    <option>patient/AllergyIntolerance.read</option>
+                                                    <option>patient/Appointment.read</option>
+                                                    <option>patient/Binary.read</option>
+                                                    <option>patient/CarePlan.read</option>
+                                                    <option>patient/CareTeam.read</option>
+                                                    <option>patient/ChargeItem.read</option>
+                                                    <option>patient/Communication.read</option>
+                                                    <option>patient/Condition.read</option>
+                                                    <option>patient/Consent.read</option>
+                                                    <option>patient/Coverage.read</option>
+                                                    <option>patient/Device.read</option>
+                                                    <option>patient/DeviceRequest.read</option>
+                                                    <option>patient/DiagnosticReport.read</option>
+                                                    <option>patient/DocumentReference.read</option>
+                                                    <option>patient/Encounter.read</option>
+                                                    <option>patient/FamilyMemberHistory.read</option>
+                                                    <option>patient/Goal.read</option>
+                                                    <option>patient/Immunization.read</option>
+                                                    <option>patient/InsurancePlan.read</option>
+                                                    <option>patient/Medication.read</option>
+                                                    <option>patient/MedicationAdministration.read</option>
+                                                    <option>patient/MedicationRequest.read</option>
+                                                    <option>patient/NutritionOrder.read</option>
+                                                    <option>patient/Observation.read</option>
+                                                    <option>patient/Patient.read</option>
+                                                    <option>patient/Person.read</option>
+                                                    <option>patient/Practitioner.read</option>
+                                                    <option>patient/PractitionerRole.read</option>
+                                                    <option>patient/Procedure.read</option>
+                                                    <option>patient/Provenance.read</option>
+                                                    <option>patient/Questionnaire.read</option>
+                                                    <option>patient/QuestionnaireResponse.read</option>
+                                                    <option>patient/RelatedPerson.read</option>
+                                                    <option>patient/Schedule.read</option>
+                                                    <option>patient/ServiceRequest.read</option>
+                                                    <option>patient/Slot.read</option>
+                                                    <option>system/Appointment.read</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-8">
+                                            <label for="customAudience">Audience</label>
+                                            <input x-model="customDefinition.aud" type="text" class="form-control" id="customAudience" placeholder="(optional)">
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group form-check">
+                                                <input x-model="customDefinition.pkce" type="checkbox" class="form-check-input" id="customPKCE">
+                                                <label class="form-check-label" for="customPKCE">PKCE</label>
+                                            </div>
                                         </div>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customAuthEndpoint">Authorization Endpoint</label>
-                                        <input x-model="customDefinition.authorization_endpoint" required type="text" class="form-control" id="customAuthEndpoint" placeholder="https://www.example.com/oauth/oauth2/authorize">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customTokenEndpoint">Token Endpoint</label>
-                                        <input x-model="customDefinition.token_endpoint" required type="text" class="form-control" id="customTokenEndpoint" placeholder="https://www.example.com/oauth/oauth2/token">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customApiEndpointBaseUrl">Api Endpoint Base Url</label>
-                                        <input x-model="customDefinition.url" required type="text" class="form-control" id="customApiEndpointBaseUrl" placeholder="https://www.example.com/r4/fhir">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customResponseMode">Response Mode</label>
-                                        <select x-model="customDefinition.response_modes_supported[0]" required class="form-control" id="customResponseMode">
-                                            <option>fragment</option>
-                                            <option>query</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customClientId">Client ID</label>
-                                        <input x-model="customDefinition.client_id" required type="text" class="form-control" id="customClientId" placeholder="xxx-xxx-xxx">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customScopes">Scopes</label>
-                                        <select x-model="customDefinition.scopes_supported" required multiple class="form-control" id="customScopes">
-                                            <optgroup>
-                                                <option selected>fhirUser</option>
-                                                <option selected>openid</option>
-                                                <option selected>profile</option>
-                                                <option>offline</option>
-                                                <option>offline_access</option>
-                                                <option>launch/patient</option>
-                                                <option>nhs-login</option>
-                                            </optgroup>
-                                            <optgroup>
-                                                <option>patient/*.read</option>
-                                                <option>patient/*</option>
-                                                <option>patient/*.*</option>
-                                            </optgroup>
-                                            <optgroup>
-                                                <option>patient/Account.read</option>
-                                                <option>patient/AllergyIntolerance.read</option>
-                                                <option>patient/Appointment.read</option>
-                                                <option>patient/Binary.read</option>
-                                                <option>patient/CarePlan.read</option>
-                                                <option>patient/CareTeam.read</option>
-                                                <option>patient/ChargeItem.read</option>
-                                                <option>patient/Communication.read</option>
-                                                <option>patient/Condition.read</option>
-                                                <option>patient/Consent.read</option>
-                                                <option>patient/Coverage.read</option>
-                                                <option>patient/Device.read</option>
-                                                <option>patient/DeviceRequest.read</option>
-                                                <option>patient/DiagnosticReport.read</option>
-                                                <option>patient/DocumentReference.read</option>
-                                                <option>patient/Encounter.read</option>
-                                                <option>patient/FamilyMemberHistory.read</option>
-                                                <option>patient/Goal.read</option>
-                                                <option>patient/Immunization.read</option>
-                                                <option>patient/InsurancePlan.read</option>
-                                                <option>patient/Medication.read</option>
-                                                <option>patient/MedicationAdministration.read</option>
-                                                <option>patient/MedicationRequest.read</option>
-                                                <option>patient/NutritionOrder.read</option>
-                                                <option>patient/Observation.read</option>
-                                                <option>patient/Patient.read</option>
-                                                <option>patient/Person.read</option>
-                                                <option>patient/Practitioner.read</option>
-                                                <option>patient/PractitionerRole.read</option>
-                                                <option>patient/Procedure.read</option>
-                                                <option>patient/Provenance.read</option>
-                                                <option>patient/Questionnaire.read</option>
-                                                <option>patient/QuestionnaireResponse.read</option>
-                                                <option>patient/RelatedPerson.read</option>
-                                                <option>patient/Schedule.read</option>
-                                                <option>patient/ServiceRequest.read</option>
-                                                <option>patient/Slot.read</option>
-                                                <option>system/Appointment.read</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customAudience">Audience</label>
-                                        <input x-model="customDefinition.aud" type="text" class="form-control" id="customAudience" placeholder="(optional)">
-                                    </div>
+                                        <div class="col-4">
+                                            <div class="form-group form-check">
+                                                <input x-model="customDefinition.confidential" type="checkbox" class="form-check-input" id="customConfidential">
+                                                <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
+                                            </div>
+                                        </div>
 
-                                    <div class="form-group form-check">
-                                        <input x-model="customDefinition.confidential" type="checkbox" class="form-check-input" id="customConfidential">
-                                        <label class="form-check-label" for="customConfidential">Confidential <small style="color:red;">requires coordination with support@fastenhealth.com</small></label>
-                                    </div>
 
-                                    <div x-show="customDefinition.confidential" class="form-group">
-                                        <label for="customConfidentialEndpointId">Confidential Endpoint</label>
-                                        <input x-model="customDefinition.confidential_endpoint" required type="text" class="form-control" id="customConfidentialEndpointId" placeholder="xxx-xxx-xxx">
+                                        <div x-show="customDefinition.confidential" class="form-group col-8">
+                                            <label for="customConfidentialEndpointId">Confidential Endpoint</label>
+                                            <input x-model="customDefinition.confidential_endpoint" required type="text" class="form-control" id="customConfidentialEndpointId" placeholder="xxx-xxx-xxx">
+                                        </div>
                                     </div>
-
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -370,6 +380,7 @@
                     scopes_supported: [],
                     confidential: false,
                     confidential_endpoint: '',
+                    pkce: true,
                     code_challenge_methods_supported: []
                 },
                 shouldSaveCustom: true,
@@ -588,7 +599,11 @@
 
                     this.customDefinition.redirect_uri = `${lighthouseEndpoint}callback/${callbackRedirect}`
                     this.customDefinition.issuer = api_endpoint_base_url
-                    // this.customDefinition.code_challenge_methods_supported = ['S256']
+                    if(this.customDefinition.pkce){
+                        this.customDefinition.code_challenge_methods_supported = ['S256']
+                    } else {
+                        this.customDefinition.code_challenge_methods_supported = []
+                    }
 
                     console.log(this.customDefinition)
 
