@@ -26,6 +26,8 @@ documentation: |
   Auth Environmnets - https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation/user-restricted-restful-apis-nhs-login-combined-authentication-and-authorisation
   Scopes - https://nhsconnect.github.io/nhslogin/scopes-and-claims/
   
+  Sandpit - https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration
+  
   The available test users are:
   User ID 	Proofing level
   9912003071  	High - P9
