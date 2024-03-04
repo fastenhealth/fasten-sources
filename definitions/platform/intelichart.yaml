@@ -1,0 +1,61 @@
+# MANUALLY POPULATED
+platform_type: medhost
+
+# https://fhirapiqa.intelichart.com/.well-known/smart-configuration
+# https://fhirauthqa.intelichart.com/.well-known/openid-configuration
+# https://fhirapiqa.intelichart.com/metadata
+scopes_supported:
+  - fhirUser
+  - openid
+  - offline_access
+  - launch/patient
+  - patient/AllergyIntolerance.read
+  - patient/Binary.read
+  - patient/CarePlan.read
+  - patient/CareTeam.read
+  - patient/Condition.read
+  - patient/Device.read
+  - patient/DiagnosticReport.read
+  - patient/DocumentReference.read
+  - patient/Encounter.read
+  - patient/Goal.read
+  - patient/Immunization.read
+  - patient/List.read
+  - patient/Location.read
+  - patient/Medication.read
+  - patient/MedicationAdministration.read
+  - patient/MedicationRequest.read
+  - patient/MedicationStatement.read
+  - patient/Observation.read
+  - patient/Organization.read
+  - patient/Patient.read
+  - patient/Practitioner.read
+  - patient/PractitionerRole.read
+  - patient/Procedure.read
+  - patient/Provenance.read
+  - patient/ServiceRequest.read
+
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: false
+documentation: |
+  https://fhirqa.intelichart.com/Clients
+  https://fhir.intelichart.com/Help/AuthRegistration
+  https://fhir.intelichart.com/Help/ErrorCodes
+  https://fhir.intelichart.com/Help/FAQ
+  https://fhir.intelichart.com/Help/Parameters
+
+missing_op_patient_everything: true
+client_supported_resources: [
+  'MedicationAdministration',
+  'MedicationStatement',
+  'ServiceRequest',
+]
+#custom_op_patient_everything: "Patient"
