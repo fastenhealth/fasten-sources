@@ -333,13 +333,24 @@
                         } else {
                             codeVerifier = "placeholder"
                         }
-                    } else if(sourceDefinition.cors_relay_required){
-                        console.error("This is a public client, but requires a CORS relay.")
-                        throw new Error("This source requires a CORS relay. Not supported in toolbox")
                     } else {
                         console.log("This is a public client, using source token endpoint.")
                         client.token_endpoint_auth_method = 'none'
                         codeVerifier = expectedSourceStateInfo.code_verifier
+
+                        if(sourceDefinition.cors_relay_required){
+                            console.error("This is a public client, but requires a CORS relay.")
+                            //check if source requires a CORS relay
+                            const originUrlParts = new URL(window.location.href)
+
+                            let corsProxyBaseUrl = `http://${originUrlParts.host}/api/source/cors/`
+
+                            //this endpoint requires a CORS relay
+                            //get the path to the Fasten server, and append `cors/` and then append the request url
+                            let tokenEndpointUrlParts = new URL(tokenEndpointUrl)
+                            tokenEndpointUrl = corsProxyBaseUrl + `${tokenEndpointUrlParts.hostname}${tokenEndpointUrlParts.pathname}${tokenEndpointUrlParts.search}`
+                            console.warn("Using local CORS proxy for token endpoint", tokenEndpointUrl)
+                        }
                     }
 
 

@@ -290,6 +290,10 @@
                                                 <input x-model="customDefinition.pkce" type="checkbox" class="form-check-input" id="customPKCE">
                                                 <label class="form-check-label" for="customPKCE">PKCE</label>
                                             </div>
+                                            <div class="form-group form-check">
+                                                <input x-model="customDefinition.cors_relay_required" type="checkbox" class="form-check-input" id="customCORS">
+                                                <label class="form-check-label" for="customCORS">CORS</label>
+                                            </div>
                                         </div>
 
                                         <div class="col-4">
@@ -367,6 +371,7 @@
                     custom_definition: true,
                     platform_type: '',
                     should_override_redirect: false,
+                    cors_relay_required: false,
                     override_redirect: '',
                     authorization_endpoint: '',
                     token_endpoint: '',
@@ -565,6 +570,7 @@
                     custom_definition: true,
                     platform_type: '',
                     should_override_redirect: false,
+                    cors_relay_required: false,
                     override_redirect: '',
                     authorization_endpoint: '',
                     token_endpoint: '',

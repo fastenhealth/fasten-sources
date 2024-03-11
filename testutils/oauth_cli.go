@@ -13,6 +13,7 @@ import (
 	"log"
 	"net/http"
 	"net/http/httputil"
+	"net/url"
 	"strings"
 	"time"
 )
@@ -144,6 +145,8 @@ func main() {
 		return
 	})
 
+	http.HandleFunc("/api/source/cors/", CORSProxyHandler)
+
 	go func() {
 		log.Println("You will now be taken to your browser for authentication")
 		time.Sleep(1 * time.Second)
@@ -240,4 +243,53 @@ func (s *fakeSourceCredential) IsDynamicClient() bool {
 
 func (s *fakeSourceCredential) RefreshDynamicClientAccessToken() error {
 	return nil
+}
+
+// there are security implications to this, but we're only using this permissive proxy locally.
+func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
+
+	originalReqUrl := strings.TrimPrefix(proxyReq.URL.Path, "/api/source/cors/")
+
+	//SECURITY: the proxy URL must start with the same URL as the endpoint.TokenUri
+	corsUrl := fmt.Sprintf("https://%s", strings.TrimPrefix(originalReqUrl, "/"))
+
+	remote, _ := url.Parse(corsUrl)
+	remote.RawQuery = proxyReq.URL.Query().Encode()
+
+	proxy := httputil.ReverseProxy{}
+	//Define the director func
+	//This is a good place to log, for example
+	proxy.Director = func(req *http.Request) {
+		//req.Header = proxyReq.Header
+		req.Header.Add("X-Forwarded-Host", req.Host)
+		req.Header.Add("X-Origin-Host", remote.Host)
+		req.Host = remote.Host
+		req.URL.Scheme = remote.Scheme
+		req.URL.Host = remote.Host
+		log.Printf("corsURL: %s\n remote.Path: %s\n Header: %v", corsUrl, remote.Path, req.Header)
+		req.URL.Path = remote.Path
+		req.Body = proxyReq.Body
+
+		//TODO: throw an error if the remote.Host is not allowed
+
+		reqDump, err := httputil.DumpRequest(req, true)
+		if err != nil {
+			return
+		}
+		log.Printf("proxy req: %q", reqDump)
+	}
+
+	proxy.ModifyResponse = func(r *http.Response) error {
+		//b, _ := ioutil.ReadAll(r.Body)
+		//buf := bytes.NewBufferString("Monkey")
+		//buf.Write(b)
+		//r.Body = ioutil.NopCloser(buf)
+		r.Header.Set("Access-Control-Allow-Methods", "GET,HEAD")
+		r.Header.Set("Access-Control-Allow-Credentials", "true")
+		r.Header.Set("Access-Control-Allow-Origin", "*")
+		return nil
+	}
+
+	newProxyReq, _ := http.NewRequest(proxyReq.Method, corsUrl, proxyReq.Body)
+	proxy.ServeHTTP(proxyRes, newProxyReq)
 }
