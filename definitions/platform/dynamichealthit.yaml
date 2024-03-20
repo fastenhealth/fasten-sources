@@ -21,7 +21,8 @@ confidential: true
 cors_relay_required: false
 documentation: |
   https://dynamicfhirpresentation.dynamicfhirsandbox.com/dhithealth/practiceone/r4/Home/ApiDocumentation
-
+client_headers:
+  Accept: "application/json+fhir"
 missing_op_patient_everything: true
 client_supported_resources: []
 #custom_op_patient_everything: "Patient"
