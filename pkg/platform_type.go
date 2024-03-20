@@ -21,6 +21,7 @@ const (
 	PlatformTypeEdifecs             PlatformType = "edifecs"
 	PlatformTypeEpic                PlatformType = "epic"
 	PlatformTypeEpicLegacy          PlatformType = "epic-legacy"
+	PlatformTypeDynamicHealthIT     PlatformType = "dynamichealthit"
 	PlatformTypeHumana              PlatformType = "humana"
 	PlatformTypeKaiser              PlatformType = "kaiser"
 	PlatformTypeMaximeyes           PlatformType = "maximeyes"
@@ -62,6 +63,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeEdifecs,
 		PlatformTypeEpic,
 		PlatformTypeEpicLegacy,
+		PlatformTypeDynamicHealthIT,
 		PlatformTypeHumana,
 		PlatformTypeKaiser,
 		PlatformTypeMaximeyes,
