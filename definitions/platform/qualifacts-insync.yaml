@@ -2,19 +2,19 @@
 platform_type: qualifacts-insync
 
 # https://documentation.qualifacts.com/platform/insync/insync-fhir.html
+# https://smilecdr.com/docs/smart/smart_on_fhir_authorization_flows.html#launch-flow-authorization-code
 scopes_supported:
   - openid
   - fhirUser
   - profile
   - offline_access
-  - launch/patient
   - 'patient/*.read'
+#  - launch/patient
 grant_types_supported:
   - authorization_code
 response_types_supported:
   - code
 response_modes_supported:
-  - fragment
   - query
 code_challenge_methods_supported:
   - S256
