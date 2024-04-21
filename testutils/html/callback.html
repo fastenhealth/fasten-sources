@@ -79,6 +79,21 @@
 
                         <div class="accordion" id="accordionExample">
                             <div class="card">
+                                <div class="card-header" id="headingState">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseState" aria-expanded="true" aria-controls="collapseState">
+                                            State Information
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseState" class="collapse show" aria-labelledby="headingState" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <pre x-text="state_info"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -210,6 +225,7 @@
             return {
                 endpoint_id: '',
 
+                state_info: '',
                 callback_code: '',
                 oauth_data: '',
                 accessToken: '',
@@ -244,7 +260,7 @@
 
                     const sourceStateInfoJson = localStorage.getItem(callbackState)
                     const sourceStateInfo = JSON.parse(sourceStateInfoJson)
-
+                    this.state_info = JSON.stringify(sourceStateInfo, null, 4)
                     this.endpoint_id = sourceStateInfo.endpoint_id
 
                     //check if localstorage has a customDefinition for this state
