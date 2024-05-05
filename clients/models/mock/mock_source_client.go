@@ -110,6 +110,20 @@ func (mr *MockSourceClientMockRecorder) GetUsCoreResources() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsCoreResources", reflect.TypeOf((*MockSourceClient)(nil).GetUsCoreResources))
 }
 
+// RefreshAccessToken mocks base method.
+func (m *MockSourceClient) RefreshAccessToken() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RefreshAccessToken")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// RefreshAccessToken indicates an expected call of RefreshAccessToken.
+func (mr *MockSourceClientMockRecorder) RefreshAccessToken() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RefreshAccessToken", reflect.TypeOf((*MockSourceClient)(nil).RefreshAccessToken))
+}
+
 // SyncAll mocks base method.
 func (m *MockSourceClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()

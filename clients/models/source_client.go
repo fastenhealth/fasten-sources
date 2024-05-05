@@ -19,4 +19,5 @@ type SourceClient interface {
 	ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error)
 
 	GetSourceCredential() SourceCredential
+	RefreshAccessToken() error
 }
