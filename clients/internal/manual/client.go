@@ -250,6 +250,11 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVer
 	}
 }
 
+func (m ManualClient) RefreshAccessToken() error {
+	//TODO implement me
+	panic("implement me")
+}
+
 func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
 	return &ManualClient{
 		FastenEnv:        env,
