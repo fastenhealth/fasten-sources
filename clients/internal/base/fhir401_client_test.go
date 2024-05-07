@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
+	"github.com/fastenhealth/fasten-sources/definitions"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	"github.com/golang/mock/gomock"
@@ -27,8 +29,10 @@ func TestNewFHIR401Client(t *testing.T) {
 		"type": "test",
 	})
 
+	endpointDefinition := &definitionsModels.LighthouseSourceDefinition{}
+
 	//test
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, endpointDefinition, &http.Client{})
 
 	//assert
 	require.NoError(t, err)
@@ -47,7 +51,13 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+
+	cignaSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "6c0454af-1631-4c4d-905d-5710439df983",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cignaSandboxDefinition, &http.Client{})
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
@@ -77,7 +87,13 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, &http.Client{})
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
@@ -106,7 +122,13 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, &http.Client{})
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -151,7 +173,12 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, &http.Client{})
+	medicareSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "6ae6c14e-b927-4ce0-862f-91123cb8d774",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, medicareSandboxDefinition, &http.Client{})
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 

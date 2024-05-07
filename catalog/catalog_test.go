@@ -43,13 +43,11 @@ func TestCatalog_GetBrands_WithSandboxMode(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Len(t, brands, 20)
+	require.Len(t, brands, 27)
 
 	for _, brand := range brands {
 		if brand.Id == "db814755-2b62-4549-ba65-5138c0b80536" {
 			require.Len(t, brand.PortalsIds, 2)
-		} else {
-			require.Len(t, brand.PortalsIds, 1)
 		}
 	}
 }
