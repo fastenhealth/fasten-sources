@@ -287,6 +287,13 @@ func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
 		r.Header.Set("Access-Control-Allow-Methods", "GET,HEAD")
 		r.Header.Set("Access-Control-Allow-Credentials", "true")
 		r.Header.Set("Access-Control-Allow-Origin", "*")
+
+		//dump, err := httputil.DumpResponse(r, true)
+		//if err != nil {
+		//	log.Fatal(err)
+		//}
+		//fmt.Printf("DUMP RESPONSE: %q", dump)
+
 		return nil
 	}
 
