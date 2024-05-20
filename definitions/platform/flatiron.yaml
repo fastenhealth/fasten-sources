@@ -12,6 +12,7 @@ scopes_supported:
   - patient/CarePlan.read
   - patient/CareTeam.read
   - patient/Condition.read
+  - patient/Device.read
   - patient/DiagnosticReport.read
   - patient/DocumentReference.read
   - patient/Encounter.read
@@ -25,7 +26,6 @@ scopes_supported:
   - patient/Organization.read
   - patient/Patient.read
   - patient/Practitioner.read
-  - patient/PractitionerRole.read
   - patient/Procedure.read
   - patient/Provenance.read
 
@@ -41,6 +41,7 @@ confidential: true
 cors_relay_required: true
 documentation: |
   https://flatiron.my.site.com/FHIR/s/
+  https://flatiron.my.site.com/FHIR/s/article/Flatiron-FHIR-Overview
 
 missing_op_patient_everything: true
 client_supported_resources: []
