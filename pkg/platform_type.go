@@ -16,11 +16,13 @@ const (
 	PlatformTypeBcbsal              PlatformType = "bcbsal"
 	PlatformTypeCareevolution       PlatformType = "careevolution"
 	PlatformTypeCerner              PlatformType = "cerner"
+	PlatformTypeCHBase              PlatformType = "chbase"
 	PlatformTypeCigna               PlatformType = "cigna"
 	PlatformTypeEclinicalworks      PlatformType = "eclinicalworks"
 	PlatformTypeEdifecs             PlatformType = "edifecs"
 	PlatformTypeEpic                PlatformType = "epic"
 	PlatformTypeEpicLegacy          PlatformType = "epic-legacy"
+	PlatformTypeFlatiron            PlatformType = "flatiron"
 	PlatformTypeDrChrono            PlatformType = "drchrono"
 	PlatformTypeDynamicHealthIT     PlatformType = "dynamichealthit"
 	PlatformTypeHumana              PlatformType = "humana"
@@ -59,11 +61,13 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeBcbsal,
 		PlatformTypeCareevolution,
 		PlatformTypeCerner,
+		PlatformTypeCHBase,
 		PlatformTypeCigna,
 		PlatformTypeEclinicalworks,
 		PlatformTypeEdifecs,
 		PlatformTypeEpic,
 		PlatformTypeEpicLegacy,
+		PlatformTypeFlatiron,
 		PlatformTypeDrChrono,
 		PlatformTypeDynamicHealthIT,
 		PlatformTypeHumana,

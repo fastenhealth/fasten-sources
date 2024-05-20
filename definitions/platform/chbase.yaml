@@ -1,0 +1,28 @@
+# MANUALLY POPULATED
+platform_type: chbase
+
+# https://fhir-usa.sbx.unify.chbase.com/.well-known/smart-configuration
+# https://fhir-usa.sbx.unify.chbase.com/metadata
+scopes_supported:
+  - fhirUser
+  - openid
+  - offline_access
+  - launch/patient
+  - patient/*.read
+
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+code_challenge_methods_supported:
+  - S256
+confidential: false
+cors_relay_required: true
+documentation: |
+  https://unify-developer.chbase.com/?page=FHIRAPI
+
+missing_op_patient_everything: true
+client_supported_resources: []
+#custom_op_patient_everything: "Patient"

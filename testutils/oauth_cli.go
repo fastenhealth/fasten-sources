@@ -260,7 +260,7 @@ func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
 	//Define the director func
 	//This is a good place to log, for example
 	proxy.Director = func(req *http.Request) {
-		//req.Header = proxyReq.Header
+		req.Header = proxyReq.Header
 		req.Header.Add("X-Forwarded-Host", req.Host)
 		req.Header.Add("X-Origin-Host", remote.Host)
 		req.Host = remote.Host
