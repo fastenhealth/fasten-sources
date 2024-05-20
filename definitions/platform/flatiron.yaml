@@ -37,7 +37,7 @@ response_modes_supported:
   - query
 code_challenge_methods_supported:
   - S256
-confidential: false
+confidential: true
 cors_relay_required: true
 documentation: |
   https://flatiron.my.site.com/FHIR/s/
