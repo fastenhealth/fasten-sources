@@ -7,7 +7,6 @@ scopes_supported:
   - fhirUser
   - openid
   - offline_access
-  - launch/patient
   - patient/AllergyIntolerance.read
   - patient/CarePlan.read
   - patient/CareTeam.read
@@ -18,7 +17,6 @@ scopes_supported:
   - patient/Encounter.read
   - patient/Goal.read
   - patient/Immunization.read
-  - patient/Device.read
   - patient/Observation.read
   - patient/Location.read
   - patient/Medication.read
