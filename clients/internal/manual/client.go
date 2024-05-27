@@ -250,7 +250,7 @@ func (m ManualClient) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVer
 	}
 }
 
-func (m ManualClient) RefreshAccessToken() error {
+func (m ManualClient) RefreshAccessToken(options ...func(*models.SourceClientRefreshOptions)) error {
 	//TODO implement me
 	panic("implement me")
 }

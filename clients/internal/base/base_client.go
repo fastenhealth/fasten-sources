@@ -114,10 +114,15 @@ func (c *SourceClientBase) GetSourceCredential() models.SourceCredential {
 	return c.SourceCredential
 }
 
-func (c *SourceClientBase) RefreshAccessToken() error {
+func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClientRefreshOptions)) error {
 	if c.testMode {
 		//if test mode is enabled, we cannot refresh the access token
 		return nil
+	}
+
+	refreshOptions := &models.SourceClientRefreshOptions{}
+	for _, o := range options {
+		o(refreshOptions)
 	}
 
 	c.refreshMutex.Lock()
@@ -144,8 +149,12 @@ func (c *SourceClientBase) RefreshAccessToken() error {
 		Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
 	}
 
-	if token.Expiry.Before(time.Now().Add(5 * time.Second)) { // expired (or will expire in 5 seconds) so let's update it
-		c.Logger.Info("access token expired, must refresh")
+	if refreshOptions.Force || token.Expiry.Before(time.Now().Add(5*time.Second)) { // expired (or will expire in 5 seconds) so let's update it
+		if refreshOptions.Force {
+			c.Logger.Info("force refresh access token", refreshOptions.Force)
+		} else {
+			c.Logger.Info("access token expired, must refresh")
+		}
 
 		if c.SourceCredential.IsDynamicClient() {
 			c.Logger.Info("refreshing dynamic client...")
