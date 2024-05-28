@@ -39,9 +39,6 @@ type SourceClientBase struct {
 
 	SourceClientOptions *models.SourceClientOptions
 
-	//When test mode is enabled, tokens will not be refreshed, and Http client provided will be used (usually go-vcr for playback)
-	testMode bool
-
 	//Mutex to prevent multiple token refreshes from happening at the same time
 	refreshMutex sync.Mutex
 }
@@ -54,6 +51,13 @@ func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.Fh
 }
 
 func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, options ...func(clientOpts *models.SourceClientOptions)) (*SourceClientBase, error) {
+
+	clientOptions := &models.SourceClientOptions{
+		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
+	}
+	for _, o := range options {
+		o(clientOptions)
+	}
 
 	client := &SourceClientBase{
 		FastenEnv:          env,
@@ -91,19 +95,11 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 			// "ServiceRequest",
 			// "Specimen",
 		},
+		SourceClientOptions: clientOptions,
 	}
-
-	clientOptions := &models.SourceClientOptions{
-		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
-	}
-	for _, o := range options {
-		o(clientOptions)
-	}
-	client.SourceClientOptions = clientOptions
 
 	if client.SourceClientOptions.TestHttpClient != nil {
 		//Testing mode.
-		client.testMode = true
 		client.OauthClient = clientOptions.TestHttpClient
 		client.OauthClient.Timeout = 10 * time.Second
 	}
@@ -125,7 +121,7 @@ func (c *SourceClientBase) GetSourceCredential() models.SourceCredential {
 }
 
 func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClientRefreshOptions)) error {
-	if c.testMode {
+	if c.SourceClientOptions.TestMode {
 		//if test mode is enabled, we cannot refresh the access token
 		return nil
 	}
@@ -142,14 +138,28 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 	//https://github.com/golang/oauth2/issues/84#issuecomment-520099526
 	// https://chromium.googlesource.com/external/github.com/golang/oauth2/+/8f816d62a2652f705144857bbbcc26f2c166af9e/oauth2.go#239
 	conf := &oauth2.Config{
-		ClientID:     c.SourceCredential.GetClientId(),
-		ClientSecret: "",
+		ClientID: c.SourceCredential.GetClientId(),
 		Endpoint: oauth2.Endpoint{
 			AuthURL:  c.EndpointDefinition.AuthorizationEndpoint,
 			TokenURL: c.EndpointDefinition.TokenEndpoint,
 		},
+		//ClientSecret: "",
 		//RedirectURL:  "",
 		//Scopes:       nil,
+	}
+
+	//overrides
+	if len(c.SourceClientOptions.ClientID) > 0 {
+		conf.ClientID = c.SourceClientOptions.ClientID
+	}
+	if len(c.SourceClientOptions.ClientSecret) > 0 {
+		conf.ClientSecret = c.SourceClientOptions.ClientSecret
+	}
+	if len(c.SourceClientOptions.RedirectURL) > 0 {
+		conf.RedirectURL = c.SourceClientOptions.RedirectURL
+	}
+	if len(c.SourceClientOptions.Scopes) > 0 {
+		conf.Scopes = c.SourceClientOptions.Scopes
 	}
 
 	token := &oauth2.Token{
@@ -227,7 +237,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 // This function make the assumption that FHIR endpoint responses are always JSON
 func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelPtr interface{}) (string, error) {
 	//check if we need to refresh the access token
-	err := c.RefreshAccessToken()
+	err := c.RefreshAccessToken(c.SourceClientOptions.SourceClientRefreshOptions...)
 	if err != nil {
 		return "", err
 	}
