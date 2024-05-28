@@ -3,6 +3,7 @@ package internal
 import (
 	"context"
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
+	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/golang/mock/gomock"
@@ -29,7 +30,7 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("8b47cf7b-330e-4ede-9967-4caa7be623aa")
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, httpClient)
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

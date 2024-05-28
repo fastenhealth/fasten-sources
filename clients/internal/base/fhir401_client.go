@@ -12,7 +12,6 @@ import (
 	fhirutils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
-	"net/http"
 	"sort"
 	"strings"
 )
@@ -21,8 +20,8 @@ type SourceClientFHIR401 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*SourceClientFHIR401, error) {
-	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
+func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (*SourceClientFHIR401, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}

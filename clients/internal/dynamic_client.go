@@ -9,7 +9,6 @@ import (
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	logrus "github.com/sirupsen/logrus"
-	"net/http"
 )
 
 type dynamicSourceClient struct {
@@ -17,7 +16,7 @@ type dynamicSourceClient struct {
 	EndpointDefinition *definitionsModels.LighthouseSourceDefinition
 }
 
-func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 
 	//get the endpoint definition
 	endpointDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
@@ -31,7 +30,7 @@ func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context
 		return nil, fmt.Errorf("error retrieving endpoint definition (%s)", sourceCreds.GetEndpointId())
 	}
 
-	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}
@@ -46,9 +45,9 @@ func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context
 	return dynamicSourceClient{SourceClient: baseClient, EndpointDefinition: endpointDefinition}, err
 }
 
-func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (models.SourceClient, error) {
+func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 
-	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}

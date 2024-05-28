@@ -77,7 +77,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	internalFragmentReferenceLookup := map[string]string{}
 
 	//retrieve the FHIR client
-	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, &definitionsModels.LighthouseSourceDefinition{}, http.DefaultClient)
+	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, &definitionsModels.LighthouseSourceDefinition{}, models.WithTestHttpClient(http.DefaultClient))
 	if err != nil {
 		return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 	}
@@ -255,7 +255,7 @@ func (m ManualClient) RefreshAccessToken(options ...func(*models.SourceClientRef
 	panic("implement me")
 }
 
-func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, testHttpClient ...*http.Client) (models.SourceClient, error) {
+func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 	return &ManualClient{
 		FastenEnv:        env,
 		Context:          ctx,

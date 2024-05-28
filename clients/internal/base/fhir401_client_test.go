@@ -32,7 +32,7 @@ func TestNewFHIR401Client(t *testing.T) {
 	endpointDefinition := &definitionsModels.LighthouseSourceDefinition{}
 
 	//test
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, endpointDefinition, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, endpointDefinition, models.WithTestHttpClient(&http.Client{}))
 
 	//assert
 	require.NoError(t, err)
@@ -57,7 +57,7 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cignaSandboxDefinition, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cignaSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
@@ -93,7 +93,7 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
@@ -128,7 +128,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -178,7 +178,7 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, medicareSandboxDefinition, &http.Client{})
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, medicareSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 

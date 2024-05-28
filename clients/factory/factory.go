@@ -14,7 +14,6 @@ import (
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	logrus "github.com/sirupsen/logrus"
-	"net/http"
 )
 
 func GetSourceClient(
@@ -22,16 +21,16 @@ func GetSourceClient(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	sourceCreds models.SourceCredential,
-	testHttpClient ...*http.Client,
+	clientOptions ...func(options *models.SourceClientOptions),
 ) (models.SourceClient, error) {
 
 	switch sourceCreds.GetPlatformType() {
 	case pkg.PlatformTypeManual:
-		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	case pkg.PlatformTypeFasten:
-		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	default:
-		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, testHttpClient...)
+		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	}
 }
 
@@ -41,7 +40,7 @@ func GetSourceClientWithDefinition(
 	globalLogger logrus.FieldLogger,
 	sourceCreds models.SourceCredential,
 	endpointDefinition *definitionsModels.LighthouseSourceDefinition,
-	testHttpClient ...*http.Client,
+	clientOptions ...func(options *models.SourceClientOptions),
 ) (models.SourceClient, error) {
-	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, testHttpClient...)
+	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
 }

@@ -37,6 +37,8 @@ type SourceClientBase struct {
 	UsCoreResources []string
 	FhirVersion     string
 
+	SourceClientOptions *models.SourceClientOptions
+
 	//When test mode is enabled, tokens will not be refreshed, and Http client provided will be used (usually go-vcr for playback)
 	testMode bool
 
@@ -51,7 +53,7 @@ func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.Fh
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*SourceClientBase, error) {
+func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, options ...func(clientOpts *models.SourceClientOptions)) (*SourceClientBase, error) {
 
 	client := &SourceClientBase{
 		FastenEnv:          env,
@@ -91,14 +93,22 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 		},
 	}
 
-	if len(testHttpClient) > 0 {
+	clientOptions := &models.SourceClientOptions{
+		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
+	}
+	for _, o := range options {
+		o(clientOptions)
+	}
+	client.SourceClientOptions = clientOptions
+
+	if client.SourceClientOptions.TestHttpClient != nil {
 		//Testing mode.
 		client.testMode = true
-		client.OauthClient = testHttpClient[0]
+		client.OauthClient = clientOptions.TestHttpClient
 		client.OauthClient.Timeout = 10 * time.Second
 	}
 
-	err := client.RefreshAccessToken()
+	err := client.RefreshAccessToken(client.SourceClientOptions.SourceClientRefreshOptions...)
 	if err != nil {
 		return nil, err
 	}
