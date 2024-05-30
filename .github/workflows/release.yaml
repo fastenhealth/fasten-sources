@@ -62,5 +62,4 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: 'js/dist'
-          provenance: true
 
