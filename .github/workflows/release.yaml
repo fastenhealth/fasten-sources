@@ -18,6 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     # Service containers to run with `build` (Required for end-to-end testing)
     steps:
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '^1.22.1' # The Go version to download (if necessary) and use.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21
       - name: Checkout
         uses: actions/checkout@v2
         with:
