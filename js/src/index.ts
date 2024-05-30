@@ -1,5 +1,5 @@
 export {generateSourceAuthorizeUrl} from './connect/authorization-url'
-export {LighthouseSourceMetadata} from './models/lighthouse'
+export {LighthouseEndpointDefinition} from './models/lighthouse'
 export {PatientAccessEndpoint, PatientAccessBrand, PatientAccessPortal} from './models/patient-access-brands'
 export {SourceState} from './models/source-state'
 export {uuidV4} from './utils/uuid'

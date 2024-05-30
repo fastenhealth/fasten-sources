@@ -1,14 +1,13 @@
 {
   "name": "@fastenhealth/fasten-sources-js",
-  "version": "0.6.0",
+  "version": "0.6.0-beta.1",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepub": "cp package.json dist",
+    "pub": "cd dist && npm publish",
+    "postpub": "cd dist && rm package.json"
   },
   "author": "Jason Kulatunga <jason@fastenhealth.com>",
   "dependencies": {

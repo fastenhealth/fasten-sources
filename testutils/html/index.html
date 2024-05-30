@@ -346,7 +346,7 @@
 
     <script type="module">
         import alpinejs from 'https://cdn.skypack.dev/alpinejs@v3.13.4';
-        import * as Oauth from 'https://cdnjs.cloudflare.com/ajax/libs/oauth4webapi/2.0.6/index.js'
+        import {generateSourceAuthorizeUrl} from 'https://cdn.skypack.dev/@fastenhealth/fasten-sources-js';
 
         alpinejs.data('pageData', pageData);
         alpinejs.start();
@@ -466,7 +466,17 @@
                             lighthouseSource.brand_id = searchResult.brand_id
                             lighthouseSource.portal_id = searchResult.portal_id
 
-                            return this.generateSourceAuthorizeUrl(lighthouseSource)
+                            return generateSourceAuthorizeUrl(lighthouseSource)
+                                .then(authorizeData => {
+                                    console.log(authorizeData)
+                                    localStorage.setItem(authorizeData.sourceState.state, JSON.stringify(authorizeData.sourceState))
+
+                                    //this might be a custom definition instead of a lighthouse retrieved definition
+                                    // we need to store this configuration in local storage so we can use it later
+                                    localStorage.setItem(`${authorizeData.sourceState.state}.customDefinition`, JSON.stringify(lighthouseSource))
+
+                                    return this.redirectWithOriginAndDestination(authorizeData.url.toString(), lighthouseSource);
+                                })
                         })
 
                     //         showSpinner()
@@ -477,55 +487,6 @@
                     //             generateSourceAuthorizeUrl(source._id, response.data)
                     //         });
                 },
-
-                async generateSourceAuthorizeUrl(lighthouseSource){
-                    const state = this.uuidV4()
-                    let sourceStateInfo = {}
-                    sourceStateInfo.state = state
-                    sourceStateInfo.endpoint_id = lighthouseSource.id
-                    sourceStateInfo.portal_id = lighthouseSource.portal_id
-                    sourceStateInfo.brand_id = lighthouseSource.brand_id
-
-                    // generate the authorization url
-                    const authorizationUrl = new URL(lighthouseSource.authorization_endpoint);
-                    authorizationUrl.searchParams.set('redirect_uri', lighthouseSource.redirect_uri);
-                    authorizationUrl.searchParams.set('response_type', lighthouseSource.response_types_supported[0]);
-                    authorizationUrl.searchParams.set('response_mode', lighthouseSource.response_modes_supported[0]);
-                    authorizationUrl.searchParams.set('state', state);
-                    authorizationUrl.searchParams.set('client_id', lighthouseSource.client_id);
-                    if(lighthouseSource.scopes_supported && lighthouseSource.scopes_supported.length){
-                        authorizationUrl.searchParams.set('scope', lighthouseSource.scopes_supported.join(' '));
-                    } else {
-                        authorizationUrl.searchParams.set('scope', '');
-                    }
-                    if (lighthouseSource.aud) {
-                        authorizationUrl.searchParams.set('aud', lighthouseSource.aud);
-                    }
-
-                    //this is for providers that support CORS and PKCE (public client auth)
-                    if(!lighthouseSource.confidential || (lighthouseSource.code_challenge_methods_supported || []).length > 0){
-                        // https://github.com/panva/oauth4webapi/blob/8eba19eac408bdec5c1fe8abac2710c50bfadcc3/examples/public.ts
-                        const codeVerifier = Oauth.generateRandomCodeVerifier();
-                        const codeChallenge = await Oauth.calculatePKCECodeChallenge(codeVerifier);
-                        const codeChallengeMethod = lighthouseSource.code_challenge_methods_supported[0]; // 'S256'
-
-                        sourceStateInfo.code_verifier = codeVerifier
-                        sourceStateInfo.code_challenge = codeChallenge
-                        sourceStateInfo.code_challenge_method = codeChallengeMethod
-
-                        authorizationUrl.searchParams.set('code_challenge', codeChallenge);
-                        authorizationUrl.searchParams.set('code_challenge_method', codeChallengeMethod);
-                    }
-
-                    localStorage.setItem(state, JSON.stringify(sourceStateInfo))
-
-                    //this might be a custom definition instead of a lighthouse retrieved definition
-                    // we need to store this configuration in local storage so we can use it later
-                    localStorage.setItem(`${state}.customDefinition`, JSON.stringify(lighthouseSource))
-
-                    this.redirectWithOriginAndDestination(authorizationUrl.toString(), lighthouseSource);
-                },
-
                 // redirectOpts = {platform_type: string, redirect_uri: string, brand_id: string, portal_id: string, id: string}
                 redirectWithOriginAndDestination(destUrl, redirectOpts) {
                     const originUrlParts = new URL(window.location.href)
@@ -618,7 +579,15 @@
                         this.saveCustomSource()
                     }
 
-                    this.generateSourceAuthorizeUrl(this.customDefinition)
+                    return generateSourceAuthorizeUrl(this.customDefinition).then(authorizeData => {
+                        console.log(authorizeData)
+                        localStorage.setItem(authorizeData.sourceState.state, JSON.stringify(authorizeData.sourceState))
+
+                        //this is a custom definition instead of a lighthouse retrieved definition
+                        // we need to store this configuration in local storage so we can use it later
+                        localStorage.setItem(`${authorizeData.sourceState.state}.customDefinition`, JSON.stringify(this.customDefinition))
+                        return this.redirectWithOriginAndDestination(authorizeData.url.toString(), this.customDefinition);
+                    })
                 },
                 //load custom source from localstorage
                 loadCustomSource(){
@@ -652,20 +621,6 @@
                         return part;
                     })
                     return parts.join(separator);
-                },
-                uuidV4() {
-                    // http://www.ietf.org/rfc/rfc4122.txt
-                    var s = [];
-                    var hexDigits = "0123456789abcdef";
-                    for (var i = 0; i < 36; i++) {
-                        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
-                    }
-                    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
-                    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
-                    s[8] = s[13] = s[18] = s[23] = "-";
-
-                    var uuid = s.join("");
-                    return uuid;
                 }
             }
         }

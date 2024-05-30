@@ -10,8 +10,8 @@ build-js:
 	tygo generate
 
 publish-js: build-js
-	tsc
-	npm publish
+	cd js && tsc
+	cd js && npm run pub
 
 test:
 	go test ./...
