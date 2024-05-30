@@ -14,6 +14,7 @@ build-js:
 	go install github.com/gzuidhof/tygo@latest
 	tygo generate
 	npm install -g typescript
+	cd js && yarn install
 	cd js && tsc
 
 publish-js:
