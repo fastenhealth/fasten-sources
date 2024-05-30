@@ -18,6 +18,7 @@ import (
 //
 // Similar in functionality to https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
 // /apis/fhir/.well-known/smart-configuration
+// TODO: refactor & rename LighthouseSourceDefinition to LighthouseEndpointDefinition
 type LighthouseSourceDefinition struct {
 	BrandId  string `json:"brand_id,omitempty" yaml:"-" validate:"omitempty,uuid"`
 	PortalId string `json:"portal_id,omitempty" yaml:"-" validate:"omitempty,uuid"`

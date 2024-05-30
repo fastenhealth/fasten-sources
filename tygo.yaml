@@ -1,0 +1,12 @@
+packages:
+  - path: "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
+    output_path: "js/src/models/patient-access-brands/"
+    exclude_files:
+      - "catalog_query_options.go"
+  #TODO: BROKEN, see: https://github.com/gzuidhof/tygo/issues/54
+#  - path: "github.com/fastenhealth/fasten-sources/definitions/models"
+#    output_path: "js/models/lighthouse/"
+#    flavor: "json"
+
+
+

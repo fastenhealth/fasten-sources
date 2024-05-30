@@ -16,9 +16,14 @@ jobs:
   release:
     name: Create Release Commit
     runs-on: ubuntu-latest
-    container: ghcr.io/packagrio/packagr:latest-golang
     # Service containers to run with `build` (Required for end-to-end testing)
     steps:
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '^1.22.1' # The Go version to download (if necessary) and use.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -32,9 +37,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-#      - name: Test
-#        run: |
-#          go mod
+      - name: Generate JS Package
+        run: |
+          make build-js
+          npm version ${{ steps.bump_version.outputs.release_version }} --no-git-tag-version
       - name: Commit Changes Locally
         id: commit
         uses: packagrio/action-releasr-go@master
@@ -48,3 +54,9 @@ jobs:
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+      - name: Publish JS Package
+        run: |
+          make publish-js
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
