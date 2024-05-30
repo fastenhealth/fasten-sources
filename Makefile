@@ -16,6 +16,3 @@ build-js:
 	npm install -g typescript
 	cd js && yarn install
 	cd js && tsc
-
-publish-js:
-	cd js && npm run pub

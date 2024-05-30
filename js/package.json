@@ -5,9 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "prepub": "cp package.json dist",
-    "pub": "cd dist && npm publish",
-    "postpub": "cd dist && rm package.json"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Kulatunga <jason@fastenhealth.com>",
   "dependencies": {
