@@ -40,7 +40,7 @@ jobs:
       - name: Generate JS Package
         run: |
           make build-js
-          npm version ${{ steps.bump_version.outputs.release_version }} --no-git-tag-version
+          cd js && npm version ${{ steps.bump_version.outputs.release_version }} --no-git-tag-version
       - name: Commit Changes Locally
         id: commit
         uses: packagrio/action-releasr-go@master
