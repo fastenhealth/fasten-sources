@@ -57,3 +57,10 @@ ones that Fasten supports
 | [clients/internal/source](./clients/internal/source)     | Automatically created OAuth clients for accessing production data from various healthcare institutions. Usually inherit from Platform clients   |
 | [definitions](./definitions/)                            | Automatically created definition files. These files are generated from files created by `fasten-sources-gen` and are used by Fasten Lighthouse. |
 
+
+
+# References
+
+## NPM Library
+- https://www.tsmean.com/articles/learn-typescript/typescript-module-compiler-option/
+- 
