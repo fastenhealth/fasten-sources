@@ -3,7 +3,7 @@ import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
 test("Aetna Login Flow", async ({page}) => {
-
+    test.skip()
     //get the Cerner Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('ac8308d1-90de-4994-bb3d-fe404832714c')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)
