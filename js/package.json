@@ -6,12 +6,14 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "e2e": "npx playwright test"
+    "e2e": "npx playwright test --headed",
+    "e2e-debug": "npx playwright test --headed --debug"
   },
   "author": "Jason Kulatunga <jason@fastenhealth.com>",
   "dependencies": {
     "@panva/oauth4webapi": "1.2.0"
   },
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
