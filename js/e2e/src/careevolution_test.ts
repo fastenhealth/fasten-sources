@@ -5,7 +5,7 @@ import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 test("CareEvolution Login Flow", async ({page}) => {
     test.skip()
 
-    //get the Cerner Sandbox endpoint definition
+    //get the CareEvolution Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('8b47cf7b-330e-4ede-9967-4caa7be623aa')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)
 
