@@ -12,7 +12,7 @@ export default async function setup() {
   bsLocal.start(BS_LOCAL_ARGS, (err) => {
     if (err) {
       console.error(
-        `${redColour}Error starting BrowserStackLocal${whiteColour}`
+        `${redColour}Error starting BrowserStackLocal${whiteColour}`, err
       );
     } else {
       console.log('BrowserStackLocal Started');

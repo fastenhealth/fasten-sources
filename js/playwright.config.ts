@@ -53,26 +53,26 @@ export default {
   },
 
   /* Configure projects for major browsers */
-  // projects: [
-  //   // {
-  //   //   name: 'chrome@latest:Windows 11',
-  //   //   use: {
-  //   //     connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','test1') },
-  //   //   },
-  //   // }
-  //   // {
-  //   //   name: 'playwright-webkit@latest:OSX Ventura',
-  //   //   use: {
-  //   //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-webkit@latest:OSX Ventura', 'test2') }
-  //   //   },
-  //   // },
-  //   {
-  //     name: 'playwright-firefox:Windows 11',
-  //     use: {
-  //       connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
-  //     },
-  //   }
-  // ],
+  projects: [
+    {
+      name: 'chrome@latest:Windows 11',
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','test1') },
+      },
+    }
+    // {
+    //   name: 'playwright-webkit@latest:OSX Ventura',
+    //   use: {
+    //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-webkit@latest:OSX Ventura', 'test2') }
+    //   },
+    // },
+    // {
+    //   name: 'playwright-firefox:Windows 11',
+    //   use: {
+    //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
+    //   },
+    // }
+  ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
