@@ -32,6 +32,7 @@ test("eClinicalWorks-Healow Login Flow", async ({page}) => {
     // We are on the agreement page
     await page.waitForSelector("text=Personal Information Sharing");
     await expect(page).toHaveTitle("LoginUi");
+    //this is a case-sensitive, but not exact match. It may break in the future.
     await page.click('button:text-is("Approve")');
 
 
