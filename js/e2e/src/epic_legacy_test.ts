@@ -2,9 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("Epic OAuth2 Legacy Login Flow", async ({page}) => {
-    test.skip()
-
+test.skip("Epic OAuth2 Legacy Login Flow", async ({page}) => {
     //get the Epic Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('fc94bfc7-684d-4e4d-aa6e-ceec01c21c81')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)

@@ -2,9 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("CareEvolution Login Flow", async ({page}) => {
-    test.skip()
-
+test.skip("CareEvolution Login Flow", async ({page}) => {
     //get the CareEvolution Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('8b47cf7b-330e-4ede-9967-4caa7be623aa')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)

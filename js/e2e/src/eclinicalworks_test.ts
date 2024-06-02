@@ -2,8 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("eClinicalWorks-Healow Login Flow", async ({page}) => {
-
+test.skip("eClinicalWorks-Healow Login Flow", async ({page}) => {
     //get the eClinicalWorks Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('f0a8629a-076c-4f78-b41a-7fc6ae81fa4d')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)

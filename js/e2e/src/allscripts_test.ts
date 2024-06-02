@@ -2,8 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("Allscripts Login Flow", async ({page}) => {
-    test.skip()
+test.skip("Allscripts Login Flow", async ({page}) => {
     //get the Allscripts - Veradigm Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('7682675b-8247-4fda-b2cd-048bfeafc8af')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)

@@ -2,9 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("Cigna Login Flow", async ({page}) => {
-    test.skip()
-
+test.skip("Cigna Login Flow", async ({page}) => {
     //get the Cerner Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('6c0454af-1631-4c4d-905d-5710439df983')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)

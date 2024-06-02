@@ -2,9 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("Athena Login Flow", async ({page}) => {
-    test.skip()
-
+test.skip("Athena Login Flow", async ({page}) => {
     //get the Cerner Sandbox endpoint definition
     let endpointDefinition = await getEndpointDefinition('950e9092-8ce7-4926-ad87-64616f00cb4c')
     let authorizeData = await generateSourceAuthorizeUrl(endpointDefinition)
