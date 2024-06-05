@@ -5,13 +5,21 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": "npx playwright test --headed",
+    "e2e-debug": "npx playwright test --headed --debug"
   },
   "author": "Jason Kulatunga <jason@fastenhealth.com>",
   "dependencies": {
     "@panva/oauth4webapi": "1.2.0"
   },
+  "type": "module",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "browserstack-local": "^1.5.5",
+    "typescript": "^5.4.5"
   }
 }

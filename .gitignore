@@ -19,3 +19,7 @@
 
 js/dist
 js/node_modules
+
+js/local.log
+js/playwright-report
+js/test-results
