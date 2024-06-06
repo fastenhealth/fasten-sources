@@ -12,7 +12,8 @@ on:
   release:
     types: [published]
   schedule:
-    cron: '0 0 * * *' # Run every day at midnight
+    # Run every day at midnight
+    - cron: '0 0 * * *'
 jobs:
 
   test-js:
