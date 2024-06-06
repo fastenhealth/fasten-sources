@@ -56,13 +56,12 @@ jobs:
           retention-days: 1
       - name: Upload coverage report
         uses: codecov/codecov-action@v2
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         if: success() || failure()
         with:
           files: ${{ github.workspace }}/coverage.txt
           flags: unittests
           fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }} # required
           verbose: true
   docker:
     if: always()
