@@ -55,8 +55,8 @@ jobs:
           path: ${{ github.workspace }}/coverage.txt
           retention-days: 1
       - name: Upload coverage report
-        uses: codecov/codecov-action@v2
-        if: success() || failure()
+        uses: codecov/codecov-action@v4
+        if: always()
         with:
           files: ${{ github.workspace }}/coverage.txt
           flags: unittests
