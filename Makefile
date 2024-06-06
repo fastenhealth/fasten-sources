@@ -8,14 +8,19 @@ serve-backend: deps
 test:
 	go test ./...
 
-test-js:
+
+.PHONY: deps-js
+deps-js:
+	cd js && yarn install
+
+.PHONY: test-js
+test-js: deps-js
 	cd js && yarn run e2e
 
 # Steps related to building and publishing fasten-sources-js library.
-
-build-js:
+.PHONY: build-js
+build-js: deps-js
 	go install github.com/gzuidhof/tygo@latest
 	tygo generate
 	npm install -g typescript
-	cd js && yarn install
 	cd js && tsc
