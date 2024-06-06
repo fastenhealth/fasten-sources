@@ -11,10 +11,29 @@ on:
     branches: [ main ]
   release:
     types: [published]
+  schedule:
+    cron: '0 0 * * *' # Run every day at midnight
 jobs:
 
-  test:
-    name: Test
+  test-js:
+    name: Test JS
+    runs-on: ubuntu-latest
+    env:
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          registry-url: 'https://registry.npmjs.org'
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        run: |
+          make test-js
+
+  test-go:
+    name: Test Go
     runs-on: ubuntu-latest
     container: ghcr.io/packagrio/packagr:latest-golang
     env:

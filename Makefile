@@ -8,6 +8,9 @@ serve-backend: deps
 test:
 	go test ./...
 
+test-js:
+	cd js && yarn run e2e
+
 # Steps related to building and publishing fasten-sources-js library.
 
 build-js:

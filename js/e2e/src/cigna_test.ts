@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
 import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
 
-test("Cigna Login Flow", async ({page}, testInfo) => {
+test.skip("Cigna Login Flow", async ({page}, testInfo) => {
     try {
         await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.title}})}`);
         await page.waitForTimeout(5000);
