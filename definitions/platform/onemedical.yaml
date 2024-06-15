@@ -1,0 +1,30 @@
+# MANUALLY POPULATED
+platform_type: medhost
+
+
+# https://api.stage.1life.com/fhir/4.0/.well-known/smart-configuration
+# https://api.stage.1life.com/fhir/4.0/metadata
+scopes_supported:
+  - fhirUser
+  - openid
+  - profile
+  - offline_access
+  - launch/patient
+  - patient/*.read
+
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  https://apidocs.onemedical.io/fhir/authentication/
+
+missing_op_patient_everything: true
+client_supported_resources: []
+#custom_op_patient_everything: "Patient"

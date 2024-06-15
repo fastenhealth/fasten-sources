@@ -35,6 +35,7 @@ const (
 	PlatformTypeNHS                 PlatformType = "nhs"
 	PlatformTypeNetsmart            PlatformType = "netsmart"
 	PlatformTypeNextgen             PlatformType = "nextgen"
+	PlatformTypeOneMedical          PlatformType = "onemedical"
 	PlatformTypePracticeFusion      PlatformType = "practicefusion"
 	PlatformTypeQualifactsCareLogic PlatformType = "qualifacts-carelogic"
 	PlatformTypeQualifactsCredible  PlatformType = "qualifacts-credible"
@@ -80,6 +81,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeNHS,
 		PlatformTypeNetsmart,
 		PlatformTypeNextgen,
+		PlatformTypeOneMedical,
 		PlatformTypePracticeFusion,
 		PlatformTypeQualifactsCareLogic,
 		PlatformTypeQualifactsCredible,
