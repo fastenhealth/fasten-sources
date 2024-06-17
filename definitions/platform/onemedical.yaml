@@ -25,6 +25,6 @@ cors_relay_required: false
 documentation: |
   https://apidocs.onemedical.io/fhir/authentication/
 
-missing_op_patient_everything: true
+missing_op_patient_everything: false
 client_supported_resources: []
 #custom_op_patient_everything: "Patient"
