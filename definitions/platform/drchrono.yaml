@@ -8,6 +8,7 @@ scopes_supported:
   - offline_access
   - fhirUser
   - patient/AllergyIntolerance.read
+#  - patient/Binary.read TODO - ask Chandler to add Binary scope to my list of supported.
   - patient/CarePlan.read
   - patient/CareTeam.read
   - patient/Condition.read
