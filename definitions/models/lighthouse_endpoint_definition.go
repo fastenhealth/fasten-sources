@@ -97,8 +97,9 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.PlatformType == pkg.PlatformTypeQualifactsCredible ||
 		def.PlatformType == pkg.PlatformTypeQualifactsCareLogic ||
 		def.PlatformType == pkg.PlatformTypeNHS ||
-		def.PlatformType == pkg.PlatformTypeFlatiron {
-		//remove trailing slash for audience for CareEvolution & Anthem
+		def.PlatformType == pkg.PlatformTypeFlatiron ||
+		def.PlatformType == pkg.PlatformTypeOneMedical {
+		//remove trailing slash for audience
 		def.Audience = strings.TrimSuffix(def.Audience, "/")
 	}
 

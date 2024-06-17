@@ -1,5 +1,5 @@
 # MANUALLY POPULATED
-platform_type: medhost
+platform_type: onemedical
 
 
 # https://api.stage.1life.com/fhir/4.0/.well-known/smart-configuration
@@ -20,7 +20,7 @@ response_modes_supported:
   - fragment
 code_challenge_methods_supported:
   - S256
-confidential: true
+confidential: false
 cors_relay_required: false
 documentation: |
   https://apidocs.onemedical.io/fhir/authentication/
