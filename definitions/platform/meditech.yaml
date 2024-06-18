@@ -7,6 +7,7 @@ scopes_supported:
   - fhirUser
   - profile
   - 'patient/*.read'
+  - 'launch/patient'
 grant_types_supported:
   - authorization_code
 response_types_supported:
@@ -16,7 +17,7 @@ response_modes_supported:
   - query
 code_challenge_methods_supported:
   - S256
-confidential: false
+confidential: true
 cors_relay_required: false
 documentation: https://fhir.meditech.com/explorer/authorization
 client_headers:
