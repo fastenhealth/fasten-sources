@@ -1,5 +1,5 @@
 # MANUALLY POPULATED
-platform_type: medhost
+platform_type: intellichart
 
 # https://fhirapiqa.intelichart.com/.well-known/smart-configuration
 # https://fhirauthqa.intelichart.com/.well-known/openid-configuration
