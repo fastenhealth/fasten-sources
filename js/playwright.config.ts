@@ -56,8 +56,86 @@ export default {
   projects: [
     {
       name: 'chrome@latest:Windows 11',
+      testMatch: /.*aetna_test.ts/,
       use: {
-        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','test1') },
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','aetna') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*allscripts_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','allscripts') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*athena_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','athena') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*careevolution_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','careevolution') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*cerner_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','cerner') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*cigna_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','cigna') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*eclinicalworks_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','eclinicalworks') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*epic_legacy_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','epic-legacy') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*kaiser_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','kaiser') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*medicare_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','medicare') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*nextgen_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','nextgen') },
+      },
+    },
+    {
+      name: 'chrome@latest:Windows 11',
+      testMatch: /.*vahealth_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','vahealth') },
       },
     }
     // {

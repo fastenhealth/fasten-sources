@@ -43,7 +43,7 @@ const patchCaps = (name, title) => {
   caps.os_version = browser_version ? browser_version : 'latest';
   caps.os = os ? os : 'osx';
   caps.os_version = os_version ? os_version : 'catalina';
-  caps.name = title;
+  caps.project = title;
 };
 
 export function getCdpEndpoint(name, title){
