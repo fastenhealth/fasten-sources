@@ -22,6 +22,8 @@ const caps = {
   'browserstack.accessKey': process.env.BROWSERSTACK_ACCESS_KEY || 'ACCESSKEY',
   'browserstack.local': process.env.BROWSERSTACK_LOCAL || true,
   'client.playwrightVersion': clientPlaywrightVersion,
+  'browserstack.maskCommands': 'sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation',
+
 };
 
 export const bsLocal = new BrowserStackLocal.Local();
