@@ -180,7 +180,7 @@ export default {
     // }
     {
       name: 'wip',
-      testMatch: /.*humana_test.ts/,
+      testMatch: /.*dynamichealthit_test.ts/,
       use: { ...devices['Desktop Chrome'] },
     }
   ],
