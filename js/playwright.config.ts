@@ -118,6 +118,13 @@ export default {
       },
     },
     {
+      name: 'maximeyes',
+      testMatch: /.*maximeyes_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','maximeyes') },
+      },
+    },
+    {
       name: 'medicare',
       testMatch: /.*medicare_test.ts/,
       use: {
@@ -132,12 +139,26 @@ export default {
       },
     },
     {
+      name: 'onemedical',
+      testMatch: /.*onemedical_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','onemedical') },
+      },
+    },
+    {
+      name: 'practicefusion',
+      testMatch: /.*practicefusion_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','practicefusion') },
+      },
+    },
+    {
       name: 'vahealth',
       testMatch: /.*vahealth_test.ts/,
       use: {
         connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','vahealth') },
       },
-    }
+    },
     // {
     //   name: 'playwright-webkit@latest:OSX Ventura',
     //   use: {
@@ -150,6 +171,11 @@ export default {
     //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
     //   },
     // }
+    {
+      name: 'maximeyes',
+      testMatch: /.*maximeyes_test.ts/,
+      use: { ...devices['Desktop Chrome'] },
+    }
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
