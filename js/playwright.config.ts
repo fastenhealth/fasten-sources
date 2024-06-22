@@ -111,6 +111,13 @@ export default {
       },
     },
     {
+      name: 'humana',
+      testMatch: /.*humana_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','humana') },
+      },
+    },
+    {
       name: 'kaiser',
       testMatch: /.*kaiser_test.ts/,
       use: {
@@ -172,8 +179,8 @@ export default {
     //   },
     // }
     {
-      name: 'maximeyes',
-      testMatch: /.*maximeyes_test.ts/,
+      name: 'wip',
+      testMatch: /.*humana_test.ts/,
       use: { ...devices['Desktop Chrome'] },
     }
   ],
