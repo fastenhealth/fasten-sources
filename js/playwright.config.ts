@@ -97,6 +97,20 @@ export default {
       },
     },
     {
+      name: 'drchrono',
+      testMatch: /.*drchrono_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','drchrono') },
+      },
+    },
+    {
+      name: 'dynamichealthit',
+      testMatch: /.*dynamichealthit_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','dynamichealthit') },
+      },
+    },
+    {
       name: 'eclinicalworks',
       testMatch: /.*eclinicalworks_test.ts/,
       use: {
@@ -129,6 +143,13 @@ export default {
       testMatch: /.*maximeyes_test.ts/,
       use: {
         connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','maximeyes') },
+      },
+    },
+    {
+      name: 'medhost',
+      testMatch: /.*medhost_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','medhost') },
       },
     },
     {
@@ -165,7 +186,7 @@ export default {
       use: {
         connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','vahealth') },
       },
-    },
+    }
     // {
     //   name: 'playwright-webkit@latest:OSX Ventura',
     //   use: {
@@ -178,11 +199,11 @@ export default {
     //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
     //   },
     // }
-    {
-      name: 'wip',
-      testMatch: /.*dynamichealthit_test.ts/,
-      use: { ...devices['Desktop Chrome'] },
-    }
+    // {
+    //   name: 'wip',
+    //   testMatch: /.*drchrono_test.ts/,
+    //   use: { ...devices['Desktop Chrome'] },
+    // }
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
