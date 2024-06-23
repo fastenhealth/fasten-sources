@@ -20,7 +20,7 @@ test-js: deps-js
 # make test-js-project PROJECT=athena
 .PHONY: test-js-project
 test-js-project: deps-js
-	cd js && yarn run e2e --project=$(PROJECT)
+	cd js && yarn run e2e --headed --debug --project=$(PROJECT)
 
 # Steps related to building and publishing fasten-sources-js library.
 .PHONY: build-js

@@ -97,6 +97,20 @@ export default {
       },
     },
     {
+      name: 'drchrono',
+      testMatch: /.*drchrono_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','drchrono') },
+      },
+    },
+    {
+      name: 'dynamichealthit',
+      testMatch: /.*dynamichealthit_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','dynamichealthit') },
+      },
+    },
+    {
       name: 'eclinicalworks',
       testMatch: /.*eclinicalworks_test.ts/,
       use: {
@@ -111,10 +125,31 @@ export default {
       },
     },
     {
+      name: 'humana',
+      testMatch: /.*humana_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','humana') },
+      },
+    },
+    {
       name: 'kaiser',
       testMatch: /.*kaiser_test.ts/,
       use: {
         connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','kaiser') },
+      },
+    },
+    {
+      name: 'maximeyes',
+      testMatch: /.*maximeyes_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','maximeyes') },
+      },
+    },
+    {
+      name: 'medhost',
+      testMatch: /.*medhost_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','medhost') },
       },
     },
     {
@@ -129,6 +164,20 @@ export default {
       testMatch: /.*nextgen_test.ts/,
       use: {
         connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','nextgen') },
+      },
+    },
+    {
+      name: 'onemedical',
+      testMatch: /.*onemedical_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','onemedical') },
+      },
+    },
+    {
+      name: 'practicefusion',
+      testMatch: /.*practicefusion_test.ts/,
+      use: {
+        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','practicefusion') },
       },
     },
     {
@@ -149,6 +198,11 @@ export default {
     //   use: {
     //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
     //   },
+    // }
+    // {
+    //   name: 'wip',
+    //   testMatch: /.*drchrono_test.ts/,
+    //   use: { ...devices['Desktop Chrome'] },
     // }
   ],
 
