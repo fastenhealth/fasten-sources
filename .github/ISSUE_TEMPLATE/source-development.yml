@@ -31,6 +31,14 @@ body:
     validations:
       required: true
   - type: input
+    id: endpoint-list
+    attributes:
+      label: Endpoint List
+      description: Please share a link to the FHIR Endpoint List for this EHR
+      placeholder: ex. https://mm-fhir-endpoint-display.prod.fhir.ema-api.com/
+    validations:
+      required: false
+  - type: input
     id: provider-portal
     attributes:
       label: Example Patient Portal Login Website
