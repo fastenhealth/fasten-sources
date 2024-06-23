@@ -45,6 +45,7 @@ body:
       description: |
         Please share a link to and example provider's login page, where patients can access their health records.
         Use the following sites for searching for example patient portals:
+        - https://explore.redoxengine.com/
         - https://enlyft.com/tech/products/practice-fusion
         - https://discovery.hgdata.com/product/practice-fusion
         - https://6sense.com/tech/electronic-health-records-ehr/practice-fusion-market-share
