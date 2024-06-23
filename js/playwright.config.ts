@@ -201,7 +201,7 @@ export default {
     // }
     // {
     //   name: 'wip',
-    //   testMatch: /.*drchrono_test.ts/,
+    //   testMatch: /.*medhost_test.ts/,
     //   use: { ...devices['Desktop Chrome'] },
     // }
   ],

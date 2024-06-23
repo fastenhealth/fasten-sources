@@ -62,6 +62,17 @@ After completing the OAuth flow with your selected EHR, you will be redirected t
 ![](./screenshots/callback.png)
 
 
+## Playwright/BrowserStack Testing
+
+You can run the following command to rest the Playwright tests:
+
+```bash
+make test-js
+
+# or to test a specific project
+make test-js-project PROJECT=wip
+```
+
 # Provider Development
 
 When developing a new provider, the first step is to find the developer documentation for the provider.
