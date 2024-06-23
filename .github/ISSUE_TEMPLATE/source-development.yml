@@ -1,0 +1,60 @@
+name: Source Development Tracker
+description: This form is used to track the development progress for new EHRs/sources to be added to Fasten
+title: "[Source]: "
+labels: ["provider"]
+projects: ["fastenhealth/fasten-sources"]
+assignees:
+  - AnalogJ
+body:
+  - type: input
+    id: provider-name
+    attributes:
+      label: EHR/Platform Name
+      description: What is the name of this Platform?
+      placeholder: ex. Epic/Cerner/Allscripts
+    validations:
+      required: true
+  - type: input
+    id: chpl-website
+    attributes:
+      label: CHPL Website
+      description: Please share a link to the CHPL entry for this EHR.
+      placeholder: ex. https://www.humana.com/
+    validations:
+      required: true
+  - type: input
+    id: dev-website
+    attributes:
+      label: Developer Documentation
+      description: Please share a link to the Developer Documentation for this EHR
+      placeholder: ex. https://www.humana.com/api/fhir_docs
+    validations:
+      required: true
+  - type: input
+    id: provider-portal
+    attributes:
+      label: Example Patient Portal Login Website
+      description: |
+        Please share a link to and example provider's login page, where patients can access their health records.
+        Use the following sites for searching for example patient portals:
+        - https://enlyft.com/tech/products/practice-fusion
+        - https://discovery.hgdata.com/product/practice-fusion
+        - https://6sense.com/tech/electronic-health-records-ehr/practice-fusion-market-share
+      placeholder: ex. https://ucsfmychart.ucsfmedicalcenter.org/ucsfmychart/Authentication/Login?
+    validations:
+      required: false
+  - type: textarea
+    id: sandbox-credentials
+    attributes:
+      label: Sandbox Credentials
+      description: Please enter or share a link to sandbox credentials for this EHR
+      placeholder: ex. https://www.humana.com/
+    validations:
+      required: false
+  - type: textarea
+    id: fasten-sources-definition
+    attributes:
+      label: Fasten Sources Definition
+      description: Please enter a working Fasten Sources definition for this EHR
+    validations:
+      required: false
