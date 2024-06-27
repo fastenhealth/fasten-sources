@@ -35,6 +35,30 @@ func TestGetSourceClientManual_ExtractPatientId_Bundle(t *testing.T) {
 	require.Equal(t, "57959813-8cd2-4e3c-8970-e4364b74980a", resp)
 }
 
+func TestGetSourceClientManual_ExtractPatientId_CCDAToFHIRConvertedBundle(t *testing.T) {
+	t.Parallel()
+	//setup
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeManual)
+	client, err := GetSourceClientManual(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential)
+
+	bundleFile, err := os.Open("testdata/fixtures/401-R4/bundle/ccda_to_fhir_converted_C-CDA_R2-1_CCD.xml.json")
+	require.NoError(t, err)
+
+	//test
+	resp, ver, err := client.ExtractPatientId(bundleFile)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, pkg.FhirVersion401, ver)
+	require.Equal(t, "12345", resp)
+}
+
 func TestGetSourceClientManual_ExtractPatientId_BundleIPS(t *testing.T) {
 	t.Parallel()
 	//setup

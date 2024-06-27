@@ -15,6 +15,7 @@ func TestGetFileDocumentType(t *testing.T) {
 		expectedDocumentType pkg.DocumentType // expected result
 	}{
 		{"testdata/fixtures/401-R4/bundle/synthea_Tania553_Harris789_545c2380-b77f-4919-ab5d-0f615f877250.json", true, pkg.DocumentTypeFhirBundle},
+		{"testdata/fixtures/401-R4/bundle/ccda_to_fhir_converted_C-CDA_R2-1_CCD.xml.json", true, pkg.DocumentTypeFhirBundle},
 		{"testdata/fixtures/401-R4/list/family-history.json", true, pkg.DocumentTypeFhirList},
 		{"testdata/fixtures/401-R4/ccda/MaryGrant-ClinicalSummary.xml", true, pkg.DocumentTypeCCDA},
 		{"testdata/fixtures/401-R4/international-patient-summary/IPS-bundle-01.json", true, pkg.DocumentTypeFhirBundle},

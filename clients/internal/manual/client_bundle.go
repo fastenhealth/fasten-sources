@@ -11,6 +11,7 @@ import (
 	fhir430utils "github.com/fastenhealth/gofhir-models/fhir430/utils"
 	"github.com/samber/lo"
 	"io"
+	"log"
 	"os"
 )
 
@@ -25,6 +26,7 @@ func extractPatientIdBundle(bundleFile *os.File) (string, pkg.FhirVersion, error
 
 	//fallback to 430 bundle
 	if err != nil || patientIds == nil || len(patientIds) == 0 {
+		log.Printf("failed to parse bundle or extract patientIds as 401, trying as 430: %v", err)
 		bundleType = pkg.FhirVersion430
 
 		patientIds, err = parse430Bundle(bundleFile)
@@ -49,6 +51,7 @@ func parse401Bundle(bundleFile *os.File) ([]string, error) {
 		patientIds := lo.FilterMap[fhir401.BundleEntry, string](bundle401Data.Entry, func(bundleEntry fhir401.BundleEntry, _ int) (string, bool) {
 			parsedResource, err := fhir401utils.MapToResource(bundleEntry.Resource, false)
 			if err != nil {
+				log.Printf("failed to parse resource: %v", err)
 				return "", false
 			}
 			typedResource := parsedResource.(models.ResourceInterface)
@@ -57,7 +60,7 @@ func parse401Bundle(bundleFile *os.File) ([]string, error) {
 			if resourceId == nil || len(*resourceId) == 0 {
 				return "", false
 			}
-			return *resourceId, resourceType == fhir430.ResourceTypePatient.String()
+			return *resourceId, resourceType == fhir401.ResourceTypePatient.String()
 		})
 
 		return patientIds, nil
