@@ -29,6 +29,8 @@ func GetSourceClient(
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	case pkg.PlatformTypeFasten:
 		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
+	case pkg.PlatformTypeHIE:
+		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	default:
 		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	}

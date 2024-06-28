@@ -7,6 +7,8 @@ type PlatformType string
 const (
 	PlatformTypeManual PlatformType = "manual"
 	PlatformTypeFasten PlatformType = "fasten"
+	PlatformTypeHIE    PlatformType = "hie" //hie is special because it requires IAL2 verification
+
 	// platform
 	PlatformTypeAdvancedmd          PlatformType = "advancedmd"
 	PlatformTypeAetna               PlatformType = "aetna"
@@ -53,6 +55,7 @@ func GetPlatformTypes() []PlatformType {
 	return []PlatformType{
 		PlatformTypeManual,
 		PlatformTypeFasten,
+		PlatformTypeHIE,
 
 		PlatformTypeAdvancedmd,
 		PlatformTypeAetna,

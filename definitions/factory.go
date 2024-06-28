@@ -36,7 +36,7 @@ func GetSourceDefinition(
 
 	if len(options.PlatformType) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
-		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten {
+		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten || options.PlatformType == pkg.PlatformTypeHIE {
 			platformDefinition, err := getPlatformDefinition(options.PlatformType)
 			if err != nil {
 				return nil, fmt.Errorf("error retrieving platform definition (%s): %w", options.PlatformType, err)
@@ -84,6 +84,8 @@ func getPlatformDefinition(platformType pkg.PlatformType) (*models.LighthouseSou
 		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
 	} else if platformType == pkg.PlatformTypeFasten {
 		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeFasten)}}, nil
+	} else if platformType == pkg.PlatformTypeHIE {
+		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeHIE)}}, nil
 	}
 
 	platformDefinition, err := strictUnmarshalYaml(platformType)
