@@ -20,7 +20,7 @@ cors_relay_required: false
 documentation: https://developerportal.aetna.com/Aetna_TestMember_Data_V6.xls
 
 #client_headers: {}
-op_patient_everything: false
+missing_op_patient_everything: true
 client_supported_resources: [
   "AllergyIntolerance",
   "CarePlan",
