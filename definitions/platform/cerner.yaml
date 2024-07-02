@@ -61,16 +61,14 @@ client_headers:
   Accept: "application/fhir+json"
 missing_op_patient_everything: true
 client_supported_resources: [
-  "Account",
-  "Appointment",
   "Consent",
   "FamilyMemberHistory",
   "InsurancePlan",
+  "MedicationAdministration",
   "MedicationRequest",
   "NutritionOrder",
   "Person",
   "Provenance",
-  "Questionnaire",
   "QuestionnaireResponse",
   "RelatedPerson",
   "Schedule",
