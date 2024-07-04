@@ -18,8 +18,8 @@ body:
     id: chpl-website
     attributes:
       label: CHPL Website
-      description: Please share a link to the CHPL entry for this EHR.
-      placeholder: ex. https://www.humana.com/
+      description: Please share a link to the [CHPL entry](https://chpl.healthit.gov/) for this EHR.
+      placeholder: ex. https://chpl.healthit.gov/
     validations:
       required: true
   - type: input
