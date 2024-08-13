@@ -291,6 +291,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 			return "", fmt.Errorf("an error occurred while reading non-JSON response body: %s", err)
 		}
 		binaryResourceJsonBytes, err := json.Marshal(map[string]interface{}{
+			"id":           base64.StdEncoding.EncodeToString([]byte(resourceUrl.String())),
 			"resourceType": "Binary",
 			"contentType":  contentTypeHeader,
 			"data":         base64.StdEncoding.EncodeToString(b),
