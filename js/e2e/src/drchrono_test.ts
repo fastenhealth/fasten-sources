@@ -18,7 +18,7 @@ test("DrChrono Login Flow", async ({page}, testInfo) => {
         await page.goto(authorizeData.url.toString());
 
         // We are on login page
-        await page.waitForSelector("text=Account Login");
+        await page.waitForSelector("text=Sign In");
         await page.focus("#username");
         await page.keyboard.type(process.env.PW_DRCHRONO_USERNAME);
         await page.focus("#password");
