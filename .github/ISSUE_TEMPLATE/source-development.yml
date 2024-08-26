@@ -67,3 +67,21 @@ body:
       description: Please enter a working Fasten Sources definition for this EHR
     validations:
       required: false
+  - type: checkboxes
+    id: status
+    attributes:
+      label: Platform Developer Readiness Checklist
+      description: This checklist is used to track the status of an EHR platform, and how ready/compliant it's Patient Access APIs are
+      options:
+        - label: developer documentation
+        - label: sandbox - endpoint published
+        - label: sandbox - client registration
+        - label: sandbox - test patient username & password
+        - label: sandbox - no fees
+        - label: production - client registration
+        - label: production - endpoint list published
+        - label: production - endpoint catalog/health system info published
+        - label: production - no fees
+        - label: production - automatic client distribution
+        
+        
