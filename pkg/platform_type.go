@@ -42,6 +42,7 @@ const (
 	PlatformTypeQualifactsCareLogic PlatformType = "qualifacts-carelogic"
 	PlatformTypeQualifactsCredible  PlatformType = "qualifacts-credible"
 	PlatformTypeQualifactsInSync    PlatformType = "qualifacts-insync"
+	PlatformTypeQuestDiagnostics    PlatformType = "questdiagnostics"
 
 	PlatformTypeUnitedhealthcare PlatformType = "unitedhealthcare"
 	PlatformTypeVahealth         PlatformType = "vahealth"
@@ -89,6 +90,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeQualifactsCareLogic,
 		PlatformTypeQualifactsCredible,
 		PlatformTypeQualifactsInSync,
+		PlatformTypeQuestDiagnostics,
 		PlatformTypeUnitedhealthcare,
 		PlatformTypeVahealth,
 
