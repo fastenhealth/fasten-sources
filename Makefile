@@ -4,7 +4,7 @@ deps:
 
 .PHONY: serve-backend
 serve-backend: deps
-	cd tools/test-smart-client && go run main.go
+	cd tools/test-smart-client && go run main.go --proxy=$(PROXY_ADDR)
 test:
 	go test ./...
 

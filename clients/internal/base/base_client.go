@@ -54,6 +54,7 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 
 	clientOptions := &models.SourceClientOptions{
 		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
+		Context:                    ctx,
 	}
 	for _, o := range options {
 		o(clientOptions)
@@ -61,7 +62,7 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 
 	client := &SourceClientBase{
 		FastenEnv:          env,
-		Context:            ctx,
+		Context:            clientOptions.Context,
 		Logger:             globalLogger,
 		SourceCredential:   sourceCreds,
 		EndpointDefinition: endpointDefinition,

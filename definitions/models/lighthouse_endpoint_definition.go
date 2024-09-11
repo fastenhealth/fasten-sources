@@ -82,7 +82,8 @@ func (def *LighthouseSourceDefinition) Populate(
 	if def.PlatformType == pkg.PlatformTypeCigna ||
 		def.PlatformType == pkg.PlatformTypeNextgen ||
 		def.PlatformType == pkg.PlatformTypeVahealth ||
-		def.PlatformType == pkg.PlatformTypeNHS {
+		def.PlatformType == pkg.PlatformTypeNHS ||
+		def.PlatformType == pkg.PlatformTypeQuestDiagnostics {
 		//most providers use the same url for API endpoint and Audience. These are the exceptions, which must not have an aud
 		def.Audience = ""
 	} else {

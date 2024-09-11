@@ -47,6 +47,8 @@ make serve-backend
 
 `make serve-backend` should automatically start a webserver and open a browser to [http://localhost:9999](http://localhost:9999)
 
+If you need to provide a proxy server (for whitelisted IPs), you can call `PROXY_ADDR=socks5://socksproxy:socksproxy@localhost:1047  make serve-backend`
+
 # Testing Connections
 
 Once the backend server is running, you can test connections to various EHR systems by selecting the "Sandbox" or "Production" radio button, and selecting the EHR you'd like to test.

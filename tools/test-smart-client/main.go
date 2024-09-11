@@ -4,12 +4,15 @@ import (
 	"context"
 	"embed"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
+	clientModels "github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
+	"golang.org/x/net/proxy"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -55,6 +58,13 @@ func JSONError(w http.ResponseWriter, err interface{}, code int) {
 func main() {
 	log.Printf("Starting oauth cli")
 	defer log.Printf("Finished oauth cli")
+
+	proxyAddr := flag.String("proxy", "", "SOCKS5 proxy address to use. eg: socks5://socksproxy:socksproxy@localhost:1047")
+	flag.Parse()
+	if *proxyAddr != "" {
+		log.Printf("proxyAddress: %s", *proxyAddr)
+	}
+
 	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
 		log.Printf("%v", req.URL.Path)
 		if strings.HasPrefix(req.URL.Path, "/callback") {
@@ -74,7 +84,7 @@ func main() {
 			//http.ServeFile(res, req, "html/index.html")
 		}
 	})
-	url := "http://localhost:9999"
+	serverUrl := "http://localhost:9999"
 
 	http.HandleFunc("/api/source/request", func(res http.ResponseWriter, req *http.Request) {
 
@@ -115,12 +125,45 @@ func main() {
 			"Accept": "application/json+fhir",
 		}
 
+		clientOptions := []func(options *clientModels.SourceClientOptions){}
+
+		//TODO: create a SOCKS Proxy Http Client for testing Quest
+		// https://eli.thegreenplace.net/2022/go-and-proxy-servers-part-3-socks-proxies/
+		if *proxyAddr != "" {
+
+			parsedProxyAddr, err := url.Parse(*proxyAddr)
+			if err != nil {
+				log.Fatalf("an error occurred while parsing proxy address: %v", err)
+			}
+			proxyPassword, hasProxyPassword := parsedProxyAddr.User.Password()
+			if !hasProxyPassword {
+				log.Fatalf("proxy address must have a password")
+			}
+
+			auth := proxy.Auth{
+				User:     parsedProxyAddr.User.Username(),
+				Password: proxyPassword,
+			}
+			dialer, err := proxy.SOCKS5("tcp", parsedProxyAddr.Host, &auth, nil)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			client := &http.Client{
+				Transport: &http.Transport{
+					Dial: dialer.Dial,
+				},
+			}
+			clientOptions = append(clientOptions, clientModels.WithHttpClient(client))
+		}
+
 		sourceClient, err := factory.GetSourceClientWithDefinition(
 			pkg.FastenLighthouseEnvProduction,
 			bgContext,
 			logger,
 			&sc,
 			&requestData.SourceDefinition,
+			clientOptions...,
 		)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
@@ -150,12 +193,12 @@ func main() {
 	go func() {
 		log.Println("You will now be taken to your browser for authentication")
 		time.Sleep(1 * time.Second)
-		err := open.Run(url)
+		err := open.Run(serverUrl)
 		if err != nil {
 			log.Printf("an error occurred opening browser: %v", err)
 		}
 		time.Sleep(1 * time.Second)
-		log.Printf("Authentication URL: %s\n", url)
+		log.Printf("Authentication URL: %s\n", serverUrl)
 	}()
 
 	log.Fatal(http.ListenAndServe(":9999", nil))
