@@ -45,6 +45,14 @@ func (m ManualClient) GetUsCoreResources() []string {
 	panic("implement me")
 }
 
+func (m ManualClient) GetResourceTypesUsCore() []string {
+	return []string{}
+}
+
+func (m ManualClient) GetResourceTypesAllowList() []string {
+	return []string{}
+}
+
 func (m ManualClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
 	//TODO implement me
 	panic("implement me")

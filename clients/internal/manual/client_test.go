@@ -2,6 +2,7 @@ package manual
 
 import (
 	"context"
+	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/golang/mock/gomock"
@@ -10,6 +11,13 @@ import (
 	"os"
 	"testing"
 )
+
+func TestGetSourceClientManual_ImplementsInterface(t *testing.T) {
+	t.Parallel()
+
+	//assert
+	require.Implements(t, (*models.SourceClient)(nil), &ManualClient{}, "should implement the models.SourceClient interface")
+}
 
 func TestGetSourceClientManual_ExtractPatientId_Bundle(t *testing.T) {
 	t.Parallel()
