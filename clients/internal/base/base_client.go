@@ -34,8 +34,8 @@ type SourceClientBase struct {
 	EndpointDefinition *definitionsModels.LighthouseSourceDefinition
 	Headers            map[string]string
 
-	UsCoreResources []string
-	FhirVersion     string
+	ResourceTypesUsCore []string
+	FhirVersion         string
 
 	SourceClientOptions *models.SourceClientOptions
 
@@ -69,7 +69,7 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 		Headers:            map[string]string{},
 
 		// https://build.fhir.org/ig/HL7/US-Core/
-		UsCoreResources: []string{
+		ResourceTypesUsCore: []string{
 			"AllergyIntolerance",
 			//"Binary",
 			"CarePlan",
@@ -113,8 +113,16 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 	return client, nil
 }
 
-func (c *SourceClientBase) GetUsCoreResources() []string {
-	return c.UsCoreResources
+func (c *SourceClientBase) GetResourceTypesUsCore() []string {
+	return c.ResourceTypesUsCore
+}
+
+func (c *SourceClientBase) GetResourceTypesAllowList() []string {
+	if c.SourceClientOptions == nil {
+		return []string{}
+	} else {
+		return c.SourceClientOptions.ResourceTypesAllowList
+	}
 }
 
 func (c *SourceClientBase) GetSourceCredential() models.SourceCredential {

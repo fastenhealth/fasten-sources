@@ -82,6 +82,34 @@ func (mr *MockSourceClientMockRecorder) GetResourceBundle(relativeResourcePath i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceBundle", reflect.TypeOf((*MockSourceClient)(nil).GetResourceBundle), relativeResourcePath)
 }
 
+// GetResourceTypesAllowList mocks base method.
+func (m *MockSourceClient) GetResourceTypesAllowList() []string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResourceTypesAllowList")
+	ret0, _ := ret[0].([]string)
+	return ret0
+}
+
+// GetResourceTypesAllowList indicates an expected call of GetResourceTypesAllowList.
+func (mr *MockSourceClientMockRecorder) GetResourceTypesAllowList() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceTypesAllowList", reflect.TypeOf((*MockSourceClient)(nil).GetResourceTypesAllowList))
+}
+
+// GetResourceTypesUsCore mocks base method.
+func (m *MockSourceClient) GetResourceTypesUsCore() []string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResourceTypesUsCore")
+	ret0, _ := ret[0].([]string)
+	return ret0
+}
+
+// GetResourceTypesUsCore indicates an expected call of GetResourceTypesUsCore.
+func (mr *MockSourceClientMockRecorder) GetResourceTypesUsCore() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceTypesUsCore", reflect.TypeOf((*MockSourceClient)(nil).GetResourceTypesUsCore))
+}
+
 // GetSourceCredential mocks base method.
 func (m *MockSourceClient) GetSourceCredential() models.SourceCredential {
 	m.ctrl.T.Helper()
@@ -94,20 +122,6 @@ func (m *MockSourceClient) GetSourceCredential() models.SourceCredential {
 func (mr *MockSourceClientMockRecorder) GetSourceCredential() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceCredential", reflect.TypeOf((*MockSourceClient)(nil).GetSourceCredential))
-}
-
-// GetUsCoreResources mocks base method.
-func (m *MockSourceClient) GetUsCoreResources() []string {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetUsCoreResources")
-	ret0, _ := ret[0].([]string)
-	return ret0
-}
-
-// GetUsCoreResources indicates an expected call of GetUsCoreResources.
-func (mr *MockSourceClientMockRecorder) GetUsCoreResources() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsCoreResources", reflect.TypeOf((*MockSourceClient)(nil).GetUsCoreResources))
 }
 
 // RefreshAccessToken mocks base method.

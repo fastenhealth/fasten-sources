@@ -7,7 +7,8 @@ import (
 
 //go:generate mockgen -source=source_client.go -destination=mock/mock_source_client.go
 type SourceClient interface {
-	GetUsCoreResources() []string
+	GetResourceTypesUsCore() []string
+	GetResourceTypesAllowList() []string
 	GetRequest(resourceSubpath string, decodeModelPtr interface{}) (string, error)
 	GetResourceBundle(relativeResourcePath string) (interface{}, error)
 	SyncAll(db DatabaseRepository) (UpsertSummary, error)
