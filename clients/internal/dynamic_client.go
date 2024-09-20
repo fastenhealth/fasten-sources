@@ -68,9 +68,16 @@ func (c dynamicSourceClient) SyncAll(db models.DatabaseRepository) (models.Upser
 		//Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html
 		//Manually processing individual resources
 
-		supportedResources := c.GetUsCoreResources()
-		if c.EndpointDefinition.ClientSupportedResources != nil {
-			supportedResources = append(supportedResources, c.EndpointDefinition.ClientSupportedResources...)
+		var supportedResources []string
+		if len(c.GetResourceTypesAllowList()) > 0 {
+			supportedResources = c.GetResourceTypesAllowList()
+			supportedResources = append(supportedResources, "Patient") //always ensure the patient is included
+		} else {
+			//no override provided, attempt to sync all resources
+			supportedResources = c.GetResourceTypesUsCore()
+			if c.EndpointDefinition.ClientSupportedResources != nil {
+				supportedResources = append(supportedResources, c.EndpointDefinition.ClientSupportedResources...)
+			}
 		}
 		return c.SyncAllByResourceName(db, supportedResources)
 	} else if len(c.EndpointDefinition.CustomOpPatientEverything) > 0 {

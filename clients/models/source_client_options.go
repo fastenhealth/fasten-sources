@@ -17,6 +17,8 @@ type SourceClientOptions struct {
 	RedirectURL  string
 	Scopes       []string
 
+	ResourceTypesAllowList []string //list of resource types that are allowed to be fetched from this source. Default empty (USCDI Core List)
+
 	SourceClientRefreshOptions []func(*SourceClientRefreshOptions)
 
 	Context context.Context
@@ -62,6 +64,12 @@ func WithRedirectURL(redirectURL string) func(*SourceClientOptions) {
 func WithScopes(scopes []string) func(*SourceClientOptions) {
 	return func(s *SourceClientOptions) {
 		s.Scopes = scopes
+	}
+}
+
+func WithResourceTypeAllowList(resourceTypeAllowList []string) func(*SourceClientOptions) {
+	return func(s *SourceClientOptions) {
+		s.ResourceTypesAllowList = resourceTypeAllowList
 	}
 }
 

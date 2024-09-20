@@ -198,7 +198,10 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	}
 
 	//process any pending resources
-	lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+	//if we have a populated whitelist, skip this -- we don't care about references to other resources, just the ones we queried. This is a naiive solution to prevent requesting unnecessary records. This should be improved.
+	if len(c.GetResourceTypesAllowList()) == 0 {
+		lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+	}
 
 	checkpointErrorData := map[string]interface{}{}
 	if len(syncErrors) > 0 {
@@ -469,6 +472,11 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 				c.Logger.Warnf("Skipping contained resource missing id: (%s/%s#%s index: %d)", currentResourceType, *currentResourceId, containedResourceType, cndx)
 				continue
 			}
+			if len(c.GetResourceTypesAllowList()) > 0 && !lo.Contains(c.GetResourceTypesAllowList(), containedResourceType) {
+				c.Logger.Warnf("Skipping contained resource not in allow list: (%s/%s#%s index: %d)", currentResourceType, *currentResourceId, containedResourceType, cndx)
+				continue
+			}
+
 			normalizedContainedResourceId := normalizeContainedResourceId(currentResourceType, *currentResourceId, *containedResourceId)
 
 			//generate a unique id for this contained resource by base64 url encoding this string
