@@ -22,6 +22,7 @@ cors_relay_required: true
 documentation: |
   https://api.questdiagnostics.com/resource-server/fhir/.well-known/smart-configuration
 
-missing_op_patient_everything: false
+# Quest does support Patient?_id=VWNrRLxxxxxxx to retrieve a bundle of records for this patient, however its not a standard operation
+missing_op_patient_everything: true
 client_supported_resources: []
 #custom_op_patient_everything: "Patient"
