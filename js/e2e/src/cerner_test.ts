@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import {getEndpointDefinition} from '../utils';
-import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
+import { getEndpointDefinition } from '../utils';
+import { generateSourceAuthorizeUrl } from '../../src/connect/authorization-url';
 
-test("Cerner Login Flow", async ({page}, testInfo) => {
+test("Cerner Login Flow", async ({ page }, testInfo) => {
     try {
-        await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.title}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: testInfo.title } })}`);
         await page.waitForTimeout(5000);
 
         //get the Cerner Sandbox endpoint definition
@@ -32,7 +32,7 @@ test("Cerner Login Flow", async ({page}, testInfo) => {
         await page.click('#proceedButton');
 
         // We are on the Select Patient page.
-        await page.waitForSelector("text=SMART II, NANCY (Self, 33)");
+        await page.waitForSelector("text=SMARTS II, NANCYS II (Self, 34)");
         await expect(page).toHaveTitle("Authorization Needed");
         await page.click("label[for='12724066']", { force: true, delay: 500 });
         await page.click("#allowButton");
@@ -41,9 +41,9 @@ test("Cerner Login Flow", async ({page}, testInfo) => {
         // If successful, Fasten Lighthouse page should now be visible
         await page.waitForSelector("text=Your account has been securely connected to FASTEN.");
 
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Authentication Successful'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Authentication Successful' } })}`);
     } catch (e) {
         console.log(e);
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Test failed'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Test failed' } })}`);
     }
 });
