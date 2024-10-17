@@ -78,6 +78,7 @@ body:
         - label: sandbox - client registration
         - label: sandbox - test patient username & password
         - label: sandbox - no fees
+        - label: sandbox - [inferno testing](https://inferno.healthit.gov/suites/g10_certification) passed
         - label: production - client registration
         - label: production - endpoint list published
         - label: production - endpoint catalog/health system info published
