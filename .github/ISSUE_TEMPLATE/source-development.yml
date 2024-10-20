@@ -53,9 +53,17 @@ body:
     validations:
       required: false
   - type: textarea
+    id: developer-portal
+    attributes:
+      label: Developer Portal
+      description: Please enter or share a link to the developer portal (where you can register app client id & secret)
+      placeholder: ex. https://www.humana.com/
+    validations:
+      required: false      
+  - type: textarea
     id: sandbox-credentials
     attributes:
-      label: Sandbox Credentials
+      label: Sandbox Patient Credentials
       description: Please enter or share a link to sandbox credentials for this EHR
       placeholder: ex. https://www.humana.com/
     validations:
