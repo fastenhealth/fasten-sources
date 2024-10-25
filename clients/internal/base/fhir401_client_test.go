@@ -14,6 +14,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"net/http"
 	"testing"
+	"time"
 )
 
 func TestNewFHIR401Client(t *testing.T) {
@@ -226,5 +227,45 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0z":     true,
 		"Patient/-10000010254618": false,
 	}, referencedResourcesLookup)
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+// This test uses the an Open Cerner endpoint for testing (auth is ignored)
+func TestFHIR401Client_ProcessBundle_OpenCerner(t *testing.T) {
+	t.Parallel()
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	//sc.EXPECT().GetAccessToken().Return("test-access-token")
+	//sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
+	})
+	require.NoError(t, err)
+
+	//override the endpoint information for testing purposes
+	cernerSandboxDefinition.Url = "https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/"
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client.OauthClient.Timeout = 120 * time.Second
+	require.NoError(t, err)
+
+	//override the headers for testing purposes
+	client.Headers = cernerSandboxDefinition.ClientHeaders
+	client.Headers["Accept"] = "application/fhir+json"
+	relativeResourcePath := "DocumentReference?patient=12724067"
+
+	// test
+	wrappedResourceModels, err := client.GetResourceBundle(relativeResourcePath)
+	//log.Printf("%v", wrappedResourceModels)
+
+	//assert
+	require.NoError(t, err)
+	require.NotNil(t, wrappedResourceModels)
+	//require.Equal(t, 10, len(wrappedResourceModels))
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
