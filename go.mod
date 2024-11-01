@@ -7,6 +7,7 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.3
 	github.com/go-playground/validator/v10 v10.16.0
 	github.com/golang/mock v1.6.0
+	github.com/google/uuid v1.6.0
 	github.com/samber/lo v1.35.0
 	github.com/seborama/govcr v4.5.0+incompatible
 	github.com/sirupsen/logrus v1.9.0

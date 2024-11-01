@@ -195,6 +195,35 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingSyncAll">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSyncAll" aria-expanded="false" aria-controls="collapseSyncAll">
+                                            SyncAll Request
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSyncAll" class="collapse" aria-labelledby="headingSyncAll" data-parent="#accordionExample">
+                                    <div class="card-body">
+
+                                        <button @click="syncAllRequestHandler()" type="button" x-bind:disabled="loadingSyncAllRequest" class="btn btn-primary btn-sm mb-3">Submit SyncAll Request</button>
+
+                                        <ol x-show="!loadingSyncAllRequest && !!totalSynced">
+                                            <li>Elapsed: <span x-text="elapsedTime"></span></li>
+                                            <li>Total Synced: <span x-text="totalSynced"></span></li>
+                                        </ol>
+                                        <pre style="max-height:400px;" x-show="!loadingSyncAllRequest" x-text="sync_all_data"></pre>
+                                        <hr/>
+                                        <pre style="max-height:400px;" x-show="!loadingSyncAllRequest" x-text="errorData"></pre>
+
+
+                                        <div x-show="!loadingSyncAllRequest && !!sync_all_data_error" class="alert alert-danger" role="alert" x-text="sync_all_data_error"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -248,6 +277,12 @@
                 raw_resource_path: '',
                 raw_data: '',
                 raw_data_error: '',
+
+                loadingSyncAllRequest: false,
+                sync_all_data: '',
+                elapsedTime:'',
+                totalSynced: 0,
+                errorData: '',
 
                 callbackInit(){
                     //get sourceType from url (example.com/callback/{{sourceType}})
@@ -422,6 +457,30 @@
                             return error.responseText
                         })
                 },
+                sourceSyncAllRequest(){
+                    let payload = {
+                        "sourceDefinition": this.sourceDefinition,
+                        "requestData": {
+                            "accessToken": this.accessToken,
+                            "patientId": this.patient_id,
+                        },
+                    }
+
+                    //post JSON payload to /api/source/request using fetch
+
+                    return fetch(  '/api/source/syncall', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                        .then(resp => resp.json())
+                        .catch((error) => {
+                            console.error('Error:', error);
+                            return error.responseText
+                        })
+                },
 
                 //Click handlers
                 populatePatientHandler(){
@@ -453,6 +512,33 @@
                             this.loadingRawRequest = false
                         })
                 },
+                syncAllRequestHandler(){
+
+                    this.loadingSyncAllRequest = true
+                    this.sync_all_data = "Loading..."
+                    this.elapsedTime = ""
+                    this.totalSynced = ""
+                    this.errorData = ""
+
+                    this.sync_all_data_error = ""
+
+                    this.sourceSyncAllRequest()
+                        .then(resp => {
+                            console.log("SyncAll Request data", resp)
+                            this.elapsedTime = resp['elapsed']
+                            this.totalSynced = resp['total_records']
+                            this.errorData = JSON.stringify(resp['errors'], null, 4)
+                            this.sync_all_data = resp.data
+                            this.loadingSyncAllRequest = false
+                        })
+                        .catch(e => {
+                            this.sync_all_data = ""
+                            this.sync_all_data_error = e.toString()
+                            this.loadingSyncAllRequest = false
+                        })
+                },
+
+
 
                 //helpers
 
