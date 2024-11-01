@@ -1,0 +1,79 @@
+{
+  "class": {
+    "code": "5",
+    "display": "Appointment",
+    "system": "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260"
+  },
+  "id": "e7vTGSIu3VmPxDxo8hbtSKQ3",
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.840.114350.1.13.44.2.7.3.698084.8",
+      "use": "usual",
+      "value": "247735644"
+    }
+  ],
+  "location": [
+    {
+      "location": {
+        "display": "Adult Orthopedics",
+        "reference": "Location/eq0Zb8k23Hg.GX9aMfavyZg3"
+      }
+    }
+  ],
+  "participant": [
+    {
+      "individual": {
+        "display": "KIRK J. JAMES, MD",
+        "reference": "Practitioner/e7y0GLCXTb0rdKZlNSuQhww3"
+      },
+      "period": {
+        "end": "2019-11-21T18:00:00Z",
+        "start": "2018-11-21T17:40:00Z"
+      }
+    }
+  ],
+  "period": {
+    "end": "2019-11-21T18:00:00Z",
+    "start": "2018-11-21T17:40:00Z"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "494",
+          "display": "Limb Pain",
+          "system": "urn:oid:1.2.840.114350.1.13.44.2.7.2.728286"
+        }
+      ],
+      "text": "Limb Pain"
+    }
+  ],
+  "resourceType": "Encounter",
+  "status": "Finished",
+  "subject": {
+    "display": "Doe, John",
+    "reference": "Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "101",
+          "display": "Office Visit",
+          "system": "urn:oid:1.2.840.114350.1.13.44.2.7.10.698084.30"
+        }
+      ],
+      "text": "Office Visit"
+    },
+    {
+      "coding": [
+        {
+          "code": "36",
+          "display": "Initial Specialty Visit",
+          "system": "urn:oid:1.2.840.114350.1.13.44.2.7.2.808267"
+        }
+      ],
+      "text": "Initial Specialty Visit"
+    }
+  ]
+}

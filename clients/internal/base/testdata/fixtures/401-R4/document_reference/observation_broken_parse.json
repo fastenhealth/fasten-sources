@@ -1,0 +1,98 @@
+{
+  "basedOn": [
+    {
+      "display": "HEPATITIS B SURFACE ANTIBODY IMMUNITY QUANTITATIVE",
+      "reference": "ServiceRequest/klsdk3-PBKXHFeY0Q7KMDFz92TYK2nbYKsI3"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "display": "Laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ],
+      "text": "Laboratory"
+    },
+    {
+      "coding": [
+        {
+          "code": "LAB",
+          "display": "LAB",
+          "system": "urn:oid:1.2.840.114350.1.13.44.2.7.10.798268.30"
+        }
+      ],
+      "text": "LAB"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "5193-8",
+        "display": "Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay",
+        "system": "http://loinc.org"
+      },
+      {
+        "code": "18063",
+        "system": "urn:oid:1.2.840.114350.1.13.44.2.7.5.737384.80113"
+      },
+      {
+        "code": "18063",
+        "display": "HEPATITIS B SURFACE ANTIBODY QUANT",
+        "system": "urn:oid:1.2.840.114350.1.13.44.2.7.2.768282"
+      }
+    ],
+    "text": "HEPATITIS B SURFACE ANTIBODY QUANT"
+  },
+  "effectiveDateTime": "2021-06-07T01:00:00Z",
+  "encounter": {
+    "display": "Lab Visit",
+    "identifier": {
+      "system": "urn:oid:1.2.840.114350.1.13.44.2.7.3.698084.8",
+      "use": "usual",
+      "value": "315534385"
+    },
+    "reference": "Encounter/exxx3In3deguCac1YMmg3"
+  },
+  "id": "eDLs6fOQWxxxxxyRm6L53E5CxAMgXynSZ6fIlFdJM8SeT.qhxNM3",
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "L",
+          "display": "Low",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+        }
+      ],
+      "text": "Low"
+    }
+  ],
+  "issued": "2021-06-07T20:00:00Z",
+  "note": [
+    {
+      "text": "Patient is considered to be Not Immune to infection with HBV."
+    }
+  ],
+  "referenceRange": [
+    {
+      "text": "\u003e=10.00"
+    }
+  ],
+  "resourceType": "Observation",
+  "specimen": {
+    "display": "Specimen XD#DDD-D00420",
+    "reference": "Specimen/xxxxwer-YwClO-82tNgDDI43tkGp2UsGcRs3"
+  },
+  "status": "final",
+  "subject": {
+    "display": "Doe, John",
+    "reference": "Patient/1234"
+  },
+  "valueQuantity": {
+    "comparator": "\u003c",
+    "unit": "mIU/mL",
+    "value": 3.1
+  }
+}

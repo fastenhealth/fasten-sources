@@ -3,7 +3,7 @@ module github.com/fastenhealth/fasten-sources
 go 1.18
 
 require (
-	github.com/fastenhealth/gofhir-models v0.0.6
+	github.com/fastenhealth/gofhir-models v0.0.7
 	github.com/gabriel-vasile/mimetype v1.4.3
 	github.com/go-playground/validator/v10 v10.16.0
 	github.com/golang/mock v1.6.0

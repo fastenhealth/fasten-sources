@@ -163,6 +163,100 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
 
+func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEnum_ShouldParseCorrectly(t *testing.T) {
+	t.Parallel()
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	require.NoError(t, err)
+	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
+
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/encounter_resource_broken_parse.json")
+	require.NoError(t, err)
+	referencedResourcesLookup := map[string]bool{}
+	internalFragmentReferenceLookup := map[string]string{}
+	summary := models.UpsertSummary{}
+
+	rawResource := models.RawResourceFhir{
+		SourceResourceID:   "e7vTGSIu3VmPxDxo8hbtSKQ3",
+		SourceResourceType: "Encounter",
+		ResourceRaw:        jsonBytes,
+	}
+
+	// test
+	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 4, len(referencedResourcesLookup))
+	require.Equal(t, map[string]bool{
+		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                      true,
+		"Location/eq0Zb8k23Hg.GX9aMfavyZg3":                       false,
+		"Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3": false,
+		"Practitioner/e7y0GLCXTb0rdKZlNSuQhww3":                   false,
+	}, referencedResourcesLookup)
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters_ShouldParseCorrectly(t *testing.T) {
+	t.Skip("Cannot handle escaped unicode characters")
+	//setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+	sc := mock_models.NewMockSourceCredential(mockCtrl)
+	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
+	})
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	require.NoError(t, err)
+	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
+
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/observation_broken_parse.json")
+	require.NoError(t, err)
+	referencedResourcesLookup := map[string]bool{}
+	internalFragmentReferenceLookup := map[string]string{}
+	summary := models.UpsertSummary{}
+
+	rawResource := models.RawResourceFhir{
+		SourceResourceID:   "e7vTGSIu3VmPxDxo8hbtSKQ3",
+		SourceResourceType: "Encounter",
+		ResourceRaw:        jsonBytes,
+	}
+
+	// test
+	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+
+	//assert
+	require.NoError(t, err)
+	require.Equal(t, 4, len(referencedResourcesLookup))
+	require.Equal(t, map[string]bool{
+		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                      true,
+		"Location/eq0Zb8k23Hg.GX9aMfavyZg3":                       false,
+		"Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3": false,
+		"Practitioner/e7y0GLCXTb0rdKZlNSuQhww3":                   false,
+	}, referencedResourcesLookup)
+	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
 func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	t.Parallel()
 	//setup
