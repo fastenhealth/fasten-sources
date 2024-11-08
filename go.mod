@@ -1,6 +1,6 @@
 module github.com/fastenhealth/fasten-sources
 
-go 1.18
+go 1.22
 
 require (
 	github.com/fastenhealth/gofhir-models v0.0.7
