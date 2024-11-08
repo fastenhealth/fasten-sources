@@ -5,6 +5,9 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"sort"
+	"strings"
+
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -12,8 +15,6 @@ import (
 	fhirutils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
-	"sort"
-	"strings"
 )
 
 type SourceClientFHIR401 struct {
@@ -147,7 +148,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	resourceNames = lo.Uniq(resourceNames)
 	sort.Strings(resourceNames)
 	for _, resourceType := range resourceNames {
-		bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?patient=%s", resourceType, c.SourceCredential.GetPatientId()))
+		bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?patient=%s&_count=50", resourceType, c.SourceCredential.GetPatientId()))
 		if err != nil {
 			syncErrors[resourceType] = err
 			continue

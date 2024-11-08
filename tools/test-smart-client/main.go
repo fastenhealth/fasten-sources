@@ -8,8 +8,10 @@ import (
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/factory"
 	clientModels "github.com/fastenhealth/fasten-sources/clients/models"
+	"github.com/fastenhealth/fasten-sources/definitions"
 	"github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
+	"github.com/fastenhealth/fasten-sources/tools/test-smart-client/utils"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
 	"golang.org/x/net/proxy"
@@ -17,6 +19,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"os"
 	"strings"
 	"time"
 )
@@ -37,6 +40,7 @@ type ResourceRequest struct {
 		ResourceType    string `json:"resourceType"`
 		ResourceRequest string `json:"resourceRequest"`
 		AccessToken     string `json:"accessToken"`
+		PatientId       string `json:"patientId"`
 	} `json:"requestData"`
 }
 
@@ -104,67 +108,7 @@ func main() {
 		log.Printf("%v", requestData)
 		logger := logrus.WithField("callback", requestData.SourceDefinition.PlatformType)
 
-		//populate a fake source credential
-		sc := fakeSourceCredential{
-			ClientId:   requestData.SourceDefinition.ClientId,
-			PatientId:  "",
-			EndpointId: requestData.SourceDefinition.Id,
-
-			OauthAuthorizationEndpoint: requestData.SourceDefinition.AuthorizationEndpoint,
-			OauthTokenEndpoint:         requestData.SourceDefinition.TokenEndpoint,
-			ApiEndpointBaseUrl:         requestData.SourceDefinition.Url,
-			RefreshToken:               "",
-			AccessToken:                requestData.RequestData.AccessToken,
-			ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
-		}
-
-		bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
-
-		//TODO: SourceDefinition is always misisng ClientHeaders, lets set them ourselves
-		requestData.SourceDefinition.ClientHeaders = map[string]string{
-			"Accept": "application/json+fhir",
-		}
-
-		clientOptions := []func(options *clientModels.SourceClientOptions){}
-
-		//TODO: create a SOCKS Proxy Http Client for testing Quest
-		// https://eli.thegreenplace.net/2022/go-and-proxy-servers-part-3-socks-proxies/
-		if *proxyAddr != "" {
-
-			parsedProxyAddr, err := url.Parse(*proxyAddr)
-			if err != nil {
-				log.Fatalf("an error occurred while parsing proxy address: %v", err)
-			}
-			proxyPassword, hasProxyPassword := parsedProxyAddr.User.Password()
-			if !hasProxyPassword {
-				log.Fatalf("proxy address must have a password")
-			}
-
-			auth := proxy.Auth{
-				User:     parsedProxyAddr.User.Username(),
-				Password: proxyPassword,
-			}
-			dialer, err := proxy.SOCKS5("tcp", parsedProxyAddr.Host, &auth, nil)
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			client := &http.Client{
-				Transport: &http.Transport{
-					Dial: dialer.Dial,
-				},
-			}
-			clientOptions = append(clientOptions, clientModels.WithHttpClient(client))
-		}
-
-		sourceClient, err := factory.GetSourceClientWithDefinition(
-			pkg.FastenLighthouseEnvProduction,
-			bgContext,
-			logger,
-			&sc,
-			&requestData.SourceDefinition,
-			clientOptions...,
-		)
+		sourceClient, err := GenerateAuthClient(&requestData, proxyAddr, logger)
 		if err != nil {
 			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
 			return
@@ -177,6 +121,77 @@ func main() {
 			JSONError(res, fmt.Errorf("an error occurred while fetching data from source: %v", err), http.StatusInternalServerError)
 			return
 		}
+
+		responeJson, err := json.MarshalIndent(response, "", "  ")
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while marshalling response: %v", err), http.StatusInternalServerError)
+			return
+		}
+
+		res.Write(responeJson)
+		return
+	})
+
+	http.HandleFunc("/api/source/syncall", func(res http.ResponseWriter, req *http.Request) {
+
+		log.Printf("Source SyncAll Request: %s %v", req.Method, req.URL.Path)
+		//write simple json response
+		res.Header().Set("Content-Type", "application/json")
+
+		//read post body (in json) and unmarshal into a struct
+		var requestData ResourceRequest
+		err := json.NewDecoder(req.Body).Decode(&requestData)
+		if err != nil {
+
+			JSONError(res, fmt.Errorf("error decoding request body: %v", err), http.StatusBadRequest)
+			httputil.DumpRequest(req, true)
+			return
+		}
+		log.Printf("%v", requestData)
+		logger := logrus.WithField("callback", requestData.SourceDefinition.PlatformType)
+
+		sourceClient, err := GenerateAuthClient(&requestData, proxyAddr, logger)
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while initializing hub client using source credential: %v", err), http.StatusInternalServerError)
+			return
+		}
+
+		response := map[string]interface{}{}
+
+		storageRepo, err := utils.NewStorageRepository(logger)
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while initializing storage repository: %w", err), http.StatusInternalServerError)
+			return
+		}
+
+		//Start Benchmarking
+		start := time.Now()
+		summary, err := sourceClient.SyncAll(storageRepo)
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while fetching data from source: %v", err), http.StatusInternalServerError)
+			return
+		}
+		elapsed := time.Since(start)
+		log.Printf("SyncAll took %s", elapsed)
+
+		// wrtie test file
+		err = storageRepo.Close()
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while closing storage repository: %w", err), http.StatusInternalServerError)
+			return
+		}
+
+		response["elapsed"] = elapsed.String()
+		response["total_records"] = summary.TotalResources
+		response["errors"] = storageRepo.ErrorData
+
+		//read the file and include the content in the reponse.
+		data, err := os.ReadFile(storageRepo.LocalFilepath)
+		if err != nil {
+			JSONError(res, fmt.Errorf("an error occurred while reading storage file: %v", err), http.StatusInternalServerError)
+			return
+		}
+		response["data"] = string(data)
 
 		responeJson, err := json.MarshalIndent(response, "", "  ")
 		if err != nil {
@@ -342,4 +357,82 @@ func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
 
 	newProxyReq, _ := http.NewRequest(proxyReq.Method, corsUrl, proxyReq.Body)
 	proxy.ServeHTTP(proxyRes, newProxyReq)
+}
+
+func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger *logrus.Entry) (clientModels.SourceClient, error) {
+	//populate a fake source credential
+	sc := fakeSourceCredential{
+		ClientId:   requestData.SourceDefinition.ClientId,
+		PatientId:  requestData.RequestData.PatientId,
+		EndpointId: requestData.SourceDefinition.Id,
+
+		OauthAuthorizationEndpoint: requestData.SourceDefinition.AuthorizationEndpoint,
+		OauthTokenEndpoint:         requestData.SourceDefinition.TokenEndpoint,
+		ApiEndpointBaseUrl:         requestData.SourceDefinition.Url,
+		RefreshToken:               "",
+		AccessToken:                requestData.RequestData.AccessToken,
+		ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
+	}
+
+	bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
+
+	//check if a definition exists for this endpoint/platform
+	if existingDef, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
+		EndpointId: requestData.SourceDefinition.Id,
+	}); err == nil && existingDef != nil {
+		logger.Infof("found existing definition for %s: %v", requestData.SourceDefinition.Id, existingDef)
+		//an exsting definition was found for this platform type, lets add some of the options to this custom definition
+		requestData.SourceDefinition.ClientHeaders = existingDef.ClientHeaders
+		requestData.SourceDefinition.MissingOpPatientEverything = existingDef.MissingOpPatientEverything
+		requestData.SourceDefinition.CustomOpPatientEverything = existingDef.CustomOpPatientEverything
+		requestData.SourceDefinition.ClientSupportedResources = existingDef.ClientSupportedResources
+	} else {
+		//TODO: SourceDefinition is always misisng ClientHeaders, lets set them ourselves
+		requestData.SourceDefinition.ClientHeaders = map[string]string{
+			"Accept": "application/json+fhir",
+		}
+	}
+
+	clientOptions := []func(options *clientModels.SourceClientOptions){}
+
+	//TODO: create a SOCKS Proxy Http Client for testing Quest
+	// https://eli.thegreenplace.net/2022/go-and-proxy-servers-part-3-socks-proxies/
+	if *proxyAddr != "" {
+
+		parsedProxyAddr, err := url.Parse(*proxyAddr)
+		if err != nil {
+			log.Fatalf("an error occurred while parsing proxy address: %v", err)
+		}
+		proxyPassword, hasProxyPassword := parsedProxyAddr.User.Password()
+		if !hasProxyPassword {
+			log.Fatalf("proxy address must have a password")
+		}
+
+		auth := proxy.Auth{
+			User:     parsedProxyAddr.User.Username(),
+			Password: proxyPassword,
+		}
+		dialer, err := proxy.SOCKS5("tcp", parsedProxyAddr.Host, &auth, nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		client := &http.Client{
+			Transport: &http.Transport{
+				Dial: dialer.Dial,
+			},
+		}
+		clientOptions = append(clientOptions, clientModels.WithHttpClient(client))
+	}
+
+	sourceClient, err := factory.GetSourceClientWithDefinition(
+		pkg.FastenLighthouseEnvProduction,
+		bgContext,
+		logger,
+		&sc,
+		&requestData.SourceDefinition,
+		clientOptions...,
+	)
+
+	return sourceClient, err
 }
