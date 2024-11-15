@@ -6,6 +6,14 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"log"
+	"net/http"
+	"net/http/httputil"
+	"net/url"
+	"os"
+	"strings"
+	"time"
+
 	"github.com/fastenhealth/fasten-sources/clients/factory"
 	clientModels "github.com/fastenhealth/fasten-sources/clients/models"
 	"github.com/fastenhealth/fasten-sources/definitions"
@@ -15,13 +23,6 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
 	"golang.org/x/net/proxy"
-	"log"
-	"net/http"
-	"net/http/httputil"
-	"net/url"
-	"os"
-	"strings"
-	"time"
 )
 
 /*
@@ -40,7 +41,9 @@ type ResourceRequest struct {
 		ResourceType    string `json:"resourceType"`
 		ResourceRequest string `json:"resourceRequest"`
 		AccessToken     string `json:"accessToken"`
+		RefreshToken    string `json:"refreshToken"`
 		PatientId       string `json:"patientId"`
+		ExpiresIn       int64  `json:"expiresIn"`
 	} `json:"requestData"`
 }
 
@@ -369,9 +372,9 @@ func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger 
 		OauthAuthorizationEndpoint: requestData.SourceDefinition.AuthorizationEndpoint,
 		OauthTokenEndpoint:         requestData.SourceDefinition.TokenEndpoint,
 		ApiEndpointBaseUrl:         requestData.SourceDefinition.Url,
-		RefreshToken:               "",
+		RefreshToken:               requestData.RequestData.RefreshToken,
 		AccessToken:                requestData.RequestData.AccessToken,
-		ExpiresAt:                  time.Now().Add(1 * time.Hour).Unix(),
+		ExpiresAt:                  time.Now().Add(time.Duration(requestData.RequestData.ExpiresIn) * time.Second).Unix(),
 	}
 
 	bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
