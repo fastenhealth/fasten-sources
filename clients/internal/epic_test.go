@@ -2,6 +2,8 @@ package internal
 
 import (
 	"context"
+	"testing"
+
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
@@ -9,12 +11,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 	//TODO: need to regenerate with _count
-	t.Skipf("skipping test, need to regenerate with _count")
+	// t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
