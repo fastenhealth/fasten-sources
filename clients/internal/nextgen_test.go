@@ -13,9 +13,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestGetSourceClientAllscripts_SyncAll(t *testing.T) {
-	// TODO: need to regenerate with _count
-	t.Skipf("skipping test, need to regenerate with _count")
+func TestGetSourceClientNextGen_SyncAll(t *testing.T) {
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -24,12 +22,13 @@ func TestGetSourceClientAllscripts_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(158).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("6709dc13-ca3e-4969-886a-fe0889eb8256")
-	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeAllscripts)
-	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("7682675b-8247-4fda-b2cd-048bfeafc8af")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("902d76a8-f538-409a-b540-86271ad625e3")
+	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeNextgen)
+	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("843f5c82-b4e3-43c6-8657-eff1390d7e44")
 
 	httpClient := base.OAuthVcrSetup(t, false)
 	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
@@ -40,6 +39,6 @@ func TestGetSourceClientAllscripts_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 158, resp.TotalResources)
-	require.Equal(t, 158, len(resp.UpdatedResources))
+	require.Equal(t, 146, resp.TotalResources)
+	require.Equal(t, 145, len(resp.UpdatedResources))
 }

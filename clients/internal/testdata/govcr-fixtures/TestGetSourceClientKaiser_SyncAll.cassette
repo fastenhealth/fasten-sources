@@ -1,0 +1,543 @@
+{
+  "Tracks": [
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/ExplanationOfBenefit",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "_includes=*",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "10000"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:28 GMT"
+          ],
+          "Etag": [
+            "W/\"2710-5HrxvIPwk6GY4gli84L4NkNtxR0\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "4726a3c5-fa1a-492f-8c98-59b43a89e458"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImU3OWJlZDA4LTVhZDktNDk4OC05YWY1LWJlNjBmNmNhNjhmOCIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDA2OjQ3OjI4LjIxMC0wODowMCJ9LCJ0eXBlIjoic2VhcmNoc2V0IiwidG90YWwiOjEsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8va3B4LXNlcnZpY2UtYnVzLmtwLm9yZy9zZXJ2aWNlL2Nkby9zaWFlL2hlYWx0aHBsYW5rcHh2MXJjL0ZISVIvYXBpL0V4cGxhbmF0aW9uT2ZCZW5lZml0P19pbmNsdWRlcz0qJnBhdGllbnQ9UGF0aWVudCUyRjRhMDg1NTY2LTQ5ZDgtZmE2Zi1kOTM0LTg0OTQyNTNiMzE0OCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2tweC1zZXJ2aWNlLWJ1cy5rcC5vcmcvc2VydmljZS9jZG8vc2lhZS9oZWFsdGhwbGFua3B4djFyYy9GSElSL2FwaS9FeHBsYW5hdGlvbk9mQmVuZWZpdC82ZGUxNWQzZS05NjE2LTQyOWQtYTBiZS1jNTUwNWRlYzY3ODciLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJFeHBsYW5hdGlvbk9mQmVuZWZpdCIsImlkIjoiNmRlMTVkM2UtOTYxNi00MjlkLWEwYmUtYzU1MDVkZWM2Nzg3IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDIyLTEwLTAzVDE1OjMxOjM3LjMwMS0wNzowMCIsInNvdXJjZSI6IiM2eVhLSmFWYkkwa0ZQMHc5IiwicHJvZmlsZSI6WyJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL1N0cnVjdHVyZURlZmluaXRpb24vQzRCQi1FeHBsYW5hdGlvbk9mQmVuZWZpdC1Qcm9mZXNzaW9uYWwtTm9uQ2xpbmljaWFuIl19LCJpZGVudGlmaWVyIjpbeyJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9Db2RlU3lzdGVtL0M0QkJJZGVudGlmaWVyVHlwZSIsImNvZGUiOiJwYXllcmlkIn1dfSwic3lzdGVtIjoiaHR0cHM6Ly9obDcub3JnL2ZoaXIvc2lkL3BheWVyaWQiLCJ2YWx1ZSI6IjIwMTAyMDQ3NjgifSx7InR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQklkZW50aWZpZXJUeXBlIiwiY29kZSI6InVjIn1dfSwic3lzdGVtIjoiaHR0cHM6Ly9obDcub3JnL2ZoaXIvc2lkL2NsYWltaWQiLCJ2YWx1ZSI6IjIwMTgyMTM3OTgwOTAwMCJ9XSwic3RhdHVzIjoiYWN0aXZlIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY2xhaW0tdHlwZSIsImNvZGUiOiJwcm9mZXNzaW9uYWwiLCJkaXNwbGF5IjoiUHJvZmVzc2lvbmFsIn1dfSwidXNlIjoiY2xhaW0iLCJwYXRpZW50Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNGEwODU1NjYtNDlkOC1mYTZmLWQ5MzQtODQ5NDI1M2IzMTQ4L19oaXN0b3J5LzEifSwiYmlsbGFibGVQZXJpb2QiOnsic3RhcnQiOiIyMDE4LTA3LTI5IiwiZW5kIjoiMjAxOC0wNy0yOSJ9LCJjcmVhdGVkIjoiMjAxOC0wOC0wMVQwMDowMDowMC0wNzowMCIsImluc3VyZXIiOnsicmVmZXJlbmNlIjoiT3JnYW5pemF0aW9uLzNlNjRlZGU0LTdlOWEtZjE4Mi0wODA2LTM4YTFhM2Y0OTZkOS9faGlzdG9yeS8xIn0sInByb3ZpZGVyIjp7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi8wODkxMjY4YS1kZThlLTRmZWItMjAyOC1iYzg5NTYzZTU5ZWUvX2hpc3RvcnkvMSJ9LCJvdXRjb21lIjoiY29tcGxldGUiLCJkaXNwb3NpdGlvbiI6IlBBSUQiLCJjYXJlVGVhbSI6W3sic2VxdWVuY2UiOjEsInByb3ZpZGVyIjp7InJlZmVyZW5jZSI6IlByYWN0aXRpb25lci9lODgwMTI0OS1hNTQxLWI4NzctNjY5Mi0zMGQ4NWUxODQzMjYvX2hpc3RvcnkvMSJ9LCJyZXNwb25zaWJsZSI6dHJ1ZSwicm9sZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQ2xhaW1DYXJlVGVhbVJvbGUiLCJjb2RlIjoicGVyZm9ybWluZyJ9XX19XSwic3VwcG9ydGluZ0luZm8iOlt7InNlcXVlbmNlIjoxLCJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCU3VwcG9ydGluZ0luZm9UeXBlIiwiY29kZSI6ImNsbXJlY3ZkZGF0ZSJ9XX0sInRpbWluZ0RhdGUiOiIyMDE4LTA4LTAxIn0seyJzZXF1ZW5jZSI6MiwiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQlN1cHBvcnRpbmdJbmZvVHlwZSIsImNvZGUiOiJiaWxsaW5nbmV0d29ya2NvbnRyYWN0aW5nc3RhdHVzIn1dfSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCUGF5ZXJBZGp1ZGljYXRpb25TdGF0dXMiLCJjb2RlIjoib3RoZXIifV19fV0sImRpYWdub3NpcyI6W3sic2VxdWVuY2UiOjEsImRpYWdub3Npc0NvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbSIsImNvZGUiOiJSMTAuODQiLCJkaXNwbGF5IjoiR0VORVJBTElaRUQgQUJET01JTkFMIFBBSU4ifV0sInRleHQiOiJHRU5FUkFMSVpFRCBBQkRPTUlOQUwgUEFJTiJ9LCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vZXgtZGlhZ25vc2lzdHlwZSIsImNvZGUiOiJwcmluY2lwYWwiLCJkaXNwbGF5IjoiUHJpbmNpcGFsIERpYWdub3NpcyJ9XX1dfSx7InNlcXVlbmNlIjoyLCJkaWFnbm9zaXNDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9pY2QtMTAtY20iLCJjb2RlIjoiTTU0LjUiLCJkaXNwbGF5IjoiTE9XIEJBQ0sgUEFJTiJ9XSwidGV4dCI6IkxPVyBCQUNLIFBBSU4ifX1dLCJwcm9jZWR1cmUiOlt7InNlcXVlbmNlIjoxLCJkYXRlIjoiMjAxOC0wNy0yOVQwMDowMDowMC0wNzowMCIsInByb2NlZHVyZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly93d3cuYW1hLWFzc24ub3JnL2dvL2NwdCIsImNvZGUiOiJBMDQyNiIsImRpc3BsYXkiOiJBTUIgU1JWQyBBTFMgTk9ORU1FUkcgVFJOU1BSVCBMVkwgMSJ9XSwidGV4dCI6IkFtYnVsYW5jZSBzZXJ2aWNlLCBhZHZhbmNlZCBsaWZlIHN1cHBvcnQsIG5vbmVtZXJnZW5jeSB0cmFuc3BvcnQsIGxldmVsIDEgKEFMUyAxKSJ9fSx7InNlcXVlbmNlIjoyLCJkYXRlIjoiMjAxOC0wNy0yOVQwMDowMDowMC0wNzowMCIsInByb2NlZHVyZUNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly93d3cuYW1hLWFzc24ub3JnL2dvL2NwdCIsImNvZGUiOiJBMDQyNSIsImRpc3BsYXkiOiJHUk9VTkQgTUlMRUFHRSBQRVIgU1RBVFVURSBNSUxFIn1dLCJ0ZXh0IjoiR3JvdW5kIG1pbGVhZ2UsIHBlciBzdGF0dXRlIG1pbGUifX1dLCJpbnN1cmFuY2UiOlt7ImZvY2FsIjp0cnVlLCJjb3ZlcmFnZSI6eyJyZWZlcmVuY2UiOiJDb3ZlcmFnZS81YTkwNzY1Mi1kMmM5LTRhMDItOGYwMi05NmVkMzQ1NWE3ZWUvX2hpc3RvcnkvMSJ9fV0sIml0ZW0iOlt7InNlcXVlbmNlIjoxLCJkaWFnbm9zaXNTZXF1ZW5jZSI6WzEsMl0sInByb2NlZHVyZVNlcXVlbmNlIjpbMV0sInByb2R1Y3RPclNlcnZpY2UiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vd3d3LmFtYS1hc3NuLm9yZy9nby9jcHQiLCJjb2RlIjoiQTA0MjYiLCJkaXNwbGF5IjoiQU1CIFNSVkMgQUxTIE5PTkVNRVJHIFRSTlNQUlQgTFZMIDEifV0sInRleHQiOiJBbWJ1bGFuY2Ugc2VydmljZSwgYWR2YW5jZWQgbGlmZSBzdXBwb3J0LCBub25lbWVyZ2VuY3kgdHJhbnNwb3J0LCBsZXZlbCAxIChBTFMgMSkifSwibW9kaWZpZXIiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5hbWEtYXNzbi5vcmcvZ28vY3B0IiwiY29kZSI6IlBIIiwiZGlzcGxheSI6IkFtYnVsYW5jZSB0cmFuc3BvcnRhdGlvbiBmcm9tIHBoeXNpY2lhbidzIG9mZmljZSB0byBob3NwaXRhbCJ9XSwidGV4dCI6IkFtYnVsYW5jZSB0cmFuc3BvcnRhdGlvbiBmcm9tIHBoeXNpY2lhbidzIG9mZmljZSB0byBob3NwaXRhbCJ9XSwic2VydmljZWRQZXJpb2QiOnsic3RhcnQiOiIyMDE4LTA3LTI5IiwiZW5kIjoiMjAxOC0wNy0yOSJ9LCJsb2NhdGlvbkNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vd3d3LmNtcy5nb3YvTWVkaWNhcmUvQ29kaW5nL3BsYWNlLW9mLXNlcnZpY2UtY29kZXMvUGxhY2Vfb2ZfU2VydmljZV9Db2RlX1NldCIsImNvZGUiOiI0MSJ9XX0sInF1YW50aXR5Ijp7InZhbHVlIjoxLCJ1bml0IjoiVW5pdHMiLCJzeXN0ZW0iOiJodHRwOi8vdW5pdHNvZm1lYXN1cmUub3JnIiwiY29kZSI6IlthcmInVV0ifSwibmV0Ijp7InZhbHVlIjo1MDAsImN1cnJlbmN5IjoiVVNEIn0sImFkanVkaWNhdGlvbiI6W3siY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJzdWJtaXR0ZWQiLCJkaXNwbGF5IjoiU3VibWl0dGVkIEFtb3VudCJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6NTAwLCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9hZGp1ZGljYXRpb24iLCJjb2RlIjoiYmVuZWZpdCIsImRpc3BsYXkiOiJCZW5lZml0IEFtb3VudCJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6Mjc1LCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9hZGp1ZGljYXRpb24iLCJjb2RlIjoiY29wYXkiLCJkaXNwbGF5IjoiQ29QYXkifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJkZWR1Y3RpYmxlIiwiZGlzcGxheSI6IkRlZHVjdGlibGUifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQkFkanVkaWNhdGlvbiIsImNvZGUiOiJjb2luc3VyYW5jZSJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6Im1lbWJlcmxpYWJpbGl0eSJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6Im5vbmNvdmVyZWQifV19LCJhbW91bnQiOnsidmFsdWUiOjIyNSwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6InByaW9ycGF5ZXJwYWlkIn1dfSwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCUGF5ZXJBZGp1ZGljYXRpb25TdGF0dXMiLCJjb2RlIjoib3V0b2ZuZXR3b3JrIn1dfSwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fV19LHsic2VxdWVuY2UiOjIsImRpYWdub3Npc1NlcXVlbmNlIjpbMSwyXSwicHJvY2VkdXJlU2VxdWVuY2UiOlsyXSwicHJvZHVjdE9yU2VydmljZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly93d3cuYW1hLWFzc24ub3JnL2dvL2NwdCIsImNvZGUiOiJBMDQyNSIsImRpc3BsYXkiOiJHUk9VTkQgTUlMRUFHRSBQRVIgU1RBVFVURSBNSUxFIn1dLCJ0ZXh0IjoiR3JvdW5kIG1pbGVhZ2UsIHBlciBzdGF0dXRlIG1pbGUifSwibW9kaWZpZXIiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5hbWEtYXNzbi5vcmcvZ28vY3B0IiwiY29kZSI6IlBIIiwiZGlzcGxheSI6IkFtYnVsYW5jZSB0cmFuc3BvcnRhdGlvbiBmcm9tIHBoeXNpY2lhbidzIG9mZmljZSB0byBob3NwaXRhbCJ9XSwidGV4dCI6IkFtYnVsYW5jZSB0cmFuc3BvcnRhdGlvbiBmcm9tIHBoeXNpY2lhbidzIG9mZmljZSB0byBob3NwaXRhbCJ9XSwic2VydmljZWRQZXJpb2QiOnsic3RhcnQiOiIyMDE4LTA3LTI5IiwiZW5kIjoiMjAxOC0wNy0yOSJ9LCJsb2NhdGlvbkNvZGVhYmxlQ29uY2VwdCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHBzOi8vd3d3LmNtcy5nb3YvTWVkaWNhcmUvQ29kaW5nL3BsYWNlLW9mLXNlcnZpY2UtY29kZXMvUGxhY2Vfb2ZfU2VydmljZV9Db2RlX1NldCIsImNvZGUiOiI0MSJ9XX0sInF1YW50aXR5Ijp7InZhbHVlIjoxMCwidW5pdCI6IlVuaXRzIiwic3lzdGVtIjoiaHR0cDovL3VuaXRzb2ZtZWFzdXJlLm9yZyIsImNvZGUiOiJbYXJiJ1VdIn0sIm5ldCI6eyJ2YWx1ZSI6OTAsImN1cnJlbmN5IjoiVVNEIn0sImFkanVkaWNhdGlvbiI6W3siY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJzdWJtaXR0ZWQiLCJkaXNwbGF5IjoiU3VibWl0dGVkIEFtb3VudCJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6OTAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJiZW5lZml0IiwiZGlzcGxheSI6IkJlbmVmaXQgQW1vdW50In1dfSwiYW1vdW50Ijp7InZhbHVlIjo1Ny41LCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9hZGp1ZGljYXRpb24iLCJjb2RlIjoiY29wYXkiLCJkaXNwbGF5IjoiQ29QYXkifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJkZWR1Y3RpYmxlIiwiZGlzcGxheSI6IkRlZHVjdGlibGUifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQkFkanVkaWNhdGlvbiIsImNvZGUiOiJjb2luc3VyYW5jZSJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6Im1lbWJlcmxpYWJpbGl0eSJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6Im5vbmNvdmVyZWQifV19LCJhbW91bnQiOnsidmFsdWUiOjMyLjUsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQkFkanVkaWNhdGlvbiIsImNvZGUiOiJwcmlvcnBheWVycGFpZCJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX0seyJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQlBheWVyQWRqdWRpY2F0aW9uU3RhdHVzIiwiY29kZSI6Im91dG9mbmV0d29yayJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX1dfV0sInRvdGFsIjpbeyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vYWRqdWRpY2F0aW9uIiwiY29kZSI6InN1Ym1pdHRlZCIsImRpc3BsYXkiOiJTdWJtaXR0ZWQgQW1vdW50In1dfSwiYW1vdW50Ijp7InZhbHVlIjo1OTAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FkanVkaWNhdGlvbiIsImNvZGUiOiJiZW5lZml0IiwiZGlzcGxheSI6IkJlbmVmaXQgQW1vdW50In1dfSwiYW1vdW50Ijp7InZhbHVlIjozMzIuNSwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vYWRqdWRpY2F0aW9uIiwiY29kZSI6ImNvcGF5IiwiZGlzcGxheSI6IkNvUGF5In1dfSwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9hZGp1ZGljYXRpb24iLCJjb2RlIjoiZGVkdWN0aWJsZSIsImRpc3BsYXkiOiJEZWR1Y3RpYmxlIn1dfSwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9Db2RlU3lzdGVtL0M0QkJBZGp1ZGljYXRpb24iLCJjb2RlIjoiY29pbnN1cmFuY2UifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQkFkanVkaWNhdGlvbiIsImNvZGUiOiJtZW1iZXJsaWFiaWxpdHkifV19LCJhbW91bnQiOnsidmFsdWUiOjAsImN1cnJlbmN5IjoiVVNEIn19LHsiY2F0ZWdvcnkiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL0NvZGVTeXN0ZW0vQzRCQkFkanVkaWNhdGlvbiIsImNvZGUiOiJub25jb3ZlcmVkIn1dfSwiYW1vdW50Ijp7InZhbHVlIjoyNTcuNSwiY3VycmVuY3kiOiJVU0QifX0seyJjYXRlZ29yeSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvQ29kZVN5c3RlbS9DNEJCQWRqdWRpY2F0aW9uIiwiY29kZSI6InByaW9ycGF5ZXJwYWlkIn1dfSwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fSx7ImNhdGVnb3J5Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9Db2RlU3lzdGVtL0M0QkJBZGp1ZGljYXRpb24iLCJjb2RlIjoicGFpZHRvcGF0aWVudCJ9XX0sImFtb3VudCI6eyJ2YWx1ZSI6MCwiY3VycmVuY3kiOiJVU0QifX1dLCJwYXltZW50Ijp7ImRhdGUiOiIyMDE4LTA4LTA2IiwiYW1vdW50Ijp7InZhbHVlIjowLCJjdXJyZW5jeSI6IlVTRCJ9fX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX1dfQ==",
+        "ContentLength": 10000,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "dd98b966-19bd-45b5-a4f0-84e2e5015f2f"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Coverage/5a907652-d2c9-4a02-8f02-96ed3455a7ee",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "1277"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:30 GMT"
+          ],
+          "Etag": [
+            "W/\"4fd-liyk5DJZmdzxfi42MOetStfh3FA\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "9e8096d4-2820-4049-8a9c-c8b8aff077c6"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJDb3ZlcmFnZSIsImlkIjoiNWE5MDc2NTItZDJjOS00YTAyLThmMDItOTZlZDM0NTVhN2VlIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDIyLTEwLTAzVDE1OjMxOjM3LjMwMS0wNzowMCIsInNvdXJjZSI6IiM2eVhLSmFWYkkwa0ZQMHc5IiwicHJvZmlsZSI6WyJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NhcmluLWJiL1N0cnVjdHVyZURlZmluaXRpb24vQzRCQi1Db3ZlcmFnZSJdfSwiaWRlbnRpZmllciI6W3sidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vdjItMDIwMyIsImNvZGUiOiJGSUxMIiwiZGlzcGxheSI6IkZpbGxlciBJZGVudGlmaWVyIn1dfSwic3lzdGVtIjoiaHR0cHM6Ly9obDcub3JnL2ZoaXIvc2lkL2NvdmVyYWdlaWQiLCJ2YWx1ZSI6IjEwMDEwMDEtTUEtMjMwMzkifV0sInN0YXR1cyI6ImFjdGl2ZSIsInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YzLUFjdENvZGUiLCJjb2RlIjoiSE1PIiwiZGlzcGxheSI6ImhlYWx0aCBtYWludGVuYW5jZSBvcmdhbml6YXRpb24gcG9saWN5In1dLCJ0ZXh0IjoiSE1PIC0gSE1PIENPTU1FUkNJQUwtSE1PIn0sInN1YnNjcmliZXJJZCI6IjEwMDEwMDEiLCJiZW5lZmljaWFyeSI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzRhMDg1NTY2LTQ5ZDgtZmE2Zi1kOTM0LTg0OTQyNTNiMzE0OC9faGlzdG9yeS8xIn0sInJlbGF0aW9uc2hpcCI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vc3Vic2NyaWJlci1yZWxhdGlvbnNoaXAiLCJjb2RlIjoic2VsZiIsImRpc3BsYXkiOiJTZWxmIn1dLCJ0ZXh0IjoiVGhlIEJlbmVmaWNpYXJ5IGlzIHRoZSBTdWJzY3JpYmVyIn0sInBlcmlvZCI6eyJzdGFydCI6IjIwMjAtMDgtMDEifSwicGF5b3IiOlt7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi8zYTY3OGVmNS1lZjkyLTEwMDMtNzZhNC1mYTNiYTBmYjVlNWYifV0sImNsYXNzIjpbeyJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb3ZlcmFnZS1jbGFzcyIsImNvZGUiOiJncm91cCIsImRpc3BsYXkiOiJHcm91cCJ9XSwidGV4dCI6IkFuIGVtcGxveWVlIGdyb3VwIn0sInZhbHVlIjoiMjMwMzkiLCJuYW1lIjoiS1AgTUEgU0lMVkVSIDAvMTUvQ1NSL1ZJUyAoNTAwMCktMCJ9XX0=",
+        "ContentLength": 1277,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "ee53c658-387f-49c5-9966-fd0b6a30a07a"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Patient/4a085566-49d8-fa6f-d934-8494253b3148",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "800"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:32 GMT"
+          ],
+          "Etag": [
+            "W/\"320-d7jfkhEyNcisFXZj18pZSlesakw\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "2006cd15-eb1e-4deb-8fa5-68b990bd03c5"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQYXRpZW50IiwiaWQiOiI0YTA4NTU2Ni00OWQ4LWZhNmYtZDkzNC04NDk0MjUzYjMxNDgiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjItMTAtMDNUMTU6MzE6MzcuMzAxLTA3OjAwIiwic291cmNlIjoiIzZ5WEtKYVZiSTBrRlAwdzkiLCJwcm9maWxlIjpbImh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY29yZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL3VzLWNvcmUtcGF0aWVudCJdfSwiaWRlbnRpZmllciI6W3sidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vdjItMDIwMyIsImNvZGUiOiJNUiIsImRpc3BsYXkiOiJNZWRpY2FsIHJlY29yZCBudW1iZXIifV19LCJzeXN0ZW0iOiJodHRwczovL2hlYWx0aHkua2Fpc2VycGVybWFuZW50ZS5vcmcvZnJvbnQtZG9vciIsInZhbHVlIjoiMDAxMDAxMDAxLU1BIn1dLCJuYW1lIjpbeyJ1c2UiOiJ1c3VhbCIsInRleHQiOiJQcm9kdmFsMSBVc2VyIiwiZmFtaWx5IjoiVXNlciIsImdpdmVuIjpbIlByb2R2YWwxIl19XSwidGVsZWNvbSI6W3sic3lzdGVtIjoicGhvbmUiLCJ2YWx1ZSI6Ijk5OS04NjctNTMwOSIsInVzZSI6ImhvbWUifV0sImdlbmRlciI6ImZlbWFsZSIsImJpcnRoRGF0ZSI6IjE5OTAtMDMtMDEiLCJhZGRyZXNzIjpbeyJ1c2UiOiJob21lIiwidHlwZSI6InBvc3RhbCIsImxpbmUiOlsiMjEwOCBCbHVlIFNwcnVjZSBMYW5lIl0sImNpdHkiOiJBYmVyZGVlbiIsInN0YXRlIjoiTUQiLCJwb3N0YWxDb2RlIjoiMjEwMDEtNTQ0OCJ9XX0=",
+        "ContentLength": 800,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "a59e0d98-df5c-41f4-b1dc-643b451c6251"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Organization/3e64ede4-7e9a-f182-0806-38a1a3f496d9",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "927"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:33 GMT"
+          ],
+          "Etag": [
+            "W/\"39f-CvagtyD5NAM3DND6lhPFM/C3kXE\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "100b0b99-fc06-421e-9354-b0116a76d158"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6IjNlNjRlZGU0LTdlOWEtZjE4Mi0wODA2LTM4YTFhM2Y0OTZkOSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyMi0xMC0wM1QxNDoxMTo1MC4zODMtMDc6MDAiLCJzb3VyY2UiOiIjbnY2SmVEd2Q3ZEM1eDhpcyIsInByb2ZpbGUiOlsiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9TdHJ1Y3R1cmVEZWZpbml0aW9uL0M0QkItT3JnYW5pemF0aW9uIl19LCJpZGVudGlmaWVyIjpbeyJ1c2UiOiJ1c3VhbCIsInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAyMDMiLCJjb2RlIjoiRklMTCIsImRpc3BsYXkiOiJGaWxsZXIgSWRlbnRpZmllciJ9XX0sInN5c3RlbSI6Imh0dHBzOi8vaGw3Lm9yZy9maGlyL3NpZC9vcmdhbml6YXRpb25pZCIsInZhbHVlIjoiVFBBIEVNSS1LRkhQLVBBWS1NQSJ9XSwiYWN0aXZlIjp0cnVlLCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vb3JnYW5pemF0aW9uLXR5cGUiLCJjb2RlIjoicGF5IiwiZGlzcGxheSI6IlBheWVyIn1dfV0sIm5hbWUiOiJLQUlTRVIgRk9VTkRBVElPTiBIRUFMVEhQTEFOLCBJTkMiLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInZhbHVlIjoiMS04MDAtNzc3LTc5MDIiLCJ1c2UiOiJ3b3JrIn1dLCJhZGRyZXNzIjpbeyJ1c2UiOiJ3b3JrIiwidHlwZSI6InBvc3RhbCIsImxpbmUiOlsiTkFUSU9OQUwgQ0xBSU1TIEFETUlOSVNUUkFUSU9OIE1JRC1BVExBTlRJQyBTVEFURVMiLCJQTyBCb3ggNjI5MDI4Il0sImNpdHkiOiJFbCBEb3JhZG8gSGlsbHMiLCJzdGF0ZSI6IkNBIiwicG9zdGFsQ29kZSI6Ijk1NzYyLTkwMjgifV19",
+        "ContentLength": 927,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "27711c02-799c-47e6-ae94-9fd51871321f"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Organization/0891268a-de8e-4feb-2028-bc89563e59ee",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "962"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:35 GMT"
+          ],
+          "Etag": [
+            "W/\"3c2-XB204NOwdlALXQMsRjmqvc7hM08\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "226aae0e-4576-4de8-b666-706745337e74"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6IjA4OTEyNjhhLWRlOGUtNGZlYi0yMDI4LWJjODk1NjNlNTllZSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyMi0xMC0wM1QxNTozMTozNy4zMDEtMDc6MDAiLCJzb3VyY2UiOiIjNnlYS0phVmJJMGtGUDB3OSIsInByb2ZpbGUiOlsiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9TdHJ1Y3R1cmVEZWZpbml0aW9uL0M0QkItT3JnYW5pemF0aW9uIl19LCJpZGVudGlmaWVyIjpbeyJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jYXJpbi1iYi9Db2RlU3lzdGVtL0M0QkJJZGVudGlmaWVyVHlwZSIsImNvZGUiOiJucGkifV19LCJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC91cy1ucGkiLCJ2YWx1ZSI6IjE0Nzc1ODM2NzIifSx7InR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAyMDMiLCJjb2RlIjoiVEFYIiwiZGlzcGxheSI6IlRheCBJRCBudW1iZXIifV19LCJzeXN0ZW0iOiJ1cm46b2lkOjIuMTYuODQwLjEuMTEzODgzLjQuNCIsInZhbHVlIjoiNjEyNDk1MDAyIn1dLCJhY3RpdmUiOnRydWUsInR5cGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vcmdhbml6YXRpb24tdHlwZSIsImNvZGUiOiJwcm92IiwiZGlzcGxheSI6IkhlYWx0aGNhcmUgUHJvdmlkZXIifV19XSwibmFtZSI6IkJVVExFUiBNRURJQ0FMIFRSQU5TUE9SVCBMTEMiLCJhZGRyZXNzIjpbeyJ1c2UiOiJ3b3JrIiwidHlwZSI6InBoeXNpY2FsIiwibGluZSI6WyI4ODA0IE9SQ0hBUkQgVFJFRSBMQU5FIl0sImNpdHkiOiJUT1dTT04iLCJzdGF0ZSI6Ik1EIiwicG9zdGFsQ29kZSI6IjIxMjg2IiwiY291bnRyeSI6IlVTQSJ9XX0=",
+        "ContentLength": 962,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "248a8e5a-d771-4314-849c-1677bf10bdcc"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Practitioner/e8801249-a541-b877-6692-30d85e184326",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "802"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:37 GMT"
+          ],
+          "Etag": [
+            "W/\"322-jtA1QX5t6PMjIQWPSVoMunb05RU\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "5c3e2bf8-aedb-4b10-80ff-dc79033ad38f"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQcmFjdGl0aW9uZXIiLCJpZCI6ImU4ODAxMjQ5LWE1NDEtYjg3Ny02NjkyLTMwZDg1ZTE4NDMyNiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyMi0xMC0wM1QxNTozMTozNy4zMDEtMDc6MDAiLCJzb3VyY2UiOiIjNnlYS0phVmJJMGtGUDB3OSIsInByb2ZpbGUiOlsiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jb3JlL1N0cnVjdHVyZURlZmluaXRpb24vdXMtY29yZS1wcmFjdGl0aW9uZXIiXX0sImlkZW50aWZpZXIiOlt7InVzZSI6InVzdWFsIiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vdjItMDIwMyIsImNvZGUiOiJOUEkiLCJkaXNwbGF5IjoiTmF0aW9uYWwgcHJvdmlkZXIgaWRlbnRpZmllciJ9XX0sInN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL3VzLW5waSIsInZhbHVlIjoiMTQ3NzU4MzY3MiJ9LHsidXNlIjoidXN1YWwiLCJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6IlRBWCIsImRpc3BsYXkiOiJUYXggSUQgbnVtYmVyIn1dfSwic3lzdGVtIjoidXJuOm9pZDoyLjE2Ljg0MC4xLjExMzg4My40LjQiLCJ2YWx1ZSI6IjYxMjQ5NTAwMiJ9XSwibmFtZSI6W3sidXNlIjoidXN1YWwiLCJ0ZXh0IjoiQlVUTEVSIE1FRElDQUwgVFJBTlNQT1JUIExMQyJ9XSwiYWRkcmVzcyI6W3sidXNlIjoid29yayIsImNpdHkiOiJCQUxUSU1PUkUiLCJzdGF0ZSI6Ik1EIn1dfQ==",
+        "ContentLength": 802,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "543b7b92-587a-4d9a-866b-7c83d4b26d11"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "kpx-service-bus.kp.org",
+          "Path": "/service/cdo/siae/healthplankpxv1rc/FHIR/api/Organization/3a678ef5-ef92-1003-76a4-fa3ba0fb5e5f",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "kpx-service-bus.kp.org",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Content-Length": [
+            "932"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:47:39 GMT"
+          ],
+          "Etag": [
+            "W/\"3a4-CViGux6Z1AmOAEF7WXb6JaFy0+E\""
+          ],
+          "X-Correlationid": [
+            ""
+          ],
+          "X-Powered-By": [
+            "Express"
+          ],
+          "X-Request-Id": [
+            "fad0d77d-47c7-4b6e-a42f-50b15ef6b93f"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6IjNhNjc4ZWY1LWVmOTItMTAwMy03NmE0LWZhM2JhMGZiNWU1ZiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMTEiLCJsYXN0VXBkYXRlZCI6IjIwMjItMTAtMjlUMjE6MDU6MTEuNjA5LTA3OjAwIiwic291cmNlIjoiIzM4SVVwUVFkS3d4eFdkdmQiLCJwcm9maWxlIjpbImh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY2FyaW4tYmIvU3RydWN0dXJlRGVmaW5pdGlvbi9DNEJCLU9yZ2FuaXphdGlvbiJdfSwiaWRlbnRpZmllciI6W3sidXNlIjoidXN1YWwiLCJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS92Mi0wMjAzIiwiY29kZSI6IkZJTEwiLCJkaXNwbGF5IjoiRmlsbGVyIElkZW50aWZpZXIifV19LCJzeXN0ZW0iOiJodHRwczovL2hsNy5vcmcvZmhpci9zaWQvb3JnYW5pemF0aW9uaWQiLCJ2YWx1ZSI6Ik5BVExUQVAgTUFTLUtGSFAtUEFZLU1BIn1dLCJhY3RpdmUiOnRydWUsInR5cGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vcmdhbml6YXRpb24tdHlwZSIsImNvZGUiOiJwYXkiLCJkaXNwbGF5IjoiUGF5ZXIifV19XSwibmFtZSI6IktBSVNFUiBGT1VOREFUSU9OIEhFQUxUSFBMQU4sIElOQyIsInRlbGVjb20iOlt7InN5c3RlbSI6InBob25lIiwidmFsdWUiOiIxLTgwMC03NzctNzkwMiIsInVzZSI6IndvcmsifV0sImFkZHJlc3MiOlt7InVzZSI6IndvcmsiLCJ0eXBlIjoicG9zdGFsIiwibGluZSI6WyJOQVRJT05BTCBDTEFJTVMgQURNSU5JU1RSQVRJT04gTUlELUFUTEFOVElDIFNUQVRFUyIsIlBPIEJveCA2MjkwMjgiXSwiY2l0eSI6IkVsIERvcmFkbyBIaWxscyIsInN0YXRlIjoiQ0EiLCJwb3N0YWxDb2RlIjoiOTU3NjItOTAyOCJ9XX0=",
+        "ContentLength": 932,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "64b1f11b-3b2d-4047-bec0-92703bbbdbe9"
+    }
+  ]
+}

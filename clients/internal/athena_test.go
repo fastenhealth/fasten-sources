@@ -2,6 +2,8 @@ package internal
 
 import (
 	"context"
+	"testing"
+
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
@@ -9,12 +11,9 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestGetSourceClientAthena_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -23,7 +22,7 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(180).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(679).Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
@@ -40,6 +39,6 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 180, resp.TotalResources)
-	require.Equal(t, 180, len(resp.UpdatedResources))
+	require.Equal(t, 684, resp.TotalResources)
+	require.Equal(t, 679, len(resp.UpdatedResources))
 }

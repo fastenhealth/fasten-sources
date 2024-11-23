@@ -1,0 +1,2206 @@
+{
+  "Tracks": [
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Patient/47c1df49-98a3-470e-bc51-69c8773f4cbf",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1518"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "53ead0a8-6093-499a-af3f-a41b8aa75433"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "99cd9e0a-fcbf-4e61-b40e-890a6d2ee7a4"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQYXRpZW50IiwiaWQiOiI0N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDAuOTYrMDA6MDAifSwiZXh0ZW5zaW9uIjpbeyJleHRlbnNpb24iOlt7InVybCI6Im9tYkNhdGVnb3J5IiwidmFsdWVDb2RpbmciOnsic3lzdGVtIjoidXJuOm9pZDoyLjE2Ljg0MC4xLjExMzg4My42LjIzOCIsImNvZGUiOiIyMTA2LTMiLCJkaXNwbGF5IjoiV2hpdGUifX0seyJ1cmwiOiJkZXRhaWxlZCIsInZhbHVlQ29kaW5nIjp7InN5c3RlbSI6InVybjpvaWQ6Mi4xNi44NDAuMS4xMTM4ODMuNi4yMzgiLCJjb2RlIjoiMjEwOC05IiwiZGlzcGxheSI6IkV1cm9wZWFuIn19LHsidXJsIjoidGV4dCIsInZhbHVlU3RyaW5nIjoiV2hpdGUgRXVyb3BlYW4ifV0sInVybCI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY29yZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL3VzLWNvcmUtcmFjZSJ9LHsiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJvbWJDYXRlZ29yeSIsInZhbHVlQ29kaW5nIjp7InN5c3RlbSI6InVybjpvaWQ6Mi4xNi44NDAuMS4xMTM4ODMuNi4yMzgiLCJjb2RlIjoiMjE4Ni01IiwiZGlzcGxheSI6Ik5vdCBIaXNwYW5pYyBvciBMYXRpbm8ifX0seyJ1cmwiOiJ0ZXh0IiwidmFsdWVTdHJpbmciOiJOb3QgSGlzcGFuaWMgb3IgTGF0aW5vIn1dLCJ1cmwiOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NvcmUvU3RydWN0dXJlRGVmaW5pdGlvbi91cy1jb3JlLWV0aG5pY2l0eSJ9XSwiaWRlbnRpZmllciI6W3sidXNlIjoib2ZmaWNpYWwiLCJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAyMDMiLCJ2YWx1ZSI6IjEyMzQ1Njc4OSJ9XSwibmFtZSI6W3sidXNlIjoib2ZmaWNpYWwiLCJ0ZXh0IjoiQWxpY2UgSm9uZXMgTmV3bWFuIiwiZmFtaWx5IjoiTmV3bWFuIiwiZ2l2ZW4iOlsiQWxpY2UiLCJKb25lcyJdfSx7InVzZSI6Im9sZCIsInRleHQiOiJBbGljaWEgSm9uZXMgTmV3bWFuIiwiZmFtaWx5IjoiTmV3bWFuIiwiZ2l2ZW4iOlsiQWxpY2lhIiwiSm9uZXMiXX1dLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInZhbHVlIjoiKzE1NTU3MjMxNTQ0IiwidXNlIjoiaG9tZSJ9LHsic3lzdGVtIjoicGhvbmUiLCJ2YWx1ZSI6IisxNTU1Nzc3MTIzNCIsInVzZSI6Im1vYmlsZSJ9XSwiZ2VuZGVyIjoiZmVtYWxlIiwiYmlydGhEYXRlIjoiMTk3MC0wNS0wMSIsImFkZHJlc3MiOlt7InVzZSI6ImhvbWUiLCJsaW5lIjpbIjEzNTcsIEFtYmVyIERyLCJdLCJjaXR5IjoiQmVhdmVydG9uIiwic3RhdGUiOiJPUiIsInBvc3RhbENvZGUiOiI5NzAwNiIsImNvdW50cnkiOiJVUyJ9XSwiY29tbXVuaWNhdGlvbiI6W3sibGFuZ3VhZ2UiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJ1cm46aWV0ZjpiY3A6NDciLCJjb2RlIjoiZW4iLCJkaXNwbGF5IjoiRW5nbGlzaCJ9XSwidGV4dCI6IkVuZ2xpc2gifSwicHJlZmVycmVkIjp0cnVlfV19",
+        "ContentLength": 1518,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "e4fbfb51-2823-4246-a1dc-836cef5f5132"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/AllergyIntolerance",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "2567"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "7705d7b4-5f62-4f31-aa51-00a54f24c873"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "dcbb26e2-9e99-44d1-bc00-f7e2962bfe0d"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImRjYmIyNmUyLTllOTktNDRkMS1iYzAwLWY3ZTI5NjJiZmUwZCIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjYwMjY5MzgrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQWxsZXJneUludG9sZXJhbmNlP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0FsbGVyZ3lJbnRvbGVyYW5jZS9iZmQyZmFlZi1lMmFiLTQ4OWEtYTEyZS0yZjU1N2Y0ZTFiZWQiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJBbGxlcmd5SW50b2xlcmFuY2UiLCJpZCI6ImJmZDJmYWVmLWUyYWItNDg5YS1hMTJlLTJmNTU3ZjRlMWJlZCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS45NjkrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2FsbGVyZ3lpbnRvbGVyYW5jZS1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vYWxsZXJneWludG9sZXJhbmNlLXZlcmlmaWNhdGlvbiIsImNvZGUiOiJjb25maXJtZWQiLCJkaXNwbGF5IjoiY29uZmlybWVkIn1dfSwidHlwZSI6ImFsbGVyZ3kiLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybSIsImNvZGUiOiI3OTgwIiwiZGlzcGxheSI6IlBlbmljaWxsaW4gRyJ9XSwidGV4dCI6IlBlbmljaWxsaW4gRyJ9LCJwYXRpZW50Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sIm9uc2V0RGF0ZVRpbWUiOiIxOTgwLTA1LTEwVDAwOjAwOjAwLjAwMC0wNTowMCIsInJlY29yZGVkRGF0ZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIiwicmVhY3Rpb24iOlt7Im1hbmlmZXN0YXRpb24iOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyNDc0NzIwMDQiLCJkaXNwbGF5IjoiSGl2ZXMifV0sInRleHQiOiJIaXZlcyJ9XSwib25zZXQiOiIxOTgwLTA1LTEwVDAwOjAwOjAwLjAwMC0wNTowMCIsInNldmVyaXR5IjoibW9kZXJhdGUifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQWxsZXJneUludG9sZXJhbmNlLzhjOWE1ZDBjLTUxYjItNDc4ZS04ZTAzLTk5ZjIxYzk2ZjIzNSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkFsbGVyZ3lJbnRvbGVyYW5jZSIsImlkIjoiOGM5YTVkMGMtNTFiMi00NzhlLThlMDMtOTlmMjFjOTZmMjM1IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjAyLjAwOSswMDowMCJ9LCJjbGluaWNhbFN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vYWxsZXJneWludG9sZXJhbmNlLWNsaW5pY2FsIiwiY29kZSI6ImFjdGl2ZSIsImRpc3BsYXkiOiJBY3RpdmUifV0sInRleHQiOiJBY3RpdmUifSwidmVyaWZpY2F0aW9uU3RhdHVzIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9hbGxlcmd5aW50b2xlcmFuY2UtdmVyaWZpY2F0aW9uIiwiY29kZSI6ImNvbmZpcm1lZCIsImRpc3BsYXkiOiJjb25maXJtZWQifV19LCJ0eXBlIjoiYWxsZXJneSIsImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vd3d3Lm5sbS5uaWguZ292L3Jlc2VhcmNoL3VtbHMvcnhub3JtIiwiY29kZSI6IjczMyIsImRpc3BsYXkiOiJBbXBpY2lsbGluIn1dLCJ0ZXh0IjoiQW1waWNpbGxpbiJ9LCJwYXRpZW50Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sIm9uc2V0RGF0ZVRpbWUiOiIxOTgwLTA1LTEwVDAwOjAwOjAwLjAwMC0wNTowMCIsInJlY29yZGVkRGF0ZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIiwicmVhY3Rpb24iOlt7Im1hbmlmZXN0YXRpb24iOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyNDc0NzIwMDQiLCJkaXNwbGF5IjoiSGl2ZXMifV0sInRleHQiOiJIaXZlcyJ9XSwib25zZXQiOiIxOTgwLTA1LTEwVDAwOjAwOjAwLjAwMC0wNTowMCIsInNldmVyaXR5IjoibW9kZXJhdGUifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 2567,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "69358235-c23a-4c11-b637-33d170a80bf1"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/CarePlan",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "3608"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "7bcb031c-c998-4d99-9f47-8315ee7298fd"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "690427c5-0e05-49b9-9c04-d466a97179f7"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjY5MDQyN2M1LTBlMDUtNDliOS05YzA0LWQ0NjZhOTcxNzlmNyIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjY1NzgzMDQrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ2FyZVBsYW4/cGF0aWVudD00N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYmX2NvdW50PTUwIn1dLCJlbnRyeSI6W3siZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ2FyZVBsYW4vZDQwYjBmN2UtNTVhYi00MzRkLTkyYWEtNzg0MzdhMmVlYTM3IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiQ2FyZVBsYW4iLCJpZCI6ImQ0MGIwZjdlLTU1YWItNDM0ZC05MmFhLTc4NDM3YTJlZWEzNyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC45MzMrMDA6MDAifSwidGV4dCI6eyJzdGF0dXMiOiJnZW5lcmF0ZWQiLCJkaXYiOiI8ZGl2IHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbFwiPlxyXG4gICAgICAgICAgICBVcmluYW5hbHlzaXMgbGFiIHRlc3QgKExPSU5DIDI0MzU3LTYpIG9uIDYvMjkvMjAxNVxyXG4gICAgICAgICAgPC9kaXY+In0sInN0YXR1cyI6ImFjdGl2ZSIsImludGVudCI6InBsYW4iLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NvcmUvQ29kZVN5c3RlbS9jYXJlcGxhbi1jYXRlZ29yeSIsImNvZGUiOiJhc3Nlc3MtcGxhbiJ9XX1dLCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImFjdGl2aXR5IjpbeyJkZXRhaWwiOnsiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMTg3NzYtNSIsImRpc3BsYXkiOiJQbGFuIG9mIENhcmUgTm90ZSJ9XSwidGV4dCI6IlBsYW4gb2YgQ2FyZSBOb3RlIn0sInN0YXR1cyI6ImluLXByb2dyZXNzIn19XX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9DYXJlUGxhbi9jNGQ1M2ZjYS1iYjg2LTQxMjctOTJlNy1kMjM1YTAwZjI3YTgiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDYXJlUGxhbiIsImlkIjoiYzRkNTNmY2EtYmI4Ni00MTI3LTkyZTctZDIzNWEwMGYyN2E4IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA0Ljk2MyswMDowMCJ9LCJ0ZXh0Ijp7InN0YXR1cyI6ImdlbmVyYXRlZCIsImRpdiI6IjxkaXYgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sXCI+PHA+XHJcbiAgICAgICAgICAgICAgR2V0IGFuIEVLRyBkb25lIG9uIDYvMjMvMjAxNS5cclxuICAgICAgICAgICAgPC9wPjxwPlxyXG4gICAgICAgICAgICAgIEdldCBhIENoZXN0IFgtcmF5IGRvbmUgb24gNi8yMy8yMDE1IHNob3dpbmcgdGhlIExvd2VyIFJlc3BpcmF0b3J5IFRyYWN0IFN0cnVjdHVyZS5cclxuICAgICAgICAgICAgPC9wPjxwPlxyXG4gICAgICAgICAgICAgIFRha2UgQ2xpbmRhbXljaW4gMzAwbWcgdGhyZWUgdGltZXMgYSBkYXkgYXMgbmVlZGVkIGlmIHBhaW4gZG9lcyBub3Qgc3Vic2lkZS9cclxuICAgICAgICAgICAgPC9wPjxwPlxyXG4gICAgICAgICAgICAgIFNjaGVkdWxlIGZvbGxvdyBvbiB2aXNpdCB3aXRoIE5laWdoYm9yaG9vZCBQaHlzaWNpYW5zIFByYWN0aWNlIG9uIDcvMS8yMDE1LlxyXG4gICAgICAgICAgICA8L3A+PC9kaXY+In0sInN0YXR1cyI6ImFjdGl2ZSIsImludGVudCI6InBsYW4iLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NvcmUvQ29kZVN5c3RlbS9jYXJlcGxhbi1jYXRlZ29yeSIsImNvZGUiOiJhc3Nlc3MtcGxhbiJ9XX1dLCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImFjdGl2aXR5IjpbeyJkZXRhaWwiOnsiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMTg3NzYtNSIsImRpc3BsYXkiOiJQbGFuIG9mIENhcmUgTm90ZSJ9XSwidGV4dCI6IlBsYW4gb2YgQ2FyZSBOb3RlIn0sInN0YXR1cyI6ImluLXByb2dyZXNzIn19XX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9DYXJlUGxhbi82MDRlMWI5Ny1jYzdjLTQ0MzctODFlOS00MWNjOTI0OGE1YWUiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDYXJlUGxhbiIsImlkIjoiNjA0ZTFiOTctY2M3Yy00NDM3LTgxZTktNDFjYzkyNDhhNWFlIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA0Ljk5MyswMDowMCJ9LCJ0ZXh0Ijp7InN0YXR1cyI6ImdlbmVyYXRlZCIsImRpdiI6IjxkaXYgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sXCI+XHJcbiAgICAgICAgICAgIFRoZSBwYXRpZW50IHdhcyBmb3VuZCB0byBoYXZlIGZldmVyIGFuZCBEciBEYXZpcyBpcyBzdXNwZWN0aW5nIEFuZW1pYSBiYXNlZCBvbiB0aGUgcGF0aWVudCBoaXN0b3J5LiBTbyBEciBEYXZpcyBhc2tlZCB0aGUgcGF0aWVudCB0byBjbG9zZWx5IG1vbml0b3IgdGhlIHRlbXBlcmF0dXJlIGFuZCBibG9vZCBwcmVzc3VyZSBhbmQgZ2V0IGFkbWl0dGVkIHRvIENvbW11bml0eSBIZWFsdGggSG9zcGl0YWxzIGlmIHRoZSBmZXZlciBkb2VzIG5vdCBzdWJzaWRlIHdpdGhpbiBhIGRheS5cclxuICAgICAgICAgIDwvZGl2PiJ9LCJzdGF0dXMiOiJhY3RpdmUiLCJpbnRlbnQiOiJwbGFuIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci91cy9jb3JlL0NvZGVTeXN0ZW0vY2FyZXBsYW4tY2F0ZWdvcnkiLCJjb2RlIjoiYXNzZXNzLXBsYW4ifV19XSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJhY3Rpdml0eSI6W3siZGV0YWlsIjp7ImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjUxODQ4LTAiLCJkaXNwbGF5IjoiRXZhbHVhdGlvbiBOb3RlIn1dLCJ0ZXh0IjoiQXNzZXNzbWVudCJ9LCJzdGF0dXMiOiJpbi1wcm9ncmVzcyJ9fV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 3608,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "75dfa13c-2237-47a4-a104-d0f85e9414a5"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/CareTeam",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1469"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "4fdc6f71-9926-4ef1-9776-f02377e8f93c"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "5061472b-29f9-449b-905e-53182638f68c"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjUwNjE0NzJiLTI5ZjktNDQ5Yi05MDVlLTUzMTgyNjM4ZjY4YyIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjcxNzUyNjUrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ2FyZVRlYW0/cGF0aWVudD00N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYmX2NvdW50PTUwIn1dLCJlbnRyeSI6W3siZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ2FyZVRlYW0vZWJiNzZkMzctZTRiOS00ZDQ1LTlkM2EtMDdiMDg2NWFhNDBmIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiQ2FyZVRlYW0iLCJpZCI6ImViYjc2ZDM3LWU0YjktNGQ0NS05ZDNhLTA3YjA4NjVhYTQwZiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS44NTgrMDA6MDAifSwic3RhdHVzIjoiYWN0aXZlIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiJMQTI3OTc2LTIiLCJkaXNwbGF5IjoiRW5jb3VudGVyLWZvY3VzZWQgY2FyZSB0ZWFtIn1dfV0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwicGVyaW9kIjp7InN0YXJ0IjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwicGFydGljaXBhbnQiOlt7InJvbGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIzNzM2NTQwMDgiLCJkaXNwbGF5IjoiTWVkaWNhbCByZWZlcnJhbCBzZXJ2aWNlIn1dLCJ0ZXh0IjoiUmVmZXJyaW5nIFByb3ZpZGVyIn1dLCJtZW1iZXIiOnsicmVmZXJlbmNlIjoiUHJhY3RpdGlvbmVyLzI2OWExMzg1LTYyZmItNDRjOS04MmEyLWYwN2Y1NTA1Mzg1NiJ9fSx7InJvbGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyMjQ2MDgwMDUiLCJkaXNwbGF5IjoiQWRtaW5pc3RyYXRpdmUgSGVhbHRoY2FyZSBTdGFmZiJ9XSwidGV4dCI6IkFkbWluaXN0cmF0aXZlIC0gT2ZmaWNlIENvbnRhY3QifV0sIm1lbWJlciI6eyJyZWZlcmVuY2UiOiJQcmFjdGl0aW9uZXIvYTczOGE4ZTAtMTVjYy00ZGM1LWExYWItMGNjN2QzMzU0YjY1In19XSwibWFuYWdpbmdPcmdhbml6YXRpb24iOlt7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi9hZTlkOWE4MC0zYjYxLTRjZTItODBkZS00M2JiOGQ1ZTkwZDUifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 1469,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "ccd63ece-8751-4bc2-bc42-0ad06629b225"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Condition",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "11517"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "55ab5d35-187b-4c1f-9196-06ac3ed98cd1"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "8d7c7d29-0a84-449f-8db9-e5427975f079"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjhkN2M3ZDI5LTBhODQtNDQ5Zi04ZGI5LWU1NDI3OTc1ZjA3OSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjc5MTQyMDYrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ29uZGl0aW9uP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi9hYTdiNzJkMi0zMzRhLTRjZmUtOTAwMC1iNTcyY2IzMzQxNDIiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6ImFhN2I3MmQyLTMzNGEtNGNmZS05MDAwLWI1NzJjYjMzNDE0MiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy4xMjYrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIiwiZGlzcGxheSI6IkNvbmZpcm1lZCJ9XSwidGV4dCI6IkNvbmZpcm1lZCJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJwcm9ibGVtLWxpc3QtaXRlbSIsImRpc3BsYXkiOiJwcm9ibGVtLWxpc3QtaXRlbSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI1OTYyMTAwMCIsImRpc3BsYXkiOiJFc3NlbnRpYWwgaHlwZXJ0ZW5zaW9uIChEaXNvcmRlciwgKSJ9XSwidGV4dCI6IkVzc2VudGlhbCBoeXBlcnRlbnNpb24gKERpc29yZGVyLCApIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMTEtMDUtMTBUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi8zZDBkNmQzYi0yZmI3LTRmNWYtYmU5Zi01YzU5YzY1YzM1OTMiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6IjNkMGQ2ZDNiLTJmYjctNGY1Zi1iZTlmLTVjNTljNjVjMzU5MyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy4xNTcrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIiwiZGlzcGxheSI6IkNvbmZpcm1lZCJ9XSwidGV4dCI6IkNvbmZpcm1lZCJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJwcm9ibGVtLWxpc3QtaXRlbSIsImRpc3BsYXkiOiJwcm9ibGVtLWxpc3QtaXRlbSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI4Mzk4NjAwNSIsImRpc3BsYXkiOiJTZXZlcmUgSHlwb3RoeXJvaWRpc20gKERpc29yZGVyKSJ9XSwidGV4dCI6IlNldmVyZSBIeXBvdGh5cm9pZGlzbSAoRGlzb3JkZXIpIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMDYtMTItMzFUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi9lNWFjZjE4ZS0yNjk5LTQ0OTUtYTA5My01MzJmYjYzMzJlMjUiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6ImU1YWNmMThlLTI2OTktNDQ5NS1hMDkzLTUzMmZiNjMzMmUyNSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy4xODYrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIiwiZGlzcGxheSI6IkNvbmZpcm1lZCJ9XSwidGV4dCI6IkNvbmZpcm1lZCJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJwcm9ibGVtLWxpc3QtaXRlbSIsImRpc3BsYXkiOiJwcm9ibGVtLWxpc3QtaXRlbSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyMzY1NzgwMDYiLCJkaXNwbGF5IjoiQ2hyb25pYyByZWplY3Rpb24gb2YgcmVuYWwgdHJhbnNwbGFudCAoZGlzb3JkZXIpIn1dLCJ0ZXh0IjoiQ2hyb25pYyByZWplY3Rpb24gb2YgcmVuYWwgdHJhbnNwbGFudCAoZGlzb3JkZXIpIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMTEtMTItMzFUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi8wYjFhZDRhMS0yYzc5LTQ3MjYtOWY5ZS1mNWEzN2YzN2ViOWEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6IjBiMWFkNGExLTJjNzktNDcyNi05ZjllLWY1YTM3ZjM3ZWI5YSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy4yMTgrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIiwiZGlzcGxheSI6IkNvbmZpcm1lZCJ9XSwidGV4dCI6IkNvbmZpcm1lZCJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJwcm9ibGVtLWxpc3QtaXRlbSIsImRpc3BsYXkiOiJwcm9ibGVtLWxpc3QtaXRlbSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIzODY2NjEwMDYiLCJkaXNwbGF5IjoiRmV2ZXIgKGZpbmRpbmcpIn1dLCJ0ZXh0IjoiRmV2ZXIgKGZpbmRpbmcpIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi80Yjk5NzA0OC1kMWZkLTRjOTMtYTk3Yi1jMWFhYzk2MzViMzMiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6IjRiOTk3MDQ4LWQxZmQtNGM5My1hOTdiLWMxYWFjOTYzNWIzMyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy4yNDYrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUiLCJkaXNwbGF5IjoiQWN0aXZlIn1dLCJ0ZXh0IjoiQWN0aXZlIn0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIiwiZGlzcGxheSI6IkNvbmZpcm1lZCJ9XSwidGV4dCI6IkNvbmZpcm1lZCJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJwcm9ibGVtLWxpc3QtaXRlbSIsImRpc3BsYXkiOiJwcm9ibGVtLWxpc3QtaXRlbSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyMzgxMzEwMDciLCJkaXNwbGF5IjoiT3ZlcndlaWdodCAoZmluZGluZykifV0sInRleHQiOiJPdmVyd2VpZ2h0IChmaW5kaW5nKSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sIm9uc2V0RGF0ZVRpbWUiOiIyMDA2LTEyLTMxVDAwOjAwOjAwLjAwMC0wNTowMCIsInJlY29yZGVkRGF0ZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIn0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9Db25kaXRpb24vYzE2YjFjMTYtMmM5NC00NzVjLTkxYzgtNzEwNTMxNDI1MDllIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiQ29uZGl0aW9uIiwiaWQiOiJjMTZiMWMxNi0yYzk0LTQ3NWMtOTFjOC03MTA1MzE0MjUwOWUiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuMjc2KzAwOjAwIn0sImNsaW5pY2FsU3RhdHVzIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tY2xpbmljYWwiLCJjb2RlIjoiYWN0aXZlIiwiZGlzcGxheSI6IkFjdGl2ZSJ9XSwidGV4dCI6IkFjdGl2ZSJ9LCJ2ZXJpZmljYXRpb25TdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi12ZXItc3RhdHVzIiwiY29kZSI6ImNvbmZpcm1lZCIsImRpc3BsYXkiOiJDb25maXJtZWQifV0sInRleHQiOiJDb25maXJtZWQifSwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tY2F0ZWdvcnkiLCJjb2RlIjoiZW5jb3VudGVyLWRpYWdub3NpcyIsImRpc3BsYXkiOiJFbmNvdW50ZXIgRGlhZ25vc2lzIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjM4NjY2MTAwNiIsImRpc3BsYXkiOiJGZXZlciAtIEZpbmRpbmcifV0sInRleHQiOiJGZXZlciAtIEZpbmRpbmcifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJvbnNldERhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJyZWNvcmRlZERhdGUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCJ9LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ29uZGl0aW9uL2NhODYwZDZhLTMxZTgtNDVjNi05YmQ3LTY5ODViYTJlNjdiNyIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkNvbmRpdGlvbiIsImlkIjoiY2E4NjBkNmEtMzFlOC00NWM2LTliZDctNjk4NWJhMmU2N2I3IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA1LjczMiswMDowMCJ9LCJjbGluaWNhbFN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLWNsaW5pY2FsIiwiY29kZSI6ImFjdGl2ZSJ9XX0sInZlcmlmaWNhdGlvblN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLXZlci1zdGF0dXMiLCJjb2RlIjoiY29uZmlybWVkIn1dfSwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tY2F0ZWdvcnkiLCJjb2RlIjoiaGVhbHRoLWNvbmNlcm4iLCJkaXNwbGF5IjoiaGVhbHRoLWNvbmNlcm4ifV19XSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiMTYxOTAxMDAzIiwiZGlzcGxheSI6IkNocm9uaWMgU2lja25lc3MgZXhoaWJpdGVkIGJ5IHBhdGllbnQifSx7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNDA2MjIxMDAzIiwiZGlzcGxheSI6IkhlYWx0aCBTdGF0dXMifV0sInRleHQiOiJDaHJvbmljIFNpY2tuZXNzIGV4aGliaXRlZCBieSBwYXRpZW50In0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMTUtMDUtMTBUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi8zMjI2ZjQyNC0xZjEyLTQ1NTYtOWM2Yi1hOGIxMTU5NzA0ZDEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6IjMyMjZmNDI0LTFmMTItNDU1Ni05YzZiLWE4YjExNTk3MDRkMSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS43NjQrMDA6MDAifSwiY2xpbmljYWxTdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jbGluaWNhbCIsImNvZGUiOiJhY3RpdmUifV19LCJ2ZXJpZmljYXRpb25TdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi12ZXItc3RhdHVzIiwiY29kZSI6ImNvbmZpcm1lZCJ9XX0sImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLWNhdGVnb3J5IiwiY29kZSI6ImhlYWx0aC1jb25jZXJuIiwiZGlzcGxheSI6ImhlYWx0aC1jb25jZXJuIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjU5NjIxMDAwIiwiZGlzcGxheSI6IkRvY3VtZW50ZWQgSHlwZXJUZW5zaW9uIHByb2JsZW0ifV0sInRleHQiOiJEb2N1bWVudGVkIEh5cGVyVGVuc2lvbiBwcm9ibGVtIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMTUtMDUtMTBUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0NvbmRpdGlvbi8xODE2NGIwNy01YjE5LTQ3MTMtODg2Ny1jZGY1YzA1ODMzYjciLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb25kaXRpb24iLCJpZCI6IjE4MTY0YjA3LTViMTktNDcxMy04ODY3LWNkZjVjMDU4MzNiNyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS44KzAwOjAwIn0sImNsaW5pY2FsU3RhdHVzIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tY2xpbmljYWwiLCJjb2RlIjoiYWN0aXZlIn1dfSwidmVyaWZpY2F0aW9uU3RhdHVzIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tdmVyLXN0YXR1cyIsImNvZGUiOiJjb25maXJtZWQifV19LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJoZWFsdGgtY29uY2VybiIsImRpc3BsYXkiOiJoZWFsdGgtY29uY2VybiJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI4Mzk4NjAwNSIsImRpc3BsYXkiOiJEb2N1bWVudGVkIEh5cG9UaHlyb2lkaXNtIHByb2JsZW0ifV0sInRleHQiOiJEb2N1bWVudGVkIEh5cG9UaHlyb2lkaXNtIHByb2JsZW0ifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJvbnNldERhdGVUaW1lIjoiMjAwNi0xMi0zMVQwMDowMDowMC4wMDAtMDU6MDAiLCJyZWNvcmRlZERhdGUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCJ9LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQ29uZGl0aW9uL2VhMWYzNmRmLTM2OTUtNDExMy05NDA0LWEwOGFjM2I2YzY5ZiIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkNvbmRpdGlvbiIsImlkIjoiZWExZjM2ZGYtMzY5NS00MTEzLTk0MDQtYTA4YWMzYjZjNjlmIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA1LjgzKzAwOjAwIn0sImNsaW5pY2FsU3RhdHVzIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9jb25kaXRpb24tY2xpbmljYWwiLCJjb2RlIjoicmVzb2x2ZWQifV19LCJ2ZXJpZmljYXRpb25TdGF0dXMiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL2NvbmRpdGlvbi12ZXItc3RhdHVzIiwiY29kZSI6ImNvbmZpcm1lZCJ9XX0sImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vY29uZGl0aW9uLWNhdGVnb3J5IiwiY29kZSI6ImhlYWx0aC1jb25jZXJuIiwiZGlzcGxheSI6ImhlYWx0aC1jb25jZXJuIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjIzODEzMTAwNyIsImRpc3BsYXkiOiJXYXRjaCBXZWlnaHQgb2YgcGF0aWVudCJ9XSwidGV4dCI6IldhdGNoIFdlaWdodCBvZiBwYXRpZW50In0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwib25zZXREYXRlVGltZSI6IjIwMDYtMTItMzFUMDA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWREYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fV19",
+        "ContentLength": 11517,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "25811ea0-91d0-406d-9745-52172bc909e6"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Device",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1321"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "ae9451c7-d4a3-40c2-9b27-27fe6a9ae9ee"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "ea60f88d-ace0-4b7d-93b4-f96d26a92db5"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImVhNjBmODhkLWFjZTAtNGI3ZC05M2I0LWY5NmQyNmE5MmRiNSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjg2NzcxMTMrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vRGV2aWNlP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0RldmljZS8zZDgzMzdkMi05NTY4LTQ3MmMtOGJjYy1mYjM1YTQ0MDRmZjIiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJEZXZpY2UiLCJpZCI6IjNkODMzN2QyLTk1NjgtNDcyYy04YmNjLWZiMzVhNDQwNGZmMiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMi45MTcrMDA6MDAifSwidWRpQ2FycmllciI6W3siZGV2aWNlSWRlbnRpZmllciI6IjMzOTI1Mjk3MjczNDc3IiwianVyaXNkaWN0aW9uIjoiaHR0cDovL2hsNy5vcmcvZmhpci9OYW1pbmdTeXN0ZW0vZmRhLXVkaSIsImNhcnJpZXJIUkYiOiIoMDEpMDA2NDMxNjkwMDcyMjIoMTcpMTYwMTI4KDIxKUJMQzIwMDQ2MUgifV0sInN0YXR1cyI6ImFjdGl2ZSIsImRpc3RpbmN0SWRlbnRpZmllciI6IjMzOTI1Mjk3MjczNDc3IiwibWFudWZhY3R1cmVEYXRlIjoiMjAxOC0wNC0yOFQxMzo1NzozMSswMDowMCIsImV4cGlyYXRpb25EYXRlIjoiMjA0My0wNS0xM1QxMzo1NzozMSswMDowMCIsImxvdE51bWJlciI6IjI3MDE4NjgyIiwic2VyaWFsTnVtYmVyIjoiMzQ3MjA0NyIsImRldmljZU5hbWUiOlt7Im5hbWUiOiJDYXJkaWFjIHJlc3luY2hyb25pemF0aW9uIHRoZXJhcHkgaW1wbGFudGFibGUgcGFjZW1ha2VyIiwidHlwZSI6InVzZXItZnJpZW5kbHktbmFtZSJ9XSwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNzA0NzA4MDA0IiwiZGlzcGxheSI6IkNhcmRpYWMgcmVzeW5jaHJvbml6YXRpb24gdGhlcmFweSBpbXBsYW50YWJsZSBwYWNlbWFrZXIifV0sInRleHQiOiJDYXJkaWFjIHJlc3luY2hyb25pemF0aW9uIHRoZXJhcHkgaW1wbGFudGFibGUgcGFjZW1ha2VyIn0sInBhdGllbnQiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX1dfQ==",
+        "ContentLength": 1321,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "ee3e4cbd-3b90-4c8c-ab0e-d0ab962cc461"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/DiagnosticReport",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "2585"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:51 GMT"
+          ],
+          "Internaltraceid": [
+            "c94ff167-4f8a-4dfe-ab2f-f6acff6e68ac"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "1328d9d2-591e-4b79-9d13-f63350214a2e"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjEzMjhkOWQyLTU5MWUtNGI3OS05ZDEzLWY2MzM1MDIxNGEyZSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjkyMTU3NjgrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vRGlhZ25vc3RpY1JlcG9ydD9wYXRpZW50PTQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiZfY291bnQ9NTAifV0sImVudHJ5IjpbeyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9EaWFnbm9zdGljUmVwb3J0LzRmMjFkYjQ1LTIzNzUtNDljMS04YTVmLTBmM2QzOGJkYzBiNCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkRpYWdub3N0aWNSZXBvcnQiLCJpZCI6IjRmMjFkYjQ1LTIzNzUtNDljMS04YTVmLTBmM2QzOGJkYzBiNCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy41MzIrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAwNzQiLCJjb2RlIjoiTEFCIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjI0MzU3LTYiLCJkaXNwbGF5IjoiVXJpbmFuYWx5c2lzIG1hY3JvIChkaXBzdGljaykgcGFuZWwifV0sInRleHQiOiJVcmluYW5hbHlzaXMgbWFjcm8gKGRpcHN0aWNrKSBwYW5lbCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJpc3N1ZWQiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLTA1OjAwIiwicGVyZm9ybWVyIjpbeyJyZWZlcmVuY2UiOiJPcmdhbml6YXRpb24vYTg5NjAyN2UtOGJmMy00YjA1LTljNTAtNjBkNGRjYzVjNjdmIiwiZGlzcGxheSI6IlZhbHVlIExhYnMifV0sInJlc3VsdCI6W3sicmVmZXJlbmNlIjoiT2JzZXJ2YXRpb24vZDA3ZGIyOWYtMzRmZS00OWRkLWI1ODEtMjBmM2RhY2MwYTM4In0seyJyZWZlcmVuY2UiOiJPYnNlcnZhdGlvbi8xZmViY2I3My1hNDk3LTRhZDgtYjM1MS1mNjhjMWFkMzU1YTkifSx7InJlZmVyZW5jZSI6Ik9ic2VydmF0aW9uLzc2NDE2NDZiLWMyNGItNGVjZC1hMTk3LWMxNTJiYmIzMWUwNiJ9LHsicmVmZXJlbmNlIjoiT2JzZXJ2YXRpb24vMmNhNDM1ZjEtYmI0My00MzQwLTg0NDMtMTBiYzQ5ODAwM2QxIn0seyJyZWZlcmVuY2UiOiJPYnNlcnZhdGlvbi9iMjdhYjMzYi02NjQ5LTQ2ODAtODc5ZC1hMDA3OTU3ZTRiMTYifSx7InJlZmVyZW5jZSI6Ik9ic2VydmF0aW9uLzM0NTM4YWQyLTM0ODctNGMxMy1iZjk1LTg5ZmIyM2Q3MmZkZiJ9LHsicmVmZXJlbmNlIjoiT2JzZXJ2YXRpb24vM2Y0NmIwMjYtMDFhMS00MjM0LWE5ZjktNTFkZDBjMzhiOTU3In1dfSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0RpYWdub3N0aWNSZXBvcnQvYTQzNjM1NzItMWRiZi00MGE1LWJlYmItZjNkNGY0NDhmOTRmIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiRGlhZ25vc3RpY1JlcG9ydCIsImlkIjoiYTQzNjM1NzItMWRiZi00MGE1LWJlYmItZjNkNGY0NDhmOTRmIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjAzLjY4OSswMDowMCJ9LCJzdGF0dXMiOiJmaW5hbCIsImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiTFAyOTY4NC01IiwiZGlzcGxheSI6IlJhZGlvbG9neSJ9XSwidGV4dCI6IlJhZGlvbG9neSJ9XSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMzY2NDMtNSIsImRpc3BsYXkiOiJDaGVzdCBYLXJheSAyIHZpZXdzIn1dLCJ0ZXh0IjoiQ2hlc3QgWC1yYXkgMiB2aWV3cyJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMiIsImlzc3VlZCI6IjIwMTUtMDYtMjJUMTA6MDA6MDAtMDU6MDAiLCJwcmVzZW50ZWRGb3JtIjpbeyJjb250ZW50VHlwZSI6InRleHQvcGxhaW4iLCJ1cmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0JpbmFyeS8zMTE2MGU0MC1mNzhjLTRjODMtYmMxMy1kMWNhOGJmY2E0YzYifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 2585,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "d09349e6-9a38-4096-817b-106add65f721"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/DocumentReference",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "3876"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "fb4381c2-70a2-40df-a00a-498d2a5b3d4b"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "92aedbda-fb0d-4377-b2ec-79097535d5a5"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjkyYWVkYmRhLWZiMGQtNDM3Ny1iMmVjLTc5MDk3NTM1ZDVhNSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUxLjk3OTQ4ODcrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vRG9jdW1lbnRSZWZlcmVuY2U/cGF0aWVudD00N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYmX2NvdW50PTUwIn1dLCJlbnRyeSI6W3siZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vRG9jdW1lbnRSZWZlcmVuY2UvYmYzZDJkNWItYTliMi00YzExLTgxMjMtNTdmNWU1ZTI2YzliIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiRG9jdW1lbnRSZWZlcmVuY2UiLCJpZCI6ImJmM2QyZDViLWE5YjItNGMxMS04MTIzLTU3ZjVlNWUyNmM5YiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS41MTcrMDA6MDAifSwic3RhdHVzIjoiY3VycmVudCIsInR5cGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjI4NTcwLTAiLCJkaXNwbGF5IjoiUHJvY2VkdXJlIG5vdGUifV0sInRleHQiOiJQcm9jZWR1cmUgbm90ZSJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjI4NTcwLTAiLCJkaXNwbGF5IjoiUHJvY2VkdXJlIG5vdGUifV0sInRleHQiOiJQcm9jZWR1cmUgbm90ZSJ9XSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJkYXRlIjoiMjAxNS0wNi0yMlQxMDowMDowMC0wNTowMCIsImF1dGhvciI6W3sicmVmZXJlbmNlIjoiUHJhY3RpdGlvbmVyLzI2OWExMzg1LTYyZmItNDRjOS04MmEyLWYwN2Y1NTA1Mzg1NiJ9XSwiY3VzdG9kaWFuIjp7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi9hZTlkOWE4MC0zYjYxLTRjZTItODBkZS00M2JiOGQ1ZTkwZDUifSwiY29udGVudCI6W3siYXR0YWNobWVudCI6eyJjb250ZW50VHlwZSI6InRleHQvcGxhaW4iLCJ1cmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0JpbmFyeS9mNjQzZDA5NC0xMjdhLTRjZTMtOGVhNS05NWMzMWRlNjYxYTcifX1dLCJjb250ZXh0Ijp7ImVuY291bnRlciI6W3sicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9XSwicGVyaW9kIjp7InN0YXJ0IjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJlbmQiOiIyMDE1LTA2LTIyVDEwOjMwOjAwLjAwMC0wNTowMCJ9fX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9Eb2N1bWVudFJlZmVyZW5jZS84NTkwYzExZC01ZDdmLTQ1NjAtODUzOC1jMzEwZmJjNTM0YjgiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJEb2N1bWVudFJlZmVyZW5jZSIsImlkIjoiODU5MGMxMWQtNWQ3Zi00NTYwLTg1MzgtYzMxMGZiYzUzNGI4IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA1LjU4OCswMDowMCJ9LCJzdGF0dXMiOiJjdXJyZW50IiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMTE1MDItMiIsImRpc3BsYXkiOiJMYWJvcmF0b3J5IHJlcG9ydCJ9XSwidGV4dCI6IkxhYm9yYXRvcnkgcmVwb3J0In0sImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMTE1MDItMiIsImRpc3BsYXkiOiJMYWJvcmF0b3J5IHJlcG9ydCJ9XSwidGV4dCI6IkxhYm9yYXRvcnkgcmVwb3J0In1dLCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImRhdGUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLTA1OjAwIiwiYXV0aG9yIjpbeyJyZWZlcmVuY2UiOiJQcmFjdGl0aW9uZXIvMjY5YTEzODUtNjJmYi00NGM5LTgyYTItZjA3ZjU1MDUzODU2In1dLCJjdXN0b2RpYW4iOnsicmVmZXJlbmNlIjoiT3JnYW5pemF0aW9uL2FlOWQ5YTgwLTNiNjEtNGNlMi04MGRlLTQzYmI4ZDVlOTBkNSJ9LCJjb250ZW50IjpbeyJhdHRhY2htZW50Ijp7ImNvbnRlbnRUeXBlIjoidGV4dC9wbGFpbiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQmluYXJ5L2QxNWRkMTc4LTExYzktNDE2Ny05YzhmLWQ4NTlhZDE1MTk5MSJ9fV0sImNvbnRleHQiOnsiZW5jb3VudGVyIjpbeyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn1dLCJwZXJpb2QiOnsic3RhcnQiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsImVuZCI6IjIwMTUtMDYtMjJUMTA6MzA6MDAuMDAwLTA1OjAwIn19fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0RvY3VtZW50UmVmZXJlbmNlLzZhMjZhNzUyLTM2ZjQtNGQ0My04ZDBkLWRjNzdmZjE5ZDc2ZCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkRvY3VtZW50UmVmZXJlbmNlIiwiaWQiOiI2YTI2YTc1Mi0zNmY0LTRkNDMtOGQwZC1kYzc3ZmYxOWQ3NmQiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDUuNyswMDowMCJ9LCJzdGF0dXMiOiJjdXJyZW50IiwidHlwZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiMTE1MDYtMyIsImRpc3BsYXkiOiJQcm9ncmVzcyBub3RlIn1dLCJ0ZXh0IjoiUHJvZ3Jlc3Mgbm90ZSJ9LCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjExNTA2LTMiLCJkaXNwbGF5IjoiUHJvZ3Jlc3Mgbm90ZSJ9XSwidGV4dCI6IlByb2dyZXNzIG5vdGUifV0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZGF0ZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAtMDU6MDAiLCJhdXRob3IiOlt7InJlZmVyZW5jZSI6IlByYWN0aXRpb25lci8yNjlhMTM4NS02MmZiLTQ0YzktODJhMi1mMDdmNTUwNTM4NTYifV0sImN1c3RvZGlhbiI6eyJyZWZlcmVuY2UiOiJPcmdhbml6YXRpb24vYWU5ZDlhODAtM2I2MS00Y2UyLTgwZGUtNDNiYjhkNWU5MGQ1In0sImNvbnRlbnQiOlt7ImF0dGFjaG1lbnQiOnsiY29udGVudFR5cGUiOiJhcHBsaWNhdGlvbi9wZGYiLCJ1cmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0JpbmFyeS9hYzI1Zjc5Yi02MDczLTQ1NjYtYjcyOC1lMjUxOTBjNjA5MjQifX0seyJhdHRhY2htZW50Ijp7ImNvbnRlbnRUeXBlIjoidGV4dC9wbGFpbiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vQmluYXJ5LzZiYmE0OGMwLWUyNTYtNGZkYy05YWEyLTAzMTM2YTM0OWRiNCJ9fV0sImNvbnRleHQiOnsiZW5jb3VudGVyIjpbeyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn1dLCJwZXJpb2QiOnsic3RhcnQiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsImVuZCI6IjIwMTUtMDYtMjJUMTA6MzA6MDAuMDAwLTA1OjAwIn19fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fV19",
+        "ContentLength": 3876,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "1cb4163e-57e3-489f-9626-0483964d344d"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Encounter",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1834"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "de68728f-90ad-4120-b350-d35a634236a9"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "e9550279-e209-4b6a-8e2d-119ab3400d4d"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImU5NTUwMjc5LWUyMDktNGI2YS04ZTJkLTExOWFiMzQwMGQ0ZCIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjA1NTgyMjgrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vRW5jb3VudGVyP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0VuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJFbmNvdW50ZXIiLCJpZCI6IjYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS4wMTgrMDA6MDAifSwic3RhdHVzIjoidW5rbm93biIsImNsYXNzIjp7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vdjMtQWN0Q29kZSIsImNvZGUiOiJBTUIiLCJkaXNwbGF5IjoiYW1idWxhdG9yeSJ9LCJ0eXBlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNDA1Mjc5MDA3IiwiZGlzcGxheSI6IkF0dGVuZGluZyBQcm92aWRlciJ9XSwidGV4dCI6IkF0dGVuZGluZyBQcm92aWRlciJ9XSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJwYXJ0aWNpcGFudCI6W3sidHlwZSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YzLVBhcnRpY2lwYXRpb25UeXBlIiwiY29kZSI6IkFUTkQiLCJkaXNwbGF5IjoiYXR0ZW5kZXIifV19XSwiaW5kaXZpZHVhbCI6eyJyZWZlcmVuY2UiOiJQcmFjdGl0aW9uZXIvMjY5YTEzODUtNjJmYi00NGM5LTgyYTItZjA3ZjU1MDUzODU2In19XSwicGVyaW9kIjp7InN0YXJ0IjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJlbmQiOiIyMDE1LTA2LTIyVDEwOjMwOjAwLjAwMC0wNTowMCJ9LCJyZWFzb25Db2RlIjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiMzg2NjYxMDA2IiwiZGlzcGxheSI6IkZldmVyIChmaW5kaW5nKSJ9XSwidGV4dCI6IkZldmVyIChmaW5kaW5nKSJ9XSwiZGlhZ25vc2lzIjpbeyJjb25kaXRpb24iOnsicmVmZXJlbmNlIjoiQ29uZGl0aW9uL2MxNmIxYzE2LTJjOTQtNDc1Yy05MWM4LTcxMDUzMTQyNTA5ZSIsImRpc3BsYXkiOiJGZXZlciAtIEZpbmRpbmcifSwidXNlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9kaWFnbm9zaXMtcm9sZSIsImNvZGUiOiJERCIsImRpc3BsYXkiOiJEaXNjaGFyZ2UgZGlhZ25vc2lzIn1dfSwicmFuayI6MX1dLCJsb2NhdGlvbiI6W3sibG9jYXRpb24iOnsicmVmZXJlbmNlIjoiTG9jYXRpb24vMTY2NWU2OTItMGUyYS00MjNmLWI2MjYtYzViZmYzMDg4MjE0IiwiZGlzcGxheSI6Ik5laWdoYm9yaG9vZCBQaHlzaWNpYW5zIFByYWN0aWNlIn19XSwic2VydmljZVByb3ZpZGVyIjp7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi9hZTlkOWE4MC0zYjYxLTRjZTItODBkZS00M2JiOGQ1ZTkwZDUifX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX1dfQ==",
+        "ContentLength": 1834,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "70d81d54-424d-4138-88f8-1694a02131e6"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Goal",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1720"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "6166a522-a2fa-4ba8-84e6-64e14d7d5d81"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "b9946706-5a87-43c1-bb80-013a9fbacabe"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImI5OTQ2NzA2LTVhODctNDNjMS1iYjgwLTAxM2E5ZmJhY2FiZSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjExODEzNDIrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vR29hbD9wYXRpZW50PTQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiZfY291bnQ9NTAifV0sImVudHJ5IjpbeyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9Hb2FsLzk5NDQ5ZTE1LTFlZTAtNGYzNy1iZWQxLTc1ZWI3MjMxZGMwMCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkdvYWwiLCJpZCI6Ijk5NDQ5ZTE1LTFlZTAtNGYzNy1iZWQxLTc1ZWI3MjMxZGMwMCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS4yNzkrMDA6MDAifSwibGlmZWN5Y2xlU3RhdHVzIjoiYWNjZXB0ZWQiLCJhY2hpZXZlbWVudFN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vZ29hbC1hY2hpZXZlbWVudCIsImNvZGUiOiJpbi1wcm9ncmVzcyJ9XX0sImRlc2NyaXB0aW9uIjp7InRleHQiOiJHZXQgcmlkIG9mIGludGVybWl0dGVudCBmZXZlciB0aGF0IGlzIG9jY3VycmluZyBldmVyeSBmZXcgd2Vla3MuIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwic3RhcnREYXRlIjoiMjAxNS0wNi0yMiIsInRhcmdldCI6W3sibWVhc3VyZSI6eyJ0ZXh0IjoiR2V0IHJpZCBvZiBpbnRlcm1pdHRlbnQgZmV2ZXIgdGhhdCBpcyBvY2N1cnJpbmcgZXZlcnkgZmV3IHdlZWtzLiJ9LCJkdWVEYXRlIjoiMjAyMi0xMS0xMCJ9XX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9Hb2FsLzU3N2MxMzg3LWI3MzQtNDhkOS04MTI5LTM1M2I4ODA3NjM4YiIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IkdvYWwiLCJpZCI6IjU3N2MxMzg3LWI3MzQtNDhkOS04MTI5LTM1M2I4ODA3NjM4YiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS4zMDcrMDA6MDAifSwibGlmZWN5Y2xlU3RhdHVzIjoiYWNjZXB0ZWQiLCJhY2hpZXZlbWVudFN0YXR1cyI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vZ29hbC1hY2hpZXZlbWVudCIsImNvZGUiOiJpbi1wcm9ncmVzcyJ9XX0sImRlc2NyaXB0aW9uIjp7InRleHQiOiJOZWVkIHRvIGdhaW4gbW9yZSBlbmVyZ3kgdG8gZG8gcmVndWxhciBhY3Rpdml0aWVzIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwic3RhcnREYXRlIjoiMjAxNS0wNi0yMiIsInRhcmdldCI6W3sibWVhc3VyZSI6eyJ0ZXh0IjoiTmVlZCB0byBnYWluIG1vcmUgZW5lcmd5IHRvIGRvIHJlZ3VsYXIgYWN0aXZpdGllcyJ9LCJkdWVEYXRlIjoiMjAyMi0xMS0xMCJ9XX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX1dfQ==",
+        "ContentLength": 1720,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "42d796dd-b93d-4131-a761-1f0b0745c03d"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Immunization",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "2232"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "20684ec1-f864-4e0f-bb81-ccaf64a547ba"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "930413a0-baf2-4445-ad7d-d819fdd46f61"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjkzMDQxM2EwLWJhZjItNDQ0NS1hZDdkLWQ4MTlmZGQ0NmY2MSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjE3OTQ1NTMrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vSW1tdW5pemF0aW9uP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0ltbXVuaXphdGlvbi84NzRmOTNmNy00NjEyLTRkNjQtYjkxZC02YTQ0Zjc4ZDVlYWEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJJbW11bml6YXRpb24iLCJpZCI6Ijg3NGY5M2Y3LTQ2MTItNGQ2NC1iOTFkLTZhNDRmNzhkNWVhYSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC41OTYrMDA6MDAifSwic3RhdHVzIjoiY29tcGxldGVkIiwidmFjY2luZUNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9jdngiLCJjb2RlIjoiMTA2IiwiZGlzcGxheSI6IlRldGFudXMgYW5kIGRpcGh0aGVyaWEgdG94b2lkcyJ9XSwidGV4dCI6IlRldGFudXMgYW5kIGRpcGh0aGVyaWEgdG94b2lkcyJ9LCJwYXRpZW50Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sIm9jY3VycmVuY2VEYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIiwicmVjb3JkZWQiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInByaW1hcnlTb3VyY2UiOnRydWUsIm1hbnVmYWN0dXJlciI6eyJyZWZlcmVuY2UiOiJPcmdhbml6YXRpb24vM2E2OWJhOGUtNzE4OS00MTZjLWExYzktOTFjOTlmZjA5MjM5IiwiZGlzcGxheSI6IkltbXVubyBJbmMuIn0sImxvdE51bWJlciI6IjIifSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL0ltbXVuaXphdGlvbi9jMzE5NDMwYi1lYzFjLTQ1NmQtYTZjZC03ODkzZmFhODYwZTciLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJJbW11bml6YXRpb24iLCJpZCI6ImMzMTk0MzBiLWVjMWMtNDU2ZC1hNmNkLTc4OTNmYWE4NjBlNyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC42NDgrMDA6MDAifSwic3RhdHVzIjoibm90LWRvbmUiLCJzdGF0dXNSZWFzb24iOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YzLUFjdFJlYXNvbiIsImNvZGUiOiJQQVRPQkoiLCJkaXNwbGF5IjoiUGF0aWVudCBSZWplY3RlZCBJbW11bml6YXRpb24ifV0sInRleHQiOiJQYXRpZW50IFJlamVjdGVkIEltbXVuaXphdGlvbiJ9LCJ2YWNjaW5lQ29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2N2eCIsImNvZGUiOiIxNjYiLCJkaXNwbGF5IjoiaW5mbHVlbnphLCBpbnRyYWRlcm1hbCwgcXVhZHJpdmFsZW50LCBwcmVzZXJ2YXRpdmUgZnJlZSJ9XSwidGV4dCI6ImluZmx1ZW56YSwgaW50cmFkZXJtYWwsIHF1YWRyaXZhbGVudCwgcHJlc2VydmF0aXZlIGZyZWUifSwicGF0aWVudCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJvY2N1cnJlbmNlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInJlY29yZGVkIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJwcmltYXJ5U291cmNlIjp0cnVlLCJtYW51ZmFjdHVyZXIiOnsicmVmZXJlbmNlIjoiT3JnYW5pemF0aW9uLzNhNjliYThlLTcxODktNDE2Yy1hMWM5LTkxYzk5ZmYwOTIzOSIsImRpc3BsYXkiOiJJbW11bm8gSW5jLiJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fV19",
+        "ContentLength": 2232,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "8727fb44-a702-4b97-b0dc-a0c3c12053bc"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/MedicationRequest",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "4039"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "207bedef-e6eb-4737-9087-452d1825c201"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "e9716861-14c7-4c86-9218-cada221d30ee"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImU5NzE2ODYxLTE0YzctNGM4Ni05MjE4LWNhZGEyMjFkMzBlZSIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjIzNDA1OTkrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vTWVkaWNhdGlvblJlcXVlc3Q/cGF0aWVudD00N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYmX2NvdW50PTUwIn1dLCJlbnRyeSI6W3siZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vTWVkaWNhdGlvblJlcXVlc3QvZjMzYjk3ZWMtYTkwNy00NTE1LWE1OTYtMGExMTgyOGMwNmMyIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiTWVkaWNhdGlvblJlcXVlc3QiLCJpZCI6ImYzM2I5N2VjLWE5MDctNDUxNS1hNTk2LTBhMTE4MjhjMDZjMiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMi42MTErMDA6MDAifSwiY29udGFpbmVkIjpbeyJyZXNvdXJjZVR5cGUiOiJNZWRpY2F0aW9uIiwiaWQiOiJtZWQwMDEiLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybSIsImNvZGUiOiIzMDkwOTAiLCJkaXNwbGF5IjoiQ2VmdHJpYXhvbmUgMTAwIE1HL01MIn1dLCJ0ZXh0IjoiQ2VmdHJpYXhvbmUgMTAwIE1HL01MIn19XSwic3RhdHVzIjoiY29tcGxldGVkIiwiaW50ZW50Ijoib3JkZXIiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL21lZGljYXRpb25yZXF1ZXN0LWNhdGVnb3J5IiwiY29kZSI6ImNvbW11bml0eSIsImRpc3BsYXkiOiJDb21tdW5pdHkifV0sInRleHQiOiJDb21tdW5pdHkifV0sIm1lZGljYXRpb25SZWZlcmVuY2UiOnsicmVmZXJlbmNlIjoiI21lZDAwMSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImF1dGhvcmVkT24iOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInJlcXVlc3RlciI6eyJyZWZlcmVuY2UiOiJQcmFjdGl0aW9uZXIvMjY5YTEzODUtNjJmYi00NGM5LTgyYTItZjA3ZjU1MDUzODU2In0sImRvc2FnZUluc3RydWN0aW9uIjpbeyJ0ZXh0IjoiVHdvIHRpbWVzIGRhaWx5IiwidGltaW5nIjp7InJlcGVhdCI6eyJib3VuZHNQZXJpb2QiOnsic3RhcnQiOiIyMDE1LTA2LTIyIiwiZW5kIjoiMjAxNS0wNi0zMCJ9LCJmcmVxdWVuY3kiOjEsInBlcmlvZCI6MTIsInBlcmlvZFVuaXQiOiJoIn0sImNvZGUiOnsidGV4dCI6IlR3byB0aW1lcyBkYWlseSJ9fSwicm91dGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjI1NTU2MDAwMCIsImRpc3BsYXkiOiJJbmplY3RhYmxlIn1dLCJ0ZXh0IjoiSW5qZWN0YWJsZSJ9LCJkb3NlQW5kUmF0ZSI6W3siZG9zZVF1YW50aXR5Ijp7InZhbHVlIjoxfX1dfV0sImRpc3BlbnNlUmVxdWVzdCI6eyJ2YWxpZGl0eVBlcmlvZCI6eyJzdGFydCI6IjIwMTUtMDYtMjIiLCJlbmQiOiIyMDE1LTA2LTMwIn19fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL01lZGljYXRpb25SZXF1ZXN0Lzg5OTIwYzk2LWJhM2YtNGI1My04MGVlLWQ3YTQ4YjQwNGYyZCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik1lZGljYXRpb25SZXF1ZXN0IiwiaWQiOiI4OTkyMGM5Ni1iYTNmLTRiNTMtODBlZS1kN2E0OGI0MDRmMmQiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDIuNjQ1KzAwOjAwIn0sInN0YXR1cyI6ImNvbXBsZXRlZCIsImludGVudCI6Im9yZGVyIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9tZWRpY2F0aW9ucmVxdWVzdC1jYXRlZ29yeSIsImNvZGUiOiJjb21tdW5pdHkiLCJkaXNwbGF5IjoiQ29tbXVuaXR5In1dLCJ0ZXh0IjoiQ29tbXVuaXR5In1dLCJtZWRpY2F0aW9uQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybSIsImNvZGUiOiIyMDk0NTkiLCJkaXNwbGF5IjoiVHlsZW5vbCA1MDBtZyJ9XSwidGV4dCI6IlR5bGVub2wgNTAwbWcifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJhdXRob3JlZE9uIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJyZXF1ZXN0ZXIiOnsicmVmZXJlbmNlIjoiUHJhY3RpdGlvbmVyLzI2OWExMzg1LTYyZmItNDRjOS04MmEyLWYwN2Y1NTA1Mzg1NiJ9LCJkb3NhZ2VJbnN0cnVjdGlvbiI6W3sidGV4dCI6IkFzIG5lZWRlZCIsInRpbWluZyI6eyJyZXBlYXQiOnsicGVyaW9kIjoyNCwicGVyaW9kVW5pdCI6ImgifSwiY29kZSI6eyJ0ZXh0IjoiQXMgbmVlZGVkIn19LCJhc05lZWRlZEJvb2xlYW4iOnRydWUsInJvdXRlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIyNjY0MzAwNiIsImRpc3BsYXkiOiJPcmFsIn1dLCJ0ZXh0IjoiT3JhbCJ9LCJkb3NlQW5kUmF0ZSI6W3siZG9zZVF1YW50aXR5Ijp7InZhbHVlIjoxfX1dfV0sImRpc3BlbnNlUmVxdWVzdCI6eyJ2YWxpZGl0eVBlcmlvZCI6eyJzdGFydCI6IjIwMTUtMDYtMjIiLCJlbmQiOiIyMDE1LTA3LTAxIn19fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL01lZGljYXRpb25SZXF1ZXN0L2Q2NThlYTU4LTgyZjYtNDRjZi1hOTMzLTZmOTkyYjVhZTdjNSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik1lZGljYXRpb25SZXF1ZXN0IiwiaWQiOiJkNjU4ZWE1OC04MmY2LTQ0Y2YtYTkzMy02Zjk5MmI1YWU3YzUiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDIuNjc5KzAwOjAwIn0sInN0YXR1cyI6ImFjdGl2ZSIsImludGVudCI6Im9yZGVyIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9tZWRpY2F0aW9ucmVxdWVzdC1jYXRlZ29yeSIsImNvZGUiOiJjb21tdW5pdHkiLCJkaXNwbGF5IjoiQ29tbXVuaXR5In1dLCJ0ZXh0IjoiQ29tbXVuaXR5In1dLCJtZWRpY2F0aW9uQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3d3dy5ubG0ubmloLmdvdi9yZXNlYXJjaC91bWxzL3J4bm9ybSIsImNvZGUiOiI3MzEyNDEiLCJkaXNwbGF5IjoiQXJhbmVzcCAwLjUgTUcvTUwifV0sInRleHQiOiJBcmFuZXNwIDAuNSBNRy9NTCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImF1dGhvcmVkT24iOiIyMDE1LTA2LTIyIiwicmVxdWVzdGVyIjp7InJlZmVyZW5jZSI6IlByYWN0aXRpb25lci8yNjlhMTM4NS02MmZiLTQ0YzktODJhMi1mMDdmNTUwNTM4NTYifSwiZG9zYWdlSW5zdHJ1Y3Rpb24iOlt7InRleHQiOiJPbmNlIGEgd2VlayIsInRpbWluZyI6eyJyZXBlYXQiOnsicGVyaW9kIjoxLCJwZXJpb2RVbml0Ijoid2sifSwiY29kZSI6eyJ0ZXh0IjoiT25jZSBhIHdlZWsifX0sInJvdXRlIjp7InRleHQiOiJJbmplY3RhYmxlIn0sImRvc2VBbmRSYXRlIjpbeyJkb3NlUXVhbnRpdHkiOnsidmFsdWUiOjF9fV19XSwiZGlzcGVuc2VSZXF1ZXN0Ijp7InZhbGlkaXR5UGVyaW9kIjp7InN0YXJ0IjoiMjAxNS0wNi0yMiJ9fX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX1dfQ==",
+        "ContentLength": 4039,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "cfea98e1-985c-4f0d-998d-b9a24a515280"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Observation",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "16769"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "7e0851df-480e-4f88-8204-511506624185"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "f6ef334e-1296-4f1b-bbb2-ae8e36edfaf0"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImY2ZWYzMzRlLTEyOTYtNGYxYi1iYmIyLWFlOGUzNmVkZmFmMCIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjI5NzQyNjYrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24/cGF0aWVudD00N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYmX2NvdW50PTUwIn1dLCJlbnRyeSI6W3siZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vOTJiN2M5ZTAtMWYyOS00MGUzLWE5OTgtYmRkYTQ4YzRmNTM0IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6IjkyYjdjOWUwLTFmMjktNDBlMy1hOTk4LWJkZGE0OGM0ZjUzNCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS42MjYrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6InNvY2lhbC1oaXN0b3J5IiwiZGlzcGxheSI6IlNvY2lhbCBIaXN0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjQ0OTg2ODAwMiIsImRpc3BsYXkiOiJDdXJyZW50IHNtb2tpbmcgc3RhdHVzIn1dLCJ0ZXh0IjoiQ3VycmVudCBzbW9raW5nIHN0YXR1cyJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZVBlcmlvZCI6eyJzdGFydCI6IjIwMTUtMDYtMjJUMDA6MDA6MDAuMDAwLTA1OjAwIn0sInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI0NDk4NjgwMDIiLCJkaXNwbGF5IjoiQ3VycmVudCBldmVyeSBkYXkifV0sInRleHQiOiJDdXJyZW50IGV2ZXJ5IGRheSJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uL2QwN2RiMjlmLTM0ZmUtNDlkZC1iNTgxLTIwZjNkYWNjMGEzOCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiJkMDdkYjI5Zi0zNGZlLTQ5ZGQtYjU4MS0yMGYzZGFjYzBhMzgiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuNzE3KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJsYWJvcmF0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU3NzgtNiIsImRpc3BsYXkiOiJDb2xvciBvZiBVcmluZSJ9XSwidGV4dCI6IkNvbG9yIG9mIFVyaW5lIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInZhbHVlU3RyaW5nIjoiWUVMTE9XIiwicmVmZXJlbmNlUmFuZ2UiOlt7InRleHQiOiJZRUxMT1cifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vMWZlYmNiNzMtYTQ5Ny00YWQ4LWIzNTEtZjY4YzFhZDM1NWE5IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6IjFmZWJjYjczLWE0OTctNGFkOC1iMzUxLWY2OGMxYWQzNTVhOSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy43NDUrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6ImxhYm9yYXRvcnkifV19XSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiNTc2Ny05IiwiZGlzcGxheSI6IkFwcGVhcmFuY2Ugb2YgVXJpbmUifV0sInRleHQiOiJBcHBlYXJhbmNlIG9mIFVyaW5lIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInZhbHVlU3RyaW5nIjoiQ0xFQVIiLCJyZWZlcmVuY2VSYW5nZSI6W3sidGV4dCI6IkNMRUFSIn1dfSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzc2NDE2NDZiLWMyNGItNGVjZC1hMTk3LWMxNTJiYmIzMWUwNiIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiI3NjQxNjQ2Yi1jMjRiLTRlY2QtYTE5Ny1jMTUyYmJiMzFlMDYiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuNzcxKzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJsYWJvcmF0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU4MTEtNSIsImRpc3BsYXkiOiJTcGVjaWZpYyBncmF2aXR5IG9mIFVyaW5lIGJ5IFRlc3Qgc3RyaXAifV0sInRleHQiOiJTcGVjaWZpYyBncmF2aXR5IG9mIFVyaW5lIGJ5IFRlc3Qgc3RyaXAifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJlZmZlY3RpdmVEYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIiwidmFsdWVRdWFudGl0eSI6eyJ2YWx1ZSI6MS4wMTV9LCJyZWZlcmVuY2VSYW5nZSI6W3sibG93Ijp7InZhbHVlIjoxLjAwNX0sImhpZ2giOnsidmFsdWUiOjEuMDMwfX1dfSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzJjYTQzNWYxLWJiNDMtNDM0MC04NDQzLTEwYmM0OTgwMDNkMSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIyY2E0MzVmMS1iYjQzLTQzNDAtODQ0My0xMGJjNDk4MDAzZDEiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuNzk3KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJsYWJvcmF0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU4MDMtMiIsImRpc3BsYXkiOiJwSCBvZiBVcmluZSBieSBUZXN0IHN0cmlwIn1dLCJ0ZXh0IjoicEggb2YgVXJpbmUgYnkgVGVzdCBzdHJpcCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjo1LjAsInVuaXQiOiJbcEhdIn0sInJlZmVyZW5jZVJhbmdlIjpbeyJsb3ciOnsidmFsdWUiOjUuMH0sImhpZ2giOnsidmFsdWUiOjguMH19XX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9PYnNlcnZhdGlvbi9iMjdhYjMzYi02NjQ5LTQ2ODAtODc5ZC1hMDA3OTU3ZTRiMTYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJPYnNlcnZhdGlvbiIsImlkIjoiYjI3YWIzM2ItNjY0OS00NjgwLTg3OWQtYTAwNzk1N2U0YjE2IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjAzLjgyNCswMDowMCJ9LCJzdGF0dXMiOiJmaW5hbCIsImNhdGVnb3J5IjpbeyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly90ZXJtaW5vbG9neS5obDcub3JnL0NvZGVTeXN0ZW0vb2JzZXJ2YXRpb24tY2F0ZWdvcnkiLCJjb2RlIjoibGFib3JhdG9yeSJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiI1NzkyLTciLCJkaXNwbGF5IjoiR2x1Y29zZSBbTWFzcy92b2x1bWVdIGluIHVyaW5lIGJ5IHRlc3Qgc3RyaXAifV0sInRleHQiOiJHbHVjb3NlIFtNYXNzL3ZvbHVtZV0gaW4gdXJpbmUgYnkgdGVzdCBzdHJpcCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjo1MCwidW5pdCI6Im1nL2RMIn0sInJlZmVyZW5jZVJhbmdlIjpbeyJ0ZXh0IjoiTmVnIn1dfSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzM0NTM4YWQyLTM0ODctNGMxMy1iZjk1LTg5ZmIyM2Q3MmZkZiIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIzNDUzOGFkMi0zNDg3LTRjMTMtYmY5NS04OWZiMjNkNzJmZGYiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuODUzKzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJsYWJvcmF0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU3OTctNiIsImRpc3BsYXkiOiJLZXRvbmVzIFtNYXNzL1ZvbHVtZV0gaW4gdXJpbmUgYnkgdGVzdCBzdHJpcCJ9XSwidGV4dCI6IktldG9uZXMgW01hc3MvVm9sdW1lXSBpbiB1cmluZSBieSB0ZXN0IHN0cmlwIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjAwOjAwLjAwMC0wNTowMCIsInZhbHVlU3RyaW5nIjoiTmVnYXRpdmUiLCJyZWZlcmVuY2VSYW5nZSI6W3sidGV4dCI6Ik5lZ2F0aXZlIn1dfSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzNmNDZiMDI2LTAxYTEtNDIzNC1hOWY5LTUxZGQwYzM4Yjk1NyIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIzZjQ2YjAyNi0wMWExLTQyMzQtYTlmOS01MWRkMGMzOGI5NTciLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuODc5KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJsYWJvcmF0b3J5In1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU4MDQtMCIsImRpc3BsYXkiOiJQcm90ZWluW01hc3MvVm9sdW1lXSBpbiB1cmluZSBieSB0ZXN0IHN0cmlwIn1dLCJ0ZXh0IjoiUHJvdGVpbltNYXNzL1ZvbHVtZV0gaW4gdXJpbmUgYnkgdGVzdCBzdHJpcCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjoxMDAsInVuaXQiOiJtZy9kTCJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzJkMzhiYWQ1LTg2ODktNDJiMS04NDVlLTg2NmEyMDJkNGQ3OCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIyZDM4YmFkNS04Njg5LTQyYjEtODQ1ZS04NjZhMjAyZDRkNzgiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuOTA2KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJ2aXRhbC1zaWducyIsImRpc3BsYXkiOiJ2aXRhbC1zaWducyJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiI4MzAyLTIiLCJkaXNwbGF5IjoiSGVpZ2h0In1dLCJ0ZXh0IjoiSGVpZ2h0In0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjA1OjAwLjAwMC0wNTowMCIsInZhbHVlUXVhbnRpdHkiOnsidmFsdWUiOjE3NywidW5pdCI6ImNtIiwic3lzdGVtIjoiaHR0cDovL3VuaXRzb2ZtZWFzdXJlLm9yZyIsImNvZGUiOiJjbSJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uL2Q3ZTJmZGQ2LWFiYzItNGJkMS05MmI2LWFlNDAzMTViYWYwNyIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiJkN2UyZmRkNi1hYmMyLTRiZDEtOTJiNi1hZTQwMzE1YmFmMDciLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuOTM4KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJ2aXRhbC1zaWducyIsImRpc3BsYXkiOiJ2aXRhbC1zaWducyJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiIyOTQ2My03IiwiZGlzcGxheSI6IldlaWdodCJ9XSwidGV4dCI6IldlaWdodCJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowNTowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjo4OCwidW5pdCI6ImtnIiwic3lzdGVtIjoiaHR0cDovL3VuaXRzb2ZtZWFzdXJlLm9yZyIsImNvZGUiOiJrZyJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzY2NjcwYzg1LTM0NmUtNGQ1MS1hM2NhLTQ3M2RjZmVkYjA5YyIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiI2NjY3MGM4NS0zNDZlLTRkNTEtYTNjYS00NzNkY2ZlZGIwOWMiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDMuOTY5KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJ2aXRhbC1zaWducyIsImRpc3BsYXkiOiJ2aXRhbC1zaWducyJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiI4NDYyLTQiLCJkaXNwbGF5IjoiQmxvb2QgUHJlc3N1cmUgLSBEaWFzdG9saWMifV0sInRleHQiOiJCbG9vZCBQcmVzc3VyZSAtIERpYXN0b2xpYyJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowODowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjo4OCwidW5pdCI6Im1tW0hnXSIsInN5c3RlbSI6Imh0dHA6Ly91bml0c29mbWVhc3VyZS5vcmciLCJjb2RlIjoibW1bSGddIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vYzE2MTgzNmQtMGY1OC00Y2ZhLWI0YzQtZTRjNTFkZmM3OWFjIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6ImMxNjE4MzZkLTBmNTgtNGNmYS1iNGM0LWU0YzUxZGZjNzlhYyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy45OTgrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6InZpdGFsLXNpZ25zIiwiZGlzcGxheSI6InZpdGFsLXNpZ25zIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6Ijg0ODAtNiIsImRpc3BsYXkiOiJCbG9vZCBQcmVzc3VyZSAtIFN5c3RvbGljIn1dLCJ0ZXh0IjoiQmxvb2QgUHJlc3N1cmUgLSBTeXN0b2xpYyJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowODowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjoxNDUsInVuaXQiOiJtbVtIZ10iLCJzeXN0ZW0iOiJodHRwOi8vdW5pdHNvZm1lYXN1cmUub3JnIiwiY29kZSI6Im1tW0hnXSJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzI0ZjlmZTNkLTU5NzYtNDAxNi04ZTE3LWUyY2IyZDg4OGZlMCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIyNGY5ZmUzZC01OTc2LTQwMTYtOGUxNy1lMmNiMmQ4ODhmZTAiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDQuMDI2KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJ2aXRhbC1zaWducyIsImRpc3BsYXkiOiJ2aXRhbC1zaWducyJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiI4ODY3LTQiLCJkaXNwbGF5IjoiSGVhcnQgUmF0ZSJ9XSwidGV4dCI6IkhlYXJ0IFJhdGUifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJlZmZlY3RpdmVEYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MTA6MDAuMDAwLTA1OjAwIiwidmFsdWVRdWFudGl0eSI6eyJ2YWx1ZSI6ODAsInVuaXQiOiIvbWluIiwic3lzdGVtIjoiaHR0cDovL3VuaXRzb2ZtZWFzdXJlLm9yZyIsImNvZGUiOiIvbWluIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vN2NkMjJmZDYtZjM0Ny00NTZkLTg3MDUtNWY3MDYyMGJiNzM0IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6IjdjZDIyZmQ2LWYzNDctNDU2ZC04NzA1LTVmNzA2MjBiYjczNCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC4wNTQrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6InZpdGFsLXNpZ25zIiwiZGlzcGxheSI6InZpdGFsLXNpZ25zIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjU5NDA4LTUiLCJkaXNwbGF5IjoiTzIgJSBCbGRDIE94aW1ldHJ5In1dLCJ0ZXh0IjoiTzIgJSBCbGRDIE94aW1ldHJ5In0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlRGF0ZVRpbWUiOiIyMDE1LTA2LTIyVDEwOjEyOjAwLjAwMC0wNTowMCIsInZhbHVlUXVhbnRpdHkiOnsidmFsdWUiOjk1LCJ1bml0IjoiJSIsInN5c3RlbSI6Imh0dHA6Ly91bml0c29mbWVhc3VyZS5vcmciLCJjb2RlIjoiJSJ9fSwic2VhcmNoIjp7Im1vZGUiOiJtYXRjaCJ9fSx7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL09ic2VydmF0aW9uLzE2ZWIyYjJjLTM1OWMtNGI0Yi05OTU5LTNmOWY2Y2UxMjNkYSIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6Ik9ic2VydmF0aW9uIiwiaWQiOiIxNmViMmIyYy0zNTljLTRiNGItOTk1OS0zZjlmNmNlMTIzZGEiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDQuMDg1KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Rlcm1pbm9sb2d5LmhsNy5vcmcvQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJ2aXRhbC1zaWducyIsImRpc3BsYXkiOiJ2aXRhbC1zaWducyJ9XX1dLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiIzMTUwLTAiLCJkaXNwbGF5IjoiSW5oYWxlZCBPeHlnZW4gQ29uY2VudHJhdGlvbiJ9XSwidGV4dCI6IkluaGFsZWQgT3h5Z2VuIENvbmNlbnRyYXRpb24ifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJlZmZlY3RpdmVEYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MTI6MDAuMDAwLTA1OjAwIiwidmFsdWVRdWFudGl0eSI6eyJ2YWx1ZSI6MzYsInVuaXQiOiIlIiwic3lzdGVtIjoiaHR0cDovL3VuaXRzb2ZtZWFzdXJlLm9yZyIsImNvZGUiOiIlIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vODgwYzBmMmMtOGM4MS00NDhmLWI5YzUtMmZhYzU1MmQ2NzVkIiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6Ijg4MGMwZjJjLThjODEtNDQ4Zi1iOWM1LTJmYWM1NTJkNjc1ZCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC4xMTQrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6InZpdGFsLXNpZ25zIiwiZGlzcGxheSI6InZpdGFsLXNpZ25zIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjgzMTAtNSIsImRpc3BsYXkiOiJCb2R5IFRlbXBlcmF0dXJlIn1dLCJ0ZXh0IjoiQm9keSBUZW1wZXJhdHVyZSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDoxNTowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjozOCwidW5pdCI6IkNlbCIsInN5c3RlbSI6Imh0dHA6Ly91bml0c29mbWVhc3VyZS5vcmciLCJjb2RlIjoiQ2VsIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vODFkYzkwOTUtZmQ3Ny00MjBlLWI5YjEtMjg5OGNjMDk3YzM1IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6IjgxZGM5MDk1LWZkNzctNDIwZS1iOWIxLTI4OThjYzA5N2MzNSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC4xNDYrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL29ic2VydmF0aW9uLWNhdGVnb3J5IiwiY29kZSI6InZpdGFsLXNpZ25zIiwiZGlzcGxheSI6InZpdGFsLXNpZ25zIn1dfV0sImNvZGUiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vbG9pbmMub3JnIiwiY29kZSI6IjkyNzktMSIsImRpc3BsYXkiOiJSZXNwaXJhdG9yeSBSYXRlIn1dLCJ0ZXh0IjoiUmVzcGlyYXRvcnkgUmF0ZSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZURhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDoxNTowMC4wMDAtMDU6MDAiLCJ2YWx1ZVF1YW50aXR5Ijp7InZhbHVlIjoxOCwidW5pdCI6Ii9taW4iLCJzeXN0ZW0iOiJodHRwOi8vdW5pdHNvZm1lYXN1cmUub3JnIiwiY29kZSI6Ii9taW4ifX0sInNlYXJjaCI6eyJtb2RlIjoibWF0Y2gifX0seyJmdWxsVXJsIjoiaHR0cHM6Ly9maGlyLXVzYS5zYngudW5pZnkuY2hiYXNlLmNvbS9PYnNlcnZhdGlvbi84NWI1YTM2Yi1lY2QwLTRjODYtYmFmZC1mMTU3YTJjMWI0MmYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJPYnNlcnZhdGlvbiIsImlkIjoiODViNWEzNmItZWNkMC00Yzg2LWJhZmQtZjE1N2EyYzFiNDJmIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA2LjA1KzAwOjAwIn0sInN0YXR1cyI6ImZpbmFsIiwiY2F0ZWdvcnkiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2Nwc2kuY29tL0NvZGVTeXN0ZW0vb2JzZXJ2YXRpb24tY2F0ZWdvcnkiLCJjb2RlIjoiZnVuY3Rpb25hbC1zdGF0dXMiLCJkaXNwbGF5IjoiRnVuY3Rpb25hbCBzdGF0dXMifV19XSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiNTQ1MjItOCIsImRpc3BsYXkiOiJGaW5kaW5nIG9mIGZ1bmN0aW9uYWwgcGVyZm9ybWFuY2UgYW5kIGFjdGl2aXR5In1dLCJ0ZXh0IjoiRmluZGluZyBvZiBmdW5jdGlvbmFsIHBlcmZvcm1hbmNlIGFuZCBhY3Rpdml0eSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sImVmZmVjdGl2ZVBlcmlvZCI6eyJzdGFydCI6IjIwMDUtMDUtMDFUMDA6MDA6MDAuMDAwLTA1OjAwIn0sInZhbHVlQ29kZWFibGVDb25jZXB0Ijp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIxMDU1MDQwMDIiLCJkaXNwbGF5IjoiRGVwZW5kZW5jZSBvbiBDYW5lIn1dLCJ0ZXh0IjoiRGVwZW5kZW5jZSBvbiBDYW5lIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vT2JzZXJ2YXRpb24vNjY0ZmNlMzQtMDFlZC00ZDBiLWI3M2YtMzNmYmFiOTRmMTk5IiwicmVzb3VyY2UiOnsicmVzb3VyY2VUeXBlIjoiT2JzZXJ2YXRpb24iLCJpZCI6IjY2NGZjZTM0LTAxZWQtNGQwYi1iNzNmLTMzZmJhYjk0ZjE5OSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNi4wODYrMDA6MDAifSwic3RhdHVzIjoiZmluYWwiLCJjYXRlZ29yeSI6W3siY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vY3BzaS5jb20vQ29kZVN5c3RlbS9vYnNlcnZhdGlvbi1jYXRlZ29yeSIsImNvZGUiOiJjb2duaXRpdmUtc3RhdHVzIiwiZGlzcGxheSI6IkNvZ25pdGl2ZSBTdGF0dXMifV19XSwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9sb2luYy5vcmciLCJjb2RlIjoiNzUyNzUtOCIsImRpc3BsYXkiOiJDb2duaXRpdmUgZnVuY3Rpb24gZmluZGluZyJ9XSwidGV4dCI6IkNvZ25pdGl2ZSBmdW5jdGlvbiBmaW5kaW5nIn0sInN1YmplY3QiOnsicmVmZXJlbmNlIjoiUGF0aWVudC80N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYifSwiZW5jb3VudGVyIjp7InJlZmVyZW5jZSI6IkVuY291bnRlci82MzcyZmI1ZS0yMzdiLTQwMjMtYTAzYy1jODI0ZDExZWEyNGQifSwiZWZmZWN0aXZlUGVyaW9kIjp7InN0YXJ0IjoiMjAwNS0wNS0wMVQwMDowMDowMC4wMDAtMDU6MDAifSwidmFsdWVDb2RlYWJsZUNvbmNlcHQiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJodHRwOi8vc25vbWVkLmluZm8vc2N0IiwiY29kZSI6IjQ4MTY3MDAwIiwiZGlzcGxheSI6IkFtbmVzaWEifV0sInRleHQiOiJBbW5lc2lhIn19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 16769,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "586a9f6c-6a4f-4e49-8bdd-8181d9881953"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Procedure",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "patient=47c1df49-98a3-470e-bc51-69c8773f4cbf\u0026_count=50",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "2579"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Internaltraceid": [
+            "2e8543b6-a77e-4843-8a74-dc00cabca979"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "359226dd-c651-4b3a-b6d8-8205645c8ef0"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6IjM1OTIyNmRkLWM2NTEtNGIzYS1iNmQ4LTgyMDU2NDVjOGVmMCIsIm1ldGEiOnsibGFzdFVwZGF0ZWQiOiIyMDI0LTExLTIzVDE0OjI2OjUyLjM4MTE2MjMrMDA6MDAifSwidHlwZSI6InNlYXJjaHNldCIsImxpbmsiOlt7InJlbGF0aW9uIjoic2VsZiIsInVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vUHJvY2VkdXJlP3BhdGllbnQ9NDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmJl9jb3VudD01MCJ9XSwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwczovL2ZoaXItdXNhLnNieC51bmlmeS5jaGJhc2UuY29tL1Byb2NlZHVyZS8zNDQ2MzdkMC1hYjU3LTRmNzktYjk5Mi00NWNkMmRkYWEwY2QiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJQcm9jZWR1cmUiLCJpZCI6IjM0NDYzN2QwLWFiNTctNGY3OS1iOTkyLTQ1Y2QyZGRhYTBjZCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNC4zNzIrMDA6MDAifSwic3RhdHVzIjoiY29tcGxldGVkIiwiY29kZSI6eyJjb2RpbmciOlt7InN5c3RlbSI6Imh0dHA6Ly9zbm9tZWQuaW5mby9zY3QiLCJjb2RlIjoiNTYyNTEwMDMiLCJkaXNwbGF5IjoiTmVidWxpemVyIFRoZXJhcHkifV0sInRleHQiOiJOZWJ1bGl6ZXIgVGhlcmFweSJ9LCJzdWJqZWN0Ijp7InJlZmVyZW5jZSI6IlBhdGllbnQvNDdjMWRmNDktOThhMy00NzBlLWJjNTEtNjljODc3M2Y0Y2JmIn0sImVuY291bnRlciI6eyJyZWZlcmVuY2UiOiJFbmNvdW50ZXIvNjM3MmZiNWUtMjM3Yi00MDIzLWEwM2MtYzgyNGQxMWVhMjRkIn0sInBlcmZvcm1lZERhdGVUaW1lIjoiMjAxNS0wNi0yMlQxMDowMDowMC4wMDAtMDU6MDAiLCJsb2NhdGlvbiI6eyJyZWZlcmVuY2UiOiJMb2NhdGlvbi8xNjY1ZTY5Mi0wZTJhLTQyM2YtYjYyNi1jNWJmZjMwODgyMTQiLCJkaXNwbGF5IjoiTmVpZ2hib3Job29kIFBoeXNpY2lhbnMgUHJhY3RpY2UifSwiYm9keVNpdGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI4MjA5NDAwOCIsImRpc3BsYXkiOiJMb3dlciBSZXNwaXJhdG9yeSBUcmFjdCBTdHJ1Y3R1cmUifV0sInRleHQiOiJMb3dlciBSZXNwaXJhdG9yeSBUcmFjdCBTdHJ1Y3R1cmUifV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19LHsiZnVsbFVybCI6Imh0dHBzOi8vZmhpci11c2Euc2J4LnVuaWZ5LmNoYmFzZS5jb20vUHJvY2VkdXJlLzA3MGI1ZTQyLTdjM2EtNDg5MC1hMTcxLWMzM2QwY2M2NzQxNCIsInJlc291cmNlIjp7InJlc291cmNlVHlwZSI6IlByb2NlZHVyZSIsImlkIjoiMDcwYjVlNDItN2MzYS00ODkwLWExNzEtYzMzZDBjYzY3NDE0IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjA0LjQzNyswMDowMCJ9LCJleHRlbnNpb24iOlt7InVybCI6Imh0dHBzOi8vY3BzaS5jb20vcjQvU3RydWN0dXJlRGVmaW5pdGlvbi9wcm9jZWR1cmUtcmVjb3JkZWREYXRlIiwidmFsdWVEYXRlVGltZSI6IjIwMTUtMDYtMjJUMTA6MDA6MDAuMDAwLTA1OjAwIn1dLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJjb2RlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiIxNzUxMzUwMDkiLCJkaXNwbGF5IjoiSW50cm9kdWN0aW9uIG9mIGNhcmRpYWMgcGFjZW1ha2VyIHN5c3RlbSB2aWEgdmVpbiJ9XSwidGV4dCI6IkludHJvZHVjdGlvbiBvZiBjYXJkaWFjIHBhY2VtYWtlciBzeXN0ZW0gdmlhIHZlaW4ifSwic3ViamVjdCI6eyJyZWZlcmVuY2UiOiJQYXRpZW50LzQ3YzFkZjQ5LTk4YTMtNDcwZS1iYzUxLTY5Yzg3NzNmNGNiZiJ9LCJlbmNvdW50ZXIiOnsicmVmZXJlbmNlIjoiRW5jb3VudGVyLzYzNzJmYjVlLTIzN2ItNDAyMy1hMDNjLWM4MjRkMTFlYTI0ZCJ9LCJwZXJmb3JtZWREYXRlVGltZSI6IjIwMTEtMTAtMDVUMDA6MDA6MDAuMDAwLTA1OjAwIiwicGVyZm9ybWVyIjpbeyJhY3RvciI6eyJyZWZlcmVuY2UiOiJQcmFjdGl0aW9uZXIvMjY5YTEzODUtNjJmYi00NGM5LTgyYTItZjA3ZjU1MDUzODU2In0sIm9uQmVoYWxmT2YiOnsicmVmZXJlbmNlIjoiT3JnYW5pemF0aW9uL2FlOWQ5YTgwLTNiNjEtNGNlMi04MGRlLTQzYmI4ZDVlOTBkNSJ9fV0sImxvY2F0aW9uIjp7InJlZmVyZW5jZSI6IkxvY2F0aW9uLzU4ODZkYThkLWQzZWYtNGFiNi04NzlmLTQ5YWM3ZmE3MWY2ZiIsImRpc3BsYXkiOiJDb21tdW5pdHkgSGVhbHRoIGFuZCBIb3NwaXRhbHMifSwiYm9keVNpdGUiOlt7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL3Nub21lZC5pbmZvL3NjdCIsImNvZGUiOiI5NDU0MDA5IiwiZGlzcGxheSI6IlN0cnVjdHVyZSBvZiBzdWJjbGF2aWFuIHZlaW4ifV0sInRleHQiOiJTdHJ1Y3R1cmUgb2Ygc3ViY2xhdmlhbiB2ZWluIn1dLCJmb2NhbERldmljZSI6W3sibWFuaXB1bGF0ZWQiOnsicmVmZXJlbmNlIjoiRGV2aWNlLzNkODMzN2QyLTk1NjgtNDcyYy04YmNjLWZiMzVhNDQwNGZmMiJ9fV19LCJzZWFyY2giOnsibW9kZSI6Im1hdGNoIn19XX0=",
+        "ContentLength": 2579,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "61f215ae-d595-4b8b-9cc1-6a8746fa68ad"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Practitioner/269a1385-62fb-44c9-82a2-f07f55053856",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "308"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "b4c91b64-ebad-47fe-87e3-98b6a1402b45"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "8b1a18ea-b143-402f-9cfc-ee9c961e78c7"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQcmFjdGl0aW9uZXIiLCJpZCI6IjI2OWExMzg1LTYyZmItNDRjOS04MmEyLWYwN2Y1NTA1Mzg1NiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS4xNzgrMDA6MDAifSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvdXMtbnBpIiwidmFsdWUiOiJBRDAxIn1dLCJuYW1lIjpbeyJ0ZXh0IjoiRHIgQWxiZXJ0IERhdmlzIiwiZmFtaWx5IjoiRGF2aXMiLCJnaXZlbiI6WyJBbGJlcnQiXSwicHJlZml4IjpbIkRyIl19XX0=",
+        "ContentLength": 308,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "158e135f-5de1-425f-a61e-f8b87ee46682"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Organization/3a69ba8e-7189-416c-a1c9-91c99ff09239",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "180"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "85f56a49-f7ca-4736-8618-44a8d400f788"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "942390a4-75f7-4c68-b0bd-0edfcd77fce3"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6IjNhNjliYThlLTcxODktNDE2Yy1hMWM5LTkxYzk5ZmYwOTIzOSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS40NyswMDowMCJ9LCJhY3RpdmUiOnRydWUsIm5hbWUiOiJJbW11bm8gSW5jLiJ9",
+        "ContentLength": 180,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "6fffff8b-85f7-463c-ae13-0edf38e0aa4a"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Organization/a896027e-8bf3-4b05-9c50-60d4dcc5c67f",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "371"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "75a048c1-c5f5-431d-a458-6ffb2937a0cf"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "8e731195-bb3c-4745-850b-e5210d22c24f"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6ImE4OTYwMjdlLThiZjMtNGIwNS05YzUwLTYwZDRkY2M1YzY3ZiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS40NTIrMDA6MDAifSwiYWN0aXZlIjp0cnVlLCJuYW1lIjoiVmFsdWUgTGFicyIsInRlbGVjb20iOlt7InN5c3RlbSI6InBob25lIiwidmFsdWUiOiI1NTUtNjY2LTEwMDIiLCJ1c2UiOiJ3b3JrIn1dLCJhZGRyZXNzIjpbeyJ1c2UiOiJ3b3JrIiwibGluZSI6WyIyNDc0LCBSb2NreSBwbGFjZSJdLCJjaXR5IjoiQmVhdmVydG9uIiwic3RhdGUiOiJPUiIsInBvc3RhbENvZGUiOiI5NzAwNiIsImNvdW50cnkiOiJVUyJ9XX0=",
+        "ContentLength": 371,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "736ad464-0fa6-4457-916b-a096dc82c03c"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Location/1665e692-0e2a-423f-b626-c5bff3088214",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "377"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "87717aff-7877-42ca-a07e-fe54f334b620"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "ea0072a5-f98f-48e6-bf58-4e206e6df793"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJMb2NhdGlvbiIsImlkIjoiMTY2NWU2OTItMGUyYS00MjNmLWI2MjYtYzViZmYzMDg4MjE0IiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjAxLjU4MSswMDowMCJ9LCJuYW1lIjoiTmVpZ2hib3Job29kIFBoeXNpY2lhbnMgUHJhY3RpY2UiLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInZhbHVlIjoiKzEoNTU1KTU1NS0xMDAyIiwidXNlIjoid29yayJ9XSwiYWRkcmVzcyI6eyJ1c2UiOiJ3b3JrIiwibGluZSI6WyIyNDcyLCBSb2NreSBwbGFjZSwiXSwiY2l0eSI6IkJlYXZlcnRvbiIsInN0YXRlIjoiT1IiLCJwb3N0YWxDb2RlIjoiOTcwMDYiLCJjb3VudHJ5IjoiVVMifX0=",
+        "ContentLength": 377,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "a1ec7528-34dc-4f8c-856e-13d9ccdfa8d2"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Binary/6bba48c0-e256-4fdc-9aa2-03136a349db4",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "369"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "b175e538-be12-4e95-8f9e-fa8596099b52"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "5737805a-afbd-4f1b-985b-d9fb52036f02"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCaW5hcnkiLCJpZCI6IjZiYmE0OGMwLWUyNTYtNGZkYy05YWEyLTAzMTM2YTM0OWRiNCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS42NTgrMDA6MDAifSwiY29udGVudFR5cGUiOiJ0ZXh0L3BsYWluIiwiZGF0YSI6IlRYTWdRV3hwWTJVZ1RtVjNiV0Z1SUhObFpXMXpJSFJ2SUdKbElHUmxkbVZzYjNCcGJtY2dhR2xuYUNCbVpYWmxjaUJoYm1RZ2FHVnVZMlVnZDJVZ2NtVmpiMjF0Wlc1a0lHaGxjaUIwYnlCblpYUWdZV1J0YVhSMFpXUWdkRzhnWVNCdVpXRnlZbmtnYUc5emNHbDBZV3dnZFhOcGJtY2dkR2hsSUhCeWIzWnBaR1ZrSUhKbFptVnljbUZzTGc9PSJ9",
+        "ContentLength": 369,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "e57b7ed8-4838-4173-bceb-fbd343e7c86b"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Organization/ae9d9a80-3b61-4ce2-80de-43bb8d5e90d5",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "396"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "269d1f6e-1b99-4337-9d15-919968c01805"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "287f4038-18b5-4d11-ab5f-4176bd234d05"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJPcmdhbml6YXRpb24iLCJpZCI6ImFlOWQ5YTgwLTNiNjEtNGNlMi04MGRlLTQzYmI4ZDVlOTBkNSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS40MjkrMDA6MDAifSwiYWN0aXZlIjp0cnVlLCJuYW1lIjoiTmVpZ2hib3Job29kIFBoeXNpY2lhbnMgUHJhY3RpY2UiLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInZhbHVlIjoiKzEoNTU1KTU1NS0xMDAyIiwidXNlIjoid29yayJ9XSwiYWRkcmVzcyI6W3sidXNlIjoid29yayIsImxpbmUiOlsiMjQ3MiwgUm9ja3kgcGxhY2UiXSwiY2l0eSI6IkJlYXZlcnRvbiIsInN0YXRlIjoiT1IiLCJwb3N0YWxDb2RlIjoiOTcwMDYiLCJjb3VudHJ5IjoiVVMifV19",
+        "ContentLength": 396,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "b1f72498-b470-4515-b2a1-fe9775e0ebaa"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Binary/d15dd178-11c9-4167-9c8f-d859ad151991",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "317"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:52 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "0a9adc6d-85ed-4f83-baab-6d8398ef4920"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "91a42998-facf-4675-955b-f1f3f91c2869"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCaW5hcnkiLCJpZCI6ImQxNWRkMTc4LTExYzktNDE2Ny05YzhmLWQ4NTlhZDE1MTk5MSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS41NDkrMDA6MDAifSwiY29udGVudFR5cGUiOiJ0ZXh0L3BsYWluIiwiZGF0YSI6IlRYTWdRV3hwWTJVZ1RtVjNiV0Z1SUhkaGN5QjBaWE4wWldRZ1ptOXlJSFJvWlNCVmNtbHVZVzVoYkhsemFYTWdiV0ZqY204Z2NHRnVaV3dnWVc1a0lIUm9aU0J5WlhOMWJIUnpJR2hoZG1VZ1ltVmxiaUJtYjNWdVpDQjBieUJpWlNCdWIzSnRZV3d1In0=",
+        "ContentLength": 317,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "a3bde2ea-8a55-4e22-b31e-66efa8656024"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Practitioner/a738a8e0-15cc-4dc5-a1ab-0cc7d3354b65",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "482"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "0f27c543-0ad9-46cf-bf69-77c659a6a14d"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "5be17afc-5bde-4b6e-ab3a-803d7f36fb55"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQcmFjdGl0aW9uZXIiLCJpZCI6ImE3MzhhOGUwLTE1Y2MtNGRjNS1hMWFiLTBjYzdkMzM1NGI2NSIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMS4yOTcrMDA6MDAifSwiaWRlbnRpZmllciI6W3sic3lzdGVtIjoiaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvdXMtbnBpIiwidmFsdWUiOiI2Nzg5MCJ9XSwibmFtZSI6W3sidGV4dCI6IlRyYWN5IERhdmlzIiwiZmFtaWx5IjoiRGF2aXMiLCJnaXZlbiI6WyJUcmFjeSJdfV0sInRlbGVjb20iOlt7InN5c3RlbSI6InBob25lIiwidmFsdWUiOiIrMSg1NTUpNTU1LTEwMDIiLCJ1c2UiOiJ3b3JrIn1dLCJhZGRyZXNzIjpbeyJ1c2UiOiJ3b3JrIiwibGluZSI6WyIyNDcyLCBSb2NreSBwbGFjZSJdLCJjaXR5IjoiQmVhdmVydG9uIiwic3RhdGUiOiJPUiIsInBvc3RhbENvZGUiOiI5NzAwNiIsImNvdW50cnkiOiJVUyJ9XX0=",
+        "ContentLength": 482,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "e7fec7f9-ef74-45c2-8905-d3a65643c2b6"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Binary/f643d094-127a-4ce3-8ea5-95c31de661a7",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "377"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "ba1da786-a97a-4b2b-b1ec-acf3f48b595b"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "fedb3fa2-8e1d-4a7c-bd7e-0c2a775620cc"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCaW5hcnkiLCJpZCI6ImY2NDNkMDk0LTEyN2EtNGNlMy04ZWE1LTk1YzMxZGU2NjFhNyIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS40NzYrMDA6MDAifSwiY29udGVudFR5cGUiOiJ0ZXh0L3BsYWluIiwiZGF0YSI6IlJISWdRV3hpWlhKMElFUmhkbWx6SUdWNFlXMXBibVZrSUUxeklFRnNhV05sSUU1bGQyMWhiaUJoYm1RZ1ptOTFibVFnZEdoaGRDQjBhR1VnY0dGalpXMWhhMlZ5SUdseklHOXdaWEpoZEdsdVp5QndjbTl3WlhKc2VTQmhibVFnZEdobElHSnlaV0YwYUd4bGMzTnVaWE56SUdseklHUjFaU0IwYnlCb2FXZG9JR1psZG1WeUlHRnVaQ0JoYm5ocFpYUjVMZz09In0=",
+        "ContentLength": 377,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "770a7736-8f12-405e-8fce-539426d7be8c"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Location/5886da8d-d3ef-4ab6-879f-49ac7fa71f6f",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "365"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "9e88e654-a7d3-4e38-91b1-366570aa3c54"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "9e6fdaa4-d424-46a0-b11b-1afaa1387c47"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJMb2NhdGlvbiIsImlkIjoiNTg4NmRhOGQtZDNlZi00YWI2LTg3OWYtNDlhYzdmYTcxZjZmIiwibWV0YSI6eyJ2ZXJzaW9uSWQiOiIxIiwibGFzdFVwZGF0ZWQiOiIyMDI0LTA1LTA5VDE3OjQyOjAxLjU5OSswMDowMCJ9LCJuYW1lIjoiQ29tbXVuaXR5IEhlYWx0aCBhbmQgSG9zcGl0YWxzIiwidGVsZWNvbSI6W3sic3lzdGVtIjoicGhvbmUiLCJ2YWx1ZSI6IisxKDU1NSk1NTUtMTAwMyIsInVzZSI6IndvcmsifV0sImFkZHJlc3MiOnsibGluZSI6WyIzNTI1LCBOZXdiZXJyeSBBdmVudWUsIl0sImNpdHkiOiJQb3J0bGFuZCIsInN0YXRlIjoiT1IiLCJwb3N0YWxDb2RlIjoiOTcwMDYiLCJjb3VudHJ5IjoiVVMifX0=",
+        "ContentLength": 365,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "df97065b-7002-4aef-b950-61d5e442b36b"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Binary/ac25f79b-6073-4566-b728-e25190c60924",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "214"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "164d2d1d-18aa-4a22-b96f-b00acdd1fc0f"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "3c01fa1e-9a85-4b5f-92dc-cc01bfcec585"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCaW5hcnkiLCJpZCI6ImFjMjVmNzliLTYwNzMtNDU2Ni1iNzI4LWUyNTE5MGM2MDkyNCIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowNS42MTgrMDA6MDAifSwiY29udGVudFR5cGUiOiJhcHBsaWNhdGlvbi9wZGYiLCJkYXRhIjoiVkdocGN5QnBjeUJoSUdOc2FXNXBZMkZzSUc1dmRHVT0ifQ==",
+        "ContentLength": 214,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "37cf6d3b-8274-4f3a-8715-8cf6e620d9f9"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Binary/31160e40-f78c-4c83-bc13-d1ca8bfca4c6",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "333"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "867c8582-e038-4f8e-9082-32e9826b75cb"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "fa58bf5d-6468-45c9-98c4-c654a939f32e"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJCaW5hcnkiLCJpZCI6IjMxMTYwZTQwLWY3OGMtNGM4My1iYzEzLWQxY2E4YmZjYTRjNiIsIm1ldGEiOnsidmVyc2lvbklkIjoiMSIsImxhc3RVcGRhdGVkIjoiMjAyNC0wNS0wOVQxNzo0MjowMy42MTcrMDA6MDAifSwiY29udGVudFR5cGUiOiJ0ZXh0L3BsYWluIiwiZGF0YSI6IlRIVnVaM01nWVhKbElHNXZkQ0JqYkdWaGNpd2dZMkZ1Ym05MElISjFiR1VnYjNWMElFRnVaVzFwWVM0Z1QzUm9aWElnZEdWemRITWdZWEpsSUhKbGNYVnBjbVZrSUhSdklHUmxkR1Z5YldsdVpTQjBhR1VnY0hKbGMyVnVZMlVnYjNJZ1lXSnpaVzVqWlNCdlppQkJibVZ0YVdFdSJ9",
+        "ContentLength": 333,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "f1ca86c4-f3f8-4bad-840a-7d6fa3b767f8"
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": {
+          "Scheme": "https",
+          "Opaque": "",
+          "User": null,
+          "Host": "fhir-usa.sbx.unify.chbase.com",
+          "Path": "/Patient/47c1df49-98a3-470e-bc51-69c8773f4cbf",
+          "RawPath": "",
+          "OmitHost": false,
+          "ForceQuery": false,
+          "RawQuery": "",
+          "Fragment": "",
+          "RawFragment": ""
+        },
+        "Proto": "HTTP/1.1",
+        "ProtoMajor": 1,
+        "ProtoMinor": 1,
+        "Header": {},
+        "Body": "",
+        "ContentLength": 0,
+        "TransferEncoding": [],
+        "Close": false,
+        "Host": "fhir-usa.sbx.unify.chbase.com",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "Trailer": null,
+        "RemoteAddr": "",
+        "RequestURI": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "Proto": "HTTP/2.0",
+        "ProtoMajor": 2,
+        "ProtoMinor": 0,
+        "Header": {
+          "Content-Length": [
+            "1518"
+          ],
+          "Content-Type": [
+            "application/fhir+json; charset=utf-8"
+          ],
+          "Date": [
+            "Sat, 23 Nov 2024 14:26:53 GMT"
+          ],
+          "Etag": [
+            "W/\"1\""
+          ],
+          "Internaltraceid": [
+            "68186e1a-baa8-4bba-a40a-8767a97f247f"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains; preload"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Request-Id": [
+            "f9901582-2ce0-4b3d-842e-ca93700b6f18"
+          ],
+          "X-Xss-Protection": [
+            "1; mode=block"
+          ]
+        },
+        "Body": "eyJyZXNvdXJjZVR5cGUiOiJQYXRpZW50IiwiaWQiOiI0N2MxZGY0OS05OGEzLTQ3MGUtYmM1MS02OWM4NzczZjRjYmYiLCJtZXRhIjp7InZlcnNpb25JZCI6IjEiLCJsYXN0VXBkYXRlZCI6IjIwMjQtMDUtMDlUMTc6NDI6MDAuOTYrMDA6MDAifSwiZXh0ZW5zaW9uIjpbeyJleHRlbnNpb24iOlt7InVybCI6Im9tYkNhdGVnb3J5IiwidmFsdWVDb2RpbmciOnsic3lzdGVtIjoidXJuOm9pZDoyLjE2Ljg0MC4xLjExMzg4My42LjIzOCIsImNvZGUiOiIyMTA2LTMiLCJkaXNwbGF5IjoiV2hpdGUifX0seyJ1cmwiOiJkZXRhaWxlZCIsInZhbHVlQ29kaW5nIjp7InN5c3RlbSI6InVybjpvaWQ6Mi4xNi44NDAuMS4xMTM4ODMuNi4yMzgiLCJjb2RlIjoiMjEwOC05IiwiZGlzcGxheSI6IkV1cm9wZWFuIn19LHsidXJsIjoidGV4dCIsInZhbHVlU3RyaW5nIjoiV2hpdGUgRXVyb3BlYW4ifV0sInVybCI6Imh0dHA6Ly9obDcub3JnL2ZoaXIvdXMvY29yZS9TdHJ1Y3R1cmVEZWZpbml0aW9uL3VzLWNvcmUtcmFjZSJ9LHsiZXh0ZW5zaW9uIjpbeyJ1cmwiOiJvbWJDYXRlZ29yeSIsInZhbHVlQ29kaW5nIjp7InN5c3RlbSI6InVybjpvaWQ6Mi4xNi44NDAuMS4xMTM4ODMuNi4yMzgiLCJjb2RlIjoiMjE4Ni01IiwiZGlzcGxheSI6Ik5vdCBIaXNwYW5pYyBvciBMYXRpbm8ifX0seyJ1cmwiOiJ0ZXh0IiwidmFsdWVTdHJpbmciOiJOb3QgSGlzcGFuaWMgb3IgTGF0aW5vIn1dLCJ1cmwiOiJodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NvcmUvU3RydWN0dXJlRGVmaW5pdGlvbi91cy1jb3JlLWV0aG5pY2l0eSJ9XSwiaWRlbnRpZmllciI6W3sidXNlIjoib2ZmaWNpYWwiLCJzeXN0ZW0iOiJodHRwOi8vdGVybWlub2xvZ3kuaGw3Lm9yZy9Db2RlU3lzdGVtL3YyLTAyMDMiLCJ2YWx1ZSI6IjEyMzQ1Njc4OSJ9XSwibmFtZSI6W3sidXNlIjoib2ZmaWNpYWwiLCJ0ZXh0IjoiQWxpY2UgSm9uZXMgTmV3bWFuIiwiZmFtaWx5IjoiTmV3bWFuIiwiZ2l2ZW4iOlsiQWxpY2UiLCJKb25lcyJdfSx7InVzZSI6Im9sZCIsInRleHQiOiJBbGljaWEgSm9uZXMgTmV3bWFuIiwiZmFtaWx5IjoiTmV3bWFuIiwiZ2l2ZW4iOlsiQWxpY2lhIiwiSm9uZXMiXX1dLCJ0ZWxlY29tIjpbeyJzeXN0ZW0iOiJwaG9uZSIsInZhbHVlIjoiKzE1NTU3MjMxNTQ0IiwidXNlIjoiaG9tZSJ9LHsic3lzdGVtIjoicGhvbmUiLCJ2YWx1ZSI6IisxNTU1Nzc3MTIzNCIsInVzZSI6Im1vYmlsZSJ9XSwiZ2VuZGVyIjoiZmVtYWxlIiwiYmlydGhEYXRlIjoiMTk3MC0wNS0wMSIsImFkZHJlc3MiOlt7InVzZSI6ImhvbWUiLCJsaW5lIjpbIjEzNTcsIEFtYmVyIERyLCJdLCJjaXR5IjoiQmVhdmVydG9uIiwic3RhdGUiOiJPUiIsInBvc3RhbENvZGUiOiI5NzAwNiIsImNvdW50cnkiOiJVUyJ9XSwiY29tbXVuaWNhdGlvbiI6W3sibGFuZ3VhZ2UiOnsiY29kaW5nIjpbeyJzeXN0ZW0iOiJ1cm46aWV0ZjpiY3A6NDciLCJjb2RlIjoiZW4iLCJkaXNwbGF5IjoiRW5nbGlzaCJ9XSwidGV4dCI6IkVuZ2xpc2gifSwicHJlZmVycmVkIjp0cnVlfV19",
+        "ContentLength": 1518,
+        "TransferEncoding": [],
+        "Close": false,
+        "Uncompressed": false,
+        "Trailer": null,
+        "TLS": null,
+        "Request": null
+      },
+      "ErrType": null,
+      "ErrMsg": null,
+      "UUID": "4cffcbce-2c6a-4763-ae7b-144e5260efca"
+    }
+  ]
+}
