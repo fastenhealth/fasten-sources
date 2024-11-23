@@ -3,7 +3,8 @@ package base
 import (
 	"crypto/tls"
 	"fmt"
-	"github.com/seborama/govcr"
+	govcr "github.com/seborama/govcr/v15"
+	"github.com/seborama/govcr/v15/cassette/track"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -43,21 +44,42 @@ func OAuthVcrSetup(t *testing.T, enableRecording bool, accessToken ...string) *h
 		Transport: &customTransport,
 	}
 
-	vcrConfig := govcr.VCRConfig{
-		Logging:      true,
-		CassettePath: path.Join("testdata", "govcr-fixtures"),
-		Client:       &insecureClient,
-
-		//this line ensures that we do not attempt to create new recordings.
-		//Comment this out if you would like to make recordings.
-		DisableRecording: !enableRecording,
+	//this line ensures that we do not attempt to create new recordings.
+	//Set enableRecording if you would like to make recordings.
+	recordMode := govcr.WithOfflineMode()
+	if enableRecording {
+		recordMode = govcr.WithLiveOnlyMode()
 	}
 
-	// HTTP headers are case-insensitive
-	vcrConfig.RequestFilters.Add(govcr.RequestDeleteHeaderKeys("User-Agent", "user-agent"))
+	vcrConfig := govcr.NewVCR(
+		govcr.NewCassetteLoader(path.Join("testdata", "govcr-fixtures", t.Name()+".cassette")),
+		govcr.WithTrackRecordingMutators(track.ResponseDeleteTLS()),
+		govcr.WithTrackReplayingMutators(track.ResponseDeleteTLS()),
+		govcr.WithClient(&insecureClient),
+		recordMode,
+	)
 
-	vcr := govcr.NewVCR(t.Name(), &vcrConfig)
-	return vcr.Client
+	vcrConfig.SetRequestMatchers(
+		govcr.DefaultMethodMatcher,
+		govcr.DefaultURLMatcher,
+		func(httpRequest, trackRequest *track.Request) bool {
+			// we can safely mutate our inputs:
+			// mutations affect other RequestMatcher's but _not_ the
+			// original HTTP request or the cassette Tracks.
+			httpRequest.Header.Del("X-Custom-Timestamp")
+			trackRequest.Header.Del("X-Custom-Timestamp")
+
+			// HTTP headers are case-insensitive
+			httpRequest.Header.Del("User-Agent")
+			trackRequest.Header.Del("User-Agent")
+			httpRequest.Header.Del("user-agent")
+			trackRequest.Header.Del("user-agent")
+
+			return govcr.DefaultHeaderMatcher(httpRequest, trackRequest)
+		},
+	)
+
+	return vcrConfig.HTTPClient()
 }
 
 // helpers
