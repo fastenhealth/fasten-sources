@@ -14,8 +14,7 @@ import (
 )
 
 func TestGetSourceClientCerner_SyncAll(t *testing.T) {
-	// TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
+	t.Skipf("skipping test, Cerner sandbox is broken, recording missing.")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -32,7 +31,7 @@ func TestGetSourceClientCerner_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeCerner)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("3290e5d7-978e-42ad-b661-1cf8a01a989c")
 
-	httpClient := base.OAuthVcrSetup(t, false)
+	httpClient := base.OAuthVcrSetup(t, true)
 	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
 
 	//test
