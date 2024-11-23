@@ -14,8 +14,6 @@ import (
 )
 
 func TestGetSourceClientMedhost_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -28,7 +26,7 @@ func TestGetSourceClientMedhost_SyncAll(t *testing.T) {
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("de9eaaedc563da3f48472b9c14669652feb2f16c00b17670aae0fe0c778e71ae")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("06da68a7d680692b380ce451dbcab682bf3ba63fe634e6db1892bb6c3b060623")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeMedhost)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("9e5d5b7a-880f-481b-8ae4-77a3d24cfa49")
 
@@ -41,6 +39,6 @@ func TestGetSourceClientMedhost_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 5, resp.TotalResources)
-	require.Equal(t, 5, len(resp.UpdatedResources))
+	require.Equal(t, 139, resp.TotalResources)
+	require.Equal(t, 141, len(resp.UpdatedResources))
 }

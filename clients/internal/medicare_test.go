@@ -14,8 +14,7 @@ import (
 )
 
 func TestGetSourceClientMedicare_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
+	t.Skipf("skipping test, medicare login is broken, recording missing.")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{

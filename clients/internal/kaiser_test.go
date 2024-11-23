@@ -14,8 +14,6 @@ import (
 )
 
 func TestGetSourceClientKaiser_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{

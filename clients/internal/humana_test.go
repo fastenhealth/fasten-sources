@@ -14,8 +14,6 @@ import (
 )
 
 func TestGetSourceClientHumana_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -41,6 +39,6 @@ func TestGetSourceClientHumana_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 140, resp.TotalResources)
-	require.Equal(t, 140, len(resp.UpdatedResources))
+	require.Equal(t, 197, resp.TotalResources)
+	require.Equal(t, 197, len(resp.UpdatedResources))
 }

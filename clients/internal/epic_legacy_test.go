@@ -14,8 +14,6 @@ import (
 )
 
 func TestGetSourceClientEpicLegacy_SyncAll(t *testing.T) {
-	//TODO: need to regenerate with _count
-	// t.Skipf("skipping test, need to regenerate with _count")
 	t.Parallel()
 	//setup
 	testLogger := logrus.WithFields(logrus.Fields{
@@ -24,11 +22,11 @@ func TestGetSourceClientEpicLegacy_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(13).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(11).Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("erXuFYUfucBZaryVksYEcMg3")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("eq081-VQEgP8drUUqCWzHfw3")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEpicLegacy)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("fc94bfc7-684d-4e4d-aa6e-ceec01c21c81")
 
@@ -41,6 +39,6 @@ func TestGetSourceClientEpicLegacy_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 17, resp.TotalResources)
-	require.Equal(t, 13, len(resp.UpdatedResources))
+	require.Equal(t, 13, resp.TotalResources)
+	require.Equal(t, 11, len(resp.UpdatedResources))
 }

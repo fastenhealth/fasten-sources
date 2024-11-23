@@ -24,7 +24,7 @@ func TestGetSourceClientChBase_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(66).Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
