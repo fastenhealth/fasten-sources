@@ -28,6 +28,9 @@ type SourceDefinitionOptions struct {
 	Env pkg.FastenLighthouseEnvType
 	//Optional - sets the Client ID for the SourceConfig
 	ClientIdLookupFn func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string
+
+	//Optional - post-Populate hook can be used to further customize the SourceDefinition
+	PostPopulateFn func(*models.LighthouseSourceDefinition)
 }
 
 func WithPlatformType(platformType pkg.PlatformType) func(*SourceDefinitionOptions) {
@@ -59,6 +62,12 @@ func WithClientIdLookup(lookup map[pkg.PlatformType]string) func(*SourceDefiniti
 func WithClientIdLookupFn(lookup func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string) func(*SourceDefinitionOptions) {
 	return func(o *SourceDefinitionOptions) {
 		o.ClientIdLookupFn = lookup
+	}
+}
+
+func WithPostPopulateFn(postPopulateFn func(*models.LighthouseSourceDefinition)) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.PostPopulateFn = postPopulateFn
 	}
 }
 
@@ -108,6 +117,10 @@ func GetSourceDefinition(
 		}
 		//platform environment specific customizations happen in Populate method
 		platformDefinition.Populate(&endpoint, options.Env, options.ClientIdLookupFn(platformType, options.EndpointId, options.Env))
+
+		if options.PostPopulateFn != nil {
+			options.PostPopulateFn(platformDefinition)
+		}
 
 		return platformDefinition, err
 	} else {
