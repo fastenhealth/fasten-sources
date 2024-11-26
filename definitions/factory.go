@@ -19,7 +19,7 @@ import (
 //go:embed platform/*.yaml
 var platformFs embed.FS
 
-type GetSourceConfigOptions struct {
+type SourceDefinitionOptions struct {
 	//One of the following is required: PlatformType or EndpointId
 	PlatformType pkg.PlatformType
 	EndpointId   string
@@ -27,12 +27,50 @@ type GetSourceConfigOptions struct {
 	//Optional - filter's the endpoint id by the environment (sandbox, prod).
 	Env pkg.FastenLighthouseEnvType
 	//Optional - sets the Client ID for the SourceConfig
-	ClientIdLookup map[pkg.PlatformType]string
+	ClientIdLookupFn func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string
+}
+
+func WithPlatformType(platformType pkg.PlatformType) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.PlatformType = platformType
+	}
+}
+
+func WithEndpointId(endpointId string) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.EndpointId = endpointId
+	}
+}
+
+func WithEnv(env pkg.FastenLighthouseEnvType) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.Env = env
+	}
+}
+
+func WithClientIdLookup(lookup map[pkg.PlatformType]string) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.ClientIdLookupFn = func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string {
+			return lookup
+		}
+	}
+}
+
+func WithClientIdLookupFn(lookup func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		o.ClientIdLookupFn = lookup
+	}
 }
 
 func GetSourceDefinition(
-	options GetSourceConfigOptions,
+	defOptions ...func(options *SourceDefinitionOptions),
+	// options SourceDefinitionOptions,
 ) (*models.LighthouseSourceDefinition, error) {
+
+	options := &SourceDefinitionOptions{}
+	for _, o := range defOptions {
+		o(options)
+	}
 
 	if len(options.PlatformType) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
@@ -69,7 +107,7 @@ func GetSourceDefinition(
 			return nil, fmt.Errorf("error retrieving platform definition (%s): %w", platformType, err)
 		}
 		//platform environment specific customizations happen in Populate method
-		platformDefinition.Populate(&endpoint, options.Env, options.ClientIdLookup)
+		platformDefinition.Populate(&endpoint, options.Env, options.ClientIdLookupFn(platformType, options.EndpointId, options.Env))
 
 		return platformDefinition, err
 	} else {
