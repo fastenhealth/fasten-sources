@@ -76,7 +76,14 @@ func GetSourceDefinition(
 	// options SourceDefinitionOptions,
 ) (*models.LighthouseSourceDefinition, error) {
 
-	options := &SourceDefinitionOptions{}
+	options := &SourceDefinitionOptions{
+		ClientIdLookupFn: func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string {
+			return nil //noop
+		},
+		PostPopulateFn: func(definition *models.LighthouseSourceDefinition) {
+			return //noop
+		},
+	}
 	for _, o := range defOptions {
 		o(options)
 	}
