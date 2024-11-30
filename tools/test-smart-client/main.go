@@ -380,9 +380,7 @@ func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger 
 	bgContext := context.WithValue(context.Background(), "AUTH_USERNAME", "temp")
 
 	//check if a definition exists for this endpoint/platform
-	if existingDef, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: requestData.SourceDefinition.Id,
-	}); err == nil && existingDef != nil {
+	if existingDef, err := definitions.GetSourceDefinition(definitions.WithEndpointId(requestData.SourceDefinition.Id)); err == nil && existingDef != nil {
 		logger.Infof("found existing definition for %s: %v", requestData.SourceDefinition.Id, existingDef)
 		//an exsting definition was found for this platform type, lets add some of the options to this custom definition
 		requestData.SourceDefinition.ClientHeaders = existingDef.ClientHeaders

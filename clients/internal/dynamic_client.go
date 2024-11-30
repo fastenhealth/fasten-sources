@@ -19,10 +19,10 @@ type dynamicSourceClient struct {
 func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 
 	//get the endpoint definition
-	endpointDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: sourceCreds.GetEndpointId(),
-		Env:        env,
-	})
+	endpointDefinition, err := definitions.GetSourceDefinition(
+		definitions.WithEndpointId(sourceCreds.GetEndpointId()),
+		definitions.WithEnv(env),
+	)
 	if err != nil {
 		return nil, err
 	}

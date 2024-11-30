@@ -52,9 +52,7 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 		"type": "test",
 	})
 
-	cignaSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "6c0454af-1631-4c4d-905d-5710439df983",
-	})
+	cignaSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("6c0454af-1631-4c4d-905d-5710439df983"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cignaSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
@@ -88,9 +86,7 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 		"type": "test",
 	})
 
-	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
-	})
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
@@ -123,9 +119,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 		"type": "test",
 	})
 
-	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
-	})
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
@@ -174,9 +168,7 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 		"type": "test",
 	})
 
-	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
-	})
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
@@ -221,9 +213,7 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 		"type": "test",
 	})
 
-	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "3290e5d7-978e-42ad-b661-1cf8a01a989c",
-	})
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
@@ -267,9 +257,7 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	medicareSandboxDefinition, err := definitions.GetSourceDefinition(definitions.GetSourceConfigOptions{
-		EndpointId: "6ae6c14e-b927-4ce0-862f-91123cb8d774",
-	})
+	medicareSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("6ae6c14e-b927-4ce0-862f-91123cb8d774"))
 	require.NoError(t, err)
 
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, medicareSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
