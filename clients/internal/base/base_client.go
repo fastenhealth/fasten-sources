@@ -130,14 +130,14 @@ func (c *SourceClientBase) GetSourceCredential() models.SourceCredential {
 }
 
 func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClientRefreshOptions)) error {
-	if c.SourceClientOptions.TestMode {
-		//if test mode is enabled, we cannot refresh the access token
-		return nil
-	}
-
 	refreshOptions := &models.SourceClientRefreshOptions{}
 	for _, o := range options {
 		o(refreshOptions)
+	}
+
+	if !refreshOptions.Force && c.SourceClientOptions.TestMode {
+		//if not Forced, and test mode is enabled, we cannot refresh the access token
+		return nil
 	}
 
 	c.refreshMutex.Lock()
@@ -187,7 +187,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 
 		if c.SourceCredential.IsDynamicClient() {
 			c.Logger.Info("refreshing dynamic client...")
-			err := c.SourceCredential.RefreshDynamicClientAccessToken()
+			err := c.SourceCredential.RefreshDynamicClientAccessToken(c.SourceClientOptions.TestHttpClient)
 			if err != nil {
 				c.Logger.Error("error refreshing dynamic client: ", err)
 				return err

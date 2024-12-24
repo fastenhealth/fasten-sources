@@ -302,7 +302,7 @@ func (s *fakeSourceCredential) IsDynamicClient() bool {
 	return false
 }
 
-func (s *fakeSourceCredential) RefreshDynamicClientAccessToken() error {
+func (s *fakeSourceCredential) RefreshDynamicClientAccessToken(testHttpClient ...*http.Client) error {
 	return nil
 }
 

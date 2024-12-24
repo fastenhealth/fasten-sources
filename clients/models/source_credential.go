@@ -1,6 +1,9 @@
 package models
 
-import "github.com/fastenhealth/fasten-sources/pkg"
+import (
+	"github.com/fastenhealth/fasten-sources/pkg"
+	"net/http"
+)
 
 // this is actually an interface to a pointer receiver
 //
@@ -21,5 +24,5 @@ type SourceCredential interface {
 
 	SetTokens(accessToken string, refreshTokens string, expiresAt int64)
 	IsDynamicClient() bool
-	RefreshDynamicClientAccessToken() error
+	RefreshDynamicClientAccessToken(testHttpClient ...*http.Client) error
 }
