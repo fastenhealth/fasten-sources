@@ -31,6 +31,9 @@ type PatientAccessBrand struct {
 	// List of locations for the organization
 	// These should be the locations where the organization has a physical presence, e.g., a hospital or clinic"
 	Locations []datatypes.Address `json:"locations,omitempty" yaml:"locations,omitempty" validate:"omitempty,dive"`
+	//List of contact details for the organization
+	// These should be the contact details for the organization, e.g., phone number, email, etc
+	Telecom []datatypes.Telecom `json:"telecom,omitempty" yaml:"telecom,omitempty" validate:"omitempty,dive"`
 	// Patient Access Details
 	// These must be references to Patient Access Portal resource Ids
 	PortalsIds []string `json:"portal_ids" yaml:"portal_ids" validate:"required,unique,dive,uuid"`
