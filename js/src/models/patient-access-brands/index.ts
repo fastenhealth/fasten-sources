@@ -43,6 +43,11 @@ export interface PatientAccessBrand {
    */
   locations?: any /* datatypes.Address */[];
   /**
+   * List of contact details for the organization
+   * These should be the contact details for the organization, e.g., phone number, email, etc
+   */
+  telecom?: any /* datatypes.Telecom */[];
+  /**
    * Patient Access Details
    * These must be references to Patient Access Portal resource Ids
    */
