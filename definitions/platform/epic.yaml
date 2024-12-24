@@ -1,4 +1,4 @@
-# MANUALLY POPULATED
+# MANUALLY POPULATED - this should mirror epic-legacy
 platform_type: epic
 
 scopes_supported:
@@ -15,9 +15,12 @@ response_modes_supported:
 code_challenge_methods_supported:
   - S256
 confidential: false
-dynamic_client_registration_mode: 'user-authenticated'
 cors_relay_required: false
-documentation: https://fhir.epic.com/Documentation?docId=testpatients
+documentation: |
+  https://fhir.epic.com/Documentation?docId=testpatients
+  
+  This client is used for Epic/MyChart installations that do not support dynamic client registration:
+
 client_headers:
   Accept: "application/json+fhir"
 missing_op_patient_everything: true
