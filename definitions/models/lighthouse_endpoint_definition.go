@@ -67,7 +67,7 @@ type LighthouseSourceDefinition struct {
 func (def *LighthouseSourceDefinition) Populate(
 	endpoint *catalog.PatientAccessEndpoint,
 	env pkg.FastenLighthouseEnvType,
-	clientIdLookup map[pkg.PlatformType]string,
+	clientId string, //should be populated via the ClientIdLookupFn
 ) {
 
 	//must be done first
@@ -116,7 +116,7 @@ func (def *LighthouseSourceDefinition) Populate(
 	//Common defaults. All customizations should be above this line
 	def.Issuer = def.Url
 	// retrieve client-id, if available
-	if clientId, clientIdOk := clientIdLookup[def.PlatformType]; clientIdOk {
+	if clientId != "" {
 		def.ClientId = clientId
 	}
 	def.RedirectUri = pkg.GetCallbackEndpoint(string(def.PlatformType))

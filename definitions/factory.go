@@ -27,7 +27,7 @@ type SourceDefinitionOptions struct {
 	//Optional - filter's the endpoint id by the environment (sandbox, prod).
 	Env pkg.FastenLighthouseEnvType
 	//Optional - sets the Client ID for the SourceConfig
-	ClientIdLookupFn func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string
+	ClientIdLookupFn func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) string
 
 	//Optional - post-Populate hook can be used to further customize the SourceDefinition
 	PostPopulateFn func(*models.LighthouseSourceDefinition)
@@ -51,15 +51,20 @@ func WithEnv(env pkg.FastenLighthouseEnvType) func(*SourceDefinitionOptions) {
 	}
 }
 
+// deprecated
 func WithClientIdLookup(lookup map[pkg.PlatformType]string) func(*SourceDefinitionOptions) {
 	return func(o *SourceDefinitionOptions) {
-		o.ClientIdLookupFn = func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string {
-			return lookup
+		o.ClientIdLookupFn = func(platformType pkg.PlatformType, endpointId string, envType pkg.FastenLighthouseEnvType) string {
+			if clientId, ok := lookup[platformType]; ok {
+				return clientId
+			} else {
+				return "" //noop
+			}
 		}
 	}
 }
 
-func WithClientIdLookupFn(lookup func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string) func(*SourceDefinitionOptions) {
+func WithClientIdLookupFn(lookup func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) string) func(*SourceDefinitionOptions) {
 	return func(o *SourceDefinitionOptions) {
 		o.ClientIdLookupFn = lookup
 	}
@@ -77,8 +82,8 @@ func GetSourceDefinition(
 ) (*models.LighthouseSourceDefinition, error) {
 
 	options := &SourceDefinitionOptions{
-		ClientIdLookupFn: func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) map[pkg.PlatformType]string {
-			return nil //noop
+		ClientIdLookupFn: func(pkg.PlatformType, string, pkg.FastenLighthouseEnvType) string {
+			return "" //noop
 		},
 		PostPopulateFn: func(definition *models.LighthouseSourceDefinition) {
 			return //noop
