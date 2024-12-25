@@ -92,5 +92,12 @@ body:
         - label: production - endpoint catalog/health system info published
         - label: production - no fees
         - label: production - automatic client distribution
-        
+  - type: textarea
+    id: status-updates
+    attributes:
+      label: Status Updates
+      description: Use the following field to add Notes and status updates in a list. Ensure that each item is includes a date.
+      placeholder: ex. - 12/24/2024 - Requested Developer Portal Access via devs@example.com
+    validations:
+      required: false          
         
