@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/base64"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
@@ -190,7 +189,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			err := c.SourceCredential.RefreshDynamicClientAccessToken(c.SourceClientOptions.TestHttpClient)
 			if err != nil {
 				c.Logger.Error("error refreshing dynamic client: ", err)
-				return err
+				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
 
 			//update the token with newly refreshed data
@@ -207,7 +206,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			newToken, err := src.Token() // this actually goes and renews the tokens
 			if err != nil {
 				log.Printf("An error occurred during token refresh: %v", err)
-				return err
+				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
 			log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
 			if newToken.AccessToken != token.AccessToken {
@@ -226,7 +225,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			}
 		} else {
 			c.Logger.Error("no refresh token available, and not dynamic client. User must re-authenticate")
-			return errors.New("no refresh token available, and not dynamic client. User must re-authenticate")
+			return fmt.Errorf("%w: no refresh token available, and not dynamic client. User must re-authenticate", pkg.ErrSMARTTokenRefreshFailure)
 		}
 	}
 
@@ -276,7 +275,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	resp, err := c.OauthClient.Do(req)
 	if err != nil {
 		c.LoggerDebugResponse(resp, true)
-		return "", err
+		return "", fmt.Errorf("%w: %v", pkg.ErrResourceHttpError, err)
 	}
 
 	defer resp.Body.Close()
@@ -288,7 +287,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 			bodyContent = bodyContent[:600]
 		}
 		c.LoggerDebugResponse(resp, true)
-		return "", fmt.Errorf("An error occurred during request %s - %d - %s [%s]", resourceUrl, resp.StatusCode, resp.Status, bodyContent)
+		return "", fmt.Errorf("%w: an error occurred during request %s - %d - %s [%s]", pkg.ErrResourceHttpError, resourceUrl, resp.StatusCode, resp.Status, bodyContent)
 	}
 	contentTypeHeader := resp.Header.Get("Content-Type")
 	if !isContentTypeJsonAnalog(contentTypeHeader) {
@@ -306,12 +305,12 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 			"data":         base64.StdEncoding.EncodeToString(b),
 		})
 		if err != nil {
-			return "", fmt.Errorf("an error occurred while reading non-JSON response body: %s", err)
+			return "", fmt.Errorf("%w: an error occurred while reading non-JSON response body: %s", pkg.ErrResourceInvalidContent, err)
 		}
 
 		err = json.Unmarshal(binaryResourceJsonBytes, decodeModelPtr)
 		if err != nil {
-			return "", fmt.Errorf("an error occurred while creating Binary response body: %s", err)
+			return "", fmt.Errorf("%w: an error occurred while creating Binary response body: %s", pkg.ErrResourceInvalidContent, err)
 		}
 
 	} else {
@@ -330,7 +329,7 @@ func UnmarshalJson(r io.Reader, decodeModelPtr interface{}) error {
 	//decoder.DisallowUnknownFields() //make sure we throw an error if unknown fields are present.
 	err := decoder.Decode(decodeModelPtr)
 	if err != nil {
-		return err
+		return fmt.Errorf("%w: %v", pkg.ErrResourceInvalidContent, err)
 	}
 	return err
 }
