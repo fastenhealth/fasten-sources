@@ -395,7 +395,7 @@ func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, err
 
 	patient := fhir401.Patient{}
 	_, err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
-	return patient, err
+	return patient, fmt.Errorf("%w: %v", pkg.ErrResourcePatientFailure, err)
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
