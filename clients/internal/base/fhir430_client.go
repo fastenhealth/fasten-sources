@@ -42,7 +42,10 @@ func (c *SourceClientFHIR430) GetPatient(patientId string) (*fhir430.Patient, er
 
 	patient := fhir430.Patient{}
 	_, err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
-	return &patient, fmt.Errorf("%w: %v", pkg.ErrResourcePatientFailure, err)
+	if err != nil {
+		return &patient, fmt.Errorf("%w: %v", pkg.ErrResourcePatientFailure, err)
+	}
+	return &patient, nil
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
