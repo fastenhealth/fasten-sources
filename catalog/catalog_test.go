@@ -2,13 +2,14 @@ package catalog_test
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/fastenhealth/fasten-sources/catalog"
 	"github.com/fastenhealth/fasten-sources/definitions"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	modelsCatalog "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestCatalog_GetBrands(t *testing.T) {
@@ -86,9 +87,8 @@ func TestCatalog_GetPortals_WithSandboxMode(t *testing.T) {
 	//assert
 	require.NoError(t, err)
 	require.LessOrEqual(t, len(portals), 100)
-
 	for _, portal := range portals {
-		require.Len(t, portal.EndpointIds, 1)
+		require.LessOrEqual(t, len(portal.EndpointIds), 2)
 	}
 }
 
@@ -200,9 +200,38 @@ func TestCatalog_GetPortal_KaiserMultipleEndpoints_Sandbox(t *testing.T) {
 	}
 	portals, err := catalog.GetPortals(&opts)
 	require.NoError(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
-
 	require.Len(t, portals, 1)
 	for _, portal := range portals {
-		require.Len(t, portal.EndpointIds, 1)
+		require.Len(t, portal.EndpointIds, 2)
 	}
+}
+
+func TestCatalog_GetEndpoints_WithValidEndpoint_Id(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "33c76b01-4ac1-4889-8403-2be0d44f88b6",
+	}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err)
+	require.Len(t, endpoints, 1)
+}
+
+func TestCatalog_GetEndpoints_WithValidEndpointId(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "57b8f926-f358-4bfe-b71b-e6eff720fbe5",
+	}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err)
+	require.Len(t, endpoints, 1)
+}
+
+func TestCatalog_GetEndpoints_InValidEndpointId(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "57b8f926-f358-4bfe-b71b-e6eff720fbe4",
+	}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.Error(t, err, "endpoint with id 57b8f926-f358-4bfe-b71b-e6eff720fbe4 not found")
+	require.Len(t, endpoints, 0)
 }

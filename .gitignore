@@ -16,7 +16,7 @@
 # vendor/
 
 .DS_Store
-
+/vendor
 js/dist
 js/node_modules
 

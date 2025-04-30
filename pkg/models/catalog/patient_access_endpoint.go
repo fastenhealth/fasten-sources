@@ -23,6 +23,9 @@ type PatientAccessEndpoint struct {
 	// URL for the endpoint, must have trailing slash
 	Url string `json:"url" yaml:"url" validate:"required,http_url,endswith=/"`
 
+	// URL for the endpoint, must have trailing slash
+	EndpointIds []string `json:"endpoint_ids,omitempty" validate:"required,dive,uuid"`
+
 	//oauth endpoints
 	AuthorizationEndpoint string `json:"authorization_endpoint,omitempty" yaml:"authorization_endpoint,omitempty" validate:"required_if=PatientAccessEndpoint.Status active,omitempty,http_url"`
 	TokenEndpoint         string `json:"token_endpoint,omitempty" yaml:"token_endpoint,omitempty" validate:"required_if=PatientAccessEndpoint.Status active,omitempty,http_url"`
