@@ -219,8 +219,9 @@ func TestCatalog_GetEndpoints_WithValidEndpoint_Id(t *testing.T) {
 func TestCatalog_GetEndpoints_WithValidEndpointId(t *testing.T) {
 	//setup
 	opts := modelsCatalog.CatalogQueryOptions{
-		Id: "57b8f926-f358-4bfe-b71b-e6eff720fbe5",
+		Id: "57209ef4-0e21-4e27-ae52-b23f395a30f5",
 	}
+	// 030f4652-65b5-4fa8-a005-4a2a2ed124b8
 	endpoints, err := catalog.GetEndpoints(&opts)
 	require.NoError(t, err)
 	require.Len(t, endpoints, 1)
