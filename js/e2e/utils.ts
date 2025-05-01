@@ -1,4 +1,4 @@
-import {LighthouseEndpointDefinition} from '../src';
+import {LighthouseEndpointDefinition} from '@shared-library';
 
 export const lighthouseEndpointLookup = {
     'sandbox': 'https://lighthouse.fastenhealth.com/sandbox/',

@@ -13,7 +13,6 @@
   "dependencies": {
     "@panva/oauth4webapi": "1.2.0"
   },
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },

@@ -1,7 +1,7 @@
 import * as Oauth from '@panva/oauth4webapi';
-import {uuidV4} from '../utils/uuid';
-import {SourceState} from '../models/source-state';
-import {LighthouseEndpointDefinition} from '../models/lighthouse';
+import {uuidV4} from '@shared-library';
+import {SourceState} from '@shared-library';
+import {LighthouseEndpointDefinition} from '@shared-library';
 
 export async function generateSourceAuthorizeUrl(lighthouseSource: LighthouseEndpointDefinition, reconnectSourceId?: string): Promise<{url: URL, sourceState: SourceState}> {
     const state = uuidV4()

@@ -1,12 +1,32 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "moduleResolution":"node",
+    "strictPropertyInitialization": false,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "paths": {
+      "@shared-library": [
+        "./src/public-api",
+      ]
+    },
     "module": "es2020",
     "target": "es2020",
-    "declaration": true,
-    "outDir": "./dist"
-  },
-  "include": [
-    "src/**/*"
-  ],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "useDefineForClassFields": false
+  }
 }

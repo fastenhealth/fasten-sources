@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import {getEndpointDefinition} from '../utils';
-import {generateSourceAuthorizeUrl} from '../../src/connect/authorization-url';
+import { generateSourceAuthorizeUrl } from '@shared-library';
 
 test("Kaiser Login Flow", async ({page}, testInfo) => {
     try {
