@@ -31,9 +31,10 @@ test("MedHost Login Flow", async ({ page }, testInfo) => {
         await page.keyboard.type(process.env.PW_MEDHOST_PASSWORD);
         await page.click('#signin');
 
-        await page.waitForSelector('text=Authorize Application for')
-        await page.getByLabel('Select All Privileges').check();
-        await page.getByRole('button', { name: 'Authorize' }).click();
+        // These are only required the first time.
+        // await page.waitForSelector('text=Authorize Application for')
+        // await page.getByLabel('Select All Privileges').check();
+        // await page.getByRole('button', { name: 'Authorize' }).click();
 
         // If successful, redirect page should now be visible
         await page.waitForSelector("text=Example Domain");
