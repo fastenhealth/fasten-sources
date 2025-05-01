@@ -32,10 +32,10 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 21
+          node-version: 23
           registry-url: 'https://registry.npmjs.org'
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Test
         run: |
           make test-js
@@ -48,7 +48,7 @@ jobs:
       STATIC: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Test
         run: |
           go install github.com/golang/mock/mockgen@v1.6.0
@@ -79,7 +79,7 @@ jobs:
       id-token: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Log into registry ${{ env.REGISTRY }}
