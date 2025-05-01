@@ -5,6 +5,9 @@ export const lighthouseEndpointLookup = {
     'prod': 'https://lighthouse.fastenhealth.com/v1/'
 }
 
+
+export const connectAPIEndpoint = "https://api.connect.fastenhealth.com/v1/"
+
 export async function getEndpointDefinition(endpoint_id: string): Promise<LighthouseEndpointDefinition> {
 
     let lighthouseEndpoint = lighthouseEndpointLookup['sandbox']

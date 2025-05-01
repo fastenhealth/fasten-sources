@@ -228,11 +228,11 @@ export default {
     //     connectOptions: { wsEndpoint: getCdpEndpoint('playwright-firefox:Windows 11', 'test3') }
     //   },
     // }
-    // {
-    //   name: 'wip',
-    //   testMatch: /.*medhost_test.ts/,
-    //   use: { ...devices['Desktop Chrome'] },
-    // }
+    ,{
+      name: 'wip',
+      testMatch: /.*practicefusion_test.ts/,
+      use: { ...devices['Desktop Chrome'] },
+    }
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
