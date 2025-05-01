@@ -32,9 +32,9 @@ test("Cerner Login Flow", async ({ page }, testInfo) => {
         await page.click('#proceedButton');
 
         // We are on the Select Patient page.
-        await page.waitForSelector("text=SMARTS II, NANCYS II (Self, 34)");
+        await page.waitForSelector("text=Allow access to the record(s) of:");
         await expect(page).toHaveTitle("Authorization Needed");
-        await page.click("label[for='12724066']", { force: true, delay: 500 });
+        // await page.click("label[for='12724066']", { force: true, delay: 500 });
         await page.click("#allowButton");
 
 
