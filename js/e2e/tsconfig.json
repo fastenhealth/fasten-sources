@@ -1,9 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/e2e",
-    "module": "commonjs",
-    "target": "es2020",
+    "outDir": "./dist-e2e",
     "types": [
       "jasmine",
       "jasminewd2",

@@ -1,6 +1,6 @@
 // global-teardown.js
 import { bsLocal } from './browserstack.config';
-import { promisify } from'util';
+import { promisify } from 'util';
 const sleep = promisify(setTimeout);
 export default async function teardown(){
   // Stop the Local instance after your test run is completed, i.e after driver.quit

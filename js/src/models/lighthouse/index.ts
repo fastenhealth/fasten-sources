@@ -1,4 +1,4 @@
-import {PatientAccessEndpoint} from '../patient-access-brands';
+import {PatientAccessEndpoint} from '@shared-library';
 
 export interface LighthouseEndpointDefinition extends PatientAccessEndpoint {
   brand_id: string

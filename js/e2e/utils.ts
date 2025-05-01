@@ -1,9 +1,12 @@
-import {LighthouseEndpointDefinition} from '../src';
+import {LighthouseEndpointDefinition} from '@shared-library';
 
 export const lighthouseEndpointLookup = {
     'sandbox': 'https://lighthouse.fastenhealth.com/sandbox/',
     'prod': 'https://lighthouse.fastenhealth.com/v1/'
 }
+
+
+export const connectAPIEndpoint = "https://api.connect.fastenhealth.com/v1/"
 
 export async function getEndpointDefinition(endpoint_id: string): Promise<LighthouseEndpointDefinition> {
 

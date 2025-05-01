@@ -1,7 +1,8 @@
 import * as Oauth from '@panva/oauth4webapi';
-import {uuidV4} from '../utils/uuid';
-import {SourceState} from '../models/source-state';
-import {LighthouseEndpointDefinition} from '../models/lighthouse';
+import {uuidV4} from '@shared-library';
+import {SourceState} from '@shared-library';
+import {LighthouseEndpointDefinition} from '@shared-library';
+import {connectAPIEndpoint} from "../../e2e/utils";
 
 export async function generateSourceAuthorizeUrl(lighthouseSource: LighthouseEndpointDefinition, reconnectSourceId?: string): Promise<{url: URL, sourceState: SourceState}> {
     const state = uuidV4()
@@ -44,6 +45,33 @@ export async function generateSourceAuthorizeUrl(lighthouseSource: LighthouseEnd
 
         authorizationUrl.searchParams.set('code_challenge', codeChallenge);
         authorizationUrl.searchParams.set('code_challenge_method', codeChallengeMethod);
+    }
+
+    return {url: authorizationUrl, sourceState: sourceStateInfo}
+}
+
+
+export async function generateFastenConnectAuthorizeUrl(brand_id: string, portal_id: string, endpoint_id: string, public_id?: string, connect_mode?: "popup" | "redirect"): Promise<{url: URL, sourceState: SourceState}>  {
+    const state = uuidV4()
+    let sourceStateInfo = new SourceState()
+    sourceStateInfo.state = state
+    sourceStateInfo.endpoint_id = endpoint_id
+    sourceStateInfo.portal_id = portal_id
+    sourceStateInfo.brand_id = brand_id
+
+    if(!public_id){
+        public_id = "public_test_uh9flcei0u85hb0c4emo913e6zsfddfap7ghfie55lofy"
+    }
+
+    //generate the URL with query params
+    const authorizationUrl = new URL(connectAPIEndpoint + 'bridge/connect');
+    authorizationUrl.searchParams.set('public_id', public_id);
+    authorizationUrl.searchParams.set('endpoint_id', endpoint_id);
+    authorizationUrl.searchParams.set('portal_id', portal_id);
+    authorizationUrl.searchParams.set('brand_id', brand_id);
+    authorizationUrl.searchParams.set('external_state', state);
+    if (connect_mode) {
+        authorizationUrl.searchParams.set('connect_mode', connect_mode);
     }
 
     return {url: authorizationUrl, sourceState: sourceStateInfo}

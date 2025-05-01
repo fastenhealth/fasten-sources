@@ -34,7 +34,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-browserstack-local@1.5.6:
+browserstack-local@^1.5.6:
   version "1.5.6"
   resolved "https://registry.npmjs.org/browserstack-local/-/browserstack-local-1.5.6.tgz#da639f0f4203df9f46efd9935b2239b223991139"
   integrity sha512-s0GadAkyE1XHxnmymb9atogTZbA654bcFpqGkcYEtYPaPvuvVfSXR0gw8ojn0I0Td2HEMJcGtdrkBjb1Fi/HmQ==
