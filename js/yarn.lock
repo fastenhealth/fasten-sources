@@ -34,10 +34,10 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-browserstack-local@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.npmjs.org/browserstack-local/-/browserstack-local-1.5.5.tgz#f36b625f3b8bfd053f673d85fd1082f2d0759693"
-  integrity sha512-jKne7yosrMcptj3hqxp36TP9k0ZW2sCqhyurX24rUL4G3eT7OLgv+CSQN8iq5dtkv5IK+g+v8fWvsiC/S9KxMg==
+browserstack-local@1.5.6:
+  version "1.5.6"
+  resolved "https://registry.npmjs.org/browserstack-local/-/browserstack-local-1.5.6.tgz#da639f0f4203df9f46efd9935b2239b223991139"
+  integrity sha512-s0GadAkyE1XHxnmymb9atogTZbA654bcFpqGkcYEtYPaPvuvVfSXR0gw8ojn0I0Td2HEMJcGtdrkBjb1Fi/HmQ==
   dependencies:
     agent-base "^6.0.2"
     https-proxy-agent "^5.0.1"
