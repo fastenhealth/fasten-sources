@@ -10,6 +10,7 @@ import (
 	"github.com/samber/lo"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -97,15 +98,23 @@ func main() {
 
 func generateCSVFile(state string, brands map[string]modelsCatalog.PatientAccessBrand) error {
 	records := [][]string{
-		{"brand_id", "brand_name", "aliases"},
+		{"brand_id", "brand_name", "aliases", "aliases_count"},
 	}
 
 	for brandId, _ := range brands {
 		brand := brands[brandId]
+
+		aliases_count := ""
+		aliases_count_int := len(lo.Compact(brand.Aliases))
+		if aliases_count_int > 0 {
+			aliases_count = strconv.Itoa(aliases_count_int)
+		}
+
 		records = append(records, []string{
 			brand.Id,
 			brand.Name,
 			strings.Join(lo.Compact(brand.Aliases), ", "),
+			aliases_count,
 		})
 	}
 
