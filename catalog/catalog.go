@@ -5,11 +5,12 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"strings"
+
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 	"github.com/fastenhealth/fasten-sources/pkg/models/datatypes"
 	"github.com/samber/lo"
-	"strings"
 )
 
 //go:embed brands.json
@@ -178,13 +179,21 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 	}
 
 	if opts != nil {
-
 		// filter by id if provided
 		if len(opts.Id) > 0 {
 			if endpoint, endpointOk := endpoints[opts.Id]; endpointOk {
 				endpoints = map[string]catalog.PatientAccessEndpoint{endpoint.Id: endpoint}
 			} else {
-				return nil, fmt.Errorf("endpoint with id %s not found", opts.Id)
+				matchingEndpoint := lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
+					return lo.Contains(value.EndpointIds, opts.Id)
+				})
+				if len(matchingEndpoint) == 0 {
+					return nil, fmt.Errorf("endpoint with id %s not found", opts.Id)
+				} else if len(matchingEndpoint) > 1 {
+					return nil, fmt.Errorf("multiple endpoints found with id %s", opts.Id)
+				} else {
+					endpoints = matchingEndpoint
+				}
 			}
 		}
 
