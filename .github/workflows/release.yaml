@@ -38,10 +38,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-      - name: Generate JS Package
-        run: |
-          make build-js
-          cd js && npm version ${{ steps.bump_version.outputs.release_version }} --no-git-tag-version
+#      - name: Generate JS Package
+#        run: |
+#          make build-js
+#          cd js && npm version ${{ steps.bump_version.outputs.release_version }} --no-git-tag-version
       - name: Commit Changes Locally
         id: commit
         uses: packagrio/action-releasr-go@master
@@ -55,11 +55,11 @@ jobs:
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-      - name: Prepare JS Package
-        run: |
-          cp js/package.json js/dist/package.json
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: 'js/dist'
+#      - name: Prepare JS Package
+#        run: |
+#          cp js/package.json js/dist/package.json
+#      - uses: JS-DevTools/npm-publish@v3
+#        with:
+#          token: ${{ secrets.NPM_TOKEN }}
+#          package: 'js/dist'
 
