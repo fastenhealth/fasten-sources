@@ -178,28 +178,14 @@ func TestCatalog_GetEndpoints_SuspendedEndpointsShouldBeRemoved(t *testing.T) {
 	require.Error(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
 }
 
-func TestCatalog_GetPortal_KaiserMultipleEndpoints(t *testing.T) {
+func TestCatalog_GetPortal_CernerMultipleEndpoints(t *testing.T) {
 	//setup
 	opts := modelsCatalog.CatalogQueryOptions{
-		Id: "59673c08-e4b5-44d5-b5ab-532e69e8f7e7",
+		Id: "00a54d25-9a00-4ebd-bc98-5a1b62958d91",
 	}
 	portals, err := catalog.GetPortals(&opts)
-	require.NoError(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
+	require.NoError(t, err, "endpoint with id 1304ec75-b6ac-45ba-beef-f3657557c027, 4df464d1-00c6-4f53-bb71-2b53b7bd89d3 not found")
 
-	require.Len(t, portals, 1)
-	for _, portal := range portals {
-		require.Len(t, portal.EndpointIds, 2)
-	}
-}
-
-func TestCatalog_GetPortal_KaiserMultipleEndpoints_Sandbox(t *testing.T) {
-	//setup
-	opts := modelsCatalog.CatalogQueryOptions{
-		Id:                "59673c08-e4b5-44d5-b5ab-532e69e8f7e7",
-		LighthouseEnvType: pkg.FastenLighthouseEnvSandbox,
-	}
-	portals, err := catalog.GetPortals(&opts)
-	require.NoError(t, err, "endpoint with id 0143a953-44e9-416f-a506-4172ed426e3a not found")
 	require.Len(t, portals, 1)
 	for _, portal := range portals {
 		require.Len(t, portal.EndpointIds, 2)
