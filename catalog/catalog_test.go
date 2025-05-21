@@ -236,3 +236,13 @@ func TestCatalog_GetEndpoints_InValidEndpointId(t *testing.T) {
 	require.Error(t, err, "endpoint with id 57b8f926-f358-4bfe-b71b-e6eff720fbe4 not found")
 	require.Len(t, endpoints, 0)
 }
+
+func TestCatalog_GetEndpoints_WithKnownMergedId(t *testing.T) {
+	//setup
+	opts := modelsCatalog.CatalogQueryOptions{
+		Id: "fc94bfc7-684d-4e4d-aa6e-ceec01c21c81",
+	}
+	endpoints, err := catalog.GetEndpoints(&opts)
+	require.NoError(t, err, "endpoint with id fc94bfc7-684d-4e4d-aa6e-ceec01c21c81 not found")
+	require.Len(t, endpoints, 1)
+}
