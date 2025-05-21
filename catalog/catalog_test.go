@@ -245,4 +245,5 @@ func TestCatalog_GetEndpoints_WithKnownMergedId(t *testing.T) {
 	endpoints, err := catalog.GetEndpoints(&opts)
 	require.NoError(t, err, "endpoint with id fc94bfc7-684d-4e4d-aa6e-ceec01c21c81 not found")
 	require.Len(t, endpoints, 1)
+	require.NotEmpty(t, endpoints[opts.Id])
 }

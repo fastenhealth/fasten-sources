@@ -14,6 +14,7 @@ import (
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
 	modelsCatalog "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 	"gopkg.in/yaml.v3"
+	"log"
 )
 
 //go:embed platform/*.yaml
@@ -93,7 +94,7 @@ func GetSourceDefinition(
 		o(options)
 	}
 
-	if len(options.PlatformType) > 0 {
+	if len(string(options.PlatformType)) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
 		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten || options.PlatformType == pkg.PlatformTypeHIE {
 			platformDefinition, err := getPlatformDefinition(options.PlatformType)
@@ -105,6 +106,7 @@ func GetSourceDefinition(
 			return nil, fmt.Errorf("unsupported platform type: %s", options.PlatformType)
 		}
 	} else if len(options.EndpointId) > 0 {
+		log.Printf("retrieving endpoint definition for %s", options.EndpointId)
 		queryOpts := &modelsCatalog.CatalogQueryOptions{Id: options.EndpointId}
 		if len(options.Env) > 0 {
 			queryOpts.LighthouseEnvType = options.Env
