@@ -23,6 +23,8 @@ type SourceCredential interface {
 	GetExpiresAt() int64
 
 	SetTokens(accessToken string, refreshTokens string, expiresAt int64)
-	IsDynamicClient() bool
-	RefreshDynamicClientAccessToken(testHttpClient ...*http.Client) error
+
+	//this is used to determine how we should refresh the access token (either using client token
+	ClientAuthenticationMethodType() pkg.ClientAuthenticationMethodType
+	RefreshPrivateKeyJwtToken(testHttpClient ...*http.Client) error
 }
