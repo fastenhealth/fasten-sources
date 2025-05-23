@@ -28,18 +28,20 @@ type LighthouseSourceDefinition struct {
 	// Smart-On-FHIR configuration
 	// https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#example-request
 
-	Scopes                            []string `json:"scopes_supported" yaml:"scopes_supported" validate:"required"`
-	GrantTypesSupported               []string `json:"grant_types_supported" yaml:"grant_types_supported" validate:"required"`
-	ResponseType                      []string `json:"response_types_supported" yaml:"response_types_supported" validate:"required"`
-	ResponseModesSupported            []string `json:"response_modes_supported" yaml:"response_modes_supported" validate:"required"`
-	TokenEndpointAuthMethodsSupported []string `json:"token_endpoint_auth_methods_supported,omitempty" yaml:"token_endpoint_auth_methods_supported,omitempty"` //optional, if not set, assumed to be 'client_secret_basic'
+	Scopes                 []string `json:"scopes_supported" yaml:"scopes_supported" validate:"required"`
+	GrantTypesSupported    []string `json:"grant_types_supported" yaml:"grant_types_supported" validate:"required"`
+	ResponseType           []string `json:"response_types_supported" yaml:"response_types_supported" validate:"required"`
+	ResponseModesSupported []string `json:"response_modes_supported" yaml:"response_modes_supported" validate:"required"`
+
+	//related to ClientAuthenticationMethodType
+	TokenEndpointAuthMethodsSupported []pkg.ClientAuthenticationMethodType `json:"token_endpoint_auth_methods_supported,omitempty" yaml:"token_endpoint_auth_methods_supported,omitempty"` //optional, if not set, assumed to be 'client_secret_basic'
 	// If populated: PKCE is supported (can be used with Confidential true or false)
 	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported" yaml:"code_challenge_methods_supported" validate:"required"`
 
 	//if enabled, requires client_secret to authenticate with provider (PKCE)
 	Confidential bool `json:"confidential" yaml:"confidential"`
 	//if enabled, will dynamically register client with provider (https://oauth.net/2/dynamic-client-registration/)
-	DynamicClientRegistrationMode string `json:"dynamic_client_registration_mode" yaml:"dynamic_client_registration_mode"`
+	//DynamicClientRegistrationMode string `json:"dynamic_client_registration_mode" yaml:"dynamic_client_registration_mode"`
 	//if true, requires CORS proxy/relay, as provider does not return proper response to CORS preflight
 	CORSRelayRequired bool `json:"cors_relay_required" yaml:"cors_relay_required"`
 	//the secret key prefix to use, if empty (default) will use the sourceType value

@@ -14,6 +14,8 @@ package pkg
 // see [OAuth Token Endpoint Authentication Methods](https://www.iana.org/assignments/oauth-parameters/oauth-parameters.xhtml#token-endpoint-auth-method)
 type ClientAuthenticationMethodType string
 
+//this is coupled with the TokenEndpointAuthMethodsSupported field in the Endpoint Definition
+
 const (
 	ClientAuthenticationMethodTypeClientSecretBasic ClientAuthenticationMethodType = "client_secret_basic"
 	ClientAuthenticationMethodTypePrivateKeyJwt     ClientAuthenticationMethodType = "private_key_jwt"
