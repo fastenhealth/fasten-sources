@@ -2,7 +2,6 @@ package models
 
 import (
 	"github.com/fastenhealth/fasten-sources/pkg"
-	"net/http"
 )
 
 // this is actually an interface to a pointer receiver
@@ -24,7 +23,6 @@ type SourceCredential interface {
 
 	SetTokens(accessToken string, refreshTokens string, expiresAt int64)
 
-	//this is used to determine how we should refresh the access token (either using client token
-	ClientAuthenticationMethodType() pkg.ClientAuthenticationMethodType
-	RefreshPrivateKeyJwtToken(testHttpClient ...*http.Client) error
+	//this is used to determine how we should refresh the access token (either using client token or JWT token refresh)
+	GetClientAuthenticationMethodType() pkg.ClientAuthenticationMethodType
 }

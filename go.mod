@@ -1,6 +1,8 @@
 module github.com/fastenhealth/fasten-sources
 
-go 1.22
+go 1.23.0
+
+toolchain go1.23.9
 
 require (
 	github.com/fastenhealth/gofhir-models v0.0.7
@@ -13,6 +15,7 @@ require (
 	github.com/sirupsen/logrus v1.9.0
 	github.com/skratchdot/open-golang v0.0.0-20200116055534-eef842397966
 	github.com/stretchr/testify v1.8.4
+	github.com/tink-crypto/tink-go/v2 v2.4.0
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17
 	golang.org/x/net v0.21.0
 	golang.org/x/oauth2 v0.2.0
@@ -41,11 +44,11 @@ require (
 	github.com/leodido/go-urn v1.2.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/crypto v0.22.0 // indirect
-	golang.org/x/sys v0.19.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/crypto v0.35.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
+	google.golang.org/protobuf v1.36.5 // indirect
 )
 
 //replace github.com/fastenhealth/gofhir-models => ../gofhir-models
