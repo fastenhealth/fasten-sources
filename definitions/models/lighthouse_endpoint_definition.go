@@ -127,3 +127,11 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.RedirectUri = pkg.GetCallbackEndpoint("qualifacts")
 	}
 }
+
+func (def *LighthouseSourceDefinition) GetClientAuthMethod() pkg.ClientAuthenticationMethodType {
+	if len(def.TokenEndpointAuthMethodsSupported) > 0 {
+		return def.TokenEndpointAuthMethodsSupported[0]
+	} else {
+		return pkg.ClientAuthenticationMethodTypeClientSecretBasic
+	}
+}

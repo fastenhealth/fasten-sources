@@ -186,7 +186,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 		}
 
 		//check the authentication method type
-		clientAuthMethod := c.SourceCredential.GetClientAuthenticationMethodType()
+		clientAuthMethod := c.EndpointDefinition.GetClientAuthMethod()
 
 		if clientAuthMethod == pkg.ClientAuthenticationMethodTypePrivateKeyJwt {
 			// this is a private key JWT client, we need to refresh the token using the private key

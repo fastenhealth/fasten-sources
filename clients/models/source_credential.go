@@ -22,7 +22,4 @@ type SourceCredential interface {
 	GetExpiresAt() int64
 
 	SetTokens(accessToken string, refreshTokens string, expiresAt int64)
-
-	//this is used to determine how we should refresh the access token (either using client token or JWT token refresh)
-	GetClientAuthenticationMethodType() pkg.ClientAuthenticationMethodType
 }

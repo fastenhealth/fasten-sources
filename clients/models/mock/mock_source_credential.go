@@ -62,20 +62,6 @@ func (mr *MockSourceCredentialMockRecorder) GetBrandId() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBrandId", reflect.TypeOf((*MockSourceCredential)(nil).GetBrandId))
 }
 
-// GetClientAuthenticationMethodType mocks base method.
-func (m *MockSourceCredential) GetClientAuthenticationMethodType() pkg.ClientAuthenticationMethodType {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetClientAuthenticationMethodType")
-	ret0, _ := ret[0].(pkg.ClientAuthenticationMethodType)
-	return ret0
-}
-
-// GetClientAuthenticationMethodType indicates an expected call of GetClientAuthenticationMethodType.
-func (mr *MockSourceCredentialMockRecorder) GetClientAuthenticationMethodType() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClientAuthenticationMethodType", reflect.TypeOf((*MockSourceCredential)(nil).GetClientAuthenticationMethodType))
-}
-
 // GetClientId mocks base method.
 func (m *MockSourceCredential) GetClientId() string {
 	m.ctrl.T.Helper()
