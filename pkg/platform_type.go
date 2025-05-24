@@ -7,7 +7,10 @@ type PlatformType string
 const (
 	PlatformTypeManual PlatformType = "manual"
 	PlatformTypeFasten PlatformType = "fasten"
-	PlatformTypeHIE    PlatformType = "hie" //hie is special because it requires IAL2 verification
+
+	// TEFCA direct & TEFCA facilitated FHIR platforms
+	PlatformTypeTEFCA     PlatformType = "tefca"      //tefca is special because it requires IAL2 verification
+	PlatformTypeTEFCAEpic PlatformType = "tefca-epic" //tefca-epic is a facilitated fhir platform
 
 	// platform
 	PlatformTypeAdvancedmd          PlatformType = "advancedmd"
@@ -56,7 +59,7 @@ func GetPlatformTypes() []PlatformType {
 	return []PlatformType{
 		PlatformTypeManual,
 		PlatformTypeFasten,
-		PlatformTypeHIE,
+		PlatformTypeTEFCA,
 
 		PlatformTypeAdvancedmd,
 		PlatformTypeAetna,

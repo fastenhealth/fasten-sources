@@ -10,6 +10,8 @@ import (
 	"github.com/fastenhealth/fasten-sources/clients/internal"
 	fasten "github.com/fastenhealth/fasten-sources/clients/internal/fasten"
 	manual "github.com/fastenhealth/fasten-sources/clients/internal/manual"
+	"github.com/fastenhealth/fasten-sources/clients/internal/tefca_direct"
+	"github.com/fastenhealth/fasten-sources/clients/internal/tefca_facilitated"
 	models "github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -29,8 +31,11 @@ func GetSourceClient(
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	case pkg.PlatformTypeFasten:
 		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
-	case pkg.PlatformTypeHIE:
-		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
+	case pkg.PlatformTypeTEFCA:
+		return tefca_direct.GetSourceClientTefca(env, ctx, globalLogger, sourceCreds, clientOptions...)
+	case pkg.PlatformTypeTEFCAEpic:
+		globalLogger.Warnf("TEFCA Facilitated FHIR with platform type: %s", pkg.PlatformTypeTEFCAEpic)
+		return tefca_facilitated.GetSourceClientTefcaFacilitated(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	default:
 		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	}
