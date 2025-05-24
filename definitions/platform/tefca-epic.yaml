@@ -20,9 +20,12 @@ code_challenge_methods_supported:
 confidential: false
 cors_relay_required: false
 documentation: |
-  https://fhir.epic.com/Documentation?docId=testpatients
+  This platform type is use for TEFCA Facilitated FHIR -- Epic. 
+  It should have all the same parameters as the Epic platform type, but with the addition of `token_endpoint_auth_methods_supported` and a different Client ID. 
+  By default, no Endpoints will be associated with this Endpoint, however this PlatformType can be set using the Facilitated FHIR Client. 
   
-  This client is used for Epic/MyChart installations that do not support dynamic client registration:
+  As we support additional TEFCA specific facilitated FHIR platforms, we will need to add them as custom platforms. 
+  
 
 client_headers:
   Accept: "application/json+fhir"

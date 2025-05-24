@@ -1,5 +1,5 @@
 # MANUALLY POPULATED
-platform_type: hie
+platform_type: tefca
 
 scopes_supported:
   - launch/patient
