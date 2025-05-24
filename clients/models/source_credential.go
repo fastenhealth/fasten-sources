@@ -9,6 +9,7 @@ import (
 //go:generate mockgen -source=source_credential.go -destination=mock/mock_source_credential.go
 type SourceCredential interface {
 	GetSourceId() string
+	GetSourceCredentialType() pkg.SourceCredentialType
 
 	GetEndpointId() string
 	GetPortalId() string
