@@ -20,7 +20,7 @@ code_challenge_methods_supported:
 confidential: true
 cors_relay_required: false
 documentation: |
-  This platform type is use for TEFCA Facilitated FHIR -- Epic. 
+  This platform type is used for TEFCA Facilitated FHIR -- Epic. 
   It should have all the same parameters as the Epic platform type, but with the addition of `token_endpoint_auth_methods_supported` and a different Client ID. 
   By default, no Endpoints will be associated with this Endpoint, however this PlatformType can be set using the Facilitated FHIR Client. 
   
