@@ -77,7 +77,7 @@ func PrivateKeyJWTBearerRefreshToken(globalLogger logrus.FieldLogger, jwtPrivate
 	}
 
 	var httpClient *http.Client
-	if len(testHttpClient) > 0 {
+	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		httpClient = testHttpClient[0]
 		//} else if debugMode == true && apiMode == pkg.ApiModeTest {
 		//	//enable debug logging for sandbox mode only.

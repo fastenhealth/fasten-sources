@@ -213,6 +213,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			}
 
 		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
+			//client_secret_basic auth. If we need to modify significantly, this should be moved to clients/client_auth_method/client_secret_basic.go
 			c.Logger.Info("using refresh token to generate access token...")
 
 			src := conf.TokenSource(c.Context, token)

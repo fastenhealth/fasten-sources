@@ -140,6 +140,7 @@ func GetSourceDefinition(
 		platformType := endpoint.GetPlatformType()
 		if len(options.PlatformTypeOverride) > 0 {
 			platformType = options.PlatformTypeOverride
+			endpoint.PlatformType = string(platformType) //override the platform type in the endpoint
 		}
 
 		platformDefinition, err := getPlatformDefinition(platformType)
