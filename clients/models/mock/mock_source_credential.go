@@ -5,7 +5,6 @@
 package mock_models
 
 import (
-	http "net/http"
 	reflect "reflect"
 
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -161,6 +160,20 @@ func (mr *MockSourceCredentialMockRecorder) GetRefreshToken() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRefreshToken", reflect.TypeOf((*MockSourceCredential)(nil).GetRefreshToken))
 }
 
+// GetSourceCredentialType mocks base method.
+func (m *MockSourceCredential) GetSourceCredentialType() pkg.SourceCredentialType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSourceCredentialType")
+	ret0, _ := ret[0].(pkg.SourceCredentialType)
+	return ret0
+}
+
+// GetSourceCredentialType indicates an expected call of GetSourceCredentialType.
+func (mr *MockSourceCredentialMockRecorder) GetSourceCredentialType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceCredentialType", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceCredentialType))
+}
+
 // GetSourceId mocks base method.
 func (m *MockSourceCredential) GetSourceId() string {
 	m.ctrl.T.Helper()
@@ -173,38 +186,6 @@ func (m *MockSourceCredential) GetSourceId() string {
 func (mr *MockSourceCredentialMockRecorder) GetSourceId() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceId", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceId))
-}
-
-// IsDynamicClient mocks base method.
-func (m *MockSourceCredential) IsDynamicClient() bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "IsDynamicClient")
-	ret0, _ := ret[0].(bool)
-	return ret0
-}
-
-// IsDynamicClient indicates an expected call of IsDynamicClient.
-func (mr *MockSourceCredentialMockRecorder) IsDynamicClient() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsDynamicClient", reflect.TypeOf((*MockSourceCredential)(nil).IsDynamicClient))
-}
-
-// RefreshDynamicClientAccessToken mocks base method.
-func (m *MockSourceCredential) RefreshDynamicClientAccessToken(testHttpClient ...*http.Client) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{}
-	for _, a := range testHttpClient {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "RefreshDynamicClientAccessToken", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
-}
-
-// RefreshDynamicClientAccessToken indicates an expected call of RefreshDynamicClientAccessToken.
-func (mr *MockSourceCredentialMockRecorder) RefreshDynamicClientAccessToken(testHttpClient ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RefreshDynamicClientAccessToken", reflect.TypeOf((*MockSourceCredential)(nil).RefreshDynamicClientAccessToken), testHttpClient...)
 }
 
 // SetTokens mocks base method.
