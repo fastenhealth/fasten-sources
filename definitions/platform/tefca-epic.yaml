@@ -17,7 +17,7 @@ response_modes_supported:
   - query
 code_challenge_methods_supported:
   - S256
-confidential: false
+confidential: true
 cors_relay_required: false
 documentation: |
   This platform type is use for TEFCA Facilitated FHIR -- Epic. 
