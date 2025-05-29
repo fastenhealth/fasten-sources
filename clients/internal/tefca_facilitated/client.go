@@ -16,7 +16,7 @@ type TefcaFacilitatedFHIRClient struct {
 
 // GetSourceClientTefcaFacilitated TEFCA Facilitated client is a wrapper around the FHIR R4 client
 // As of now, only Epic QHIN requires TEFCA Facilitated FHIR (all other QHIN communication is direct).
-// For Epic, the TEFCA/QHIN RLS will respond with a FHIR endpoint + OID for each insitution the patient has been to.
+// For Epic, the TEFCA/QHIN RLS will respond with a FHIR endpoint + OID for each institution the patient has been to.
 // Fasten must then use a standard Smart-on-FHIR connection to the Epic FHIR server to retrieve medical records for the patient.
 //
 // SEE: https://rce.sequoiaproject.org/wp-content/uploads/2022/10/TEFCA-Facilitated-FHIR-Implementation-Guide-Draft-for-508.pdf
