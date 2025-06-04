@@ -1,0 +1,49 @@
+# MANUALLY POPULATED - this should mirror epic
+platform_type: tefca-epic
+
+token_endpoint_auth_methods_supported:
+  - 'private_key_jwt'
+
+scopes_supported:
+  - openid
+  - fhirUser
+  - profile
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - fragment
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  This platform type is used for TEFCA Facilitated FHIR -- Epic. 
+  It should have all the same parameters as the Epic platform type, but with the addition of `token_endpoint_auth_methods_supported` and a different Client ID. 
+  By default, no Endpoints will be associated with this Endpoint, however this PlatformType can be set using the Facilitated FHIR Client. 
+  
+  As we support additional TEFCA specific facilitated FHIR platforms, we will need to add them as custom platforms. 
+  
+
+client_headers:
+  Accept: "application/json+fhir"
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]

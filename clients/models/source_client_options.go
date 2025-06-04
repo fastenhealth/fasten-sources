@@ -2,6 +2,7 @@ package models
 
 import (
 	"context"
+	"github.com/tink-crypto/tink-go/v2/keyset"
 	"golang.org/x/oauth2"
 	"net/http"
 )
@@ -12,10 +13,11 @@ type SourceClientOptions struct {
 	TestMode bool
 
 	//Client related options/overrides. Some of these will already be provided via the Endpoint or the SourceCredential.
-	ClientID     string
-	ClientSecret string
-	RedirectURL  string
-	Scopes       []string
+	ClientID              string
+	ClientSecret          string
+	ClientJWTKeysetHandle *keyset.Handle //required for JWT Bearer Token refresh
+	RedirectURL           string
+	Scopes                []string
 
 	ResourceTypesAllowList []string //list of resource types that are allowed to be fetched from this source. Default empty (USCDI Core List)
 
@@ -52,6 +54,12 @@ func WithClientID(clientID string) func(*SourceClientOptions) {
 func WithClientSecret(clientSecret string) func(*SourceClientOptions) {
 	return func(s *SourceClientOptions) {
 		s.ClientSecret = clientSecret
+	}
+}
+
+func WithClientJWTKeysetHandle(clientJWTKeysetHandle *keyset.Handle) func(*SourceClientOptions) {
+	return func(s *SourceClientOptions) {
+		s.ClientJWTKeysetHandle = clientJWTKeysetHandle
 	}
 }
 

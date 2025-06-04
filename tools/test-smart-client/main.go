@@ -298,12 +298,8 @@ func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string
 	s.ExpiresAt = expiresAt
 }
 
-func (s *fakeSourceCredential) IsDynamicClient() bool {
-	return false
-}
-
-func (s *fakeSourceCredential) RefreshDynamicClientAccessToken(testHttpClient ...*http.Client) error {
-	return nil
+func (s *fakeSourceCredential) GetSourceCredentialType() pkg.SourceCredentialType {
+	return pkg.SourceCredentialTypeSmartOnFhir
 }
 
 // there are security implications to this, but we're only using this permissive proxy locally.

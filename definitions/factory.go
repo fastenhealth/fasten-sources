@@ -15,6 +15,7 @@ import (
 	modelsCatalog "github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 	"gopkg.in/yaml.v3"
 	"log"
+	"strings"
 )
 
 //go:embed platform/*.yaml
@@ -22,8 +23,9 @@ var platformFs embed.FS
 
 type SourceDefinitionOptions struct {
 	//One of the following is required: PlatformType or EndpointId
-	PlatformType pkg.PlatformType
-	EndpointId   string
+	PlatformType         pkg.PlatformType
+	PlatformTypeOverride pkg.PlatformType
+	EndpointId           string
 
 	//Optional - filter's the endpoint id by the environment (sandbox, prod).
 	Env pkg.FastenLighthouseEnvType
@@ -37,6 +39,18 @@ type SourceDefinitionOptions struct {
 func WithPlatformType(platformType pkg.PlatformType) func(*SourceDefinitionOptions) {
 	return func(o *SourceDefinitionOptions) {
 		o.PlatformType = platformType
+	}
+}
+
+// This function is used to override the platform type specified in the Endpoint Definition.
+// It should only be done in the case of TEFCA Facilitated FHIR
+func WithPlatformTypeOverride(platformTypeOverride pkg.PlatformType) func(*SourceDefinitionOptions) {
+	return func(o *SourceDefinitionOptions) {
+		if !strings.HasPrefix(string(platformTypeOverride), "tefca-") {
+			log.Printf("ERROR: PlatformTypeOverride is not a TEFCA platform type (%s), Ignoring", platformTypeOverride)
+		} else {
+			o.PlatformTypeOverride = platformTypeOverride
+		}
 	}
 }
 
@@ -96,7 +110,7 @@ func GetSourceDefinition(
 
 	if len(string(options.PlatformType)) > 0 {
 		//only manual and fasten can be retrieved directly, all other Endpoint configs are retrieved via the catalog (endpointId -> platformType -> platformDefinition)
-		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten || options.PlatformType == pkg.PlatformTypeHIE {
+		if options.PlatformType == pkg.PlatformTypeManual || options.PlatformType == pkg.PlatformTypeFasten || options.PlatformType == pkg.PlatformTypeTEFCA {
 			platformDefinition, err := getPlatformDefinition(options.PlatformType)
 			if err != nil {
 				return nil, fmt.Errorf("error retrieving platform definition (%s): %w", options.PlatformType, err)
@@ -124,6 +138,10 @@ func GetSourceDefinition(
 
 		//this is the platform that we need to use as the base class.
 		platformType := endpoint.GetPlatformType()
+		if len(options.PlatformTypeOverride) > 0 {
+			platformType = options.PlatformTypeOverride
+			endpoint.PlatformType = string(platformType) //override the platform type in the endpoint
+		}
 
 		platformDefinition, err := getPlatformDefinition(platformType)
 		if err != nil {
@@ -149,8 +167,8 @@ func getPlatformDefinition(platformType pkg.PlatformType) (*models.LighthouseSou
 		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeManual)}}, nil
 	} else if platformType == pkg.PlatformTypeFasten {
 		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeFasten)}}, nil
-	} else if platformType == pkg.PlatformTypeHIE {
-		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeHIE)}}, nil
+	} else if platformType == pkg.PlatformTypeTEFCA {
+		return &models.LighthouseSourceDefinition{PatientAccessEndpoint: &modelsCatalog.PatientAccessEndpoint{PlatformType: string(pkg.PlatformTypeTEFCA)}}, nil
 	}
 
 	platformDefinition, err := strictUnmarshalYaml(platformType)

@@ -5,6 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"github.com/fastenhealth/fasten-sources/clients/client_auth_method"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -184,13 +185,24 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			c.Logger.Info("access token expired, must refresh")
 		}
 
-		if c.SourceCredential.IsDynamicClient() {
-			c.Logger.Info("refreshing dynamic client...")
-			err := c.SourceCredential.RefreshDynamicClientAccessToken(c.SourceClientOptions.TestHttpClient)
+		//check the authentication method type
+		clientAuthMethod := c.EndpointDefinition.GetClientAuthMethod()
+
+		if clientAuthMethod == pkg.ClientAuthenticationMethodTypePrivateKeyJwt {
+			// this is a private key JWT client, we need to refresh the token using the private key
+
+			if c.SourceClientOptions.ClientJWTKeysetHandle == nil {
+				c.Logger.Error("no jwt keyset handle provided for private key JWT client")
+				return fmt.Errorf("%w: unable to generate client assertion, missing keyset", pkg.ErrSMARTTokenRefreshFailure)
+			}
+
+			c.Logger.Info("refreshing using JWT private key...")
+			tokenRefreshResponse, err := client_auth_method.PrivateKeyJWTBearerRefreshToken(c.Logger, c.SourceClientOptions.ClientJWTKeysetHandle, c.SourceCredential, *c.EndpointDefinition, c.SourceClientOptions.TestHttpClient)
 			if err != nil {
-				c.Logger.Error("error refreshing dynamic client: ", err)
+				c.Logger.Error("error refreshing JWT client: ", err)
 				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
+			c.SourceCredential.SetTokens(tokenRefreshResponse.AccessToken, tokenRefreshResponse.RefreshToken, time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix())
 
 			//update the token with newly refreshed data
 			token = &oauth2.Token{
@@ -199,7 +211,9 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 				AccessToken:  c.SourceCredential.GetAccessToken(),
 				Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
 			}
+
 		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
+			//client_secret_basic auth. If we need to modify significantly, this should be moved to clients/client_auth_method/client_secret_basic.go
 			c.Logger.Info("using refresh token to generate access token...")
 
 			src := conf.TokenSource(c.Context, token)
@@ -224,9 +238,10 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 
 			}
 		} else {
-			c.Logger.Error("no refresh token available, and not dynamic client. User must re-authenticate")
-			return fmt.Errorf("%w: no refresh token available, and not dynamic client. User must re-authenticate", pkg.ErrSMARTTokenRefreshFailure)
+			c.Logger.Error("no refresh token available, and does not support JWT refresh. User must re-authenticate")
+			return fmt.Errorf("%w: no refresh token available, and does not support JWT refresh. User must re-authenticate", pkg.ErrSMARTTokenRefreshFailure)
 		}
+
 	}
 
 	c.OauthClient = oauth2.NewClient(c.Context, oauth2.StaticTokenSource(token))

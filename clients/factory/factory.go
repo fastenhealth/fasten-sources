@@ -10,6 +10,8 @@ import (
 	"github.com/fastenhealth/fasten-sources/clients/internal"
 	fasten "github.com/fastenhealth/fasten-sources/clients/internal/fasten"
 	manual "github.com/fastenhealth/fasten-sources/clients/internal/manual"
+	"github.com/fastenhealth/fasten-sources/clients/internal/tefca_direct"
+	"github.com/fastenhealth/fasten-sources/clients/internal/tefca_facilitated"
 	models "github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	pkg "github.com/fastenhealth/fasten-sources/pkg"
@@ -29,10 +31,16 @@ func GetSourceClient(
 		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	case pkg.PlatformTypeFasten:
 		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
-	case pkg.PlatformTypeHIE:
-		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
 	default:
-		return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		if sourceCreds.GetSourceCredentialType() == pkg.SourceCredentialTypeTefcaDirect {
+			return tefca_direct.GetSourceClientTefca(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		} else if sourceCreds.GetSourceCredentialType() == pkg.SourceCredentialTypeTefcaFacilitated {
+			globalLogger.Warnf("TEFCA Facilitated FHIR with platform type: %s", pkg.PlatformTypeTEFCAEpic)
+			return tefca_facilitated.GetSourceClientTefcaFacilitated(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		} else {
+			//always default to Smart on FHIR
+			return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		}
 	}
 }
 
@@ -44,5 +52,8 @@ func GetSourceClientWithDefinition(
 	endpointDefinition *definitionsModels.LighthouseSourceDefinition,
 	clientOptions ...func(options *models.SourceClientOptions),
 ) (models.SourceClient, error) {
+	//always default to Smart on FHIR. while we could check for Facilitated FHIR, the client is the exact same, the only difference
+	//is the endpoint definition, which is presumably already correctly configured for the Facilitated FHIR platform type
 	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+
 }
