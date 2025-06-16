@@ -25,7 +25,7 @@ test("DynamicHealthIT Login Flow", async ({page}, testInfo) => {
 
         // We are on login page
         await page.waitForSelector("text=Account Login");
-        await page.focus("#username");
+        await page.focus("#Username");
         await page.keyboard.type(process.env.PW_DYNAMICHEALTHIT_USERNAME);
         await page.focus("#password");
         await page.keyboard.type(process.env.PW_DYNAMICHEALTHIT_PASSWORD);
