@@ -23,7 +23,6 @@ func TestSourceClientBase_RefreshAccessToken_WithoutValidAccessToken_ShouldFailD
 	sc.EXPECT().GetAccessToken().Return("test-access-token").AnyTimes()
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
-	sc.EXPECT().IsDynamicClient().Return(false).AnyTimes()
 	sc.EXPECT().SetTokens(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes()
 	sc.EXPECT().GetExpiresAt().Return(time.Now().Add(-60 * time.Minute).Unix()).AnyTimes()
 
@@ -50,7 +49,6 @@ func TestSourceClientBase_GetRequest_WithInvalidCredentials_ShouldReturnError(t 
 	sc.EXPECT().GetAccessToken().Return("test-access-token").AnyTimes()
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
-	sc.EXPECT().IsDynamicClient().Return(false).AnyTimes()
 
 	testLogger := logrus.WithFields(logrus.Fields{
 		"test": "TestSourceClientBase_GetRequest",
