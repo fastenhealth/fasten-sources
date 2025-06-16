@@ -32,7 +32,7 @@ test("eClinicalWorks-Healow Login Flow", async ({page}, testInfo) => {
         await page.click("#btnLoginSubmit");
 
         // We have logged in
-        await page.waitForSelector("text=What you need to know about Fasten Health");
+        await page.waitForSelector("text=What you need to know about Fasten Connect");
         await expect(page).toHaveTitle("LoginUi");
         await page.click('button:text(" Continue ")');
 
