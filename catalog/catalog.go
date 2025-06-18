@@ -227,6 +227,86 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 	return endpoints, nil
 }
 
+// the portal doesn't really matter here. We just care about Brand and associated Endpoint
+func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, tefcaBrandName, tefcaUrl string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, error) {
+	endpoints, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("failed: %w", err)
+	}
+
+	//get an endpoint (since they are unique on the URL) that matches the provided url
+	endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
+		if value.GetPlatformType() != platformType {
+			return false
+		}
+		return normalizeEndpointURL(value.Url) == normalizeEndpointURL(tefcaUrl)
+	})
+
+	if len(endpoints) == 0 {
+		return nil, nil, nil, fmt.Errorf("no endpoints found matching url: %s", tefcaUrl)
+	}
+	if len(endpoints) > 1 {
+		return nil, nil, nil, fmt.Errorf("multiple endpoints found matching url: %s", tefcaUrl)
+	}
+
+	//if we found an endpoint, lets try to find an associated portal and brand.
+
+	portals, err := GetPortals(&catalog.CatalogQueryOptions{
+		LighthouseEnvType:     pkg.FastenLighthouseEnvProduction, //always production for RLS.
+		CachedEndpointsLookup: &endpoints,
+	})
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("error getting portals from catalog: %w", err)
+	}
+
+	brands, err := GetBrands(&catalog.CatalogQueryOptions{
+		LighthouseEnvType:   pkg.FastenLighthouseEnvProduction, //always production for RLS.
+		CachedPortalsLookup: &portals,
+	})
+	if err != nil {
+		return nil, nil, nil, fmt.Errorf("error getting brands from catalog: %w", err)
+	}
+
+	//find a brand that matches the provided homeOid or orgOid
+	for brandId, _ := range brands {
+		brand := brands[brandId]
+		brandNames := lo.Uniq(append([]string{brand.Name}, brand.Aliases...))
+		foundMatch := brandNamesMatch(brandNames, tefcaBrandName)
+		if foundMatch {
+			//we found a matching brand, now we need to find a portal that is associated with the endpoint
+			for portalIdNdx, _ := range brand.PortalsIds {
+				portalId := brand.PortalsIds[portalIdNdx]
+				if portal, portalOk := portals[portalId]; portalOk {
+					//check if the portal has the endpoint
+					if lo.Contains(portal.EndpointIds, lo.Values(endpoints)[0].Id) {
+						//we found a matching portal and endpoint
+						return &brand, &portal, &lo.Values(endpoints)[0], nil
+					}
+				}
+			}
+		}
+	}
+	return nil, nil, nil, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
+}
+
+func brandNamesMatch(brandNames []string, tefcaBrandName string) bool {
+	for ndx, _ := range brandNames {
+		brandName := brandNames[ndx]
+		if strings.EqualFold(tefcaBrandName, brandName) {
+			return true
+		}
+	}
+	return false
+	//if !strings.EqualFold(tefcaBrandName, brandName) {
+	//	return false
+	//}
+	//_, stateFound := lo.Find(brand.Locations, func(location datatypes.Address) bool {
+	//	return strings.EqualFold(location.State, tefcaBrand.State)
+	//})
+	//return stateFound
+
+}
+
 func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiEndpoint string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, pkg.FastenLighthouseEnvType, error) {
 	brands, err := GetBrands(&catalog.CatalogQueryOptions{})
 	if err != nil {
