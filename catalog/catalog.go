@@ -228,10 +228,13 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 }
 
 // the portal doesn't really matter here. We just care about Brand and associated Endpoint
-func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, tefcaBrandName, tefcaUrl string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, error) {
+// if we are able to successfully dtermine the endpoint, ALWAYS return it, even if we don't know the brand or portal. Endpoint is all we need for TEFCA Facilitated connections
+func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, tefcaBrandName, tefcaUrl string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, bool, error) {
+	foundEndpoint := false
+
 	endpoints, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("failed: %w", err)
+		return nil, nil, nil, foundEndpoint, fmt.Errorf("failed: %w", err)
 	}
 
 	//get an endpoint (since they are unique on the URL) that matches the provided url
@@ -243,10 +246,11 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 	})
 
 	if len(endpoints) == 0 {
-		return nil, nil, nil, fmt.Errorf("no endpoints found matching url: %s", tefcaUrl)
+		return nil, nil, nil, foundEndpoint, fmt.Errorf("no endpoints found matching url: %s", tefcaUrl)
 	}
+	foundEndpoint = true
 	if len(endpoints) > 1 {
-		return nil, nil, nil, fmt.Errorf("multiple endpoints found matching url: %s", tefcaUrl)
+		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("multiple endpoints found matching url, returning first: %s", tefcaUrl)
 	}
 
 	//if we found an endpoint, lets try to find an associated portal and brand.
@@ -256,7 +260,7 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 		CachedEndpointsLookup: &endpoints,
 	})
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("error getting portals from catalog: %w", err)
+		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting portals from catalog: %w", err)
 	}
 
 	brands, err := GetBrands(&catalog.CatalogQueryOptions{
@@ -264,7 +268,7 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 		CachedPortalsLookup: &portals,
 	})
 	if err != nil {
-		return nil, nil, nil, fmt.Errorf("error getting brands from catalog: %w", err)
+		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting brands from catalog: %w", err)
 	}
 
 	//find a brand that matches the provided homeOid or orgOid
@@ -280,13 +284,13 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 					//check if the portal has the endpoint
 					if lo.Contains(portal.EndpointIds, lo.Values(endpoints)[0].Id) {
 						//we found a matching portal and endpoint
-						return &brand, &portal, &lo.Values(endpoints)[0], nil
+						return &brand, &portal, &lo.Values(endpoints)[0], foundEndpoint, nil
 					}
 				}
 			}
 		}
 	}
-	return nil, nil, nil, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
+	return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
 }
 
 func brandNamesMatch(brandNames []string, tefcaBrandName string) bool {

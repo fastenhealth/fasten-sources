@@ -235,9 +235,10 @@ func TestCatalog_GetEndpoints_WithKnownMergedId(t *testing.T) {
 }
 
 func TestGetBrandPortalEndpointUsingRLSIdentifiers(t *testing.T) {
-	brand, portal, endpoint, err := catalog.GetBrandPortalEndpointUsingTEFCAIdentifiers(pkg.PlatformTypeEpic, "The Portland Clinic", "https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/")
+	brand, portal, endpoint, foundEndpoint, err := catalog.GetBrandPortalEndpointUsingTEFCAIdentifiers(pkg.PlatformTypeEpic, "The Portland Clinic", "https://tpc-shield.tpcllp.com/FHIR/api/FHIR/R4/")
 
 	require.NoError(t, err)
+	require.True(t, foundEndpoint)
 	require.Equal(t, "45c1a83e-fcdf-4bd5-8c87-8aaa3d4d7d5e", endpoint.Id)
 	require.Equal(t, "96da4ce5-fc35-4e4e-a136-d60a724459ed", portal.Id)
 	require.Equal(t, "eb9e8dea-d77a-45c8-b86a-76fa27cd19e6", brand.Id)
