@@ -2,9 +2,10 @@ package models
 
 import (
 	"context"
+	"net/http"
+
 	"github.com/tink-crypto/tink-go/v2/keyset"
 	"golang.org/x/oauth2"
-	"net/http"
 )
 
 type SourceClientOptions struct {
@@ -23,7 +24,8 @@ type SourceClientOptions struct {
 
 	SourceClientRefreshOptions []func(*SourceClientRefreshOptions)
 
-	Context context.Context
+	Context     context.Context
+	Concurrency int
 }
 
 func WithHttpClient(customHttpClient *http.Client) func(*SourceClientOptions) {
@@ -84,5 +86,11 @@ func WithResourceTypeAllowList(resourceTypeAllowList []string) func(*SourceClien
 func WithSourceClientRefreshOptions(options ...func(*SourceClientRefreshOptions)) func(*SourceClientOptions) {
 	return func(s *SourceClientOptions) {
 		s.SourceClientRefreshOptions = options
+	}
+}
+
+func WithConcurrency(Concurrency int) func(*SourceClientOptions) {
+	return func(s *SourceClientOptions) {
+		s.Concurrency = Concurrency
 	}
 }

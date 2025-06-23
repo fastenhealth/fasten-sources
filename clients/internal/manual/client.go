@@ -4,6 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
+	"net/http"
+	"os"
+	"strings"
+	"sync"
+
 	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
@@ -11,10 +17,6 @@ import (
 	"github.com/fastenhealth/gofhir-models/fhir401"
 	fhir401utils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"github.com/sirupsen/logrus"
-	"io"
-	"net/http"
-	"os"
-	"strings"
 )
 
 type ManualClient struct {
@@ -79,7 +81,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	syncErrors := map[string]error{}
 
 	//lookup table for every resource ID found by Fasten
-	lookupResourceReferences := map[string]bool{}
+	lookupResourceReferences := &sync.Map{}
 
 	//lookup table for bundle internal references -> relative references (used heavily by file Bundles)
 	internalFragmentReferenceLookup := map[string]string{}
@@ -111,7 +113,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 		}
 
 		for _, apiModel := range rawResourceList {
-			err = client.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			_, err = client.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[apiModel.SourceResourceType] = err
 				continue
@@ -154,7 +156,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 			}
 
 			rawResourceList = append(rawResourceList, *apiModel)
-			err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			_, err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[apiModel.SourceResourceType] = err
 				continue
@@ -221,7 +223,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 			}
 
 			rawResourceList = append(rawResourceList, *apiModel)
-			err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			_, err = client.ProcessResource(db, *apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[apiModel.SourceResourceType] = err
 				continue
