@@ -235,6 +235,8 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 	lookupResourceReferences *sync.Map,
 	syncErrors map[string]error,
 ) (map[string]bool, map[string]error) {
+	// now that we've processed all resources by resource type, lets see if there's any extracted resources that we haven't processed.
+	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
 	extractionLoopCount := 0
 	goRoutineLimit := 5
 
@@ -249,6 +251,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 	}
 
 	for {
+		//loop "forever" until we've processed all pending resources
 		pendingResourceReferences := []string{}
 		lookupResourceReferences.Range(func(key, value any) bool {
 			if completed, ok := value.(bool); ok && !completed {
@@ -259,6 +262,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 			return true
 		})
 
+		//convert absolute urls to relative urls if possible
 		for i := range pendingResourceReferences {
 			if strings.HasPrefix(pendingResourceReferences[i], c.EndpointDefinition.Url) {
 				pendingResourceReferences[i] = strings.TrimPrefix(
@@ -273,6 +277,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 			break
 		}
 		if extractionLoopCount > 10 {
+			//bail out
 			c.Logger.Warnf("we've attempted to extract resources more than 10 times. This should not happen.")
 			break
 		}
@@ -286,7 +291,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 
 				resourceSourceUri, err := c.GetRequest(pendingResourceIdOrUri, &resourceRaw)
 				if err != nil {
-					lookupResourceReferences.Store(pendingResourceIdOrUri, true)
+					lookupResourceReferences.Store(pendingResourceIdOrUri, true) //skip this failing resource
 					c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceIdOrUri, err)
 					return nil
 				}
@@ -294,17 +299,21 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 				resourceRawJson, err := json.Marshal(resourceRaw)
 				if err != nil {
 					c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceIdOrUri, err)
-					lookupResourceReferences.Store(pendingResourceIdOrUri, true)
+					lookupResourceReferences.Store(pendingResourceIdOrUri, true) //skip this failing resource
 					return nil
 				}
 
 				var pendingResourceIdParts []string
 				if strings.HasPrefix(pendingResourceIdOrUri, "http://") || strings.HasPrefix(pendingResourceIdOrUri, "https://") {
+					//this resource is an absolute url, and is most likely a Binary resource. Lets confirm, and throw an error if not.
 					if pendingResourceType, ok := resourceRaw["resourceType"].(string); !ok || pendingResourceType != "Binary" {
 						c.Logger.Errorf("[ERROR THIS SHOULD NOT HAPPEN] skipping absolute resource (%s), not Binary: %v", pendingResourceIdOrUri, err)
 						lookupResourceReferences.Store(pendingResourceIdOrUri, true)
 						return nil
 					} else {
+						//this is a binary resource, but it does not have an "id", so we need to generate one. (lookup will happen using sourceUri anyways)
+						//TODO: if we use content addressable storage, we can use the hash of the resource as the id, however we can only store one SourceURI at a time, which could cause issues
+						// so we'll generate a base64 encoded version of the sourceUri as the id
 						encoded := base64.StdEncoding.EncodeToString([]byte(resourceSourceUri))
 						pendingResourceIdParts = []string{"Binary", encoded}
 					}
@@ -318,7 +327,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 					ResourceRaw:        resourceRawJson,
 					SourceUri:          resourceSourceUri,
 				}
-
+				//process resource will store the resource in the database, and potentially extract new resources we need to process.
 				partialSummary, err := c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, nil)
 				if err != nil {
 					syncSyncErrors.Store(pendingResourceIdOrUri, err)
