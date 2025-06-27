@@ -238,7 +238,15 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 	// now that we've processed all resources by resource type, lets see if there's any extracted resources that we haven't processed.
 	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
 	extractionLoopCount := 0
-	goRoutineLimit := 5
+
+	// Ensure goRoutineLimit is between 1 and 5
+	goRoutineLimit := c.SourceClientOptions.Concurrency
+	if goRoutineLimit < 1 {
+		goRoutineLimit = 1
+	}
+	if goRoutineLimit > 5 {
+		goRoutineLimit = 5
+	}
 
 	g, _ := errgroup.WithContext(context.Background())
 	g.SetLimit(goRoutineLimit)
