@@ -3,6 +3,11 @@ package base
 import (
 	"context"
 	"encoding/json"
+	"net/http"
+	"strings"
+	"sync"
+	"testing"
+
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/definitions"
@@ -12,8 +17,6 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
-	"net/http"
-	"testing"
 )
 
 func TestNewFHIR401Client(t *testing.T) {
@@ -128,7 +131,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/cerner_document_reference_206130480.json")
 	require.NoError(t, err)
-	referencedResourcesLookup := map[string]bool{}
+	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
 	summary := models.UpsertSummary{}
 
@@ -139,11 +142,11 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	}
 
 	// test
-	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
-
+	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 8, len(referencedResourcesLookup))
+	require.Equal(t, 8, len(referencedResourcesLookupMap))
 	require.Equal(t, map[string]bool{
 		"DiagnosticReport/206130480":  false,
 		"DocumentReference/206130480": true,
@@ -153,7 +156,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 		"Practitioner/12742069":       false,
 		"https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XML-206130480": false,
 		"https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Binary/XR-206130480":  false,
-	}, referencedResourcesLookup)
+	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
 
@@ -177,7 +180,7 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/encounter_resource_broken_parse.json")
 	require.NoError(t, err)
-	referencedResourcesLookup := map[string]bool{}
+	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
 	summary := models.UpsertSummary{}
 
@@ -188,17 +191,19 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 	}
 
 	// test
-	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+
+	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 4, len(referencedResourcesLookup))
+	require.Equal(t, 4, len(referencedResourcesLookupMap))
 	require.Equal(t, map[string]bool{
 		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                      true,
 		"Location/eq0Zb8k23Hg.GX9aMfavyZg3":                       false,
 		"Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3": false,
 		"Practitioner/e7y0GLCXTb0rdKZlNSuQhww3":                   false,
-	}, referencedResourcesLookup)
+	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
 
@@ -222,7 +227,7 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/observation_broken_parse.json")
 	require.NoError(t, err)
-	referencedResourcesLookup := map[string]bool{}
+	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
 	summary := models.UpsertSummary{}
 
@@ -233,17 +238,18 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 	}
 
 	// test
-	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 4, len(referencedResourcesLookup))
+	require.Equal(t, 4, len(referencedResourcesLookupMap))
 	require.Equal(t, map[string]bool{
 		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                      true,
 		"Location/eq0Zb8k23Hg.GX9aMfavyZg3":                       false,
 		"Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3": false,
 		"Practitioner/e7y0GLCXTb0rdKZlNSuQhww3":                   false,
-	}, referencedResourcesLookup)
+	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }
 
@@ -266,7 +272,7 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/medicare-eob.json")
 	require.NoError(t, err)
-	referencedResourcesLookup := map[string]bool{}
+	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
 	summary := models.UpsertSummary{}
 
@@ -277,11 +283,12 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	}
 
 	// test
-	err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
+	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 23, len(referencedResourcesLookup))
+	require.Equal(t, 23, len(referencedResourcesLookupMap))
 	//notice how the contained resources are tagged as completed in the referencedResourcesLookup
 	require.Equal(t, map[string]bool{
 		"Coverage/part-b--10000010254618":              false,
@@ -307,6 +314,136 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0yMA==": true,
 		"Observation/RXhwbGFuYXRpb25PZkJlbmVmaXQvY2Fycmllci0tMTAwMDA5MzAwMzc5MjEjbGluZS1vYnNlcnZhdGlvbi0z":     true,
 		"Patient/-10000010254618": false,
-	}, referencedResourcesLookup)
+	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
+	t.Parallel()
+
+	// Setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+
+	access_token := "token here"
+	httpClient := OAuthVcrSetup(t, false, access_token)
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
+		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
+	)
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		testLogger,
+		fakeSourceCredential,
+		cernerSandboxDefinition,
+		models.WithTestHttpClient(httpClient),
+	)
+	require.NoError(t, err)
+
+	// Read lookup_references.json and convert to sync.Map
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	require.NoError(t, err)
+
+	var refMap map[string]interface{}
+	err = json.Unmarshal(jsonBytes, &refMap)
+	require.NoError(t, err)
+
+	referencedResourcesLookup := &sync.Map{}
+	for k, v := range refMap {
+		referencedResourcesLookup.Store(k, v)
+	}
+	client.SourceClientOptions.Concurrency = 5
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
+	// Test
+	_, syncErrors := client.ProcessPendingResources(fakeDatabase, &summary, referencedResourcesLookup, map[string]error{})
+	for key, err := range syncErrors {
+		if err != nil && !strings.Contains(err.Error(), "Skipping") {
+			require.NoError(t, err, "error occurred while processing resource %s", key)
+		}
+	}
+
+	// Assert
+	// Assert
+	require.Equal(t, 193, len(summary.UpdatedResources), "should have updated 193 resources")
+	require.Equal(t, 194, summary.TotalResources, "should have processed 194 resources total")
+
+}
+
+func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
+	t.Parallel()
+
+	// Setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+
+	access_token := "token here"
+	httpClient := OAuthVcrSetup(t, false, access_token)
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
+		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
+	)
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		testLogger,
+		fakeSourceCredential,
+		cernerSandboxDefinition,
+		models.WithTestHttpClient(httpClient),
+	)
+	require.NoError(t, err)
+
+	// Read lookup_references.json and convert to sync.Map
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	require.NoError(t, err)
+
+	var refMap map[string]interface{}
+	err = json.Unmarshal(jsonBytes, &refMap)
+	require.NoError(t, err)
+
+	referencedResourcesLookup := &sync.Map{}
+	for k, v := range refMap {
+		referencedResourcesLookup.Store(k, v)
+	}
+	client.SourceClientOptions.Concurrency = 1
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
+
+	// Test
+	_, syncErrors := client.ProcessPendingResources(fakeDatabase, &summary, referencedResourcesLookup, map[string]error{})
+	for key, err := range syncErrors {
+		if err != nil && !strings.Contains(err.Error(), "Skipping") {
+			require.NoError(t, err, "error occurred while processing resource %s", key)
+		}
+	}
+
+	// Assert
+	require.Equal(t, 193, len(summary.UpdatedResources), "should have updated 193 resources")
+	require.Equal(t, 194, summary.TotalResources, "should have processed 194 resources total")
+
 }

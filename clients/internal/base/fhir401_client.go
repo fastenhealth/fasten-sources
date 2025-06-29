@@ -7,6 +7,9 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+	"sync"
+	"sync/atomic"
+	"time"
 
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
@@ -15,6 +18,7 @@ import (
 	fhirutils "github.com/fastenhealth/gofhir-models/fhir401/utils"
 	"github.com/samber/lo"
 	"github.com/sirupsen/logrus"
+	"golang.org/x/sync/errgroup"
 )
 
 type SourceClientFHIR401 struct {
@@ -63,10 +67,10 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	syncErrors := map[string]error{}
 
 	//lookup table for every resource ID found by Fasten
-	lookupResourceReferences := map[string]bool{}
+	lookupResourceReferences := &sync.Map{}
 
 	for ndx, apiModel := range rawResourceModels {
-		err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+		_, err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 		if err != nil {
 			syncErrors[apiModel.SourceResourceType] = err
 			continue
@@ -85,7 +89,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 	}
 
 	//process any pending resources
-	lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+	_, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
 
 	if len(syncErrors) > 0 {
 		//TODO: ignore errors.
@@ -142,7 +146,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	syncErrors := map[string]error{}
 
 	//lookup table for every resource ID found by Fasten
-	lookupResourceReferences := map[string]bool{}
+	lookupResourceReferences := &sync.Map{}
 
 	//query for resources by resource name
 	resourceNames = lo.Uniq(resourceNames)
@@ -162,7 +166,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 		summary.TotalResources += len(rawResourceModels)
 
 		for ndx, apiModel := range rawResourceModels {
-			err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+			_, err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
@@ -200,9 +204,14 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 
 	//process any pending resources
 	//if we have a populated whitelist, skip this -- we don't care about references to other resources, just the ones we queried. This is a naiive solution to prevent requesting unnecessary records. This should be improved.
+	startTime := time.Now()
 	if len(c.GetResourceTypesAllowList()) == 0 {
-		lookupResourceReferences, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
+		_, syncErrors = c.ProcessPendingResources(db, &summary, lookupResourceReferences, syncErrors)
 	}
+
+	endTime := time.Since(startTime)
+
+	fmt.Println("Total time take on pending ", endTime)
 
 	checkpointErrorData := map[string]interface{}{}
 	if len(syncErrors) > 0 {
@@ -220,22 +229,54 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 	return summary, nil
 }
 
-func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseRepository, summary *models.UpsertSummary, lookupResourceReferences map[string]bool, syncErrors map[string]error) (map[string]bool, map[string]error) {
+func (c *SourceClientFHIR401) ProcessPendingResources(
+	db models.DatabaseRepository,
+	summary *models.UpsertSummary,
+	lookupResourceReferences *sync.Map,
+	syncErrors map[string]error,
+) (map[string]bool, map[string]error) {
 	// now that we've processed all resources by resource type, lets see if there's any extracted resources that we haven't processed.
 	// NOTE: this is effectively a recursive operation since an extracted resource id may reference other resources.
 	extractionLoopCount := 0
+
+	// Ensure goRoutineLimit is between 1 and 5
+	goRoutineLimit := c.SourceClientOptions.Concurrency
+	if goRoutineLimit < 1 {
+		goRoutineLimit = 1
+	}
+	if goRoutineLimit > 5 {
+		goRoutineLimit = 5
+	}
+
+	g, _ := errgroup.WithContext(context.Background())
+	g.SetLimit(goRoutineLimit)
+	mutex := &sync.Mutex{}
+
+	var successCounter int32
+	var syncSyncErrors sync.Map
+	for k, v := range syncErrors {
+		syncSyncErrors.Store(k, v)
+	}
+
 	for {
 		//loop "forever" until we've processed all pending resources
-
-		pendingLookupResourceReferences := lo.PickBy[string, bool](lookupResourceReferences, func(resourceId string, isCompleted bool) bool { return !isCompleted })
-		pendingResourceReferences := lo.Keys(pendingLookupResourceReferences)
+		pendingResourceReferences := []string{}
+		lookupResourceReferences.Range(func(key, value any) bool {
+			if completed, ok := value.(bool); ok && !completed {
+				if strKey, ok := key.(string); ok {
+					pendingResourceReferences = append(pendingResourceReferences, strKey)
+				}
+			}
+			return true
+		})
 
 		//convert absolute urls to relative urls if possible
-		for i, _ := range pendingResourceReferences {
-			pendingResourceId := pendingResourceReferences[i]
-			//convert absolute urls to relative url if possible
-			if strings.HasPrefix(pendingResourceId, c.EndpointDefinition.Url) {
-				pendingResourceReferences[i] = strings.TrimPrefix(strings.TrimPrefix(pendingResourceId, c.EndpointDefinition.Url), "/")
+		for i := range pendingResourceReferences {
+			if strings.HasPrefix(pendingResourceReferences[i], c.EndpointDefinition.Url) {
+				pendingResourceReferences[i] = strings.TrimPrefix(
+					strings.TrimPrefix(pendingResourceReferences[i], c.EndpointDefinition.Url),
+					"/",
+				)
 			}
 		}
 
@@ -243,80 +284,109 @@ func (c *SourceClientFHIR401) ProcessPendingResources(db models.DatabaseReposito
 		if len(pendingResourceReferences) == 0 {
 			break
 		}
-
 		if extractionLoopCount > 10 {
 			//bail out
 			c.Logger.Warnf("we've attempted to extract resources more than 10 times. This should not happen.")
 			break
 		}
 
-		//process pending resources
 		summary.TotalResources += len(pendingResourceReferences)
-		for ndx, pendingResourceIdOrUri := range pendingResourceReferences {
-			var resourceRaw map[string]interface{}
 
-			resourceSourceUri, err := c.GetRequest(pendingResourceIdOrUri, &resourceRaw)
-			if err != nil {
-				lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
-				c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceIdOrUri, err)
-				continue
-			}
-			resourceRawJson, err := json.Marshal(resourceRaw)
-			if err != nil {
-				c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceIdOrUri, err)
-				lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
-				continue
-			}
+		for _, pendingResourceIdOrUri := range pendingResourceReferences {
+			pendingResourceIdOrUri := pendingResourceIdOrUri
+			g.Go(func() error {
+				var resourceRaw map[string]interface{}
 
-			pendingResourceIdParts := []string{}
-			if strings.HasPrefix(pendingResourceIdOrUri, "http://") || strings.HasPrefix(pendingResourceIdOrUri, "https://") {
-				//this resource is an absolute url, and is most likely a Binary resource. Lets confirm, and throw an error if not.
-				if pendingResourceType, ok := resourceRaw["resourceType"].(string); !ok || pendingResourceType != "Binary" {
-					c.Logger.Errorf("[ERROR THIS SHOULD NOT HAPPEN] skipping absolute resource (%s), resource is not a Binary resource: %v", pendingResourceIdOrUri, err)
-					lookupResourceReferences[pendingResourceIdOrUri] = true //skip this failing resource
-					continue
+				resourceSourceUri, err := c.GetRequest(pendingResourceIdOrUri, &resourceRaw)
+				if err != nil {
+					lookupResourceReferences.Store(pendingResourceIdOrUri, true) //skip this failing resource
+					c.Logger.Warnf("skipping resource (%s), request failed: %v", pendingResourceIdOrUri, err)
+					return nil
+				}
+
+				resourceRawJson, err := json.Marshal(resourceRaw)
+				if err != nil {
+					c.Logger.Warnf("skipping resource (%s), could not decode json: %v", pendingResourceIdOrUri, err)
+					lookupResourceReferences.Store(pendingResourceIdOrUri, true) //skip this failing resource
+					return nil
+				}
+
+				var pendingResourceIdParts []string
+				if strings.HasPrefix(pendingResourceIdOrUri, "http://") || strings.HasPrefix(pendingResourceIdOrUri, "https://") {
+					//this resource is an absolute url, and is most likely a Binary resource. Lets confirm, and throw an error if not.
+					if pendingResourceType, ok := resourceRaw["resourceType"].(string); !ok || pendingResourceType != "Binary" {
+						c.Logger.Errorf("[ERROR THIS SHOULD NOT HAPPEN] skipping absolute resource (%s), not Binary: %v", pendingResourceIdOrUri, err)
+						lookupResourceReferences.Store(pendingResourceIdOrUri, true)
+						return nil
+					} else {
+						//this is a binary resource, but it does not have an "id", so we need to generate one. (lookup will happen using sourceUri anyways)
+						//TODO: if we use content addressable storage, we can use the hash of the resource as the id, however we can only store one SourceURI at a time, which could cause issues
+						// so we'll generate a base64 encoded version of the sourceUri as the id
+						encoded := base64.StdEncoding.EncodeToString([]byte(resourceSourceUri))
+						pendingResourceIdParts = []string{"Binary", encoded}
+					}
 				} else {
-					//this is a binary resource, but it does not have an "id", so we need to generate one. (lookup will happen using sourceUri anyways)
-					//TODO: if we use content addressable storage, we can use the hash of the resource as the id, however we can only store one SourceURI at a time, which could cause issues
-					// so we'll generate a base64 encoded version of the sourceUri as the id
-					pendingResourceIdParts = []string{pendingResourceType, base64.StdEncoding.EncodeToString([]byte(resourceSourceUri))}
+					pendingResourceIdParts = strings.SplitN(pendingResourceIdOrUri, "/", 2)
 				}
-			} else {
-				pendingResourceIdParts = strings.SplitN(pendingResourceIdOrUri, "/", 2)
-			}
 
-			pendingRawResource := models.RawResourceFhir{
-				SourceResourceType: pendingResourceIdParts[0],
-				SourceResourceID:   pendingResourceIdParts[1],
-				ResourceRaw:        resourceRawJson,
-				SourceUri:          resourceSourceUri,
-			}
-
-			//process resource will store the resource in the database, and potentially extract new resources we need to process.
-			err = c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, summary)
-			if err != nil {
-				syncErrors[pendingResourceIdOrUri] = err
-				continue
-			}
-
-			if ndx%100 == 0 {
-				stageErrorData := map[string]interface{}{}
-				if len(syncErrors) > 0 {
-					stageErrorData["errors"] = syncErrors
+				pendingRawResource := models.RawResourceFhir{
+					SourceResourceType: pendingResourceIdParts[0],
+					SourceResourceID:   pendingResourceIdParts[1],
+					ResourceRaw:        resourceRawJson,
+					SourceUri:          resourceSourceUri,
 				}
-				db.BackgroundJobCheckpoint(c.Context,
-					map[string]interface{}{
-						"stage":          "PendingResources",
-						"stage_progress": ndx,
-						"summary":        summary,
-					},
-					stageErrorData,
-				)
-			}
+				//process resource will store the resource in the database, and potentially extract new resources we need to process.
+				partialSummary, err := c.ProcessResource(db, pendingRawResource, lookupResourceReferences, map[string]string{}, nil)
+				if err != nil {
+					syncSyncErrors.Store(pendingResourceIdOrUri, err)
+					c.Logger.Errorf("[ERROR] %v", err)
+					return nil
+				}
+
+				if partialSummary != nil {
+					mutex.Lock()
+					summary.UpdatedResources = append(summary.UpdatedResources, partialSummary.UpdatedResources...)
+					summary.TotalResources += partialSummary.TotalResources
+					mutex.Unlock()
+				}
+
+				count := atomic.AddInt32(&successCounter, 1)
+				if count%100 == 0 {
+
+					errorCount := 0
+					syncSyncErrors.Range(func(_, _ any) bool {
+						errorCount++
+						return true
+					})
+
+					stageErrorData := map[string]interface{}{}
+					if errorCount > 0 {
+						stageErrorData["errors"] = ToMap[string, error](&syncSyncErrors)
+					}
+
+					mutex.Lock()
+					db.BackgroundJobCheckpoint(c.Context,
+						map[string]interface{}{
+							"stage":          "PendingResources",
+							"stage_progress": count,
+							"summary":        summary,
+						},
+						stageErrorData,
+					)
+					mutex.Unlock()
+				}
+
+				return nil
+			})
 		}
-		extractionLoopCount += 1
+		_ = g.Wait()
+		extractionLoopCount++
 	}
-	return lookupResourceReferences, syncErrors
+
+	finalErrors := ToMap[string, error](&syncSyncErrors)
+	finalRefs := ToMap[string, bool](lookupResourceReferences)
+
+	return finalRefs, finalErrors
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -444,16 +514,24 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 // - inserting into the database
 // - increment the updatedResources list if the resource has been updated
 // - extract all external references from the resource payload (adding the the lookup table)
-func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup map[string]bool, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) error {
-	referencedResourcesLookup[fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID)] = true
+func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup *sync.Map, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) (*models.UpsertSummary, error) {
+
+	if summary == nil {
+		summary = &models.UpsertSummary{
+			UpdatedResources: []string{},
+		}
+	}
+
+	referencedResourcesLookup.Store(fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID), true)
 	if len(resource.SourceUri) > 0 {
 		//this is a reference to an external resource, we should mark that url as seen
-		referencedResourcesLookup[resource.SourceUri] = true
+		referencedResourcesLookup.Store(resource.SourceUri, true)
+
 	}
 
 	resourceObj, err := fhirutils.MapToResource(resource.ResourceRaw, false)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	resourceObjTyped := resourceObj.(models.ResourceInterface)
@@ -494,9 +572,15 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 				SourceResourceType: containedResourceType,
 				ResourceRaw:        containedResource,
 			}
-			err = c.ProcessResource(db, containedResourceWrapped, referencedResourcesLookup, internalFragmentReferenceLookup, summary)
+			childSummary, err := c.ProcessResource(db, containedResourceWrapped, referencedResourcesLookup, internalFragmentReferenceLookup, summary)
 			if err != nil {
-				return err
+				return nil, err
+			}
+
+			// Merge only if it was a newly created one (defensive in case recursion uses nil)
+			if summary != childSummary {
+				summary.UpdatedResources = append(summary.UpdatedResources, childSummary.UpdatedResources...)
+				summary.TotalResources += childSummary.TotalResources
 			}
 		}
 	}
@@ -505,16 +589,16 @@ func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, reso
 
 	isUpdated, err := db.UpsertRawResource(c.Context, c.SourceCredential, resource)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	if isUpdated {
 		summary.UpdatedResources = append(summary.UpdatedResources, fmt.Sprintf("%s/%s", resource.SourceResourceType, resource.SourceResourceID))
 	}
 
 	for _, ref := range resource.ReferencedResources {
-		if _, lookupOk := referencedResourcesLookup[ref]; !lookupOk {
-			referencedResourcesLookup[ref] = false //this reference has not been seen before, set to false (pending)
+		if _, lookupOk := referencedResourcesLookup.Load(ref); !lookupOk {
+			referencedResourcesLookup.Store(ref, false)
 		}
 	}
-	return nil
+	return summary, nil
 }

@@ -3,14 +3,16 @@ package base
 import (
 	"crypto/tls"
 	"fmt"
-	govcr "github.com/seborama/govcr/v15"
-	"github.com/seborama/govcr/v15/cassette/track"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"path"
+	"sync"
 	"testing"
 	"time"
+
+	govcr "github.com/seborama/govcr/v15"
+	"github.com/seborama/govcr/v15/cassette/track"
 )
 
 type bearerTransport struct {
@@ -19,7 +21,7 @@ type bearerTransport struct {
 }
 
 func (bt *bearerTransport) RoundTrip(req *http.Request) (*http.Response, error) {
-
+	req.Header.Add("Accept", "application/fhir+json")
 	req.Header.Add("X-Transaction-Id", time.Now().String())
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", bt.accessToken))
 	return bt.underlyingTransport.RoundTrip(req)
@@ -90,4 +92,17 @@ func ReadTestFixture(path string) ([]byte, error) {
 	}
 	defer jsonFile.Close()
 	return ioutil.ReadAll(jsonFile)
+}
+
+func ToMap[K comparable, V any](sm *sync.Map) map[K]V {
+	m := make(map[K]V)
+	sm.Range(func(k, v any) bool {
+		if key, ok := k.(K); ok {
+			if value, ok := v.(V); ok {
+				m[key] = value
+			}
+		}
+		return true
+	})
+	return m
 }
