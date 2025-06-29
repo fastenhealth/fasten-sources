@@ -21,7 +21,7 @@ type bearerTransport struct {
 }
 
 func (bt *bearerTransport) RoundTrip(req *http.Request) (*http.Response, error) {
-
+	req.Header.Add("Accept", "application/fhir+json")
 	req.Header.Add("X-Transaction-Id", time.Now().String())
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", bt.accessToken))
 	return bt.underlyingTransport.RoundTrip(req)

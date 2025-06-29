@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
+	"strings"
 	"sync"
 	"testing"
 
@@ -315,4 +316,134 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 		"Patient/-10000010254618": false,
 	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
+}
+
+func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
+	t.Parallel()
+
+	// Setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+
+	access_token := "eyJraWQiOiIyMDI1LTA2LTI4VDAyOjAyOjAzLjE0MS5lYy5lczI1NiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJodHRwczovL2F1dGhvcml6YXRpb24uY2VybmVyLmNvbS8iLCJleHAiOjE3NTExNjc0NTEsImlhdCI6MTc1MTE2Njg1MSwianRpIjoiYmIzNjgyMGYtYzYxNy00NGY3LWI4MzctYTQxMzhhY2RmMTI0IiwidXJuOmNlcm5lcjphdXRob3JpemF0aW9uOmNsYWltczp2ZXJzaW9uOjEiOnsidmVyIjoiMS4wIiwicHJvZmlsZXMiOnsic21hcnQtdjEiOnsicGF0aWVudHMiOlsiMTI3MjQwNjYiXSwiYXpzIjoiZmhpclVzZXIgb2ZmbGluZV9hY2Nlc3Mgb3BlbmlkIHBhdGllbnQvQWxsZXJneUludG9sZXJhbmNlLnJlYWQgcGF0aWVudC9BcHBvaW50bWVudC5yZWFkIHBhdGllbnQvQmluYXJ5LnJlYWQgcGF0aWVudC9DYXJlUGxhbi5yZWFkIHBhdGllbnQvQ2FyZVRlYW0ucmVhZCBwYXRpZW50L0NvbmRpdGlvbi5yZWFkIHBhdGllbnQvQ29uc2VudC5yZWFkIHBhdGllbnQvQ292ZXJhZ2UucmVhZCBwYXRpZW50L0RldmljZS5yZWFkIHBhdGllbnQvRGlhZ25vc3RpY1JlcG9ydC5yZWFkIHBhdGllbnQvRG9jdW1lbnRSZWZlcmVuY2UucmVhZCBwYXRpZW50L0VuY291bnRlci5yZWFkIHBhdGllbnQvRmFtaWx5TWVtYmVySGlzdG9yeS5yZWFkIHBhdGllbnQvR29hbC5yZWFkIHBhdGllbnQvSW1tdW5pemF0aW9uLnJlYWQgcGF0aWVudC9JbnN1cmFuY2VQbGFuLnJlYWQgcGF0aWVudC9NZWRpY2F0aW9uQWRtaW5pc3RyYXRpb24ucmVhZCBwYXRpZW50L01lZGljYXRpb25SZXF1ZXN0LnJlYWQgcGF0aWVudC9OdXRyaXRpb25PcmRlci5yZWFkIHBhdGllbnQvT2JzZXJ2YXRpb24ucmVhZCBwYXRpZW50L1BhdGllbnQucmVhZCBwYXRpZW50L1BlcnNvbi5yZWFkIHBhdGllbnQvUHJvY2VkdXJlLnJlYWQgcGF0aWVudC9Qcm92ZW5hbmNlLnJlYWQgcGF0aWVudC9RdWVzdGlvbm5haXJlLnJlYWQgcGF0aWVudC9RdWVzdGlvbm5haXJlUmVzcG9uc2UucmVhZCBwYXRpZW50L1JlbGF0ZWRQZXJzb24ucmVhZCBwYXRpZW50L1NjaGVkdWxlLnJlYWQgcGF0aWVudC9TZXJ2aWNlUmVxdWVzdC5yZWFkIHBhdGllbnQvU2xvdC5yZWFkIHVzZXIvTG9jYXRpb24ucmVhZCB1c2VyL09yZ2FuaXphdGlvbi5yZWFkIHVzZXIvUHJhY3RpdGlvbmVyLnJlYWQiLCJmaGlyVXNlciI6IlBhdGllbnQvMTI3MjQwNjYifX0sImNsaWVudCI6eyJuYW1lIjoiRmFzdGVuIEhlYWx0aCIsImlkIjoiODllZmMyMmMtZTg3OS00YzAyLWE0MjMtYzNiOThhMDExN2EzIn0sInVzZXIiOnsicHJpbmNpcGFsIjoicnM3bWg5d3gzeGI4dnk2MyIsInBlcnNvbmEiOiJwYXRpZW50IiwiaWRzcCI6ImVjMjQ1OGYyLTFlMjQtNDFjOC1iNzFiLTBlNzAxYWY3NTgzZC1jaCIsInNlc3Npb25JZCI6IjVkMDYzZmJiLTAxM2MtNDVlZC1hZjQ5LTIzYzU3ZjI0NGFiYSIsInByaW5jaXBhbFR5cGUiOiJ1c2VybmFtZSIsInByaW5jaXBhbFVyaSI6InVybjpjZXJuZXI6aWRlbnRpdHktZmVkZXJhdGlvbjpyZWFsbTplYzI0NThmMi0xZTI0LTQxYzgtYjcxYi0wZTcwMWFmNzU4M2QtY2g6cHJpbmNpcGFsOnJzN21oOXd4M3hiOHZ5NjMiLCJpZHNwVXJpIjoiaHR0cHM6Ly9jZXJuZXJoZWFsdGguY29tL3NhbWwvcmVhbG1zL2VjMjQ1OGYyLTFlMjQtNDFjOC1iNzFiLTBlNzAxYWY3NTgzZC1jaC9tZXRhZGF0YSJ9LCJ0ZW5hbnQiOiJlYzI0NThmMi0xZTI0LTQxYzgtYjcxYi0wZTcwMWFmNzU4M2QifX0.GeNw0drPp0mjDR3OzN64QJaoPyEvYqSO2wvtHX3bYwMXe79gUFWvBAf_JzJZTzNSfulz-uzyF2w_h76C2z-wJg"
+	httpClient := OAuthVcrSetup(t, true, access_token)
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
+		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
+	)
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		testLogger,
+		fakeSourceCredential,
+		cernerSandboxDefinition,
+		models.WithTestHttpClient(httpClient),
+	)
+	require.NoError(t, err)
+
+	// Read lookup_references.json and convert to sync.Map
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	require.NoError(t, err)
+
+	var refMap map[string]interface{}
+	err = json.Unmarshal(jsonBytes, &refMap)
+	require.NoError(t, err)
+
+	referencedResourcesLookup := &sync.Map{}
+	for k, v := range refMap {
+		referencedResourcesLookup.Store(k, v)
+	}
+	client.SourceClientOptions.Concurrency = 5
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
+	// Test
+	_, syncErrors := client.ProcessPendingResources(fakeDatabase, &summary, referencedResourcesLookup, map[string]error{})
+	for key, err := range syncErrors {
+		if err != nil && !strings.Contains(err.Error(), "Skipping") {
+			require.NoError(t, err, "error occurred while processing resource %s", key)
+		}
+	}
+
+	// Assert
+	// Assert
+	require.Equal(t, 193, len(summary.UpdatedResources), "should have updated 193 resources")
+	require.Equal(t, 194, summary.TotalResources, "should have processed 194 resources total")
+
+}
+
+func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
+	t.Parallel()
+
+	// Setup
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
+
+	testLogger := logrus.WithFields(logrus.Fields{
+		"type": "test",
+	})
+	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
+	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
+
+	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+
+	access_token := "eyJraWQiOiIyMDI1LTA2LTI4VDAyOjAyOjAzLjE0MS5lYy5lczI1NiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJpc3MiOiJodHRwczovL2F1dGhvcml6YXRpb24uY2VybmVyLmNvbS8iLCJleHAiOjE3NTExNjc0NTEsImlhdCI6MTc1MTE2Njg1MSwianRpIjoiYmIzNjgyMGYtYzYxNy00NGY3LWI4MzctYTQxMzhhY2RmMTI0IiwidXJuOmNlcm5lcjphdXRob3JpemF0aW9uOmNsYWltczp2ZXJzaW9uOjEiOnsidmVyIjoiMS4wIiwicHJvZmlsZXMiOnsic21hcnQtdjEiOnsicGF0aWVudHMiOlsiMTI3MjQwNjYiXSwiYXpzIjoiZmhpclVzZXIgb2ZmbGluZV9hY2Nlc3Mgb3BlbmlkIHBhdGllbnQvQWxsZXJneUludG9sZXJhbmNlLnJlYWQgcGF0aWVudC9BcHBvaW50bWVudC5yZWFkIHBhdGllbnQvQmluYXJ5LnJlYWQgcGF0aWVudC9DYXJlUGxhbi5yZWFkIHBhdGllbnQvQ2FyZVRlYW0ucmVhZCBwYXRpZW50L0NvbmRpdGlvbi5yZWFkIHBhdGllbnQvQ29uc2VudC5yZWFkIHBhdGllbnQvQ292ZXJhZ2UucmVhZCBwYXRpZW50L0RldmljZS5yZWFkIHBhdGllbnQvRGlhZ25vc3RpY1JlcG9ydC5yZWFkIHBhdGllbnQvRG9jdW1lbnRSZWZlcmVuY2UucmVhZCBwYXRpZW50L0VuY291bnRlci5yZWFkIHBhdGllbnQvRmFtaWx5TWVtYmVySGlzdG9yeS5yZWFkIHBhdGllbnQvR29hbC5yZWFkIHBhdGllbnQvSW1tdW5pemF0aW9uLnJlYWQgcGF0aWVudC9JbnN1cmFuY2VQbGFuLnJlYWQgcGF0aWVudC9NZWRpY2F0aW9uQWRtaW5pc3RyYXRpb24ucmVhZCBwYXRpZW50L01lZGljYXRpb25SZXF1ZXN0LnJlYWQgcGF0aWVudC9OdXRyaXRpb25PcmRlci5yZWFkIHBhdGllbnQvT2JzZXJ2YXRpb24ucmVhZCBwYXRpZW50L1BhdGllbnQucmVhZCBwYXRpZW50L1BlcnNvbi5yZWFkIHBhdGllbnQvUHJvY2VkdXJlLnJlYWQgcGF0aWVudC9Qcm92ZW5hbmNlLnJlYWQgcGF0aWVudC9RdWVzdGlvbm5haXJlLnJlYWQgcGF0aWVudC9RdWVzdGlvbm5haXJlUmVzcG9uc2UucmVhZCBwYXRpZW50L1JlbGF0ZWRQZXJzb24ucmVhZCBwYXRpZW50L1NjaGVkdWxlLnJlYWQgcGF0aWVudC9TZXJ2aWNlUmVxdWVzdC5yZWFkIHBhdGllbnQvU2xvdC5yZWFkIHVzZXIvTG9jYXRpb24ucmVhZCB1c2VyL09yZ2FuaXphdGlvbi5yZWFkIHVzZXIvUHJhY3RpdGlvbmVyLnJlYWQiLCJmaGlyVXNlciI6IlBhdGllbnQvMTI3MjQwNjYifX0sImNsaWVudCI6eyJuYW1lIjoiRmFzdGVuIEhlYWx0aCIsImlkIjoiODllZmMyMmMtZTg3OS00YzAyLWE0MjMtYzNiOThhMDExN2EzIn0sInVzZXIiOnsicHJpbmNpcGFsIjoicnM3bWg5d3gzeGI4dnk2MyIsInBlcnNvbmEiOiJwYXRpZW50IiwiaWRzcCI6ImVjMjQ1OGYyLTFlMjQtNDFjOC1iNzFiLTBlNzAxYWY3NTgzZC1jaCIsInNlc3Npb25JZCI6IjVkMDYzZmJiLTAxM2MtNDVlZC1hZjQ5LTIzYzU3ZjI0NGFiYSIsInByaW5jaXBhbFR5cGUiOiJ1c2VybmFtZSIsInByaW5jaXBhbFVyaSI6InVybjpjZXJuZXI6aWRlbnRpdHktZmVkZXJhdGlvbjpyZWFsbTplYzI0NThmMi0xZTI0LTQxYzgtYjcxYi0wZTcwMWFmNzU4M2QtY2g6cHJpbmNpcGFsOnJzN21oOXd4M3hiOHZ5NjMiLCJpZHNwVXJpIjoiaHR0cHM6Ly9jZXJuZXJoZWFsdGguY29tL3NhbWwvcmVhbG1zL2VjMjQ1OGYyLTFlMjQtNDFjOC1iNzFiLTBlNzAxYWY3NTgzZC1jaC9tZXRhZGF0YSJ9LCJ0ZW5hbnQiOiJlYzI0NThmMi0xZTI0LTQxYzgtYjcxYi0wZTcwMWFmNzU4M2QifX0.GeNw0drPp0mjDR3OzN64QJaoPyEvYqSO2wvtHX3bYwMXe79gUFWvBAf_JzJZTzNSfulz-uzyF2w_h76C2z-wJg"
+	httpClient := OAuthVcrSetup(t, true, access_token)
+
+	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
+		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
+	)
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		testLogger,
+		fakeSourceCredential,
+		cernerSandboxDefinition,
+		models.WithTestHttpClient(httpClient),
+	)
+	require.NoError(t, err)
+
+	// Read lookup_references.json and convert to sync.Map
+	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	require.NoError(t, err)
+
+	var refMap map[string]interface{}
+	err = json.Unmarshal(jsonBytes, &refMap)
+	require.NoError(t, err)
+
+	referencedResourcesLookup := &sync.Map{}
+	for k, v := range refMap {
+		referencedResourcesLookup.Store(k, v)
+	}
+	client.SourceClientOptions.Concurrency = 1
+	summary := models.UpsertSummary{
+		UpdatedResources: []string{},
+	}
+
+	// Test
+	_, syncErrors := client.ProcessPendingResources(fakeDatabase, &summary, referencedResourcesLookup, map[string]error{})
+	for key, err := range syncErrors {
+		if err != nil && !strings.Contains(err.Error(), "Skipping") {
+			require.NoError(t, err, "error occurred while processing resource %s", key)
+		}
+	}
+
+	// Assert
+	require.Equal(t, 193, len(summary.UpdatedResources), "should have updated 193 resources")
+	require.Equal(t, 194, summary.TotalResources, "should have processed 194 resources total")
+
 }
