@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import {getEndpointDefinition} from '../utils';
+import { getEndpointDefinition } from '../utils';
 import { generateSourceAuthorizeUrl } from '@shared-library';
 
-test.skip("Epic OAuth2 Legacy Login Flow", async ({page}, testInfo) => {
+test("Epic OAuth2 Legacy Login Flow", async ({ page }, testInfo) => {
     try {
-        await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.title}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: testInfo.title } })}`);
         await page.waitForTimeout(5000);
         //get the Epic Sandbox endpoint definition
         let endpointDefinition = await getEndpointDefinition('fc94bfc7-684d-4e4d-aa6e-ceec01c21c81')
@@ -17,13 +17,14 @@ test.skip("Epic OAuth2 Legacy Login Flow", async ({page}, testInfo) => {
         await page.goto(authorizeData.url.toString());
 
         // We are on MyChart login page
-        await page.waitForSelector("text=MyChart Username");
+        await page.waitForSelector("label[for='Login']");
         await expect(page).toHaveTitle("MyChart - Login Page");
         await page.click("label[for='Login']", { force: true });
         await page.keyboard.type("fhirderrick");
         await page.click("label[for='Password']", { force: true });
         await page.keyboard.type("epicepic1");
-        await page.click("text=Sign In");
+        await page.click("input[type='submit']");
+
 
         // We have logged in to MyChart
         await page.waitForSelector("text=Fasten Health has said that it:");
@@ -39,15 +40,15 @@ test.skip("Epic OAuth2 Legacy Login Flow", async ({page}, testInfo) => {
         await page.click("text=Allow access", { force: true, delay: 500 });
 
         // MyChart has granted access, redirecting back to app from MyChart
-        await page.waitForSelector("text=Epic FHIR Dynamic Registration Redirect");
+        // await page.waitForSelector("text=Epic FHIR Dynamic Registration Redirect");
 
         // Should auto redirect if successful, but playwright Chrome seems to have issues so we'll manually click if needed
-        try {
-            await page.click("text=Back to main page", { force: true, delay: 5000 });
-        } catch (e) {}
+        // try {
+        //     await page.click("text=Back to main page", { force: true, delay: 5000 });
+        // } catch (e) { }
 
         // If successful, Dynamic Client Registration Data should now be visible
-        await page.waitForSelector("text=Dynamic Client Registration Data");
+        // await page.waitForSelector("text=Dynamic Client Registration Data");
 
 
 
@@ -69,13 +70,13 @@ test.skip("Epic OAuth2 Legacy Login Flow", async ({page}, testInfo) => {
         // } catch (e) {}
         //
         // // MyChart has granted access, redirecting back to app from MyChart
-        // await page.waitForSelector("text=Your account has been securely connected to FASTEN.")
+        await page.waitForSelector("text=Your account has been securely connected to FASTEN.")
         // await expect((new URL(page.url())).searchParams.get("code")).toBeTruthy()
 
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Authentication Successful'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Authentication Successful' } })}`);
     } catch (e) {
         console.log(e);
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Test failed'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Test failed' } })}`);
     }
 });
 //

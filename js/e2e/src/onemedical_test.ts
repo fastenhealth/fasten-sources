@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
-import {getEndpointDefinition} from '../utils';
-import {generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl} from '@shared-library';
+import { getEndpointDefinition } from '../utils';
+import { generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl } from '@shared-library';
 import process from 'process';
 
 //TODO: Oops!, something went wrong
-test.skip("OneMedical Login Flow", async ({page}, testInfo) => {
+test.skip("OneMedical Login Flow", async ({ page }, testInfo) => {
     try {
-        await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.title}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: testInfo.title } })}`);
         await page.waitForTimeout(5000);
         //get the OneMedical Sandbox endpoint definition
         // let endpointDefinition = await getEndpointDefinition('c835742c-c896-4b93-beb5-28df18f16bd8')
@@ -24,7 +24,7 @@ test.skip("OneMedical Login Flow", async ({page}, testInfo) => {
         await page.goto(authorizeData.url.toString());
 
         // We are on login page
-        await page.waitForSelector("text=Log in to continue");
+        await page.waitForSelector("label[for='username-textbox']");
         await page.focus("#email");
         await page.keyboard.type(process.env.PW_ONEMEDICAL_USERNAME);
         await page.focus("#password");
@@ -48,9 +48,9 @@ test.skip("OneMedical Login Flow", async ({page}, testInfo) => {
         expect(params.get('connection_status')).toEqual("authorized");
         expect(params.get('external_state')).toEqual(authorizeData.sourceState.state);
 
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Authentication Successful'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Authentication Successful' } })}`);
     } catch (e) {
         console.log(e);
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Test failed'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Test failed' } })}`);
     }
 });
