@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
-import {getEndpointDefinition} from '../utils';
-import {generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl} from '@shared-library';
+import { getEndpointDefinition } from '../utils';
+import { generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl } from '@shared-library';
 
-test("Nextgen Login Flow", async ({page}, testInfo) => {
+test("Nextgen Login Flow", async ({ page }, testInfo) => {
     try {
-        await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.title}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: "setSessionName", arguments: { name: testInfo.title } })}`);
         await page.waitForTimeout(5000);
         //get the NextGen Sandbox endpoint definition
         // let endpointDefinition = await getEndpointDefinition('843f5c82-b4e3-43c6-8657-eff1390d7e44')
@@ -30,11 +30,11 @@ test("Nextgen Login Flow", async ({page}, testInfo) => {
         await page.click('button:text("Next")');
 
         // We have logged in
-        await page.waitForSelector("text=Connect to Fasten Health - Sandbox");
+        await page.waitForSelector("text=Connect to Fasten Connect - Sandbox");
         await page.click('#btnAllow');
 
         // Keep me signed in.
-        await page.waitForSelector("text=Connect to Fasten Health - Sandbox");
+        await page.waitForSelector("text=Connect to Fasten Connect - Sandbox");
         await page.click('button:text("Next")');
 
         // If successful, redirect page should now be visible
@@ -50,9 +50,9 @@ test("Nextgen Login Flow", async ({page}, testInfo) => {
         expect(params.get('connection_status')).toEqual("authorized");
         expect(params.get('external_state')).toEqual(authorizeData.sourceState.state);
 
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Authentication Successful'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'passed', reason: 'Authentication Successful' } })}`);
     } catch (e) {
         console.log(e);
-        await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Test failed'}})}`);
+        await page.evaluate(_ => { }, `browserstack_executor: ${JSON.stringify({ action: 'setSessionStatus', arguments: { status: 'failed', reason: 'Test failed' } })}`);
     }
 });

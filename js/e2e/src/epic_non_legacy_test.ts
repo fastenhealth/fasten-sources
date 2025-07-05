@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { getEndpointDefinition } from '../utils';
-import {generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl} from '@shared-library';
+import { generateFastenConnectAuthorizeUrl, generateSourceAuthorizeUrl } from '@shared-library';
 
 test("Epic Non Legacy Login Flow", async ({ page }, testInfo) => {
     try {
@@ -24,13 +24,13 @@ test("Epic Non Legacy Login Flow", async ({ page }, testInfo) => {
         await page.goto(authorizeData.url.toString());
 
         // We are on MyChart login page
-        await page.waitForSelector("text=MyChart Username");
+        await page.waitForSelector("label[for='Login']");
         await expect(page).toHaveTitle("MyChart - Login Page");
         await page.click("label[for='Login']", { force: true });
         await page.keyboard.type("fhircamila");
         await page.click("label[for='Password']", { force: true });
         await page.keyboard.type("epicepic1");
-        await page.click("text=Log In");
+        await page.click("input[type='submit']");
 
         // // We have logged in to MyChart
         await page.waitForSelector("text=Fasten Health has said that it:");
