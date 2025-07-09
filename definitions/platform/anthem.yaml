@@ -1,8 +1,6 @@
 # MANUALLY POPULATED
 platform_type: anthem
 
-# inherit_platform_type: careevolution
-
 scopes_supported:
   - launch/patient
   - fhirUser
@@ -17,7 +15,9 @@ response_modes_supported:
   - query
 confidential: true
 cors_relay_required: false
-documentation: https://patient360c.anthem.com/P360Member/fhir/documentation?prefix=fhir-r4
+documentation: |
+  https://sbx.totalview.healthos.elevancehealth.com/fhir/documentation#overview-section
+  https://sbx.totalview.healthos.elevancehealth.com/registration/sandbox/login
 client_headers:
   Accept: "application/json+fhir"
 missing_op_patient_everything: false

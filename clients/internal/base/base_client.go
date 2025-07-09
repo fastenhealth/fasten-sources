@@ -242,6 +242,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			return fmt.Errorf("%w: no refresh token available, and does not support JWT refresh. User must re-authenticate", pkg.ErrSMARTTokenRefreshFailure)
 		}
 
+		c.Logger.Infof("Access token refreshed successfully, expires at %s", token.Expiry.Format(time.RFC3339))
 	}
 
 	c.OauthClient = oauth2.NewClient(c.Context, oauth2.StaticTokenSource(token))
