@@ -2,7 +2,7 @@
 platform_type: anthem
 
 scopes_supported:
-  - launch/patient
+  - profile
   - fhirUser
   - openid
   - offline_access
