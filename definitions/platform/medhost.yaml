@@ -19,7 +19,6 @@ scopes_supported:
   - patient/Encounter.read
   - patient/Goal.read
   - patient/Immunization.read
-  - patient/List.read
   - patient/Location.read
   - patient/Medication.read
   - patient/MedicationAdministration.read
