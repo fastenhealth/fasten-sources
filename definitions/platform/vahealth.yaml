@@ -16,9 +16,12 @@ scopes_supported:
   - patient/DocumentReference.read
   - patient/Encounter.read
   - patient/Immunization.read
+  - patient/Location.read
   - patient/Medication.read
+  - patient/MedicationOrder.read
   - patient/MedicationRequest.read
   - patient/Observation.read
+  - patient/Organization.read
   - patient/Patient.read
   - patient/Practitioner.read
   - patient/PractitionerRole.read
