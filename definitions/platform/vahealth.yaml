@@ -47,3 +47,4 @@ client_supported_resources: [
   "MedicationRequest",
   "PractitionerRole"
 ]
+client_rate_limited: true
