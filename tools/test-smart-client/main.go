@@ -358,7 +358,7 @@ func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
 	proxy.ServeHTTP(proxyRes, newProxyReq)
 }
 
-func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger *logrus.Entry) (clientModels.SourceClient, error) {
+func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger logrus.FieldLogger) (clientModels.SourceClient, error) {
 	//populate a fake source credential
 	sc := fakeSourceCredential{
 		ClientId:   requestData.SourceDefinition.ClientId,

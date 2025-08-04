@@ -58,6 +58,8 @@ type LighthouseSourceDefinition struct {
 	//can only be set if MissingOpPatientEverything is true
 	CustomOpPatientEverything string   `json:"-" yaml:"custom_op_patient_everything"  validate:"omitempty"`
 	ClientSupportedResources  []string `json:"-" yaml:"client_supported_resources"  validate:"omitempty"`
+	//if true, the client is rate limited by the provider, so we need to handle the 429 Too Many Requests response (and x-ratelimit-*/retry-after headers)
+	ClientRateLimited bool `json:"-" yaml:"client_rate_limited"  validate:"omitempty"`
 
 	//set by the Populate() function
 	PlatformType pkg.PlatformType `json:"platform_type" yaml:"platform_type" validate:"required"`

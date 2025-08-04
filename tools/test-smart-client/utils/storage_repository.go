@@ -13,7 +13,7 @@ import (
 )
 
 type StorageRepository struct {
-	Logger        *logrus.Entry
+	Logger        logrus.FieldLogger
 	LocalFilepath string
 	LocalFilename string
 	JsonlWriter   JsonlWriter
@@ -23,7 +23,7 @@ type StorageRepository struct {
 	ErrorData map[string]interface{}
 }
 
-func NewStorageRepository(logger *logrus.Entry) (*StorageRepository, error) {
+func NewStorageRepository(logger logrus.FieldLogger) (*StorageRepository, error) {
 	localFilename := fmt.Sprintf("%s-%s.jsonl", time.Now().Format(time.DateOnly), uuid.New().String())
 	localFilepath := filepath.Join("/tmp", localFilename)
 

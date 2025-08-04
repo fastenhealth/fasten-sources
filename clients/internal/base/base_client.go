@@ -56,6 +56,11 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
 		Context:                    ctx,
 	}
+
+	if endpointDefinition.ClientRateLimited {
+		options = append(options, models.WithRetryableHttpClient()) //make sure we have a retryable http client if the platform_type is rate limited
+	}
+
 	for _, o := range options {
 		o(clientOptions)
 	}

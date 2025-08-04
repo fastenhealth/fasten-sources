@@ -2,8 +2,11 @@ package models
 
 import (
 	"context"
+	"github.com/fastenhealth/fasten-sources/pkg/utils"
 	"net/http"
+	"time"
 
+	"github.com/hashicorp/go-retryablehttp"
 	"github.com/tink-crypto/tink-go/v2/keyset"
 	"golang.org/x/oauth2"
 )
@@ -36,6 +39,24 @@ func WithHttpClient(customHttpClient *http.Client) func(*SourceClientOptions) {
 	// https://github.com/hashicorp/go-gcp-common/blob/main/gcputil/credentials.go#L172C9-L172C94
 	return func(s *SourceClientOptions) {
 		s.Context = context.WithValue(s.Context, oauth2.HTTPClient, customHttpClient)
+	}
+}
+
+// WithRetryableHttpClient wraps the retryablehttp.RateLimitLinearJitterBackoff.
+// It first checks if the response status code is http.StatusTooManyRequests (HTTP Code 429) or http.StatusServiceUnavailable (HTTP Code 503).
+// If it is and the response contains a Retry-After response header, it will wait the amount of time specified by the header.
+// Otherwise, this calls retryablehttp.LinearJitterBackoff.
+func WithRetryableHttpClient() func(*SourceClientOptions) {
+
+	return func(s *SourceClientOptions) {
+		retryClient := retryablehttp.NewClient()
+		retryClient.RetryMax = 5
+		retryClient.RetryWaitMax = 30 * time.Minute //max wait 30 minutes per request
+		retryClient.Backoff = utils.XRateLimitLinearJitterBackoff
+
+		//https://github.com/hashicorp/go-retryablehttp/pull/101 - add a Logrus compatible logger.
+		//retryClient.Logger
+		s.Context = context.WithValue(s.Context, oauth2.HTTPClient, retryClient.StandardClient())
 	}
 }
 
