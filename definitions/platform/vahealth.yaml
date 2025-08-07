@@ -45,6 +45,5 @@ client_supported_resources: [
   "Appointment",
   "DeviceRequest",
   "MedicationRequest",
-  "PractitionerRole"
 ]
 client_rate_limited: true
