@@ -208,7 +208,6 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 }
 
 func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters_ShouldParseCorrectly(t *testing.T) {
-	t.Skip("Cannot handle escaped unicode characters")
 	//setup
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
@@ -243,12 +242,13 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 4, len(referencedResourcesLookupMap))
+	//require.Equal(t, 4, len(referencedResourcesLookupMap))
 	require.Equal(t, map[string]bool{
-		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                      true,
-		"Location/eq0Zb8k23Hg.GX9aMfavyZg3":                       false,
-		"Patient/etMDDQeIicnivVsdRrZcEQGPqfFlXIbJH5wMZqQ7ZNldGo3": false,
-		"Practitioner/e7y0GLCXTb0rdKZlNSuQhww3":                   false,
+		"Encounter/e7vTGSIu3VmPxDxo8hbtSKQ3":                  true,
+		"Encounter/exxx3In3deguCac1YMmg3":                     false,
+		"Patient/1234":                                        false,
+		"ServiceRequest/klsdk3-PBKXHFeY0Q7KMDFz92TYK2nbYKsI3": false,
+		"Specimen/xxxxwer-YwClO-82tNgDDI43tkGp2UsGcRs3":       false,
 	}, referencedResourcesLookupMap)
 	//require.Equal(t, "A00000000000005", profile.SourceResourceID)
 }

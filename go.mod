@@ -1,11 +1,13 @@
 module github.com/fastenhealth/fasten-sources
 
+//replace github.com/fastenhealth/gofhir-models => ../gofhir-models
+
 go 1.23.0
 
 toolchain go1.23.9
 
 require (
-	github.com/fastenhealth/gofhir-models v0.0.7
+	github.com/fastenhealth/gofhir-models v0.0.8
 	github.com/gabriel-vasile/mimetype v1.4.3
 	github.com/go-playground/validator/v10 v10.16.0
 	github.com/golang/mock v1.6.0
@@ -53,5 +55,3 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
 )
-
-//replace github.com/fastenhealth/gofhir-models => ../gofhir-models
