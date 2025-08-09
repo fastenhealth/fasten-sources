@@ -83,7 +83,8 @@ func (def *LighthouseSourceDefinition) Populate(
 	//	sourceDef.Hidden = true
 	//}
 
-	if def.PlatformType == pkg.PlatformTypeCigna ||
+	if def.PlatformType == pkg.PlatformTypeAdvancedmd ||
+		def.PlatformType == pkg.PlatformTypeCigna ||
 		def.PlatformType == pkg.PlatformTypeNextgen ||
 		def.PlatformType == pkg.PlatformTypeVahealth ||
 		def.PlatformType == pkg.PlatformTypeNHS ||
@@ -94,8 +95,7 @@ func (def *LighthouseSourceDefinition) Populate(
 		def.Audience = def.Url
 	}
 
-	if def.PlatformType == pkg.PlatformTypeAdvancedmd ||
-		def.PlatformType == pkg.PlatformTypeCareevolution ||
+	if def.PlatformType == pkg.PlatformTypeCareevolution ||
 		def.PlatformType == pkg.PlatformTypeAnthem ||
 		def.PlatformType == pkg.PlatformTypeEclinicalworks ||
 		def.PlatformType == pkg.PlatformTypeMedhost ||
