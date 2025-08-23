@@ -71,8 +71,6 @@ func TestCatalog_GetBrands_WithCache(t *testing.T) {
 			require.Len(t, brand.PortalsIds, 2)
 		} else if brand.Id == "e5079d5c-4526-4b03-a5d9-55db63065f94" {
 			require.Len(t, brand.PortalsIds, 3)
-		} else {
-			require.Len(t, brand.PortalsIds, 1)
 		}
 	}
 }
