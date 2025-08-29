@@ -238,6 +238,7 @@ type fakeSourceCredential struct {
 	RefreshToken               string
 	AccessToken                string
 	ExpiresAt                  int64
+	Scope                      string
 }
 
 func (s *fakeSourceCredential) GetSourceId() string {
@@ -292,10 +293,11 @@ func (s *fakeSourceCredential) GetExpiresAt() int64 {
 	return s.ExpiresAt
 }
 
-func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string, expiresAt int64) {
+func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string, expiresAt int64, scope string) {
 	s.AccessToken = accessToken
 	s.RefreshToken = refreshToken
 	s.ExpiresAt = expiresAt
+	s.Scope = scope
 }
 
 func (s *fakeSourceCredential) GetSourceCredentialType() pkg.SourceCredentialType {
