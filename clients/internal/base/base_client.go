@@ -207,7 +207,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 				c.Logger.Error("error refreshing JWT client: ", err)
 				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
-			c.SourceCredential.SetTokens(tokenRefreshResponse.AccessToken, tokenRefreshResponse.RefreshToken, time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix())
+			c.SourceCredential.SetTokens(tokenRefreshResponse.AccessToken, tokenRefreshResponse.RefreshToken, time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix(), tokenRefreshResponse.Scope)
 
 			//update the token with newly refreshed data
 			token = &oauth2.Token{
@@ -231,8 +231,15 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			if newToken.AccessToken != token.AccessToken {
 				token = newToken
 
+				newTokenScope := ""
+				if scope := newToken.Extra("scope"); scope != nil {
+					if scopeStr, scopeStrOk := scope.(string); scopeStrOk {
+						newTokenScope = scopeStr // safe casting and assignment
+					}
+				}
+
 				// update the "source" credential with new data (which will need to be sent
-				c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix())
+				c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix(), newTokenScope)
 				//updatedSource.AccessToken = newToken.AccessToken
 				//updatedSource.ExpiresAt = newToken.Expiry.Unix()
 				//// Don't overwrite `RefreshToken` with an empty value
