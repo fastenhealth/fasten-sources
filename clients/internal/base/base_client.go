@@ -9,6 +9,7 @@ import (
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
+	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/exp/slices"
 	"golang.org/x/oauth2"
@@ -347,6 +348,55 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 	}
 
 	return resourceUrl.String(), err
+}
+
+// Use token introspection from Token Introspectin endpoint
+// https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html
+func (c *SourceClientBase) IntrospectToken() (*models.TokenIntrospectResponse, error) {
+
+	introspectEndpoint := c.EndpointDefinition.IntrospectionEndpoint
+	if len(introspectEndpoint) == 0 {
+		//replace the token endpoint with the introspection endpoint
+		introspectEndpoint = strings.TrimSuffix(strings.TrimSuffix(c.EndpointDefinition.TokenEndpoint, "/"), "/token") + "/introspect"
+	}
+
+	req, err := http.NewRequest("POST", introspectEndpoint, strings.NewReader(fmt.Sprintf("token=%s", c.SourceCredential.GetAccessToken())))
+	if err != nil {
+		return nil, errors.Errorf("error creating introspection request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	//req.SetBasicAuth(c.SourceCredential.GetClientId(), c.SourceClientOptions.ClientSecret)
+	c.LoggerDebugRequest(req)
+	resp, err := c.OauthClient.Do(req)
+	if err != nil {
+		return nil, errors.Errorf("error getting token info: %w", err)
+	}
+
+	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
+		b, _ := io.ReadAll(resp.Body)
+		bodyContent := string(b)
+		if len(bodyContent) > 600 {
+			bodyContent = bodyContent[:600]
+		}
+		c.LoggerDebugResponse(resp, true)
+		return nil, fmt.Errorf("%w: an error occurred during request %s - %d - %s [%s]", pkg.ErrResourceHttpError, introspectEndpoint, resp.StatusCode, resp.Status, bodyContent)
+	}
+
+	//parse res.Body into a map
+
+	// Read the response body
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+
+	// Parse the JSON into a map
+	var data models.TokenIntrospectResponse
+	err = json.Unmarshal(body, &data)
+	if err != nil {
+		return nil, fmt.Errorf("error unmarshaling response body: %w", err)
+	}
+	return &data, nil
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
