@@ -46,7 +46,7 @@ func (m ManualClient) GetUsCoreResources() []string {
 	//TODO implement me
 	panic("implement me")
 }
-func (m ManualClient) IntrospectToken() (*models.TokenIntrospectResponse, error) {
+func (m ManualClient) IntrospectToken(tokenType models.TokenIntrospectTokenType) (*models.TokenIntrospectResponse, error) {
 	//TODO implement me
 	panic("implement me")
 }

@@ -8,3 +8,11 @@ type TokenIntrospectResponse struct {
 	Patient   string `json:"patient,omitempty"`
 	ExpiresAt int    `json:"exp,omitempty"`
 }
+
+// https://datatracker.ietf.org/doc/html/rfc7009#section-4.1.2.2
+type TokenIntrospectTokenType string
+
+const (
+	TokenIntrospectTokenTypeAccess  TokenIntrospectTokenType = "access_token"
+	TokenIntrospectTokenTypeRefresh TokenIntrospectTokenType = "refresh_token"
+)

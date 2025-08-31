@@ -352,7 +352,7 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 
 // Use token introspection from Token Introspectin endpoint
 // https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html
-func (c *SourceClientBase) IntrospectToken() (*models.TokenIntrospectResponse, error) {
+func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectTokenType) (*models.TokenIntrospectResponse, error) {
 
 	introspectEndpoint := c.EndpointDefinition.IntrospectionEndpoint
 	if len(introspectEndpoint) == 0 {
@@ -360,7 +360,19 @@ func (c *SourceClientBase) IntrospectToken() (*models.TokenIntrospectResponse, e
 		introspectEndpoint = strings.TrimSuffix(strings.TrimSuffix(c.EndpointDefinition.TokenEndpoint, "/"), "/token") + "/introspect"
 	}
 
-	req, err := http.NewRequest("POST", introspectEndpoint, strings.NewReader(fmt.Sprintf("token=%s", c.SourceCredential.GetAccessToken())))
+	formData := url.Values{}
+	if tokenType == models.TokenIntrospectTokenTypeAccess && len(c.SourceCredential.GetAccessToken()) > 0 {
+		//formData.Set("token_type_hint", "access_token") //don't attempt to hint for access token
+		formData.Set("token", c.SourceCredential.GetAccessToken())
+
+	} else if tokenType == models.TokenIntrospectTokenTypeRefresh && len(c.SourceCredential.GetRefreshToken()) > 0 {
+		formData.Set("token_type_hint", "refresh_token")
+		formData.Set("token", c.SourceCredential.GetRefreshToken())
+	} else {
+		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
+	}
+
+	req, err := http.NewRequest("POST", introspectEndpoint, strings.NewReader(formData.Encode()))
 	if err != nil {
 		return nil, errors.Errorf("error creating introspection request: %w", err)
 	}
@@ -389,6 +401,8 @@ func (c *SourceClientBase) IntrospectToken() (*models.TokenIntrospectResponse, e
 	if err != nil {
 		return nil, fmt.Errorf("error reading response body: %w", err)
 	}
+
+	log.Printf("!!!! RAW TOKEN RESPONSE: %s", string(body))
 
 	// Parse the JSON into a map
 	var data models.TokenIntrospectResponse

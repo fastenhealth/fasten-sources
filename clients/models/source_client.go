@@ -22,5 +22,5 @@ type SourceClient interface {
 	GetSourceCredential() SourceCredential
 	RefreshAccessToken(options ...func(*SourceClientRefreshOptions)) error
 
-	IntrospectToken() (*TokenIntrospectResponse, error)
+	IntrospectToken(tokenType TokenIntrospectTokenType) (*TokenIntrospectResponse, error)
 }
