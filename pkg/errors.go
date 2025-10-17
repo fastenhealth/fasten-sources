@@ -17,4 +17,7 @@ var (
 
 	// ErrResourceInvalidContent this error occurs when an error is encountered while trying to unmarshal a resource.
 	ErrResourceInvalidContent = errors.New("ErrResourceInvalidContent")
+
+	// ErrScopePatientMissing this error occurs when the scope is missing for a patient.
+	ErrScopePatientMissing = errors.New("ErrScopePatientMissing")
 )
