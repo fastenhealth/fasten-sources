@@ -5,14 +5,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/fastenhealth/fasten-sources/clients/client_auth_method"
-	"github.com/fastenhealth/fasten-sources/clients/models"
-	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
-	"github.com/fastenhealth/fasten-sources/pkg"
-	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
-	"golang.org/x/exp/slices"
-	"golang.org/x/oauth2"
 	"io"
 	"log"
 	"mime"
@@ -23,6 +15,14 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/fastenhealth/fasten-sources/clients/client_auth_method"
+	"github.com/fastenhealth/fasten-sources/clients/models"
+	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
+	"github.com/fastenhealth/fasten-sources/pkg"
+	"github.com/sirupsen/logrus"
+	"golang.org/x/exp/slices"
+	"golang.org/x/oauth2"
 )
 
 type SourceClientBase struct {
@@ -374,14 +374,14 @@ func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectToken
 
 	req, err := http.NewRequest("POST", introspectEndpoint, strings.NewReader(formData.Encode()))
 	if err != nil {
-		return nil, errors.Errorf("error creating introspection request: %w", err)
+		return nil, fmt.Errorf("error creating introspection request: %w", err)
 	}
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	//req.SetBasicAuth(c.SourceCredential.GetClientId(), c.SourceClientOptions.ClientSecret)
 	c.LoggerDebugRequest(req)
 	resp, err := c.OauthClient.Do(req)
 	if err != nil {
-		return nil, errors.Errorf("error getting token info: %w", err)
+		return nil, fmt.Errorf("error getting token info: %w", err)
 	}
 
 	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
