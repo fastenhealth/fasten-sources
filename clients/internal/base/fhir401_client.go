@@ -466,6 +466,13 @@ func (c *SourceClientFHIR401) GetPatient(patientId string) (fhir401.Patient, err
 	patient := fhir401.Patient{}
 	_, err := c.GetRequest(fmt.Sprintf("Patient/%s", patientId), &patient)
 	if err != nil {
+		scopes := c.SourceCredential.GetScope()
+		if len(scopes) > 0 {
+			lower := strings.ToLower(scopes)
+			if !strings.Contains(lower, "patient/patient.") && !strings.Contains(lower, "patient/*") {
+				return patient, fmt.Errorf("%w: %v", pkg.ErrScopePatientMissing, err)
+			}
+		}
 		return patient, fmt.Errorf("%w: %v", pkg.ErrResourcePatientFailure, err)
 	}
 	return patient, nil

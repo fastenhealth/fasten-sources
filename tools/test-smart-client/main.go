@@ -293,6 +293,10 @@ func (s *fakeSourceCredential) GetExpiresAt() int64 {
 	return s.ExpiresAt
 }
 
+func (s *fakeSourceCredential) GetScope() string {
+	return s.Scope
+}
+
 func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string, expiresAt int64, scope string) {
 	s.AccessToken = accessToken
 	s.RefreshToken = refreshToken
