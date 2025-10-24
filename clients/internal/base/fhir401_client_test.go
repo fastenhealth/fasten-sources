@@ -3,10 +3,12 @@ package base
 import (
 	"context"
 	"encoding/json"
+	"io"
 	"net/http"
 	"strings"
 	"sync"
 	"testing"
+	"time"
 
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
@@ -18,6 +20,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 )
+
+// RoundTripper helper for unit tests; lets us stub HTTP responses without network
+type rtFunc func(*http.Request) (*http.Response, error)
+
+func (f rtFunc) RoundTrip(r *http.Request) (*http.Response, error) { return f(r) }
 
 func TestNewFHIR401Client(t *testing.T) {
 	t.Parallel()
@@ -446,4 +453,178 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 	require.Equal(t, 193, len(summary.UpdatedResources), "should have updated 193 resources")
 	require.Equal(t, 194, summary.TotalResources, "should have processed 194 resources total")
 
+}
+
+// Stub HTTP to return 403 so GetPatient error path runs.
+// When scope lacks patient/* and patient/Patient.*, expect ErrScopePatientMissing.
+func TestFHIR401_GetPatient_ReturnsScopeMissing_WhenScopeLacksPatient(t *testing.T) {
+	t.Parallel()
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+
+	// Stub a 403 response for any request (no network)
+	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
+		return &http.Response{
+			StatusCode: 403,
+			Status:     "403 Forbidden",
+			Body:       io.NopCloser(strings.NewReader(`{"resourceType":"OperationOutcome"}`)),
+			Header:     http.Header{"Content-Type": []string{"application/json"}},
+			Request:    r,
+		}, nil
+	})
+
+	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
+	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
+	// Make token appear valid so refresh isn't attempted
+	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
+	// Scope missing patient/* and patient/Patient.*
+	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile launch/patient offline_access")
+
+	logger := logrus.WithField("test", "401-scope-missing")
+	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		logger,
+		sourceCredential,
+		defn,
+		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
+	)
+	require.NoError(t, err)
+
+	_, gotErr := client.GetPatient("some-patient-id")
+	require.Error(t, gotErr)
+	require.ErrorIs(t, gotErr, pkg.ErrScopePatientMissing)
+}
+
+// Stub HTTP to return 403 so GetPatient error path runs.
+// When scope includes patient/Patient.read, expect ErrResourcePatientFailure.
+func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatient(t *testing.T) {
+	t.Parallel()
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+
+	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
+		return &http.Response{
+			StatusCode: 403,
+			Status:     "403 Forbidden",
+			Body:       io.NopCloser(strings.NewReader(`{"resourceType":"OperationOutcome"}`)),
+			Header:     http.Header{"Content-Type": []string{"application/json"}},
+			Request:    r,
+		}, nil
+	})
+
+	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
+	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
+	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
+	// Includes patient/Patient.read
+	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/Patient.read")
+
+	logger := logrus.WithField("test", "401-patient-failure")
+	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		logger,
+		sourceCredential,
+		defn,
+		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
+	)
+	require.NoError(t, err)
+
+	_, gotErr := client.GetPatient("some-patient-id")
+	require.Error(t, gotErr)
+	require.ErrorIs(t, gotErr, pkg.ErrResourcePatientFailure)
+}
+
+// Stub HTTP to return 403 so GetPatient error path runs.
+// When scope includes patient/*.read, expect ErrResourcePatientFailure.
+func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientWildcardRead(t *testing.T) {
+	t.Parallel()
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+
+	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
+		return &http.Response{
+			StatusCode: 403,
+			Status:     "403 Forbidden",
+			Body:       io.NopCloser(strings.NewReader(`{"resourceType":"OperationOutcome"}`)),
+			Header:     http.Header{"Content-Type": []string{"application/json"}},
+			Request:    r,
+		}, nil
+	})
+
+	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
+	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
+	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
+	// Includes patient/*.read
+	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/*.read")
+
+	logger := logrus.WithField("test", "401-patient-wildcard-read")
+	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		logger,
+		sourceCredential,
+		defn,
+		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
+	)
+	require.NoError(t, err)
+
+	_, gotErr := client.GetPatient("some-patient-id")
+	require.Error(t, gotErr)
+	require.ErrorIs(t, gotErr, pkg.ErrResourcePatientFailure)
+}
+
+// Stub HTTP to return 403 so GetPatient error path runs.
+// When scope includes patient/Patient.r (short form), expect ErrResourcePatientFailure.
+func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientShortR(t *testing.T) {
+	t.Parallel()
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+
+	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
+		return &http.Response{
+			StatusCode: 403,
+			Status:     "403 Forbidden",
+			Body:       io.NopCloser(strings.NewReader(`{"resourceType":"OperationOutcome"}`)),
+			Header:     http.Header{"Content-Type": []string{"application/json"}},
+			Request:    r,
+		}, nil
+	})
+
+	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
+	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
+	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
+	// Includes patient/Patient.r
+	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/Patient.r")
+
+	logger := logrus.WithField("test", "401-patient-short-r")
+	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
+	require.NoError(t, err)
+
+	client, err := GetSourceClientFHIR401(
+		pkg.FastenLighthouseEnvSandbox,
+		context.Background(),
+		logger,
+		sourceCredential,
+		defn,
+		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
+	)
+	require.NoError(t, err)
+
+	_, gotErr := client.GetPatient("some-patient-id")
+	require.Error(t, gotErr)
+	require.ErrorIs(t, gotErr, pkg.ErrResourcePatientFailure)
 }
