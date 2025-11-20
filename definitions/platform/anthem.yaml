@@ -22,5 +22,6 @@ client_headers:
   Accept: "application/json+fhir"
 missing_op_patient_everything: false
 client_supported_resources: []
-
-
+# PKCE is required, from Nov 21, 2025
+code_challenge_methods_supported:
+  - S256
