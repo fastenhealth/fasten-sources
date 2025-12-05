@@ -175,10 +175,13 @@
                     <th scope="col">Name</th>
                     <th scope="col">Platform</th>
                     <th scope="col">Endpoint Id</th>
+                    <th scope="col">Action</th>
                   </tr>
                 </thead>
+
                 <tbody>
                   <template x-for="searchResult in searchResults">
+                    <!-- main row -->
                     <tr
                       @click="authRedirect(searchResult)"
                       class="cursor-pointer"
@@ -186,12 +189,42 @@
                       <td x-text="searchResult.name"></td>
                       <td x-text="searchResult.platform_type"></td>
                       <td x-text="searchResult.endpoint_id"></td>
+                      <td>
+                        <button
+                          @click.stop="searchResult.showAuthUrl = !searchResult.showAuthUrl; getAuthUrl(searchResult)"
+                          class="btn btn-sm btn-light"
+                          title="More"
+                        >
+                          <span x-show="!searchResult.loading">▼</span>
+                          <span
+                            x-show="searchResult.loading"
+                            class="spinner-border spinner-border-sm"
+                            role="status"
+                          ></span>
+                        </button>
+                      </td>
                     </tr>
                   </template>
                 </tbody>
               </table>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="alert alert-info"
+                style="max-height: 200px; overflow-y: auto"
+                x-show="authUrl !== ''"
+              >
+                <span
+                  x-text="authUrl"
+                  style="word-break: break-all; white-space: pre-wrap"
+                ></span>
+              </div>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-12">
               <button
@@ -557,6 +590,7 @@
           searchText: "",
           searchEndpointEnv: "sandbox",
 
+          authUrl: "",
           searchResultsLoading: false,
           searchResults: [],
           searchResultsTotal: 0,
@@ -660,6 +694,34 @@
                 this.searchResultsLoading = false;
               });
           },
+
+          getAuthUrl(searchResult) {
+            searchResult.loading = true;
+
+            let payload = {
+              endpoint_id: searchResult.endpoint_id,
+              portal_id: searchResult.portal_id,
+              brand_id: searchResult.brand_id,
+            };
+
+            fetch("/api/source/authUrl", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            })
+              .then((resp) => resp.json())
+              .then((data) => {
+                this.authUrl = data.auth_url;
+                console.log("auth url", searchResult.authUrl);
+              })
+              .catch((err) => {
+                console.error("Error fetching auth URL:", err);
+              })
+              .finally(() => {
+                searchResult.loading = false;
+              });
+          },
+
           async authRedirect(searchResult) {
             //disable everything
             this.searchResultsLoading = true;

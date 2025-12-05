@@ -20,6 +20,7 @@ import (
 	"github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/fasten-sources/tools/test-smart-client/utils"
+	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	"github.com/skratchdot/open-golang/open"
 	"golang.org/x/net/proxy"
@@ -49,6 +50,8 @@ type ResourceRequest struct {
 
 //go:embed html
 var staticHtml embed.FS
+
+const FASTEN_CONNECT_URL = "https://api.connect.fastenhealth.com/v1"
 
 func JSONError(w http.ResponseWriter, err interface{}, code int) {
 	log.Printf("%v", err)
@@ -204,6 +207,76 @@ func main() {
 
 		res.Write(responeJson)
 		return
+	})
+
+	http.HandleFunc("/api/source/authUrl", func(res http.ResponseWriter, req *http.Request) {
+
+		type RequestBody struct {
+			BrandID    string `json:"brand_id"`
+			PortalID   string `json:"portal_id"`
+			EndpointID string `json:"endpoint_id"`
+		}
+		res.Header().Set("Content-Type", "application/json")
+
+		var body RequestBody
+		err := json.NewDecoder(req.Body).Decode(&body)
+		if err != nil {
+			JSONError(res, fmt.Errorf("error decoding request body: %v", err), http.StatusBadRequest)
+			httputil.DumpRequest(req, true)
+			return
+		}
+
+		if body.BrandID == "" || body.PortalID == "" || body.EndpointID == "" {
+			JSONError(res, fmt.Errorf("brand_id, portal_id and endpoint_id are required %v", err), http.StatusBadRequest)
+			return
+		}
+
+		publicID := "public_test_uh9flcei0u85hb0c4emo913e6zsfddfap7ghfie55lofy"
+
+		fastenURL := fmt.Sprintf(
+			FASTEN_CONNECT_URL+"/bridge/connect?public_id=%s&endpoint_id=%s&portal_id=%s&brand_id=%s&external_state=%s",
+			publicID,
+			body.EndpointID,
+			body.PortalID,
+			body.BrandID,
+			uuid.New().String(),
+		)
+
+		client := &http.Client{
+			CheckRedirect: func(req *http.Request, via []*http.Request) error {
+				return http.ErrUseLastResponse
+			},
+		}
+
+		fastenReq, _ := http.NewRequest("GET", fastenURL, nil)
+		fastenResp, err := client.Do(fastenReq)
+		if err != nil {
+			JSONError(res, fmt.Errorf("failed to hit fasten api %v", err), http.StatusBadRequest)
+			return
+		}
+		defer fastenResp.Body.Close()
+
+		// Extract redirect URL
+		authUrl := fastenResp.Header.Get("Location")
+		if authUrl == "" {
+			JSONError(res, fmt.Errorf("fasten did not return a auth url %v", err), http.StatusBadRequest)
+			return
+		}
+
+		// decode URL
+		decoded, err := url.QueryUnescape(authUrl)
+		if err == nil {
+			authUrl = decoded
+		}
+
+		log.Println("URL", authUrl)
+
+		resp := map[string]string{
+			"auth_url": authUrl,
+		}
+
+		res.WriteHeader(http.StatusOK)
+		json.NewEncoder(res).Encode(resp)
 	})
 
 	http.HandleFunc("/api/source/cors/", CORSProxyHandler)
