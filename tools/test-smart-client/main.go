@@ -1,11 +1,13 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"embed"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -48,10 +50,30 @@ type ResourceRequest struct {
 	} `json:"requestData"`
 }
 
+type SourceSearchFilter struct {
+	Query         string   `json:"query,omitempty"`
+	QueryFields   []string `json:"fields,omitempty"`
+	PlatformTypes []string `json:"platformTypes,omitempty"`
+	Categories    []string `json:"categories,omitempty"`
+	Locations     []string `json:"locations,omitempty"`
+	ShowHidden    bool     `json:"showHidden,omitempty"`
+	App           string   `json:"app,omitempty"`
+	SearchAfter   []any    `json:"searchAfter,omitempty"`
+	SortBy        string   `json:"sortBy,omitempty"`
+	Provider      string   `json:"provider,omitempty"`
+}
+
 //go:embed html
 var staticHtml embed.FS
 
 const FASTEN_CONNECT_URL = "https://api.connect.fastenhealth.com/v1"
+
+var PUBLIC_IDS = map[string]string{
+	"sandbox": "public_test_uh9flcei0u85hb0c4emo913e6zsfddfap7ghfie55lofy",
+	"prod":    "",
+}
+
+const API_MODE = "test"
 
 func JSONError(w http.ResponseWriter, err interface{}, code int) {
 	log.Printf("%v", err)
@@ -215,6 +237,7 @@ func main() {
 			BrandID    string `json:"brand_id"`
 			PortalID   string `json:"portal_id"`
 			EndpointID string `json:"endpoint_id"`
+			Provider   string `json:"provider"`
 		}
 		res.Header().Set("Content-Type", "application/json")
 
@@ -226,16 +249,14 @@ func main() {
 			return
 		}
 
-		if body.BrandID == "" || body.PortalID == "" || body.EndpointID == "" {
-			JSONError(res, fmt.Errorf("brand_id, portal_id and endpoint_id are required %v", err), http.StatusBadRequest)
+		if body.BrandID == "" || body.PortalID == "" || body.EndpointID == "" || body.Provider == "" {
+			JSONError(res, fmt.Errorf("brand_id, portal_id and endpoint_id and provider are required %v", err), http.StatusBadRequest)
 			return
 		}
 
-		publicID := "public_test_uh9flcei0u85hb0c4emo913e6zsfddfap7ghfie55lofy"
-
 		fastenURL := fmt.Sprintf(
 			FASTEN_CONNECT_URL+"/bridge/connect?public_id=%s&endpoint_id=%s&portal_id=%s&brand_id=%s&external_state=%s",
-			publicID,
+			PUBLIC_IDS[body.Provider],
 			body.EndpointID,
 			body.PortalID,
 			body.BrandID,
@@ -277,6 +298,58 @@ func main() {
 
 		res.WriteHeader(http.StatusOK)
 		json.NewEncoder(res).Encode(resp)
+	})
+
+	http.HandleFunc("/api/source/search", func(res http.ResponseWriter, req *http.Request) {
+
+		res.Header().Set("Content-Type", "application/json")
+
+		var searchFilter SourceSearchFilter
+		err := json.NewDecoder(req.Body).Decode(&searchFilter)
+		if err != nil {
+			JSONError(res, fmt.Errorf("error decoding request body: %v", err), http.StatusBadRequest)
+			return
+		}
+
+		if searchFilter.Provider == "" {
+			JSONError(res, fmt.Errorf("provider is required %v", err), http.StatusBadRequest)
+			return
+		}
+
+		fastenURL := fmt.Sprintf(
+			FASTEN_CONNECT_URL+"/bridge/catalog/search?public_id=%s&api_mode=%s",
+			PUBLIC_IDS[searchFilter.Provider],
+			API_MODE,
+		)
+
+		payload, err := json.Marshal(searchFilter)
+		if err != nil {
+			JSONError(res, fmt.Errorf("failed to marshal search filter %v", err), http.StatusBadRequest)
+			return
+		}
+
+		client := &http.Client{}
+		fastenReq, err := http.NewRequest("POST", fastenURL, bytes.NewBuffer(payload))
+		if err != nil {
+			JSONError(res, fmt.Errorf("failed to build fasten request %v", err), http.StatusBadRequest)
+			return
+		}
+		fastenReq.Header.Set("Content-Type", "application/json")
+
+		fastenResp, err := client.Do(fastenReq)
+		if err != nil {
+			JSONError(res, fmt.Errorf("failed to hit fasten api %v", err), http.StatusBadRequest)
+			return
+		}
+		defer fastenResp.Body.Close()
+
+		respBody, err := io.ReadAll(fastenResp.Body)
+		if err != nil {
+			JSONError(res, fmt.Errorf("failed to read fasten response %v", err), http.StatusBadRequest)
+			return
+		}
+
+		res.Write(respBody)
 	})
 
 	http.HandleFunc("/api/source/cors/", CORSProxyHandler)

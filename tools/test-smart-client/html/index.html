@@ -99,7 +99,7 @@
                 class="btn-check"
                 type="radio"
                 value="sandbox"
-                x-model="searchEndpointEnv"
+                x-model="provider"
                 @change="doSearch(true)"
               />
               Sandbox Providers
@@ -109,7 +109,7 @@
                 class="btn-check"
                 type="radio"
                 value="prod"
-                x-model="searchEndpointEnv"
+                x-model="provider"
                 @change="doSearch(true)"
               />
               Production Providers
@@ -182,10 +182,7 @@
                 <tbody>
                   <template x-for="searchResult in searchResults">
                     <!-- main row -->
-                    <tr
-                      @click="authRedirect(searchResult)"
-                      class="cursor-pointer"
-                    >
+                    <tr @click="authRedirect(authUrl)" class="cursor-pointer">
                       <td x-text="searchResult.name"></td>
                       <td x-text="searchResult.platform_type"></td>
                       <td x-text="searchResult.endpoint_id"></td>
@@ -221,6 +218,15 @@
                   x-text="authUrl"
                   style="word-break: break-all; white-space: pre-wrap"
                 ></span>
+
+                <div class="mt-2">
+                  <button
+                    class="btn btn-sm btn-primary mt-2"
+                    @click="authRedirect(authUrl)"
+                  >
+                    Authorize
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -588,7 +594,8 @@
       export function pageData() {
         return {
           searchText: "",
-          searchEndpointEnv: "sandbox",
+          searchEndpointEnv: "fastenConnect",
+          provider: "sandbox",
 
           authUrl: "",
           searchResultsLoading: false,
@@ -597,8 +604,7 @@
           searchAfter: [],
 
           lighthouseEndpointLookup: {
-            sandbox: "https://lighthouse.fastenhealth.com/sandbox/",
-            prod: "https://lighthouse.fastenhealth.com/v1/",
+            fastenConnect: "https://api.connect.fastenhealth.com/v1/",
           },
 
           //custom brand/endpoint
@@ -635,6 +641,7 @@
               });
             }
             filter.query = this.searchText;
+            filter.provider = this.provider;
 
             return filter;
           },
@@ -647,18 +654,14 @@
               "searching...",
               this.searchText,
               this.searchEndpointEnv,
-              this.searchAfter
+              this.searchAfter,
+              this.provider
             );
 
             this.searchResults = [];
-
-            var lighthouseEndpoint =
-              this.lighthouseEndpointLookup[this.searchEndpointEnv];
-            localStorage.setItem("lighthouseEndpoint", lighthouseEndpoint);
-
             this.searchResultsLoading = true;
             // showSpinner()
-            fetch(lighthouseEndpoint + "search", {
+            fetch("/api/source/search", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -702,6 +705,7 @@
               endpoint_id: searchResult.endpoint_id,
               portal_id: searchResult.portal_id,
               brand_id: searchResult.brand_id,
+              provider: this.provider,
             };
 
             fetch("/api/source/authUrl", {
@@ -722,98 +726,9 @@
               });
           },
 
-          async authRedirect(searchResult) {
-            //disable everything
-            this.searchResultsLoading = true;
-            var lighthouseEndpoint =
-              this.lighthouseEndpointLookup[this.searchEndpointEnv];
-
-            fetch(lighthouseEndpoint + "connect/" + searchResult.endpoint_id)
-              .then((resp) => resp.json())
-              .then((response) => {
-                console.log(response);
-                let lighthouseSource = response.data;
-                lighthouseSource.brand_id = searchResult.brand_id;
-                lighthouseSource.portal_id = searchResult.portal_id;
-
-                return generateSourceAuthorizeUrl(lighthouseSource).then(
-                  (authorizeData) => {
-                    console.log(authorizeData);
-                    localStorage.setItem(
-                      authorizeData.sourceState.state,
-                      JSON.stringify(authorizeData.sourceState)
-                    );
-
-                    //this might be a custom definition instead of a lighthouse retrieved definition
-                    // we need to store this configuration in local storage so we can use it later
-                    localStorage.setItem(
-                      `${authorizeData.sourceState.state}.customDefinition`,
-                      JSON.stringify(lighthouseSource)
-                    );
-
-                    return this.redirectWithOriginAndDestination(
-                      authorizeData.url.toString(),
-                      lighthouseSource
-                    );
-                  }
-                );
-              });
-
-            //         showSpinner()
-            //
-            //         //get the full source information and generate the authorization url
-            //         $.get(  lighthouseEndpoint + 'connect/' + source._id, function( response ) {
-            //             console.log(response.data)
-            //             generateSourceAuthorizeUrl(source._id, response.data)
-            //         });
-          },
-          // redirectOpts = {platform_type: string, redirect_uri: string, brand_id: string, portal_id: string, id: string}
-          redirectWithOriginAndDestination(destUrl, redirectOpts) {
-            const originUrlParts = new URL(window.location.href);
-
-            //retrieve the state info from destUrl
-            const destUrlParts = new URL(destUrl);
-            const state = destUrlParts.searchParams.get("state");
-
-            //path based routing
-            originUrlParts.hash = ""; //reset hash in-case its present.
-            originUrlParts.pathname = this.pathJoin([
-              originUrlParts.pathname,
-              `callback/${state}`,
-            ]);
-
-            var lighthouseEndpoint =
-              this.lighthouseEndpointLookup[this.searchEndpointEnv];
-            let redirectUrl = this.pathJoin([
-              lighthouseEndpoint,
-              `redirect/${state}`,
-            ]);
-
-            const redirectUrlParts = new URL(redirectUrl);
-            const redirectParams = new URLSearchParams();
-            redirectParams.set("origin_url", originUrlParts.toString());
-            redirectParams.set("dest_url", destUrl);
-
-            if (redirectOpts.brand_id) {
-              redirectParams.set("brand_id", redirectOpts.brand_id);
-            }
-            if (redirectOpts.portal_id) {
-              redirectParams.set("portal_id", redirectOpts.portal_id);
-            }
-            if (redirectOpts.id) {
-              redirectParams.set("endpoint_id", redirectOpts.id);
-            }
-            if (redirectOpts.custom_definition) {
-              redirectParams.set(
-                "custom_definition",
-                redirectOpts.custom_definition
-              );
-            }
-            redirectUrlParts.search = redirectParams.toString();
-            console.log(redirectUrlParts.toString());
-
-            // Simulate a mouse click:
-            window.location.href = redirectUrlParts.toString();
+          async authRedirect(authUrl) {
+            if (!authUrl) return;
+            window.open(authUrl, "_blank");
           },
 
           resetCustomDefinitionModel() {
@@ -840,9 +755,8 @@
           },
 
           defineCustomSource() {
-            this.searchEndpointEnv = "sandbox";
             var lighthouseEndpoint =
-              this.lighthouseEndpointLookup[this.searchEndpointEnv];
+              -this.lighthouseEndpointLookup[this.searchEndpointEnv];
 
             let api_endpoint_base_url = this.customDefinition.url;
             //if api_endpoint_base_url ends with "/" character, trim
@@ -916,6 +830,7 @@
             this.searchAfter = [];
             this.searchResultsTotal = [];
             this.searchResultsLoading = false;
+            this.authUrl = "";
           },
           pathJoin(parts, sep) {
             const separator = sep || "/";
