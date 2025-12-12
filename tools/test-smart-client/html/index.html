@@ -178,11 +178,12 @@
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   <template x-for="searchResult in searchResults">
-                    <!-- main row -->
-                    <tr @click="authRedirect(authUrl)" class="cursor-pointer">
+                    <tr
+                      @click="getAuthUrl(searchResult)"
+                      class="cursor-pointer"
+                    >
                       <td x-text="searchResult.name"></td>
                       <td x-text="searchResult.platform_type"></td>
                       <td x-text="searchResult.endpoint_id"></td>
@@ -222,7 +223,7 @@
                 <div class="mt-2">
                   <button
                     class="btn btn-sm btn-primary mt-2"
-                    @click="authRedirect(authUrl)"
+                    @click="fastenAuthRedirect(authUrl)"
                   >
                     Authorize
                   </button>
@@ -595,9 +596,10 @@
         return {
           searchText: "",
           searchEndpointEnv: "fastenConnect",
-          provider: "sandbox",
 
+          provider: "sandbox",
           authUrl: "",
+
           searchResultsLoading: false,
           searchResults: [],
           searchResultsTotal: 0,
@@ -726,9 +728,103 @@
               });
           },
 
-          async authRedirect(authUrl) {
+          async fastenAuthRedirect(authUrl) {
             if (!authUrl) return;
             window.open(authUrl, "_blank");
+          },
+
+          async authRedirect(searchResult) {
+            //disable everything
+            this.searchResultsLoading = true;
+            var lighthouseEndpoint =
+              this.lighthouseEndpointLookup[this.searchEndpointEnv];
+
+            fetch(lighthouseEndpoint + "connect/" + searchResult.endpoint_id)
+              .then((resp) => resp.json())
+              .then((response) => {
+                console.log(response);
+                let lighthouseSource = response.data;
+                lighthouseSource.brand_id = searchResult.brand_id;
+                lighthouseSource.portal_id = searchResult.portal_id;
+
+                return generateSourceAuthorizeUrl(lighthouseSource).then(
+                  (authorizeData) => {
+                    console.log(authorizeData);
+                    localStorage.setItem(
+                      authorizeData.sourceState.state,
+                      JSON.stringify(authorizeData.sourceState)
+                    );
+
+                    //this might be a custom definition instead of a lighthouse retrieved definition
+                    // we need to store this configuration in local storage so we can use it later
+                    localStorage.setItem(
+                      `${authorizeData.sourceState.state}.customDefinition`,
+                      JSON.stringify(lighthouseSource)
+                    );
+
+                    return this.redirectWithOriginAndDestination(
+                      authorizeData.url.toString(),
+                      lighthouseSource
+                    );
+                  }
+                );
+              });
+
+            //         showSpinner()
+            //
+            //         //get the full source information and generate the authorization url
+            //         $.get(  lighthouseEndpoint + 'connect/' + source._id, function( response ) {
+            //             console.log(response.data)
+            //             generateSourceAuthorizeUrl(source._id, response.data)
+            //         });
+          },
+          // redirectOpts = {platform_type: string, redirect_uri: string, brand_id: string, portal_id: string, id: string}
+          redirectWithOriginAndDestination(destUrl, redirectOpts) {
+            const originUrlParts = new URL(window.location.href);
+
+            //retrieve the state info from destUrl
+            const destUrlParts = new URL(destUrl);
+            const state = destUrlParts.searchParams.get("state");
+
+            //path based routing
+            originUrlParts.hash = ""; //reset hash in-case its present.
+            originUrlParts.pathname = this.pathJoin([
+              originUrlParts.pathname,
+              `callback/${state}`,
+            ]);
+
+            var lighthouseEndpoint =
+              this.lighthouseEndpointLookup[this.searchEndpointEnv];
+            let redirectUrl = this.pathJoin([
+              lighthouseEndpoint,
+              `redirect/${state}`,
+            ]);
+
+            const redirectUrlParts = new URL(redirectUrl);
+            const redirectParams = new URLSearchParams();
+            redirectParams.set("origin_url", originUrlParts.toString());
+            redirectParams.set("dest_url", destUrl);
+
+            if (redirectOpts.brand_id) {
+              redirectParams.set("brand_id", redirectOpts.brand_id);
+            }
+            if (redirectOpts.portal_id) {
+              redirectParams.set("portal_id", redirectOpts.portal_id);
+            }
+            if (redirectOpts.id) {
+              redirectParams.set("endpoint_id", redirectOpts.id);
+            }
+            if (redirectOpts.custom_definition) {
+              redirectParams.set(
+                "custom_definition",
+                redirectOpts.custom_definition
+              );
+            }
+            redirectUrlParts.search = redirectParams.toString();
+            console.log(redirectUrlParts.toString());
+
+            // Simulate a mouse click:
+            window.location.href = redirectUrlParts.toString();
           },
 
           resetCustomDefinitionModel() {
@@ -755,8 +851,9 @@
           },
 
           defineCustomSource() {
+            this.searchEndpointEnv = "sandbox";
             var lighthouseEndpoint =
-              -this.lighthouseEndpointLookup[this.searchEndpointEnv];
+              this.lighthouseEndpointLookup[this.searchEndpointEnv];
 
             let api_endpoint_base_url = this.customDefinition.url;
             //if api_endpoint_base_url ends with "/" character, trim
