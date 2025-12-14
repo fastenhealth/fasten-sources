@@ -225,7 +225,7 @@
                     class="btn btn-sm btn-primary mt-2"
                     @click="fastenAuthRedirect(authUrl)"
                   >
-                    Authorize
+                    Redirect
                   </button>
                 </div>
               </div>
@@ -543,13 +543,30 @@
                         </div>
                       </div>
                       <button
-                        @click="defineCustomSource()"
+                        @click="redirectCustomDefinition()"
                         type="button"
                         class="btn btn-primary"
                       >
                         Submit
                       </button>
                     </div>
+
+                    <!-- START BUILD URL VIEW -->
+                    <div class="row">
+                      <div class="col-12">
+                        <div
+                          class="alert alert-info"
+                          style="max-height: 200px; overflow-y: auto"
+                          x-show="previewAuthorizeUrl()"
+                        >
+                          <span
+                            x-text="previewAuthorizeUrl()"
+                            style="word-break: break-all; white-space: pre-wrap"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END BUILD URL VIEW -->
                   </div>
                 </div>
               </div>
@@ -588,6 +605,7 @@
     <script type="module">
       import alpinejs from "https://cdn.skypack.dev/alpinejs@v3.13.4";
       import { generateSourceAuthorizeUrl } from "https://cdn.skypack.dev/@fastenhealth/fasten-sources-js";
+      import * as Oauth from "https://cdn.jsdelivr.net/npm/@panva/oauth4webapi/+esm";
 
       alpinejs.data("pageData", pageData);
       alpinejs.start();
@@ -762,10 +780,12 @@
                       JSON.stringify(lighthouseSource)
                     );
 
-                    return this.redirectWithOriginAndDestination(
+                    let redirectUri = this.redirectWithOriginAndDestination(
                       authorizeData.url.toString(),
                       lighthouseSource
                     );
+                    // Simulate a mouse click:
+                    return (window.location.href = redirectUri);
                   }
                 );
               });
@@ -823,8 +843,7 @@
             redirectUrlParts.search = redirectParams.toString();
             console.log(redirectUrlParts.toString());
 
-            // Simulate a mouse click:
-            window.location.href = redirectUrlParts.toString();
+            return redirectUrlParts.toString();
           },
 
           resetCustomDefinitionModel() {
@@ -851,7 +870,7 @@
           },
 
           defineCustomSource() {
-            this.searchEndpointEnv = "sandbox";
+            this.searchEndpointEnv = "fastenConnect";
             var lighthouseEndpoint =
               this.lighthouseEndpointLookup[this.searchEndpointEnv];
 
@@ -904,6 +923,11 @@
               }
             );
           },
+
+          async redirectCustomDefinition() {
+            window.location.href = await this.previewAuthorizeUrl();
+          },
+
           //load custom source from localstorage
           loadCustomSource() {
             this.customDefinition = JSON.parse(
@@ -918,6 +942,93 @@
           },
           hasSavedCustomSource() {
             return localStorage.getItem(`savedCustomDefinition`) !== null;
+          },
+
+          async previewAuthorizeUrl() {
+            try {
+              const lighthouseSource = { ...this.customDefinition };
+
+              // Fallback auth endpoint for preview
+              if (!lighthouseSource.authorization_endpoint) {
+                lighthouseSource.authorization_endpoint =
+                  "https://www.example.com/oauth/oauth2/authorize";
+              }
+
+              const lighthouseEndpoint =
+                this.lighthouseEndpointLookup["fastenConnect"] + "bridge/";
+
+              // Redirect logic
+              let callbackRedirect = lighthouseSource.platform_type;
+              if (lighthouseSource.should_override_redirect) {
+                callbackRedirect = lighthouseSource.override_redirect;
+              }
+
+              lighthouseSource.redirect_uri = `${lighthouseEndpoint}callback`;
+              if (callbackRedirect != "") {
+                lighthouseSource.redirect_uri = `${lighthouseEndpoint}callback/${callbackRedirect}`;
+              }
+
+              // Build base authorization URL
+              const authorizationUrl = new URL(
+                lighthouseSource.authorization_endpoint
+              );
+
+              authorizationUrl.searchParams.set("response_type", "code");
+              authorizationUrl.searchParams.set(
+                "client_id",
+                lighthouseSource.client_id || ""
+              );
+              authorizationUrl.searchParams.set(
+                "redirect_uri",
+                lighthouseSource.redirect_uri
+              );
+              authorizationUrl.searchParams.set(
+                "scope",
+                (lighthouseSource.scopes_supported || []).join(" ")
+              );
+              authorizationUrl.searchParams.set(
+                "aud",
+                lighthouseSource.aud || ""
+              );
+              authorizationUrl.searchParams.set("state", crypto.randomUUID());
+
+              if (lighthouseSource.response_modes_supported?.length) {
+                authorizationUrl.searchParams.set(
+                  "response_mode",
+                  lighthouseSource.response_modes_supported[0]
+                );
+              }
+
+              if (
+                !lighthouseSource.confidential ||
+                (lighthouseSource.code_challenge_methods_supported || [])
+                  .length > 0
+              ) {
+                const codeVerifier = Oauth.generateRandomCodeVerifier();
+                const codeChallenge = await Oauth.calculatePKCECodeChallenge(
+                  codeVerifier
+                );
+
+                const codeChallengeMethod =
+                  lighthouseSource.code_challenge_methods_supported?.[0] ||
+                  "S256";
+
+                // Preview-only: do NOT store verifier in localStorage
+                authorizationUrl.searchParams.set(
+                  "code_challenge",
+                  codeChallenge
+                );
+                authorizationUrl.searchParams.set(
+                  "code_challenge_method",
+                  codeChallengeMethod
+                );
+              }
+
+              return decodeURIComponent(authorizationUrl.toString());
+            } catch (e) {
+              console.error("Preview authorize URL error:", e);
+              return "";
+            }
           },
 
           //helper functions
