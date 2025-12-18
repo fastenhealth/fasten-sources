@@ -1,4 +1,4 @@
-name: CI
+name: CI-Go
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -15,30 +15,6 @@ on:
     # Run every day at midnight
     - cron: '0 0 * * *'
 jobs:
-
-  test-js:
-    name: Test JS
-    runs-on: ubuntu-latest
-    env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      PW_ONEMEDICAL_USERNAME: ${{ secrets.PW_ONEMEDICAL_USERNAME }}
-      PW_ONEMEDICAL_PASSWORD: ${{ secrets.PW_ONEMEDICAL_PASSWORD }}
-      PW_PRACTICEFUSION_USERNAME: ${{ secrets.PW_PRACTICEFUSION_USERNAME }}
-      PW_PRACTICEFUSION_PASSWORD: ${{ secrets.PW_PRACTICEFUSION_PASSWORD }}
-      PW_MAXIMEYES_USERNAME: ${{ secrets.PW_MAXIMEYES_USERNAME }}
-      PW_MAXIMEYES_PASSWORD: ${{ secrets.PW_MAXIMEYES_PASSWORD }}
-
-    steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 23
-          registry-url: 'https://registry.npmjs.org'
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Test
-        run: |
-          make test-js
 
   test-go:
     name: Test Go

@@ -35,6 +35,8 @@ func TestNewFHIR401Client(t *testing.T) {
 	sc.EXPECT().GetAccessToken().Return("test-access-token")
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
 
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -42,7 +44,7 @@ func TestNewFHIR401Client(t *testing.T) {
 	endpointDefinition := &definitionsModels.LighthouseSourceDefinition{}
 
 	//test
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, endpointDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, endpointDefinition, models.WithTestHttpClient(&http.Client{}))
 
 	//assert
 	require.NoError(t, err)
@@ -58,6 +60,9 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
 	//sc.EXPECT().GetAccessToken().Return("test-access-token")
 	//sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -65,7 +70,7 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	cignaSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("6c0454af-1631-4c4d-905d-5710439df983"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cignaSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cignaSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
@@ -92,6 +97,9 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
 	//sc.EXPECT().GetAccessToken().Return("test-access-token")
 	//sc.EXPECT().GetRefreshToken().Return("test-refresh-token")
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -99,7 +107,7 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
 	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
@@ -124,7 +132,9 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
-	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	db := mock_models.NewMockStorageRepository(mockCtrl)
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -132,7 +142,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -173,7 +183,9 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
-	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	db := mock_models.NewMockStorageRepository(mockCtrl)
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -181,7 +193,7 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -219,7 +231,9 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
-	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	db := mock_models.NewMockStorageRepository(mockCtrl)
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
@@ -227,7 +241,7 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -266,14 +280,16 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	sc := mock_models.NewMockSourceCredential(mockCtrl)
-	db := mock_models.NewMockDatabaseRepository(mockCtrl)
+	db := mock_models.NewMockStorageRepository(mockCtrl)
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
 	medicareSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("6ae6c14e-b927-4ce0-862f-91123cb8d774"))
 	require.NoError(t, err)
 
-	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, medicareSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, medicareSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
@@ -335,9 +351,10 @@ func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 
@@ -354,6 +371,7 @@ func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
 		context.Background(),
 		testLogger,
 		fakeSourceCredential,
+		mockSourceCredentialRepository,
 		cernerSandboxDefinition,
 		models.WithTestHttpClient(httpClient),
 	)
@@ -400,11 +418,12 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 	testLogger := logrus.WithFields(logrus.Fields{
 		"type": "test",
 	})
-	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	access_token := "token here"
 	httpClient := OAuthVcrSetup(t, false, access_token)
@@ -419,6 +438,7 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 		context.Background(),
 		testLogger,
 		fakeSourceCredential,
+		mockSourceCredentialRepository,
 		cernerSandboxDefinition,
 		models.WithTestHttpClient(httpClient),
 	)
@@ -459,8 +479,8 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 // When scope lacks patient/* and patient/Patient.*, expect ErrScopePatientMissing.
 func TestFHIR401_GetPatient_ReturnsScopeMissing_WhenScopeLacksPatient(t *testing.T) {
 	t.Parallel()
-	ctrl := gomock.NewController(t)
-	defer ctrl.Finish()
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
 
 	// Stub a 403 response for any request (no network)
 	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
@@ -473,13 +493,15 @@ func TestFHIR401_GetPatient_ReturnsScopeMissing_WhenScopeLacksPatient(t *testing
 		}, nil
 	})
 
-	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
 	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
 	// Make token appear valid so refresh isn't attempted
 	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
 	// Scope missing patient/* and patient/Patient.*
 	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile launch/patient offline_access")
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	logger := logrus.WithField("test", "401-scope-missing")
 	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
@@ -490,6 +512,7 @@ func TestFHIR401_GetPatient_ReturnsScopeMissing_WhenScopeLacksPatient(t *testing
 		context.Background(),
 		logger,
 		sourceCredential,
+		mockSourceCredentialRepository,
 		defn,
 		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
 	)
@@ -504,8 +527,8 @@ func TestFHIR401_GetPatient_ReturnsScopeMissing_WhenScopeLacksPatient(t *testing
 // When scope includes patient/Patient.read, expect ErrResourcePatientFailure.
 func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatient(t *testing.T) {
 	t.Parallel()
-	ctrl := gomock.NewController(t)
-	defer ctrl.Finish()
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
 
 	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
 		return &http.Response{
@@ -517,12 +540,13 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatient(t *te
 		}, nil
 	})
 
-	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
 	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
 	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
 	// Includes patient/Patient.read
 	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/Patient.read")
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	logger := logrus.WithField("test", "401-patient-failure")
 	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
@@ -533,6 +557,7 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatient(t *te
 		context.Background(),
 		logger,
 		sourceCredential,
+		mockSourceCredentialRepository,
 		defn,
 		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
 	)
@@ -547,8 +572,8 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatient(t *te
 // When scope includes patient/*.read, expect ErrResourcePatientFailure.
 func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientWildcardRead(t *testing.T) {
 	t.Parallel()
-	ctrl := gomock.NewController(t)
-	defer ctrl.Finish()
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
 
 	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
 		return &http.Response{
@@ -560,12 +585,14 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientWildca
 		}, nil
 	})
 
-	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
 	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
 	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
 	// Includes patient/*.read
 	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/*.read")
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	logger := logrus.WithField("test", "401-patient-wildcard-read")
 	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
@@ -576,6 +603,7 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientWildca
 		context.Background(),
 		logger,
 		sourceCredential,
+		mockSourceCredentialRepository,
 		defn,
 		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
 	)
@@ -590,8 +618,8 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientWildca
 // When scope includes patient/Patient.r (short form), expect ErrResourcePatientFailure.
 func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientShortR(t *testing.T) {
 	t.Parallel()
-	ctrl := gomock.NewController(t)
-	defer ctrl.Finish()
+	mockCtrl := gomock.NewController(t)
+	defer mockCtrl.Finish()
 
 	roundTripper := rtFunc(func(r *http.Request) (*http.Response, error) {
 		return &http.Response{
@@ -603,12 +631,14 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientShortR
 		}, nil
 	})
 
-	sourceCredential := mock_models.NewMockSourceCredential(ctrl)
+	sourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetAccessToken().AnyTimes().Return("acc")
 	sourceCredential.EXPECT().GetRefreshToken().AnyTimes().Return("ref")
 	sourceCredential.EXPECT().GetExpiresAt().AnyTimes().Return(time.Now().Add(30 * time.Minute).Unix())
 	// Includes patient/Patient.r
 	sourceCredential.EXPECT().GetScope().AnyTimes().Return("openid profile patient/Patient.r")
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	logger := logrus.WithField("test", "401-patient-short-r")
 	defn, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
@@ -619,6 +649,7 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientShortR
 		context.Background(),
 		logger,
 		sourceCredential,
+		mockSourceCredentialRepository,
 		defn,
 		models.WithTestHttpClient(&http.Client{Transport: roundTripper}),
 	)

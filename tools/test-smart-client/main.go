@@ -308,6 +308,12 @@ func (s *fakeSourceCredential) GetSourceCredentialType() pkg.SourceCredentialTyp
 	return pkg.SourceCredentialTypeSmartOnFhir
 }
 
+type fakeSourceCredentialRepository struct{}
+
+func (sr *fakeSourceCredentialRepository) StoreTokens(ctx context.Context, sourceCredentials clientModels.SourceCredential) error {
+	return nil
+}
+
 // there are security implications to this, but we're only using this permissive proxy locally.
 func CORSProxyHandler(proxyRes http.ResponseWriter, proxyReq *http.Request) {
 
@@ -427,12 +433,14 @@ func GenerateAuthClient(requestData *ResourceRequest, proxyAddr *string, logger 
 		}
 		clientOptions = append(clientOptions, clientModels.WithHttpClient(client))
 	}
+	scr := fakeSourceCredentialRepository{}
 
 	sourceClient, err := factory.GetSourceClientWithDefinition(
 		pkg.FastenLighthouseEnvProduction,
 		bgContext,
 		logger,
 		&sc,
+		&scr,
 		&requestData.SourceDefinition,
 		clientOptions...,
 	)
