@@ -25,8 +25,8 @@ type SourceClientFHIR401 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (*SourceClientFHIR401, error) {
-	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (*SourceClientFHIR401, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}
@@ -39,7 +39,7 @@ func GetSourceClientFHIR401(env pkg.FastenLighthouseEnvType, ctx context.Context
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Sync
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c *SourceClientFHIR401) SyncAll(db models.StorageRepository) (models.UpsertSummary, error) {
 	bundle, err := c.GetPatientBundle(c.SourceCredential.GetPatientId())
 	if err != nil {
 		return models.UpsertSummary{
@@ -52,7 +52,7 @@ func (c *SourceClientFHIR401) SyncAll(db models.DatabaseRepository) (models.Upse
 
 // If the Patient/$everything or Patient/$export endpoints are supported, this function will allow us to easily process and add resources to the DB.
 // This funciton should mimic SyncAllByResourceName logic
-func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundle interface{}) (models.UpsertSummary, error) {
+func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.StorageRepository, bundle interface{}) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
 	}
@@ -111,7 +111,7 @@ func (c *SourceClientFHIR401) SyncAllByPatientEverythingBundle(db models.Databas
 // then store these resources in the database. NOTE: we must extract links to other resources referenced as we find them, and process
 // them as well
 // Changes to this function may need to be applied to SyncAllByPatientEverythingBundle as well.
-func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
+func (c *SourceClientFHIR401) SyncAllByResourceName(db models.StorageRepository, resourceNames []string) (models.UpsertSummary, error) {
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
 	}
@@ -230,7 +230,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.DatabaseRepository
 }
 
 func (c *SourceClientFHIR401) ProcessPendingResources(
-	db models.DatabaseRepository,
+	db models.StorageRepository,
 	summary *models.UpsertSummary,
 	lookupResourceReferences *sync.Map,
 	syncErrors map[string]error,
@@ -521,7 +521,7 @@ func (c *SourceClientFHIR401) ProcessBundle(bundle fhir401.Bundle) ([]models.Raw
 // - inserting into the database
 // - increment the updatedResources list if the resource has been updated
 // - extract all external references from the resource payload (adding the the lookup table)
-func (c *SourceClientFHIR401) ProcessResource(db models.DatabaseRepository, resource models.RawResourceFhir, referencedResourcesLookup *sync.Map, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) (*models.UpsertSummary, error) {
+func (c *SourceClientFHIR401) ProcessResource(db models.StorageRepository, resource models.RawResourceFhir, referencedResourcesLookup *sync.Map, internalFragmentReferenceLookup map[string]string, summary *models.UpsertSummary) (*models.UpsertSummary, error) {
 
 	if summary == nil {
 		summary = &models.UpsertSummary{

@@ -124,6 +124,21 @@ func (mr *MockSourceClientMockRecorder) GetSourceCredential() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceCredential", reflect.TypeOf((*MockSourceClient)(nil).GetSourceCredential))
 }
 
+// IntrospectToken mocks base method.
+func (m *MockSourceClient) IntrospectToken(tokenType models.TokenIntrospectTokenType) (*models.TokenIntrospectResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "IntrospectToken", tokenType)
+	ret0, _ := ret[0].(*models.TokenIntrospectResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// IntrospectToken indicates an expected call of IntrospectToken.
+func (mr *MockSourceClientMockRecorder) IntrospectToken(tokenType interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IntrospectToken", reflect.TypeOf((*MockSourceClient)(nil).IntrospectToken), tokenType)
+}
+
 // RefreshAccessToken mocks base method.
 func (m *MockSourceClient) RefreshAccessToken(options ...func(*models.SourceClientRefreshOptions)) error {
 	m.ctrl.T.Helper()
@@ -143,7 +158,7 @@ func (mr *MockSourceClientMockRecorder) RefreshAccessToken(options ...interface{
 }
 
 // SyncAll mocks base method.
-func (m *MockSourceClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (m *MockSourceClient) SyncAll(db models.StorageRepository) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAll", db)
 	ret0, _ := ret[0].(models.UpsertSummary)
@@ -158,7 +173,7 @@ func (mr *MockSourceClientMockRecorder) SyncAll(db interface{}) *gomock.Call {
 }
 
 // SyncAllBundle mocks base method.
-func (m *MockSourceClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
+func (m *MockSourceClient) SyncAllBundle(db models.StorageRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAllBundle", db, bundleFile, bundleFhirVersion)
 	ret0, _ := ret[0].(models.UpsertSummary)
@@ -173,7 +188,7 @@ func (mr *MockSourceClientMockRecorder) SyncAllBundle(db, bundleFile, bundleFhir
 }
 
 // SyncAllByPatientEverythingBundle mocks base method.
-func (m *MockSourceClient) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundleModel interface{}) (models.UpsertSummary, error) {
+func (m *MockSourceClient) SyncAllByPatientEverythingBundle(db models.StorageRepository, bundleModel interface{}) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAllByPatientEverythingBundle", db, bundleModel)
 	ret0, _ := ret[0].(models.UpsertSummary)
@@ -188,7 +203,7 @@ func (mr *MockSourceClientMockRecorder) SyncAllByPatientEverythingBundle(db, bun
 }
 
 // SyncAllByResourceName mocks base method.
-func (m *MockSourceClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
+func (m *MockSourceClient) SyncAllByResourceName(db models.StorageRepository, resourceNames []string) (models.UpsertSummary, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncAllByResourceName", db, resourceNames)
 	ret0, _ := ret[0].(models.UpsertSummary)

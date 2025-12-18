@@ -25,7 +25,7 @@ type TefcaFacilitatedFHIRClient struct {
 // So, this client will override the platform data (and client id), and return a modified Client
 //
 // TODO: this client should just validate the FHIR resources via a linter.
-func GetSourceClientTefcaFacilitated(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+func GetSourceClientTefcaFacilitated(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 	//get the endpoint definition
 	endpointDefinition, err := definitions.GetSourceDefinition(
 		definitions.WithEndpointId(sourceCreds.GetEndpointId()),
@@ -41,7 +41,7 @@ func GetSourceClientTefcaFacilitated(env pkg.FastenLighthouseEnvType, ctx contex
 		return nil, fmt.Errorf("error retrieving endpoint definition (%s)", sourceCreds.GetEndpointId())
 	}
 
-	dynamicSourceClient, err := internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+	dynamicSourceClient, err := internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 	return &TefcaFacilitatedFHIRClient{
 		dynamicSourceClient,
 	}, err

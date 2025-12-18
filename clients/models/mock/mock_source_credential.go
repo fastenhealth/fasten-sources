@@ -160,6 +160,20 @@ func (mr *MockSourceCredentialMockRecorder) GetRefreshToken() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRefreshToken", reflect.TypeOf((*MockSourceCredential)(nil).GetRefreshToken))
 }
 
+// GetScope mocks base method.
+func (m *MockSourceCredential) GetScope() string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetScope")
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+// GetScope indicates an expected call of GetScope.
+func (mr *MockSourceCredentialMockRecorder) GetScope() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetScope", reflect.TypeOf((*MockSourceCredential)(nil).GetScope))
+}
+
 // GetSourceCredentialType mocks base method.
 func (m *MockSourceCredential) GetSourceCredentialType() pkg.SourceCredentialType {
 	m.ctrl.T.Helper()
@@ -186,20 +200,6 @@ func (m *MockSourceCredential) GetSourceId() string {
 func (mr *MockSourceCredentialMockRecorder) GetSourceId() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSourceId", reflect.TypeOf((*MockSourceCredential)(nil).GetSourceId))
-}
-
-// GetScope mocks base method.
-func (m *MockSourceCredential) GetScope() string {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetScope")
-	ret0, _ := ret[0].(string)
-	return ret0
-}
-
-// GetScope indicates an expected call of GetScope.
-func (mr *MockSourceCredentialMockRecorder) GetScope() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetScope", reflect.TypeOf((*MockSourceCredential)(nil).GetScope))
 }
 
 // SetTokens mocks base method.

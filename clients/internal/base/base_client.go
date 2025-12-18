@@ -30,10 +30,11 @@ type SourceClientBase struct {
 	Context   context.Context
 	Logger    logrus.FieldLogger
 
-	OauthClient        *http.Client
-	SourceCredential   models.SourceCredential
-	EndpointDefinition *definitionsModels.LighthouseSourceDefinition
-	Headers            map[string]string
+	OauthClient                *http.Client
+	SourceCredential           models.SourceCredential
+	SourceCredentialRepository models.SourceCredentialRepository
+	EndpointDefinition         *definitionsModels.LighthouseSourceDefinition
+	Headers                    map[string]string
 
 	ResourceTypesUsCore []string
 	FhirVersion         string
@@ -44,14 +45,14 @@ type SourceClientBase struct {
 	refreshMutex sync.Mutex
 }
 
-func (c *SourceClientBase) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
+func (c *SourceClientBase) SyncAllBundle(db models.StorageRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (models.UpsertSummary, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 func (c *SourceClientBase) ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error) {
 	panic("SyncAllBundle functionality is not available on this client")
 }
 
-func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, options ...func(clientOpts *models.SourceClientOptions)) (*SourceClientBase, error) {
+func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, endpointDefinition *definitionsModels.LighthouseSourceDefinition, options ...func(clientOpts *models.SourceClientOptions)) (*SourceClientBase, error) {
 
 	clientOptions := &models.SourceClientOptions{
 		SourceClientRefreshOptions: []func(*models.SourceClientRefreshOptions){},
@@ -67,12 +68,13 @@ func NewBaseClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalL
 	}
 
 	client := &SourceClientBase{
-		FastenEnv:          env,
-		Context:            clientOptions.Context,
-		Logger:             globalLogger,
-		SourceCredential:   sourceCreds,
-		EndpointDefinition: endpointDefinition,
-		Headers:            map[string]string{},
+		FastenEnv:                  env,
+		Context:                    clientOptions.Context,
+		Logger:                     globalLogger,
+		SourceCredential:           sourceCreds,
+		SourceCredentialRepository: sourceCredsDb,
+		EndpointDefinition:         endpointDefinition,
+		Headers:                    map[string]string{},
 
 		// https://build.fhir.org/ig/HL7/US-Core/
 		ResourceTypesUsCore: []string{

@@ -12,8 +12,8 @@ type FastenClient struct {
 	models.SourceClient
 }
 
-func GetSourceClientFasten(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
-	manualClient, err := manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
+func GetSourceClientFasten(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+	manualClient, err := manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 	return &FastenClient{
 		manualClient,
 	}, err

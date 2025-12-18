@@ -18,8 +18,8 @@ type SourceClientFHIR430 struct {
 	*SourceClientBase
 }
 
-func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (*SourceClientFHIR430, error) {
-	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+func GetSourceClientFHIR430(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (*SourceClientFHIR430, error) {
+	baseClient, err := NewBaseClient(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}
