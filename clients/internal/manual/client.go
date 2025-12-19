@@ -25,7 +25,8 @@ type ManualClient struct {
 	Context    context.Context
 	Logger     logrus.FieldLogger
 
-	SourceCredential models.SourceCredential
+	SourceCredential           models.SourceCredential
+	SourceCredentialRepository models.SourceCredentialRepository
 }
 
 func (m ManualClient) GetSourceCredential() models.SourceCredential {
@@ -37,7 +38,7 @@ func (m ManualClient) GetResourceBundle(relativeResourcePath string) (interface{
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllByPatientEverythingBundle(db models.DatabaseRepository, bundleModel interface{}) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAllByPatientEverythingBundle(db models.StorageRepository, bundleModel interface{}) (models.UpsertSummary, error) {
 	//TODO implement me
 	panic("implement me")
 }
@@ -58,7 +59,7 @@ func (m ManualClient) GetResourceTypesAllowList() []string {
 	return []string{}
 }
 
-func (m ManualClient) SyncAllByResourceName(db models.DatabaseRepository, resourceNames []string) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAllByResourceName(db models.StorageRepository, resourceNames []string) (models.UpsertSummary, error) {
 	//TODO implement me
 	panic("implement me")
 }
@@ -67,11 +68,11 @@ func (m ManualClient) GetRequest(resourceSubpath string, decodeModelPtr interfac
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAll(db models.StorageRepository) (models.UpsertSummary, error) {
 	panic("implement me")
 }
 
-func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os.File, bundleType pkg.FhirVersion) (models.UpsertSummary, error) {
+func (m ManualClient) SyncAllBundle(db models.StorageRepository, bundleFile *os.File, bundleType pkg.FhirVersion) (models.UpsertSummary, error) {
 	//structurally similar to #SyncAllByResourceName in clients/internal/base/fhir401_client.go
 	summary := models.UpsertSummary{
 		UpdatedResources: []string{},
@@ -90,7 +91,7 @@ func (m ManualClient) SyncAllBundle(db models.DatabaseRepository, bundleFile *os
 	internalFragmentReferenceLookup := map[string]string{}
 
 	//retrieve the FHIR client
-	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, &definitionsModels.LighthouseSourceDefinition{}, models.WithTestHttpClient(http.DefaultClient))
+	client, err := base.GetSourceClientFHIR401(m.FastenEnv, m.Context, m.Logger, m.SourceCredential, m.SourceCredentialRepository, &definitionsModels.LighthouseSourceDefinition{}, models.WithTestHttpClient(http.DefaultClient))
 	if err != nil {
 		return summary, fmt.Errorf("an error occurred while creating 4.0.1 client: %w", err)
 	}
@@ -268,12 +269,13 @@ func (m ManualClient) RefreshAccessToken(options ...func(*models.SourceClientRef
 	panic("implement me")
 }
 
-func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+func GetSourceClientManual(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 	return &ManualClient{
-		FastenEnv:        env,
-		Context:          ctx,
-		Logger:           globalLogger,
-		SourceCredential: sourceCreds,
+		FastenEnv:                  env,
+		Context:                    ctx,
+		Logger:                     globalLogger,
+		SourceCredential:           sourceCreds,
+		SourceCredentialRepository: sourceCredsDb,
 	}, nil
 }
 

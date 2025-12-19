@@ -16,7 +16,7 @@ type dynamicSourceClient struct {
 	EndpointDefinition *definitionsModels.LighthouseSourceDefinition
 }
 
-func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 
 	//get the endpoint definition
 	endpointDefinition, err := definitions.GetSourceDefinition(
@@ -30,7 +30,7 @@ func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context
 		return nil, fmt.Errorf("error retrieving endpoint definition (%s)", sourceCreds.GetEndpointId())
 	}
 
-	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,9 +45,9 @@ func GetDynamicSourceClient(env pkg.FastenLighthouseEnvType, ctx context.Context
 	return dynamicSourceClient{SourceClient: baseClient, EndpointDefinition: endpointDefinition}, err
 }
 
-func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, endpointDefinition *definitionsModels.LighthouseSourceDefinition, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
 
-	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+	baseClient, err := base.GetSourceClientFHIR401(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 	if err != nil {
 		return nil, err
 	}
@@ -62,7 +62,7 @@ func GetDynamicSourceClientWithDefinition(env pkg.FastenLighthouseEnvType, ctx c
 	return dynamicSourceClient{SourceClient: baseClient, EndpointDefinition: endpointDefinition}, err
 }
 
-func (c dynamicSourceClient) SyncAll(db models.DatabaseRepository) (models.UpsertSummary, error) {
+func (c dynamicSourceClient) SyncAll(db models.StorageRepository) (models.UpsertSummary, error) {
 
 	if c.EndpointDefinition.MissingOpPatientEverything {
 		//Operation-PatientEverything is not supported - https://build.fhir.org/operation-patient-everything.html

@@ -21,7 +21,7 @@ func TestGetSourceClientEpicLegacy_SyncAll(t *testing.T) {
 	})
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
-	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(11).Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
@@ -30,8 +30,10 @@ func TestGetSourceClientEpicLegacy_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEpicLegacy)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("fc94bfc7-684d-4e4d-aa6e-ceec01c21c81")
 
+	fakeSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, fakeSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

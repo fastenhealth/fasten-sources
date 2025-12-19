@@ -23,23 +23,24 @@ func GetSourceClient(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	sourceCreds models.SourceCredential,
+	sourceCredsDb models.SourceCredentialRepository,
 	clientOptions ...func(options *models.SourceClientOptions),
 ) (models.SourceClient, error) {
 
 	switch sourceCreds.GetPlatformType() {
 	case pkg.PlatformTypeManual:
-		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		return manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 	case pkg.PlatformTypeFasten:
-		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, clientOptions...)
+		return fasten.GetSourceClientFasten(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 	default:
 		if sourceCreds.GetSourceCredentialType() == pkg.SourceCredentialTypeTefcaDirect {
-			return tefca_direct.GetSourceClientTefca(env, ctx, globalLogger, sourceCreds, clientOptions...)
+			return tefca_direct.GetSourceClientTefca(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 		} else if sourceCreds.GetSourceCredentialType() == pkg.SourceCredentialTypeTefcaFacilitated {
 			globalLogger.Warnf("TEFCA Facilitated FHIR with platform type: %s", pkg.PlatformTypeTEFCAEpic)
-			return tefca_facilitated.GetSourceClientTefcaFacilitated(env, ctx, globalLogger, sourceCreds, clientOptions...)
+			return tefca_facilitated.GetSourceClientTefcaFacilitated(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 		} else {
 			//always default to Smart on FHIR
-			return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, clientOptions...)
+			return internal.GetDynamicSourceClient(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 		}
 	}
 }
@@ -49,11 +50,12 @@ func GetSourceClientWithDefinition(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	sourceCreds models.SourceCredential,
+	sourceCredsDb models.SourceCredentialRepository,
 	endpointDefinition *definitionsModels.LighthouseSourceDefinition,
 	clientOptions ...func(options *models.SourceClientOptions),
 ) (models.SourceClient, error) {
 	//always default to Smart on FHIR. while we could check for Facilitated FHIR, the client is the exact same, the only difference
 	//is the endpoint definition, which is presumably already correctly configured for the Facilitated FHIR platform type
-	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, endpointDefinition, clientOptions...)
+	return internal.GetDynamicSourceClientWithDefinition(env, ctx, globalLogger, sourceCreds, sourceCredsDb, endpointDefinition, clientOptions...)
 
 }

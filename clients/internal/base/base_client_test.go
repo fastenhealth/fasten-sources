@@ -23,8 +23,10 @@ func TestSourceClientBase_RefreshAccessToken_WithoutValidAccessToken_ShouldFailD
 	sc.EXPECT().GetAccessToken().Return("test-access-token").AnyTimes()
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
-	sc.EXPECT().SetTokens(gomock.Any(), gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes()
+	sc.EXPECT().SetTokens(gomock.Any(), gomock.Any(), gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes()
 	sc.EXPECT().GetExpiresAt().Return(time.Now().Add(-60 * time.Minute).Unix()).AnyTimes()
+
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	testLogger := logrus.WithFields(logrus.Fields{
 		"test": "TestSourceClientBase_RefreshAccessToken",
@@ -33,7 +35,7 @@ func TestSourceClientBase_RefreshAccessToken_WithoutValidAccessToken_ShouldFailD
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
+	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 	require.NotNil(t, client)
 
@@ -49,6 +51,7 @@ func TestSourceClientBase_GetRequest_WithInvalidCredentials_ShouldReturnError(t 
 	sc.EXPECT().GetAccessToken().Return("test-access-token").AnyTimes()
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	testLogger := logrus.WithFields(logrus.Fields{
 		"test": "TestSourceClientBase_GetRequest",
@@ -57,7 +60,7 @@ func TestSourceClientBase_GetRequest_WithInvalidCredentials_ShouldReturnError(t 
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{
+	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{
 		Timeout: 2 * time.Second,
 	}))
 	require.NoError(t, err)
@@ -99,6 +102,7 @@ func TestSourceClientBase_WithRetryableHttpClient_With429HTTPCodeResponse_Should
 	sc.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
 	sc.EXPECT().GetExpiresAt().Return(time.Now().Add(10 * time.Minute).Unix()).AnyTimes()
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	testLogger := logrus.WithFields(logrus.Fields{
 		"test": "TestSourceClientBase_GetRequest",
@@ -107,7 +111,7 @@ func TestSourceClientBase_WithRetryableHttpClient_With429HTTPCodeResponse_Should
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithRetryableHttpClient())
+	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithRetryableHttpClient())
 	require.NoError(t, err)
 	require.NotNil(t, client)
 
@@ -127,6 +131,8 @@ func TestSourceClientBase_WithRetryableHttpClient_With429HTTPCodeResponse_XRateL
 	sc.EXPECT().GetClientId().Return("test-client-id").AnyTimes()
 	sc.EXPECT().GetExpiresAt().Return(time.Now().Add(10 * time.Minute).Unix()).AnyTimes()
 
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
+
 	testLogger := logrus.WithFields(logrus.Fields{
 		"test": "TestSourceClientBase_GetRequest",
 	})
@@ -134,7 +140,7 @@ func TestSourceClientBase_WithRetryableHttpClient_With429HTTPCodeResponse_XRateL
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"))
 	require.NoError(t, err)
 
-	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, cernerSandboxDefinition, models.WithRetryableHttpClient())
+	client, err := NewBaseClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithRetryableHttpClient())
 	require.NoError(t, err)
 	require.NotNil(t, client)
 

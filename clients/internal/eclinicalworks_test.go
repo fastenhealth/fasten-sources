@@ -21,7 +21,7 @@ func TestGetSourceClientEclinicalWorks_SyncAll(t *testing.T) {
 	})
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
-	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
@@ -29,9 +29,12 @@ func TestGetSourceClientEclinicalWorks_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("WGrltmI2ngIkIfGEoFYOiWGBKTPz-9EUZ0RObS.tPio")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEclinicalworks)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("f0a8629a-076c-4f78-b41a-7fc6ae81fa4d")
+	fakeSourceCredential.EXPECT().GetScope().AnyTimes().Return("fhirUser openid offline patient/*.read")
+
+	fakeSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, fakeSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

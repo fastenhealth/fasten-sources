@@ -21,7 +21,7 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	})
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
-	fakeDatabase := mock_models.NewMockDatabaseRepository(mockCtrl)
+	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
 	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(679).Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
@@ -29,9 +29,10 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("a-80000.E-14545")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeAthena)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("950e9092-8ce7-4926-ad87-64616f00cb4c")
+	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	httpClient := base.OAuthVcrSetup(t, false)
-	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, models.WithTestHttpClient(httpClient))
+	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, mockSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test
 	resp, err := client.SyncAll(fakeDatabase)

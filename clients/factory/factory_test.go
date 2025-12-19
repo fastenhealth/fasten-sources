@@ -145,8 +145,9 @@ func TestGetSourceClientWithOptions(t *testing.T) {
 			mockSourceCredential.EXPECT().GetRefreshToken().Return("testing").AnyTimes()
 			mockSourceCredential.EXPECT().GetAccessToken().Return("").AnyTimes()
 			mockSourceCredential.EXPECT().GetExpiresAt().Return(time.Now().Unix()).AnyTimes()
+			mockSourceCredentialRepository := mockModels.NewMockSourceCredentialRepository(mockController)
 
-			client, err := factory.GetSourceClient(pkg.FastenLighthouseEnvSandbox, ctx, logger, mockSourceCredential, tt.options...)
+			client, err := factory.GetSourceClient(pkg.FastenLighthouseEnvSandbox, ctx, logger, mockSourceCredential, mockSourceCredentialRepository, tt.options...)
 
 			if tt.expectedError {
 				assert.Error(t, err)

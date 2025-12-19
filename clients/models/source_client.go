@@ -11,12 +11,12 @@ type SourceClient interface {
 	GetResourceTypesAllowList() []string
 	GetRequest(resourceSubpath string, decodeModelPtr interface{}) (string, error)
 	GetResourceBundle(relativeResourcePath string) (interface{}, error)
-	SyncAll(db DatabaseRepository) (UpsertSummary, error)
-	SyncAllByResourceName(db DatabaseRepository, resourceNames []string) (UpsertSummary, error)
-	SyncAllByPatientEverythingBundle(db DatabaseRepository, bundleModel interface{}) (UpsertSummary, error)
+	SyncAll(db StorageRepository) (UpsertSummary, error)
+	SyncAllByResourceName(db StorageRepository, resourceNames []string) (UpsertSummary, error)
+	SyncAllByPatientEverythingBundle(db StorageRepository, bundleModel interface{}) (UpsertSummary, error)
 
 	//Manual client ONLY functions
-	SyncAllBundle(db DatabaseRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (UpsertSummary, error)
+	SyncAllBundle(db StorageRepository, bundleFile *os.File, bundleFhirVersion pkg.FhirVersion) (UpsertSummary, error)
 	ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error)
 
 	GetSourceCredential() SourceCredential

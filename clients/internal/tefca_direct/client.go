@@ -15,8 +15,8 @@ type TefcaClient struct {
 // TEFCA Direct client is a wrapper around the manual upload client.
 // This is because it is assumed that TEFCA direct communication will happen out of band, the CCDA will be converted to FHIR and then "stored" using this client
 // TODO: this client should just validate the FHIR resources via a linter.
-func GetSourceClientTefca(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
-	manualClient, err := manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, clientOptions...)
+func GetSourceClientTefca(env pkg.FastenLighthouseEnvType, ctx context.Context, globalLogger logrus.FieldLogger, sourceCreds models.SourceCredential, sourceCredsDb models.SourceCredentialRepository, clientOptions ...func(options *models.SourceClientOptions)) (models.SourceClient, error) {
+	manualClient, err := manual.GetSourceClientManual(env, ctx, globalLogger, sourceCreds, sourceCredsDb, clientOptions...)
 	return &TefcaClient{
 		manualClient,
 	}, err
