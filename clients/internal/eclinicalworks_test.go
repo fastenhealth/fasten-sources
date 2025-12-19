@@ -29,6 +29,7 @@ func TestGetSourceClientEclinicalWorks_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("WGrltmI2ngIkIfGEoFYOiWGBKTPz-9EUZ0RObS.tPio")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEclinicalworks)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("f0a8629a-076c-4f78-b41a-7fc6ae81fa4d")
+	fakeSourceCredential.EXPECT().GetScope().AnyTimes().Return("fhirUser openid offline patient/*.read")
 
 	fakeSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 

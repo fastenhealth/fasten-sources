@@ -359,7 +359,7 @@ func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 
 	access_token := "token here"
-	httpClient := OAuthVcrSetup(t, false, access_token)
+	httpClient := OAuthVcrSetup(t, false, WithVcrAccessToken(access_token))
 
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
 		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
@@ -426,7 +426,7 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	access_token := "token here"
-	httpClient := OAuthVcrSetup(t, false, access_token)
+	httpClient := OAuthVcrSetup(t, false, WithVcrAccessToken(access_token))
 
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
 		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
