@@ -297,7 +297,7 @@ func (s *fakeSourceCredential) GetScope() string {
 	return s.Scope
 }
 
-func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string, expiresAt int64, scope string) {
+func (s *fakeSourceCredential) SetTokens(accessToken string, refreshToken string, expiresAt int64, scope string, refreshExpiresAt *int64) {
 	s.AccessToken = accessToken
 	s.RefreshToken = refreshToken
 	s.ExpiresAt = expiresAt

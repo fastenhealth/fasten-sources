@@ -23,5 +23,5 @@ type SourceCredential interface {
 	GetExpiresAt() int64
 	GetScope() string
 
-	SetTokens(accessToken string, refreshTokens string, expiresAt int64, scope string)
+	SetTokens(accessToken string, refreshTokens string, expiresAt int64, scope string, refreshExpiresAt *int64)
 }
