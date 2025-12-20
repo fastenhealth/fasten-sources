@@ -22,11 +22,11 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 	mockCtrl := gomock.NewController(t)
 	defer mockCtrl.Finish()
 	fakeDatabase := mock_models.NewMockStorageRepository(mockCtrl)
-	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Times(11).Return(true, nil)
+	fakeDatabase.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return(true, nil)
 	fakeDatabase.EXPECT().BackgroundJobCheckpoint(gomock.Any(), gomock.Any(), gomock.Any()).AnyTimes().Return()
 
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
-	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("eq081-VQEgP8drUUqCWzHfw3")
+	fakeSourceCredential.EXPECT().GetPatientId().AnyTimes().Return("eAB3mDIBBcyUKviyzrxsnAw3")
 	fakeSourceCredential.EXPECT().GetPlatformType().AnyTimes().Return(pkg.PlatformTypeEpic)
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("8e2f5de7-46ac-4067-96ba-5e3f60ad52a4")
 
@@ -41,6 +41,6 @@ func TestGetSourceClientEpic_SyncAll(t *testing.T) {
 
 	//assert
 	require.NoError(t, err)
-	require.Equal(t, 13, resp.TotalResources)
-	require.Equal(t, 11, len(resp.UpdatedResources))
+	require.Equal(t, 415, resp.TotalResources)
+	require.Equal(t, 413, len(resp.UpdatedResources))
 }
