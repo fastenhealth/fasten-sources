@@ -170,7 +170,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.StorageRepository,
 			}
 			rawResourceModels, internalFragmentReferenceLookup, err := c.ProcessBundle(bundle.(fhir401.Bundle))
 			if err != nil {
-				c.Logger.Infof("An error occurred while processing %s bundle %s", resourceType, c.SourceCredential.GetPatientId())
+				c.Logger.Infof("An error occurred while processing %s bundle %s [%s]", resourceType, c.SourceCredential.GetPatientId(), resourceQuerySearchParameters.Encode())
 				syncErrors[resourceType] = err
 				continue
 			}
@@ -222,7 +222,7 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.StorageRepository,
 
 	endTime := time.Since(startTime)
 
-	fmt.Println("Total time take on pending ", endTime)
+	c.Logger.Infof("Total time taken collecting pending resoureces: %v", endTime)
 
 	checkpointErrorData := map[string]interface{}{}
 	if len(syncErrors) > 0 {
@@ -635,6 +635,9 @@ type resourceQuery struct {
 // generateResourceQueries will generate resource queries based on the resource names and endpoint definition
 // - Most resources support simple queries like "Patient?patient={id}", but some resources may require more complex queries
 // - Some EHRs have mandatory search parameters for certain resource types, which need to be included in the query
+// SEE https://build.fhir.org/ig/HL7/US-Core/capability-statements.html
+// SEE https://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-client.html - Client Capabilities
+// SEE https://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#observation - Server Capabilities
 // ASSUMED that the resourceNames input is already filtered to only include supported resources
 // ASSUMED that the resourceNames input is unique
 // ASSUMED that the endpointDefinition is not nil
@@ -643,26 +646,77 @@ func generateResourceQueries(resourceNames []string, endpointDefinition *definit
 	for _, resourceName := range resourceNames {
 		resourceQueryData := resourceQuery{
 			ResourceName: resourceName,
-		}
-
-		switch resourceName {
-		//case "Observation":
-		//	// Example: Observation may require category=lab for lab observations
-		default:
-			// Default case: eg. simple patient query
-			resourceQueryData.SearchParamCombinations = []url.Values{
+			SearchParamCombinations: []url.Values{
+				//default, always include the patient and a count
 				{
 					"patient": []string{sourceCred.GetPatientId()},
 					"_count":  []string{"50"},
 				},
-			}
+			},
 		}
 
-		//if endpointDefinition != nil && endpointDefinition.ClientSupportedResources != nil && lo.Contains(endpointDefinition.ClientSupportedResources, resourceName) {
-		//	resourceQueries = append(resourceQueries, resourceName)
-		//} else {
-		//	resourceQueries = append(resourceQueries, resourceName)
-		//}
+		switch resourceName {
+		case "CarePlan":
+			if endpointDefinition.PlatformType == pkg.PlatformTypeEpic {
+				// Epic CarePlan requires status=active to return results
+				carePlanCategories := []string{
+					"734163000",         //encounter
+					"38717003",          //logitudinal
+					"736271009",         //outpatient
+					"736353004",         //inpatient
+					"738906000",         //dental
+					"736378000",         //oncology
+					"719091000000102",   //questionnaire
+					"959871000000107",   //anticoagulation
+					"inpatient-pathway", //epic-inpatient-pathway
+					"409073007",         //education
+					"care-path",         //epic-care-path
+				}
+				for _, category := range carePlanCategories {
+					resourceQueryData.SearchParamCombinations = append(resourceQueryData.SearchParamCombinations, url.Values{
+						"patient":  []string{sourceCred.GetPatientId()},
+						"category": []string{category},
+						"_count":   []string{"50"},
+					})
+				}
+			}
+
+		case "Observation":
+			if endpointDefinition.PlatformType == pkg.PlatformTypeEpic || endpointDefinition.PlatformType == pkg.PlatformTypeTEFCAEpic || endpointDefinition.PlatformType == pkg.PlatformTypeEpicLegacy {
+				// Epic and Cerner Observation may require category=lab for lab observations
+				observationCategories := []string{
+					//https://terminology.hl7.org/7.0.1/CodeSystem-observation-category.html
+					"social-history",
+					"vital-signs",
+					"imaging",
+					"laboratory",
+					"procedure",
+					"survey",
+					"exam",
+					"therapy",
+					"activity",
+					"symptom",
+
+					//Epic specific categories
+					"delivery",
+					"obstetrics-gynecology",
+					"periodontal",
+					"phenotype",
+					"sdoh",
+					"smartdata",
+				}
+
+				for _, category := range observationCategories {
+					resourceQueryData.SearchParamCombinations = append(resourceQueryData.SearchParamCombinations, url.Values{
+						"patient":  []string{sourceCred.GetPatientId()},
+						"category": []string{category},
+						"_count":   []string{"50"},
+					})
+				}
+			}
+			//	// Example: Observation may require category=lab for lab observations
+
+		}
 		resourceQueries = append(resourceQueries, resourceQueryData)
 	}
 	return resourceQueries
