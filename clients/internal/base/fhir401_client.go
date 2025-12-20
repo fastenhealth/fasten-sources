@@ -5,6 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"sort"
 	"strings"
 	"sync"
@@ -151,43 +152,53 @@ func (c *SourceClientFHIR401) SyncAllByResourceName(db models.StorageRepository,
 	//query for resources by resource name
 	resourceNames = lo.Uniq(resourceNames)
 	sort.Strings(resourceNames)
-	for _, resourceType := range resourceNames {
-		bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?patient=%s&_count=50", resourceType, c.SourceCredential.GetPatientId()))
-		if err != nil {
-			syncErrors[resourceType] = err
-			continue
-		}
-		rawResourceModels, internalFragmentReferenceLookup, err := c.ProcessBundle(bundle.(fhir401.Bundle))
-		if err != nil {
-			c.Logger.Infof("An error occurred while processing %s bundle %s", resourceType, c.SourceCredential.GetPatientId())
-			syncErrors[resourceType] = err
-			continue
-		}
-		summary.TotalResources += len(rawResourceModels)
 
-		for ndx, apiModel := range rawResourceModels {
-			_, err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+	resourceQueries := generateResourceQueries(resourceNames, c.EndpointDefinition, c.SourceCredential)
+
+	for ndx, _ := range resourceQueries {
+		resourceQueryData := resourceQueries[ndx]
+		resourceType := resourceQueryData.ResourceName
+		//query for all resources of this type (resourceQueryData.ResourceName) for the current patient
+		// there may be multiple combinations of search parameters to try
+		for spndx, _ := range resourceQueryData.SearchParamCombinations {
+			resourceQuerySearchParameters := resourceQueryData.SearchParamCombinations[spndx]
+
+			bundle, err := c.GetResourceBundle(fmt.Sprintf("%s?%s", resourceType, resourceQuerySearchParameters.Encode()))
 			if err != nil {
 				syncErrors[resourceType] = err
 				continue
 			}
+			rawResourceModels, internalFragmentReferenceLookup, err := c.ProcessBundle(bundle.(fhir401.Bundle))
+			if err != nil {
+				c.Logger.Infof("An error occurred while processing %s bundle %s", resourceType, c.SourceCredential.GetPatientId())
+				syncErrors[resourceType] = err
+				continue
+			}
+			summary.TotalResources += len(rawResourceModels)
 
-			if ndx%100 == 0 {
-				stageErrorData := map[string]interface{}{}
-				if len(syncErrors) > 0 {
-					stageErrorData["errors"] = syncErrors
+			for ndx, apiModel := range rawResourceModels {
+				_, err = c.ProcessResource(db, apiModel, lookupResourceReferences, internalFragmentReferenceLookup, &summary)
+				if err != nil {
+					syncErrors[resourceType] = err
+					continue
 				}
-				db.BackgroundJobCheckpoint(c.Context,
-					map[string]interface{}{
-						"stage":          resourceType,
-						"stage_progress": ndx,
-						"summary":        summary,
-					},
-					stageErrorData,
-				)
+
+				if ndx%100 == 0 {
+					stageErrorData := map[string]interface{}{}
+					if len(syncErrors) > 0 {
+						stageErrorData["errors"] = syncErrors
+					}
+					db.BackgroundJobCheckpoint(c.Context,
+						map[string]interface{}{
+							"stage":          resourceType,
+							"stage_progress": ndx,
+							"summary":        summary,
+						},
+						stageErrorData,
+					)
+				}
 			}
 		}
-
 		checkpointErrorData := map[string]interface{}{}
 		if len(syncErrors) > 0 {
 			checkpointErrorData["errors"] = syncErrors
@@ -410,6 +421,9 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 			self = link.Url
 		} else if link.Relation == "previous" {
 			prev = link.Url
+		} else if len(prev) == 0 && link.Relation == "prev" {
+			//some servers use `prev` instead of `previous`
+			prev = link.Url
 		}
 	}
 
@@ -431,6 +445,9 @@ func (c *SourceClientFHIR401) GetResourceBundle(relativeResourcePath string) (in
 			} else if link.Relation == "self" {
 				self = link.Url
 			} else if link.Relation == "previous" {
+				prev = link.Url
+			} else if len(prev) == 0 && link.Relation == "prev" {
+				//some servers use `prev` instead of `previous`
 				prev = link.Url
 			}
 		}
@@ -608,4 +625,45 @@ func (c *SourceClientFHIR401) ProcessResource(db models.StorageRepository, resou
 		}
 	}
 	return summary, nil
+}
+
+type resourceQuery struct {
+	ResourceName            string
+	SearchParamCombinations []url.Values
+}
+
+// generateResourceQueries will generate resource queries based on the resource names and endpoint definition
+// - Most resources support simple queries like "Patient?patient={id}", but some resources may require more complex queries
+// - Some EHRs have mandatory search parameters for certain resource types, which need to be included in the query
+// ASSUMED that the resourceNames input is already filtered to only include supported resources
+// ASSUMED that the resourceNames input is unique
+// ASSUMED that the endpointDefinition is not nil
+func generateResourceQueries(resourceNames []string, endpointDefinition *definitionsModels.LighthouseSourceDefinition, sourceCred models.SourceCredential) []resourceQuery {
+	resourceQueries := []resourceQuery{}
+	for _, resourceName := range resourceNames {
+		resourceQueryData := resourceQuery{
+			ResourceName: resourceName,
+		}
+
+		switch resourceName {
+		//case "Observation":
+		//	// Example: Observation may require category=lab for lab observations
+		default:
+			// Default case: eg. simple patient query
+			resourceQueryData.SearchParamCombinations = []url.Values{
+				{
+					"patient": []string{sourceCred.GetPatientId()},
+					"_count":  []string{"50"},
+				},
+			}
+		}
+
+		//if endpointDefinition != nil && endpointDefinition.ClientSupportedResources != nil && lo.Contains(endpointDefinition.ClientSupportedResources, resourceName) {
+		//	resourceQueries = append(resourceQueries, resourceName)
+		//} else {
+		//	resourceQueries = append(resourceQueries, resourceName)
+		//}
+		resourceQueries = append(resourceQueries, resourceQueryData)
+	}
+	return resourceQueries
 }
