@@ -2,6 +2,7 @@ package client_auth_method_test
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	clientAuth "github.com/fastenhealth/fasten-sources/clients/client_auth_method"
 	mockModels "github.com/fastenhealth/fasten-sources/clients/models/mock"
@@ -137,7 +138,7 @@ func TestPrivateKeyJWTBearerRefreshToken(t *testing.T) {
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.NoError(t, err)
@@ -171,7 +172,7 @@ func TestPrivateKeyJWTBearerRefreshToken_ErrorResponse(t *testing.T) {
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.Error(t, err)
