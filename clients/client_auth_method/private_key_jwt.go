@@ -1,6 +1,7 @@
 package client_auth_method
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/fastenhealth/fasten-sources/clients/models"
@@ -57,6 +58,7 @@ func CreatePrivateKeyJWTClientAssertion(jwtPrivateKeyHandle *keyset.Handle, jwtI
 // See:
 // - https://fhir.epic.com/Documentation?docId=oauth2&section=Standalone-Oauth2-Launch-Using-Refresh-Token-JWT
 func PrivateKeyJWTBearerRefreshToken(
+	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	jwtPrivateKeyHandle *keyset.Handle,
 	endpointDef definitionsModels.LighthouseSourceDefinition,
@@ -87,7 +89,7 @@ func PrivateKeyJWTBearerRefreshToken(
 		"client_assertion":      {jwtToken},
 	}
 
-	tokenResponse, err := privateKeyJWTBearerAuthRequest[models.TokenRefreshResponse](globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
+	tokenResponse, err := privateKeyJWTBearerAuthRequest[models.TokenRefreshResponse](ctx, globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
 	if err != nil {
 		return nil, fmt.Errorf("%w: an error occurred while refreshing token: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 	}
@@ -96,6 +98,7 @@ func PrivateKeyJWTBearerRefreshToken(
 }
 
 func PrivateKeyJWTBearerIntrospectToken(
+	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	jwtPrivateKeyHandle *keyset.Handle,
 	endpointDef definitionsModels.LighthouseSourceDefinition,
@@ -138,7 +141,7 @@ func PrivateKeyJWTBearerIntrospectToken(
 		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
 	}
 
-	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
+	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
 	if err != nil {
 		return nil, fmt.Errorf("%w: an error occurred while refreshing token: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 	}
@@ -151,7 +154,7 @@ func PrivateKeyJWTBearerIntrospectToken(
 
 // this is a generic function to make http calls protected by private_key_jwt auth
 // Used by refresh-token refresh, token introspection, userinfo, etc.
-func privateKeyJWTBearerAuthRequest[T any](globalLogger logrus.FieldLogger, endpointUrl string, requestParamsForm url.Values, testHttpClient ...*http.Client) (*T, error) {
+func privateKeyJWTBearerAuthRequest[T any](ctx context.Context, globalLogger logrus.FieldLogger, endpointUrl string, requestParamsForm url.Values, testHttpClient ...*http.Client) (*T, error) {
 	var httpClient *http.Client
 	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		httpClient = testHttpClient[0]
@@ -163,8 +166,15 @@ func privateKeyJWTBearerAuthRequest[T any](globalLogger logrus.FieldLogger, endp
 		httpClient = &http.Client{}
 	}
 
-	jwtAuthResponse, err := httpClient.PostForm(endpointUrl, requestParamsForm)
+	//jwtAuthResponse, err := httpClient.PostForm(endpointUrl, requestParamsForm)
+	jwtAuthRequest, err := http.NewRequest("POST", endpointUrl, strings.NewReader(requestParamsForm.Encode()))
+	if err != nil {
+		return nil, fmt.Errorf("error creating jwt client request: %w", err)
+	}
+	jwtAuthRequest.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	jwtAuthRequest = jwtAuthRequest.WithContext(ctx)
 
+	jwtAuthResponse, err := httpClient.Do(jwtAuthRequest)
 	if err != nil {
 		return nil, fmt.Errorf("an error occurred while sending jwt client request, %v", err)
 	}
