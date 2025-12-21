@@ -13,6 +13,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 	"time"
 )
 
@@ -55,7 +56,17 @@ func CreatePrivateKeyJWTClientAssertion(jwtPrivateKeyHandle *keyset.Handle, jwtI
 // We're generating a new Access Token using a Refresh Token using a JWT Bearer token
 // See:
 // - https://fhir.epic.com/Documentation?docId=oauth2&section=Standalone-Oauth2-Launch-Using-Refresh-Token-JWT
-func PrivateKeyJWTBearerRefreshToken(globalLogger logrus.FieldLogger, jwtPrivateKeyHandle *keyset.Handle, sourceCredential models.SourceCredential, endpointDef definitionsModels.LighthouseSourceDefinition, testHttpClient ...*http.Client) (*models.TokenRefreshResponse, error) {
+func PrivateKeyJWTBearerRefreshToken(
+	globalLogger logrus.FieldLogger,
+	jwtPrivateKeyHandle *keyset.Handle,
+	endpointDef definitionsModels.LighthouseSourceDefinition,
+	refreshToken string,
+	testHttpClient ...*http.Client,
+) (*models.TokenRefreshResponse, error) {
+	if len(refreshToken) == 0 {
+		return nil, fmt.Errorf("no refresh token provided")
+	}
+
 	jwtToken, _, err := CreatePrivateKeyJWTClientAssertion(
 		jwtPrivateKeyHandle,
 		endpointDef.ClientId,
@@ -69,13 +80,78 @@ func PrivateKeyJWTBearerRefreshToken(globalLogger logrus.FieldLogger, jwtPrivate
 	//send this signed jwt to the token endpoint to get a new access token
 	// https://fhir.epic.com/Documentation?docId=oauth2&section=JWKS
 
-	postForm := url.Values{
+	formData := url.Values{
 		"grant_type":            {"refresh_token"},
-		"refresh_token":         {sourceCredential.GetRefreshToken()},
+		"refresh_token":         {refreshToken},
 		"client_assertion_type": {"urn:ietf:params:oauth:client-assertion-type:jwt-bearer"},
 		"client_assertion":      {jwtToken},
 	}
 
+	tokenResponse, err := privateKeyJWTBearerAuthRequest[models.TokenRefreshResponse](globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
+	if err != nil {
+		return nil, fmt.Errorf("%w: an error occurred while refreshing token: %v", pkg.ErrSMARTTokenRefreshFailure, err)
+	}
+
+	return tokenResponse, nil
+}
+
+func PrivateKeyJWTBearerIntrospectToken(
+	globalLogger logrus.FieldLogger,
+	jwtPrivateKeyHandle *keyset.Handle,
+	endpointDef definitionsModels.LighthouseSourceDefinition,
+	tokenType models.TokenIntrospectTokenType,
+	token string,
+	testHttpClient ...*http.Client,
+) (*models.TokenIntrospectResponse, error) {
+	jwtToken, _, err := CreatePrivateKeyJWTClientAssertion(
+		jwtPrivateKeyHandle,
+		endpointDef.ClientId,
+		endpointDef.ClientId,
+		endpointDef.TokenEndpoint,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("an error occurred while creating client assertion before refreshing token: %w", err)
+	}
+
+	introspectEndpoint := endpointDef.IntrospectionEndpoint
+	if len(introspectEndpoint) == 0 {
+		//replace the token endpoint with the introspection endpoint
+		introspectEndpoint = strings.TrimSuffix(strings.TrimSuffix(endpointDef.TokenEndpoint, "/"), "/token") + "/introspect"
+	}
+
+	if len(token) == 0 {
+		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
+	}
+
+	formData := url.Values{
+		"client_assertion_type": {"urn:ietf:params:oauth:client-assertion-type:jwt-bearer"},
+		"client_assertion":      {jwtToken},
+	}
+	if tokenType == models.TokenIntrospectTokenTypeAccess {
+		//formData.Set("token_type_hint", "access_token") //don't attempt to hint for access token
+		formData.Set("token", token)
+
+	} else if tokenType == models.TokenIntrospectTokenTypeRefresh {
+		formData.Set("token_type_hint", "refresh_token")
+		formData.Set("token", token)
+	} else {
+		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
+	}
+
+	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
+	if err != nil {
+		return nil, fmt.Errorf("%w: an error occurred while refreshing token: %v", pkg.ErrSMARTTokenRefreshFailure, err)
+	}
+	//log.Printf("!!!! RAW TOKEN RESPONSE: %s", string(body))
+
+	return introspectResponse, nil
+}
+
+// helpers
+
+// this is a generic function to make http calls protected by private_key_jwt auth
+// Used by refresh-token refresh, token introspection, userinfo, etc.
+func privateKeyJWTBearerAuthRequest[T any](globalLogger logrus.FieldLogger, endpointUrl string, requestParamsForm url.Values, testHttpClient ...*http.Client) (*T, error) {
 	var httpClient *http.Client
 	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		httpClient = testHttpClient[0]
@@ -87,30 +163,29 @@ func PrivateKeyJWTBearerRefreshToken(globalLogger logrus.FieldLogger, jwtPrivate
 		httpClient = &http.Client{}
 	}
 
-	tokenResp, err := httpClient.PostForm(endpointDef.TokenEndpoint, postForm)
+	jwtAuthResponse, err := httpClient.PostForm(endpointUrl, requestParamsForm)
 
 	if err != nil {
-		return nil, fmt.Errorf("%w: an error occurred while sending client token request, %v", pkg.ErrSMARTTokenRefreshFailure, err)
+		return nil, fmt.Errorf("an error occurred while sending jwt client request, %v", err)
 	}
 
-	defer tokenResp.Body.Close()
-	if tokenResp.StatusCode >= 300 || tokenResp.StatusCode < 200 {
+	defer jwtAuthResponse.Body.Close()
+	if jwtAuthResponse.StatusCode >= 300 || jwtAuthResponse.StatusCode < 200 {
 
-		b, err := io.ReadAll(tokenResp.Body)
+		b, err := io.ReadAll(jwtAuthResponse.Body)
 		if err == nil {
 			//TODO: we should eventually remove this logging.
 			globalLogger.Errorf("Error Response body: %s", string(b))
 		}
 
-		return nil, fmt.Errorf("%w: an error occurred while reading token response, status code was not 200: %d", pkg.ErrSMARTTokenRefreshFailure, tokenResp.StatusCode)
+		return nil, fmt.Errorf("an error occurred while reading jwt client response, status code was not 200: %d", jwtAuthResponse.StatusCode)
 	}
 
-	var tokenResponse models.TokenRefreshResponse
-	err = json.NewDecoder(tokenResp.Body).Decode(&tokenResponse)
+	var tokenResponse T
+	err = json.NewDecoder(jwtAuthResponse.Body).Decode(&tokenResponse)
 	if err != nil {
-		return nil, fmt.Errorf("%w: an error occurred while parsing client token response: %v", pkg.ErrSMARTTokenRefreshFailure, err)
+		return nil, fmt.Errorf("an error occurred while parsing jwt client response: %v", err)
 	}
 
 	return &tokenResponse, nil
-
 }
