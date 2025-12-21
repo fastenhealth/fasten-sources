@@ -137,7 +137,7 @@ func TestPrivateKeyJWTBearerRefreshToken(t *testing.T) {
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, sourceCredential, endpointDef)
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.NoError(t, err)
@@ -171,7 +171,7 @@ func TestPrivateKeyJWTBearerRefreshToken_ErrorResponse(t *testing.T) {
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, sourceCredential, endpointDef)
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.Error(t, err)

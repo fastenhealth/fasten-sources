@@ -209,7 +209,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			}
 
 			c.Logger.Info("refreshing using JWT private key...")
-			tokenRefreshResponse, err := client_auth_method.PrivateKeyJWTBearerRefreshToken(c.Logger, c.SourceClientOptions.ClientJWTKeysetHandle, c.SourceCredential, *c.EndpointDefinition, c.SourceClientOptions.TestHttpClient)
+			tokenRefreshResponse, err := client_auth_method.PrivateKeyJWTBearerRefreshToken(c.Logger, c.SourceClientOptions.ClientJWTKeysetHandle, *c.EndpointDefinition, c.SourceCredential.GetRefreshToken(), c.SourceClientOptions.TestHttpClient)
 			if err != nil {
 				c.Logger.Error("error refreshing JWT client: ", err)
 				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
