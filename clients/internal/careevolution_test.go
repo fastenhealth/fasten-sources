@@ -31,7 +31,7 @@ func TestGetSourceClientCareevolution_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("8b47cf7b-330e-4ede-9967-4caa7be623aa")
 	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
-	httpClient := base.OAuthVcrSetup(t, false)
+	httpClient := testutils.OAuthVcrSetup(t, false)
 	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, mockSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test

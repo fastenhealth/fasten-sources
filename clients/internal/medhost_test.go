@@ -2,9 +2,9 @@ package internal
 
 import (
 	"context"
+	"github.com/fastenhealth/fasten-sources/clients/testutils"
 	"testing"
 
-	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -32,7 +32,7 @@ func TestGetSourceClientMedhost_SyncAll(t *testing.T) {
 
 	fakeSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
-	httpClient := base.OAuthVcrSetup(t, false)
+	httpClient := testutils.OAuthVcrSetup(t, false)
 	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, fakeSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test
