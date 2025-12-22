@@ -2,9 +2,9 @@ package internal
 
 import (
 	"context"
+	"github.com/fastenhealth/fasten-sources/clients/testutils"
 	"testing"
 
-	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
@@ -32,7 +32,7 @@ func TestGetSourceClientAthena_SyncAll(t *testing.T) {
 	fakeSourceCredential.EXPECT().GetEndpointId().AnyTimes().Return("950e9092-8ce7-4926-ad87-64616f00cb4c")
 	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
-	httpClient := base.OAuthVcrSetup(t, false)
+	httpClient := testutils.OAuthVcrSetup(t, false)
 	client, err := GetDynamicSourceClient(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, fakeSourceCredential, mockSourceCredentialRepository, models.WithTestHttpClient(httpClient))
 
 	//test
