@@ -8,6 +8,7 @@ import (
 	definitionsModels "github.com/fastenhealth/fasten-sources/definitions/models"
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/google/uuid"
+	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/tink-crypto/tink-go/v2/jwt"
 	"github.com/tink-crypto/tink-go/v2/keyset"
@@ -66,7 +67,7 @@ func PrivateKeyJWTBearerRefreshToken(
 	testHttpClient ...*http.Client,
 ) (*models.TokenRefreshResponse, error) {
 	if len(refreshToken) == 0 {
-		return nil, fmt.Errorf("no refresh token provided")
+		return nil, errors.New("no refresh token provided")
 	}
 
 	jwtToken, _, err := CreatePrivateKeyJWTClientAssertion(
@@ -123,7 +124,7 @@ func PrivateKeyJWTBearerIntrospectToken(
 	}
 
 	if len(token) == 0 {
-		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
+		return nil, errors.Errorf("no token (%s) available to introspect", tokenType)
 	}
 
 	formData := url.Values{
@@ -138,7 +139,7 @@ func PrivateKeyJWTBearerIntrospectToken(
 		formData.Set("token_type_hint", "refresh_token")
 		formData.Set("token", token)
 	} else {
-		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
+		return nil, errors.Errorf("no token (%s) available to introspect", tokenType)
 	}
 
 	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
@@ -154,14 +155,20 @@ func PrivateKeyJWTBearerIntrospectToken(
 
 // this is a generic function to make http calls protected by private_key_jwt auth
 // Used by refresh-token refresh, token introspection, userinfo, etc.
-func privateKeyJWTBearerAuthRequest[T any](ctx context.Context, globalLogger logrus.FieldLogger, endpointUrl string, requestParamsForm url.Values, testHttpClient ...*http.Client) (*T, error) {
+func privateKeyJWTBearerAuthRequest[T any](
+	ctx context.Context,
+	globalLogger logrus.FieldLogger,
+	endpointUrl string,
+	requestParamsForm url.Values,
+	testHttpClient ...*http.Client,
+) (*T, error) {
 	var httpClient *http.Client
 	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		httpClient = testHttpClient[0]
-		//} else if debugMode == true && apiMode == pkg.ApiModeTest {
-		//	//enable debug logging for sandbox mode only.
-		//	logger.Warnf("debug mode enabled")
-		//	httpClient = &http.Client{Transport: &debugSetterTransport{}}
+	} else if debugMode == true {
+		//enable debug logging for sandbox mode only.
+		globalLogger.Warnf("debug mode enabled")
+		httpClient = &http.Client{Transport: &debugLoggingTransport{}}
 	} else {
 		httpClient = &http.Client{}
 	}
@@ -169,14 +176,14 @@ func privateKeyJWTBearerAuthRequest[T any](ctx context.Context, globalLogger log
 	//jwtAuthResponse, err := httpClient.PostForm(endpointUrl, requestParamsForm)
 	jwtAuthRequest, err := http.NewRequest("POST", endpointUrl, strings.NewReader(requestParamsForm.Encode()))
 	if err != nil {
-		return nil, fmt.Errorf("error creating jwt client request: %w", err)
+		return nil, fmt.Errorf("error creating jwt client request [%s]: %w", endpointUrl, err)
 	}
 	jwtAuthRequest.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	jwtAuthRequest = jwtAuthRequest.WithContext(ctx)
 
 	jwtAuthResponse, err := httpClient.Do(jwtAuthRequest)
 	if err != nil {
-		return nil, fmt.Errorf("an error occurred while sending jwt client request, %v", err)
+		return nil, fmt.Errorf("an error occurred while sending jwt client request [%s]: %w", endpointUrl, err)
 	}
 
 	defer jwtAuthResponse.Body.Close()
@@ -185,16 +192,16 @@ func privateKeyJWTBearerAuthRequest[T any](ctx context.Context, globalLogger log
 		b, err := io.ReadAll(jwtAuthResponse.Body)
 		if err == nil {
 			//TODO: we should eventually remove this logging.
-			globalLogger.Errorf("Error Response body: %s", string(b))
+			globalLogger.Errorf("Error Response body [%s]: %s", endpointUrl, string(b))
 		}
 
-		return nil, fmt.Errorf("an error occurred while reading jwt client response, status code was not 200: %d", jwtAuthResponse.StatusCode)
+		return nil, errors.Errorf("an error occurred while reading jwt client response, status code was not 200 [%s]: %d", endpointUrl, jwtAuthResponse.StatusCode)
 	}
 
 	var tokenResponse T
 	err = json.NewDecoder(jwtAuthResponse.Body).Decode(&tokenResponse)
 	if err != nil {
-		return nil, fmt.Errorf("an error occurred while parsing jwt client response: %v", err)
+		return nil, fmt.Errorf("an error occurred while parsing jwt client response [%s]: %w", endpointUrl, err)
 	}
 
 	return &tokenResponse, nil
