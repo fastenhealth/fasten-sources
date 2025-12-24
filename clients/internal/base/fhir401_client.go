@@ -5,6 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"github.com/fastenhealth/fasten-sources/clients/testutils"
 	"net/url"
 	"sort"
 	"strings"
@@ -372,7 +373,7 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 
 					stageErrorData := map[string]interface{}{}
 					if errorCount > 0 {
-						stageErrorData["errors"] = ToMap[string, error](&syncSyncErrors)
+						stageErrorData["errors"] = testutils.ToMap[string, error](&syncSyncErrors)
 					}
 
 					mutex.Lock()
@@ -394,8 +395,8 @@ func (c *SourceClientFHIR401) ProcessPendingResources(
 		extractionLoopCount++
 	}
 
-	finalErrors := ToMap[string, error](&syncSyncErrors)
-	finalRefs := ToMap[string, bool](lookupResourceReferences)
+	finalErrors := testutils.ToMap[string, error](&syncSyncErrors)
+	finalRefs := testutils.ToMap[string, bool](lookupResourceReferences)
 
 	return finalRefs, finalErrors
 }

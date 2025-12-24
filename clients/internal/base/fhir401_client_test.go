@@ -3,6 +3,7 @@ package base
 import (
 	"context"
 	"encoding/json"
+	"github.com/fastenhealth/fasten-sources/clients/testutils"
 	"io"
 	"net/http"
 	"strings"
@@ -73,7 +74,7 @@ func TestFHIR401Client_ProcessBundle_Cigna(t *testing.T) {
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cignaSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/bundle/cigna_syntheticuser05-everything.json")
 	require.NoError(t, err)
 	var bundle fhir401.Bundle
 	err = json.Unmarshal(jsonBytes, &bundle)
@@ -110,7 +111,7 @@ func TestFHIR401Client_ProcessBundle_Cerner(t *testing.T) {
 	client, err := GetSourceClientFHIR401(pkg.FastenLighthouseEnvSandbox, context.Background(), testLogger, sc, mockSourceCredentialRepository, cernerSandboxDefinition, models.WithTestHttpClient(&http.Client{}))
 	require.NoError(t, err)
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_open_12724067_DocumentReference.json")
 	require.NoError(t, err)
 	var bundle fhir401.Bundle
 	err = json.Unmarshal(jsonBytes, &bundle)
@@ -146,7 +147,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/cerner_document_reference_206130480.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/document_reference/cerner_document_reference_206130480.json")
 	require.NoError(t, err)
 	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
@@ -160,7 +161,7 @@ func TestFhir401Client_ProcessResource(t *testing.T) {
 
 	// test
 	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
-	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
+	referencedResourcesLookupMap := testutils.ToMap[string, bool](referencedResourcesLookup)
 	//assert
 	require.NoError(t, err)
 	require.Equal(t, 8, len(referencedResourcesLookupMap))
@@ -197,7 +198,7 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/encounter_resource_broken_parse.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/document_reference/encounter_resource_broken_parse.json")
 	require.NoError(t, err)
 	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
@@ -212,7 +213,7 @@ func TestFhir401Client_ProcessEncounterResource_WhichContainsCapitalizedStatusEn
 	// test
 	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
 
-	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
+	referencedResourcesLookupMap := testutils.ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
@@ -245,7 +246,7 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/observation_broken_parse.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/document_reference/observation_broken_parse.json")
 	require.NoError(t, err)
 	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
@@ -259,7 +260,7 @@ func TestFhir401Client_ProcessObservationResource_WhichContainsUnicodeCharacters
 
 	// test
 	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
-	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
+	referencedResourcesLookupMap := testutils.ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
@@ -293,7 +294,7 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 	require.NoError(t, err)
 	db.EXPECT().UpsertRawResource(gomock.Any(), gomock.Any(), gomock.Any()).Return(true, nil).AnyTimes()
 
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/document_reference/medicare-eob.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/document_reference/medicare-eob.json")
 	require.NoError(t, err)
 	referencedResourcesLookup := &sync.Map{}
 	internalFragmentReferenceLookup := map[string]string{}
@@ -307,7 +308,7 @@ func TestFhir401Client_ProcessResourceWithContainedResources(t *testing.T) {
 
 	// test
 	_, err = client.ProcessResource(db, rawResource, referencedResourcesLookup, internalFragmentReferenceLookup, &summary)
-	referencedResourcesLookupMap := ToMap[string, bool](referencedResourcesLookup)
+	referencedResourcesLookupMap := testutils.ToMap[string, bool](referencedResourcesLookup)
 
 	//assert
 	require.NoError(t, err)
@@ -359,7 +360,7 @@ func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
 	fakeSourceCredential := mock_models.NewMockSourceCredential(mockCtrl)
 
 	access_token := "token here"
-	httpClient := OAuthVcrSetup(t, false, WithVcrAccessToken(access_token))
+	httpClient := testutils.OAuthVcrSetup(t, false, testutils.WithVcrAccessToken(access_token))
 
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
 		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
@@ -378,7 +379,7 @@ func TestFhir401Client_ProcessPendingResource_Limit5(t *testing.T) {
 	require.NoError(t, err)
 
 	// Read lookup_references.json and convert to sync.Map
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
 	require.NoError(t, err)
 
 	var refMap map[string]interface{}
@@ -426,7 +427,7 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 	mockSourceCredentialRepository := mock_models.NewMockSourceCredentialRepository(mockCtrl)
 
 	access_token := "token here"
-	httpClient := OAuthVcrSetup(t, false, WithVcrAccessToken(access_token))
+	httpClient := testutils.OAuthVcrSetup(t, false, testutils.WithVcrAccessToken(access_token))
 
 	cernerSandboxDefinition, err := definitions.GetSourceDefinition(
 		definitions.WithEndpointId("3290e5d7-978e-42ad-b661-1cf8a01a989c"),
@@ -445,7 +446,7 @@ func TestFhir401Client_ProcessPendingResource_Limit1(t *testing.T) {
 	require.NoError(t, err)
 
 	// Read lookup_references.json and convert to sync.Map
-	jsonBytes, err := ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
+	jsonBytes, err := testutils.ReadTestFixture("testdata/fixtures/401-R4/bundle/cerner_pending_resources.json")
 	require.NoError(t, err)
 
 	var refMap map[string]interface{}
