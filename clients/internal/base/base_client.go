@@ -156,37 +156,8 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 	//check if we need to refresh the access token
 	//https://github.com/golang/oauth2/issues/84#issuecomment-520099526
 	// https://chromium.googlesource.com/external/github.com/golang/oauth2/+/8f816d62a2652f705144857bbbcc26f2c166af9e/oauth2.go#239
-	conf := &oauth2.Config{
-		ClientID: c.SourceCredential.GetClientId(),
-		Endpoint: oauth2.Endpoint{
-			AuthURL:  c.EndpointDefinition.AuthorizationEndpoint,
-			TokenURL: c.EndpointDefinition.TokenEndpoint,
-		},
-		//ClientSecret: "",
-		//RedirectURL:  "",
-		//Scopes:       nil,
-	}
-
-	//overrides
-	if len(c.SourceClientOptions.ClientID) > 0 {
-		conf.ClientID = c.SourceClientOptions.ClientID
-	}
-	if len(c.SourceClientOptions.ClientSecret) > 0 {
-		conf.ClientSecret = c.SourceClientOptions.ClientSecret
-	}
-	if len(c.SourceClientOptions.RedirectURL) > 0 {
-		conf.RedirectURL = c.SourceClientOptions.RedirectURL
-	}
-	if len(c.SourceClientOptions.Scopes) > 0 {
-		conf.Scopes = c.SourceClientOptions.Scopes
-	}
-
-	token := &oauth2.Token{
-		TokenType:    "Bearer",
-		RefreshToken: c.SourceCredential.GetRefreshToken(),
-		AccessToken:  c.SourceCredential.GetAccessToken(),
-		Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
-	}
+	conf := c.generateOAuthConfig()
+	token := c.generateOAuthTokenFromCredential()
 
 	tokenWasRefreshed := false
 	if refreshOptions.Force || token.Expiry.Before(time.Now().Add(5*time.Second)) { // expired (or will expire in 5 seconds) so let's update it
@@ -412,84 +383,104 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 // Use token introspection from Token Introspectin endpoint
 // https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html
 func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectTokenType) (*models.TokenIntrospectResponse, error) {
-	if tokenType == models.TokenIntrospectTokenTypeAccess && len(c.SourceCredential.GetAccessToken()) > 0 {
-		//formData.Set("token_type_hint", "access_token") //don't attempt to hint for access token
-		return c.introspectTokenWithValue(tokenType, c.SourceCredential.GetAccessToken())
-	} else if tokenType == models.TokenIntrospectTokenTypeRefresh && len(c.SourceCredential.GetRefreshToken()) > 0 {
-		return c.introspectTokenWithValue(tokenType, c.SourceCredential.GetRefreshToken())
-	} else {
-		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
-	}
-}
 
-func (c *SourceClientBase) introspectTokenWithValue(tokenType models.TokenIntrospectTokenType, token string) (*models.TokenIntrospectResponse, error) {
-
-	introspectEndpoint := c.EndpointDefinition.IntrospectionEndpoint
-	if len(introspectEndpoint) == 0 {
-		//replace the token endpoint with the introspection endpoint
-		introspectEndpoint = strings.TrimSuffix(strings.TrimSuffix(c.EndpointDefinition.TokenEndpoint, "/"), "/token") + "/introspect"
-	}
-
-	if len(token) == 0 {
-		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
-	}
-
-	formData := url.Values{}
+	var introspectToken string
 	if tokenType == models.TokenIntrospectTokenTypeAccess {
-		//formData.Set("token_type_hint", "access_token") //don't attempt to hint for access token
-		formData.Set("token", token)
+		introspectToken = c.SourceCredential.GetAccessToken()
 
 	} else if tokenType == models.TokenIntrospectTokenTypeRefresh {
-		formData.Set("token_type_hint", "refresh_token")
-		formData.Set("token", token)
-	} else {
+		introspectToken = c.SourceCredential.GetRefreshToken()
+	}
+	if len(introspectToken) == 0 {
 		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
 	}
 
-	req, err := http.NewRequest("POST", introspectEndpoint, strings.NewReader(formData.Encode()))
-	if err != nil {
-		return nil, fmt.Errorf("error creating introspection request: %w", err)
-	}
-	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	//req.SetBasicAuth(c.SourceCredential.GetClientId(), c.SourceClientOptions.ClientSecret)
-	c.LoggerDebugRequest(req)
-	resp, err := c.OauthClient.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error getting token info: %w", err)
-	}
+	conf := c.generateOAuthConfig()
+	token := c.generateOAuthTokenFromCredential()
+	clientAuthMethod := c.EndpointDefinition.GetClientAuthMethod()
 
-	if resp.StatusCode >= 300 || resp.StatusCode < 200 {
-		b, _ := io.ReadAll(resp.Body)
-		bodyContent := string(b)
-		if len(bodyContent) > 600 {
-			bodyContent = bodyContent[:600]
+	if clientAuthMethod == pkg.ClientAuthenticationMethodTypePrivateKeyJwt {
+		// this is a private key JWT client, we need to refresh the token using the private key
+
+		if c.SourceClientOptions.ClientJWTKeysetHandle == nil {
+			c.Logger.Error("no jwt keyset handle provided for private key JWT client")
+			return nil, fmt.Errorf("%w: unable to generate client assertion, missing keyset", pkg.ErrSMARTTokenRefreshFailure)
 		}
-		c.LoggerDebugResponse(resp, true)
-		return nil, fmt.Errorf("%w: an error occurred during request %s - %d - %s [%s]", pkg.ErrResourceHttpError, introspectEndpoint, resp.StatusCode, resp.Status, bodyContent)
+
+		//try to introspect the refresh token to get the expiration if possible.
+		introspectData, introspectErr := client_auth_method.PrivateKeyJWTBearerIntrospectToken(
+			c.Context,
+			c.Logger,
+			c.SourceClientOptions.ClientJWTKeysetHandle,
+			*c.EndpointDefinition,
+			tokenType,
+			introspectToken,
+			c.SourceClientOptions.TestHttpClient,
+		)
+		if introspectErr != nil {
+			return nil, introspectErr
+		}
+		return introspectData, nil
+	} else {
+
+		//try to introspect the refresh token to get the expiration if possible.
+		introspectData, introspectErr := client_auth_method.ClientSecretBasicIntrospectToken(
+			c.Context,
+			c.Logger,
+			*c.EndpointDefinition,
+			conf,
+			token,
+			tokenType,
+			introspectToken,
+			c.SourceClientOptions.TestHttpClient,
+		)
+		if introspectErr != nil {
+			return nil, introspectErr
+		}
+		return introspectData, nil
 	}
-
-	//parse res.Body into a map
-
-	// Read the response body
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-
-	//log.Printf("!!!! RAW TOKEN RESPONSE: %s", string(body))
-
-	// Parse the JSON into a map
-	var data models.TokenIntrospectResponse
-	err = json.Unmarshal(body, &data)
-	if err != nil {
-		return nil, fmt.Errorf("error unmarshaling response body: %w", err)
-	}
-	return &data, nil
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Helper Functions
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+func (c *SourceClientBase) generateOAuthConfig() *oauth2.Config {
+	conf := &oauth2.Config{
+		ClientID: c.SourceCredential.GetClientId(),
+		Endpoint: oauth2.Endpoint{
+			AuthURL:  c.EndpointDefinition.AuthorizationEndpoint,
+			TokenURL: c.EndpointDefinition.TokenEndpoint,
+		},
+		//ClientSecret: "",
+		//RedirectURL:  "",
+		//Scopes:       nil,
+	}
+
+	//overrides
+	if len(c.SourceClientOptions.ClientID) > 0 {
+		conf.ClientID = c.SourceClientOptions.ClientID
+	}
+	if len(c.SourceClientOptions.ClientSecret) > 0 {
+		conf.ClientSecret = c.SourceClientOptions.ClientSecret
+	}
+	if len(c.SourceClientOptions.RedirectURL) > 0 {
+		conf.RedirectURL = c.SourceClientOptions.RedirectURL
+	}
+	if len(c.SourceClientOptions.Scopes) > 0 {
+		conf.Scopes = c.SourceClientOptions.Scopes
+	}
+	return conf
+}
+
+func (c *SourceClientBase) generateOAuthTokenFromCredential() *oauth2.Token {
+	&oauth2.Token{
+		TokenType:    "Bearer",
+		RefreshToken: c.SourceCredential.GetRefreshToken(),
+		AccessToken:  c.SourceCredential.GetAccessToken(),
+		Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
+	}
+}
+
 func UnmarshalJson(r io.Reader, decodeModelPtr interface{}) error {
 	decoder := json.NewDecoder(r)
 	//decoder.DisallowUnknownFields() //make sure we throw an error if unknown fields are present.
