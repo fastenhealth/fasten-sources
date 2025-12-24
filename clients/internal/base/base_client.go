@@ -473,7 +473,7 @@ func (c *SourceClientBase) generateOAuthConfig() *oauth2.Config {
 }
 
 func (c *SourceClientBase) generateOAuthTokenFromCredential() *oauth2.Token {
-	&oauth2.Token{
+	return &oauth2.Token{
 		TokenType:    "Bearer",
 		RefreshToken: c.SourceCredential.GetRefreshToken(),
 		AccessToken:  c.SourceCredential.GetAccessToken(),
