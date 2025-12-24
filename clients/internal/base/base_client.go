@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"mime"
 	"net/http"
 	"net/http/httputil"
@@ -222,7 +221,13 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
 
-			c.SourceCredential.SetTokens(tokenRefreshResponse.AccessToken, tokenRefreshResponse.RefreshToken, time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix(), tokenRefreshResponse.Scope, nil)
+			c.SourceCredential.SetTokens(
+				tokenRefreshResponse.AccessToken,
+				tokenRefreshResponse.RefreshToken,
+				time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix(),
+				tokenRefreshResponse.Scope,
+				nil,
+			)
 
 			//update the token with newly refreshed data
 			token = &oauth2.Token{
@@ -232,38 +237,69 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 				Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
 			}
 			tokenWasRefreshed = true
-		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
-			//client_secret_basic auth. If we need to modify significantly, this should be moved to clients/client_auth_method/client_secret_basic.go
-			c.Logger.Info("using refresh token to generate access token...")
 
-			src := conf.TokenSource(c.Context, token)
-			newToken, err := src.Token() // this actually goes and renews the tokens
+			//try to introspect the refresh token to get the expiration if possible.
+			if introspectData, introspectErr := client_auth_method.PrivateKeyJWTBearerIntrospectToken(
+				c.Context,
+				c.Logger,
+				c.SourceClientOptions.ClientJWTKeysetHandle,
+				*c.EndpointDefinition,
+				models.TokenIntrospectTokenTypeRefresh,
+				c.SourceCredential.GetRefreshToken(),
+				c.SourceClientOptions.TestHttpClient,
+			); introspectErr == nil && introspectData.ExpiresAt > 0 {
+				refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
+				c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
+			} else {
+				c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
+			}
+		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
+
+			c.Logger.Info("refreshing using client id & secret...")
+			tokenRefreshResponse, err := client_auth_method.ClientSecretBasicRefreshToken(
+				c.Context,
+				c.Logger,
+				conf,
+				token,
+				c.SourceClientOptions.TestHttpClient,
+			)
 			if err != nil {
-				log.Printf("An error occurred during token refresh: %v", err)
+				c.Logger.Error("error refreshing confidential client: ", err)
 				return fmt.Errorf("%w: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 			}
-			log.Printf("new token expiry: %s", newToken.Expiry.Format(time.RFC3339))
-			if newToken.AccessToken != token.AccessToken {
-				token = newToken
 
-				newTokenScope := ""
-				if scope := newToken.Extra("scope"); scope != nil {
-					if scopeStr, scopeStrOk := scope.(string); scopeStrOk {
-						newTokenScope = scopeStr // safe casting and assignment
-					}
-				}
+			c.SourceCredential.SetTokens(
+				tokenRefreshResponse.AccessToken,
+				tokenRefreshResponse.RefreshToken,
+				time.Now().Add(time.Second*time.Duration(tokenRefreshResponse.ExpiresIn)).Unix(),
+				tokenRefreshResponse.Scope,
+				nil,
+			)
 
-				// update the "source" credential with new data (which will need to be sent
-				c.SourceCredential.SetTokens(newToken.AccessToken, newToken.RefreshToken, newToken.Expiry.Unix(), newTokenScope, nil)
-				//updatedSource.AccessToken = newToken.AccessToken
-				//updatedSource.ExpiresAt = newToken.Expiry.Unix()
-				//// Don't overwrite `RefreshToken` with an empty value
-				//// if this was a token refreshing request.
-				//if newToken.RefreshToken != "" {
-				//	updatedSource.RefreshToken = newToken.RefreshToken
-				//}
+			//update the token with newly refreshed data
+			token = &oauth2.Token{
+				TokenType:    "Bearer",
+				RefreshToken: c.SourceCredential.GetRefreshToken(),
+				AccessToken:  c.SourceCredential.GetAccessToken(),
+				Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
+			}
+			tokenWasRefreshed = true
 
-				tokenWasRefreshed = true
+			//try to introspect the refresh token to get the expiration if possible.
+			if introspectData, introspectErr := client_auth_method.ClientSecretBasicIntrospectToken(
+				c.Context,
+				c.Logger,
+				*c.EndpointDefinition,
+				conf,
+				token,
+				models.TokenIntrospectTokenTypeRefresh,
+				c.SourceCredential.GetRefreshToken(),
+				c.SourceClientOptions.TestHttpClient,
+			); introspectErr == nil && introspectData.ExpiresAt > 0 {
+				refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
+				c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
+			} else {
+				c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
 			}
 		} else {
 			c.Logger.Error("no refresh token available, and does not support JWT refresh. User must re-authenticate")
@@ -277,20 +313,6 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 	c.OauthClient.Timeout = 120 * time.Second
 
 	if tokenWasRefreshed {
-
-		var refreshExpiration *int64
-		//try to get refresh token expiration if possible.
-		//NOTE: we can only call this function AFTER c.OauthClient is set.
-		if introspectData, introspectErr := c.introspectTokenWithValue(models.TokenIntrospectTokenTypeRefresh, token.RefreshToken); introspectErr == nil {
-			if introspectData.ExpiresAt > 0 {
-				refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
-				refreshExpiration = &refreshExpirationUnix
-			}
-			c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), refreshExpiration)
-		} else {
-			c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
-		}
-
 		//store the updated tokens
 		err := c.SourceCredentialRepository.StoreTokens(c.Context, c.SourceCredential)
 		if err != nil {
