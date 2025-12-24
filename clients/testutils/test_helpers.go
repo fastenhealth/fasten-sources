@@ -59,12 +59,19 @@ func OAuthVcrSetup(t *testing.T, enableRecording bool, options ...func(vcrOption
 	customTransport.underlyingTransport = tr
 	if enableRecording && len(opts.AccessToken) > 0 {
 		customTransport.accessToken = opts.AccessToken
-	} else {
+	} else if !enableRecording {
 		customTransport.accessToken = "PLACEHOLDER"
 	}
 
-	insecureClient := http.Client{
-		Transport: &customTransport,
+	var insecureClient http.Client
+	if len(customTransport.accessToken) > 0 {
+		insecureClient = http.Client{
+			Transport: &customTransport,
+		}
+	} else {
+		insecureClient = http.Client{
+			Transport: tr,
+		}
 	}
 
 	//this line ensures that we do not attempt to create new recordings.
