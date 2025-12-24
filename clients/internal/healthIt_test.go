@@ -5,7 +5,6 @@ import (
 	"github.com/fastenhealth/fasten-sources/clients/testutils"
 	"testing"
 
-	"github.com/fastenhealth/fasten-sources/clients/internal/base"
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
 	"github.com/fastenhealth/fasten-sources/pkg"
