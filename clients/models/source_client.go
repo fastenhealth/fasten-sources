@@ -20,7 +20,18 @@ type SourceClient interface {
 	ExtractPatientId(bundleFile *os.File) (string, pkg.FhirVersion, error)
 
 	GetSourceCredential() SourceCredential
+
+	// RefreshAccessToken will refresh the Access Token using the OAuth Token endpoint
+	// https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-asymmetric-auth.html#refresh-access-token
+	// https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-symmetric-auth.html#refresh-access-token
+	// Some EHRs implement Rolling Refresh Tokens, so the Refresh Token may also be updated during this process. You must
+	// store the new Refresh Token if provided. (This will be done automatically using the SourceCredentialRepository.StoreTokens method)
 	RefreshAccessToken(options ...func(*SourceClientRefreshOptions)) error
 
+	// IntrospectToken will provide information about the token using the OAuth Introspection endpoint if available
+	// https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html
+	// Generally this method is used to validate if a Token is still valid or has expired/revoked
+	// Most EHR servers will require authentication via client credentials or JWT to access the introspection endpoint
+	// Note: This function *may* require a valid AccessToken to be set on the client depending on the source implementation
 	IntrospectToken(tokenType TokenIntrospectTokenType) (*TokenIntrospectResponse, error)
 }
