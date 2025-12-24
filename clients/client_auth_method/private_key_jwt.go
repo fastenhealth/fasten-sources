@@ -142,7 +142,7 @@ func PrivateKeyJWTBearerIntrospectToken(
 		return nil, errors.Errorf("no token (%s) available to introspect", tokenType)
 	}
 
-	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, endpointDef.TokenEndpoint, formData, testHttpClient...)
+	introspectResponse, err := privateKeyJWTBearerAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, introspectEndpoint, formData, testHttpClient...)
 	if err != nil {
 		return nil, fmt.Errorf("%w: an error occurred while refreshing token: %v", pkg.ErrSMARTTokenRefreshFailure, err)
 	}
