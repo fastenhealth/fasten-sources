@@ -26,10 +26,14 @@ func ClientSecretBasicRefreshToken(
 	testHttpClient ...*http.Client,
 ) (*models.TokenRefreshResponse, error) {
 
+	if tokenData == nil || len(tokenData.RefreshToken) == 0 {
+		return nil, fmt.Errorf("%w: no refresh token available to refresh access token", pkg.ErrSMARTTokenRefreshFailure)
+	}
+
 	//client_secret_basic auth. If we need to modify significantly, this should be moved to clients/client_auth_method/client_secret_basic.go
 	globalLogger.Info("using refresh token to generate access token...")
 
-	if len(testHttpClient) > 0 {
+	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		globalLogger.Warnf("test httpClient provided, using it...")
 		ctx = context.WithValue(ctx, oauth2.HTTPClient, testHttpClient[0])
 	} else if debugMode == true {
@@ -155,7 +159,7 @@ func clientSecretBasicAuthRequest[T any](
 	request *http.Request,
 	testHttpClient ...*http.Client,
 ) (*T, error) {
-	if len(testHttpClient) > 0 {
+	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
 		globalLogger.Warnf("test httpClient provided, using it...")
 		ctx = context.WithValue(ctx, oauth2.HTTPClient, testHttpClient[0])
 	} else if debugMode == true {
