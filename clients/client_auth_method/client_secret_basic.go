@@ -56,8 +56,8 @@ func ClientSecretBasicRefreshToken(
 			}
 		}
 	}
-	tokenRefreshResp.AccessToken = newToken.AccessToken
-	tokenRefreshResp.RefreshToken = newToken.RefreshToken
+	tokenRefreshResp.AccessToken = strings.TrimSpace(newToken.AccessToken)
+	tokenRefreshResp.RefreshToken = strings.TrimSpace(newToken.RefreshToken)
 	tokenRefreshResp.TokenType = newToken.TokenType
 	tokenRefreshResp.ExpiresIn = int64(newToken.Expiry.Sub(time.Now()).Seconds())
 	// Optionally get patient ID from userinfo endpoint if available
