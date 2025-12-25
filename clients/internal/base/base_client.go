@@ -209,21 +209,6 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			}
 			tokenWasRefreshed = true
 
-			//try to introspect the refresh token to get the expiration if possible.
-			if introspectData, introspectErr := client_auth_method.PrivateKeyJWTBearerIntrospectToken(
-				c.Context,
-				c.Logger,
-				c.SourceClientOptions.ClientJWTKeysetHandle,
-				*c.EndpointDefinition,
-				models.TokenIntrospectTokenTypeRefresh,
-				c.SourceCredential.GetRefreshToken(),
-				c.SourceClientOptions.TestHttpClient,
-			); introspectErr == nil && introspectData.ExpiresAt > 0 {
-				refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
-				c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
-			} else {
-				c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
-			}
 		} else if len(c.SourceCredential.GetRefreshToken()) > 0 {
 
 			c.Logger.Info("refreshing using client id & secret...")
@@ -255,23 +240,6 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 				Expiry:       time.Unix(c.SourceCredential.GetExpiresAt(), 0),
 			}
 			tokenWasRefreshed = true
-
-			//try to introspect the refresh token to get the expiration if possible.
-			if introspectData, introspectErr := client_auth_method.ClientSecretBasicIntrospectToken(
-				c.Context,
-				c.Logger,
-				*c.EndpointDefinition,
-				conf,
-				token,
-				models.TokenIntrospectTokenTypeRefresh,
-				c.SourceCredential.GetRefreshToken(),
-				c.SourceClientOptions.TestHttpClient,
-			); introspectErr == nil && introspectData.ExpiresAt > 0 {
-				refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
-				c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
-			} else {
-				c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
-			}
 		} else {
 			c.Logger.Error("no refresh token available, and does not support JWT refresh. User must re-authenticate")
 			return fmt.Errorf("%w: no refresh token available, and does not support JWT refresh. User must re-authenticate", pkg.ErrSMARTTokenRefreshFailure)
@@ -284,6 +252,15 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 	c.OauthClient.Timeout = 120 * time.Second
 
 	if tokenWasRefreshed {
+		//try to introspect the refresh token to get the expiration if possible.
+		if introspectData, introspectErr := c.IntrospectToken(models.TokenIntrospectTokenTypeRefresh); introspectErr == nil && introspectData.ExpiresAt > 0 {
+			c.Logger.Infof("introspected refresh token expiration: %d", introspectData.ExpiresAt)
+			refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
+			c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
+		} else {
+			c.Logger.Warnf("unable to introspect refresh token for expiration: %v", introspectErr)
+		}
+
 		//store the updated tokens
 		err := c.SourceCredentialRepository.StoreTokens(c.Context, c.SourceCredential)
 		if err != nil {
@@ -399,7 +376,22 @@ func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectToken
 	token := c.generateOAuthTokenFromCredential()
 	clientAuthMethod := c.EndpointDefinition.GetClientAuthMethod()
 
-	if clientAuthMethod == pkg.ClientAuthenticationMethodTypePrivateKeyJwt {
+	if c.EndpointDefinition.PlatformType == pkg.PlatformTypeEpic {
+		//try to introspect the refresh token to get the expiration if possible.
+		introspectData, introspectErr := client_auth_method.ClientBearerTokenAuthIntrospectToken(
+			c.Context,
+			c.Logger,
+			*c.EndpointDefinition,
+			token,
+			tokenType,
+			introspectToken,
+			c.SourceClientOptions.TestHttpClient,
+		)
+		if introspectErr != nil {
+			return nil, introspectErr
+		}
+		return introspectData, nil
+	} else if clientAuthMethod == pkg.ClientAuthenticationMethodTypePrivateKeyJwt {
 		// this is a private key JWT client, we need to refresh the token using the private key
 
 		if c.SourceClientOptions.ClientJWTKeysetHandle == nil {
@@ -422,14 +414,12 @@ func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectToken
 		}
 		return introspectData, nil
 	} else {
-
 		//try to introspect the refresh token to get the expiration if possible.
-		introspectData, introspectErr := client_auth_method.ClientSecretBasicIntrospectToken(
+		introspectData, introspectErr := client_auth_method.ClientSecretBasicAuthIntrospectToken(
 			c.Context,
 			c.Logger,
-			*c.EndpointDefinition,
 			conf,
-			token,
+			*c.EndpointDefinition,
 			tokenType,
 			introspectToken,
 			c.SourceClientOptions.TestHttpClient,
