@@ -69,15 +69,12 @@ func ClientSecretBasicRefreshToken(
 	return tokenRefreshResp, nil
 }
 
-// ClientSecretBasicIntrospectToken performs token introspection using client_secret_basic authentication method
-// NOTE: some EHRs, like Epic, will not use client id & secret for introspection, and will instead require the access token only.
-// REQUIRES valid oauthTokenData.AccessToken to function
-func ClientSecretBasicIntrospectToken(
+// ClientSecretBasicAuthIntrospectToken performs token introspection using client id and secret.
+func ClientSecretBasicAuthIntrospectToken(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
+	oauthConfig *oauth2.Config,
 	endpointDef definitionsModels.LighthouseSourceDefinition,
-	oauthConfig *oauth2.Config, //only used to provide the configuration (clientid & client secret) required to make the request, not used to generate a oauth2.Client
-	oauthTokenData *oauth2.Token, //only used to provide the access token required to make the request
 	tokenType models.TokenIntrospectTokenType,
 	token string, //token to introspect, can be access or refresh token depending on tokenType
 	testHttpClient ...*http.Client,
@@ -112,72 +109,69 @@ func ClientSecretBasicIntrospectToken(
 	basicAuthRequest.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	basicAuthRequest.Header.Set("Accept", "application/json")
 
-	return clientSecretBasicAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, oauthConfig, oauthTokenData, basicAuthRequest, testHttpClient...)
+	return clientSecretBasicAuthRequest[models.TokenIntrospectResponse](ctx, globalLogger, oauthConfig, basicAuthRequest, testHttpClient...)
 }
 
-// ClientSecretBasicUserInfoGetPatientId retrieves the patient ID from the userinfo endpoint using client_secret_basic authentication method
-// NOTE: some EHRs, like Epic, will not use client id & secret for userinfo, and will instead require the access token only.
-// REQUIRES valid oauthTokenData.AccessToken to function
-func ClientSecretBasicUserInfoGetPatientId(
-	ctx context.Context,
-	globalLogger logrus.FieldLogger,
-	oauthConfig *oauth2.Config,
-	oauthTokenData *oauth2.Token,
-	userInfoEndpoint string,
-	testHttpClient ...*http.Client,
-) (string, error) {
+//// ClientSecretBasicUserInfoGetPatientId retrieves the patient ID from the userinfo endpoint using client_secret_basic authentication method
+//// NOTE: some EHRs, like Epic, will not use client id & secret for userinfo, and will instead require the access token only.
+//// REQUIRES valid oauthTokenData.AccessToken or ID token to be passed in to function
+//func ClientSecretBasicUserInfoGetPatientId(
+//	ctx context.Context,
+//	globalLogger logrus.FieldLogger,
+//	oauthConfig *oauth2.Config,
+//	userInfoEndpoint string,
+//	testHttpClient ...*http.Client,
+//) (string, error) {
+//
+//	basicAuthRequest, err := http.NewRequestWithContext(ctx, "GET", userInfoEndpoint, nil)
+//	if err != nil {
+//		return "", fmt.Errorf("error creating client secret protected request [%s]: %w", userInfoEndpoint, err)
+//	}
+//	basicAuthRequest.Header.Set("Accept", "application/json")
+//
+//	respData, err := clientSecretBasicAuthRequest[map[string]any](ctx, globalLogger, oauthConfig, basicAuthRequest, testHttpClient...)
+//	if err != nil {
+//		return "", fmt.Errorf("error getting patient info: %w", err)
+//	}
+//	if respData == nil {
+//		return "", errors.New("empty response from userinfo endpoint")
+//	} else if patientId, hasPatientId := (*respData)["patient"]; hasPatientId {
+//		return patientId.(string), nil
+//	}
+//	return "", errors.New("could not get patient from userinfo endpoint")
+//}
 
-	basicAuthRequest, err := http.NewRequest("GET", userInfoEndpoint, nil)
-	if err != nil {
-		return "", fmt.Errorf("error creating client secret protected request [%s]: %w", userInfoEndpoint, err)
-	}
-	basicAuthRequest.Header.Set("Accept", "application/json")
+// #####################################################################################################################
+// helpers Basic Authentication
+// #####################################################################################################################
 
-	respData, err := clientSecretBasicAuthRequest[map[string]any](ctx, globalLogger, oauthConfig, oauthTokenData, basicAuthRequest, testHttpClient...)
-	if err != nil {
-		return "", fmt.Errorf("error getting patient info: %w", err)
-	}
-	if respData == nil {
-		return "", errors.New("empty response from userinfo endpoint")
-	} else if patientId, hasPatientId := (*respData)["patient"]; hasPatientId {
-		return patientId.(string), nil
-	}
-	return "", errors.New("could not get patient from userinfo endpoint")
-}
-
-// helpers
-
-// this is a generic function to make http calls protected by basic auth
+// this is a generic function to make http calls protected by client id & secret basic auth
 // Used by token introspection, userinfo, etc.
-// This function should NOT be used for token refresh, as oauth2.Config.TokenSource() should be used instead for that purpose.
-// This function will ignore the refresh token in the provided oauth2.Token, to avoid accidental usage. Instead it will create a "static" token
+// This function CANNOT be used for token refresh, as oauth2.Config.TokenSource() should be used instead for that purpose.
 func clientSecretBasicAuthRequest[T any](
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
 	oauthConfig *oauth2.Config,
-	token *oauth2.Token,
 	request *http.Request,
 	testHttpClient ...*http.Client,
 ) (*T, error) {
+	var httpClient *http.Client
 	if len(testHttpClient) > 0 && testHttpClient[0] != nil {
-		globalLogger.Warnf("test httpClient provided, using it...")
-		ctx = context.WithValue(ctx, oauth2.HTTPClient, testHttpClient[0])
+		httpClient = testHttpClient[0]
 	} else if debugMode == true {
-		//} else if debugMode == true {
 		//enable debug logging for sandbox mode only.
 		globalLogger.Warnf("debug mode enabled")
-		hc := &http.Client{Transport: &debugLoggingTransport{}}
-		ctx = context.WithValue(ctx, oauth2.HTTPClient, hc)
-		//} else if !source.Confidential {
-		//	//some sources (like Athena) seem to timeout if a Authorization header is provided, when a client_id:client_secret is not present.
-		//	logger.Infof("clean authorization transport enabled for non-confidential source")
-		//	hc := &http.Client{Transport: &cleanAuthorizationTransport{}}
-		//	ctx = context.WithValue(ctx, oauth2.HTTPClient, hc)
+		httpClient = &http.Client{Transport: &debugLoggingTransport{}}
+	} else {
+		httpClient = &http.Client{}
 	}
 
-	basicAuthResponse, err := StaticOAuthClient(ctx, oauthConfig, token).Do(request)
+	//update the request with basic auth
+	request.SetBasicAuth(oauthConfig.ClientID, oauthConfig.ClientSecret)
+
+	basicAuthResponse, err := httpClient.Do(request)
 	if err != nil {
-		return nil, fmt.Errorf("an error occurred while sending client secret protected request [%s]: %w", request.URL, err)
+		return nil, fmt.Errorf("an error occurred while sending basic auth protected request [%s]: %w", request.URL, err)
 	}
 
 	defer basicAuthResponse.Body.Close()
@@ -189,28 +183,14 @@ func clientSecretBasicAuthRequest[T any](
 			globalLogger.Errorf("Error Response body: %s", string(b))
 		}
 
-		return nil, errors.Errorf("an error occurred while reading client secret protected response, status code was not 200 [%s]: %d", request.URL, basicAuthResponse.StatusCode)
+		return nil, errors.Errorf("an error occurred while reading basic auth protected response, status code was not 200 [%s]: %d", request.URL, basicAuthResponse.StatusCode)
 	}
 
 	var tokenResponse T
 	err = json.NewDecoder(basicAuthResponse.Body).Decode(&tokenResponse)
 	if err != nil {
-		return nil, fmt.Errorf("an error occurred while parsing client secret protected response [%s]: %w", request.URL, err)
+		return nil, fmt.Errorf("an error occurred while parsing basic auth protected response [%s]: %w", request.URL, err)
 	}
 
 	return &tokenResponse, nil
-}
-
-// oauthConfig.Client() will automatically refresh the token if needed
-// WE MUST DO THIS MANUALLY, as automatic refreshes will cause rolling refresh tokens to break (since we will not be able to store the newly issued refresh token)
-// delete the refresh token to avoid accidental usage
-func StaticOAuthClient(ctx context.Context, oauthConfig *oauth2.Config, oauthToken *oauth2.Token) *http.Client {
-	staticToken := &oauth2.Token{
-		AccessToken:  oauthToken.AccessToken,
-		TokenType:    oauthToken.TokenType,
-		RefreshToken: "", //delete refresh token to avoid accidental usage
-		Expiry:       oauthToken.Expiry,
-	}
-
-	return oauthConfig.Client(ctx, staticToken)
 }
