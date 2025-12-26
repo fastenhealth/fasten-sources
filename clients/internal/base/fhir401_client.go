@@ -657,8 +657,9 @@ func generateResourceQueries(resourceNames []string, endpointDefinition *definit
 		}
 
 		switch resourceName {
+
 		case "CarePlan":
-			if endpointDefinition.PlatformType == pkg.PlatformTypeEpic {
+			if endpointDefinition.PlatformType == pkg.PlatformTypeEpic || endpointDefinition.PlatformType == pkg.PlatformTypeTEFCAEpic || endpointDefinition.PlatformType == pkg.PlatformTypeEpicLegacy {
 				// Epic CarePlan requires status=active to return results
 				carePlanCategories := []string{
 					"734163000",         //encounter
@@ -714,8 +715,31 @@ func generateResourceQueries(resourceNames []string, endpointDefinition *definit
 						"_count":   []string{"50"},
 					})
 				}
+			} else if endpointDefinition.PlatformType == pkg.PlatformTypeQuestDiagnostics {
+				//see: https://api.questdiagnostics.com/resource-server/fhir/r4/metadata and email thread
+				observationCategories := []string{"laboratory"}
+				for _, category := range observationCategories {
+					resourceQueryData.SearchParamCombinations = append(resourceQueryData.SearchParamCombinations, url.Values{
+						"patient":  []string{sourceCred.GetPatientId()},
+						"category": []string{category},
+						"_count":   []string{"50"},
+					})
+				}
 			}
 			//	// Example: Observation may require category=lab for lab observations
+
+		case "DiagnosticReport":
+			if endpointDefinition.PlatformType == pkg.PlatformTypeQuestDiagnostics {
+				//see: https://api.questdiagnostics.com/resource-server/fhir/r4/metadata and email thread
+				diagnosticReportCategories := []string{"LAB"}
+				for _, category := range diagnosticReportCategories {
+					resourceQueryData.SearchParamCombinations = append(resourceQueryData.SearchParamCombinations, url.Values{
+						"patient":  []string{sourceCred.GetPatientId()},
+						"category": []string{category},
+						"_count":   []string{"50"},
+					})
+				}
+			}
 
 		}
 		resourceQueries = append(resourceQueries, resourceQueryData)
