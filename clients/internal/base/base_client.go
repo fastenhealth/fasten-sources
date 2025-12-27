@@ -182,6 +182,7 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 			tokenRefreshResponse, err := client_auth_method.PrivateKeyJWTBearerRefreshToken(
 				c.Context,
 				c.Logger,
+				c.SourceCredential.GetClientId(),
 				c.SourceClientOptions.ClientJWTKeysetHandle,
 				*c.EndpointDefinition,
 				c.SourceCredential.GetRefreshToken(),
@@ -403,6 +404,7 @@ func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectToken
 		introspectData, introspectErr := client_auth_method.PrivateKeyJWTBearerIntrospectToken(
 			c.Context,
 			c.Logger,
+			c.SourceCredential.GetClientId(),
 			c.SourceClientOptions.ClientJWTKeysetHandle,
 			*c.EndpointDefinition,
 			tokenType,

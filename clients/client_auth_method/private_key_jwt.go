@@ -12,6 +12,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/tink-crypto/tink-go/v2/jwt"
 	"github.com/tink-crypto/tink-go/v2/keyset"
+	"golang.org/x/oauth2"
 	"io"
 	"net/http"
 	"net/url"
@@ -21,6 +22,10 @@ import (
 
 // https://fhir.epic.com/Documentation?docId=oauth2&section=Standalone-Oauth2-Launch-Using-Refresh-Token-JWT
 func CreatePrivateKeyJWTClientAssertion(jwtPrivateKeyHandle *keyset.Handle, jwtIssuer string, jwtSubject string, jwtAudience string) (string, *time.Time, error) {
+
+	if jwtSubject == "" || jwtIssuer == "" || jwtAudience == "" {
+		return "", nil, fmt.Errorf("%w: jwt subject, issuer and audience are required", pkg.ErrSMARTTokenRefreshFailure)
+	}
 
 	// Retrieve the JWT Signer primitive from privateKeysetHandle.
 	signer, err := jwt.NewSigner(jwtPrivateKeyHandle)
@@ -61,6 +66,7 @@ func CreatePrivateKeyJWTClientAssertion(jwtPrivateKeyHandle *keyset.Handle, jwtI
 func PrivateKeyJWTBearerRefreshToken(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
+	clientId string,
 	jwtPrivateKeyHandle *keyset.Handle,
 	endpointDef definitionsModels.LighthouseSourceDefinition,
 	refreshToken string,
@@ -72,8 +78,8 @@ func PrivateKeyJWTBearerRefreshToken(
 
 	jwtToken, _, err := CreatePrivateKeyJWTClientAssertion(
 		jwtPrivateKeyHandle,
-		endpointDef.ClientId,
-		endpointDef.ClientId,
+		clientId,
+		clientId,
 		endpointDef.TokenEndpoint,
 	)
 	if err != nil {
@@ -101,6 +107,7 @@ func PrivateKeyJWTBearerRefreshToken(
 func PrivateKeyJWTBearerIntrospectToken(
 	ctx context.Context,
 	globalLogger logrus.FieldLogger,
+	clientId string,
 	jwtPrivateKeyHandle *keyset.Handle,
 	endpointDef definitionsModels.LighthouseSourceDefinition,
 	tokenType models.TokenIntrospectTokenType,
@@ -109,8 +116,8 @@ func PrivateKeyJWTBearerIntrospectToken(
 ) (*models.TokenIntrospectResponse, error) {
 	jwtToken, _, err := CreatePrivateKeyJWTClientAssertion(
 		jwtPrivateKeyHandle,
-		endpointDef.ClientId,
-		endpointDef.ClientId,
+		clientId,
+		clientId,
 		endpointDef.TokenEndpoint,
 	)
 	if err != nil {
@@ -169,6 +176,13 @@ func privateKeyJWTBearerAuthRequest[T any](
 		//enable debug logging for sandbox mode only.
 		globalLogger.Warnf("debug mode enabled")
 		httpClient = &http.Client{Transport: &debugLoggingTransport{}}
+	} else if customHttpClient := ctx.Value(oauth2.HTTPClient); customHttpClient != nil {
+		if customHttpClientCasted, customHttpClientCastedOk := customHttpClient.(*http.Client); customHttpClientCastedOk {
+			httpClient = customHttpClientCasted
+		} else {
+			globalLogger.Warnf("unable to cast custom http client from context, using default http client")
+			httpClient = &http.Client{}
+		}
 	} else {
 		httpClient = &http.Client{}
 	}

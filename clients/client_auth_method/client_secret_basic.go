@@ -162,6 +162,13 @@ func clientSecretBasicAuthRequest[T any](
 		//enable debug logging for sandbox mode only.
 		globalLogger.Warnf("debug mode enabled")
 		httpClient = &http.Client{Transport: &debugLoggingTransport{}}
+	} else if customHttpClient := ctx.Value(oauth2.HTTPClient); customHttpClient != nil {
+		if customHttpClientCasted, customHttpClientCastedOk := customHttpClient.(*http.Client); customHttpClientCastedOk {
+			httpClient = customHttpClientCasted
+		} else {
+			globalLogger.Warnf("unable to cast custom http client from context, using default http client")
+			httpClient = &http.Client{}
+		}
 	} else {
 		httpClient = &http.Client{}
 	}

@@ -129,8 +129,8 @@ func TestPrivateKeyJWTBearerRefreshToken(t *testing.T) {
 	sourceCredential := mockModels.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 
+	clientId := "test-client-id"
 	endpointDef := definitionsModels.LighthouseSourceDefinition{
-		ClientId: "test-client-id",
 		PatientAccessEndpoint: &catalog.PatientAccessEndpoint{
 			TokenEndpoint: mockServer.URL + "/token-endpoint",
 		},
@@ -138,7 +138,7 @@ func TestPrivateKeyJWTBearerRefreshToken(t *testing.T) {
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, clientId, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.NoError(t, err)
@@ -164,15 +164,15 @@ func TestPrivateKeyJWTBearerRefreshToken_ErrorResponse(t *testing.T) {
 	sourceCredential := mockModels.NewMockSourceCredential(mockCtrl)
 	sourceCredential.EXPECT().GetRefreshToken().Return("test-refresh-token").AnyTimes()
 
+	clientId := "test-client-id"
 	endpointDef := definitionsModels.LighthouseSourceDefinition{
-		ClientId: "test-client-id",
 		PatientAccessEndpoint: &catalog.PatientAccessEndpoint{
 			TokenEndpoint: mockServer.URL + "/token-endpoint",
 		}}
 
 	// Call the function
 	globalLogger := logrus.New()
-	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
+	response, err := clientAuth.PrivateKeyJWTBearerRefreshToken(context.TODO(), globalLogger, clientId, mockKeysetHandle, endpointDef, sourceCredential.GetRefreshToken())
 
 	// Assertions
 	assert.Error(t, err)
