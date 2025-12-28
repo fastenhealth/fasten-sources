@@ -35,6 +35,9 @@ func ClientBearerTokenAuthIntrospectToken(
 	if len(token) == 0 {
 		return nil, fmt.Errorf("no token (%s) available to introspect", tokenType)
 	}
+	if len(oauthTokenData.AccessToken) == 0 {
+		return nil, fmt.Errorf("no access token available for bearer token authentication")
+	}
 
 	introspectEndpoint := endpointDef.IntrospectionEndpoint
 	if len(introspectEndpoint) == 0 {
@@ -138,7 +141,7 @@ func clientBearerTokenAuthRequest[T any](
 			globalLogger.Errorf("Error Response body: %s", string(b))
 		}
 
-		return nil, errors.Errorf("an error occurred while reading bearer token protected response, status code was not 200 [%s]: %d", request.URL, bearerTokenAuthResponse.StatusCode)
+		return nil, errors.Errorf("an error occurred while reading bearer token protected response, status code was not 200 [%s]: %d - %s", request.URL, bearerTokenAuthResponse.StatusCode, bearerTokenAuthResponse.Status)
 	}
 
 	var tokenResponse T

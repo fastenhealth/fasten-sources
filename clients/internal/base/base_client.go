@@ -255,7 +255,6 @@ func (c *SourceClientBase) RefreshAccessToken(options ...func(*models.SourceClie
 	if tokenWasRefreshed {
 		//try to introspect the refresh token to get the expiration if possible.
 		if introspectData, introspectErr := c.IntrospectToken(models.TokenIntrospectTokenTypeRefresh); introspectErr == nil && introspectData.ExpiresAt > 0 {
-			c.Logger.Infof("introspected refresh token expiration: %d", introspectData.ExpiresAt)
 			refreshExpirationUnix := time.Unix(int64(introspectData.ExpiresAt), 0).Unix()
 			c.SourceCredential.SetTokens(c.SourceCredential.GetAccessToken(), c.SourceCredential.GetRefreshToken(), c.SourceCredential.GetExpiresAt(), c.SourceCredential.GetScope(), &refreshExpirationUnix)
 		} else {
@@ -429,6 +428,7 @@ func (c *SourceClientBase) IntrospectToken(tokenType models.TokenIntrospectToken
 		if introspectErr != nil {
 			return nil, introspectErr
 		}
+		c.Logger.Infof("Refresh token introspected successfully, expires at %s", time.Unix(int64(introspectData.ExpiresAt), 0).Format(time.RFC3339))
 		return introspectData, nil
 	}
 }
