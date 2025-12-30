@@ -38,6 +38,9 @@ type LighthouseSourceDefinition struct {
 	// If populated: PKCE is supported (can be used with Confidential true or false)
 	CodeChallengeMethodsSupported []string `json:"code_challenge_methods_supported" yaml:"code_challenge_methods_supported" validate:"required"`
 
+	//Smart-App-Launch Version supported
+	SmartAppLaunchVersion string `json:"smart_app_launch_version" yaml:"smart_app_launch_version" validate:"omitempty,oneof='1.1.0' '2.0.0' '2.2.0'"`
+
 	//if enabled, requires client_secret to authenticate with provider (PKCE)
 	Confidential bool `json:"confidential" yaml:"confidential"`
 	//if enabled, will dynamically register client with provider (https://oauth.net/2/dynamic-client-registration/)
