@@ -8,19 +8,22 @@ import (
 
 func benchmarkGetEndpointsWithOptions(opts *modelsCatalog.CatalogQueryOptions, b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		GetEndpoints(opts)
+		g, _ := GetEndpoints(opts)
+		b.Log("Retrieved endpoints:", len(g))
 	}
 }
 
 func benchmarkGetPortalsWithOptions(opts *modelsCatalog.CatalogQueryOptions, b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		GetPortals(opts)
+		g, _ := GetPortals(opts)
+		b.Log("Retrieved portals:", len(g))
 	}
 }
 
 func benchmarkGetBrandsWithOptions(opts *modelsCatalog.CatalogQueryOptions, b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		GetBrands(opts)
+		g, _ := GetBrands(opts)
+		b.Log("Retrieved brands:", len(g))
 	}
 }
 
@@ -60,6 +63,7 @@ func Benchmark_GetPortals_Environment_WithEndpointCache(b *testing.B) {
 }
 
 // 203611925 ns/op
+// 2722 ns/op
 func Benchmark_GetBrands_NoFilter(b *testing.B) { benchmarkGetBrandsWithOptions(nil, b) }
 
 // 205480108 ns/op
