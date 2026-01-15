@@ -318,19 +318,8 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 		}
 	}
 	// no exact match found.
-	// however, at this point we have filtered the brands, portals and endpoints down to only those that match the platform type and endpoint URL
-	// pick the first brand we find in the list, as long as there's more than one brand
-	if len(brands) > 0 {
-		selectedBrand := lo.Values(brands)[0]
-
-		//find the associated portal (first) for the selected brand
-		matchingPortals := lo.PickByKeys(portals, selectedBrand.PortalsIds)
-		if len(matchingPortals) > 0 {
-			return &selectedBrand, &lo.Values(matchingPortals)[0], &lo.Values(endpoints)[0], foundEndpoint, nil
-		} else {
-			return &selectedBrand, nil, &lo.Values(endpoints)[0], foundEndpoint, nil
-		}
-	}
+	// this is ok, because in the UI we'll use a fallback TEFCA brand if no exact match is found.
+	// we'll still return the valid endpoint and the fact that it was found.
 
 	// no brands found for this endpoint at all
 	return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
