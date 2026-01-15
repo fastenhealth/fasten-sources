@@ -156,7 +156,7 @@ func Benchmark_GetBrands_Environment_Prod_WithEndpointCache(b *testing.B) {
 	}, b)
 }
 
-// 8561518084 ns/op
+// 4812402166 ns/op
 func Benchmark_GetBrandPortalEndpointUsingTEFCAIdentifiers_Multiple_Lookups(b *testing.B) {
 	platformType := pkg.PlatformTypeEpic
 	for n := 0; n < b.N; n++ {
