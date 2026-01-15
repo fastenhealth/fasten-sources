@@ -298,7 +298,7 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 	}
 	brands := brandsCache
 
-	//find a brand that matches the provided homeOid or orgOid
+	//now loop through the brands to find a matching brand name
 	for brandId, _ := range brands {
 		brand := brands[brandId]
 		brandNames := lo.Uniq(append([]string{brand.Name}, brand.Aliases...))
@@ -317,6 +317,22 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 			}
 		}
 	}
+	// no exact match found.
+	// however, at this point we have filtered the brands, portals and endpoints down to only those that match the platform type and endpoint URL
+	// pick the first brand we find in the list, as long as there's more than one brand
+	if len(brands) > 0 {
+		selectedBrand := lo.Values(brands)[0]
+
+		//find the associated portal (first) for the selected brand
+		matchingPortals := lo.PickByKeys(portals, selectedBrand.PortalsIds)
+		if len(matchingPortals) > 0 {
+			return &selectedBrand, &lo.Values(matchingPortals)[0], &lo.Values(endpoints)[0], foundEndpoint, nil
+		} else {
+			return &selectedBrand, nil, &lo.Values(endpoints)[0], foundEndpoint, nil
+		}
+	}
+
+	// no brands found for this endpoint at all
 	return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
 }
 
