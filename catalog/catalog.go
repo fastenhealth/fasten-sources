@@ -372,5 +372,6 @@ func normalizeEndpointURL(url string) string {
 	if !strings.HasSuffix(url, "/") {
 		normalized = normalized + "/"
 	}
+	normalized = strings.ToLower(normalized)
 	return normalized
 }
