@@ -28,7 +28,7 @@ func benchmarkGetBrandsWithOptions(opts *modelsCatalog.CatalogQueryOptions, b *t
 	}
 }
 
-// 252661950 ns/op
+// 5929 ns/op
 // 1 of each call
 func Benchmark_GetEndpoint_MultipleEndpoints(b *testing.B) {
 	//we want to make sure the cache isn't being modified between runs
@@ -42,23 +42,23 @@ func Benchmark_GetEndpoint_MultipleEndpoints(b *testing.B) {
 	}
 }
 
-// 56487095 ns/op
+// 2682 ns/op
 // 13938 results
 func Benchmark_GetEndpoint_NoFilter(b *testing.B) { benchmarkGetEndpointsWithOptions(nil, b) }
 
-// 56367765 ns/op
+// 2659 ns/op
 // 1 result
 func Benchmark_GetEndpoint_SingleEndpoint(b *testing.B) {
 	benchmarkGetEndpointsWithOptions(&modelsCatalog.CatalogQueryOptions{Id: "9d0fa28a-0c5b-4065-9ee6-284ec9577a57"}, b)
 }
 
-// 55848260 ns/op
+// 1221454 ns/op
 // 36 results
 func Benchmark_GetEndpoint_Environment(b *testing.B) {
 	benchmarkGetEndpointsWithOptions(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}, b)
 }
 
-// 559879958 ns/op
+// 6038 ns/op
 // 1 of each call
 func Benchmark_GetPortals_MultiplePortals(b *testing.B) {
 	//we want to make sure the cache isn't being modified between runs
@@ -72,23 +72,23 @@ func Benchmark_GetPortals_MultiplePortals(b *testing.B) {
 	}
 }
 
-// 182056250 ns/op
-// 40167
+// 2581 ns/op
+// 40167 results
 func Benchmark_GetPortals_NoFilter(b *testing.B) { benchmarkGetPortalsWithOptions(nil, b) }
 
-// 278172469 ns/op
+// 2689 ns/op
 // 1 result
 func Benchmark_GetPortals_SingleEndpoint(b *testing.B) {
 	benchmarkGetPortalsWithOptions(&modelsCatalog.CatalogQueryOptions{Id: "59673c08-e4b5-44d5-b5ab-532e69e8f7e7"}, b)
 }
 
-// 539327104 ns/op - double time
+// 4968109 ns/op
 // 37 results
 func Benchmark_GetPortals_Environment(b *testing.B) {
 	benchmarkGetPortalsWithOptions(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}, b)
 }
 
-// 316843417 ns/op
+// 4748811 ns/op
 // 37 results
 func Benchmark_GetPortals_Environment_WithEndpointCache(b *testing.B) {
 	cache, _ := GetEndpoints(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox})
@@ -98,7 +98,7 @@ func Benchmark_GetPortals_Environment_WithEndpointCache(b *testing.B) {
 	}, b)
 }
 
-// 1079450167 ns/op
+// 2794283 ns/op
 // 1 of each call
 func Benchmark_GetBrands_MultipleBrands(b *testing.B) {
 	//we want to make sure the cache isn't being modified between runs
@@ -112,11 +112,11 @@ func Benchmark_GetBrands_MultipleBrands(b *testing.B) {
 	}
 }
 
-// 504037062 ns/op
+// 2562 ns/op
 // 33329 results
 func Benchmark_GetBrands_NoFilter(b *testing.B) { benchmarkGetBrandsWithOptions(nil, b) }
 
-// 519999334 ns/op
+// 2826065 ns/op
 // 0 results
 func Benchmark_GetBrands_SingleEndpoint(b *testing.B) {
 	benchmarkGetBrandsWithOptions(&modelsCatalog.CatalogQueryOptions{Id: "59673c08-e4b5-44d5-b5ab-532e69e8f7e7"}, b)
@@ -128,7 +128,7 @@ func Benchmark_GetBrands_Environment_Sandbox(b *testing.B) {
 	benchmarkGetBrandsWithOptions(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox}, b)
 }
 
-// 1007805916 ns/op
+// 1022472167 ns/op
 // 33 results
 func Benchmark_GetBrands_Environment_Sandbox_WithEndpointCache(b *testing.B) {
 	cacheEndpoints, _ := GetEndpoints(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvSandbox})
@@ -140,11 +140,12 @@ func Benchmark_GetBrands_Environment_Sandbox_WithEndpointCache(b *testing.B) {
 }
 
 // TODO: cannot run this, it takes ~10 minutes to run and it's not feasible
+// 1033727667 ns/op
 //func Benchmark_GetBrands_Environment_Prod(b *testing.B) {
 //	benchmarkGetBrandsWithOptions(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvProduction}, b)
 //}
 
-// 4728215542 ns/op
+// 4665917167 ns/op
 // 33307 results
 func Benchmark_GetBrands_Environment_Prod_WithEndpointCache(b *testing.B) {
 	cacheEndpoints, _ := GetEndpoints(&modelsCatalog.CatalogQueryOptions{LighthouseEnvType: pkg.FastenLighthouseEnvProduction})
@@ -153,4 +154,20 @@ func Benchmark_GetBrands_Environment_Prod_WithEndpointCache(b *testing.B) {
 		LighthouseEnvType:   pkg.FastenLighthouseEnvProduction,
 		CachedPortalsLookup: &cachePortals,
 	}, b)
+}
+
+// 8561518084 ns/op
+func Benchmark_GetBrandPortalEndpointUsingTEFCAIdentifiers_Multiple_Lookups(b *testing.B) {
+	platformType := pkg.PlatformTypeEpic
+	for n := 0; n < b.N; n++ {
+		_, _, _, _, err := GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType, "The Portland Clinic", "https://epicproxy.et4001.epichosted.com/APIProxyPRD/TPC/api/FHIR/R4/")
+		if err != nil {
+			b.Errorf("Error in GetBrandPortalEndpointUsingTEFCAIdentifiers: %v", err)
+		}
+
+		_, _, _, _, err2 := GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType, "Midwestern University Clinics", "https://epicproxy.et1329.epichosted.com/APIProxyPRD/api/FHIR/R4/")
+		if err2 != nil {
+			b.Errorf("Error in GetBrandPortalEndpointUsingTEFCAIdentifiers: %v", err)
+		}
+	}
 }

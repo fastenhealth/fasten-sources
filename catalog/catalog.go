@@ -22,11 +22,20 @@ var portalsFs embed.FS
 //go:embed endpoints.json
 var endpointsFs embed.FS
 
+// cached maps -- THESE MUST BE READ-ONLY after initial load
+var brandsCache map[string]catalog.PatientAccessBrand
+var portalsCache map[string]catalog.PatientAccessPortal
+var endpointsCache map[string]catalog.PatientAccessEndpoint
+
 func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessBrand, error) {
-	brands, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessBrand](brandsFs, "brands.json")
-	if err != nil {
-		return nil, fmt.Errorf("failed: %w", err)
+	var err error
+	if brandsCache == nil {
+		brandsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessBrand](brandsFs, "brands.json")
+		if err != nil {
+			return nil, fmt.Errorf("failed: %w", err)
+		}
 	}
+	brands := brandsCache
 
 	if opts != nil {
 		// filter by id if provided
@@ -104,10 +113,14 @@ func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAcc
 }
 
 func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessPortal, error) {
-	portals, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessPortal](portalsFs, "portals.json")
-	if err != nil {
-		return nil, fmt.Errorf("failed: %w", err)
+	var err error
+	if portalsCache == nil {
+		portalsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessPortal](portalsFs, "portals.json")
+		if err != nil {
+			return nil, fmt.Errorf("failed: %w", err)
+		}
 	}
+	portals := portalsCache
 
 	if opts != nil {
 		// filter by id if provided
@@ -172,20 +185,19 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 	return portals, nil
 }
 
-var endpoints map[string]catalog.PatientAccessEndpoint
-
 // GetEndpoints returns a map of endpoints, filtered by the provided options.
 // Note, the map keys may not match the endpoint IDs, as they may be aliases for a merged endpoint.
 // eg.
 // {"endpoint1": {"id": "endpoint2", "url": "https://endpoint2.com", "endpoint_ids": ["endpoint1"]}}
 func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessEndpoint, error) {
 	var err error
-	if endpoints == nil {
-		endpoints, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
+	if endpointsCache == nil {
+		endpointsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
 		if err != nil {
 			return nil, fmt.Errorf("failed: %w", err)
 		}
 	}
+	endpoints := endpointsCache
 
 	if opts != nil {
 		// filter by id if provided
@@ -411,7 +423,6 @@ func GetPatientAccessInfoForLegacySourceType(legacySourceType string, legacyApiE
 //helpers
 
 func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientAccessPortal | catalog.PatientAccessEndpoint](embeddedFile embed.FS, embeddedFilename string) (map[string]T, error) {
-
 	fileBytes, err := embeddedFile.ReadFile(embeddedFilename)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read embedded %s: %w", embeddedFilename, err)
