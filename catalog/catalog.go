@@ -248,11 +248,14 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 // if we are able to successfully dtermine the endpoint, ALWAYS return it, even if we don't know the brand or portal. Endpoint is all we need for TEFCA Facilitated connections
 func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, tefcaBrandName, tefcaUrl string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, bool, error) {
 	foundEndpoint := false
-
-	endpoints, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
-	if err != nil {
-		return nil, nil, nil, foundEndpoint, fmt.Errorf("failed: %w", err)
+	var err error
+	if endpointsCache == nil {
+		endpointsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
+		if err != nil {
+			return nil, nil, nil, foundEndpoint, fmt.Errorf("failed: %w", err)
+		}
 	}
+	endpoints := endpointsCache
 
 	//get an endpoint (since they are unique on the URL) that matches the provided url
 	endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
@@ -271,22 +274,27 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 	}
 
 	//if we found an endpoint, lets try to find an associated portal and brand.
-
-	portals, err := GetPortals(&catalog.CatalogQueryOptions{
-		LighthouseEnvType:     pkg.FastenLighthouseEnvProduction, //always production for RLS.
-		CachedEndpointsLookup: &endpoints,
-	})
-	if err != nil {
-		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting portals from catalog: %w", err)
+	if portalsCache == nil {
+		portalsCache, err = GetPortals(&catalog.CatalogQueryOptions{
+			LighthouseEnvType:     pkg.FastenLighthouseEnvProduction, //always production for RLS.
+			CachedEndpointsLookup: &endpoints,
+		})
+		if err != nil {
+			return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting portals from catalog: %w", err)
+		}
 	}
+	portals := portalsCache
 
-	brands, err := GetBrands(&catalog.CatalogQueryOptions{
-		LighthouseEnvType:   pkg.FastenLighthouseEnvProduction, //always production for RLS.
-		CachedPortalsLookup: &portals,
-	})
-	if err != nil {
-		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting brands from catalog: %w", err)
+	if brandsCache == nil {
+		brandsCache, err = GetBrands(&catalog.CatalogQueryOptions{
+			LighthouseEnvType:   pkg.FastenLighthouseEnvProduction, //always production for RLS.
+			CachedPortalsLookup: &portals,
+		})
+		if err != nil {
+			return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting brands from catalog: %w", err)
+		}
 	}
+	brands := brandsCache
 
 	//find a brand that matches the provided homeOid or orgOid
 	for brandId, _ := range brands {
