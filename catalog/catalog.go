@@ -172,14 +172,19 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 	return portals, nil
 }
 
+var endpoints map[string]catalog.PatientAccessEndpoint
+
 // GetEndpoints returns a map of endpoints, filtered by the provided options.
 // Note, the map keys may not match the endpoint IDs, as they may be aliases for a merged endpoint.
 // eg.
 // {"endpoint1": {"id": "endpoint2", "url": "https://endpoint2.com", "endpoint_ids": ["endpoint1"]}}
 func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessEndpoint, error) {
-	endpoints, err := strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
-	if err != nil {
-		return nil, fmt.Errorf("failed: %w", err)
+	var err error
+	if endpoints == nil {
+		endpoints, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
+		if err != nil {
+			return nil, fmt.Errorf("failed: %w", err)
+		}
 	}
 
 	if opts != nil {
