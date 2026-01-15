@@ -171,3 +171,15 @@ func Benchmark_GetBrandPortalEndpointUsingTEFCAIdentifiers_Multiple_Lookups(b *t
 		}
 	}
 }
+
+// 4827527917 ns/op
+func Benchmark_GetBrandPortalEndpointUsingTEFCAIdentifiers_Mismatch_name(b *testing.B) {
+	platformType := pkg.PlatformTypeEpic
+	for n := 0; n < b.N; n++ {
+		_, _, _, _, err := GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType, "Invalid Clinic", "https://epicproxy.et4001.epichosted.com/APIProxyPRD/TPC/api/FHIR/R4/")
+		if err != nil {
+			b.Errorf("Error in GetBrandPortalEndpointUsingTEFCAIdentifiers: %v", err)
+		}
+
+	}
+}
