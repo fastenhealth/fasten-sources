@@ -339,7 +339,11 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 			"resourceType": "Binary",
 			"contentType":  contentTypeHeader,
 			"data":         base64.StdEncoding.EncodeToString(b),
+			"meta": map[string]interface{}{
+				"source": resourceUrl.String(),
+			},
 		})
+
 		if err != nil {
 			return "", fmt.Errorf("%w: an error occurred while reading non-JSON response body: %s", pkg.ErrResourceInvalidContent, err)
 		}
