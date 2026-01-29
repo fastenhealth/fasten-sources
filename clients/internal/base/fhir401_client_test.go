@@ -2,14 +2,19 @@ package base
 
 import (
 	"context"
+	"encoding/base64"
 	"encoding/json"
-	"github.com/fastenhealth/fasten-sources/clients/testutils"
+	"fmt"
 	"io"
 	"net/http"
+	"net/http/httptest"
 	"strings"
 	"sync"
 	"testing"
 	"time"
+
+	"github.com/fastenhealth/fasten-sources/clients/testutils"
+	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
 
 	"github.com/fastenhealth/fasten-sources/clients/models"
 	mock_models "github.com/fastenhealth/fasten-sources/clients/models/mock"
@@ -659,4 +664,57 @@ func TestFHIR401_GetPatient_ReturnsPatientFailure_WhenScopeIncludesPatientShortR
 	_, gotErr := client.GetPatient("some-patient-id")
 	require.Error(t, gotErr)
 	require.ErrorIs(t, gotErr, pkg.ErrResourcePatientFailure)
+}
+
+func TestGetRequest_NonJSON_ReturnsBinary(t *testing.T) {
+	rawData := []byte("lorem fake data")
+
+	// test server
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/pdf")
+		w.WriteHeader(http.StatusOK)
+		_, _ = w.Write(rawData)
+	}))
+	defer ts.Close()
+
+	// client under test
+	client := &SourceClientBase{
+		EndpointDefinition: &definitionsModels.LighthouseSourceDefinition{
+			PatientAccessEndpoint: &catalog.PatientAccessEndpoint{
+				Url: ts.URL + "/",
+			},
+		},
+		SourceClientOptions: &models.SourceClientOptions{
+			TestMode: true,
+		},
+		OauthClient: ts.Client(),
+		Logger:      logrus.New(),
+	}
+
+	var binary map[string]interface{}
+
+	returnedURL, err := client.GetRequest("/binary", &binary)
+	require.NoError(t, err)
+
+	prettyJson, err := json.MarshalIndent(binary, "", " ")
+	require.NoError(t, err)
+	fmt.Println("binary", string(prettyJson))
+
+	// assert
+	require.Equal(t, ts.URL+"/binary", returnedURL)
+
+	require.Equal(t, "Binary", binary["resourceType"])
+	require.Equal(t, "application/pdf", binary["contentType"])
+
+	meta := binary["meta"].(map[string]interface{})
+	source := meta["source"].(string)
+	require.Equal(t, source, returnedURL)
+
+	dataStr, ok := binary["data"].(string)
+	require.True(t, ok)
+
+	decodedData, err := base64.StdEncoding.DecodeString(dataStr)
+	require.NoError(t, err)
+	require.Equal(t, rawData, decodedData)
+
 }
