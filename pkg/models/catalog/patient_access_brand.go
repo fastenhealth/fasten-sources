@@ -24,6 +24,8 @@ type PatientAccessBrand struct {
 	Name string `json:"name" yaml:"name" validate:"required,min=2,patient-access-brand-name"`
 	// URL for the organization’s primary website. note this is distinct from a patient portal, described under “Patient Access Details” below
 	BrandWebsite string `json:"brand_website,omitempty" yaml:"brand_website,omitempty" validate:"omitempty,http_url"`
+	// Whether the brand should be hidden from the UI. This is used to hide brands that are no longer active, but we want to keep the data for historical purposes. Note that this is not used to determine whether a brand is active or not, only whether it should be hidden from the UI. The status of the brand should be determined by the status of the patient access endpoints associated with the brand.
+	Hidden bool `json:"hidden,omitempty" yaml:"hidden,omitempty"` //nilable, because we want to allow overriding the value from hidden to not hidden
 	// URL for the organization’s logo, which will be displayed on a card, Note this is a fallback logo, the primary logo will always be the Portal logo
 	Logo string `json:"logo,omitempty" yaml:"logo,omitempty" validate:"omitempty,http_url"`
 	// List of alternate names for the organization, e.g., “GH”, “General”, “GH Hospital”

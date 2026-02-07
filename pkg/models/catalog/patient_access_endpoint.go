@@ -31,6 +31,8 @@ type PatientAccessEndpoint struct {
 	TokenEndpoint         string `json:"token_endpoint,omitempty" yaml:"token_endpoint,omitempty" validate:"required_if=PatientAccessEndpoint.Status active,omitempty,http_url"`
 	IntrospectionEndpoint string `json:"introspection_endpoint,omitempty" yaml:"introspection_endpoint,omitempty" validate:"omitempty,http_url"`
 	UserInfoEndpoint      string `json:"userinfo_endpoint,omitempty" yaml:"userinfo_endpoint,omitempty" validate:"omitempty,http_url"`
+	RevokeEndpoint        string `json:"revoke_endpoint,omitempty" yaml:"revoke_endpoint,omitempty" validate:"omitempty,http_url"`
+
 	//optional - required when Dynamic Client Registration mode is set
 	RegistrationEndpoint string `json:"registration_endpoint,omitempty" yaml:"registration_endpoint,omitempty" validate:"omitempty,http_url"`
 
