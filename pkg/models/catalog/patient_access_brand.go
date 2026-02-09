@@ -2,15 +2,9 @@ package catalog
 
 import (
 	"github.com/fastenhealth/fasten-sources/pkg/models/datatypes"
-	validator "github.com/go-playground/validator/v10"
-	"regexp"
+	"github.com/go-playground/validator/v10"
 )
 
-func PatientAccessBrandNameRegex(fl validator.FieldLevel) bool {
-	return regexp.MustCompile("^[a-zA-Z0-9-+'()&.,#:!@/ _]+$").MatchString(fl.Field().String())
-}
-
-// TODO: generate via reflection
 type PatientAccessBrand struct {
 	// Fasten UUID for the brand - id should be a unique identifier for the brand. It is globally unique and should be a UUID
 	Id string `json:"id" yaml:"id" validate:"required,uuid"`
@@ -22,20 +16,7 @@ type PatientAccessBrand struct {
 	// Primary name for the organization to display on a card, e.g., “General Hospital”
 	// Note this is not used within the app, only the Portal name should be used.
 	Name string `json:"name" yaml:"name" validate:"required,min=2,patient-access-brand-name"`
-	// URL for the organization’s primary website. note this is distinct from a patient portal, described under “Patient Access Details” below
-	BrandWebsite string `json:"brand_website,omitempty" yaml:"brand_website,omitempty" validate:"omitempty,http_url"`
-	// Whether the brand should be hidden from the UI. This is used to hide brands that are no longer active, but we want to keep the data for historical purposes. Note that this is not used to determine whether a brand is active or not, only whether it should be hidden from the UI. The status of the brand should be determined by the status of the patient access endpoints associated with the brand.
-	Hidden bool `json:"hidden,omitempty" yaml:"hidden,omitempty"` //nilable, because we want to allow overriding the value from hidden to not hidden
-	// URL for the organization’s logo, which will be displayed on a card, Note this is a fallback logo, the primary logo will always be the Portal logo
-	Logo string `json:"logo,omitempty" yaml:"logo,omitempty" validate:"omitempty,http_url"`
-	// List of alternate names for the organization, e.g., “GH”, “General”, “GH Hospital”
-	Aliases []string `json:"aliases,omitempty" yaml:"aliases,omitempty" validate:"omitempty,unique,dive"`
-	// List of locations for the organization
-	// These should be the locations where the organization has a physical presence, e.g., a hospital or clinic"
-	Locations []datatypes.Address `json:"locations,omitempty" yaml:"locations,omitempty" validate:"omitempty,dive"`
-	//List of contact details for the organization
-	// These should be the contact details for the organization, e.g., phone number, email, etc
-	Telecom []datatypes.Telecom `json:"telecom,omitempty" yaml:"telecom,omitempty" validate:"omitempty,dive"`
+
 	// Patient Access Details
 	// These must be references to Patient Access Portal resource Ids
 	PortalsIds []string `json:"portal_ids" yaml:"portal_ids" validate:"required,unique,dive,uuid"`

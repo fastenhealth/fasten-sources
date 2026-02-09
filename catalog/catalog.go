@@ -5,7 +5,6 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
-	"strings"
 
 	"github.com/fastenhealth/fasten-sources/pkg"
 	"github.com/fastenhealth/fasten-sources/pkg/models/catalog"
@@ -30,7 +29,7 @@ var endpointsCache map[string]catalog.PatientAccessEndpoint
 func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessBrand, error) {
 	var err error
 	if brandsCache == nil {
-		brandsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessBrand](brandsFs, "brands.json")
+		brandsCache, err = StrictUnmarshalEmbeddedFile[catalog.PatientAccessBrand](brandsFs, "brands.json")
 		if err != nil {
 			return nil, fmt.Errorf("failed: %w", err)
 		}
@@ -116,7 +115,7 @@ func GetBrands(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAcc
 func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessPortal, error) {
 	var err error
 	if portalsCache == nil {
-		portalsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessPortal](portalsFs, "portals.json")
+		portalsCache, err = StrictUnmarshalEmbeddedFile[catalog.PatientAccessPortal](portalsFs, "portals.json")
 		if err != nil {
 			return nil, fmt.Errorf("failed: %w", err)
 		}
@@ -193,7 +192,7 @@ func GetPortals(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAc
 func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.PatientAccessEndpoint, error) {
 	var err error
 	if endpointsCache == nil {
-		endpointsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
+		endpointsCache, err = StrictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
 		if err != nil {
 			return nil, fmt.Errorf("failed: %w", err)
 		}
@@ -245,107 +244,9 @@ func GetEndpoints(opts *catalog.CatalogQueryOptions) (map[string]catalog.Patient
 	return endpoints, nil
 }
 
-// the portal doesn't really matter here. We just care about Brand and associated Endpoint
-// if we are able to successfully dtermine the endpoint, ALWAYS return it, even if we don't know the brand or portal. Endpoint is all we need for TEFCA Facilitated connections
-func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, tefcaBrandName, tefcaUrl string) (*catalog.PatientAccessBrand, *catalog.PatientAccessPortal, *catalog.PatientAccessEndpoint, bool, error) {
-	foundEndpoint := false
-	var err error
-	if endpointsCache == nil {
-		endpointsCache, err = strictUnmarshalEmbeddedFile[catalog.PatientAccessEndpoint](endpointsFs, "endpoints.json")
-		if err != nil {
-			return nil, nil, nil, foundEndpoint, fmt.Errorf("failed: %w", err)
-		}
-	}
-	endpoints := endpointsCache
-
-	//get an endpoint (since they are unique on the URL) that matches the provided url
-	tefcaUrl = normalizeEndpointURL(tefcaUrl)
-	endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
-		if value.GetPlatformType() != platformType {
-			return false
-		}
-		return normalizeEndpointURL(value.Url) == tefcaUrl
-	})
-
-	if len(endpoints) == 0 {
-		return nil, nil, nil, foundEndpoint, fmt.Errorf("no endpoints found matching url: %s", tefcaUrl)
-	}
-	foundEndpoint = true
-	if len(endpoints) > 1 {
-		return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("multiple endpoints found matching url, returning first: %s", tefcaUrl)
-	}
-
-	//if we found an endpoint, lets try to find an associated portal and brand.
-	if portalsCache == nil {
-		portalsCache, err = GetPortals(&catalog.CatalogQueryOptions{
-			LighthouseEnvType:     pkg.FastenLighthouseEnvProduction, //always production for RLS.
-			CachedEndpointsLookup: &endpoints,
-		})
-		if err != nil {
-			return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting portals from catalog: %w", err)
-		}
-	}
-	portals := portalsCache
-
-	if brandsCache == nil {
-		brandsCache, err = GetBrands(&catalog.CatalogQueryOptions{
-			LighthouseEnvType:   pkg.FastenLighthouseEnvProduction, //always production for RLS.
-			CachedPortalsLookup: &portals,
-		})
-		if err != nil {
-			return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("error getting brands from catalog: %w", err)
-		}
-	}
-	brands := brandsCache
-
-	//now loop through the brands to find a matching brand name
-	for brandId, _ := range brands {
-		brand := brands[brandId]
-		brandNames := lo.Uniq(append([]string{brand.Name}, brand.Aliases...))
-		foundMatch := brandNamesMatch(brandNames, tefcaBrandName)
-		if foundMatch {
-			//we found a matching brand, now we need to find a portal that is associated with the endpoint
-			for portalIdNdx, _ := range brand.PortalsIds {
-				portalId := brand.PortalsIds[portalIdNdx]
-				if portal, portalOk := portals[portalId]; portalOk {
-					//check if the portal has the endpoint
-					if lo.Contains(portal.EndpointIds, lo.Values(endpoints)[0].Id) {
-						//we found a matching portal and endpoint
-						return &brand, &portal, &lo.Values(endpoints)[0], foundEndpoint, nil
-					}
-				}
-			}
-		}
-	}
-	// no exact match found.
-	// this is ok, because in the UI we'll use a fallback TEFCA brand if no exact match is found.
-	// we'll still return the valid endpoint and the fact that it was found.
-
-	// no brands found for this endpoint at all
-	return nil, nil, &lo.Values(endpoints)[0], foundEndpoint, fmt.Errorf("no brand found matching name: %s", tefcaBrandName)
-}
-
-func brandNamesMatch(brandNames []string, tefcaBrandName string) bool {
-	for ndx, _ := range brandNames {
-		brandName := brandNames[ndx]
-		if strings.EqualFold(tefcaBrandName, brandName) {
-			return true
-		}
-	}
-	return false
-	//if !strings.EqualFold(tefcaBrandName, brandName) {
-	//	return false
-	//}
-	//_, stateFound := lo.Find(brand.Locations, func(location datatypes.Address) bool {
-	//	return strings.EqualFold(location.State, tefcaBrand.State)
-	//})
-	//return stateFound
-
-}
-
 //helpers
 
-func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientAccessPortal | catalog.PatientAccessEndpoint](embeddedFile embed.FS, embeddedFilename string) (map[string]T, error) {
+func StrictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientAccessBrandDetails | catalog.PatientAccessPortal | catalog.PatientAccessEndpoint](embeddedFile embed.FS, embeddedFilename string) (map[string]T, error) {
 	fileBytes, err := embeddedFile.ReadFile(embeddedFilename)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read embedded %s: %w", embeddedFilename, err)
@@ -360,18 +261,4 @@ func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientA
 		return nil, fmt.Errorf("failed to decode %s: %w", embeddedFilename, err)
 	}
 	return patientAccessType, nil
-}
-
-func normalizeEndpointURL(url string) string {
-	normalized := url
-	// for cases such as foobar.com
-	if !strings.HasPrefix(url, "https://") && !strings.HasPrefix(url, "http://") {
-		normalized = "https://" + normalized
-	}
-
-	if !strings.HasSuffix(url, "/") {
-		normalized = normalized + "/"
-	}
-	normalized = strings.ToLower(normalized)
-	return normalized
 }
