@@ -1,4 +1,4 @@
-package brand_details
+package catalog_details
 
 import (
 	"embed"
@@ -20,7 +20,7 @@ var brandDetailsCache map[string]modelsCatalog.PatientAccessBrandDetails
 func GetBrandDetails(opts *modelsCatalog.CatalogQueryOptions) (map[string]modelsCatalog.PatientAccessBrandDetails, error) {
 	var err error
 	if brandDetailsCache == nil {
-		brandDetailsCache, err = catalog.StrictUnmarshalEmbeddedFile[modelsCatalog.PatientAccessBrandDetails](brandDetailsFs, "brands.json")
+		brandDetailsCache, err = catalog.StrictUnmarshalEmbeddedFile[modelsCatalog.PatientAccessBrandDetails](brandDetailsFs, "brand_details.json")
 		if err != nil {
 			return nil, fmt.Errorf("failed: %w", err)
 		}
