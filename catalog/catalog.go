@@ -259,12 +259,12 @@ func GetBrandPortalEndpointUsingTEFCAIdentifiers(platformType pkg.PlatformType, 
 	endpoints := endpointsCache
 
 	//get an endpoint (since they are unique on the URL) that matches the provided url
-	tefcaUrl = normalizeEndpointURL(tefcaUrl)
+	tefcaUrl = NormalizeEndpointURL(tefcaUrl)
 	endpoints = lo.PickBy(endpoints, func(key string, value catalog.PatientAccessEndpoint) bool {
 		if value.GetPlatformType() != platformType {
 			return false
 		}
-		return normalizeEndpointURL(value.Url) == tefcaUrl
+		return NormalizeEndpointURL(value.Url) == tefcaUrl
 	})
 
 	if len(endpoints) == 0 {
@@ -362,7 +362,7 @@ func strictUnmarshalEmbeddedFile[T catalog.PatientAccessBrand | catalog.PatientA
 	return patientAccessType, nil
 }
 
-func normalizeEndpointURL(url string) string {
+func NormalizeEndpointURL(url string) string {
 	normalized := url
 	// for cases such as foobar.com
 	if !strings.HasPrefix(url, "https://") && !strings.HasPrefix(url, "http://") {
