@@ -2,9 +2,9 @@ module github.com/fastenhealth/fasten-sources
 
 //replace github.com/fastenhealth/gofhir-models => ../gofhir-models
 
-go 1.23.0
+go 1.25.7
 
-toolchain go1.23.9
+toolchain go1.25.7
 
 require (
 	github.com/fastenhealth/gofhir-models v0.0.8
