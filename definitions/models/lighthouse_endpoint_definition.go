@@ -101,6 +101,7 @@ func (def *LighthouseSourceDefinition) Populate(
 	if def.PlatformType == pkg.PlatformTypeCareevolution ||
 		def.PlatformType == pkg.PlatformTypeAnthem ||
 		def.PlatformType == pkg.PlatformTypeEclinicalworks ||
+		def.PlatformType == pkg.PlatformTypeDarena ||
 		def.PlatformType == pkg.PlatformTypeMedhost ||
 		def.PlatformType == pkg.PlatformTypeNetsmart ||
 		def.PlatformType == pkg.PlatformTypeQualifactsCredible ||
