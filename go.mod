@@ -4,8 +4,6 @@ module github.com/fastenhealth/fasten-sources
 
 go 1.25.7
 
-toolchain go1.25.7
-
 require (
 	github.com/fastenhealth/gofhir-models v0.0.8
 	github.com/gabriel-vasile/mimetype v1.4.3
