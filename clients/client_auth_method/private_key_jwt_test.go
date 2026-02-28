@@ -16,7 +16,6 @@ import (
 	"github.com/tink-crypto/tink-go/v2/jwt"
 	"github.com/tink-crypto/tink-go/v2/keyset"
 	"io"
-	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -72,7 +71,6 @@ func TestCreatePrivateKeyJWTClientAssertion(t *testing.T) {
 	// Call the function
 	token, expires, err := clientAuth.CreatePrivateKeyJWTClientAssertion(mockKeysetHandle, jwtIssuer, jwtSubject, jwtAudience)
 
-	log.Printf(token)
 	// Assertions
 	assert.NoError(t, err)
 	assert.NotEmpty(t, token)
