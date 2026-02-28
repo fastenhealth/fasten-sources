@@ -1,0 +1,39 @@
+# MANUALLY POPULATED - this should mirror epic-legacy
+platform_type: 'darena'
+scopes_supported:
+  - fhirUser
+  - openid
+  - profile
+  - offline_access
+  - patient/*.rs
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+code_challenge_methods_supported:
+  - S256
+documentation: |
+  Developer Portal URL: https://app.meldrx.com/OrganizationRequest
+  Developer Documentation: https://docs.darena.health/#darena-health-apis-for-cures-act-compliance
+  URL: https://chpl.healthit.gov/#/organizations/developers/323
+
+missing_op_patient_everything: true
+client_supported_resources: [
+  "Account",
+  "Appointment",
+  "Consent",
+  "FamilyMemberHistory",
+  "InsurancePlan",
+  "MedicationRequest",
+  "NutritionOrder",
+  "Person",
+  "Provenance",
+  "Questionnaire",
+  "QuestionnaireResponse",
+  "RelatedPerson",
+  "Schedule",
+  "ServiceRequest",
+  "Slot",
+]
