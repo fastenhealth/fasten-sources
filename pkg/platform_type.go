@@ -30,6 +30,7 @@ const (
 	// deprecated - use PlatformTypeEpic instead
 	PlatformTypeEpicLegacy          PlatformType = "epic-legacy"
 	PlatformTypeFlatiron            PlatformType = "flatiron"
+	PlatformTypeDarena              PlatformType = "darena"
 	PlatformTypeDrChrono            PlatformType = "drchrono"
 	PlatformTypeDynamicHealthIT     PlatformType = "dynamichealthit"
 	PlatformTypeHumana              PlatformType = "humana"
@@ -78,6 +79,7 @@ func GetPlatformTypes() []PlatformType {
 		PlatformTypeEpic,
 		PlatformTypeEpicLegacy,
 		PlatformTypeFlatiron,
+		PlatformTypeDarena,
 		PlatformTypeDrChrono,
 		PlatformTypeDynamicHealthIT,
 		PlatformTypeHumana,

@@ -1,5 +1,9 @@
 # MANUALLY POPULATED - this should mirror epic-legacy
 platform_type: 'darena'
+
+# Darena platform requires JWT client authentication
+token_endpoint_auth_methods_supported:
+  - 'private_key_jwt'
 scopes_supported:
   - fhirUser
   - openid
