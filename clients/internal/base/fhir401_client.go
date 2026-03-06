@@ -744,7 +744,7 @@ func generateResourceQueries(resourceNames []string, endpointDefinition *definit
 			if endpointDefinition.PlatformType == pkg.PlatformTypeAthena {
 				//see: https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-medicationrequest.html
 				//see: https://linear.app/fasten-health/issue/FAS-152
-				intentCode := []string{"order", "plan"}
+				intentCode := []string{"order,plan"}
 				for _, intent := range intentCode {
 					resourceQueryData.SearchParamCombinations = append(resourceQueryData.SearchParamCombinations, url.Values{
 						"patient": []string{sourceCred.GetPatientId()},
