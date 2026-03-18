@@ -2,7 +2,9 @@ package base
 
 import (
 	"context"
+	"crypto/sha1"
 	"encoding/base64"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -334,8 +336,12 @@ func (c *SourceClientBase) GetRequest(resourceSubpathOrNext string, decodeModelP
 		if err != nil {
 			return "", fmt.Errorf("an error occurred while reading non-JSON response body: %s", err)
 		}
+
+		hash := sha1.Sum([]byte(resourceUrl.String()))
+		id := hex.EncodeToString(hash[:])
+
 		binaryResourceJsonBytes, err := json.Marshal(map[string]interface{}{
-			"id":           base64.StdEncoding.EncodeToString([]byte(resourceUrl.String())),
+			"id":           id,
 			"resourceType": "Binary",
 			"contentType":  contentTypeHeader,
 			"data":         base64.StdEncoding.EncodeToString(b),

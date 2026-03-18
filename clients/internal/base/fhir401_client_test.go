@@ -2,7 +2,9 @@ package base
 
 import (
 	"context"
+	"crypto/sha1"
 	"encoding/base64"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -716,5 +718,47 @@ func TestGetRequest_NonJSON_ReturnsBinary(t *testing.T) {
 	decodedData, err := base64.StdEncoding.DecodeString(dataStr)
 	require.NoError(t, err)
 	require.Equal(t, rawData, decodedData)
+
+}
+func TestGetRequest_Binary_IdIsSHA1Hash(t *testing.T) {
+	rawData := []byte("lorem fake data")
+
+	// test server
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/pdf")
+		w.WriteHeader(http.StatusOK)
+		_, _ = w.Write(rawData)
+	}))
+	defer ts.Close()
+
+	// client under test
+	client := &SourceClientBase{
+		EndpointDefinition: &definitionsModels.LighthouseSourceDefinition{
+			PatientAccessEndpoint: &catalog.PatientAccessEndpoint{
+				Url: ts.URL + "/",
+			},
+		},
+		SourceClientOptions: &models.SourceClientOptions{
+			TestMode: true,
+		},
+		OauthClient: ts.Client(),
+		Logger:      logrus.New(),
+	}
+
+	var binary map[string]interface{}
+
+	returnedURL, err := client.GetRequest("/binary", &binary)
+	require.NoError(t, err)
+
+	// compute expected SHA1 hash of URL
+	hash := sha1.Sum([]byte(returnedURL))
+	expectedID := hex.EncodeToString(hash[:])
+
+	// extract id from response
+	id, ok := binary["id"].(string)
+	require.True(t, ok)
+
+	// assert SHA1 match
+	require.Equal(t, expectedID, id)
 
 }
