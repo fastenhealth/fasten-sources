@@ -36,6 +36,7 @@ const (
 	PlatformTypeHumana              PlatformType = "humana"
 	PlatformTypeKaiser              PlatformType = "kaiser"
 	PlatformTypeMaximeyes           PlatformType = "maximeyes"
+	PlatformTypeModMedEma           PlatformType = "modmedema"
 	PlatformTypeMedhost             PlatformType = "medhost"
 	PlatformTypeMedicare            PlatformType = "medicare"
 	PlatformTypeMeditech            PlatformType = "meditech"
