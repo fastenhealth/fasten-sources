@@ -1,0 +1,51 @@
+# MANUALLY POPULATED - this should mirror epic-legacy
+platform_type: modmedema
+
+# Mod Med EMA platform requires JWT client authentication after Jan 2026
+token_endpoint_auth_methods_supported:
+  - "private_key_jwt"
+
+scopes_supported:
+  - fhirUser
+  - openid
+  - profile
+  - offline_access
+  - patient/AllergyIntolerance.rs
+  - patient/CarePlan.rs
+  - patient/CareTeam.rs
+  - patient/Condition.rs
+  - patient/Coverage.rs
+  - patient/Device.rs
+  - patient/DiagnosticReport.rs
+  - patient/DocumentReference.rs
+  - patient/Encounter.rs
+  - patient/Goal.rs
+  - patient/Immunization.rs
+  - patient/Location.rs
+  - patient/Medication.rs
+  - patient/MedicationRequest.rs
+  - patient/Observation.rs
+  - patient/Organization.rs
+  - patient/Patient.rs
+  - patient/Practitioner.rs
+  - patient/PractitionerRole.rs
+  - patient/Procedure.rs
+  - patient/Provenance.rs
+  - patient/RelatedPerson.rs
+  - patient/ServiceRequest.rs
+grant_types_supported:
+  - authorization_code
+response_types_supported:
+  - code
+response_modes_supported:
+  - query
+code_challenge_methods_supported:
+  - S256
+confidential: true
+cors_relay_required: false
+documentation: |
+  https://www.modmed.com/public-api-v2/
+  https://www.modmed.com/wp-content/uploads/2023/04/MMI-API-Documentation-April-2023.pdf
+
+missing_op_patient_everything: true
+client_supported_resources: []
