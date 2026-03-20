@@ -16,12 +16,7 @@ jobs:
   release:
     name: Create Release Commit
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
     # Service containers to run with `build` (Required for end-to-end testing)
-    env:
-      AWS_REGION: us-east-1
     steps:
       - uses: actions/setup-go@v5
         with:
@@ -61,6 +56,17 @@ jobs:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 
+  deploy-s3:
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      AWS_REGION: us-east-1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
