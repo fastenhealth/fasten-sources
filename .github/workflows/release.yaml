@@ -16,6 +16,9 @@ jobs:
   release:
     name: Create Release Commit
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     # Service containers to run with `build` (Required for end-to-end testing)
     env:
       AWS_REGION: us-east-1
