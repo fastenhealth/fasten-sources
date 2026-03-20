@@ -17,6 +17,8 @@ jobs:
     name: Create Release Commit
     runs-on: ubuntu-latest
     # Service containers to run with `build` (Required for end-to-end testing)
+    outputs:
+      release_version: ${{ steps.bump_version.outputs.release_version }} # Map step output
     steps:
       - uses: actions/setup-go@v5
         with:
@@ -75,7 +77,7 @@ jobs:
 
       - name: Upload CDN assets to S3
         run: |
-          aws s3 cp catalog/brands.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/brands.json"
-          aws s3 cp catalog/portals.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/portals.json"
-          aws s3 cp catalog/endpoints.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/endpoints.json"
+          aws s3 cp catalog/brands.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{needs.release.outputs.release_version}}/brands.json"
+          aws s3 cp catalog/portals.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{needs.release.outputs.release_version}}/portals.json"
+          aws s3 cp catalog/endpoints.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{needs.release.outputs.release_version}}/endpoints.json"
 
