@@ -17,6 +17,8 @@ jobs:
     name: Create Release Commit
     runs-on: ubuntu-latest
     # Service containers to run with `build` (Required for end-to-end testing)
+    env:
+      AWS_REGION: us-east-1
     steps:
       - uses: actions/setup-go@v5
         with:
@@ -55,11 +57,16 @@ jobs:
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-#      - name: Prepare JS Package
-#        run: |
-#          cp js/package.json js/dist/package.json
-#      - uses: JS-DevTools/npm-publish@v3
-#        with:
-#          token: ${{ secrets.NPM_TOKEN }}
-#          package: 'js/dist'
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload CDN assets to S3
+        run: |
+          aws s3 cp catalog/brands.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/brands.json"
+          aws s3 cp catalog/portals.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/portals.json"
+          aws s3 cp catalog/endpoints.json "s3://${{ secrets.DEPLOY_BUCKET }}/catalog/${{steps.bump_version.outputs.release_version}}/endpoints.json"
 
