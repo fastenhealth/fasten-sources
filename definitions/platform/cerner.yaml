@@ -24,7 +24,9 @@ scopes_supported:
   - patient/Goal.read
   - patient/Immunization.read
   - patient/InsurancePlan.read
+  - patient/Media.read
   - patient/MedicationAdministration.read
+  - patient/MedicationDispense.read
   - patient/MedicationRequest.read
   - patient/NutritionOrder.read
   - patient/Observation.read
@@ -38,6 +40,7 @@ scopes_supported:
   - patient/Schedule.read
   - patient/ServiceRequest.read
   - patient/Slot.read
+  - patient/Specimen.read
   - user/Organization.read
   - user/Location.read
   - user/Practitioner.read
